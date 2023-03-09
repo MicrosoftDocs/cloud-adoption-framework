@@ -1,5 +1,5 @@
 ---
-title: Management operations considerations for the Azure Spring Apps landing zone accelerator
+title: Management operations for the Azure Spring Apps landing zone accelerator
 description: Operational considerations and recommendations for a Spring Boot workload.
 author: pagewriter-msft
 ms.author: prwilk
@@ -9,7 +9,7 @@ ms.service: caf
 ms.subservice: caf-scenario-spring-apps
 ---
 
-# Operational considerations for the Azure Spring Apps landing zone accelerator
+# Management operations for the Azure Spring Apps landing zone accelerator
 
 
 Patience is a virtue!
