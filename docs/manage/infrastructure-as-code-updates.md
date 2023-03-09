@@ -80,7 +80,7 @@ Periodic Landing Zone updates with Infrastructure as Code can help you catch thi
 
 When you make a change to resources via the portal, CLI, or other non-Infrastructure as Code method, the change goes through.  When you next run a deployment through Infrastructure as Code, the comparison to the code-defined state and the actual state in the portal can be flagged (using what-if or plan functions).  This can be used to identify that an environment has been modified outside of the code file.
 
-Once identified, Infrastructure as Code can be run to reset the resources to the correct configuration.  This is the default in Terraform but requires using a Complete function in Bicep.  This can let you repair unauthorized changes.
+Once identified, Infrastructure as Code can be run to reset the resources to the correct configuration.  This is the default in Terraform but requires using a Complete mode deployment in Bicep.  This can let you repair unauthorized changes.
 
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, often involving reviewing each resource change and updating its parameters to match the "as is" configuration.
 
