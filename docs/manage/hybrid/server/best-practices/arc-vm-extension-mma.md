@@ -92,7 +92,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
 ## Azure Arc-enabled servers Log Analytics agent extension deployment
 
-1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstar/archive/extensions/arm/mma-template.parameters.json)
+1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/mma-template.parameters.json)
 
     ![A screenshot of ARM extensions parameters file.](./media/arc-vm-extension-mma/parameters-file-2.png)
 
