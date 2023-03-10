@@ -24,7 +24,7 @@ The *source binaries* are prepared for replication and synchronization. The arti
 
 A *toolchain* that aligns with the new platform and source binaries are implemented to execute and manage the replication and synchronization processes. Learn about [various tools that could contribute to a migration to Azure](./replicate-options.md).
 
-## Replication risk: Physics of replication
+## Replication risks: Physics of replication
 
 When you plan and execute the replication of a binary source to a new destination, there are fundamental laws to consider.
 
