@@ -2,7 +2,7 @@
 title: Cluster and application security
 description: Learn about Kubernetes security essentials in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/06/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,8 +10,6 @@ ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: application security, security essentials, Kubernetes security
 ---
-
-<!-- cSpell:ignore kured -->
 
 # Cluster and application security
 
@@ -68,8 +66,8 @@ As you prepare the application for production, implement a minimum set of best p
 - **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
 
   For more information, see:
-  - [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction) <br>
-  - [Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
+  - [Azure Container Registry integration with Defender for Cloud](/azure/security-center/defender-for-container-registries-introduction) <br>
+  - [Azure Kubernetes Service integration with Defender for Cloud](/azure/security-center/defender-for-kubernetes-introduction)
 
 ## Optimize and scale
 

@@ -1,31 +1,27 @@
 ---
 title: 'Get started: Accelerate migration'
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Accelerate migration
 
-Proper alignment of business and IT stakeholders helps to overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
+Proper alignment of business and IT stakeholders helps overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
 
 - Stakeholder alignment
 - Migration planning
 - Deploying a landing zone
 - Migrating your first 10 workloads
 
-It also helps you implement proper governance and management processes.
+This article also helps you implement proper governance and management processes. Use this guide to streamline the processes and materials required to align an overall migration effort.
 
-Use this guide to streamline the processes and materials required for aligning an overall migration effort. The guide uses the methodologies of the Cloud Adoption Framework that are highlighted in this illustration.
-
-![Get started with migration in Azure](../_images/get-started/migration-map.png)
-
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). Use it to identify the guidance that best aligns to your current needs.
 
 ## Get started
 
@@ -223,7 +219,7 @@ Operations management is another requirement to reach migration success. Migrati
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
+- Identify any workloads that require a Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
   - Review the workbook: estimate one hour per application owner.
   - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
@@ -250,4 +246,4 @@ The Cloud Adoption Framework is a lifecycle solution that helps you begin a migr
 | Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
 | Cloud operations team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). The answers you provide help identify which guidance aligns best with your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). The answers you provide help identify which guidance aligns best with your current needs.

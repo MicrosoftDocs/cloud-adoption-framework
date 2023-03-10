@@ -2,7 +2,7 @@
 title: Machine learning solutions
 description: These machine learning checklists and resources can help you plan your machine learning AI application development and deployment.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,8 +10,6 @@ ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: machine learning solutions, machine learning checklist, machine learning ai
 ---
-
-<!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
 
 # Machine learning
 
@@ -21,7 +19,7 @@ Azure empowers you with the most advanced machine learning capabilities. Quickly
 
 You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray and RLlib.
 
-Get started with the [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-machine-learning), where you'll find a tutorial on how to [set up your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](https://www.onnxruntime.ai/).
+Get started with the [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-machine-learning), where you'll find a tutorial on how to [set up your first machine learning experiment](/azure/machine-learning/quickstart-create-resources). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](https://onnxruntime.ai/).
 
 Common scenarios for machine learning solutions include:
 
@@ -37,7 +35,7 @@ Common scenarios for machine learning solutions include:
 - **Get started by first familiarizing yourself with machine learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
 
   - Learn about [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning)
-  - [Create your first machine learning experiment with a Jupyter notebook with Python](/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
+  - [Create your first machine learning experiment with a Jupyter notebook with Python](/azure/machine-learning/quickstart-create-resources)
   - [Experiment with visual drag-and-drop](/azure/machine-learning/tutorial-designer-automobile-price-train-score)
   - [Use the AutoML UI](/azure/machine-learning/tutorial-first-experiment-automated-ml)
   - [Configure your dev environment](/azure/machine-learning/how-to-configure-environment)
@@ -51,9 +49,9 @@ Common scenarios for machine learning solutions include:
 - **Follow along with video tutorials** to learn more about the benefits of machine learning, such as no-code model building, machine learning operations (MLOps), ONNX Runtime, model interpretability and transparency, and more.
 
   - [What's new with Azure Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
-  - [Use AutoML to build models](https://aka.ms/automlvideo)
-  - [Build zero-code models with Azure Machine Learning designer](https://aka.ms/studioanddesigner)
-  - [MLOps for managing the end-to-end lifecycle](https://aka.ms/mlopsvideo)
+  - [Use AutoML to build models](/shows/AI-Show/Automate-ML)
+  - [Build zero-code models with Azure Machine Learning designer](/shows/AI-Show/Designer-drag-and-drop-ML)
+  - [MLOps for managing the end-to-end lifecycle](/shows/AI-Show/MLops-updates-model-registry)
   - [Incorporating ONNX Runtime into your models](https://www.youtube.com/watch?v=qy7X2JGLUC4)
   - [Model interpretability and transparency](https://channel9.msdn.com/shows/ai-show/machine-learning-Interpretability-toolkit)
   - [Building models with R](https://channel9.msdn.com/shows/ai-show/r-in-azure-machine-learning)

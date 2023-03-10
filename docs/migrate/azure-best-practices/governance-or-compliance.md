@@ -1,8 +1,8 @@
 ---
 title: Governance or compliance strategy
 description: Governance or compliance strategy
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -44,13 +44,12 @@ During assessment, you must make additional decisions to align to the required g
 
 Governance and compliance assessment requirements are too customer-specific to provide general guidance on the actual steps taken during assessment. The process should include tasks and time for aligning to compliance and governance requirements.
 
-For a deeper understanding of governance, read the overview of the [Disciplines of Cloud Governance](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework includes templates to document the policies, guidance, and requirements for each of the following sections:
+For a deeper understanding of governance, read the overview of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework includes templates to document the policies, guidance, and requirements for each of the following sections:
 
 - [Cost Management discipline](../../govern/cost-management/template.md)
 - [Security Baseline discipline](../../govern/security-baseline/template.md)
-- [Resource Consistency discipline](../../govern/resource-consistency/template.md)
-- [Identity Baseline discipline](../../govern/identity-baseline/template.md)
-- [Deployment Acceleration discipline](../../govern/deployment-acceleration/template.md)
+- [Identity Baseline discipline](/azure/cloud-adoption-framework/govern/identity-baseline/)
+- [Deployment Acceleration discipline](/azure/cloud-adoption-framework/govern/deployment-acceleration/)
 
 For information about developing governance guidance based on the Cloud Adoption Framework governance model, see [Implement a cloud governance strategy](../../govern/corporate-policy.md).
 

@@ -24,6 +24,10 @@ The Secure methodology provides a vision of the complete end state to guide the 
 
 The Cloud Adoption Framework provides security guidance for this security journey by providing clarity for the processes, best practices, models, and experiences. This guidance is based on the lessons learned and real world experiences of real customers, Microsoft's security journey, and work with organizations like NIST, The Open Group, and the [Center for Internet Security (CIS)](https://www.cisecurity.org/).
 
+Watch the following video to learn more about the Secure methodology and how it helps guide continuing security improvements over time.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBXs]
+
 ## Mapping to concepts, frameworks, and standards
 
 Security itself is both a standalone organizational discipline and a quality/attribute that is integrated or overlaid on other disciplines, which make it difficult to precisely define and map in detail. The security industry uses many different frameworks to capture risk, plan controls, and operate. Here is a quick summary of how the disciplines in the CAF Secure methodology relate to other security concepts and guidance:
@@ -64,9 +68,9 @@ Transforming how the business and tech teams view security requires aligning sec
 
 - **Culture:** The culture of security must be focused on safely meeting the business mission, not impeding it. At the same time, security must become a normalized part of the culture of the organization as the internet upon which the business operates is open, allow adversaries to attempt attacks at any time. This cultural shift requires improved processes, partnerships, and ongoing leadership support at all levels to communicate the change, model the behavior, and reinforce the shift.
 - **Risk ownership:** The accountability for security risk should be assigned to the same roles that own all other risks, freeing security up to be a trusted advisor and subject matter expert rather than a scapegoat. Security should be responsible for sound and balanced advice that is communicated in the language of those leaders, but should not be held accountable for decisions they do not own.
-- **Security talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skillsets, mature security teams are also diversifying their strategy by focusing on
-  - **Growing security skillsets and knowledge** within existing teams in IT and the business. This is especially important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
-  - **Recruiting diverse skillsets** to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
+- **Security talent:**  Security talent is in a chronic shortage and organizations should always be planning how to best develop and distribute security knowledge and skills. In addition to growing security teams directly with technical security skill sets, mature security teams are also diversifying their strategy by focusing on
+  - **Growing security skill sets and knowledge** within existing teams in IT and the business. This is especially important for DevOps teams with a DevSecOps approach and can take many forms (such as a security help desk, identifying and training champions within the community, or job swapping programs).
+  - **Recruiting diverse skill sets** to security teams to bring fresh perspectives and frameworks to problems (like business, human psychology, or economics) and build better relationships within the organization. To a hammer, all problems look like nails.
 
 ### Business alignment
 
@@ -78,7 +82,7 @@ Because of these shifts, your cloud adoption program should focus heavily on bus
 
 ### Security disciplines
 
-This transformation will affect each security discipline differently. While each of these disciples is extremely important and requires investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud:
+This transformation will affect each security discipline differently. While each of these disciplines is extremely important and requires investment, these are ordered (roughly) by which ones have the most immediate opportunities for quick wins as you adopt the cloud:
 
 - **Access control:** Application of network and identity create access boundaries and segmentation to reduce the frequency and reach of any security breaches
 - **Security operations:** Monitor IT operations to detect, respond, and recover from breach. Use data to continuously reduce risk of breach
@@ -101,6 +105,9 @@ All security activities should be aligned to and shaped by a dual focus on
 The Secure methodology is part of a comprehensive set of security guidance that also includes:
 
 - [Azure Well-Architected Framework](/azure/architecture/framework/security/overview): Guidance on securing your workloads on Azure.
+- [Security architecture design](/azure/architecture/guide/security/security-start-here): Implementation-level journey of our security architectures.
+  - [Browse our security architectures](/azure/architecture/browse/?azure_categories=security)
 - [Azure security benchmarks](/security/benchmark/azure/): Prescriptive best practices and controls for Azure security.
-- [Enterprise-scale landing zone](../ready/enterprise-scale/security-governance-and-compliance.md): Azure reference architecture and implementation with integrated security.
+- [Enterprise-scale landing zone](../ready/landing-zone/design-area/governance.md): Azure reference architecture and implementation with integrated security.
 - [Top 10 security best practices for Azure](./security-top-10.md): Top Azure security best practices that Microsoft recommends based on lessons learned across customers and our own environments.
+- [Microsoft Cybersecurity Architectures](/security/cybersecurity-reference-architecture/mcra): The diagrams describe how Microsoft security capabilities integrate with Microsoft platforms and 3rd-party platforms.

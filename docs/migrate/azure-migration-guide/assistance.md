@@ -2,16 +2,13 @@
 title: How to obtain assistance
 description: Learn how to obtain assistance during your Azure migration process. The right assistance can help accelerate your migration efforts.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC
 ---
-
-<!-- cSpell:ignore MSPs -->
 
 # Get assistance
 
@@ -37,8 +34,6 @@ If you need help from Microsoft Support while using Azure, follow these steps to
 1. Select **Help + support**.
 1. Select **New support request** to enter details about your issue and contact support.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest]" submitText="Create a support request" ::: form-end
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -54,8 +49,6 @@ To view your support requests, follow these steps:
 
 1. Select **Help + support**.
 1. Select **All support requests** to view your support requests.
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Support/HelpAndSupportBlade/managesupportrequest]" submitText="View your support requests" ::: form-end
 
 ::: zone-end
 
@@ -73,8 +66,6 @@ Need support engineer assistance for deep technical guidance?
 1. Select **Help + support**.
 1. Select **Support Plans** to review the plans available to you.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Support/HelpAndSupportBlade/supportPlans]" submitText="Review support plans" ::: form-end
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -83,7 +74,7 @@ Need support engineer assistance for deep technical guidance?
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazureplatform%2Cazuremarketplace%2Cwindowsazureplatformctp)
+- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
 ::: zone-end

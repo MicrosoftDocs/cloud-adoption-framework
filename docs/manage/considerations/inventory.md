@@ -1,8 +1,8 @@
 ---
 title: Inventory and visibility in Azure cloud management
 description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility).
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -24,7 +24,7 @@ The inventory and visibility discipline builds on these timeless phrases. Before
 
 ## Common customer challenges
 
-Unless inventory and visibility processes are consistently applied, operational management teams can suffer from a higher volume of business interruptions, longer time to recovery, and greater amounts of effort required to troubleshoot and triage issues. As changes adversely affect higher priority applications and larger numbers of assets, each of these metrics grows even faster.
+Unless inventory and visibility processes are consistently applied, operational management teams can suffer from a higher volume of business interruptions, longer time to recovery, and greater amounts of effort required to troubleshoot and triage issues. As changes adversely affect higher priority applications and larger numbers of assets, these metrics grow even faster.
 
 These challenges stem from a small number of questions that can be answered only through consistent data/telemetry:
 
@@ -114,7 +114,7 @@ ITSM integration is often the first example of acting on inventory and visibilit
 
 ### Data centralization
 
-There's a variety of reasons why a business might require multiple tenants within a single cloud provider. In those scenarios, data centralization is a required component of the enhanced management baseline, because it can provide visibility across each of those tenants or environments.
+There's a variety of reasons why a business might require multiple tenants within a single cloud provider. In those scenarios, data centralization is a required component of the enhanced management baseline, because it can provide visibility across those tenants or environments.
 
 ## Next steps
 

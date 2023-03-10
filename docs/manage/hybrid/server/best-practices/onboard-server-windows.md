@@ -2,7 +2,7 @@
 title: Connect an existing Windows Server instance to Azure Arc
 description: Connect an existing Windows Server instance to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -74,9 +74,9 @@ Upon completion, you will have your Windows Server instance, connected as a new 
 
 ![A screenshot of the `az_connect_win.ps1` Windows script running.](./media/onboard-server/az-connect-windows.png)
 
-![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource.png)
+![A screenshot of an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/windows-resource.png)
 
-![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/windows-resource-detail.png)
+![A screenshot of details from an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/windows-resource-detail.png)
 
 ## Delete the deployment
 

@@ -1,8 +1,8 @@
 ---
 title: Predictive modeling to influence customer behavior
 description: Use predictive modeling to develop predictive capabilities through data, insights, patterns, predictions, and interactions.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -63,9 +63,9 @@ People have always tried to detect patterns in large volumes of data. Computers 
 
 Using insights as a starting point, machine learning develops and applies predictive models to capitalize on the patterns in data. Through multiple iterations of training, testing, and adoption, those models and algorithms can accurately predict future outcomes.
 
-[Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml) is the cloud-native service in Azure for building and training models based on your data. This tool also includes a [workflow for accelerating the development of machine learning algorithms](/azure/machine-learning/concept-azure-machine-learning-architecture). This workflow can be used to develop algorithms through a visual interface or Python.
+[Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) is the cloud-native service in Azure for building and training models based on your data. This tool also includes a [workflow for accelerating the development of machine learning algorithms](/azure/machine-learning/concept-azure-machine-learning-architecture). This workflow can be used to develop algorithms through a visual interface or Python.
 
-For more robust machine learning models, [ML Services in Azure HDInsight](/azure/hdinsight/r-server/r-server-overview) provides a machine learning platform built on Apache Hadoop clusters. This approach enables more granular control of the underlying clusters, storage, and compute nodes. Azure HDInsight also offers more advanced integration through tools like ScaleR and SparkR to create predictions based on integrated and ingested data, even working with data from a stream. The [flight delay prediction solution](/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr) demonstrates these advanced capabilities when used to predict flight delays based on weather conditions. The HDInsight solution also allows for enterprise controls, such as data security, network access, and performance monitoring to operationalize patterns.
+For more robust machine learning models, [ML Services in Azure HDInsight](https://azure.microsoft.com/services/hdinsight/r-server/#overview) provides a machine learning platform built on Apache Hadoop clusters. This approach enables more granular control of the underlying clusters, storage, and compute nodes. Azure HDInsight also offers more advanced integration through tools like ScaleR and SparkR to create predictions based on integrated and ingested data, even working with data from a stream. The [flight delay prediction solution](/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr) demonstrates these advanced capabilities when used to predict flight delays based on weather conditions. The HDInsight solution also allows for enterprise controls, such as data security, network access, and performance monitoring to operationalize patterns.
 
 ## Predictions
 
@@ -73,7 +73,7 @@ After a pattern is built and trained, you can apply it through APIs, which can m
 
 [Azure Cognitive Services](/azure/cognitive-services/) is an example of a predictive API built by a cloud vendor. This service includes predictive APIs for content moderation, anomaly detection, and suggestions to personalize content. These APIs are ready to use and are based on well-known content patterns, which Microsoft has used to train models. The APIs make predictions based on the data you feed into the API.
 
-[Azure Machine Learning](/azure/machine-learning/) lets you deploy custom-built algorithms, which you can create and train based solely on your own data. For information about deploying predictions with Azure Machine Learning, see [Deploy machine learning models to Azure](/azure/machine-learning/how-to-deploy-and-where).
+[Azure Machine Learning](/azure/machine-learning/) lets you deploy custom-built algorithms, which you can create and train based solely on your own data. For information about deploying predictions with Azure Machine Learning, see [Deploy machine learning models to Azure](/azure/machine-learning/how-to-deploy-managed-online-endpoints).
 
 For information about the processes for exposing predictions developed for ML Services on Azure HDInsight, see [Set up HDInsight clusters](/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters).
 
@@ -87,5 +87,5 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption for the following innovation scenarios.
 
-- [Kubernetes in the Cloud Adoption Framework](..\kubernetes\index.md)
-- [AI in the Cloud Adoption Framework](..\ai\index.md)
+- [Kubernetes in the Cloud Adoption Framework](../kubernetes/index.md)
+- [AI in the Cloud Adoption Framework](../ai/index.md)

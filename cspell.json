@@ -3,8 +3,7 @@
     "language": "en",
     "enabled": true,
     "import": [
-        ".\\docs\\cspell.json"
+        "./docs/cspell.json"
     ],
-    "words": [
-    ]
+    "words": []
 }

@@ -28,10 +28,15 @@ items:
         tocHref: /azure/security/fundamentals/
         topicHref: /azure/cloud-adoption-framework/ready/azure-best-practices
     - name: Adopt
+      tocHref: /azure/cloud-adoption-framework/adopt/
+      topicHref: /azure/cloud-adoption-framework/adopt
       items:
       - name: Migrate
         tocHref: /azure/cloud-adoption-framework/migrate/
         topicHref: /azure/cloud-adoption-framework/migrate
+      - name: Modernize
+        tocHref: /azure/cloud-adoption-framework/modernize/
+        topicHref: /azure/cloud-adoption-framework/modernize
       - name: Innovate
         tocHref: /azure/cloud-adoption-framework/innovate/
         topicHref: /azure/cloud-adoption-framework/innovate
@@ -55,15 +60,32 @@ items:
       - name: Secure
         tocHref: /azure/cloud-adoption-framework/secure/
         topicHref: /azure/cloud-adoption-framework/secure
-    - name: Technology platform scenarios (lenses)
+    - name: Scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
-      topicHref: /azure/cloud-adoption-framework/scenarios
-    - name: Industry scenarios (lenses)
-      tocHref: /azure/cloud-adoption-framework/industry/retail/
-      topicHref: /azure/cloud-adoption-framework/industry/retail
+      topicHref: /azure/cloud-adoption-framework/scenarios/overview
+      items:
+      - name: Data management
+        tocHref: /azure/cloud-adoption-framework/scenarios/data-management
+        topicHref: /azure/cloud-adoption-framework/scenarios/data-management/
+      - name: Hybrid and multicloud
+        tocHref: /azure/cloud-adoption-framework/scenarios/hybrid
+        topicHref: /azure/cloud-adoption-framework/scenarios/hybrid/
+      - name: Modern application platform
+        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform
+        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform/
+      - name: SAP
+        tocHref: /azure/cloud-adoption-framework/scenarios/sap
+        topicHref: /azure/cloud-adoption-framework/scenarios/sap/
+      - name: Desktop virtualization
+        tocHref: /azure/cloud-adoption-framework/scenarios/wvd
+        topicHref: /azure/cloud-adoption-framework/scenarios/wvd/
+      - name: Retail industry
+        tocHref: /azure/cloud-adoption-framework/industry/retail
+        topicHref: /azure/cloud-adoption-framework/industry/retail/
     - name: Reference
       tocHref: /azure/cloud-adoption-framework/reference/
       topicHref: /azure/cloud-adoption-framework/reference
+
       items:
       - name: Decision guides
         tocHref: /azure/cloud-adoption-framework/decision-guides/

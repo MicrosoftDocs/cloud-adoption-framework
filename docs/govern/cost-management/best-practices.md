@@ -1,8 +1,8 @@
 ---
 title: Costing and sizing Azure resources
 description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing resources in Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -127,7 +127,7 @@ Azure provides different types of storage data.
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access and connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard HDD, Standard SSD, Premium SSD, or Ultra Disk Storage. <br><br> Disk management: Unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queuing. |
-| **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
+| **Tables** | Store tables. | Now part of Azure Cosmos DB for Table. |
 
 ### Access tiers
 
@@ -163,10 +163,10 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 **Learn more:**
 
-- Review [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage/).
+- Review [Azure Storage products and pricing](https://azure.microsoft.com/product-categories/storage/).
 - Learn to use the [Azure Import/Export service](/azure/import-export/storage-import-export-service) to securely import large amounts of data to Azure Blob Storage and Azure Files.
 - Compare [blobs, files, and disk storage data types](/azure/storage/common/storage-introduction).
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Review [different types of storage accounts](/azure/storage/common/storage-account-overview).
 - Learn about [Azure Storage redundancy](/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
 - Learn more about [Azure Files](/azure/storage/files/storage-files-introduction).
@@ -206,7 +206,7 @@ Using Azure Reserved VM Instances, you prepay for either a one-year or three-yea
 - You can cancel reserved instances.
 
 ![Azure Reserved VM Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
-*Figure 1: Azure Reserved VM instances.*
+*Figure 1: Azure Reserved VM Instances.*
 
 **Learn more:**
 
@@ -293,9 +293,9 @@ In Azure Cost Management + Billing, you can:
 
 **Learn more:**
 
-- Read the [Azure Cost Management + Billing overview](/azure/cost-management-billing/cloudyn/overview).
+- Read the [Azure Cost Management + Billing overview](/azure/cost-management-billing/cost-management-billing-overview).
 - Learn how to [optimize your cloud investment with Azure Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn how to use [Azure Cost Management + Billing reports](/azure/cost-management-billing/cloudyn/use-reports).
+- Learn how to [explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 - Review a tutorial on [optimizing costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
 - Review the [Azure Consumption APIs](/rest/api/consumption/budgets).
 
@@ -344,7 +344,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 **Learn more:**
 
-- Learn more about [access tiers](/azure/storage/blobs/storage-blob-storage-tiers).
+- Learn more about [access tiers](/azure/storage/blobs/access-tiers-overview).
 - Read the [StorSimple overview](/azure/azure-monitor/overview).
 - Review [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple/).
 

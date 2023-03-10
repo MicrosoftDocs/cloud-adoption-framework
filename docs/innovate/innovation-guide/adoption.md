@@ -1,13 +1,12 @@
 ---
 title: Qualitative and quantitative data feedback
 description: Learn how to use Azure tools to collect quantitative and qualitative feedback on web apps and APIs hosted in GitHub.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Quantitative data, quantitative feedback, qualitative feedback, testing feedback, customer feedback
 ---
@@ -41,12 +40,6 @@ To view quantitative data on your applications:
 1. The **overview** pane includes some statistics on the application. Select **application dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents]" submitText="Go to Application Insights" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -86,12 +79,6 @@ To view quantitative data on your APIs:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -118,8 +105,6 @@ Azure Boards and Azure Pipelines require a portal that's separate from GitHub an
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ### Action
 
 To create a DevOps project:
@@ -127,10 +112,6 @@ To create a DevOps project:
 1. Go to **Azure DevOps Projects**.
 2. Select **create DevOps project**.
 3. Select **runtime, framework, and service**.
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -154,12 +135,6 @@ To view current deployments in your pipeline:
 3. Select **Deployment Center** in the **deployment** section of the **app services** pane.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites]" submitText="Go to App Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

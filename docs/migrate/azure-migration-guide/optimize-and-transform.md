@@ -2,16 +2,13 @@
 title: Optimize and promote
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-new, AQC
 ---
-
-<!-- markdownlint-disable DOCSMD001 -->
 
 # Release workloads (test, optimize, and handoff)
 
@@ -29,8 +26,6 @@ All Azure services that provide a consumption-based cost model can be resized th
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
 
 ::: zone target="chromeless"
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/metrics]" submitText="Go to Monitor" :::
 
 ::: zone-end
 
@@ -51,15 +46,13 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Compute%2FVirtualMachines]" submitText="Go to Virtual Machines" :::
-
 ::: zone-end
 
 ::: zone target="docs"
 
 - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
-- [Resize a Windows VM](/azure/virtual-machines/windows/resize-vm)
-- [Resize a Linux virtual machine using Azure CLI](/azure/virtual-machines/linux/change-vm-size)
+- [Resize a Windows VM](/azure/virtual-machines/resize-vm)
+- [Resize a Linux virtual machine via Azure CLI](/azure/virtual-machines/resize-vm)
 
 Partners can use the Partner Center to review the usage.
 
@@ -76,8 +69,6 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Storage%2FStorageAccounts]" submitText="Go to Storage Accounts" :::
-
 ::: zone-end
 
 ### Resize a SQL database
@@ -88,8 +79,6 @@ Partners can use the Partner Center to review the usage.
 1. Select **Apply**.
 
 ::: zone target="chromeless"
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2FServers%2FDatabases]" submitText="Go to SQL Databases" :::
 
 ::: zone-end
 
@@ -105,8 +94,6 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview]" submitText="Go to Cost Management + Billing" :::
-
 ::: zone-end
 
 You can also use **Advisor** and select the **Costs** tab to identify recommendations for potential cost reductions.
@@ -116,8 +103,6 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 >
 
 ::: zone target="chromeless"
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Expert/AdvisorBlade]" submitText="Go to Azure Advisor" :::
 
 ::: zone-end
 

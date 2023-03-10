@@ -1,18 +1,15 @@
 ---
 title: Innovate with AI in Azure
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Automate business processes, ai innovation, machine learning, knowledge mining
 ---
-
-<!-- cSpell:ignore ONNX -->
 
 # Innovate with AI in Azure
 
@@ -35,7 +32,7 @@ This article introduces a few approaches to innovating with AI. Innovations can 
 
 Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first machine learning experiment](/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open-source model format and runtime for machine learning, see [ONNX Runtime](https://www.onnxruntime.ai/).
+For more information, see [Azure Machine Learning overview](/azure/machine-learning/overview-what-is-azure-machine-learning) and [Getting started with your first machine learning experiment](/azure/machine-learning/quickstart-create-resources). For more information on the open-source model format and runtime for machine learning, see [ONNX Runtime](https://onnxruntime.ai/).
 
 <!-- markdownlint-disable MD024 -->
 
@@ -50,12 +47,6 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 1. The new workspace provides both low-code and code-driven approaches for data scientists to train, build, deploy, and manage models.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces]" submitText="Go to Azure Machine Learning resources" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -93,12 +84,6 @@ To get started with a Cognitive Services API:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -111,7 +96,7 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 Interact more naturally with your customers and improve customer engagement through conversational experiences powered by Bot Framework and Azure Bot Service. In addition, use Cognitive Services APIs like Language Understanding (LUIS), QnA Maker, and Speech service. These help your customers with common tasks, leaving your call center agents time to focus on more nuanced, higher value cases.
 
-For more information on how to build bots, see [Azure Bot Service](/learn/paths/create-bots-with-the-azure-bot-service/).
+For more information on how to build bots, see [Azure Bot Service](/training/paths/create-conversational-ai-solutions/).
 
 #### Action
 
@@ -124,12 +109,6 @@ To get started with Azure Bot Service:
 1. Select **Create**. Then follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FBotServices]" submitText="Go to Azure Bot Service" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -158,12 +137,6 @@ To get started:
 1. Follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FSearchServices]" submitText="Go to Azure Cognitive Search" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

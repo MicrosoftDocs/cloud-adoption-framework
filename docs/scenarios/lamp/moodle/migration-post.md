@@ -2,16 +2,13 @@
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: think-tank
 ---
-
-<!-- cspell:ignore SCORM newkey keyout mydomain httpd sitelog sitelogs -->
-<!--docutune:casing SCP WinSCP SCORM -->
 
 # How to follow up after a Moodle migration
 
@@ -278,7 +275,7 @@ If you see a *File not found* error when uploading a file, your web server might
 - If your web server doesn't support slash arguments, turn them off in Moodle by clearing the **Use slash arguments** check box in **Administration** > **Site administration** > **Server** > **HTTP**. You may see this message.
 
   > [!WARNING]
-  > Disabling slash arguments will result in SCORM packages not working and slash arguments warnings being displayed!
+  > Disabling slash arguments will result in SCORM (sharable content object reference model) packages not working and slash arguments warnings being displayed.!
 
 ### Maintenance mode errors
 

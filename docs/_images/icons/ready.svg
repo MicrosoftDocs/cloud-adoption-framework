@@ -1,15 +1,46 @@
-<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 58.5 58.5">
+<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
   <defs>
-    <linearGradient id="linear-gradient" x1="29.25" y1="10.04" x2="29.25" y2="48.46" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#5ea0ef"/>
-      <stop offset="0.18" stop-color="#589eed"/>
-      <stop offset="0.41" stop-color="#4897e9"/>
-      <stop offset="0.66" stop-color="#2e8ce1"/>
-      <stop offset="0.94" stop-color="#0a7cd7"/>
-      <stop offset="1" stop-color="#0078d4"/>
+    <radialGradient id="radial-gradient" cx="30" cy="30" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b3b3b3"/>
+      <stop offset="0.12" stop-color="#adadad"/>
+      <stop offset="0.64" stop-color="#9b9b9b"/>
+      <stop offset="1" stop-color="#949494"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="30.132" cy="29.818" r="9.657" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#008bf1"/>
+      <stop offset="0.22" stop-color="#0086ec"/>
+      <stop offset="0.49" stop-color="#0078dd"/>
+      <stop offset="0.79" stop-color="#0061c4"/>
+      <stop offset="1" stop-color="#004dae"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="29.828" y1="25.213" x2="29.828" y2="34.597" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0fffd"/>
+      <stop offset="1" stop-color="#d2ebff"/>
     </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="14.992" y1="24.563" x2="21.111" y2="24.563" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#32bedd"/>
+      <stop offset="0.18" stop-color="#32caea"/>
+      <stop offset="0.41" stop-color="#32d2f2"/>
+      <stop offset="0.78" stop-color="#32d4f5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="39.015" y1="24.593" x2="45.008" y2="24.593" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="30.845" y1="18.023" x2="40.067" y2="18.023" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-5" x1="19.991" y1="18.026" x2="29.26" y2="18.026" xlink:href="#linear-gradient-2"/>
   </defs>
-  <circle cx="29.25" cy="29.25" r="29" fill="#fff" stroke="#ccc" stroke-width="0.5"/>
-  <rect x="10.04" y="10.04" width="38.41" height="38.41" fill="#fff"/>
-  <path d="M38,21.2l1.69,1.69-14.05,14L18.8,30.09l1.69-1.68,5.16,5.15ZM29.25,10a19.19,19.19,0,0,1,5.1.68A18.9,18.9,0,0,1,39,12.65a19.17,19.17,0,0,1,6.88,6.9,19.23,19.23,0,0,1,1.93,4.6,19.81,19.81,0,0,1,.7,5.1,19.19,19.19,0,0,1-.68,5.1A18.9,18.9,0,0,1,45.85,39,19.17,19.17,0,0,1,39,45.83a19.23,19.23,0,0,1-4.6,1.93,19.81,19.81,0,0,1-5.1.7,19.19,19.19,0,0,1-5.1-.68,18.9,18.9,0,0,1-4.6-1.93,19.26,19.26,0,0,1-8.81-11.48,19.78,19.78,0,0,1-.7-5.12,19.19,19.19,0,0,1,.68-5.1,18.9,18.9,0,0,1,1.93-4.6,19.26,19.26,0,0,1,11.48-8.81A19.78,19.78,0,0,1,29.25,10Zm0,36a16,16,0,0,0,4.45-.61,17.53,17.53,0,0,0,4-1.68,16.18,16.18,0,0,0,3.41-2.65,17.73,17.73,0,0,0,2.63-3.39,17.17,17.17,0,0,0,1.7-4,15.54,15.54,0,0,0,.61-4.46,16,16,0,0,0-.61-4.45,17.53,17.53,0,0,0-1.68-4,16.18,16.18,0,0,0-2.65-3.41,17.73,17.73,0,0,0-3.39-2.63,17.17,17.17,0,0,0-4-1.7,15.54,15.54,0,0,0-4.46-.61,16,16,0,0,0-4.45.61,17.53,17.53,0,0,0-4,1.68,16.18,16.18,0,0,0-3.41,2.65,17.73,17.73,0,0,0-2.63,3.39,17.17,17.17,0,0,0-1.7,4,15.54,15.54,0,0,0-.61,4.46,16,16,0,0,0,.61,4.45,17.53,17.53,0,0,0,1.68,4,16.18,16.18,0,0,0,2.65,3.41,17.73,17.73,0,0,0,3.39,2.63,17.17,17.17,0,0,0,4,1.7A15.54,15.54,0,0,0,29.25,46.06Z" fill="url(#linear-gradient)"/>
+  <g>
+    <circle cx="30" cy="30" r="30" fill="#fff"/>
+    <circle cx="30" cy="30" r="30" opacity="0.35" fill="url(#radial-gradient)"/>
+  </g>
+  <g>
+    <path d="M30.132,39.471a9.654,9.654,0,1,0-9.66-9.653A9.657,9.657,0,0,0,30.132,39.471Z" fill="url(#radial-gradient-2)"/>
+    <path d="M35.528,26.554l-1.337-1.341L27.479,31.92l-2.008-2.012-1.342,1.341,3.35,3.348Z" fill="url(#linear-gradient)"/>
+    <path d="M41.208,40a14.975,14.975,0,0,0,3.8-9.215H41.932a11.8,11.8,0,0,1-2.911,7.029Z" fill="#0078d4"/>
+    <path d="M18.85,19.927A14.946,14.946,0,0,0,14.992,29.2H18.21a11.852,11.852,0,0,1,2.9-7.013Z" fill="url(#linear-gradient-2)"/>
+    <path d="M19.981,41.193A14.988,14.988,0,0,0,29.26,45V41.853a11.856,11.856,0,0,1-7.018-2.915Z" fill="#0078d4"/>
+    <path d="M14.992,30.784a14.973,14.973,0,0,0,3.852,9.273l2.262-2.26a11.816,11.816,0,0,1-2.9-7.013Z" fill="#0078d4"/>
+    <path d="M41.2,19.985l-2.188,2.186A11.819,11.819,0,0,1,41.933,29.2h3.075A14.945,14.945,0,0,0,41.2,19.985Z" fill="url(#linear-gradient-3)"/>
+    <path d="M30.845,44.99a14.976,14.976,0,0,0,9.232-3.855l-2.193-2.192a11.863,11.863,0,0,1-7.039,2.905Z" fill="#0078d4"/>
+    <path d="M30.845,15.005v3.142a11.844,11.844,0,0,1,7.029,2.894l2.193-2.192A14.96,14.96,0,0,0,30.845,15.005Z" fill="url(#linear-gradient-4)"/>
+    <path d="M29.26,15a14.977,14.977,0,0,0-9.269,3.8l2.256,2.255a11.861,11.861,0,0,1,7.008-2.905V15Z" fill="url(#linear-gradient-5)"/>
+  </g>
 </svg>

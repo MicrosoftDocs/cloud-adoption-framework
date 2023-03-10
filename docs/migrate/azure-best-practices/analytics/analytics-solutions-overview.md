@@ -2,15 +2,13 @@
 title: Azure Synapse Analytics solutions
 description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions with Teradata, Netezza, and Exadata.
 author: v-hanki
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: think-tank
 ---
-
-<!-- cSpell:ignore Giga -->
 
 # Azure Synapse Analytics solutions
 

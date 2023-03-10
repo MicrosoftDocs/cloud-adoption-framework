@@ -1,8 +1,8 @@
 ---
 title: Ambient user experiences with interactive devices
 description: Learn about advanced approaches for ambient user experiences using interactive devices, rather than applications, for digital innovation.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -62,8 +62,6 @@ For example, consider the case of spatial anchors. Spatial anchors allow you to 
 Beyond mobile reality, or even mixed reality, lies integrated reality. Integrated reality aims to remove the digital experience entirely. All around us are devices with compute and connectivity capabilities. These devices can be used to collect data from the immediate surroundings without the customer having to ever touch a phone, laptop, or VR device.
 
 This digital experience is best when some form of device is consistently within the same surroundings in which the customer need occurs. Common scenarios include factory floors, elevators, and even your car. These types of large devices already contain compute power. You can also use data from the device itself to detect customer behaviors and send those behaviors to the cloud. This automatic capture of customer behavior data dramatically reduces the need for a customer to input data. Additionally, the web, mobile, or VR experience can function as a feedback loop to share what's been learned from the integrated reality solution.
-
-<!-- docutune:casing "advanced computer vision" -->
 
 Examples of integrated reality in Azure:
 

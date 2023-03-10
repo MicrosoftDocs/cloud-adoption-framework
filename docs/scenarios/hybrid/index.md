@@ -1,8 +1,8 @@
 ---
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
-author: brianblanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/11/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,15 @@ ms.custom: e2e-hybrid, think-tank
 
 # Introduction to hybrid and multicloud
 
-Microsoft Azure provides all of the products and features required to help you build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and/or public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
+Microsoft Azure provides all of the products and features required to help you build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
+
+Watch the following video to learn more.
+
+<!-- markdownlint-disable MD034 -->
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMBdw]
+
+<!-- markdownlint-enable MD034 -->
 
 ## Defining hybrid and multicloud
 
@@ -49,7 +57,7 @@ We recognize that there are many valid reasons for customers to choose to distri
 
 - Minimize or avoid single cloud provider lock-in
 - Business units, subsidiaries, or acquired companies have already adopted different cloud platforms
-- Different cloud providers may have regulatory and data sovereignty requirements in different countries
+- Different cloud providers may have regulatory and data sovereignty requirements in different geopolitical regions
 - Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
 - Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud strategies

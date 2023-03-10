@@ -2,7 +2,7 @@
 title: Governance disciplines for SAP on Azure
 description: Learn more about the shared responsibility model, and learn about security, compliance, and governance design recommendations and considerations for SAP on Azure.
 author: deepakonics
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap
 
 # Governance disciplines for SAP on Azure
 
-SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations specific to the deployment of the SAP platform on Azure. To fully prepare for governance of an enterprise solution, it is important to review the guidance in the [enterprise-scale design area for security governance and compliance](../../ready/enterprise-scale/security-governance-and-compliance.md)
+SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations specific to the deployment of the SAP platform on Azure. To fully prepare for governance of an enterprise solution, it is important to review the guidance in the [Azure landing zone design area for security governance and compliance](../../ready/landing-zone/design-area/governance.md)
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, the cloud hosted many larger-scale workloads, like SAP on Azure. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of cloud services.
 
@@ -36,15 +36,17 @@ Security is a shared responsibility between Microsoft and customers. You can upl
 
 For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
-### Enable Azure Security Center
+Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](../../ready/landing-zone/design-area/security.md#zero-trust).
+
+### Enable Microsoft Defender for Cloud
 
 Enterprises that use hub-spoke network topologies often deploy cloud architecture patterns across multiple Azure subscriptions. In the following cloud deployment diagram, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads and subscriptions.
 
 ![Diagram showing an enterprise cloud deployment with security issues.](./media/security-issues.png)
 
-[Azure Security Center](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
+[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
 
-Enable Azure Security Center Standard for SAP on Azure subscriptions to:
+Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
 - Strengthen the security posture your datacenters and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
 
@@ -52,15 +54,15 @@ Enable Azure Security Center Standard for SAP on Azure subscriptions to:
 
 - Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
 
-When you enable Azure Security Center Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
+When you enable Microsoft Defender for Cloud Standard for SAP, make sure to exclude the SAP database servers from any policy that installs endpoint protection.
 
-The following screenshot shows the Azure Security Center dashboard in the Azure portal:
+The following screenshot shows the workload protection dashboard in the Azure portal:
 
-![Azure Security Center dashboard](./media/security-center-dashboard.png)
+![Workload protection dashboard](./media/defender-cloud-dashboard.png)
 
-### Enable Azure Sentinel
+### Enable Microsoft Sentinel
 
-[Azure Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 ### Secure authentication
 
@@ -133,7 +135,7 @@ For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsof
 
 ### Securely manage traffic
 
-For internet-facing applications, you must make sure to distribute load per application requirements while maintaining security levels. The term load balancing refers to the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
+For internet-facing applications, you must make sure to distribute load per application requirements while maintaining security levels. *Load balancing* is the distribution of workloads across multiple computing resources. Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. Load balancing can also improve availability by sharing a workload across redundant computing resources.
 
 Load balancers direct traffic to VMs in the application subnet. For high availability, this example uses SAP Web Dispatcher and Azure Standard Load Balancer. These two services also support capacity extension by scaling out. You can also use Azure Application Gateway or other partner products, depending on the traffic type and required functionality like Secure Sockets Layer (SSL) termination and forwarding.
 
@@ -160,7 +162,7 @@ The following table summarizes the Azure load-balancing services by category:
 
 - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door, because of common challenges around DNS caching and systems not honoring DNS TTL.
 
-- [Application Gateway](/azure/application-gateway/overview) provides an managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
+- [Application Gateway](/azure/application-gateway/overview) provides a managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
 
 - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
 
@@ -180,7 +182,7 @@ The following recommendations are for various security scenarios. The in-scope r
 
 | Scope (scenario) | Recommendation | Notes |
 |---|---|---|
-| See a consolidated view of all-up Azure and on-premises security posture. | Azure Security Center Standard | Azure Security Center Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
+| See a consolidated view of all-up Azure and on-premises security posture. | Microsoft Defender for Cloud Standard | Microsoft Defender for Cloud Standard helps onboard Windows and Linux machines from on-premises and cloud and shows a consolidated security posture. |
 | Encrypt all SAP on Azure databases to meet regulatory requirements. | SAP HANA native encryption and SQL TDE | For databases, use the SAP HANA native encryption technology. If you're using SQL Database, enable TDE. |
 | Secure an SAP Fiori application for global users with HTTPS traffic. | Azure Front Door | Front Door is an application delivery network that provides global load balancing and site acceleration service for web applications. |
 
@@ -236,3 +238,4 @@ The following recommendations are for various compliance and governance scenario
 - [Best practices in migrating SAP applications to Azure, part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
+-

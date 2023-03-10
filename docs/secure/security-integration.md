@@ -1,8 +1,8 @@
 ---
 title: Security integration
 description: Integrate security insights and practices. Learn how security teams should work with other stakeholders to IT and business operations.
-author: NaomiOooo
-ms.author: naomio
+author: martinekuan
+ms.author: martinek
 ms.date: 05/14/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -20,7 +20,11 @@ Your organization must maintain security assurances while minimizing friction wi
 
 Internal friction and low levels of conflict between teams might occur in organizations. Such conflicts aren't sustainable. It's critical for all of the teams to work together in the age of cloud, digital business, and zero trust security. Teams operating with different goals, culture, and language make an organization inefficient and ineffective.
 
-Be sure that security teams aren't operating in silos. The teams should work closely together to ensure smooth process operations and knowledge sharing.
+Be sure that security teams aren't operating in silos. The teams should work closely together to ensure smooth process operations and knowledge sharing. 
+
+Watch the following video to learn more about integrating security across all areas of your business. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBX5]
 
 This guidance describes how you can improve security integration with business and IT teams and integration between security teams.
 

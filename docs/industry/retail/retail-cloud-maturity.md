@@ -1,8 +1,8 @@
 ---
 title: Cloud maturity model for retail
 description: Learn about the cloud maturity model for retail organizations. Knowing what stage your organization's at helps guide your cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -46,7 +46,7 @@ The following articles can guide your cloud adoption journey and help you succee
 
 - [Cloud adoption strategy for the retail industry](./strategy.md)
 - [Cloud adoption plan for the retail industry](./plan.md)
-- [Review your environment or Azure landing zone(s)](./ready.md)
+- [Review your environment or Azure landing zones](./ready.md)
 - [Migrate common retail industry technologies](./migrate.md)
 - [Innovation in the retail industry](./innovate.md)
 - [Governance in the retail industry](./govern.md)

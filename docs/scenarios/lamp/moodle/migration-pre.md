@@ -2,15 +2,13 @@
 title: How to prepare for a Moodle migration
 description: Learn how to prepare for a Moodle migration. See how to back up Moodle files and create resources that are needed for migration.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: think-tank
 ---
-
-<!-- cspell:ignore downloadazcopy mysqldump onpremisesstorage zcvf -->
 
 # How to prepare for a Moodle migration
 
@@ -50,7 +48,7 @@ If you don't have an Azure subscription, you can [create one for free](https://a
   az account set --subscription '<subscription name>'
   ```
 
- An example command is:
+An example command is:
 
   `az account set --subscription 'ComputePM LibrarySub'`
 
@@ -176,7 +174,7 @@ To back up configuration files, follow these steps:
    cp -R /etc/nginx /home/azureadmin/storage/configuration/
    ```
 
-   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores ngnix configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
+   The `php` directory stores PHP configuration files, such as `php-fpm.conf`, `php.ini`, `pool.d`, and `conf.d`. The `nginx` directory stores NGINX configurations, such as `nginx.conf` and `sites-enabled/dns.conf`.
 
 ### Back up the database
 

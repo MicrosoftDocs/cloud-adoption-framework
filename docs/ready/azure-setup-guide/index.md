@@ -2,12 +2,11 @@
 title: Azure setup guide overview
 description: Get an overview of the Azure setup guide, which gives you step-by-step guidance to set up Azure effectively for your organization.
 author: timleyden
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/03/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
@@ -37,8 +36,8 @@ You'll learn how to:
 
 **Next steps:**
 
->[!div class="nextstepaction"]
->[Organize your resources to simplify how you apply settings](./organize-resources.md)
+> [!div class="nextstepaction"]
+> [Organize your resources to simplify how you apply settings](./organize-resources.md)
 
 ::: zone-end
 

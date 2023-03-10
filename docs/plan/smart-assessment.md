@@ -2,12 +2,12 @@
 title: Strategic Migration Assessment and Readiness Tool (SMART)
 description: Learn how to use the Strategic Migration Assessment and Readiness Tool (SMART) to accelerate your cloud adoption efforts.
 author: microsoftsonny
-ms.author: janet
+ms.author: martinek
 ms.date: 08/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 # Strategic Migration Assessment and Readiness Tool (SMART)
@@ -30,7 +30,7 @@ You have the ability to pick an area of focus, or answer all the assessment ques
 
 ## Access the assessment
 
-You can start the assessment by visiting [`https://aka.ms/smarttool`](/assessments/?id=Strategic-Migration-Assessment&mode=pre-assessment).
+You can start the assessment by visiting [`https://aka.ms/smarttool`](/assessments/Strategic-Migration-Assessment/).
 
 :::image type="content" source="../_images/start-smart.png" alt-text="Diagram that shows the Strategic Migration Assessment and Readiness Tool (SMART).":::
 
@@ -58,5 +58,5 @@ You can compare across all 10 dimensions to see resources that contributed to yo
 
 ## Next steps
 
-- [Strategic Migration Assessment and Readiness Tool (SMART)](/assessments/?id=strategic-migration-assessment)
+- [Strategic Migration Assessment and Readiness Tool (SMART)](/assessments/Strategic-Migration-Assessment/)
 - [Find out how ready you are to start migrating - the SMART way](https://azure.microsoft.com/migration/#overview)

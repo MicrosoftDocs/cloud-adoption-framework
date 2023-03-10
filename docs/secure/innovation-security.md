@@ -1,8 +1,8 @@
 ---
 title: Innovation security
 description: Explore the key themes of consideration for integrating security best practices into innovation areas
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -24,6 +24,10 @@ Developing new capabilities and applications requires successfully meeting three
 
 Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see the [leadership imperative: blend the cultures](/#the-leadership-imperative-blend-the-cultures).
 
+Watch the following video to learn more about the DevSecOps method for secure and rapid innovation.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
+
 ## What is DevSecOps?
 
 Technology innovation is frequently developed in the context of a rapid lean and agile development approach that combines development and operations together into a *DevOps* process. We've learned that integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.
@@ -42,7 +46,7 @@ DevOps expanded the traditional development model (people, process, and technolo
 
 DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development and operations. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. With mutual understanding and mutual respect for each other's needs, the teams will work on the most important issues first, whatever the source.
 
-The Cloud Adoption Framework's Organize methodology provides further context on DevSecOps structures in an organization. For more information, see [Understand application security and DevSecOps functions](../organize/cloud-security-application-security-devsecops.md).
+The Organize methodology of the Cloud Adoption Framework provides further context on DevSecOps structures in an organization. For more information, see [Understand application security and DevSecOps functions](../organize/cloud-security-application-security-devsecops.md).
 
 ## Why DevSecOps?
 

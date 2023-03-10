@@ -1,9 +1,9 @@
 ---
 title: Architectural decision guides
-description: Use these core cloud deployment infrastructure component patterns and models to support your specific cloud deployment scenarios.
-author: alexbuckgit
-ms.author: abuck
-ms.date: 02/11/2019
+description: Use these core cloud deployment infrastructure component guides to support your specific cloud deployment scenarios.
+author: martinekuan
+ms.author: martinek
+ms.date: 02/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -12,35 +12,29 @@ ms.custom: internal
 
 # Architectural decision guides
 
-The architectural decision guides in the Cloud Adoption Framework describe patterns and models that help when creating cloud governance design guidance. Each decision guide focuses on one core infrastructure component of cloud deployments and lists patterns and models that can support specific cloud deployment scenarios.
+The Cloud Adoption Framework's architectural decision guides describe patterns and models that can help you create your own cloud governance design. Each decision guide focuses on one core infrastructure component of cloud deployments and lists patterns and models that can support specific cloud deployment scenarios.
 
-When you begin to establish cloud governance for your organization, actionable governance journeys provide a baseline roadmap. These journeys make assumptions about requirements and priorities that might not reflect those of your organization.
+Actionable governance journeys provide a baseline roadmap for you to establish cloud governance for your organization. These journeys make assumptions about requirements and priorities. Your organization's situation can be different than the ones described in the governance journeys.
 
-These decision guides supplement the sample governance journeys by providing alternative patterns and models that help you align the architectural design choices made in the example design guidance with your own requirements.
+Architectural decision guides help you navigate these potential differences. Each guide supplements the sample governance journeys by providing alternate patterns and models, which can help you align the architectural design choices in the examples with the requirements your specific situation.
 
 ## Decision guidance categories
 
-The following categories represent foundational technologies for all cloud deployments. The sample governance journeys make design decisions related to these technologies based on the needs of example businesses, and some of these decisions might not match your organization's needs. The following sections discuss alternative options for each category, allowing you to choose a pattern or model better suited to your requirements.
+The following architectural decision guides cover foundational technology components for all cloud deployments. Use these guides along with the cloud governance example journeys to choose a solution that suits your organization's unique needs.
 
-[Subscriptions](./subscriptions/index.md): Plan your cloud deployment's subscription design and account structure to match your organization's ownership, billing, and management capabilities.
+[Identity](./identity/index.md): Integrate cloud-based identity services with your organization's identity resources to manage control and authorization within your IT environment.
 
-[Identity](./identity/index.md): Integrate cloud-based identity services with your existing identity resources to support authorization and access control within your IT environment.
+[Resource consistency](./resource-consistency/index.md): Ensure that the deployment and organization of your cloud-based resources enforce your organization's resource management and policy requirements.
 
-[Policy enforcement](./policy-enforcement/index.md): Define and enforce organizational policy rules for cloud-deployed resources and workloads that align with your governance requirements.
+[Resource tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
 
-[Resource consistency](./resource-consistency/index.md): Ensure that deployment and organization of your cloud-based resources align to enforce resource management and policy requirements.
+[Encryption](./encryption/index.md): Secure your sensitive data using encryption that meets your organization's compliance and security policy requirements.
 
-[Resource tagging](./resource-tagging/index.md): Organize your cloud-based resources to support billing models, cloud accounting approaches, management, and to optimize resource utilization and cost. Resource tagging requires a consistent and well-organized naming and metadata scheme.
-
-[Software Defined Networking](./software-defined-network/index.md): Deploy secure workloads to the cloud using rapid deployment and modification of virtualized networking capabilities. Software-defined networks can support agile workflows, isolate resources, and integrate cloud-based systems with your existing IT infrastructure.
-
-[Encryption](./encryption/index.md): Secure your sensitive data using encryption to align with your organization's compliance and security policy requirements.
-
-[Logging and reporting](./logging-and-reporting/index.md): Monitor log data generated by cloud-based resources. Analyzing data provides health-related insights into the operations, maintenance, and compliance status of workloads.
+[Logging and reporting](./logging-and-reporting/index.md): Monitor log data generated by your organization's cloud-based resources. Analyzing log data provides insights into the health of operations, maintenance, and workload compliance status.
 
 ## Next steps
 
-Learn how subscriptions and accounts serve as the base of a cloud deployment.
+Learn about options for managing identity in your cloud environment.
 
 > [!div class="nextstepaction"]
-> [Subscriptions design](./subscriptions/index.md)
+> [Identity decision guide](./identity/index.md)

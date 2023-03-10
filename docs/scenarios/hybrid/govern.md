@@ -1,8 +1,8 @@
 ---
 title: Govern your portfolio of hybrid and multicloud workloads
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments.
-author: brianblanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -34,10 +34,10 @@ With a basic understanding of unified operations and Azure Arc, you can extend y
 
 Security baselines are among the most common ways that you can expand your governance disciplines in a unified operations scenario. The following best practices will help preserve your security baseline across all environments:
 
-- [Collect and detect security data across clouds with Azure Security Center](/azure/security-center/quickstart-onboard-machines)
-- [Investigate and respond to security threats with Azure Sentinel](/azure/sentinel/investigate-cases)
-- [Connect AWS accounts to Azure Defender](/azure/security-center/quickstart-onboard-aws)
-- [Connect GCP accounts to Azure Defender](/azure/security-center/quickstart-onboard-gcp)
+- [Collect and detect security data across clouds with Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines)
+- [Investigate and respond to security threats with Microsoft Sentinel](/azure/sentinel/investigate-cases)
+- [Connect AWS accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-aws)
+- [Connect GCP accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-gcp)
 
 ## Next steps
 

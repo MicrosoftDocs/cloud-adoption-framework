@@ -2,7 +2,7 @@
 title: Cloud migration antipatterns
 description: Avoid antipatterns, establish security and compliance guardrails, understand dependencies, and run thorough assessments before choosing an architecture.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -30,7 +30,7 @@ The online shop team is innovative, so it begins modernizing the application, bu
 
 ### Preferred outcome: Establish security and compliance guardrails
 
-Before you shift workloads to the cloud, put security and compliance guardrails in place. These guardrails make sure that workloads follow security and compliance requirements. Have the cloud governance and cloud security teams deliver the guardrails within an [Azure landing zone](../ready/landing-zone/index.md). Check the guardrails with IT, especially for hybrid workloads. See [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/enterprise-scale/architecture.md) for help with defining guardrails that support workload teams, so that they work in a fast, consistent, compliant, and secure manner.
+Before you shift workloads to the cloud, put security and compliance guardrails in place. These guardrails make sure that workloads follow security and compliance requirements. Have the cloud governance and cloud security teams deliver the guardrails within an [Azure landing zone](../ready/landing-zone/index.md). Check the guardrails with IT, especially for hybrid workloads. See [Cloud Adoption Framework enterprise-scale landing zone architecture](../ready/landing-zone/index.md) for help with defining guardrails that support workload teams, so that they work in a fast, consistent, compliant, and secure manner.
 
 ## Antipattern: Migrate, modernize, or innovate without an assessment
 
@@ -72,10 +72,10 @@ A conglomerate decides to spin off its hotel division into a separate company. T
 
 ### Preferred outcome: Use a segmentation strategy
 
-Separate various duties and plan for a different environment before you migrate to Azure. You can reach subscription limits quickly when you combine different stages into one subscription. Establish a [segmentation strategy](/azure/architecture/framework/security/design-segmentation) to make it easier to [implement governance and compliance](../ready/enterprise-scale/management-group-and-subscription-organization.md).
+Separate various duties and plan for a different environment before you migrate to Azure. You can reach subscription limits quickly when you combine different stages into one subscription. Establish a [segmentation strategy](/azure/architecture/framework/security/design-segmentation) to make it easier to [implement governance and compliance](../ready/landing-zone/design-area/resource-org.md).
 
 ## Next steps
 
 - [Azure migration guide overview](../migrate/azure-migration-guide/index.md)
 - [Azure cloud migration best practices checklist](../migrate/azure-best-practices/index.md)
-- [Management group and subscription organization](../ready/enterprise-scale/management-group-and-subscription-organization.md)
+- [Management group and subscription organization](../ready/landing-zone/design-area/resource-org.md)

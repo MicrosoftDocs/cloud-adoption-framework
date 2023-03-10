@@ -1,16 +1,14 @@
 ---
 title: Approve architecture changes before migration
 description: Learn to classify the architectural changes when they are required and also establish proper approval activities.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 06/09/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: internal
 ---
-
-<!-- cSpell:ignore ITIL -->
 
 # Approve architecture changes before migration
 
@@ -55,7 +53,7 @@ The following best practices can help the CAB maintain a degree of comfort durin
 
 It is tempting for a cloud adoption team to consider detailed architectural decisions for each workload being migrated to the cloud. It is equally tempting to use cloud migration as a catalyst to refactor past architectural decisions. For organizations that are migrating a few hundred VMs or a few dozen workloads, either approach can be properly managed. When migrating a datacenter consisting of 1,000 or more assets, each of these approaches is considered a high-risk antipattern that significantly reduces the likelihood of success. Modernizing, refactoring, and rearchitecting every application requires a diverse skill set and a wide variety of changes, and these tasks create dependencies on human efforts at scale. Each of these dependencies injects risk into the migration effort.
 
-The article on [digital estate rationalization](../../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when rationalizing a digital estate. By choosing a default (standard) rationalization approach to govern the migration effort, the cloud advisory board or product owner can review and approve the application of one change to a long list of workloads. This reduces technical approval of each workload to those that require a significant architecture change to be cloud compatible. Additionally to this, once the assessment process for the migration has been performed, there should be a clear idea of what changes will be required going forward and this initial list could be used to identify common change types or categories of change (standard changes). The cloud adoption team should meet with the relevant change managers and approvers early in the project to agree on the categories and types of changes in the list, and then establish appropriate pre-approved standard change models that will enable changes to be made without the need of the CAB approval, provided certain criteria or prerequisites for the changes are met. For example, changes can be preapproved for none production, or changes will require a tested backout plan, or changes might need a peer review.
+The article on [digital estate rationalization](../../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when rationalizing a digital estate. By choosing a default (standard) rationalization approach to govern the migration effort, the cloud advisory board or product owner can review and approve the application of one change to a long list of workloads. This reduces technical approval of each workload to those that require a significant architecture change to be cloud compatible. Additionally to this, once the assessment process for the migration has been performed, there should be a clear idea of what changes will be required going forward and this initial list could be used to identify common change types or categories of change (standard changes). The cloud adoption team should meet with the relevant change managers and approvers early in the project to agree on the categories and types of changes in the list, and then establish appropriate pre-approved standard change models that will enable changes to be made without the need of the CAB approval, provided certain criteria or prerequisites for the changes are met. For example, changes can be preapproved for none production, or changes will require a tested back-out plan, or changes might need a peer review.
 
 > [!IMPORTANT]
 > An organizations ITSM change processes might need to be realigned to work effectively and iteratively with the fast pace of change expected in the cloud. See [Technical complexity](../prerequisites/technical-complexity.md)  for more guidance.

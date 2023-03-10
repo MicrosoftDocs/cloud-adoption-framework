@@ -1,13 +1,13 @@
 ---
 title: Build a digital transformation timeline
 description: Use the Cloud Adoption Framework to consider the impact of time on your digital transformation objectives.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Build a digital transformation timeline
@@ -19,7 +19,7 @@ Digital transformation and cloud adoption might seem like technical project. But
 If you've been building out the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) for your organization, some trends have likely begun to emerge:
 
 - Competing motivations: Your organization is likely motivated by needs that span several of the [motivation categories](./motivations.md): Migration motivations, innovation motivations, and critical business events. Each of these categories requires slightly different behaviors during technical implementation and business adoption.
-- Competing business outcomes: Your organization is also likely to see competing [business outcomes](business-outcomes/index.md). It's possible to improve customer engagements in the cloud. You could also use the cloud to achieve cost reduction outcomes. But the behaviors required to do each are different, making it difficult to succeed at both in parallel.
+- Competing business outcomes: Your organization is also likely to see competing [business outcomes](./business-outcomes/index.md). It's possible to improve customer engagements in the cloud. You could also use the cloud to achieve cost reduction outcomes. But the behaviors required to do each are different, making it difficult to succeed at both in parallel.
 - Aligning financial and technical considerations: If motivations and outcomes aren't aligned, it's easy to have misaligned conceptions when evaluating key considerations. This can lead to difficulty executing your strategy or at minimum communicating success.
 
 It's possible to achieve conflicting motivations and competing outcomes. However, your successes will be greater if you prioritize your transformation and develop a timeline that focuses on the most important objectives first.

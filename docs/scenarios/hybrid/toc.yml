@@ -1,14 +1,9 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
-#cSpell:ignore devtest mariadb
-
 items:
   - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
-    href: scenario-overview.md
+    href: index.md
     pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
     items:
-    - name: Intro to hybrid and multicloud
-      href: index.md
     - name: Intro to unified operations
       href: unified-operations.md
     - name: Azure products
@@ -22,12 +17,74 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
+    - name: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
+      href: enterprise-scale-landing-zone.md
+    - name: Azure Arc-enabled servers
+      items:
+      - name: Identity and access management
+        href: arc-enabled-servers/eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-servers/eslz-arc-servers-connectivity.md
+      - name: Resource organization
+        href: arc-enabled-servers/eslz-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-servers/eslz-security-governance-and-compliance.md
+      - name: Management disciplines
+        href: arc-enabled-servers/eslz-management-and-monitoring-arc-server.md
+      - name: Automation disciplines
+        href: arc-enabled-servers/eslz-automation-arc-server.md
+      - name: Cost governance
+        href: arc-enabled-servers/eslz-cost-governance.md        
+    - name: Azure Arc-enabled Kubernetes
+      items:
+      - name: Identity and access management
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md
+      - name: Resource organization
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md
+      - name: Management disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md
+      - name: Automation disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md
+      - name: Extensions management
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md
+      - name: CI/CD and GitOps disciplines
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md
+      - name: Services observability
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
+      - name: Cost governance
+        href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
+    - name: Azure Arc-enabled SQL Managed Instance
+      items:
+      - name: Identity and access management
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-identity-access-management.md
+      - name: Network topology and connectivity
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-network-connectivity.md
+      - name: Storage disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines.md 
+      - name: Resource organization
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization.md
+      - name: Governance and security disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines.md
+      - name: Management disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md
+      - name: Business continuity and disaster recovery
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md    
+      - name: Upgradeability disciplines
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md
+      - name: Cost governance
+        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-cost-governance.md    
     - name: Implementation options
       items:
-      - name: Start small with basic VM management
-        href: /azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Enterprise-scale landing zones for hybrid
-        href: enterprise-scale-landing-zone.md
+      - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
+        href: arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md
+      - name: Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox
+        href: arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md
+      - name: Start with Azure Arc-enabled SQL Managed Instance landing zone accelerator sandbox
+        href: arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox.md
 
   - name: Migrate to the cloud
     href: migrate.md
@@ -53,7 +110,7 @@ items:
   - name: Hybrid architectures
     items:
     - name: Overview
-      href: /azure/architecture/browse/?azure_categories=hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/architecture/browse/?azure_categories=hybrid&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Applications
       items:
@@ -63,7 +120,7 @@ items:
         href: /azure/architecture/solution-ideas/articles/ai-at-the-edge-disconnected?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Azure Functions in a hybrid environment
         href: /azure/architecture/hybrid/azure-functions-hybrid?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Robo application example on Azure Stack HCI
+      - name: ROBO application example on Azure Stack HCI
         href: /azure/architecture/hybrid/azure-stack-robo?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Run containers in a hybrid environment
         href: /azure/architecture/hybrid/hybrid-containers?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
@@ -138,9 +195,9 @@ items:
 
     - name: Security
       items:
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/hybrid/hybrid-security-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Hybrid security monitoring using Azure Security Center and Azure Sentinel
+      - name: Hybrid security monitoring using Microsoft Defender for Cloud and Microsoft Sentinel
         href: /azure/architecture/solution-ideas/articles/devsecops-in-azure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
     - name: Environmental readiness
@@ -230,13 +287,13 @@ items:
     - name: Azure Stack HCI
       href: /azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Azure Modular Datacenter
-      href: /azure-stack#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hub
     - name: Azure Stack HCI
-      href: /azure-stack#azure-stack-hci?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
     - name: Azure IoT Edge
-      href: /azure/iot-edge/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Azure Sphere
-      href: /azure-sphere?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
+      href: /azure-sphere/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
     - name: Windows for IoT
       href: /windows/iot-core/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
     - name: Virtual WAN
@@ -252,32 +309,32 @@ items:
     - name: Hybrid cloud
       items:
       - name: Introduction to Azure hybrid cloud services
-        href: /learn/modules/intro-to-azure-hybrid-services/
+        href: /training/modules/intro-to-azure-hybrid-services/
       - name: Design a hybrid network architecture on Azure
-        href: /learn/modules/design-a-hybrid-network-architecture/
+        href: /training/modules/design-a-hybrid-network-architecture/
       - name: Implement hybrid network infrastructure
-        href: /learn/modules/implement-hybrid-network-infrastructure/
+        href: /training/modules/implement-hybrid-network-infrastructure/
     - name: Azure Arc
       items:
       - name: Intro to Azure Arc
-        href: /learn/modules/intro-to-azure-arc/
+        href: /training/modules/intro-to-azure-arc/
       - name: Azure Arc for servers
-        href: /learn/modules/intro-to-arc-for-servers/
+        href: /training/modules/intro-to-arc-for-servers/
       - name: Azure Arc for Kubernetes
-        href: /learn/modules/intro-to-arc-enabled-kubernetes/
+        href: /training/modules/intro-to-arc-enabled-kubernetes/
       - name: Azure Arc for hybrid infrastructure
-        href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc/
+        href: /training/paths/manage-hybrid-infrastructure-with-azure-arc/
       - name: Azure Arc for hybrid workloads
-        href: /learn/modules/manage-hybrid-workloads-azure-arc/
+        href: /training/modules/manage-hybrid-workloads-azure-arc/
     - name: Azure Stack
       items:
       - name: Intro to Azure Stack
-        href: /learn/modules/intro-to-azure-stack/
+        href: /training/modules/intro-to-azure-stack/
       - name: Azure Stack HCI foundations
-        href: /learn/paths/azure-stack-hci-foundations/
+        href: /training/paths/azure-stack-hci-foundations/
       - name: Azure Stack HCI deployment
-        href: /learn/modules/azure-stack-hci-plan-deploy/
+        href: /training/modules/azure-stack-hci-plan-deploy/
       - name: Azure Stack HCI technologies
-        href: /learn/modules/azure-stack-hci-technologies/
+        href: /training/modules/azure-stack-hci-technologies/
       - name: Azure Stack HCI - Azure Arc integration
-        href: /learn/modules/stack-hci-arc-integration/
+        href: /training/modules/stack-hci-arc-integration/

@@ -1,8 +1,8 @@
 ---
 title: Cost Management sample policy statements
 description: Use the Cloud Adoption Framework for Azure to get sample Cost Management policy statements that will help you draft policy statements.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -34,7 +34,7 @@ The following sample policy statements address common cost-related business risk
 
 **Policy statement:** Any cloud deployment must be allocated to a billing unit with approved budget and a mechanism for budgetary limits.
 
-**Design options:** In Azure, budget can be controlled with [Azure Cost Management + Billing](/azure/cost-management-billing/cloudyn/manage-budgets).
+**Design options:** In Azure, budget can be controlled with [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview).
 
 ## Underutilization
 

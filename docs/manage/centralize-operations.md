@@ -2,7 +2,7 @@
 title: Centralize management operations
 description: Learn to centralize management operations by using a single Azure Active Directory tenant for all users. Centralized management simplifies management operations and reduces maintenance costs.
 author: JnHs
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -21,7 +21,7 @@ We recommend that you use only one Azure AD tenant for your organization, if pos
 - Certain legal or compliance requirements apply.
 - There are acquisitions of other organizations (sometimes temporary until a long-term tenant consolidation strategy is defined).
 
-When a multiple-tenant architecture is required, [Azure Lighthouse](/azure/lighthouse/overview) provides a way to centralize and streamline management operations. Subscriptions from multiple tenants can be onboarded for [Azure delegated resource management](/azure/lighthouse/concepts/azure-delegated-resource-management). This option allows specified users in the managing tenant to perform [cross-tenant management functions](/azure/lighthouse/concepts/cross-tenant-management-experience) in a centralized and scalable manner.
+When a multiple-tenant architecture is required, [Azure Lighthouse](/azure/lighthouse/overview) provides a way to centralize and streamline management operations. Subscriptions from multiple tenants can be onboarded for [Azure delegated resource management](/azure/lighthouse/concepts/architecture). This option allows specified users in the managing tenant to perform [cross-tenant management functions](/azure/lighthouse/concepts/cross-tenant-management-experience) in a centralized and scalable manner.
 
 For example, let's say your organization has a single tenant, `Tenant A`. The organization then acquires two additional tenants, `Tenant B` and `Tenant C`, and you have business reasons that require you to maintain them as separate tenants.
 

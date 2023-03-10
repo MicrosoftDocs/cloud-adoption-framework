@@ -2,7 +2,7 @@
 title: Cluster design and operations
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design, network design, and operations.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/02/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,8 +10,6 @@ ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: Network design, cluster design, infrastructure provisioning, kubernetes
 ---
-
-<!-- cSpell:ignore autoscaler PDBs -->
 
 # Cluster design and operations
 
@@ -77,7 +75,7 @@ Once the application is in production, how can you optimize your workflow and pr
 
 - **Configure monitoring and troubleshooting at scale.** Set up alerting and monitoring for applications in Kubernetes. Learn about the default configuration, how to integrate more advanced metrics, and how to add custom monitoring and alerting to operate your application.
 
-  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?v=W7aN_z-cyUw&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=16)
+  - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=W7aN_z-cyUw&index=16)
   - [Configure alerts using Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview)
-  - [Review diagnostic logs for master components](/azure/aks/view-control-plane-logs)
+  - [Review diagnostic logs for master components](/azure/azure-monitor/containers/container-insights-log-query#resource-logs)
   - [Azure Kubernetes Service (AKS) diagnostics](/azure/aks/concepts-diagnostics)

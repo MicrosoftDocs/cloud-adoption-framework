@@ -2,7 +2,7 @@
 title: Application development and deployment
 description: Learn about site reliability engineering (SRE) using Kubernetes in the Cloud Adoption Framework for application development and deployment.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,8 +10,6 @@ ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: application development, application deployment, site reliability engineering
 ---
-
-<!-- cSpell:ignore autoscaler Istio Linkerd -->
 
 # Application development and deployment
 
@@ -36,12 +34,12 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Working with Docker in Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
   - [Working with Kubernetes in Visual Studio Code](https://code.visualstudio.com/docs/azure/kubernetes)
-  - [Bridge to Kubernetes overview](/visualstudio/containers/overview-bridge-to-kubernetes)
+  - [Bridge to Kubernetes overview](/visualstudio/bridge/overview-bridge-to-kubernetes)
 
 - **Containerize your application.** Familiarize yourself with the end-to-end Kubernetes development experience, including application scaffolding, inner-loop workflows, application-management frameworks, CI/CD pipelines, log aggregation, monitoring, and application metrics.
 
   To learn more, see:
-  - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/containerize-your-apps-with-docker-and-kubernetes/)
+  - [Get up and running with Kubernetes (e-book collection)](https://azure.microsoft.com/resources/kubernetes-ebook-collection/)
   - [`Containerize Your Applications with Kubernetes on Azure` (webinar)](https://info.microsoft.com/AU-AzureApp-WBNR-FY20-11Nov-12-ContainerizeYourApplicationswithKubernetesonAzure-SRDEM10557_LP02OnDemandRegistration-ForminBody.html)
 
 - **Review common Kubernetes scenarios.** Although Kubernetes is often thought of as a platform for delivering microservices, it's becoming a much broader platform. For more information about common Kubernetes scenarios such as batch analytics and workflow, see [Overview of common Kubernetes scenarios (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=zd8vYhrFXp4&index=7).
@@ -51,7 +49,7 @@ As you get started, use the checklist and application development resources in t
   For more information, see:
   - [Project design and layout for successful Kubernetes applications (webinar)](https://info.microsoft.com/ww-OnDemandRegistration-successful-kubernetes-applications-webinar.html)
   - [How Kubernetes deployments work (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=mNK14yXIZF4&index=3)
-  - [Develop and deploy applications on Kubernetes (Microsoft Learn)](/learn/paths/develop-deploy-applications-kubernetes/)
+  - [Develop and deploy applications on Kubernetes](/training/paths/develop-deploy-applications-kubernetes/)
 
 - **Manage application storage.** Understand the performance needs and access methods for pods so that you can provide the appropriate storage options. Also, plan for ways to back up and test the restore process for attached storage.
 
@@ -91,7 +89,7 @@ As you prepare the application for production, use the following checklist. You 
   - [Logging in Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
   - [Get started with monitoring and alerting for Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=W7aN_z-cyUw&index=16)
   - [Azure Monitor for containers](/azure/azure-monitor/containers/container-insights-overview)
-  - [Enable and review Kubernetes control plane logs in Azure Kubernetes Service (AKS)](/azure/aks/view-control-plane-logs)
+  - [Enable and review Kubernetes control plane logs in Azure Kubernetes Service (AKS)](/azure/azure-monitor/containers/container-insights-log-query#resource-logs)
   - [View Kubernetes logs, events, and pod metrics in real time](/azure/azure-monitor/containers/container-insights-livedata-overview)
 
 - **Define resource requirements for the application.** A primary way to manage the compute resources within a Kubernetes cluster is to use pod requests and limits. These requests and limits tell the Kubernetes scheduler what compute resources a pod should be assigned. For more information, see [Define pod resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits).
@@ -101,7 +99,7 @@ As you prepare the application for production, use the following checklist. You 
 - **Deploy applications using an automated pipeline and DevOps.** The full automation of all steps between code commit to production deployment allows teams to focus on building code and removes the overhead and potential human error in manual steps. Deploying new code is quicker and less risky, helping teams become more agile, more productive, and more confident about their running code.
 
   To learn more, see:
-  - [Evolve your DevOps practices](/learn/paths/evolve-your-devops-practices/)
+  - [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/)
   - [Setting up a Kubernetes build pipeline (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=5irsAdKoEBU&index=6)
   - [Deployment Center for Azure Kubernetes Service](/azure/aks/deployment-center-launcher)
   - [GitHub Actions for deploying to Azure Kubernetes Service](/azure/aks/kubernetes-action)
@@ -126,12 +124,12 @@ Now that the application is in production, how can you optimize your workflow an
   - [How&nbsp;service&nbsp;meshes&nbsp;work&nbsp;in&nbsp;Kubernetes&nbsp;(video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=izVWk7rYqWI&index=15) <br>
   - Learn about [service meshes](/azure/aks/servicemesh-about)
   - [Use Open Service Mesh with Azure Kubernetes Service](/azure/aks/open-service-mesh-about)
-  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-istio-about)
-  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-linkerd-about)
-  - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-consul-about)
+  - [Use Istio with Azure Kubernetes Service](/azure/aks/servicemesh-about)
+  - [Use Linkerd with Azure Kubernetes Service](/azure/aks/servicemesh-about)
+  - [Use Consul with Azure Kubernetes Service](/azure/aks/servicemesh-about)
 
 - **Implement site reliability engineering (SRE) practices.** Site reliability engineering (SRE) is a proven approach to maintain crucial system and application reliability while iterating at the speed demanded by the marketplace.
 
   To learn more, see:
-  - [Introduction to site reliability engineering (SRE)](/learn/modules/intro-to-site-reliability-engineering/)
+  - [Introduction to site reliability engineering (SRE)](/training/modules/intro-to-site-reliability-engineering/)
   - [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
