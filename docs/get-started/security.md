@@ -1,13 +1,13 @@
 ---
 title: 'Get started: Secure the enterprise environment'
 description: Get started integrating security at critical points during your cloud adoption efforts and operations.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Implement security across the enterprise environment
@@ -17,10 +17,6 @@ Security helps create assurances of confidentiality, integrity, and availability
 This getting started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
 
 The steps in this guide are intended for all roles that support security assurances for cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
-
-This guide includes elements from across the Microsoft Cloud Adoption Framework for Azure:
-
-![Get started with enterprise security](../_images/get-started/security-map.png)
 
 Adhering to the steps in this guide will help you integrate security at critical points in the process. The goal is to avoid obstacles in cloud adoption and reduce unnecessary business or operational disruption.
 
@@ -228,7 +224,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
   - [Azure security benchmarks](/security/benchmark/azure/introduction): Specific configuration recommendations for securing Azure environments.
-  - [Azure security baseline training](/learn/modules/create-security-baselines/).
+  - [Azure security baseline training](/training/modules/create-security-baselines/).
 
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
 

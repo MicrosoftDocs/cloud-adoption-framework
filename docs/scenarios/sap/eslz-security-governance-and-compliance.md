@@ -2,7 +2,7 @@
 title: Governance disciplines for SAP on Azure
 description: Learn more about the shared responsibility model, and learn about security, compliance, and governance design recommendations and considerations for SAP on Azure.
 author: deepakonics
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap
 
 # Governance disciplines for SAP on Azure
 
-SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations specific to the deployment of the SAP platform on Azure. To fully prepare for governance of an enterprise solution, it is important to review the guidance in the [enterprise-scale design area for security governance and compliance](../../ready/landing-zone/design-area/governance.md)
+SAP is a common technology many organizations use in their most crucial workloads today. When planning SAP architecture, you should pay special attention to ensuring that the architecture is robust and secure. The goal of this article is to document the security, compliance, and governance design criteria for enterprise-scale SAP on Azure. The article discusses design recommendations, best practices, and design considerations specific to the deployment of the SAP platform on Azure. To fully prepare for governance of an enterprise solution, it is important to review the guidance in the [Azure landing zone design area for security governance and compliance](../../ready/landing-zone/design-area/governance.md)
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, the cloud hosted many larger-scale workloads, like SAP on Azure. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of cloud services.
 
@@ -35,6 +35,8 @@ For more information about the shared responsibility model, see [Shared responsi
 Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
 For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
+
+Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](../../ready/landing-zone/design-area/security.md#zero-trust).
 
 ### Enable Microsoft Defender for Cloud
 
@@ -236,3 +238,4 @@ The following recommendations are for various compliance and governance scenario
 - [Best practices in migrating SAP applications to Azure, part 1](https://azure.microsoft.com/blog/best-practices-in-migrating-sap-applications-to-azure-part-1/)
 - [SAP on Azure: designing for efficiency and operations](https://azure.microsoft.com/blog/sap-on-azure-designing-for-efficiency-operations/)
 - [Azure Virtual Machines planning and implementation for SAP NetWeaver](/azure/virtual-machines/workloads/sap/planning-guide)
+-

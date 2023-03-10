@@ -2,7 +2,7 @@
 title: Innovation with AI in the Cloud Adoption Framework
 description: Find Cloud Adoption Framework tools, programs, and configuration templates to simplify adoption of AI for applications and cloud-native practices at scale.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

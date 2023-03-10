@@ -1,8 +1,8 @@
 ---
 title: Workload classification before migration
 description: Classify your workloads during a pre-migration assessment.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 12/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Workload classification before migration
 
-During each iteration of any migration process, one or more workloads are migrated and promoted to production. Before either of those migration activities, it's important to classify each workload. Classification helps clarify governance, security, operations, and data management and analytics requirements.
+During each iteration of any migration process, one or more workloads are migrated and promoted to production. Before either of those migration activities, it's important to classify each workload. Classification helps clarify governance, security, operations, and cloud-scale analytics requirements.
 
 The following guidance builds on the suggested tagging requirements outlined in the [Define your tagging strategy](../../../ready/azure-best-practices/resource-tagging.md) article. This article builds by adding important [operations](../../../manage/considerations/criticality.md#criticality-scale) and [governance](../../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) elements.
 

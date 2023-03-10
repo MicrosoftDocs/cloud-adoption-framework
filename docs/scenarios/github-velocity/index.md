@@ -2,7 +2,7 @@
 title: How GitHub accelerates cloud adoption
 description: Companies can take advantage of GitHub's connectedness to the open-source community and find thousands of reiterated, enhanced, and ready-to-deploy cloud solution examples from organizations that have successfully adopted Azure services.
 author: nkpatterson
-ms.author: janet
+ms.author: martinek
 ms.date: 1/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -100,7 +100,7 @@ Within an enterprise, contributors are developers across the company, and mainta
 
 - **Contributors:** Developers, data scientists, product managers, marketers, and other roles within a company that help drive software forward. Contributors might not be part of the direct project team but help build software by contributing code, submitting bug fixes, and more.
 
-For more information, see the white paper [An introduction to InnerSource](https://resources.github.com/whitepapers/introduction-to-InnerSource/).
+For more information, see the white paper [An introduction to InnerSource](https://resources.github.com/innersource/fundamentals/).
 
 ## Automation
 
@@ -149,7 +149,7 @@ For more information, see:
 
 The following links provide more information about GitHub.
 
-- [GitHub modules in Microsoft Learn](/learn/browse/?products=github)
-- [GitHub Learning Lab](https://lab.github.com/)
+- [Learn modules for GitHub](/training/browse/?products=github)
+- [GitHub Learning Lab](https://github.com/apps/github-learning-lab)
 - [GitHub Docs](https://docs.github.com/en)
 - [Tips for getting started with GitHub DevSecOps](https://resources.github.com/whitepapers/Architects-guide-to-DevOps/)

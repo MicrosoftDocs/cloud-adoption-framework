@@ -2,13 +2,13 @@
 title: 'The virtual datacenter: A network perspective'
 description: Use the Cloud Adoption Framework for Azure to learn how to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
-ms.author: brblanch
+ms.author: martinek
 manager: rossort
 ms.date: 03/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: think-tank, virtual-network
+ms.custom: think-tank, virtual-network, UpdateFrequency5
 ---
 
 # The virtual datacenter: A network perspective

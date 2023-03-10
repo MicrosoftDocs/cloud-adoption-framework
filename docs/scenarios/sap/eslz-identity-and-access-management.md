@@ -2,7 +2,7 @@
 title: Identity and access management for SAP on Azure
 description: Learn more about design considerations and recommendations that relate to identity and access management in an SAP deployment on Microsoft Azure.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap
 
 # Identity and access management for SAP
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [enterprise-scale design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an SAP platform on Microsoft Azure. Since SAP is an mission-critical platform, the guidance on the enterprise-scale design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md). Following the guidance in this article will help examine design considerations and recommendations that relate to identity and access management specific to the deployment of an SAP platform on Microsoft Azure. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 **Design considerations:**
 

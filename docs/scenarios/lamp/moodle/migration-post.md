@@ -2,7 +2,7 @@
 title: How to follow up after a Moodle migration
 description: Learn how to follow up after a Moodle migration. See how to update log paths, restart servers, and take other steps that are needed to complete the migration.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

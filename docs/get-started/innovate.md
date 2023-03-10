@@ -1,24 +1,20 @@
 ---
 title: 'Get started: Build new products and services in the cloud'
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Accelerate new product and service innovation in the cloud
 
 Creating new products and services in the cloud requires a different approach than migration requires. The Innovate methodology of the Cloud Adoption Framework establishes an approach that guides the development of new products and services.
 
-This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
-
-![Diagram of the Cloud Adoption Framework methodologies, including the Innovate methodology.](../_images/get-started/innovation-map.png)
-
-*Figure 1: The Cloud Adoption Framework methodologies, including the Innovate methodology.*
+Innovation is less predictable than a standard migration, but it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide a structure for creating a balanced portfolio throughout cloud adoption.
 
 ## Step 1: Document the business strategy
 

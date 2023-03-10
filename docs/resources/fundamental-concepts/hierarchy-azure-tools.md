@@ -1,13 +1,13 @@
 ---
 title: How do Azure products support the portfolio hierarchy?
 description: How do Azure products support the portfolio hierarchy?
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency5
 ---
 
 # How do Azure products support the portfolio hierarchy?

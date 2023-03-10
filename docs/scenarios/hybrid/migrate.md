@@ -1,8 +1,8 @@
 ---
 title: Hybrid and multicloud migration
 description: Understand migration to a hybrid and multicloud environment.
-author: brianblanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Hybrid and multicloud migration
 
-In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework for Azure, migration to the cloud is already considered to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when you migrate to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
+In the [Migrate methodology](../../migrate/index.md) of the Cloud Adoption Framework, migration to the cloud is already considered to be a hybrid or multicloud process. Most of the guidance in that methodology will remain relevant when you migrate to a hybrid and multicloud environment. The biggest shift from that methodology is related to the long-term objective of migrations.
 
 ![Diagram that shows the shift from unidirectional cloud migration to bidirectional hybrid and multicloud migration described in the next paragraph.](../../_images/hybrid/primary-cloud-provider.png)
 

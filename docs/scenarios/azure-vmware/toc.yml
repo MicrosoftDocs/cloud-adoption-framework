@@ -16,9 +16,12 @@ items:
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
         href: eslz-network-topology-connectivity.md
+        items:
+          - name: Example Architectures for Azure VMware Solution
+            href: example-architectures.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
-      - name: Operations baseline
+      - name: Management and monitoring
         href: eslz-management-and-monitoring.md
       - name: Business continuity and disaster recovery
         href: eslz-business-continuity-and-disaster-recovery.md
@@ -26,9 +29,8 @@ items:
         href: eslz-platform-automation-and-devops.md
     - name: Implementation options
       items:
-      - name: Enterprise-scale for Azure VMware Solution
+      - name: Azure VMware Solution landing zone accelerator
         href: enterprise-scale-landing-zone.md
-
   - name: Migrate Azure VMware Solution to Azure
     href: migrate.md
   - name: Govern Azure VMware Solution in Azure
@@ -58,4 +60,4 @@ items:
   - name: Learn modules
     items:
     - name: Run VMware workloads on Azure VMware Solution
-      href: /learn/paths/run-vmware-workloads-azure-vmware-solution/
+      href: /training/paths/run-vmware-workloads-azure-vmware-solution/

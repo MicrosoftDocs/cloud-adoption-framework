@@ -1,8 +1,8 @@
 ---
 title: Architectural decision guides
 description: Use these core cloud deployment infrastructure component guides to support your specific cloud deployment scenarios.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 02/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -22,17 +22,11 @@ Architectural decision guides help you navigate these potential differences. Eac
 
 The following architectural decision guides cover foundational technology components for all cloud deployments. Use these guides along with the cloud governance example journeys to choose a solution that suits your organization's unique needs.
 
-[Subscriptions](./subscriptions/index.md): Design your cloud deployment's subscription design and account structure to meet your organization's ownership, billing, and management capabilities.
-
 [Identity](./identity/index.md): Integrate cloud-based identity services with your organization's identity resources to manage control and authorization within your IT environment.
-
-[Policy enforcement](./policy-enforcement/index.md): Define and enforce policy rules that align with your organization's governance requirements for cloud-deployed resources and workloads.
 
 [Resource consistency](./resource-consistency/index.md): Ensure that the deployment and organization of your cloud-based resources enforce your organization's resource management and policy requirements.
 
-[Resource tagging](./resource-tagging/index.md): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
-
-[Software Defined Networking](./software-defined-network/index.md): Use rapid deployment along with modification of virtualized networking capabilities to deploy secure workloads to the cloud. Software-defined networks can support agile workflows, isolate resources, and integrate cloud-based systems with your organization's existing IT infrastructure.
+[Resource tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide): Organize your cloud-based resources to optimize resource utilization and cost, and to support your organization's billing models, cloud accounting approaches, and management. Resource tagging requires consistent and well-organized naming and metadata practices.
 
 [Encryption](./encryption/index.md): Secure your sensitive data using encryption that meets your organization's compliance and security policy requirements.
 
@@ -40,7 +34,7 @@ The following architectural decision guides cover foundational technology compon
 
 ## Next steps
 
-Learn how subscriptions and accounts form the base foundation of a cloud deployment.
+Learn about options for managing identity in your cloud environment.
 
 > [!div class="nextstepaction"]
-> [Subscriptions design](./subscriptions/index.md)
+> [Identity decision guide](./identity/index.md)

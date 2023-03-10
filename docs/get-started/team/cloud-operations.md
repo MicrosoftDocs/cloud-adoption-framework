@@ -1,20 +1,18 @@
 ---
 title: 'Get started: Build a cloud operations team'
 description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Build a cloud operations team
 
 An operations team focuses on monitoring, repairing, and remediating issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
-
-![Get started building a cloud operations team](../../_images/get-started/operations-team-map.png)
 
 ## Step 1: Determine whether a cloud operations team is needed
 
@@ -137,7 +135,7 @@ By continually making operational improvements, the team can:
 - Improve platform operations.
 - Implement workload-specific operations.
 
-As additional workloads are transitioned to cloud operations, the need for operations improvements become clearer.
+As additional workloads are transitioned to cloud operations, the need for operations improvements becomes clearer.
 
 **Deliverables:**
 

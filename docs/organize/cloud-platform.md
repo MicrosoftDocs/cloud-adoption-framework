@@ -1,13 +1,13 @@
 ---
 title: Understand cloud platform functions
 description: Understand cloud platform functions, including the source, the scope, and the deliverable.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Cloud platform functions
@@ -32,7 +32,7 @@ The skills needed to provide full platform functionality can be provided by:
 
 - [`Foundations for Cloud Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
 - [`Microsoft Azure Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
-- [Azure network services](/learn/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Azure network services](/training/modules/azure-networking-fundamentals/): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
 **Review the following:**
 

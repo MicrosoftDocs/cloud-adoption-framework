@@ -2,7 +2,7 @@
 title: Use Ansible to scale onboarding Amazon Web Services Amazon Elastic Compute Cloud instances to Azure Arc
 description: Use Ansible to scale onboarding Amazon Web Services Amazon Elastic Compute Cloud instances to Azure Arc
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: Governance or compliance strategy
 description: Governance or compliance strategy
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -48,9 +48,8 @@ For a deeper understanding of governance, read the overview of the [Five Discipl
 
 - [Cost Management discipline](../../govern/cost-management/template.md)
 - [Security Baseline discipline](../../govern/security-baseline/template.md)
-- [Resource Consistency discipline](../../govern/resource-consistency/template.md)
-- [Identity Baseline discipline](../../govern/identity-baseline/template.md)
-- [Deployment Acceleration discipline](../../govern/deployment-acceleration/template.md)
+- [Identity Baseline discipline](/azure/cloud-adoption-framework/govern/identity-baseline/)
+- [Deployment Acceleration discipline](/azure/cloud-adoption-framework/govern/deployment-acceleration/)
 
 For information about developing governance guidance based on the Cloud Adoption Framework governance model, see [Implement a cloud governance strategy](../../govern/corporate-policy.md).
 

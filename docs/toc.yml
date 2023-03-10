@@ -2,7 +2,7 @@ items:
   - name: Cloud Adoption Framework for Azure
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About the framework
+  - name: About the Framework
     href: overview.md
   - name: What's new
     href: get-started/whats-new.md
@@ -13,18 +13,22 @@ items:
       href: scenarios/overview.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
-    - name: Data management and analytics
+    - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
+    - name: High-performance computing
+      href: scenarios/azure-hpc/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/aks/index.md
+      href: scenarios/app-platform/index.md
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
       href: scenarios/wvd/index.md
     - name: Retail industry
       href: industry/retail/index.md
+    - name: Defense
+      href: scenarios/defense/index.md
 
   - name: Adoption journeys
     items:
@@ -41,6 +45,8 @@ items:
           href: get-started/what-is-azure.md
         - name: Azure fundamental concepts
           href: ready/considerations/fundamental-concepts.md
+        - name: How does Azure Resource Manager work?
+          href: get-started/how-azure-resource-manager-works.md        
         - name: Portfolio hierarchy
           href: resources/fundamental-concepts/hosting-hierarchy.md
         - name: Azure hierarchy support
@@ -140,6 +146,8 @@ items:
       href: strategy/digital-transformation-timeline.md
     - name: Create a business case
       href: strategy/cloud-migration-business-case.md
+    - name: Building your devops practice
+      href: strategy/building-devops-practice.md
     - name: Share your strategy
       href: strategy/share-your-strategy.md
     - name: Additional considerations
@@ -239,7 +247,7 @@ items:
         href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
         href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Establish monitoring and reporting
+      - name: Monitoring and reporting
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
@@ -257,6 +265,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Design principles
+        href: ready/landing-zone/design-principles.md
       - name: Journey to the target architecture
         href: ready/landing-zone/landing-zone-journey.md
       - name: Design areas
@@ -274,9 +284,33 @@ items:
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
+          - name: Handling Azure landing zones across multiple tenants
+            items:
+              - name: Overview
+                href: ready/landing-zone/design-area/multi-tenant/overview.md
+              - name: Scenarios
+                href: ready/landing-zone/design-area/multi-tenant/scenarios.md
+              - name: Considerations & recommendations
+                items:
+                  - name: General
+                    href: ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md
+                  - name: Automation
+                    href: ready/landing-zone/design-area/multi-tenant/automation.md
+                  - name: Canary environments
+                    href: ready/landing-zone/design-area/multi-tenant/canary.md
+                  - name: Azure Lighthouse
+                    href: ready/landing-zone/design-area/multi-tenant/lighthouse.md
 
         - name: Identity and access management
-          href: ready/landing-zone/design-area/identity-access.md
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/identity-access.md
+          - name: Active Directory and Hybrid Identity
+            href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
+          - name: Platform access
+            href: ready/landing-zone/design-area/identity-access-platform-access.md
+          - name: Landing zones
+            href: ready/landing-zone/design-area/identity-access-landing-zones.md
 
         - name: Network topology and connectivity
           items:
@@ -333,6 +367,8 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Tailoring the Azure landing zones architecture
+            href: ready/landing-zone/tailoring-alz.md
           - name: Adopt policy-driven guardrails
             href: ready/enterprise-scale/dine-guidance.md
           - name: Additional information
@@ -345,6 +381,8 @@ items:
               href: ready/azure-best-practices/resource-abbreviations.md
             - name: Define your tagging strategy
               href: ready/azure-best-practices/resource-tagging.md
+            - name: Resource naming and tagging decision guide
+              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
             - name: Move resources
               href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Design options for specific use cases
@@ -366,7 +404,9 @@ items:
             href: ready/landing-zone/design-area/encryption-and-keys.md
           - name: Service enablement framework
             href: ready/landing-zone/design-area/service-enablement-framework.md
-
+          - name: Security control mapping
+            href: ready\control-mapping\security-control-mapping.md
+            
         - name: Management
           items:
           - name: Overview
@@ -401,11 +441,36 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/platform-automation-devops.md
-          - name: Test-driven development (TDD) for landing zones
-            href: ready/considerations/test-driven-development.md
-          - name: Landing zone TDD in Azure
-            href: ready/considerations/azure-test-driven-development.md
-
+          - name: Platform automation
+            items:
+            - name: Automation
+              href: ready/considerations/automation.md
+          - name: Subscription vending
+            href: ready/landing-zone/design-area/subscription-vending.md
+          - name: DevOps
+            items:
+            - name: DevOps considerations
+              href: ready/considerations/devops-principles-and-practices.md
+            - name: Team topologies
+              href: ready/considerations/devops-teams-topologies.md
+          - name: Development strategy
+            items:
+            - name: Development lifecycle
+              href: ready/considerations/development-strategy-development-lifecycle.md
+            - name: Infrastructure as Code
+              href: ready/considerations/infrastructure-as-code.md
+            - name: Environments
+              href: ready/considerations/environments.md
+            - name: Test-driven development for Azure Landing Zones
+              href: ready/considerations/development-strategy-test-driven-development.md
+            - name: DevOps Toolchain considerations
+              href: ready/considerations/devops-toolchain.md
+          - name: Security considerations
+            items:
+            - name: Overview
+              href: ready/considerations/security-considerations-overview.md
+            - name: Role-based access control for DevOps Tools
+              href: ready/considerations/security-considerations-tools.md
       - name: Implementation options
         href: ready/landing-zone/implementation-options.md
         items:
@@ -415,18 +480,10 @@ items:
           items:
           - name: Overview
             href: ready/enterprise-scale/index.md
-          - name: Design principles
-            href: ready/enterprise-scale/design-principles.md
           - name: Implement enterprise-scale landing zones
             href: ready/enterprise-scale/implementation.md
-          - name: Testing approach for enterprise-scale
-            href: ready/enterprise-scale/testing-approach.md
-          - name: Terraform module for CAF enterprise-scale
-            href: ready/enterprise-scale/terraform-module-caf-enterprise-scale.md
           - name: Scenario-specific enterprise-scale landing zones
             href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
-          - name: Enterprise-scale FAQ
-            href: ready/enterprise-scale/faq.md
 
         - name: Start small and expand
           items:
@@ -434,12 +491,19 @@ items:
             href: ready/landing-zone/migrate-landing-zone.md
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
-          - name: Terraform landing zones
+
+        - name: Deploy Azure landing zones with Terraform
+          items:
+          - name: Overview
+            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
+          - name: Azure landing zones Terraform module
+            href: ready/landing-zone/terraform-module.md
+          - name: CAF Terraform landing zones
             href: ready/landing-zone/terraform-landing-zone.md
 
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
-        - name: Partner landing zones
+        - name: Get landing zone help
           href: ready/landing-zone/partner-landing-zone.md
 
       - name: Align
@@ -450,6 +514,8 @@ items:
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
           href: ready/landing-zone/align-scenarios.md
+        - name: Brownfield landing zone considerations
+          href: ready/landing-zone/brownfield-considerations.md
 
       - name: Enhance
         items:
@@ -457,10 +523,22 @@ items:
           href: ready/considerations/index.md
         - name: Improve landing zone operations
           href: ready/considerations/landing-zone-operations.md
+        - name: Testing approach for Azure landing zones
+          href: ready/enterprise-scale/testing-approach.md
         - name: Improve landing zone governance
-          href: ready/considerations/landing-zone-governance.md
-        - name: Improve landing zone security
           items:
+          - name: Overview
+            href: ready/considerations/landing-zone-governance.md
+          - name: Naming and tagging standards
+            href: ready/azure-best-practices/naming-and-tagging.md
+          - name: Track costs across workloads
+            href: ready/azure-best-practices/track-costs.md
+          - name: Scale with multiple subscriptions
+            href: ready/azure-best-practices/scale-subscriptions.md
+          - name: Organize subscriptions
+            href: ready/landing-zone/design-area/resource-org.md
+        - name: Improve landing zone security
+          items: 
           - name: Overview
             href: ready/considerations/landing-zone-security.md
           - name: Onboard a subscription to Microsoft Defender for Cloud
@@ -476,6 +554,9 @@ items:
           - name: Azure operational security best practices
             href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
+      - name: Azure landing zones FAQ
+        href: ready/enterprise-scale/faq.md
+
     - name: Skills relevant to ready and landing zones
       href: ready/suggested-skills.md
 
@@ -484,6 +565,12 @@ items:
 
   - name: Adopt
     items:
+    - name: Overview
+      href: adopt/index.md
+    - name: Cloud adoption journey
+      href: adopt/cloud-adoption.md
+    - name: Migrate or modernize first? 
+      href: adopt/migrate-or-modernize.md
     - name: Migrate
       items:
       - name: Overview
@@ -492,6 +579,8 @@ items:
         items:
         - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
+        - name: Migration tools decision guide
+          href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
         - name: Deploy workloads
@@ -725,9 +814,9 @@ items:
               href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Amazon RDS PostgreSQL to Azure Database for PostgreSQL online
               href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB offline
+            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB offline
               href: /azure/dms/tutorial-mongodb-cosmos-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB's API for MongoDB online
+            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB online
               href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: /azure/postgresql/howto-migrate-from-oracle?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -769,15 +858,13 @@ items:
           items:
           - name: Overview
             href: infrastructure/mainframe-migration/index.md
-          - name: Myths and facts
-            href: infrastructure/mainframe-migration/myths-and-facts.md
           - name: Switch from mainframes to Azure
             href: infrastructure/mainframe-migration/migration-strategies.md
           - name: Mainframe application migration
             href: infrastructure/mainframe-migration/application-strategies.md
         - name: Migrate secure workloads
           items:
-          - name: Securing and managing workloads after migration
+          - name: Secure and manage workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
           - name: Azure database security best practices
             href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -902,6 +989,31 @@ items:
 
       - name: Skills relevant to migrate
         href: migrate/suggested-skills.md
+    
+    - name: Modernize
+      items:
+      - name: Overview  
+        href: modernize/index.md
+      - name: Business alignment
+        items:
+        - name: Overview
+          href: modernize/business-alignment/index.md
+        - name: Envision 
+          href: modernize/business-alignment/envision-cloud-modernization.md
+        - name: Evaluate
+          href: modernize/business-alignment/evaluate-modernization-options.md
+        - name: Commit
+          href: modernize/business-alignment/commit-to-modernization-plan.md      
+      - name: Modernization strategies
+        items:
+        - name: Overview
+          href: modernize/modernize-strategies/index.md
+        - name: Process modernization 
+          href: modernize/modernize-strategies/process-modernization.md
+        - name: Application modernization
+          href: modernize/modernize-strategies/application-modernization.md
+        - name: Database modernization
+          href: modernize/modernize-strategies/database-modernization.md
 
     - name: Innovate
       items:
@@ -1113,7 +1225,7 @@ items:
             - name: Event-driven applications
               items:
               - name: Learning path for creating serverless applications
-                href: /learn/paths/create-serverless-applications/
+                href: /training/paths/create-serverless-applications/
               - name: Azure Functions developer guide
                 href: /azure/azure-functions/functions-reference?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: Azure Serverless Computing Cookbook
@@ -1130,9 +1242,9 @@ items:
             - name: Get started with a shared repository via GitHub
               href: https://guides.github.com/introduction/git-handbook/
             - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
             - name: Synchronize Power Apps with Azure DevOps
-              href: /power-platform/alm/devops-build-tools?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+              href: /power-platform/alm/devops-build-tools?&preserve-view=true&toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Feedback loops
             items:
             - name: Manage feedback with Azure DevOps
@@ -1146,7 +1258,7 @@ items:
           - name: Reliable testing
             items:
             - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops
+              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
           - name: Solution deployment
             items:
             - name: Continuous deployment with Azure Pipelines and GitHub
@@ -1289,6 +1401,23 @@ items:
             href: innovate/considerations/devices.md
           - name: Predict and influence
             href: innovate/considerations/predict.md
+    - name: Relocate
+      items:
+      - name: Overview
+        href: relocate/index.md
+      - name: Initiate
+        href: relocate/initiate.md
+      - name: Move
+        items:
+        - name: Evaluate
+          href: relocate/evaluate.md
+        - name: Select
+          href: relocate/select.md
+        - name: Migrate
+          href: relocate/migrate.md
+        - name: Cutover
+          href: relocate/cutover.md
+                
 
   - name: Govern
     items:
@@ -1424,63 +1553,40 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Download the template
-          href: govern/identity-baseline/template.md
-        - name: Understand business risks
-          href: govern/identity-baseline/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/identity-baseline/metrics-tolerance.md
-        - name: Sample Identity Baseline policies
-          href: govern/identity-baseline/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/identity-baseline/compliance-processes.md
-        - name: Improve the identity baseline
-          href: govern/identity-baseline/discipline-improvement.md
-        - name: Azure tools for identity baseline
-          href: govern/identity-baseline/toolchain.md
+        - name: Azure Active Directory governance guidance
+          href: govern/identity-baseline/azure-ad-configuration.md
+        - name: Administrative access governance guidance
+          href: govern/identity-baseline/administrative-access.md
+        - name: Business user access governance guidance
+          href: govern/identity-baseline/business-user-access.md
+        - name: Application access governance guidance
+          href: govern/identity-baseline/application-access.md
       - name: Resource consistency
         items:
         - name: Overview of resource consistency
           href: govern/resource-consistency/index.md
-        - name: Download the template
-          href: govern/resource-consistency/template.md
-        - name: Understand business risks
-          href: govern/resource-consistency/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/resource-consistency/metrics-tolerance.md
-        - name: Sample Resource Consistency policies
-          href: govern/resource-consistency/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/resource-consistency/compliance-processes.md
-        - name: Improve resource consistency
-          href: govern/resource-consistency/discipline-improvement.md
-        - name: Azure tools for resource consistency
-          href: govern/resource-consistency/toolchain.md
-        - name: Resource access management
-          href: govern/resource-consistency/resource-access-management.md
-        - name: Governance design for a simple workload
-          href: govern/resource-consistency/governance-simple-workload.md
-        - name: Governance design for multiple teams
-          href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Management groups guidance
+          href: govern/resource-consistency/management-group-structure.md
+        - name: Resource naming guidance
+          href: govern/resource-consistency/naming.md
+        - name: Resource tagging guidance
+          href: govern/resource-consistency/tagging.md
+        - name: Managing business constraints
+          href: govern/resource-consistency/business-constraints.md
+        - name: Keep your Azure landing zone up to date
+          href: govern/resource-consistency/keep-azure-landing-zone-up-to-date.md
+        - name: Migrate Azure landing zone policies to Azure built-in policies
+          href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
+        - name: Update Azure landing zone custom policies
+          href: govern/guides/standard/update-custom-policies.md          
       - name: Deployment acceleration
         items:
         - name: Overview of deployment acceleration
           href: govern/deployment-acceleration/index.md
-        - name: Download the template
-          href: govern/deployment-acceleration/template.md
-        - name: Understand business risks
-          href: govern/deployment-acceleration/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/deployment-acceleration/metrics-tolerance.md
-        - name: Sample Deployment Acceleration policies
-          href: govern/deployment-acceleration/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/deployment-acceleration/compliance-processes.md
-        - name: Improve deployment acceleration
-          href: govern/deployment-acceleration/discipline-improvement.md
-        - name: Azure tools for deployment acceleration
-          href: govern/deployment-acceleration/toolchain.md
-
+        - name: Consistency and repeatability in deployments
+          href: govern/deployment-acceleration/deployment-consistency-repeatability.md
+        - name: Policy visibility in deployments
+          href: govern/deployment-acceleration/policy-visibility-in-deployment.md
     - name: Govern antipatterns
       href: antipatterns/govern-antipatterns.md
 
@@ -1540,7 +1646,6 @@ items:
             href: manage/azure-server-management/common-policies.md
         - name: Review of tools and services
           href: manage/azure-server-management/tools-services.md
-        
 
       - name: Monitoring
         items:
@@ -1550,6 +1655,8 @@ items:
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
           href: manage/monitor/observability.md
+        - name: Service Level Objectives
+          href: manage/monitor/service-level-objectives.md
         - name: Data collection
           href: manage/monitor/data-collection.md
         - name: Response
@@ -1628,33 +1735,41 @@ items:
         href: secure/devsecops-controls.md
 
     - name: Best practices
-      items:
-      - name: Securing DevOps
-        href: secure/best-practices/secure-devops.md
-      - name: Secure DevOps governance
-        href: secure/best-practices/end-to-end-governance.md
-      - name: Azure Virtual Desktop
-        href: scenarios/wvd/eslz-security-governance-and-compliance.md
-      - name: Managing secrets
-        href: secure/best-practices/manage-secrets.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Network security
-        href: /security/compass/network-security-containment
+      items:  
+      - name: Infrastructure and development security
+        items:
+        - name: Introduction
+          href: secure/security-best-practices-introduction.md
+        - name: Infrastructure security
+          items:
+          - name: Overview
+            href: secure/infrastructure-security-overview.md
+          - name: Strategy
+            href: secure/infrastructure-security-strategy.md
+          - name: Architecture
+            href: secure/infrastructure-security-architecture.md
+          - name: Implementation
+            href: secure/infrastructure-security-implementation.md
+          - name: Operations and governance
+            href: secure/infrastructure-security-operations-governance.md
+        - name: Development security
+          items:
+          - name: Strategy
+            href: secure/development-security-strategy-overview.md
+          - name: Innovation security
+            href: secure/development-innovation-security.md
+          - name: Securing DevOps strategy and process
+            href: secure/devops-strategy-process-security.md
+          - name: Securing DevOps CI/CD pipelines
+            href: secure/best-practices/secure-devops.md
+          - name: Secure DevOps governance
+            href: secure/best-practices/end-to-end-governance.md
+          - name: Architecture
+            href: secure/development-security-architecture.md
+          - name: Implementation
+            href: secure/development-security-implementation-operations.md
       - name: Toolchain
         href: secure/best-practices/toolchain.md
-      - name: Securing Power Platform
-        items:
-          - name: Overview
-            href: /power-platform/admin/security/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security and governance considerations
-            href: /power-platform/admin/governance-considerations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Compliance and data privacy
-            href: /power-platform/admin/wp-compliance-data-privacy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Establish DLP policies
-            href: /power-platform/guidance/adoption/dlp-strategy?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Enable cross-tenant isolation
-            href: /power-platform/admin/cross-tenant-restrictions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Data protection in connectors
-            href: /connectors/protection?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
     - name: Security considerations
       items:
@@ -1664,13 +1779,13 @@ items:
         href: organize/cloud-security.md
       - name: Getting started
         href: get-started/security.md
-      - name: Azure security top 10
+      - name: Security best practices
         href: secure/security-top-10.md
-      - name: Microsoft cybersecurity reference architectures
+      - name: Microsoft Cybersecurity Reference Architectures
         href: /security/cybersecurity-reference-architecture/mcra?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Security documentation
         href: /security/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Azure security benchmarks
+      - name: Azure Security Benchmark
         href: /security/benchmark/azure/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
   - name: Organize
@@ -1750,8 +1865,6 @@ items:
       items:
       - name: Overview
         href: decision-guides/index.md
-      - name: Subscriptions
-        href: decision-guides/subscriptions/index.md
       - name: Identity
         items:
         - name: Identity decision guide
@@ -1764,86 +1877,36 @@ items:
           href: ready/considerations/roles.md
         - name: Choose an authentication method
           href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Policy enforcement
-        href: decision-guides/policy-enforcement/index.md
-      - name: Resource consistency
-        href: decision-guides/resource-consistency/index.md
-      - name: Resource tagging
-        href: decision-guides/resource-tagging/index.md
-      - name: Encryption
-        href: decision-guides/encryption/index.md
-      - name: Networking
-        items:
-        - name: Review networking options
-          href: ready/considerations/networking-options.md
-        - name: Network boundary security
-          href: resources/networking-vdc.md
-        - name: Plan virtual networks
-          href: /azure/virtual-network/virtual-network-vnet-plan-design-arm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Best practices for network security
-          href: /azure/security/fundamentals/network-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Perimeter networks
-          href: ready/azure-best-practices/perimeter-networks.md
-        - name: Hub and spoke network topology
-          href: ready/azure-best-practices/hub-spoke-network-topology.md
-        - name: Software-defined networks
-          items:
-          - name: Overview
-            href: decision-guides/software-defined-network/index.md
-          - name: PaaS-only
-            href: decision-guides/software-defined-network/paas-only.md
-          - name: Cloud-native
-            href: decision-guides/software-defined-network/cloud-native.md
-          - name: Cloud DMZ
-            href: decision-guides/software-defined-network/cloud-dmz.md
-          - name: Hybrid
-            href: decision-guides/software-defined-network/hybrid.md
-          - name: Hub and spoke model
-            href: decision-guides/software-defined-network/hub-spoke.md
-      - name: Logging and reporting
-        href: decision-guides/logging-and-reporting/index.md
-      - name: Cost management
-        items:
-        - name: Track costs
-          href: ready/azure-best-practices/track-costs.md
-        - name: Optimize your cloud investment
-          href: /azure/cost-management-billing/costs/cost-mgt-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Create and manage budgets
-          href: /azure/cost-management-billing/costs/tutorial-acm-create-budgets?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Export cost data
-          href: /azure/cost-management-billing/costs/tutorial-export-acm-data?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Optimize costs from recommendations
-          href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Monitor usage and spending
-          href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Migration tools
-        href: decision-guides/migrate-decision-guide/index.md
       - name: Storage
         items:
         - name: Review storage options
           href: ready/considerations/storage-options.md
-        - name: Storage security guide
-          href: /azure/storage/blobs/security-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Databases
         items:
         - name: Review data options
           href: ready/considerations/data-options.md
-        - name: Database security best practices
-          href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Choose a deployment option in Azure SQL Database
-          href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+      - name: Networking
+        items:
+        - name: Hub and spoke network topology
+          href: ready/azure-best-practices/hub-spoke-network-topology.md
+        - name: Perimeter networks
+          href: ready/azure-best-practices/perimeter-networks.md
+      - name: Resource consistency
+        href: decision-guides/resource-consistency/index.md
+      - name: Encryption
+        href: decision-guides/encryption/index.md
+      - name: Logging and reporting
+        href: decision-guides/logging-and-reporting/index.md
       - name: AI + machine learning
         items:
-        - name: Organize and set up Azure Machine Learning environments
+        - name: Organize and set up Azure Machine Learning
           href: ready/azure-best-practices/ai-machine-learning-resource-organization.md
         - name: Best practices for enterprise security
           href: ready/azure-best-practices/ai-machine-learning-enterprise-security.md
-        - name: Budget, cost, and quota management with Azure Machine Learning
+        - name: Manage budget, cost, and quota with Azure
           href: ready/azure-best-practices/optimize-ai-machine-learning-cost.md
-        - name: Machine learning DevOps (MLOps)
+        - name: Machine learning operations
           href: ready/azure-best-practices/ai-machine-learning-mlops.md
-      - name: Create hybrid cloud consistency
-        href: ready/considerations/hybrid-consistency.md
 
     - name: Additional resources
       items:
@@ -1854,7 +1917,7 @@ items:
       - name: Docs for product implementation
         href: /
       - name: Learn to develop skills
-        href: /learn/
+        href: /training/
       - name: Assessments to personalize guidance
         href: /assessments/
 
@@ -1866,3 +1929,6 @@ items:
         href: resources/azure-scaffold.md
       - name: Virtual datacenter (VDC)
         href: resources/vdc.md
+      - name: Virtual datacenter boundary security
+        href: resources/networking-vdc.md
+

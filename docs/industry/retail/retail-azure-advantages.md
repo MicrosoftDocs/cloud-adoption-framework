@@ -1,8 +1,8 @@
 ---
 title: Azure for Retail
 description: Learn how your retail organization can use Azure to transform their business and provide great customer service using a secure cloud platform.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,13 +1,13 @@
 ---
 title: Understand cloud governance functions
 description: Understand the function of a cloud governance team, including the source, the scope, and the deliverable.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 <!-- docutune:ignore IS -->
@@ -36,7 +36,7 @@ These baseline functions help you identify risks related to current and future r
 
 - Review the [Govern methodology](../govern/index.md).
 - Take the [governance benchmark assessment](../govern/benchmark.md).
-- [Introduction to security in Azure](/learn/modules/protect-against-security-threats-azure/): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles for you.
+- [Introduction to security in Azure](/training/modules/protect-against-security-threats-azure/): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles for you.
 - Understand how to work across groups to [manage cost](./cost-conscious-organization.md).
 
 ## Minimum scope

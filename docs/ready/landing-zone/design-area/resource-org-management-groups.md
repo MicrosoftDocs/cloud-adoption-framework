@@ -1,13 +1,13 @@
 ---
 title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
-author: DominicAllen
-ms.author: doalle
-ms.date: 01/04/2022
+author: martinekuan
+ms.author: martinek
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Management groups
@@ -58,14 +58,17 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Don't create management groups for production, testing, and development environments. If necessary, separate these groups into different subscriptions in the same management group. To review further guidance on this topic, see:
 
-  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
-## Management groups in the Azure landing zone accelerator
+## Management groups in the Azure landing zone accelerator and Azure landing zone Bicep repository
 
-The following decisions have been made and included in the implementation for the management group structure. These decisions are part of the Azure landing zone accelerator.
+The following decisions have been made and included in the implementation for the management group structure. These decisions are part of the Azure landing zone accelerator and the [management groups module of the Azure landing zone bicep repo](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/managementGroups).
 
-![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-org.png)
+> [!NOTE]
+> The management group hierarchy can be modified in the Azure landing zone bicep module by editing [managementGroups.bicep](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/managementGroups/managementGroups.bicep).
+
+![Diagram that shows the Azure landing zone accelerator management group structure.](./media/sub-organization.png)
 
 | Management group| Description |
 |---|---|
@@ -79,6 +82,12 @@ The following decisions have been made and included in the implementation for th
 |**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
 |**Sandboxes**| The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 |**Decommissioned**| The dedicated management group for landing zones that are being canceled. Canceled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
+
+> [!NOTE]
+> For many organization, the default `Corp` and `Online` management groups provide an ideal starting point.
+> Some organizations need to add more, while others won't find them relevant to their organization.
+>
+> If you are considering making changes to the Management Group hierarchy, please refer to our [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md) guidance.
 
 ## Permissions for the Azure landing zone accelerator
 

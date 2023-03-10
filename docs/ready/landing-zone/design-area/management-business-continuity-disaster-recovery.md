@@ -1,13 +1,13 @@
 ---
 title: Business continuity and disaster recovery
 description: Design area guidance for business continuity and disaster recovery
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Business continuity and disaster recovery
@@ -70,6 +70,6 @@ The following design practices support BCDR for application workloads:
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity if an outage affects an Azure region or peering provider location.
 
-- Avoid using overlapping IP address ranges for production and DR sites.
+- Avoid using overlapping IP address ranges in production and DR networks.
 
-  Production DR networks that use the same classless interdomain routing blocks require a failover process that can complicate and delay application failover. When possible, plan for a BCDR network architecture that provides concurrent connectivity to all sites.
+  Production and DR networks that have overlapping IP addresses require a failover process that can complicate and delay application failover. When possible, plan for a BCDR network architecture that provides concurrent connectivity to all sites.

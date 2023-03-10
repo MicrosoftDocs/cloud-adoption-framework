@@ -2,7 +2,7 @@
 title: Create a VMware vSphere template for Ubuntu Server 18.04
 description: Create a VMware vSphere template for Ubuntu Server 18.04.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
