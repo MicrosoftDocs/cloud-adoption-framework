@@ -43,3 +43,4 @@ Each of these laws of physics drives the following risks that commonly affect mi
 ## Next steps
 
 [Understand staging activities during a migration](./stage.md)
+
