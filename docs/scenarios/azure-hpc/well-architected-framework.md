@@ -93,7 +93,7 @@ HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Stora
 
 ### Node health check
 
-[Azure Managed Grafana](https://azure.microsoft.com/services/managed-grafana/#overview) is a fully managed service for analytics and monitoring solutions. It's supported by Grafana Enterprise, which provides extensible data visualizations. This can be integrated in the HPC workloads and an example is shown in Azure HPC OnDemand Platform like [AzHop](https://azure.github.io/az-hop/).
+[Azure Managed Grafana](https://azure.microsoft.com/services/managed-grafana/#overview) is a fully managed service for analytics and monitoring solutions. It's supported by Grafana Enterprise, which provides extensible data visualizations. This can be integrated in the HPC workloads and an example is shown in the [Azure HPC OnDemand Platform](https://azure.github.io/az-hop/).
 
 ## Performance efficiency
 
