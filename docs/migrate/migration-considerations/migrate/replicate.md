@@ -12,7 +12,7 @@ ms.custom: internal
 
 # The role of replication in the migration process
 
-On-premises datacenters store physical assets, like servers, appliances, and network devices. But each server is only a physical shell. The real value comes from the binary that runs on the server. The applications and data are the reason why the datacenter exists. They are the primary binaries to migrate. Digital assets and binary sources, like operating systems, network routes, files, and security protocols, power the applications and data stores.
+On-premises datacenters store physical assets, like servers, appliances, and network devices. But each server is only a physical shell. The real value comes from the binary that runs on the server. The applications and data are the reason why the datacenter exists. They're the primary binaries to migrate. Digital assets and binary sources, like operating systems, network routes, files, and security protocols, power the applications and data stores.
 
 Replication is the workhorse of migration efforts. It copies a point-in-time version of various binaries. The binary snapshots are then copied to a new platform and deployed onto new hardware in a process called *seeding*. When this process is executed properly, the seeded copy of the binary behaves identically to the original binary on the old hardware. But the snapshot of the binary is out of date and misaligned with the original source. To keep the new binary and the old binary aligned, a process called *synchronization* continuously updates the copy that's stored in the new platform. Synchronization continues until the asset is promoted in alignment with the chosen promotion model. At that point, the synchronization stops.
 
