@@ -63,8 +63,8 @@ Use the following checklist and application development resources to plan your a
   For more information, see:
   - [How Kubernetes and configuration management works (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=vRcQOZLnKUk&index=11)
   - [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10)
-  - [Use Azure Key Vault with Kubernetes](https://github.com/azure/kubernetes-keyvault-flexvol)
-  - [Use Azure AD pod identity to authenticate and access Azure resources](https://github.com/azure/aad-pod-identity)
+  - [Use Azure Key Vault with Kubernetes](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
+  - [Use Azure AD pod identity to authenticate and access Azure resources](https://azure.github.io/azure-workload-identity/docs)
 
 ## Deploy to production and apply best practices
 
