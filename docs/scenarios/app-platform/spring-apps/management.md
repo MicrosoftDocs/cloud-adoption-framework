@@ -36,7 +36,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     An important use case is _service discovery_. Instrument your application so that Azure Spring Apps can maintain a list of live apps to call that's used to route and load balance requests.
 
-- **Health probes**. You can set up health probes to detect the_ health of the backend services_. Make sure that you review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
+- **Health probes**. You can set up health probes to detect the _health of the backend services_. Make sure that you review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
 
 
 ## Design Recommendations
@@ -50,7 +50,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
     > [!NOTE] 
     > There's a delay for logs to appear in your storage account, your event hub, or Log Analytics. If the Spring app instances are deleted or moved during that time, the diagnostic settings should be deleted to ensure that another app with the same resource id does not reuse the same diagnostic setting.
 
-- Use Application Insights as a consistent Application Performance Monitoring (APM) tool across all application components to c_ollect application logs, metrics, and traces_. It can collect data from all the dependencies and traces and has the capability to visualize end-to-end transactions. 
+- Use Application Insights as a consistent Application Performance Monitoring (APM) tool across all application components to _collect application logs, metrics, and traces_. It can collect data from all the dependencies and traces and has the capability to visualize end-to-end transactions. 
 
     Azure Spring Apps allows you to collect Spring Cloud Resilience4J metrics into Application Insights. For that you need to enable the Java In-Process agent and configure dimension collection. 
 
@@ -63,7 +63,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
 - Take advantage of Spring Boot Actuator Health Indicator to configure your health probes.
 
-    Always use the _readiness and liveness probes_ together so that apps are removed from service discovery features. 
+    Always use _readiness and liveness probes_ together so that unhealthy app instances are removed from service discovery features. 
 
     If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment helps avoid the probe to fail and force the application to restart.
 
