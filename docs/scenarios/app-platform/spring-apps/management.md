@@ -18,7 +18,7 @@ The organization might provide **centralized monitoring shared by all workloads*
 
 > For information about the platform design, see [Platform design: Workload management and monitoring](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-workloads).
 
-Alternatively, you can choose to **provision your own monitoring resources**. This approach gives the application team more autonomy and **simplify the overall management** of your application. The tradeoff might be increased management overhead. The Azure Spring Apps landing zone accelerator and the following guidance are based on this approach. 
+Alternatively, you can choose to **provision your own monitoring resources**. This approach gives the application team more autonomy and **simplifies the overall management** of your application. The tradeoff might be increased management overhead. The Azure Spring Apps landing zone accelerator and the following guidance are based on this approach. 
 
 ## Design considerations
 
@@ -28,13 +28,13 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     You should consider *storing this data for future analysis*. Also, have the ability to visualize so that you can spot trends quickly.
 
-- **Distributed tracing**. Distributed tracing gives you _observability across different services_ within your Azure Spring Apps ecosystem. You'll need to configure monitoring agents for your application. 
+- **Distributed tracing**. Distributed tracing gives you _observability across different services_ within your Azure Spring Apps ecosystem. You need to configure monitoring agents for your application. 
 
 - **Alerts**. The application teams must _get notified_ about events that are important for the workload. Setting alerts can achieve that goal. You can set alerts that monitor resources based on metrics such as storage, rate of requests, data usage, and others.
 
 - **Instrumentation**. Instrumentation allows you to _capture data from the application_.  
 
-    An important use case is_ service discovery_. Instrument your application so that Azure Spring Apps can maintain a list of live apps to call that's used to route and load balance requests.
+    An important use case is _service discovery_. Instrument your application so that Azure Spring Apps can maintain a list of live apps to call that's used to route and load balance requests.
 
 - **Health probes**. You can set up health probes to detect the_ health of the backend services_. Make sure that you review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
 
@@ -56,7 +56,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     Azure Spring Apps integrates Spring Cloud Sleuth and Zipkin with Application Insights.
 
-- Choose service discovery mechanisms that allow you to _quickly discover and register app instances_. The options vary by Azure Spring Apps. 
+- Choose service discovery mechanisms that allow you to _quickly discover and register app instances_. The options vary based on the chosen Azure Spring Apps tier. 
 
     - Basic/Standard: [Kubernetes Service Discovery or  Managed Spring Cloud Service Registry (using Eureka)](/azure/spring-apps/how-to-service-registration?pivots=programming-language-java)
     - (Enterprise) [Tanzu Service Registry](/azure/spring-apps/how-to-enterprise-service-registry) 
@@ -65,7 +65,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     Always use the _readiness and liveness probes_ together so that apps are removed from service discovery features. 
 
-    If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment will help avoid the probe to fail and force the application to restart.
+    If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment helps avoid the probe to fail and force the application to restart.
 
 
 ## Related links

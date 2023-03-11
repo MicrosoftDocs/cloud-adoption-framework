@@ -27,13 +27,15 @@ As the workload owner, follow these best practices to make sure that the applica
 
 - **Access from the application to other services**. The application should authenticate itself when connecting to backend services that are part of the workload. This will protect the services from unauthorized access. Consider features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials. 
 
-- **Access to the application**. Users or other components might access the application over the public internet. Access must be authenticated based on client certificates or through Active Directory (Azure AD). 
+- **Access to the application**. Users might send requests to the application over the public internet. Or requests might come from private or on-premises networks. In either case, access must be authenticated based on client certificates or through Active Directory (Azure AD). 
 
-	Consider the technology options for the service discovery mechanism that will involke calls between apps. With Kubernetes Service Discovery approach <<TBD: pros and cons>>. Alternatively, using Managed Spring Cloud Service Registry (OSS) <<pros/cons>>. TBD: talk about authorization using Azure AD and RBAC. 
+	Consider the technology options for the service discovery mechanism that will involke calls between apps. The options vary by Azure Spring Apps tiers. 
 
-	TBD: Talk about secure communication model from client to application with TLS/SSL
+    - Basic/Standard: [Kubernetes Service Discovery or  Managed Spring Cloud Service Registry (using Eureka)](/azure/spring-apps/how-to-service-registration?pivots=programming-language-java)
+    - (Enterprise) [Tanzu Service Registry](/azure/spring-apps/how-to-enterprise-service-registry) . 
 
-- **User access to resources based on responsibilities**. Your workload maybe accessed by various team members with different responsibilities. For example, you might need to grant access to: 
+	
+- **Operator access to resources**. Your workload maybe accessed by various team members with different responsibilities. For example, you might need to grant access to: 
 
 	- The platform team members who need operational access.
 	- The application team memmbers who will develop applications.
@@ -55,14 +57,19 @@ As the workload owner, follow these best practices to make sure that the applica
 
 ##### Managed identities
 
-Use managed identities for the application so that it's authenticated through Azure AD. Of the [types of managed identifies](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types), decide which type is appropriate per use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. However, if you want permissions to be tied to the application lifecycle, system-managed identities might be better suited. For more information, see [Choose system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
+Use managed identities for the application so that it's authenticated through Azure AD. Not all services supported this feature of Azure AD. For information, see [Azure services that support Azure AD authentication](/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
+
+
+Of the [types of managed identifies](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types), decide which type is appropriate per use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. However, if you want permissions to be tied to the application lifecycle, system-managed identities might be better suited. 
+
+For more information, see [Choose system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
 
 Use built-in Azure RBAC roles to simplify the management of required permissions for managed identity.
 
 - Azure Spring Apps Identities
 	- Use your own managed identity for Azure Spring Apps
-	- Use system-assigned and user-assigned managed identities separately 
-	- Use Privileged Identity Management in Azure AD and identity and access management in Azure landing zones.
+	- Use system-assigned and user-assigned managed identities separately. For more information, see [Best practices when using managed identities](/azure/spring-apps/how-to-use-managed-identities?pivots=sc-standard-tier#best-practices-when-using-managed-identities). 
+	- Use Privileged Identity Management in Azure AD.
 
 ##### Secure internet communication
 
@@ -70,7 +77,7 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 - Use self-signed certificated only for non-prod environments
 - Securely load certificates from Azure Key Vault
 
-##### Role-based access controls
+##### Role-based access control (RBAC)
 
 - Consider creating custom roles, following the principle of least privilege when out-of-box roles require modifications to existing permissions. 
 - Choose enhanced-security storage for keys, secrets, certificates, and application configuration.
