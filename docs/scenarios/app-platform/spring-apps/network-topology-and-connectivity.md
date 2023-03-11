@@ -81,7 +81,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
 
 - Azure Spring Apps are deployed in a virtual network or outside the network. For additional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
 
-## Next steps
+## Next step
 
 Review the critical design areas to make complete considerations and recommendations for your architecture. 
 

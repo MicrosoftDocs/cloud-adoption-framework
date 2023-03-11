@@ -138,3 +138,11 @@ Patch/Vulnerability & Change Management		Patch/Vulnerability & Change Management
 Anti-Phishing		Anti-Phishing-14.1	Azure Spring App should use network injection	1.1.0
 Appendix A: Checklists
 Pending Review. I will add a link to the various Checklist.
+
+
+## Next step
+
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
+
+> [!div class="nextstepaction"] 
+> [Monitoring operations](./management.md)

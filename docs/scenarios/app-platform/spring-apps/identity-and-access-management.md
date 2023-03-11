@@ -77,3 +77,9 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 - For automated deployment, set up a service principal that has the minimum required permissions to deploy from the CI/CD pipeline.
 - Enable diagnostic logging for Application Console, System Logs, Ingress Logs, Build Logs and Container Event Logs. You can use these detailed logs to diagnose problems with your app and monitor access requests. Enabling these logs also provides an Azure Monitor activity log that gives you insight into subscription-level events.
 
+## Next steps
+
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
+
+> [!div class="nextstepaction"] 
+> [Network topology and connectivity](./network-topology-and-connectivity.md)
