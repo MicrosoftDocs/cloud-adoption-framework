@@ -25,8 +25,8 @@ As the workload owner, follow these best practices to make sure that the applica
 
 ## Design considerations
 
-- **Access from the application to other services**. The application should authenticate itself when connecting to backend services that are part of the workload. This will protect the services from unauthorized access. Consider features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials. 
-
+- **Access from the application to other services**. The application should authenticate itself when connecting to backend services that are part of the workload. This will protect the services from unauthorized access. Consider using  Managed Identities when connecting to backend resources that are protected by Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials. 
+TBD: should we add a consideration for Private/Public based on where the users are coming from. The [reference architecture](https://learn.microsoft.com/en-us/azure/spring-apps/reference-architecture?tabs=azure-spring-standard) makes a big distinction between Private and Public and this drives a few architectural decisions.
 - **Access to the application**. Users or other components might access the application over the public internet. Access must be authenticated based on client certificates or through Active Directory (Azure AD). 
 
 	Consider the technology options for the service discovery mechanism that will involke calls between apps. With Kubernetes Service Discovery approach <<TBD: pros and cons>>. Alternatively, using Managed Spring Cloud Service Registry (OSS) <<pros/cons>>. TBD: talk about authorization using Azure AD and RBAC. 
@@ -63,7 +63,7 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 	- Use your own managed identity for Azure Spring Apps
 	- Use system-assigned and user-assigned managed identities separately 
 	- Use Privileged Identity Management in Azure AD and identity and access management in Azure landing zones.
-
+Enforce [multifactor authentication (MFA)](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
 ##### Secure internet communication
 
 - Use certificates issued by a certificate authority, extended validation certificates or wildcard certificates
