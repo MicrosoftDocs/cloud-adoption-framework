@@ -22,8 +22,8 @@ The landing zone accelerator is a set of design considerations, reference archit
     - [Identity and access management](./identity-and-access-management.md)
     - [Network topology and connectivity](./network-topology-and-connectivity.md)
     - [Security](./security.md)
-    - [Management](./management.md)
-    - [Governance](./governance.md)
+    - [Monitoring operations](./management.md)
+
 
 
 - **Reference architecture** provides design guidance that applies the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.

@@ -100,11 +100,8 @@ items:
         href: spring-apps\network-topology-and-connectivity.md
       - name: Security
         href: spring-apps\security.md
-      - name: Operations management
+      - name: Monitoring operations
         href: spring-apps\management.md
-      - name: Governance 
-        href: spring-apps\governance.md
-
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms
