@@ -3,7 +3,7 @@ title: Brownfield landing zone scenario
 description: Document describing remediation around existing azure brown field scenario
 author: kevinevansmsft
 ms.author: kevinevans
-ms.date: 08/02/2022
+ms.date: 13/03/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
