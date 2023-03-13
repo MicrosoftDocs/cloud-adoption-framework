@@ -25,7 +25,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - An Azure subscription can only trust one Azure AD tenant at a time, further information can be found at [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
-- Multiple Azure AD tenants can function in the same enrollment.
+- Multiple Azure AD tenants can function in the same enrollment. Review [Azure landing zones and multiple Azure Active Directory tenants](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview)
 
 - Azure Lighthouse only supports delegation at the subscription and resource group scopes.
 
