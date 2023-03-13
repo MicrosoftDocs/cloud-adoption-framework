@@ -22,6 +22,10 @@ To plan for a more sustainable path forward in your cloud adoption journey, take
 
 One key criterion for prioritization of migration workload can be current carbon emission. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to cloud, thereby maximizing the ROI early in the migration journey.
 
+#### Capture initial Emissions Impact Dashboard baseline
+
+TODO.
+
 ## Roles and responsibilities
 
 TBD.
@@ -36,6 +40,14 @@ The governance team can  define the accountabilities around ensuring the sustain
 ### Build green teams
 
 Initiate the idea of building “green teams” that can have different sustainability metrics depending on the served domain, not dependent of the “central sustainability team” guidance, but contributing to the overall green targets of the company.
+
+#### Goals and metrics for teams owning sustainability
+
+At Microsoft, we have a dedicated [sustainability science team](https://www.microsoft.com/research/project/sustainability-science-team/) whose mission is to ensure that our sustainability work is grounded in the best available science. This drives our work in sustainability, from our climate commitments to partnering with our customers and partners on co-designing new solutions.
+
+Establishing goals and metrics for teams owning sustainability in your organization is important. Metrics can include emissions like greenhouse gas emissions, carbon footprint data, water use, and energy consumption.
+
+The ultimate responsibility for measuring and owning these goals rests with the sustainability team who will align to the company's sustainability strategy set by the board. Consider [nominating a lead and build a team]().
 
 ## Skilling
 
@@ -55,6 +67,9 @@ Depending on roles across the business, there will be different training require
 - Learn more about why educating your teams around sustainability is important. See [make sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
 
 ## Reporting standards
+
+
+### Define standards
 
 Defining standards can ease the cultural pushback in implementing green IT and prioritize sustainability (e.g., updating old legacy systems can be costly).
 
