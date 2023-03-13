@@ -139,6 +139,7 @@ Here are a few more points to be aware of as you set up Availability Zones:
 - With Availability Zones, Azure offers an SLA of 99.99 percent for VM uptime.
     
     :::image type="content" source="./media/migrate-best-practices-networking/availability-zone.png" alt-text="Diagram that shows availability zones within an Azure region.":::
+    
     *Figure 3: Availability zones.*
 
 - You can plan and build high availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone. Then you can replicate them in other zones. Azure services that support availability zones fall into two categories:
@@ -376,6 +377,7 @@ Application security groups enable you to configure network security as a natura
 **Example:**
 
 :::image type="content" source="./media/migrate-best-practices-networking/asg.png" alt-text="Diagram that shows an example application security group.":::
+
 *Figure 9: Application security group example.*
 
 | Network interface | Application security group |
