@@ -18,7 +18,7 @@ Security governance and compliance are critical to Citrix DaaS deployments on Az
 
 [Azure Policy](/azure/governance/policy/overview) is an important tool for Citrix on Azure deployments. Policies can help you adhere to security standards set by your cloud platform team. Policies provide automatic enforcement and reporting to support continuous regulatory compliance.
 
-Review your policy baseline with your platform team per the [Design area: Azure governance](../../../ready/landing-zone/design-area/governance.md#plan-for-governance) guidelines. Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
+Review your policy baseline with your platform team per the [Design area: Azure governance](../../../ready/landing-zone/design-area/governance.md) guidelines. Apply policy definitions at the top-level root management group so you can assign them at inherited scopes.
 
 The following sections focus on identity, networking, and antivirus recommendations.
 
