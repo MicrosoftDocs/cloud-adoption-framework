@@ -218,8 +218,6 @@ items:
         href: plan/iteration-paths.md
       - name: Estimate timelines
         href: plan/timelines.md
-      - name: Plan for sustainability
-        href: plan/plan-sustainability.md
     - name: Best practices
       items:
       - name: Digital estate assessment in Azure
@@ -230,6 +228,9 @@ items:
     - name: Strategic Migration Assessment and Readiness Tool (SMART)
       href: plan/smart-assessment.md
 
+    - name: Plan for sustainability
+      href: plan/plan-sustainability.md
+      
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
