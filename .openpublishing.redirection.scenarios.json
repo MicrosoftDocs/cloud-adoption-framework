@@ -1,6 +1,11 @@
 {
   "redirections": [
      {
+      "source_path_from_root": "/docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-data-mesh.md",
+      "redirect_url": "/docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario",
+      "redirect_document_id": false
+     },
+     {
       "source_path_from_root": "/docs/scenarios/data-management/eslz-provision-platform.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/manage-provision-platform",
       "redirect_document_id": false

@@ -22,9 +22,9 @@ For demanding workloads, striking the correct balance between encryption and per
 
 Corporate policy and third-party compliance are the biggest drivers when planning an encryption strategy. Azure provides multiple standard mechanisms that meet common requirements for encrypting data, whether at rest or in transit. You'll need to develop a more sophisticated encryption strategy to support policies and compliance requirements that demand tighter controls. For example:
 
-* Standardized secrets and key management
-* Encryption in-use
-* Data-specific encryption
+- Standardized secrets and key management
+- Encryption in-use
+- Data-specific encryption
 
 ## Key management
 
@@ -46,8 +46,8 @@ With cloud-native key management, all keys and secrets are generated, managed, a
 
 **Cloud-native assumptions:** Using a cloud-native key management system includes these assumptions:
 
-* You trust the cloud key management solution with creating, managing, and hosting your organization's secrets and keys.
-* You enable all on-premises applications and services that rely on accessing encryption services or secrets to access the cloud key management system.
+- You trust the cloud key management solution with creating, managing, and hosting your organization's secrets and keys.
+- You enable all on-premises applications and services that rely on accessing encryption services or secrets to access the cloud key management system.
 
 ### Bring your own key (BYOK)
 
@@ -55,9 +55,9 @@ With a BYOK approach, you generate keys on dedicated HSM hardware within your on
 
 **Bring-your-own-key assumptions:** Generating keys on-premises and using them with a cloud-based key management system includes these assumptions:
 
-* You trust the underlying security and access control infrastructure of the cloud platform for hosting and using your keys and secrets.
-* Your cloud-hosted applications or services can access and use keys and secrets in a robust and secure way.
-* You're required by regulatory or organizational policy to keep the creation and management of your organization's secrets and keys on-premises.
+- You trust the underlying security and access control infrastructure of the cloud platform for hosting and using your keys and secrets.
+- Your cloud-hosted applications or services can access and use keys and secrets in a robust and secure way.
+- You're required by regulatory or organizational policy to keep the creation and management of your organization's secrets and keys on-premises.
 
 ### On-premises (hold your own key)
 
@@ -65,8 +65,8 @@ Certain scenarios might have regulatory, policy, or technical reasons prohibitin
 
 **On-premises key management assumptions:** Using an on-premises key management system includes these assumptions:
 
-* You're required by regulatory or organizational policy to create, manage, and host your organization's secrets and keys on-premises.
-* Any cloud-based applications or services that rely on accessing encryption services or secrets can access the on-premises key management system.
+- You're required by regulatory or organizational policy to create, manage, and host your organization's secrets and keys on-premises.
+- Any cloud-based applications or services that rely on accessing encryption services or secrets can access the on-premises key management system.
 
 ## Data encryption
 
@@ -86,12 +86,12 @@ Typically, data in transit is encrypted by requiring SSL/TLS protocols for netwo
 
 **Assumptions about encrypting data in transit:** Implementing proper encryption policy for data in transit assumes the following conditions:
 
-* All publicly accessible endpoints in your cloud environment communicate with the public internet using SSL/TLS protocols.
-* When you connect cloud networks with on-premises or other external network over the public internet, use encrypted VPN protocols.
-* When you connect cloud networks with on-premises or other external network using a dedicated WAN connection, such as ExpressRoute, you:
-   * Use a VPN or other encryption appliance on-premises.
-   * Pair the appliance with a corresponding virtual VPN or encryption appliance deployed to your cloud network.
-* If you have sensitive data that shouldn't be included in traffic logs or other diagnostics reports visible to IT staff, encrypt all traffic between resources in your virtual network.
+- All publicly accessible endpoints in your cloud environment communicate with the public internet using SSL/TLS protocols.
+- When you connect cloud networks with on-premises or other external network over the public internet, use encrypted VPN protocols.
+- When you connect cloud networks with on-premises or other external network using a dedicated WAN connection, such as ExpressRoute, you:
+  - Use a VPN or other encryption appliance on-premises.
+  - Pair the appliance with a corresponding virtual VPN or encryption appliance deployed to your cloud network.
+- If you have sensitive data that shouldn't be included in traffic logs or other diagnostics reports visible to IT staff, encrypt all traffic between resources in your virtual network.
 
 ### Data at rest
 
@@ -107,8 +107,8 @@ Your overall policy and compliance requirements, the sensitivity of the data bei
 
 Encrypting data at rest assumes the following conditions:
 
-* You're storing data that isn't meant for public consumption.
-* Your workloads can accept the added latency cost of disk encryption.
+- You're storing data that isn't meant for public consumption.
+- Your workloads can accept the added latency cost of disk encryption.
 
 ### Data in use
 
@@ -116,16 +116,16 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 **Assumptions about encrypting data in use:** Encrypting data in use assumes the following condition:
 
-* You're required to maintain data ownership separate from the underlying cloud platform always, even at the RAM and CPU level.
+- You're required to maintain data ownership separate from the underlying cloud platform always, even at the RAM and CPU level.
 
 ## Learn more
 
 For more information about encryption and key management in Azure, see:
 
-* [Azure encryption overview](/azure/security/fundamentals/encryption-overview): A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
-* [Azure Key Vault](/azure/key-vault/general/overview): Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
-* [Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices). A discussion of Azure data security and encryption best practices.
-* [Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute/): Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
+- [Azure encryption overview](/azure/security/fundamentals/encryption-overview): A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
+- [Azure Key Vault](/azure/key-vault/general/overview): Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
+- [Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices). A discussion of Azure data security and encryption best practices.
+- [Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute/): Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 
 ## Next steps
 

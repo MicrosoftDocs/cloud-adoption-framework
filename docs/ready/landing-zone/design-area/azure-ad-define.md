@@ -7,7 +7,7 @@ ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Define Azure AD tenants
@@ -17,6 +17,9 @@ An Azure AD tenant provides identity and access management, which is an importan
 Azure AD is also used by software as a service (SaaS) applications such as Microsoft 365 and Azure Marketplace. Organizations already using on-premises AD can integrate it with their current infrastructure and extend cloud authentication. Each Azure AD directory has one or more domains. A directory can have many subscriptions associated with it but only one Azure AD tenant.
 
 Ask basic security questions during the Azure AD design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
+
+>[!TIP]
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
 
 **Design considerations:**
 
@@ -42,7 +45,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - Add one or more custom domains to your Azure AD tenant as per [Add your custom domain name using the Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
 
-  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in you on-premises Active Directory Domain Services environment.
+  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in your on-premises Active Directory Domain Services environment.
 
 - Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 

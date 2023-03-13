@@ -8,7 +8,7 @@ ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, engagement-fy23
+ms.custom: internal, engagement-fy23, UpdateFrequency.5
 ---
 
 # Service enablement framework

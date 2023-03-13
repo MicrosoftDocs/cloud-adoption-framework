@@ -45,7 +45,7 @@ The cloud governance team is responsible for the following decisions and impleme
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions are structured and how to use Azure management groups to efficiently manage the access, policies, and compliance for the subscriptions. Refer to the subscription [organization and governance recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-recommendations) for a thorough review of subscription design recommendations.
+The decision on what subscription design to use determines how Azure subscriptions are structured and how to use Azure management groups to efficiently manage the access, policies, and compliance for the subscriptions. Refer to the subscription [organization and governance recommendations](../../../ready/landing-zone/design-area/resource-org-subscriptions.md#organization-and-governance-recommendations) for a thorough review of subscription design recommendations.
 
 - As new requests for Azure resources arise, establish a *department* for each major business unit in each operating geography. Within each of the departments, create *subscriptions* for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include:
@@ -122,7 +122,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
-- [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
+- [Software Defined Networking patterns](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps

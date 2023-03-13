@@ -24,7 +24,7 @@ Additional design guidance for Citrix DaaS on Azure is available on [Citrix Tech
 
 Naming and tagging standards help you organize resources and simplify resource management, cost tracking, and governance.
 
-Maintaining consistency across resources can help you identify deviation from agreed-upon policies. [Prescriptive guidance for resource tagging](/azure/cloud-adoption-framework/govern/guides/complex/prescriptive-guidance#resource-tagging) describes how one of the following patterns can help you deploy governance practices. Similar patterns are available for using tags to evaluate regulatory compliance.
+Maintaining consistency across resources can help you identify deviation from agreed-upon policies. [Prescriptive guidance for resource tagging](../../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) describes how one of the following patterns can help you deploy governance practices. Similar patterns are available for using tags to evaluate regulatory compliance.
 	
 A standardized naming convention is the starting point for organizing cloud-hosted resources. Properly structured naming systems enable you to quickly identify resources for management and accounting purposes. If you have existing IT naming conventions for other parts of your organization, consider whether you'll align your cloud naming conventions with them or make your cloud naming conventions unique and separate.
 	
@@ -47,4 +47,4 @@ You can start with a single subscription and switch to a multiple-subscription a
 ## Next steps
 
 - [Network topology and connectivity for Citrix on Azure](./citrix-network-topology-connectivity.md)
-- [Naming and tagging in Azure](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide)
+- [Naming and tagging in Azure](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)

@@ -7,7 +7,7 @@ ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: internal
+ms.custom: internal, devx-track-azurepowershell
 ---
 
 # Common Azure Policy examples

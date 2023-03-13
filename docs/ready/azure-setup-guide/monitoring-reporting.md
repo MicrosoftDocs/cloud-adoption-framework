@@ -47,8 +47,6 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ::: zone-end
 
 ## [Azure Service Health](#tab/AzureServiceHealth)

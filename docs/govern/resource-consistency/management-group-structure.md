@@ -14,11 +14,11 @@ ms.custom: internal
 
 Management groups are a key construct for managing resource consistency. Management groups are logical containers for subscriptions that are arranged hierarchically. You can apply policies and manage access at the management group level and all child management groups and subscriptions inherit the policies and role assignments.
 
-:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-org.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
+:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-organization.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
 Diagram of a root management group holding both management groups and subscriptions. Some child management groups hold management groups, some hold subscriptions, and some hold both.
 :::image-end:::
 
-*Diagram 1: Hierarchy of management groups and subscriptions from [management groups in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).*
+*Diagram 1: Hierarchy of management groups and subscriptions from [management groups in Azure landing zones](../../ready/landing-zone/design-area/resource-org-management-groups.md).*
 
 Management groups help ensure consistency. When you apply policies at the management group level, you ensure all subscriptions under that management group have those policies applied.
 
@@ -30,7 +30,7 @@ Establish a relatively flat management group structure based on the security and
 
 Use the following resources to see proven management groups structures and to understand important design considerations and recommendations when designing your structure.
 
-- Understand the [management groups design considerations and recommendations in the Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+- Understand the [management groups design considerations and recommendations in the Cloud Adoption Framework for Azure](../../ready/landing-zone/design-area/resource-org-management-groups.md)
 - Consider the management group structure implemented in the [management groups module of the Azure landing zone bicep repo](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/managementGroups)
 
 ## Audit
