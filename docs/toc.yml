@@ -218,6 +218,8 @@ items:
         href: plan/iteration-paths.md
       - name: Estimate timelines
         href: plan/timelines.md
+      - name: Plan for sustainability
+        href: plan/plan-sustainability.md
     - name: Best practices
       items:
       - name: Digital estate assessment in Azure
