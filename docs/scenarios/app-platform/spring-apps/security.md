@@ -11,33 +11,77 @@ ms.subservice: caf-scenario-spring-apps
 
 # Security considerations for the Azure Spring Apps landing zone accelerator
 
+This article provides security considerations and recommendations for making sure that the workload hosted in Azure Spring Apps is capable of detecting, preventing, and responding to security vulnerabilities. 
 
-Patience is a virtue!
+Security of the workload cannot be guaranteed by just the application. As the workload owner, evaulate the attack surface that includes the application, the infrastructure services with which the application interacts, and also human errors. Azure provides various security controls on network, identity, and data to support your defense in depth strategy. 
 
-Content coming soon. 
+For information about built-in security features of Azure Spring Apps, see [Security controls for Azure Spring Apps Service](/azure/spring-apps/concept-security-controls).
+
+The centralized teams will provide networking and identity controls as part of the platform. Review those contols to make design decisions for the workload. The design is subject to periodic reviews conducted by the centralized security team.
+
+> For information about the platform design, see [Platform design: Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
+
+The organization will also provide guardrails for maintaining control over platforms, applications, and resources in Azure. The centralized plaform teams will apply policies to the application landing zone subscription, which are inherited from the management group. Work with the central team to regularly review the platform policies and participate in change management to make sure the workload requirements are accomodated.
+
+> For information about the platform design, see [Platform design: Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
 
+## Design considerations
 
-Security considerations for Azure Spring Apps Landing Zone Accelerator
-This ReadMe File provides design considerations and recommendations for Security when you use Azure Spring Apps landing zone accelerator. It walks through aspects of Azure Spring Apps (ASA) security governance to think about before implementing any solution.
+- **Internal traffic**. Restrict or allow traffic between internal resources to follow an enterprise segmentation principle that aligns with the business risks. Where necessary, create isolation boundaries through virtual networks and subnets. Have rules in place to retrict traffic flows between networks.
 
-Most of this content is technology-agnostic, because implementation varies among customers. The ReadMe File focuses on how to implement solutions using Azure and open-source software. The decisions made when you create an enterprise-scale landing zone can partially predefine your governance. It's important to understand governance principles because of the effect of the decisions made.
+- **External traffic**. Use Azure native resources to protect your workload resources against attacks from external networks, including:
 
-Azure Spring Apps is the new name for the Azure Spring Cloud service. Security controls are built into Azure Spring Apps Service.
+- Distributed denial of service (DDoS) attacks. 
+- Application-specific attacks. 
+- Unsolicited and potentially malicious internet traffic. 
 
-A security control is a quality or feature of an Azure service that contributes to the service's ability to prevent, detect, and respond to security vulnerabilities. For each control, we use Yes or No to indicate whether it is currently in place for the service. We use N/A for a control that is not applicable to the service.
+- **Domain Name Service (DNS)**. Protect DNS zones and records from accidental or malicious modification 
+DNS security to mitigate against common attacks, such as: 
 
-Azure Spring Apps Landing Zone - Topology
-Public:
+Dangling DNS 
 
-ASA-LZA-Public-screenshot
+DNS amplifications attacks 
 
-Private:
+DNS poisoning and spoofing 
 
-ASA-LZA-Private-screenshot
+## Design recommendations
 
-Azure Spring Apps Landing Zone - Azure Components
-Pending
+#### Network controls
+
+These network controls will create isolation boundaries and restrict flows in and out of the application.
+
+##### Network as the perimeter
+
+When you deploy Azure Spring Cloud Service resources, create or use an existing virtual network. 
+
+Create isolation within the virtual network through subnetting. Restrict or allow traffic between internal resources using your [NSG rules](/azure/virtual-network/tutorial-filter-network-traffic) . Use the [Adaptive network hardening](/azure/security-center/security-center-adaptive-network-hardening) feature of Microsoft Defender for Cloud to further harden the NSG configurations that limit ports and source IPs. Base the configurations on external network traffic rules.
+
+Use [Azure service tags](/azure/virtual-network/service-tags-overview) to define network access controls instead of specific IP addresses when creating security rules. By specifying the service tag name in the appropriate rule's source or destination field, allow or deny the traffic for the corresponding service. Microsoft manages the address prefixes that are encompassed by the service tag. It automatically updates the service tag as addresses change. 
+
+Use the `AzureSpringCloud` service tag on network security groups or Azure Firewall, to allow traffic to applications in Azure Spring Apps. 
+
+For more information, see [Customer responsibilities for running Azure Spring Cloud in a virtual network](/azure/spring-cloud/vnet-customer-responsibilities). 
+
+##### Private networks
+
+Using Azure ExpressRoute or Azure virtual private network (VPN) to create private connections between Azure datacenters and on-premises infrastructure in a colocated environment. [ExpressRoute connections](/azure/expressroute/expressroute-connectivity-models) don't go over the public internet with reliability, faster speeds, and lower latencies. 
+
+For [point-to-site VPN and site-to-site VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways), connect on-premises devices or networks to a virtual network. Use any combination of these VPN options and Azure ExpressRoute. 
+
+To connect two or more virtual networks in Azure together, use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Network traffic between peered virtual networks is private. This type of traffic is kept on the Azure backbone network. 
+
+
+##### Attacks from external networks
+
+Place controls on inbound traffic and block application layer attacks with [Azure Application Gateway with integrated web application firewall (WAF)](/azure/web-application-firewall/ag/ag-overview). 
+
+Use [Azure Firewall](/azure/firewall/tutorial-firewall-deploy-portal) restrict outbound traffic from the application. It can also be used to protect applications and services against potentially malicious traffic from the internet and other external locations. 
+
+Azure Firewall threat intelligence-based filtering can alert on or block traffic to and from known malicious IP addresses and domains. The IP addresses and domains are sourced from the Microsoft Threat Intelligence feed. When payload inspection is necessary, deploy a third-party [intrusion detection/intrusion prevention system (IDS/IPS) from Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace?search=IDS) with payload inspection capabilities. Alternatively, you can use host-based IDS/IPS or a host-based [endpoint detection](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) and response (EDR) solution with or instead of network-based IDS/IPS. 
+
+To protect the workload resources against DDoS attacks, enable [DDoS standard protection](/azure/virtual-network/manage-ddos-protection) on your Azure virtual networks. Use[ Microsoft Defender for Cloud](/azure/security-center/recommendations-reference#recs-network) to detect misconfiguration risks to your network-related resources. 
+
 
 Component	Version	Location
 Design Considerations

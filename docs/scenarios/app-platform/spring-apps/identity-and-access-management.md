@@ -46,7 +46,9 @@ As the workload owner, follow these best practices to make sure that the applica
 
 	TBD: On Enterprise Tier, decide whether to setup Sigle sign on using AD for Spring cloud Gateway and API portal
 
-- **Configuration data access**. Based on your choice of tier for Azure Spring Apps (**Basic** or **Enterprise**), you'll need to decide configuration server options. For **Basic**, consider support for server and client side for an externalized configuration in a distributed system like Azure DevOps, GitHub, GitLab, and Bitbucket for storing your Config Server files. 
+- **Configuration data access**. Based on your choice of tier for Azure Spring Apps (**Basic/Standard** or **Enterprise**), you'll need to decide configuration server options. 
+
+	For **Basic**, consider support for server and client side for an externalized configuration in a distributed system like Azure DevOps, GitHub, GitLab, and Bitbucket for storing your Config Server files. 
 
 	You'll need to make a choice between using public or private repositories and their authentication mechanism. Azure Spring Apps supports basic password/token-based authentication and SSH.
 		
