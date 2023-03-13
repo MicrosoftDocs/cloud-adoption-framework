@@ -14,41 +14,41 @@ ms.custom: internal
 
 # Scale a migration to Azure
 
-This article demonstrates how the fictional company Contoso performs a migration at scale to Azure. The company considers how to plan and perform a migration of more than 3,000 workloads, 8,000 databases, and 10,000 virtual machines (VMs).
+This article demonstrates how the fictional company, Contoso, performs a migration at scale to Azure. The company considers how to plan and perform a migration of more than 3,000 workloads, 8,000 databases, and 10,000 virtual machines (VMs).
 
 ## Business drivers
 
-The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
+The IT leadership team works closely with business partners to understand what they want to achieve with this migration:
 
-- **Address business growth.** Contoso is growing, causing pressure on on-premises systems and infrastructure.
-- **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. It mustn't get in the way or become a business blocker.
-- **Scale.** As the business grows successfully, the Contoso IT team must provide systems that are able to grow at the same pace.
+- **Address business growth.** Contoso is growing, which creates pressure on on-premises systems and infrastructure.
+- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, so they can deliver customer requirements quickly.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. They must react faster than the changes in the marketplace to enable success in a global economy. IT can't get in the way or become a business blocker.
+- **Scale.** As the business grows successfully, the Contoso IT team must provide systems that can grow at the same pace.
 - **Improve cost models.** Contoso wants to lessen capital requirements in the IT budget. Contoso wants to use cloud abilities to scale and reduce the need for expensive hardware.
 - **Lower licensing costs.** Contoso wants to minimize cloud costs.
 
 ## Migration goals
 
-The Contoso cloud team has pinned down goals for this migration. It used these goals to determine the best migration method.
+The Contoso cloud team pins down goals for this migration. It uses these goals to determine the best migration method.
 
 | Requirements | Details |
 | --- | --- |
 | Move to Azure quickly | Contoso wants to start moving applications and VMs to Azure as quickly as possible. |
-| Compile a full inventory | Contoso wants a complete inventory of all applications, databases, and VMs in the organization. |
-| Assess and classify applications | Contoso wants to take full advantage of the cloud. As a default, Contoso assumes that all services will run as platform as a service (PaaS). Infrastructure as a service (IaaS) will be used where PaaS isn't appropriate. |
-| Train and move to DevOps | Contoso wants to move to a DevOps model. Contoso will provide Azure and DevOps training and will reorganize teams as necessary. |
+| Compile a full inventory | Contoso wants a complete inventory of applications, databases, and VMs in the organization. |
+| Assess and classify applications | Contoso wants to take full advantage of the cloud. As a default, Contoso assumes that all services run as platform as a service (PaaS). Contoso uses infrastructure as a service (IaaS) where PaaS isn't appropriate. |
+| Train and move to DevOps | Contoso wants to move to a DevOps model. Contoso provides Azure and DevOps training and reorganizes teams as necessary. |
 
-After establishing goals and requirements, Contoso reviews the IT footprint and identifies the migration process.
+After Contoso establishes goals and requirements, they review the IT footprint and identify the migration process.
 
 ## Current deployment
 
-Contoso has planned and set up an [Azure infrastructure](./contoso-migration-infrastructure.md) and tried out different proof-of-concept (POC) migration combinations as detailed in the preceding table. It's now ready to embark on a full migration to Azure at scale. Here's what Contoso wants to migrate.
+Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrastructure.md) and tried out the proof-of-concept (POC) migration combinations in the previous table. Now it's time to embark on a full migration to Azure at scale. Contoso wants to migrate:
 
 | Item | Volume | Details |
 | --- | --- | --- |
-| Workloads | > 3,000 applications | <li> Applications run on VMs. <li> Application platforms include Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle). |
-| Databases | Approximately 8,500 databases | Databases include SQL Server, MySQL, and PostgreSQL. |
-| VMs | > 35,000 VMs | VMs run on VMware hosts and are managed by vCenter servers. |
+| Workloads | > 3,000 applications | <li> Applications run on VMs <li> Application platforms, including Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle) |
+| Databases | Approximately 8,500 databases | Databases, including SQL Server, MySQL, and PostgreSQL |
+| VMs | > 35,000 VMs | VMs that are run on VMware hosts and are managed by vCenter servers |
 
 ## Migration process
 
@@ -56,10 +56,10 @@ Now that Contoso has established business drivers and migration goals, it can al
 
 ## Plan
 
-Contoso kicks off the planning process by discovering and assessing on-premises applications, data, and infrastructure. Here's what Contoso will do:
+Contoso kicks off the planning process by discovering and assessing on-premises applications, data, and infrastructure. Contoso:
 
-- Contoso needs to discover applications, map dependencies across applications, and decide on migration order and priority.
-- As Contoso assesses, it will build out a comprehensive inventory of applications and resources. Along with the new inventory, Contoso will use and update these existing items:
+- Discover applications, map dependencies across applications, and decide on the migration order and priority.
+- Build out a comprehensive inventory of applications and resources as it assesses. Along with the new inventory, Contoso use and update these existing items:
   - The configuration management database (CMDB). It holds technical configurations for Contoso applications.
   - The service catalog. It documents the operational details of applications, including associated business partners and service-level agreements.
 
