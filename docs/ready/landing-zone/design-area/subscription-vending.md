@@ -106,7 +106,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 - [How to use tags in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data)
 - [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
-**Use production and non-production subscriptions.** In the request for a new subscription, you must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but have other [terms](/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
+**Use production and non-production subscriptions.** In the request for a new subscription, you must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but have other [terms](https://azure.microsoft.com/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
 - [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
 - [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
