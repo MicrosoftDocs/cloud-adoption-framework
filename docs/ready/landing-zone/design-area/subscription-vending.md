@@ -20,8 +20,8 @@ Step 1 is to create the platform subscriptions. Step 2 is to create the platform
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
-- [Platform vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones)
-- [Democratized approach to subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization)  
+- [Platform vs. application landing zones](../index.md#platform-vs-application-landing-zones)
+- [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
@@ -70,14 +70,14 @@ The subscription automation needs to set up the required networking components, 
 
 **Enforce networking governance.** The platform team should enforce virtual network governance via (1) Azure policy assigned to the management group hierarchy or (2) Azure Virtual Network Manager and Security Admin Rules. For more information, see:
 
-- [Policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance)
+- [Policy-driven governance](../design-principles.md#policy-driven-governance)
 - [How to block high risk ports](/azure/virtual-network-manager/how-to-block-high-risk-ports).
 
 ### Determine subscription placement
 
 The platform team should use the networking and governance requirements to place the subscription in the management group hierarchy. They should also review the subscription quota limits before creating the subscription. For more information, see:
 
-- [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+- [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md)
 
 **Identify the right management group.** Management groups help you organize and govern subscriptions and workload deployments. Locate or create a management group that enforces the policies needed for the classification and need of each workload.
 
@@ -108,8 +108,8 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 
 **Use production and non-production subscriptions.** In the request for a new subscription, you must specify whether the workload is for Production or DevTest. DevTest environments result in lower resource charges but have other [terms](https://azure.microsoft.com/offers/ms-azr-0148p/). Note DevTest offer isn't available for MPA. For more information, see:
 
-- [Azure billing offers and Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
-- [Resource organization design area overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
+- [Azure billing offers and Active Directory tenants](./azure-billing-ad-tenant.md)
+- [Resource organization design area overview](./resource-org.md)
 - [Create Azure subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 
 **Set up identity and role-based access controls (RBACs).** Managing access to resources within an Azure subscription is critical for maintaining a secure and compliant environment. To control access, it's essential to set up identity and RBACs. This setup involves designating a subscription owner, creating Azure AD groups to manage access, and establishing automation accounts to deploy workloads.
@@ -120,7 +120,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 
 - *Establish workload identities.* Workload identities (service principles) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets.
 
- For more information, see [the identity design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
+ For more information, see [the identity design area](./identity-access.md).
 
 **Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team to set the subscription budget.
 
@@ -134,7 +134,7 @@ With the subscription in place, the application team can deploy and operate the 
 
 As the governance requirements of a workload change, you should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
-- [Management groups overview](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+- [Management groups overview](./resource-org-management-groups.md)
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
 - [Move subscription to new management group (Terraform)](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_group_subscription_association)
-- [Tailor Azure landing zone to meet your requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+- [Tailor Azure landing zone to meet your requirements](../tailoring-alz.md)
