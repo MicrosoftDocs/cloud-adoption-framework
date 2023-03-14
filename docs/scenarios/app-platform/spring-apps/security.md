@@ -41,6 +41,13 @@ The organization will also provide guardrails for maintaining control over platf
     - DNS amplifications attacks 
     - DNS poisoning and spoofing 
 
+- **Integration with centralized identity and authentication system**. TBD
+
+- **Security monitoring**. The system should have monitoring tools in place that report user sign-in activities and detects risky sign-ins. These tools should be integrated with central security information and event management (SIEM) systems. 
+
+- **Credential exposure**. You can deploy and run code, configurations, and persisted data with  with identities or secrets. Make sure those credentials are examined when accessing those assets.
+
+
 ## Design recommendations
 
 #### Network controls
@@ -94,24 +101,46 @@ Azure landing zones use Azure AD as the default identity and access management s
 
 If you want to grant access the Azure Spring Apps data plane, use [Azure Spring Cloud Data Reader](/azure/role-based-access-control/built-in-roles#azure-spring-cloud-data-reader) built-in role. This role gives read-only permissions. 
 
-##### Application identities
+These Azure AD features are recommended:
 
-The application might need to access other Azure services. Suppose it wants to retrieve secrets from Azure Key Vault.
+- **Application identities**. The application might need to access other Azure services. Suppose it wants to retrieve secrets from Azure Key Vault.
 
-Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so that the application can authenticate itself to other service by using Azure AD. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files. 
+    Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so that the application can authenticate itself to other service by using Azure AD. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files. 
 
-If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/create-azure-service-principal-azureps) with restricted permissions at the resource level. 
+    If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/create-azure-service-principal-azureps) with restricted permissions at the resource level. 
 
-In both cases, Key Vault can be used with Azure-managed identities. A runtime environment (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
+    In both cases, Key Vault can be used with Azure-managed identities. A runtime environment (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
 
-##### Azure AD single sign-on (SSO)
+- **Azure AD single sign-on (SSO)**. [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended for authenticating access to the application from other applications (or devices) running in the cloud or on-premises. SSO also provides identity management to internal and external users such as partner and vendors. 
 
-Using [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended for authenticating access to the application from other applications (or devices) running in the cloud or on-premises. SSO also provides access management to internal and external users such as partner and vendors. 
+- **Strong authentication controls**. Azure AD supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius in case of a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Introduction to passwordless authentication options for Azure AD](/azure/active-directory/authentication/concept-authentication-passwordless).
+
+- **Conditional access to resources**. Azure Spring Apps supports [Azure AD conditional access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions include user sign-ins from certain IP ranges that need to sign in using MFA. These [conditional access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Azure AD to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources. 
 
 
-##### 
+- **Monitor and alert on account anomalies**. Azure Spring Apps is integrated with Azure AD, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes made to any resource within Azure AD. The data is integrated with Azure Monitor and can be exported to Azure Sentinel. 
+
+    Microsoft Defender for Cloud is recommended for getting alerts about suspicious activities, such as excessive number of failed authentication attempts or deprecated accounts in the subscription. 
+
+    For more information, see these articles:
+
+    - [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs) 
+    - [View Azure AD risky sign-ins](/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
+    - [Identify Azure AD users flagged for risky activity](/azure/active-directory/reports-monitoring/concept-user-at-risk) 
+    - [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access) 
+    - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference) 
 
 
+#### Credential scanning
+
+Implement Credential Scanner to identify credentials that access code, configurations, and persisted data. Credential Scanner also encourages moving discovered credentials to more secure locations, such as Key Vault. 
+
+For GitHub, you can use the native secret scanning feature to identify credentials or other forms of secrets within the code. 
+
+For more information, see these articles:
+
+- [Set up Credential Scanner](https://secdevtools.azurewebsites.net/helpcredscan.html) 
+- [GitHub secret scanning](https://docs.github.com/github/administering-a-repository/about-secret-scanning) 
 
 
 
