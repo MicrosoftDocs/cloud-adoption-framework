@@ -32,18 +32,14 @@ The organization will also provide guardrails for maintaining control over platf
 
 - **External traffic**. Use Azure native resources to protect your workload resources against attacks from external networks, including:
 
-- Distributed denial of service (DDoS) attacks. 
-- Application-specific attacks. 
-- Unsolicited and potentially malicious internet traffic. 
+    - Distributed denial of service (DDoS) attacks. 
+    - Application-specific attacks. 
+    - Unsolicited and potentially malicious internet traffic. 
 
-- **Domain Name Service (DNS)**. Protect DNS zones and records from accidental or malicious modification 
-DNS security to mitigate against common attacks, such as: 
-
-Dangling DNS 
-
-DNS amplifications attacks 
-
-DNS poisoning and spoofing 
+- **Domain Name Service (DNS)**. Protect DNS zones and records from accidental or malicious modification. Common attacks are: 
+    - Dangling DNS 
+    - DNS amplifications attacks 
+    - DNS poisoning and spoofing 
 
 ## Design recommendations
 
@@ -63,7 +59,7 @@ Use the `AzureSpringCloud` service tag on network security groups or A
 
 For more information, see [Customer responsibilities for running Azure Spring Cloud in a virtual network](/azure/spring-cloud/vnet-customer-responsibilities). 
 
-##### Private networks
+##### Connection with private networks
 
 Using Azure ExpressRoute or Azure virtual private network (VPN) to create private connections between Azure datacenters and on-premises infrastructure in a colocated environment. [ExpressRoute connections](/azure/expressroute/expressroute-connectivity-models) don't go over the public internet with reliability, faster speeds, and lower latencies. 
 
@@ -82,106 +78,41 @@ Azure Firewall threat intelligence-based filtering can alert on or block traffic
 
 To protect the workload resources against DDoS attacks, enable [DDoS standard protection](/azure/virtual-network/manage-ddos-protection) on your Azure virtual networks. Use[ Microsoft Defender for Cloud](/azure/security-center/recommendations-reference#recs-network) to detect misconfiguration risks to your network-related resources. 
 
+##### Protect Domain Name Service (DNS) 
 
-Component	Version	Location
-Design Considerations
-1. Azure Security Baseline for Azure Spring Apps Service
-This security baseline applies guidance from the Azure Security Benchmark version 2.0 to Azure Spring App Service. The Azure Security Benchmark provides recommendations on how you can secure your cloud solutions on Azure. The content is grouped by the security controls defined by the Azure Security Benchmark and the related guidance applicable to Azure Spring App Service.
+Use Azure DNS for hosting DNS domains. DNS zones and records should be protected from bad actors. Azure role-based access control (Azure RBAC) and resource locks are recommended for that purpose. For more information, see [Prevent dangling DNS entries and avoid subdomain takeover](/azure/security/fundamentals/subdomain-takeover). 
 
-You can monitor this security baseline and its recommendations using Microsoft Defender for Cloud. Azure Policy definitions will be listed in the Regulatory Compliance section of the Microsoft Defender for Cloud dashboard.
+#### Identity controls
 
-When a section has relevant Azure Policy Definitions, they are listed in this baseline to help you measure compliance to the Azure Security Benchmark controls and recommendations. Some recommendations may require a paid Microsoft Defender plan to enable certain security scenarios.
+Azure provides identity controls through Azure Active Directory (Azure AD). The application make use of many features such as single sign-on, strong authentications, managed identities, conditional access, and others. The design choices for the application are covered in [Design are: Identity and access management](./identity-and-access-management.md).
 
-Controls not applicable to Azure Spring App Service, and those for which the global guidance is recommended verbatim, have been excluded. To see how Azure Spring App Service completely maps to the Azure Security Benchmark, see the full Azure Spring App Service security baseline mapping file.
+This section covers the security aspect of those choices. 
 
-2. Data Protection Security Controls
-Security Control	Yes/No	Notes	Documentation
-Server-side encryption at rest:	Yes	User uploaded source and artifacts, config server settings, app settings, and data in persistent storage are stored in Azure	Azure Storage encryption for data at REST
-Microsoft-Managed Keys	Yes	Storage, which automatically encrypts the content at rest. Config server cache, runtime binaries built from uploaded source, and application logs during the application lifetime are saved to Azure managed disk, which automatically encrypts the content at rest. Container images built from user uploaded source are saved in Azure Container Registry, which automatically encrypts the image content at rest.	Server-side encryption of Azure managed disks Container image storage in Azure Container Registry
-Encryption in transient	Yes	User app public endpoints use HTTPS for inbound traffic by default.	---------------
-API calls encrypted	Yes	Management calls to configure Azure Spring Apps service occur via Azure Resource Manager calls over HTTPS.	Azure Resource Manager
-Customer Lockbox	Yes	Provide Microsoft with access to relevant customer data during support scenarios.	Customer Lockbox for Microsoft Azure
-3. Network Access Security Controls
-Security Control	Yes/No	Notes	Documentation
-Service Tag	Yes	Use Azure Spring App service tag to define outbound network access controls on network security groups or Azure Firewall, to allow traffic to applications in Azure Spring Apps.	Service tags
-4. Micrsoft Defender for Cloud Monitoring
-The Azure Security Benchmark is the default policy initiative for Microsoft Defender for Cloud and is the foundation for Microsoft Defender for Cloud's recommendations. The Azure Policy definitions related to this control are enabled automatically by Microsoft Defender for Cloud. Alerts related to this control may require an Microsoft Defender plan for the related services.
+##### Integration with the centralized identity system 
 
-5. Azure Policy Built-in Definitions - Microsoft.AppPlatform
-Name	Description	Effect(s)	Version
-Azure Spring App should use network injection	Azure Spring App instances should use virtual network injection for the following purposes: 1. Isolate Azure Spring App from Internet. 2. Enable Azure Spring App to interact with systems in either on premises data centers or Azure service in other virtual networks. 3. Empower customers to control inbound and outbound network communications for Azure Spring App.	Audit, Disabled, Deny	1.0.0
-6. Secure Internet Communications
-The TLS/SSL protocol establishes identity and trust, and encrypts communications of all types. TLS/SSL makes secure communications possible, particularly web traffic carrying commerce and customer data.
+Azure landing zones use Azure AD as the default identity and access management service. Using  centralized Azure AD to govern the workload services is recommended. This includes the use of the organization's network resources, Azure Storage, Key Vault, and other services that your application depends on. 
 
-You can use any type of TLS/SSL certificate. For example, you can use certificates issued by a certificate authority, extended validation certificates, wildcard certificates with support for any number of subdomains, or self-signed certificates for dev and testing environments.
+If you want to grant access the Azure Spring Apps data plane, use [Azure Spring Cloud Data Reader](/azure/role-based-access-control/built-in-roles#azure-spring-cloud-data-reader) built-in role. This role gives read-only permissions. 
 
-7. Load Certificates Securitty with Zero Trust
-Zero Trust is based on the principle of "never trust, always verify, and credential-free". Zero Trust helps to secure all communications by eliminating unknown and unmanaged certificates. Zero Trust involves trusting only certificates that are shared by verifying identity prior to granting access to those certificates. For more information, see the Zero Trust Guidance Center.
+##### Application identities
 
-To securely load certificates from Azure Key Vault, Spring Boot apps use managed identities and Azure role-based access control (RBAC). Azure Spring Apps uses a provider service principal and Azure role-based access control. This secure loading is powered using the Azure Key Vault Java Cryptography Architecture (JCA) Provider. For more information, see Azure Key Vault JCA client library for Java.
+The application might need to access other Azure services. Suppose it wants to retrieve secrets from Azure Key Vault.
 
-If your Spring code, Java code, or open-source libraries, such as OpenSSL, rely on the JVM default JCA chain to implicitly load certificates into the JVM's trust store, then you can import your TLS/SSL certificates from Key Vault into Azure Spring Apps and use those certificates within the app. For more information, see Use TLS/SSL certificates in your application in Azure Spring Apps.
+Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so that the application can authenticate itself to other service by using Azure AD. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files. 
 
-8. Upload well known public TLS/SSL certificates for Backend Systems
-For an app to communicate to backend services in the cloud or in on-premises systems, it may require the use of public TLS/SSL certificates to secure communication. You can upload those TLS/SSL certificates for securing outbound communications. For more information, see Use TLS/SSL certificates in your application in Azure Spring Apps.
+If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/create-azure-service-principal-azureps) with restricted permissions at the resource level. 
 
-9. Automate provisioning and configuration for Securing Communications
-Using an ARM Template, Bicep, or Terraform, you can automate the provisioning and configuration of all the Azure resources mentioned above for securing communications.
+In both cases, Key Vault can be used with Azure-managed identities. A runtime environment (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
 
-Design Recommendations
-1. Azure Policy Regulatory Compliance Controls for Azure Spring Apps
-Azure Spring Apps is the new name for the Azure Spring App service. Although the service has a new name, you'll see the old name in some places for a while as we work to update assets such as screenshots, videos, and diagrams.
+##### Azure AD single sign-on (SSO)
 
-Regulatory Compliance in Azure Policy provides Microsoft created and managed initiative definitions, known as built-ins, for the compliance domains and security controls related to different compliance standards. This page lists the compliance domains and security controls for Azure Spring Apps. You can assign the built-ins for a security control individually to help make your Azure resources compliant with the specific standard.
+Using [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended for authenticating access to the application from other applications (or devices) running in the cloud or on-premises. SSO also provides access management to internal and external users such as partner and vendors. 
 
-The title of each built-in policy definition links to the policy definition in the Azure portal. Use the link in the Policy Version column to view the source on the Azure Policy GitHub repo.
 
-Each control is associated with one or more Azure Policy definitions. These policies might help you assess compliance with the control. However, there often isn't a one-to-one or complete match between a control and one or more policies. As such, Compliant in Azure Policy refers only to the policies themselves. This doesn't ensure that you're fully compliant with all requirements of a control. In addition, the compliance standard includes controls that aren't addressed by any Azure Policy definitions at this time. Therefore, compliance in Azure Policy is only a partial view of your overall compliance status. The associations between controls and Azure Policy Regulatory Compliance definitions for these compliance standards can change over time.
+##### 
 
-2. Azure Security Benchmark
-The Azure Security Benchmark provides recommendations on how you can secure your cloud solutions on Azure. To see how this service completely maps to the Azure Security Benchmark, see the [Azure Security Benchmark mapping files](https://github.com/MicrosoftDocs/SecurityBenchmarks/tree/master/Azure Offer Security Baselines).
 
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - Azure Security Benchmark.
 
-Domain	Control ID	Control Title	Policy	Policy Version
-Network Security	NS-2	Secure cloud services with network controls	Azure Spring App should use network injection	1.1.0
-3. FedRAMP High
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - FedRAMP High. For more information about this compliance standard, see FedRAMP High.
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Access Control	AC-17	Remote Access	Azure Spring App should use network injection	1.1.0
-Access Control	AC-17 (1)	Automated Monitoring / Control	Azure Spring App should use network injection	1.1.0
-4. FedRAMP Moderate
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - FedRAMP Moderate. For more information about this compliance standard, see [FedRAMP Moderate](https://www.fedramp.gov/.
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Access Control	AC-17	Remote Access	Azure Spring App should use network injection	1.1.0
-Access Control	AC-17 (1)	Automated Monitoring / Control	Azure Spring App should use network injection	1.1.0
-5. New Zealand ISM Restricted
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - New Zealand ISM Restricted. For more information about this compliance standard, see New Zealand ISM Restricted.
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Infrastructure	INF-9	10.8.35 Security Architecture	Azure Spring App should use network injection	1.1.0
-6. NIST SP 800-53 Rev. 5
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - NIST SP 800-53 Rev. 5. For more information about this compliance standard, see NIST SP 800-53 Rev. 5.
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Access Control	AC-17	Remote Access	Azure Spring App should use network injection	1.1.0
-Access Control	AC-17 (1)	Monitoring and Control	Azure Spring App should use network injection	1.1.0
-7. NZ ISM Resticted v3.5
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - NZ ISM Restricted v3.5. For more information about this compliance standard, see NZ ISM Restricted v3.5.
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Infrastructure	NZISM Security Benchmark INF-9	10.8.35 Security Architecture	Azure Spring App should use network injection	1.1.0
-8. Reserve Bank of India IT Framerwork for Banks v2016
-To review how the available Azure Policy built-ins for all Azure services map to this compliance standard, see Azure Policy Regulatory Compliance - RBI ITF Banks v2016. For more information about this compliance standard, see RBI ITF Banks v2016 (PDF).
-
-Domain	Control ID	Control Title	Policy	Policy Version
-Patch/Vulnerability & Change Management		Patch/Vulnerability & Change Management-7.7	Azure Spring App should use network injection	1.1.0
-Patch/Vulnerability & Change Management		Patch/Vulnerability & Change Management-7.7	Azure Spring App should use network injection	1.1.0
-Anti-Phishing		Anti-Phishing-14.1	Azure Spring App should use network injection	1.1.0
-Appendix A: Checklists
-Pending Review. I will add a link to the various Checklist.
 
 
 ## Next step
