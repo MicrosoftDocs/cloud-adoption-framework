@@ -18,11 +18,11 @@ This article demonstrates how the fictional company, Contoso, performs a migrati
 
 ## Business drivers
 
-The IT leadership team works closely with business partners to understand what they want to achieve with this migration:
+The IT leadership team works closely with business partners to understand what they want to achieve with this migration. They plan to:
 
 - **Address business growth.** Contoso is growing, which creates pressure on on-premises systems and infrastructure.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, so they can deliver customer requirements quickly.
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. They must react faster than the changes in the marketplace to enable success in a global economy. IT can't get in the way or become a business blocker.
+- **Increase agility.** Contoso IT needs to be responsive to the needs of the business. They must react faster than the changes in the marketplace to enable success in a global economy. IT can't get in the way or become a business blocker.
 - **Scale.** As the business grows successfully, the Contoso IT team must provide systems that can grow at the same pace.
 - **Improve cost models.** Contoso wants to lessen capital requirements in the IT budget. Contoso wants to use cloud abilities to scale and reduce the need for expensive hardware.
 - **Lower licensing costs.** Contoso wants to minimize cloud costs.
@@ -48,7 +48,7 @@ Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrast
 | --- | --- | --- |
 | Workloads | > 3,000 applications | <li> Applications run on VMs <li> Application platforms, including Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle) |
 | Databases | Approximately 8,500 databases | Databases, including SQL Server, MySQL, and PostgreSQL |
-| VMs | > 35,000 VMs | vCenter servers manage VMs that are run on VMware hosts. |
+| VMs | > 35,000 VMs | vCenter servers manage VMs that are run on VMware hosts |
 
 ## Migration process
 
@@ -73,12 +73,12 @@ When discovery is complete, Contoso has a full inventory of assets and the metad
 
 ### Identify classifications
 
-Contoso identifies some common categories to classify assets in the inventory. These classifications are critical to Contoso's decision making for migration. The classification list helps to establish migration priorities and identify complex issues.
+Contoso identifies common categories to classify assets in the inventory. These classifications are crucial to Contoso's decision making for migration. The classification list helps to establish migration priorities and identify complex issues.
 
 | Category | Assigned value | Details |
 | --- | --- | --- |
 | Business group | List of business group names | Which group is responsible for the inventory item? |
-| POC candidate | Y/N | Can the application be used as a POC or early adopter for cloud migration? |
+| POC candidate | Y/N | Can Contoso use the application as a POC or early adopter for cloud migration? |
 | Technical debt | None/Some/Severe | Is the inventory item running or using an out-of-support product, platform, or operating system? |
 | Firewall implications | Y/N | Does the application communicate with the internet or outside traffic? Does it integrate with a firewall? |
 | Security issues | Y/N | Are there known security issues with the application? Does the application use unencrypted data or out-of-date platforms? |
@@ -88,8 +88,8 @@ Contoso identifies some common categories to classify assets in the inventory. T
 As part of the assessment process, Contoso identifies where applications are running. It determines the dependencies and connections between application servers. Contoso maps the environment in steps:
 
 1. Contoso discovers how servers and machines map to individual applications, network locations, and groups.
-2. Contoso identifies applications that have few dependencies and are suitable for a quick migration.
-3. Contoso uses mapping to identify complex dependencies and communications between application servers. Contoso can group these servers logically to represent applications and plan a migration strategy based on these groups.
+1. Contoso identifies applications that have few dependencies and are suitable for a quick migration.
+1. Contoso uses mapping to identify complex dependencies and communications between application servers. Contoso can group these servers logically to represent applications and plan a migration strategy based on these groups.
 
 With mapping completed, Contoso ensures that all application components are identified and accounted for when building the migration plan.
 
@@ -99,7 +99,7 @@ With mapping completed, Contoso ensures that all application components are iden
 
 As the last step in the discovery and assessment process, Contoso evaluates assessment and mapping results to determine how to migrate each application in the service catalog.
 
-Contoso adds classifications to the inventory.
+Contoso adds classifications to the inventory to capture the evaluation process.
 
 | Category | Assigned value | Details |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ Contoso adds classifications to the inventory.
 
 ### Determine costs
 
-To determine costs and the potential savings of Azure migration, Contoso uses the [total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/) to calculate and compare the TCO for Azure to a comparable on-premises deployment.
+To determine the costs and potential savings of Azure migration, Contoso uses the [total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/). Contoso compares the TCO calculations for Azure to a similar on-premises deployment.
 
 ### Identify assessment tools
 
@@ -154,7 +154,7 @@ Contoso must use Azure Migrate correctly because of the scale of this migration:
 
 Contoso uses Azure Migrate:
 
-- In vCenter to organize VMs into folders. This organization makes it easy for the admins to focus as they run an assessment against VMs in a specific folder.
+- In vCenter to organize VMs into folders. This arrangement makes it easy for the admins to focus as they run an assessment against VMs in a specific folder.
 - To assess dependencies between machines. This action requires agents to be installed on the VMs to be assessed.
 
 Contoso uses automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
