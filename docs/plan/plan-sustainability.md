@@ -56,9 +56,11 @@ Knowledge and awareness to be shared throughout the organization, not only targe
 
 ### Build a sustainability community
 
-Depending on roles across the business, there will be different training requirements for sustainability and cloud efficiency, whether they are part of the main organization's sustainability teams or a community member.
+Teams need to constantly be aware of new advancements in sustainability.
+Building a community around cloud efficiency and green software is a good starting point to foster awareness and drive a sustainability culture across your organization.
 
-- Set up a way of communication so community members can share what they've learned with the wider team.
+- Share best practices company-wide to help clients meet their goals. See [How do I start a sustainability community in my organization?](https://devblogs.microsoft.com/sustainable-software/how-do-i-start-a-sustainability-community/)
+- Review the guidance in the Azure Well-Architected Framework sustainability workload guidance for [community and knowledge sharing](/azure/architecture/framework/sustainability/sustainability-operational-procedures#community-and-knowledge-sharing).
 
 ### Learning resources
 

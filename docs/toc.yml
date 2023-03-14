@@ -1707,6 +1707,8 @@ items:
         href: manage/considerations/platform.md
       - name: Workload operations
         href: manage/considerations/workload.md
+      - name: Sustainability alignment
+        href: manage/considerations/sustainability.md
     - name: Advanced management and system design
       href: manage/design-principles.md
     - name: Manage antipatterns
