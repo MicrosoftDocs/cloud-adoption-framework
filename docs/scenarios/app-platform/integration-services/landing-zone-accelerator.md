@@ -48,4 +48,4 @@ It's highly recommended that you have a good understanding of the **integration 
 Review the critical design areas to make complete considerations and recommendations for your architecture. 
 
 > [!div class="nextstepaction"] 
-> [Identity and access management](./identity-and-access-management.md)
+> [Review the identity and access management design area](./identity-and-access-management.md)

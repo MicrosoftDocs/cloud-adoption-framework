@@ -69,7 +69,7 @@ Some examples of common Azure administration activities include:
 | KeyVault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
 
 > [!div class="nextstepaction"]
-> [Network topology and connectivity](./network-topology-and-connectivity.md)
+> [Review the network topology and connectivity design area](./network-topology-and-connectivity.md)
 
 ## Further Reading
 

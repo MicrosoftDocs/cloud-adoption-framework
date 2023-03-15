@@ -310,9 +310,33 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled using IP Filtering.
 
-- Public network access should be disabled using Service Endpoints:
-  Create a Virtual Network Service Endpoint in your VNet and bind this
-  to your Event Hub namespace using a virtual network rule
+- Public network access should be disabled using Service Endpoints: Create a Virtual Network Service Endpoint in your VNet and bind this to your Event Hub namespace using a virtual network rule
 
-- Enable the Trusted Services option to allow select Azure resources to
-  access your namespace.
+- Enable the Trusted Services option to allow select Azure resources to access your namespace.
+
+> [!div class="nextstepaction"] 
+> [Review the management design area](./management.md)
+
+## Further Reading
+
+- [What is Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/private-link-overview)
+
+- [Azure Private Link availability](https://learn.microsoft.com/en-us/azure/private-link/availability#integration)
+
+- [Virtual Network Service Endpoints Overview](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview)
+
+- [Azure Private Endpoint DNS configuration](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns)
+
+- [App Service Environments (ASE) Overview](https://learn.microsoft.com/en-us/azure/app-service/environment/overview)
+
+- [Integrate Key Vault with Azure Private Link](https://learn.microsoft.com/en-gb/azure/key-vault/general/private-link-service?tabs=portal)
+
+- [Protect APIs with Application Gateway and API Management](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/apis/protect-apis)
+
+- [Network Security for Azure Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/network-security)
+
+- [Network Security for Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)
+
+- [Allow access to Azure Event Hubs namespaces from specific virtual networks](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-service-endpoints)
+
+- [Overview of TLS termination using Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/ssl-overview)
