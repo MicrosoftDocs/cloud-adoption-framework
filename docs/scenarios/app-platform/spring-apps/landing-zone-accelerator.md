@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Azure Spring Apps landing zone accelerator
 
-Azure Spring Apps landing zone accelerator is intended for an **application team** that's **building and deploying Spring Boot applications** in a typical enterprise landing zone design. As the workload owner, use the **architectural guidance** to achieve your target technical state with confidence.  
+Azure Spring Apps landing zone accelerator is intended for an **application team** that's **building and deploying Spring Boot applications** in a typical enterprise landing zone design. As the workload owner, use **architectural guidance** provided in this accelerator to achieve your target technical state with confidence.  
 
 ## What's included in the accelerator
 
@@ -29,6 +29,9 @@ The landing zone accelerator is a set of design considerations, reference archit
 - **Reference architecture** provides design guidance that applies the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.
 
     [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/spring-apps-reference-architecture-landing-zone.png)](./media/spring-apps-reference-architecture-landing-zone.png#lightbox)
+
+
+    For information about this architecture, see TBD: Insert link.
 
 - **Reference implementation** accompanies the architecture and demonstrates the best practices, provides infrastructure-as-code templates a sample spring app.
 

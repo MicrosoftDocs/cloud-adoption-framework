@@ -51,11 +51,11 @@ As you design the workload, make sure the security controls owned by you are ali
 
 ## Design recommendations
 
-#### Network controls
+#### Network as the permimeter
 
 These network controls will create isolation boundaries and restrict flows in and out of the application.
 
-##### Network as the perimeter
+##### Network segmentation
 
 When you deploy Azure Spring Cloud Service resources, create or use an existing virtual network. 
 
@@ -90,7 +90,7 @@ To protect the workload resources against DDoS attacks, enable [DDoS standard pr
 
 Use Azure DNS for hosting DNS domains. DNS zones and records should be protected from bad actors. Azure role-based access control (Azure RBAC) and resource locks are recommended for that purpose. For more information, see [Prevent dangling DNS entries and avoid subdomain takeover](/azure/security/fundamentals/subdomain-takeover). 
 
-#### Identity controls
+#### Identity as the perimeter
 
 Azure provides identity controls through Azure Active Directory (Azure AD). The application make use of many features such as single sign-on, strong authentications, managed identities, conditional access, and others. The design choices for the application are covered in [Design are: Identity and access management](./identity-and-access-management.md).
 
@@ -163,10 +163,11 @@ For remote management, instead of an unencrypted protocol, use Secure Shell (SSH
  
 ##### Data at rest
 
-Server-side encryption at rest:User uploaded source and artifacts, config server settings, app settings, and data in persistent storage are stored in Azure
+User uploaded source and artifacts, config server settings, app settings, and data in persistent storage are stored in Azure. Server-side data at rest is protected by [Azure Storage encryption](/azure/storage/common/storage-service-encryption).
 
+Storage, which automatically encrypts the content at rest with Microsoft-managed keys. Config server cache, runtime binaries built from uploaded source, and application logs during the application lifetime are saved to Azure managed disk, which automatically encrypts the content at rest. Container images built from user uploaded source are saved in Azure Container Registry, which automatically encrypts the image content at rest.
 
- 
+For support scenarios, provide Microsoft with access to relevant customer data during support scenarios. For more information, see [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
 
 
 ## Next step
