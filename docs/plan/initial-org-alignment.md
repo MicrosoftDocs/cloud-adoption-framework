@@ -61,9 +61,9 @@ Depending on the organization's size, there might be dedicated *Security* and *D
 
 In the [Organize](../organize/index.md) section, we outline the functions, the cadence of meetings, the deliverables, and typical sources of skills and traditional roles that can fit the function.
 
-**Consider sustainability:**
+### Introduce sustainability
 
-Many organizations are evolving their organizational structure by introducing sustainability practices within the company. For example, modern Cloud Center of Excellence teams can encompass the directions for setting up the sustainability practice. Meanwhile, the governance might define the accountabilities to ensure sustainability targets are being tracked and measured in alignment with the [organizational objectives and key results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr#examples-of-okrs).
+Many organizations are evolving their organizational structure by introducing sustainability practices within the company. For example, modern Cloud Center of Excellence teams can encompass the directions for setting up the sustainability practice. Meanwhile, the governance team might define the accountabilities to ensure sustainability targets are being tracked and measured in alignment with the [organizational objectives and key results](/azure/cloud-adoption-framework/strategy/business-outcomes/okr#examples-of-okrs).
 
 For additional considerations in defining roles, responsibilities, and standards, see [Plan for sustainability - Roles and responsibilities](plan-sustainability.md#roles-and-responsibilities).
 
