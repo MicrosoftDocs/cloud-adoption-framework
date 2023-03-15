@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 02/20/2023
+ms.date: 03/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
