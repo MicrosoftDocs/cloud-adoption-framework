@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap
 
 **APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
 
-This article is Part 2 of the SAP Extend and Innovate Data: Best Practices series. For the first article in the series, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md).
+This article is Part 2 of the SAP extend and innovate data: Best practices series. For the first article in the series, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md).
 
 SAP applications often run several mission-critical and core business processes, which generate a huge amount valuable business data. There are many SAP applications and solutions across OLTP, such as ECC, CRM, SCM, and OLAP, such as BW. SAP applications expose data in several ways. When customers combine SAP and non-SAP data and apply advanced data services, such as analytics and AI, they extract real-time, predictive insights. This method improves business outcomes. SAP data integration can be a large, complex project.
 
