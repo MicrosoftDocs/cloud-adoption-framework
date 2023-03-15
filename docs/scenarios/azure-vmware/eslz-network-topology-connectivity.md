@@ -134,4 +134,4 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 - To learn Cloud Adoption Framework enterprise-scale landing zone architectural principles, various design considerations, and best practices for Azure VMware Solution, see the next article in this series:
 
   > [!div class="nextstepaction"]
-  > [Security, governance, and compliance disciplines for Azure VMware Solution](./eslz-security-governance-and-compliance.md)
+  > [Network considerations for AVS dual-region deployments](./eslz-dual-region-network-topology.md)
