@@ -68,10 +68,9 @@ For more information, see [Choose system or user-assigned managed identities](/a
 
 Use built-in Azure RBAC roles to simplify the management of required permissions for managed identity.
 
-- Azure Spring Apps Identities
-	- Use your own managed identity for Azure Spring Apps
-	- Use system-assigned and user-assigned managed identities separately. For more information, see [Best practices when using managed identities](/azure/spring-apps/how-to-use-managed-identities?pivots=sc-standard-tier#best-practices-when-using-managed-identities). 
-	- Use Privileged Identity Management in Azure AD.
+- Use your own managed identity for Azure Spring Apps
+- Use system-assigned and user-assigned managed identities separately. For more information, see [Best practices when using managed identities](/azure/spring-apps/how-to-use-managed-identities?pivots=sc-standard-tier#best-practices-when-using-managed-identities). 
+- Use Privileged Identity Management in Azure AD.
 
 ##### Secure internet communication
 

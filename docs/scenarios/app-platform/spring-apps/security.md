@@ -13,19 +13,20 @@ ms.subservice: caf-scenario-spring-apps
 
 This article provides security considerations and recommendations for making sure that the workload hosted in Azure Spring Apps is capable of detecting, preventing, and responding to security vulnerabilities. 
 
-Security of the workload cannot be guaranteed by just the application. As the workload owner, evaulate the attack surface that includes the application, the infrastructure services with which the application interacts, and also human errors. Azure provides various security controls on network, identity, and data to support your defense in depth strategy. 
+Security of the workload cannot be guaranteed by just the application. As the workload owner, **evaluate the attack surface that includes the application _and_ the infrastructure services** with which the application interacts, and also human errors. 
 
-For information about built-in security features of Azure Spring Apps, see [Security controls for Azure Spring Apps Service](/azure/spring-apps/concept-security-controls).
+Azure provides various security controls on **network, identity, and data** to support your defense in depth strategy. Many of those [controls are built into Azure Spring Apps](/azure/spring-apps/concept-security-controls). This guidance is based [Azure security baseline for Azure Spring Apps](/security/benchmark/azure/baselines/azure-spring-apps-security-baseline) that's derived from [Azure Security Benchmark version 2.0](/security/benchmark/azure/overview-v2). The benchmark provides recommendations on how you can secure your workload running on Azure Spring Apps cloud.
 
-The centralized teams will provide networking and identity controls as part of the platform. Review those contols to make design decisions for the workload. The design is subject to periodic reviews conducted by the centralized security team.
+The centralized teams will provide **networking and identity controls** as part of the platform. They will also provide guardrails for maintaining control over platforms, applications, and resources in Azure. The application landing zone subscription provided for the workload will be **preprovisioned with policies**, which are inherited from the management group. 
 
-> For information about the platform design, see [Platform design: Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
+As you design the workload, make sure the security controls owned by you are aligned with the central controls. The design is subject to periodic reviews conducted by the centralized security team. **Regularly review the security controls and platform policies with the central teams** to make sure the workload requirements are accomodated.
 
-The organization will also provide guardrails for maintaining control over platforms, applications, and resources in Azure. The centralized plaform teams will apply policies to the application landing zone subscription, which are inherited from the management group. Work with the central team to regularly review the platform policies and participate in change management to make sure the workload requirements are accomodated.
+> For information about the platform design, see:
+>
+> -  [Platform design: Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security).
+> - For information about the platform design, see [Platform design: Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
 
-> For information about the platform design, see [Platform design: Governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance).
-
-
+ 
 ## Design considerations
 
 - **Internal traffic**. Restrict or allow traffic between internal resources to follow an enterprise segmentation principle that aligns with the business risks. Where necessary, create isolation boundaries through virtual networks and subnets. Have rules in place to retrict traffic flows between networks.
@@ -36,16 +37,16 @@ The organization will also provide guardrails for maintaining control over platf
     - Application-specific attacks. 
     - Unsolicited and potentially malicious internet traffic. 
 
-- **Domain Name Service (DNS)**. Protect DNS zones and records from accidental or malicious modification. Common attacks are: 
-    - Dangling DNS 
-    - DNS amplifications attacks 
-    - DNS poisoning and spoofing 
+- **Identity management**. Make use of Azure Active Directory (Azure AD) features such as managed identities, single sign-on, strong authentications, managed identities, conditional access, and to provide authentication and authorization through Azure AD..
 
-- **Integration with centralized identity and authentication system**. TBD
-
-- **Security monitoring**. The system should have monitoring tools in place that report user sign-in activities and detects risky sign-ins. These tools should be integrated with central security information and event management (SIEM) systems. 
+- **Security monitoring**. The system should have monitoring tools in place to measure compliance to organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of security posture. 
 
 - **Credential exposure**. You can deploy and run code, configurations, and persisted data with  with identities or secrets. Make sure those credentials are examined when accessing those assets.
+
+- **Data in transit**. Data that is being transferred between components, locations, or and API calls must be encrypted.
+
+- **Data at rest**.  All persisted data including configuration  must be encrypted.
+
 
 
 ## Design recommendations
@@ -109,7 +110,7 @@ These Azure AD features are recommended:
 
     If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/create-azure-service-principal-azureps) with restricted permissions at the resource level. 
 
-    In both cases, Key Vault can be used with Azure-managed identities. A runtime environment (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
+    In both cases, Key Vault can be used with Azure-managed identities. A runtime component (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
 
 - **Azure AD single sign-on (SSO)**. [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended for authenticating access to the application from other applications (or devices) running in the cloud or on-premises. SSO also provides identity management to internal and external users such as partner and vendors. 
 
@@ -117,18 +118,21 @@ These Azure AD features are recommended:
 
 - **Conditional access to resources**. Azure Spring Apps supports [Azure AD conditional access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions include user sign-ins from certain IP ranges that need to sign in using MFA. These [conditional access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Azure AD to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources. 
 
+- **Priviledged access**. Implement [Azure AD Privileged Identity Management](https://review.learn.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 
-- **Monitor and alert on account anomalies**. Azure Spring Apps is integrated with Azure AD, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes made to any resource within Azure AD. The data is integrated with Azure Monitor and can be exported to Azure Sentinel. 
+#### Monitor and alert on account anomalies
 
-    Microsoft Defender for Cloud is recommended for getting alerts about suspicious activities, such as excessive number of failed authentication attempts or deprecated accounts in the subscription. 
+Azure Spring Apps is integrated with Azure AD, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes made to any resource within Azure AD. The data is integrated with Azure Monitor and can be exported to Azure Sentinel. 
 
-    For more information, see these articles:
+Microsoft Defender for Cloud is recommended for getting alerts about suspicious activities, such as excessive number of failed authentication attempts or deprecated accounts in the subscription. 
 
-    - [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs) 
-    - [View Azure AD risky sign-ins](/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
-    - [Identify Azure AD users flagged for risky activity](/azure/active-directory/reports-monitoring/concept-user-at-risk) 
-    - [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access) 
-    - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference) 
+For more information, see these articles:
+
+- [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs) 
+- [View Azure AD risky sign-ins](/azure/active-directory/reports-monitoring/concept-risky-sign-ins) 
+- [Identify Azure AD users flagged for risky activity](/azure/active-directory/reports-monitoring/concept-user-at-risk) 
+- [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access) 
+- [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference) 
 
 
 #### Credential scanning
@@ -142,6 +146,27 @@ For more information, see these articles:
 - [Set up Credential Scanner](https://secdevtools.azurewebsites.net/helpcredscan.html) 
 - [GitHub secret scanning](https://docs.github.com/github/administering-a-repository/about-secret-scanning) 
 
+#### Data controls
+
+##### Data in transit
+
+While network access controls can restrict traffic, the data being transfered is succeptible to out-of-band attacks, such as traffic capture. Use encryption to make sure attackers can't easily read or modify that data.
+
+Azure provides encryption for data in transit between Azure data centers. Azure Spring Apps supports data encryption in transit with Transport Layer Security (TLS) v1.2 or greater. 
+
+While this encryption is optional for traffic on private networks, it's critical for traffic on external and public networks. All **public endpoints must use HTTPS** for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
+
+For HTTP traffic, make sure clients that connect to your Azure resources can **negotiate TLS v1.2 or later**. **Don't use obsolete versions or protocols**. Disable weak ciphers. 
+
+For remote management, instead of an unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
+
+ 
+##### Data at rest
+
+Server-side encryption at rest:User uploaded source and artifacts, config server settings, app settings, and data in persistent storage are stored in Azure
+
+
+ 
 
 
 ## Next step
