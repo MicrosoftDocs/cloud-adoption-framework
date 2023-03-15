@@ -169,7 +169,7 @@ Contoso has some scripts that it uses to discover and document the SQL Server da
 
 #### Partner assessment tools
 
-Many other partner tools can help Contoso assess the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/migration/migration-center-partners/).
+Many other partner tools can help Contoso assess the on-premises environment for migration to Azure. Learn more about [Azure migration partners](https://azure.microsoft.com/resources/azure-migrate-isv-playbook).
 
 ## Step 2: Migrate
 
@@ -186,7 +186,7 @@ Contoso considers four broad migration strategies.
 | Rearchitect | <li> This strategy modifies or extends an application code base to optimize the application architecture for cloud capabilities and scale. <li> It modernizes an application into a resilient, highly scalable, independently deployable architecture. <li> Azure services can accelerate the process, scale applications with confidence, and manage applications with ease. |
 | Rebuild | <li> This approach rebuilds an application from scratch by using cloud-native technologies. <li> Azure PaaS provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses. It removes the need for an underlying application infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical applications to take advantage of cloud technologies, such as serverless compute or microservices. <li> Contoso manages the application and services that it develops, and Azure manages everything else. |
 
-Data must be considered, especially when Contoso has a high volume of databases. Contoso's default approach is to use PaaS services such as Azure SQL Database to take full advantage of cloud features. When Contoso moves to a PaaS service for databases, they only have to maintain data. Microsoft maintains the underlying platform.
+Data must be considered, especially because Contoso has a high volume of databases. Contoso's default approach is to use PaaS services such as Azure SQL Database to take full advantage of cloud features. When Contoso moves to a PaaS service for databases, they only have to maintain data. Microsoft maintains the underlying platform.
 
 ### Evaluate migration tools
 
@@ -237,9 +237,11 @@ Contoso runs the planner tool on a Windows Server machine that matches the minim
    | Process server | <li> Installed by default on the configuration server. <li> The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. <li> The process server also installs the Azure Site Recovery Mobility service on VMs that you want to replicate and performs automatic discovery of on-premises machines. <li> Scaled deployments need extra standalone process servers to handle large volumes of replication traffic. |
    | Mobility service | <li> The Mobility service agent is installed on each VMware VM that's migrated with Azure Site Recovery. |
 
+ <br>
+
 - Contoso determines how to deploy these components based on capacity considerations.
 
-   <br>
+   
 
    | Component | Capacity requirements |
    | --- | --- |
@@ -350,4 +352,4 @@ Contoso wants to ensure that it can recover from failures, avoid costly business
 
 In this article, Contoso planned for an Azure migration at scale. It divided the migration process into four stages from assessment and migration to optimization, security, and management after the migration was complete.
 
-It's important for an organization to plan a migration project as a whole process and to migrate its systems by breaking down sets into classifications and numbers that make sense for the business. Assess data and apply classifications for projects, so you can break them down into a series of smaller migrations, which can run safely and rapidly. The sum of these smaller migrations quickly turns into a large successful migration to Azure.
+It's important for an organization to plan a migration project as a whole process and to migrate its systems by breaking down sets into classifications and numbers that make sense for the business. Assess data and apply classifications for projects to break them down into a series of smaller migrations, which can run safely and rapidly. The sum of these smaller migrations quickly turns into a large successful migration to Azure.
