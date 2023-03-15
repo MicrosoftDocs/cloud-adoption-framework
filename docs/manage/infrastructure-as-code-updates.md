@@ -36,10 +36,8 @@ This means that Infrastructure as Code can be used to restore state by removing 
 
 For Azure landing zones, there are two main options for Infrastructure as Code:
 
-- Azure Bicep, managed by Microsoft, specifically for ALZ visit [ALZ Bicep repository](https://aka.ms/alz/bicep).
-- Terraform, managed by Hashicorp, specifically for ALZ visit [ALZ Terraform registry](https://aka.ms/alz/tf/repo).
-
-You can learn more about planning for the automation of Landing Zones by referencing the [Automation](../ready/considerations/automation.md#platform-automation-design-recommendation) article.
+- Azure Bicep, which is domain-specific language used to deploy Azure resources developed by Microsoft.
+- Terraform, which is a product produced by Hashicorp to deploy infrastructure to both cloud and on-prem.  Terraform has specific resource providers produced by Microsoft for the deployment of Azure resources.
 
 ## Benefits of updating ALZ with Infrastructure as Code
 
@@ -85,17 +83,33 @@ When you make a change to resources via the portal, CLI, or other non-Infrastruc
 
 Once identified, Infrastructure as Code can be run to attempt to align the deployment with the definition.  This can be used to identify issues and remediate many scenarios, depending on the nature of the issues, the nature of the run, and how the changes were made.  For example, Terraform will attempt to restore the baseline to resources it has deployed previously, and a `Complete` mode deployment in Bicep will remove resources in a resource group that are not part of the definition.  These can be excellent tools to detect and repair configuration drift, even if they might not be able to address all issues.
 
-To understand more about how these processes work, read about [Comparing Out of Band Changes - Out of Band Changes](https://learn.microsoft.com/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features#out-of-band-changes) to understand how these different approaches are tackled.  For Terraform, there is a helpful article on [Detecting and Managing Drift with Terraform](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform)
+To understand how Terraform and Bicep handle out of band changes, read the following:
+
+- [Comparing Out of Band Changes - Out of Band Changes](https://learn.microsoft.com/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features#out-of-band-changes)
+
+To learn more about how Terraform can detect and manage configuration drift, read the following:
+
+- [Detecting and Managing Drift with Terraform](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform)
 
 Changes that are defined in the portal can be cumbersome to implement back in to Infrastructure as Code.  They require updating the code to match the current state, often involving reviewing each resource change and updating its parameters to match the "as is" configuration.
 
-As a result, if you're using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts that have access to make changes directly, such as using Privileged Identity Management.  See [Security Baseline discipline overview](../govern/security-baseline/index.md) and [Identity Baseline discipline overview](../govern/identity-baseline/index.md) for guidance on this.
+As a result, if you're using Infrastructure as Code to manage your Landing Zone or other resources, you should plan only to make changes outside of Infrastructure as Code only as part of an emergency.  You should take all precautions with accounts that have access to make changes directly, such as using Privileged Identity Management.
 
-You can review [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
+You can review general automation and security practices in the following articles:
+
+- [Security Baseline discipline overview](../govern/security-baseline/index.md)
+- [Identity Baseline discipline overview](../govern/identity-baseline/index.md)
+- [Operational compliance considerations](../ready/landing-zone/design-area/management-operational-compliance.md#operational-compliance-recommendations)
+- [Platform Automation Design Recommendations](../ready/considerations/automation.md#platform-automation-design-recommendation)
 
 ## Next steps
 
-You can learn more about managing Azure Landing Zones with Infrastructure as Code by referencing these two repositories:
+You can explore an introduction to the Infrastructure as Code tools in the following articles:
 
-- [ALZ Bicep](https://aka.ms/alz/bicep)
-- [ALZ Terraform](https://aka.ms/alz/terraform)
+- [What is Bicep?](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep)
+- [What is Terraform?](https://developer.hashicorp.com/terraform/intro)
+
+You can learn more about deploying and operating Azure Landing Zones with Infrastructure as Code in the following articles:
+
+- [Azure landing zones - Bicep modules design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/bicep/landing-zone-bicep)
+- [Azure landing zones - Terraform module design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/terraform/landing-zone-terraform)
