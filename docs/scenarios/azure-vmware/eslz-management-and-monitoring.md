@@ -68,7 +68,7 @@ Review the following *recommendations* for platform management and monitoring of
 - For SLA purposes, Azure VMware Solution requires the number of failures to `tolerate = 1` for clusters that have between three and five hosts, and the number of failures to `tolerate = 2` for clusters with 6-to-16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
 - In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
-  - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connections within, from, and to the Azure VMware Solution".
+  - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connections within, from, and to the Azure VMware Solution, including ExpressRoute Direct and ExpressRoute Global Reach connections.
 - Send your logs to Log Analytics. 
 For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics).
 
