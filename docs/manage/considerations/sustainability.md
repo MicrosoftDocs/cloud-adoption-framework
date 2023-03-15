@@ -14,9 +14,11 @@ ms.custom: UpdateFrequency2
 
 Introducing sustainability in your cloud management and operations help drive carbon awareness in your teams, and ultimately work toward achieving your goals set up for your [sustainability outcomes](../../strategy/business-outcomes/sustainability.md).
 
-## Monitoring
+## Monitoring carbon emissions
 
 Utilize monitoring capabilities to better understand how your organization is using resources, and help identify areas of improvements.
+
+In the Azure Well-Architected Framework, we describe measuring and tracking carbon impact by using the Emissions Impact Dashboard, defining emissions targets, identifying the metrics and set improvement goals, using cost optimization as a proxy for carbon, and defining policies. To learn more, see [operational procedure considerations for sustainable workloads on Azure](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
 
 ### Cost as a proxy for sustainability
 

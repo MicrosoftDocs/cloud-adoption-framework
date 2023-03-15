@@ -73,7 +73,10 @@ The sustainability community members might be separate from the central organiza
 
 ### Learning resources
 
-- Sustainability, or cloud efficiency, is a fundamental topic to understand to optimize your cloud infrastructure, applications, and workloads. Learn how with the Microsoft Learn module [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/).
+- Sustainability, or cloud efficiency, is a fundamental topic to understand to optimize your cloud infrastructure, applications, and workloads. It's also an important part of your planning process to understand how you early in your cloud journey can contribute to become more sustainable.
+
+- Learn how to design Azure solutions and workloads to be more sustainable. See the [Azure Well-Architected Framework sustainability workload guidance](/azure/architecture/framework/sustainability/).
+- See the Microsoft Learn module [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/).
 - You might also benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
 - Learn more about why educating your teams about sustainability is essential. See [make sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
 
