@@ -24,7 +24,7 @@ The Azure landing zone accelerator is an Azure portal-based deployment experienc
 
 ## Where can I find a list of all the approved implementations/accelerators for Platform and Application landing zones?
 
-The ALZ team maintains a list of platform and application accelerators and implementation options that are available to see in the [Azure Architecture Centre page here](/azure/architecture/landing-zones/landing-zone-deploy).
+The ALZ team maintains a list of platform and application accelerators and implementation options that are available to see in the [Azure Architecture Center page here](/azure/architecture/landing-zones/landing-zone-deploy).
 
 As an ALZ team we only support the accelerators and implementation options listed under the Platform section of this document. We have also reviewed and worked with the teams that have created the accelerators and implementation options listed under the Application section of this document to ensure they align to ALZ's design principles and area guidance.
 
