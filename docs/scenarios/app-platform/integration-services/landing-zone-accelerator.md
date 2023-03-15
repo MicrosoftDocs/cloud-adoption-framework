@@ -26,11 +26,11 @@ The landing zone accelerator is a set of design considerations, reference archit
     - [Governance](./governance.md)
 
 
-- **Reference architecture** provides design guidance that applies the recommendations for an example spring app. The practical approach can be used as design guidance for greenfield implementation and as an assessment for brownfield customers already using Spring boot apps.
+- **Reference architecture** provides design guidance that applies the recommendations for an example workload.
 
     [![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/ais-enterprise-deployment_HighRes.png)](./media/ais-enterprise-deployment_HighRes.png#lightbox)
 
-- **Reference implementation** accompanies the architecture and demonstrates the best practices, provides infrastructure-as-code templates a sample spring app.
+- **Reference implementation** accompanies the architecture and demonstrates the best practices, deploying all the resources needed for an enterprise-ready AIS platform. Once deployed, all you need to do is upload your own code/workflows/files to start using this environment.
 
     > [!IMPORTANT]
     > ![GitHub logo](../../../_images/icons/github.svg) Refer to the [Azure Integration Services Reference Implementation](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/Reference%20Implementation.md).

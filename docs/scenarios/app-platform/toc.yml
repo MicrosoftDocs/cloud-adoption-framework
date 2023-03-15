@@ -14,7 +14,7 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
-    - name: Azure Integration Services landing zone accelerator
+    - name: Azure Integration Services (AIS)
       items:
       - name: Azure Integration Services landing zone accelerator
         href: integration-services/landing-zone-acclerator.md
