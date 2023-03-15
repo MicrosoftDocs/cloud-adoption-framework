@@ -31,7 +31,7 @@ As an ALZ team we only support the accelerators and implementation options liste
 If you cannot find an accelerator or implementation on this list and believe it should be, please raise a [GitHub issue on the ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose) as a feature request for us to triage.
 
 >[!TIP]
-> Often you can tailor your Azure landing zones deployment to meet your needs by reviewing and following the guidance we have published in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+> Often you can tailor your Azure landing zones deployment, to meet the needs of your platform landing zone, by reviewing and following the guidance we have published in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
 ## What is the Azure landing zone conceptual architecture?
 
