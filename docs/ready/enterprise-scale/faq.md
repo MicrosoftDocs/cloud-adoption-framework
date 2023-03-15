@@ -3,7 +3,7 @@ title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
 ms.author: martinek
-ms.date: 04/12/2021
+ms.date: 03/15/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -21,6 +21,14 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 ## What is the Azure landing zone accelerator?
 
 The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture).
+
+## Where can I find a list of all the approved implementations/accelerators for Platform and Application landing zones?
+
+The ALZ team maintains a list of platform and application accelerators and implementation options that are available to see in the [Azure Architecture Centre page here](/azure/architecture/landing-zones/landing-zone-deploy).
+
+As an ALZ team we only support the accelerators and implementation options listed under the Platform section of this document. We have also reviewed and worked with the teams that have created the accelerators and implementation options listed under the Application section of this document to ensure they align to ALZ's design principles and area guidance.
+
+If you cannot find an accelerator or implementation on this list and believe it should be, please raise a [GitHub issue on the ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose) as a feature request for us to triage.
 
 ## What is the Azure landing zone conceptual architecture?
 
