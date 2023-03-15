@@ -18,7 +18,7 @@ This article builds on a number of considerations and recommendations defined in
 
 For the purposes of this article, Identity and Access Management (IAM) refers to the authentication and authorization options available for deploying or maintaining resources within Azure. In practice, this involves identifying which identities have permission to create, update, delete and manage resources either via the Azure Portal, or via the Resource Manager API.
 
-IAM is a separate consideration from  endpoint security, which defines which identities can call into and access your services. Endpoint security is covered in the separate [Security](./security.md) article in this series.  That being said, sometimes the two options overlap: for some services in Azure, access to the endpoint is configured via the same RBAC controls used to manage access to the resources.
+IAM is a separate consideration from  endpoint security, which defines which identities can call into and access your services. Endpoint security is covered in the separate [Security](./security.md) article in this series.  That being said, sometimes the two design areas overlap: for some services in Azure, access to the endpoint is configured via the same RBAC controls used to manage access to the resources.
 
 ## Design considerations
 
@@ -28,13 +28,11 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 ## Design recommendations
 
 - Consider what roles you will need to manage and maintain your AIS applications.  Questions to ask in this regard:
-    - Who will need to view log files (*Application Insights*, *Log
-    Analytics*, *Storage Accounts*)?
+    - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
 
-  - Does anyone need to view original request data (including sensitive
-    data)?
+  - Does anyone need to view original request data (including sensitive data)?
 
-  - Where can this be viewed from e.g., only from corporate network?
+  - Where can original request data be viewed from (for example, only from your corporate network??
 
   - Who can view run history for a workflow?
 
@@ -42,24 +40,20 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
   - Who needs access to API Management subscription keys?
 
-  - Who can view contents of a Service Bus Topic or Subscription, or see
-    queue/topic metrics?
+  - Who can view contents of a Service Bus Topic or Subscription, or see queue/topic metrics?
 
   - Who needs to be able to administer Key Vault?
 
-  - Who needs to be able to add, edit, or delete keys, secrets and
-    certificates in Key Vault?
+  - Who needs to be able to add, edit, or delete keys, secrets and certificates in Key Vault?
 
-  - Who needs to be able to view and read keys, secrets or certificates
-    in Key Vault?
+  - Who needs to be able to view and read keys, secrets or certificates in Key Vault?
 
-  - Will the existing built-in Azure AD roles and groups cover the
-    above?
+  - Will the existing built-in Azure AD roles and groups cover the above?
 
-  - Should you create custom roles to either limit access, or to provide more granularity over permissions? E.g. to access the Callback URL for a Logic App requires a single permission, but there is no built-in role for those, other than “Contributor” or “Owner” which are too broad.
-- Work with the principle of least-privilege (PoLP) and build custom roles to limit the permission a given identity has to a resource if no built-in role suffices. For example, if an identity should have permission to get a Logic App Callback URL, but not to view a Logic App, a custom role can be created for this.
-- Look at using Azure Policy to restrict access to certain resources, or to enforce compliance with company policy. For example, you can create a policy that only allows deployment of API Management APIs that use encrypted protocols.
-- Review common Azure administration activities involved in the administration and management of AIS on Azure and assign RBAC permissions appropriately (for more detail on the permissions available, see Resource Provider Operations).
+  - Should you create custom roles to either limit access, or to provide more granularity over permissions? For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner” which are too broad.
+- Work with the principle of least-privilege (PoLP) and build custom roles to limit the permission a given identity has to a resource if no built-in role is sufficient. For example, if an identity should have permission to get a Logic App callback URL, but not to view a Logic App, a custom role can be created for this.
+- Look at using Azure Policy to restrict access to certain resources or to enforce compliance with company policy. For example, you can create a policy that only allows deployment of API Management APIs that use encrypted protocols.
+- Review common Azure administration activities involved in the administration and management of AIS on Azure and assign RBAC permissions appropriately (for more detail on the permissions available, see [resource provider operations](/azure/role-based-access-control/resource-provider-operations)).
 
 Some examples of common Azure administration activities include:
 
@@ -74,4 +68,21 @@ Some examples of common Azure administration activities include:
 | API Management           | Microsoft.ApiManagement             | Register/Delete a User, Read APIs, Manage Authorizations, Manage Cache                                                                                             |
 | KeyVault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
 
-                    
+> [!div class="nextstepaction"]
+> [Network topology and connectivity](./network-topology-and-connectivity.md)
+
+## Further Reading
+
+- [Azure Active Directory Identity and access management operations reference guide](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
+
+- [Azure identity and access management design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
+
+- [Azure identity and access for landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones?source=recommendations)
+
+- [Secure access and data in Azure Logic Apps](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
+
+- [Create custom roles in Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
+
+- [Azure Policy Overview](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+
+- [Tutorial: Build Azure Policies to enforce compliance](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage)
