@@ -23,7 +23,7 @@ The needs of your organization determine whether you should use a single subscri
 - Multiple subscriptions enable you to easily view billing for each subscription. They also allow you to limit who can access the Azure services associated with each subscription. For example, you could have production and non-production subscriptions, or internal and external subscriptions.
 - Using multiple subscriptions can help you plan for [subscriptions limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-For more information about the decision-making process, see [Subscription decision guide](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions).
+For more information about the decision-making process, see [Subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md).
 
 We also recommend that you consider ARM throttling limits when you make decisions about subscriptions. For more information, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
 
