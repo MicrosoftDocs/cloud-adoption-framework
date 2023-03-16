@@ -17,9 +17,9 @@ items:
     - name: Azure Integration Services (AIS)
       items:
       - name: Azure Integration Services landing zone accelerator
-        href: integration-services/landing-zone-acclerator.md
+        href: integration-services/landing-zone-accelerator.md
       - name: Identity and access management
-        href: integration-services/identity-access-management.md
+        href: integration-services/identity-and-access-management.md
       - name: Network topology and connectivity
         href: integration-services/network-topology-and-connectivity.md
       - name: Security

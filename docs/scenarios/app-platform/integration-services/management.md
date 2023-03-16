@@ -5,7 +5,7 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/16/2023
 ms.topic: conceptual
-ms.service: caf
+ms.service: cloud-adoption-framework
 ms.subservice: internal
 ---
 
