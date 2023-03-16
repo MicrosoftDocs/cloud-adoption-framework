@@ -104,95 +104,90 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 ### SAP Table connector
 
-#### Design considerations when using Table connector
+#### Design considerations when using a Table connector
 
-- Consider Optimizing The partitioning for better Performance
-- Consider the degree of parallelism from SAP table.
-- Consider Single file design for target Sink.
-- Benchmarking the throughput when using large data volumes.
+- Optimize the partitioning for better performance.
+- Consider the degree of parallelism from the SAP Table.
+- Consider a single file design for the target sink.
+- Benchmark the throughput when you use large data volumes.
 
 #### Design recommendations when using Table connector
 
-- **Partitioning:** Partitioning in SAP table connector effectively splits one underlying select statement into several using where clauses on a suitable field (for example, a field with high cardinality). If your SAP table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter _maxPartitionsNumber_) such that the partitions are small enough to avoid memory dumps in SAP, but large enough to speed up extraction.
+- **Partitioning:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses are on a suitable field, for example a field with high cardinality. If your SAP Table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
 
-- **Parallelism:** Degree of copy parallelism (parameter _parallelCopies_) works in tandem with partitioning and instructs the SHIR to make multiple parallel    RFC calls to the SAP system. For example, if you set this parameter to four, the service concurrently generates and runs four queries based on your specified partition option and settings, and each query retrieves a portion of data from your SAP table.
+- **Parallelism:** The degree of copy parallelism (parameter `parallelCopies`) works in tandem with partitioning and instructs the SHIR to make parallel RFC calls to the SAP system. For example, if you set this parameter to four, the service concurrently generates and runs four queries based on your specified partition option and settings. Each query retrieves a portion of data from your SAP table.
 
-     For optimum results, the number of partitions should be a multiple of number of the degree of copy parallelism.
+    For optimum results, the number of partitions should be a multiple of the number of the degree of copy parallelism.
 
-     When copying data from SAP table to binary sinks, the actual parallel count is adjusted automatically based on the amount of memory available in SHIR. Therefore, it is recommended to record the SHIR VM size for each test cycle in addition to the degree of copy parallelism and the number of partitions. Observe the performance of SHIR VM, performance of source SAP system, desired vs actual degree of parallelism and use an iterative process to identify the optimum settings and the ideal size for SHIR VM considering all ingestion pipelines that will simultaneously load data from one or multiple SAP systems.
+    When you copy data from SAP Table to binary sinks, the actual parallel count is automatically adjusted based on the amount of memory that's available in SHIR. Record the SHIR VM size for each test cycle, the degree of copy parallelism, and the number of partitions. Observe the performance of the SHIR VM, the performance of the source SAP system, and the desired vs. the actual degree of parallelism. Use an iterative process to identify the optimum settings and the ideal size for the SHIR VM. Consider all ingestion pipelines that simultaneously load data from one or multiple SAP systems.
 
-     Note the observed number of RFC calls to SAP against the configured degree of parallelism. If you observe that the number of RFC calls to SAP is less than the degree of parallism, verify that the SHIR virtual machine has enough memory and CPU resources available and choose a larger virtual machine if necessary. Another reason for this is that the source SAP system is configured to limit the number of parallel connections, this is explained in generic recommendations in this article.
+    Note the observed number of RFC calls to SAP against the configured degree of parallelism. If the number of RFC calls to SAP is less than the degree of parallelism, verify that the SHIR VM has enough memory and CPU resources available. Choose a larger virtual machine if necessary. The source SAP system is configured to limit the number of parallel connections. For more information, see the [General recommendations](#general-recommendations) section in this article.
 
-- **Number of files:** When copying data into a file-based data store and the targeted sink is configured to be a folder, then multiple files are generated by default, but if you set the "fileName" property in the sink, the data will be written to a single file. It's recommended to write to a folder as multiple files to obtain a much higher write throughput compared to writing to a single file.
+- **Number of files:** When you copy data into a file-based data store and the targeted sink is configured to be a folder, multiple files are generated by default. If you set the `fileName` property in the sink, the data is written to a single file. It's recommended that you write to a folder as multiple files because it obtains a higher write throughput compared to writing to a single file.
 
-- **Performance benchmarking:** When it comes to ingesting large amounts of data, we recommend performance benchmarking exercise by varying different parameters such as partitioning, degree of parallelism, number of files to determine the optimum setting for the given architecture, volume and type of data. Gather data from various tests in following format.
+- **Performance benchmarking:** We recommend using the performance benchmarking exercise to ingest large amounts of data. This method varies parameters, such as partitioning, degree of parallelism, and the number of files to determine the optimum setting for the given architecture, volume, and type of data. Gather data from tests in the following format.
 
-     ![ Performance Benchmark ](./media/performance-benchmark.png)
+     ![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark.png)
 
 ## Troubleshooting
 
-#### Considerations & Recommendations
+- For troubleshooting when extraction from the SAP system is slow or failing, use SAP logs from SM37 and match with the readings in Azure Data Factory.
 
-- Design consideration for Troubleshooting when Extraction from the SAP system is slow or failing – Troubleshoot using SAP logs from SM37 & matching with telemetry in data factory.
+- If only one batch job is triggered, set the SAP source partitions to have performance improvement in the mapping data flow in Azure Data Factory. For more information, see step 6 in [Map data flow properties](/azure/data-factory/connector-sap-change-data-capture#mapping-data-flow-properties).
 
-Recommendations –
+- If multiple batch jobs are triggered in the SAP system, and there's a big difference between each batch job's start time, change the size of Azure IR. When you increase the number of driver nodes in Azure IR, the parallelism of batch jobs in the SAP side increase.
 
-  - If only one Batch job is triggered, please set SAP source partitions to have performance improvement in the Mapping Data flow in the data factory. Please refer to point 6 in [Transform data from an SAP ODP source with the SAP CDC connector in Azure Data Factory or Azure Synapse Analytics - Azure Data Factory & Azure Synapse | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-factory/connector-sap-change-data-capture#mapping-data-flow-properties)
+    > [!NOTE]
+    > The maximum number of driver nodes for Azure IR is 16. Each driver node can only trigger one batch processes. This limitation might change in the future.
 
-  - If multiple batch jobs are triggered in the SAP system and each batch job's start-time has big difference, please change the size of Azure Integration Runtime (IR). Increasing the number of driver nodes in Azure Integration Runtime will increase the parallelism of batch jobs in the SAP side.
+- Check the logs in SHIR.
 
-      > [!NOTE]
-      > Please note that the maximum number of driver nodes for Azure IR is 16 and one cannot go beyond that. Currently each driver node can only trigger one batch processes but this limitation might change in the future. This is a current limitation.
+- To view logs, go to SHIR VM. Open Event viewer > Applications and service logs > Connectors > Integration runtime.
 
-- Check the logs in SHIR 
+- To send logs to support, go to SHIR VM. Open Integration Runtime configuration manager > Diagnostic > Send Logs. This action sends the logs from the last seven days and provides you a report ID. You will need this report ID and RunId of your run. Document the report ID for future reference.
 
-- **Viewing logs:** Go to SHIR Virtual machine and open Event viewer -\> Applications and service logs -\> Connectors -Integration runtime
+- When you use the SAP CDC connector in a SLT scenario:
 
-- **Sending logs to support:** Go to SHIR vm -\> Integration Runtime configuration manager -\> Diagnostic -\> Send Logs. This will send the logs from last 7 days and provide you a "report ID". You will need this report ID and RunId of your run. DONT FORGET to copy the "Report ID" shown to you when you have sent it as you only see it once.
+  - Ensure that prerequisites are met.
+    Roles are required for the SLT user, for example ADFSLTUSER, in OLTP systems, for example ECC, for SLT replication to work. For more information about roles, see [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517).
 
-- When using SAP CDC connector with SLT Scenario
+  - If errors occur in a SLT scenario, see the recommendations for analysis. Isolate and test the scenario within the SAP solution first. For example, test it outside of ADF by running the test program provided by SAP `RODPS_REPL_TEST` in SE38. If the issue is on the SAP side, you get the same error when you use the report. You can analyze the data extraction in SAP by using the transaction code `ODQMON`.
 
-    - Ensure that all pre-requisites are met.
-       SLT scenario - Roles required for the SLT user (eg ADFSLTUSER) in OLTP systems (eg ECC) for SLT replication to work. --\> [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517)
+    If the replication works when you use this test report, but not with ADF, contact Azure or ADF support.
 
-    - If you face errors using SLT scenario, please see the recommendations for analysis. 
-       Isolate and test the scenario within SAP solution first, i.e. test it outside of ADF by running the test program provided by SAP **RODPS\_REPL\_TEST** in **SE38.** If the issue is on the SAP side, you will get the same error when using this report. You can further analyse the data extraction in SAP using transaction code **ODQMON**.
+    The following example shows a report for `RODPS_REPL_TEST` in SE38.
 
-       If the replication works using this test report, but not with ADF, then contact the Azure / ADF support.
+    ![Screenshot that shows the ODP Context dropdown in the Extract Data dialog.](./media/rodps-repl-test.png)
 
-       Here is an example screenshot
+    ![Screenshot that shows the settings in the Extract Data dialog.](./media/rodps-repl-test-1.png)
 
-       **SE38 --\> RODPS\_REPL\_TEST**
+    ![Screenshot that shows the Extract Data dialog.](./media/rodps-repl-test-2.png)
 
-       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test.png)
+    The following example shows the transaction code `ODQMON`.
 
-       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test-1.png)
+    ![Screenshot that shows the Monitor Delta Queue Data Units window.](./media/odqmon.png)
 
-       ![ SAP Report RODPS_REPL_TEST  ](./media/rodps-repl-test-2.png)
+  - When ADF Linked Service connects to the SLT system, it doesn't show the SLT Mass Transfer IDs when you refresh the **Context** field.
 
-       **Transaction code: ODQMON**
+    ![Screenshot that shows ADF Linked Service.](./media/adf-linked-service.png)
 
-       ![ SAP transaction ODQMON  ](./media/odqmon.png)
+  - To run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following business add-in (BAdI) implementation.
 
-    - ADF Linked Service connecting to SLT system doesn't show SLT Mass Transfer IDs when you refresh "Context"
+    BAdi: `BADI_ODQ_QUEUE_MODEL`
 
-       ![ ADF Linked Service  ](./media/adf-linked-service.png)
+    Enhancement implementation: `ODQ_ENH_SLT_REPLICATION`
 
-       In order to run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following BAdI (Business Add-In) implementation.
+    1. In transaction LTRC, go to the **Expert Function** tab and select **Activate / Deactivate BAdI Implementation** to activate the implementation.
 
-       BAdi : BADI\_ODQ\_QUEUE\_MODEL
+       ![Screenshot that shows the Expert Function tab.](./media/ltrc-1.png)
+    1. Select **Yes**.
 
-       Enhancement Implementation : ODQ\_ENH\_SLT\_REPLICATION
+       ![Screenshot that shows the Customizing of BADI Implementations dialog.](./media/ltrc-2.png)
 
-       Activate it using the expert function "Activate / Deactivate BAdI Implementation" in transaction LTRC.
+    1. In the **ODQ/ODP specific functions** folder, select **Check Whether BAdI Implementation is Active**.
 
-       ![ SAP transaction LTRC  ](./media/ltrc-1.png)
+       ![Screenshot that shows the ODQ ODP specific functions folder. Check Whether BADI Implementation is Active is selected.](./media/ltrc-3.png)
 
-       ![ SAP transaction LTRC  ](./media/ltrc-2.png)
-
-       ![ SAP transaction LTRC  ](./media/ltrc-3.png)
+       The dialog shows the program activity.
 
        ![ SAP transaction LTRC  ](./media/ltrc-4.png)
-
-
-
