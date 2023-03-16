@@ -36,8 +36,8 @@ This means that Infrastructure as Code can be used to restore state by removing 
 
 For Azure landing zones, there are two main options for Infrastructure as Code:
 
-- Azure Bicep, which is domain-specific language used to deploy Azure resources developed by Microsoft.
-- Terraform, which is a product produced by Hashicorp to deploy infrastructure to both cloud and on-prem.  Terraform has specific resource providers produced by Microsoft for the deployment of Azure resources.
+- Azure Bicep, which is domain-specific language used to deploy Azure resources developed by Microsoft.  You can read more about deploying Landing Zones with Bicep in the article: [Azure landing zones - Bicep modules design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/bicep/landing-zone-bicep)
+- Terraform, which is a product produced by Hashicorp to deploy infrastructure to both cloud and on-prem.  Terraform has specific resource providers produced by Microsoft for the deployment of Azure resources.  You can read more about deploying Landing Zones with Terraform in the article: [Azure landing zones - Terraform module design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/terraform/landing-zone-terraform)
 
 ## Benefits of updating ALZ with Infrastructure as Code
 
@@ -108,8 +108,3 @@ You can explore an introduction to the Infrastructure as Code tools in the follo
 
 - [What is Bicep?](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep)
 - [What is Terraform?](https://developer.hashicorp.com/terraform/intro)
-
-You can learn more about deploying and operating Azure Landing Zones with Infrastructure as Code in the following articles:
-
-- [Azure landing zones - Bicep modules design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/bicep/landing-zone-bicep)
-- [Azure landing zones - Terraform module design considerations](https://learn.microsoft.com/azure/architecture/landing-zones/terraform/landing-zone-terraform)
