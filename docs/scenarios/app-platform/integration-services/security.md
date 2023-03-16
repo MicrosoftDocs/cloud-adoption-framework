@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: internal
 ---
 
-# Security
+# Security considerations for the Azure Integration Services landing zone accelerator
 
 Good security is the cornerstone of any Azure application. Azure Integration Services face a particular challenge, as there are many
 resources that make up an application; each of these resources has their own security considerations.
