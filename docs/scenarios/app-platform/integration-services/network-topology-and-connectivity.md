@@ -6,7 +6,7 @@ ms.author: csiemens
 ms.date: 03/10/2023
 ms.topic: conceptual
 ms.service: caf
-ms.subservice: caf-scenario-integration-services
+ms.subservice: internal
 ---
 
 # Network topology and connectivity considerations for the Integration Services landing zone accelerator
@@ -179,7 +179,7 @@ An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a
 ## Network design for App Service Plans
 
 - App Services in a multi-tenanted environment can be deployed with a private or a public endpoint. When deployed with a [private endpoint](/azure/app-service/networking/private-endpoint), public exposure of the App Service is removed. If there's a requirement for the private endpoint of the App Service to also be reachable via the internet, consider the use of App Gateway to expose the app service.
-- Plan your subnets carefully for outbound VNet integration considering the number of IP addresses that are required. VNet integration requires a dedicated subnet. When planning your subnet size, be aware that Azure [reserves 5 IP addresses](azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets) in each subnet. Additionally, one address is used from the integration subnet for each plan instance. When you scale your app to four instances, then four addresses are used. When you scale up or down in size, the required address space is doubled for a short period of time. This affects the real, available supported instances in your subnet.
+- Plan your subnets carefully for outbound VNet integration considering the number of IP addresses that are required. VNet integration requires a dedicated subnet. When planning your subnet size, be aware that Azure [reserves 5 IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets) in each subnet. Additionally, one address is used from the integration subnet for each plan instance. When you scale your app to four instances, then four addresses are used. When you scale up or down in size, the required address space is doubled for a short period of time. This affects the real, available supported instances in your subnet.
 
 When there is a need to connect from an App Service to on-premises, private, or IP-restricted services, consider that:
 
@@ -220,52 +220,35 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
-- Are you using [Private DNS
-  zones](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-dns)
+- Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns)
   or your own DNS server (with DNS forwarding) to resolve to a private
   link resource?
 
-- IP Filtering and VNets are only supported in the Premium SKU tier for
-  Service Bus. If the Premium Tier isn’t practical, look at using [SAS
-  Tokens](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-authentication-and-authorization#shared-access-signature)
-  as your primary way of locking down access to your namespace.
+- IP Filtering and VNets are only supported in the Premium SKU tier for Service Bus. If the Premium Tier isn’t practical, look at using [SAS Tokens](/azure/service-bus-messaging/service-bus-authentication-and-authorization#shared-access-signature) as your primary way of locking down access to your namespace.
 
 ### Design recommendations
 
-- Public network access should be disabled using [IP
-  Filtering](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-ip-filtering),
-  which applies to all supported protocols (for example, AMQP and HTTPS).
+- Public network access should be disabled using [IP Filtering](/azure/service-bus-messaging/service-bus-ip-filtering), which applies to all supported protocols (for example, AMQP and HTTPS).
 
-- Traffic to this namespace should be restricted over [private
-  endpoints](/azure/service-bus-messaging/private-link-service)
-  only, by restricting public network access (using IP Filtering).
+- Traffic to this namespace should be restricted over [private endpoints](/azure/service-bus-messaging/private-link-service) only, by restricting public network access (using IP Filtering).
 
-- Place your private endpoint in its own dedicated subnet reserved for
-  Service Bus.
+- Place your private endpoint in its own dedicated subnet reserved for Service Bus.
 
-- Add a DNS record using the private DNS zone for the private endpoint.
-
-- Enable trusted services within Azure to access your namespace directly (thereby
-  bypassing the firewall) to prevent issues with you integration design.
+- Add a DNS record using the private DNS zone for the private endpoint. Enable trusted services within Azure to access your namespace directly (thereby bypassing the firewall) to prevent issues with you integration design.
 
 ## Network design for Function Apps
 
 ### Design considerations
 
-- Are you using [Private DNS
-  zones](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-dns)
-  or your own DNS server (with DNS forwarding) to resolve to a private
-  link resource?
+- Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns) or your own DNS server (with DNS forwarding) to resolve to a private link resource?
 
 ### Design recommendations
 
 - Public network access should be disabled.
 
-- Traffic to this namespace should be restricted over private endpoints
-  only.
+- Traffic to this namespace should be restricted over private endpoints only.
 
-- Place your private endpoint in its own dedicated subnet reserved for
-  Functions.
+- Place your private endpoint in its own dedicated subnet reserved for Functions.
 
 - Add a DNS record using private DNS zone for the private endpoint.
 
@@ -275,12 +258,9 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled.
 
-- Create a private endpoint for [restricting
-  access](https://learn.microsoft.com/en-gb/azure/key-vault/general/private-link-service?tabs=portal)
-  via VNet’s only.
+- Create a private endpoint for [restricting access](/azure/key-vault/general/private-link-service?tabs=portal) via VNet’s only.
 
-- Place your private endpoint in its own dedicated subnet reserved for
-  Key Vault.
+- Place your private endpoint in its own dedicated subnet reserved for Key Vault.
 
 - Add a DNS record using private DNS zone for the private endpoint.
 
@@ -288,20 +268,15 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
-- Are you using [Private DNS
-  zones](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-dns)
-  or your own DNS server (with DNS forwarding) to resolve to a private
-  link resource?
+- Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns) or your own DNS server (with DNS forwarding) to resolve to a private  link resource?
 
 ### Design recommendations
 
 - Public network access should be disabled using IP Filtering.
 
-- Traffic to your topics and domain should be restricted over Private
-  Endpoints only.
+- Traffic to your topics and domain should be restricted over Private Endpoints only.
 
-- Place your private endpoint in its own dedicated subnet reserved for
-  Event Grid.
+- Place your private endpoint in its own dedicated subnet reserved for Event Grid.
 
 - Add a DNS record using private DNS zone for the private endpoint.
 
@@ -309,8 +284,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
-- Restricting network access does not work with the Basic SKU tier in
-  Event Hubs
+- Restricting network access does not work with the Basic SKU tier in Event Hubs
 
 ### Design recommendations
 

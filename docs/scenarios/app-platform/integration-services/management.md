@@ -6,7 +6,7 @@ ms.author: csiemens
 ms.date: 03/16/2023
 ms.topic: conceptual
 ms.service: caf
-ms.subservice: caf-scenario-integration-services
+ms.subservice: internal
 ---
 
 # Operations management considerations for the AIS Services landing zone accelerator

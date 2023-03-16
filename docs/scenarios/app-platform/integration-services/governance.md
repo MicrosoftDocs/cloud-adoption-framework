@@ -11,8 +11,6 @@ ms.custom: internal
 ---
 # Governance considerations for the Azure Integration Services landing zone accelerator
 
-# Governance
-
 Governance involves making sure any policies you have in place are being followed, and that you can show your applications are compliant with any legal, financial, regulatory, or internal requirements they are subject to. For smaller applications, this may be a manual process; for larger applications, automation is essential. Azure contains several offerings designed to make the compliance and governance process easier.
 
 Note that this section deals with the [Control Plane](/azure/azure-resource-manager/management/control-plane-and-data-plane) only - meaning how we create, manage, and configure the resources in Azure (generally via the **Azure Resource Manager**). This section does not deal with governance of the Data Plane - meaning how the endpoints for your
