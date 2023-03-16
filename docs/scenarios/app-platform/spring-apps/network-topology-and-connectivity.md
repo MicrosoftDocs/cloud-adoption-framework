@@ -50,7 +50,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
 
     The minimum CIDR block size of each of these subnets is /28. The runtime subnet needs a  minimum address space of /28. The application subnet also needs a minimum address space of /28. However, the number of spring apps that you can deploy will influence the size of that subnet. For information about the maximum app instances by subnet range, see [Using smaller subnet ranges](/azure/spring-apps/how-to-deploy-in-azure-virtual-network?tabs=azure-portal#using-smaller-subnet-ranges).
 
-- If you use Azure Application Gateway as the reverse proxy in front of Azure Spring Apps, you'll need another subnet for that instance.
+- If you use Azure Application Gateway as the reverse proxy in front of Azure Spring Apps, you'll need another subnet for that instance. For information, see [Using Application Gateway as the reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#scenario-1-using-application-gateway-as-the-reverse-proxy).
 
 - Use Network Security Groups (NSGs) on subnets to filter east-west traffic, that is,  restricting traffic to your service runtime subnet. 
 

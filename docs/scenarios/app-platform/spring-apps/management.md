@@ -22,17 +22,17 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
 ## Design considerations
 
-- **Logs and metrics**. This data is emitted from the application and resources. Logs provide insight into the operations of the workload. Metrics are collected at regular intervals and allow for near-real time insights. Both can help with investigations related to the *health and utilization of resources*. 
+- **Logs and metrics**. Collect logs and metrics emitted from the application and resources. Logs provide insight into the operations of the workload. Metrics are collected at regular intervals and allow for near-real time insights. Both can help with investigations related to the *health and utilization of resources*. 
 
-    Logs and metrics are key for _scaling decisions_. You can allow apps to scale based on metric thresholds or during a specific time window. 
+    Metrics are key for _scaling decisions_. You can allow apps to scale based on metric thresholds or during a specific time window. 
 
     You should consider *storing this data for future analysis*. Also, have the ability to visualize so that you can spot trends quickly.
 
-- **Distributed tracing**. Distributed tracing gives you _observability across different services_ within your Azure Spring Apps ecosystem. You need to configure monitoring agents for your application. 
+- **Distributed tracing**. Implement distributed tracing to get _observability across different services_ within your Azure Spring Apps ecosystem. You need to configure monitoring agents for your application. 
 
 - **Alerts**. The application teams must _get notified_ about events that are important for the workload. Setting alerts can achieve that goal. You can set alerts that monitor resources based on metrics such as storage, rate of requests, data usage, and others.
 
-- **Instrumentation**. Instrumentation allows you to _capture data from the application_.  
+- **Instrumentation**. Have instrumentation to _capture logs from the application_.  
 
     An important use case is _service discovery_. Instrument your application so that Azure Spring Apps can maintain a list of live apps to call that's used to route and load balance requests.
 
