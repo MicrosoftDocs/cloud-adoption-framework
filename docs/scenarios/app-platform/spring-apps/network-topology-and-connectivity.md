@@ -48,7 +48,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
 
 - Azure Spring Apps requires two dedicated subnets. One subnet has the service runtime and the other for the Spring Boot applications.
 
-    The minimum CIDR block size of each of these subnets is /28. The runtime subnet needsa  minimum address space of /28. The application subnet also needs a minimum address space of /28. However, the number of spring apps that you can deploy will influence the size of that subnet. For information about the maximum app instances by subnet range, see [Using smaller subnet ranges](/azure/spring-apps/how-to-deploy-in-azure-virtual-network?tabs=azure-portal#using-smaller-subnet-ranges).
+    The minimum CIDR block size of each of these subnets is /28. The runtime subnet needs a  minimum address space of /28. The application subnet also needs a minimum address space of /28. However, the number of spring apps that you can deploy will influence the size of that subnet. For information about the maximum app instances by subnet range, see [Using smaller subnet ranges](/azure/spring-apps/how-to-deploy-in-azure-virtual-network?tabs=azure-portal#using-smaller-subnet-ranges).
 
 - If you use Azure Application Gateway as the reverse proxy in front of Azure Spring Apps, you'll need another subnet for that instance.
 
@@ -72,7 +72,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
  
 - Use a reverse proxy to ensure that malicious users are prevented from trying to bypass the web application firewall (WAF) or circumvent throttling limits. Azure Application Gateway with integrated WAF is recommended.
 
-    If you are using the Enterprise tier, use the assigned endpoint of the Spring Cloud Gateway app as the back-end pool of the Application Gateway. This endpoint resolves to a private IP address in the Azure Spring Apps Service Runtime subnet.
+    If you're using the Enterprise tier, use the assigned endpoint of the Spring Cloud Gateway app as the back-end pool of the Application Gateway. This endpoint resolves to a private IP address in the Azure Spring Apps Service Runtime subnet.
 
     Add an NSG on the Service Runtime subnet that allows traffic only from the Application Gateway subnet, Spring Apps subnet and Azure Load Balancer.
  

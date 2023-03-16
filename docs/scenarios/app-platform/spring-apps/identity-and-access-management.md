@@ -29,7 +29,7 @@ As the workload owner, follow these best practices to make sure that the applica
 
 - **Access to the application**. Users might send requests to the application over the public internet. Or requests might come from private or on-premises networks. In either case, access must be authenticated based on client certificates or through Active Directory (Azure AD). 
 
-	Consider the technology options for the service discovery mechanism that will involke calls between apps. The options vary by Azure Spring Apps tiers. 
+	Consider the technology options for the service discovery mechanism that will invoke calls between apps. The options vary by Azure Spring Apps tiers. 
 
     - Basic/Standard: [Kubernetes Service Discovery or  Managed Spring Cloud Service Registry (using Eureka)](/azure/spring-apps/how-to-service-registration?pivots=programming-language-java)
     - (Enterprise) [Tanzu Service Registry](/azure/spring-apps/how-to-enterprise-service-registry) . 
@@ -38,13 +38,11 @@ As the workload owner, follow these best practices to make sure that the applica
 - **Operator access to resources**. Your workload maybe accessed by various team members with different responsibilities. For example, you might need to grant access to: 
 
 	- The platform team members who need operational access.
-	- The application team memmbers who will develop applications.
+	- The application team members who will develop applications.
 	- DevOps engineer who will need access to the build and release pipelines to deploy the workload and configure using Infrastructure-as-Code (IaC).
 	- Site reliability engineer for troubleshooting issues.
 
 	Based on the purpose of access, decide the level of control you want to provide to the user. Always start with the principle of least privilege. RBAC Role assignments can make sure that users have right set of privileges for their responsibilities and maintain boundaries. Consider built-in RBAC roles before creating custom roles. 
-
-	TBD: On Enterprise Tier, decide whether to setup Sigle sign on using AD for Spring cloud Gateway and API portal
 
 - **Configuration data access**. Based on your choice of tier for Azure Spring Apps (**Basic/Standard** or **Enterprise**), you'll need to decide configuration server options. 
 
@@ -74,9 +72,9 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 
 ##### Secure internet communication
 
-- Use certificates issued by a certificate authority, extended validation certificates or wildcard certificates
-- Use self-signed certificated only for non-prod environments
-- Securely load certificates from Azure Key Vault
+- Use certificates issued by a certificate authority, extended validation certificates or wildcard certificates.
+- Use self-signed certificated only for pre-production environments.
+- Securely load certificates from Azure Key Vault.
 
 ##### Role-based access control (RBAC)
 

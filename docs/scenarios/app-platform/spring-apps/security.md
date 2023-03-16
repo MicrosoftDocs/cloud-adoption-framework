@@ -29,7 +29,7 @@ As you design the workload, make sure the security controls owned by you're alig
  
 ## Design considerations
 
-- **Internal traffic**. Restrict or allow traffic between internal resources to follow an enterprise segmentation principle that aligns with the business risks. Where necessary, _create isolation boundaries_ through virtual networks and subnets. Have rules in place to retrict traffic flows between networks.
+- **Internal traffic**. Restrict or allow traffic between internal resources to follow an enterprise segmentation principle that aligns with the business risks. Where necessary, _create isolation boundaries_ through virtual networks and subnets. Have rules in place to restrict traffic flows between networks.
 
 - **External traffic**. Use Azure native resources to _protect your workload resources against attacks from external networks_, including:
 
@@ -112,7 +112,7 @@ These Azure AD features are recommended:
 
     Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so that the application can authenticate itself to other service by using Azure AD. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files. 
 
-    If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/active-directory/develop/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level. 
+    If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level. 
 
     In both cases, Key Vault can be used with Azure-managed identities. A runtime component (such as an Azure function) can be used to retrieve the secrets from Key Vault. For more information, see [Use Key Vault for security principal registration](/azure/key-vault/general/authentication). 
 
@@ -126,7 +126,7 @@ These Azure AD features are recommended:
 
 #### Data controls
 
-While network and identity controls restrict access to the application, the data itself needs to be protected. Encryption ensures and is a key security capabilities that must applied to mitigate. 
+While network and identity controls restrict access to the application, the data itself needs to be protected. Encryption ensures data integrity and is a key security capability that must applied to mitigate. 
 
 ##### Data in transit
 
@@ -136,7 +136,7 @@ Azure Spring Apps supports encryption with Transport Layer Security (TLS) v1.2 o
 
 This encryption is optional for traffic on private networks, it's critical for traffic on external and public networks. All _public endpoints must use HTTPS_ for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
 
-For HTTP traffic, make sure clients that connect to your Azure resources can _**_negotiate TLS v1.2 or later_. _Don't use obsolete versions or protocols_. Disable weak ciphers. 
+For HTTP traffic, make sure clients that connect to your Azure resources can _negotiate TLS v1.2 or later_. _Don't use obsolete versions or protocols_. Disable weak ciphers. 
 
 For remote management, instead of using unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
 
@@ -168,7 +168,7 @@ For more information, see these articles:
 
 ### Governance policies
 
-Azure built-in definition of [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Faf35e2a4-ef96-44e7-a9ae-853dd97032c4)	will allow you to enforce [network controls](#network-as-the-permimeter). 
+Azure built-in definition of [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Faf35e2a4-ef96-44e7-a9ae-853dd97032c4)	will allow you to enforce [network controls](#network-as-the-perimeter). 
 
  1. Detect the implementation of isolation boundaries for the application from the internet. 
  2. Enable Azure Spring Apps to communicate with private networks in on-premises data centers or Azure service in other virtual networks. 
