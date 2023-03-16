@@ -20,7 +20,9 @@ The network topology and connectivity considerations for this architecture depen
 Use a network topology based on [Virtual WAN](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) if your organization:
 
 - Plans to deploy resources across several Azure regions and requires global connectivity between VNets in these Azure regions and multiple on-premises locations.
+
 - Needs to integrate a large-scale branch network directly into Azure, either via a software-defined WAN (SD-WAN) deployment or requires more than 30 branch sites for native IPsec termination.
+
 - You require transitive routing between VPN and ExpressRoute, such as remote branches connected via Site-to-Site VPN or remote users connected via Point-to-Site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
 
 Organizations use Virtual WAN to meet large-scale interconnectivity requirements. Microsoft manages this service, which helps reduce overall network complexity and modernizes your organization's network.
@@ -28,8 +30,11 @@ Organizations use Virtual WAN to meet large-scale interconnectivity requirements
 Use a [traditional Azure network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/traditional-azure-networking-topology) based around a hub-and-spoke architecture if your organization:
 
 - Plans to deploy resources in only select Azure regions.
+
 - Doesn't need a global, interconnected network.
+
 - Has few remote or branch locations per region and needs fewer than 30 IP security (IPsec) tunnels.
+
 - Requires full control of the configuration or requires manual custom configuration of your Azure network.
 
 ### Reference network topology
@@ -43,9 +48,13 @@ The following architecture diagram shows the reference architecture for an AIS e
 Enterprise deployments of AIS should include the use of Private Endpoints and Virtual Networks. The following design considerations should be taken into account when planning your IP addressing:
 
 - Some AIS services require [dedicated subnets](/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network)
+
     - [API Management](/azure/api-management/api-management-using-with-vnet?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=stv2#enable-vnet-connectivity-using-the-azure-portal-stv2-compute-platform)
+    
     - [Logic Apps](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#prerequisites)
+    
     - You can delegate subnets to certain services to create instances of a service within the subnet.
+    
     - Azure VPN Gateway can connect overlapping, on-premises sites with overlapping IP address spaces through its [network address translation (NAT) capability](/azure/vpn-gateway/nat-howto).
 
 ## Custom DNS
@@ -53,8 +62,11 @@ Enterprise deployments of AIS should include the use of Private Endpoints and Vi
 Most AIS services allow customers to use their own DNS names for public endpoints, either using their own DNS servers, or via the Azure DNS offering. Configuration of these is done on a resource by resource basis, but the supported resources are listed below:
 
 - API Management supports [custom domains](/azure/api-management/configure-custom-domain?tabs=custom).
+
 - Function Apps and Logic Apps support [custom domains](/azure/app-service/app-service-web-tutorial-custom-domain?tabs=a%2Cazurecli), when hosted by an App Service Plan or App Service Environment.
+
 - Storage accounts support [custom domains](/azure/storage/blobs/storage-custom-domain-name?tabs=azure-portal) for blob storage endpoints.
+
 - Data Factory, Service Bus and Event Grid do not support custom domains.
 
 ## Private DNS
@@ -66,6 +78,7 @@ To resolve the records of a private DNS zone from your virtual network, you must
 ### Design considerations
 
 - It's important to correctly configure your DNS settings to resolve the private endpoint IP address to the fully qualified domain name (FQDN) of your resources.
+
 - Existing Microsoft Azure services might already have a DNS configuration for a public endpoint. This configuration must be overridden to connect using your private endpoint.
 
 ## Encryption and certificate authentication
@@ -75,12 +88,15 @@ If your network design requires encryption of in-transit traffic, and/or certifi
 ### Design considerations
 
 - Does your design require that traffic between Azure services be encrypted? Can your encryption be terminated at an [Azure Front Door](/azure/frontdoor/front-door-overview), and then be non-encrypted while traversing Azure backbone or within your VNet?
+
 - Will you need to terminate encryption at multiple places?
+
 - Do you need to handle authentication at multiple places, or can it be performed once for an external request?
 
 ### Design recommendations
 
 - If using an enterprise hub-and-spoke design, consider using Azure Front Door as your entry point for internet-based requests.
+
 - Consider using [Azure Application Gateway](/azure/application-gateway/create-ssl-portal) as the termination point for any external TLS-based requests or [API Management](/azure/api-management/api-management-howto-mutual-certificates) for certificate authentication and/or SSL termination.
 
 ## Connectivity to on-premises resources
@@ -90,18 +106,27 @@ Many enterprise integration scenarios require connecting your on-premises system
 ### Design considerations
 
 - [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) provides dedicated private connectivity to Azure Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) resources from on-premises locations.
+
 - [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) provides Site-to-Site (S2S) shared connectivity over the public internet to Azure Infrastructure as a Service (IaaS) virtual network resources from on-premises locations.
+
 - Azure ExpressRoute and Azure VPN Gateway have [different capabilities, costs and performance](/azure/vpn-gateway/vpn-gateway-about-vpngateways#planningtable).
+
 - The [On-Premises Data Gateway](/data-integration/gateway/service-gateway-onprem) (OPDG) or [Azure Hybrid Connections](/azure/app-service/app-service-hybrid-connections) can be used where ExpressRoute or VPN Gateway is not practical – OPDG/Hybrid Connections are both examples relay services, utilizing Service Bus to make connections outbound from your on-premises network to receive requests from Azure, without having to open ports in your external firewall/network.
+
     - OPDG is limited in the number of requests per minute it supports (the throttling limit), has specific data size limits, and only works with limited Azure resources (Logic Apps, PowerBI, Power Apps, Power Automate, Analysis Services).
+    
     - Hybrid connections work with App Services (Function Apps or Web Apps) and has its own throttling and sizing limits.
+    
     - [Azure Relay Hybrid Connections](/azure/azure-relay/relay-hybrid-connections-protocol) is a key part of Service Bus which allows for relays outside of App Services or OPDG.
 
 ### Design Recommendations
 
 - Use Azure **ExpressRoute** as the primary connectivity channel for connecting an on-premises network to Azure.
+
 - Ensure that you are using the right SKU for the ExpressRoute and/or VPN Gateway based on bandwidth and performance requirements.
+
 - Use Azure **VPN Gateway** to connect branches or remote locations to Azure.
+
 - Use **OPDG** and/or **Hybrid Connections** where ExpressRoute or VPN Gateway can’t be used, where the throughput limits will not be an issue, and where you are using a support Azure Resource (e.g. Logic Apps, Function Apps).
 
 ## Connectivity to AIS PaaS services
@@ -111,9 +136,13 @@ Azure AIS PaaS services are typically accessed over public endpoints. The Azure 
 Securing these endpoints can be achieved using either [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [private endpoints](/azure/private-link/private-endpoint-overview). These two options are similar but the choice between using a service endpoint or private endpoint depends largely on your security requirements.
 
 - To block all internet traffic to a target resource, use a private endpoint.
+
 - If you want to secure a specific sub-resource to your VNet resources, use a private endpoint.
+
 - If you want to secure a specific storage account to your VNet resources, you can use a private endpoint or a service endpoint with a service endpoint policy.
+
 - If you don't need a private IP address at the destination, service endpoints are considerably easier to create and maintain, and they don't require special DNS configuration.
+
 - Service endpoints have zero cost.
 
 [Azure Private Link](/azure/private-link/private-link-overview) enables you to [access Azure AIS Services](/azure/private-link/availability#integration) (for example, Service Bus and API Management) and Azure-hosted customer-owned/partner services over a private endpoint in your virtual network.
@@ -123,17 +152,25 @@ When using Private Link, traffic between your virtual network and the service tr
 ### Design considerations
 
 - Virtual network injection provides dedicated private deployments for supported services. Management plane traffic still flows through public IP addresses.
+
 - Azure Private Link provides dedicated access by using private IP addresses for Azure PaaS instances or custom services behind Azure Load Balancer Standard tier.
+
 - Enterprise customers often have concerns about public endpoints for PaaS services that must be appropriately mitigated.
 
 ### Design recommendations
 
 - Use virtual network injection for supported Azure services to make them available from within your virtual network.
+
 - Azure PaaS services injected into a virtual network still perform management plane operations by using service specific public IP addresses. Connectivity must be guaranteed for the service to operate correctly.
+
 - Access Azure PaaS services from on-premises through ExpressRoute with private peering. Use either virtual network injection for dedicated Azure services or Azure Private Link for available shared Azure services.
+
 - To access Azure PaaS services from on-premises when virtual network injection or Private Link isn't available, use ExpressRoute with Microsoft peering, which lets you avoid traversing the public internet.
+
 - Accessing Azure PaaS services from on-premises via ExpressRoute with Microsoft peering doesn't prevent access to the public endpoints of the PaaS service. You must configure and restrict that separately as required.
+
 - Don't enable virtual network service endpoints by default on all subnets.
+
 - Disable public access to AIS PaaS services.
 
 ## Network design for API Management
@@ -141,14 +178,19 @@ When using Private Link, traffic between your virtual network and the service tr
 ### Design considerations
 
 - Decide if APIs are accessible externally, internally, or a hybrid of both.
+
 - Decide if you want to use the internal [API Management gateway](/azure/api-management/virtual-network-concepts?tabs=stv2#limitations) as your main endpoint, or if you want to use a Web Application Firewall (WAF) service like [Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview) or [Azure Front Door](/azure/web-application-firewall/afds/afds-overview).
+
 - Decide if there should be multiple gateways deployed and how these are load balanced - for example, by using [Application Gateway in front of the API Management gateway](/azure/architecture/reference-architectures/apis/protect-apis).
+
 - Decide whether connectivity to on-premises or multi-cloud environments is required.
 
 ### Design recommendations
 
 - Deploy your API Management instance [in a VNet](/azure/api-management/api-management-using-with-vnet) to allow access to backend services in the network.
+
 - Use [Application Gateway](/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway) for external access to API Management when the API Management instance is deployed in a VNet in internal mode.
+
 - Use a [private endpoint for your API Management](/azure/api-management/private-endpoint) instance to allow clients in your private network to securely access the instance over Azure Private Link.
 
 ## Network design for Storage Accounts
@@ -158,8 +200,11 @@ Azure Storage is used as the storage solution for Azure Logic Apps and Azure Fun
 ### Design recommendations
 
 - Enable a [Service Endpoint for Azure Storage](/azure/storage/common/storage-network-security?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=azure-portal#grant-access-from-a-virtual-network) within the VNet if you need to keep the public IP address of the storage account available. The service endpoint routes traffic from the VNet through an optimal path to the Azure Storage service. The identities of the subnet and the virtual network are also transmitted with each request. Administrators can then configure network rules for the storage account that allow requests to be received from specific subnets in a VNet.
-- For best performance, your Logic App/Function App should use a storage account in the same region, which reduces latency
+
+- For best performance, your Logic App/Function App should use a storage account in the same region, which reduces latency.
+
 - Use [private endpoints](/azure/storage/common/storage-private-endpoints) for Azure Storage accounts to allow clients on a virtual network (VNet) to securely access data over a Private Link.
+
 - Different private endpoints should be created for each table, queue and blob storage service.
 
 ## Network design for App Service Environments
@@ -169,7 +214,9 @@ An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a
 ### Design considerations
 
 - An ASE is deployed onto a single subnet within your VNet. An ASE can be deployed using a Virtual IP Address (VIP) allowing external connections to use a publicly-visible IP address, which can be added to a public DNS record.
+
 - Applications within an ASE will have access to all other resources within the Virtual Network, depending on network access rules. Access to resources in other VNets can be achieved using Virtual Network peering.
+
 - Applications within an ASE don’t need to be configured to belong to a VNet – they are automatically within the VNet by virtue of being deployed to the ASE. This means that instead of having to configure network access on a per-resource basis, you can configure it once at the ASE level.
 
 ### Design recommendations
@@ -179,11 +226,13 @@ An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a
 ## Network design for App Service Plans
 
 - App Services in a multi-tenanted environment can be deployed with a private or a public endpoint. When deployed with a [private endpoint](/azure/app-service/networking/private-endpoint), public exposure of the App Service is removed. If there's a requirement for the private endpoint of the App Service to also be reachable via the internet, consider the use of App Gateway to expose the app service.
+
 - Plan your subnets carefully for outbound VNet integration considering the number of IP addresses that are required. VNet integration requires a dedicated subnet. When planning your subnet size, be aware that Azure [reserves 5 IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets) in each subnet. Additionally, one address is used from the integration subnet for each plan instance. When you scale your app to four instances, then four addresses are used. When you scale up or down in size, the required address space is doubled for a short period of time. This affects the real, available supported instances in your subnet.
 
 When there is a need to connect from an App Service to on-premises, private, or IP-restricted services, consider that:
 
 - When running in the multi-tenanted environment, the App Service call can originate from a wide range of IP addresses, and VNet integration may be needed to meet your networking requirements.
+
 - Services like API Management (APIM) can be used to proxy calls between networking boundaries and can provide a static IP if needed.
 
 ### Design recommendations
