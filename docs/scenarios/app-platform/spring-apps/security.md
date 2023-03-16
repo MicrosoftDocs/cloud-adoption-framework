@@ -96,13 +96,13 @@ Use Azure DNS for hosting DNS domains. DNS zones and records should be protected
 
 ### Identity as the perimeter
 
-Azure provides identity controls through Azure Active Directory (Azure AD). The application makes use of many features such as single sign-on, strong authentications, managed identities, conditional access, and others. The design choices for the application are covered in [Design are: Identity and access management](./identity-and-access-management.md).
+Azure provides identity controls through Azure Active Directory (Azure AD). The application makes use of many features such as single sign-on, strong authentications, managed identities, conditional access, and others. The design choices for the architecture are covered in [Design are: Identity and access management](./identity-and-access-management.md).
 
 This section covers the security aspect of those choices. 
 
 ##### Integration with the centralized identity system 
 
-Azure landing zones use Azure AD as the default identity and access management service. Using  centralized Azure AD to govern the workload services is recommended. This includes the use of the organization's network resources, Azure Storage, Key Vault, and other services that your application depends on. 
+Azure landing zones use Azure AD as the default identity and access management service. Using  centralized Azure AD to govern the workload services is recommended. This includes access to the organization's network resources, Azure Storage, Key Vault, and other services that your application depends on. 
 
 If you want to grant access the Azure Spring Apps data plane, use [Azure Spring Cloud Data Reader](/azure/role-based-access-control/built-in-roles#azure-spring-cloud-data-reader) built-in role. This role gives read-only permissions. 
 
@@ -134,11 +134,11 @@ Data being transferred is susceptible to out-of-band attacks, such as traffic ca
 
 Azure Spring Apps supports encryption with Transport Layer Security (TLS) v1.2 or greater. TLS provides secure communications through identity and trust, and encrypts communications of all types. You can use any type of TLS certificate. For example, certificates issued by a certificate authority, extended validation certificates, wildcard certificates with support for any number of subdomains, or self-signed certificates for dev and testing environments.
 
-This encryption is optional for traffic on private networks, it's critical for traffic on external and public networks. All _public endpoints must use HTTPS_ for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
+Encryption is critical for traffic on external and public networks. All _public endpoints must use HTTPS_ for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
 
 For HTTP traffic, make sure clients that connect to your Azure resources can _negotiate TLS v1.2 or later_. _Don't use obsolete versions or protocols_. Disable weak ciphers. 
 
-For remote management, instead of using unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
+For remote management, instead of using an unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
 
  
 ##### Data at rest
@@ -147,7 +147,7 @@ The workload will need to store state for source and artifacts, config server se
 
 Config server cache, runtime binaries built from uploaded source, and application logs during the application lifetime are saved to Azure managed disk. This data is also [automatically encrypted](/azure/virtual-machines/disk-encryption). Container images, which are built from user uploaded source are saved in [Azure Container Registry](/azure/container-registry/container-registry-storage), are encrypted.
 
-For support scenarios, Microsoft needs access to relevant customer data. Using [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview) is recommended because the access needs to be approved by your team or organization. 
+For support scenarios, when Microsoft needs access to relevant customer data,  using [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview) is recommended because the access must be approved by your team or organization. 
 
 
 ### Monitor and alert on account anomalies

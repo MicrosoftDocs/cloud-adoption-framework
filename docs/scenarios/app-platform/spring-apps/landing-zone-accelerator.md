@@ -31,12 +31,12 @@ The landing zone accelerator is a set of design considerations, reference archit
     [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/spring-apps-reference-architecture-landing-zone.png)](./media/spring-apps-reference-architecture-landing-zone.png#lightbox)
 
 
-    For information about this architecture, see TBD: Insert link.
+    For information about this architecture, see [Azure Spring Apps Landing Zone Accelerator](https://github.com/Azure/springapps-landing-zone-accelerator#azure-spring-apps-landing-zone-accelerator).
 
 - **Reference implementation** accompanies the architecture and demonstrates the best practices, provides infrastructure-as-code templates a sample spring app.
 
     > [!IMPORTANT]
-    > ![GitHub logo](../../../_images/icons/github.svg) Refer to the [Azure Spring Apps Reference Implementation](https://github.com/Azure/azure-spring-apps-reference-architecture).
+    > ![GitHub logo](../../../_images/icons/github.svg) Refer to the [Azure Spring Apps Reference Implementation](https://github.com/Azure/springapps-landing-zone-accelerator).
 
 
 ## Integration with platform landing zones

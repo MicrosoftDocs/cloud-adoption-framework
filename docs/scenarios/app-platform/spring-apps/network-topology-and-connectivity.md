@@ -79,7 +79,7 @@ These recommendations provide prescriptive guidance for the preceding set of rec
     > [!NOTE]
     > You can choose an alternative for the reverse proxy are such as Azure Front Door or non-Azure services. For information about configuration options, see [Expose Azure Spring Apps through a reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy).
 
-- Azure Spring Apps are deployed in a virtual network or outside the network. For additional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
+- Azure Spring Apps can be deployed in a virtual network (through VNet injection) or outside the network. For additional considerations, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
 
 ## Next step
 

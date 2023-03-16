@@ -50,7 +50,7 @@ As the workload owner, follow these best practices to make sure that the applica
 
 	You'll need to make a choice between using public or private repositories and their authentication mechanism. Azure Spring Apps supports basic password/token-based authentication and SSH.
 		
-	For **Enterprise**, Application Configuration Service for VMware Tanzu enables the management of Kubernetes-native ConfigMap resources that are populated from properties defined in one or more Git repositories with explicit configuration to config-file-pattern. -- What's the guidance here.
+	For **Enterprise**, consider using Application Configuration Service for VMware Tanzu, which enables the management of Kubernetes-native ConfigMap resources that are populated from properties defined in one or more Git repositories.
 
 
 ## Design recommendations

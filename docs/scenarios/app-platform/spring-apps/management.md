@@ -28,16 +28,13 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     You should consider *storing this data for future analysis*. Also, have the ability to visualize so that you can spot trends quickly.
 
+- **Instrumentation**. Have instrumentation in place to generate _additional logs and metrics from the application_.  
+
 - **Distributed tracing**. Implement distributed tracing to get _observability across different services_ within your Azure Spring Apps ecosystem. You need to configure monitoring agents for your application. 
 
 - **Alerts**. The application teams must _get notified_ about events that are important for the workload. Setting alerts can achieve that goal. You can set alerts that monitor resources based on metrics such as storage, rate of requests, data usage, and others.
 
-- **Instrumentation**. Have instrumentation to _capture logs from the application_.  
-
-    An important use case is _service discovery_. Instrument your application so that Azure Spring Apps can maintain a list of live apps to call that's used to route and load balance requests.
-
 - **Health probes**. You can set up health probes to detect the _health of the backend services_. Make sure that you review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
-
 
 ## Design Recommendations
 
