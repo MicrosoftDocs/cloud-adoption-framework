@@ -6,7 +6,7 @@ ms.author: csiemens
 ms.date: 03/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: internal
+ms.subservice: scenario
 ---
 
 # Azure Integration Services landing zone accelerator
