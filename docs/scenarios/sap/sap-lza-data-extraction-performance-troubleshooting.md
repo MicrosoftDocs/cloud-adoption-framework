@@ -51,7 +51,7 @@ It's important to configure optimal settings for the source and target so you ca
 
    ![Screenshot that shows the dialog work processes in the Task Manager.](./media/dialogwp.png)
 
-- If you want to run multiple partitions in parallel on SHIR at the same time, use a powerful virtual machine to set up SHIR. Or use scale out by using SHIR high availability and scalability features to have multiple nodes. For more information, see [/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability).
+- If you want to run multiple partitions in parallel on SHIR at the same time, use a powerful virtual machine to set up SHIR. Or use scale out by using SHIR high availability and scalability features to have multiple nodes. For more information, see [High availability and scalability](/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#high-availability-and-scalability).
 
 ## Partitions
 
@@ -149,7 +149,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 - When you use the SAP CDC connector in an SLT scenario:
 
   - Ensure that prerequisites are met.
-    Roles are required for the SLT user, for example ADFSLTUSER, in OLTP systems, for example ECC, for SLT replication to work. For more information about roles, see [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517).
+    Roles are required for the SLT user, for example ADFSLTUSER, in OLTP systems, for example ECC, for SLT replication to work. For more information about roles, see [What authorizations and roles are needed](https://launchpad.support.sap.com/#/notes/2658517).
 
   - If errors occur in an SLT scenario, see the recommendations for analysis. Isolate and test the scenario within the SAP solution first. For example, test it outside of ADF by running the test program provided by SAP `RODPS_REPL_TEST` in SE38. If the issue is on the SAP side, you get the same error when you use the report. You can analyze the data extraction in SAP by using the transaction code `ODQMON`.
 

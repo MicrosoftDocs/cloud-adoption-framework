@@ -39,7 +39,7 @@ SAP SaaS solutions:
 
 - [SAP S/4HANA Cloud](https://www.sap.com/products/erp/s4hana.html) is the public SaaS version of SAP S/4HANA.
 - SAP Customer Experience solutions, such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/service-management/service-cloud.html).
-- [SAP Ariba](https://discovery-center.cloud.sap/serviceCatalog/sap-analytics-cloud?commercialModel=subscription&provider=azure&tab=service_plan&region=all) for direct and indirect spend.
+- [SAP Business Network](https://www.sap.com/products/spend-management/ariba-network.html) for direct and indirect spend.
 - [SAP Concur](https://www.concur.com/) for travel and expense.
 - [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management.
 - [SAP SuccessFactors](https://www.sap.com/products/hcm.html) for human capital management.
@@ -51,19 +51,19 @@ SAP SaaS solutions:
 - **Licensing** Understand the existing licenses available and consider the licensing implications before you extract data from SAP systems. Work with your SAP counterparts. Because licensing is a complex subject and the policies might change over time, you can contact your SAP account team for guidance. For more information, see these guides:
 
   -	[Indirect access guide](https://news.sap.com/wp-content/blogs.dir/1/files/Indirect_Access_Guide_for_SAP_Installed_Base.pdf) for SAP ERP (ECC and SAP S/4HANA) customers with contracts based on SAP pricing policies prior to April 10, 2018.  
-  - [Pricing for Digital Age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
+  - [ERP pricing for the digital age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
 
-- **SAP HANA** For SAP HANA, you must differentiate between the runtime and full-use database licenses. Runtime databases only support software licensed from SAP. Full-use databases licensed from SAP support SAP and non-SAP software. Full-use SAP HANA databases are licensed based on a gigabyte-of-memory metric. So, third-party data connectors that access the SAP HANA database directly need to have a full-use SAP HANA database license. For more information, see https://blogs.sap.com/2021/01/18/technical-details-hana-licensing/ and the [SAP Licensing Guide](https://www.sapusers.org/uploads/files/5660).
+- **SAP HANA** For SAP HANA, you must differentiate between the runtime and full-use database licenses. Runtime databases only support software licensed from SAP. Full-use databases licensed from SAP support SAP and non-SAP software. Full-use SAP HANA databases are licensed based on a gigabyte-of-memory metric. So, third-party data connectors that access the SAP HANA database directly need to have a full-use SAP HANA database license. For more information, see [HANA licensing technical details](https://blogs.sap.com/2021/01/18/technical-details-hana-licensing/) and the [SAP licensing guide](https://www.sapusers.org/uploads/files/5660).
 
 - **OpenHub license** For data extraction from SAP BW on anyDB or SAP HANA, consider the SAP NetWeaver OpenHub license and the SAP OpenHub for S/4HANA license. These licenses are included in the SAP HANA enterprise edition. SAP BW/4HANA doesn't require an OpenHub license. For more information about terms and conditions, see [SAP Software Use Rights (SUR)](https://assets.cdn.sap.com/agreements/product-use-and-support-terms/sur/sap-software-use-rights-english-v1-2022.pdf).
 
-- **SLT licensing** The Operational Data Provisioning (ODP) framework is part of many SAP systems, including SAP ECC and SAP S/4HANA. It's also contained in SAP BW and SAP BW/4HANA. One of the possible ODP providers of the SAP CDC connector is SAP Landscape Transformation Replication Server (SLT). It's a trigger-based data replication technology that allows real-time replication from SAP and/or non-SAP sources to SAP and/or non-SAP targets. For more information about SLT licensing, see [2707835 - SLT Licensing](https://launchpad.support.sap.com/#/notes/2707835). The target system of the replication determines which license you need. If the license of the target system includes the use of SLT, you don't need a separate SLT license. In any other SLT case, including the use of SAP CDC connector, an SLT full license is required.
+- **SLT licensing** The Operational Data Provisioning (ODP) framework is part of many SAP systems, including SAP ECC and SAP S/4HANA. It's also contained in SAP BW and SAP BW/4HANA. One of the possible ODP providers of the SAP CDC connector is SAP Landscape Transformation Replication Server (SLT). It's a trigger-based data replication technology that allows real-time replication from SAP and/or non-SAP sources to SAP and/or non-SAP targets. For more information, see [SLT Licensing](https://launchpad.support.sap.com/#/notes/2707835). The target system of the replication determines which license you need. If the license of the target system includes the use of SLT, you don't need a separate SLT license. In any other SLT case, including the use of SAP CDC connector, an SLT full license is required.
 
 - Within a customer organization, there are separate teams that support data integration and SAP projects. Often the data team is unaware of existing OpenHub licenses that enables data extraction from SAP BW by using the OpenHub interface.
 
 - Consider the technical debt of existing SAP BW transformations and investments.
 
-- Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. Consider the [Whitepaper](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf). For information about the SAP CDC connector, see [SAP CDC page](/azure/data-factory/connector-sap-change-data-capture).
+- Azure Data Factory and Azure Synapse Analytics pipelines provide multiple connectors for data extraction from SAP sources. For more information, see [Transform data from an SAP ODP source using the SAP CDC connector](/azure/data-factory/connector-sap-change-data-capture) and [SAP data integration using Azure Data Factory](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
 
 - **Data analysis** After the source system is identified and its capabilities and limitations are known, consider the following data analysis elements:
   - Source business object
@@ -83,9 +83,9 @@ SAP SaaS solutions:
 
 - If the SAP BW system has many transformations on top of data that's extracted from SAP ERP systems, you might consider an SAP BW Open Hub connector to extract data from SAP BW. Consider your organization’s data strategy and skill set. You might already invest in Azure data services, which can influence your choice of source SAP system.
 
-- If you use the [CDC (Change Data Capture) connector](/azure/data-factory/sap-change-data-capture-introduction-architecture), the following data providers are recommended based on the source system.  
+- If you use the [CDC (change data capture) connector](/azure/data-factory/sap-change-data-capture-introduction-architecture), the following data providers are recommended based on the source system.  
 
-| SAP source | Data providers |
+| SAP source | Data provider |
 |---|---|
 | **ECC** | **ECC extractors**:  An SAP extractor is a program that is used to retrieve data in an SAP source system and transfer it to an SAP Business Warehouse or Business Intelligence system. If you or your partner have experience and knowledge of BW extractors, they're the preferred option. Ensure your partner has implementation and operation experience for a successful project.<br><br> **SLT (SAP Landscape Transformation Replication Server)**: If you can't use extractors or if a database trigger option is required, you can rely on original tables and work via SLT. |
 | **S/4 HANA** | **ABAP CDS views**: SAP CDS stands for SAP Core Data Services. SAP CDS is an infrastructure for data modeling where data models are defined and consumed on the database server rather than the application server. There are two types of SAP CDS views, HANA CDS views and ABAP CDS views. SAP ABAP CDS views are defined at the application server level. This option is preferred to extract data. Data is easier to consume (multi-dimensional model). Technology is easier to handle because CDS views are like database views, and they can be understood without deep SAP knowledge. Custom CDS views are easier to create and more powerful.<br><br>**Extractors**: Exists in S/4 HANA to fill gaps. Use this provider when you don't have CDS views, and the gap is filled with extractors. Ensure you or your partner have implementation and operational experience for a successful project.<br><br>**SLT (SAP Landscape Transformation Replication Server)**: Connecting to tables. Use this option if the previous two options don't fit the use case. |
@@ -100,6 +100,5 @@ SAP SaaS solutions:
 
 ## Next steps
 
-The following article provides details on the connectors available in Azure to connect with the SAP system and decision criteria to choose the right connector for you.
-
-[Choosing Azure Connectors](./sap-lza-choosing-azure-connectors.md)
+- [Choose the best SAP connector](./sap-lza-choosing-azure-connectors.md)
+- [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md)

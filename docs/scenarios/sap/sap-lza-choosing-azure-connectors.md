@@ -83,8 +83,8 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 |---|---|---|---|---|---|---|---|---|
 | SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, and BW/4HANA | Raw data | SAP CDC via SLT | All transparent, pooled, and cluster tables support full load and CDC. Some views (transaction SE11) support full load and CDC. | RFC calls to NetWeaver application and message server. | Basic SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
 | SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, and BW/4HANA | Logical objects | SAP CDC | ABAP CDS views support full load and many of them support delta, for example if they're based on time stamps or triggers. SAP extractors, standard and custom, support full load and might also support delta based on the configuration. BW InfoProviders, such as DSO, ADSO, InfoCubes, MultiProvider, CompositeProvider, and Query (if exposed as InfoProvider) support full load and might also support delta based on the configuration. | RFC calls to the NetWeaver application and message server. | Basic, SNC | Prerequisites | Yes, fast with built-in parallel loading based on the configurable partitioning. | Large |
-| SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4 HANA, BW on AnyDB, and BW on HANA. BW/4HANA not supported. | Raw data | SAP Table | All transparent, pooled, and cluster tables and views (SE11) support full load. You can also extract changes with manual watermarking by using a timestamp or the unique ID column. |  RFC calls to NetWeaver application and message server. | Basic, SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
-| BW on AnyDB and BW on HANA. BW/4HANA not supported. | Logical objects | SAP BW Open Hub | BW objects exposed via Open Hub Destination (OHD) local table, such as DataSources, DSO, InfoCube, MultiProvider, CompositeProvider, and Query (if exposed as InfoProvider) support full load. Delta is supported if the OHD supports delta. | RFC calls to NetWeaver application and message server. | Basic | Prerequisites (Create SAP OHD in SAP BW to expose data) | Yes, fast with built-in parallel loading based on OHD specific schema. | Large |
+| SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4 HANA, BW on AnyDB, and BW on HANA. BW/4HANA not supported. | Raw data | SAP Table | All transparent, pooled, and cluster tables and views (transaction SE11) support full load. You can also extract changes with manual watermarking by using a timestamp or the unique ID column. |  RFC calls to NetWeaver application and message server. | Basic, SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
+| BW on AnyDB and BW on HANA. BW/4HANA not supported. | Logical objects | SAP BW Open Hub | BW objects exposed via Open Hub Destination (OHD) local table, such as DataSources, DSO, InfoCube, MultiProvider, CompositeProvider, and Query (if exposed as InfoProvider) support full load. Delta is supported if the OHD supports delta. | RFC calls to NetWeaver application and message server. | Basic | Prerequisites. Create SAP OHD in SAP BW to expose data. | Yes, fast with built-in parallel loading based on OHD specific schema. | Large |
 | BW on AnyDB and BW on HANA. BW/4HANA not supported. | Logical objects | SAP BW via MDX | BW InfoCubes and QueryCubes (including BEx queries) support full load. Delta isn't supported. | RFC calls to NetWeaver application server. | Basic | Prerequisites | Slower | Small |
 | SAP ECC, S/4 HANA | Raw data or logical objects | SAP ECC via SAP Gateway | Any objects exposed by OData services, such as SAP tables, views, BAPI objects, extractors, data, or IDOCs sent to SAP PI that can be received as OData via relative adapters support full load. You can also extract changes with manual watermarking by using a timestamp or the unique ID column. |  HTTP (OData) calls to NetWeaver application and message server. | Basic | Prerequisites. Set up SAP Gateway, activate OData service, and expose entities. | Slower | Small |
 | SAP HANA | Raw data or logical objects | SAP HANA | HANA database row and column tables, information models (analytic and calculation views), and custom query support full load. You can also extract changes with manual watermarking by using a timestamp or the unique ID column. | ODBC calls to HANA database. | Basic, Windows (SSO) | Prerequisites | Yes, fast with built-in parallel loading based on the configurable partitioning. | Large |
@@ -92,17 +92,15 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 
 There might be more than one connector available for a scenario. Your choice depends on which connector offers you the best integration capabilities. Consider using the connector that integrates with a higher layer, for example the SAP application instead of the database. The following images show the suggested decision direction.
 
- **SAP ECC, S/4 HANA, SAP Application Integration** -
+ **SAP ECC, S/4 HANA, SAP application integration** -
    Extracts data from SAP ECC, S/4 HANA, or other SAP applications.
 
-   ![Diagram showing an SAP ECC and S/4 HANA connectors.](./media/sap-s4hana-connector-decision.png)
+   ![Diagram showing SAP ECC and S/4 HANA connectors.](./media/sap-s4hana-connector-decision.png)
 
- **SAP BW Integration** -
+ **SAP BW integration** -
     Extracts data from SAP BW and B/4 HANA.
-    ![Diagram showing an SAP BW and BW/4 HANA connectors.](./media/sap-bw4-hana-decision.png)
+    ![Diagram showing SAP BW and BW/4 HANA connectors.](./media/sap-bw4-hana-decision.png)
 
 ## Next steps
 
-The following articles provide details on performance and troubleshooting when you extract data from SAP by using Azure Connectors.
-
-- [Performance and Troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md)
