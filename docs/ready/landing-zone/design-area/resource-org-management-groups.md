@@ -81,7 +81,7 @@ The following decisions have been made and included in the implementation for th
 |**Online**| The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. |
 |**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
 |**Sandboxes**| The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
-|**Decommissioned**| The dedicated management group for landing zones that are being canceled. Canceled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
+|**Decommissioned**| The dedicated management group for landing zones that are being cancelled. Cancelled landing zones will be moved to this management group before deletion by Azure after 30-60 days. |
 
 > [!NOTE]
 > For many organization, the default `Corp` and `Online` management groups provide an ideal starting point.
