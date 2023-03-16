@@ -2,7 +2,7 @@
 title: SAP data integration with Azure-Performance and troubleshooting
 description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
 author: pankajmeshramCSA
-ms.author: pankajmeshramCSA
+ms.author: pameshra
 ms.date: 01/16/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -25,13 +25,13 @@ It's important to configure optimal settings for the source and target so you ca
 - Ensure the correct SAP parameters are set for a max concurrent connection.
 - Consider using SAP Group logon type for better performance and load distribution.
 - Ensure that the SHIR virtual machine is sized adequately and is highly available.
-- When you work with very large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. Check connector-specific documentation for more details.
+- When you work with large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. Check connector-specific documentation for more details.
 
 ### General recommendations
 
 - Use the SAP transaction RZ12 to modify values for max concurrent connections.
 
-   **SAP parameters for RFC - RZ12**: The following parameter can restrict the number of RFC calls that are allowed for one user or one application, so ensure that this isn't causing a bottleneck.
+   **SAP parameters for RFC - RZ12**: The following parameter can restrict the number of RFC calls that are allowed for one user or one application, so ensure that this restriction isn't causing a bottleneck.
 
    ![Screenshot that shows the Instance Dependent Properties section. Maximum number of separate logons is highlighted.](./media/sap-rfc.png)
 
@@ -42,7 +42,7 @@ It's important to configure optimal settings for the source and target so you ca
   > [!NOTE]
   > Dataflow spark cluster and SHIR are powerful. Many internal SAP copy activities, for example 16, can be triggered and executed. But if the SAP server's concurrent connection number is small, for example 8, it affects the perf to read data from the SAP side.
 
-- Start with 4vCPUs and 16 GB VMs for SHIR. The following steps show the connection of the dialog work process in SAP with SHIR.
+- Start with 4vCPUs and 16-GB VMs for SHIR. The following steps show the connection of the dialog work process in SAP with SHIR.
 
   1. Check if the customer uses a poor physical machine to setup and online the SHIR to run an internal SAP copy.
   2. Go to the Azure Data Factory portal and find the related SAP CDC linked service that's used in dataflow. Check the referenced SHIR name.
@@ -55,11 +55,11 @@ It's important to configure optimal settings for the source and target so you ca
 
 ## Partitions
 
-The following section describes the partitioning process for a SAP CDC connector. The process is the same for a SAP Table and SAP BW OpenHub connector.
+The following section describes the partitioning process for an SAP CDC connector. The process is the same for an SAP table and SAP BW OpenHub connector.
 
 [![Screenshot that shows data extraction resources.](./media/sap-partition1.png)](./media/sap-partition1.png#lightbox)
 
-Scaling can be performed on the self-hosted IR or the Azure IR depending on your performance requirements. Review the CPU consumption of the SHIR to provide you metrics to help you decide on your scaling approach. The SHIR can be vertically or horizontally scaled based on your needs. We recommend that you deploy the Azure IR at a lower SKU and then scale up to meet your performance requirements as determined through load testing rather than starting at the higher end unnecessarily.
+Scaling can be performed on the self-hosted IR or the Azure IR depending on your performance requirements. Review the CPU consumption of the SHIR to view metrics to help you decide on your scaling approach. The SHIR can be vertically or horizontally scaled based on your needs. We recommend that you deploy the Azure IR at a lower SKU. Scale up to meet your performance requirements as determined through load testing, rather than starting at the higher end unnecessarily.
 > [!NOTE]
 > If you're reaching 70% capacity, scale up or scale out for SHIR.
 
@@ -89,7 +89,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
     ![Screenshot that shows the sink processing time in the Stream information dialog.](./media/sink-processing.png)
 
-    If a very small cluster is used to run the mapping data flow, this could affect the performance at the sink. Use a large cluster, for example 16 + 256 cores, so the perf reads the data from the stage and writes into the sink.
+    If a small cluster is used to run the mapping data flow, it could affect the performance at the sink. Use a large cluster, for example 16 + 256 cores, so the perf reads the data from the stage and writes into the sink.
 
 - For large data volumes, we recommend partitioning the load to run parallel jobs, but keep the number of partitions less than or equal to the Azure IR core, also called the Spark cluster core.
 
@@ -135,7 +135,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - If only one batch job is triggered, set the SAP source partitions to have performance improvement in the mapping data flow in Azure Data Factory. For more information, see step 6 in [Map data flow properties](/azure/data-factory/connector-sap-change-data-capture#mapping-data-flow-properties).
 
-- If multiple batch jobs are triggered in the SAP system, and there's a big difference between each batch job's start time, change the size of Azure IR. When you increase the number of driver nodes in Azure IR, the parallelism of batch jobs in the SAP side increase.
+- If multiple batch jobs are triggered in the SAP system, and there's a significant difference between each batch job's start time, change the size of Azure IR. When you increase the number of driver nodes in Azure IR, the parallelism of batch jobs in the SAP side increase.
 
     > [!NOTE]
     > The maximum number of driver nodes for Azure IR is 16. Each driver node can only trigger one batch processes. This limitation might change in the future.
@@ -144,14 +144,14 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - To view logs, go to SHIR VM. Open Event viewer > Applications and service logs > Connectors > Integration runtime.
 
-- To send logs to support, go to SHIR VM. Open Integration Runtime configuration manager > Diagnostic > Send Logs. This action sends the logs from the last seven days and provides you a report ID. You will need this report ID and RunId of your run. Document the report ID for future reference.
+- To send logs to support, go to SHIR VM. Open Integration Runtime configuration manager > Diagnostic > Send Logs. This action sends the logs from the last seven days and provides you with a report ID. You need this report ID and RunId of your run. Document the report ID for future reference.
 
-- When you use the SAP CDC connector in a SLT scenario:
+- When you use the SAP CDC connector in an SLT scenario:
 
   - Ensure that prerequisites are met.
     Roles are required for the SLT user, for example ADFSLTUSER, in OLTP systems, for example ECC, for SLT replication to work. For more information about roles, see [2658517 - What authorizations and roles are needed? - SLT](https://launchpad.support.sap.com/#/notes/2658517).
 
-  - If errors occur in a SLT scenario, see the recommendations for analysis. Isolate and test the scenario within the SAP solution first. For example, test it outside of ADF by running the test program provided by SAP `RODPS_REPL_TEST` in SE38. If the issue is on the SAP side, you get the same error when you use the report. You can analyze the data extraction in SAP by using the transaction code `ODQMON`.
+  - If errors occur in an SLT scenario, see the recommendations for analysis. Isolate and test the scenario within the SAP solution first. For example, test it outside of ADF by running the test program provided by SAP `RODPS_REPL_TEST` in SE38. If the issue is on the SAP side, you get the same error when you use the report. You can analyze the data extraction in SAP by using the transaction code `ODQMON`.
 
     If the replication works when you use this test report, but not with ADF, contact Azure or ADF support.
 
@@ -173,7 +173,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
   - To run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following business add-in (BAdI) implementation.
 
-    BAdi: `BADI_ODQ_QUEUE_MODEL`
+    BAdI: `BADI_ODQ_QUEUE_MODEL`
 
     Enhancement implementation: `ODQ_ENH_SLT_REPLICATION`
 
