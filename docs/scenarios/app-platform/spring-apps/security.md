@@ -37,21 +37,25 @@ As you design the workload, make sure the security controls owned by you are ali
     - Application-specific attacks. 
     - Unsolicited and potentially malicious internet traffic. 
 
-- **Identity management**. Make use of Azure Active Directory (Azure AD) features such as managed identities, single sign-on, strong authentications, managed identities, conditional access, and to provide authentication and authorization through Azure AD..
+- **Identity management**. Make use of Azure Active Directory (Azure AD) features such as managed identities, single sign-on, strong authentications, managed identities, conditional access, and to provide authentication and authorization through Azure AD.
 
 - **Security monitoring**. The system should have monitoring tools in place to measure compliance to organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of security posture. 
 
-- **Credential exposure**. You can deploy and run code, configurations, and persisted data with  with identities or secrets. Make sure those credentials are examined when accessing those assets.
-
 - **Data in transit**. Data that is being transferred between components, locations, or and API calls must be encrypted.
 
-- **Data at rest**.  All persisted data including configuration  must be encrypted.
+- **Data at rest**. All persisted data including configuration must be encrypted.
 
+- **Governance policies**. You should detect deviations from compliance standards set by your organization. Azure Policy provides built-in definitions that should be applied to detect those deviations. This doesn't ensure that you're fully compliant with all requirements of a control. There might be compliant standards that aren't addressed built-in definitions. Also the definitions might change over time. TBD: what's the guidance here. Do custom policies?
 
+- **Credential exposure**. You can deploy and run code, configurations, and persisted data with  with identities or secrets. Make sure those credentials are examined when accessing those assets.
+
+- **Certificate management**. Certificates must be loaded based on Zero Trust principle of _never trust, always verify, and credential-free_. Only trust certificates that are shared by verifying identity prior to granting access to those certificates.
+
+- **Consistent deployments**. Using Infrastructure-as-Code (IaC) will automate the provisioning and configuration of all the Azure resources and strengthen the security posture. 
 
 ## Design recommendations
 
-#### Network as the permimeter
+### Network as the permimeter
 
 These network controls will create isolation boundaries and restrict flows in and out of the application.
 
@@ -90,7 +94,7 @@ To protect the workload resources against DDoS attacks, enable [DDoS standard pr
 
 Use Azure DNS for hosting DNS domains. DNS zones and records should be protected from bad actors. Azure role-based access control (Azure RBAC) and resource locks are recommended for that purpose. For more information, see [Prevent dangling DNS entries and avoid subdomain takeover](/azure/security/fundamentals/subdomain-takeover). 
 
-#### Identity as the perimeter
+### Identity as the perimeter
 
 Azure provides identity controls through Azure Active Directory (Azure AD). The application make use of many features such as single sign-on, strong authentications, managed identities, conditional access, and others. The design choices for the application are covered in [Design are: Identity and access management](./identity-and-access-management.md).
 
@@ -120,7 +124,7 @@ These Azure AD features are recommended:
 
 - **Priviledged access**. Implement [Azure AD Privileged Identity Management](https://review.learn.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 
-#### Monitor and alert on account anomalies
+### Monitor and alert on account anomalies
 
 Azure Spring Apps is integrated with Azure AD, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes made to any resource within Azure AD. The data is integrated with Azure Monitor and can be exported to Azure Sentinel. 
 
@@ -135,7 +139,50 @@ For more information, see these articles:
 - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference) 
 
 
-#### Credential scanning
+#### Data controls
+
+##### Data in transit
+
+While network access controls can restrict traffic, the data being transfered is succeptible to out-of-band attacks, such as traffic capture. Use encryption to make sure attackers can't easily read or modify that data. Azure provides encryption for data in transit between Azure data centers. 
+
+Azure Spring Apps supports encryption with Transport Layer Security (TLS) v1.2 or greater. TLS provides secure communications through identity and trust, and encrypts communications of all types. You can use any type of TLS/SSL certificate. For example, certificates issued by a certificate authority, extended validation certificates, wildcard certificates with support for any number of subdomains, or self-signed certificates for dev and testing environments.
+
+This encryption is optional for traffic on private networks, it's critical for traffic on external and public networks. All **public endpoints must use HTTPS** for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
+
+For HTTP traffic, make sure clients that connect to your Azure resources can **negotiate TLS v1.2 or later**. **Don't use obsolete versions or protocols**. Disable weak ciphers. 
+
+For remote management, instead of using unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
+
+ 
+##### Data at rest
+
+The workload will need to store state for source and artifacts, config server settings, app settings, and storage. Server-side data at rest is protected by [Azure Storage encryption](/azure/storage/common/storage-service-encryption). Storage automatically encrypts the content with Microsoft-managed keys. 
+
+Config server cache, runtime binaries built from uploaded source, and application logs during the application lifetime are saved to Azure managed disk. This data is also [automatically encrypted](/azure/virtual-machines/disk-encryption). Container images, which are built from user uploaded source are saved in [Azure Container Registry](/azure/container-registry/container-registry-storage), are encrypted.
+
+For support scenarios, Microsoft needs access to relavant customer data. Using [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview) is recommended because the access needs to be approved by your team or organization. 
+
+
+### Governance policies
+
+Azure built-in definition of [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Faf35e2a4-ef96-44e7-a9ae-853dd97032c4)	will allow you to enforce [network controls](#network-as-the-permimeter). 
+
+ 1. Detect the implementation of isolation boundaries for the application from the internet. 
+ 2. Enable Azure Spring Apps to communicate with private networks in on-premises data centers or Azure service in other virtual networks. 
+ 3. Control inbound and outbound network communications for Azure Spring Apps virtual network.
+
+### Certificate management
+
+An app might need public TLS certificates when communicating with backend services or on-premises systems. You can upload those certificates in Azure Key Vault. 
+
+To securely load certificates from Azure Key Vault, Spring Boot apps use managed identities and Azure role-based access control (RBAC). Azure Spring Apps uses a provider service principal and Azure role-based access control. This secure loading is powered using the Azure Key Vault Java Cryptography Architecture (JCA) Provider. For more information, see [Azure Key Vault JCA client library for Java](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca).
+
+If your Spring code, Java code, or open-source libraries, such as OpenSSL, rely on the JVM default JCA chain to implicitly load certificates into the JVM's trust store, you can import your TLS certificates from Key Vault into Azure Spring Apps and use those certificates within the app. For more information, see [Use TLS/SSL certificates in your application in Azure Spring Apps](/azure/spring-apps/how-to-use-tls-certificate).
+
+
+
+
+### Credential scanning
 
 Implement Credential Scanner to identify credentials that access code, configurations, and persisted data. Credential Scanner also encourages moving discovered credentials to more secure locations, such as Key Vault. 
 
@@ -146,28 +193,7 @@ For more information, see these articles:
 - [Set up Credential Scanner](https://secdevtools.azurewebsites.net/helpcredscan.html) 
 - [GitHub secret scanning](https://docs.github.com/github/administering-a-repository/about-secret-scanning) 
 
-#### Data controls
 
-##### Data in transit
-
-While network access controls can restrict traffic, the data being transfered is succeptible to out-of-band attacks, such as traffic capture. Use encryption to make sure attackers can't easily read or modify that data.
-
-Azure provides encryption for data in transit between Azure data centers. Azure Spring Apps supports data encryption in transit with Transport Layer Security (TLS) v1.2 or greater. 
-
-While this encryption is optional for traffic on private networks, it's critical for traffic on external and public networks. All **public endpoints must use HTTPS** for inbound traffic by default. Also management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
-
-For HTTP traffic, make sure clients that connect to your Azure resources can **negotiate TLS v1.2 or later**. **Don't use obsolete versions or protocols**. Disable weak ciphers. 
-
-For remote management, instead of an unencrypted protocol, use Secure Shell (SSH) for Linux or Remote Desktop Protocol (RDP) and TLS for Windows. 
-
- 
-##### Data at rest
-
-User uploaded source and artifacts, config server settings, app settings, and data in persistent storage are stored in Azure. Server-side data at rest is protected by [Azure Storage encryption](/azure/storage/common/storage-service-encryption).
-
-Storage, which automatically encrypts the content at rest with Microsoft-managed keys. Config server cache, runtime binaries built from uploaded source, and application logs during the application lifetime are saved to Azure managed disk, which automatically encrypts the content at rest. Container images built from user uploaded source are saved in Azure Container Registry, which automatically encrypts the image content at rest.
-
-For support scenarios, provide Microsoft with access to relevant customer data during support scenarios. For more information, see [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
 
 
 ## Next step
