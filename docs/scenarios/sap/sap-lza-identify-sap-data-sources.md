@@ -1,6 +1,6 @@
 ---
-title: Data and Analytics for SAP on Azure
-description: Learn about the best practices to integrate SAP data with Azure data services for SAP on Azure.
+title: SAP data integration with Azure-Identify SAP data sources
+description: Learn how to identify SAP applications and connectors to integrate SAP data with Azure data services.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 01/16/2023
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# Identify SAP data sources
+# SAP data integration with Azure: Identify SAP data sources
 
 This article is Part 1 of the SAP extend and innovate data: Best practices series.
 
@@ -55,7 +55,7 @@ SAP SaaS solutions:
 
 - **SAP HANA** For SAP HANA, you must differentiate between the runtime and full-use database licenses. Runtime databases only support software licensed from SAP. Full-use databases licensed from SAP support SAP and non-SAP software. Full-use SAP HANA databases are licensed based on a gigabyte-of-memory metric. So, third-party data connectors that access the SAP HANA database directly need to have a full-use SAP HANA database license. For more information, see https://blogs.sap.com/2021/01/18/technical-details-hana-licensing/ and the [SAP Licensing Guide](https://www.sapusers.org/uploads/files/5660).
 
-- **OpenHub license** For data extraction from SAP BW on anyDB or SAP HANA, consider the SAP NetWeaver OpenHub license and the SAP OpenHub for S/4HANA license. These licenses are included in the SAP HANA enterprise edition. SAP BW/4HANA doesn't require an OpenHub license. For more information about terms and conditions, see [SAP software use rights (SUR)](https://assets.cdn.sap.com/agreements/product-use-and-support-terms/sur/sap-software-use-rights-english-v1-2022.pdf).
+- **OpenHub license** For data extraction from SAP BW on anyDB or SAP HANA, consider the SAP NetWeaver OpenHub license and the SAP OpenHub for S/4HANA license. These licenses are included in the SAP HANA enterprise edition. SAP BW/4HANA doesn't require an OpenHub license. For more information about terms and conditions, see [SAP Software Use Rights (SUR)](https://assets.cdn.sap.com/agreements/product-use-and-support-terms/sur/sap-software-use-rights-english-v1-2022.pdf).
 
 - **SLT licensing** The Operational Data Provisioning (ODP) framework is part of many SAP systems, including SAP ECC and SAP S/4HANA. It's also contained in SAP BW and SAP BW/4HANA. One of the possible ODP providers of the SAP CDC connector is SAP Landscape Transformation Replication Server (SLT). It's a trigger-based data replication technology that allows real-time replication from SAP and/or non-SAP sources to SAP and/or non-SAP targets. For more information about SLT licensing, see [2707835 - SLT Licensing](https://launchpad.support.sap.com/#/notes/2707835). The license is determined by the target system of the replication. If the license of the target system includes the use of SLT, you don't need a separate SLT license. In any other SLT case, including the use of SAP CDC connector, an SLT full license is required.
 

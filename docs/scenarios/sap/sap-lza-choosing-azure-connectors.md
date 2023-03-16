@@ -1,6 +1,6 @@
 ---
-title: Choose the best SAP connector to integrate SAP data with Azure
-description: Learn about the best practices to integrate SAP data with Azure data services for SAP on Azure.
+title: SAP data integration with Azure-Choose the best SAP connector
+description: Learn how to choose the best SAP connector for your source application to integrate SAP data with Azure data services.
 author: shah-manish
 ms.author: manshah
 ms.date: 01/24/2023
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# Choose the best SAP connector to integrate SAP data with Azure
+# SAP data integration with Azure: Choose the best SAP connector
 
 **APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
 
@@ -39,7 +39,7 @@ We recommend the following considerations to help you determine your approach an
 > [!TIP]
 > Validate that present and future SAP components and versions support the solution.
 >
-> When possible, connect to SAP Message Server (group) instead of Application Server for load balancing.
+> When possible, connect to SAP Message Server (Logon type: Group) instead of Application Server for load balancing.
 >
 > Most of the Azure connectors support connecting to SAP systems by using Secure Network Communication (SNC).
 >
@@ -69,8 +69,8 @@ The following table shows the broader choices available depending on which SAP a
 | **Data location**  | **Scenario: Full load and manual delta**  | **Scenario: Full load and change data capture** |
 | --------------------- | ------------------------------------      | ------------------------------------        |
 | SAP HANA   | [SAP HANA](/azure/data-factory/connector-sap-hana?tabs=data-factory) | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                     |
-| SAP BW  | [SAP table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP BW OpenHub](/azure/data-factory/connector-sap-business-warehouse-open-hub), [SAP BW via MDX](/azure/data-factory/connector-sap-business-warehouse?tabs=data-factory) | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                    |
-| SAP ECC, SAP S/4 HANA  | [SAP table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP ECC](/azure/data-factory/connector-sap-ecc?tabs=data-factory)   | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                   |
+| SAP BW  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP BW OpenHub](/azure/data-factory/connector-sap-business-warehouse-open-hub), [SAP BW via MDX](/azure/data-factory/connector-sap-business-warehouse?tabs=data-factory) | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                    |
+| SAP ECC, SAP S/4 HANA  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP ECC](/azure/data-factory/connector-sap-ecc?tabs=data-factory)   | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                   |
 
 The following table shows a summary of all SAP connectors available in Azure Data Factory and Azure Synapse Analytics for different SAP sources, scenarios, and the connector’s capabilities.
 
@@ -81,7 +81,7 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 
 | SAP&#xa0;source&#xa0;application | Data&#xa0;type | Azure connector | Supported&#xa0;objects&#xa0;and&#xa0;mode | Protocol&#xa0;and&#xa0;connection | Authentication | More information | Parallelization and&#xa0;performance| Data&#xa0;volume |
 |---|---|---|---|---|---|---|---|---|
-| SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, and BW/4HANA | Raw data | SAP CDC via SLT | All transparent, pooled, and cluster tables support full load and CDC. Some views, like SE11, support full load and CDC. | RFC calls to NetWeaver application and message server. | Basic SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
+| SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, and BW/4HANA | Raw data | SAP CDC via SLT | All transparent, pooled, and cluster tables support full load and CDC. Some views (transaction SE11) support full load and CDC. | RFC calls to NetWeaver application and message server. | Basic SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
 | SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4HANA, CRM, SRM, BW on HANA, and BW/4HANA | Logical objects | SAP CDC | ABAP CDS views support full load and many of them support delta, for example if they're based on time stamps or triggers. SAP extractors, standard and custom, support full load and might also support delta based on the configuration. BW InfoProviders, such as DSO, ADSO, InfoCubes, MultiProvider, CompositeProvider, and Query (if exposed as InfoProvider) support full load and might also support delta based on the configuration. | RFC calls to the NetWeaver application and message server. | Basic, SNC | Prerequisites | Yes, fast with built-in parallel loading based on the configurable partitioning. | Large |
 | SAP applications based on NetWeaver AS ABAP, such as SAP ECC, S/4 HANA, BW on AnyDB, and BW on HANA. BW/4HANA not supported. | Raw data | SAP Table | All transparent, pooled, and cluster tables and views (SE11) support full load. You can also extract changes with manual watermarking by using a timestamp or the unique ID column. |  RFC calls to NetWeaver application and message server. | Basic, SNC | Prerequisites | Yes, fast with built-in parallel loading based on configurable partitioning. | Large |
 | BW on AnyDB and BW on HANA. BW/4HANA not supported. | Logical objects | SAP BW Open Hub | BW objects exposed via Open Hub Destination (OHD) local table, such as DataSources, DSO, InfoCube, MultiProvider, CompositeProvider, and Query (if exposed as InfoProvider) support full load. Delta is supported if the OHD supports delta. | RFC calls to NetWeaver application and message server. | Basic | Prerequisites (Create SAP OHD in SAP BW to expose data) | Yes, fast with built-in parallel loading based on OHD specific schema. | Large |
