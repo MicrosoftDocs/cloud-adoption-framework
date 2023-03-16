@@ -23,11 +23,13 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 ## Design considerations
 
 - Determine the Azure resource administration boundaries for the resources you deploy, considering separation of duties and operational efficiency.
+
 - Review the Azure administration and management activities you require your teams to perform. Consider the AIS resources you will deploy and how you will use them. Determine the best possible distribution of responsibilities within your organization.
 
 ## Design recommendations
 
 - Consider what roles you will need to manage and maintain your AIS applications.  Questions to ask in this regard:
+
     - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
 
   - Does anyone need to view original request data (including sensitive data)?
@@ -68,21 +70,25 @@ Some examples of common Azure administration activities include:
 | API Management           | Microsoft.ApiManagement             | Register/Delete a User, Read APIs, Manage Authorizations, Manage Cache                                                                                             |
 | KeyVault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
 
+## Next step
+
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
+
 > [!div class="nextstepaction"]
-> [Review the network topology and connectivity design area](./network-topology-and-connectivity.md)
+> [Network topology and connectivity](./network-topology-and-connectivity.md)
 
 ## Recommended content
 
-- [Azure Active Directory Identity and access management operations reference guide](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
+- [Azure Active Directory Identity and access management operations reference guide](/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
 
-- [Azure identity and access management design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
+- [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
 
-- [Azure identity and access for landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones?source=recommendations)
+- [Azure identity and access for landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones?source=recommendations)
 
-- [Secure access and data in Azure Logic Apps](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
+- [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
 
-- [Create custom roles in Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
+- [Create custom roles in Azure](/azure/role-based-access-control/custom-roles)
 
-- [Azure Policy Overview](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+- [Azure Policy Overview](/azure/governance/policy/overview)
 
-- [Tutorial: Build Azure Policies to enforce compliance](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage)
+- [Tutorial: Build Azure Policies to enforce compliance](/azure/governance/policy/tutorials/create-and-manage)

@@ -195,11 +195,17 @@ When there is a need to connect from an App Service to on-premises, private, or 
 ### Design considerations
 
 - To connect Data Factory to a data source located in your on-premises network, or perhaps on an Azure service that has been configured to block access from all Azure services unless they are specifically permitted, you need to consider integrating your Data Factory with a virtual network that provides network access to the target data source.
+
 - Data Factory employs separate environments called [integration runtimes](/azure/data-factory/concepts-integration-runtime). The default Data Factory runtime, the Azure integration runtime, is not associated with a VNet and as such it cannot be used to connect to data sources that are secured with the most restrictive firewalls. Consider [which of these runtimes](/azure/data-factory/choose-the-right-integration-runtime-configuration) best meet your requirements.
+
 - Managed VNets take some time to start up, whereas normal Azure runtimes are available almost instantly. This is something you need to keep in mind when both scheduling your pipelines and debugging them.
+
 - SSIS runtimes with a VNet-integrated runtime will take up to 30 minutes to start.
+
 - Self-hosted integration runtimes can only execute the copy activity, which copies data from one source to another as-is. If you want to perform any transformations to the data, you can’t do those using Data Factory’s data flows.
+
 - [Managed Private Endpoints](/azure/data-factory/managed-virtual-network-private-endpoint#managed-private-endpoints) are private endpoints created in the Azure Data Factory Managed Virtual Network establishing a private link to Azure resources (generally data sources for ADF). Azure Data Factory manages these private endpoints on your behalf.
+
 - [Private endpoints](/azure/data-factory/data-factory-private-link) are only available for self-hosted integration runtimes to connect to Data Factory.
 
 ## Network design for Logic Apps (Standard) - VNet integrated apps
@@ -314,29 +320,33 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Enable the Trusted Services option to allow select Azure resources to access your namespace.
 
+## Next step
+
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
+
 > [!div class="nextstepaction"] 
-> [Review the management design area](./management.md)
+> [Security](./security.md)
 
 ## Recommended content
 
-- [What is Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/private-link-overview)
+- [What is Azure Private Link](/azure/private-link/private-link-overview)
 
-- [Azure Private Link availability](https://learn.microsoft.com/en-us/azure/private-link/availability#integration)
+- [Azure Private Link availability](/azure/private-link/availability#integration)
 
-- [Virtual Network Service Endpoints Overview](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview)
+- [Virtual Network Service Endpoints Overview](/azure/virtual-network/virtual-network-service-endpoints-overview)
 
-- [Azure Private Endpoint DNS configuration](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns)
+- [Azure Private Endpoint DNS configuration](/azure/private-link/private-endpoint-dns)
 
-- [App Service Environments (ASE) Overview](https://learn.microsoft.com/en-us/azure/app-service/environment/overview)
+- [App Service Environments (ASE) Overview](/azure/app-service/environment/overview)
 
-- [Integrate Key Vault with Azure Private Link](https://learn.microsoft.com/en-gb/azure/key-vault/general/private-link-service?tabs=portal)
+- [Integrate Key Vault with Azure Private Link](/azure/key-vault/general/private-link-service?tabs=portal)
 
-- [Protect APIs with Application Gateway and API Management](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/apis/protect-apis)
+- [Protect APIs with Application Gateway and API Management](/azure/architecture/reference-architectures/apis/protect-apis)
 
-- [Network Security for Azure Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/network-security)
+- [Network Security for Azure Event Grid](/azure/event-grid/network-security)
 
-- [Network Security for Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)
+- [Network Security for Azure Event Hubs](/azure/event-hubs/network-security)
 
-- [Allow access to Azure Event Hubs namespaces from specific virtual networks](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-service-endpoints)
+- [Allow access to Azure Event Hubs namespaces from specific virtual networks](/azure/event-hubs/event-hubs-service-endpoints)
 
-- [Overview of TLS termination using Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/ssl-overview)
+- [Overview of TLS termination using Application Gateway](/azure/application-gateway/ssl-overview)

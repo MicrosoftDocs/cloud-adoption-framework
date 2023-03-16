@@ -56,34 +56,58 @@ The choice that you make will affect both the cost of your resources,along with 
 ## Design recommendations
 
 - If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
+
 - Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
+
 - When storing data (in Azure Storage or Azure SQL Server, for example), always enable **Encryption at Rest**. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
+
 - Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
 - When using TLS protocols, always use TLS 1.2 or greater.
+
 - Look at the use of an **Application Gateway** (Azure Application Gateway or Azure Front Door) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
+
   - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and
     availability of your applications.
+
   - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't failover as quickly as Front Door because of common challenges around DNS caching and systems not honoring DNS TTL.
+  
   - [Application Gateway](/azure/application-gateway/overview) provides a managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
+  
   - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and
     outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
+
 - Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues/flaws e.g., endpoints without IP Filtering.
+
 - Where available, use [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction) to scan your resources and identify potential weaknesses.
+
 - Keep secrets in [**Azure Key Vault**](/azure/key-vault/general/basic-concepts), and then link these to **App Settings** (Functions, Logic Apps), **Named Values** (API Management), or **Configuration Entries** (App Configuration).
+
 - Implement a key rotation policy to ensure that all keys in use in your environment are regularly rotated to prevent against attacks using jeopardized keys
+
 - Use **OAuth 2.0** as the authentication mechanism between resource endpoints:
+
   - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually AAD, but could be any Identity provider).
+  
   - In API Management, use the jwt-validation policy element to require an OAuth flow for connections to endpoints.
+  
   - In Azure Storage and Key Vault, setup access policies to restrict access to specific identities.
+  
 - Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses.
+
 - Always follow the principal of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom AAD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+
 - Use automated deployment to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
+
 - Regularly review audit logs (ideally using an automated tool) to identify both security attacks, and any unauthorized access to your resources.
+
 - Look at the use of penetration testing, to identify any weaknesses in your security design.
 
-> [!div class="nextstepaction"]
-> [Review the management design area](./management.md)
+## Next step
 
+Review the critical design areas to make complete considerations and recommendations for your architecture. 
+
+> [!div class="nextstepaction"]
+> [Management](./management.md)
 
 ## Recommended content
 
