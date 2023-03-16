@@ -71,7 +71,7 @@ Some examples of common Azure administration activities include:
 > [!div class="nextstepaction"]
 > [Review the network topology and connectivity design area](./network-topology-and-connectivity.md)
 
-## Further Reading
+## Recommended content
 
 - [Azure Active Directory Identity and access management operations reference guide](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
 

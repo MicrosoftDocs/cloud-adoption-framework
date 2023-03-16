@@ -317,7 +317,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 > [!div class="nextstepaction"] 
 > [Review the management design area](./management.md)
 
-## Further Reading
+## Recommended content
 
 - [What is Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/private-link-overview)
 
