@@ -28,11 +28,11 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
     You should consider *storing this data for future analysis*. Also, have the ability to visualize so that you can spot trends quickly.
 
-- **Instrumentation**. Have instrumentation in place to generate _additional logs and metrics from the application_.  
+- **Instrumentation**. Have instrumentation in place to generate _additional observability data from the application_. To collect instrumentation information, use an Application Performance Management (APM) tool such as Azure Application Insights Java agent. Combining platform diagnostics with this information will give you enhanced monitoring capabilities. 
 
-- **Distributed tracing**. Implement distributed tracing to get _observability across different services_ within your Azure Spring Apps ecosystem. You need to configure monitoring agents for your application. 
+- **Distributed tracing**. Implement distributed tracing to get _observability across different services_ within your Azure Spring Apps ecosystem. 
 
-- **Alerts**. The application teams must _get notified_ about events that are important for the workload. Setting alerts can achieve that goal. You can set alerts that monitor resources based on metrics such as storage, rate of requests, data usage, and others.
+- **Alerts**. The application teams must _get notified_ about events that are important for the workload. Setting alerts can achieve that goal. You can set alerts that monitor resources based on metrics such as storage, rate of requests, data usage, and others. 
 
 - **Health probes**. You can set up health probes to detect the _health of the backend services_. Make sure that you review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
 
@@ -58,11 +58,13 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
     - Basic/Standard: [Kubernetes Service Discovery or  Managed Spring Cloud Service Registry (using Eureka)](/azure/spring-apps/how-to-service-registration?pivots=programming-language-java)
     - (Enterprise) [Tanzu Service Registry](/azure/spring-apps/how-to-enterprise-service-registry) 
 
-- Take advantage of Spring Boot Actuator Health Indicator to configure your health probes.
+- Always use _readiness and liveness probes_ together so that unhealthy app instances are removed from service discovery features. 
 
-    Always use _readiness and liveness probes_ together so that unhealthy app instances are removed from service discovery features. 
+- If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment helps avoid the probe to fail and force the application to restart.
 
-    If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment helps avoid the probe to fail and force the application to restart.
+- Configure your health probes to take action based on the application-specific command, a TCP Socket connection or a HTTP request.
+
+- For Spring Boot apps, take advantage of Spring Boot Actuator Health Indicator to configure your health probes.
 
 
 ## Related links
