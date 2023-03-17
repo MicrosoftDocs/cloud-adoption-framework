@@ -125,7 +125,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - **Performance benchmarking:** We recommend using the performance benchmarking exercise to ingest large amounts of data. This method varies parameters, such as partitioning, degree of parallelism, and the number of files to determine the optimum setting for the given architecture, volume, and type of data. Gather data from tests in the following format.
 
-     ![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark-2.png)
+  [![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark-2.png)](./media/performance-benchmark-2.png#lightbox)
 
 ## Troubleshooting
 
