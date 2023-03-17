@@ -93,7 +93,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
   Use the **Optimize** tab to define the partitions. You can use source partitioning in the CDC connector.
 
-    ![Screenshot that shows source partitioning in the Optimize tab.](./media/sap-partition-azureir.png)
+    ![Screenshot that shows source partitioning in the Optimize tab.](./media/sap-partition-azure-ir.png)
 
   > [!NOTE]
   >
