@@ -53,7 +53,7 @@ Enterprise deployments of AIS should include the use of Private Endpoints and Vi
     
     - [Logic Apps](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#prerequisites)
     
-    - You can delegate subnets to certain services to create instances of a service within the subnet.
+    - You can designate a given subnet t0 a given service to create instances of that service within the subnet. For example, you can designate a subnet to app service plans so that you can add additional apps over time.
     
     - Azure VPN Gateway can connect overlapping, on-premises sites with overlapping IP address spaces through its [network address translation (NAT) capability](/azure/vpn-gateway/nat-howto).
 
