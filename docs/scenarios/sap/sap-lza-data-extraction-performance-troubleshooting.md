@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap
 
 # SAP data integration with Azure: Performance and troubleshooting
 
+**APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
+
 This article is Part 3 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md) and [Choose the best SAP connector](./sap-lza-choosing-azure-connectors.md).
 
 There are many ways to connect to the SAP system for data integration. The following article describes general and connector-specific considerations and recommendations.
@@ -44,8 +46,8 @@ It's important to configure optimal settings for the source and target so you ca
 
 - Start with 4vCPUs and 16-GB VMs for SHIR. The following steps show the connection of the dialog work process in SAP with SHIR.
 
-  1. Check if the customer uses a poor physical machine to setup and online the SHIR to run an internal SAP copy.
-  2. Go to the Azure Data Factory portal and find the related SAP CDC linked service that's used in dataflow. Check the referenced SHIR name.
+  1. Check if the customer uses a poor physical machine to setup and install SHIR to run an internal SAP copy.
+  2. Go to the Azure Data Factory portal and find the related SAP CDC linked service that's used in the data flow. Check the referenced SHIR name.
   3. Check the CPU, memory, network, and disk settings of the physical machine where SHIR is installed.
   4. Check how many `diawp.exe` are running on the SHIR machine. One `diawp.exe` can run one copy activity. The number of `diawp.exe` is based on the machine's CPU, memory, network, and disk settings.
 
@@ -55,7 +57,7 @@ It's important to configure optimal settings for the source and target so you ca
 
 ## Partitions
 
-The following section describes the partitioning process for an SAP CDC connector. The process is the same for an SAP table and SAP BW OpenHub connector.
+The following section describes the partitioning process for an SAP CDC connector. The process is the same for an SAP Table and SAP BW Open Hub connector.
 
 [![Screenshot that shows data extraction resources.](./media/sap-partition1.png)](./media/sap-partition1.png#lightbox)
 
@@ -74,9 +76,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 >- The number of partitions executed in parallel are limited by the number of driver cores in the Azure IR. A resolution for this limitation is currently underway.
 >- Each unit or package in SAP transaction ODQMON is a single file in the staging folder.
 
-### SAP change data capture (CDC) connector
-
-#### Design considerations when running the pipelines using CDC
+## Design considerations when running the pipelines using CDC
 
 - Check the SAP to stage duration.
 - Check the runtime performance in the sink.
@@ -102,16 +102,14 @@ The idea of partitioning is to split a large initial dataset into multiple small
   >- There's a direct correlation between the number of partitions with SHIR cores and Azure IR nodes.
   >- The SAP CDC connector is listed as Odata subscriber type "Odata access for Operational Data Provisioning" under ODQMON in the SAP system.
 
-### SAP Table connector
-
-#### Design considerations when using a Table connector
+## Design considerations when using a Table connector
 
 - Optimize the partitioning for better performance.
-- Consider the degree of parallelism from the SAP Table.
+- Consider the degree of parallelism from SAP Table.
 - Consider a single file design for the target sink.
 - Benchmark the throughput when you use large data volumes.
 
-#### Design recommendations when using Table connector
+## Design recommendations when using a Table connector
 
 - **Partitioning:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses are on a suitable field, for example a field with high cardinality. If your SAP Table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
 
@@ -127,7 +125,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - **Performance benchmarking:** We recommend using the performance benchmarking exercise to ingest large amounts of data. This method varies parameters, such as partitioning, degree of parallelism, and the number of files to determine the optimum setting for the given architecture, volume, and type of data. Gather data from tests in the following format.
 
-     ![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark.png)
+     ![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark-2.png)
 
 ## Troubleshooting
 
@@ -180,6 +178,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
     1. In transaction LTRC, go to the **Expert Function** tab and select **Activate / Deactivate BAdI Implementation** to activate the implementation.
 
        ![Screenshot that shows the Expert Function tab.](./media/ltrc-1.png)
+
     1. Select **Yes**.
 
        ![Screenshot that shows the Customizing of BADI Implementations dialog.](./media/ltrc-2.png)
@@ -190,4 +189,4 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
        The dialog shows the program activity.
 
-       ![ SAP transaction LTRC  ](./media/ltrc-4.png)
+       ![Screenshot that shows the program activity.](./media/ltrc-4.png)

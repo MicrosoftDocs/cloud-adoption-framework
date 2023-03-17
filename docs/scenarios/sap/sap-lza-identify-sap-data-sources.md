@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap
 
 # SAP data integration with Azure: Identify SAP data sources
 
+**APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
+
 This article is Part 1 of the SAP extend and innovate data: Best practices series.
 
 Digital transformation requires a seamless combination of intelligence derived from data across business operations to meet the business objectives of an enterprise. Enterprises use SAP applications as enterprise resource planning systems (ERP), Line of Business (LoB) SaaS applications, enterprise data warehouses, business intelligence, or integration platforms. The siloed data in SAP systems can be harnessed to drive business transformation. As you progress through your cloud adoption journey and move business-critical workloads to Azure, prioritize moving SAP workloads to Azure. This method optimally integrates data into your Azure environment.

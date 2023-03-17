@@ -40,11 +40,11 @@ items:
     items:
     - name: SAP and Data
       items:
-      - name: Identify SAP Data Sources
+      - name: SAP data integration with Azure-Identify SAP data sources
         href: sap-lza-identify-sap-data-sources.md
-      - name: Choosing Azure Connectors
+      - name: SAP data integration with Azure-Choose the best SAP connector
         href: sap-lza-choosing-azure-connectors.md
-      - name: Performance & Troubleshooting
+      - name: SAP data integration with Azure-Performance and troubleshooting
         href: sap-lza-data-extraction-performance-troubleshooting.md
     href: innovate.md
   - name: Manage SAP platform and workloads
