@@ -45,7 +45,7 @@ As you design the workload, make sure the security controls owned by you're alig
 
 - **Data at rest**. All persisted data including configuration _must be encrypted_.
 
-- **Governance policies**. You should detect deviations from compliance standards set by your organization. Azure Policy provides _built-in definitions that should be applied_ to detect those deviations. Applying policies doesn't ensure that you're fully compliant with all requirements of a control. There might be compliant standards that aren't addressed built-in definitions. Also the definitions might change over time. TBD: what's the guidance here. Do custom policies?
+- **Governance policies**. You should detect deviations from compliance standards set by your organization. Azure Policy provides _built-in definitions that should be applied_ to detect those deviations. Applying policies doesn't ensure that you're fully compliant with all requirements of a control. There might be compliant standards that aren't addressed built-in definitions. A
 
 - **Credential exposure**. You can deploy and run code, configurations, and persisted data with  identities or secrets. Make sure those _credentials are examined_ when accessing those assets.
 
