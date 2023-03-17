@@ -91,7 +91,7 @@ The main query tables are:
 >
 > \| where customDimensions.LogLevel == "Error"
 
-*Number of workflow executions in last 24 hours across all workflows:*
+**Number of workflow executions in last 24 hours across all workflows:**
 
 > traces
 >
@@ -102,9 +102,6 @@ The main query tables are:
 > \| where timestamp \> ago(1d)
 >
 > \| count
-
-*  
-*
 
 **Trigger success rate, graphed over time**
 
