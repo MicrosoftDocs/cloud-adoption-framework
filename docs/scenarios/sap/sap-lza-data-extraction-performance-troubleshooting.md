@@ -165,7 +165,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
   - When ADF Linked Service connects to the SLT system, it doesn't show the SLT Mass Transfer IDs when you refresh the **Context** field.
 
-    ![Screenshot that shows ADF Linked Service.](./media/adf-linked-service.png)
+    ![Screenshot that shows ADF Linked Service.](./media/azure-data-factory-linked-service.png)
 
   - To run the ODP/ODQ replication scenario for SAP LT Replication Server, activate the following business add-in (BAdI) implementation.
 
