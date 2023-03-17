@@ -12,8 +12,6 @@ ms.custom: think-tank, e2e-sap
 
 # SAP data integration with Azure: Performance and troubleshooting
 
-**APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
-
 This article is Part 3 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md) and [Choose the best SAP connector](./sap-lza-choosing-azure-connectors.md).
 
 There are many ways to connect to the SAP system for data integration. The following article describes general and connector-specific considerations and recommendations.
@@ -25,9 +23,9 @@ It's important to configure optimal settings for the source and target so you ca
 ### General considerations
 
 - Ensure the correct SAP parameters are set for a max concurrent connection.
-- Consider using SAP Group logon type for better performance and load distribution.
+- Consider using the SAP Group logon type for better performance and load distribution.
 - Ensure that the SHIR virtual machine is sized adequately and is highly available.
-- When you work with large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. Check connector-specific documentation for more details.
+- When you work with large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. See connector-specific documentation for more details.
 
 ### General recommendations
 
@@ -39,10 +37,10 @@ It's important to configure optimal settings for the source and target so you ca
 
    ![Screenshot that shows ARFC quotas in the Performance Assistant window.](./media/sap-rfc-quotas.png)
 
-- **Connection to SAP by using Logon Group**: SHIR (self-hosted integration runtime) should connect SAP by using an SAP Logon Group (via message server) and not to a specific application server to ensure a workload distribution across all available application servers.
+- **Connection to SAP by using Logon Group**: SHIR (self-hosted integration runtime) should connect to SAP by using an SAP Logon Group (via message server) and not to a specific application server to ensure a workload distribution across all available application servers.
 
   > [!NOTE]
-  > Dataflow spark cluster and SHIR are powerful. Many internal SAP copy activities, for example 16, can be triggered and executed. But if the SAP server's concurrent connection number is small, for example 8, it affects the perf to read data from the SAP side.
+  > Dataflow Spark cluster and SHIR are powerful. Many internal SAP copy activities, for example 16, can be triggered and executed. But if the SAP server's concurrent connection number is small, for example 8, the perf reads data from the SAP side.
 
 - Start with 4vCPUs and 16-GB VMs for SHIR. The following steps show the connection of the dialog work process in SAP with SHIR.
 
@@ -93,7 +91,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - For large data volumes, we recommend partitioning the load to run parallel jobs, but keep the number of partitions less than or equal to the Azure IR core, also called the Spark cluster core.
 
-  Use the Optimize tab to define the partitions. You can use source partitioning in the CDC connector.
+  Use the **Optimize** tab to define the partitions. You can use source partitioning in the CDC connector.
 
     ![Screenshot that shows source partitioning in the Optimize tab.](./media/sap-partition-azureir.png)
 
@@ -111,9 +109,9 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 ## Design recommendations when using a Table connector
 
-- **Partitioning:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses are on a suitable field, for example a field with high cardinality. If your SAP Table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
+- **Partitioning:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses are on a suitable field, for example a field with high cardinality. If your SAP table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
 
-- **Parallelism:** The degree of copy parallelism (parameter `parallelCopies`) works in tandem with partitioning and instructs the SHIR to make parallel RFC calls to the SAP system. For example, if you set this parameter to four, the service concurrently generates and runs four queries based on your specified partition option and settings. Each query retrieves a portion of data from your SAP table.
+- **Parallelism:** The degree of copy parallelism (parameter `parallelCopies`) works in tandem with partitioning and instructs the SHIR to make parallel RFC calls to the SAP system. For example, if you set this parameter to 4, the service concurrently generates and runs four queries based on your specified partition option and settings. Each query retrieves a portion of data from your SAP table.
 
     For optimum results, the number of partitions should be a multiple of the number of the degree of copy parallelism.
 
@@ -142,7 +140,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - To view logs, go to SHIR VM. Open Event viewer > Applications and service logs > Connectors > Integration runtime.
 
-- To send logs to support, go to SHIR VM. Open Integration Runtime configuration manager > Diagnostic > Send Logs. This action sends the logs from the last seven days and provides you with a report ID. You need this report ID and RunId of your run. Document the report ID for future reference.
+- To send logs to support, go to SHIR VM. Open the Integration Runtime configuration manager > Diagnostic > Send Logs. This action sends the logs from the last seven days and provides you with a report ID. You need this report ID and RunId of your run. Document the report ID for future reference.
 
 - When you use the SAP CDC connector in an SLT scenario:
 
