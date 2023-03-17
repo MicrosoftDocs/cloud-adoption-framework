@@ -25,7 +25,7 @@ It's important to configure optimal settings for the source and target so you ca
 - Ensure the correct SAP parameters are set for a max concurrent connection.
 - Consider using the SAP Group logon type for better performance and load distribution.
 - Ensure that the SHIR virtual machine is sized adequately and is highly available.
-- When you work with large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. See connector-specific documentation for more details.
+- When you work with large datasets, check if the connector you're using provides a partitioning capability. Many of the SAP connectors support partitioning and parallelizing capabilities to speed up data loads. When you use this method, data is packaged into smaller chunks that can be loaded by using several parallel processes. For more information, see connector-specific documentation.
 
 ### General recommendations
 
@@ -44,7 +44,7 @@ It's important to configure optimal settings for the source and target so you ca
 
 - Start with 4vCPUs and 16-GB VMs for SHIR. The following steps show the connection of the dialog work process in SAP with SHIR.
 
-  1. Check if the customer uses a poor physical machine to setup and install SHIR to run an internal SAP copy.
+  1. Check if the customer uses a poor physical machine to set up and install SHIR to run an internal SAP copy.
   2. Go to the Azure Data Factory portal and find the related SAP CDC linked service that's used in the data flow. Check the referenced SHIR name.
   3. Check the CPU, memory, network, and disk settings of the physical machine where SHIR is installed.
   4. Check how many `diawp.exe` are running on the SHIR machine. One `diawp.exe` can run one copy activity. The number of `diawp.exe` is based on the machine's CPU, memory, network, and disk settings.
