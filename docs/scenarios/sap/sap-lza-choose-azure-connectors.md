@@ -95,7 +95,7 @@ There might be more than one connector available for a scenario. Your choice dep
  **SAP ECC, S/4 HANA, SAP application integration** -
    Extracts data from SAP ECC, S/4 HANA, or other SAP applications.
 
-   ![Diagram showing SAP ECC and S/4 HANA connectors.](./media/sap-s4hana-connector-decision.png)
+   ![Diagram showing SAP ECC and S/4 HANA connectors.](./media/sap-s4-hana-connector-decision.png)
 
  **SAP BW integration** -
     Extracts data from SAP BW and B/4 HANA.
