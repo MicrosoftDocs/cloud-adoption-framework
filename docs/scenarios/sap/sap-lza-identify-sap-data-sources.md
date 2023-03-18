@@ -100,5 +100,5 @@ SAP SaaS solutions:
 
 ## Next steps
 
-- [Choose the best SAP connector](./sap-lza-choosing-azure-connectors.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
 - [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md)

@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # SAP data integration with Azure: Performance and troubleshooting
 
-This article is Part 3 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md) and [Choose the best SAP connector](./sap-lza-choosing-azure-connectors.md).
+This article is Part 3 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md) and [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md).
 
 There are many ways to connect to the SAP system for data integration. The following article describes general and connector-specific considerations and recommendations.
 
@@ -57,13 +57,13 @@ It's important to configure optimal settings for the source and target so you ca
 
 The following section describes the partitioning process for an SAP CDC connector. The process is the same for an SAP Table and SAP BW Open Hub connector.
 
-[![Screenshot that shows data extraction resources.](./media/sap-partition1.png)](./media/sap-partition1.png#lightbox)
+[![Screenshot that shows data extraction resources.](./media/sap-partition-1.png)](./media/sap-partition-1.png#lightbox)
 
 Scaling can be performed on the self-hosted IR or the Azure IR depending on your performance requirements. Review the CPU consumption of the SHIR to view metrics to help you decide on your scaling approach. The SHIR can be vertically or horizontally scaled based on your needs. We recommend that you deploy the Azure IR at a lower SKU. Scale up to meet your performance requirements as determined through load testing, rather than starting at the higher end unnecessarily.
 > [!NOTE]
 > If you're reaching 70% capacity, scale up or scale out for SHIR.
 
-[![Diagram that shows how the partitioning process works in a SAP CDC connector.](./media/sap-partition2.png)](./media/sap-partition2.png#lightbox)
+[![Diagram that shows how the partitioning process works in a SAP CDC connector.](./media/sap-partition-2.png)](./media/sap-partition-2.png#lightbox)
 
 Partitioning is useful for initial or large full loads and is typically not required for delta loads. If you don't specify the partition, by default, 1 "producer" in the SAP system (typically one batch process) fetches the source data into the operational data queue (ODQ), and SHIR fetches the data from ODQ. By default, SHIR uses four threads to fetch the data from ODQ, so potentially four dialog processes are occupied in SAP at that time.
 
