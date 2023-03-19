@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
+products: azure-monitor
 ---
 
 # Manage Azure policies and deploy the Azure monitoring agent extension to Azure Arc Linux and Windows servers
