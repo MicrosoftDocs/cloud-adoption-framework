@@ -62,7 +62,7 @@ Alternatively, you can choose to **provision your own monitoring resources**. Th
 
 - If your application has a longer startup time, adjust the total timeout (`initialDelaySeconds + periodSeconds * failureThreshold`) to a value longer than the start time of your application. This adjustment helps avoid the probe to fail and force the application to restart.
 
-- Configure your health probes to take action based on the application-specific command, a TCP Socket connection or a HTTP request.
+- Configure your health probes to take action based on the application-specific command, a TCP Socket connection or an HTTP request.
 
 - For Spring Boot apps, take advantage of Spring Boot Actuator Health Indicator to configure your health probes.
 

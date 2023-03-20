@@ -45,6 +45,12 @@ The accelerator assumes that the enterprise (platform) landing zones are based o
 
 It's highly recommended that you have a good understanding of the **integration points between the shared resources and workload resources**. If there are changes required in the platform, work with the centralized team to get the changes implemented with a **shared responsibility mindset**. For example, communicate the expected potential of the workload early so that the central networking team can allocate a virtual network with address space that's large enough to accommodate that growth.
 
+## Deploy the accelerator
+
+The Azure Spring Apps landing zone accelerator reference implementation with infrastructure-as-code templates is available on GitHub.
+
+> [Azure Spring Apps Reference Implementation](https://github.com/Azure/springapps-landing-zone-accelerator)
+
 
 ## Next step
 
