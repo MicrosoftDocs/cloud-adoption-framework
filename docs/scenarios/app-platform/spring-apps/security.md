@@ -126,7 +126,7 @@ These Azure AD features are recommended:
 
 #### Data controls
 
-While network and identity controls restrict access to the application, the data itself needs to be protected. Encryption ensures data integrity and is a key security capability that must applied to mitigate threats. 
+While network and identity controls restrict access to the application, the data itself needs to be protected. Encryption ensures data integrity and is a key security capability that must be applied to mitigate threats. 
 
 ##### Data in transit
 
