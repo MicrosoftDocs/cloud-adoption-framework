@@ -78,7 +78,7 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 - Consider creating custom roles. Follow the principle of least privilege when out-of-box roles require modifications to existing permissions.
 - Choose enhanced-security storage for keys, secrets, certificates, and application configuration.
 - For automated deployment, set up a service principal that has the minimum required permissions to deploy from the CI/CD pipeline.
-- Enable diagnostic logging for application console, system logs, Ingress logs, build logs, and container event logs. You can use these detailed logs to diagnose problems with your app and monitor access requests. When you enable these logs, an Azure Monitor activity log gives you insight into subscription-level events.
+- Enable diagnostic logging for application console, system logs, ingress logs, build logs, and container event logs. You can use these detailed logs to diagnose problems with your app and monitor access requests. When you enable these logs, an Azure Monitor activity log gives you insight into subscription-level events.
 
 ## Next steps
 
