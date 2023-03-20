@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-sap, engagement-fy23
+products: azure-monitor
 ---
 
 # Operations baseline for SAP on Azure
