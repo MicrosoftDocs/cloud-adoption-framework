@@ -38,23 +38,15 @@ The table below summarizes the recommended use cases for each network model.
 | Azure CNI        | - Full virtual network connectivity is required for pods<br>- Advanced AKS features (such as virtual nodes) are needed<br>- Sufficient IP address space is available<br>- Pod to pod and pod to VM connectivity needed<br>- External resources need to reach pods directly<br>- AKS network policies are required |
 | Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Simplier network configuration <br>- AKS egress requirements can be met |
 
-- IP addressing and the size of the virtual network subnet must be carefully planned to support the scaling of the cluster. For example, you can add more nodes.
-- Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](/azure/aks/virtual-nodes-portal).
-- AKS clusters support Basic and Standard Azure Load Balancer SKUs.
-- AKS services can be exposed with public or internal load balancers. Internal load balancers can be configured in the same subnet as the Kubernetes nodes or in a dedicated subnet.
-- Azure Policy and the [Azure Policy add-on for AKS](/azure/governance/policy/concepts/policy-for-kubernetes) can control and limit the objects created in your AKS cluster, such as denying the creation of services with a public load balancer.
-- AKS uses CoreDNS to provide name resolution to pods running in the cluster.
-  - CoreDNS will resolve cluster-internal domains directly.
-  - Other domains will be forwarded to the DNS servers configured in Azure Virtual Network, which will be either the default Azure DNS resolver, or any custom DNS servers configured at the virtual network level.
-- Outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
-  - By default, AKS clusters have unrestricted egress internet access.
-  - There are two deployment models for [outbound connectivity](/azure/aks/egress-outboundtype): `LoadBalancer` or `UserDefinedRouting (UDR)`. With `UDR`, there's no public IP address created in the cluster for egress traffic. This is especially important when deploying an AKS cluster to a `Corp` subscription with a policy to forbid creation of a public IP address. For more information, see [Policies included in reference implementations of enterprise-scale landing zones](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
-  - Egress traffic from the AKS cluster can be sent through Azure Firewall or a network virtual appliance cluster by configuring UDRs in the AKS subnet.
-  - If using outbound mode `loadBalancer`, you must carefully manage outbound ports, since you might use up the available outbound ports.
-- By default, all pods in an AKS cluster can send and receive traffic without limitations. Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two [network policy models](/azure/aks/use-network-policies#network-policy-options-in-aks) are available for AKS. Azure network policies are fully supported by Microsoft, while Calico is an open-source network security solution with more features and is also recommended.
-- A service mesh provides capabilities like traffic management, resiliency, policy, security, strong identity, and observability. For more information, see the [selection criteria](/azure/aks/servicemesh-about#selection-criteria).
-- Global load-balancing mechanisms such as [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) and [Azure Front Door](/azure/frontdoor/front-door-overview) increase resiliency by routing traffic across multiple clusters, potentially in different Azure regions.
-- AKS sets up a network security group (NSG) on the subnet in which the cluster is deployed. Don't manually edit this NSG, but you can influence by configuring the services you deploy in AKS.
+In addition, when designing your AKS cluster, it is important to carefully plan the IP addressing and size of the virtual network subnet to support scaling. Virtual nodes can be used for quick cluster scaling, but there are some known limitations.
+
+AKS clusters support Basic and Standard Azure Load Balancer SKUs, and services can be exposed with public or internal load balancers. AKS uses CoreDNS to provide name resolution to pods running in the cluster, and outbound (egress) network traffic can be sent through an Azure Firewall or network virtual appliance cluster.
+
+By default, all pods in an AKS cluster can send and receive traffic without limitations. However, Kubernetes network policies can be used to improve security and filter network traffic between pods in an AKS cluster. Two network policy models are available for AKS: Azure network policies and Calico.
+
+Finally, AKS sets up a network security group (NSG) on the subnet in which the cluster is deployed. It is recommended not to manually edit this NSG, but services deployed in AKS can influence it.
+
+Overall, selecting the appropriate network model and carefully planning network resources can help optimize the performance, security, and cost of your AKS cluster.
 
 
 ### Private clusters
