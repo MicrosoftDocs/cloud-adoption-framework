@@ -16,13 +16,8 @@ ms.custom: think-tank, e2e-aks
 
 ## Design considerations
 
-- AKS supports two networking models: kubenet and Azure Container Networking Interface (CNI).
-  - CNI requires extra planning for IP addresses.
-  - Only CNI supports Windows Server node and network policies pool.
-  - UDR for kubenet is automatically set up by AKS.
-  - kubenet only supports up to 400 nodes.
-  - Verify the current list of [capabilities supported by each CNI plug-in](/azure/aks/concepts-network#compare-network-models).
-  -
+AKS has three networking models: kubenet, CNI Overlay, and CNI. Kubenet is a basic solution, CNI Overlay is designed for advanced networking, and CNI provides even more advanced features, like IP address management and network segmentation. These models provide flexibility and scalability options for container networking in AKS.
+
 The table below provides an overview of three different network models available in Azure Kubernetes Service (AKS): Kubenet, Azure CNI, and Azure CNI Overlay. Each network model has its unique set of use cases and advantages, depending on the specific requirements and constraints of the Kubernetes cluster.
 
 | Network Model    | When to use                                                                                                        |
