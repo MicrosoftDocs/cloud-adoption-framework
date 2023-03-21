@@ -141,8 +141,6 @@ Traffic between the AKS pods and the private endpoints per default will not go t
 - For non-private clusters, use authorized IP ranges.
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer.
 
-# Comparing Network Models in Azure Kubernetes Service
-
 When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it is essential to understand the capabilities and characteristics of each model.
 
 The following table compares the features of the three network models in AKS: Kubenet, Azure CNI, and Azure CNI Overlay.
