@@ -29,7 +29,7 @@ You can choose to provision your own monitoring resources. This approach gives t
 
 - **Instrumentation**. Put instrumentation in place to generate more observability data from the application. To collect instrumentation information, use an Application Performance Management (APM) tool, such as Azure Application Insights Java agent. Combine platform diagnostics with this information to provide enhanced monitoring capabilities.
 
-- **Distributed tracing**. Implement distributed tracing to get  observability across different services within your Azure Spring Apps ecosystem.
+- **Distributed tracing**. Implement distributed tracing to get observability across different services within your Azure Spring Apps ecosystem.
 
 - **Alerts**. The application teams must get notified about events that are important for the workload. Set alerts to achieve this goal. You can set alerts that monitor resources based on metrics, such as storage, rate of requests, and data usage.
 

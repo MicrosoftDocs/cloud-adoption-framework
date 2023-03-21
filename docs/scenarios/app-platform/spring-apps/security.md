@@ -19,7 +19,7 @@ Azure provides security controls for the network, identity, and data to support 
 
 The centralized teams provide networking and identity controls as part of the platform. They provide guardrails to maintain control over platforms, applications, and resources in Azure. The application landing zone subscription provided for the workload is preprovisioned with policies, which are inherited from the management group.
 
-As you design the workload, ensure that the security controls owned by you are aligned with the central controls. The design is subject to periodic reviews conducted by the centralized security team. Regularly review the security controls and platform policies with the central teams to make sure the workload requirements are accommodated.
+As you design the workload, ensure that the security controls that you own are aligned with the central controls. The design is subject to periodic reviews conducted by the centralized security team. Regularly review the security controls and platform policies with the central teams to make sure the workload requirements are accommodated.
 
 > For information about the platform design, see:
 >
@@ -44,7 +44,7 @@ As you design the workload, ensure that the security controls owned by you are a
 
 - **Data at rest**. All persisted data, including configuration, must be encrypted.
 
-- **Governance policies**. You should detect deviations from the compliance standards that are set by your organization. Azure Policy provides built-in definitions that should be applied to detect the deviations. When you apply policies, it doesn't ensure that you're fully compliant with all requirements of a control. There might be compliant standards that aren't addressed in built-in definitions.
+- **Governance policies**. You should detect deviations from the compliance standards that your organization sets. Azure Policy provides built-in definitions that should be applied to detect the deviations. When you apply policies, it doesn't ensure that you're fully compliant with all requirements of a control. There might be compliant standards that aren't addressed in built-in definitions.
 
 - **Credential exposure**. You can deploy and run code, configurations, and persisted data with identities or secrets. Make sure the credentials are examined when you access the assets.
 
@@ -116,7 +116,7 @@ These Azure AD features are recommended:
 
 - **Azure AD single sign-on (SSO)**. [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
 
-- **Strong authentication controls**. Azure AD supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius in case of a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Azure Active Directory](/azure/active-directory/authentication/concept-authentication-passwordless).
+- **Strong authentication controls**. Azure AD supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Azure Active Directory](/azure/active-directory/authentication/concept-authentication-passwordless).
 
 - **Conditional access to resources**. Azure Spring Apps supports [Azure AD conditional access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Azure AD to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
 
@@ -124,13 +124,13 @@ These Azure AD features are recommended:
 
 #### Data controls
 
-Network and identity controls restrict access to the application, but the data itself needs to be protected. Encryption ensures data integrity and is a key security capability that must applied to mitigate threats.
+Network and identity controls restrict access to the application, but the data needs to be protected. Encryption ensures data integrity and is a key security capability that must be applied to mitigate threats.
 
 ##### Data in transit
 
 Transferred data is susceptible to out-of-band attacks, such as traffic capture. Use encryption to make sure attackers can't easily read or modify that data. Azure provides encryption for data in transit between Azure data centers.
 
-Azure Spring Apps supports encryption with Transport Layer Security (TLS) v1.2 or greater. TLS provides secure communications through identity and trust, and encrypts communications of all types. You can use any type of TLS certificate. For example, certificates that are issued by a certificate authority, extended validation certificates, wildcard certificates with support for any number of subdomains, or self-signed certificates for dev and testing environments.
+Azure Spring Apps supports encryption with Transport Layer Security (TLS) v1.2 or greater. TLS provides secure communications through identity and trust, and encrypts communications of all types. You can use any type of TLS certificate. For example, certificates issued by a certificate authority, extended validation certificates, wildcard certificates with support for any number of subdomains, or self-signed certificates for dev and testing environments.
 
 Encryption is critical for traffic on external and public networks. All public endpoints must use HTTPS for inbound traffic by default. Management calls to configure Azure Spring Apps service through Azure Resource Manager API calls must be over HTTPS.
 
