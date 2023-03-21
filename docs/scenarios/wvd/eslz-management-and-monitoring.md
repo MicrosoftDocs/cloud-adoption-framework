@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd, engagement-fy23
+products: azure-monitor
 ---
 
 # Management baseline considerations for an Azure Virtual Desktop

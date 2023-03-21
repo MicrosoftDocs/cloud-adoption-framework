@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
+products: azure-monitor
 ---
 
 # Manage extensions and use an Azure Resource Manager template to deploy the Log Analytics agent to Azure Arc Linux and Windows servers
