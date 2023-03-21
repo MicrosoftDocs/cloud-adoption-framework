@@ -6,14 +6,12 @@ ms.author: fguerri
 ms.date: 02/09/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenerio-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Network considerations for AVS dual-region deployments
-
-## Introduction
-This article describes how to configure network connectivity when AVS (Azure VMware Solution) private clouds are deployed in two Azure regions, for disaster resilience purposes. In case of partial or complete regional outages, the network topology presented here allows the surviving components (AVS private clouds, Azure-native resources, on-prem sites) to maintain connectivity with each other and with the internet. 
+This article describes how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions, for disaster resilience purposes. In case of partial or complete regional outages, the network topology presented here allows the surviving components (private clouds, Azure-native resources, on-prem sites) to maintain connectivity with each other and with the internet. 
 
 This article focuses on a typical dual-region scenario, shown in Figure 1 below:
 - An Azure hub and spoke network exists in each region.
@@ -27,10 +25,10 @@ This article focuses on a typical dual-region scenario, shown in Figure 1 below:
 > In the reference scenario of Figure 1, the two regional hub VNets are connected via global VNet peering. While not strictly required (traffic between Azure VNets in the two regions could be routed over Expressroute connections), this configuration is strongly recommended. VNet Peering minimizes latency and maximizes throughput, as it removes the need to hairpin traffic through the Expressroute meet-me edge routers. 
 
 The next sections describe the AVS network configuration that is required to enable, in the reference dual-region scenario, the following communication patterns:
-- AVS to AVS (covered in the section "AVS cross-region connectivity");
-- AVS to on-prem sites connected over ExpressRoute (covered in the section "Hybrid connectivity");
-- AVS to Azure Virtual Networks (covered in the section "Azure Virtual Networks connectivity");
-- AVS to internet (covered in the section "Internet connectivity").
+- AVS to AVS (covered in the section [AVS cross-region connectivity](#avs-cross-region-connectivity));
+- AVS to on-prem sites connected over ExpressRoute (covered in the section [Hybrid connectivity](#hybrid-connectivity));
+- AVS to Azure Virtual Networks (covered in the section [Azure Virtual Networks connectivity](#azure-virtual-networks-connectivity));
+- AVS to internet (covered in the section [Internet connectivity](#internet-connectivity)).
 
 ## AVS cross-region connectivity
 When multiple AVS private clouds exist, layer-3 connectivity among them is often a requirement, for example to support data replication. 
@@ -67,7 +65,7 @@ Changing a private cloud’s internet connectivity configuration after initial d
 
 ### Azure-native internet breakout
 If a secure internet edge was built in Azure VNets prior to AVS adoption, it may be required (centralized management of network security policies, cost optimization, …) to leverage it for internet access for AVS private clouds. Internet security edges in Azure VNets can be implemented using Azure Firewall or third-party firewall/proxy NVAs available on the Azure Marketplace.
-Internet-bound traffic emitted by AVS virtual machines can be attracted to an Azure VNet by originating a default route and announcing it, over BGP, to the private cloud’s managed ER circuit. This internet connectivity option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in Figure 6 below.
+Internet-bound traffic emitted by AVS virtual machines can be attracted to an Azure VNet by originating a default route and announcing it, over BGP, to the private cloud’s managed ER circuit. This internet connectivity option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in Figure 6 below (see also the [official documentation](/azure/azure-vmware/disable-internet-access) for more details).
 
 [ ![figure6](media/dual-region-fig6.png) ](media/dual-region-fig6.png#lightbox)
 *Figure 6. AVS configuration to enable internet connectivity via internet edges hosted in Azure VNets.* 
