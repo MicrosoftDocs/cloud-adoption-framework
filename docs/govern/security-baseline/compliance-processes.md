@@ -16,7 +16,7 @@ This article shows you how to develop policy adherence processes that govern the
 
 ## Planning, review, and reporting processes
 
-The best Security Baseline tools in the cloud are only as good as the processes and policies that they support. The following example processes are commonly part of the Security Baseline discipline. These examples can be a good resource when you update your security policy. Typically, you update your policy based on business change and feedback. The feedback comes from security and IT teams that are tasked with turning governance guidance into action. Use these examples as a starting point when you update your policy.
+The best Security Baseline tools in the cloud are only as good as the processes and policies that they support. The following sections describe processes that are commonly part of the Security Baseline discipline. These processes can be a good resource when you update your security policy. Typically, you update your policy based on business change and feedback. The feedback comes from security and IT teams that are tasked with turning governance guidance into action. Use the following sections as a starting point when you update your policy.
 
 ### Initial risk assessment and planning
 
