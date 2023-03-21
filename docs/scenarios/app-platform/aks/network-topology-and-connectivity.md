@@ -16,9 +16,21 @@ ms.custom: think-tank, e2e-aks
 
 ## Design considerations
 
-AKS has three networking models: kubenet, CNI Overlay, and CNI. Kubenet is a basic solution, CNI Overlay is designed for advanced networking, and CNI provides even more advanced features, like IP address management and network segmentation. These models provide flexibility and scalability options for container networking in AKS.
+Azure Kubernetes Service (AKS) provides three different networking models for container networking: Kubenet, CNI Overlay, and CNI. Each of these models has its unique set of features and advantages, offering flexibility and scalability options for container networking in AKS.
 
-The table below provides an overview of three different network models available in Azure Kubernetes Service (AKS): Kubenet, Azure CNI, and Azure CNI Overlay. Each network model has its unique set of use cases and advantages, depending on the specific requirements and constraints of the Kubernetes cluster.
+### Kubenet
+
+Kubenet is a basic networking solution that conserves IP address space and offers simple configuration. It is ideal for small AKS clusters with fewer than 400 nodes, where manually managing and maintaining user-defined routes is acceptable. It is suitable for scenarios where internal or external load balancers are sufficient for reaching pods from outside the cluster.
+
+### Azure CNI
+
+Azure CNI is a network model designed for advanced networking. It provides full virtual network connectivity for pods, allowing for pod-to-pod and pod-to-VM connectivity. It is ideal for scenarios where advanced AKS features, such as virtual nodes, are required. It is suitable for scenarios where sufficient IP address space is available, and external resources need to reach pods directly. AKS network policies are also supported with Azure CNI.
+
+### Azure CNI Overlay
+
+Azure CNI Overlay is designed to address IP address shortages and simplify network configuration. It is suitable for scenarios where scaling up to 1000 nodes and 250 pods per node is sufficient, and an additional hop for pod connectivity is acceptable. AKS egress requirements can also be met with Azure CNI Overlay.
+
+The table below summarizes the recommended use cases for each network model.
 
 | Network Model    | When to use                                                                                                        |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
