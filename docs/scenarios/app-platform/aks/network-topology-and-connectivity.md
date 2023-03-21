@@ -22,6 +22,15 @@ ms.custom: think-tank, e2e-aks
   - UDR for kubenet is automatically set up by AKS.
   - kubenet only supports up to 400 nodes.
   - Verify the current list of [capabilities supported by each CNI plug-in](/azure/aks/concepts-network#compare-network-models).
+  -
+The table below provides an overview of three different network models available in Azure Kubernetes Service (AKS): Kubenet, Azure CNI, and Azure CNI Overlay. Each network model has its unique set of use cases and advantages, depending on the specific requirements and constraints of the Kubernetes cluster.
+
+| Network Model    | When to use                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Kubenet          | - IP address space conservation is a priority<br>- Simple configuration<br>- Fewer than 400 nodes per cluster<br>- Kubernetes internal or external load balancers sufficient for reaching pods from outside the cluster<br>- Manually managing and maintaining user-defined routes is acceptable |
+| Azure CNI        | - Full virtual network connectivity is required for pods<br>- Advanced AKS features (such as virtual nodes) are needed<br>- Sufficient IP address space is available<br>- Pod to pod and pod to VM connectivity needed<br>- External resources need to reach pods directly<br>- AKS network policies are required |
+| Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Simplier network configuration <br>- AKS egress requirements can be met |
+
 - IP addressing and the size of the virtual network subnet must be carefully planned to support the scaling of the cluster. For example, you can add more nodes.
 - Virtual nodes can be used for quick cluster scaling, but there are some [known limitations](/azure/aks/virtual-nodes-portal).
 - AKS clusters support Basic and Standard Azure Load Balancer SKUs.
