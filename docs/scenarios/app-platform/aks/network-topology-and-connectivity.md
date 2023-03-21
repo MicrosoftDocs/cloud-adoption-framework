@@ -140,8 +140,7 @@ Traffic between the AKS pods and the private endpoints per default will not go t
 - If your security policy mandates inspecting all outbound internet traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the managed hub virtual network. For more information, see [Limit egress traffic](/azure/aks/limit-egress-traffic). The AKS [outbound type UDR](/azure/aks/egress-outboundtype#deploy-a-cluster-with-outbound-type-of-udr-and-azure-firewall) requires associating a route table to the AKS node subnet, so it cannot be used today with the dynamic route injection supported by Azure Virtual WAN or Azure Route Server.
 - For non-private clusters, use authorized IP ranges.
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer.
-
-When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it is essential to understand the capabilities and characteristics of each model.
+- When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure     Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it is essential to understand the capabilities and characteristics of each model.
 
 The following table compares the features of the three network models in AKS: Kubenet, Azure CNI, and Azure CNI Overlay.
 
