@@ -46,7 +46,7 @@ Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrast
 
 | Item | Volume | Details |
 | --- | --- | --- |
-| Workloads | > 3,000 applications | <li> Applications run on VMs <li> Application platforms, including Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle) |
+| Workloads | > 3,000 applications | - Applications run on VMs <br> - Application platforms, including Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_software_bundle) |
 | Databases | Approximately 8,500 databases | Databases, including SQL Server, MySQL, and PostgreSQL |
 | VMs | > 35,000 VMs | vCenter servers manage VMs that are run on VMware hosts |
 
@@ -54,7 +54,7 @@ Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrast
 
 Now that Contoso has established business drivers and migration goals, it can align to the [Migrate methodology](../index.md). It can build on the application of migration waves and migration sprints to iteratively plan and execute migration efforts.
 
-## Plan
+## Step 1: Plan
 
 Contoso kicks off the planning process by discovering and assessing on-premises applications, data, and infrastructure. Contoso:
 
@@ -181,10 +181,10 @@ Contoso considers four broad migration strategies.
 
 | Strategy | Details | Usage |
 | --- | --- | --- |
-| Rehost | <li> This strategy, often called a *lift-and-shift* migration, is a no-code option that migrates existing applications to Azure quickly. <li> An application is migrated as is with the benefits of the cloud and without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic applications that require no code changes. |
-| Refactor | <li> This strategy, also called *repackaging*, requires minimal application code or configuration changes to connect the application to Azure PaaS and takes advantage of cloud capabilities. | <li> Contoso can refactor strategic applications to retain the same basic functionality but move them to run on an Azure platform, such as Azure App Service. <li> This strategy requires minimum code changes. <li> Contoso has to maintain a VM platform because Microsoft doesn't manage it. |
-| Rearchitect | <li> This strategy modifies or extends an application code base to optimize the application architecture for cloud capabilities and scale. <li> It modernizes an application into a resilient, highly scalable, independently deployable architecture. <li> Azure services can accelerate the process, scale applications with confidence, and manage applications with ease. |
-| Rebuild | <li> This approach rebuilds an application from scratch by using cloud-native technologies. <li> Azure PaaS provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses. It removes the need for an underlying application infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical applications to take advantage of cloud technologies, such as serverless compute or microservices. <li> Contoso manages the application and services that it develops, and Azure manages everything else. |
+| Rehost | - This strategy, often called a *lift-and-shift* migration, is a no-code option that migrates existing applications to Azure quickly. <br> - An application is migrated as is with the benefits of the cloud and without the risks or costs associated with code changes. | - Contoso can rehost less-strategic applications that require no code changes. |
+| Refactor | - This strategy, also called *repackaging*, requires minimal application code or configuration changes to connect the application to Azure PaaS and takes advantage of cloud capabilities. | - Contoso can refactor strategic applications to retain the same basic functionality but move them to run on an Azure platform, such as Azure App Service. <br> - This strategy requires minimum code changes. <br> - Contoso has to maintain a VM platform because Microsoft doesn't manage it. |
+| Rearchitect | - This strategy modifies or extends an application code base to optimize the application architecture for cloud capabilities and scale. <br> - It modernizes an application into a resilient, highly scalable, independently deployable architecture. <br> - Azure services can accelerate the process, scale applications with confidence, and manage applications with ease. |
+| Rebuild | - This approach rebuilds an application from scratch by using cloud-native technologies. <br> - Azure PaaS provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses. It removes the need for an underlying application infrastructure, middleware, and other resources. | - Contoso can rewrite critical applications to take advantage of cloud technologies, such as serverless compute or microservices. <br> - Contoso manages the application and services that it develops, and Azure manages everything else. |
 
 Data must be considered, especially because Contoso has a high volume of databases. Contoso's default approach is to use PaaS services such as Azure SQL Database to take full advantage of cloud features. When Contoso moves to a PaaS service for databases, they only have to maintain data. Microsoft maintains the underlying platform.
 
@@ -233,9 +233,9 @@ Contoso runs the planner tool on a Windows Server machine that matches the minim
 
    | Component | Details |
    | --- | --- |
-   | Configuration server | <li> Usually a VMware VM that's configured through an OVF template. <li> The configuration server component coordinates communications between on-premises and Azure, and it manages data replication. |
-   | Process server | <li> Installed by default on the configuration server. <li> The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. <li> The process server also installs the Azure Site Recovery Mobility service on VMs that you want to replicate and performs automatic discovery of on-premises machines. <li> Scaled deployments need extra standalone process servers to handle large volumes of replication traffic. |
-   | Mobility service | <li> The Mobility service agent is installed on each VMware VM that's migrated with Azure Site Recovery. |
+   | Configuration server | - Usually a VMware VM that's configured through an OVF template. <br> - The configuration server component coordinates communications between on-premises and Azure, and it manages data replication. |
+   | Process server | - Installed by default on the configuration server. <br> - The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. <br> - The process server also installs the Azure Site Recovery Mobility service on VMs that you want to replicate and performs automatic discovery of on-premises machines. <br> - Scaled deployments need extra standalone process servers to handle large volumes of replication traffic. |
+   | Mobility service | - The Mobility service agent is installed on each VMware VM that's migrated with Azure Site Recovery. |
 
  <br>
 
@@ -245,12 +245,12 @@ Contoso runs the planner tool on a Windows Server machine that matches the minim
 
    | Component | Capacity requirements |
    | --- | --- |
-   | Maximum daily change rate | <li> A single process server can handle a daily change rate up to 2 terabytes (TB). Because a VM can only use one process server, the maximum daily data change rate that's supported for a replicated VM is 2 TB. |
-   | Maximum throughput | <li> A standard Azure Storage account can handle a maximum of 20,000 requests per second. I/O operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has five disks and each disk generates 120 IOPS (8K size) on the VM, it's within the Azure per-disk IOPS limit of 500. <li> The number of storage accounts needed equals the total source machine IOPS divided by 20,000. A replicated machine can belong to only a single storage account in Azure. |
-   | Configuration server | Based on Contoso's estimate of replicating 100 to 200 VMs together and the [configuration server sizing requirements](/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimates that it needs the server machine configuration: <li> CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <li> Memory: 32 GB <li> Cache disk: 1 TB <li> Data change rate: 1 TB to 2 TB <br> Contoso must ensure that the configuration server is optimally located on the same network and LAN segment as the VMs to be migrated. |
-   | Process server | Contoso deploys a standalone dedicated process server that can replicate 100 to 200 VMs: <li> CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <li> Memory: 32 GB <li> Cache disk: 1 TB <li> Data change rate: 1 TB to 2 TB <br> The process server works hard, so it's located on an ESXi host that can handle the disk I/O, network traffic, and CPU required for the replication. Contoso considers a dedicated host for this purpose. |
-   | Networking | <li> Contoso reviewed the current Site-to-Site VPN infrastructure and decided to implement Azure ExpressRoute. The implementation is critical because it lowers latency and improves bandwidth to Contoso's primary Azure region (`East US 2`). <li> Contoso carefully monitors data that flows from the process server. If the data overloads the network bandwidth, Contoso considers [throttling the process server bandwidth](/azure/site-recovery/site-recovery-plan-capacity-vmware#control-network-bandwidth). |
-   | Azure Storage | <li> For migration, Contoso identifies the right type and number of target Azure Storage accounts. Site Recovery replicates VM data to Azure Storage. <li> Site Recovery can replicate to Standard SSD or Premium SSD storage accounts. <li> Contoso reviews [storage limits](/azure/virtual-machines/disks-types) and considers the expected growth and future increased usage. Given the speed and priority of migrations, Contoso decides to use Premium SSDs. <li> Contoso decides to use managed disks for VMs deployed to Azure. The IOPS required helps determine if the disks are Standard HDD, Standard SSD, or Premium SSD. |
+   | Maximum daily change rate | - A single process server can handle a daily change rate up to 2 terabytes (TB). Because a VM can only use one process server, the maximum daily data change rate that's supported for a replicated VM is 2 TB. |
+   | Maximum throughput | - A standard Azure Storage account can handle a maximum of 20,000 requests per second. I/O operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has five disks and each disk generates 120 IOPS (8K size) on the VM, it's within the Azure per-disk IOPS limit of 500. <br> - The number of storage accounts needed equals the total source machine IOPS divided by 20,000. A replicated machine can belong to only a single storage account in Azure. |
+   | Configuration server | Based on Contoso's estimate of replicating 100 to 200 VMs together and the [configuration server sizing requirements](/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimates that it needs the server machine configuration: - CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <br> - Memory: 32 GB <br> - Cache disk: 1 TB <br> - Data change rate: 1 TB to 2 TB <br> Contoso must ensure that the configuration server is optimally located on the same network and LAN segment as the VMs to be migrated. |
+   | Process server | Contoso deploys a standalone dedicated process server that can replicate 100 to 200 VMs: - CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <br> - Memory: 32 GB <br> - Cache disk: 1 TB <br> - Data change rate: 1 TB to 2 TB <br> The process server works hard, so it's located on an ESXi host that can handle the disk I/O, network traffic, and CPU required for the replication. Contoso considers a dedicated host for this purpose. |
+   | Networking | - Contoso reviewed the current Site-to-Site VPN infrastructure and decided to implement Azure ExpressRoute. The implementation is critical because it lowers latency and improves bandwidth to Contoso's primary Azure region (`East US 2`). <br> - Contoso carefully monitors data that flows from the process server. If the data overloads the network bandwidth, Contoso considers [throttling the process server bandwidth](/azure/site-recovery/site-recovery-plan-capacity-vmware#control-network-bandwidth). |
+   | Azure Storage | - For migration, Contoso identifies the right type and number of target Azure Storage accounts. Site Recovery replicates VM data to Azure Storage. <br> - Site Recovery can replicate to Standard SSD or Premium SSD storage accounts. <br> - Contoso reviews [storage limits](/azure/virtual-machines/disks-types) and considers the expected growth and future increased usage. Given the speed and priority of migrations, Contoso decides to use Premium SSDs. <br> - Contoso decides to use managed disks for VMs deployed to Azure. The IOPS required helps determine if the disks are Standard HDD, Standard SSD, or Premium SSD. |
 
 #### Azure Database Migration Service
 
@@ -282,7 +282,7 @@ Contoso can use other tools and services to identify VM information, like:
 
 <!-- docutune:ignore "cost management tools" -->
 
-## Ready for production
+## Step 3: Ready for production
 
 After Contoso moves resources to Azure, it streamlines them to improve performance and maximize ROI with cost management tools. Because Azure is a pay-for-use service, it's important for Contoso to understand how systems are performing and to ensure they're sized properly.
 
