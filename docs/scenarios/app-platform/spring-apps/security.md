@@ -1,6 +1,6 @@
 ---
 title: Security considerations for the Azure Spring Apps landing zone accelerator
-description: Security considerations and recommendations for a Spring Boot workload.
+description: Learn how to create a workload that's capable of detecting, preventing, and responding to security vulnerabilities in Azure Spring Apps.
 author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023
@@ -155,8 +155,7 @@ Azure Spring Apps is integrated with Azure AD, which can track sign-in activitie
 For more information, see:
 
 - [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs)
-- [View Azure AD risky sign-ins](/azure/active-directory/reports-monitoring/concept-risky-sign-ins#investigate-risk)
-- [Identify Azure AD users flagged for risky activity](/azure/active-directory/reports-monitoring/concept-user-at-risk)
+- [View Azure AD risky sign-ins](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk)
 - [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access)
 - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference)
 
