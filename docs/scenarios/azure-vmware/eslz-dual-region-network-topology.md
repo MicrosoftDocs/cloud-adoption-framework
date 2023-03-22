@@ -6,7 +6,7 @@ ms.author: fguerri
 ms.date: 02/09/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: caf-scenerio-vmware
+ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
