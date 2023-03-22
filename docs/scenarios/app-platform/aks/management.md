@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-aks, engagement-fy23
+products: azure-monitor
 ---
 
 # Operations management considerations for Azure Kubernetes Service

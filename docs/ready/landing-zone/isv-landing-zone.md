@@ -3,7 +3,7 @@ title: Independent software vendor (ISV) considerations for Azure landing zones
 description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
 author: arsenvlad
 ms.author: arsenv
-ms.date: 06/22/2022
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -28,7 +28,7 @@ As an independent software vendor (ISV) building and operating your solution on 
 The Azure landing zones help you choose a direction for your overall Azure environment. But as an ISV, SaaS provider, or startup, your specific implementation needs might differ from more standard customer scenarios. The following are just a few different implementation scenario examples:
 
 * You build software that customers deploy into their own subscriptions.
-* You have your own *control plane* and use automation scripts or software to deploy and configure Azure resources for your SaaS solutions.
+* You have your own [control plane](/azure/architecture/guide/multitenant/considerations/control-planes) and use automation scripts or software to deploy and configure Azure resources for your SaaS solutions.
 * You're a small ISV or startup and want to start with the lowest possible cost, and might not want to initially use services like Azure Firewall and Azure DDoS Protection.
 * You're a large SaaS ISV and plan to split your SaaS application across multiple subscriptions for scale. You also want to group the subscriptions so they correspond to your development, test, staging, and production environments.
 * Your organization's operating model separates the roles of your corporate IT team and your SaaS product teams. Your organization's corporate IT team might manage resources like Microsoft Office 365 and Microsoft Teams, and your SaaS product team might be responsible for building and operating your SaaS product (including its central platform and identity components).
@@ -133,7 +133,7 @@ Each Azure AD tenant must have its own domain name. If your organization uses tw
 
 Avoid using separate Azure AD tenants for pre-production and production environments. Rather than creating two tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each, you should create one Azure AD tenant. You can use management groups and Azure RBAC to govern the access to subscriptions and resources under this single tenant.
 
-For more information on the using multiple Azure AD tenants, see the [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
+For more information on the using multiple Azure AD tenants, see [Azure landing zones and multiple Azure Active Directory tenants](../landing-zone/design-area/multi-tenant/overview.md) and [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
 ## Management groups
 

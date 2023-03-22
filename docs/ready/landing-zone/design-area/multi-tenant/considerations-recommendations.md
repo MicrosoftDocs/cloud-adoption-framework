@@ -35,8 +35,8 @@ The Contoso Corporation has a separate Azure Active Directory tenant for the sol
 
 >[!TIP]
 > For more information about testing Azure landing zones and Azure workloads and resources within Azure landing zones environments, see:
->    - [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) 
->    - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+>    - [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](../../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) 
+>    - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 
 >[!NOTE]
 > Azure landing zones are deployed within a single Azure Active Directory tenant. If you have multiple Azure Active Directory tenants that you want to deploy Azure resources within, and you want to control, govern, and monitor them by using Azure landing zones, you must deploy Azure landing zones within each of those tenants individually.
@@ -65,7 +65,7 @@ This section explains key considerations and recommendations about Azure landing
 - Consider using [Azure Active Directory B2B](/azure/active-directory/external-identities/what-is-b2b) to simplify and enhance user experience and administration when your organization has multiple Azure Active Directory tenants.
 - Consider using the Microsoft identity platform, with Azure Active Directory with B2B and B2C capabilities, so developers can create applications in a single Azure subscription and within a single tenant. This method supports users from many identity sources. For more information, see [Multi-tenant apps](/azure/active-directory/develop/application-model#multi-tenant-apps) and [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview).
 - Consider using the features available for multi-tenant organizations. For more information, see [What is a multi-tenant organization in Azure Active Directory](/azure/active-directory/multi-tenant-organizations/overview).
-- Consider [keeping your Azure landing zone up to date](/azure/cloud-adoption-framework/govern/resource-consistency/keep-azure-landing-zone-up-to-date).
+- Consider [keeping your Azure landing zone up to date](../../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
 
 #### Azure products and services Azure Active Directory integration
 
@@ -86,7 +86,7 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
 - Use a single Azure Active Directory tenant, which is usually the corporate Azure Active Directory tenant. Only create more Azure Active Directory tenants when there are requirements that can't be met by using the corporate Azure Active Directory tenant.
 - Use sandbox subscriptions to provide application teams safe, controlled, and isolated development environments within the same single Azure Active Directory tenant. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
 - Use Azure Active Directory multi-tenant applications when you create integrations from operational tooling, such as ServiceNow, and connect them to multiple Azure Active Directory tenants. For more information, see [Best practices for all isolation architectures](/azure/active-directory/fundamentals/secure-with-azure-ad-best-practices#operational-tools).
-- If you're an ISV, see [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone).
+- If you're an ISV, see [Independent software vendor (ISV) considerations for Azure landing zones](../../isv-landing-zone.md).
 - Use Azure Lighthouse to simplify cross-tenant management experiences. For more information, see [Azure Lighthouse usage in Azure landing zones multi-tenant scenarios](lighthouse.md).
 - On your Enterprise Agreement enrollments or Microsoft Customer Agreements that are homed in the destination Azure Active Directory tenant, create account owners, invoice section owners, and subscription creators. Assign the owners and creators to the subscriptions they create to avoid having to [change directories on Azure subscriptions](/azure/role-based-access-control/transfer-subscription) once created. For more information, see [Add an account from another Azure AD tenant](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant) and [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants).
 - See the [Azure Active Directory security operations guide](/azure/active-directory/fundamentals/security-operations-introduction).

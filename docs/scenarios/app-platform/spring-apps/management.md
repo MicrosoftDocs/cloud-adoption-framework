@@ -1,6 +1,6 @@
 ---
 title: Monitor operations for the Azure Spring Apps landing zone accelerator
-description: Learn about operational considerations and recommendations for a Spring Boot workload.
+description: Learn about operational considerations and recommendations for a Spring Boot workload that's deployed in Azure Spring Apps.
 author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023

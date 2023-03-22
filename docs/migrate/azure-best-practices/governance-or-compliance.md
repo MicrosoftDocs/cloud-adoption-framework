@@ -48,8 +48,8 @@ For a deeper understanding of governance, read the overview of the [Five Discipl
 
 - [Cost Management discipline](../../govern/cost-management/template.md)
 - [Security Baseline discipline](../../govern/security-baseline/template.md)
-- [Identity Baseline discipline](/azure/cloud-adoption-framework/govern/identity-baseline/)
-- [Deployment Acceleration discipline](/azure/cloud-adoption-framework/govern/deployment-acceleration/)
+- [Identity Baseline discipline](../../govern/identity-baseline/index.md)
+- [Deployment Acceleration discipline](../../govern/deployment-acceleration/index.md)
 
 For information about developing governance guidance based on the Cloud Adoption Framework governance model, see [Implement a cloud governance strategy](../../govern/corporate-policy.md).
 
