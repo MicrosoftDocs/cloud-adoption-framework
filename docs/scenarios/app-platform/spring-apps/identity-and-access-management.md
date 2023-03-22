@@ -85,3 +85,4 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Network topology and connectivity](./network-topology-and-connectivity.md)
+

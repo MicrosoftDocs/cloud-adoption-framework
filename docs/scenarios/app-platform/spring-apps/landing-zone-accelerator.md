@@ -45,5 +45,3 @@ It's highly recommended that you have a good understanding of the **integration 
 Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Identity and access management](./identity-and-access-management.md)
-
-

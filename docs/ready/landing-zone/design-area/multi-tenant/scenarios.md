@@ -74,7 +74,7 @@ ISVs that deliver their SaaS (software as a service) products to their customers
 
 If you’re an ISV, you might have separation between your corporate Azure Active Directory tenant, including Azure usage, for your business-as-usual activities, such as e-mail, file sharing, and internal applications. You might also have a separate Azure Active Directory tenant where Azure subscriptions host and deliver the SaaS applications that you provide to your end customers. This approach is common and sensible because it protects you and your customers from security incidents.
 
-For more information, see [Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone).
+For more information, see [Independent software vendor (ISV) considerations for Azure landing zones](../../isv-landing-zone.md).
 
 ## Tenant level testing / Microsoft 365 testing
 
@@ -91,8 +91,8 @@ But the separate Azure Active Directory tenant is **not** for hosting Azure subs
 >[!TIP]
 > For information about how to handle testing Azure landing zones and Azure workloads or resources within Azure landing zones environments, see:
 >
-> - [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
-> - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+> - [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
+> - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 
 ## Grassroots / Shadow IT / Start-ups
 
@@ -105,7 +105,7 @@ For more information about how to navigate this scenario, see the [Mergers and a
 >[!IMPORTANT]
 > We highly recommend platform teams have an easily accessible and efficient process to give teams access to an Azure sandbox subscription or subscriptions that are homed in the corporate or primary Azure Active Directory tenant for the organization. This process prevents Shadow IT scenarios from occurring and prevents challenges in the future for all parties involved.
 >
-> For more information about sandboxes, see [Management groups guidance within the resource organization design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups).
+> For more information about sandboxes, see [Management groups guidance within the resource organization design area](../resource-org-management-groups.md).
 
 ## Summary
 
