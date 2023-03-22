@@ -7,7 +7,7 @@ ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+ms.custom: internal
 ---
 
 # Independent software vendor (ISV) considerations for Azure landing zones
