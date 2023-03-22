@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Identity and access management for the Azure Spring Apps landing zone accelerator
 
-This article provides design considerations and recommendations to authenticate users in Azure Spring Apps. Grant users the necessary level of access to workload resources.
+This article describes design considerations and recommendations to authenticate users in Azure Spring Apps. Grant users the necessary level of access to workload resources.
 
 The centralized platform team and the application teams must have a good understanding of:
 
