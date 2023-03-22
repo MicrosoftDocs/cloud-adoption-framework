@@ -22,7 +22,7 @@ The landing zone accelerator is a set of design considerations and reference arc
   - [Identity and access management](./identity-and-access-management.md)
   - [Network topology and connectivity](./network-topology-and-connectivity.md)
   - [Security](./security.md)
-  - [Monitoring operations](./management.md)
+  - [Monitor operations](./management.md)
 
 - **Reference architecture** provides design guidance that applies the recommendations to an example Spring app. The practical approach is used as design guidance for greenfield implementation and as an assessment for brownfield customers that already use Spring Boot apps.
 
@@ -38,10 +38,8 @@ For more information, see [Azure Spring Apps reference implementation](https://g
 
 The accelerator assumes that the enterprise (platform) landing zones are based on [Azure landing zone](../../../ready/landing-zone/index.md) guidance. The platform landing zones have shared services that centralized teams manage. You can focus your efforts on application development and workload resources.
 
-It's highly recommended that you have a good understanding of the **integration points between the shared resources and workload resources**. If the platform requires changes, work with the centralized team to get the changes implemented with a **shared responsibility mindset**. For example, communicate the expected potential of the workload early so that the central networking team can allocate a virtual network with address space that's large enough to accommodate that growth.
+It's highly recommended that you have a good understanding of the integration points between the shared resources and workload resources. If the platform requires changes, work with the centralized team to get the changes implemented with a shared responsibility mindset. For example, communicate the expected potential of the workload early so that the central networking team can allocate a virtual network with address space that's large enough to accommodate that growth.
 
 ## Next steps
-
-Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Identity and access management](./identity-and-access-management.md)

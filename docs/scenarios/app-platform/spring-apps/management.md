@@ -17,11 +17,11 @@ The organization might provide centralized monitoring that's shared by all workl
 
 For information about the platform design, see [Workload management and monitoring](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-workloads).
 
-You can choose to provision your own monitoring resources. This approach gives the application team more autonomy and simplifies the overall management of your application. The tradeoff might be increased management overhead. The Azure Spring Apps landing zone accelerator and the following guidance are based on this approach.
+You can provision your own monitoring resources. This approach gives the application team more autonomy and simplifies the overall management of your application. The tradeoff might be increased management overhead. The Azure Spring Apps landing zone accelerator and the following guidance are based on this approach.
 
 ## Design considerations
 
-- **Logs and metrics**. Collect logs and metrics emitted from the application and resources. Logs provide insight into the operations of the workload. Metrics are collected at regular intervals and allow for near real-time insights. Logs and metrics can help with investigations that are related to the health and utilization of resources.
+- **Logs and metrics**. Collect logs and metrics that are emitted from the application and resources. Logs provide insight into the operations of the workload. Metrics are collected at regular intervals and provide near real-time insights. Logs and metrics can help with investigations that are related to the health and utilization of resources.
 
     Metrics are key for scaling decisions. You can allow apps to scale based on metric thresholds, or apps can scale during a specific time window.
 
@@ -31,13 +31,13 @@ You can choose to provision your own monitoring resources. This approach gives t
 
 - **Distributed tracing**. Implement distributed tracing to get observability across different services within your Azure Spring Apps ecosystem.
 
-- **Alerts**. The application teams must get notified about events that are important for the workload. Set alerts to achieve this goal. You can set alerts that monitor resources based on metrics, such as storage, rate of requests, and data usage.
+- **Alerts**. The application teams must get notified about events that are important for the workload. You can set alerts that monitor resources based on metrics, such as storage, rate of requests, and data usage.
 
-- **Health probes**. You can set up health probes to detect the health of the backend services. Review how the health probes are set up so that requests are routed to healthy instances, and to ensure that the application terminates gracefully if backend services aren't available.
+- **Health probes**. You can set up health probes to detect the health of the backend services. Review how the health probes are set up so that requests are routed to healthy instances and to ensure that the application terminates gracefully if backend services aren't available.
 
-## Design Recommendations
+## Design recommendations
 
-- Use Azure Monitor metrics to collect metrics emitted from monitored resources into a time-series database.
+- Use Azure Monitor metrics to collect metrics that are emitted from monitored resources into a time-series database.
 
     For Azure Spring Apps, view the charts in each application overview page and common metrics page.
 
@@ -61,7 +61,7 @@ You can choose to provision your own monitoring resources. This approach gives t
 
 - If your application has a longer startup time, adjust the total timeout `initialDelaySeconds + periodSeconds * failureThreshold` to a value longer than the start time of your application. This adjustment helps avoid the probe failure and forces the application to restart.
 
-- Configure your health probes to take action based on the application-specific command, a TCP Socket connection or an HTTP request.
+- Configure your health probes to take action based on the application-specific command, a TCP Socket connection, or an HTTP request.
 
 - For Spring Boot apps, take advantage of the Spring Boot Actuator Health Indicator to configure your health probes.
 

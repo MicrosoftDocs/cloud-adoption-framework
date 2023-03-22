@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Network topology and connectivity for the Azure Spring Apps landing zone accelerator
 
-This article provides design considerations and recommendations for the network where the Spring Boot workload is placed. Your target design depends on the requirements of the workload and the security and compliance requirements of your organization.  
+This article describes design considerations and recommendations for the network where the Spring Boot workload is placed. Your target design depends on the requirements of the workload and the security and compliance requirements of your organization.  
 
 The centralized platform team and the application team share the responsibility of the networking design area. The platform team selects the [networking topology](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#topology), which can be a traditional hub-spoke model or Virtual WAN network topology (Microsoft-managed). The application team is responsible for the design choices of the spoke network. The workload is expected to have dependencies on shared services that the platform manages. The application team must understand the implications of those dependencies and communicate their requirements so the overall goals of the workload are met.
 
@@ -77,10 +77,8 @@ These recommendations provide prescriptive guidance for the preceding set of con
     > [!NOTE]
     > You can choose an alternative for the reverse proxy, such as Azure Front Door or non-Azure services. For information about configuration options, see [Expose Azure Spring Apps through a reverse proxy](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy).
 
-- Azure Spring Apps can be deployed in a virtual network (through VNet injection) or outside the network. For more information, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
+- Azure Spring Apps can be deployed in a virtual network through VNet injection or outside the network. For more information, see [Configuration summary](/azure/architecture/reference-architectures/microservices/spring-cloud-reverse-proxy#configuration-summary).
 
 ## Next steps
-
-Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Security considerations for the Azure Spring Apps landing zone accelerator](./security.md)

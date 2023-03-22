@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Identity and access management for the Azure Spring Apps landing zone accelerator
 
-This article describes design considerations and recommendations to authenticate users in Azure Spring Apps. Grant users the necessary level of access to workload resources.
+This article describes design considerations and recommendations to authenticate users in Azure Spring Apps, and grant users the necessary level of access to workload resources.
 
 The centralized platform team and the application teams must have a good understanding of:
 
@@ -21,11 +21,11 @@ The centralized platform team and the application teams must have a good underst
 
 For information about the platform design, see [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).
 
-As the workload owner, follow these best practices to ensure that the application resources don't violate organizational security or governance boundaries. The goal is to ensure that the deployed Azure Spring app and the related resources of the workload are secure and only accessible by authorized users. This action protects sensitive data and prevents misuse of the app and its resources.
+As the workload owner, follow these best practices to ensure that the application resources don't violate organizational security or governance boundaries. The goal is to ensure that the deployed Azure Spring app and the related resources of the workload are secure and only accessible by authorized users. When you follow these practices, you protect sensitive data and prevent the misuse of the app and its resources.
 
 ## Design considerations
 
-- **Access from the application to other services**. The application should authenticate itself when it connects to backend services that are part of the workload. This authentication protects the services from unauthorized access. Consider features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials.
+- **Access from the application to other services**. The application should authenticate itself when it connects to backend services that are part of the workload. This authentication protects the services from unauthorized access. Consider using features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials.
 
 - **Access to the application**. Users might send requests to the application over the public internet. Or requests might come from private or on-premises networks. In either case, access must be authenticated based on client certificates or through Active Directory (Azure AD).
 
@@ -81,8 +81,6 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 - Enable diagnostic logging for application console, system logs, ingress logs, build logs, and container event logs. You can use these detailed logs to diagnose problems with your app and monitor access requests. When you enable these logs, an Azure Monitor activity log gives you insight into subscription-level events.
 
 ## Next steps
-
-Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Network topology and connectivity](./network-topology-and-connectivity.md)
 

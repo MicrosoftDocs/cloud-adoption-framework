@@ -11,7 +11,7 @@ ms.subservice: caf-scenario-spring-apps
 
 # Security considerations for the Azure Spring Apps landing zone accelerator
 
-This article provides security considerations and recommendations for a workload that's hosted in Azure Spring Apps. This guidance helps you create a workload that's capable of detecting, preventing, and responding to security vulnerabilities.
+This article describes security considerations and recommendations for a workload that's hosted in Azure Spring Apps. This guidance helps you create a workload that's capable of detecting, preventing, and responding to security vulnerabilities.
 
 A secured application can't guarantee the security of the entire workload. As the workload owner, evaluate human errors, and evaluate the attack surface, like the application and the infrastructure services with which the application interacts.
 
@@ -21,10 +21,10 @@ The centralized teams provide networking and identity controls as part of the pl
 
 As you design the workload, ensure that the security controls that you own are aligned with the central controls. The design is subject to periodic reviews conducted by the centralized security team. Regularly review the security controls and platform policies with the central teams to make sure the workload requirements are accommodated.
 
-> For information about the platform design, see:
->
-> - [Design area: Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
-> - [Design area: Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)
+For information about the platform design, see:
+
+- [Design area: Security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
+- [Design area: Azure governance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)
 
 ## Design considerations
 
@@ -38,7 +38,7 @@ As you design the workload, ensure that the security controls that you own are a
 
 - **Identity management**. Use Azure Active Directory (Azure AD) features, such as managed identities, single sign-on, strong authentications, managed identities, and conditional access to provide authentication and authorization through Azure AD.
 
-- **Security monitoring**. The system should have monitoring tools to detect threats and measure compliance by using the organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of security posture.
+- **Security monitoring**. The system should have monitoring tools to detect threats and measure compliance by using the organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of the security posture.
 
 - **Data in transit**. Data that's transferred between components, locations, or API calls must be encrypted.
 
@@ -48,7 +48,7 @@ As you design the workload, ensure that the security controls that you own are a
 
 - **Credential exposure**. You can deploy and run code, configurations, and persisted data with identities or secrets. Make sure the credentials are examined when you access the assets.
 
-- **Certificate management**. Certificates must be loaded based on the Zero Trust principle of never trust, always verify, and they must be credential-free. Only trust certificates that are shared by verifying the identity prior to granting access to the certificates.
+- **Certificate management**. Certificates must be loaded based on the Zero Trust principle of never trust, always verify, and they must be credential-free. Only trust shared certificates by verifying the identity prior to granting access to the certificates.
 
 - **Consistent deployments**. Use infrastructure-as-code (IaC) to automate the provisioning and configuration of all Azure resources and strengthen the security posture.
 
@@ -187,8 +187,6 @@ For more information, see:
 - [GitHub secret scanning](https://docs.github.com/github/administering-a-repository/about-secret-scanning)
 
 ## Next steps
-
-Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 [Monitoring operations](./management.md)
 
