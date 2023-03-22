@@ -5,8 +5,8 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/16/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.service: caf
+ms.subservice: caf-scenario-app-plat
 ---
 
 # Operations management considerations for the AIS Services landing zone accelerator
