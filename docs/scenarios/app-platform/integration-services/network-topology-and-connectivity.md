@@ -5,8 +5,8 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/10/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.service: caf
+ms.subservice: caf-scenario-app-plat
 ---
 
 # Network topology and connectivity considerations for the Integration Services landing zone accelerator
