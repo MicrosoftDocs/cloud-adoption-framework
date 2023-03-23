@@ -65,7 +65,9 @@ Because Infrastructure as Code deployments are backed by a definition file, you 
 
 Using source control practices, a new branch of your Infrastructure as Code should be created to add changes and revisions.  This branch's history in your source control system captures the iterations and changes.  Deployments with it can be done to a test environment (see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md)) until the changes are ready to be merged in and deployed to production.  Throughout this cycle, the deployment records capture what version was used and what resources were deployed, giving you a highly visible history.
 
-The article on [Testing Terraform code](https://learn.microsoft.com/azure/developer/terraform/best-practices-testing-overview) provides guidance on performing integration testing, unit testing, compliance testing, and end-to-end testing.  These methods allow you to perform testing even before you deploy the code, as well as to test in non-production environments from your branch.  These testing methods can also be used with Bicep.
+For general testing guThese testing methods can also be used with Bicep.
+
+The article on [Testing your application and Azure environment](https://learn.microsoft.com/azure/architecture/framework/devops/release-engineering-testing) provides guidance on performing different kinds of tests, such as integration testing, unit testing, canary releasetesting, and fault injection.  These methods allow you to perform testing even before you deploy the code, as well as to test in non-production environments from your branch.  
 
 ### Testing environments
 
@@ -108,3 +110,4 @@ You can explore an introduction to the Infrastructure as Code tools in the follo
 
 - [What is Bicep?](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep)
 - [What is Terraform?](https://developer.hashicorp.com/terraform/intro)
+- [Testing Terraform code](https://learn.microsoft.com/azure/developer/terraform/best-practices-testing-overview)
