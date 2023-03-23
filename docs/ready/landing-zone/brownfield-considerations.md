@@ -1,9 +1,9 @@
 ---
 title: Brownfield landing zone considerations
-description: Learn about asdf
+description: Learn about aligning the Azure landing zone target architecture and best practices to an existing environment.
 author: timwarner-msft
 ms.author: timwarner
-ms.date: 06/22/2022
+ms.date: 03/23/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
