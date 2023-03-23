@@ -32,7 +32,7 @@ This means that if you have an Infrastructure as Code definition for an Azure re
 This means that Infrastructure as Code can be used to restore state by removing resources that are no longer needed, and managing the lifecycle of resources through many changes.
 
 >[!NOTE]
->The specific mechanics for IaC removing resources can vary.  For example, Bicep requires the use of a `complete` deployment type to remediate out of scope resources, and that only works in specific scopes.  For Terraform, resources have a `lifecycle` meta-argument that provide instructions for how Terraform should handle resources.
+>The specific mechanics for IaC removing resources can vary.  For example, Bicep requires the use of a `complete` deployment type to remediate out of scope resources.  This command only works in specific scopes.  For Terraform, resources have a `lifecycle` meta-argument that provide instructions for how Terraform should handle resources.
 
 For Azure landing zones, there are two main options for Infrastructure as Code:
 
