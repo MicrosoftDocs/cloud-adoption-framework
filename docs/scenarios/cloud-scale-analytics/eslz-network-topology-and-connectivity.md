@@ -18,7 +18,7 @@ Since data management and data landing zones are important, you should also incl
 
 This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple azure regions.
 
-Cloud-scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
+Cloud-scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated, and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
 
 :::image type="content" source="images/networking-overview.png" alt-text="Networking overview" lightbox="images/networking-overview.png":::
 *Figure 1: Networking overview for cloud-scale analytics.*

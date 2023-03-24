@@ -146,7 +146,7 @@ The following figure shows both options:
 
 *Figure 4: Options for hub-to-hub connectivity.*
 
-- When two Azure regions need to connect, evaluate and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
+- When two Azure regions need to connect, evaluate, and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
 
 - When more than two Azure regions need to connect, then we recommend that the hub virtual networks in each region connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-spoke networks in three regions:
 
