@@ -117,7 +117,7 @@ If you use the [Azure landing zones Terraform module](https://github.com/Azure/t
 
 ### Detect updates with Terraform
 
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [\[v2.3.0\] policy updates](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
+Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [policy updates for v2.3.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
 
 ### Update with Terraform
 
