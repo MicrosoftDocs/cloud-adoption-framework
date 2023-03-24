@@ -15,7 +15,7 @@ ms.custom: think-tank
 Azure landing zones are built on [management groups](/azure/governance/management-groups/overview). [Azure policies](/azure/governance/policy/overview) are assigned and subscriptions are placed into management groups to provide the required governance controls that an organization needs to meet its security and compliance needs.
 
 >[!TIP]
-> See [Security control mapping with Azure landing zones](/azure/cloud-adoption-framework/ready/control-mapping/security-control-mapping) to learn how to use Azure landing zone and Azure Policy to help achieve your organization's security, compliance, and regulatory needs.
+> See [Security control mapping with Azure landing zones](../../../control-mapping/security-control-mapping.md) to learn how to use Azure landing zone and Azure Policy to help achieve your organization's security, compliance, and regulatory needs.
 
 These resources are deployed within a single Azure Active Directory (Azure AD) tenant. Management groups and most other Azure resources, like Azure Policy, only support operating within a single Azure Active Directory tenant. An Azure subscription relies on an Azure Active Directory tenant to authenticate users, services, and devices against Azure Resource Manager (ARM) to control plane operations and some Azure services, like Azure Storage, for data plane operations.
 
@@ -23,7 +23,7 @@ Multiple subscriptions can rely on the same Azure Active Directory tenant. Each 
 
 [![Diagram of a single Azure Active Directory tenant with Azure landing zones deployed.](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
-In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
+In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](../../index.md#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
 
 This approach is recommended for most organizations based on their requirements. This approach gives organizations the best collaboration experience possible and allows them to control, govern, and isolate users and resources within a single Azure Active Directory tenant.
 
@@ -32,7 +32,7 @@ Your organization might be required to use multiple Azure Active Directory tenan
 >[!NOTE]
 > This article focuses on Azure, not Microsoft 365 or other Microsoft Cloud offerings, such as Dynamics 365 or Power Platform.
 >
-> It focuses on [the platform rather than applications](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Azure Active Directory tenants and application architecture, see:
+> It focuses on [the platform rather than applications](../../index.md#platform-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Azure Active Directory tenants and application architecture, see:
 >
 > - [Multi-tenant apps in Azure Active Directory](/azure/active-directory/develop/application-model#multi-tenant-apps)
 > - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
@@ -67,7 +67,7 @@ The Global Administrator (Global Admin) role is another concern. The Global Admi
 
 The ownership of this role across internal teams and departments can provide a challenge as the Identity team and the Azure team are often in different teams, departments, and organization structures.
 
-The teams that operate Azure are responsible for Azure services and want to ensure the security of the services that they manage. When individuals outside of that team have roles with the power to potentially access their environments, the security is weaker. For more information, see [Understand required cloud functions](/azure/cloud-adoption-framework/organize/#understand-required-cloud-functions).
+The teams that operate Azure are responsible for Azure services and want to ensure the security of the services that they manage. When individuals outside of that team have roles with the power to potentially access their environments, the security is weaker. For more information, see [Understand required cloud functions](../../../../organize/index.md#understand-required-cloud-functions).
 
 Azure Active Directory provides controls that help mitigate this problem on a technical level, but this issue is also a people and process discussion. For more information, see [Recommendations](considerations-recommendations.md#recommendations).
 
@@ -76,9 +76,9 @@ Azure Active Directory provides controls that help mitigate this problem on a te
 > 
 > For more information, see:
 > 
-> - [Define Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-ad-define)
-> - [Architecture: Standardize on a single directory and identity](/azure/cloud-adoption-framework/secure/security-top-10#9-architecture-standardize-on-a-single-directory-and-identity)
-> - [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach)
+> - [Define Azure Active Directory tenants](../azure-ad-define.md)
+> - [Architecture: Standardize on a single directory and identity](../../../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
+> - [Testing approach for Azure landing zones](../../../enterprise-scale/testing-approach.md)
 > - [Introduction to delegated administration and isolated environments](/azure/active-directory/fundamentals/secure-with-azure-ad-introduction)
 > - [Resource isolation in a single tenant](/azure/active-directory/fundamentals/secure-with-azure-ad-single-tenant)
 > - [Your Microsoft 365 for enterprise tenants](/microsoft-365/solutions/tenant-management-tenants)

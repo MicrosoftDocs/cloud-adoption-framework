@@ -7,7 +7,7 @@ ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: think-tank
+ms.custom: think-tank,UpdateFrequency5
 ---
 
 # Cloud organizational antipatterns
