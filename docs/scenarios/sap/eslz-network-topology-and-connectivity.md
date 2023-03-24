@@ -109,7 +109,7 @@ This section explores key recommendations for encrypting networks between on-pre
 
 - It isn't necessary to encrypt traffic over ExpressRoute for SAP deployments. SAP traffic typically consumes a lot of bandwidth and is sensitive to performance. IPsec tunnels encrypt internet traffic by default, and encryption or decryption could negatively affect the traffic's performance.
 
-- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity#define-network-encryption-requirements.md) to understand network encryption options in enterprise-scale landing zones.
+- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
 
 ## Segregate systems
 
