@@ -58,7 +58,7 @@ Together, these toolsets establish broad visibility and insights into your attac
 Your processes and procedures should also include:
 
 - Threat modeling systems, architectures, and specific applications.
-- Automated governance controls with Azure Policy as code workflows. These controls are guardrails that audit and enforce standards and policies. These code workflows include Azure Resource Management templates, Azure landing zone Bicep modules, and Azure landing zone Terraform modules.
+- Automated governance controls with Azure Policy as code workflows. These controls are guardrails that audit and enforce standards and policies. These code workflows include Azure Resource Management templates, ALZ-Bicep modules, and Azure landing zone Terraform modules.
 
 ## Next steps
 
