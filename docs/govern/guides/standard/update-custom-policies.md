@@ -125,15 +125,15 @@ The Azure landing zone Terraform module provides update guidance for deploying b
 
 ## Update steps for Bicep module deployments
 
-If you use the [Azure landing zone Bicep modules](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
+If you use the [ALZ-Bicep modules](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
 
 ### Detect updates with Bicep
 
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In Azure landing zone Bicep, you can also see changes to policies at the Azure landing zone-Bicep [releases](https://github.com/Azure/ALZ-Bicep/releases) page.
+Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. You can also see changes to ALZ-Bicep policies in [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
 
 ### Update with Bicep
 
-Azure landing zone-Bicep provides generic guidance for updating Azure landing zone custom policies to newer policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+ALZ-Bicep provides generic guidance for updating Azure landing zone custom policies to newer policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
 
 ## Next steps
 
