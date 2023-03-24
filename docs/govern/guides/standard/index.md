@@ -19,7 +19,7 @@ This governance guide follows the experiences of a fictional company through var
 As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!IMPORTANT]
-> This MVP is a baseline starting point built on a set of assumptions. Even this minimal set of best practices is based on corporate policies driven by unique business risks and risk tolerances. Read the [longer narrative](./narrative.md) that follows this article to check whether this set of assumptions apply to your situation.
+> This MVP is a baseline starting point built on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. Read the [longer narrative](./narrative.md) that follows this article to check whether this set of assumptions apply to your situation.
 
 ### Governance best practices
 
@@ -27,7 +27,7 @@ These best practices serve as a foundation for your organization to quickly and 
 
 ### Resource organization
 
-Refer to the [management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment.  The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+Refer to the [management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment. The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
 
 The following diagram contains the governance MVP hierarchy for resource organization.
 

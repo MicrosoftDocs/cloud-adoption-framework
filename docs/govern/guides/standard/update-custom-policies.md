@@ -20,7 +20,7 @@ The following infographic provides a decision tree and process flow for Azure la
 
 :::image type="content" source="../../../_images/govern/azure-landing-zone-policy-to-newer-version.png" lightbox="../../../_images/govern/azure-landing-zone-policy-to-newer-version-large.png" alt-text="Diagram that shows a decision tree for the Azure landing zone custom policy update process.":::
 > [!CAUTION]
-> When you delete existing policy assignments, your environment isn't protected during the time it takes to reassign policies. After you assign updated policies, review your policy Compliance section for any unhealthy resources, and remediate them.
+> When you delete existing policy assignments, your environment isn't protected during the time it takes to reassign policies. After you assign updated policies, review your policy compliance section for any unhealthy resources and remediate them.
 
 ## Update steps for Azure landing zone environments
 
@@ -30,7 +30,7 @@ This section describes the general high-level steps to update your Azure landing
 
 Use the following authoritative options to determine that one or more of your Azure landing zone custom policies are outdated:
 
-- Periodically review [What's new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated, such as [this example](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
+- Periodically review [`What's New`](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated, such as [this example](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
 - Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outdated.
 
 ### Apply updates
@@ -53,7 +53,7 @@ Depending on the result of the above investigations, take the following actions:
 
 If the outdated Azure landing zone policy is assigned to any scope in your Azure estate, isn't part of an existing Azure landing zone custom policy initiative, and the parameter names and number haven't changed:
 
-- Replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone intermediate root management group, for example `Contoso`. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+- Replace the existing custom policy definition contents with the updated custom policy definition contents at the Azure landing zone intermediate root management group, for example `Contoso`. For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters and not part of a custom policy initiative
 
@@ -66,15 +66,15 @@ If the outdated Azure landing zone policy is assigned to any scope in your Azure
 1. Delete the outdated policy from the Azure landing zone intermediate root management group, for example `Contoso`.
 1. Import the updated policy to the Azure landing zone intermediate root management group.
 1. Update the existing policy assignments or create new policy assignments by including the updated policy at the prerecorded scopes.
-1. After you reassign the updated custom policy, review the policy Compliance section to validate that resources are in a healthy state.
+1. After you reassign the updated custom policy, review the policy compliance section to validate that resources are in a healthy state.
 
-For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with unchanged parameters assigned through a custom policy initiative
 
 If the outdated Azure landing zone policy is part of an existing Azure landing zone custom policy initiative, is assigned to any scope in your Azure estate, and has unchanged parameter names and numbers:
 
-- Replace the existing custom policy definition contents with the updated custom policy definition contents. No further changes need to be made to the custom policy initiative or assignments, because the parameter number and names are unchanged. For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+- Replace the existing custom policy definition contents with the updated custom policy definition contents. No further changes need to be made to the custom policy initiative or assignments, because the parameter number and names are unchanged. For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Policies with changed parameters assigned through a custom policy initiative
 
@@ -83,18 +83,18 @@ If the outdated policy is part of an existing custom policy initiative, is assig
 1. Capture all policy assignments, where they're assigned, and their parameter values for the custom policy initiative.
 1. Delete the existing policy assignments at all scopes where assigned.
 1. Delete the outdated policy from the custom policy initiative.
-   
+
    You can't delete *initiative parameter(s)* from the custom policy initiative. Consider reusing these parameters.
-   
+
 1. Delete the outdated policy from the Azure landing zone intermediate root management group, for example `Contoso`.
 1. Import the updated policy to the Azure landing zone intermediate root management group.
 1. Add the updated policy to the custom policy initiative.
-   - If applicable, reuse the previous initiative parameter(s).
+   - If applicable, reuse the previous initiative parameters.
    - If applicable, add other initiative parameters by following existing naming patterns that the custom policy initiative defines.
 1. Reassign the updated custom policy initiative.
-1. After you reassign the updated custom policy initiative, review the policy Compliance section to validate that resources are in a healthy state.
+1. After you reassign the updated custom policy initiative, review the policy compliance section to validate that resources are in a healthy state.
 
-For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
 #### Updated assigned custom policy initiative
 
@@ -105,11 +105,11 @@ If an Azure landing zone custom policy initiative is completely updated, and is 
 1. Delete the outdated custom policy initiative from the intermediate root management group, for example `Contoso`. Before deleting, record all custom policy definition names and IDs, assuming all custom policy definitions are up-to-date.
 1. Import the updated custom policy initiative definition with the appropriate policy references.
 
-   You can get updated initiatives at [policySetDefinitions](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions), with a generic `contoso` scope for custom policies. Remember to change the `contoso` scope to your management group hierarchy pseudo root name for each policy definition ID.
+   You can get updated initiatives at [`policySetDefinitions`](https://github.com/Azure/Enterprise-Scale/tree/main/src/resources/Microsoft.Authorization/policySetDefinitions), with a generic `contoso` scope for custom policies. Remember to change the `contoso` scope to your management group hierarchy pseudo root name for each policy definition ID.
 1. Reassign the updated custom policy initiative.
-1. After you reassign the updated custom policy initiative, review the policy Compliance section to validate that resources are in a healthy state.
+1. After you reassign the updated custom policy initiative, review the policy compliance section to validate that resources are in a healthy state.
 
-For detailed guidance, see the [Azure landing zones User Guide](https://aka.ms/alz/custompolicyupdate).
+For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/alz/custompolicyupdate).
 
 ## Update steps for Terraform module deployments
 
@@ -117,19 +117,19 @@ If you use the [Azure landing zones Terraform module](https://github.com/Azure/t
 
 ### Detect updates with Terraform
 
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [Releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [\[v2.3.0\] Policy updates](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
+Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In the Terraform module, you can also see changes to policies on the [releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases) page. For an example, see [\[v2.3.0\] policy updates](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.3.0).
 
 ### Update with Terraform
 
-The Azure landing zone Terraform module provides update guidance for deploying breaking changes. Follow the upgrade guidance for your version at [Upgrade guides](https://aka.ms/alz/tf/upgrade).
+The Azure landing zone Terraform module provides update guidance for deploying breaking changes. Follow the upgrade guidance for your version at [upgrade guides](https://aka.ms/alz/tf/upgrade).
 
 ## Update steps for Bicep module deployments
 
-If you use the [Azure landing zone Bicep module(s)](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
+If you use the [Azure landing zone Bicep modules](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
 
 ### Detect updates with Bicep
 
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In Azure landing zone Bicep, you can also see changes to policies at the Azure landing zone-Bicep [Releases](https://github.com/Azure/ALZ-Bicep/releases) page.
+Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. In Azure landing zone Bicep, you can also see changes to policies at the Azure landing zone-Bicep [releases](https://github.com/Azure/ALZ-Bicep/releases) page.
 
 ### Update with Bicep
 
