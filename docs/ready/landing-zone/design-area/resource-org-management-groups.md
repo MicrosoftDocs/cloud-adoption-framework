@@ -61,7 +61,9 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
   - [How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
-## Management groups in the Azure landing zone accelerator and Azure landing zone Bicep repository
+<a id='management-groups-alz'></a>
+
+## Management groups in the Azure landing zone accelerator and ALZ-Bicep repository
 
 The following decisions have been made and included in the implementation for the management group structure. These decisions are part of the Azure landing zone accelerator and the [management groups module of the Azure landing zone bicep repo](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/managementGroups).
 
