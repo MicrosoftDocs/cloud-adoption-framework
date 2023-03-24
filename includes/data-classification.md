@@ -20,7 +20,7 @@ The following is a list of classifications Microsoft uses. Depending on your ind
 
 ## Tagging data classification in Azure
 
-Resource tags are a good approach for metadata storage, and you can use these tags to apply data classification information to deployed resources. Although tagging cloud assets by classification isn't a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify data itself, regardless of where it resides (on-premises, in Azure, or somewhere else). Consider it as part of an overall classification strategy.
+Resource tags are a good approach for metadata storage, and you can use these tags to apply data classification information to deployed resources. Although tagging cloud assets by classification isn't a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) (formerly Microsoft Information Protection) helps you discover, classify, and protect sensitive information wherever it lives or travels. Consider it as part of an overall classification strategy.
 
 ## Take action
 
