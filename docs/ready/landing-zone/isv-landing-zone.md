@@ -90,7 +90,7 @@ Some SaaS solutions interact with or use resources that are deployed in customer
 
 ![Diagram that shows a dual deployment SaaS deployment model.](./media/isv-landing-zone/isv-dual-deployment.png)
 
-A real-world example of *dual deployment SaaS* is Microsoft Power BI, a SaaS service that can optionally use a Power BI on-premises dta gateway deployed on a virtual machine in a customer's Azure subscription.
+A real-world example of *dual deployment SaaS* is Microsoft Power BI, a SaaS service that can optionally use a Power BI on-premises data gateway deployed on a virtual machine in a customer's Azure subscription.
 
 Other examples of *dual deployment SaaS* scenarios include:
 
