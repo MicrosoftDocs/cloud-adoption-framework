@@ -19,7 +19,7 @@ This governance guide follows the experiences of a fictional company through var
 As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!IMPORTANT]
-> This MVP is a baseline starting point built on a set of assumptions. Even this minimal set of best practices is based on corporate policies driven by unique business risks and risk tolerances. Read the [longer narrative](./narrative.md) that follows this article to check whether this set of assumptions apply to your situation.
+> This MVP is a baseline starting point built on a set of assumptions. Even this minimal set of best practices is based on corporate policies that are driven by unique business risks and risk tolerances. Read the [longer narrative](./narrative.md) that follows this article to check whether this set of assumptions apply to your situation.
 
 ### Governance best practices
 
@@ -27,7 +27,7 @@ These best practices serve as a foundation for your organization to quickly and 
 
 ### Resource organization
 
-Refer to the [management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment.  The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
+Refer to the [management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscription](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment. The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture).
 
 The following diagram contains the governance MVP hierarchy for resource organization.
 
@@ -60,7 +60,7 @@ Once you deploy the MVP, you can incorporate additional layers of governance int
 
 ## What does this guidance provide?
 
-Practices and tools from the [Deployment Acceleration discipline](../../deployment-acceleration/index.md) are established in the MVP so you can quickly apply corporate policy. The MVP relies on Azure Blueprints, Azure Policy, and Azure management groups to apply a few basic corporate policies, as defined in the narrative for our example fictional company. You can use Azure Resource Manager templates and Azure policies to apply these corporate policies. establish a small baseline for identity and security.
+Practices and tools from the [Deployment Acceleration discipline](../../deployment-acceleration/index.md) are established in the MVP so you can quickly apply corporate policy. The MVP relies on Azure Blueprints, Azure Policy, and Azure management groups to apply a few basic corporate policies, as defined in the narrative for our example fictional company. You can use Azure Resource Manager templates and Azure policies to apply these corporate policies and establish a small baseline for identity and security.
 
 ![Diagram showing an example of an incremental governance MVP.](../../../_images/govern/governance-mvp.png)
 
@@ -80,4 +80,3 @@ Over time, you can use this governance MVP to improve governance practices. As a
 Now that you're familiar with the governance MVP and the forthcoming governance changes, read the supporting narrative for additional context.
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)
-
