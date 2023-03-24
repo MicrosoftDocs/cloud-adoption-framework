@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: internal, engagement-fy23
+products: azure-monitor
 ---
 
 # Skills readiness for cloud monitoring

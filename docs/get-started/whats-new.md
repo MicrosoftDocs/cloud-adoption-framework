@@ -26,7 +26,7 @@ The new relocate guidance details the process of moving a workload hosted in Azu
 
 ### Why update your Azure landing zones
 
-An Azure landing zone is a set of predefined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important that your deployed landing zone environment is kept up to date so you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases. Explore the benefits of [keeping your Azure landing zone updated, secure, and optimized](/azure/cloud-adoption-framework/govern/resource-consistency/keep-azure-landing-zone-up-to-date).
+An Azure landing zone is a set of predefined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important that your deployed landing zone environment is kept up to date so you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases. Explore the benefits of [keeping your Azure landing zone updated, secure, and optimized](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
 
 ### Migrate Azure landing zone policies to Azure built-in policies
 

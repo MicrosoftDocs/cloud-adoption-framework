@@ -23,7 +23,7 @@ You can practice your skills with an automated, easy-to-deploy sandbox solution 
 
 *Figure 1: Diagram of ArcBox in a sandbox subscription.*
 
-*For more information on the design areas labeled A-I in the visual, see [environment design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas#environment-design-areas).*
+*For more information on the design areas labeled A-I in the visual, see [environment design areas](../../../ready/landing-zone/design-areas.md#environment-design-areas).*
 
 ArcBox is entirely self-contained within a single Azure subscription and resource group. It lets you get hands-on with Azure Arc-enabled server technology while needing nothing more than an Azure subscription.
 
