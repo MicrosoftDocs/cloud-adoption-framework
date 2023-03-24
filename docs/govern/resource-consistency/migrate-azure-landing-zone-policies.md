@@ -14,7 +14,7 @@ ms.custom: internal
 
 Over time, Azure landing zone custom policies and policy initiatives might be deprecated or superseded by Azure built-in policies. If so, they should be removed or migrated. This article describes how to migrate Azure landing zone custom policies and policy initiatives to Azure built-in policies.
 
-The guidance in this document describes the manual, high-level steps for your policies migration. It also provides references on how to process implementations managed through the [Azure landing zone Terraform module](#update-steps-for-azure-landing-zone-terraform-module-deployments) or [ALZ-Bicep](#update-steps-for-azure-landing-zone-bicep-deployments).
+The guidance in this document describes the manual, high-level steps for your policies migration. It also provides references on how to process implementations managed through the [Azure landing zone Terraform module](#update-steps-for-azure-landing-zone-terraform-module-deployments) or [ALZ-Bicep](#update-steps-for-alz-bicep-deployments).
 
 The following infographic shows the update process flow.
 
