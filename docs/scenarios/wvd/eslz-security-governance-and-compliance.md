@@ -58,7 +58,7 @@ Review the following sections to find recommended security controls and governan
 
 - Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/configure-profile-container-tutorial).
 
-- [Configure the RDP ShortPath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
+- [Configure the RDP Shortpath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
 
 ## Session hosts
 
