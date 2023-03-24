@@ -25,7 +25,7 @@ Migration is when you move your workloads to the cloud. Different forms of migra
 
 - ***Key benefits:*** Cost, security, availability, visibility, performance. You don't have to worry about acquiring, managing, and securing hardware.
 
-- ***Example:*** Migrate applications from on-premises to Azure virtual machines (infrastructure as a service) or Azure App Service (platform as a service).
+- ***Example:*** Migrate applications from on-premises to Azure Virtual Machines (infrastructure as a service) or Azure App Service (platform as a service).
 
 For more information, see [Migrate](../migrate/index.md).
 
