@@ -7,7 +7,6 @@ ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: UpdateFrequency.5
 ---
 
 # Deploy Azure landing zones by using Terraform

@@ -94,7 +94,7 @@ If you're using the [ALZ-Bicep](https://github.com/Azure/alz-bicep) to manage yo
 
 ### Detect updates for ALZ-Bicep policy changes
 
-Use the methods described in [Detect updates for Azure landing zone policies](#detect-updates-for-azure-landing-zone-policies) to determine whether policies have changed in ALZ-Bicep. You'll also see changes to policies in the [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
+Use the methods described in [Detect updates for Azure landing zone policies](#detect-updates-for-azure-landing-zone-policies) to determine whether policies have changed in ALZ-Bicep. You'll also see changes to policies in [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
 
 ### Migration steps for ALZ-Bicep policies
 

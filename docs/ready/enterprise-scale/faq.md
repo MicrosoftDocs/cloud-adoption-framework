@@ -225,7 +225,7 @@ Subscription reuse is the process of reissuing an existing subscription to a new
 
 ### Why should I consider reusing subscriptions?
 
-In general, we recommend that customers adopt the [Subscription Democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization). However, there are specific circumstances where subscription reuse isn't  possible or recommended.
+In general, we recommend that customers adopt the [Subscription Democratization design principle](../landing-zone/design-principles.md#subscription-democratization). However, there are specific circumstances where subscription reuse isn't  possible or recommended.
 
 > [!TIP]
 > Watch the YouTube video on the Subscription Democratization design principle here: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)

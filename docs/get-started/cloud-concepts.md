@@ -22,7 +22,7 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 
 As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
-Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure governance visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
+Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure Governance Visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
@@ -53,7 +53,7 @@ All cloud hosting and environment decisions require you to understand the portfo
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand critical Azure topics before embarking on your cloud adoption journey.
 - The [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that transition to your cloud operations team.
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of workloads and assets slated for cloud adoption.
-- The [Digital estate analysis](../digital-estate/approach.md) approach helps you document existing workloads and assets slated for cloud adoption. In Azure, the digital estate is best represented in the [Azure Migrate](/azure/migrate/migrate-support-matrix) tool.
+- The [digital estate analysis](../digital-estate/approach.md) approach helps you document existing workloads and assets slated for cloud adoption. In Azure, the digital estate is best represented in the [Azure Migrate](/azure/migrate/migrate-support-matrix) tool.
 
 <br>
 
@@ -145,8 +145,11 @@ Portfolio hierarchy complexity informs organizational structures and methodologi
 | --- | --- |
 | <li> Your cloud strategy team is accountable for aligning virtual or dedicated organizational structures to ensure the success of your cloud adoption lifecycle. | <li> Everyone involved in your cloud adoption lifecycle should be familiar with the alignment of people and levels of accountability. |
 
+<!-- docutune:ignore "Get started" -->
+
 ## Next steps
 
-Follow the guides in the "Get started" section of the Microsoft Cloud Adoption Framework documentation to build on these foundational concepts.
+Follow the guides in the "Get started" section of the Microsoft Cloud Adoption Framework to build on these foundational concepts.
+
 > [!div class="nextstepaction"]
 > [Apply fundamental concepts to other getting started guides](./index.md)
