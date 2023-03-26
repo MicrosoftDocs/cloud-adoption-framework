@@ -10,9 +10,6 @@ ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
-
 # Network topology and connectivity
 
 The network topology and connectivity design area is critical for establishing a foundation for your cloud network design.
