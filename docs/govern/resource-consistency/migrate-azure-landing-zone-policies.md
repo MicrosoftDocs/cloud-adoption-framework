@@ -14,7 +14,7 @@ ms.custom: internal
 
 Over time, Azure landing zone custom policies and policy initiatives might be deprecated or superseded by Azure built-in policies. If so, they should be removed or migrated. This article describes how to migrate Azure landing zone custom policies and policy initiatives to Azure built-in policies.
 
-The guidance in this document describes the manual, high-level steps for your policies migration. It also provides references on how to process implementations managed through the [Azure landing zone Terraform module](#update-steps-for-azure-landing-zone-terraform-module-deployments) or [Azure landing zone Bicep](#update-steps-for-azure-landing-zone-bicep-deployments).
+The guidance in this document describes the manual, high-level steps for your policies migration. It also provides references on how to process implementations managed through the [Azure landing zone Terraform module](#update-steps-for-azure-landing-zone-terraform-module-deployments) or [ALZ-Bicep](#update-steps-for-alz-bicep-deployments).
 
 The following infographic shows the update process flow.
 
@@ -88,17 +88,17 @@ Use the methods described in [Detect updates for Azure landing zone policies](#d
 
 The Azure landing zone Terraform module provides update guidance when deploying breaking changes. Follow the upgrade guidance available for your specific version [here](https://aka.ms/alz/tf/upgrade) at the bottom of the page.
 
-## Update steps for Azure landing zone Bicep deployments
+## Update steps for ALZ-Bicep deployments
 
-If you're using the [Azure landing zone Bicep](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section references resources on how to migrate Azure landing zone custom policies and initiatives to Azure built-in policies.
+If you're using the [ALZ-Bicep](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section references resources on how to migrate Azure landing zone custom policies and initiatives to Azure built-in policies.
 
-### Detect updates for Azure landing zone Bicep policy changes
+### Detect updates for ALZ-Bicep policy changes
 
-Use the methods described in [Detect updates for Azure landing zone policies](#detect-updates-for-azure-landing-zone-policies) to determine whether policies have changed in Azure landing zone Bicep. You'll also see changes to policies in the [Azure landing zone Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
+Use the methods described in [Detect updates for Azure landing zone policies](#detect-updates-for-azure-landing-zone-policies) to determine whether policies have changed in ALZ-Bicep. You'll also see changes to policies in [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
 
-### Migration steps for Azure landing zone Bicep policies
+### Migration steps for ALZ-Bicep policies
 
-Azure landing zone Bicep provides generic guidance for migrating policies from Azure landing zone custom policies to Azure built-in policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+ALZ-Bicep provides generic guidance for migrating policies from Azure landing zone custom policies to Azure built-in policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
 
 ## Next steps
 

@@ -42,7 +42,7 @@ The following table provides a simplified categorization of these teams.
 
 ## Design considerations
 
-- Establish a cross-functional platform team to design, build, provision, manage and maintain your Azure Landing Zone lifecycle. This team can include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. Make sure you avoid [antipatterns](../../antipatterns/ready-antipatterns.md#antipattern-become-a-cloud-provider).
+- Establish a cross-functional platform team to design, build, provision, manage, and maintain your Azure Landing Zone lifecycle. This team can include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. Make sure you avoid [antipatterns](../../antipatterns/ready-antipatterns.md#antipattern-become-a-cloud-provider).
 
 - Consider establishing an enabling team that can provide DevOps functions to support applications and platforms that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
 

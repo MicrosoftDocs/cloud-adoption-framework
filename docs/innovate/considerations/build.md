@@ -44,7 +44,7 @@ This last step is the culmination of a customer empathy-driven hypothesis. It de
 > [!CAUTION]
 > The goal is to *build* with customer empathy, not to *plan* with it. It's all too easy to get stuck in endless cycles of planning and tweaking to hit upon the perfect customer empathy statement. Before you try to develop such a statement, review the following sections on defining and building an MVP.
 
-After you prove the core assumptions, later iterations focus on growth tests in addition to empathy tests. After you build, test and validate empathy, you begin to understand the addressable market at scale. You can more deeply understand your addressable market by expanding the standard hypothesis formula described previously. Then, based on available data, estimate the size of the total market (the number of potential customers).
+After you prove the core assumptions, later iterations focus on growth tests in addition to empathy tests. After you build, test, and validate empathy, you begin to understand the addressable market at scale. You can more deeply understand your addressable market by expanding the standard hypothesis formula described previously. Then, based on available data, estimate the size of the total market (the number of potential customers).
 
 From there, estimate the percentage of the total market that experiences a similar challenge and might therefore be interested in the solution. You then have your addressable market. The next hypothesis to test is: how will *x%* of customers' lives be improved by using the proposed solution to address this manageable challenge? A small sampling of customers reveals leading indicators that suggest a percentage effect on the pool of customers engaged.
 

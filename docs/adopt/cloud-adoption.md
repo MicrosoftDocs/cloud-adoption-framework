@@ -56,19 +56,19 @@ We recommend picking easy wins for the first workloads to move. This strategy le
 
 You should apply lessons-learned from your first moves to tackle more challenging or more important workloads. We have some examples to give you a sense of the workload types.
 
-- ***High Business Impact:*** Workloads that drive revenue or are mission-critical.
+- ***High business impact:*** Workloads that drive revenue or are mission-critical.
 
-- ***High Input/Output (I/O) Online Transactional Processing (OLTP) Systems:*** These workloads record business transactions and have elevated processing requirements.
+- ***High input/output (I/O) online transactional processing (OLTP) systems:*** These workloads record business transactions and have elevated processing requirements.
 
-- ***Regulated Information:*** These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
+- ***Regulated information:*** These workloads must follow legal and industry standards such as HIPAA, PCI DSS, and others. We recommend using Azure Policy to ensure compliance with these standards. For more information, see [Azure Policy](/azure/governance/policy/concepts/regulatory-compliance).
 
 ### Hard or costly to move (5%)
 
 Move the most difficult and costly workloads last. The following systems might need more thought to move efficiently.
 
-- ***High Value Asset (HVA):*** Disruption or corruption of this workload would disrupt all business operations.
+- ***High value asset (HVA):*** Disruption or corruption of this workload would disrupt all business operations.
 
-- ***Public Key Infrastructure (PKI) systems:*** Workloads that manage x509 digital certificates, network encryption, and authentication.
+- ***Public key infrastructure (PKI) systems:*** Workloads that manage x509 digital certificates, network encryption, and authentication.
 
 - ***Legacy source control:*** Source control systems that aren't easily replaced with GitHub.
 

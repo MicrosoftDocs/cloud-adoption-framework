@@ -10,7 +10,6 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-<!-- docutune:casing "Azure Fence Agent" -->
 <!-- docutune:ignore DB -->
 
 # Business continuity and disaster recovery for an SAP migration

@@ -27,7 +27,7 @@ Each of the following links takes you to questions that are typically asked when
 
 ## Cloud adoption scenarios
 
-Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. We have cloud adoption guidance for different scenarios including hybrid and multicloud, modern application platforms, SAP, retail, defense. and more.
+Your organization's cloud adoption effort should support long-term strategic goals for your cloud journey. We have cloud adoption guidance for different scenarios including hybrid and multicloud, modern application platforms, SAP, retail, defense, and more.
 
 - [Scenarios overview](../scenarios/index.md)
 - [Hybrid and multicloud](../scenarios/hybrid/scenario-overview.md)

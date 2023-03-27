@@ -128,7 +128,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm\<vm&nbsp;role>\<environment><###>* <br><br> <li> `vmsqltest001` <li> `vmhadoopprod001` |
+| **Virtual machine** | Resource group | *vm-\<vm&nbsp;role>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` |
 | **Web app** | Global | *app-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
 | **Function app** | Global | *func-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
