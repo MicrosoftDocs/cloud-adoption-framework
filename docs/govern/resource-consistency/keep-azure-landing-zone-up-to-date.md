@@ -37,6 +37,10 @@ Over time, Azure landing zone custom policies and policy initiatives might be up
 - [Migrate landing zone custom policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md)
 - [Update Azure landing zone custom policies](../guides/standard/update-custom-policies.md)
 
+## Using Infrastructure-as-Code (IaC) to keep ALZ updated
+
+Maintain your ALZ environment with IaC to consistently stay updated with ALZ. To learn more about the benefits and details, see [Why use Infrastructure as Code to update your ALZ?](../../manage/infrastructure-as-code-updates.md)
+
 ## Next steps
 
 - [Latest updates to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
