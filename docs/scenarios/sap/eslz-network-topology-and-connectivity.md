@@ -140,6 +140,8 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 
+- For Migration projects consider tuning the network parameters. For example disabling the acknowledgements during the migration period can improve the performance.
+
 - Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
 
 ## Design Considerations for RISE implementations
