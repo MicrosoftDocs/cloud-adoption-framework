@@ -13,6 +13,7 @@ ms.custom: think-tank, e2e-azure-vmware
 # Network considerations for AVS dual-region deployments
 This article describes how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions, for disaster resilience purposes. In case of partial or complete regional outages, the network topology presented here allows the surviving components (private clouds, Azure-native resources, on-prem sites) to maintain connectivity with each other and with the internet. 
 
+## Dual-region scenario
 This article focuses on a typical dual-region scenario, shown in Figure 1 below:
 - An Azure hub and spoke network exists in each region.
 - A disaster-resilient configuration for Expressroute (two circuits in two different peering locations, with each circuit connected to hub VNets in both regions) has been deployed. The guidance provided in the following sections stays the same in case [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
@@ -24,13 +25,14 @@ This article focuses on a typical dual-region scenario, shown in Figure 1 below:
 > [!NOTE]
 > In the reference scenario of Figure 1, the two regional hub VNets are connected via global VNet peering. While not strictly required (traffic between Azure VNets in the two regions could be routed over Expressroute connections), this configuration is strongly recommended. VNet Peering minimizes latency and maximizes throughput, as it removes the need to hairpin traffic through the Expressroute meet-me edge routers. 
 
+## Dual-region communication patterns
 The next sections describe the AVS network configuration that is required to enable, in the reference dual-region scenario, the following communication patterns:
 - AVS to AVS (covered in the section [AVS cross-region connectivity](#avs-cross-region-connectivity));
 - AVS to on-prem sites connected over ExpressRoute (covered in the section [Hybrid connectivity](#hybrid-connectivity));
 - AVS to Azure Virtual Networks (covered in the section [Azure Virtual Networks connectivity](#azure-virtual-networks-connectivity));
 - AVS to internet (covered in the section [Internet connectivity](#internet-connectivity)).
 
-## AVS cross-region connectivity
+### AVS cross-region connectivity
 When multiple AVS private clouds exist, layer-3 connectivity among them is often a requirement, for example to support data replication. 
 AVS natively supports direct connectivity between two private clouds deployed in different Azure regions. Private clouds connect to the Azure network in their own region through Expressroute circuits, managed by the platform and terminated on dedicated ER meet-me locations. Throughout this article, these circuits are referred to as “AVS managed circuits”. They should not be confused with the normal circuits that customers deploy to connect their on-prem sites to Azure which will be referred to as “customer managed circuits” (see Figure 2).   
 Direct connectivity between private clouds is based on [Expressroute Global Reach](/azure/expressroute/expressroute-global-reach) connections between AVS managed circuits, as shown by the green line in the diagram below. Please refer to the [official documentation](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud) for more information (the article describes the procedure for connnecting an AVS managed circuit with a customer-managed circuit; The same procedure applies to connecting two AVS managed circuits). 
@@ -38,20 +40,20 @@ Direct connectivity between private clouds is based on [Expressroute Global Reac
 [ ![figure2](media/dual-region-fig2.png) ](media/dual-region-fig2.png#lightbox)
 *Figure 2. AVS private clouds in different regions directly connected to each other over a Global Reach connection (green line) between the private clouds’ managed ER circuits. In each Azure region where AVS is available, network infrastructure that terminates the AVS side of the AVS managed circuits is present. It is referred to as “Dedicated ER meet-me location” in the picture.*
 
-## Hybrid connectivity 
+### Hybrid connectivity 
 The recommended option for connecting AVS private clouds to on-prem sites is Expressroute Global Reach. Global Reach connections can be established between customer managed Expressroute circuits and AVS managed Expressroute circuits. Global Reach connections are not transitive, therefore a full mesh (each AVS managed circuit connected to each customer managed circuit) is required for disaster resilience, as shown in Figure 3 below (orange lines).
 
 [ ![figure3](media/dual-region-fig3.png) ](media/dual-region-fig3.png#lightbox) 
 *Figure 3. Global Reach connections (orange lines) can be established between customer managed Expressroute circuits and AVS managed Expressroute circuits.* 
 
-## Azure Virtual Networks connectivity
+### Azure Virtual Networks connectivity
 Azure VNets can be connected to AVS private clouds through connections between Expressroute Gateways and AVS managed circuits (i.e. exactly in the same way Azure VNets can be connected to on-prem sites over customer managed Expressroute circuits). Please review the [AVS official documentation](/azure/azure-vmware/tutorial-configure-networking#connect-to-the-private-cloud-manually) for configuration instructions. 
 In dual region scenarios, a full mesh is recommended for the ER connections between the two regional hub VNets and private clouds, as shown in Figure 4 (yellow lines).
 
 [ ![figure4](media/dual-region-fig4.png) ](media/dual-region-fig4.png#lightbox)
 *Figure 4. By connecting each hub VNet’s Expressroute Gateway to each AVS private cloud’s managed Expressroute circuit (yellow lines), Azure native resources in each region have direct L3 connectivity to AVS private clouds (the global VNet peering connection between the two hub VNets, shown in the previous diagrams, has been omitted for clarity).*
 
-## Internet connectivity
+### Internet connectivity
 When deploying AVS private clouds in multiple regions, native options for internet connectivity (managed SNAT or Public IPs down to the NSX-T) are recommended. Either option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in Figure 5 below. 
 
 [ ![figure5](media/dual-region-fig5.png) ](media/dual-region-fig5.png#lightbox)
@@ -63,7 +65,7 @@ Both the options highlighted in Figure 5 provide each private cloud with a direc
 
 Changing a private cloud’s internet connectivity configuration after initial deployment is possible, but the private cloud will lose connectivity to internet, Azure VNets and on-prem sites while the configuration is being updated. When either one of the native internet connectivity options above (Figure 5) is used, no additional configuration is required in dual region scenarios (the topology stays the same as the one shown in Figure 4). For more information on internet connectivity for AVS, please review the [AVS official documentation](/azure/azure-vmware/concepts-design-public-internet-access).
 
-### Azure-native internet breakout
+#### Azure-native internet breakout
 If a secure internet edge was built in Azure VNets prior to AVS adoption, it may be required (centralized management of network security policies, cost optimization, …) to leverage it for internet access for AVS private clouds. Internet security edges in Azure VNets can be implemented using Azure Firewall or third-party firewall/proxy NVAs available on the Azure Marketplace.
 Internet-bound traffic emitted by AVS virtual machines can be attracted to an Azure VNet by originating a default route and announcing it, over BGP, to the private cloud’s managed ER circuit. This internet connectivity option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in Figure 6 below (see also the [official documentation](/azure/azure-vmware/disable-internet-access) for more details).
 
