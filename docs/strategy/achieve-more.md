@@ -1,13 +1,13 @@
 ---
 title: Achieve more with your cloud investment
 description: Use the Cloud Adoption Framework and your cloud business case to reduce costs and reinvest into modernization.
-author: WendyRing
-ms.author: wering
+author: martinekuan
+ms.author: martinek
 ms.date: 04/21/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Achieve more with your investment in the cloud

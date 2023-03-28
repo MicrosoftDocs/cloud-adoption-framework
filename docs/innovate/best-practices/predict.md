@@ -2,7 +2,7 @@
 title: AI prediction and innovation tools
 description: Use AI applications and AI agents to create innovative tools that help detect patterns, integrate AI predictions, and influence customer behavior. Discover AI tools.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

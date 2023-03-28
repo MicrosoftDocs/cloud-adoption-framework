@@ -2,7 +2,7 @@
 title: Migrate assets
 description: Learn how to start the migration to Azure by identifying the best tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -16,7 +16,7 @@ In this phase of the adoption journey, use the output of the assessment phase to
 
 ## [Native migration tools](#tab/Tools)
 
-The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
+The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](./migration-tools-decision-guide.md).
 
 ### Azure Migrate
 
@@ -66,8 +66,6 @@ The first time you use Azure Database Migration Service, you must register the r
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to Subscriptions" :::
-
 ::: zone-end
 
 <!-- docutune:casing "Create Migration Service wizard" -->
@@ -80,8 +78,6 @@ After you register the resource provider, create an instance of Azure Database M
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
 
 ::: zone target="chromeless"
-
-::: form action="Create[#create/Microsoft.AzureDMS]" submitText="Create an Azure Database Migration Service instance" :::
 
 ::: zone-end
 
@@ -123,7 +119,7 @@ After a successful migration, some post-migration tasks might include:
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 
-For more information, see [Migrate ASP.NET applications to Azure](/learn/paths/migrate-dotnet-apps-azure/).
+For more information, see [Migrate ASP.NET applications to Azure](/training/paths/migrate-dotnet-apps-azure/).
 
 ### Data Migration Assistant
 
@@ -173,7 +169,7 @@ For more information, see [Overview of Database Experimentation Assistant](/sql/
 
 ### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. You can also use the data migration tool when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration imports data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table Storage, Amazon DynamoDB, and even Azure Cosmos DB for NoSQL collections. You can also use the data migration tool when migrating from a single partition collection to a multipartition collection in Azure Cosmos DB for NoSQL.
 
 For more information, see [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
 
@@ -248,7 +244,7 @@ Microsoft Learn is a new approach to learning. The skills and responsibilities t
 
 Here's an example of a tailored learning path that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](/training/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 ## [Cost management](#tab/ManageCost)
 

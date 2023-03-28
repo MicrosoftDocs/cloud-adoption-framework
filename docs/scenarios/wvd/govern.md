@@ -1,8 +1,8 @@
 ---
 title: Governing an Azure Virtual Desktop environment
 description: Explore governance best practice for Azure Virtual Desktop
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -39,6 +39,6 @@ For Azure Virtual Desktop, the baseline needs to expand to include controls for 
 
 The following guides provide best practices for implementing security controls for Azure Virtual Desktop environments:
 
-- [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
+- [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/azure-virtual-desktop-security-baseline).
 
 - [Azure Virtual Desktop security guide: best practices](/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices).

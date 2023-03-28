@@ -1,17 +1,14 @@
 ---
 title: Overview of network topology and connectivity for Azure
 description: Examine key design considerations and best practices surrounding networking and connectivity.
-author: DominicAllen
-ms.author: doalle
-ms.date: 12/01/2021
+author: timwarner-msft
+ms.author: timwarner
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
-
-<!-- docutune:casing "Azure VPN Gateway" L7 -->
-<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
 
 # Network topology and connectivity
 
@@ -24,6 +21,21 @@ The network topology and connectivity design area is critical for establishing a
 **Scope:** The goal of network design is to align your cloud network design with overall cloud adoption plans. If your cloud adoption plans include hybrid or multicloud dependencies, or if you need connectivity for other reasons, your network design should also incorporate those connectivity options and expected traffic patterns.
 
 **Out of scope:** This design area establishes the foundation for networking. It doesn't address compliance-related issues like advanced network security or automated enforcement guardrails. That guidance comes when you review the [security](./security.md) and [governance](./governance.md) compliance design areas. Postponing security and governance discussions lets the cloud platform team address initial networking requirements before they expand their audience for more complex topics.
+
+**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your new Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+
+**Existing (brownfield) cloud environment:** Consider the following if you are interested in applying proven-practice Azure virtual network (VNet) design principles to existing Azure environments:
+
+- Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](../../azure-best-practices/hub-spoke-network-topology.md)
+- Consider [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) to centralize network security group (NSG) security rules across multiple VNets
+- [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) unifies networking, security, and routing to help businesses build hybrid cloud architectures safer and faster
+- Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses instead of using the public Internet.
+
+The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice network design and configuration guidance integrated within them.
+
+For instance, the [Azure Landing Zones Bicep - Deployment Flow - Hub and Spoke](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlowHS) workflow includes Bicep modules to accelerate Azure virtual network hub-and-spoke architectures.
+
+For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ## Design area overview
 
@@ -54,7 +66,7 @@ Network topology is a critical element of landing zone architecture because it d
 - [Plan for inbound and outbound internet connectivity](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md) describes recommended connectivity models to and from the public internet.
 - [Plan for landing zone network segmentation](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md) explores key recommendations for highly secure internal network segmentation within a landing zone to support a zero-trust network implementation.
 - [Define network encryption requirements](../../azure-best-practices/define-network-encryption-requirements.md) explores key recommendations for network encryption between on-premises and Azure and across Azure regions.
-- [Plan for traffic inspection](../../azure-best-practices/plan-for-traffic-inspection.md) explores key considerations and recommended approaches for mirroring or tapping traffic in Azure Virtual Network. Many organizations require Azure traffic to be mirrored to a network packet collector for deep inspection and analysis. This requirement typically focuses on inbound and outbound internet traffic.
+- [Plan for traffic inspection](../../azure-best-practices/plan-for-traffic-inspection.md) explores key considerations and recommended approaches for mirroring or tapping traffic in Azure Virtual Network. Many organizations require Azure traffic to be mirrored to a network packet collector for deep inspection and packet analysis. This requirement typically focuses on inbound and outbound internet traffic.
 
 ## Resources
 

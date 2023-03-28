@@ -1,8 +1,8 @@
 ---
 title: Track costs across business units, environments, or projects
 description: Learn how to create tracking mechanisms to monitor costs using the Cloud Adoption Framework for Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -33,23 +33,13 @@ When tags are used to classify assets as part of a cost management effort, compa
 
 ### Organize assets
 
-There are several approaches to organizing assets. This section outlines a best practice based on the needs of a large enterprise with cost structures spread across business units, geographies, and IT organizations. A similar best practice for a smaller, less complex organization is available in the [standard enterprise governance guide](../../govern/guides/standard/index.md).
+There are several approaches to organizing assets. Microsoft's enterprise-scale [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) design provides an architecture that can be used as the basis of any Azure cloud environment.  The landing zone [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) documentation provides detailed guidance on organizing [management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups). Understanding the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) used in designing the conceptual architecture will give you a foundation in best practices as you adapt the architecture to meet your specific business needs. Deviations to the design may be necessary to meet your business requirements, but understanding the impact of those deviations will prepare you for any necessary mitigations.
 
-For a large enterprise, the following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
+The following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
-![Diagram of resource organization for a large enterprise.](../../_images/govern/large-enterprise-resource-organization.png)
+![Diagram that shows the Azure landing zone accelerator management group structure.](../landing-zone/media/sub-organization.png)
+
 *Figure 2: Resource organization for a large enterprise.*
-
-In the diagram above, the root of the management group hierarchy contains a node for each business unit. In this example, the multinational company needs visibility into the regional business units, so it creates a node for geography under each business unit in the hierarchy.
-
-Within each geography, there's a separate node for production and nonproduction environments to isolate cost, access, and governance controls. To allow for more efficient operations and wiser operations investments, the company uses subscriptions to further isolate production environments with varying degrees of operational performance commitments. Finally, the company uses resource groups to capture deployable units of a function, called applications.
-
-The diagram shows best practices but doesn't include these options:
-
-- Many companies limit operations to a single geopolitical region, which reduces the need to diversify governance disciplines or cost data based on local data-sovereignty requirements. In those cases, a geography node is unnecessary.
-- Some companies prefer to further segregate development, testing, and quality control environments into separate subscriptions.
-- When a company integrates a cloud center of excellence (CCoE) team, shared services subscriptions in each geography node can reduce duplicated assets.
-- Smaller adoption efforts might have a much smaller management hierarchy. It's common to see a single root node for corporate IT, with a single level of subordinate nodes in the hierarchy for various environments. That doesn't mean best practices for a well-managed environment are violated, but it does make it more difficult to provide a least-rights access model for cost control and other important functions.
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. But the following articles can help you apply the approach to a resource organization that best fits your company:
 
@@ -81,10 +71,7 @@ As a general best practice, members of all teams should be assigned the role of 
 
 The following scope and role settings will create the required visibility into cost management. This best practice might require minor changes to align to asset organization decisions.
 
-- [Cloud adoption team](../../organize/cloud-adoption.md). Responsibilities for ongoing optimization changes require Cost Management Contributor access at the resource group level.
-
-  - **Working environment:** At a minimum, the cloud adoption team should already have [Contributor](/azure/role-based-access-control/built-in-roles#contributor) access to all affected resource groups, or at least those groups related to dev/test or ongoing deployment activities. No other scope setting is required.
-  - **Production environments:** When proper separation of responsibility has been established, the cloud adoption team probably won't continue to have access to the resource groups related to its projects. The resource groups that support the production instances of their workloads will need more scope to give this team visibility into the production cost impact of its decisions. Setting the [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) scope for production resource groups for this team will allow the team to monitor costs and set budgets based on usage and ongoing investment in the supported workloads.
+- [Cloud adoption team](../../organize/cloud-adoption.md). As cloud adoption teams primarily focus on implementation of cloud technologies, cost management access to production environments is not typically required. By virtue of normally having contributor access to non-production or Sandbox subscriptions, this team would inherently have access to cost management data for those subscriptions.
 
 - [Cloud strategy team](../../organize/cloud-strategy.md). Responsibilities for tracking costs across multiple projects and business units require [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader) access at the root level of the management group hierarchy.
 
@@ -99,7 +86,7 @@ The following scope and role settings will create the required visibility into c
   - **Shared services.** When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has Contributor or Owner access to that subscription, making additional scope assignment for Cost Management Contributor unnecessary.
   - **CCoE automation/controls.** The CCoE commonly provides controls and automated deployment scripts to cloud adoption teams. The CCoE has a responsibility to understand how these accelerators affect costs. To gain that visibility, the team needs Cost Management Contributor access to any resource groups or subscriptions running those accelerators.
 
-- **Cloud operations team.** Responsibility for managing ongoing costs of production environments requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to all production subscriptions.
+- **Cloud operations team.** Responsibility for managing ongoing costs of production environments requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to the Landing Zone and Platform management group nodes.
 
   - The general recommendation puts production and nonproduction assets in separate subscriptions that are governed by nodes of the management group hierarchy associated with production environments. In a well-managed environment, members of the operations team likely have Owner or Contributor access to production subscriptions already, making the Cost Management Contributor role unnecessary.
 

@@ -1,8 +1,8 @@
 ---
 title: Evaluate and define corporate policy
 description: Identify corporate policy business risk, risk tolerance, and policy and compliance processes as part of a cloud governance strategy.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

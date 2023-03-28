@@ -25,7 +25,7 @@ Within the Azure platform, there are two ways to give access to data products:
 - Using Azure Purview (data policies)
 - Using a custom data marketplace, which grants access through Azure Active Directory Entitlement Management
 
-The Azure Purview method is explained in [dataset provisioning by data owners for Azure Storage](/azure/purview/how-to-access-policies-storage). Note that data owners can also define polices for [resource groups and subscriptions](/azure/purview/tutorial-data-owner-policies-resource-group).
+The Azure Purview method is explained in [dataset provisioning by data owners for Azure Storage](/azure/purview/how-to-policies-data-owner-storage). Note that data owners can also define polices for [resource groups and subscriptions](/azure/purview/how-to-policies-data-owner-resource-group).
 
 This article explains how you can use Azure Active Directory Entitlement Management with a custom data marketplace to give access to data products.
 

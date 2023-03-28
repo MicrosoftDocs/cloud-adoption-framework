@@ -1,13 +1,13 @@
 ---
 title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Inventory and visibility considerations

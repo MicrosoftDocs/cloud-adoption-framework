@@ -1,8 +1,8 @@
 ---
 title: Security considerations for Azure API Management
 description: Learn about design considerations and recommendations for security in the Azure API Management landing zone accelerator
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -14,7 +14,7 @@ ms.custom: internal
 
 This article provides design considerations and recommendations for security when using the API Management landing zone accelerator. Security covers multiple aspects including securing the frontend APIs, securing backends, and securing the developer portal.
 
-Learn more about the [security](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security) design area.
+Learn more about the [security](../../../ready/landing-zone/design-area/security.md) design area.
 
 ## Design considerations
 

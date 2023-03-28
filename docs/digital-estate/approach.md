@@ -1,8 +1,8 @@
 ---
 title: Approaches to digital estate planning
 description: Understand the characteristics and requirements of top-down workload-driven, asset-driven, or incremental approaches to digital estate planning.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,19 +32,19 @@ It also looks at the types of users it supports (casual or expert, always or occ
 The asset-driven approach provides a plan based on the assets that support an application for migration. In this approach, you pull statistical usage data from a configuration management database (CMDB) or other infrastructure assessment tools.
 
 This approach usually assumes an IaaS model of deployment as a baseline. In this process, the analysis evaluates the attributes of each asset:
- 
-* Memory
-* Number of processors (CPU cores)
-* Operating system storage space
-* Data drives
-* Network interface cards (NICs)
-* IPv6
-* Network load balancing
-* Clustering
-* Operating system version
-* Database version (if necessary)
-* Supported domains
-* Third-party components or software packages, among others
+
+- Memory
+- Number of processors (CPU cores)
+- Operating system storage space
+- Data drives
+- Network interface cards (NICs)
+- IPv6
+- Network load balancing
+- Clustering
+- Operating system version
+- Database version (if necessary)
+- Supported domains
+- Third-party components or software packages, among others
 
 The assets that you inventory in this approach are then aligned with workloads or applications for grouping and dependency mapping purposes.
 

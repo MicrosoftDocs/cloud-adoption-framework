@@ -1,8 +1,8 @@
 ---
 title: Security toolchain
 description: Review best practices for using the Cloud Adoption Framework for Azure and the Innovate methodology to create a toolchain for security.
-author: NaomiOooo
-ms.author: naomio
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

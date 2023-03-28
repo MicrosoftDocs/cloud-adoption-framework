@@ -1,9 +1,9 @@
 ---
 title: Security Baseline tools in Azure
 description: See how Azure native tools can help mature policies and processes that support the Security Baseline discipline.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -12,8 +12,7 @@ ms.custom: internal
 
 # Security Baseline tools in Azure
 
-The [Security Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, the Security Baseline discipline involves classification of the digital estate and data. It also involves documentation of risks, business tolerance, and mitigation strategies associated with the security of data, assets, and networks. From a technical perspective, this discipline also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../decision-guides/software-defined-network/index.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and tools to [automate enforcement](../../decision-guides/policy-enforcement/index.md) of security policies across [resource groups](../../decision-guides/resource-consistency/index.md).
-
+The [Security Baseline discipline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, the Security Baseline discipline involves classification of the digital estate and data. It also involves documentation of risks, business tolerance, and mitigation strategies associated with the security of data, assets, and networks. From a technical perspective, this discipline also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../ready/azure-best-practices/define-an-azure-network-topology.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and tools to [automate enforcement](../policy-compliance/processes.md#automation-of-monitoring-and-compliance) of security policies across [resource groups](../../decision-guides/resource-consistency/index.md).
 The following list of Azure tools can help mature the policies and processes that support this discipline.
 
 | Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal/) and [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | [Azure Key Vault](/azure/key-vault/)  | [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Policy](/azure/governance/policy/overview) | [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) | [Azure Monitor](/azure/azure-monitor/overview) |

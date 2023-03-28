@@ -2,12 +2,13 @@
 title: Cloud monitoring strategy
 description: Learn how to define an effective cloud monitoring strategy.
 author: mgoedtel
-ms.author: brblanch
-ms.date: 08/22/2022
+ms.author: magoedte
+ms.date: 01/24/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
+products: azure-monitor
 ---
 
 # Cloud monitoring strategy
@@ -16,7 +17,7 @@ As your organization migrates to a cloud environment, it's important to plan and
 
 ## Where to start?
 
-To ease your journey to the cloud, use the [strategy](./index.md) and [planning](../plan/index.md) phases of the Cloud Adoption Framework. Include monitoring in your strategy and planning phases for all of your initiatives and projects. 
+To ease your journey to the cloud, use the [strategy](./index.md) and [planning](../plan/index.md) phases of the Cloud Adoption Framework. Include monitoring in your strategy and planning phases for all of your initiatives and projects.
 
 For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
 
@@ -186,11 +187,11 @@ As part of the learning cycle, you'll get monitoring data and insights into the 
 
 The DIKW model is often used for learning. Actions and decisions move from *data* to *information*, *knowledge*, and *wisdom*.
 
-![Chart that shows monitoring and control strategy principles and modes.](./media/monitoring-strategy/monitoring-and-control-strategy.png)
+![Chart that shows monitoring and control strategy principles and modes.](../manage/monitor/media/observability/monitoring-and-control-disciplines.png)
 
-Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
+Monitoring is foundational for services you build in Azure. Your strategy can address these five disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
-- **Observe:** First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and Azure Resource Manager templates, to establish initial visibility of services and their warranty: availability, performance or capacity, security, and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is as important as being alerted on services that are unhealthy.
+- **Monitor:** First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and Azure Resource Manager templates, to establish initial visibility of services and their warranty: availability, performance or capacity, security, and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is as important as being alerted on services that are unhealthy.
 
 - **Measure:** Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues, which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
@@ -200,7 +201,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 - **Respond:** Based on the context of known issues to observe and measure, evaluate what qualifies as a bug, autoremediation, or requires manual response based on what is classified as an incident, problem, or change.
 
-- **Learn and improve:** Providers and consumers participating in learning cycles implies consuming actual monitoring data through insights, reports, and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important, too. The monitoring configuration is changing in tandem with changes to the service (such as new, modified, or retired) and continues to match the actual service warranty.
+- **Learn and improve:** With these two interdependent disciplines, providers and consumers participate in learning cycles. They consume monitoring data through insights, reports, and workbooks. Using these methods to tune and optimize your monitoring configuration, to continuously improve the target service. Change is important, too. The monitoring configuration is changing in tandem with changes to the business, technology, cloud provider, and other services to evolve the service warranty.
 
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. Keep in mind the *five Rs* of rationalization introduced earlier during the planning phase. If you're using System Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
@@ -208,9 +209,9 @@ To help you align monitoring plans to strategy, use the following table to categ
 |-----|---------------------|------------------|
 | 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned datacenters with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the Microsoft 365 and Azure management packs. |
-| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
-| 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. Gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
-| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
+| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager or System Center Operations Manager Managed Instance (preview) and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
+| 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. You can use System Center Operations Manager Managed Instance (preview). If you use System Center Operations Manager, gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
+| 5 | Hybrid forever | System Center Operations Manager Managed Instance (preview), Azure AD, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
 | 6 | Cloud native | Azure Monitor, Azure Policy, Microsoft Defender for Cloud, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
 | 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Microsoft Sentinel. |
 | 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |

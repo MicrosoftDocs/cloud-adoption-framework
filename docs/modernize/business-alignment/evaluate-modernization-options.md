@@ -1,25 +1,23 @@
 ---
 title: Evaluate cloud modernization readiness
-description: Learn how to evaluate your technical and financial indicators to determine which workloads you want to modernize during cloud adoption.
+description: Learn how to evaluate your technical and financial cloud readiness to determine which workloads you want to modernize during cloud adoption.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 08/19/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice:
+ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: evaluate, technical, financial indicators, workloads, modernize, cloud adoption framework
 ---
 # Evaluate cloud modernization readiness
 
-Once you've envisioned your cloud modernization possibilities, evaluate whether you're ready to modernize in the cloud.
+Once you've envisioned your cloud modernization possibilities, you can evaluate whether you're ready to modernize in the cloud.
 
-:::image type="content" source="../../_images/modernize/evaluate/evaluate-971.png" alt-text="Image showing where you are in the business alignment process.":::
+Evaluating your readiness for modernization has two components. You should assess your financial readiness and then your technical readiness.
 
-Evaluating your readiness for modernization has to components. You need to assess you financial readiness and technical readiness.
-
-- *Financial readiness assessment* - helps you determine if you need more time to review your applications.
-- *Technical readiness assessment* - helps you determine if you need to choose a different adoption path other than modernize.
+- *Financial readiness* - helps you determine if you need more time to review your applications.
+- *Technical readiness* - helps you determine if you're ready to modernize or need to explore a different path.
 
 ## Step 1 - Evaluate the financial readiness of each workload
 
@@ -27,16 +25,14 @@ A financial readiness assessment helps you determine if it makes business sense 
 
 For each workload you want to modernize, answer the following questions to assess your financial readiness.
 
-Answering *yes* to all questions means you're likely ready to modernize. If you answer *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload.
+- *Can you quantify the business value of modernizing the workload?*
+- *Do you know what your modernization cost will be?*
+- *Are these workloads business-critical?*
+- *Does the cost of modernization meet your desired cost savings?*
 
-|Question|Yes|No|
-|--|--|--|
-|*Can you quantify the business<br> value of modernizing the workload?*|Modernize|Conduct Azure Well-Architected Review|
-|*Do you know what your <br>modernization cost will be?*|Modernize<br>|Conduct Azure Well-Architected Review|
-|*Are these workloads business-critical?*|Modernize|Conduct Azure Well-Architected Review|
-|*Does the cost of modernization<br> meet your desired cost savings?*|Modernize|Conduct Azure Well-Architected Review|
+Answering *yes* to all questions means you're likely ready to modernize. If you answered *no* to any of the questions, we recommend you conduct an [Azure Well-Architected Review](/assessments/?mode=pre-assessment&session=local) of your workload
 
-If you answered *yes* to all the financial readiness questions, the workload is likely ready to adopt the cloud. The next step, [technical readiness evaluation](#step-2---evaluate-the-technical-readiness-of-each-workload), will help you determine if you're ready to modernize or take another adoption path.
+Step 2 will help you determine if you're ready to modernize or need to explore another adoption path.
 
 ## Step 2 - Evaluate the technical readiness of each workload
 
@@ -59,4 +55,4 @@ If you answered *yes* to all the technical-readiness questions, you're likely re
 You've [envisioned](envision-cloud-modernization.md) and [evaluated](evaluate-modernization-options.md). It's time to commit to a modernization path.
 
 > [!div class="nextstepaction"]
-> [How to commit to modernization](commit-to-modernization-plan.md)
+> [Commit to modernization](commit-to-modernization-plan.md)

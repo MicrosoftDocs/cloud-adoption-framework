@@ -28,7 +28,6 @@ The following are some design considerations before onboarding Azure Arc-enabled
 
 - Your machines run a [supported operating system](/azure/azure-arc/servers/agent-overview#supported-operating-systems) for the Azure connected machine agent.
 - Your machines have the [required software](/azure/azure-arc/servers/agent-overview#software-requirements) installed before deploying the Azure connected machine agent.
-- You've reviewed the [Azure subscription and service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) for Azure Arc-enabled servers.
 
 ### Network connectivity
 
@@ -59,7 +58,7 @@ The following are general design recommendations for Azure Arc-enabled servers:
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/decision-guides/resource-tagging/) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
 - Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
 
 ### Onboard Azure Arc-enabled servers
@@ -88,7 +87,7 @@ Overview of steps:
 
 ### Lifecycle automation
 
-Once your servers are onboarded to Azure, it's recommended to [enable patch and Update Management](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/arc-update-management) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found in [Update Management overview](/azure/automation/update-management/overview).
+Once your servers are onboarded to Azure, it's recommended to [enable patch and Update Management](../../../manage/hybrid/server/best-practices/arc-update-management.md) to ease OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found in [Update Management overview](/azure/automation/update-management/overview).
 
 We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
 
@@ -102,4 +101,4 @@ For more guidance for your hybrid cloud adoption journey,  review the following 
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
 - Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
 - Review [Azure Automation in a hybrid environment](/azure/architecture/hybrid/azure-automation-hybrid) for Hybrid Runbook Worker feature of Azure Automation.
-- Learn more about Azure Arc via the [Azure Arc learning path](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).

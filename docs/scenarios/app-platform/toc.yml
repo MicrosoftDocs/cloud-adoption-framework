@@ -90,6 +90,18 @@ items:
         href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
         href: azure-red-hat-openshift\platform-automation-devops.md
+    - name: Azure Spring Apps
+      items:
+      - name: Azure Spring Apps landing zone accelerator
+        href: spring-apps\landing-zone-accelerator.md
+      - name: Identity and access management
+        href: spring-apps\identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: spring-apps\network-topology-and-connectivity.md
+      - name: Security
+        href: spring-apps\security.md
+      - name: Monitoring operations
+        href: spring-apps\management.md
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms
@@ -437,10 +449,10 @@ items:
   - name: Build skills on Learn
     items:
     - name: Introduction to Kubernetes on Azure
-      href: /learn/paths/intro-to-kubernetes-on-azure/
+      href: /training/paths/intro-to-kubernetes-on-azure/
     - name: Administer containers in Azure
-      href: /learn/paths/administer-containers-in-azure/
+      href: /training/paths/administer-containers-in-azure/
     - name: Develop and deploy applications on Kubernetes
-      href: /learn/paths/develop-deploy-applications-kubernetes/
+      href: /training/paths/develop-deploy-applications-kubernetes/
     - name: Architect modern applications in Azure
-      href: /learn/paths/architect-modern-apps/
+      href: /training/paths/architect-modern-apps/

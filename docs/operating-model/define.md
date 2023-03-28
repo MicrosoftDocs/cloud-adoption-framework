@@ -1,13 +1,13 @@
 ---
 title: Define your cloud operating model
 description: Learn how the Cloud Adoption Framework helps you define your operating model.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 06/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal, operating-model
+ms.custom: internal, operating-model, UpdateFrequency2
 ---
 
 # Define your cloud operating model

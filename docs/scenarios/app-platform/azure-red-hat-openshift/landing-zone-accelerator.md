@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-ARO
 ---
 
-# Azure Red Hat OpenShift landing zone accelerator
+# Azure Red Hat OpenShift (ARO) landing zone accelerator
 
 The Azure Red Hat OpenShift landing zone accelerator is a collection of design guidance and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone.
 
@@ -20,7 +20,7 @@ This solution is open source. You can adapt the templates to create an architect
 
 The Azure Red Hat OpenShift landing zone accelerator assumes that a platform foundation has been successfully implemented, which will take care of the shared services required to construct and operationalize a landing zone. Shared services include networking, security, identity, and governance.
 
-A platform foundation isn't mandatory to implement a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have a platform foundation, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
+A platform foundation isn't mandatory to implement a landing zone accelerator, but it does handle much of the security and management required to safely manage your cloud environment. If you already have a platform foundation, you can skip this step. For more information, review [Implement Cloud Adoption Framework Azure landing zone](../../../ready/landing-zone/index.md).
 
 ## Landing zone accelerator benefits
 

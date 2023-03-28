@@ -2,12 +2,12 @@
 title: Examples of agility outcomes
 description: Use the Cloud Adoption Framework to understand your company's market position and competitive landscape.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 07/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Examples of agility outcomes

@@ -1,13 +1,13 @@
 ---
 title: Cloud security compliance management functions
 description: Understand the capabilities needed for cloud security compliance management.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Cloud security compliance management functions

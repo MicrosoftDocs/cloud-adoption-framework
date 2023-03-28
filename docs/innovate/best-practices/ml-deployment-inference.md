@@ -2,7 +2,7 @@
 title: Machine learning inference during deployment
 description: Understand how your AI model makes predictions while it's being deployed in production.
 author: DonnaForlin
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

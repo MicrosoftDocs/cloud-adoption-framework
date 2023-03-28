@@ -1,13 +1,13 @@
 ---
 title: 'Get started: Improve reliability with the right controls'
 description: Learn the basics of improving reliability through governance controls and a management baseline.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Improve reliability with the right controls
@@ -57,10 +57,9 @@ Not all workloads are created equal. In any environment, there are workloads tha
 
 Enterprise reliability requires consistent application of the management baseline. That consistency comes from appropriate corporate policy, IT processes, and automated tools. These resources govern the implementation of the management baseline for all affected resources.
 
-**Deliverables:**
+**Deliverable:**
 
-- Ensure proper application of the management baseline for all affected systems.
-- Document your Resource Consistency policies, processes, and design guidance in the [Resource Consistency discipline template](../govern/resource-consistency/template.md).
+Ensure proper application of the management baseline for all affected systems.
 
 **Guidance to support deliverable completion:**
 

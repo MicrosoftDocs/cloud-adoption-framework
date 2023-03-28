@@ -1,8 +1,8 @@
 ---
 title: Prerequisites to migration
 description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,12 +2,12 @@
 title: Building your DevOps practice
 description: Use the Cloud Adoption Framework to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: wayneme
-ms.author: brblanch
+ms.author: martinek
 ms.date: 05/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Building your DevOps practice

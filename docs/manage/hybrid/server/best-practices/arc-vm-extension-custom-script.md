@@ -2,7 +2,7 @@
 title: Use virtual machine extensions and an Azure Resource Manager template to deploy custom scripts to Azure Arc Linux and Windows servers
 description: Learn how to execute custom scripts to Azure Arc-enabled servers by using virtual machine extensions that provide post-deployment configuration and automation tasks.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -81,7 +81,7 @@ To demonstrate the custom script extension, use the following Linux and Windows 
 
 ## Azure Arc-enabled servers custom script extension deployment
 
-1. Edit the extensions parameters file for [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatewindows.parameters.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/customscript-templatelinux.parameters.json)
+1. Edit the extensions parameters file for [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/customscript-templatewindows.parameters.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/customscript-templatelinux.parameters.json)
 
    ![A screenshot of an ARM template parameters file.](./media/arc-vm-extension-custom-script/parameters-file.png)
 
@@ -113,7 +113,7 @@ To demonstrate the custom script extension, use the following Linux and Windows 
          ./custom_script_linux.sh
          ```
 
-4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/extensions/arm) and run the following command with the templates that match your operating system:
+4. To deploy the ARM template for Linux or Windows, navigate to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/archive/extensions/arm) and run the following command with the templates that match your operating system:
 
     ```azurecli
     az deployment group create --resource-group <Name of the Azure resource group> \

@@ -19,7 +19,7 @@ This article describes implementation for your organization in the context of in
 Follow the Cloud Adoption Framework guidance for deploying Azure landing zones. A landing zone is a starting point to incrementally mature toward the target architecture aligned with best practices. To get started with landing zones, see [What is an Azure landing zone?](../ready/landing-zone/index.md)
 
 > [!NOTE]
-> Your organization might already have an environment that needs modification to align to the Azure landing zone target architecture and best practices. To understand the decision points and technical approach to refactoring environments to align with the Ready methodology, see [Transition existing Azure environments](/azure/cloud-adoption-framework/ready/enterprise-scale/transition).
+> Your organization might already have an environment that needs modification to align to the Azure landing zone target architecture and best practices. To understand the decision points and technical approach to refactoring environments to align with the Ready methodology, see [Transition existing Azure environments](../ready/enterprise-scale/transition.md).
 
 ## Infrastructure as code
 
@@ -37,13 +37,13 @@ Azure Resource Manager is a deployment and management service. Deployments of Az
 
 ## Azure landing zone accelerators
 
-Your organization might decide not to use IaC options. Azure landing zone accelerators deploy Azure Resource Manager templates within a portal experience with pre-provisioned code, with tools and controls to quickly reach a security baseline. Read more about [security tools and controls](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#security-in-the-azure-landing-zone-accelerator) deployed in the Azure landing zone accelerators.
+Your organization might decide not to use IaC options. Azure landing zone accelerators deploy Azure Resource Manager templates within a portal experience with pre-provisioned code, with tools and controls to quickly reach a security baseline. Read more about [security tools and controls](../ready/landing-zone/design-area/security.md#security-in-the-azure-landing-zone-accelerator) deployed in the Azure landing zone accelerators.
 
 If your organization is considering IaC deployment options, we recommend that you deploy the [Azure landing zones Bicep module](https://github.com/Azure/ALZ-Bicep) or the [Azure landing zones Terraform module](https://aka.ms/alz/tf).
 
 Bicep templates offer the same capabilities as Azure Resource Manager templates. The templates are converted to Azure Resource Manager templates during deployment. They define the infrastructure that your organization wants to deploy through specified parameters, variables, expressions, and modules. You can use the template throughout the development lifecycle to deploy repeatable and consistent infrastructure. Deploy [Azure landing zones Bicep modules](https://github.com/Azure/ALZ-Bicep) to deliver and deploy the Azure Landing Zone conceptual architecture in a modular approach.
 
-Terraform is an open-source IaC software tool. Read about [how to use, configure and extend](https://aka.ms/alz/tf) the Azure landing zones Terraform module with your deployments.
+Terraform is an open-source IaC software tool. Read about [how to use, configure, and extend](https://aka.ms/alz/tf) the Azure landing zones Terraform module with your deployments.
 
 ## Next steps
 

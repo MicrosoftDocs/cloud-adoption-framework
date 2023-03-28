@@ -81,7 +81,7 @@ Use any of these options to manage your data using Microsoft Purview through Mic
 
 - **Option 1:** Use a jump machine that's connected to the corporate network. To use this connectivity model, you must have connectivity between the VNet where the Microsoft Purview portal private endpoint is created and your corporate network.
 
-  Review Cloud Adoption Framework networking for more information [network topology and connectivity overview](../../../ready/enterprise-scale/network-topology-and-connectivity.md)
+  Review Cloud Adoption Framework networking for more information [network topology and connectivity overview](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md).
 
 - **Option 2:** If hybrid connectivity isn't available in your organization, [deploy a virtual machine](/azure/virtual-machines/windows/quick-create-portal) inside the data management landing zone. [Deploy Azure Bastion](/azure/bastion/quickstart-host-portal) to connect to Microsoft Purview using a secure connection.
 

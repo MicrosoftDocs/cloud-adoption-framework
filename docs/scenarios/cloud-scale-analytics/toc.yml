@@ -138,6 +138,8 @@ items:
         href: architectures/data-mesh-data-marketplace.md
       - name: Master data management in data mesh
         href: architectures/data-mesh-master-data-management.md
+      - name: Operationalize data mesh for AI/ML
+        href: architectures/operationalize-data-mesh-for-ai-ml.md
       - name: Getting started checklist
         href: architectures/data-mesh-checklist.md
     - name: Reference architectures
@@ -147,11 +149,13 @@ items:
       - name: Single data landing zone
         href: ./architectures/reference-architecture-adatum.md
       - name: Multiple data landing zones
-        href: ./architectures/reference-architecture-relecloud.md
+        href: ./architectures/reference-architecture-multizone.md
+      - name: Azure Synapse Analytics for landing zones
+        href: /azure/architecture/example-scenario/analytics/synapse-analytics-landing-zone 
       - name: Highly sensitive data landing zones
         href: ./architectures/reference-architecture-lamna.md
       - name: Financial institution scenario for data mesh
-        href: ./architectures/reference-architecture-data-mesh.md
+        href: ./architectures/data-mesh-scenario.md
 
     - name: Deployment templates
       href: ./architectures/deployment-templates.md

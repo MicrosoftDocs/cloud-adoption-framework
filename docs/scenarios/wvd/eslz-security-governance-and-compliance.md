@@ -58,7 +58,7 @@ Review the following sections to find recommended security controls and governan
 
 - Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/configure-profile-container-tutorial).
 
-- [Configure the RDP ShortPath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
+- [Configure the RDP Shortpath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
 
 ## Session hosts
 
@@ -106,7 +106,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. To identify Azure Virtual Desktop's associated compute cost, tag all your host pools and virtual machines. Tag Azure Files or Azure NetApp Files resources to track the storage cost associated with FSLogix User Profile Containers, custom OS images, and MSIX app attach (if used).
 
-- Define the [minimum suggested tags](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
+- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
 
 - [Set budget(s) in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 
@@ -122,7 +122,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) is currently in Public Preview. Currently, you can apply configuration policies defined in the OS scope and apps configured to install in the system context to Azure Virtual Desktop multi-session VMs. All multi-session configurations must be targeted to devices or device groups. User scope policies aren't currently supported.
 
-- Audit and configure the hardening of your session hosts' operating system by using[Azure Policy's guest configuration](/azure/governance/policy/concepts/guest-configuration). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
+- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
 - [Use Azure Policy built-in definitions](/azure/azure-monitor/policy-reference)  to configure the diagnostics settings for Azure Virtual Desktop resources like workspaces, application groups, and host pools.
 
@@ -175,6 +175,14 @@ Nearly all organizations must comply with various government or industry regulat
 
 - Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Landing Zones.
 
-## Next steps
+## Recommended security best practices and baselines
+
 - [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-guide)
 - [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
+
+## Next steps
+
+Learn about platform automation and DevOps for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)

@@ -7,7 +7,7 @@ ms.date: 08/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency3
 ---
 
 # Cloud security functions

@@ -2,7 +2,7 @@
 title: Use Update Management in Azure Automation to manage operating system updates for Azure Arc-enabled servers
 description: Learn how to onboard Azure Arc-enabled servers to Update Management in Azure Automation.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -51,7 +51,7 @@ In the following procedures you create and configure an Azure Automation account
 
 Update Management uses the Log Analytics agent to collect Windows and Linux server log files and the data collected is stored in a Log Analytics workspace.
 
-1. Create a Log Analytics workspace using this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/updateManagement/law-template.json). This creates a new Log Analytics workspace, defines the Update Management solution, and enables it for the workspace.
+1. Create a Log Analytics workspace using this [Azure Resource Manager template (ARM template)](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/updateManagement/law-template.json). This creates a new Log Analytics workspace, defines the Update Management solution, and enables it for the workspace.
 
 2. Create a new resource group for the Log Analytics workspace by running the following command, replacing the values in brackets with your own.
 
@@ -63,11 +63,11 @@ Update Management uses the Log Analytics agent to collect Windows and Linux serv
 
     ![A screenshot of the `az group create` command.](./media/arc-update-management/az-group-create.png)
 
-3. Edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/updateManagement/law-template.parameters.json), providing a name for your Log Analytics workspace, a location, and a name for your Azure Automation account. You also need to supply the name of your Azure Arc-enabled server, and the name of the resource group that contains the Azure Arc-enabled server as shown in the following example:
+3. Edit the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/updateManagement/law-template.parameters.json), providing a name for your Log Analytics workspace, a location, and a name for your Azure Automation account. You also need to supply the name of your Azure Arc-enabled server, and the name of the resource group that contains the Azure Arc-enabled server as shown in the following example:
 
     ![A screenshot of an ARM template.](./media/arc-update-management/arm-template.png)
 
-4. Deploy the ARM template. Go to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/updateManagement) and run the following command:
+4. Deploy the ARM template. Go to the [deployment folder](https://github.com/microsoft/azure_arc/tree/main/azure_arc_servers_jumpstart/archive/updateManagement) and run the following command:
 
     ```console
     az deployment group create --resource-group <Name of the Azure resource group you created> \

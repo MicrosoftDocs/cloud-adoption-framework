@@ -7,12 +7,12 @@ ms.date: 3/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Tailor the Azure landing zone architecture to meet requirements
 
-As part of the Azure landing zone guidance, several reference [implementation options](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) are available:
+As part of the Azure landing zone guidance, several reference [implementation options](../enterprise-scale/implementation.md) are available:
 
 - Azure landing zone with Azure Virtual WAN
 - Azure landing zone with traditional hub and spoke
@@ -46,21 +46,21 @@ More processes and tooling might be required to ensure a landing zone has the re
 - Diagnostic settings to send activity log data to a Log Analytics workspace.
 - Continuous export settings for Microsoft Defender for Cloud.
 - Virtual network with managed IP address spaces for application workloads.
-- Linking of virtual networks to a distributed denial of service (DDoS) standard plan.
+- Linking of virtual networks to a distributed denial of service (DDoS) Network Protection.
 
 > [!NOTE]
-> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles#policy-driven-governance) design principle.
+> In the Azure landing zone reference implementations, Azure policies with the `DeployIfNotExists` and `Modify` [effects](/azure/governance/policy/concepts/effects) are used to achieve the deployment of some of the preceding resources. They follow the [policy-driven governance](./design-principles.md#policy-driven-governance) design principle.
 >
-> For more information, see [Adopt policy-driven guardrails](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance).
+> For more information, see [Adopt policy-driven guardrails](../enterprise-scale/dine-guidance.md).
 
 ## Built-in archetypes for the Azure landing zone conceptual architecture
 
 The conceptual architecture includes example landing zone archetypes for application workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
 
 > [!TIP]
-> To review the landing zone archetypes in the Azure landing zone accelerator, see [Management groups in the Azure landing zone accelerator](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator).
+> To review the landing zone archetypes in the Azure landing zone accelerator, see [Management groups in the Azure landing zone accelerator](./design-area/resource-org-management-groups.md).
 
-You might also want to create changes elsewhere in the resource hierarchy. When you plan the hierarchy for your implementation of Azure landing zones for your organization, follow the guidelines in the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
+You might also want to create changes elsewhere in the resource hierarchy. When you plan the hierarchy for your implementation of Azure landing zones for your organization, follow the guidelines in the [design areas](./design-areas.md).
 
 The following landing zone archetype examples from the conceptual architecture help you to understand their purpose and intended use:
 
@@ -72,7 +72,7 @@ The following landing zone archetype examples from the conceptual architecture h
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 
@@ -91,7 +91,7 @@ There's a simple and safe way to meet this new requirement. Create a new managem
 Now you can place new or move existing Azure subscriptions into the new **PCI** management group to make it inherit the required policies and form the new archetype.
 
 > [!TIP]
-> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/transition#subscription-move).
+> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#subscription-move).
 
 ### Tailor platform landing zone archetypes
 
@@ -123,4 +123,4 @@ Consider the following points when you think about tailoring your implementation
 - Avoid going beyond a hierarchy depth of four layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
 - Don't create archetypes for environments like development, test, and production.
   
-  For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](/azure/cloud-adoption-framework/ready/enterprise-scale/faq#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture)
+  For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)

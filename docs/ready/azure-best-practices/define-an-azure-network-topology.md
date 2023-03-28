@@ -2,7 +2,7 @@
 title: Define an Azure network topology
 description: Examine key design considerations and recommendations surrounding network topologies within Azure .
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

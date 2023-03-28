@@ -1,13 +1,13 @@
 ---
 title: 'Get started: Ensure consistent performance across a portfolio'
 description: Learn the basics of managing performance across a portfolio, including maintaining performance, setting expectations, and creating organizational alignment.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Ensure consistent performance across a portfolio
@@ -49,10 +49,9 @@ The operations management baseline, outlined in the Microsoft Cloud Adoption Fra
 
 As the management baseline is improved, it's important to ensure that those improvements carry through to the Resource Consistency governance discipline. Doing so ensures the application of the enhanced baseline in all managed environments.
 
-**Deliverables:**
+**Deliverable:**
 
-- Ensure proper application of the enhanced management baseline for all affected systems.
-- Document your policies, processes, and design guidance for resource consistency in the [Resource Consistency discipline template](../govern/resource-consistency/template.md).
+Ensure proper application of the enhanced management baseline for all affected systems.
 
 **Guidance to support deliverable completion:**
 

@@ -1,13 +1,13 @@
 ---
 title: Subscription considerations and recommendations
 description: Learn about the critical role that subscriptions play as units of management, billing, and scale in Azure.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 6/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Subscription considerations and recommendations
@@ -18,6 +18,12 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 - ownership and governance model
 - organizational structure
 - application portfolios
+
+> [!TIP]
+> We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+
+>[!NOTE]
+>  You should review the subscription limits as documented in [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts). This guidance is primarily aimed at customers using Enterprise Agreements, Microsoft Customer Agreements (Enterprise) or Microsoft Partner Agreements (CSP).
 
 ## Subscriptions considerations
 
@@ -34,11 +40,12 @@ The following sections contain considerations to help you plan and create subscr
 - Subscriptions serve as a scale unit so component workloads can scale within platform [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). Make sure you consider subscription resource limits as you design your workloads.
 
 - Subscriptions provide a management boundary for governance and isolation that clearly separates concerns.
+
 - Create separate platform subscriptions for management (monitoring), connectivity, and identity when they're required.
-    - Establish a dedicated management subscription in your platform management group to support global management capabilities like Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
-      - Establish a dedicated identity subscription in your platform management group to host Windows Server Active Directory domain controllers when needed.
-      - Establish a dedicated connectivity subscription in your platform management group to host an Azure Virtual WAN hub, private Domain Name System (DNS), ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all your foundation network resources are billed together and isolated from other workloads.
-      - Use subscriptions as a democratized unit of management aligned with your business needs and priorities.
+  - Establish a dedicated management subscription in your platform management group to support global management capabilities like Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+    - Establish a dedicated identity subscription in your platform management group to host Windows Server Active Directory domain controllers when needed.
+    - Establish a dedicated connectivity subscription in your platform management group to host an Azure Virtual WAN hub, private Domain Name System (DNS), ExpressRoute circuit, and other networking resources. A dedicated subscription ensures that all your foundation network resources are billed together and isolated from other workloads.
+    - Use subscriptions as a democratized unit of management aligned with your business needs and priorities.
 
 - Use manual processes to limit Azure AD tenants to only Enterprise Agreement enrollment subscriptions. Using a manual process prevents the creation of Microsoft Developer Network subscriptions at the root management group scope.
   - For support, submit an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/).
@@ -57,6 +64,8 @@ Azure regions might have a finite number of resources. As a result, available ca
 
   - For virtual machine capacity reservations, see [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview).
 
+- Consider reusing unused or decommissioned subscriptions as per the guidance in [Should we create a new Azure Subscription every time or can we, and should we, reuse Azure Subscriptions? - Azure landing zones FAQ](../../enterprise-scale/faq.md#should-we-create-a-new-azure-subscription-every-time-or-should-we-reuse-azure-subscriptions).
+
 ### Tenant transfer restriction design considerations
 
 Each Azure subscription is linked to a single Azure AD tenant, which acts as an identity provider (IdP) for your Azure subscription. The Azure AD tenant is used to authenticate users, services, and devices.
@@ -67,7 +76,7 @@ The Azure AD tenant linked to your Azure subscription can be changed by any user
 - [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription)
 
 > [!NOTE]
-> Transferring to another Azure AD tenant is not supported or Azure Cloud Solution Provider (CSP) subscriptions.
+> Transferring to another Azure AD tenant is not supported for Azure Cloud Solution Provider (CSP) subscriptions.
 
 With Azure landing zones, you can set requirements to prevent users from transferring subscriptions to your organization's Azure AD tenant. Review the process in [Manage Azure subscription policies](/azure/cost-management-billing/manage/manage-azure-subscription-policy).
 
@@ -137,7 +146,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Avoid a rigid subscription model. Instead, use a set of flexible criteria to group subscriptions across your organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions, and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
-  - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-enterprise-scale-architecture).
+  - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 
 ### Quota and capacity recommendations
 
@@ -150,6 +159,10 @@ The following sections contain recommendations to help you plan and create subsc
 - Raise support requests for quota increases under subscription provisioning, such as for total available VM cores within a subscription. Ensure that your quota limits are set before your workloads exceed the default limits.
 
 - Ensure that any required services and features are available within your chosen deployment regions.
+
+### Automation recommendations
+
+- Build a Subscription vending process to automate the creation of Subscriptions for application teams via a request workflow as described in [Subscription vending](subscription-vending.md).
 
 ### Tenant transfer restriction recommendations
 
