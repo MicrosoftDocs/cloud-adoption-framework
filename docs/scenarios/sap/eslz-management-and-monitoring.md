@@ -40,7 +40,7 @@ Here are some key design considerations and recommendations for monitoring and m
 - Always ensure time-zone matches between Operating system and SAP system.
 
 - Do not group different application services in the same cluster.
-  - Do not combine DRBD and Central Services clusters on the same cluster. However, you can use the same pacemaker cluster to manage  approximately five different central services ([multi-sid cluster](./workloads/high-availability-guide-rhel-multi-sid.md)).
+  - Do not combine DRBD and Central Services clusters on the same cluster. However, you can use the same pacemaker cluster to manage  approximately five different central services ([multi-sid cluster](/azure/sap/workloads/high-availability-guide-rhel-multi-sid)).
   - Whilst using IBM’s TWS cluster for Job Scheduling consider running TWS cluster on it’s own pair of VMs, It is not recommended to run on SAP central services/database cluster.
 
 - For DB2 database for running SAP on Azure, in scenarios where log_meth2 is implemented consider using Azure File share (NFS4.1), it improves the DR recovery speed.
