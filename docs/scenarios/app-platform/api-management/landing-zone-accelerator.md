@@ -7,7 +7,7 @@ ms.date: 04/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: internal
+ms.custom: internal, devx-track-bicep
 ---
 
 # Azure API Management landing zone accelerator
