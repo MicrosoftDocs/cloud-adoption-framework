@@ -18,7 +18,7 @@ This article describes operations and governance for your organization in the co
 
 Define which roles are responsible for which security decisions. Advertise responsibility widely throughout your organization and project teams. This approach helps ensure that decisions are made quickly and consistently. It reduces delays in project delivery and security control implementation.
 
-Clarifying role responsibility and expanding the awareness across your organization helps mitigate enterprise risk using native cloud [security governance](/security/compass/governance-risk-compliance-capabilities) and [security operations](/security/compass/security-operations-capabilities) tools. Maintain key roles and responsibilities across your security teams with established lines of responsibility and accountability.
+Clarifying role responsibility and expanding the awareness across your organization helps mitigate enterprise risk using native cloud [security governance](../secure/security-governance.md) and [security operations](/security/operations) tools. Maintain key roles and responsibilities across your security teams with established lines of responsibility and accountability.
 
 Use this [tracking worksheet](/security/compass/progress-and-role-tracking-worksheets#cloud-role-tracking-worksheet) to capture and share your cloud role tracking and designate parties for specific functions.
 
@@ -58,7 +58,7 @@ Together, these toolsets establish broad visibility and insights into your attac
 Your processes and procedures should also include:
 
 - Threat modeling systems, architectures, and specific applications.
-- Automated governance controls with Azure Policy as code workflows. These controls are guardrails that audit and enforce standards and policies. These code workflows include Azure Resource Management templates, Azure landing zone Bicep modules, and Azure landing zone Terraform modules.
+- Automated governance controls with Azure Policy as code workflows. These controls are guardrails that audit and enforce standards and policies. These code workflows include Azure Resource Management templates, ALZ-Bicep modules, and Azure landing zone Terraform modules.
 
 ## Next steps
 

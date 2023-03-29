@@ -30,10 +30,7 @@ Corporate policies drive cloud governance. The governance guide focuses on speci
 
 - **Business risks:** Identifying and understanding corporate risks.
 - **Policy and compliance:** Converting risks into policy statements that support any compliance requirements.
-
-### Processes
-
-- Ensuring adherence to the stated policies.
+- **Processes:** Ensuring adherence to the stated policies.
 
 **Five Disciplines of Cloud Governance:** These disciplines support the corporate policies. Each discipline protects the company from potential pitfalls:
 

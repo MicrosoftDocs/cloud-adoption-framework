@@ -1869,14 +1869,8 @@ items:
         items:
         - name: Identity decision guide
           href: decision-guides/identity/index.md
-        - name: Identity management best practices
-          href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Secure privileged access
-          href: /azure/active-directory/roles/security-planning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Azure role-based access control
           href: ready/considerations/roles.md
-        - name: Choose an authentication method
-          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Storage
         items:
         - name: Review storage options

@@ -29,7 +29,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 | Technology platforms | SAP (classic and HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
 | Additional scenarios | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Multitenant environments](/azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | NetApp |
 
-Watch this short video for more information about using the right tools to move, manage and optimize your cloud environment.
+Watch this short video for more information about using the right tools to move, manage, and optimize your cloud environment.
 
 <!-- markdownlint-disable MD034 -->
 

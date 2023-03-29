@@ -7,6 +7,7 @@ ms.date: 10/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
+products: azure-monitor
 ---
 
 # Cloud monitoring guide: Observability

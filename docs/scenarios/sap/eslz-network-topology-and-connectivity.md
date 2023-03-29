@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Network topology and connectivity for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Plan for IP addressing
 
@@ -109,7 +109,7 @@ This section explores key recommendations for encrypting networks between on-pre
 
 - It isn't necessary to encrypt traffic over ExpressRoute for SAP deployments. SAP traffic typically consumes a lot of bandwidth and is sensitive to performance. IPsec tunnels encrypt internet traffic by default, and encryption or decryption could negatively affect the traffic's performance.
 
-- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
+- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to understand network encryption options in enterprise-scale landing zones.
 
 ## Segregate systems
 
@@ -139,6 +139,8 @@ It isn't recommended to host the database management system (DBMS) and applicati
 - If using Load Balancer with Linux guest operating systems, check that the Linux network parameter `net.ipv4.tcp_timestamps` is set to `0`.
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
+
+- For migration projects, consider tuning the network parameters. For example, you can improve performance by disabling the acknowledgements during the migration period.
 
 - Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
 
