@@ -1,6 +1,11 @@
 {
    "redirections": [
       {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-update-management.md",
+         "redirect_url": "/azure/automation/update-management/overview",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/get-started/help.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
          "redirect_document_id": false
