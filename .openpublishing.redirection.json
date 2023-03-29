@@ -1,6 +1,16 @@
 {
    "redirections": [
       {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-mma.md",
+         "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions-template",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md",
+         "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/manage/hybrid/server/best-practices/arc-update-management.md",
          "redirect_url": "/azure/automation/update-management/overview",
          "redirect_document_id": false
