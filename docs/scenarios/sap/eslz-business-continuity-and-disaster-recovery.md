@@ -171,7 +171,7 @@ Azure provides a backup SaaS service, [Azure Backup](/azure/backup/backup-overvi
 
 - Ideally, avoid pulling your backups from Azure into your on-premises backup infrastructure, especially for large databases. Doing so affects how much bandwidth the ExpressRoute circuits use.
 
-- Load Test the  backup and recovery tools as part of the performance test plan.
+- Load-test the backup and recovery tools as part of the performance test plan.
 
 ## Disaster recovery
 
@@ -220,7 +220,7 @@ Another factor to consider when you choose your disaster recovery region is the 
 - Use native database replication, rather than Site Recovery, to synchronize data to the disaster recovery site.
 - Peer the primary and disaster recovery virtual networks. For example, for HANA System Replication, an SAP HANA DB virtual network needs to be peered to the disaster recovery site's SAP HANA DB virtual network.
 - If you use Azure NetApp Files storage for your SAP deployments, at a minimum, create two Azure NetApp Files accounts in the Premium tier, in two regions.
-- Consider grouping systems based on their Business criticality and proximity dependency based on application performance and deploy each group to a separate region in a paired region construct to minimise the business impact of a regional outage. For example, two critical ECC systems serving two different business units can be deployed in UK South and UK West to minimize the impact of a regional outage.
+- Consider grouping systems based on their business importance and proximity dependency based on application performance. Deploy each group to a separate region in a paired region construct to minimize the business impact of a regional outage. For example, two critical ECC systems serving two different business units can be deployed in UK South and UK West to minimize the impact of a regional outage.
 
 ## Next steps
 

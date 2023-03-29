@@ -35,12 +35,12 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - All production systems must use premium managed disk with minimum of 128GB (P10) for OS Disks to avoid any performance issues.
 
-- Exclude all the database filesystems and executables from anti-virus scan, if not it could lead to performance problems . Please check with the database vendors for a prescriptive details on the exclusion list. For example: Oracle recommends excluding /oracle/<sid>/sapdata* from anti-virus scans.
+- Exclude all the database filesystems and executables from anti-virus scan. Otherwise it could lead to performance problems. Check with the database vendors for a prescriptive details on the exclusion list. For example, Oracle recommends excluding /oracle/\<sid>/sapdata* from anti-virus scans.
 
 - Always ensure time-zone matches between Operating system and SAP system.
 
 - Do not group different application services in the same cluster.
-  - Do not combine DRBD and Central Services clusters on the same cluster,However you can use the same pacemaker cluster to manage  ~5 different central services([multi-sid cluster](https://learn.microsoft.com/en-us/azure/sap/workloads/high-availability-guide-rhel-multi-sid)).
+  - Do not combine DRBD and Central Services clusters on the same cluster. However, you can use the same pacemaker cluster to manage  approximately five different central services ([multi-sid cluster](./workloads/high-availability-guide-rhel-multi-sid.md)).
   - Whilst using IBM’s TWS cluster for Job Scheduling consider running TWS cluster on it’s own pair of VMs, It is not recommended to run on SAP central services/database cluster.
 
 - For DB2 database for running SAP on Azure, in scenarios where log_meth2 is implemented consider using Azure File share (NFS4.1), it improves the DR recovery speed.
