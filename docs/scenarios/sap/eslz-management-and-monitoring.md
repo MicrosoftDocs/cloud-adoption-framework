@@ -33,6 +33,30 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) monitoring to maintain disaster recovery service health for SAP application servers.
 
+- All production systems must use premium managed disk with minimum of 128GB (P10) for OS Disks to avoid any performance issues.
+
+- Exclude all the database filesystems and executables from anti-virus scan. Otherwise it could lead to performance problems. Check with the database vendors for a prescriptive details on the exclusion list. For example, Oracle recommends excluding /oracle/\<sid>/sapdata* from anti-virus scans.
+
+- Always ensure time-zone matches between Operating system and SAP system.
+
+- Do not group different application services in the same cluster.
+  - Do not combine DRBD and Central Services clusters on the same cluster. However, you can use the same pacemaker cluster to manage  approximately five different central services ([multi-sid cluster](/azure/sap/workloads/high-availability-guide-rhel-multi-sid)).
+  - Whilst using IBM’s TWS cluster for Job Scheduling consider running TWS cluster on it’s own pair of VMs, It is not recommended to run on SAP central services/database cluster.
+
+- For DB2 database for running SAP on Azure, in scenarios where log_meth2 is implemented consider using Azure File share (NFS4.1), it improves the DR recovery speed.
+
+- Consider  running Dev/Test systems in a snooze model to save and optimise Azure run costs.
+
+- Consider creating a non-functional requirement plan and map them with native azure resources that can address them. For example: Central Services cluster monitoring can be done by Azure Monitor for SAP. 
+
+- Review and adopt SAP parameters specially ABAP memory parameters whilst performing a OS/DB migration. For example: EM/Initial_size_MB is only valid for AIX environment and should not be set for Azure VMs.
+
+- Consider collecting full database statistics for non-HANA databases after migration. For example: Implement SAP Not 1020260 for oracle.
+
+- Consider using Oracle Automatic Storage Management (ASM) for all SAP on Azure Oracle deployments.
+
+- Consider  using DB2’s Automatic Storage(AS) for SAP on Azure DB2 deployments.
+
 - Optimize and manage SAP Basis operations by using [SAP Landscape Management (LaMa)](https://www.sap.com/products/landscape-management.html). Use the [SAP LaMa connector for Azure](/azure/virtual-machines/workloads/sap/lama-installation) to relocate, copy, clone, and refresh SAP systems.
 
 - Perform a [quality check for SAP HANA](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/QualityCheck) on the provisioned Azure infrastructure to verify that provisioned VMs comply with SAP HANA on Azure best practices.
@@ -40,3 +64,4 @@ Here are some key design considerations and recommendations for monitoring and m
 - For each Azure subscription, run an [Azure Availability Zone latency test](https://github.com/Azure/SAP-on-Azure-Scripts-and-Utilities/tree/main/AvZone-Latency-Test) before zonal deployment to choose low-latency zones for SAP on Azure deployment.
 
 - If you partner with our customers by managing their SAP estate, consider [Azure Lighthouse](/azure/lighthouse/overview). Azure Lighthouse allows managed service providers to use Azure native identity services to authenticate to the customers' environment. It puts the control in the hands of the customer, as they can revoke access at any time, and audit service provider actions. It works with existing APIs, such as the Cloud Solution Provider program. The benefits for the provider include managing tenants without switching contexts and viewing cross-tenant information. Using Azure Lighthouse is an easy choice to maintain trust between customers and providers and streamline the management of their SAP environments.
+
