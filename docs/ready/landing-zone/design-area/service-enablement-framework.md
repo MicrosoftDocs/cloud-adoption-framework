@@ -32,7 +32,7 @@ The following tables provide a framework to assess the enterprise security readi
 
 | Category | Criteria |
 |--|--|
-| Authentication and access control | - Are all control plane operations governed by Azure Active Directory (Azure AD)? Is there a nested control plane, such as with AKS? <br/> - What methods exist to provide access to the data plane? <br/> - Does the data plane integrate with Azure AD? <br/> - Does authentication between Azure services use managed identities or service principals? <br/> - Is Azure-to-Internet as a Service (IaaS), or service-to-virtual-network, authentication via Azure AD? <br/> - How are any applicable keys or shared access signatures managed? <br/> - How can access be revoked? |
+| Authentication and access control | - Are all control plane operations governed by Azure Active Directory (Azure AD)? Is there a nested control plane, such as with AKS? <br/> - What methods exist to provide access to the data plane? <br/> - Does the data plane integrate with Azure AD? <br/> - Does authentication between Azure services use managed identities or service principals? <br/> - How are any applicable keys or shared access signatures managed? <br/> - How can access be revoked? |
 | Segregation of duties | Does the service separate control plane and data plane operations within Azure AD? |
 | Multifactor authentication and conditional access | Is multifactor authentication enforced for user-to-service interactions? |
 
