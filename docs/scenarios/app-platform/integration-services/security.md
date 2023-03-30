@@ -22,6 +22,8 @@ Good security is the cornerstone of any Azure application. Azure Integration Ser
 - [Azure security baseline for Service Bus](https://learn.microsoft.com/security/benchmark/azure/baselines/service-bus-security-baseline)
 
 - [Azure security baseline for Functions](https://learn.microsoft.com/security/benchmark/azure/baselines/functions-security-baseline)
+
+- [Azure security baseline for Storage](https://learn.microsoft.com/benchmark/azure/baselines/storage-security-baseline)
 - 
 - [Azure security baseline for Key Vault](https://learn.microsoft.com/security/benchmark/azure/baselines/key-vault-security-baseline)
 
