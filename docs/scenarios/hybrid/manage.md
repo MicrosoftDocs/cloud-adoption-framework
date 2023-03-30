@@ -30,7 +30,7 @@ To get started, [inventory and tag your hybrid and multicloud resources](../../m
 
 <!-- docutune:casing "update management guide" -->
 
-After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. To deploy tools that can control patching across cloud providers, follow the steps in the [Hybrid and multicloud update management guide](../../manage/hybrid/server/best-practices/arc-update-management.md).
+After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. For more information, see [Update Management overview](/azure/automation/update-management/overview).
 
 ## Enhanced baseline
 
@@ -46,10 +46,10 @@ Enhance your operations baseline by bringing on a continuously broader range of 
 
 Along with tagging and bringing on assets, you can also deliver many operations management disciplines by using hybrid and multicloud tools.
 
-One example of a mature operations management discipline is the use of Microsoft Monitoring Agent to manage software installation, antivirus protection, or other configuration management functions. The following articles demonstrate configuration of Monitoring Agent in your hybrid and multicloud environment:
+Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a VM requires software installation or antivirus protection, or if you need to run a script in a VM, you can use a VM extension. These articles provide more information: 
 
-- [Manage VMs with Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
-- [Scale configuration of Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
+- [Virtual machine extension management with Azure Arc-enabled servers](/azure/azure-arc/servers/manage-vm-extensions)
+- [Enable Azure VM extensions by using ARM templates](/azure/azure-arc/servers/manage-vm-extensions-template)
 
 ## Next steps
 
