@@ -11,10 +11,47 @@ ms.subservice: caf-scenario-app-plat
 
 # Security considerations for the Azure Integration Services landing zone accelerator
 
-Good security is the cornerstone of any Azure application. Azure Integration Services face a particular challenge, as there are many
-resources that make up an application; each of these resources has their own security considerations.
+Good security is the cornerstone of any Azure application. Azure Integration Services face a particular challenge, as there are many resources that make up an application, and each of these resources has their own security considerations. To ensure that you understand the particular considerations of each service, refer to the following security baselines:
 
-Good security involves many different considerations including but not limited to:
+- [Azure security baseline for Logic Apps](https://learn.microsoft.com/security/benchmark/azure/baselines/logic-apps-security-baseline)
+
+- [Azure security baseline for API Management](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/api-management-security-baseline)
+
+- [Azure security baseline for Data Factory](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/data-factory-security-baseline)
+
+- [Azure security baseline for Service Bus](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/service-bus-security-baseline)
+
+- [Azure security baseline for Functions](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/functions-security-baseline)
+
+- [Azure security baseline for Storage](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/storage-security-baseline)
+- 
+- [Azure security baseline for Key Vault](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/key-vault-security-baseline)
+
+## Design considerations
+
+When designing your security model, there are two different design areas: **design-time security**, and **run-time security**.
+
+- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or a management API. Within Azure, we use Azure AD and role-based access control (RBAC) to achieve this.
+
+- **Run-Time security** involves access to endpoints and resources during the flow of an application - for example, authenticating and authorizing a user that calls a Logic App, or an API operation in API Management.
+
+Decide early on if you need:
+
+- **Private Cloud** - all of your resources reside in a VNet and only use private addressing, with no access to or from the public internet, potentially available to your on-premises resources via VPN or ExpressRoute.
+  
+- **Public Cloud** - all of your public-facing resources have access to public internet, although locked to down to restrict access from the public internet.
+
+- **Hybrid** - some resources are private, and some are public.
+
+The choice that you make will affect both the cost of your resources, along with how much security you can implement for your applications.
+
+General security considerations include:
+
+- Using Azure services to protect ingress and egress traffic.
+
+- Using Azure AD and OAuth 2.0 to manage authentication.
+
+- Enforcing governance policies with Azure Policy.
 
 - Locking down access to resources (access control).
 
@@ -24,44 +61,9 @@ Good security involves many different considerations including but not limited t
 
 - Auditing access to resources.
 
-As an example:
-
-- Encrypting and restricting access to sensitive data like passwords or certificates.
-
-- Encrypting and restricting stored data like health records or credit card information.
-
-- Restricting access to external endpoints. For example, using IP Filtering, or placing the resource in a VNet.
-
-- Using Managed Identities and an OAuth 2 authentication flow to access Azure resources.
-
-With Azure there is also a difference between **design-time security**, and **run-time security**:
-
-- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or a management API. Within Azure, we use Azure AD and role-based access control (RBAC) to achieve this.
-
-- **Run-Time security** involves access to endpoints and resources during the flow of an application - for example, authenticating and authorizing a user that calls a Logic App, or an API operation in API Management.
-
-## Design considerations
-
-- Decide early on if you need:
-
-  - **Private Cloud** - all of your resources reside in a VNet and only use private addressing, with no access to or from the public internet, potentially available to your on-premises resources via VPN or ExpressRoute.
-  
-  - **Public Cloud** - all of your public-facing resources have access to public internet, although locked to down to restrict access from the public internet.
-
-  - **Hybrid** - some resources are private, and some are public.
-
-The choice that you make will affect both the cost of your resources,along with how much security you can implement for your applications.
-
 ## Design recommendations
 
-- If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
-
-- Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
-
-- When storing data (in Azure Storage or Azure SQL Server, for example), always enable **Encryption at Rest**. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
-
-- Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
-- When using TLS protocols, always use TLS 1.2 or greater.
+### Network design recommendations
 
 - Look at the use of an **Application Gateway** (Azure Application Gateway or Azure Front Door) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
 
@@ -75,13 +77,33 @@ The choice that you make will affect both the cost of your resources,along with 
   - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and
     outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
 
-- Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues/flaws e.g., endpoints without IP Filtering.
+- Implement network isolation for your integration services resources by using VNet integration to place them in an isolated subnet combined with using [Azure private link](/azure/private-link/private-link-overview) and private endpoints. See the [Network topology and connectivity](./network-topology-and-connectivity.md) article in this series for a review of this design guidance.
 
-- Where available, use [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction) to scan your resources and identify potential weaknesses.
+- Protect your egress traffic with [Azure Firewall](/azure/firewall/overview)
+
+- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses.
+
+- If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
+
+### Encryption design recommendations
+
+- When storing data (in Azure Storage or Azure SQL Server, for example), always enable **Encryption at Rest**. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
+
+- Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
+
+- When using TLS protocols, always use TLS 1.2 or greater.
 
 - Keep secrets in [**Azure Key Vault**](/azure/key-vault/general/basic-concepts), and then link these to **App Settings** (Functions, Logic Apps), **Named Values** (API Management), or **Configuration Entries** (App Configuration).
 
 - Implement a key rotation policy to ensure that all keys in use in your environment are regularly rotated to prevent against attacks using jeopardized keys
+
+- For Logic App, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
+
+### Authentication and access design recommendations
+
+- Always follow the principal of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom AAD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+
+- Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
 - Use **OAuth 2.0** as the authentication mechanism between resource endpoints:
 
@@ -90,16 +112,18 @@ The choice that you make will affect both the cost of your resources,along with 
   - In API Management, use the jwt-validation policy element to require an OAuth flow for connections to endpoints.
   
   - In Azure Storage and Key Vault, setup access policies to restrict access to specific identities.
-  
-- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses.
 
-- Always follow the principal of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom AAD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+### Governance design recommendations
 
-- Use automated deployment to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
+- Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues/flaws e.g., endpoints without IP Filtering.
+
+- Where available, use [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction) to scan your resources and identify potential weaknesses.
 
 - Regularly review audit logs (ideally using an automated tool) to identify both security attacks, and any unauthorized access to your resources.
 
 - Look at the use of penetration testing, to identify any weaknesses in your security design.
+
+- Use automated deployment to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
 
 ## Next step
 
