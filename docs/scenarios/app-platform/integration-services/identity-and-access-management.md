@@ -28,13 +28,19 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
 ## Design recommendations
 
-- Consider what roles you'll need to manage and maintain your AIS applications.  Questions to ask in this regard:
+- Use managed identities for integration services resources - see the [Security](./security.md) article in this series for a detailed description of this recommendation.
 
-    - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
+- Use Azure AD for authentication to integration services resources.
+
+- Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, devops engineers and system administrators, for example.
+
+- Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications.  Questions to ask in this regard:
+
+  - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
 
   - Does anyone need to view original request data (including sensitive data)?
 
-  - Where can original request data be viewed from (for example, only from your corporate network?
+  - Where can original request data be viewed from (for example, only from your corporate network)?
 
   - Who can view run history for a workflow?
 
@@ -52,10 +58,8 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
   - Will the existing built-in Azure AD roles and groups cover the requirements that you have identified?
 
-  - Should you create custom roles to either limit access, or to provide more granularity over permissions? For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner”, which are too broad.
+- Create custom roles to either limit access, or to provide more granularity over permissions when built-in roles will not sufficiently lock down access. For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner”, which are too broad.
   
-- Work with the principle of least-privilege (PoLP) and build custom roles to limit the permission a given identity has to a resource if no built-in role is sufficient. For example, if an identity should have permission to get a Logic App callback URL, but not to view a Logic App, a custom role can be created for this.
-
 - Look at using Azure Policy to restrict access to certain resources or to enforce compliance with company policy. For example, you can create a policy that only allows deployment of API Management APIs that use encrypted protocols.
 
 - Review common activities involved in the administration and management of AIS on Azure and assign RBAC permissions appropriately.For more detail on the permissions available, see [resource provider operations](/azure/role-based-access-control/resource-provider-operations).
