@@ -46,7 +46,7 @@ Enhance your operations baseline by bringing on a continuously broader range of 
 
 Along with tagging and bringing on assets, you can also deliver many operations management disciplines by using hybrid and multicloud tools.
 
-Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a VM requires software installation or antivirus protection, or if you need to run a script in a VM, you can use a VM extension. These articles provide more information: 
+Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a VM requires software installation or antivirus protection, or if you need to run a script on a VM, you can use a VM extension. These articles provide more information: 
 
 - [Virtual machine extension management with Azure Arc-enabled servers](/azure/azure-arc/servers/manage-vm-extensions)
 - [Enable Azure VM extensions by using ARM templates](/azure/azure-arc/servers/manage-vm-extensions-template)

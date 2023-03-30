@@ -141,7 +141,7 @@ Centralizing logs drives reports that can be used as additional layers of securi
 
 With Azure Arc-enabled servers, you can manage your enterprise estate with centralized management and monitoring at-scale. More specifically, it provides alerts and recommendations to IT teams, with full operational visibility that includes managing the updates of your Windows and Linux VMs.
 
-Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs. For more information, see [Update Management overview](/azure/automation/update-management/overview).
+Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs, including your Azure Arc-enabled servers. For more information, see [Update Management overview](/azure/automation/update-management/overview).
 
 You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Azure Arc resources.
 
