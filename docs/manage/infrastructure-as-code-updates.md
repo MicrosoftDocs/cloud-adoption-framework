@@ -63,33 +63,31 @@ Due to the programmatic nature of the deployments, infrastructure as code reduce
 
 Infrastructure as code deployments are backed by a definition file, so you can use source control to manage the versions of your definitions. Depending on the method of IaC that you use, you can reference the deployments in Azure for Bicep or your state file for Terraform to review the history of previous deployments.
 
-When you use source control practices, a new branch of your IaC is created to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
+When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
 
 Use these testing methods with Bicep for general testing purposes.
 
- For information about performing tests, such as integration tests, unit tests, canary release tests, and fault injection tests, see [Testing your application and Azure environment](/azure/architecture/framework/devops/release-engineering-testing). With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
+For information about performing tests, such as integration tests, unit tests, canary release tests, and fault injection tests, see [Testing your application and Azure environment](/azure/architecture/framework/devops/release-engineering-testing). With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
 
 ### Testing environments
 
-IaC deployments are repeatable, so you can use the same definition to deploy a second (or more) environment based on the deployment. This function is valuable for testing changes.
+IaC deployments are repeatable, so you can use the same definition to deploy a second (or more) environment based on the deployment. This method is valuable for testing changes.
 
 For example, if you want to replace your Azure Firewall by using the Premium SKU, you can deploy a test environment and validate the changes without changing production.  
 
 ### Catch configuration drifts
 
-IaC provides a unique option to catch configuration drifts during updates. The deployment catches changes to the definition file and presents instances where the resource configuration is different from the definition.
+IaC provides a unique option to catch configuration drifts during updates. The deployment catches changes to the definition file and presents instances where the resource configuration differs from the definition.
 
 Landing zone updates with IaC can help you catch this configuration drift and allow you to update the code appropriately, address these misconfigurations via the update, or address them in another way.
 
-When you make a change to resources via the portal, CLI, or a non-IaC method, it's implemented. The next time you run a deployment through IaC, it flags the comparison to the code-defined state and the actual state in the portal by using what-if or plan functions. Use this method to identify if an environment is modified outside of the code file.
+When you make a change to resources via the portal, CLI, or a non-IaC method, the change is implemented. The next time you run a deployment through IaC, it flags the comparison between the code-defined state and the actual state in the portal by using what-if or plan functions. Use this method to identify if an environment is modified outside of the code file.
 
 After the misalignment is identified, you can run IaC to attempt to align the deployment with the definition. Use this method to identify issues and remediate scenarios depending on the nature of the issues, the nature of the run, and how the changes were made. For example, Terraform attempts to restore the baseline to resources it has deployed, and a `Complete` mode deployment in Bicep removes resources in a resource group that aren't part of the definition. These tools detect and repair configuration drift, but they might not address all issues.
 
-For information about how Terraform and Bicep handle out-of-band changes, see [Out-of-band changes](/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features#out-of-band-changes).
+For more information, see [Out-of-band changes](/azure/developer/terraform/comparing-terraform-and-bicep?tabs=comparing-bicep-terraform-integration-features#out-of-band-changes) and [Detecting and managing drift with Terraform](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform).
 
-For information about how Terraform detects and manages configuration drift, see [Detecting and managing drift with Terraform](https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform).
-
-Changes that are defined in the portal are cumbersome to implement back in to IaC. You need to update the code to match the current state, which often involves reviewing each resource change and updating its parameters to match the "as is" configuration.
+Changes that are defined in the portal are cumbersome to implement back in to IaC. You must update the code to match the current state, which often involves reviewing each resource change and updating its parameters to match the "as is" configuration.
 
 If you use IaC to manage your landing zone or other resources, you should only make changes outside of IaC as part of an emergency. Take precautions with accounts that have access to make changes directly, such as Privileged Identity Management.
 
