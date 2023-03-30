@@ -81,7 +81,7 @@ General security considerations include:
 
 - Protect your egress traffic with [Azure Firewall](/azure/firewall/overview)
 
-- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses.
+- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses (this is applicable for logic apps not integrated into VNets).
 
 - If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
 
@@ -115,7 +115,7 @@ General security considerations include:
 
 ### Governance design recommendations
 
-- Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues/flaws e.g., endpoints without IP Filtering.
+- Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues or flaws. For example, endpoints without IP Filtering.
 
 - Where available, use [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction) to scan your resources and identify potential weaknesses.
 
