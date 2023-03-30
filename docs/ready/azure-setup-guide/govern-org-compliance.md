@@ -14,7 +14,7 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you have options. You can use tools and services like Azure Policy, Azure Blueprints, and Microsoft Defender for Cloud. These tools enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
+As you establish corporate policy and plan your governance strategies, you have options. You can use tools and services like Azure Policy, Azure Blueprints, and Microsoft Defender for Cloud. These tools enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
 
 ## [Azure Blueprints](#tab/AzureBlueprints)
 
