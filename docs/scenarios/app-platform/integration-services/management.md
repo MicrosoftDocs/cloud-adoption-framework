@@ -44,11 +44,11 @@ We can utilize this information to visualize the overall health of our resources
 
   - What external systems will you connect to?
 
-  - What level of alerting will you need?
+  - What types of alerting will you need?
 
 - Think about what queries you need to run. For example, will you need to know if a given request takes longer than expected? Or if you get a single error vs a cluster of errors?
 
-- What level of Tracking will you need? E.g., if a message arrives from a 3<sup>rd</sup> Party, do you need to track that message through all associated resources?
+- What level of tracking will you need? For example, if a message arrives from a 3<sup>rd</sup> Party, do you need to track that message through all associated resources?
 
 - What management tasks will you need to perform? Will you need to resubmit messages or files?
 
@@ -58,15 +58,21 @@ We can utilize this information to visualize the overall health of our resources
 
 - Log Analytics is used to query logs and setup alerts, enabling you to see the health of your resources and understand issues that may occur. Log data can include custom properties (see *Tracked Properties* below).
 
+- Refer to the App Service landing zone accelerator [management article](../app-services/management.md) for additional considerations and recommendations specific to App Services
+
 ## Design Recommendations
 
 - Setup **Application Insights** so that it uses a Log Analytics Workspace as it’s data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). This allows logging and performance data to be kept in a consolidated location.
+
+- Setup alerts for all resources to notify appropriate teams of events related to individual resources or to the workload.
 
 - Link the resources in your solution to Application Insights, if supported. For example, a Logic App can be linked to Application Insights, so that runtime data and metrics are available for querying. See [here for an example](/azure/logic-apps/create-single-tenant-workflows-azure-portal#enable-open-application-insights).
 
 - Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking id, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this with the Request, HTTP, or HTTP+WebHook triggers.
 
 - Use the **[Tracked Properties](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to log additional data (input or output) from an action into the log files. These properties are then available for use when querying logs using KQL with Log Analytics or another solution.
+
+- Consider using resource tags. Resource tags can help you manage and organize resources on Azure. You can use them to assign metadata to resources. You can use this metadata for various purposes, like categorizing resources by application or business unit, tracking the cost of resources, and identifying resources for compliance.
 
 ## Sample Kusto Queries
 
