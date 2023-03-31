@@ -7,7 +7,7 @@ ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, devx-track-bicep, devx-track-terraform
 ---
 
 # Update Azure landing zone custom policies

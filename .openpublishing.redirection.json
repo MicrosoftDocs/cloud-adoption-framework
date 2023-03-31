@@ -774,6 +774,16 @@
          "source_path": "docs/infrastructure/mainframe-migration/myths-and-facts.md",
          "redirect_url": "/azure/cloud-adoption-framework/infrastructure/mainframe-migration/",
          "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/considerations/storage-options.md",
+         "redirect_url": "/azure/architecture/guide/technology-choices/storage-options",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/considerations/data-options.md",
+         "redirect_url": "/azure/architecture/guide/technology-choices/data-options",
+         "redirect_document_id": false 
       }
    ]
 }
