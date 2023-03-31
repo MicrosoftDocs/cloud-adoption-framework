@@ -1875,14 +1875,6 @@ items:
           href: decision-guides/identity/index.md
         - name: Azure role-based access control
           href: ready/considerations/roles.md
-      - name: Storage
-        items:
-        - name: Review storage options
-          href: ready/considerations/storage-options.md
-      - name: Databases
-        items:
-        - name: Review data options
-          href: ready/considerations/data-options.md
       - name: Networking
         items:
         - name: Hub and spoke network topology
