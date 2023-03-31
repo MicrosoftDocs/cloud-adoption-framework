@@ -13,19 +13,19 @@ ms.subservice: caf-scenario-app-plat
 
 Good security is the cornerstone of any Azure application. Azure Integration Services face a particular challenge, as there are many resources that make up an application, and each of these resources has their own security considerations. To ensure that you understand the particular considerations of each service, refer to the following security baselines:
 
-- [Azure security baseline for Logic Apps](https://learn.microsoft.com/security/benchmark/azure/baselines/logic-apps-security-baseline)
+- [Azure security baseline for Logic Apps](/security/benchmark/azure/baselines/logic-apps-security-baseline)
 
-- [Azure security baseline for API Management](https://learn.microsoft.com/security/benchmark/azure/baselines/api-management-security-baseline)
+- [Azure security baseline for API Management](/security/benchmark/azure/baselines/api-management-security-baseline)
 
-- [Azure security baseline for Data Factory](https://learn.microsoft.com/security/benchmark/azure/baselines/data-factory-security-baseline)
+- [Azure security baseline for Data Factory](/security/benchmark/azure/baselines/data-factory-security-baseline)
 
-- [Azure security baseline for Service Bus](https://learn.microsoft.com/security/benchmark/azure/baselines/service-bus-security-baseline)
+- [Azure security baseline for Service Bus](/security/benchmark/azure/baselines/service-bus-security-baseline)
 
-- [Azure security baseline for Functions](https://learn.microsoft.com/security/benchmark/azure/baselines/functions-security-baseline)
+- [Azure security baseline for Functions](/security/benchmark/azure/baselines/functions-security-baseline)
 
-- [Azure security baseline for Storage](https://learn.microsoft.com/benchmark/azure/baselines/storage-security-baseline)
-- 
-- [Azure security baseline for Key Vault](https://learn.microsoft.com/security/benchmark/azure/baselines/key-vault-security-baseline)
+- [Azure security baseline for Storage](/security/benchmark/azure/baselines/storage-security-baseline)
+
+- [Azure security baseline for Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline)
 
 ## Design considerations
 
@@ -121,9 +121,9 @@ General security considerations include:
 
 - Regularly review audit logs (ideally using an automated tool) to identify both security attacks, and any unauthorized access to your resources.
 
-- Look at the use of penetration testing, to identify any weaknesses in your security design.
+- Consider the use of penetration testing to identify any weaknesses in your security design.
 
-- Use automated deployment to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
+- Use automated deployment processes to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
 
 ## Next step
 
