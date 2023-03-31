@@ -62,7 +62,7 @@ We can utilize this information to visualize the overall health of our resources
 
 - Setup **Application Insights** so that it uses a Log Analytics Workspace as it’s data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). This allows logging and performance data to be kept in a consolidated location.
 
-- Link your resource to Application Insights, if supported. For example, a Logic App can be linked to Application Insights, so that runtime data and metrics are available for querying. See [here for an example](/azure/logic-apps/create-single-tenant-workflows-azure-portal#enable-open-application-insights).
+- Link the resources in your solution to Application Insights, if supported. For example, a Logic App can be linked to Application Insights, so that runtime data and metrics are available for querying. See [here for an example](/azure/logic-apps/create-single-tenant-workflows-azure-portal#enable-open-application-insights).
 
 - Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking id, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this with the Request, HTTP, or HTTP+WebHook triggers.
 
