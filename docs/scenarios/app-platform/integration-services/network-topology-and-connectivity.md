@@ -41,7 +41,7 @@ Use a [traditional Azure network topology](/azure/cloud-adoption-framework/ready
 
 The following architecture diagram shows the reference architecture for an AIS enterprise deployment:
 
-[![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/ais-enterprise-deployment_HighRes.png)](./media/ais-enterprise-deployment_HighRes.png#lightbox)
+[![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_HighRes.png#lightbox)
 
 ## Plan for IP addressing
 
