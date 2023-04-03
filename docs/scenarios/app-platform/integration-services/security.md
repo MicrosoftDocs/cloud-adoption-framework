@@ -107,7 +107,7 @@ General security considerations include:
 
 - Use **OAuth 2.0** as the authentication mechanism between resource endpoints:
 
-  - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually AAD, but could be any Identity provider).
+  - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually Azure Active Directory, but could be any Identity provider).
   
   - In API Management, use the jwt-validation policy element to require an OAuth flow for connections to endpoints.
   
