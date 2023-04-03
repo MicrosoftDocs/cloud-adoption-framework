@@ -68,7 +68,7 @@ We can utilize this information to visualize the overall health of our resources
 
 - Link the resources in your solution to Application Insights, if supported. For example, a Logic App can be linked to Application Insights, so that runtime data and metrics are available for querying. See [here for an example](/azure/logic-apps/create-single-tenant-workflows-azure-portal#enable-open-application-insights).
 
-- Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking id, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this result with the Request, HTTP, or HTTP+WebHook triggers.
+- Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking ID, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this result with the Request, HTTP, or HTTP+WebHook triggers.
 
 - Use the **[Tracked Properties](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to log other data (input or output) from an action into the log files. These properties are then available for use when querying logs using KQL with Log Analytics or another solution.
 
@@ -91,14 +91,17 @@ The main query tables are:
 
 **Workflows with Errors:**
 
+```Kusto
 > traces
 >
 > \| where customDimensions\["Category"\] == "Host.Triggers.Workflows"
 >
 > \| where customDimensions.LogLevel == "Error"
+```
 
 **Number of workflow executions in last 24 hours across all workflows:**
 
+```Kusto
 > traces
 >
 > \| where customDimensions\["Category"\] == "Host.Triggers.Workflows"
@@ -108,9 +111,11 @@ The main query tables are:
 > \| where timestamp \> ago(1d)
 >
 > \| count
+```
 
 **Trigger success rate, graphed over time**
 
+```Kusto
 > traces  
 > \| where customDimensions\["Category"\] == "Host.Triggers.Workflows"  
 > \| where customDimensions\["EventName"\] == "WorkflowTriggerEnd"  
@@ -123,6 +128,7 @@ The main query tables are:
 >
 > by bin(timestamp, 1m)  
 > \| render timechart
+```
 
 ## Next step
 

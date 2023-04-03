@@ -15,7 +15,7 @@ Governance involves making sure any policies you have in place are being followe
 This article deals with the [Control Plane](/azure/azure-resource-manager/management/control-plane-and-data-plane) only - meaning how we create, manage, and configure the resources in Azure (generally via the **Azure Resource Manager**). This article does not deal with governance of the Data Plane - meaning how the endpoints for your
 resources are governed or secured or monitored.
 
-## Design Considerations
+## Design considerations
 
 - Have you defined the roles and responsibilities for all individuals that interact with your resources?
 
@@ -29,7 +29,7 @@ resources are governed or secured or monitored.
 
 - What tooling do you have for managing all your resources? Do you need to perform manual remediation, or can it be automated? How are you alerted if any part of your estate is not in compliance?
 
-## Design Recommendations
+## Design recommendations
 
 - Use **[Azure Policy](/azure/governance/policy/overview)** to enforce organizational standards, and help you assess compliance. Azure Policy can provide you with an aggregated view, enabling to evaluate the overall state of your environment, with the ability to drill down to per-resource per-policy granularity. For example, you
   can have policies that look for unauthorized or expensive resources; or which look for resources that are provisioned without adequate  security.
@@ -45,7 +45,7 @@ resources are governed or secured or monitored.
 - Enable **[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)** to help identify resources that are in breach of security of endpoint
   policies.
 
-## Recommended Content
+## Recommended content
 
 - [What is Azure Policy?](/azure/governance/policy/overview)
 

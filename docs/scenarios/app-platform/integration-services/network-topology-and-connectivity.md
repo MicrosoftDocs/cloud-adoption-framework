@@ -111,15 +111,15 @@ Many enterprise integration scenarios require connecting your on-premises system
 
 - Azure ExpressRoute and Azure VPN Gateway have [different capabilities, costs and performance](/azure/vpn-gateway/vpn-gateway-about-vpngateways#planningtable).
 
-- The [On-Premises Data Gateway](/data-integration/gateway/service-gateway-onprem) (OPDG) or [Azure Hybrid Connections](/azure/app-service/app-service-hybrid-connections) can be used where ExpressRoute or VPN Gateway is not practical – OPDG/Hybrid Connections are both examples relay services, utilizing Service Bus to make connections outbound from your on-premises network to receive requests from Azure, without having to open ports in your external firewall/network.
+- The [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) (OPDG) or [Azure Hybrid Connections](/azure/app-service/app-service-hybrid-connections) can be used where ExpressRoute or VPN Gateway is not practical – OPDG/Hybrid Connections are both examples relay services, utilizing Service Bus to make connections outbound from your on-premises network to receive requests from Azure, without having to open ports in your external firewall/network.
 
-    - OPDG is limited in the number of requests per minute it supports (the throttling limit), has specific data size limits, and only works with limited Azure resources (Logic Apps, PowerBI, Power Apps, Power Automate, Analysis Services).
+    - OPDG is limited in the number of requests per minute it supports (the throttling limit), has specific data size limits, and only works with limited Azure resources (Logic Apps, Power BI, Power Apps, Power Automate, Analysis Services).
     
     - Hybrid connections work with App Services (Function Apps or Web Apps) and has its own throttling and sizing limits.
     
     - [Azure Relay Hybrid Connections](/azure/azure-relay/relay-hybrid-connections-protocol) is a key part of Service Bus which allows for relays outside of App Services or OPDG.
 
-### Design Recommendations
+### Design recommendations
 
 - Use Azure **ExpressRoute** as the primary connectivity channel for connecting an on-premises network to Azure.
 
@@ -183,7 +183,7 @@ When using Private Link, traffic between your virtual network and the service tr
 
 - Decide if there should be multiple gateways deployed and how these are load balanced - for example, by using [Application Gateway in front of the API Management gateway](/azure/architecture/reference-architectures/apis/protect-apis).
 
-- Decide whether connectivity to on-premises or multi-cloud environments is required.
+- Decide whether connectivity to on-premises or multicloud environments is required.
 
 ### Design recommendations
 
@@ -339,7 +339,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled using IP Filtering.
 
-- Public network access should be disabled using Service Endpoints: Create a Virtual Network Service Endpoint in your VNet and bind this to your Event Hub namespace using a virtual network rule
+- Public network access should be disabled using Service Endpoints: Create a Virtual Network Service Endpoint in your VNet and bind this to your Event Hubs namespace using a virtual network rule
 
 - Enable the Trusted Services option to allow select Azure resources to access your namespace.
 

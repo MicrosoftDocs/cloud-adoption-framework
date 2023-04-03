@@ -101,7 +101,7 @@ General security considerations include:
 
 ### Authentication and access design recommendations
 
-- Always follow the principal of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom AAD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom Azure AD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
 
 - Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
