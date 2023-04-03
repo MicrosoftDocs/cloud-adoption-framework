@@ -213,7 +213,7 @@ An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a
 
 ### Design considerations
 
-- An ASE is deployed onto a single subnet within your VNet. An ASE can be deployed using a Virtual IP Address (VIP) allowing external connections to use a publicly-visible IP address, which can be added to a public DNS record.
+- An ASE is deployed onto a single subnet within your VNet. An ASE can be deployed using a Virtual IP Address (VIP) allowing external connections to use a publicly visible IP address, which can be added to a public DNS record.
 
 - Applications within an ASE will have access to all other resources within the Virtual Network, depending on network access rules. Access to resources in other VNets can be achieved using Virtual Network peering.
 
