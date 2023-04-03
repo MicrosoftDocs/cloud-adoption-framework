@@ -30,11 +30,10 @@ Learn more about the [platform automation and DevOps](../../../ready/landing-zon
 - API Management configurations are represented as Resource Manager templates or equivalent Bicep or Terraform templates, and an infrastructure-as-code mindset should be embraced.
 - The API Management admin team will publish configuration changes to the production API Management environment from a Git repository (publisher repo) owned by the API Management admin team.
 - Each individual API team may fork the publisher repo to have their own developer repo to work from.
-- Each team can use the API Management [DevOps Resource Kit](https://github.com/Azure/azure-api-management-devops-resource-kit) or the [API Management extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-apimanagement) for Visual Studio Code to extract the relevant artifacts from their development API Management instance. These artifacts are based on Azure Resource Manager and should be committed to the API team’s Git repo.
+- Each team can use the API Management [APIOps](https://github.com/azure/apiops) or the [API Management extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-apimanagement) for Visual Studio Code to extract the relevant artifacts from their development API Management instance. These artifacts are based on Azure Resource Manager and should be committed to the API team’s Git repo.
     > [!NOTE]
     > Do not use the API Management [Git integration](/azure/api-management/api-management-configuration-repository-git).
 - Service templates and shared templates should be in separate repos.
-- Use the option to [extract all APIs with separate API folders](https://github.com/Azure/azure-api-management-devops-resource-kit/blob/main/src/README.md#extractor).
 - Changes to artifacts should be done to the extracted artifacts and then committed to Git. These should be deployed to a dev environment.
 - To promote to the centralized environments (staging, production, and so on), API teams can submit a pull request (PR) to merge their changes to the publisher repo.
 - The API Management admin team validates the PR.
