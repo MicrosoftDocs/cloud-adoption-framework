@@ -26,17 +26,17 @@ The inventory and visibility discipline builds on these timeless phrases. Before
 
 Unless inventory and visibility processes are consistently applied, operational management teams can suffer from a higher volume of business interruptions, longer time to recovery, and greater amounts of effort required to troubleshoot and triage issues. As changes adversely affect higher priority applications and larger numbers of assets, these metrics grow even faster.
 
-These challenges stem from a few questions that can be answered only through consistent data and readings:
+These challenges stem from a few questions that can be answered only through consistent data and telemetry readings:
 
-- How does the current-state performance deviate from standard operational performance data and readings?
+- How does the current-state performance deviate from standard operational performance telemetry?
 - What assets are causing the business interruptions at the workload level?
 - Which assets must be remediated to return to acceptable performance of this workload or business process?
 - When did the deviation start? What was the trigger?
 - Which changes have been made to the underlying assets? By whom?
 - Were the changes intentional? Malicious?
-- How did changes affect data and readings?
+- How did changes affect performance telemetry?
 
-It's difficult, if not impossible, to answer these questions without a rich, centralized source for logs and readings data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. Well-defined processes capture how a consistent configuration enforces data collection to support the components of inventory and visibility that are listed in the next section.
+It's difficult, if not impossible, to answer these questions without a rich, centralized source for logs and telemetry data. To enable cloud management by ensuring the consistent configuration that's required to centralize the data, the baseline service must first start by defining the processes. Well-defined processes capture how a consistent configuration enforces data collection to support the components of inventory and visibility that are listed in the next section.
 
 ## Components of inventory and visibility
 
@@ -46,7 +46,7 @@ Creating visibility on any cloud platform requires a few key components:
 - Inventory
 - Central logging
 - Change tracking
-- Data and readings
+- Performance telemetry
 
 ### Responsibility and visibility
 
@@ -66,9 +66,9 @@ Enforcing the consistent use of central logging is the first step toward establi
 
 Change is the one constant in a technology environment. Awareness and understanding of changes across multiple workloads is essential to reliable operations. Your cloud management solution should include a means of understanding the 'when, how, and why' of technical change. Without those data points, remediation efforts are hindered.
 
-### Data and readings
+### Performance telemetry
 
-Data drives business commitments about cloud management. To properly maintain commitments, the cloud operations team must understand the data and readings about the stability, performance, and operations of the workload. The cloud operations team must also understand the assets that support the workload.
+Data drives business commitments about cloud management. To properly maintain commitments, the cloud operations team must understand the telemetry about the stability, performance, and operations of the workload. The cloud operations team must also understand the assets that support the workload.
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
 
