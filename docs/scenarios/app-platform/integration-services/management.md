@@ -32,7 +32,7 @@ We can utilize this information to visualize the overall health of our resources
 - **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** is an Azure Monitoring offering, which provides the ability visualize
   and alert on performance data emitted by monitored resources.
 
-- **[Kusto Query Language](/azure/data-explorer/kusto/query/)** (KQL) is a powerful query language optimized for querying and formatting data. For example, it is the primary query language for Log Analytics.
+- **[Kusto Query Language](/azure/data-explorer/kusto/query/)** (KQL) is a powerful query language optimized for querying and formatting data. For example, it's the primary query language for Log Analytics.
 
 ## Design Considerations
 
@@ -48,29 +48,29 @@ We can utilize this information to visualize the overall health of our resources
 
 - Think about what queries you need to run. For example, will you need to know if a given request takes longer than expected? Or if you get a single error vs a cluster of errors?
 
-- What level of tracking will you need? For example, if a message arrives from a 3<sup>rd</sup> Party, do you need to track that message through all associated resources?
+- What level of tracking will you need? For example, if a message arrives from a third party, do you need to track that message through all associated resources?
 
 - What management tasks will you need to perform? Will you need to resubmit messages or files?
 
 - Logic App run history is stored in Azure Storage by default, but you can choose to also export metrics and log files to other sources  (for example, Log Analytics, or an external Storage Account). Consider how you use your logging information, and if you use a centralized log store.
 
-- Application Insights is used to provide application performance monitoring. To do this, it collects metrics from the resources that make up your solution.
+- Application Insights is used to provide application performance monitoring. It does so by collecting metrics from the resources that make up your solution.
 
-- Log Analytics is used to query logs and setup alerts, enabling you to see the health of your resources and understand issues that may occur. Log data can include custom properties (see *Tracked Properties* below).
+- Log Analytics is used to query logs and set up alerts, enabling you to see the health of your resources and understand issues that may occur. Log data can include custom properties (see *Tracked Properties* below).
 
-- Refer to the App Service landing zone accelerator [management article](../app-services/management.md) for additional considerations and recommendations specific to App Services
+- Refer to the App Service landing zone accelerator [management article](../app-services/management.md) for more considerations and recommendations specific to App Services
 
 ## Design Recommendations
 
-- Setup **Application Insights** so that it uses a Log Analytics Workspace as it’s data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). This allows logging and performance data to be kept in a consolidated location.
+- Set up **Application Insights** so that it uses a Log Analytics Workspace as it’s data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). Doing so allows logging and performance data to be kept in a consolidated location.
 
-- Setup alerts for all resources to notify appropriate teams of events related to individual resources or to the workload.
+- Set up alerts for all resources to notify appropriate teams of events related to individual resources or to the workload.
 
 - Link the resources in your solution to Application Insights, if supported. For example, a Logic App can be linked to Application Insights, so that runtime data and metrics are available for querying. See [here for an example](/azure/logic-apps/create-single-tenant-workflows-azure-portal#enable-open-application-insights).
 
-- Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking id, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this with the Request, HTTP, or HTTP+WebHook triggers.
+- Use the **[clientTrackingId](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to supply a custom tracking id, allowing you to correlate events across logic app runs. You can use the x-ms-client-tracking-id header to achieve this result with the Request, HTTP, or HTTP+WebHook triggers.
 
-- Use the **[Tracked Properties](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to log additional data (input or output) from an action into the log files. These properties are then available for use when querying logs using KQL with Log Analytics or another solution.
+- Use the **[Tracked Properties](/azure/logic-apps/monitor-logic-apps-log-analytics)** feature of Logic Apps to log other data (input or output) from an action into the log files. These properties are then available for use when querying logs using KQL with Log Analytics or another solution.
 
 - Consider using resource tags. Resource tags can help you manage and organize resources on Azure. You can use them to assign metadata to resources. You can use this metadata for various purposes, like categorizing resources by application or business unit, tracking the cost of resources, and identifying resources for compliance.
 
@@ -87,7 +87,7 @@ The main query tables are:
   This table logs all requests made by the Logic App runtime to another resource OR to specific actions within your workflow.
 
 - *traces*  
-  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. In addition, if you have logged any tracked properties from your actions, you will find these in the *customDimensions* section; you can use the extend clause in a query to add these as columns in your query response.
+  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. If you've logged any tracked properties from your actions, you'll find this data in the *customDimensions* section.  You can then use the extend clause in a query to add the data as columns in your query response.
 
 **Workflows with Errors:**
 
