@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency.5
 
 # Network topology and connectivity
 
-The network topology and connectivity design area is critical for establishing a foundation for your cloud network design.
+The network topology and connectivity design area are critical for establishing a foundation for your cloud network design.
 
 ## Design area review
 
@@ -32,8 +32,8 @@ In Azure landing zones, there are two main management groups hosting workloads: 
 
 ### What is the purpose of Connectivity, Corp, and Online Management Groups?
 
-- **Connectivity management group**: This management group contains a dedicated subscriptions for connectivity, commonly a single subscription for most organizations. This These subscriptions  will host the Azure networking resources required for the platform, like Azure Virtual WAN, Virtual Network Gateways, Azure Firewall, and Azure DNS private zones. It is also where hybrid connectivity is established between the cloud and on-premises environments, using services like ExpressRoute etc.
-- **Corp management group**: The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription and therefore form part of the same routing domain. Workloads such as internal systems are not exposed directly to the internet, but may be exposed via reverse proxies etc., such as Application Gateways.
+- **Connectivity management group**: This management group contains dedicated subscriptions for connectivity, commonly a single subscription for most organizations. These subscriptions host the Azure networking resources required for the platform, like Azure Virtual WAN, Virtual Network Gateways, Azure Firewall, and Azure DNS private zones. It's also where hybrid connectivity is established between the cloud and on-premises environments, using services like ExpressRoute etc.
+- **Corp management group**: The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription and therefore form part of the same routing domain. Workloads such as internal systems aren't exposed directly to the internet, but may be exposed via reverse proxies etc., such as Application Gateways.
 - **Online management group**: The dedicated management group for online landing zones. This group is intended to contain subscriptions used for public-facing resources, such as websites, e-commerce applications, and customer-facing services. For example, organizations can use the Online management group to isolate public-facing resources from the rest of the Azure environment, reducing the attack surface and ensuring that public-facing resources are secure and available to customers.
 
 ### Why did we create Corp and Online management groups to separate workloads?
@@ -42,6 +42,6 @@ The difference in networking considerations between the Corp and Online manageme
 
 The Corp management group is used to manage and secure internal resources and services, such as line-of-business applications, databases, and user management. The networking considerations for the Corp management group are focused on providing secure and efficient connectivity between internal resources, while enforcing strict security policies to protect against unauthorized access.
 
-The Online management group in Azure Landing Zones (ALZ) can be considered as as an isolated environments that are it is used to manage public-facing resources and services that are accessible from the Internet. By using the Online management group to manage public-facing resources, the ALZ architecture provides a way to isolate those resources from internal resources, thereby reducing the risk of unauthorized access and minimizing the attack surface.
+The Online management group in Azure Landing Zones (ALZ) can be considered as an isolated environment used to manage public-facing resources and services that are accessible from the Internet. By using the Online management group to manage public-facing resources, the ALZ architecture provides a way to isolate those resources from internal resources, thereby reducing the risk of unauthorized access and minimizing the attack surface.
 
 In the ALZ architecture, the virtual network in the Online management group is peered with the virtual network in the Corp management group, allowing public-facing resources to communicate with internal resources in a secure and controlled manner. This peering connection ensures that the network traffic between public-facing resources and internal resources is secure and restricted, while still allowing the resources to communicate as needed.
