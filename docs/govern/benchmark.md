@@ -12,14 +12,14 @@ ms.custom: internal
 
 # Assess your transformation journey
 
-The Cloud Adoption Framework provides a [governance benchmark tool](https://cafbaseline.com) to help you identify gaps in your organization across six key domains as defined in the framework.
+The Cloud Adoption Framework provides a [governance benchmark tool](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) to help you identify gaps in your organization across six key domains as defined in the framework.
 
 ## Governance benchmark tool
 
 Receive a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started. Assess your current state and future state to establish a vision for applying the framework.
 
 > [!div class="nextstepaction"]
-> [Use the governance benchmark tool](https://cafbaseline.com)
+> [Use the governance benchmark tool](/assessments/b1891add-7646-4d60-a875-32a4ab26327e)
 
 ## Next steps
 

@@ -7,7 +7,8 @@ ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, devx-track-arm-template
+products: azure-monitor
 ---
 
 # Manage extensions and use an Azure Resource Manager template to deploy the Log Analytics agent to Azure Arc Linux and Windows servers
@@ -78,7 +79,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
     > [!NOTE]
     > We highly recommend that you scope the service principal to a specific [Azure subscription and resource group](/cli/azure/ad/sp).
 
-5. You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/log_analytics-template.parameters.json), and providing a name and location for your workspace.
+5. You will also need to have a Log Analytics workspace deployed. You can automate the deployment by editing the ARM template [parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/log_analytics-template.parameters.json), and providing a name and location for your workspace.
 
     ![A screenshot of ARM template parameters for name and location.](./media/arc-vm-extension-mma/parameters-file-1.png)
 
@@ -92,7 +93,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
 ## Azure Arc-enabled servers Log Analytics agent extension deployment
 
-1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template.parameters.json)
+1. Edit the [extensions parameters file](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/mma-template.parameters.json)
 
     ![A screenshot of ARM extensions parameters file.](./media/arc-vm-extension-mma/parameters-file-2.png)
 
@@ -112,7 +113,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
       ![A screenshot of a workspace configuration.](./media/arc-vm-extension-mma/mma-workspace-config.png)
 
-2. Choose the ARM template that matches your operating system, either [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-windows.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
+2. Choose the ARM template that matches your operating system, either [Windows](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/mma-template-windows.json) or [Linux](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/archive/extensions/arm/mma-template-linux.json), deploy the template by running the following command:
 
     ```console
     az deployment group create --resource-group <Name of the Azure resource group> \

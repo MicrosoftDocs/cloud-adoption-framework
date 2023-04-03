@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Policy visibility in the deployment process
 
-Azure policy is a key tool to ensure solutions adhere to organizational standards and to assess compliance. Policy enforcement and auditing should be automated in the DevOps process to ensure compliance. This governance should be performed as early in the development process as possible to prevent rework or wasted efforts, such as implementing non-compliant resources. Automating policy compliance at the beginning of the development process ensures applications start compliant and remain compliant.
+Azure Policy is a key tool to ensure solutions adhere to organizational standards and to assess compliance. Policy enforcement and auditing should be automated in the DevOps process to ensure compliance. This governance should be performed as early in the development process as possible to prevent rework or wasted efforts, such as implementing noncompliant resources. Automating policy compliance at the beginning of the development process ensures applications start compliant and remain compliant.
 
 ## Guidance and enforcement
 
@@ -24,7 +24,7 @@ Use the following resources as a guide to implement compliance checks within you
 
 - [Implement Azure Policy as Code with GitHub](/azure/governance/policy/tutorials/policy-as-code-github)
 - [Implement Azure Policy with Azure DevOps release pipelines](/azure/governance/policy/tutorials/policy-devops-pipelines)
-- Use the [GitHub Action for Azure Policy Compliance Scan](https://github.com/marketplace/actions/azure-policy-compliance-scan) to continue or fail the workflow based on the compliance state of resources.
+- Use the [`GitHub Action for Azure Policy Compliance Scan`](https://github.com/marketplace/actions/azure-policy-compliance-scan) to continue or fail the workflow based on the compliance state of resources.
 
 ## Auditing
 
@@ -32,4 +32,4 @@ Use the following resources as a guide to audit policy compliance and to automat
 
 - [Get compliance data of Azure resources in the portal](/azure/governance/policy/how-to/get-compliance-data#portal)
 - [Get compliance data of Azure resources at the command line](/azure/governance/policy/how-to/get-compliance-data#command-line)
-- Use the [GitHub Action for Azure Policy Compliance Scan](https://github.com/marketplace/actions/azure-policy-compliance-scan) to generate a report on the compliance state of scanned resources.
+- Use the [`GitHub Action for Azure Policy Compliance Scan`](https://github.com/marketplace/actions/azure-policy-compliance-scan) to generate a report on the compliance state of scanned resources.

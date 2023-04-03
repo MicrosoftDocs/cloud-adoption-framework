@@ -7,7 +7,7 @@ ms.date: 09/15/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+ms.custom: internal
 ---
 # How to get help building a landing zone
 

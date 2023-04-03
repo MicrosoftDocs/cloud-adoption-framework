@@ -128,7 +128,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm\<vm&nbsp;role>\<environment><###>* <br><br> <li> `vmsqltest001` <li> `vmhadoopprod001` |
+| **Virtual machine** | Resource group | *vm-\<vm&nbsp;role>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` |
 | **Web app** | Global | *app-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
 | **Function app** | Global | *func-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
@@ -136,7 +136,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure SQL database** | Azure SQL Database | *sqldb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
+| **Azure SQL database** | Azure SQL Server | *sqldb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
 | **Azure Cosmos DB database** | Global | *cosmos-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `cosmos-navigator-prod` <li> `cosmos-emissions-dev` |
 | **Azure Cache for Redis instance** | Global | *redis-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
   
@@ -160,6 +160,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
+| **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
 | **Azure Data Factory** | Global | *adf-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
 | **Azure Stream Analytics** | Resource group | *asa-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `asa-navigator-prod` <li> `asa-emissions-dev` |
 | **Data Lake Storage account** | Global | *dls\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
