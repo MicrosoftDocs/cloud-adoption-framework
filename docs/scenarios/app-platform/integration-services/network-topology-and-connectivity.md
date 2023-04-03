@@ -283,7 +283,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Place your private endpoint in its own dedicated subnet reserved for Service Bus.
 
-- Add a DNS record using the private DNS zone for the private endpoint. Enable trusted services within Azure to access your namespace directly (thereby bypassing the firewall) to prevent issues with you integration design.
+- Add a DNS record using the private DNS zone for the private endpoint. Enable trusted services within Azure to access your namespace directly (thereby bypassing the firewall) to prevent issues with your integration design.
 
 ## Network design for Function Apps
 
