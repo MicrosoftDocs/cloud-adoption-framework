@@ -7,7 +7,7 @@ ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for Enterprise Agreement enrollment
@@ -72,7 +72,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Assign a budget for each department and account, and establish an alert associated with the budget.
 
-- Create a new department for IT if business domains have independent IT capabilities.
+- Create new departments for IT only if the corresponding business domains have independent IT capabilities.
 
 - If you use multiple Azure AD tenants, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 

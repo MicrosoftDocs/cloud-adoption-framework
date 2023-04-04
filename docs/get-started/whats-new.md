@@ -7,7 +7,7 @@ ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
@@ -16,20 +16,52 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## February 2023
+
+### CAF relocate
+
+The new relocate guidance details the process of moving a workload hosted in Azure to a different Azure region. Relocate walks you through five steps (initiate, evaluate, select, migrate, cutover) and shows you how to pick the right relocation strategy for each workload you want to move. For more information, see [Relocate overview](../relocate/index.md).
+
+## January 2023
+
+### Why update your Azure landing zones
+
+An Azure landing zone is a set of predefined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important that your deployed landing zone environment is kept up to date so you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases. Explore the benefits of [keeping your Azure landing zone updated, secure, and optimized](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
+
+### Migrate Azure landing zone policies to Azure built-in policies
+
+Azure landing zone custom policies and policy initiatives might be deprecated or superseded by Azure built-in policies over time. If so, they should be removed or migrated. Explore how to [migrate Azure landing zone custom policies and policy initiatives to Azure built-in policies](../govern/resource-consistency/migrate-azure-landing-zone-policies.md).
+
+### Update Azure landing zone custom policies and policy initiatives
+
+Azure landing zone custom policies and policy initiatives update to newer versions that can then incorporate into an Azure environment. Learn how to [update your Azure landing zone custom policies and policy initiatives when newer versions release](../govern/guides/standard/update-custom-policies.md).
+
+### Azure App Service Cloud Adoption Framework design guidelines for the App Service landing zone accelerator
+
+We're excited to announce updates to our Azure App Service Cloud Adoption Framework design guidelines for the App Service landing zone accelerator. These changes improve the security, governance, platform automation, operations management, identity and access management, and network topology and connectivity considerations for your App Service deployments.
+
+| Article | Description |
+|---|---|
+| [Security considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/security.md) | Security considerations are updated to include new guidance on implementing authentication and authorization, network security, application security, and data security for securing your App Service resources. |
+| [Governance considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/governance.md) | Governance considerations are updated to include new guidance on implementing deployment strategy, data management, monitoring, logging, cost management, resource management, and access control for enforcing compliance and governance standards. |
+| [Platform automation and DevOps for the App Service landing zone accelerator](../scenarios/app-platform/app-services/platform-automation-and-devops.md) | Platform automation and DevOps for the landing zone accelerator is updated to include new guidance on implementing an infrastructure-as-code deployment strategy and Azure DevOps for automating the deployment and management of your App Service resources.
+| [Operations management considerations for the App Service landing zone accelerator](../scenarios/app-platform/app-services/management.md) | Operations management considerations are updated to include new guidance on implementing scaling, monitoring, alerting, diagnostics, security, and compliance in your App Service resources. |
+| [Identity and access management](../scenarios/app-platform/app-services/identity-and-access-management.md) | Identity and access management considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to multitenant App Service and App Service Environment. |
+| [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md) | Network topology and connectivity considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to multitenant App Service and App Service Environment. |
+
+We encourage you to review these updates and incorporate them into your App Service deployments. As always, we welcome your feedback and suggestions for future improvements.
+
 ## December 2022
 
 ### Defense cloud adoption scenario
 
 The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
 
-We invite you to explore Defense cloud adoption scenario and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
-
-> [!div class="nextstepaction"]
-> [Defense cloud adoption scenario](../scenarios/defense/index.md)
+We invite you to [explore the Defense cloud adoption scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
 
 ### HPC landing zone accelerator
 
-High-performance computing (HPC) on Azure is the complete set of Azure resources—compute, networking, and storage—integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries, such as manufacturing, energy, and finance.
+High-performance computing (HPC) on Azure is the complete set of Azure resources (compute, networking, and storage) integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries such as manufacturing, energy, and finance.
 
 The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a well-architected framework for best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
 
@@ -37,13 +69,13 @@ Use the following links to get started with HPC on Azure:
 
 - [Introduction to the Azure HPC scenario](../scenarios/azure-hpc/index.md)
 - [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
-- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
+- [Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
 
 ## October 2022
 
 ### Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled SQL Managed Instance is a data service that you can create on the infrastructure of your choice. Azure Arc-enabled SQL Managed Instance is nearly 100 percent compatible with the latest SQL Server database engine. Customers who use SQL Server can migrate their applications to Azure Arc data services, while maintaining data sovereignty, with minimal changes to applications and databases. SQL Managed Instance includes built-in management capabilities that drastically reduce management overhead.
+Azure Arc-enabled SQL Managed Instance is a data service that you can create on the infrastructure of your choice. Azure Arc-enabled SQL Managed Instance is nearly 100 percent compatible with the latest version of the SQL Server Database Engine. Customers who use SQL Server can migrate their applications to Azure Arc data services, while maintaining data sovereignty, with minimal changes to applications and databases. SQL Managed Instance includes built-in management capabilities that drastically reduce management overhead.
 
 Use the articles in the following table to learn more about Azure Arc-enabled SQL Managed Instance.
 
@@ -54,7 +86,7 @@ Use the articles in the following table to learn more about Azure Arc-enabled SQ
 | [Storage disciplines for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines.md) | Learn design considerations and recommendations for storage disciplines with Azure Arc-enabled SQL Managed Instance. |
 | [Resource organization for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization.md) | Learn how to organize resources when working with Azure Arc-enabled SQL Managed Instance. |
 | [Governance and security for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines.md) | Adopt best practices for governance, security, and compliance on Azure Arc-enabled SQL Managed Instance. |
-| [Management and monitoring for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md) | Learn about design considerations and recommendations for the management and monitoring of  Azure Arc-enabled SQL Managed Instance. |
+| [Management and monitoring for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md) | Learn about design considerations and recommendations for the management and monitoring of Azure Arc-enabled SQL Managed Instance. |
 | [Deploy a sandbox for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox.md) | Learn how to deploy Azure Arc-enabled data services to an Azure landing zone in a sandbox subscription to accelerate your adoption of hybrid or multicloud architectures. |
 | [Business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md) | Learn how to implement business continuity and disaster recovery for Azure Arc-enabled SQL Managed Instance. |
 | [Upgradeability disciplines for Azure Arc-enabled SQL Managed Instance](../scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md) | Learn how to implement upgradeability disciplines for Azure Arc-enabled SQL Managed Instance. |
@@ -113,13 +145,13 @@ Each article provides top-level guidance, followed by recommended tools, materia
 | Article | Description |
 |--|--|
 |[Introduction](../secure/security-best-practices-introduction.md) |An introduction to infrastructure security and development security that covers the full lifecycle of strategy, architecture, implementation, operations, and governance.|
-| [Infrastructure security best practices overview](../secure/infrastructure-security-overview.md) |An outline of the interrelationship of development security's dependency on infrastructure security, with a continuous improvement approach that progresses towards a "north star" end-state across security strategy, architecture, implementation, and operations. |
+| [Infrastructure security best practices overview](../secure/infrastructure-security-overview.md) |An outline of the interrelationship of development security's dependency on infrastructure security, with a continuous improvement approach that progresses toward a "north star" end-state across security strategy, architecture, implementation, and operations. |
 | [Infrastructure security strategy](../secure/infrastructure-security-strategy.md) | Define a security strategy that reduces business risk from attacks. Take incremental steps to build confidentiality, integrity, and availability assurances into all information systems and data. |
 | [Infrastructure security architecture](../secure/infrastructure-security-architecture.md) | Best practices related to the ideal end state and key components of infrastructure security, including Azure landing zones, Zero Trust principles, and more Azure Security Benchmark security recommendations. |
-| [Infrastructure security implementation](../secure/infrastructure-security-implementation.md) and [security operations and governance](../secure/infrastructure-security-operations-governance.md) | Learn about implementation, operations, and governance security, including IaC approaches, native security controls, ALZ accelerators, operational role responsibility assignments, security governance best practices, cloud workload protection, and cloud security posture management.|
+| [Infrastructure security implementation](../secure/infrastructure-security-implementation.md) and [security operations and governance](../secure/infrastructure-security-operations-governance.md) | Learn about implementation, operations, and governance security, including IaC approaches, native security controls, Azure landing zone accelerators, operational role responsibility assignments, security governance best practices, cloud workload protection, and cloud security posture management.|
 | [Development security strategy](../secure/development-security-strategy-overview.md) | Best practices related to development security strategy including innovation security, Shift Left strategies, and the technical strategies to protect applications, code, and the underlying infrastructure, platform, or device. |
-| [Development innovation security](../secure/development-innovation-security.md) | Develop an innovation security strategy that enables your organization to balance the protection of innovation data and processes with incremental and continuous improvements in the development lifecycle. Define an innovation minimum viable product (MVP) across development, security, and operations—integrating Shift Left security thinking within your DevOps lifecycle from the beginning. |
-| [Securing DevOps strategy and process](../secure/devops-strategy-process-security.md) | Learn how to move towards a DevSecOps strategy end-state, balancing smaller, iterative improvements with innovation and the development lifecycle. Push rapid releases with elements of classic security and operations. Ensure your minimum viable product (MVP) balances the need for rapid releases—natively embedding guardrails across security, governance, and compliance—while balancing production, performance, and reliability. |
+| [Development innovation security](../secure/development-innovation-security.md) | Develop an innovation security strategy that enables your organization to balance the protection of innovation data and processes with incremental and continuous improvements in the development lifecycle. Define an innovation minimum viable product (MVP) across development, security, and operations by integrating Shift Left security thinking within your DevOps lifecycle from the beginning. |
+| [Securing DevOps strategy and process](../secure/devops-strategy-process-security.md) | Learn how to move toward a DevSecOps strategy end-state, balancing smaller, iterative improvements with innovation and the development lifecycle. Push rapid releases with elements of classic security and operations. Ensure your minimum viable product (MVP) balances the need for rapid releases, natively embedding guardrails across security, governance, and compliance while balancing production, performance, and reliability. |
 | [Development security architecture](../secure/development-security-architecture.md) | Best practices related to the ideal end state and key components of development security, including IaC deployment consistency, and integrated process for security development.
 | [Development security implementation and operations](../secure/development-security-implementation-operations.md) | Learn about the implementation and operations aspects of development security, including comprehensive repository toolsets, continuous, incremental governance improvements, and DevSecOps controls. |
 
@@ -142,21 +174,21 @@ Use the following table of article links to get started with this scenario.
 | Article | Description |
 |--|--|
 | [Identity and access management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md) |Best practices for right access controls design to secure hybrid resources as they're centrally managed from Azure using Azure Arc. |
-| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) |Design considerations when working with Azure Arc-enabled Kubernetes and how to securely connect them to your Enterprise Scale Landing Zone. |
+| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) |Design considerations when working with Azure Arc-enabled Kubernetes and how to securely connect them to your enterprise-scale landing zone. |
 | [Resource organization](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) |Best practices for resource consistency and tagging strategy that includes your hybrid and multicloud resources. |
-| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) |The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../ready/landing-zone/index.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
-| [Management disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) |Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled Kubernetes on Azure enterprise estate, with centralized management and monitoring at the platform level. |
-| [Automation disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) |Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
-| [Extensions management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) |Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. As part of your Enterprise Scale Landing Zone implementation you should keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. |
-| [CI/CD and GitOps disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) |As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files that are stored in Git repositories. As part of your Enterprise Scale Landing Zone implementation you should plan on how and when GitOps practices using Azure Arc-enabled Kubernetes applies in your organization and who are the people who will be using it.|
-| [Services observability](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) |Observability is an application characteristic that refers to how well a system’s internal state or status can be understood from its external outputs. As part of your Enterprise Scale Landing Zone implementation you should plan when to implement the Azure Arc-enabled Kubernetes cluster extensions for observability use-cases; Open Service Mesh and Self-hosted API Management gateway. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) |The [enterprise-scale landing zone architecture](../ready/landing-zone/index.md) in the Cloud Adoption Framework includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access control (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Management disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md) |Similar to governance techniques, Azure management services can also be extended out to other environments, such as on-premises and other cloud platforms via Azure Arc. Enterprise-scale provides guidance on how operationally maintain Azure Arc-enabled Kubernetes on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Automation disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md) |Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your enterprise-scale landing zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+| [Extensions management](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md) |Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. As part of your enterprise-scale landing zone implementation you should keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. |
+| [CI/CD and GitOps disciplines](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md) |As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files that are stored in Git repositories. As part of your enterprise-scale landing zone implementation you should plan on how and when GitOps practices using Azure Arc-enabled Kubernetes applies in your organization and who are the people who will be using it.|
+| [Services observability](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md) |Observability is an application characteristic that refers to how well a system's internal state or status can be understood from its external outputs. As part of your enterprise-scale landing zone implementation you should plan when to implement the Azure Arc-enabled Kubernetes cluster extensions for observability use-cases; Open Service Mesh and self-hosted API Management gateway. |
 | [Cost governance](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md) |Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
 | [Start with Azure Arc-enabled Kubernetes landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md) |Get started with a fully automated Azure Arc-enabled Kubernetes sandbox deployment. |
 | [Introduction to Azure Arc-enabled Kubernetes landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) |Learn how to accelerate adoption of hybrid or multicloud architectures. |
 
 ### App Service landing zone accelerator
 
-The new App Service landing zone accelerator provides recommendations and considerations that help accelerate your App Service adoption. You can use its architectural approach as a set of design guidelines in greenfield scenarios and as an assessment in brownfield scenarios. This scenario covers both multi-tenanted App Service and App Service Environment deployments. Its reference implementation covers an architecture that uses an internal App Service Environment v3 for line of business applications.
+The new App Service landing zone accelerator provides recommendations and considerations that help accelerate your App Service adoption. You can use its architectural approach as a set of design guidelines in greenfield scenarios and as an assessment in brownfield scenarios. This scenario covers both multitenanted App Service and App Service Environment deployments. Its reference implementation covers an architecture that uses an internal App Service Environment v3 for line of business applications.
 
 Use the following links to get started with this landing zone accelerator:
 
@@ -184,7 +216,7 @@ Use the following links to get started with this landing zone accelerator:
 
 ### Cloud-scale analytics
 
-This Cloud Adoption Framework release provides a considerable update to the Data Management and Analytics scenario. Based on feedback and lessons from many of our customers, we've renamed this scenario "cloud-scale analytics" and updated all the articles within it.  The following table provides links to the highlights.
+This Cloud Adoption Framework release provides a considerable update to the data management and analytics scenario. Based on feedback and lessons from many of our customers, we've renamed this scenario *cloud-scale analytics* and updated all the articles within it. The following table provides links to the highlights.
 
 | Article | Description |
 |--|--|
@@ -207,7 +239,7 @@ This update provides guidance to help you prepare for low-code development adopt
 - [Power Apps overview](/powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Power Automate workflows](/power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Automate tasks with robotic process automation](/power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Intelligent low-code apps](/ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=main)
+- [Intelligent low-code applications](/ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&branch=main)
 
 ### Independent software vendor (ISV) considerations for Azure landing zones
 
@@ -250,18 +282,18 @@ Use the following links to get started with this scenario.
 | Article | Description |
 |--|--|
 | [Identity and access management](../scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md) | Best practices for right access controls design to secure hybrid resources as they're centrally managed from Azure using Azure Arc. |
-| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md) | Design considerations when working with Azure Arc-enabled servers and how to securely connect them to your Enterprise Scale Landing Zone. |
+| [Network topology and connectivity](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md) | Design considerations when working with Azure Arc-enabled servers and how to securely connect them to your enterprise-scale landing zone. |
 | [Resource organization](../scenarios/hybrid/arc-enabled-servers/eslz-resource-organization.md) | Best practices for resource consistency and tagging strategy that includes your hybrid and multicloud resources. |
-| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md) | The [Cloud Adoption Framework's Enterprise Scale Landing Zone architecture](../ready/landing-zone/index.md) includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access controls (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
-| [Management disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure Management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise Scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
-| [Automation disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your Enterprise Scale Landing Zone implementation you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
+| [Governance and security disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md) | The [enterprise-scale landing zone architecture](../ready/landing-zone/index.md) in the Cloud Adoption Framework includes patterns for standardizing the deployment of [Azure Policy](/azure/governance/policy/overview) and [role-based access control (RBAC)](../ready/azure-setup-guide/manage-access.md) through structured use of management groups to segment resources into logical groupings. These patterns can be extended using technologies such as Azure Arc. |
+| [Management disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md) | Similar to governance techniques, Azure management services can also be extended out to other environments, such as on-premises and other cloud platforms through Azure Arc. Enterprise-scale provides guidance on how operationally maintain Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the platform level. |
+| [Automation disciplines](../scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md) | Azure Arc enables organizations to manage their digital state hosted outside of Azure with the same level of experience and automation as a native Azure resource. As part of your enterprise-scale landing zone implementation, you should plan for agent onboarding, lifecycle management, and expansion of the Azure control plane capabilities via Azure Arc with as much automation as possible. |
 | [Cost governance](../scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md) | Keep track of ungoverned and unmonitored resources that prevent you from to increase accountability with budgets, cost allocation, and chargebacks. |
 | [Start with Azure Arc-enabled servers landing zone accelerator sandbox](../scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md) | Get started with a fully automated Azure Arc-enabled servers sandbox deployment. |
 | [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid](../scenarios/hybrid/enterprise-scale-landing-zone.md) | Learn how to accelerate adoption of hybrid or multicloud architectures. |
 
 ### Launch of Cloud Adoption Strategy Evaluator in the Microsoft Cloud Adoption Framework
 
-We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment), a new assessment built around the principles of cloud economics—which evaluates your cloud adoption strategy, and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
+We've launched the [Cloud Adoption Strategy Evaluator](/assessments/?id=8fefc6d5-97ac-42b3-8e97-d82701e55bab&mode=pre-assessment), a new assessment built around the principles of cloud economics that evaluates your cloud adoption strategy and provides recommendations to help build a robust business case that supports your organization's unique cloud journey.
 
 ## December 2021
 

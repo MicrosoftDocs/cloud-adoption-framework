@@ -7,7 +7,7 @@ ms.date: 06/27/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Identity for Azure platform resources
@@ -16,7 +16,7 @@ Azure identity services, including Azure Active Directory (Azure AD), manage acc
 
 ## Design consideration for platform access
 
-You need to decide which resources are manged centrally and which are federated.
+You need to decide which resources are managed centrally and which are federated.
 
 Shared resources or any aspect of the environment that implements or enforces a security boundary, such as the network, must be managed centrally. This requirement is part of many regulatory frameworks. It's a standard practice for any organization that grants or denies access to confidential or critical business resources.
 

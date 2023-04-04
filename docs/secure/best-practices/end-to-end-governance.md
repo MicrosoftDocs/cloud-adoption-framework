@@ -63,7 +63,6 @@ Now that you understand the need to secure ARM templates and DevOps workflows, y
 
 To learn more about governance design and permissions, see:
 
-- [Governance design for multiple teams](../../govern/resource-consistency/governance-multiple-teams.md)
 - [Recommended method for granting and restricting permissions](/azure/devops/organizations/security/restrict-access#recommended-method-for-granting-and-restricting-permissions)
 - [Default permissions and access for Azure DevOps](/azure/devops/organizations/security/permissions-access)
 - [Managing people's access to your organization with roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles)

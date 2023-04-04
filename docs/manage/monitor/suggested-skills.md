@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: internal, engagement-fy23
+products: azure-monitor
 ---
 
 # Skills readiness for cloud monitoring
@@ -21,7 +22,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Resource Manager](/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, Azure role-based access control (Azure RBAC), using Azure Resource Manager (ARM) templates, and managing resources using Azure CLI and Azure PowerShell.
 
-- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
+- Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure VM insights and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
 
 - Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). Extend your skills with the Azure CLI and Azure PowerShell further by taking these Microsoft Learn courses:
   - [Control Azure services with the CLI](/training/modules/control-azure-services-with-cli/) and [Create Azure resources by using Azure CLI](/training/modules/create-azure-resources-by-using-azure-cli/).
@@ -41,7 +42,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - For a larger scope of instrumentation, you can take the Microsoft Learn Path [Develop an instrumentation strategy](/training/paths/az-400-develop-instrumentation-strategy/), which teaches you about logging, telemetry, and monitoring to give you full visibility into what's happening in your environment.
 
-- In the [Instrument a cloud-native ASP.NET Core microservice](/training/modules/microservices-logging-aspnet-core/) Microsoft Learn module, you'll learn how to instrument your cloud-native ASP.NET Core microservice apps to diagnose problems and monitor performance. This module includes how to enable Azure Monitor for Containers in a Kubernetes cluster.
+- In the [Instrument a cloud-native ASP.NET Core microservice](/training/modules/microservices-logging-aspnet-core/) Microsoft Learn module, you'll learn how to instrument your cloud-native ASP.NET Core microservice apps to diagnose problems and monitor performance. This module includes how to enable Azure Container insights in a Kubernetes cluster.
 
 - Learn how to [Analyze your Azure infrastructure by using Azure Monitor logs](/training/modules/analyze-infrastructure-with-azure-monitor-logs). This Microsoft Learn module walks you through using Azure Monitor logs to extract valuable information about your infrastructure from log data.
 

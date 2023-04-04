@@ -7,7 +7,7 @@ ms.date: 08/26/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency5
 ---
 
 # Portfolio hierarchy

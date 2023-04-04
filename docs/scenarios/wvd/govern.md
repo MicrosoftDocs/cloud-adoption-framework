@@ -39,6 +39,6 @@ For Azure Virtual Desktop, the baseline needs to expand to include controls for 
 
 The following guides provide best practices for implementing security controls for Azure Virtual Desktop environments:
 
-- [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/windows-virtual-desktop-security-baseline).
+- [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/azure-virtual-desktop-security-baseline).
 
 - [Azure Virtual Desktop security guide: best practices](/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices).
