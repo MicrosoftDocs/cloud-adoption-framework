@@ -179,7 +179,7 @@ Nearly all organizations must comply with various government or industry regulat
 
 - [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-guide)
 - [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
-- [Apply Zero Trust principles to an Azure Virtual Desktop deployment](https://learn.microsoft.com/security/zero-trust/azure-infrastructure-avd)
+- [Apply Zero Trust principles to an Azure Virtual Desktop deployment](/security/zero-trust/azure-infrastructure-avd)
 
 ## Next steps
 
