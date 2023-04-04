@@ -155,7 +155,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
-| Service Bus | `Microsoft.ServiceBus/namespaces` | `sb` |
+| Service Bus namespace | `Microsoft.ServiceBus/namespaces` | `sbns` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt` |
 | Service Bus topic subscription | `Microsoft.ServiceBus/namespaces/topics/subscriptions` | `sbts` |
