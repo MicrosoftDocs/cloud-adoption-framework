@@ -53,7 +53,7 @@ With this policy, your organization can allow continued deployments on the cloud
 
 ## Track and notify
 
-Tracking workload consumption in the cloud is critical to establishing governance around sustainability and cloud efficiency. While it may not be possible to measure carbon emissions directly for specific workloads, tracking consumption in terms of cost can help organizations monitor and optimize their energy usage, which can help reduce their carbon footprint.
+Tracking workload consumption in the cloud is critical to establishing governance around sustainability and cloud efficiency. While it might not be possible to measure carbon emissions directly for specific workloads, tracking consumption in terms of cost can help organizations monitor and optimize their energy usage, which can help reduce their carbon footprint.
 
 By setting thresholds for consumption, organizations can establish a baseline for typical consumption and identify instances where consumption is higher than expected. Using the established baseline, you can indicate that a workload or component isn't optimized, leading to higher energy usage and potentially higher carbon emissions.
 

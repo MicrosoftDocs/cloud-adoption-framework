@@ -42,7 +42,7 @@ To dive deeper, see [Learn How Moving Data to Tape Can Lead to Significant Energ
 
 ## Reporting
 
-When reporting on sustainability and cloud management, it is essential to consider internal and external stakeholders. Internally, you can share reports with relevant teams and management to raise awareness and promote accountability. Externally, customers, investors, or other stakeholders might request reports to evaluate the organization's sustainability and environmental impact.
+When reporting on sustainability and cloud management, it's essential to consider internal and external stakeholders. Internally, you can share reports with relevant teams and management to raise awareness and promote accountability. Externally, customers, investors, or other stakeholders might request reports to evaluate the organization's sustainability and environmental impact.
 
 By tracking and reporting on key metrics, organizations can promote transparency, accountability, and continuous sustainability and environmental impact improvement.
 
@@ -56,7 +56,7 @@ One key benefit of the Emissions Impact Dashboard is its ability to help custome
 
 Demand shaping is a technique to optimize resource utilization by aligning demand with available resources. From a sustainability perspective, demand shaping can effectively reduce carbon emissions by ensuring that resources are used efficiently and effectively.
 
-In a cloud environment, demand shaping typically involves identifying periods of low demand and [scheduling resource-intensive workloads during those times](/azure/architecture/framework/sustainability/sustainability-application-platform#process-when-the-carbon-intensity-is-low). By doing so, organizations can take advantage of excess capacity and reduce the need to deploy additional resources, which can help reduce energy consumption and carbon emissions.
+In a cloud environment, demand shaping typically involves identifying periods of low demand and [scheduling resource-intensive workloads during those times](/azure/architecture/framework/sustainability/sustainability-application-platform#process-when-the-carbon-intensity-is-low). By doing so, organizations can take advantage of excess capacity and reduce the need to deploy more resources, which can help reduce energy consumption and carbon emissions.
 
 From a management perspective, demand shaping requires careful planning and coordination. It's essential to have a clear understanding of resource utilization patterns and workload requirements and the ability to automate resource allocation and scheduling.
 
