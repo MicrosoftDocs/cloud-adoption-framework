@@ -7,7 +7,7 @@ ms.date: 04/05/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Sustainability considerations in your cloud governance strategy
