@@ -35,19 +35,19 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - All production systems must use premium managed disk with minimum of 128GB (P10) for OS Disks to avoid any performance issues.
 
-- Exclude all the database filesystems and executables from anti-virus scan. Otherwise it could lead to performance problems. Check with the database vendors for a prescriptive details on the exclusion list. For example, Oracle recommends excluding /oracle/\<sid>/sapdata* from anti-virus scans.
+- Exclude all the database filesystems and executables from anti-virus scan. Otherwise it could lead to performance problems. Check with the database vendors for prescriptive details on the exclusion list. For example, Oracle recommends excluding /oracle/\<sid>/sapdata* from anti-virus scans.
 
 - Always ensure time-zone matches between Operating system and SAP system.
 
 - Do not group different application services in the same cluster.
   - Do not combine DRBD and Central Services clusters on the same cluster. However, you can use the same pacemaker cluster to manage  approximately five different central services ([multi-sid cluster](/azure/sap/workloads/high-availability-guide-rhel-multi-sid)).
-  - Whilst using IBM’s TWS cluster for Job Scheduling consider running TWS cluster on it’s own pair of VMs, It is not recommended to run on SAP central services/database cluster.
+  - Whilst using IBM’s TWS cluster for Job Scheduling consider running TWS cluster on its own pair of VMs, It is not recommended to run on SAP central services/database cluster.
 
 - For DB2 database for running SAP on Azure, in scenarios where log_meth2 is implemented consider using Azure File share (NFS4.1), it improves the DR recovery speed.
 
-- Consider  running Dev/Test systems in a snooze model to save and optimise Azure run costs.
+- Consider  running Dev/Test systems in a snooze model to save and optimize Azure run costs.
 
-- Consider creating a non-functional requirement plan and map them with native azure resources that can address them. For example: Central Services cluster monitoring can be done by Azure Monitor for SAP. 
+- Consider creating a non-functional requirement plan and map them with native Azure resources that can address them. For example: Central Services cluster monitoring can be done by Azure Monitor for SAP. 
 
 - Review and adopt SAP parameters specially ABAP memory parameters whilst performing a OS/DB migration. For example: EM/Initial_size_MB is only valid for AIX environment and should not be set for Azure VMs.
 
@@ -65,3 +65,6 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - If you partner with our customers by managing their SAP estate, consider [Azure Lighthouse](/azure/lighthouse/overview). Azure Lighthouse allows managed service providers to use Azure native identity services to authenticate to the customers' environment. It puts the control in the hands of the customer, as they can revoke access at any time, and audit service provider actions. It works with existing APIs, such as the Cloud Solution Provider program. The benefits for the provider include managing tenants without switching contexts and viewing cross-tenant information. Using Azure Lighthouse is an easy choice to maintain trust between customers and providers and streamline the management of their SAP environments.
 
+## SAP on Azure - Oracle Performance Efficiency
+
+Performance efficiency can be difficult to diagnose in any enterprise system. For SAP on Azure running Oracle, we have a collection of SQL scripts for helping to diagnose any performance issues. The first recommendation is to use AWR reports. AWR reports contain valuable information in diagnosing issues in the Oracle system. It is recommended to run the AWR report during several sessions and to pick peak times for running the report. This will ensure broad coverage for the analysis. The AWR report will show SQL statistics, database information, system and IO statistics, and other information that can be used to pinpoint any issues that can be encountered. For more tools on analysis and SQL statements that can help with this, please see the SAP blog post [here](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/announcement-sap-on-azure-oracle-performance-efficiency-scripts/ba-p/3725178)
