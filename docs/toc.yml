@@ -1506,6 +1506,8 @@ items:
           href: govern/policy-compliance/cloud-policy-review.md
         - name: Data classification
           href: govern/policy-compliance/data-classification.md
+        - name: Sustainability considerations
+          href: govern/policy-compliance/sustainability-considerations.md
     - name: Disciplines of cloud governance
       href: govern/governance-disciplines.md
     - name: Implement disciplines of cloud governance
