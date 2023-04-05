@@ -12,11 +12,9 @@ ms.custom: internal
 
 # Sustainability considerations in your cloud governance strategy
 
-## Corporate policies for cloud efficiency
-
 Exploring considerations and determining policies for sustainability and cloud efficiency can help both reduce cost as well as help aligning with regulatory compliance frameworks. Listed below are sample policies to help you understand how you can drive for sustainability while benefitting from cost optimizations, and considerations for governing the sustainability discussions in your organization.
 
-### Deploy to low-carbon regions
+## Deploy to low-carbon regions
 
 Many organizations are [setting targets](/azure/cloud-adoption-framework/strategy/business-outcomes/sustainability) to become carbon neutral or even carbon negative. Deploying resources in low-carbon regions can help you achieve these targets by reducing your organization's overall carbon emissions.
 
@@ -29,7 +27,7 @@ Learn more:
 - See the [regional differences](/azure/architecture/framework/sustainability/sustainability-application-platform#regional-differences) section in the Azure Well-Architected Framework sustainability workload guidance.
 - Review the [Microsoft data center sustainability fact sheet](https://infrastructuremap.microsoft.com/fact-sheets) to make better informed decisions on where to deploy your Azure solutions.
 
-### Schedule workloads
+## Schedule workloads
 
 Defining a policy for scheduling workloads during low-carbon periods can reduce the carbon footprint of your organization's cloud infrastructure. Here are some steps you can take to define a policy for scheduling workloads:
 
@@ -41,7 +39,7 @@ Defining a policy for scheduling workloads during low-carbon periods can reduce 
 
 By implementing this policy, you can reduce your organization's carbon footprint and contribute to a more sustainable technical ecosystem.
 
-### Restrict service tiers
+## Restrict service tiers
 
 Defining a policy restricting which tiers and SKUs can be deployed in your Azure subscriptions can help your organization reduce its carbon footprint and meet sustainability goals. To design an effective policy, you should:
 
@@ -53,7 +51,7 @@ Defining a policy restricting which tiers and SKUs can be deployed in your Azure
 
 With this policy, your organization can allow continued deployments on the cloud platforms you have available, while still establishing basic governance in line with your climate commitments.
 
-### Track and notify
+## Track and notify
 
 Tracking workload consumption in the cloud is critical to establishing governance around sustainability and cloud efficiency. While it may not be possible to measure carbon emissions directly for specific workloads, tracking consumption in terms of cost can help organizations monitor and optimize their energy usage, which can help reduce their carbon footprint.
 
