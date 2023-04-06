@@ -45,7 +45,7 @@ Defining a policy restricting which tiers and SKUs can be deployed in your Azure
 
 - **Identify carbon impact:** Identify the carbon impact of various SKUs and service tiers.
 - **Define the criteria:** Define criteria for the preferred SKU that has lower carbon intensity.
-- **Establish rules:** Establish rules for selecting the preferred SKU, such as setting it as the default or requiring an exception or justification for deploying higher carbon intensity SKUs.
+- **Establish rules:** Establish rules for selecting the preferred SKU or requiring a justification for deploying higher carbon intensity SKUs.
 
 **Consider the tradeoffs** of a lower service tier. For example, you can achieve a lower carbon footprint, but might also end up with a solution with reduced performance. Make conscious choices about when and where to restrict service tiers.
 
