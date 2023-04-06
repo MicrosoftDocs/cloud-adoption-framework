@@ -1,26 +1,32 @@
 ---
 title: Cloud monitoring guide
 description: Learn about Azure Monitor, System Center Operations Manager, and the recommended strategy for monitoring each of the cloud deployment models.
-author: MGoedtel
+author: Zimmergren
 ms.reviewer: tozimmergren
-ms.date: 12/13/2022
-ms.author: martinek
+ms.date: 04/06/2023
+ms.author: tozimmergren
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, engagement-fy23
+ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
-# Cloud monitoring guide: Introduction
+# The cloud monitoring guide
 
-The cloud fundamentally changes how enterprises procure and use technology resources. In the past, enterprises assumed ownership of and responsibility for all levels of technology, from infrastructure to software. Now, the cloud offers the potential for enterprises to provision and consume resources as needed.
+This article is part of a series. The following articles are meant to be read together, in this order:
 
-Although the cloud offers nearly unlimited flexibility in design choices, enterprises seek proven and consistent methodologies for adopting cloud technologies. Each enterprise has different goals and timelines for cloud adoption, making a one-size-fits-all approach to adoption nearly impossible.
+- Introduction (this article)
+- [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
+- [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
+- [Observability](./observability.md)
+- [Service Level Objectives](./service-level-objectives.md)
+- [Collect the right data](./data-collection.md)
+- [Response](./response.md)
 
-![Diagram of cloud adoption strategies](./media/monitoring-management-guidance-cloud-and-on-premises/introduction-cloud-adoption.png)
+## Introduction
 
-This digital transformation also enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model is likely part of the migration journey from on-premises to operating entirely in the cloud. IT must also understand how to effectively monitor the application or service migrating to Azure and continue to deliver efficient IT operations and DevOps.
+Digital transformation enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model can be part of the migration journey from on-premises to operating entirely in the cloud. IT departments must also understand how to effectively monitor the application or service migrating to Azure and continue to deliver efficient IT operations and maintain optimized DevOps processes.
 
 Stakeholders often want cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions exist to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
 
@@ -37,18 +43,6 @@ Review the [monitoring platforms overview](./platform-overview.md) page to learn
 ## Audience
 
 This guide is useful primarily for enterprise administrators, IT operations, IT security and compliance, application architects, workload development owners, and workload operations owners.
-
-## How this guide is structured
-
-This article is part of a series. The following articles are meant to be read together, in this order:
-
-- Introduction (this article)
-- [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
-- [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
-- [Observability](./observability.md)
-- [Service Level Objectives](./service-level-objectives.md)
-- [Collect the right data](./data-collection.md)
-- [Response](./response.md)
 
 ## Products and services
 
