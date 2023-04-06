@@ -46,11 +46,11 @@ When reporting on sustainability and cloud management, it's essential to conside
 
 By tracking and reporting on key metrics, organizations can promote transparency, accountability, and continuous sustainability and environmental impact improvement.
 
-### Carbon emissions reporting by resource group or tagged resources
+### Emissions Impact Dashboard for detailed carbon emissions reporting
 
-The [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard?activetab=pivot:mostpopulartab) in Azure is a powerful tool that enables customers to track and report on carbon emissions.
+In Azure, customers can use the [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track and report on carbon emissions. This tool provides valuable insights into emissions by subscription, region, and service, allowing customers to understand their environmental impact better.
 
-One key benefit of the Emissions Impact Dashboard is its ability to help customers create detailed reports on carbon emissions. By tagging resources with relevant metadata, such as business units or project names, customers can generate customized reports that provide a granular view of emissions across different areas of their organization. This level of detail can benefit large enterprises with complex cloud environments, where it might be challenging to track emissions without a centralized reporting tool.
+Customers can access information on emissions scopes, years, months, and other details, providing a comprehensive view of their emissions. This centralized reporting tool can be valuable for large enterprises with complex cloud environments in tracking emissions accurately and efficiently.
 
 ## Demand shaping
 

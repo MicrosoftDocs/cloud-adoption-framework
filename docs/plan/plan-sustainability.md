@@ -3,32 +3,28 @@ title: Plan for sustainability
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate sustainability into your cloud adoption plan.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/08/2023
+ms.date: 04/06/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal, UpdateFrequency2, engagement-fy23
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Plan for sustainability
 
-TBD.
+Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to corporate social responsibility, comply with regulations and industry standards, and improve your brand reputation.
 
 ## Identify current emissions
 
-To plan for a more sustainable path forward in your cloud adoption journey, consider existing emissions to measure them over time as you move workloads to the cloud or between cloud providers.
+Identify current emissions to plan a sustainable cloud adoption journey. Measure over time when moving workloads to/from cloud providers to reduce carbon footprint and achieve compliance with industry standards.
 
 ### Identify the most carbon-emitting workloads
 
 One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey.
 
-#### Capture initial Emissions Impact Dashboard baseline
-
-TODO.
-
 ## Roles and responsibilities
 
-TBD.
+To successfully integrate sustainability into your cloud journey, it's essential to nominate a lead responsible for your sustainability efforts, define clear RACI (Responsibility, Accountability, Consulted, and Informed) for sustainability targets, and build green teams with specific sustainability metrics. This approach helps businesses to have a sustainability focal point, ensures accountability for meeting targets, and encourages cross-functional collaboration.
 
 ### Nominate a sustainability lead
 
@@ -53,16 +49,15 @@ Initiate the idea of building "green teams" that can have different sustainabili
 
 #### Goals and metrics for teams owning sustainability
 
-At Microsoft, we have a dedicated [sustainability science team](https://www.microsoft.com/research/project/sustainability-science-team/) whose mission is to ensure that our sustainability work is grounded in the best available science. This drives our work in sustainability, from our climate commitments to partnering with our customers and partners on co-designing new solutions.
+At Microsoft, we have a dedicated [sustainability science team](https://www.microsoft.com/research/project/sustainability-science-team/) whose mission is to ensure that our sustainability work is grounded in the best available science. This drives our work in sustainability, from our climate commitments to partnering with our customers and partners on codesigning new solutions.
 
 Establishing goals and metrics for teams owning sustainability in your organization is essential. Metrics can include greenhouse gas emissions, carbon footprint data, water use, and energy consumption.
 
-The ultimate responsibility for measuring and owning these goals rests with the sustainability team, who will align with the company's sustainability strategy set by the board.
+The ultimate responsibility for measuring and owning these goals rests with the sustainability team, who aligns with the company's sustainability strategy set by the board.
 
 ## Skilling
 
-Scale up the green skills knowledge for customers and employees to support the related discussions.  
-Expertise and awareness should be shared throughout the organization, not only targeting the dictated sustainability team.
+To drive sustainability awareness, it's essential to upskill employees on green skills and encourage them to participate in related discussions. The sustainability teams can focus on skilling ambitions and should engage the entire organization in relevant initiatives.
 
 ### Build a sustainability community
 
@@ -73,7 +68,7 @@ The sustainability community members might be separate from the central organiza
 
 ### Learning resources
 
-- Sustainability, or cloud efficiency, is a fundamental topic to understand to optimize your cloud infrastructure, applications, and workloads. It's also an important part of your planning process to understand how you early in your cloud journey can contribute to become more sustainable.
+- Sustainability, or cloud efficiency, is a fundamental topic to understand optimizing your cloud infrastructure, applications, and workloads. Knowing how early in your cloud journey you can contribute to becoming more sustainable is also an essential part of your planning process.
 
 - Learn how to design Azure solutions and workloads to be more sustainable. See the [Azure Well-Architected Framework sustainability workload guidance](/azure/architecture/framework/sustainability/).
 - See the Microsoft Learn module [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/).
@@ -83,16 +78,11 @@ The sustainability community members might be separate from the central organiza
 
 ## Define reporting standards
 
-Defining standards can ease the cultural pushback in implementing green IT and prioritize sustainability. For example, updating old legacy systems can be costly.
+Create reporting standards to provide consistency and clarity in emissions reporting, which helps in decision-making for sustainability.
+For instance, use metrics such as Power Usage Effectiveness (PUE) and Greenhouse Gas (GHG) emissions to compare on-premises data centers to cloud services. Also, consider indirect emissions in the supply chain lifecycle.
 
-To standardize reporting, it's essential to define reporting standards and visualize the emissions to help justify decisions related to sustainability.
-
-For example, measure direct impact by looking at the current on-premises data center Power Usage Effectiveness (PUE) and Greenhouse Gas (GHG) emissions. Compare to the emissions of migrating to the cloud. You can also look at indirect emissions like the supply chain lifecycle.
-
-To report emissions, you can use existing frameworks and regulations, such as the Greenhouse Gas Protocol.
+Reporting standards like the Greenhouse Gas Protocol can help align reporting across organizations. Defining such standards can alleviate resistance to implementing green IT and sustainability practices, particularly in cases where legacy systems need updates.
 
 ## Risk management
 
-A company's level of climate risk might impact business operations.
-
-- Aligning the company's sustainability progress/commitments with the business/stakeholder interests.
+Manage climate risk effectively by aligning a company's sustainability progress and commitments with the interest of its stakeholder. Considerations include the environmental impact of the company's cloud operations. Understanding this and taking proactive steps to mitigate climate risk can lead to not only protecting themselves from potential adverse impacts but also positioning themselves as leaders in cloud efficiency and sustainability, as well as responsible business practices.
