@@ -25,7 +25,7 @@ In addition to the risk of downtime, delays in the synchronization of Active Dir
 
 ## Storage 
 
-Storage is another critical aspect of Azure Virtual Desktop. It is responsible for storing user profiles, virtual machine disks, and application data. If the storage system fails, users will be unable to access their data, and virtual machines will be unavailable. This can cause significant disruption to an organization's operations. For recommended storage options to host Azure Virtual Desktop FSLogix Profile containers, see [Storage FSLogix profile container Azure Virtual Desktop - Azure | Microsoft Learn](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/virtual-desktop/store-fslogix-profile.md)
+Storage is another critical aspect of Azure Virtual Desktop. It is responsible for storing user profiles, virtual machine disks, and application data. If the storage system fails, users will be unable to access their data, and virtual machines will be unavailable. This can cause significant disruption to an organization's operations. 
 
 To mitigate the risk of storage failure, organizations should implement redundant storage and backup solutions. Redundant storage ensures that if one storage system fails, there is a backup system to take its place. Backup solutions provide an additional layer of protection by creating copies of data that can be restored in case of failure. For best practices, see [Storage FSLogix profile container Azure Virtual Desktop - Azure | Microsoft Learn](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/virtual-desktop/store-fslogix-profile.md)
 
