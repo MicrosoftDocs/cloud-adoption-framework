@@ -26,19 +26,19 @@ This article is part of a series. The following articles are meant to be read to
 
 ## Introduction
 
-Digital transformation enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model can be part of the migration journey from on-premises to operating entirely in the cloud. IT departments must also understand how to effectively monitor the application or service migrating to Azure and continue to deliver efficient IT operations and maintain optimized DevOps processes.
+IT departments must effectively monitor applications or services in and outside Azure while maintaining optimized DevOps processes. Digital transformation allows for infrastructure, workload, and application modernization. Adopting a hybrid cloud model might be part of the migration journey from on-premises to the cloud based on business strategy.
 
-Stakeholders often want cloud-based software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions exist to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
+Stakeholders often desire SaaS-based monitoring and management tools for cloud solutions. Understanding available services is crucial to achieving end-to-end visibility, cost reduction, and less focus on traditional IT operations tools.
 
-The goal of this guide is to provide a detailed reference to help enterprise IT managers, business decision-makers, application architects, and application developers understand:
+This guide aims to provide a reference for enterprise IT managers, decision-makers, architects, and developers to comprehend the following:
 
-- Azure monitoring platforms, with an overview and comparison of their capabilities.
+- Monitoring platforms for Azure, including overviews and comparison of their capabilities.
 - The best-fit solution for monitoring hybrid, private, and Azure native workloads.
 - The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these typical workloads to Azure.
 
 This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
 
-Review the [monitoring platforms overview](./platform-overview.md) page to learn how Azure Monitor and System Center Operations Manager work, and how they compare.
+Review the [monitoring platforms overview](./platform-overview.md) page to learn how Azure Monitor and System Center Operations Manager work and how they compare.
 
 ## Audience
 
