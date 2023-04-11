@@ -17,6 +17,7 @@ products: azure-monitor
 This article is part of a series. The following articles are meant to be read together, in this order:
 
 - Introduction (this article)
+- [Monitoring platforms overview](./platform-overview.md)
 - [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
 - [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
 - [Observability](./observability.md)
@@ -30,19 +31,17 @@ IT departments must effectively monitor applications or services in and outside 
 
 Stakeholders often desire SaaS-based monitoring and management tools for cloud solutions. Understanding available services is crucial to achieving end-to-end visibility, cost reduction, and less focus on traditional IT operations tools.
 
-This guide aims to provide a reference for enterprise IT managers, decision-makers, architects, and developers to comprehend the following:
+This cloud monitoring guide helps you to:
 
-- Monitoring platforms for Azure, including overviews and comparison of their capabilities.
-- The best-fit solution for monitoring hybrid, private, and Azure native workloads.
-- The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these typical workloads to Azure.
+- Understand the monitoring platforms for Azure, including overviews and comparison of their capabilities.
+- Find the best solution for monitoring hybrid, private, and Azure native workloads.
+- Grasp the recommended end-to-end monitoring approach for both infrastructure and applications.
 
-This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
-
-Review the [monitoring platforms overview](./platform-overview.md) page to learn how Azure Monitor and System Center Operations Manager work and how they compare.
+The articles in this guide aren't how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
 
 ## Audience
 
-This guide is useful primarily for enterprise administrators, IT operations, IT security and compliance, application architects, workload development owners, and workload operations owners.
+This guide aims to provide a reference for enterprise decision-makers, IT managers and administrators, IT operations, IT security and compliance, application architects, workload development owners, and developers.
 
 ## Products and services
 
