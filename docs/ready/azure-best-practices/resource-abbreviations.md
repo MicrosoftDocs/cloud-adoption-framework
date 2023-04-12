@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 2/10/2023
+ms.date: 4/12/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -19,15 +19,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
-
-## General
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
-| Management group | `Microsoft.Management/managementGroups` | `mg` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
-| Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 
 ## AI + machine learning
 
@@ -165,14 +156,16 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
+| Azure Policy definition | `Microsoft.Authorization/policyDefinitions` | <*descriptive*> |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
-| Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Management group | `Microsoft.Management/managementGroups` | `mg` |
 | Microsoft Purview instance | `Microsoft.Purview/accounts` | `pview` |
+| Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 | Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
@@ -189,7 +182,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
-| Bastion | `Microsoft.Network/bastionHosts` | `bas` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
@@ -226,10 +218,18 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
+
+## Security
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Azure Bastion | `Microsoft.Network/bastionHosts` | `bas` |
+| Key vault | `Microsoft.KeyVault/vaults` | `kv` |
+| Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 | Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
 | Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
 
