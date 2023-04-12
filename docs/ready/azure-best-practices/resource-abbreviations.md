@@ -187,6 +187,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Connections | `Microsoft.Network/connections`| `con` |
 | DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
 | DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
+| DNS private resolver inbound endpoint | `Microsoft.Network/dnsResolvers/inboundEndpoints` | `in` |
+| DNS private resolver outbound endpoint | `Microsoft.Network/dnsResolvers/outboundEndpoints` | `out` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
