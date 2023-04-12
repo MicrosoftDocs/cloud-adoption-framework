@@ -35,12 +35,19 @@ Stakeholders often desire SaaS-based monitoring and management tools for cloud s
 What you can expect from this series of articles:
 
 - **Understand the recommended monitoring platforms**: Make informed decisions for cloud monitoring in Azure and hybrid environments. Learn about infrastructure requirements, data collection options, health monitoring, alerting, analyzing monitoring data, and how to extend the base platform.
+
 - **Define a monitoring strategy**: Understand high-level modeling, how monitoring informs your strategy, and considerations for scale, privacy, and security. Also, explore how to formulate monitoring requirements and establish minimum governance and readiness.
+
 - **Monitoring strategy for cloud deployment models**: Discover recommended monitoring strategies for Azure, hybrid environments, or private clouds like Azure Stack.
+
 - **Understand observability**: Learn about observability and why it's crucial. Consider the monitoring plan, the business, service, and technology perspectives, and the key considerations.
+
 - **Establish Service Level Objectives (SLOs)**: Discover what purpose SLOs serve and what approach you can take to establish them. Learn more about the types of SLOs, how to define them, and their considerations.
+
 - **Collecting the correct data**: Dive into how to collect the right data and considerations for developing monitoring configurations.
+
 - **Responding to events**: Explore the response discipline, which is a result of defining one or more actions based on data-driven decisions from monitoring.
+
 - **Learn about skills readiness**: Understand the necessary skills for cloud monitoring.
 
 The articles in this guide _aren't_ how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
