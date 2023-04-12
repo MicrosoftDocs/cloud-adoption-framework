@@ -40,17 +40,17 @@ Improve the sustainability of your IT operations by moving data to tape or a lon
 
 To dive deeper, see [Learn How Moving Data to Tape Can Lead to Significant Energy Savings and Reduction in CO2 Emissions](https://datastorage-na.fujifilm.com/sustainability/idc-whitepaper-reduce-data-usage/).
 
-## Reporting
+## Reporting and insights
 
 When reporting on sustainability and cloud management, it's essential to consider internal and external stakeholders. Internally, you can share reports with relevant teams and management to raise awareness and promote accountability. Externally, customers, investors, or other stakeholders might request reports to evaluate the organization's sustainability and environmental impact.
 
 By tracking and reporting on key metrics, organizations can promote transparency, accountability, and continuous sustainability and environmental impact improvement.
 
-### Emissions Impact Dashboard for detailed carbon emissions reporting
+### Emissions Impact Dashboard for detailed insights on carbon emissions
 
-In Azure, customers can use the [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track and report on carbon emissions. This tool provides valuable insights into emissions by subscription, region, and service, allowing customers to understand their environmental impact better.
+In Azure, customers can use the [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track and get insights on carbon emissions. This tool provides valuable insights into emissions by subscription, region, and service, allowing customers to understand their environmental impact better.
 
-Customers can access information on emissions scopes, years, months, and other details, providing a comprehensive view of their emissions. This centralized reporting tool can be valuable for large enterprises with complex cloud environments in tracking emissions accurately and efficiently.
+Customers can access information on emissions scopes, years, months, and other details, providing a comprehensive view of their emissions. This centralized tool can be valuable for large enterprises with complex cloud environments in tracking emissions accurately and efficiently.
 
 ## Demand shaping
 
