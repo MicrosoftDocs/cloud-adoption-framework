@@ -3,7 +3,7 @@ title: Cloud monitoring guide
 description: Learn about Azure Monitor, System Center Operations Manager, and the recommended strategy for monitoring each of the cloud deployment models.
 author: Zimmergren
 ms.reviewer: tozimmergren
-ms.date: 04/06/2023
+ms.date: 04/12/2023
 ms.author: tozimmergren
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -47,8 +47,8 @@ This guide aims to provide a reference for enterprise decision-makers, IT manage
 
 A few software and services are available to help you monitor and manage various resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
-- [Azure Monitor](/azure/azure-monitor/overview) (includes Log Analytics and Application Insights)
-- [System Center Operations Manager](/system-center/scom/welcome)
+- [Azure Monitor](/azure/azure-monitor/overview), including Log Analytics and Application Insights
+- [System Center Operations Manager](/system-center/scom/welcome) and[] System Center Operations Manager Managed Instance](/system-center/scom/operations-manager-managed-instance-overview)
 - [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview)
 - [Azure Arc](/azure/azure-arc/)
 - [Azure Automation](/azure/automation/automation-intro)
