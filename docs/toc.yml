@@ -1651,6 +1651,8 @@ items:
         items:
         - name: Overview
           href: manage/monitor/index.md
+        - name: Monitoring platforms overview
+          href: manage/monitor/platform-overview.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
@@ -1661,8 +1663,6 @@ items:
           href: manage/monitor/data-collection.md
         - name: Response
           href: manage/monitor/response.md
-        - name: Monitoring platforms overview
-          href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring
           href: manage/monitor/suggested-skills.md
       - name: Centralize management operations
