@@ -54,7 +54,7 @@ This guide provides a reference for enterprise decision-makers, IT managers and 
 A few software and services are available to help you monitor and manage various resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
 - [Azure Monitor](/azure/azure-monitor/overview), including Log Analytics and Application Insights
-- [System Center Operations Manager](/system-center/scom/welcome) and[] System Center Operations Manager Managed Instance](/system-center/scom/operations-manager-managed-instance-overview)
+- [System Center Operations Manager](/system-center/scom/welcome) and [System Center Operations Manager Managed Instance](/system-center/scom/operations-manager-managed-instance-overview)
 - [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview)
 - [Azure Arc](/azure/azure-arc/)
 - [Azure Automation](/azure/automation/automation-intro)
