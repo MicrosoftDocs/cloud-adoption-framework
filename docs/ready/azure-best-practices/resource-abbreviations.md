@@ -24,7 +24,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
 | Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
@@ -153,6 +152,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
+| API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
 | Service Bus | `Microsoft.ServiceBus/namespaces` | `sb` |
