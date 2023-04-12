@@ -84,7 +84,7 @@ You can implement this scenario with:
 - Express route or VPN virtual network gateway for hybrid connectivity to on-premises.
 - Azure private DNS zone.
 - Azure private endpoints.
-- Azure files service on storage accounts.
+- Azure Files service on storage accounts.
 - Azure key vault.
 
 [![Diagram of the hub and spoke with hybrid connectivity scenario](./media/network-topology-scenario-1.png)](./media/network-topology-scenario-1.png#lightbox)
@@ -96,7 +96,7 @@ You can implement this scenario with:
 - No public IPs or any other public inbound path to session hosts is needed, traffic from clients to session hosts flows through Azure Virtual Desktop control plane gateway.
 - No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
 - Outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
-- Connections from session hosts to Azure files (storage accounts) are established using private endpoints.
+- Connections from session hosts to Azure Files (storage accounts) are established using private endpoints.
 - Azure private DNS zones are used to resolve private endpoint namespaces:
   - Storage account file service (privatelink.file.core.windows.net).
   - Key vaults (privatelink.vaultcore.azure.net).

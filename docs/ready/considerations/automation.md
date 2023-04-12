@@ -60,4 +60,3 @@ In software defined cloud infrastructure, teams use various tools and techniques
 - [Use Bicep and GitHub Actions to deploy Azure resources](/training/paths/bicep-github-actions)
 - [Use Bicep and Azure Pipelines to deploy Azure resources](/training/paths/bicep-azure-pipelines)
 - [Control and govern your Azure environment by deploying your infrastructure as code](/training/modules/control-govern-azure-environment-deploying-infrastructure-code/)
--

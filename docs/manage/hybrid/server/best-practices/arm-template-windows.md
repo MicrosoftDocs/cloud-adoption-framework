@@ -7,7 +7,7 @@ ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, devx-track-arm-template
 ---
 
 # Use an Azure Resource Manager template to deploy and connect an Azure virtual machine to Azure Arc
