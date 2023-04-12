@@ -2,7 +2,7 @@
 title: Assess each workload and refine plans
 description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
-ms.author: brblanch
+ms.author: martinek
 ms.date: 10/12/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -44,7 +44,6 @@ Begin server discovery, assessment, and migration by using the following steps f
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Discover, assess and migrate" :::
 
 ::: zone-end
 
@@ -98,7 +97,7 @@ Before migration, use that data, along with discovery conversations, to evaluate
 The first step in challenging these assumptions is a [review of all five Rs of rationalization](../../digital-estate/rationalize.md).
 
 - Does the assumed rationalization approach work for this workload? Is it the best approach?
-- Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication) impact the migration of this workload?
+- Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks-physics-of-replication) impact the migration of this workload?
 - Does this workload require any [remediation activities](../migration-considerations/assess/evaluate.md) before migration?
 
 These types of questions help challenge assumptions and lead to the best path for each workload.

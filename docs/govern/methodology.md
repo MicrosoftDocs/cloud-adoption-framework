@@ -1,8 +1,8 @@
 ---
 title: Govern methodology for the cloud
 description: Use an incremental governance approach based on a minimum viable product (MVP) to support corporate policies and move quickly toward cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -30,10 +30,7 @@ Corporate policies drive cloud governance. The governance guide focuses on speci
 
 - **Business risks:** Identifying and understanding corporate risks.
 - **Policy and compliance:** Converting risks into policy statements that support any compliance requirements.
-
-### Processes
-
-- Ensuring adherence to the stated policies.
+- **Processes:** Ensuring adherence to the stated policies.
 
 **Five Disciplines of Cloud Governance:** These disciplines support the corporate policies. Each discipline protects the company from potential pitfalls:
 

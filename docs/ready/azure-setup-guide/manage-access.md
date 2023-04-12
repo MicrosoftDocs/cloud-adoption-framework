@@ -2,7 +2,7 @@
 title: Manage access to your Azure environment with Azure role-based access control
 description: Learn how to set up access control for your Azure environment with Azure role-based access control.
 author: LijuKodicheraJayadevan
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -38,8 +38,6 @@ To grant a user access to a resource group:
 1. Select **+ Add** > **Add role assignment**.
 1. Select a role, and then assign access to a user, group, or service principal.
 
-::: form action="OpenBlade[#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups]" submitText="Go to resource groups" ::: form-end
-
 **Grant subscription access:**
 
 To grant a user access to a subscription:
@@ -49,8 +47,6 @@ To grant a user access to a subscription:
 1. Select **Access control (IAM)**.
 1. Select **+ Add** > **Add role assignment**.
 1. Select a role, and then assign access to a user, group, or service principal.
-
-::: form action="OpenBlade[#blade/Microsoft_Azure_Billing/SubscriptionsBlade]" submitText="Go to subscriptions" ::: form-end
 
 ::: zone-end
 

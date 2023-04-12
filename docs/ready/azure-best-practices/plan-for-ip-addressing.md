@@ -2,7 +2,7 @@
 title: Plan for IP addressing
 description: Examine important design considerations and recommendations to ensure IP address space doesn't overlap across on-premises locations and Azure regions.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 12/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -54,3 +54,6 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 - Don't create virtual networks without planning the required address space in advance.
 
 - Don't use public IP addresses for virtual networks, especially if the public IP addresses don't belong to your organization.
+
+- Take the services you are going to use into consideration, there are some services with reserved ips, like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
+

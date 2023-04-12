@@ -2,7 +2,7 @@
 title: Governance for the retail industry
 description: Learn how to use the Cloud Adoption Framework methodology to improve governance of your cloud portfolio for the retail industry.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -30,7 +30,7 @@ Lack of data ownership causes data to be curated and assembled on a case-by-case
 
 According to aggregate data in the report, [`The New Intelligent Supply Chain: Strategies for agility, sustainability, and operational excellence`](https://clouddamcdnprodep.azureedge.net/gdc/gdcSP3mu5/original?ocid=eml_pg213712_gdc_comm_dt&mkt_tok=MTU3LUdRRS0zODIAAAF_tG7MLPUdet-mYf1Y1PD9PfDE134zkWJLqww_-UsO6Qvccaups4t-fFzNFFq3iufQVu2EkvPbeFwvepmGnxOpEAU22nXVpMvygIexrERAEFImtF-gZPCkLg), the three macro forces affecting the consumer goods and retail industries are rapidly changing consumer expectations, growing demands for sustainability, and the shift to a digitally fueled supply chain. Any digitally fueled supply chain will need to rely on sound source data to be efficient and productive. This is why proper data governance across environments is one such challenge, especially with disparate datasets stored in siloed departments across your organization.
 
-It's important to manage the availability, usability, integrity, and security of the data in your organization, based on internal data standards and policies that also control data usage. For good data governance, data must be consistent and trustworthy, without getting misused. This is important data to your company—the data that helps optimize operations and drives business decision-making in a competitive e-commerce global ecosystem, where companies  are constantly confronted with new data privacy regulations, and increasingly depend on data analytics to factor changing customer behaviors and future business growth trajectories.
+It's important to manage the availability, usability, integrity, and security of the data in your organization, based on internal data standards and policies that also control data usage. For good data governance, data must be consistent and trustworthy, without getting misused. This is important data to your company—the data that helps optimize operations and drives business decision-making in a competitive e-commerce global ecosystem, where companies are constantly confronted with new data privacy regulations, and increasingly depend on data analytics to factor changing customer behaviors and future business growth trajectories.
 
 ## Unified operations and data management
 

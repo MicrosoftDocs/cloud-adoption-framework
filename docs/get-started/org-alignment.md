@@ -1,13 +1,13 @@
 ---
 title: 'Get started: Align your organization'
 description: Recommended steps for aligning your organization so that you're ready for successful cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Align your organization
@@ -69,6 +69,8 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 Watch this video to get an overview of common team structures at various stages of organizational maturity.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
 

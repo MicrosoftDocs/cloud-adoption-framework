@@ -1,8 +1,8 @@
 ---
 title: Create additional subscriptions to scale your Azure environment
 description: Use the Cloud Adoption Framework for Azure to learn how to develop a strategy for scaling your environment using multiple Azure subscriptions.
-author: alexbuckgit
-ms.author: abuck
+author: martinekuan
+ms.author: martinek
 ms.date: 05/20/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -42,7 +42,7 @@ Your business priorities might lead you to create additional subscriptions. Thes
 - Security
 - Governance
 
-For other considerations about scaling your subscriptions, review the [subscription decision guide](../../decision-guides/subscriptions/index.md) in the Cloud Adoption Framework.
+For other considerations about scaling your subscriptions, review the subscription [organization and governance recommendations](../landing-zone/design-area/resource-org-subscriptions.md) in the Cloud Adoption Framework.
 
 ## Moving resources between subscriptions
 

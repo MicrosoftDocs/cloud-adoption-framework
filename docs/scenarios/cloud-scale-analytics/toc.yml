@@ -1,0 +1,273 @@
+items:
+  - name: Cloud-scale analytics - Microsoft Cloud Adoption Framework for Azure
+    href: ./index.md
+
+  - name: Overview
+    href: overview-cloud-scale-analytics.md
+  - name: Build an initial strategy
+    href: ./strategy.md
+  - name: Define your plan
+    href: ./plan.md
+
+  - name: Prepare analytics estate
+    items:
+    - name: Azure landing zones
+      href: ./ready.md
+
+    - name: Design area considerations
+      items:
+      - name: Enterprise enrollment
+        href: ./eslz-enterprise-enrollment-and-azure-ad-tenants.md
+      - name: Identity and access management
+        href: ./eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        items:
+        - name: Overview
+          href: ./eslz-network-topology-and-connectivity.md
+        - name: Single-region connectivity
+          href: eslz-network-considerations-single-region.md
+        - name: Cross-region connectivity
+          href: eslz-network-considerations-cross-region.md   
+        - name: Limiting cross tenant endpoint connections
+          href: ../../ready/azure-best-practices/limit-cross-tenant-private-endpoint-connections.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+      - name: Resource organization
+        href: ./eslz-resource-organization.md
+      - name: Governance and security disciplines
+        href: ./eslz-security-governance-and-compliance.md
+      - name: Policies
+        href: ./eslz-policies.md
+      - name: Operations baseline
+        href: ./eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: ./eslz-business-continuity-and-disaster-recovery.md
+
+  - name: Govern your analytics estate
+    items:
+    - name: Overview
+      href: ./govern.md
+    - name: Requirements for governing data
+      href: ./govern-requirements.md
+    - name: Data governance processes
+      href: ./govern-components.md
+    - name: Data catalog
+      href: govern-data-catalog.md
+    - name: Data lineage
+      href: govern-lineage.md
+    - name: Master data management
+      href: ./govern-master-data.md
+    - name: Data quality
+      href: govern-data-quality.md
+    - name: Data lifecycle
+      href: govern-lifecycle.md
+    - name: Metadata
+      href: govern-metadata-standards.md
+
+  - name: Secure your analytics estate
+    items:
+    - name: Overview
+      href: ./secure.md
+    - name: Authentication
+      href: ./secure-authentication.md
+    - name: Authorization
+      href: ./secure-analytics-role-based-access-control.md
+    - name: Data privacy
+      href: ./secure-data-privacy.md
+    - name: Data access management
+      href: ./security-provisioning.md
+
+  - name: Organize people and teams
+    items:
+      - name: Overview
+        href: ./organize.md
+      - name: Teams
+        href: organize-roles-teams.md
+      - name: Roles and responsibilities
+        href: organize-roles-responsibilities.md
+      - name: Teams functions
+        href: ./organize-team-functions.md
+
+  - name: Manage your analytics estate
+    items:
+    - name: Overview
+      href: manage.md
+    - name: Platform automation
+      href: manage-platform-automation-devops.md
+    - name: Provision the platform
+      href: manage-provision-platform.md
+    - name: Observability
+      href: manage-observability.md
+
+  - name: Well-architected considerations
+    href: ./well-architected-framework.md
+
+  - name: Architectures
+    items:
+    - name: Overview
+      href: architectures/overview-architectures.md
+    - name: Data management landing zone
+      href: ./architectures/data-management-landing-zone.md
+    - name: Data landing zone
+      href: ./architectures/data-landing-zone.md
+    - name: Data Products
+      items:
+        - name: Overview
+          href: ./architectures/data-landing-zone-data-products.md
+        - name: Data application (source-aligned)
+          href: architectures/data-application-source-aligned.md
+        - name: Data application reference patterns
+          href: architectures/data-reference-patterns.md
+    - name: Scaling the architecture
+      href: architectures/scale-architectures.md
+    - name: Data standardization
+      href: architectures/data-standardization.md
+    - name: Common Data Models
+      href: architectures/common-industry-data-models.md
+    - name: Data mesh specific guidance
+      items:
+      - name: Overview
+        href: architectures/what-is-data-mesh.md
+      - name: What are data domains?
+        href: architectures/data-domains.md
+      - name: Data mesh products
+        href: architectures/what-is-data-product.md
+      - name: Data Contracts
+        href: architectures/data-contracts.md
+      - name: Self-serve data platforms
+        href: architectures/self-serve-data-platforms.md
+      - name: Data marketplace
+        href: architectures/data-mesh-data-marketplace.md
+      - name: Master data management in data mesh
+        href: architectures/data-mesh-master-data-management.md
+      - name: Operationalize data mesh for AI/ML
+        href: architectures/operationalize-data-mesh-for-ai-ml.md
+      - name: Getting started checklist
+        href: architectures/data-mesh-checklist.md
+    - name: Reference architectures
+      items:
+      - name: Overview
+        href: ./architectures/reference-architecture-overview.md
+      - name: Single data landing zone
+        href: ./architectures/reference-architecture-adatum.md
+      - name: Multiple data landing zones
+        href: ./architectures/reference-architecture-multizone.md
+      - name: Azure Synapse Analytics for landing zones
+        href: /azure/architecture/example-scenario/analytics/synapse-analytics-landing-zone 
+      - name: Highly sensitive data landing zones
+        href: ./architectures/reference-architecture-lamna.md
+      - name: Financial institution scenario for data mesh
+        href: ./architectures/data-mesh-scenario.md
+
+    - name: Deployment templates
+      href: ./architectures/deployment-templates.md
+    - name: Solution accelerators
+      href: architectures/solution-accelerators.md
+    - name: Connecting to environments privately
+      href: ./architectures/connect-to-environments-privately.md
+    - name: Frequently asked questions
+      href: ./architectures/frequently-asked-questions.md
+
+  - name: Tutorials
+    items:
+    - name: Evaluate an enterprise data scenario
+      href: ../cloud-scale-analytics/tutorials/tutorial-evaluate-scenario.md
+    - name: Create a data landing zone
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-landing-zone.md
+    - name: Create a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-create-data-product-batch.md
+    - name: Set up a data product batch
+      href: ../cloud-scale-analytics/tutorials/tutorial-set-up-data-product-batch.md
+    - name: Clean up resources
+      href: ../cloud-scale-analytics/tutorials/cleanup-instructions.md
+
+  - name: Best practices
+    items:
+      - name: Data landing zone ingestion
+        items:
+        - name: Overview
+          href: ./best-practices/data-ingestion.md
+        - name: SAP data ingestion
+          href: ./best-practices/sap-data-ingestion.md
+        - name: Data agnostic ingestion engine
+          href: ./best-practices/automated-ingestion-pattern.md
+      - name: Data lake implementation
+        items:
+        - name: Data lake overview
+          href: ./best-practices/data-lake-overview.md
+        - name: Data lake zones
+          href: best-practices/data-lake-zones.md
+        - name: Data lake key considerations
+          href: ./best-practices/data-lake-key-considerations.md
+        - name: Managing data lake access
+          href: ./best-practices/data-lake-access.md
+      - name: Azure Databricks implementation
+        href: ./best-practices/azure-databricks-implementation.md
+      - name: Azure Synapse Analytics implementation
+        href: ./best-practices/azure-synapse-analytics-implementation.md
+      - name: Microsoft Purview implementation
+        items:
+        - name: Readiness checklist
+          href: ./best-practices/purview-checklist.md
+        - name: Deployment best practices
+          href: ./best-practices/purview-deployment.md
+      - name: Azure Machine Learning implementation
+        items:
+        - name: Implementation
+          href: best-practices/azure-machine-learning.md
+        - name: Organize and set up Azure Machine Learning environments
+          href: ../../ready/azure-best-practices/ai-machine-learning-resource-organization.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+        - name: Best practices for enterprise security
+          href: ../../ready/azure-best-practices/ai-machine-learning-enterprise-security.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+        - name: Budget, cost, and quota management with Azure Machine Learning
+          href: ../../ready/azure-best-practices/optimize-ai-machine-learning-cost.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+        - name: Machine learning DevOps guide
+          href: ../../ready/azure-best-practices/ai-machine-learning-mlops.md?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+        - name: Data science best practices
+          href: ./best-practices/data-science-best-practices.md
+
+
+  - name: Featured Azure products
+    items:
+    - name: ARM templates
+      href: /azure/azure-resource-manager/templates/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Blob Storage
+      href: /azure/storage/blobs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Cosmos DB
+      href: /azure/cosmos-db/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Database for MariaDB
+      href: /azure/mariadb/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Database for MySQL
+      href: /azure/mysql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Database for PostgreSQL
+      href: /azure/data-explorer/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Databricks
+      href: /azure/databricks/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Data Explorer
+      href: /azure/data-explorer/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Data Lake
+      href: /azure/storage/blobs/data-lake-storage-introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Key Vault
+      href: /azure/key-vault/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Machine Learning
+      href: /azure/machine-learning/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Policy
+      href: /azure/governance/policy/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Private Link
+      href: /azure/private-link/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Microsoft Purview
+      href: /azure/purview/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Stream Analytics
+      href: /azure/stream-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure SQL Database
+      href: /azure/azure-sql/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Azure Synapse Analytics
+      href: /azure/synapse-analytics/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Data Factory
+      href: /azure/data-factory/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Event Hubs
+      href: /azure/event-hubs/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: HDInsight
+      href: /azure/hdinsight/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Network Watcher
+      href: /azure/network-watcher/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json
+    - name: Virtual network
+      href: /azure/virtual-network/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/toc.json

@@ -2,12 +2,12 @@
 title: Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc
 description: Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, devx-track-terraform
 ---
 
 # Use a Terraform plan to deploy a Google Cloud Platform Windows instance and connect it to Azure Arc
@@ -30,7 +30,7 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
 3. [Install Terraform >= 0.12](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-4. **Google Cloud Platform account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgraded your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
+4. **Google Cloud Platform account with billing enabled:** [Create a free trial account](https://cloud.google.com/free). To create Windows Server virtual machines, you must upgrade your account to enable billing. Select **Billing** from the menu and then select **Upgrade** at the lower right.
 
     ![First screenshot showing how to enable billing on a GCP account.](./media/gcp-windows/billing-1.png)
 
@@ -94,7 +94,7 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 1. Retrieve your Azure subscription ID and tenant ID using the `az account list` command.
 
-2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
+2. The Terraform plan creates resources in both Microsoft Azure and Google Cloud Platform. It then executes a script on a GCP virtual machine to install the Azure Arc agent and all necessary artifacts. This script requires certain information about your GCP and Azure environments. Edit [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) and update each of the variables with the appropriate values.
 
     - `TF_VAR_subscription_id` = your Azure subscription ID
     - `TF_VAR_client_id` = your Azure service principal application ID
@@ -105,7 +105,7 @@ Before executing the Terraform plan, you must set and then export the environmen
 
 3. From CLI, navigate to the `azure_arc_servers_jumpstart/gcp/windows/terraform` directory of the cloned repo.
 
-4. Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/windows/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
+4. Export the environment variables you edited by running [`scripts/vars.sh`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/gcp/ubuntu/terraform/scripts/vars.sh) with the source command as shown below. Terraform requires these to be set for the plan to execute properly.
 
     ```console
     source ./scripts/vars.sh

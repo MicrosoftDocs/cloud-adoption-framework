@@ -2,12 +2,12 @@
 title: Cloud migration antipatterns
 description: Avoid antipatterns, establish security and compliance guardrails, understand dependencies, and run thorough assessments before choosing an architecture.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank
+ms.custom: think-tank,UpdateFrequency5
 ---
 
 # Cloud migration antipatterns

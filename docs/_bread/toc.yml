@@ -28,10 +28,15 @@ items:
         tocHref: /azure/security/fundamentals/
         topicHref: /azure/cloud-adoption-framework/ready/azure-best-practices
     - name: Adopt
+      tocHref: /azure/cloud-adoption-framework/adopt/
+      topicHref: /azure/cloud-adoption-framework/adopt
       items:
       - name: Migrate
         tocHref: /azure/cloud-adoption-framework/migrate/
         topicHref: /azure/cloud-adoption-framework/migrate
+      - name: Modernize
+        tocHref: /azure/cloud-adoption-framework/modernize/
+        topicHref: /azure/cloud-adoption-framework/modernize
       - name: Innovate
         tocHref: /azure/cloud-adoption-framework/innovate/
         topicHref: /azure/cloud-adoption-framework/innovate
@@ -66,8 +71,8 @@ items:
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid/
       - name: Modern application platform
-        tocHref: /azure/cloud-adoption-framework/scenarios/aks
-        topicHref: /azure/cloud-adoption-framework/scenarios/aks/
+        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform
+        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform/
       - name: SAP
         tocHref: /azure/cloud-adoption-framework/scenarios/sap
         topicHref: /azure/cloud-adoption-framework/scenarios/sap/

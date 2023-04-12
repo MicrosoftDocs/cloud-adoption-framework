@@ -1,8 +1,8 @@
 ---
 title: Cloud governance guides
 description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/11/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -19,7 +19,7 @@ The guides in this section illustrate the Cloud Adoption Framework (CAF) model's
 Choose a governance guide below to begin your cloud adoption journey. Each guide outlines a set of best practices based on a set of fictional customer experiences.
 
 > [!NOTE]
-> If you are unsure which guide you should follow, continue on to the next section of this article. It compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.  
+> If you are unsure which guide to follow, continue to the next section of this article. It compares the differences between the two guides, and its examples will help you determine which guide fits your scenario.
 
 - [Standard governance guide](./standard/index.md): A guide based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds. The standard governance guide is appropriate for most organizations.
 
@@ -31,7 +31,7 @@ Choose a governance guide below to begin your cloud adoption journey. Each guide
 > [!div class="nextstepaction"]
 > [Governance guide for complex enterprises](./complex/index.md)
 
-## <a id="an-incremental-approach-to-cloud-governance"></a>
+<a id="an-incremental-approach-to-cloud-governance"></a>
 
 ## Choose a governance guide
 

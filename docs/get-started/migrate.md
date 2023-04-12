@@ -1,31 +1,27 @@
 ---
 title: 'Get started: Accelerate migration'
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Accelerate migration
 
-Proper alignment of business and IT stakeholders helps to overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
+Proper alignment of business and IT stakeholders helps overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for:
 
 - Stakeholder alignment
 - Migration planning
 - Deploying a landing zone
 - Migrating your first 10 workloads
 
-It also helps you implement proper governance and management processes.
+This article also helps you implement proper governance and management processes. Use this guide to streamline the processes and materials required to align an overall migration effort.
 
-Use this guide to streamline the processes and materials required for aligning an overall migration effort. The guide uses the methodologies of the Cloud Adoption Framework that are highlighted in this illustration.
-
-![Get started with migration in Azure](../_images/get-started/migration-map.png)
-
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). Use it to identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). Use it to identify the guidance that best aligns to your current needs.
 
 ## Get started
 
@@ -195,7 +191,7 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about your corporate policy and processes. After determining your approach, you can build the disciplines required to enable governance across your enterprise cloud adoption efforts.
 - [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the disciplines needed to create a governance minimum viable product (MVP) that serves as the foundation for all adoption.
-- [Governance benchmark](https://aka.ms/adopt/assess/govern): Identify gaps in your organization's current state of governance. Get a personalized benchmark report and curated guidance on how to get started.
+- [Governance benchmark](/assessments/b1891add-7646-4d60-a875-32a4ab26327e): Identify gaps in your organization's current state of governance. Get a personalized benchmark report and curated guidance on how to get started.
 
 **Deliverables:**
 
@@ -250,4 +246,4 @@ The Cloud Adoption Framework is a lifecycle solution that helps you begin a migr
 | Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
 | Cloud operations team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |
 
-If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/?id=strategic-migration-assessment). The answers you provide help identify which guidance aligns best with your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness by using the [strategic migration and readiness tool (SMART) assessment](/assessments/Strategic-Migration-Assessment/). The answers you provide help identify which guidance aligns best with your current needs.

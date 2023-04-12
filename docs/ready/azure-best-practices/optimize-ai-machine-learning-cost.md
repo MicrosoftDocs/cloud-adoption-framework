@@ -47,15 +47,7 @@ To get the best VM size for your scenario, it might consist of trial and error. 
   - Use a [memory optimized](/azure/virtual-machines/sizes-memory) VM if you're training on large datasets.
   - Use a [compute optimized](/azure/virtual-machines/sizes-compute) VM if you're doing real-time inferencing or other latency sensitive tasks.
   - Use a VM with more cores and RAM in order to speed up training times.
-- If you need a GPU:
-  - Use a VM with a faster GPU in order to speed up training times. Here's the list of GPU-enabled VM families in order of speed:
-    - [NC-series](/azure/virtual-machines/nc-series) (Nvidia Tesla K80)
-    - [NV-series](/azure/virtual-machines/nv-series) (Nvidia Tesla M80)
-    - [ND-series](/azure/virtual-machines/nd-series) (Nvidia Tesla P40)
-    - [NCv2-series](/azure/virtual-machines/ncv2-series) (Nvidia Tesla P100)
-    - [NCv3-series](/azure/virtual-machines/ncv3-series) (Nvidia Tesla V100)
-    - [NDv2-series](/azure/virtual-machines/ndv2-series) (Nvidia Tesla V100 with NVLink connections)
-    - [NCasT4\_v3-series](/azure/virtual-machines/nct4-v3-series) (Nvidia Tesla T4)
+- If you need a GPU, see the [GPU optimized VM sizes](/azure/virtual-machines/sizes-gpu) for information on selecting a VM.
   - If you're doing distributed training, use VM sizes that have multiple GPUs.
   - If you're doing distributed training on multiple nodes, use GPUs that have NVLink connections.
 
@@ -152,7 +144,7 @@ Next to VM priority, consider running jobs on various VM SKUs. It might be that 
 
 ### Early-terminate a run when training doesn't converge
 
-When you continuously experiment to improve a model against its baseline, you might be executing various experiment runs, each with slightly different configurations. For one run, you might tweak the input datasets. For another run, you might make a hyperparameter change. Not all changes might be as effective as the other. You detect early that a change didn't have the intended affect on the quality of your model training. To detect if training does not converge, monitor training progress during a run. For example, by logging performance metrics after each training epoch. Consider early terminating the job to free up resources and budget for another trial.
+When you continuously experiment to improve a model against its baseline, you might be executing various experiment runs, each with slightly different configurations. For one run, you might tweak the input datasets. For another run, you might make a hyperparameter change. Not all changes might be as effective as the other. You detect early that a change didn't have the intended effect on the quality of your model training. To detect if training does not converge, monitor training progress during a run. For example, by logging performance metrics after each training epoch. Consider early terminating the job to free up resources and budget for another trial.
 
 ## Plan, manage and share budgets, cost, and quota
 
@@ -169,6 +161,16 @@ To understand where the budget is going, it's critical to know where Azure Machi
 - Azure Machine Learning only charges for compute infrastructure used and doesn't add a surcharge on compute costs.
 - When an Azure Machine Learning workspace is created, there are also a few other resources created to enable Azure Machine Learning: Key Vault, Application Insights, Azure Storage, and Azure Container Registry. These resources are used in Azure Machine Learning and you'll pay for these resources.
 - There are costs associated with managed compute such as training clusters, compute instances, and managed inferencing endpoints. With these managed compute resources, there are the following infrastructure costs to account for: virtual machines, virtual network, load balancer, bandwidth, and storage.
+
+### Track spending patterns and achieve better reporting with tagging
+
+Administrators often want to be able to track costs on different resources in Azure Machine Learning. Tagging is a natural solution to this problem and aligns with the general approach used by Azure and many other cloud service providers. With tags support, you can now see cost breakdown at the compute level, therefore granting you access to a more granular view to assist with better cost monitoring, improved reporting and greater transparency.
+
+Tagging enables you to place customized tags on your workspaces and computes (from Azure Resource Manager templates and Azure Machine Learning studio) to further filter on these resources in Azure Cost Management based on these tags to observe spend patterns. This functionality can be best utilized for internal charge-back scenarios. In addition, tags can be useful for capturing metadata or details associated with the compute, for e.g. a project, a team, certain billing code, etc. This makes tagging very beneficial for measuring how much money you are spending on different resources and therefore, gaining deeper insights into your cost and spend patterns across teams or projects.
+
+There are also system injected tags placed on computes that allow you to filter in the Cost Analysis page by the “Compute type” tag to see a compute wise breakdown of your total spend and determine what category of compute resources might be attributing to the majority of your costs. This is particularly useful for gaining more visibility into your training vs inferencing cost patterns.
+
+![Screenshot of the cost analytics view filtered by compute type.](./media/ai-machine-learning-azure-cost-analysis.png)
 
 ### Govern and restrict compute usage by policy
 

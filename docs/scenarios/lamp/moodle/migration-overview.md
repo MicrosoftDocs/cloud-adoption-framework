@@ -2,7 +2,7 @@
 title: Overview of Moodle manual migration
 description: Review the prerequisites and overall steps for manually migrating Moodle from an on-premises environment to Azure.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

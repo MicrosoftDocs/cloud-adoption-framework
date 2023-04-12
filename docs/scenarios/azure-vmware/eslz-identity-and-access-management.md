@@ -2,8 +2,8 @@
 title: Enterprise-scale identity and access management - Azure VMware Solution
 description: This article examines the design considerations and recommendations related to identity and access management specific to Azure VMware Solution.
 author: E-G-C
-ms.author: janet
-ms.date: 09/15/2021
+ms.author: martinek
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,7 +20,7 @@ Identity requirements for Azure VMware Solution vary according to its implementa
 
 ## Design considerations
 
-After you deploy Azure VMware Solution, the new environment's vCenter contains a built-in local user called `cloudadmin`. This user is assigned to the CloudAdmin role with several permissions in vCenter. You can also create custom roles in your Azure VMware Solution environment using the principle of least privilege.
+After you deploy Azure VMware Solution, the new environment's vCenter contains a built-in local user called `cloudadmin`. This user is assigned to the CloudAdmin role with several permissions in vCenter Server. You can also create custom roles in your Azure VMware Solution environment using the principle of least privilege with role-based access control (RBAC).
 
 ## Design recommendations
 
@@ -38,11 +38,11 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 
 - Use the [Run command](/azure/azure-vmware/concepts-run-command) in your private cloud to:
 
-  - Add an AD DS domain controller as an identity source for vCenter and NSX-T.
+  - Add an AD DS domain controller as an identity source for vCenter Server and NSX-T Data Center.
 
   - Provide lifecycle operation on the `vsphere.local\CloudAdmins` group.
 
-- Create groups in Active Directory and use RBAC to manage vCenter and NSX-T. You can create [custom roles](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html) and [assign](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-18071E9A-EED1-4968-8D51-E0B4F526FDA3.html) Active Directory groups to the custom roles.
+- Create groups in Active Directory and use RBAC to manage vCenter Server and NSX-T Data Center. You can create [custom roles](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html) and [assign](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-18071E9A-EED1-4968-8D51-E0B4F526FDA3.html) Active Directory groups to the custom roles.
 
 ## Next steps
 

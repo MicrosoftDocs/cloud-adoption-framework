@@ -3,22 +3,24 @@ title: Ready methodology for hybrid and multicloud strategy
 description: Learn how to prepare your environment for a hybrid and multicloud scenario with Azure landing zones.
 author: likamrat
 ms.author: likamrat
-ms.date: 01/12/2022
+ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 <!-- docutune:casing "Harry's Harvesters" "Angie's Applications" "Mary's Markets" -->
 
 # Prepare your environment for a hybrid and multicloud scenario
 
-The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure guides customers through environment readiness for cloud adoption. The readiness section includes technical accelerators like Azure landing zones, which are the basic building blocks in any cloud adoption environment. Review your choice of what landing zone to deploy. If you need help with choosing the right one to deploy, this guide can help you get started. If you're considering what landing zone would best fit your organization's operating model, see [Choose the landing zone for your organization](../../ready/landing-zone/choose-landing-zone-option.md) to help you get started.
+The Cloud Adoption Framework [Ready methodology](../../ready/index.md) guides customers as they prepare their environment for cloud adoption. The methodology includes technical accelerators like Azure landing zones, which are the building blocks of any Azure cloud adoption environment.
 
-## Hybrid and multicloud in various landing zones
+If you need help with choosing the right landing zone to deploy for your organization, this guide can help you get started. When considering which landing zone best fits your organization's operating model, review [Choose the landing zone for your organization](../../ready/landing-zone/choose-landing-zone-option.md).
 
-[Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/) are the output of a multisubscription Azure environment that accounts for:
+## Hybrid and multicloud in landing zones
+
+[Azure landing zones](../../ready/landing-zone/index.md) are the output of a multisubscription Azure environment that accounts for:
 
 - Scale
 - Security governance
@@ -27,61 +29,56 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework fo
 - Cost management
 - Monitoring
 
-When preparing for a hybrid and multicloud deployment, environment configurations might be slightly different.
-
-The following key considerations are necessary to prepare a consistent environment for any hybrid and multicloud deployment:
+Your environment considerations might be slightly different when you're preparing for a hybrid and multicloud deployment. A consistent environment for any hybrid and multicloud deployment requires you to consider:
 
 - Network topology and connectivity
 - Unified operational process controls for operations, governance, security, and compliance
 - Unified and consistent automation disciplines, development experience, and DevOps practices across heterogeneous environments
 
-Azure Arc enables hybrid and multicloud architectures and holds a set of technologies. Each architecture includes the critical design areas and considerations to create a successful deployment.
+Azure Arc enables hybrid and multicloud architectures and contains a set of technologies. Each architecture it enables includes all the critical design areas and considerations you need to create a successful deployment.
 
 ## Evaluate your cloud mix
 
-Choosing a hybrid and multicloud environment isn't a binary decision, it's closer to a range of decisions. Before you configure your Azure environment or any other cloud environment, it's important to identify how your cloud environment will support your specific mix of cloud-hosting decisions. Here are some examples of common cloud mixes:
+Choosing a hybrid and multicloud environment involves a range of decisions rather than a single binary decision. Before you configure your Azure environment, identify how your cloud environment will support your specific mix of cloud-hosting choices. The following diagram contains some examples of common cloud mixes:
 
-[![Diagram that shows three illustrations of how different customers distribute workloads across cloud providers.](./media/arc-servers-graphs.png)](./media/arc-servers-graphs.png#lightbox)
+[![Diagram that shows three illustrations of how different customers distribute workloads across cloud providers.](./media/arc-distribute-graphs.png)](./media/arc-distribute-graphs.png#lightbox)
 
-Each dark blue dot is a workload, and each light blue circle is a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration, as seen with our three reference customers:
+In this diagram, each dark blue dot is a workload, and each light blue circle is a business process supported by a distinct environment.
+
+Every cloud mix requires a different Azure environment configuration. You can see this with our three reference customers:
 
 - **Hybrid-first customer:** Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.
+  - **Fabrikam** is a *hybrid-first* customer with a heavy investment in aging datacenters. Its highest priorities are cost and governance. Legacy IT priorities and aging technology infrastructure hinder Fabrikam's innovation, which drives some early cloud adoption.
 
-  **Fabrikam** is a *hybrid-first* customer, with a heavy investment in aging datacenters. Cost and governance are its highest priorities. Legacy IT priorities and aging technology infrastructure hindered innovation, which drove some early cloud adoption.
+- **Azure-first customer:** Most workloads move to Azure, while a few workloads stay on-premises. Strategic decisions lead to a few workloads living on the edge or in multicloud environments.
+  - **Contoso** is an *Azure-first* customer. Like Fabrikam, it's completed its first wave of digital transformation, acquired a few companies, and added customers in regulated industries. Its highest priority is still innovation, but with its multicloud environment, it's focused on operations management. It needs efficient, scalable operations in order to continue its acquisition strategy.
 
-- **Azure-first customer:** Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
+- **Multicloud-first customer:** Most workloads are hosted on a different public cloud, like Google Cloud Platform (GCP) or Amazon Web Services (AWS). Strategic decisions lead to a few workloads living in Azure or on the edge. Customers frequently move from a hybrid-first mix to an Azure-first mix as their cloud strategy matures, but we also support customers who decide to make hybrid or multicloud mixes their priority. Azure plays a role in each type of mix.
+  - **Tailwind Traders** is a *multicloud-first* customer. Like Contoso, it has moved to the cloud, but didn't use Azure to do so. It has some local datacenter assets and edge devices. Tailwind Traders is an early adopter of other clouds in an early startup phase, and its biggest priority is growth. Customer retail requirements and the need for improved operations that enable efficient scaling drive hybrid and multicloud growth.
 
-  **Contoso** is an *Azure-first* customer. Like Fabrikam, it completed its first wave of digital transformation, acquired a few companies, and added customers in regulated industries. Innovation is still its priority. But with its multicloud environment, it's focused on operations management, and efficient, scalable operations are required to continue its acquisition strategy.
-
-- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like Google Cloud Platform (GCP) or Amazon Web Services (AWS). Strategic decisions have led to a few workloads living in Azure or on the edge. Each month, we see customers move from a hybrid-first mix to an Azure-first mix as their cloud strategy matures. But, we also support customers who decide to make hybrid or multicloud mixes their priority. Azure plays a role in each mix.
-
-  **Tailwind Traders** is a *multicloud-first* customer. Like Contoso, it moved to the cloud, but didn't choose Azure. It also has some local datacenter assets and edge devices. Tailwind Traders is an early adopter of other clouds in an early startup phase, and growth is its biggest priority. Driving growth in hybrid and multicloud are the retail requirements of its customers and the need to improve operations to scale efficiently.
-
-The following considerations are most important when preparing any of your cloud environments for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data will drive the answers to the following questions. Clearly identify what intended cloud mix is required, then consider the best configuration for your environments:
+A few considerations are critical for preparing any cloud environment for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data drives your answers to the following questions. Clearly identify what cloud mix you require, then consider the best configuration for your environments.
 
 - What mixture of hybrid, edge, and multicloud environments do you support today?
 - What mixture best aligns with your strategy for the future?
-- Do you want to operate each platform independently or through a unified operations and a single pane of glass approach?
+- Do you want to operate each platform independently or through unified operations and a single pane of glass approach?
 
 ## Azure Arc overview
 
-Some customers might want to simplify complex and distributed environments across on-premises, edge, and multicloud. [Azure Arc](https://azure.microsoft.com/services/azure-arc/) enables deployment of Azure services anywhere and extends Azure management to any infrastructure.
+You might want to simplify complex and distributed environments across on-premises, edge, and multicloud. [Azure Arc](https://azure.microsoft.com/services/azure-arc/) lets you deploy Azure services anywhere and extends Azure management to any infrastructure.
 
-- **Organize and govern across environments**: Get databases, Kubernetes clusters, and servers sprawling across on-premises, edge, and multicloud environments under control by centrally organizing and governing from a single place.
-
-- **Manage Kubernetes applications at scale**: Deploy and manage Kubernetes applications across environments using DevOps techniques. Ensure that applications are deployed and configured from source control consistently.
-
-- **Run Azure services anywhere**: Get automated patching, upgrades, security, and scale on-demand across on-premises, edge, and multicloud environments for your data estate.
+- **Organize and govern across environments**: Get databases, Kubernetes clusters, and servers that sprawl across on-premises, edge, and multicloud environments under control through central organization and governance from a single place.
+- **Manage Kubernetes applications at scale**: Use DevOps techniques to deploy and manage Kubernetes applications across environments. Ensure that you consistently deploy and configure applications from source control.
+- **Run Azure services anywhere**: Get automated patching, upgrades, security, and scaling on-demand across on-premises, edge, and multicloud environments for your data estate.
 
 ## Azure Arc customer snapshot
 
-All three reference customers run workloads on different hardware. They also run workloads across on-premises datacenters and multiple public cloud providers, and support IoT workloads deployed on the edge. These workloads include various services and are based on either bare-metal servers, virtual machines, managed platform as a service (PaaS) services, and cloud-native, container-based applications.
+All three previously mentioned reference customers run workloads on different hardware. They also run workloads across on-premises datacenters and multiple public cloud providers and support IoT workloads deployed on the edge. Their workloads include various services, and are based on bare-metal servers, virtual machines, managed platform as a service (PaaS) services, or cloud-native, container-based applications.
 
-All three customers realized the need to have hybrid and multicloud established practices is essential for business success. Also, the need for modernized workloads is becoming crucial to all three customers' relevancy in their respected areas.
+All three customers realize they need to have hybrid and multicloud established practices to achieve business success. The need for modernized workloads is becoming crucial to all three customers' relevancy in their respected areas.
 
-With Azure Arc as their hybrid and multicloud control plane, these customers can use existing IT investments and current operational practices in a non-distributive fashion. Customers use their current practices by onboarding Azure Arc-enabled servers, SQL servers, and Kubernetes clusters. They're also able to modernize workloads while still meeting data sovereignty requirements by using Azure Arc-enabled data services, application services, and machine-learning services.
+With Azure Arc as their hybrid and multicloud control plane, these customers can use existing IT investments and current operational practices in a non-distributive fashion. To continue using their current practices, the customers onboard Azure Arc-enabled servers, SQL servers, and Kubernetes clusters. They use Azure Arc-enabled data services, application services, and machine-learning services to modernize their workloads while ensuring they still meet data sovereignty requirements.
 
-Azure Arc extends the Azure Resource Manager (ARM) APIs so any workload can be represented as a first-class citizen in Azure. This extension is the foundation to implement unified operations, management, compliance, security, and governance at scale. It's implemented using:
+Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any workload as a first-class citizen in Azure. This extension provides the foundation for you to implement unified operations, management, compliance, security, and governance at scale. It's implemented with:
 
 - Centralized monitoring
 - Logging
@@ -93,64 +90,62 @@ Azure Arc extends the Azure Resource Manager (ARM) APIs so any workload can be r
 - Threat detection
 - Security vulnerability management and auditing
 
-[![Diagram that shows Azure Arc overview.](./media/arc-servers-unified-operations.png)](./media/arc-servers-unified-operations.png#lightbox)
+[![Diagram that shows Azure Arc overview.](./media/arc-unified-operations.png)](./media/arc-unified-operations.png#lightbox)
 
 ## Configure your initial Azure environment
 
-For each cloud mix above, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework helps prepare your environment by using a few steps:
+For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework provides a few steps to help you prepare your environment:
 
-- Review [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
-- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) to properly evaluate your technical requirements.
-- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template to start your configuration.
-- Review the [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md) article.
+- Review [What is an Azure landing zone?](../../ready/landing-zone/index.md)
+- Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) and properly evaluate your technical requirements.
+- Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template for your configuration.
+- Learn how to [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md).
 
 ## Azure Arc as a landing zone accelerator
 
-Azure Arc resources can be part of any application. For example:
+Azure Arc resources can be part of any application. Examples include:
 
-- Azure Arc-enabled servers representing IT assets deployed outside of Azure
-- Customer-managed Kubernetes clusters in a multicloud environment
-- Azure Arc-enabled data, application, and machine-learning services working at the edge
+- Azure Arc-enabled servers representing IT assets deployed outside of Azure.
+- Customer-managed Kubernetes clusters in a multicloud environment.
+- Azure Arc-enabled data, application, and machine-learning services working at the edge.
 
-As such, the application landing zone subscriptions can also contain Azure Arc resources and regular Azure resources.
+Application landing zone subscriptions can also contain both Azure Arc resources and regular Azure resources.
 
-Since Azure Arc resources are located outside of Azure, they can be considered a *metadata resource* in the way they're represented in Azure. So, Azure Arc resources can be treated as any other Azure resource that can be part of a landing zone. It doesn't matter if it's a platform or application, and follows the [subscription democratization and application-centric and archetype-neutral](/azure/cloud-adoption-framework/ready/enterprise-scale/design-principles) design principles.
+Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](../../ready/landing-zone/design-principles.md) design principles.
 
-:::image type="content" source="./media/landing-zone-design-revised.png" alt-text="Diagram that shows a landing zone design." lightbox="./media/landing-zone-design-revised.png":::
+[![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 
 ### Common examples of Azure Arc resources in Azure landing zones
 
-Review these examples to learn how to project Azure Arc resources as metadata resources in Azure landing zones.
+The following examples show how you can project Azure Arc resources as metadata resources in Azure landing zones.
 
 #### Example one: Projecting domain controllers outside of Azure
 
-Many customers have Active Directory Domain Services (AD DS) deployments within their environments of which domain controllers are a critical component of AD DS and the customers overall architecture.
+Many customers have Active Directory Domain Services (AD DS) deployments within their environments. Domain controllers are a critical component of AD DS and the customers overall architecture.
 
-Within the Azure landing zone conceptual architecture, there's a dedicated identity landing zone subscription that's designed to host identity-based resources. This subscription can be hosted in Azure, for example using AD DS domain controller (DC) virtual machines (VMs). It can also be projected into Azure via Azure Arc-enabled servers from any other location.
-
-It's the recommended pattern for Azure Arc-enabled identity-related resources located outside of Azure. Then it can be projected into the identity Azure landing zone via Azure Arc.
+Within the Azure landing zone conceptual architecture, there's a dedicated identity landing zone subscription designed to host identity-based resources. You can host this subscription in Azure using AD DS domain controller (DC) virtual machines (VMs). You can also project it into Azure from any other location via Azure Arc-enabled servers.
 
 #### Example two: Projecting on-premises datacenters into Azure
 
-Most customers are likely to still have on-premises datacenters present in their environments. The footprint can vary. They might have single servers or large virtualized environments.
+Most customers still have on-premises datacenters present in their environments. The footprints of these datacenters can vary from single servers to large virtualized environments.
 
-Customers can treat these on-premises datacenters as normal landing zones and then place them into new or existing landing zones as they see fit. Some common approaches for this example are:
+Customers can treat their on-premises datacenters as normal landing zones and place them into new or existing landing zones as they see fit. Some common approaches include:
 
-- Move project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
-  - In larger environments that have multiple datacenters across the globe, customers might have one landing zone per country. These landing zones also contain the resources from that country to provide a logical separation of the on-premises datacenters into Azure.
-  - This approach might also assist with the security, governance, and compliance requirements for different on-premises datacenters.
-- Move project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
+- Moving project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
+  - In larger environments with multiple datacenters across the globe, customers might have one landing zone per geopolitical region. These landing zones also contain the resources from that region to provide a logical separation of the on-premises datacenters into Azure.
+  - This approach can also assist with the security, governance, and compliance requirements for different on-premises datacenters.
+- Moving project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
 
 #### Example three: Projecting remote application resources into Azure
 
-A customer might develop latency-sensitive applications, or applications with data sovereignty requirements. These applications might need to host some resources that are part of their application outside of Azure. With these types of development, customers still want to control, govern, secure, and operate all of the resources that build up their application from a central point. By using Azure Arc, customers can achieve this goal.
+Customers might develop latency-sensitive applications or applications with data sovereignty requirements. These applications can need to host resources that are part of their application outside of Azure. Customers still want to centrally control, govern, secure, and operate all of the resources that build up their application. Azure Arc lets customers achieve this goal.
 
-Customers in this scenario should project their Azure Arc resources for their application into the same application landing zone subscription they deploy Azure resources into. This method ensures that a single set of controls can be applied to all resources from a single control plane. No matter what location the resources are in.
+In this scenario, customers should project the Azure Arc resources for their application into the same application landing zone subscription that they deploy Azure resources into. Customers can then apply one set of controls to all resources from a single control plane no matter where the resources are.
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles:
+For more information about your hybrid and multicloud cloud journey, see the following articles.
 
-- [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud](./enterprise-scale-landing-zone.md)
+- Review the [Introduction to Azure Arc-enabled servers landing zone accelerator for hybrid and multicloud](./enterprise-scale-landing-zone.md).
 
-- [Learn how to deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md)
+- Learn how to [Deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md).

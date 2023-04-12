@@ -1,8 +1,8 @@
 ---
 title: Cloud migration
 description: Prepare for a successful migration to Azure using an iterative process to assess, migrate, optimize, secure, and manage workloads.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/10/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -17,6 +17,8 @@ Any enterprise-scale [cloud adoption plan](../plan/index.md) includes workloads 
 Watch the following video to get a quick overview of the lift and shift approach.
 
 <!-- markdownlint-disable MD034 -->
+
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWDup6]
 
@@ -56,6 +58,8 @@ The following bullets provide an overview of the phases of this process (picture
   Watch this video to get a quick overview about completing a comprehensive assessment.
 
   <!-- markdownlint-disable MD034 -->
+ 
+  <br/>
 
   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWDpel]
 

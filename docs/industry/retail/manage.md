@@ -1,8 +1,8 @@
 ---
 title: Managing the cloud in the retail industry
 description: Managing a portfolio of retail applications in the cloud. Use these questions to create a baseline from which to work.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: internal, e2e-retail
 
 # Managing the cloud for the retail industry
 
-The Manage methodology in the Cloud Adoption Framework for Azure offers a path for implementing an operations baseline. You can develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/index.md).
+The Manage methodology of the Cloud Adoption Framework offers a path for implementing an operations baseline. You can develop that baseline throughout your cloud adoption lifecycle. For more information, see [Cloud management in the Cloud Adoption Framework](../../manage/index.md).
 
 For retail companies, IT operations are heavily influenced by the company's historical growth patterns. Those growth patterns influence your organizational structures across your technology teams. To understand how history affects operations management, see [Understand common growth patterns for retailers](./organize.md#common-growth-patterns-for-retailers).
 

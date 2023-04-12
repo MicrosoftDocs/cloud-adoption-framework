@@ -1,13 +1,13 @@
 ---
 title: Cloud security compliance management functions
 description: Understand the capabilities needed for cloud security compliance management.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Cloud security compliance management functions
@@ -23,7 +23,7 @@ Cloud introduces changes to security compliance including:
 - **Pre-cloud guidance:** While many regulatory requirements have been updated to incorporate the dynamic nature of cloud services, some requirements do not yet reflect these differences. Organizations should work with regulatory bodies to update these requirements and be prepared to explain these differences during audit exercises.
 - **Linking compliance with risk:** Ensure that organizations are tying compliance violations and exceptions to organizational risks to ensure the right level of attention and funding to correct issues.
 - **Tracking and reporting enabled by cloud:** This function should actively embrace the software-defined nature of the cloud, since it offers comprehensive logging, configuration data, and analytical insights that make reporting on compliance more efficient than traditional on-premises approaches.
-- **Cloud-based compliance tools** are available to facilitate easier reporting of regulatory compliance such as [Microsoft Compliance Manager](/microsoft-365/compliance/compliance-manager), which can reduce overhead costs of this function.
+- **Cloud-based compliance tools** are available to facilitate easier reporting of regulatory compliance such as [Microsoft Purview Compliance Manager](/microsoft-365/compliance/compliance-manager), which can reduce overhead costs of this function.
 
 ## Team composition and key relationships
 

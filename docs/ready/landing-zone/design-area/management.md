@@ -1,18 +1,19 @@
 ---
 title: Management for Azure environments
 description: Learn about some design considerations and recommendations for managing your Azure environment.
-author: DominicAllen
-ms.author: doalle
+author: martinekuan
+ms.author: martinek
 ms.date: 12/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
+products: azure-monitor
 ---
 
 # Design area: Management for Azure environments
 
-This design area establishes a foundation for operations management across your Azure, hybrid, or multicloud environments. You can enhance your learning later on using the operations guidance outlined in [Cloud Adoption Framework's Manage methodology](../../../manage/index.md).
+This design area establishes a foundation for operations management across your Azure, hybrid, or multicloud environments. You can enhance your learning later on using the operations guidance outlined in [Manage methodology](../../../manage/index.md) of the Cloud Adoption Framework.
 
 ## Design area review
 
@@ -20,7 +21,7 @@ This design area establishes a foundation for operations management across your 
 
 **Scope:** The goal of this exercise is to understand operations management requirements and implement those requirements consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on operations tooling. You'll use operations tooling to manage the collective portfolio of workloads with a set of common tools and processes. This initial set of operations tooling is also referred to as your operations baseline.
 
-**Out of scope:** You can use the operations baseline defined in this exercise consistently across all workloads. The operations baseline can also be expanded with other tools and processes as outlined in the [Cloud Adoption Framework's Manage methodology](../../../manage/index.md). Doing so helps to improve operations for specific technology platforms or individual workloads.
+**Out of scope:** You can use the operations baseline defined in this exercise consistently across all workloads. The operations baseline can also be expanded with other tools and processes as outlined in the [Manage methodology](../../../manage/index.md) of the Cloud Adoption Framework. Doing so helps to improve operations for specific technology platforms or individual workloads.
 
 You can also use the operations baseline with the Azure Well-Architected Framework and Microsoft Azure Well-Architected Review to improve the operations and architecture of individual workloads you deploy within your cloud environment. However, any advanced operations, tech platform operations, or workload operations are out of scope for this exercise.
 
@@ -28,7 +29,7 @@ You can also use the operations baseline with the Azure Well-Architected Framewo
 
 For stable, ongoing operations in the cloud, a management baseline is required to provide visibility, operations compliance, and protect and recover capabilities.
 
-The management design area focuses on the considerations and recommendations for landing zone design decisions. Also, the [Manage methodology](../../../manage/index.md) in the Cloud Adoption Framework provides further in-depth guidance for holistic management processes and tools.
+The management design area focuses on the considerations and recommendations for landing zone design decisions. Also, the [Manage methodology](../../../manage/index.md) of the Cloud Adoption Framework provides further in-depth guidance for holistic management processes and tools.
 
 ### Operations baseline
 
@@ -46,5 +47,5 @@ Use the following advanced operations items as discussion points within your clo
 
 |Scope|Context|
 |-|-|
-|[**Platform management**](./management-platform.md)|When evaluating supported workloads, it's common for those workloads to have dependencies on shared platforms, like SAP, WVD, AVS, SQL, and so on. When technology platforms are used by multiple workloads, advanced operations can't be delegated to a single workload team. In these instances, centralized operations teams need a plan for the ongoing operations of those shared technology platforms. These responsibilities.require extra tooling beyond the operations baseline that supports the overall cloud environment. |
+|[**Platform management**](./management-platform.md)|When evaluating supported workloads, it's common for those workloads to have dependencies on shared platforms, like SAP, WVD, AVS, SQL, and so on. When technology platforms are used by multiple workloads, advanced operations can't be delegated to a single workload team. In these instances, centralized operations teams need a plan for the ongoing operations of those shared technology platforms. These responsibilities require extra tooling beyond the operations baseline that supports the overall cloud environment. |
 |[**Workload management**](./management-workloads.md)| Workloads built on top of the landing zone platform might have specific management requirements in addition to the tools and processes put in place for the platform services. <br> These requirements should be considered in the context of the platform management to ensure that additions or exceptions are known and documented. <br> It's also important to look at these requirements in the broader context. Often, what is thought to be a requirement for a single workload can become a common pattern. Consider these situations as part of the overall platform toolset to avoid unnecessary duplication of effort. <br> For further information on considerations for workload-specific management, review the [operational excellence](/azure/architecture/framework/#operational-excellence) of the Azure Well-Architected Framework.|

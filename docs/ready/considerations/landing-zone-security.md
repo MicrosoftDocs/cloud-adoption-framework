@@ -1,8 +1,8 @@
 ---
 title: Improve landing zone security
 description: Improve landing zone security.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,25 +12,95 @@ ms.custom: internal
 
 # Improve landing zone security
 
-When a workload or the landing zones that hosts it require access to any sensitive data or critical systems, it's important to protect the data and assets. Improving landing zone security builds on the [test-driven development approach to landing zones](./test-driven-development.md) by expanding or refactoring the landing zone to account for heightened security requirements.
 
-## Landing zone security best practices
+When a workload or the landing zones that hosts it require access to any sensitive data or critical systems, it's important to protect the data and assets.
 
-The following list of reference architectures and best practices provides examples of ways to improve landing zone security:
 
-- [Microsoft Defender for Cloud](/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard a subscription to Defender for Cloud.
-- [Microsoft Sentinel](/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Onboard to Microsoft Sentinel to provide a **security information event management (SIEM)** and **security orchestration automated response (SOAR)** solution.
-- [Secure network architecture](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Reference architecture for implementing a perimeter network and secure network architecture.
-- [Identity management and access control](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Series of best practices for implementing identity and access to secure a landing zone in Azure.
-- [Network security practices](/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json): Provides additional best practices for securing the network.
-- [Operational security](/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) provides best practices for increasing operational security in Azure.
-- The [Security Baseline discipline](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-best-practices): Example of developing a governance-driven security baseline to enforce security requirements.
+## Secure
+
+As you're exiting the Ready state, you have the ongoing responsibility to maintain the security of your environment. Cloud security is also an incremental process instead of just a static destination. Focus on objectives and key results when envisioning a security end state. Map concepts, frameworks, and standards to the disciplines in the CAF [secure methodology](../../secure/index.md) alongside mapping to roles and responsibilities for human discipline. The secure methodology provides guidance.
+
+Below we provide an overview of this guidance with links to the details.
+
+### Risk insights
+
+Business operations have security [risks](../../secure/risk-insights.md). The security team should inform and advise decision makers on how security risks fit into their frameworks by understanding the business and using security practices to recognize which risk to appropriately plan and take action upon.
+- [What is cybersecurity risk?](../../secure/risk-insights.md#what-is-cybersecurity-risk): All potential damage or destruction of the business caused by human attackers attempting to steal currency, inside information, or technology.
+- [Align your security risk management](../../secure/risk-insights.md#align-your-security-risk-management):  Invest in bridging cybersecurity and organizational leadership to explain security threats using business-friendly terminology, actively listening and communicating to all people across the business.
+- [Understanding cybersecurity risk](../../secure/risk-insights.md#understanding-cybersecurity-risk): Comprehend the motivations and behavior patterns of human attackers for stealing money, information, or technology and identifying potential impact of different types of attacks.
+
+### Security integration
+
+Ensure that security is an organizational concern and not siloed into a single group. [Security integration](../../secure/security-integration.md) provides you with guidance on how to integrate security into everyone's role while minimizing friction with business processes. Specific guidance includes:
+- [Normalizing relations](../../secure/security-integration.md#normalize-relations): Ensure all teams are integrated with security teams and have a shared understanding of security goals. Further, work to find the right level of security controls, ensuring the controls don't outweigh business value.
+- [Integrate with IT and business operations](../../secure/security-integration.md#integrate-with-it-and-business-operations): Balance the implementation of security updates and mapping how all security processes affect current business impact, and potential security risk in the future.
+- [Integrate security teams](../../secure/security-integration.md#integrate-security-teams): Avoid operating in silos by responding to active threats and continuously improving the security posture of the organization by practicing security as a dynamic discipline.
+
+### Business resilience
+
+While organizations can never have perfect security, there's still the pragmatic approach of [Business resilience](../../secure/business-resilience.md) in investing the full lifecycle of a security risk before, during, and after an incident.
+- [Resilience goals](../../secure/business-resilience.md#resilience-goals): Focus on enabling your business to rapidly innovate, limit the impact, and always seek safe ways to adopt technology.
+- [Security resilience and assume breach](../../secure/business-resilience.md#security-resilience-and-assume-breach): Assume breach or compromise to follow the key principle of zero trust and practice pragmatic security behaviors to prevent attacks, limit damage, and have quick recovery from them.
+
+### Access control
+
+Make an [access control](../../secure/access-control.md) strategy that aligns both user experience and security assurances.
+- [From security perimeter to zero trust](../../secure/access-control.md#from-security-perimeter-to-zero-trust): Embrace a zero trust approach for access control for establishing and improving security assurances when working in the cloud and using new technology.
+- [Modern access control](../../secure/access-control.md#modern-access-control): Make an access control strategy that is comprehensive, consistent, and flexible. Go beyond a single tactic or technology for multiple workloads, clouds, and various business sensitivity levels.
+- [Known, trusted, allowed](../../secure/access-control.md#known-trusted-allowed): Follow the dynamic three-step process to ensure known authentication, trusting the user or device, and allowing the appropriate rights and privileges for the application, service, or data.
+- [Data-driven access decisions](../../secure/access-control.md#data-driven-access-decisions): Make informed decisions from the diverse data on the users and devices for fulfilling explicit validation.
+- [Segmentation: Separate to protect](../../secure/access-control.md#segmentation-separate-to-protect): Create boundaries as separate segments of an internal environment to contain damages of successful attacks.
+- [Isolation: Avoid firewall and forget](../../secure/access-control.md#isolation-avoid-firewall-and-forget): Design an extreme form of segmentation for business-critical assets that consists of: people, process, and technology.
+
+### Security operations
+
+Establish [security operations](../../secure/security-operations.md) by reducing risk, rapidly responding, and recovery to protect your organization and follow the security discipline of the DevOps process.
+- [People and process](../../secure/security-operations.md#people-and-process): Create a culture to empower people with tools to enable them as your most valuable asset and diversify your thinking portfolio by including and training non-technical people with strong backgrounds in forensic investigation roles.
+- [Security operations model](../../secure/security-operations.md#security-operations-model): Focus on the outcomes of incident management, incident preparation, and threat intelligence. Delegate the outcomes between subteams to triage, investigate, and hunt on high volume and complex incidents.
+- [SecOps business touchpoints](../../secure/security-operations.md#secops-business-touchpoints): Interact with business leadership in order to inform major incidents and determine impact of critical systems. Continuously joint practice response to reduce organizational risk.
+- [SecOps modernization](../../secure/security-operations.md#secops-modernization): Evolve security operations by following trends involving platform coverage, identity-centric security, IoT and OT devices, and relevant telemetry from the cloud.
+
+### Asset protection
+
+Secure business critical [assets](../../secure/asset-protection.md), which include all physical and virtual items by implementing security controls that are unique to each asset type. Consistently execute preventive and detective protection to meet policies, standards and architecture.
+- [Get secure](../../secure/asset-protection.md#get-secure): Bring resources up to your organization's latest security standards and policy by applying current controls to brownfield assets and ensuring greenfield assets are set to the most recent standards.
+- [Stay secure](../../secure/asset-protection.md#stay-secure): Practice continuous cloud improvement and plan for upgrading or retiring end-of-life software as business, technology, and security requirements change rapidly.
+- [Get started](../../secure/asset-protection.md#getting-started): Start protecting assets by focusing on well-known cloud resources first and use well-known and proven vendor/industry baselines for your security configuration.
+- [Key information](../../secure/asset-protection.md#key-information): Use key elements of accountable and responsible teams to manage enterprise-wide assets such as cloud elasticity workload needs and design controls to identify best practices. Measure business value of asset protection and favor automated policy to avoid cost and manual repetition.
+
+### Security governance
+
+Perform oversight and monitoring with [security governance](../../secure/security-governance.md) for sustaining and improving security posture over time by using business goals and risk to determine the best direction for security.
+- [Compliance and reporting](../../secure/security-governance.md#compliance-and-reporting): Have both external and internal security policies meet mandatory requirements in a given industry.
+- [Architecture and standards](../../secure/security-governance.md#architecture-and-standards): Create a unified view across your enterprise estate as most enterprises are a hybrid environment that includes both on-premises and cloud resources.
+- [Security posture management](../../secure/security-governance.md#security-posture-management): Plan for governance to monitor security standards, provide guidance, and improve processes. Maintain agility by driven governance through policy and continuous improvement.
+- [Governance and protection disciplines](../../secure/security-governance.md#governance-and-protection-disciplines): Apply security controls and provide feedback to identify the best solutions.
+- [Governance and security operations](../../secure/security-governance.md#governance-and-security-operations): Ensure that lessons learned from incidents are integrated into security operations and governance.
+
+### Innovation security
+
+Protect the processes and data of innovation against cyberattacks as new applications are developed with [innovation security](../../secure/innovation-security.md) in mind.
+- [What is DevSecOps?](../../secure/innovation-security.md#what-is-devsecops): Integrated security into the already combined process of development and operations in DevOps to mitigate risks in the innovation process.
+- [Secure by design and shifting left](../../secure/innovation-security.md#secure-by-design-and-shifting-left): Involve security in all stages of the DevOps lifecycle and have teams align with innovation speed, reliability and resilience.
+- [Why DevSecOps?](../../secure/innovation-security.md#why-devsecops): To secure the DevOps process protecting against attackers exploiting weaknesses in all IT infrastructure within your organization, which in turn protects your customers.
+- [The DevSecOps Journey](../../secure/innovation-security.md#the-devsecops-journey): Use idea incubation and DevOps as a two-phase process like most organizations. Identify the MVP (minimum viable product) requirements, use leadership techniques to resolve teams conflicts, and integrate security in existing processes and tools.
+- [Tips on navigating the journey](../../secure/innovation-security.md#tips-on-navigating-the-journey): As you transform your security, there will be common challenges throughout the journey that will involve education, time, resourcing, and the overall shifting nature of IT operations.
+
+### DevSecOps controls
+
+Add security to each stage of continuous integration and continuous delivery (CI/CD) when making [DevSecOps controls](../../secure/devsecops-controls.md).
+- [Plan and develop](../../secure/devsecops-controls.md#plan-and-develop): Bring security to the planning phase in modern development methodologies to implement threat modeling, IDE security plugins/pre-commit, and peer review.
+- [Commit the code](../../secure/devsecops-controls.md#commit-the-code): Evaluate and implement vulnerability scanning capability to your centralized repositories to discover risks and perform remediation.
+- [Build and test](../../secure/devsecops-controls.md#build-and-test): Use build and release pipelines for automation and standardization for the processes of building and deploying secure code without spending large amounts of time in redeploying or upgrading existing environments.
+- [Go to production and operate](../../secure/devsecops-controls.md#go-to-production-and-operate): Oversee and manage the state of security when the solution is brought to production. Use infrastructure scanning tools and penetration testing practices for enabling teams to find risks and vulnerabilities to address.
+
+
+
 
 ## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./development-strategy-test-driven-development.md) and [test-driven development in Azure](./development-strategy-test-driven-development.md).
 
-![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
 ## Next steps
 

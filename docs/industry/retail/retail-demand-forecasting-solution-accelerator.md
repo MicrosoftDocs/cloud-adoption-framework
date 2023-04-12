@@ -2,7 +2,7 @@
 title: Retail demand forecasting solution accelerator
 description: Learn how to implement better demand forecasting to create meaningful gains in your retail environment
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -63,6 +63,6 @@ Read more:
 - [Azure Synapse Analytics](/azure/synapse-analytics/)
 - [Azure Kubernetes Service](/azure/aks/)
 - [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-ml)
-- [Azure Synapse content on Microsoft Learn](/learn/browse/?terms=synapse)
-- [Azure Kubernetes on Microsoft Learn](/learn/browse/?terms=kubernetes)
-- [Data scientist learning path on Microsoft Learn](/learn/browse/?roles=data-scientist)
+- [Learn modules for Azure Synapse](/training/browse/?terms=synapse)
+- [Learn modules for Azure Kubernetes](/training/browse/?terms=kubernetes)
+- [Data scientist learning path](/training/browse/?roles=data-scientist)

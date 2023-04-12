@@ -1,8 +1,8 @@
 ---
 title: Innovate with SAP and Azure
 description: Innovate with SAP and Azure
-author: JefferyMitchell
-ms.author: brblanch
+author: PankajMeshramCSA
+ms.author: martinek
 ms.date: 07/01/2010
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,12 +2,12 @@
 title: Cloud strategy antipatterns
 description: Avoid causing cloud adoption projects to fail through misalignment. Take steps to clearly define and communicate cloud adoption KPIs and motivations.
 author: mahia127
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: think-tank,UpdateFrequency5
 ---
 
 # Cloud strategy antipatterns

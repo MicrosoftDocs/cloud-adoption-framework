@@ -2,7 +2,7 @@
 title: Migrate PostgreSQL databases to Azure
 description: Learn how Contoso migrated its on-premises PostgreSQL databases to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -25,7 +25,7 @@ The IT leadership team has worked closely with business partners to understand w
 - **Increase security.** Contoso realizes that regulatory issues will cause the company to adjust its on-premises strategy based on auditing, logging, and compliance requirements.
 
 > [!NOTE]
-> For detailed guidance on migrations to Azure Database for PostgreSQL with labs, see [Azure Postgres Migration Guide](https://aka.ms/migrate/postgres). 
+> For detailed guidance on migrations to Azure Database for PostgreSQL with labs, see [Azure PostgreSQL Migration Guide](https://aka.ms/migrate/postgres). 
 
 ## Migration goals
 
