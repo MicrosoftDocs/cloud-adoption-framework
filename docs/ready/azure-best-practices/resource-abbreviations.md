@@ -44,11 +44,14 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
-| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
 | Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
+| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
+| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
+| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -91,6 +94,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
+| Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
 | Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
@@ -125,10 +129,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
-| Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
-| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
