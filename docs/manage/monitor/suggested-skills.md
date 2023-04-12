@@ -1,20 +1,22 @@
 ---
 title: Skills readiness for cloud monitoring
 description: Skills readiness for cloud monitoring
-author: martinekuan
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 12/13/2022
+ms.date: 04/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: internal, engagement-fy23
+ms.custom: internal, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
 # Skills readiness for cloud monitoring
 
-The objective of planning your migration journey is to develop the plans necessary to guide implementation. The plans also need to include how you'll operate these workloads before they're transitioned or released into production, as opposed to afterward. Business stakeholders expect valuable services, and they expect them without disruption. IT staff members realize they need to learn new skills and adapt. Hence, they're prepared to confidently use the integrated Azure services to monitor resources effectively in Azure and hybrid environments.
+Planning for cloud monitoring requires understanding how you'll operate your workloads before releasing them into production and continuous monitoring in a live production environment.
+
+Business stakeholders expect services to run without disruption. Organizations often realize that their IT staff need to learn new skills and adapt to the ever-changing landscape in the cloud. Developing the necessary skills can be accelerated with several learning paths, as you see listed in this article.
 
 Developing the necessary skills can be accelerated with the following learning paths. They're organized starting with learning the fundamentals and then divided across three primary subject domains: infrastructure, application, and data analysis.
 
@@ -42,7 +44,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - For a larger scope of instrumentation, you can take the Microsoft Learn Path [Develop an instrumentation strategy](/training/paths/az-400-develop-instrumentation-strategy/), which teaches you about logging, telemetry, and monitoring to give you full visibility into what's happening in your environment.
 
-- In the [Instrument a cloud-native ASP.NET Core microservice](/training/modules/microservices-logging-aspnet-core/) Microsoft Learn module, you'll learn how to instrument your cloud-native ASP.NET Core microservice apps to diagnose problems and monitor performance. This module includes how to enable Azure Container insights in a Kubernetes cluster.
+- In the [Instrument a cloud-native ASP.NET Core microservice](/training/modules/microservices-logging-aspnet-core/) Microsoft Learn module, you learn how to instrument your cloud-native ASP.NET Core microservice apps to diagnose problems and monitor performance. This module includes how to enable Azure Container insights in a Kubernetes cluster.
 
 - Learn how to [Analyze your Azure infrastructure by using Azure Monitor logs](/training/modules/analyze-infrastructure-with-azure-monitor-logs). This Microsoft Learn module walks you through using Azure Monitor logs to extract valuable information about your infrastructure from log data.
 
@@ -50,7 +52,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
-- [`Monitoring Microsoft Azure Hybrid Cloud Networks`](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize virtual networks and virtual private network connections for your hybrid cloud implementation.
+- [`Monitoring Microsoft Azure Hybrid Cloud Networks`](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize virtual networks and virtual private network connections for your hybrid cloud implementation.
 
 - With [Azure Arc for servers](/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage virtual machines running in Azure.
 
@@ -68,9 +70,9 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [`Microsoft Azure Database Monitoring Playbook`](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use the monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
-- Learn more about the [Application Insights Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) to automatically collect a debug snapshot from your live web applications. Further, learn how to use the [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to capture and view performance traces for apps running in the cloud.
+- Learn more about the [Application Insights Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) to collect a debug snapshot from your live web applications automatically. Further, learn how to use the [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to capture and view performance traces for apps running in the cloud.
 
-## Data analysis
+## Analyzing monitoring data
 
 While collecting data is a foundational piece of any environment operating in the cloud, analyzing that information is imperative to understand more about the health of your workloads and infrastructure. Review the following resources to dive in and analyze logs using Kusto Query Language (KQL).
 
@@ -80,25 +82,23 @@ While collecting data is a foundational piece of any environment operating in th
 
 - The Microsoft Learn module [Write multi-table queries by using Kusto Query Language](/training/modules/multi-table-queries-with-kusto-query-language/) teaches you how to retrieve data from multiple tables in a single query.
 
-- Expand your learning with the [guided project - Analyze logs in Azure Monitor with KQL](/training/modules/analyze-logs-with-kql/) learn module to understand how to write log queries to find answers to operational and business questions. Further, this module will teach you to use KQL to extract insights from logs in Azure Monitor.
+- Expand your learning with the [guided project - Analyze logs in Azure Monitor with KQL](/training/modules/analyze-logs-with-kql/) learn module to understand how to write log queries to find answers to operational and business questions. Further, this module teaches you to use KQL to extract insights from logs in Azure Monitor.
 
-## Deeper skills exploration
+## Dive deeper
 
 Various learning options beyond these initial options are available for developing skills.
 
-### Typical mappings of cloud IT roles
+### Cloud IT roles mapping
 
-Microsoft and its partners offer various options for all audiences to develop skills with Azure services.
+Microsoft offers various options for all audiences to develop skills with Azure services.
 
-- [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
+- [Map roles and skills](../../plan/suggested-skills.md): A resource for mapping your cloud career path. Learn about your cloud role and suggested skills. Follow a learning curriculum at your own pace to build the necessary skills to stay relevant.
 
 - Explore [Azure certification training and exams](/certifications/) to gain official recognition for your Azure knowledge.
 
-## Azure DevOps and project management
+### Azure DevOps and project management
 
-The hybrid cloud environment disrupts IT with undefined roles, responsibilities, and activities. Organizations must move to modern practices to manage services, including agile and DevOps methodologies, to better meet the transformation and optimization needs of today's businesses in a streamlined and efficient manner.
-
-As part of migrating to a cloud monitoring platform, the IT team responsible for monitoring the enterprise needs to include agile training and participation in DevOps activities. This also includes following the *Dev* in DevOps by taking requirements and turning them into organized agile requirements to deliver minimally viable monitoring solutions refined iteratively and in line with business needs. Connect your Azure DevOps Server project with a GitHub Enterprise Server repository for source control to manage the iterative monitoring solution packages and any other related collateral. This links commits and pull requests in GitHub to work items. You can use GitHub Enterprise for development to support continuous monitoring integration and deployment while using Azure Boards to plan and track your work.
+IT teams responsible for monitoring the enterprise need to include agile training and participation in DevOps activities. This also includes following the *Dev* in DevOps by turning requirements into organized agile requirements to deliver minimally viable monitoring solutions refined iteratively and in line with business needs.
 
 To learn more, review the following:
 
@@ -110,11 +110,13 @@ To learn more, review the following:
 
 - [Automate your deployments with Azure DevOps](/training/modules/deploy-nodejs/).
 
-## Other considerations
+### Other considerations
 
-Customers often need help with managing, maintaining, and delivering the expected business (and to the IT organization) outcomes for the services that IT provides. Monitoring is considered core to managing infrastructure and the business, focusing on measuring service quality and customer experience. To achieve those goals, lay the groundwork using ITSM in conjunction with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning with the strategic goals and needs of the organization.
+Customers often need help managing, maintaining, and delivering the expected business outcomes for IT services. Monitoring is considered core to managing infrastructure and the business, focusing on measuring service quality and customer experience.
 
-Review the following to understand the updates made to the most popular ITSM framework [`ITIL 4 and the Cloud` white paper](https://www.axelos.com/case-studies-and-white-papers/itil-4-and-the-cloud), which focuses on joining existing ITIL guidance with best practices from DevOps, agile and lean approaches. Also, consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint for transforming IT using a process-agnostic framework.
+To achieve those goals, lay the groundwork using IT Service Management (ITSM) with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning with the strategic goals and needs of the organization.
+
+Consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint for transforming IT using a process-agnostic framework.
 
 ## Learn more
 
