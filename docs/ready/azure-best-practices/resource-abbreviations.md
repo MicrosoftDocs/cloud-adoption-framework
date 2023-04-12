@@ -119,6 +119,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
+| MariaDB server | `Microsoft.DBforMariaDB/servers` | `maria` |
+| MariaDB database | `Microsoft.DBforMariaDB/servers/databases` | `mariadb` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
