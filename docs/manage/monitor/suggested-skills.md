@@ -14,19 +14,7 @@ products: azure-monitor
 
 # Skills readiness for cloud monitoring
 
-This article is part of a series. The following articles are meant to be read together, in this order:
-
-- [Introduction](./index.md)
-- [Monitoring platforms overview](./platform-overview.md)
-- [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
-- [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
-- [Observability](./observability.md)
-- [Service Level Objectives](./service-level-objectives.md)
-- [Collect the right data](./data-collection.md)
-- [Response](./response.md)
-- Relevant skills (this article)
-
-## Introduction
+This page is part of [The cloud monitoring guide](./index.md) article series.
 
 Planning for cloud monitoring requires understanding how you'll operate your workloads before releasing them into production and continuous monitoring in a live production environment.
 
