@@ -24,6 +24,7 @@ This article is part of a series. The following articles are meant to be read to
 - [Service Level Objectives](./service-level-objectives.md)
 - [Collect the right data](./data-collection.md)
 - [Response](./response.md)
+- [Relevant skills](./suggested-skills.md)
 
 ## Introduction
 
@@ -31,17 +32,22 @@ IT departments must effectively monitor applications or services in and outside 
 
 Stakeholders often desire SaaS-based monitoring and management tools for cloud solutions. Understanding available services is crucial to achieving end-to-end visibility, cost reduction, and less focus on traditional IT operations tools.
 
-This cloud monitoring guide helps you to:
+What you can expect from this series of articles:
 
-- Understand the monitoring platforms for Azure, including overviews and comparison of their capabilities.
-- Find the best solution for monitoring hybrid, private, and Azure native workloads.
-- Grasp the recommended end-to-end monitoring approach for both infrastructure and applications.
+- **Understand the recommended monitoring platforms**: Make informed decisions for cloud monitoring in Azure and hybrid environments. Learn about infrastructure requirements, data collection options, health monitoring, alerting, analyzing monitoring data, and how to extend the base platform.
+- **Define a monitoring strategy**: Understand high-level modeling, how monitoring informs your strategy, and considerations for scale, privacy, and security. Also, explore how to formulate monitoring requirements and establish minimum governance and readiness.
+- **Monitoring strategy for cloud deployment models**: Discover recommended monitoring strategies for Azure, hybrid environments, or private clouds like Azure Stack.
+- **Understand observability**: Learn about observability and why it's crucial. Consider the monitoring plan, the business, service, and technology perspectives, and the key considerations.
+- **Establish Service Level Objectives (SLOs)**: Discover what purpose SLOs serve and what approach you can take to establish them. Learn more about the types of SLOs, how to define them, and their considerations.
+- **Collecting the correct data**: Dive into how to collect the right data and considerations for developing monitoring configurations.
+- **Responding to events**: Explore the response discipline, which is a result of defining one or more actions based on data-driven decisions from monitoring.
+- **Learn about skills readiness**: Understand the necessary skills for cloud monitoring.
 
-The articles in this guide aren't how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
+The articles in this guide _aren't_ how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
 
 ## Audience
 
-This guide aims to provide a reference for enterprise decision-makers, IT managers and administrators, IT operations, IT security and compliance, application architects, workload development owners, and developers.
+This guide provides a reference for enterprise decision-makers, IT managers and administrators, IT operations, IT security and compliance, application architects, workload development owners, and developers.
 
 ## Products and services
 
