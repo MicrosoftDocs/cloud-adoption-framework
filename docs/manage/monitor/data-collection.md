@@ -1,22 +1,22 @@
 ---
 title: Collect monitoring data in the cloud
 description: Learn to observe the health and availability of your cloud solution to collect the right monitoring data.
-author: MGoedtel
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 11/15/2022
+ms.date: 04/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, engagement-fy23
+ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
-# Cloud monitoring guide: Collect the right data
+# Collect the right data
 
-This article describes some considerations for collecting monitoring data in a cloud application.
+In this article, you will learn about considerations for collecting monitoring data in a cloud application. This article is part of a series in [the cloud monitoring guide](./index.md).
 
-To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect a level of signals based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
+To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect signals based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
 
 Plan for monitoring and migration carefully. Start by including the monitoring service owner, manager of operations, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration on the following criteria:
 
@@ -37,7 +37,7 @@ For service-level quality results, monitor the health and availability of these 
 To drive quicker resolution of the incident, consider the following recommendations:
 
 - Define a dashboard for each service component.
-- Use metrics to help guide further diagnosis and to identify a resolution or workaround of the issue if a root cause can't be uncovered.
+- Use metrics to help guide further diagnosis and identify a resolution or workaround if you can't discover a root cause.
 - Use dashboard drill-down capabilities, or support customizing the view to refine it.
 - If you need verbose logs, metrics should have helped target the search criteria. If the metrics didn't help, improve them for the following incident.
 

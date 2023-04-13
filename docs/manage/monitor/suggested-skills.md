@@ -20,7 +20,7 @@ Business stakeholders expect services to run without disruption. Organizations o
 
 Developing the necessary skills can be accelerated with the following learning paths. They're organized starting with learning the fundamentals and then divided across three primary subject domains: infrastructure, application, and data analysis.
 
-This page is part of [The cloud monitoring guide](./index.md) article series.
+This article is part of a series in [the cloud monitoring guide](./index.md).
 
 ## Fundamentals
 
