@@ -45,7 +45,8 @@ The Azure policies below will be applied directly to the Sandbox Management Grou
 | [Deny VNet peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) | Deny any VNet peering with VNets outside of the sandbox subscription. This helps the sandbox environments stay isolated from a network perspective. |
 | [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) | This policy should be used to deny creation of Express Route gateways, VPN gateways, and vWan hubs. Denying these resources help ensure the sandbox environments stay isolated from a network perspective. |
 
-One of the benefits of creating a sandbox subscription is the ability to manage costs for each program/project. This allows costs to be more easily tracked and for sandboxes be cancelled when budgets or the expiration date of the sandbox has been reached.
+One of the benefits of creating a sandbox subscription is the ability to manage costs for each program/project. This allows costs to be more easily tracked and for sandboxes to be cancelled when budgets or the expiration date of the sandbox has been reached.
+
 
 ### Networking
 
