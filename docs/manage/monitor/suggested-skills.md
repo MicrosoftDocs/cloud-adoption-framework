@@ -14,13 +14,13 @@ products: azure-monitor
 
 # Skills readiness for cloud monitoring
 
+This article is part of a series in [the cloud monitoring guide](./index.md).
+
 Planning for cloud monitoring requires understanding how you'll operate your workloads before releasing them into production and continuous monitoring in a live production environment.
 
 Business stakeholders expect services to run without disruption. Organizations often realize that their IT staff need to learn new skills and adapt to the ever-changing landscape in the cloud. Developing the necessary skills can be accelerated with several learning paths, as you see listed in this article.
 
 Developing the necessary skills can be accelerated with the following learning paths. They're organized starting with learning the fundamentals and then divided across three primary subject domains: infrastructure, application, and data analysis.
-
-This article is part of a series in [the cloud monitoring guide](./index.md).
 
 ## Fundamentals
 

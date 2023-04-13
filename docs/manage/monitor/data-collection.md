@@ -14,7 +14,7 @@ products: azure-monitor
 
 # Collect the right data
 
-In this article, you will learn about considerations for collecting monitoring data in a cloud application. This article is part of a series in [the cloud monitoring guide](./index.md).
+This article is part of a series in [the cloud monitoring guide](./index.md).
 
 To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect signals based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
 
@@ -27,6 +27,8 @@ Plan for monitoring and migration carefully. Start by including the monitoring s
 - How will the service owner, support teams, and other personnel search the logs?
 
 How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform. If you're migrating from an existing monitoring platform or set of monitoring tools, use the migration to reevaluate the signals you collect. This is especially true now that there are several cost factors to consider when you migrate or integrate with a cloud-based monitoring platform like [Azure Monitor](/azure/azure-monitor/overview). Remember, monitoring data needs to be actionable. You need to have optimized data collected to give you "a 10,000-foot view" of the overall health of the service. The instrumentation that's defined to identify actual incidents should be as simple, predictable, and reliable as possible.
+
+In this article, you will learn about considerations for collecting monitoring data in a cloud application.
 
 ## Develop a monitoring configuration
 
