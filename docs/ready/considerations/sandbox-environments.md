@@ -50,7 +50,8 @@ One of the benefits of creating a sandbox subscription is the ability to manage 
 
 ### Networking
 
-All sandbox networking is left to the sandbox user to create that fits their needs. To keep the sandbox isolated it is important to ensure the networks created inside the sandbox are not peered with other networks outside of the sandbox. This ensures each sandbox is its own isolated environment. The policies outlined in the table above limits the sandbox users ability to peer with outside networks.
+All sandbox networking is left to the sandbox user to create what fits their needs. To keep the sandbox isolated it is important to ensure the networks created inside the sandbox are not peered with other networks outside of the sandbox. This ensures each sandbox is its own isolated environment. The policies outlined in the table above limits the sandbox user's ability to peer with outside networks.
+
 
 ### Audit Logging
 
