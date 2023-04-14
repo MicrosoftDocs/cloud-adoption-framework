@@ -24,25 +24,25 @@ Observing the health and availability of your cloud solution helps build an unde
 
 Ask yourself these questions to establish criteria for a monitoring configuration:
 
-- **Service composition**: What's the composition of the services? Are those dependencies monitored today? If so, are there multiple tools involved, and is there an opportunity to consolidate without introduce additional risk?
+- **Service composition**: What's the composition of the services? Are those dependencies monitored today? If so, are multiple tools involved, and is there an opportunity to consolidate without introducing additional risk?
 
 - **Define predictable failure states**: These signals are the symptoms of the _failure_, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
 
 - **Service SLA**: What's the Service Level Agreement (SLA) of the service, and how will you measure and report it?
 
-- **Service dashboard design**: What should the service dashboard look like when an incident is raised? What should the dashboard look like for the service owner, and for the team supporting the service?
+- **Service dashboard design**: What should the service dashboard look like when reviewing incidents? What should the dashboard look like for the service owner and the team supporting the service?
 
-- **Resource metrics**: What resource metrics are produced by the solution that you need to monitor?
+- **Resource metrics**: What resource metrics are produced by the solution you need to monitor?
 
 - **Log search**: How will the service owner, support teams, and other personnel search the logs?
 
-- **Stakeholder involvement**: Include the monitoring service owner, manager of IT operations, and other stakeholders during the planning phase. Continue to engage them throughout the development and release cycles of your monitoring solutions.
+- **Stakeholder involvement**: Include the monitoring service owner, manager of IT operations, and other stakeholders during the planning phase. Continue to engage them throughout your monitoring solutions' development and release cycles.
 
 How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform.
 
 ### Evaluate required monitoring signals
 
-Whether you're deploying new workloads with a new monitoring solution, or migrating from an existing monitoring platform or a set of monitoring tools, evaluating the required monitoring signals is essential. Carefully designing the required signals help drive the expected outcomes and reduce the noise.
+Whether you're deploying new workloads with a new monitoring solution, or migrating from an existing monitoring platform or a set of monitoring tools, evaluating the required monitoring signals is essential. Carefully designing the required signals help drive the expected outcomes and reduces noise.
 
 Consider the following:
 
