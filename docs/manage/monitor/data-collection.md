@@ -12,21 +12,43 @@ ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
-# Collect the right data
+# Collect the right monitoring data
 
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
-To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect signals based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
+## Create a monitoring plan
 
-Plan for monitoring and migration carefully. Start by including the monitoring service owner, manager of operations, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration on the following criteria:
+Observing the health and availability of your cloud solution helps build an understanding of the signals you expect in your systems.
 
-- What is the composition of the service? Are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate without introducing risks?
-- What is the SLA of the service, and how will I measure and report it?
-- What should the service dashboard look like when an incident is raised? What should the dashboard look like for the service owner and the team supporting the service?
-- What metrics does the resource produce that I need to monitor?
-- How will the service owner, support teams, and other personnel search the logs?
+### Monitoring plan considerations
 
-How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform. If you're migrating from an existing monitoring platform or set of monitoring tools, use the migration to reevaluate the signals you collect. This is especially true now that there are several cost factors to consider when you migrate or integrate with a cloud-based monitoring platform like [Azure Monitor](/azure/azure-monitor/overview). Remember, monitoring data needs to be actionable. You need to have optimized data collected to give you "a 10,000-foot view" of the overall health of the service. The instrumentation that's defined to identify actual incidents should be as simple, predictable, and reliable as possible.
+Ask yourself these questions to establish criteria for a monitoring configuration:
+
+- **Service composition**: What's the composition of the services? Are those dependencies monitored today? If so, are there multiple tools involved, and is there an opportunity to consolidate without introduce additional risk?
+
+- **Define predictable failure states**: These signals are the symptoms of the _failure_, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
+
+- **Service SLA**: What's the Service Level Agreement (SLA) of the service, and how will you measure and report it?
+
+- **Service dashboard design**: What should the service dashboard look like when an incident is raised? What should the dashboard look like for the service owner, and for the team supporting the service?
+
+- **Resource metrics**: What resource metrics are produced by the solution that you need to monitor?
+
+- **Log search**: How will the service owner, support teams, and other personnel search the logs?
+
+- **Stakeholder involvement**: Include the monitoring service owner, manager of IT operations, and other stakeholders during the planning phase. Continue to engage them throughout the development and release cycles of your monitoring solutions.
+
+How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform.
+
+### Evaluate required monitoring signals
+
+Whether you're deploying new workloads with a new monitoring solution, or migrating from an existing monitoring platform or a set of monitoring tools, evaluating the required monitoring signals is essential. Carefully designing the required signals help drive the expected outcomes and reduce the noise.
+
+Consider the following:
+
+- **Actionable**: Remember, monitoring data needs to be actionable to reduce noise and false positives.
+- **Optimized**: Optimize the data collected to give you a holistic view of the overall health of the service.
+- **Incident instrumentation**: The instrumentation that's defined to identify actual incidents should be as simple, predictable, and reliable as possible.
 
 In this article, you will learn about considerations for collecting monitoring data in a cloud application.
 
