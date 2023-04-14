@@ -257,6 +257,11 @@ additionalContent:
           url: https://azure.microsoft.com/migration/migration-modernization-program/
 
         # Card
+        - title: Partner-led Workshops
+          summary: Obtain best practices on Cloud Adoption Framework from certified partners
+          url: https://azureforpartners-staging.azurewebsites.net/azure/partners/ammp-w
+
+        # Card
         - title: Find a partner
           summary: Find a partner to help you get started
           url: https://aka.ms/adopt/findapartner
