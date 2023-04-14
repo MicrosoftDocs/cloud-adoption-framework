@@ -2,12 +2,12 @@
 title: Azure landing zone frequently asked questions (FAQ)
 description: The Azure landing zone frequently asked questions (FAQ) provide answers to common questions asked about the Azure landing zone architecture.
 author: jtracey93
-ms.author: martinek
-ms.date: 03/15/2023
+ms.author: tozimmergren
+ms.date: 04/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 # Azure landing zone frequently asked questions (FAQ)
@@ -22,16 +22,16 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture).
 
-## Where can I find a list of all the approved implementations/accelerators for Platform and Application landing zones?
+## Which are the recommended accelerators and implementations for Azure landing zones?
 
-The ALZ team maintains a list of platform and application accelerators and implementation options that are available to see in the [Azure Architecture Center page here](/azure/architecture/landing-zones/landing-zone-deploy).
+Microsoft actively develops and maintains the platform and application accelerators and implementations in alignment with the Azure landing zone [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design area](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) guidance.
 
-As an ALZ team we only support the accelerators and implementation options listed under the Platform section of this document. We have also reviewed and worked with the teams that have created the accelerators and implementation options listed under the Application section of this document to ensure they align to ALZ's design principles and area guidance.
+Review the [Deploy Azure landing zones](/azure/architecture/landing-zones/landing-zone-deploy) guidance to learn more about the recommended platform and application landing zones.
 
-If you cannot find an accelerator or implementation on this list and believe it should be, please raise a [GitHub issue on the ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose) as a feature request for us to triage.
+ To learn how to tailor your Azure landing zones deployment to meet your needs, see [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
 >[!TIP]
-> Often you can tailor your Azure landing zones deployment, to meet the needs of your platform landing zone, by reviewing and following the guidance we have published in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+> To request an addition to the accelerator and implementation list, raise a GitHub issue on the [ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose).
 
 ## What is the Azure landing zone conceptual architecture?
 
@@ -67,7 +67,7 @@ In short, **no**. Use Azure Policy to control, govern, and keep your workloads a
 
 ## What is Cloud Adoption Framework Landing zones for Terraform (aztfmod)?
 
-The Cloud Adoption Framework landing zones (aka aztfmod) [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
+The Cloud Adoption Framework landing zones [open source project (OSS)](https://aztfmod.github.io/documentation/docs/intro/) (also known as _aztfmod_) is a community driven project owned and maintained outside of the Azure landing zone core team and the Azure GitHub organization. If your organization chooses to use this OSS project, consideration should be given to the support available as this is driven by the community effort through GitHub.
 
 ## What if we already have resources in our landing zones and later assign an Azure Policy definition that includes them in its scope?
 
@@ -94,9 +94,9 @@ We suggest working with each application or service workload team (landing zone 
 
 With Azure landing zone architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
 
-*Archetype-aligned* means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
+_Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
-The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: *N workloads x Z management groups  = total management groups*.
+The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: _N workloads x Z management groups  = total management groups_.
 
 So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
 
@@ -127,7 +127,7 @@ A common challenge to this approach is that you might need some policies to appl
 
 [![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
 
-*Some management groups have been removed for illustration clarity purposes.*
+_Some management groups have been removed for illustration clarity purposes._
 
 > [!TIP]
 > We discussed this topic in a recent YouTube video: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
@@ -185,13 +185,13 @@ The below high-level steps can be used as a set of steps to follow to expand int
 > Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md)
 
 1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is generally recommended to use for most customers across multiple regions for connectivity
+   - The same existing subscription is recommended to use for most customers across multiple regions for connectivity
 2. Create new Resource Group in subscription in the new target region
 3. Create new hub Virtual Network in the new target region
 4. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
 5. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections
 6. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
-7. Create and configure any required routing: Azure Route Server, User-Defined Routes etc.
+7. Create and configure any required routing: Azure Route Server, User-Defined Routes, and more.
 8. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
    - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription
 
@@ -205,9 +205,9 @@ You can now connect application landing zone spokes via Virtual Network Peering 
 1. Create new Virtual Hub in the existing Virtual WAN in the new target region
 2. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
 3. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
-4. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, etc.
+4. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, and more.
 5. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers which might be part of the Identity platform landing zone subscription
+   - Some customers might do this on their Active Directory Domain Controllers, which might be part of the Identity platform landing zone subscription
    - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection
 
 You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
