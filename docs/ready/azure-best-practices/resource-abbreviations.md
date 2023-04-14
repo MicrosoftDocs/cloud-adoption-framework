@@ -89,6 +89,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
+| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc`
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
 | Web app | `Microsoft.Web/sites` | `app` |
 
@@ -102,6 +103,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
+| Service Fabric managed cluster | `Microsoft.ServiceFabric/managedClusters` | `sfmc` |
 
 ## Databases
 
@@ -161,6 +163,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Policy definition | `Microsoft.Authorization/policyDefinitions` | <*descriptive*> |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
+| Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
