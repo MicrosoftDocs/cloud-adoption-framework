@@ -22,8 +22,7 @@ This article focuses on a typical dual-region scenario, shown in the following F
 - A disaster-resilient configuration for ExpressRoute (two circuits in two different peering locations, with each circuit connected to hub virtual networks in both regions) has been deployed. The guidance provided in the following sections stays the same in case [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
 - An Azure VMware Solution private cloud has been deployed in each region.
 
-[ ![figure1](media/dual-region-fig1.png) ](media/dual-region-fig1.png#lightbox)
-*Figure 1. Dual-region scenario covered in this article.*
+:::image type="content" source="media/dual-region-fig1.png" alt-text="Diagram of Figure 1, which shows the dual-region scenario covered in this article." lightbox="media/dual-region-fig1.png":::
 
 > [!NOTE]
 > In the reference scenario of Figure 1, the two regional hub virtual networks are connected via global VNet peering. While not strictly necessary, as traffic between Azure virtual networks in the two regions could be routed over ExpressRoute connections, we strongly recommend this configuration. VNet Peering minimizes latency and maximizes throughput, as it removes the need to hairpin traffic through the ExpressRoute meet-me edge routers.
@@ -43,33 +42,35 @@ When multiple Azure VMware Solution private clouds exist, Layer 3 connectivity a
 
 Azure VMware Solution natively supports direct connectivity between two private clouds deployed in different Azure regions. Private clouds connect to the Azure network in their own region through ExpressRoute circuits, managed by the platform and terminated on dedicated ExpressRoute meet-me locations. Throughout this article, these circuits are referred to as *Azure VMware Solution managed circuits*. Azure VMware Solution managed circuits shouldn't be confused with the normal circuits that customers deploy to connect their on-premises sites to Azure. The normal circuits that customers deploy are *customer managed circuits* (see Figure 2).
 
-Direct connectivity between private clouds is based on [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) connections between Azure VMware Solution managed circuits, as shown by the green line in the following diagram. For more information, see the [Tutorial: Peer on-premises environments to Azure VMware Solution](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud). The article describes the procedure for connecting an Azure VMware Solution managed circuit with a customer-managed circuit. The same procedure applies to connecting two Azure VMware Solution managed circuits.
+Direct connectivity between private clouds is based on [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach) connections between Azure VMware Solution managed circuits, as shown by the green line in the following diagram. For more information, see [Tutorial: Peer on-premises environments to Azure VMware Solution](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud). The article describes the procedure for connecting an Azure VMware Solution managed circuit with a customer-managed circuit. The same procedure applies to connecting two Azure VMware Solution managed circuits.
 
-[ ![figure2](media/dual-region-fig2.png) ](media/dual-region-fig2.png#lightbox)
-*Figure 2. Azure VMware Solution private clouds in different regions directly connected to each other over a Global Reach connection (green line) between the private clouds' managed ExpressRoute circuits. In each Azure region where Azure VMware Solution is available, network infrastructure that terminates the Azure VMware Solution side of the Azure VMware Solution managed circuits is present. It's referred to as “Dedicated ExpressRoute meet-me location” in the picture.*
+:::image type="complex" source="media/dual-region-fig2.png" alt-text="Diagram of Figure 2, which shows private clouds in different regions connected over a Global Reach connection between managed ExpressRoute circuits." lightbox="media/dual-region-fig2.png":::
+   Diagram of Figure 2, which shows Azure VMware Solution private clouds in different regions are directly connected to each other over a Global Reach connection between the private clouds' managed ExpressRoute circuits. In each Azure region where Azure VMware Solution is available, network infrastructure that terminates the Azure VMware Solution side of the Azure VMware Solution managed circuits is present. It's referred to as a Dedicated ExpressRoute meet-me location in the picture.
+:::image-end:::
 
 ### Hybrid connectivity
 
-The recommended option for connecting Azure VMware Solution private clouds to on-premises sites is ExpressRoute Global Reach. Global Reach connections can be established between customer managed ExpressRoute circuits and Azure VMware Solution managed ExpressRoute circuits. Global Reach connections aren't transitive, therefore a full mesh (each Azure VMware Solution managed circuit connected to each customer managed circuit) is necessary for disaster resilience, as shown in the following Figure 3 (orange lines).
+The recommended option for connecting Azure VMware Solution private clouds to on-premises sites is ExpressRoute Global Reach. Global Reach connections can be established between customer managed ExpressRoute circuits and Azure VMware Solution managed ExpressRoute circuits. Global Reach connections aren't transitive, therefore a full mesh (each Azure VMware Solution managed circuit connected to each customer managed circuit) is necessary for disaster resilience, as shown in the following Figure 3 (represented by orange lines).
 
-[ ![figure3](media/dual-region-fig3.png) ](media/dual-region-fig3.png#lightbox)
-*Figure 3. Global Reach connections (orange lines) can be established between customer managed ExpressRoute circuits and Azure VMware Solution managed ExpressRoute circuits.*
+:::image type="complex" source="media/dual-region-fig3.png" alt-text="Diagram of Figure 3, which shows Global Reach connections connecting customer managed ExpressRoute circuits and VMware Solution ExpressRoute circuits." lightbox="media/dual-region-fig3.png":::
+   Diagram of Figure 3, which shows Global Reach connections can be established between customer managed ExpressRoute circuits and Azure VMware Solution managed ExpressRoute circuits.
+:::image-end:::
 
 ### Azure Virtual Network connectivity
 
 Azure Virtual Network can be connected to Azure VMware Solution private clouds through connections between ExpressRoute Gateways and Azure VMware Solution managed circuits. This connection is exactly the same way that Azure Virtual Network can be connected to on-premises sites over customer managed ExpressRoute circuits. See [Connect to the private cloud manually](/azure/azure-vmware/tutorial-configure-networking#connect-to-the-private-cloud-manually) for configuration instructions.
 
-In dual region scenarios, we recommend a full mesh for the ExpressRoute connections between the two regional hub Virtual Network and private clouds, as shown in Figure 4 (yellow lines).
+In dual region scenarios, we recommend a full mesh for the ExpressRoute connections between the two regional hub Virtual Network and private clouds, as shown in Figure 4 (represented by yellow lines).
 
-[ ![figure4](media/dual-region-fig4.png) ](media/dual-region-fig4.png#lightbox)
-*Figure 4. By connecting each hub virtual network's ExpressRoute Gateway to each Azure VMware Solution private cloud's managed ExpressRoute circuit (yellow lines), Azure native resources in each region have direct L3 connectivity to Azure VMware Solution private clouds. (The global virtual network peering connection between the two hub virtual networks, shown in the previous diagrams, has been omitted for clarity.)*
+:::image type="complex" source="media/dual-region-fig4.png" alt-text="Diagram of Figure 4, which shows that Azure native resources in each region have direct L3 connectivity to Azure VMware Solution private clouds." lightbox="media/dual-region-fig4.png":::
+   Diagram of Figure 4, which shows that Azure native resources in each region have direct L3 connectivity to Azure VMware Solution private clouds as the result of connecting each hub virtual network's ExpressRoute Gateway to each Azure VMware Solution private cloud's managed ExpressRoute circuit. (The global virtual network peering connection between the two hub virtual networks, shown in the previous diagrams, has been omitted for clarity.)
+:::image-end:::
 
 ### Internet connectivity
 
 When deploying Azure VMware Solution private clouds in multiple regions, we recommend native options for internet connectivity (managed source network address translation (SNAT) or public IPs down to the NSX-T). Either option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in the following Figure 5.
 
-[ ![figure5](media/dual-region-fig5.png) ](media/dual-region-fig5.png#lightbox)
-*Figure 5. Azure VMware Solution native options for internet connectivity in the Azure portal.*
+:::image type="content" source="media/dual-region-fig5.png" alt-text="Diagram of Figure 5, which shows the Azure VMware Solution native options for internet connectivity in the Azure portal." lightbox="media/dual-region-fig5.png":::
 
 Both the options highlighted in Figure 5 provide each private cloud with a direct internet breakout in its own region. The following considerations should inform the decision as to which native internet connectivity option to use:
 
@@ -84,15 +85,15 @@ If a secure internet edge was built in Azure Virtual Network prior to Azure VMwa
 
 Internet-bound traffic emitted by Azure VMware Solution virtual machines can be attracted to an Azure VNet by originating a default route and announcing it, over border gateway protocol (BGP), to the private cloud's managed ExpressRoute circuit. This internet connectivity option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in the following Figure 6. For more information, see [Disable internet access or enable a default route](/azure/azure-vmware/disable-internet-access).
 
-[ ![figure6](media/dual-region-fig6.png) ](media/dual-region-fig6.png#lightbox)
-*Figure 6. Azure VMware Solution configuration to enable internet connectivity via internet edges hosted in Azure Virtual Network.*
+:::image type="content" source="media/dual-region-fig6.png" alt-text="Diagram of Figure 6, which shows the Azure VMware Solution configuration to enable internet connectivity via internet edges in Azure Virtual Network." lightbox="media/dual-region-fig6.png":::
 
 The internet edge NVAs can originate the default route if they support BGP. If not, you must deploy other BGP-capable NVAs. For more information on how to implement internet outbound connectivity for Azure VMware Solution in a single region, see [Implementing internet connectivity for Azure VMware Solution with Azure NVAs](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Step-By-Step-Guides/Implementing%20internet%20connectivity%20for%20AVS%20with%20Azure%20NVAs). In the dual-region scenario discussed in this article, the same configuration must be applied to both regions.
 
 The key consideration in dual-region scenarios is that the default route originated in each region should be propagated over ExpressRoute only to the Azure VMware Solution private cloud in same region. This propagation allows Azure VMware Solution workloads to access the internet through a local (in-region) breakout. However, if you use the topology shown in Figure 4, each Azure VMware Solution private cloud also receives an equal-cost default route from the remote region over the cross-region ExpressRoute connections. The red dashed lines represent this unwanted cross-region default route propagation in Figure 7.
 
-[ ![figure7](media/dual-region-fig7.png) ](media/dual-region-fig7.png#lightbox)
-*Figure 7. The cross-region connections between ExpressRoute Gateways and Azure VMware Solution-managed ExpressRoute circuits (red dashed lines) must be removed to avoid cross-region propagation of the default route.*
+:::image type="complex" source="media/dual-region-fig7.png" alt-text="Diagram of Figure 7, which shows the cross-region connections between ExpressRoute Gateways and VMware Solution-managed ExpressRoute circuits must be removed." lightbox="media/dual-region-fig7.png":::
+   Diagram of Figure 7, which shows the cross-region connections between ExpressRoute Gateways and Azure VMware Solution-managed ExpressRoute circuits must be removed to avoid cross-region propagation of the default route.
+:::image-end:::
 
 Removing the Azure VMware Solution cross-region ExpressRoute connections achieves the goal of injecting, in each private cloud, a default route to forward internet-bound connections to the Azure internet edge in the local region.
 
@@ -102,13 +103,13 @@ The cross-region propagation over Global Reach of a less preferred default route
 
 The recommended topology for dual-region deployments with internet breakouts in Azure VNets is shown in the following Figure 8.
 
-[ ![figure8](media/dual-region-fig8.png) ](media/dual-region-fig8.png#lightbox)
-*Figure 8. Recommended topology for dual region Azure VMware Solution deployments with internet outbound access through internet edges in Azure VNets. Cross-region connections between ExpressRoute Gateways and Azure VMware Solution managed circuits must not be established, to prevent unwanted cross-region propagation of the default route.*
+:::image type="complex" source="media/dual-region-fig8.png" alt-text="Diagram of Figure 7, which shows the cross-region connections between ExpressRoute Gateways and VMware Solution-managed ExpressRoute circuits must be removed." lightbox="media/dual-region-fig8.png":::
+   Diagram of Figure 8, which shows the recommended topology for dual region Azure VMware Solution deployments with internet outbound access through internet edges in Azure VNets. Cross-region connections between ExpressRoute Gateways and Azure VMware Solution managed circuits must not be established to prevent unwanted cross-region propagation of the default route.
+:::image-end:::
 
-When you originate default routes in Azure, special care must be taken to avoid propagation to on-premises sites (unless there's a requirement to provide internet access to on-premises sites via an internet edge in Azure). The customer-operated devices that terminate the customer managed ExpressRoute circuits must be configured to filter default routes received from Azure, as shown in Figure 9. This configuration is necessary to avoid disrupting internet access for the on-premises sites.
+When you originate default routes in Azure, special care must be taken to avoid propagation to on-premises sites, unless there's a requirement to provide internet access to on-premises sites via an internet edge in Azure. The customer-operated devices that terminate the customer managed ExpressRoute circuits must be configured to filter default routes received from Azure, as shown in Figure 9. This configuration is necessary to avoid disrupting internet access for the on-premises sites.
 
-[ ![figure9](media/dual-region-fig9.png) ](media/dual-region-fig9.png#lightbox)
-*Figure 9. The BGP speakers that terminate the customer-managed ExpressRoute circuits must filter the default routes originated by Azure NVAs.*
+:::image type="content" source="media/dual-region-fig9.png" alt-text="Diagram of Figure 9, which shows the BGP speakers that terminate the customer-managed ExpressRoute circuits are filtering Azure NVAs' default routes." lightbox="media/dual-region-fig9.png":::
 
 ## Next steps
 
@@ -116,4 +117,4 @@ When you originate default routes in Azure, special care must be taken to avoid 
 - For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure/azure-vmware/concepts-design-public-internet-access).
 
   > [!div class="nextstepaction"]
-  > [Example architectures for Azure VMware Solutions](./example-architectures.md) 
+  > [Example architectures for Azure VMware Solutions](./example-architectures.md)
