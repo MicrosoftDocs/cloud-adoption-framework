@@ -103,8 +103,8 @@ The cross-region propagation over Global Reach of a less preferred default route
 
 The recommended topology for dual-region deployments with internet breakouts in Azure VNets is shown in the following Figure 8.
 
-:::image type="complex" source="media/dual-region-fig8.png" alt-text="Diagram of Figure 7, which shows the cross-region connections between ExpressRoute Gateways and VMware Solution-managed ExpressRoute circuits must be removed." lightbox="media/dual-region-fig8.png":::
-   Diagram of Figure 8, which shows the recommended topology for dual region Azure VMware Solution deployments with internet outbound access through internet edges in Azure VNets. Cross-region connections between ExpressRoute Gateways and Azure VMware Solution managed circuits must not be established to prevent unwanted cross-region propagation of the default route.
+:::image type="complex" source="media/dual-region-fig8.png" alt-text="Diagram of Figure 8, which shows the recommended topology for dual region deployments with internet outbound access through internet edges." lightbox="media/dual-region-fig8.png":::
+   Diagram of Figure 8, which shows the recommended topology for dual region Azure VMware Solution deployments with internet outbound access through internet edges in Azure Virtual Network. Cross-region connections between ExpressRoute Gateways and Azure VMware Solution managed circuits must not be established to prevent unwanted cross-region propagation of the default route.
 :::image-end:::
 
 When you originate default routes in Azure, special care must be taken to avoid propagation to on-premises sites, unless there's a requirement to provide internet access to on-premises sites via an internet edge in Azure. The customer-operated devices that terminate the customer managed ExpressRoute circuits must be configured to filter default routes received from Azure, as shown in Figure 9. This configuration is necessary to avoid disrupting internet access for the on-premises sites.
