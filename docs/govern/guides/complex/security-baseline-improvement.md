@@ -24,7 +24,7 @@ For the past 12 months, the cloud adoption teams have cleared most of the 5,000 
 
 The cloud governance team continues to change along with the narrative. The two founding members of the team are now among the most respected cloud architects in the company. The collection of configuration scripts has grown as new teams tackle innovative new deployments. The cloud governance team has also grown. Most recently, members of the IT operations team have joined cloud governance team activities to prepare for cloud operations. The cloud architects who helped foster this community are seen both as cloud guardians and cloud accelerators.
 
-While the difference is subtle, it's an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a defender of the Five Disciplines of Cloud Governance.
+While the difference is subtle, it's an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a guardian of the Five Disciplines of Cloud Governance.
 
 ### Changes in the current state
 
@@ -84,10 +84,10 @@ The following changes to policy will help remediate the new risks and guide impl
 1. The cloud vendor must be capable of supporting the existing edge device solution and any required configurations to protect any publicly exposed network boundary.
 1. The cloud vendor must be capable of supporting a shared connection to the global WAN, with data transmission routed through the existing edge device solution.
 1. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
-1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets. 
+1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 1. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
 1. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users. 
+1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
 1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 ## Incremental improvement of best practices

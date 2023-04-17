@@ -1,5 +1,5 @@
 ---
-title: How Azure Resource Manager Works
+title: How Azure Resource Manager works
 description: Understand fundamental Azure concepts like Azure Resource Manager, subscriptions, resource groups, and resources and how resources are deployed in Azure.
 author: alexbuckgit
 ms.author: robbag
@@ -7,7 +7,7 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, UpdateFrequency3
+ms.custom: internal, UpdateFrequency3, devx-track-arm-template
 ---
 
 # Resource access management in Azure
@@ -22,7 +22,7 @@ In Azure, a resource is an entity managed by Azure. Virtual machines, virtual ne
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](/azure/azure-resource-manager/management/overview#resource-groups). A resource group is a logical container that associates multiple resources so you can manage them as a single entity—based on lifecycle and security. For example, you can create or delete resources as a group if the resources share a similar lifecycle—such as the resources for an [N-tier application](/azure/architecture/guide/architecture-styles/n-tier). In other words, everything that you create, manage, and deprecate together is associated within a resource group.
+Each resource in Azure must belong to a [resource group](/azure/azure-resource-manager/management/overview#resource-groups). A resource group is a logical container that associates multiple resources so you can manage them as a single entity, based on lifecycle and security. For example, you can create or delete resources as a group if the resources share a similar lifecycle, such as the resources for an [n-tier application](/azure/architecture/guide/architecture-styles/n-tier). In other words, everything that you create, manage, and deprecate together is associated within a resource group.
 
 ![Diagram of a resource group containing a resource.](../_images/get-started/design/governance-1-10.png)
 
@@ -70,7 +70,7 @@ The next control is a check that the user has sufficient permission to make the 
 
 ![Users assigned to Azure roles](../_images/get-started/design/governance-1-18.png)
 
-An Azure role specifies a set of permissions a user can take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in owner role](/azure/role-based-access-control/built-in-roles#owner) allows a user to run any action on a resource.
+An Azure role specifies a set of permissions a user can take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in Owner role](/azure/role-based-access-control/built-in-roles#owner) allows a user to run any action on a resource.
 
 The next control is a check that the request is allowed under the settings specified for [Azure resource policy](/azure/governance/policy/). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
 

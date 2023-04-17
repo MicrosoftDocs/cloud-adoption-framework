@@ -7,7 +7,7 @@ ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+ms.custom: internal
 ---
 
 # Independent software vendor (ISV) considerations for Azure landing zones
@@ -90,7 +90,7 @@ Some SaaS solutions interact with or use resources that are deployed in customer
 
 ![Diagram that shows a dual deployment SaaS deployment model.](./media/isv-landing-zone/isv-dual-deployment.png)
 
-A real-world example of *dual deployment SaaS* is Microsoft Power BI, a SaaS service that can optionally use a Power BI On-Premises Data Gateway deployed on a virtual machine in a customer's Azure subscription.
+A real-world example of *dual deployment SaaS* is Microsoft Power BI, a SaaS service that can optionally use a Power BI on-premises data gateway deployed on a virtual machine in a customer's Azure subscription.
 
 Other examples of *dual deployment SaaS* scenarios include:
 
@@ -165,7 +165,7 @@ This management approach is similar to the [testing approach for enterprise-scal
 
 ### Platform management group
 
-In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator-and-azure-landing-zone-bicep-repository), the **Platform** management group contains all Azure subscriptions that host components and shared services used by workloads in the landing zone subscriptions. Examples of components deployed into the platform and shared services subscriptions include centralized logging infrastructure (such as Log Analytics workspaces), DevOps, security, automation tooling, central networking resources (such as hub-VNet and DDos Protection plans), and an ISV's control plane services.
+In the [Azure landing zone resource organization hierarchy](./design-area/resource-org-management-groups.md#management-groups-alz), the **Platform** management group contains all Azure subscriptions that host components and shared services used by workloads in the landing zone subscriptions. Examples of components deployed into the platform and shared services subscriptions include centralized logging infrastructure (such as Log Analytics workspaces), DevOps, security, automation tooling, central networking resources (such as hub-VNet and DDos Protection plans), and an ISV's control plane services.
 
 The **Platform** management group is frequently partitioned into **Identity**, **Management**, and **Connectivity** child groups to provide convenient separation of roles and policies for enterprise customers.
 
@@ -215,7 +215,7 @@ Select each tab to see the two diagrams.
 
 ### Decommissioned and Sandboxes management groups
 
-The Azure landing zone [resource organization guidance](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-accelerator-and-azure-landing-zone-bicep-repository) recommends including **Decommissioned** and **Sandboxes** management groups directly below your top-level management group.
+The Azure landing zone [resource organization guidance](./design-area/resource-org-management-groups.md#management-groups-alz) recommends including **Decommissioned** and **Sandboxes** management groups directly below your top-level management group.
 
 The **Decommissioned** management group is a holding place for Azure subscriptions that are being disabled and will eventually be deleted. You can move a subscription that's no longer in use into this management group to track it until all the resources in the subscription are permanently deleted.
 

@@ -7,7 +7,7 @@ ms.date: 03/23/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: internal
+ms.custom: internal, devx-track-terraform
 ---
 
 # Azure App Service landing zone accelerator

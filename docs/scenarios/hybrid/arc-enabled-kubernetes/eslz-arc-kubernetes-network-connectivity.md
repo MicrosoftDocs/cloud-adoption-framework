@@ -28,7 +28,7 @@ The following diagram displays a network architecture that allows cluster access
 
 ## Design considerations
 
-- Review the [network topology and connectivity design area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your connectivity model.
+- Review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your connectivity model.
 - Review the [network requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) for Azure Arc-enabled Kubernetes to understand how clusters communicate with Azure from on-premises network or other cloud providers.
 - Consider trade-offs between your organization's security and compliance requirements and the benefits Azure Arc-enabled Kubernetes offers your organization. Decide between [fully connected mode and semi-connected mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) for your implementation.
 - Decide whether to use public or private endpoints when connecting to [Azure Log Analytics](/azure/azure-monitor/logs/private-link-design) workspaces through ExpressRoute or VPN versus internet connectivity.

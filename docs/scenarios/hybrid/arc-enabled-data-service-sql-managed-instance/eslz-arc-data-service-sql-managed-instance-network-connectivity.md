@@ -36,7 +36,7 @@ The following scenario diagram shows an example of various consumer services sec
 
 ## Design considerations
 
-* Review the [network topology and connectivity design area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) of the Azure landing zones to align Arc-enabled data services network connectivity with your organization's adopted landing zone design.
+* Review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) of the Azure landing zones to align Arc-enabled data services network connectivity with your organization's adopted landing zone design.
 
 * Review the [Network connectivity for Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) for understanding network architecture and recommendations to make right design decisions for deploying and operating Arc-enabled data services on Arc-enabled Kubernetes cluster. Arc-enabled data services use Azure Arc-enabled Kubernetes network connectivity for service deployment and operations.
 
