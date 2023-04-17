@@ -28,7 +28,7 @@ Microsoft actively develops and maintains the platform and application accelerat
 
 Review the [Deploy Azure landing zones](/azure/architecture/landing-zones/landing-zone-deploy) guidance to learn more about the recommended platform and application landing zones.
 
- To learn how to tailor your Azure landing zones deployment to meet your needs, see [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+To learn how to tailor your Azure landing zones deployment to meet your needs, see [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
 >[!TIP]
 > To request an addition to the accelerator and implementation list, raise a GitHub issue on the [ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose).
