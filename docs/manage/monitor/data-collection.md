@@ -16,11 +16,9 @@ products: azure-monitor
 
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
-## Create a monitoring plan
+## Data collection considerations
 
 Observing the health and availability of your cloud solution helps build an understanding of the signals you expect in your systems.
-
-### Monitoring plan considerations
 
 Ask yourself these questions to establish criteria for a monitoring configuration:
 
