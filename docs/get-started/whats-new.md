@@ -42,7 +42,7 @@ In this three-part series about SAP applications, learn how to [identify SAP dat
 
 Learn about the platform-level SLAs for different high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup with SAP workload on Azure. Also find information about their configuration details and non-Azure storage service options.
 
-### Multi-tenant guidance
+### Multiple Azure Active Directory tenant guidance
 
 The following articles provide guidance about how to design and implement an Azure environment to accommodate multiple tenants.
 
