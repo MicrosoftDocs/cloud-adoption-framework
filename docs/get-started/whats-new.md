@@ -32,7 +32,7 @@ Data mesh helps organizations move from a centralized data lake or data warehous
 
 ### Automated Azure VMware Solution implementation options
 
-AVS can be implemented in multiple ways, which can be categorized into two broad categories: deployment with connectivity to Azure and deployment with no connection to Azure. Each of these [deployment options](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-platform-automation-and-devops#automated-azure-vmware-solution-implementation-options) has been automated by using Azure Bicep, Terraform, and PowerShell.
+AVS can be implemented in multiple ways, which can be categorized into two broad categories: deployment with connectivity to Azure and deployment with no connection to Azure. Each of these [deployment options](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-platform-automation-and-devops#automated-azure-vmware-solution-implementation-options) can be automated by using Azure Bicep, Terraform, and PowerShell.
 
 ### SAP extend and innovate data
 
@@ -49,7 +49,7 @@ The following articles provide guidance about how to design and implement an Azu
 | Article | Description |
 |---------|-------------|
 | [Automate Azure landing zones across multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/automation) | Learn about the automation approaches you can use to successfully operate and maintain the ALZ deployment at scale across multiple tenants. |
-| [Azure landing zones canary approach with multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/canary) | Learn how to handle Azure landing zones canary environments. |
+| [Azure landing zones canary approach with multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/canary) | Learn how to handle Azure landing zones canary environments when you have multiple tenants. |
 | [Azure Lighthouse usage in Azure landing zones multi-tenant scenarios](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/lighthouse) | [Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in Azure landing zone scenarios in single or multi-tenant architectures. |
 | [Azure landing zones and multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview) | Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones and the benefits of using a single tenant. |
 | [Scenarios for multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/scenarios) | Learn about the most common scenarios where an organization might need multiple Azure Active Directory tenants. |
