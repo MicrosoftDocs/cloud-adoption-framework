@@ -33,7 +33,7 @@ The following list provides examples of naming components that are useful when y
 | **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Location** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-| **VM role** | Identifier for the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
+| **VM role** | Identifier of the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
 | **Instance** | The instance count for a specific resource to identify more than one resource that has the same naming convention. Examples, `01`, `001` |
 
 > [!NOTE]
@@ -67,7 +67,7 @@ For example, resource names have length limits. We recommend that you keep the l
 
 When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that's useful when you construct resource names.
 
-You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you are working in the Azure portal while being signed in to the VM itself.
+You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you're working in the Azure portal while being signed in to the VM itself.
 
 | Naming component | Description |
 |--|--|
@@ -92,7 +92,7 @@ The following section provides example names for common Azure resource types in 
 >
 > Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more, CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
 
-The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, see the 
+The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the 
 [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 > [!NOTE]
