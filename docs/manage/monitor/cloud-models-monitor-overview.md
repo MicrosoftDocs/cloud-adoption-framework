@@ -90,7 +90,7 @@ This section compares several platform and infrastructure factors for Azure Moni
 
 - To forward the diagnostics data emitted from your Azure resources to your on-premises tools or managed service provider, configure [Azure Event Hubs](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs) to stream the data to them.
 
-### Operations Manager
+### Hybrid monitoring with Operations Manager
 
 Operations Manager integrates with Azure, Microsoft 365, and Amazon Web Services (AWS). It can monitor these diverse cloud environments with specific management packs.
 
@@ -131,35 +131,37 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
     This strategy delivers network layer visibility without the need for SNMP. In an interactive topology map, it can also present the hop-by-hop topology of routes between the source and destination endpoint. It's better than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
 
-### Monitoring with Azure Monitor
+### Hybrid monitoring with Azure Monitor
 
-Although migration to the cloud presents numerous challenges, it also provides opportunities. Your organization can migrate from one or more on-premises enterprise monitoring tools to reduce capital expenditures and operating costs and benefit from the advantages that a cloud monitoring platform such as Azure Monitor can deliver at cloud scale. Examine your monitoring and alerting requirements, the configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
+Examine your monitoring and alerting requirements, the configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
 
-- Monitor the hybrid infrastructure and applications from a simple or multitier architecture where components are hosted between Azure, other cloud providers, and your corporate network. The components might include one or more VMs, multiple VMs placed in an availability set or Virtual Machine Scale Set, or a containerized application that's deployed to Azure Kubernetes Service (AKS) running on Windows Server or Linux containers.
+- **Hybrid infrastructure and application monitoring**: Monitor the hybrid infrastructure and applications from a simple or multitier architecture where components are hosted between Azure, other cloud providers, and your corporate network. The components might include one or more VMs, multiple VMs placed in an availability set or Virtual Machine Scale Set, or a containerized application that's deployed to Azure Kubernetes Service (AKS) running on Windows Server or Linux containers.
 
-- Use [Azure Arc](/azure/azure-arc/overview) to prepare your servers, virtual machines, Kubernetes clusters, and databases across your environment for management as if they're running in Azure. Azure Arc delivers consistent inventory, management, governance, and security with familiar Azure services and management capabilities.
+- **Monitor on-premises resources with [Azure Arc](/azure/azure-arc/overview)**: Make use of Azure Arc to prepare your on-premises servers, virtual machines, Kubernetes clusters, and databases across your environment for management as if they're running in Azure. Azure Arc delivers consistent inventory, management, governance, and security with familiar Azure services and management capabilities.
 
-- Enable Azure VM insights, Azure Container insights, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor Logs.
+- **Detect and diagnose issues between infrastructure and applications**: Enable Azure VM insights, Azure Container insights, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor Logs.
 
-- Create intelligent alerts that apply to a core set of applications and service components, help reduce alert noise with dynamic thresholds for complex signals, and use alert aggregation based on machine learning algorithms to help identify the issue quickly.
+- **Create intelligent alerts**: Design intelligent alerts that applies to a core set of applications and service components, which help reduce alert noise with dynamic thresholds for complex signals, and use alert aggregation based on machine learning algorithms to help identify the issue quickly.
 
-- Define a library of queries and dashboards to support the requirements of the various personas in the IT organization.
+- **Knowledge library**: Define a library of queries and dashboards to support the requirements of the various personas in the IT organization. You can access these from Azure Monitor, as an example, and quickly gain the insights you need for your daily business.
 
-- Define standards and methods for enabling monitoring across the hybrid and cloud resources, a monitoring baseline for each resource, and alert thresholds.
+- **Define a monitoring baseline**: Define standards and methods for enabling monitoring across the hybrid and cloud resources, a monitoring baseline for each resource, and alert thresholds.
 
-- Configure Azure role-based access control (Azure RBAC) so you grant users and groups only the access required to monitor data from the resources they manage.
-
-- Include automation and self-service to enable each team to create, enable, and tune their monitoring and alerting configurations as needed.
+- **Configure the minimum required access**: Use Azure role-based access control (Azure RBAC) to grant users and groups only the access required to monitor data from the resources they manage.
 
 ## Private cloud monitoring
 
-You can achieve holistic monitoring of Azure Stack with System Center Operations Manager. Specifically, you can monitor the workloads running in the tenant, the resource level, the virtual machines, and the infrastructure hosting Azure Stack (physical servers and network switches).
+Many customers rely on Azure Stack for their private clouds. You can achieve holistic monitoring of Azure Stack with Operations Manager. Specifically, you can monitor the workloads running in the tenant, the resource level, the virtual machines, and the physical infrastructure hosting Azure Stack, like servers and network switches.
 
-You can also achieve holistic monitoring with a combination of [infrastructure monitoring capabilities](/azure-stack/operator/azure-stack-monitor-health) that are included in Azure Stack. These capabilities help you view health and alerts for an Azure Stack region and the [Azure Monitor service](/azure-stack/user/azure-stack-metrics-azure-data) in Azure Stack, which provides base-level infrastructure metrics and logs for most services.
+### Considerations for private cloud monitoring
 
-If you already invested in Operations Manager, use the Azure Stack management pack to monitor Azure Stack deployment's availability and health state, including regions, resource providers, updates, update runs, scale units, unit nodes, infrastructure roles, and their instances. This management pack uses the health and update resource provider REST APIs to communicate with Azure Stack. To monitor physical servers and storage devices, utilize the OEM vendors' management pack (for example, provided by Lenovo, HPE, or Dell).
+- **Monitor health and alerts**: To learn about the included infrastructure monitoring capabilities that helps you view health and alerts for an Azure Stack Hub region, see [Monitor health and alerts in Azure Stack Hub](/azure-stack/operator/azure-stack-monitor-health).
 
-Operations Manager can natively monitor the network switches to collect basic statistics by using SNMP. The Azure management pack can monitor the tenant workloads by following two basic steps. Configure the subscription that you want to monitor, and then add the monitors for that subscription.
+- **Use Azure Monitor on Azure Stack Hub**: To get an integrated experience with Azure Monitor and get base-level infrastructure metrics and logs for most services, use [Azure Monitor on Azure Stack Hub](/azure-stack/user/azure-stack-metrics-azure-data).
+
+- **Use Azure Stack management packs**: If you already invested in Operations Manager, use the Azure Stack management pack to monitor Azure Stack deployment's availability and health state, including regions, resource providers, updates, update runs, scale units, unit nodes, infrastructure roles, and their instances. This management pack uses the health and update resource provider REST APIs to communicate with Azure Stack. To monitor physical servers and storage devices, utilize the OEM vendors' management pack (for example, provided by Lenovo, HPE, or Dell).
+
+- **Monitor network switches**: Operations Manager can natively monitor the network switches to collect basic statistics by using SNMP. The Azure management pack can monitor the tenant workloads by following two basic steps. Configure the subscription that you want to monitor, and then add the monitors for that subscription.
 
 ## Next steps
 
