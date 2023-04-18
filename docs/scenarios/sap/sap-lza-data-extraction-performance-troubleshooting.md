@@ -197,8 +197,6 @@ The idea of partitioning is to split a large initial dataset into multiple small
     based triggers instead of date columns. The overall concept is similar to SLT however, you don’t use the LTRC transaction to monitor it, instead use DHCDCMON transaction. 
 
 
-** Beginning of New Section *** new section added here ** remove this line after final review **
-
 ## SLT Troubleshooting
 SAP LT Replication Server (SLT) allows real-time data replication from SAP sources and/or non-SAP sources to SAP targets and/or non-SAP targets.
 There are three types of toolsets to monitor the extraction from SLT to Azure. 
