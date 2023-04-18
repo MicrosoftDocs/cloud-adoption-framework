@@ -17,7 +17,7 @@ This article focuses on using Azure Virtual Desktop to move an on-premises RDS e
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment.
 
 ## Business drivers
 
@@ -240,9 +240,9 @@ At this point, the migration has enabled using pooled resources with Windows 10 
 
 But now Contoso must migrate the persistent virtual machines to Azure.
 
-## Step 4: Replicate and persist VMs to Azure Virtual Desktop
+## Step 4: Replicate VMs to Azure Virtual Desktop
 
-The next step in the migration process for Contoso is to migrate its persistent virtual machines to Azure Virtual Desktop. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created at the beginning of the process.
+The next step in the migration process for Contoso is to migrate its persistent and non-persistent (when required) virtual machines to Azure Virtual Desktop. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created at the beginning of the process.
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
