@@ -12,11 +12,12 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Define your naming convention
 
-An effective naming convention consists of resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
+A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. Names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`. 
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name.*
+
 
 ### Recommended naming components
 
