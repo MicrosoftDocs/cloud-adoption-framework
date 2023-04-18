@@ -125,6 +125,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
   [![Screenshot that shows the performance benchmark data format.](./media/performance-benchmark-2.png)](./media/performance-benchmark-2.png#lightbox)
 
+
 ## Troubleshooting
 
 - For troubleshooting when extraction from the SAP system is slow or failing, use SAP logs from SM37 and match with the readings in Azure Data Factory.
@@ -188,3 +189,73 @@ The idea of partitioning is to split a large initial dataset into multiple small
        The dialog shows the program activity.
 
        ![Screenshot that shows the program activity.](./media/ltrc-4.png)
+
+  - Resetting subscriptions - If you want to start with a fresh extraction or stop replication data then you can remove the subscription directly in the ODQMON.
+    This will also remove entries from LTRC. This is done by the master controller job so it may take a couple of mins between resetting the subscription in ODQMON and seeing the effect in LTRC. Its best practice to schedule ODP housekeeping jobs to keep the delta queues clean. ( for e.g. ODQ_CLEANUP_CLIENT_004 )
+
+  - CDS_VIEW - (DHCDCMON transaction) – Starting from release S/4 HANA 1909 , SAP has introduced a new way of replicating data from CDS_Views which uses data 
+    based triggers instead of date columns. The overall concept is similar to SLT however, you don’t use the LTRC transaction to monitor it, instead use DHCDCMON transaction. 
+
+
+** Beginning of New Section *** new section added here ** remove this line after final review **
+
+## SLT Troubleshooting
+SAP LT Replication Server (SLT) allows real-time data replication from SAP sources and/or non-SAP sources to SAP targets and/or non-SAP targets.
+There are three types of toolsets to monitor the extraction from SLT to Azure. 
+  - ODQMON - This is the overall monitoring tool for Data Extraction. Recommendation is to start the analysis with ODQMON. It allows you to track data inconsistencies, initial performance analysis, open subscriptions and extraction requests. 
+  - LTRC – If your issue is with Data replication from source system to ODP, this is the transaction that you should look at including performance analysis. It allows you to monitor dataflow and can be used when you see inconsistencies in the extracted data. 
+  - SM37 – Detailed monitoring of each SLT extraction Step. 
+
+Typical problems that you may encounter when extracting data from SLT
+  - No extraction is happening – Please check if SAP CDC connection has created a connection in ODQMON and check if the subscription exists. 
+  - Data Inconsistencies – Please check odqmon to see the individual request of data and confirm that you can see data there. If you can see the data in ODQMON but not in Azure Synapse or ADF then most likely the investigation should happen on Azure side. If you cannot see the data in ODQMON then perform analysis of the SLT framework using LTRC. 
+  - Performance Problems – The extraction happens using two step approach. Firstly, SLT reads data from the source system and transfers them to ODP. Then SAP CDC connector picks up the data from ODP and transfers it to the chosen data store. The LTRC transaction allows you to analyse the first part of the extraction process. For analysing the data extraction from ODP to Azure, use ODQMON and ADF/Synapse monitoring tools. 
+  - Housekeeping – The normal housekeeping should be done using ODQMON where you can managing the subscription directly and you should not use LTRC for the same.  
+
+   > [!NOTE]
+   > For more details, please refer this 
+   > [SLT blog1](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-cdc-connector-and-slt-part-1-overview-and-architecture/ba-p/3775190)
+   > [SLT blog2](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-cdc-connector-and-slt-part-2-initial-configuration/ba-p/3780884)
+
+
+## SLT Performance 
+
+- Initial load mode – (ODPSLT) – There are three steps to extract data from SLT into ODP. 
+      -   Creating migration Objects which usually takes a couple of seconds.
+      - 	Access plan calculation that splits the source table into smaller chunks. 
+          This step depends on the Initial load mode that one selected during SLT configuration and highly depends on the size of the table. We usually recommending going with the Resource Optimized Option. 
+      - 	Data load – That transfers the data form the source system to ODP. 
+
+  Each step is controlled by the background jobs. One can use the SM37 and LTRC transaction to monitor the duration. It may happen that if your system is overutilized, there would be a delay in starting the background jobs due to the lack of free batch work processes. This can highly impact the performance, since the tasks are idle and waiting to start. 
+
+  If the access plan calculation takes a significant amount of time and your initial load mode is set to Performance optimized , try with changing it to resource optimized and retriggering the extraction. If the data load takes significant amount of time, you can increase the no. of parallel threads in the configuration. 
+
+> [!NOTE]
+> The LTRC user interface varies between releases and it may look different based on your release type. Here are some screenshots for the same. 
+     
+  ![Screenshot that shows SAP s/4 hana screen.](./media/sap-slt-s4hana.png)
+      
+  ![Screenshot that shows SAP ECC screen.](./media/sap-slt-ecc.png)
+
+- If you are using standalone architecture for SLT replication (dedicated SLT replication server), the network throughput between the source system and replication server might impact the performance of the extraction. 
+
+- Replication – 
+    -  Ensure that you have enough data transfer jobs that are not reserved for the initial load. 
+    -  Check that you don’t have unprocessed logging table record in the load statistics.
+    -  Ensure that replication options is set to real-time. 
+
+- Advance replication settings are available in LTRS for further tuning of data replication. 
+
+For more details please refer to [SLT troubleshooting guide from SAP](https://help.sap.com/doc/bc5f2d71bca841bab3cf601c746cf902/16.0.4.0/en-US/Replication_Server_Troubleshooting_Guide_en.pdf) 
+
+   
+## Monitoring
+To monitor the SAP Data extraction, we recommend to check these two places 
+  - Monitor SAP Data extraction in ADF/Synapse pipelines - Please refer to ADF monitoring guide to get detailed step by step instructions [Visually monitor Azure Data Factory -  Azure Data Factory | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-factory/monitor-visually)
+  - Monitoring in SAP system for CDC - 
+        - ODQMON – Use transaction ODQMON for monitoring the (operational) delta queues. For more details please refer to SAP's [documentation](https://help.sap.com/doc/saphelp_nw74/7.4.16/en-US/7b/5bce89037f4897a69b02ecda028517/frameset.htm) 
+        -	Use SM37/36, SM50 transactions in SAP system. 
+
+## Next steps
+
+- [SAP Data Integration Security](./sap-lza-data-integration-security.md)
