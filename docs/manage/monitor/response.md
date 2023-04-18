@@ -172,3 +172,8 @@ You can also, as an example, use the following Azure services or service-related
 * Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
 
 While notifying the responsible teams is the most common action for alerting, automating corrective actions is often appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Skills readiness for cloud monitoring](./suggested-skills.md)

@@ -166,4 +166,4 @@ Many customers rely on Azure Stack for their private clouds. You can achieve hol
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Collect the right data](./data-collection.md)
+> [Observability](./observability.md)

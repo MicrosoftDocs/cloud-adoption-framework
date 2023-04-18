@@ -223,6 +223,5 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Next steps
 
-* Learn how the concept of [Continuous monitoring with Azure Monitor](/azure/azure-monitor/continuous-monitoring) can help drive operational excellence and business value.
-
-* Review the considerations for [collecting monitoring data](data-collection.md).
+> [!div class="nextstepaction"]
+> [Collect the right data](./data-collection.md)

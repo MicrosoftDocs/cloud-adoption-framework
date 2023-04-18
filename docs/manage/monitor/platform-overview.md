@@ -174,4 +174,4 @@ Monitor supports several methods to collect monitoring or management data from A
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Monitoring the cloud deployment models](./cloud-models-monitor-overview.md)
+> [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)

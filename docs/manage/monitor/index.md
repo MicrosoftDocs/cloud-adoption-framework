@@ -45,4 +45,4 @@ This guide provides a reference for enterprise decision-makers, IT managers and 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Monitoring strategy for cloud deployment models](./cloud-models-monitor-overview.md)
+> [Monitoring strategy for cloud deployment models](./platform-overview.md)

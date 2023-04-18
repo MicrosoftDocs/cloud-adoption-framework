@@ -277,4 +277,4 @@ Early on, formulate a readiness plan to help your IT staff adopt new skills, pra
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Observability](../manage/monitor/observability.md)
+> [Monitoring strategy for cloud deployment models](../manage/monitor/cloud-models-monitor-overview.md)
