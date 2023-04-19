@@ -96,7 +96,7 @@ Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool
 1. Assess the current RDS environment.
 2. Create the VDI and new images in Azure and migrate and persist VMs to Azure.
 3. Convert UPDs to FSLogix profile containers.
-4. Replicate VMs to Azure.
+4. Migrate any session hosts that most persist (can't be recreated).
 
 ## Step 1: Assess the current on-premises environment
 
@@ -238,7 +238,7 @@ Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixPr
 
 At this point, the migration has enabled using pooled resources with Windows 10 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 10 Enterprise multi-session.
 
-But now Contoso must migrate the virtual machines to Azure.
+But now Contoso must migrate the virtual machines that need to persist (in cases where VMs can't be recreated) to Azure.
 
 ## Step 4: Replicate VMs to Azure Virtual Desktop
 
