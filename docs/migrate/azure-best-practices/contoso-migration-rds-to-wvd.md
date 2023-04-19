@@ -235,7 +235,7 @@ A roaming profile conversion:
 Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
 ```
 
-Optionally, the FSLogix Azure Files share created for Azure Virtual Desktop by the Landing Zone Accelerator, can be connected to the on-premises host running the conversion command line, this way the UPDs or roaming profiles will be converted and also migrated to an Azure hosted file share.
+Optionally, the FSLogix Azure Files share created for Azure Virtual Desktop, can be connected to the on-premises host where the conversion will be executed, so it is used as target in the conversions. This option will convert UPDs or roaming profiles and also storage the new FSLogix containers in the Azure hosted file share.
 
 At this point, the migration has enabled using pooled resources with Windows 10 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 10 Enterprise multi-session.
 
