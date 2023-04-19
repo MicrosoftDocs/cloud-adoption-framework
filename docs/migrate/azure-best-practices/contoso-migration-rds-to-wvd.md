@@ -17,7 +17,7 @@ This article focuses on using Azure Virtual Desktop to move an on-premises RDS e
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment.
 
 ## Business drivers
 
@@ -96,7 +96,7 @@ Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool
 1. Assess the current RDS environment.
 2. Create the VDI and new images in Azure and migrate and persist VMs to Azure.
 3. Convert UPDs to FSLogix profile containers.
-4. Replicate any persistent VMs to Azure.
+4. Migrate any session hosts that most persist (can't be recreated).
 
 ## Step 1: Assess the current on-premises environment
 
@@ -238,11 +238,11 @@ Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixPr
 
 At this point, the migration has enabled using pooled resources with Windows 10 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 10 Enterprise multi-session.
 
-But now Contoso must migrate the persistent virtual machines to Azure.
+But now Contoso must migrate the virtual machines that need to persist (in cases where VMs can't be recreated) to Azure.
 
-## Step 4: Replicate and persist VMs to Azure Virtual Desktop
+## Step 4: Replicate VMs to Azure Virtual Desktop
 
-The next step in the migration process for Contoso is to migrate its persistent virtual machines to Azure Virtual Desktop. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created at the beginning of the process.
+The next step in the migration process for Contoso is to migrate its persistent and non-persistent (when required) virtual machines to Azure Virtual Desktop. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created at the beginning of the process.
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
