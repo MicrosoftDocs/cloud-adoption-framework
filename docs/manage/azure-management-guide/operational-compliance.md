@@ -68,11 +68,6 @@ To apply a policy to a resource group:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -93,6 +88,8 @@ Azure Policy is used throughout governance processes. It's also highly valuable 
 - Environment settings.
 
 Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
+
+An important part of this process is maintaining and updating Azure Policy assignments and updating them as your governance process requires.  Using Infrastructure as Code can help you update and maintain your policy infrastructure.  To learn more, see [Use infrastructure as code to update Azure landing zones](../infrastructure-as-code-updates.md).
 
 ::: zone target="chromeless"
 

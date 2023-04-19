@@ -7,7 +7,7 @@ ms.date: 08/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal, template-concept
+ms.custom: internal, template-concept, UpdateFrequency2
 ---
 
 # Create a business case for cloud migration
@@ -31,17 +31,17 @@ There are several key components to consider when you plan a business case.
 - What am I spending in my data center operations categories, for example, power or lease costs?
 - When is the next hardware refresh?
 
-**On-premises cost scenario:** Forecast what your on-premises costs will be if you don't migrate to the cloud.
+**On-premises cost scenario:** Forecast your on-premises costs if you don't migrate to the cloud.
 
 :::image type="content" source="./media/create-financial-plan/optimization-opportunity.png" alt-text="Diagram of on-premises or status quo.":::
 
-**Azure scenario for on-premises costs:** Forecast what your on-premises costs will be when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. Include all of the core benefits that the cloud provides.
+**Azure scenario for on-premises costs:** Forecast your on-premises costs when you migrate to the cloud in an Azure scenario. It takes resources and time to shift your environment to the cloud, so it's important to account for them in the business case. Include all of the core benefits that the cloud provides.
 
 :::image type="content" source="./media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
 **Migration timeline and Azure costs:** Forecast the migration timeline and estimated costs for a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
-A business case isn't just a moment-in-time view. It's a plan that covers a period of time. As you shift to the cloud, your costs will begin to decrease. You can forecast the ramp-down in on-premises spending over time associated with your cloud migration plan.
+A business case isn't just a moment-in-time view. It's a plan that covers a period of time. As you shift to the cloud, your costs begin to decrease. You can forecast the ramp-down in on-premises spending over time associated with your cloud migration plan.
 
 Once on-premises workloads and cost structure have been identified, you can then build out your optimized Azure consumption plan.
 
@@ -51,7 +51,7 @@ As a final step, compare the cloud environment to an on-premises or status quo s
 
 ## Cloud savings
 
-Migrating resources to the cloud can save organizations money. Cloud billing models differ from on-premises, creating meaningful savings opportunities to reduce costs. Savings can then be reinvested into new technology initiatives. 
+Migrating resources to the cloud can save organizations money. Cloud billing models differ from on-premises, creating meaningful savings opportunities to reduce costs. Savings can then be reinvested into new technology initiatives.
 
 Cloud costs are flexible, and they can be reduced with:
 
@@ -61,9 +61,11 @@ Cloud costs are flexible, and they can be reduced with:
 
 **Reservations:** Receive a discount on your workloads when you [reserve resources in advance](https://azure.microsoft.com/reservations/). In return, Microsoft passes the savings onto you as discounts of up to 72 percent.
 
-**Azure dev/test pricing:** Take advantage of [discounted rates for development and testing](https://azure.microsoft.com/pricing/dev-test/), including the Microsoft software charges on Azure Virtual Machines and special dev/test pricing on other services.
+**Azure savings plan for compute:** Azure savings plan for compute is a flexible cost-saving plan that generates significant savings on pay-as-you-go prices with a one-year or three-year contract. Eligible compute services include virtual machines, dedicated hosts, container instances, Azure premium functions, and Azure app services. Savings apply to these compute services regardless of the region, instance size, or operating system. To further optimize cost and flexibility, you can combine an Azure savings plan with Azure Reservations. For more information, see [Azure savings plan overview](https://azure.microsoft.com/pricing/offers/savings-plan-compute/#benefits-and-features) and [Azure savings plan documentation](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview).
 
-**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2, which have reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You'll receive free extended security patches by migrating to an Azure VM.
+**Azure dev/test pricing:** Take advantage of [discounted rates for development and testing](https://azure.microsoft.com/pricing/dev-test/). It includes the Microsoft software charges on Azure Virtual Machines and special dev/test pricing on other services.
+
+**Extended security updates:** Receive [continued support](/lifecycle/faq/extended-security-updates) for SQL Server 2008 and SQL Server 2008 R2 even though they've reached the end of their support lifecycle. You can migrate your on-premises SQL Server instances to Azure Virtual Machines, Azure SQL Database, or stay on-premises and purchase extended security updates. You receive free extended security patches by migrating to an Azure VM.
 
 ## Tools and calculators
 

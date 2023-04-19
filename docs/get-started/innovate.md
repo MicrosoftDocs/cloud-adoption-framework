@@ -7,7 +7,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Accelerate new product and service innovation in the cloud

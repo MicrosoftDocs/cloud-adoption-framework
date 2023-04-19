@@ -7,7 +7,7 @@ ms.date: 07/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Accelerate migration
@@ -191,7 +191,7 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about your corporate policy and processes. After determining your approach, you can build the disciplines required to enable governance across your enterprise cloud adoption efforts.
 - [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the disciplines needed to create a governance minimum viable product (MVP) that serves as the foundation for all adoption.
-- [Governance benchmark](https://aka.ms/adopt/assess/govern): Identify gaps in your organization's current state of governance. Get a personalized benchmark report and curated guidance on how to get started.
+- [Governance benchmark](/assessments/b1891add-7646-4d60-a875-32a4ab26327e): Identify gaps in your organization's current state of governance. Get a personalized benchmark report and curated guidance on how to get started.
 
 **Deliverables:**
 

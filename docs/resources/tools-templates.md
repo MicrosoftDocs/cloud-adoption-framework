@@ -7,7 +7,7 @@ ms.date: 01/13/2022
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency5
 ---
 
 # Tools and templates
@@ -52,7 +52,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Governance benchmark assessment](https://cafbaseline.com) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
+| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
 | [CAF Foundation blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
 | [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
 | [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. Focuses on cost management. |
@@ -61,9 +61,9 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 | [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on resource consistency. |
 | [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. Focuses on the security baseline. |
 | [Azure Security Benchmark](/security/benchmark/azure/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
-| [Azure governance visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | The Azure governance visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities - such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
-| [Microsoft product placemat for CMMC L3](https://aka.ms/cmmc/productplacemat) | The Microsoft product placemat for cybersecurity maturity model certification (CMMC) level 3 (preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for CMMC practices. |
-| [Psrule for Azure](https://aka.ms/ps-rule-azure) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. These tests allow you to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
+| [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities - such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
+| [Microsoft Product Placemat for CMMC L3](https://aka.ms/cmmc/productplacemat) | The Microsoft Product Placemat for CMMC Level 3 (Preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for cybersecurity maturity model certification practices. |
+| [PSRule for Azure](https://aka.ms/ps-rule-azure) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. These tests allow you to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
 
 ## Migrate
 

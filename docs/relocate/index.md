@@ -53,7 +53,7 @@ Relocation has two phases. The first phase is to initiate the relocation project
 
 You should read relocation best practices and use them as guidance for each workload relocation. The following articles detail how you should approach each step. The content highlights critical areas to focus on but also refers you to other documentation for deeper technical insight. It assumes a basic understanding of Azure regions and service availability. For more information, see:
 
-- [Azure regions decision guide](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+- [Azure regions decision guide](../migrate/azure-best-practices/multiple-regions.md)
 - [Special conditions to consider when moving a resource](/azure/azure-resource-manager/management/move-support-resources)
 - [Azure Products by Region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/)
 - [Azure regions and availability zones](/azure/reliability/availability-zones-overview)

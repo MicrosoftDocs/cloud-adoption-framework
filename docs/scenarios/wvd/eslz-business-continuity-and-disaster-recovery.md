@@ -21,7 +21,7 @@ A good business continuity and disaster recovery (BCDR) strategy keeps your crit
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/virtual-desktop/disaster-recovery).
+For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
 
 ## Design considerations
 
@@ -68,7 +68,7 @@ For host pool VM resiliency, consider these factors:
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
 
-Before approaching BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so you can provision multiple host pools with different disaster recovery approaches and capabilities.
+Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so that you can provision multiple host pools with different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and Office containers
 
@@ -182,11 +182,11 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 ## Next steps
 
 - Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
-  - Network infrastructure, as part of hub and spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
-  - Hybrid connectivity must be highly available in both the primary and secondary regions.
+  - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
+  - Hybrid connectivity must be highly available in the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
 
-Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
+- Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 
-> [!div class="nextstepaction"]
-> [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
+  > [!div class="nextstepaction"]
+  > [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)

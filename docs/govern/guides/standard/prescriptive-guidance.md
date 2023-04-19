@@ -53,7 +53,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 ### Resource consistency
 
-Your resource consistency decisions determine the tools, processes, and efforts required to configure, deploy and manage Azure resources consistently within a subscription. In this narrative, [deployment consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency) is the primary resource consistency pattern.
+Your resource consistency decisions determine the tools, processes, and efforts required to configure, deploy, and manage Azure resources consistently within a subscription. In this narrative, [deployment consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency) is the primary resource consistency pattern.
 
 - Create resource groups for applications using the lifecycle approach. Everything you create, maintain, and retire together should reside in a single resource group. For more information, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md#basic-grouping).
 - Apply Azure Policy to all subscriptions from the associated management group.
@@ -105,7 +105,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource naming and tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
-- [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
+- [Software Defined Networking patterns](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps

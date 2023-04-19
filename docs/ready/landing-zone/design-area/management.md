@@ -7,7 +7,8 @@ ms.date: 12/07/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
+products: azure-monitor
 ---
 
 # Design area: Management for Azure environments

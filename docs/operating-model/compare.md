@@ -7,7 +7,7 @@ ms.date: 09/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal, operating-model
+ms.custom: internal, operating-model, UpdateFrequency2
 ---
 
 # Review and compare common cloud operating models
