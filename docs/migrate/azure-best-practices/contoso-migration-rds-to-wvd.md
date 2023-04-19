@@ -17,8 +17,7 @@ This article focuses on using Azure Virtual Desktop to move an on-premises RDS e
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. <br><br> Manage Azure Virtual Desktop with [Azure Virtual Desktop management UX](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
-
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment. |
 ## Business drivers
 
 Working closely with business partners, the Contoso IT team defines the business drivers for a VDI migration to Azure. These drivers might include:
