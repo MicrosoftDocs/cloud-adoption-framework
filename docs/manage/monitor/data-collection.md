@@ -4,7 +4,7 @@ description: Learn to observe the health and availability of your cloud solution
 author: Zimmergren
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 04/12/2023
+ms.date: 04/19/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -47,8 +47,6 @@ Consider the following:
 - **Actionable**: Remember, monitoring data needs to be actionable to reduce noise and false positives.
 - **Optimized**: Optimize the data collected to give you a holistic view of the overall health of the service.
 - **Incident instrumentation**: The instrumentation that's defined to identify actual incidents should be as simple, predictable, and reliable as possible.
-
-In this article, you will learn about considerations for collecting monitoring data in a cloud application.
 
 ## Develop a monitoring configuration
 
