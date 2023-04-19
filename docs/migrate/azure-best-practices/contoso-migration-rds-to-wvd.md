@@ -33,7 +33,7 @@ Working closely with business partners, the Contoso IT team defines the business
 With the business drivers in mind, Contoso pins down goals for this migration:
 
 - Modernize the virtual desktop environment for the cloud.
-- Take advantage of existing Microsoft 365 licenses.
+- Take advantage of existing [Microsoft 365 licenses](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses) on Azure Virtual Desktop.
 - Improve security of corporate data when users work remotely.
 - Optimize the new environment for cost and growth.
 
@@ -53,7 +53,7 @@ Additional benefits might include:
 
 ## Solutions design
 
-After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
+After assessing current RDS deployments, pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
 
 ### Current architecture
 
@@ -99,12 +99,17 @@ Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool
 
 ## Step 1: Assess the current on-premises environment
 
-Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure region. With Azure Virtual Desktop, Contoso can provision virtual machines, host pools, and create application groups. Azure Virtual Desktop also configures an availability set for all of the servers in the Azure Virtual Desktop solution. With Azure Virtual Desktop, Contoso can create a high-available VDI environment and to scale up and down quickly as needed.
+Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure region. With Azure Virtual Desktop, Contoso can provision virtual machines, host pools, and create application groups. With Azure Virtual Desktop, Contoso can create a high-available VDI environment (using availability zones) and to scale up and down quickly as needed.
 
 > [!NOTE]
 > Contoso reviews two scenarios during the assessment: multi-session (shared) instances of RDS and persistent (or user-dedicated) virtual machines.
 
-1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts.
+1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
+
+    > [!NOTE]
+    > Review [Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
+
+    <!-- -->
 
     > [!NOTE]
     > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](/active-directory/cloud-sync/concept-how-it-works).
@@ -175,7 +180,7 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
 The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
 
 > [!NOTE]
-> Contoso will also need to migrate application servers to Azure to get the company closer to the Azure Virtual Desktop environment and reduce network latency for its users.
+> Contoso will also need to migrate application servers to Azure to get the company closer to the Azure Virtual Desktop environment and reduce network latency for its users. This same methodology should be applied to Domain Controllers and DNS servers that Azure Virtual Desktops session hosts will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
 
 ## Step 2: Create the Azure Virtual Desktop environment for pooled desktops
 
@@ -186,7 +191,7 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-create-host-pool.png" alt-text="Screenshot that shows creating a host pool in Azure Virtual Desktop.":::
   *Figure 12: A new Azure Virtual Desktop host pool.*
 
-1. Specify the subscription, resource group, and location. Then select the name for the host pool, host pool type, and max session limit. Desktop type is set to **Pooled** because Contoso is starting with a new shared environment for some of its users. Based on the personas of the users from the Lakeside assessment, Contoso sets the max session limit to **150**.
+1. Specify the subscription, resource group, and location. Then select the name for the host pool, host pool type, and max session limit. Desktop type is set to **Pooled** because Contoso is starting with a new shared environment for some of its users. Based on the personas of the users from the Lakeside assessment, Contoso sets the max session limit to **15updating**.
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-host-pool-basics-tab.png" alt-text="Screenshot that shows the configuration for host pool basics.":::
    *Figure 13: Prerequisites for configuring virtual machines.*
@@ -195,7 +200,7 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
 
    - Contoso configures the VM and chooses a custom size by selecting **Change size** or using the default.
    - Azure Virtual Desktop is chosen as the VM name prefix for these pooled desktops.
-   - Because Contoso is creating the pooled servers to use the new Windows 10 Enterprise multi-session functionality for the virtual machine settings, leave the image source set to **Gallery**. This option enables Contoso to select the Windows 10 Enterprise multi-session image for the VMs.
+   - Because Contoso is creating the session hosts to use Windows 10 Enterprise multi-session functionality, leave the image source set to **Gallery**. This option enables Contoso to select the Windows 10 Enterprise multi-session image for the VMs. It's best practice to customize [Golden Images](azure/virtual-desktop/set-up-golden-image) per your workload personas using this marketplace image.
    - Other settings include the disk type, an Active Directory domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-create-host-pool-virtual-machines.png" alt-text="Screenshot that shows configuring the virtual machines." lightbox="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-create-host-pool-virtual-machines-lightbox.png":::
@@ -286,19 +291,27 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 
 ### Security
 
-The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
+The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect Azure Virtual Desktop landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
 
 For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 ## Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+Azure virtual desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
+
+    > [!NOTE]
+    > Learn more about BCDR options with [Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
+
+    <!-- -->
+
+Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 ### Licensing and cost optimization
 
-- [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments.
+- [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
 - Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
-- Contoso has existing licensing for its VMs and takes advantage of the Azure Hybrid Benefit for application servers. Contoso converts the existing Azure VMs to take advantage of this pricing.
+- Contoso will use [Azure Virtual Desktop Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the hostpool.
+- Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
 ## Conclusion
 
