@@ -90,7 +90,8 @@ All sandboxes should have an expiration date.
 
 ### Restricting Azure Resources
 
-Some organizations will want to control which Azure services are eligible to be deployed to sandboxes. This can be controlled via Azure policy. The [Azure service blocklist](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy can be used to deny specific Azure services from being deployed.
+Ensuring any Azure service can be used in sandbox environments will provide the most robust learning environment for sandbox users. Although unrestricted sandboxes are ideal, some organizations will have requirements to restrict which Azure services are allowed to be deployed to sandboxes. This can be controlled via Azure policy. The [Azure service blocklist](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy can be used to deny specific Azure services from being deployed.
+
 
 ### Information Protection
 
