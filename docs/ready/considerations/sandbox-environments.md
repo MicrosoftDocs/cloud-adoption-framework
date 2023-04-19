@@ -61,7 +61,8 @@ The [current Azure Landing Zone policy guidance](https://github.com/Azure/Enterp
 
 ### Sandbox Permissions
 
-The sandbox user(s) are given Owner access to the sandbox subscription. When sandboxes are canceled all sandbox users should have the Owner RBAC role replaced by the Reader RBAC role. 
+The sandbox user(s) are given Owner access to the sandbox subscription. When sandboxes are canceled all sandbox users should have the Owner RBAC role removed. 
+
 
 ## Additional Considerations
 
