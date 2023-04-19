@@ -108,7 +108,7 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
 1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts.
 
     > [!NOTE]
-    > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) and  [Azure AD Connect Cloud Sync](/active-directory/cloud-sync/concept-how-it-works)
+    > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](/active-directory/cloud-sync/concept-how-it-works)
 
     <!-- -->
 
