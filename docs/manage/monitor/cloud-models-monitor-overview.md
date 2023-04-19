@@ -80,9 +80,9 @@ This section compares several platform and infrastructure factors for Azure Moni
 | Interactive visualizations | Yes | Yes, limited.<br><br>Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions. | Yes, limited.<br><br>Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions. |
 | Integration with IT or DevOps tools | Yes | Yes, limited. | Yes, limited. |
 
-## Considerations for hybrid monitoring
+### Considerations for hybrid monitoring
 
-### Collect and stream monitoring data to third-party or on-premises tools
+#### Collect and stream monitoring data to third-party or on-premises tools
 
 - To collect metrics and logs from Azure infrastructure and platform resources, enable [Azure resource logs](/azure/azure-monitor/essentials/resource-logs) for those resources.
 
@@ -90,7 +90,7 @@ This section compares several platform and infrastructure factors for Azure Moni
 
 - To forward the diagnostics data emitted from your Azure resources to your on-premises tools or managed service provider, configure [Azure Event Hubs](/azure/azure-monitor/essentials/resource-logs#send-to-azure-event-hubs) to stream the data to them.
 
-### Hybrid monitoring with Operations Manager
+#### Hybrid monitoring with Operations Manager
 
 Operations Manager integrates with Azure, Microsoft 365, and Amazon Web Services (AWS). It can monitor these diverse cloud environments with specific management packs.
 
@@ -102,7 +102,7 @@ For customers who have made significant investments in Operations Manager to ach
 
 Although Operations Manager is capable of monitoring resources that are hosted in Azure, there are several advantages to including Azure Monitor. Its strengths overcome the limitations of Operations Manager and can establish a solid foundation to support eventual migration from it. Here we review those strengths and limitations, with our recommendation to include Azure Monitor in your hybrid monitoring strategy.
 
-#### Disadvantages of using Operations Manager by itself
+##### Disadvantages of using Operations Manager by itself
 
 - **Ad-hoc data analysis is unavailable**: Monitoring data in Operations Manager is commonly analyzed using predefined views provided by management packs accessed from the console, SQL Server Reporting Services (SSRS) reports, or custom views end users have created. Ad hoc data analysis isn't possible out of the box.
 
@@ -110,7 +110,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 - **Alerting**: Alerting in Operations Manager doesn't support complex expressions or include correlation logic. To help reduce noise, alerts are grouped to show their relationships and identify their causes.
 
-#### Advantages of using Operations Manager with Azure Monitor
+##### Advantages of using Operations Manager with Azure Monitor
 
 - **Better features**: Azure Monitor complements the Operations Manager data warehouse database by collecting important performance and log data. Azure Monitor delivers better analytics, has an increased performance when querying large data volume, and better retention than the Operations Manager data warehouse.
 
@@ -131,7 +131,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
     This strategy delivers network layer visibility without the need for SNMP. In an interactive topology map, it can also present the hop-by-hop topology of routes between the source and destination endpoint. It's better than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
 
-### Hybrid monitoring with Azure Monitor
+#### Hybrid monitoring with Azure Monitor
 
 Examine your monitoring and alerting requirements, the configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
 
