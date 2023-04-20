@@ -37,7 +37,7 @@ Working closely with business partners, the Contoso IT team defines the business
 With the business drivers in mind, Contoso pins down goals for this migration:
 
 - Modernize the virtual desktop environment for the cloud.
-- Take advantage of existing Microsoft 365 licenses.
+- Take advantage of existing [Microsoft 365 licenses](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses) on Azure Virtual Desktop.
 - Improve security of corporate data when users work remotely.
 - Optimize the new environment for cost and growth.
 
@@ -57,7 +57,7 @@ Additional benefits might include:
 
 ## Solutions design
 
-After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
+After assessing current RDS deployments, pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
 
 ### Current architecture
 
@@ -103,15 +103,20 @@ Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool
 
 ## Step 1: Assess the current on-premises environment
 
-Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure region. With Azure Virtual Desktop, Contoso can provision virtual machines, host pools, and create application groups. Azure Virtual Desktop also configures an availability set for all of the servers in the Azure Virtual Desktop solution. With Azure Virtual Desktop, Contoso can create a high-available VDI environment and to scale up and down quickly as needed.
+Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure region. With Azure Virtual Desktop, Contoso can provision virtual machines, host pools, and create application groups. With Azure Virtual Desktop, Contoso can create a high-available VDI environment (using Azure availability zones or availability sets) and to scale up and down quickly as needed.
 
 > [!NOTE]
 > Contoso reviews two scenarios during the assessment: multi-session (shared) instances of RDS and persistent (or user-dedicated) virtual machines.
 
-1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network to be connected where you deploy Azure Virtual Desktop.
+1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
 
     > [!NOTE]
-    > Learn more about [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) for synchronizing Active Directory on-premises with Azure AD.
+    > Review [Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
+
+    <!-- -->
+
+    > [!NOTE]
+    > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](/active-directory/cloud-sync/concept-how-it-works).
 
     <!-- -->
 
@@ -179,7 +184,7 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
 The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
 
 > [!NOTE]
-> Contoso will also need to migrate application servers to Azure to get the company closer to the Azure Virtual Desktop environment and reduce network latency for its users.
+> Contoso will also need to migrate application servers to Azure to get the company closer to the Azure Virtual Desktop environment and reduce network latency for its users. This same methodology should be applied to Domain Controllers and DNS servers that Azure Virtual Desktops session hosts will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
 
 ## Step 2: Create the Azure Virtual Desktop environment with the AVD Landing Zone Accelerator
 
