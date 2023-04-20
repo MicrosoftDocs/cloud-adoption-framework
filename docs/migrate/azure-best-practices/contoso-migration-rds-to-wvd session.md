@@ -138,8 +138,8 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project.":::
    *Figure 5: Adding job data to the migration.*
 
-    > [!IMPORTANT]
-    > This location isn't where the new Azure Virtual Desktop environment will be deployed. Only the data related to the Azure Migrate project will be stored here.
+   > [!IMPORTANT]
+   > This location isn't where the new Azure Virtual Desktop environment will be deployed. Only the data related to the Azure Migrate project will be stored here.
 
 1. Select **VDI**, and then select **Click here** under **Assessment tools**.
 
@@ -178,8 +178,8 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
 - Concurrent user reports.
 - Top software packages in use.
 
-    ![Screenshot of Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
-    *Figure 11: Lakeside dashboard reports.*
+   ![Screenshot of Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
+   *Figure 11: Lakeside dashboard reports.*
 
 The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
 
@@ -212,6 +212,7 @@ A roaming profile conversion:
 ```powershell
 Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
 ```
+
 Optionally, the FSLogix Azure Files share created for Azure Virtual Desktop, can be connected to the on-premises host where the conversion will be executed, so it is used as target in the conversions. This option will convert UPDs or roaming profiles and also storage the new FSLogix containers in the Azure hosted file share.
 
 At this point, the migration has enabled using pooled resources with Windows 11 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 11 Enterprise multi-session.
@@ -250,13 +251,13 @@ The next step in the migration process for Contoso is to migrate its persistent 
    > [!NOTE]
    > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
 
-    > [!NOTE]
-    > Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images, but you may also want to migrate any existing images or VMs that you want to use in Azure.
-    
-    <!-- -->
-    
-    > If you do have an image that you want to migrate to Azure, see [here](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for detailed instructions on preparing and uploading an image to Azure. This guide covers the steps needed to package the image into a virtual hard disk (VHD) format. Once the VHD is prepared, you can then upload it to Azure and use it to create new VMs in your Azure environment.
-    > It's important to note that if you are migrating the VMs through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
+   > [!NOTE]
+   > Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. 
+   >
+   >For scenarios on which an image needs to be migrated to Azure, [this guide](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) contains detailed instructions on preparing and uploading an image to Azure. This guide covers the steps needed to package the image into a virtual hard disk (VHD) format. Once the VHD is prepared, you can then upload it to Azure and use it to create new VMs in your Azure environment.
+
+   > [!NOTE]
+   > It's important to note that if VMs are being migrated through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
 
 1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
 
@@ -279,10 +280,8 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 Azure virtual desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
 
-    > [!NOTE]
-    > Learn more about BCDR options with [Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
-
-    <!-- -->
+   > [!NOTE]
+   > Learn more about BCDR options with [Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
 
 Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](https://learn.microsoft.com/azure/backup/backup-azure-vms-introduction).
 
