@@ -207,6 +207,7 @@ A roaming profile conversion:
 ```powershell
 Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
 ```
+Optionally, the FSLogix Azure Files share created for Azure Virtual Desktop, can be connected to the on-premises host where the conversion will be executed, so it is used as target in the conversions. This option will convert UPDs or roaming profiles and also storage the new FSLogix containers in the Azure hosted file share.
 
 At this point, the migration has enabled using pooled resources with Windows 11 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 11 Enterprise multi-session.
 
@@ -263,19 +264,27 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 
 ### Security
 
-The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
+The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect Azure Virtual Desktop landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
 
 For more information, see [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas).
 
 ## Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), see [Multiregion BCDR for Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
+Azure virtual desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
+
+    > [!NOTE]
+    > Learn more about BCDR options with [Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
+
+    <!-- -->
+
+Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 ### Licensing and cost optimization
 
-- [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments.
+- [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
 - Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
-- Contoso has existing licensing for its VMs and takes advantage of the Azure Hybrid Benefit for application servers. Contoso converts the existing Azure VMs to take advantage of this pricing.
+- Contoso will use [Azure Virtual Desktop Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the hostpool.
+- Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
 ## Conclusion
 
