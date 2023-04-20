@@ -133,17 +133,14 @@ Many enterprise integration scenarios require connecting your on-premises system
 
 Azure AIS PaaS services are typically accessed over public endpoints. The Azure platform provides capabilities for securing these endpoints or even making them entirely private.
 
-Securing these endpoints can be achieved using either [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [private endpoints](/azure/private-link/private-endpoint-overview). These two options are similar but the choice between using a service endpoint or private endpoint depends largely on your security requirements.
+Securing these endpoints can be achieved using [private endpoints](/azure/private-link/private-endpoint-overview). 
 
 - To block all internet traffic to a target resource, use a private endpoint.
 
 - If you want to secure a specific sub-resource to your VNet resources, use a private endpoint.
 
-- If you want to secure a specific storage account to your VNet resources, you can use a private endpoint or a service endpoint with a service endpoint policy.
+- If you want to secure a specific storage account to your VNet resources, you can use a private endpoint.
 
-- If you don't need a private IP address at the destination, service endpoints are considerably easier to create and maintain, and they don't require special DNS configuration.
-
-- Service endpoints have zero cost.
 
 [Azure Private Link](/azure/private-link/private-link-overview) enables you to [access Azure AIS Services](/azure/private-link/availability#integration) (for example, Service Bus and API Management) and Azure-hosted customer-owned/partner services over a private endpoint in your virtual network.
 
@@ -198,8 +195,6 @@ When using Private Link, traffic between your virtual network and the service tr
 Azure Storage is used as the storage solution for Azure Logic Apps and Azure Functions.
 
 ### Design recommendations
-
-- Enable a [Service Endpoint for Azure Storage](/azure/storage/common/storage-network-security?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=azure-portal#grant-access-from-a-virtual-network) within the VNet if you need to keep the public IP address of the storage account available. The service endpoint routes traffic from the VNet through an optimal path to the Azure Storage service. The identities of the subnet and the virtual network are also transmitted with each request. Administrators can then configure network rules for the storage account that allow requests to be received from specific subnets in a VNet.
 
 - For best performance, your Logic App/Function App should use a storage account in the same region, which reduces latency.
 
