@@ -97,9 +97,9 @@ Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool
 ## Scenario steps
 
 1. Assess the current RDS environment.
-2. Create the VDI deployment, migrate images and VMs that need to persist in Azure.
+2. Create the VDI deployment.
 3. Convert UPDs to FSLogix profile containers.
-4. Migrate any session hosts that most persist (can't be recreated).
+4. Migrate any VM or image that most persist.
 
 ## Step 1: Assess the current on-premises environment
 
