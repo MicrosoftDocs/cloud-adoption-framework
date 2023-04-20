@@ -110,18 +110,18 @@ Contoso provisions the Azure Virtual Desktop service in the **East US 2** Azure 
 
 1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
 
-    > [!NOTE]
-    > Review [Azure Virtual Desktop identities and authentication](https://learn.microsoft.com/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
+   > [!NOTE]
+   > Review [Azure Virtual Desktop identities and authentication](https://learn.microsoft.com/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
 
-    <!-- -->
+   <!-- -->
 
-    > [!NOTE]
-    > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](https://learn.microsoft.com/active-directory/cloud-sync/concept-how-it-works).
+   > [!NOTE]
+   > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](https://learn.microsoft.com/active-directory/cloud-sync/concept-how-it-works).
 
-    <!-- -->
+   <!-- -->
 
-    > [!NOTE]
-    > Learn about provisioning [Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
+   > [!NOTE]
+   > Learn about provisioning [Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
 
 1. In Azure Migrate, select **Discover, assess and migrate**.
 
@@ -247,14 +247,16 @@ The next step in the migration process for Contoso is to migrate its persistent 
     Export-RDSRegistrationInfo -TenantName "Contoso" -HostPoolName "ContosoWVD" | Select-Object -ExpandProperty Token > .\registration-token.txt
     ```
 
-    > [!NOTE]
-    > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
+   > [!NOTE]
+   > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
 
-> [!NOTE]
-> Migrating Images to Azure
-> Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images, but you may also want to migrate any existing images or VMs that you want to use in Azure. 
-> If you do have an image that you want to migrate to Azure, see [here](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for detailed instructions on preparing and uploading an image to Azure. This guide covers the steps needed to package the image into a virtual hard disk (VHD) format. Once the VHD is prepared, you can then upload it to Azure and use it to create new VMs in your Azure environment.
-> It's important to note that if you are migrating the VMs through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
+    > [!NOTE]
+    > Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images, but you may also want to migrate any existing images or VMs that you want to use in Azure.
+    
+    <!-- -->
+    
+    > If you do have an image that you want to migrate to Azure, see [here](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for detailed instructions on preparing and uploading an image to Azure. This guide covers the steps needed to package the image into a virtual hard disk (VHD) format. Once the VHD is prepared, you can then upload it to Azure and use it to create new VMs in your Azure environment.
+    > It's important to note that if you are migrating the VMs through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
 
 1. As the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
 
