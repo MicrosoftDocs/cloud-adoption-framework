@@ -27,10 +27,10 @@ This article focuses on using Azure Virtual Desktop to move an on-premises RDS e
 Working closely with business partners, the Contoso IT team defines the business drivers for a VDI migration to Azure. These drivers might include:
 
 - **Current environment end-of-life:** A datacenter is out of capacity when it reaches the end of a lease or is closing down. Migrating to the cloud provides virtually unlimited capacity. Current software might also be reaching its end of life where it's become necessary to upgrade the software running Contoso's current VDI solution.
-- **Multi-session Windows 11 VDI:** Provide Contoso users with the only multi-session Windows 11 desktop virtualized in the cloud that's highly scalable, up to date, and available on any device.
+- **Multi-session Windows 11 or Windows 10 VDI:** Provide Contoso users with the only multi-session Windows 11 or Windows 10 desktop virtualized in the cloud that's highly scalable, up to date, and available on any device.
 - **Optimize for Microsoft 365 Apps for enterprise:** Deliver the best Microsoft 365 Apps for enterprise experience, with multi-session virtual desktop scenarios providing the most productive virtualized experience for Contoso's users.
 - **Deploy and scale in minutes:** Quickly virtualize and deploy modern and legacy desktop applications to the cloud in minutes with unified management in the Azure portal.
-- **Secure and productive on Azure and Microsoft 365:** Deploy a complete, intelligent solution that enhances creativity and collaboration for everyone. Shift to Microsoft 365 and get Office 365, Windows 11, and Enterprise Mobility + Security.
+- **Secure and productive on Azure and Microsoft 365:** Deploy a complete, intelligent solution that enhances creativity and collaboration for everyone. Shift to Microsoft 365 and get Office 365, Windows 11 or Windows 10, and Enterprise Mobility + Security.
 
 ## RDS on-premises to Azure Virtual Desktop in the cloud goals
 
@@ -45,7 +45,7 @@ These goals support the decision to use Azure Virtual Desktop and validate it as
 
 ## Benefits of running Azure Virtual Desktop
 
-Using Azure Virtual Desktop, Contoso can now seamlessly run, manage, and scale its VDI solution quickly and easily. The company can also provide an optimized multi-session Windows 11 environment to its users.
+Using Azure Virtual Desktop, Contoso can now seamlessly run, manage, and scale its VDI solution quickly and easily. The company can also provide an optimized multi-session Windows 11 or Windows 10 environment to its users.
 
 Contoso capitalizes on existing Microsoft 365 licenses while using the scale, performance, security, and innovation of Azure.
 
@@ -79,7 +79,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Windows 11 Enterprise multi-session environment. <br><br> Cloud-based, allowing access from anywhere. <br><br> Take advantage of other Azure services like Azure Files within the Azure Virtual Desktop environment. <br><br> Optimized for the Microsoft modern desktop. |
+| **Pros** | Windows 11 or Windows 10 Enterprise multi-session environment. <br><br> Cloud-based, allowing access from anywhere. <br><br> Take advantage of other Azure services like Azure Files within the Azure Virtual Desktop environment. <br><br> Optimized for the Microsoft modern desktop. |
 | **Cons** | To fully optimize for Azure, Contoso will have to rebuild Windows 11 images optimized for multiuser sessions. <br><br> Azure Virtual Desktop doesn't support user profile disks, so UPDs must be migrated to FSLogix profile containers. |
 
 ## Migration process
@@ -87,7 +87,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 Contoso moves VMs to Azure Virtual Desktop by using the Lakeside assessment tool and Azure Migrate. Contoso needs to:
 
 - Run the assessment tool against its on-premises RDS infrastructure to establish the scale of the Azure Virtual Desktop deployment in Azure.
-- Migrate to Azure Virtual Desktop via either Windows 11 Enterprise multi-session or persistent virtual machines.
+- Migrate to Azure Virtual Desktop via either Windows 11 or Windows 10 Enterprise multi-session or persistent virtual machines.
 - Optimize the Azure Virtual Desktop multi-session by scaling up and down as needed to manage costs.
 - Virtualize applications and assign users as needed to continue to secure and manage the Azure Virtual Desktop environment.
 
