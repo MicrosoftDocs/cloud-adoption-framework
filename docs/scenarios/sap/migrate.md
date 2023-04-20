@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Migrate an SAP platform to Azure
 
-SAP is a powerful platform with specific, complex, and strict technical, security, and compliance requirements; this platform is unlikely to move in a standard migration factory. Azure Migrate features tools that can migrate most platforms and workloads, but SAP workloads require different tools and processes to replicate and deploy their assets. Once the core platform is deployed, standard processes and tools will help dependant workloads to resume and finish migrating.
+SAP is a powerful platform with specific, complex, and strict technical, security, and compliance requirements; this platform is unlikely to move in a standard migration factory. Azure Migrate features tools that can migrate most platforms and workloads, but SAP workloads require different tools and processes to replicate and deploy their assets. Once the core platform is deployed, standard processes and tools will help dependent workloads to resume and finish migrating.
 
 ## SAP process flow
 
@@ -21,14 +21,14 @@ There are a few steps to consider when migrating SAP workloads, some of which de
 > [!NOTE]
 > Before you start to migrate your SAP platform, validate that you have [established a compatible Azure landing zone for the SAP platform](./ready.md) and:
 
-- Assess the SAP platform and dependant workloads.
+- Assess the SAP platform and dependent workloads.
 - Evaluate sizing considerations for the SAP platform.
 - Migrate the platform.
 - Migrate the workload.
 
-## Assess the SAP platform and dependant workloads
+## Assess the SAP platform and dependent workloads
 
-Organizations typically don't consider the following questions when assessing an SAP platform and dependant workloads:
+Organizations typically don't consider the following questions when assessing an SAP platform and dependent workloads:
 
 - What operating systems and versions are your SAP virtual machines running?
 
@@ -77,7 +77,7 @@ Explore [Migrating an SAP platform to Azure](/training/modules/migrate-sap-workl
 
 ## Migrate the workload
 
-After migrating the core platform, you can use standardized [migration factory processes](../../migrate/index.md) to migrate each dependant workload. See the [introduction to an SAP adoption scenario](./index.md) for individual workload group architectures and their unique scenarios.
+After migrating the core platform, you can use standardized [migration factory processes](../../migrate/index.md) to migrate each dependent workload. See the [introduction to an SAP adoption scenario](./index.md) for individual workload group architectures and their unique scenarios.
 
 ## Next step: Innovate with SAP
 
