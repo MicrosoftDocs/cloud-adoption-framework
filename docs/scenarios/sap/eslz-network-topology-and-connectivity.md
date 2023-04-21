@@ -148,5 +148,9 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 When running SAP RISE deployments in Azure, integration of SAP managed environment with your own Azure ecosystem is paramount. To understand the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
 
+Customers approaching a RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or Vnet peering. For those customers without any prior Azure workloads, S2S might be the easier option. However, customers who envision adopting Azure as a strategic platform might be interested in setting up a proper Azure landing zone and employ Vnet peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [CAF Migration Landing Zone](/azure/governance/blueprints/samples/caf-migrate-landing-zone/) could be a good option. This blueprint can easily be adopted to the specific customer requirement, with specific focus on the Vnet parameters planned by the customer.
 
+Deploying cross-tenant Vnet peering to the SAP RISE tenant also implies some further work on the customer side: careful planning of the Vnet architecture is needed to ensure there are no overlapping CIDR ranges. In addition, DNS peering to the SAP RISE tenant must be properly done as per the document referred to above (Integrating Azure with SAP RISE managed workloads). 
+
+Finally, if the customer decides to set up a Virtual WAN solution and also has a need for S2S VPN connections, they should consider the following [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal?toc=%2Fazure%2Fvpn-gateway%2Ftoc.json#limits-and-limitations).
 
