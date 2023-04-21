@@ -14,6 +14,20 @@ items:
     items:
     - name: Azure landing zones
       href: ready.md
+    - name: Azure Integration Services (AIS)
+      items:
+      - name: Azure Integration Services landing zone accelerator
+        href: integration-services/landing-zone-accelerator.md
+      - name: Identity and access management
+        href: integration-services/identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: integration-services/network-topology-and-connectivity.md
+      - name: Security
+        href: integration-services/security.md
+      - name: Management
+        href: integration-services/management.md
+      - name: Governance
+        href: integration-services/governance.md
     - name: Azure Kubernetes Service (AKS)
       items:
       - name: AKS landing zone accelerator
@@ -90,6 +104,18 @@ items:
         href: azure-red-hat-openshift\operations.md
       - name: Platform automation 
         href: azure-red-hat-openshift\platform-automation-devops.md
+    - name: Azure Spring Apps
+      items:
+      - name: Azure Spring Apps landing zone accelerator
+        href: spring-apps\landing-zone-accelerator.md
+      - name: Identity and access management
+        href: spring-apps\identity-and-access-management.md
+      - name: Network topology and connectivity
+        href: spring-apps\network-topology-and-connectivity.md
+      - name: Security
+        href: spring-apps\security.md
+      - name: Monitoring operations
+        href: spring-apps\management.md
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms

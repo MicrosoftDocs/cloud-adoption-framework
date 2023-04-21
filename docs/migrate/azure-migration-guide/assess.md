@@ -97,7 +97,7 @@ Before migration, use that data, along with discovery conversations, to evaluate
 The first step in challenging these assumptions is a [review of all five Rs of rationalization](../../digital-estate/rationalize.md).
 
 - Does the assumed rationalization approach work for this workload? Is it the best approach?
-- Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication) impact the migration of this workload?
+- Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks-physics-of-replication) impact the migration of this workload?
 - Does this workload require any [remediation activities](../migration-considerations/assess/evaluate.md) before migration?
 
 These types of questions help challenge assumptions and lead to the best path for each workload.

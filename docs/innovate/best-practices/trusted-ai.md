@@ -139,7 +139,7 @@ AI business consumers (business experts) close the feedback loop and provide inp
 
 - Each predictive value should be broken down into individual features or vectors by importance or impact and deliver thorough prediction explanations that can be exported into a business report for audit and compliance reviews, customer transparency, and business readiness.
 
-- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about noncompliance with PHI and PII, violation of national security laws, and more.
+- Due to increasing global security and privacy risks, best practices for resolving data violations during inference require complying with regulations in individual industry verticals; for example, alerts about noncompliance with PHI and PII, violation of national/regional security laws, and more.
 
 ## Next steps
 

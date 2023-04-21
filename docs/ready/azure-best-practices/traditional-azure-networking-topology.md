@@ -58,7 +58,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - ExpressRoute has certain limits; there are a maximum number of ExpressRoute connections per ExpressRoute gateway, and ExpressRoute private peering can identify a maximum number of routes from Azure to on-premises. For more information about ExpressRoute limits, see [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits).
 
-- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. A VPN gateway supports up to 30 site-to-site or network-to-network tunnels.
+- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. A VPN gateway supports up to 100 site-to-site or network-to-network tunnels.
 
 - If an NVA is part of the architecture, consider Azure Route Server to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. Azure Route Server allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure software defined network (SDN) in the Azure virtual network (VNet) without the need to manually configure or maintain route tables.
 
@@ -146,7 +146,7 @@ The following figure shows both options:
 
 *Figure 4: Options for hub-to-hub connectivity.*
 
-- When two Azure regions need to connect, evaluate and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
+- When two Azure regions need to connect, evaluate, and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
 
 - When more than two Azure regions need to connect, then we recommend that the hub virtual networks in each region connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-spoke networks in three regions:
 

@@ -20,6 +20,8 @@ We define each approach and outline their benefits. If the benefits described ma
 
 :::image type="content" source="../_images/adopt/migrate-or-modernize-first.png" alt-text="Diagram that shows approaches to cloud migration and modernization.":::
 
+<!-- docutune:ignore Rehost Replatform -->
+
 ## Migrate ("Rehost")
 
 Migrate your applications first using the rehosting approach ("lift-and-shift"). With rehosting, you move an existing application to the cloud as-is and modernize it later. Rehosting has four major benefits:

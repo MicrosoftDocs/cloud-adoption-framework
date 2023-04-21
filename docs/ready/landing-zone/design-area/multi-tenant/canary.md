@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Azure landing zones canary approach with multiple tenants
 
-When you have multiple Azure Active Directory tenants, you can handle Azure landing zones canary environments the same way you handle them within a single Azure Active Directory tenant. If you're a multi-tenant ALZ consumer, follow the [canary guidance](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach) in each Azure Active Directory tenant separately.
+When you have multiple Azure Active Directory tenants, you can handle Azure landing zones canary environments the same way you handle them within a single Azure Active Directory tenant. If you're a multi-tenant ALZ consumer, follow the [canary guidance](../../../enterprise-scale/testing-approach.md) in each Azure Active Directory tenant separately.
 
 ## Deployment stamps approach
 

@@ -75,7 +75,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 ### Migration process
 
-1. Contoso provisions an Azure SQL managed instance and then migrates the SmartHotel360 database to it by using Azure Database Migration Service.
+1. Contoso provisions an Azure SQL Database and then migrates the SmartHotel360 database to it by using Azure Database Migration Service.
 1. Contoso provisions and configures web apps, and deploys the SmartHotel360 application to them.
 
     ![Diagram of the migration process.](./media/contoso-migration-refactor-web-app-sql/migration-process.png)

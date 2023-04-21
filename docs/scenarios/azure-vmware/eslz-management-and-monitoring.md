@@ -34,16 +34,16 @@ Review the following *considerations* for platform management and monitoring of 
 
 ### VMware tooling considerations
 
-- Consider VMware solutions like vRealize Operations Manager and vRealize Network Insights to provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter events and flow logs for the NSX-T distributed firewall.
+- Consider VMware solutions like vRealize Operations Manager and vRealize Network Insights to provide a detailed understanding of the Azure VMware Solution platform. Customers can see monitoring data like vCenter Server events and flow logs for the NSX-T Data Center distributed firewall.
 - Metrics available in vRealize Operations are documented in [VMware's vRealize Operations documentation](https://docs.vmware.com/en/vRealize-Operations/8.6/com.vmware.vcom.metrics.doc/GUID-C272EDE0-49E0-44D6-B47F-C32723AC9246.html).
 - *Pull* logging is currently supported by vRealize Log Insight for Azure VMware Solution. Only events, tasks, and alarms can be captured. Syslog pushing of unstructured data from hosts to vRealize isn't currently supported. SNMP Traps aren't supported.
-- While Microsoft monitors the health of vSAN, it's possible to utilize vCenter to query and monitor the performance of vSAN. Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
-- vCenter logs can be sent to Storage Accounts or Event Hubs using the Diagnostic Settings within the Private Cloud resource in Azure. Log settings aren't directly configurable within vCenter, only via the Private Cloud resource in Azure. More information is available in the [configuring VMware syslog documentation](/azure/azure-vmware/configure-vmware-syslogs). The output is raw syslog, so consider retention and downstream processing before enabling.
+- While Microsoft monitors the health of vSAN, it's possible to utilize vCenter Server to query and monitor the performance of vSAN. Performance metrics can be viewed from a VM or backend perspective, showing average latency, IOPS, throughput, and outstanding IO through vCenter.
+- vCenter Server logs can be sent to Storage Accounts or Event Hubs using the Diagnostic Settings within the Private Cloud resource in Azure. Log settings aren't directly configurable within vCenter Server, only via the Private Cloud resource in Azure. More information is available in the [configuring VMware syslog documentation](/azure/azure-vmware/configure-vmware-syslogs). The output is raw syslog, so consider retention and downstream processing before enabling.
 - In-guest memory collection isn't supported by vRealize Operations using VMware tools. Active and consumed memory will continue to work.
 
 ### Guest workload management considerations
 
-- Virtual machines within Azure VMware Solution are treated the same as on-premises VMware VMs by default. You can continue using existing VM-level monitoring within AVS via existing agents.
+- Virtual machines within Azure VMware Solution are treated the same as on-premises VMware vSphere VMs by default. You can continue using existing VM-level monitoring within AVS via existing agents.
 - Azure VMware Solution VMs won't show up in the Azure portal unless [Azure Arc for Servers](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) is deployed to them. Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane. You can apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest VMs.
 
 ## Design recommendations
@@ -68,7 +68,7 @@ Review the following *recommendations* for platform management and monitoring of
 - For SLA purposes, Azure VMware Solution requires the number of failures to `tolerate = 1` for clusters that have between three and five hosts, and the number of failures to `tolerate = 2` for clusters with 6-to-16 hosts. The full SLA is documented in the following [service level agreement](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
 - In a hybrid environment, you can use [Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to monitor communication between on-premises and Azure resources.
 - Configure two connection monitors in [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) to monitor connectivity.
-  - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connection over ExpressRoute Direct and also over ExpressRoute Global Reach.
+  - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connections within, from, and to the Azure VMware Solution, including ExpressRoute Direct and ExpressRoute Global Reach connections.
 - Send your logs to Log Analytics. 
 For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics).
 

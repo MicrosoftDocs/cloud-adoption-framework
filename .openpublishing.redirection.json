@@ -1,6 +1,21 @@
 {
    "redirections": [
       {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-mma.md",
+         "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions-template",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md",
+         "redirect_url": "/azure/azure-arc/servers/manage-vm-extensions",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-update-management.md",
+         "redirect_url": "/azure/automation/update-management/overview",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/get-started/help.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
          "redirect_document_id": false
@@ -759,6 +774,16 @@
          "source_path": "docs/infrastructure/mainframe-migration/myths-and-facts.md",
          "redirect_url": "/azure/cloud-adoption-framework/infrastructure/mainframe-migration/",
          "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/considerations/storage-options.md",
+         "redirect_url": "/azure/architecture/guide/technology-choices/storage-options",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/considerations/data-options.md",
+         "redirect_url": "/azure/architecture/guide/technology-choices/data-options",
+         "redirect_document_id": false 
       }
    ]
 }
