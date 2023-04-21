@@ -85,38 +85,40 @@ Cloud automation offers significant advantages for security and health monitorin
 For example:
 
 1. An identity-driven threat is detected from one or more logs, raising an alert.
-2. Automation is immediately triggered to gather more information and correlate more logs - to enrich the alert.
+2. Automation is immediately triggered to gather more information and correlate more logs to enrich the alert.
 3. An operator takes action by selecting the right automation from a library, such as disabling a user account.
 
-And later, the example or use case can be fully automated.
+The example or use case can be fully automated.
 
-The role of automation then provides a sort of *playbook* that reduces costs and saves time:
+The role of automation then provides a sort of _playbook_ that reduces costs and saves time:
 
-* No security incident was needed to follow through a lengthy investigation, diagnosis, resolution, and recovery.
-* The detection-to-correction cycle could be in seconds or minutes versus hours.
+- No security incident was needed to follow through a lengthy investigation, diagnosis, resolution, and recovery.
+- The detection-to-correction cycle could be in seconds or minutes versus hours.
 
 Next, your team needs to build a list or library of automation examples that can be flexibly used - either from raw material on public websites or internally curated and stored in a source control repository.
 
 Here's a list of suggested reading for more automation based on identity- or security events:
 
-* [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
-* [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
+- [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
+- [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
 
 ## Agile work management
 
 Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud for the cited reasons, but it's still vital for traditional incident-significant service disruption events.
 
-Agile and DevOps processes are now needed:
+### DevOps
 
-* You'll need a repository or source control of automation playbooks, scripts, and documentation, for example
-* You manage a library of cloud automation using Agile work management methods.
+Today, organizations have more agile and DevOps processes requirements:
+
+- You'll need a repository or source control of automation playbooks, scripts, and documentation, for example
+- You manage a library of cloud automation using Agile work management methods.
 
 You then get two things:
 
-* Monitoring solutions in production can then call or get the latest from the repository when needed, or
-* DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
+- Monitoring solutions in production can then call or get the latest from the repository when needed, or
+- DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
 
-This is a derivative of incident management in DevOps, and to learn more, see [DevOps Incident Management: A Guide With Best Practices](https://www.xplg.com/devops-incident-management-best-practices/).
+### Structure the data
 
 Many services in Azure help you monitor and diagnose the infrastructure, platform, and software layers managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record the status of an event and complement the diagnostic or any other telemetry you collect from the different resources in Azure.
 
@@ -124,14 +126,19 @@ Understanding how you can structure all that data gathered to meet your analysis
 
 Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under- or over-utilization, and more. Then evaluate if they're the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.
 
-Under certain circumstances, some alerts can be informational to inform you that:
+### Informational alerts
 
-* A VM was automatically shut down to minimize waste and control costs based on a schedule or low utilization detected.
-* IaaS or PaaS resources are idle for an extended period or not provisioned based on Azure Advisor recommendations.
+Under certain circumstances, some alerts can be _informational_. We can use this to learn about how our systems behave. For example, you might want to get these informational alerts:
 
-In the first example, the orchestration was used based on a native scheduling feature and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, *alerting* is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
+- **A VM was shut down**: A VM was automatically shut down to _minimize waste and control costs_ based on a schedule or low utilization detected.
 
-Keep in mind that learning is key.
+  In this example, the orchestration was used based on a native scheduling feature and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why.
+
+- **Idle resources**: IaaS or PaaS resources are idle for an extended period or not provisioned based on Azure Advisor recommendations.
+
+  In this example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, _alerting_ is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
+
+Keep in mind that learning is key, and when designed right, informational alerts can give you many insights into your cloud ecosystem and health.
 
 ## Successful alerting strategy
 
