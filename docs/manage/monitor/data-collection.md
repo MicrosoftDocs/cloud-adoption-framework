@@ -4,7 +4,7 @@ description: Learn to observe the health and availability of your cloud solution
 author: Zimmergren
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 04/19/2023
+ms.date: 04/21/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -14,11 +14,11 @@ products: azure-monitor
 
 # Collect the right monitoring data
 
+Observing the health and availability of your cloud solution helps build an understanding of the signals you expect in your systems so you can determine what data you should collect.
+
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
 ## Data collection considerations
-
-Observing the health and availability of your cloud solution helps build an understanding of the signals you expect in your systems.
 
 Ask yourself these questions to establish criteria for a monitoring configuration:
 
@@ -50,16 +50,20 @@ Consider the following:
 
 ## Develop a monitoring configuration
 
-The monitoring service owner and the team typically follow a standard set of activities to develop a monitoring configuration. These activities start at the initial planning stages, continue through testing and validating in a nonproduction environment, and extend to deploying into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and the experience of several people in the organization (the service desk, operations, engineers, and developers). Such configurations assume that the service already exists, is being migrated to the cloud, and hasn't been rearchitected.
+Typically, the owner of a monitoring service and their team adhere to a standard set of activities to create a monitoring configuration. These activities encompass the planning stages, testing and validating in a nonproduction environment, and deploying into production.
 
-For service-level quality results, monitor the health and availability of these services early in the development process. If you monitor the design of that service or application as an afterthought, your results will be less successful.
+To develop monitoring configurations, the team draws upon known failure modes, test results from simulated failures, and the experience of various individuals within the organization, such as the service desk, operations personnel, engineers, and developers. 
+
+These configurations are designed under the assumption that the service already exists, is undergoing migration to the cloud, and hasn't been restructured.
+To ensure that service-level quality results are achieved, monitoring the health and availability of these services early in the development process is essential. If monitoring the service or application's design is only considered an afterthought, the results are likely to be less successful.
 
 To drive quicker resolution of the incident, consider the following recommendations:
 
-- Define a dashboard for each service component.
-- Use metrics to help guide further diagnosis and identify a resolution or workaround if you can't discover a root cause.
-- Use dashboard drill-down capabilities, or support customizing the view to refine it.
-- If you need verbose logs, metrics should have helped target the search criteria. If the metrics didn't help, improve them for the following incident.
+- **Individual component dashboards**: Define a dashboard for each service component to help quickly identify any known issues in any given area of your applications and infrastructure.
+
+- **Use metrics**: Utilize the metrics signals that are built into the various components to help diagnose and identify resolutions or workarounds if you can't identify a root cause.
+
+- **Enable dashboard customizations**: Design your dashboards so you can easily drill down into the data from the monitoring dashboards. Make sure you support customizing the views dynamically, allowing for easy filtering and troubleshooting.
 
 Embracing this guiding set of principles can help give you near-real-time insights and better management of your service.
 
