@@ -20,7 +20,7 @@ Identify current emissions to plan a sustainable cloud adoption journey. Measure
 
 ### Identify the most carbon-emitting workloads
 
-One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey.
+One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey. Consider using a tool like the [Emissions Savings Estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) which will help you understand the emissions from your current on-premises workloads.
 
 ## Roles and responsibilities
 
