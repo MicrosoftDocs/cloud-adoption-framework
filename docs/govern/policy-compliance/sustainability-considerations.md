@@ -3,7 +3,7 @@ title: Sustainability considerations in your cloud governance strategy
 description: Identify sustainability policies as part of a cloud governance strategy.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/05/2023
+ms.date: 04/24/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
