@@ -78,6 +78,7 @@ After defining initial priorities and adding workloads to the plan, define each 
 | Application owners | Who is accountable for the business impact of any applications associated with this workload? |         |
 | Business freeze periods | Are there any times when the business won't permit change? |         |
 | Geographies | Are any geographies affected by this workload? |         |
+| Sustainability | What [sustainability and cloud efficiency considerations](./plan-sustainability.md#identify-current-emissions) have been taken into account for this workload?|         |
 
 ### Technical inputs
 
