@@ -1,5 +1,5 @@
 ---
-title: Plan for sustainability
+title: Sustainability considerations in cloud adoption planning
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate sustainability into your cloud adoption plan.
 author: Zimmergren
 ms.author: tozimmergren
@@ -10,7 +10,7 @@ ms.subservice: plan
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Plan for sustainability
+# Sustainability considerations in cloud adoption planning
 
 Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to corporate social responsibility, comply with regulations and industry standards, and improve your brand reputation.
 
