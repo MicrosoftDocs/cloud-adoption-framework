@@ -40,6 +40,7 @@ Assuming the suggested structure aligns with your cloud adoption plan, the next 
 - Who will be accountable for the team's ability to deliver technical changes?
 - What person (or group of people) will be responsible for implementing protective governance mechanisms?
 - What person is accountable for defining those governance controls?
+- What person (or group of people) will be responsible for planning the sustainability and cloud efficiency?
 - Are there other capabilities or people with accountability or responsibility within the cloud adoption plan?
 
 After documenting the answers to these questions, you can establish [plans for skills readiness](./adapt-roles-skills-processes.md) to define plans to prepare these people for future work.

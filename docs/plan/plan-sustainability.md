@@ -43,18 +43,6 @@ For example, the Cloud Center of Excellence (CCoE) can encompass the directions 
 
 The governance team can define the accountabilities around ensuring the sustainability targets are [being tracked and progressed](/azure/cloud-adoption-framework/strategy/business-outcomes/okr#examples-of-okrs).
 
-### Build green teams
-
-Initiate the idea of building "green teams" that can have different sustainability metrics depending on the served domain, not dependent on the central sustainability team guidance but contributing to the overall green targets of the company.
-
-#### Goals and metrics for teams owning sustainability
-
-At Microsoft, we have a dedicated [sustainability science team](https://www.microsoft.com/research/project/sustainability-science-team/) whose mission is to ensure that our sustainability work is grounded in the best available science. This drives our work in sustainability, from our climate commitments to partnering with our customers and partners on codesigning new solutions.
-
-Establishing goals and metrics for teams owning sustainability in your organization is essential. Metrics can include greenhouse gas emissions, carbon footprint data, water use, and energy consumption.
-
-The ultimate responsibility for measuring and owning these goals rests with the sustainability team, who aligns with the company's sustainability strategy set by the board.
-
 ## Skilling
 
 To drive sustainability awareness, it's essential to upskill employees on green skills and encourage them to participate in related discussions. The sustainability teams can focus on skilling ambitions and should engage the entire organization in relevant initiatives.
