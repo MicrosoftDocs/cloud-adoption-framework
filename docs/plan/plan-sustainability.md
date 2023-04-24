@@ -71,7 +71,7 @@ For instance, use metrics such as Power Usage Effectiveness (PUE) and Greenhouse
 
 Reporting standards like the Greenhouse Gas Protocol can help align reporting across organizations. Defining such standards can alleviate resistance to implementing green IT and sustainability practices, particularly in cases where legacy systems need updates.
 
-Planning for reporting standards also helps with [sustainability considerations](./../manage/considerations/sustainability.md#reporting-and-insights) in your cloud management processes.
+Planning for reporting standards also helps with [sustainability considerations](./../manage/considerations/sustainability.md#sustainability-insights) in your cloud management processes.
 
 ## Risk management
 
