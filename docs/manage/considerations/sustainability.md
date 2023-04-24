@@ -62,6 +62,3 @@ In a cloud environment, demand shaping typically involves identifying periods of
 
 From a management perspective, demand shaping requires careful planning and coordination. It's essential to have a clear understanding of resource utilization patterns and workload requirements and the ability to automate resource allocation and scheduling.
 
-Learn more:
-
-- See [Demand Shaping](https://learn.greensoftware.foundation/carbon-awareness#demand-shaping) in the Principles of Green Software Engineering.
