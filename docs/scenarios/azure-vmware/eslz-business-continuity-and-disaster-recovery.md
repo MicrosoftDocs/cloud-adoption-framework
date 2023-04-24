@@ -55,7 +55,9 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
   :::image type="content" source="../_images/eslz-bcdr-3.png" alt-text="Diagram that shows Azure Backup Server deployed as an Azure VMware Solution VM.":::
 
-- Use the [application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at the right capacity and disk type, such as HDD, SSD, or Ultra. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations. Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number of servers, storage, and IOPS requirements for each of them.
+- Use the [application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at the right capacity and disk type, such as HDD, SSD, or Ultra. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations.
+
+- Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number of servers, storage, and IOPS requirements for each of them. When providing "Total Size of the Workload (GB)*” value in capacity planner, use median value between "used storage" and “allocated storage” of all VMs in vCenter you want to backup.
 
 - Use [storage pools](/azure/backup/backup-mabs-add-storage) with Azure Backup Server for enhanced disk IOPS/throughput. Use [tiered storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on Backup Server for enhanced operations.
 

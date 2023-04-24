@@ -3,11 +3,11 @@ title: 'Standard enterprise governance: Best practices explained'
 description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a standard enterprise.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/12/2022
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Standard enterprise governance: Best practices explained
@@ -53,7 +53,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 ### Resource consistency
 
-Your resource consistency decisions determine the tools, processes, and efforts required to configure, deploy and manage Azure resources consistently within a subscription. In this narrative, [deployment consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency) is the primary resource consistency pattern.
+Your resource consistency decisions determine the tools, processes, and efforts required to configure, deploy, and manage Azure resources consistently within a subscription. In this narrative, [deployment consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency) is the primary resource consistency pattern.
 
 - Create resource groups for applications using the lifecycle approach. Everything you create, maintain, and retire together should reside in a single resource group. For more information, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md#basic-grouping).
 - Apply Azure Policy to all subscriptions from the associated management group.
@@ -67,7 +67,7 @@ Your resource consistency decisions determine the tools, processes, and efforts 
 
 ### Resource tagging
 
-Resource tagging decisions determine how metadata applies to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the [classification](../../../decision-guides/resource-tagging/index.md#resource-tagging-patterns) pattern is chosen as the default model for resource tagging.
+Resource tagging decisions determine how metadata applies to Azure resources within a subscription to support operations, management, and accounting purposes. In this narrative, the [classification](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md#resource-tagging-patterns) pattern is chosen as the default model for resource tagging.
 
 - Tag deployed assets with:
   - Data classification
@@ -102,10 +102,10 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Encryption patterns](../../../decision-guides/encryption/index.md)
 - [Identity patterns](../../../decision-guides/identity/index.md)
 - [Logging and reporting patterns](../../../decision-guides/logging-and-reporting/index.md)
-- [Policy enforcement patterns](../../../decision-guides/policy-enforcement/index.md)
+- [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
-- [Resource naming and tagging patterns](../../../decision-guides/resource-tagging/index.md)
-- [Software Defined Networking patterns](../../../decision-guides/software-defined-network/index.md)
+- [Resource naming and tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+- [Software Defined Networking patterns](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps

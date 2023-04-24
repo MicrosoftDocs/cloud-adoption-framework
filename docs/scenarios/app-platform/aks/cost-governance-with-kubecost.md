@@ -20,32 +20,12 @@ This section shows how to use [Kubecost](https://www.kubecost.com/) to govern Az
 
 There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
 
-To install Kubecost directly, use the following commands:
-
-```bash
-
-# Create the Kubecost namespace
-
-kubectl create namespace kubecost
-
-# Install Kubecost into the AKS cluster
-
-kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/master/kubecost.yaml --namespace kubecost
-```
-
-To install Kubecost by using Helm 2, use the following commands:
+The recommended installation method is the Helm 3 chart. To install a basic configuration of Kubecost by using Helm 3, use the following commands:
 
 ```bash
 helm repo add kubecost https://kubecost.github.io/cost-analyzer/
-helm install kubecost/cost-analyzer --namespace kubecost --name kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
-```
-
-To install Kubecost by using Helm 3, use the following commands:
-
-```bash
-kubectl create namespace kubecost
-helm repo add kubecost https://kubecost.github.io/cost-analyzer/
-helm install kubecost kubecost/cost-analyzer --namespace kubecost --set kubecostToken="YWxnaWJib25AbWljcm9zb2Z0LmNvbQ==xm343yadf98"
+helm repo update
+helm upgrade --install kubecost kubecost/cost-analyzer --namespace kubecost --create-namespace
 ```
 
 After a few minutes, check to make sure that Kubecost is up and running:
@@ -59,6 +39,14 @@ kubectl port-forward -n kubecost svc/kubecost-cost-analyzer 9090:9090
 ```
 
 You can now open your browser and point to `http://127.0.0.1:9090` to open the Kubecost UI. In the Kubecost UI, select your cluster to view cost allocation information.
+
+### Configuring Kubecost for Azure cloud integration
+
+To complete your Kubecost installation, you should configure the [Azure Cloud Integration](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster) and the [Azure Rate Card Configuration](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster/azure-config).
+
+With [Azure Cost Export](/azure/cost-management-billing/costs/tutorial-export-acm-data?tabs=azure-portal), you can create a recurring task that automatically exports your Cost Management data to an Azure storage account on a daily basis. Kubecost is configured to access the data in this storage account, allowing it to display the total cost for Azure resources in the dashboard, not just the data coming from the AKS cluster. To ensure that Kubecost produces accurate dashboards, you should tag your Azure resources as described in the Kubecost documentation for [tagging Azure resources](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster#step-3-tagging-azure-resources). Some Azure resources are created by the AKS cluster, this is the case when you create a Service of type `LoadBalancer` or a `PersistentVolume`. To track the cost for these resources correctly, you can use annotations in the Kubernetes resources to add the proper Azure tags, as examples in the article ["Use Azure tags in Azure Kubernetes Service"](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/use-azure-tags-in-azure-kubernetes-service-aks/ba-p/3611583).
+
+The Azure Rate Card Configuration is necessary for accurate pricing to be reported in your dashboard. You will need to [create a Service Principal with a custom role as explained in the documentation page](https://docs.kubecost.com/install-and-configure/install/cloud-integration/azure-out-of-cluster/azure-config) and configure Kubecost to use the Service Principal to query the Azure Billing Rate Card API.
 
 ### Navigate Kubecost
 

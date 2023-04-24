@@ -7,7 +7,7 @@ ms.date: 04/04/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # What is cloud accounting?

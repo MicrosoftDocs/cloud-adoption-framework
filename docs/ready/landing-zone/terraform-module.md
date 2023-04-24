@@ -7,7 +7,7 @@ ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, engagement-fy23, devx-track-terraform
 ---
 
 # Azure landing zones Terraform module

@@ -7,7 +7,7 @@ ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for the Microsoft customer agreement service
@@ -59,3 +59,5 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 - Periodically audit the agreement billing RBAC role assignments to review who has access.
 
 - For development/testing (dev/test) workloads, use the Microsoft Azure plan for dev/test offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148g/).
+
+- Any user that has permissions upon an invoice section, billing profile or billing account to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-mca-roles#subscription-billing-roles-and-tasks), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)

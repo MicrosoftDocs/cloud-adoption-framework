@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+  ],
+  "ignoreWords": [
+    "arnaud",
+    "asos",
+    "bühler",
+    "carhartt",
+    "coverdell",
+    "flickinger",
+    "gerri",
+    "jamey",
+    "laine",
+    "ryan",
+    "shiels",
+    "sorensen"
+  ],
+  "flagWords": [
+  ]
+}

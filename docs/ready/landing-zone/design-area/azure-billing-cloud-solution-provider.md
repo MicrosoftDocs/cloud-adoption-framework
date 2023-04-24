@@ -7,7 +7,7 @@ ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for the Cloud Solution Provider service
@@ -48,6 +48,8 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 - Discuss how to create self-service subscriptions with your CSP partner.
 
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views. These reports can use Azure metadata, like tags and location, to explore and analyze your organization's costs.
+
+- Any user that has permissions upon an invoice section, billing profile or billing account to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-mca-roles#subscription-billing-roles-and-tasks), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)
 
 ## Next steps
 

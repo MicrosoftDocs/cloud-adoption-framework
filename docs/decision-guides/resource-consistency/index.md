@@ -28,9 +28,9 @@ In Azure, [resource groups](/azure/azure-resource-manager/management/overview#re
 
 Resource groups are containers for resources with a common lifecycle and shared management constraints, such as policy or Azure role-based access control requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
-* Are the contents of the resource group developed together?
-* Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
-* Are the contents of the resource group retired together?
+- Are the contents of the resource group developed together?
+- Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
+- Are the contents of the resource group retired together?
 
 If you answered *no* to any of the above points, place the resource in another resource group.
 
@@ -55,7 +55,7 @@ By combining resource groups and standardized Resource Manager templates, you ca
 
 For example, you might have a requirement that all virtual machines deployed within your subscription connect to a common subnet managed by your central IT team. Use a standard template for deploying workload VMs to create a separate resource group for the workload and deploy the required VMs there. This resource group has a policy rule to only allow network interfaces within the resource group to be joined to the shared subnet.
 
-For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](../policy-enforcement/index.md).
+For a more in-depth discussion of enforcing your policy decisions within a cloud deployment, see [Policy enforcement](../../govern/policy-compliance/policy-definition.md).
 
 ## Hierarchical consistency
 

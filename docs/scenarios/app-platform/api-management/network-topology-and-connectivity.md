@@ -34,7 +34,7 @@ Learn more about the [network topology and connectivity](../../../ready/landing-
 - Use Azure Front Door for multi-region deployment.
 - Ensure [required ports](/azure/api-management/virtual-network-reference) (such as `80`, `443`) are open between the calling client and the backend API Management gateway.
 - Deploy the API Management gateway in a VNet to allow access to backend services in the network.
-- VNet peering supports high performance in a region but has a scalability limit of 500 networks. If you require more workloads to be connected, use a [hub spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) architecture or PLE.
+- VNet peering supports high performance in a region but has a scalability limit of 500 networks. If you require more workloads to be connected, use a [hub spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) architecture or [Private Endpoint](/azure/private-link/private-endpoint-overview).
 - When a VNet is used in internal mode, make it easy for consumers to onboard (connect) to your API Management platform. Provide an open network path (through upstream hub or network security group setup) to remove friction when connecting to API Management.
 
 ## Enterprise-scale assumptions

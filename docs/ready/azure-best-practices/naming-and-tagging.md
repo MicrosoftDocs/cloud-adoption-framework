@@ -7,7 +7,7 @@ ms.date: 12/22/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal, readiness, fasttrack-edit
+ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
 ---
 
 # Develop your naming and tagging strategy for Azure resources
@@ -19,7 +19,7 @@ Define your naming and tagging strategy as early as possible. Use the following 
 - [Define your naming convention](./resource-naming.md)
 - [Recommended abbreviations for Azure resource types](./resource-abbreviations.md)
 - [Define your tagging strategy](./resource-tagging.md)
-- [Resource naming and tagging decision guide](../../decision-guides/resource-tagging/index.md)
+- [Resource naming and tagging decision guide](./resource-naming-and-tagging-decision-guide.md)
 - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules)
 
 > [!NOTE]

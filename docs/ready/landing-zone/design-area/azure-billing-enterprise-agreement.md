@@ -7,7 +7,7 @@ ms.date: 08/23/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for Enterprise Agreement enrollment
@@ -72,7 +72,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Assign a budget for each department and account, and establish an alert associated with the budget.
 
-- Create a new department for IT if business domains have independent IT capabilities.
+- Create new departments for IT only if the corresponding business domains have independent IT capabilities.
 
 - If you use multiple Azure AD tenants, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
@@ -85,3 +85,5 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 - Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
 
 - [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Azure Cost Management + Billing data.
+
+- Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)

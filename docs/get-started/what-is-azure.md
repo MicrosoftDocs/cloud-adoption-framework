@@ -7,7 +7,7 @@ ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # How does Azure work?
@@ -38,7 +38,7 @@ Azure is a huge collection of servers and networking hardware, which runs a comp
 
 ## Next steps
 
-Learn more about cloud adoption with the Microsoft Cloud Adoption Framework for Azure.
+Learn about how resources are deployed in Azure with the Azure Resource Manager.
 
 > [!div class="nextstepaction"]
-> [Microsoft Cloud Adoption Framework for Azure](../index.yml)
+> [Microsoft Cloud Adoption Framework for Azure](how-azure-resource-manager-works.md)

@@ -7,7 +7,7 @@ ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Prerequisites for an effective cloud adoption plan

@@ -21,7 +21,7 @@ A good business continuity and disaster recovery (BCDR) strategy keeps your crit
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/virtual-desktop/disaster-recovery).
+For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
 
 ## Design considerations
 
@@ -58,14 +58,17 @@ For host pool VM resiliency, consider these factors:
    -  Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
    -  Standard SSD Managed Disks - 99.5%
    -  Standard HDD Managed Disks - 95%   
-- The default resiliency option for Azure Virtual Desktop host pool deployment is to use an availability set. This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
+- The default resiliency option for Azure Virtual Desktop host pool deployment is to use availability zones. 
+
+- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
+
+- Availability Sets - This option ensures host pool resiliency only at the single Azure datacenter level. Azure availability sets for virtual machines have a formal 99.95 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines).
 
   > [!NOTE]
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-- Through [availability zones](/azure/availability-zones/az-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.
 
-Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications that your organization accesses via Azure Virtual Desktop are critical to your business. You might want to separate critical applications from non-critical applications so that you can provision multiple host pools by using different disaster recovery approaches and capabilities.
+Before you begin your BCDR planning and design for Azure Virtual Desktop, consider which applications accessed via Azure Virtual Desktop are critical. You might want to separate them from non-critical applications so that you can provision multiple host pools with different disaster recovery approaches and capabilities.
 
 ### Optimal storage for profile and Office containers
 
@@ -162,6 +165,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Make sure that the managed disk for the local VM is large enough to accommodate the local cache of all users' FSLogix profile and Office containers.
 
 - Use Azure Compute Gallery to replicate golden images to different regions.
+  - Golden images don't participate in providing users the ability to connect to their session host VM. However, they play a critical role in how quickly you are able to run the provisioning process of new virtual machines on a host pool and therefore must be backed up and available.
   - Use ZRS to create the image. Maintain at least two copies of the image per region.
 
 - Use Azure Backup to protect critical user data from data loss or logical corruption when you use the Azure Files Standard tier or Premium tier.
@@ -173,6 +177,16 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Hybrid connectivity must be highly available in both the primary region and the secondary region.
   - Active Directory authentication must be available in the disaster recovery region or connectivity to the on-premises domain must be guaranteed.
 
+[Design Decision: Disaster Recovery Planning](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/cvad-disaster-recovery.html#overview) on Citrix TechZone summarizes design considerations for Citrix technologies. This guide assists with business continuity and disaster recovery (BCDR) architecture planning and considerations for both on-premises and Azure deployments of Citrix DaaS.
+
 ## Next steps
 
-- [Platform automation and DevOps considerations for Azure Virtual Desktop](eslz-platform-automation-and-devops.md)
+- Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
+  - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
+  - Hybrid connectivity must be highly available in the primary and secondary regions.
+  - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
+
+- Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
+
+  > [!div class="nextstepaction"]
+  > [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)

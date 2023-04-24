@@ -12,28 +12,29 @@ ms.custom: internal, readiness, fasttrack-edit
 
 # Define your naming convention
 
-An effective naming convention consists of resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it. For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
+A good name for a resource helps you to quickly identify its type, its associated workload, its environment, and the Azure region where it runs. To do so, names should follow a consistent format—a *naming convention*—that is composed of important information about each resource. The information in the names ideally includes whatever you need to identify specific instances of resources. For example, a public IP address (PIP) for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`. 
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name.*
 
+
 ### Recommended naming components
 
-When you construct your naming convention, identify the key pieces of information you want to reflect in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. The intention is to have a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. 
+When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. 
 
 The following list provides examples of naming components that are useful when you construct resource names:
 
 | Naming component | Description |
 |--|--|
-| **Organization** | Top-level name of organization, normally utilized as top management group or, in smaller organizations, part of the naming convention. Example: `contoso`
-| **Business unit or department** | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component often is used as a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
+| **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso`
+| **Business unit or department** | Top-level division of your company that owns the subscription or the workload that the resource belongs to. In smaller organizations, this component might represent a single corporate, top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
+| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
 | **Project, application, or service name** | Name of a project, application, or service that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
 | **Location** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-| **VM role** | Identifier for the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
-| **Instance** | The instance count for a specific resource to identify more than one resource that has the same naming convention. Examples, `01`, `001` |
+| **VM role** | Identifier of the purpose of the VM. Examples: `db` (database), `ws` (web server), `ps` (print server) |
+| **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
 
 > [!NOTE]
 > Although virtual machine (VM) names in Azure can be longer than the allowed NetBIOS name of the VM, we recommend that you keep them consistent. For more information and for other restrictions, see [Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
@@ -41,15 +42,15 @@ The following list provides examples of naming components that are useful when y
 
 ## Naming considerations 
 
-In addition to defining the naming components, you must also consider the order in which the naming components should be listed, if and what type of delimiters you should use between components, and take into account the different naming rules associated with resources types. 
+In addition to defining the naming components, you must also consider the order in which the naming components are listed and what type of delimiters (if any) should appear between components. Also take into account the different naming rules that are associated with resources types.
 
 ### Scope
 
-All Azure resource types have a scope that defines the level of that resource and that the resource names must be unique. A resource must have a unique name within its scope.
+All Azure resource types have a scope that defines the level of that resource. Also, A resource must have a unique name within its scope.
 
-For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups could have their own virtual network named `vnet-prod-westus-001`. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
+For example, a virtual network has the scope of a resource group, which means that there can be only one network named `vnet-prod-westus-001` in a specific resource group. Other resource groups can also have virtual networks named `vnet-prod-westus-001`, but each resource group can have only one with that name. Subnets are scoped to virtual networks, so each subnet within a virtual network must have a distinct name.
 
-Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, so they must be unique across the entire Azure platform.
+Some resource names have a global scope, such as a name for a Platform as a Service (PaaS) that has a public endpoint or a virtual machine DNS label. A resource in a global scope must have a name that's unique across the entire Azure platform.
 
 ![Diagram that shows the scope levels for Azure resource names.](../../_images/ready/resource-naming-scope.png)
 
@@ -62,11 +63,11 @@ Azure naming rules vary depending on the resource type. When you define a naming
 For example, resource names have length limits. We recommend that you keep the length of naming components short to prevent exceeding resource name length limits.
 
 > [!NOTE]
-> Balancing the context of a name with its scope and name length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
+> Balancing the context of a name with its scope and length limit is important when you develop your naming conventions. For more information, see [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules).
 
-When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that's useful when you construct resource names.
+When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that are useful when you construct resource names.
 
-You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you are working in the Azure portal while being signed in to the VM itself.
+You can abbreviate resource names and naming components as a strategy to reduce the length and complexity of resource names. Shortening names can be useful for any of the naming components, but it's especially important to help you keep resource names within name length limits. For example, a VM name in Azure can be longer than the OS naming restrictions. Keeping Azure VM names shorter than the naming restrictions of the OS helps create consistency, improve communication when discussing resources, and reduce confusion when you're working in the Azure portal while being signed in to the VM itself.
 
 | Naming component | Description |
 |--|--|
@@ -89,13 +90,13 @@ The following section provides example names for common Azure resource types in 
 >
 > Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches that might iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
 >
-> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more, CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
+> Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more: CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
 
-The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For additional examples, see the 
+The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the 
 [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 > [!NOTE]
-> The following examples are intended to provide visualization of a naming convention, but actual conventions will vary by organization.  
+> The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
 
 ### Example names: General
 
@@ -128,7 +129,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Virtual machine** | Resource group | *vm\<vm&nbsp;role>\<environment><###>* <br><br> <li> `vmsqltest001` <li> `vmhadoopprod001` |
+| **Virtual machine** | Resource group | *vm-\<vm&nbsp;role>-\<environment>-<###>* <br><br> <li> `vm-sql-test-001` <li> `vm-hadoop-prod-001` |
 | **Web app** | Global | *app-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `app-navigator-prod-001.azurewebsites.net` <li> `app-accountlookup-dev-001.azurewebsites.net` |
 | **Function app** | Global | *func-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>-\<###>.azurewebsites.net* <br><br> <li> `func-navigator-prod-001.azurewebsites.net` <li> `func-accountlookup-dev-001.azurewebsites.net` |
 
@@ -136,7 +137,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure SQL database** | Azure SQL Database | *sqldb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
+| **Azure SQL database** | Azure SQL Server | *sqldb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
 | **Azure Cosmos DB database** | Global | *cosmos-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `cosmos-navigator-prod` <li> `cosmos-emissions-dev` |
 | **Azure Cache for Redis instance** | Global | *redis-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
   
@@ -160,6 +161,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
+| **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
 | **Azure Data Factory** | Global | *adf-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
 | **Azure Stream Analytics** | Resource group | *asa-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `asa-navigator-prod` <li> `asa-emissions-dev` |
 | **Data Lake Storage account** | Global | *dls\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |

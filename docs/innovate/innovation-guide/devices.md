@@ -59,11 +59,6 @@ To create an IoT Hub instance:
 1. Go to **IoT Hub**.
 2. Select **Create IoT hub**.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 The Azure IoT Hub Device Provisioning Service is a helper service for Azure IoT Hub that enables zero-touch, just-in-time provisioning.
 
 <!-- markdownlint-disable MD024 -->
@@ -74,11 +69,6 @@ To create an Azure IoT Hub Device Provisioning Service:
 
 1. Go to **Device Provisioning Services**.
 2. Select **Add**.
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -109,11 +99,6 @@ To create Azure Digital Twins:
 3. Select **Create** to start the deployment process.
 4. To review existing digital twins, select this button:
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ## [Location intelligence](#tab/AzureMaps)
@@ -142,11 +127,6 @@ To use location intelligence:
 
 1. Go to **Azure Maps Accounts**.
 2. Select **Create Azure Maps accounts**.
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -179,11 +159,6 @@ To use Azure Spatial Anchors:
 1. Go to **Spatial Anchors accounts**.
 2. Select **Create Spatial Anchors account**.
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ## [Azure Remote Rendering](#tab/RemoteRender)
@@ -209,10 +184,5 @@ To use Remote Rendering:
 
 1. Go to **Batch Accounts**.
 2. Select **Create batch accounts**.
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
