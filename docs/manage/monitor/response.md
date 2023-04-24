@@ -22,7 +22,7 @@ Response is the result of defining one or more _actions_ based on data-driven de
 - **Continuously monitor**: Apply monitoring throughout the incident and troubleshooting activities to further help diagnose problems.
 - **Automate**: Configure automatic investigation, diagnosis, resolution, recovery, and remediation based on identified signals.
 
- The principle of _significance_ applies here. This helps with process flow or policy for action to tune and optimize alerts, notifications, and report digests. Cloud monitoring is much more than notifying humans that something is wrong. It is also about providing signals to systems and services to react. 
+ The principle of _significance_ applies here. This helps with process flow or policy for action to tune and optimize alerts, notifications, and report digests. Cloud monitoring is much more than notifying humans that something is wrong. It is also about providing signals to systems and services to react.
 
 Monitoring plays a critical role in a wide range of scenarios:
 
@@ -102,9 +102,9 @@ Here's a list of suggested reading for more automation based on identity- or sec
 - [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
 - [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
 
-## Agile work management
+## Work management
 
-Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud for the cited reasons, but it's still vital for traditional incident-significant service disruption events.
+Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud for the cited reasons, but it's still vital for traditional incident-significant service disruption events. Today, agile work management and DevOps plays an increasingly important role.
 
 ### DevOps
 
@@ -142,19 +142,19 @@ Keep in mind that learning is key, and when designed right, informational alerts
 
 ## Successful alerting strategy
 
-*You can't fix what you don't know is broken.*
+_You can't fix what you don't know is broken._
 
 Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. You can improve the observability of your services and applications only if you fully understand their composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This configuration includes the predictable failure states (the symptoms, not the cause of the failure) that make sense to alert for.
 
 Consider the following principles for determining whether a symptom is an appropriate candidate for alerting:
 
-* **Does it matter?** Is the issue symptomatic of a real problem or issue influencing the application's overall health? For example, do you care whether the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should trigger an alert. But you don't need to notify the team because it doesn't help point to what is causing the condition in the first place. However, alerting and reporting on the SQL query process utilization issue is relevant and actionable.
+- **Does it matter?** Is the issue symptomatic of a real problem or issue influencing the application's overall health? For example, do you care whether the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should trigger an alert. But you don't need to notify the team because it doesn't help point to what is causing the condition in the first place. However, alerting and reporting on the SQL query process utilization issue is relevant and actionable.
 
-* **Is it urgent?** Is the issue real, and does it need urgent attention? If so, the responsible team should be immediately notified.
+- **Is it urgent?** Is the issue real, and does it need urgent attention? If so, the responsible team should be immediately notified.
 
-* **Are your customers affected?** Are users of the service or application affected by the issue?
+- **Are your customers affected?** Are users of the service or application affected by the issue?
 
-* **Are other dependent systems affected?** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
+- **Are other dependent systems affected?** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
 
 Ask these questions when you're initially developing a monitoring configuration. Test and validate the assumptions in a nonproduction environment and then deploy them into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and experience from different team members.
 
@@ -166,12 +166,12 @@ Suppose you are in a hybrid scenario or are migrating resources directly to the 
 
 You can also, as an example, use the following Azure services or service-related features to help automate response and recovery actions:
 
-* [Azure Automation](/azure/automation/overview).
-* [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
-* [Azure Functions](/azure/azure-functions/functions-overview).
-* Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
-* [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
-* Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
+- [Azure Automation](/azure/automation/overview).
+- [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
+- [Azure Functions](/azure/azure-functions/functions-overview).
+- Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
+- [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
+- Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
 
 While notifying the responsible teams is the most common action for alerting, automating corrective actions is often appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
 
