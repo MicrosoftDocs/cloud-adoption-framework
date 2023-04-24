@@ -1,5 +1,5 @@
 ---
-title: Sustainability alignment in cloud management
+title: Sustainability considerations in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to better manage your cloud operations and take sustainability and cloud efficiency into consideration.
 author: Zimmergren
 ms.author: tozimmergren

@@ -71,6 +71,8 @@ For instance, use metrics such as Power Usage Effectiveness (PUE) and Greenhouse
 
 Reporting standards like the Greenhouse Gas Protocol can help align reporting across organizations. Defining such standards can alleviate resistance to implementing green IT and sustainability practices, particularly in cases where legacy systems need updates.
 
+Planning for reporting standards also helps with [sustainability considerations](./../manage/considerations/sustainability.md#reporting-and-insights) in your cloud management processes.
+
 ## Risk management
 
 Manage climate risk effectively by aligning a company's sustainability progress and commitments with the interest of its stakeholder. Considerations include the environmental impact of the company's cloud operations. Understanding this and taking proactive steps to mitigate climate risk can lead to not only protecting themselves from potential adverse impacts but also positioning themselves as leaders in cloud efficiency and sustainability, as well as responsible business practices.
