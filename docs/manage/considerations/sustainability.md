@@ -56,7 +56,7 @@ Customers can access information on emissions scopes, years, months, and other d
 
 Demand shaping is a technique to optimize resource utilization by aligning demand with available resources. From a sustainability perspective, demand shaping can effectively reduce carbon emissions by ensuring that resources are used efficiently and effectively.
 
-In a cloud environment, demand shaping typically involves identifying periods of low demand and [scheduling resource-intensive workloads during those times](/azure/architecture/framework/sustainability/sustainability-application-platform#process-when-the-carbon-intensity-is-low). By doing so, organizations can take advantage of excess capacity and reduce the need to deploy more resources, which can help reduce energy consumption and carbon emissions.
+In a cloud environment, demand shaping typically involves identifying periods of low demand and [scheduling resource-intensive workloads during those times](/azure/well-architected/sustainability/sustainability-application-platform#process-when-the-carbon-intensity-is-low). By doing so, organizations can take advantage of excess capacity and reduce the need to deploy more resources, which can help reduce energy consumption and carbon emissions.
 
 From a management perspective, demand shaping requires careful planning and coordination. It's essential to have a clear understanding of resource utilization patterns and workload requirements and the ability to automate resource allocation and scheduling.
 
