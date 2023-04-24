@@ -7,7 +7,7 @@ ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Keep your Azure landing zone up to date

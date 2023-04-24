@@ -7,7 +7,7 @@ ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Govern methodology for the cloud
