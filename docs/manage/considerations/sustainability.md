@@ -40,7 +40,7 @@ Improve the sustainability of your IT operations by moving data to tape or a lon
 
 To dive deeper, see [Learn How Moving Data to Tape Can Lead to Significant Energy Savings and Reduction in CO2 Emissions](https://datastorage-na.fujifilm.com/sustainability/idc-whitepaper-reduce-data-usage/).
 
-## Reporting and insights
+## Sustainability insights
 
 When reporting on sustainability and cloud management, it's essential to consider internal and external stakeholders. Internally, you can share reports with relevant teams and management to raise awareness and promote accountability. Externally, customers, investors, or other stakeholders might request reports to evaluate the organization's sustainability and environmental impact.
 
@@ -51,6 +51,8 @@ By tracking and reporting on key metrics, organizations can promote transparency
 In Azure, customers can use the [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track and get insights on carbon emissions. This tool provides valuable insights into emissions by subscription, region, and service, allowing customers to understand their environmental impact better.
 
 Customers can access information on emissions scopes, years, months, and other details, providing a comprehensive view of their emissions. This centralized tool can be valuable for large enterprises with complex cloud environments in tracking emissions accurately and efficiently.
+
+Please be aware that the findings, interpretations and conclusions presented in the Emissions Impact Dashboard report are for informational purposes only. The reports are not intended and should not be used for legal compliance, marketing, or official reporting purposes.
 
 ## Demand shaping
 
