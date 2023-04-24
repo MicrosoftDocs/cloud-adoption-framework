@@ -17,6 +17,8 @@ items:
       - name: Network topology and connectivity
         href: eslz-network-topology-connectivity.md
         items:
+          - name: Dual region network topology
+            href: eslz-dual-region-network-topology.md
           - name: Example Architectures for Azure VMware Solution
             href: example-architectures.md
       - name: Governance discipline
