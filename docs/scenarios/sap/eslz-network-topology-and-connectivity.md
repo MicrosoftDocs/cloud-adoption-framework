@@ -152,5 +152,5 @@ Customers approaching a RISE implementation will normally have two options when 
 
 Deploying cross-tenant Vnet peering to the SAP RISE tenant also implies some further work on the customer side: careful planning of the Vnet architecture is needed to ensure there are no overlapping CIDR ranges. In addition, DNS peering to the SAP RISE tenant must be properly done as per the document referred to above (Integrating Azure with SAP RISE managed workloads). 
 
-Finally, if the customer decides to set up a Virtual WAN solution and also has a need for S2S VPN connections, they should consider the following [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal?toc=%2Fazure%2Fvpn-gateway%2Ftoc.json#limits-and-limitations).
+Finally, if the customer decides to set up a Virtual WAN solution and also has a need for S2S/VPN or ER connections, they should consider the following [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal?toc=%2Fazure%2Fvpn-gateway%2Ftoc.json#limits-and-limitations).
 
