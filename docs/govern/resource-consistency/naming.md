@@ -89,7 +89,7 @@ The following Azure Resource Graph example query identifies improperly named vir
 
 ```azurecli
 Resources
-| where type == 'microsoft.network/virtualnetworks'
+| where type == 'microsoft.network/virtualNetworks'
 | project name, id
 | extend valid = name matches regex @"(^vnet-\w+-(prod|dev)-\w+-\d\d\d$)"
 | where valid == false

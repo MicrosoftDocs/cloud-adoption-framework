@@ -46,7 +46,7 @@ The following Azure Resource Graph query lists policy assignments at the managem
 
 ```bash
 PolicyResources
-| where type == 'microsoft.authorization/policyassignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
+| where type == 'microsoft.authorization/policyAssignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
 | project Policy=properties.displayName,AssignedBy=properties.metadata.assignedBy,Scope=properties.scope
 | summarize make_list(Policy) by tostring(Scope)
 | order by Scope

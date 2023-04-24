@@ -4,7 +4,7 @@ description: Learn how to migrate an on-premises Remote Desktop Services environ
 author: benstegink
 ms.author: martinek
 ms.date: 09/07/2021
-ms.review: ssumner
+ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

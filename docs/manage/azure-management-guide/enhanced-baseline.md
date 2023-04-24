@@ -127,7 +127,7 @@ To learn more, see [Microsoft Defender for Cloud documentation](/azure/security-
 
 Azure Sentinel is a cloud-native security information event management (SIEM) and security orchestration automated response (SOAR) solution that plays a role, not only in your Enhanced management baseline in Azure but also in the Enhanced Baseline, Platform Operations and Workload Operations. 
 
-Azure Sentinel allows you to Collect Data, Detect Threats, Investigate Incidents and Respond using Automation. Upon enabling the solution the ability to connect and collect data from Azure, On-premises or any other cloud provider becomes available. There are over a hundred Data Connectors available including Office 365 Audit Logs, Azure Activity Logs, Cisco Umbrella, Trend Micro TippingPoint, Sophos Cloud Optix, VMWare ESXi and many others that simplify your integration into Sentinel from existing investments. 
+Azure Sentinel allows you to Collect Data, Detect Threats, Investigate Incidents and Respond using Automation. Upon enabling the solution the ability to connect and collect data from Azure, On-premises or any other cloud provider becomes available. There are over a hundred Data Connectors available including Office 365 Audit Logs, Azure Activity Logs, Cisco Umbrella, Trend Micro TippingPoint, Sophos Cloud Optix, VMWare ESXi and many others that simplify your integration into Sentinel from existing investments.
 
 Azure Sentinel can be enabled at no additional cost on an Azure Monitor Log Analytics workspace for the first 31-days. See more [Azure Sentinel Pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 
