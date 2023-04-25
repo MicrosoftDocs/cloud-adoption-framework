@@ -311,6 +311,41 @@ items:
             href: ready/landing-zone/design-area/identity-access-platform-access.md
           - name: Landing zones
             href: ready/landing-zone/design-area/identity-access-landing-zones.md
+            
+        - name: Resource organization
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/resource-org.md
+          - name: Management groups
+            href: ready/landing-zone/design-area/resource-org-management-groups.md
+          - name: Subscriptions
+            href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Tailoring the Azure landing zones architecture
+            href: ready/landing-zone/tailoring-alz.md
+          - name: Adopt policy-driven guardrails
+            href: ready/enterprise-scale/dine-guidance.md
+          - name: Additional information
+            items:
+            - name: Naming and tagging
+              href: ready/azure-best-practices/naming-and-tagging.md
+            - name: Define your naming convention
+              href: ready/azure-best-practices/resource-naming.md
+            - name: Abbreviations for resource types
+              href: ready/azure-best-practices/resource-abbreviations.md
+            - name: Define your tagging strategy
+              href: ready/azure-best-practices/resource-tagging.md
+            - name: Resource naming and tagging decision guide
+              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
+            - name: Move resources
+              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Design options for specific use cases
+            items:
+            - name: Create your initial subscriptions
+              href: ready/azure-best-practices/initial-subscriptions.md
+            - name: Scale with multiple subscriptions
+              href: ready/azure-best-practices/scale-subscriptions.md
+            - name: Organize your subscriptions
+              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Network topology and connectivity
           items:
@@ -358,41 +393,6 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
-
-        - name: Resource organization
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/resource-org.md
-          - name: Management groups
-            href: ready/landing-zone/design-area/resource-org-management-groups.md
-          - name: Subscriptions
-            href: ready/landing-zone/design-area/resource-org-subscriptions.md
-          - name: Tailoring the Azure landing zones architecture
-            href: ready/landing-zone/tailoring-alz.md
-          - name: Adopt policy-driven guardrails
-            href: ready/enterprise-scale/dine-guidance.md
-          - name: Additional information
-            items:
-            - name: Naming and tagging
-              href: ready/azure-best-practices/naming-and-tagging.md
-            - name: Define your naming convention
-              href: ready/azure-best-practices/resource-naming.md
-            - name: Abbreviations for resource types
-              href: ready/azure-best-practices/resource-abbreviations.md
-            - name: Define your tagging strategy
-              href: ready/azure-best-practices/resource-tagging.md
-            - name: Resource naming and tagging decision guide
-              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
-            - name: Move resources
-              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Design options for specific use cases
-            items:
-            - name: Create your initial subscriptions
-              href: ready/azure-best-practices/initial-subscriptions.md
-            - name: Scale with multiple subscriptions
-              href: ready/azure-best-practices/scale-subscriptions.md
-            - name: Organize your subscriptions
-              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Security
           items:
