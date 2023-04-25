@@ -7,7 +7,7 @@ ms.date: 09/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Governance in the Microsoft Cloud Adoption Framework for Azure
