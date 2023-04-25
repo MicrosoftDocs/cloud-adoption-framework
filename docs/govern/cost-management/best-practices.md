@@ -7,7 +7,7 @@ ms.date: 04/24/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Best practices for costing and sizing resources hosted in Azure
