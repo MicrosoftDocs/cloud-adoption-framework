@@ -7,7 +7,7 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Resource Consistency discipline
@@ -49,7 +49,7 @@ or (diskState == 'Unattached' or diskState != 'ActiveSAS')
 | project name, resourceGroup, subscriptionId, tenantId, properties.diskState
 
 resources
-| where type == "microsoft.network/networkinterfaces"
+| where type == "microsoft.network/networkInterfaces"
 | extend vm = properties.virtualMachine
 | where isnull(vm.id)
 | project name, resourceGroup, subscriptionId, tenantId, vm.id

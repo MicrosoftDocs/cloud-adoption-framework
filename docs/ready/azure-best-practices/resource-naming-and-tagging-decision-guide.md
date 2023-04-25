@@ -52,7 +52,6 @@ The following table describes the qualities and alignments that are shown in the
 | **Functional**                    | Tags that describe the function of the virtual machine for easy identification.<br/>Example: workload; function in the workload (app, data, and so on); environment (such as development, staging, production). |
 | **Classification**                | Tags that classify the value of an asset can aid in making decisions.<br/>Example: data classification (public, private, confidential, and so on); criticality; SLA. |
 | **Accounting**                    | Tags that help to track costs that are associated with asset operations.<br/>Example: department, project, region, and so on. |
-| **Partnership**                   | Tags that align partners that count on this asset, outside of IT.<br/>Example: owner, owner alias, stakeholder, power user, executive. |
 | **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions.<br/>Example: business process, business criticality, revenue impact. |
 
 A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
@@ -90,7 +89,6 @@ The following tagging patterns are examples of how you can use tagging to organi
 | Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorizes resources by their purposes within a workload, the environment they've been deployed to, or other functionality and operational details. |
 | Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it's used and the policies that apply to it. |
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Associates a resource with specific groups within an organization for billing purposes. |
-| Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about who (outside of IT) is related to or otherwise affected by the resource. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
 
 ## Learn more
