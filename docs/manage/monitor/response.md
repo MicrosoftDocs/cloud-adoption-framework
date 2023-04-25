@@ -102,6 +102,12 @@ Here's a list of suggested reading for more automation based on identity- or sec
 - [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
 - [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
 
+## Successful alerting strategy
+
+_You can't fix what you don't know is broken._
+
+Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. You can improve the observability of your services and applications only if you fully understand their composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This configuration includes the predictable failure states (the symptoms, not the cause of the failure) that make sense to alert for.
+
 ### Informational alerts
 
 Under certain circumstances, some alerts can be _informational_. We can use this to learn about how our systems behave. For example, you might want to get these informational alerts:
@@ -114,13 +120,9 @@ Under certain circumstances, some alerts can be _informational_. We can use this
 
   In this example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, _alerting_ is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
 
+### Alerting strategy considerations
+
 Keep in mind that learning is key, and when designed right, informational alerts can give you many insights into your cloud ecosystem and health.
-
-## Successful alerting strategy
-
-_You can't fix what you don't know is broken._
-
-Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. You can improve the observability of your services and applications only if you fully understand their composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This configuration includes the predictable failure states (the symptoms, not the cause of the failure) that make sense to alert for.
 
 Consider the following principles for determining whether a symptom is an appropriate candidate for alerting:
 
