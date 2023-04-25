@@ -63,7 +63,7 @@ Sustainability, or cloud efficiency, is a fundamental topic to understand optimi
 - You might also benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
 - Learn more about why educating your teams about sustainability is essential. See [make sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
 - For leaders, learn how to integrate sustainability into the organization by aligning climate action with business models. See the LinkedIn training [Navigating Environmental Sustainability: A Guide for Leaders](https://www.linkedin.com/learning/navigating-environmental-sustainability-a-guide-for-leaders/).
-- Find detailed information about environmental sustainability topics and technologies at the [Microsoft Sustainability Learning Center](https://www.microsoft.com/en-us/sustainability/learning-center)
+- Find detailed information about environmental sustainability topics and technologies at the [Microsoft Sustainability Learning Center](https://www.microsoft.com/sustainability/learning-center)
 
 ## Define reporting standards
 
