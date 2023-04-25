@@ -50,7 +50,7 @@ Here's a list of relevant resources for alerting and automation capabilities in 
 - [Integrate Azure Monitor with supported IT Service Management (ITSM) Integration products](/azure/azure-monitor/alerts/itsmc-overview).
 - [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules)
 
-## Cloud monitoring
+## Modern cloud monitoring
 
 Compared to monitoring platforms and related tools that were available in the past, cloud computing offers:
 
@@ -101,30 +101,6 @@ Here's a list of suggested reading for more automation based on identity- or sec
 
 - [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
 - [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
-
-## Work management
-
-Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud for the cited reasons, but it's still vital for traditional incident-significant service disruption events. Today, agile work management and DevOps plays an increasingly important role.
-
-### DevOps
-
-Today, organizations have more agile and DevOps processes requirements:
-
-- You'll need a repository or source control of automation playbooks, scripts, and documentation, for example
-- You manage a library of cloud automation using Agile work management methods.
-
-You then get two things:
-
-- Monitoring solutions in production can then call or get the latest from the repository when needed, or
-- DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
-
-### Structure the data
-
-Many services in Azure help you monitor and diagnose the infrastructure, platform, and software layers managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record the status of an event and complement the diagnostic or any other telemetry you collect from the different resources in Azure.
-
-Understanding how you can structure all that data gathered to meet your analysis requirements is essential. When combined with data from each part of the service and data generated from other dependencies that might not be in the same region, subscription, or resource group, this information requires careful correlation to ensure that data is combined accurately.
-
-Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under- or over-utilization, and more. Then evaluate if they're the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.
 
 ### Informational alerts
 
