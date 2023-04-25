@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Sustainability considerations in cloud adoption planning
 
-Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to Corporate Social Responsibility(CSR), comply with regulations and industry standards, and improve your brand reputation.
+Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to Corporate Social Responsibility (CSR), comply with regulations and industry standards, and improve your brand reputation.
 
 ## Identify current emissions
 
