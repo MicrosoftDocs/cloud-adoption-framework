@@ -28,7 +28,7 @@ The measurement of a digital estate changes depending on the desired business ou
 
 - **Operational stability:** Businesses are dependent on stable technologies to operate effectively. Near-zero downtime and service reliability are crucial in competitive markets. When operational stability is a priority, the digital estate should be measured on positive or negative impact to stable operations. Business continuity, disaster recovery, and reliability of workloads and each asset are required measures when operational stability is a priority
 
-- **Sustainable platform:** With a global drive towards sustainability, businesses may want to move towards a more sustainable platform to reduce their carbon emissions. 
+- **Sustainable platform:** With a global drive towards sustainability, businesses might want to move towards a more sustainable platform to reduce carbon emissions. 
  
 After an organization understands the most important form of transformation, digital estate planning becomes much easier to manage.
 
