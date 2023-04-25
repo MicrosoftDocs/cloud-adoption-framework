@@ -56,13 +56,14 @@ The sustainability community members might be separate from the central organiza
 
 ### Learning resources
 
-- Sustainability, or cloud efficiency, is a fundamental topic to understand optimizing your cloud infrastructure, applications, and workloads. Knowing how early in your cloud journey you can contribute to becoming more sustainable is also an essential part of your planning process.
+Sustainability, or cloud efficiency, is a fundamental topic to understand optimizing your cloud infrastructure, applications, and workloads. Knowing how early in your cloud journey you can contribute to becoming more sustainable is also an essential part of your planning process.
 
 - Learn how to design Azure solutions and workloads to be more sustainable. See the [Azure Well-Architected Framework sustainability workload guidance](/azure/architecture/framework/sustainability/).
 - See the Microsoft Learn module [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/).
 - You might also benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
 - Learn more about why educating your teams about sustainability is essential. See [make sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
 - For leaders, learn how to integrate sustainability into the organization by aligning climate action with business models. See the LinkedIn training [Navigating Environmental Sustainability: A Guide for Leaders](https://www.linkedin.com/learning/navigating-environmental-sustainability-a-guide-for-leaders/).
+- Find detailed information about environmental sustainability topics and technologies at the [Microsoft Sustainability Learning Center](https://www.microsoft.com/sustainability/learning-center)
 
 ## Define reporting standards
 
