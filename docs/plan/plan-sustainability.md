@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Sustainability considerations in cloud adoption planning
 
-Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to corporate social responsibility, comply with regulations and industry standards, and improve your brand reputation.
+Planning for sustainability in your cloud journey and business is crucial for several reasons. First, it can help your organization reduce its environmental impact by optimizing resource usage, reducing energy consumption, and lowering carbon emissions. Doing so can demonstrate your commitment to Corporate Social Responsibility (CSR), comply with regulations and industry standards, and improve your brand reputation.
 
 ## Identify current emissions
 
@@ -32,7 +32,7 @@ Have you defined the person leading the charge for sustainability in your organi
 
 The role of the Chief Sustainability Officer is evolving. It will likely be pivotal in the future as organizations navigate the complexity of delivering on Environmental, Social, and Governance (ESG) commitments.
 
- It can be the Chief Sustainability Officer if that role exists in your organization. However, it can be anyone ultimately responsible and accountable for sustainability in the cloud. See [making sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
+It can be the Chief Sustainability Officer if that role exists in your organization. However, it can be anyone ultimately responsible and accountable for sustainability in the cloud. See [making sustainability part of everybody's job](https://techcommunity.microsoft.com/t5/green-tech-blog/make-sustainability-part-of-everybody-s-job/ba-p/3146718).
 
 **Consider nominating a lead** for your sustainability efforts and teams, helping your business have a sustainability focal point. Organizations often have small silos of interested parties, and sustainability is such a task that requires everyone to be participating and work together. Some organizations are beginning their ESG journey, and there might not be a dedicated budget for a Chief Sustainability Officer role. Instead, building a virtual community across the business and dedicating someone to take the lead is a significant first step to consider.
 
