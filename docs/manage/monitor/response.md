@@ -148,32 +148,24 @@ Alerting on what matters is critical. It's underpinned by collecting and measuri
 
 Consider the following principles for determining whether a symptom is an appropriate candidate for alerting:
 
-- **Does it matter?** Is the issue symptomatic of a real problem or issue influencing the application's overall health? For example, do you care whether the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should trigger an alert. But you don't need to notify the team because it doesn't help point to what is causing the condition in the first place. However, alerting and reporting on the SQL query process utilization issue is relevant and actionable.
+- **Actionable:** Does the issue matter? Does it reflect a real problem in your application's health? For example, you might want to send an alert when CPU utilization is too high over a sustained period for a resource or a SQL query is consistently causing performance issues, but you might not want to send an alert when the CPU spikes over a short period. Make things actionable to reduce false positives and avoid alert fatigue.
 
-- **Is it urgent?** Is the issue real, and does it need urgent attention? If so, the responsible team should be immediately notified.
+- **Urgency:** Does the issue need urgent attention? If so, the responsible team should be immediately notified.
 
-- **Are your customers affected?** Are users of the service or application affected by the issue?
+- **Customer impact:** Are users of the service or application affected by the issue?
 
-- **Are other dependent systems affected?** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
+- **Impact on dependent systems:** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
 
-Ask these questions when you're initially developing a monitoring configuration. Test and validate the assumptions in a nonproduction environment and then deploy them into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and experience from different team members.
+With these initial considerations, you can start developing your monitoring configuration. You can test and validate the assumptions across environments. For example, continuously evaluate these considerations and questions in nonproduction as well as production environments. Continuous improvement is key to successful response on monitoring signals.
 
-After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users or the cloud provider (through their tools), and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine whether you're improving.
+When continuously evaluating what's working, consider asking yourself these questions to help drive awareness of your monitoring response effectiveness:
 
-[Azure Monitor](/azure/azure-monitor/overview) support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Azure Monitor also [integrates with various IT service management (ITSM) solutions](/azure/azure-monitor/alerts/itsmc-overview) to automate the creation of incident records and escalate to the right support team or any other alert management system that uses a webhook.
+- **Alert volume:** Do you get a high alert volume? Are there many non-actionable alerts that could've been avoided?
+- **Unnoticed issues:** Do you get reports or tickets from users experiencing issues that were not caught by the monitoring configuration?
+- **False positives:** Do you get alerts or signals that were incorrectly flagged?
+- **Alert or event:** Do you really need to send an alert, or could some of the raised alerts just be events flagged in the system? If the signals show up when you query for it, as opposed to sending an alert, would that suffice to avoid alert fatigue and non-actionable notifications?
 
-Suppose you are in a hybrid scenario or are migrating resources directly to the cloud. In that case, you can still utilize [System Center Operations Manager](/system-center/scom/welcome), which has similar capabilities for alert automation. However, Azure Monitor usually covers common use cases for cloud-native workloads and more modern monitoring needs.
-
-You can also, as an example, use the following Azure services or service-related features to help automate response and recovery actions:
-
-- [Azure Automation](/azure/automation/overview).
-- [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
-- [Azure Functions](/azure/azure-functions/functions-overview).
-- Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
-- [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
-- Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
-
-While notifying the responsible teams is the most common action for alerting, automating corrective actions is often appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
+See the [monitoring platforms overview](./platform-overview.md) in this article series for a deeper understanding of the  capabilities across the Microsoft monitoring solutions.
 
 ## Next steps
 
