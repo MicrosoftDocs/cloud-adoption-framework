@@ -96,7 +96,7 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Prerequisites.
 1. Assess the current RDS on-premises environment.
 1. Deploy [AVD Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-1. Other roaming profile solutions migration to FSLogix.
+1. Other roaming profile solutions migration to FSLogix (Optional).
 1. Migrate FSLogix on-premise data to Azure (Optional).
 1. Migrate VMs that must persist to Azure (Optional).
 1. Optimize the AVD environment.
