@@ -70,9 +70,9 @@ The following diagram outlines the architecture that will be built to migrate RD
 
 - Sync Active Directory to Azure Active Directory.
 - Deploy [AVD Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-- Convert user profile disks (UPDs) to FSLogix profile containers (When needed).
-- Migrate user profile data from FSLogix on-premisses to AVD FSLogix storage (When needed).
-- Migrate on-premisses VMs that most persist (When needed).
+- Convert user profile disks (UPDs) to FSLogix profile containers (Optional).
+- Migrate user profile data from FSLogix on-premisses to AVD FSLogix storage (Optional).
+- Migrate on-premisses VMs that most persist (Optional).
 
   [![AVD LZA diagram.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)
   *Figure 1: Proposed architecture: AVD LZA will deploy the resources contained under the AVD LZ Subscription*.
@@ -96,9 +96,9 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Prerequisites.
 1. Assess the current RDS on-premises environment.
 1. Deploy [AVD Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-1. Convert user profiles disks (UPDs) to FSLogix profile containers (When needed).
-1. Migrate FSLogix on-premise data to Azure (When needed).
-1. Migrate VMs that must persist to Azure (When needed).
+1. Convert user profiles disks (UPDs) to FSLogix profile containers (Optional).
+1. Migrate FSLogix on-premise data to Azure (Optional).
+1. Migrate VMs that must persist to Azure (Optional).
 
 ### Step 1: Prerequisites
 
@@ -115,7 +115,7 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 
 1. Prior to the deployment of the AVD LZA, ensure the the requirements of the deployment are met ([AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)).
 
-### Step 2: Assess the current RDS on-premises environment.
+### Step 2: Assess the current RDS on-premises environment
 
 1. In Azure Migrate, select **Discover, assess and migrate**.
 
@@ -164,31 +164,50 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
    *Figure 10: The Lakeside dashboard.*
 1. After an adequate amount of data is captured, Contoso reviews the assessment data to determine the best migration path. This assessment data includes the raw assessment data from the desktops data and the data broken into different user personas. This information includes the:
 
-- Number of users in each persona.
-- Applications in use by users.
-- Resource consumption by user.
-- Resource utilization averages by user persona.
-- VDI server performance data.
-- Concurrent user reports.
-- Top software packages in use.
+    - Number of users in each persona.
+    - Applications in use by users.
+    - Resource consumption by user.
+    - Resource utilization averages by user persona.
+    - VDI server performance data.
+    - Concurrent user reports.
+    - Top software packages in use.
 
    ![Screenshot of Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
    *Figure 11: Lakeside dashboard reports.*
 
-The data is analyzed by Contoso to determine the most cost-effective use of both pooled AVD resources and personal AVD resources.
+    The data is analyzed by Contoso to determine the most cost-effective use of both pooled AVD resources and personal AVD resources.
 
+> [!IMPORTANT]
+> Reviewing the assessment data, Contoso defines two RDS scenarios:
+> 1. **Multi-session (non-persistent):** RDS hosts running Windows server and allowing multiple users connections to the same host.
+> 1. **Single-session (persistent):** RDS hosts running Windows 11.
 > [!NOTE]
-> Contoso reviews two scenarios during the assessment: multi-session (Pooled) instances of RDS and persistent (Personal) virtual machines.
-> [!NOTE]
-> Contoso will also need to migrate application servers to Azure to get the company closer to the AVD environment and reduce network latency for its users. This same methodology should be applied to Domain Controllers and DNS servers that AVD session hosts will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
+> To reduce improve performance of AVD users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the AVD environment. This same methodology should be applied to platform shared services (Domain Controllers, DNS, network devices, among others) that AVD will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
+
+**Next steps:**
+
+- Execute AVD LZA deployments with the defined scenario steps.
 
 ### Step 3: Deploy AVD Landing Zone Accelerator (LZA)
 
 The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy an end-to-end AVD enterprise ready environment, to deploy the accelerator follow the [AVD LZA Deployment Walk Through](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/deploy-baseline.md) guide.
 
-### Step 4: Convert the UPDs to FSLogix profile containers (When needed)
+> [!IMPORTANT]
+> Based on the outcome of the assessment phase, two AVD LZA deployments will be required to address Contoso scenarios:
+> 1. **Multi-session (Pooled hostpool):** AVD management plane (workspace, hostpool, application group, scaling plan) deployment with Windows 10 multi-session session hosts and FSLogix to manage users profile data.
+> 1. **Single-session (Personal hostpool):** AVD management plane (workspace, hostpool, application group, scaling plan) deployment without de deployment of new session hosts (personal VMs will be migrated from RDS).
+> [!NOTE]
+> To reduce improve performance of AVD users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the AVD environment. This same methodology should be applied to platform shared services (Domain Controllers, DNS, network devices, among others) that AVD will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
 
-Because AVD doesn't support user profile disks (UPDs), Contoso needs to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
+**Next steps:**
+
+- Migrate user profile data that must persist.
+- Migrate VMs that must persist
+- Deploy the necessary applications to the users.
+
+### Step 4: Convert the UPDs to FSLogix profile containers (Optional)
+
+Because AVD doesn't support user profile disks (UPDs), Contoso need to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
 
 <!-- docutune:casing FSLogixMigration -->
 
@@ -209,17 +228,18 @@ A roaming profile conversion:
 Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
 ```
 
-Optionally, the FSLogix Azure Files share created for AVD, can be connected to the on-premises host where the conversion will be executed, so it is used as target in the conversions. This option will convert UPDs or roaming profiles and also storage the new FSLogix containers in the Azure hosted file share.
+> [!IMPORTANT]
+> The FSLogix Azure Files share created by the AVD LZA deployment, can be mounted on the on-premises host  executing the conversion and be used as the target path. This option will convert UPDs or roaming profiles to FSLogix containers while also moving them to the Azure storage.
 
 At this point, the migration has enabled using pooled resources with Windows Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows Enterprise multi-session.
 
 But now Contoso must migrate the virtual machines that must persist (in cases where VMs can't be recreated) to Azure.
 
-### Step 5: Migrate FSLogix on-premise data to Azure (When needed)
+### Step 5: Migrate FSLogix on-premise data to Azure (Optional)
 
-### Step 6: Migrate VMs that must persist to Azure (When needed)
+### Step 6: Migrate VMs that must persist to Azure (Optional)
 
-The next step in the migration process for Contoso is to migrate its persistent and non-persistent (when required) virtual machines to AVD. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created at the beginning of the process.
+The next step in the migration process for Contoso is to migrate its persistent VMs to AVD. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created on step 1.
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
@@ -272,14 +292,14 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 
 The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
 
-For more information, see [Security best practices for IaaS workloads in Azure](https://learn.microsoft.com/azure/security/fundamentals/iaas).
+For more information, see [AVD security best practices](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide).
 
-## Business continuity and disaster recovery
+### Business continuity and disaster recovery
 
 AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
 
    > [!NOTE]
-   > Learn more about BCDR options with [Business continuity and disaster recovery considerations for AVD](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
+   > Learn more about BCDR options with [Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
 
 Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](https://learn.microsoft.com/azure/backup/backup-azure-vms-introduction).
 
