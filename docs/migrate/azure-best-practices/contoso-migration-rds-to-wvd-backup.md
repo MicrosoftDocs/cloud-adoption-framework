@@ -74,10 +74,10 @@ The following diagram outlines the architecture that will be built to migrate RD
 - Migrate user profile data from FSLogix on-premisses to AVD FSLogix storage (Optional).
 - Migrate on-premisses VMs that most persist (Optional).
 
-  [![AVD LZA diagram.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)
-  *Figure 1: Proposed architecture: AVD LZA will deploy the resources contained under the AVD LZ Subscription*.
+   [![AVD LZA diagram.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)
+   *Figure 1: Proposed architecture: AVD LZA will deploy the resources contained under the AVD LZ Subscription*.
 
-    [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
+   [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
 
 ## Migration process
 
@@ -96,7 +96,7 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Prerequisites.
 1. Assess the current RDS on-premises environment.
 1. Deploy [AVD Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-1. Convert user profiles disks (UPDs) to FSLogix profile containers (Optional).
+1. Other roaming profile solutions migration to FSLogix.
 1. Migrate FSLogix on-premise data to Azure (Optional).
 1. Migrate VMs that must persist to Azure (Optional).
 
@@ -107,13 +107,13 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy AVD session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
 
    > [!NOTE]
-   > Review [AVD identities and authentication](https://learn.microsoft.com/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
+   > Review **[AVD identities and authentication](https://learn.microsoft.com/azure/virtual-desktop/authentication)** for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
    > [!NOTE]
-   > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](https://learn.microsoft.com/active-directory/cloud-sync/concept-how-it-works).
+   > Learn more about the options to sync Active Directory on-premises with **[Azure AD Connect](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express)** or  **[Azure AD Connect Cloud Sync](https://learn.microsoft.com/active-directory/cloud-sync/concept-how-it-works)**.
    > [!NOTE]
-   > Learn more about provisioning [Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
+   > Learn more about provisioning **[Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance)** and synchronizing Azure AD to it.
 
-1. Prior to the deployment of the AVD LZA, ensure the the requirements of the deployment are met ([AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)).
+1. Prior to the deployment of the AVD LZA, ensure the the [AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) are met.
 
 ### Step 2: Assess the current RDS on-premises environment
 
@@ -205,33 +205,12 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 - Migrate VMs that must persist.
 - Deploy the necessary applications to the users.
 
-### Step 4: Convert the UPDs to FSLogix profile containers (Optional)
-
-Because AVD doesn't support user profile disks (UPDs), Contoso need to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
-
-<!-- docutune:casing FSLogixMigration -->
-
-After Contoso imports the FSLogixMigration module, it runs the following PowerShell cmdlets to migrate from UPDs to FSLogix.
+### Step 4: Other roaming profile solutions migration to FSLogix
 
 > [!IMPORTANT]
-> The PowerShell modules for Hyper-V, Active Directory, and Pester are prerequisites to running the cmdlets to convert UPDs to FSLogix.
-
-A UDP conversion:
-
-```powershell
-Convert-RoamingProfile -ParentPath "C:\Users\" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512
-```
-
-A roaming profile conversion:
-
-```powershell
-Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
-```
-
-> [!IMPORTANT]
-> The FSLogix Azure Files share created by the AVD LZA deployment, can be mounted on the on-premises host  executing the conversion and be used as the target path. This option will convert UPDs or roaming profiles to FSLogix containers while also moving them to the Azure storage.
-
-At this point, the migration has enabled using pooled resources with Windows Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows Enterprise multi-session.
+> FSLogix doesn't provide a direct migration path from other roaming profile solutions. Implementing OneDrive with known folder move or similar cloud or network storage solutions provides users with a location to save their data outside of their profile. For smaller use cases, our **[frx command-line utility](https://learn.microsoft.com/fslogix/utilities/frx/frx)** can help copy local profiles into a new VHD(x).
+> [!NOTE]
+> Learn more about **[Onedrive known folder move](https://learn.microsoft.com/sharepoint/redirect-known-folders)**.
 
 **Next steps:**
 
@@ -285,9 +264,9 @@ The next step in the migration process for Contoso is to migrate its persistent 
    *Figure 19: The last step prior to the final migration.*
 
 > [!IMPORTANT]
-> Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. For scenarios on which an image must be migrated, the following article provides guidance [Prepare a Windows VHD or VHDX to upload to Azure](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. For scenarios on which an image must be migrated, the following article provides guidance **[Prepare a Windows VHD or VHDX to upload to Azure](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)**.
 > [!NOTE]
-> Contoso can also automate this process by using `msiexec` commands and passing in the registration token or by using VM custom script extension to deploy the agents ([AVD LZA Automation](https://github.com/Azure/avdaccelerator)).
+> Contoso can also automate this process by using `msiexec` commands and passing in the registration token or by using VM custom script extension to deploy the agents (**[AVD LZA Automation](https://github.com/Azure/avdaccelerator)**).
 > [!NOTE]
 > It's important to note that if VMs are being migrated through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
 
@@ -302,14 +281,14 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
 
    > [!NOTE]
-   > Learn more about AVD security with [AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide).
+   > Learn more about AVD security with **[AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide)**.
 
 ### Business continuity and disaster recovery
 
 AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
 
    > [!NOTE]
-   > Learn more about BCDR options with [Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
+   > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
 
 ### Licensing and cost optimization
 
