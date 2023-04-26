@@ -21,11 +21,11 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If your organization prefers to use non-Azure network virtual appliance (NVAs), or for situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
-- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [NAT gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
+- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 ## Design recommendations
 
-- Use Azure Virtual Network NAT (NAT gateway) for direct outbound connectivity to the internet. NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
+- Use Azure NAT Gateway for direct outbound connectivity to the internet. A NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
 
   - Use a NAT gateway for:
 
