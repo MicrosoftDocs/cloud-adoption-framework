@@ -99,6 +99,8 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Other roaming profile solutions migration to FSLogix.
 1. Migrate FSLogix on-premise data to Azure (Optional).
 1. Migrate VMs that must persist to Azure (Optional).
+1. Optimize the AVD environment.
+1. Configure Business continuity and disaster recovery (Optional)
 
 ### Step 1: Prerequisites
 
@@ -218,8 +220,12 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 - Migrate VMs that must persist.
 - Deploy the necessary applications to the users.
 
+### Step 5: Migrate FSLogix data to Azure (Optional)
 
-### Step 5: Migrate FSLogix on-premise data to Azure (Optional)
+> [!IMPORTANT]
+> Microsoft doesn't support roaming of FSLogix profiles between OS versions (eg. Windows 7 to Windows 10 or Windows Server 2012 to Windows 11 Multi-Session). Therefore FSLogix data migration to Azure is only recommended when AVD session hosts are using the same OS version as the on-premises RDS host (eg. Windows 10 to Windows 10). For scenario son which OS versions doesn't match, the recommendation is to implementing OneDrive with known folder move or similar cloud or network storage solutions provides users with a location to save their data outside of their profile.
+> [!NOTE]
+> Learn more about **[Onedrive known folder move](https://learn.microsoft.com/sharepoint/redirect-known-folders)**.
 
 **Next steps:**
 
@@ -272,6 +278,24 @@ The next step in the migration process for Contoso is to migrate its persistent 
 
 After host pools are assigned to users, Contoso finalizes the migration of those machines and continues to gradually migrate the rest of the on-premises RDS hosts to AVD.
 
+### Step 7: Optimize AVD environment
+
+1. Licensing
+   - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
+
+1. Cost optimization
+   - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
+   - Contoso will enable [Azure Cost Management + Billing](https://learn.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+   - Contoso will use [AVD Tagging](https://learn.microsoft.com/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
+   - Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](https://learn.microsoft.com/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
+
+### Step 8: Configure Business continuity and disaster recovery (Optional)
+
+AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
+
+   > [!NOTE]
+   > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
+
 ## Review the deployment
 
 With the virtual desktops and application servers now running in Azure, Contoso now needs to fully operationalize and secure the deployment.
@@ -283,19 +307,9 @@ The Contoso security team reviews the Azure VMs to determine any security issues
    > [!NOTE]
    > Learn more about AVD security with **[AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide)**.
 
-### Business continuity and disaster recovery
-
-AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
-
-   > [!NOTE]
-   > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
-
 ### Licensing and cost optimization
 
-- [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
-- Contoso will enable [Azure Cost Management + Billing](https://learn.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
-- Contoso will use [AVD Tagging](https://learn.microsoft.com/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
-- Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](https://learn.microsoft.com/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
+
 
 ## Conclusion
 
