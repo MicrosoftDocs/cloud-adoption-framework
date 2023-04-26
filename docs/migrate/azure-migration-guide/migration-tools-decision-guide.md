@@ -33,12 +33,6 @@ Answering the following questions allow you to make decisions based on the above
 
 In line with the Cloud Adoption Framework's emphasis on [incremental migration](../../migrate/index.md#migration-effort) efforts, an initial decision on migration strategy and tooling doesn't rule out future innovation efforts to update an application to take advantage of opportunities presented by the Azure platform. While an initial migration effort might focus primarily on rehosting using an IaaS approach, you should plan to revisit your cloud-hosted application portfolio regularly to investigate optimization opportunities.
 
-## Sustainability and migration
-
-Migrating large amounts of data can take a long time and be compute-intensive. Suppose you track [sustainability outcomes and benefits](/azure/cloud-adoption-framework/strategy/business-outcomes/sustainability) for your organization. In that case, it can help to compare the carbon impact of shipping data using [DataBox](/azure/databox/data-box-overview) instead of moving data over the wire.
-
-Consider checking the carbon intensity in your region and use carbon forecasting tools to schedule moving lower-priority datasets during periods of low carbon impact.
-
 ## Learn more
 
 - [Cloud fundamentals: Overview of Azure compute options](/azure/architecture/guide/technology-choices/compute-decision-tree): Provides information on the capabilities of Azure IaaS and PaaS compute options.
