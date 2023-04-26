@@ -198,6 +198,13 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 > Based on the outcome of the assessment phase, two AVD LZA deployments will be required to address Contoso scenarios:
 > 1. **Multi-session (Pooled host pool):** AVD management plane (workspace, host pool, application group, scaling plan) deployment with Windows 10 or Windows 11 multi-session session hosts and FSLogix to manage users profile data.
 > 1. **Single-session (Personal host pool):** AVD management plane (workspace, host pool, application group, scaling plan) deployment without de deployment of new session hosts (personal VMs will be migrated from RDS).
+
+| Deployment Type | Link |
+|:--|:--|
+| Azure portal UI |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-baseline.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-baseline.json)
+| Command line (Bicep/ARM) | [![Powershell/Azure CLI](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/powershell.png)](./workload/bicep/readme.md) |
+| Terraform | [![Terraform](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/terraform.png)](./workload/terraform/greenfield/readme.md) |
+
 > [!NOTE]
 > To improve performance of AVD users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the AVD environment. This same methodology should be applied to platform shared services (Domain Controllers, DNS, network devices, among others) that AVD will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
 
