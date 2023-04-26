@@ -99,8 +99,8 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Other roaming profile solutions migration to FSLogix (Optional).
 1. Migrate FSLogix on-premise data to Azure (Optional).
 1. Migrate VMs that must persist to Azure (Optional).
-1. Manage the AVD environment.
-1. Optimize the AVD environment.
+1. Manage the AVD.
+1. Optimize the AVD.
 
 ### Step 1: Prerequisites
 
@@ -263,11 +263,6 @@ The next step in the migration process for Contoso is to migrate its persistent 
 
    - Install AVD agents and register VMs on the host pool following the guidance outline in this doc: [Register session hosts to a host pool](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#register-session-hosts-to-a-host-pool).
 
-1. As the last step before the final migration, Contoso selects the **Users** item in the AVD settings to map the servers to their respective users and groups.
-
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="[Screenshot that shows assigning AVD resources to users and groups.":::
-   *Figure 19: The last step prior to the final migration.*
-
 > [!IMPORTANT]
 > Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. For scenarios on which an image must be migrated, the following article provides guidance **[Prepare a Windows VHD or VHDX to upload to Azure](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)**.
 > [!NOTE]
@@ -277,7 +272,36 @@ The next step in the migration process for Contoso is to migrate its persistent 
 
 After host pools are assigned to users, Contoso finalizes the migration of those machines and continues to gradually migrate the rest of the on-premises RDS hosts to AVD.
 
-### Step 7: Optimize AVD environment
+**Next steps:**
+
+- Manage AVD.
+
+### Step 7: Manage AVD
+
+1. Publish applications and desktops
+   - AVD LZA deployment creates by default one application group for desktops and has the option to also deploy a remote apps application group. Post deployment there is no need to manage desktops as they are published by default, remote apps can be managed by following the guidance on the docs:
+      - [Manage application groups with the Azure portal](https://learn.microsoft.com/azure/virtual-desktop/manage-app-groups).
+      - [Manage application groups using PowerShell or the Azure CLI](https://learn.microsoft.com/azure/virtual-desktop/manage-app-groups-powershell?tabs=azure-powershell).
+      - [Publish built-in apps in Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/publish-apps).
+
+1. User access
+   - As the last step before the final migration, Contoso selects the **Users** item in the AVD settings to map the servers to their respective users and groups.
+
+       :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="[Screenshot that shows assigning AVD resources to users and groups.":::
+       *Figure 19: The last step prior to the final migration.*
+
+      Additional user assignment information can be found at the doc [Manage application groups with the Azure portal](https://learn.microsoft.com/azure/virtual-desktop/manage-app-groups)
+
+1. Scaling
+   - AVD LZA deployment has the option to create an AVD scaling plan that is assigned and enabled on the host pool (Pooled host pools), the scaling plan is pre configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules. Scaling rules should be modified to meet the specific needs of the workloads the AVD environment is hosting. Information on configuring scaling plans can be found at the doc [Autoscale scaling plans and example scenarios in Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/autoscale-scenarios)
+
+1. Monitoring
+
+**Next steps:**
+
+- Optimize AVD.
+
+### Step 8: Optimize AVD
 
 1. Security
    - The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
@@ -303,7 +327,7 @@ After host pools are assigned to users, Contoso finalizes the migration of those
 
    [![AVD Multi-region deployment Stage 2](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)
    *Figure 20: Sample of an AVD multi-region architecture.*
-   
+
    [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.vsdx)
 
 ## Review the deployment
