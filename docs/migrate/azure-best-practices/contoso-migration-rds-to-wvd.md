@@ -194,15 +194,15 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 
 > [!IMPORTANT]
 > Based on the outcome of the assessment phase, two AVD LZA deployments will be required to address Contoso scenarios:
-> 1. **Multi-session (Pooled hostpool):** AVD management plane (workspace, hostpool, application group, scaling plan) deployment with Windows 10 multi-session session hosts and FSLogix to manage users profile data.
-> 1. **Single-session (Personal hostpool):** AVD management plane (workspace, hostpool, application group, scaling plan) deployment without de deployment of new session hosts (personal VMs will be migrated from RDS).
+> 1. **Multi-session (Pooled host pool):** AVD management plane (workspace, host pool, application group, scaling plan) deployment with Windows 10 multi-session session hosts and FSLogix to manage users profile data.
+> 1. **Single-session (Personal host pool):** AVD management plane (workspace, host pool, application group, scaling plan) deployment without de deployment of new session hosts (personal VMs will be migrated from RDS).
 > [!NOTE]
 > To reduce improve performance of AVD users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the AVD environment. This same methodology should be applied to platform shared services (Domain Controllers, DNS, network devices, among others) that AVD will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
 
 **Next steps:**
 
-- Migrate user profile data that must persist.
-- Migrate VMs that must persist
+- Migrate user profile data that must persist (UPDs or FSLogix).
+- Migrate VMs that must persist.
 - Deploy the necessary applications to the users.
 
 ### Step 4: Convert the UPDs to FSLogix profile containers (Optional)
@@ -233,11 +233,26 @@ Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixPr
 
 At this point, the migration has enabled using pooled resources with Windows Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows Enterprise multi-session.
 
-But now Contoso must migrate the virtual machines that must persist (in cases where VMs can't be recreated) to Azure.
+**Next steps:**
+
+- Migrate user profile data that must persist (FSLogix).
+- Migrate VMs that must persist.
+- Deploy the necessary applications to the users.
+
 
 ### Step 5: Migrate FSLogix on-premise data to Azure (Optional)
 
+**Next steps:**
+
+- Migrate VMs that must persist.
+- Deploy the necessary applications to the users.
+
 ### Step 6: Migrate VMs that must persist to Azure (Optional)
+
+> [!IMPORTANT]
+> Instead of migrating RDS hosts, Microsoft generally recommends to redeploy VMs using Azure market place images or custom images built from the marketplace ones, these will ensure compatibility and remove any possible bloat from the existing on-premises images.
+>
+>For scenarios on which VMs must persist, the steps on this guide provide details on migrating on-premisses RDS hosts to AVD.
 
 The next step in the migration process for Contoso is to migrate its persistent VMs to AVD. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created on step 1.
 
@@ -257,32 +272,26 @@ The next step in the migration process for Contoso is to migrate its persistent 
    *Figure 18: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage starts. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
-   - As machines start running in Azure, Contoso installs the [AVD VM agent](https://aka.ms/wvdvmagent) on each machine.
-   - As a part of the installation, enter the registration token for the AVD environment to associate the server with the correct environment.
 
-1. The registration token can be obtained by using the following commands:
+1. As migrated VMs start running in Azure, Contoso will need to install and configure AVD agents on each migrated:
+   - Get host pool registration token, following guidance outline in this doc: [Generate a registration key](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#generate-a-registration-key).
 
-    ```powershell
-    Export-RDSRegistrationInfo -TenantName "Contoso" -HostPoolName "ContosoWVD" | Select-Object -ExpandProperty Token > .\registration-token.txt
-    ```
-
-   > [!NOTE]
-   > Contoso can also automate this process by using `msiexec` commands and passing in the registration token as a variable.
-
-   > [!NOTE]
-   > Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. 
-   >
-   >For scenarios on which an image needs to be migrated to Azure, [this guide](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) contains detailed instructions on preparing and uploading an image to Azure. This guide covers the steps needed to package the image into a virtual hard disk (VHD) format. Once the VHD is prepared, you can then upload it to Azure and use it to create new VMs in your Azure environment.
-
-   > [!NOTE]
-   > It's important to note that if VMs are being migrated through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
+   - Install AVD agents and register VMs on the host pool following the guidance outline in this doc: [Register session hosts to a host pool](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#register-session-hosts-to-a-host-pool)
+   
 
 1. As the last step before the final migration, Contoso selects the **Users** item in the AVD settings to map the servers to their respective users and groups.
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="[Screenshot that shows assigning AVD resources to users and groups.":::
    *Figure 19: The last step prior to the final migration.*
 
-After host pools are assigned to users, Contoso finalizes the migration of those machines and continues to gradually migrate the rest of the on-premises VDI hosts to Azure.
+> [!IMPORTANT]
+> Microsoft generally recommends to rebuild an image in Azure to ensure compatibility and remove any possible bloat from the existing on-premises images. For scenarios on which an image must be migrated, the following article provides guidance [Prepare a Windows VHD or VHDX to upload to Azure](https://learn.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> [!NOTE]
+> Contoso can also automate this process by using `msiexec` commands and passing in the registration token or by using VM custom script extension to deploy the agents ([AVD LZA Automation](https://github.com/Azure/avdaccelerator)).
+> [!NOTE]
+> It's important to note that if VMs are being migrated through replication, the image will migrate with them, so you will not need to upload it separately. However, if you are creating new VMs in Azure, or if you want to use the same image across multiple VMs, then you will need to follow the steps outlined in the guide to prepare and upload the image to Azure.
+
+After host pools are assigned to users, Contoso finalizes the migration of those machines and continues to gradually migrate the rest of the on-premises RDS hosts to AVD.
 
 ## Review the deployment
 
@@ -292,7 +301,8 @@ With the virtual desktops and application servers now running in Azure, Contoso 
 
 The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
 
-For more information, see [AVD security best practices](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide).
+   > [!NOTE]
+   > Learn more about AVD security with [AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide).
 
 ### Business continuity and disaster recovery
 
@@ -307,7 +317,7 @@ Contoso backs up the data on the VMs by using Azure Backup to keep data safe. Fo
 
 - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
 - Contoso will enable [Azure Cost Management + Billing](https://learn.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
-- Contoso will use [AVD Tagging](https://learn.microsoft.com/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the hostpool.
+- Contoso will use [AVD Tagging](https://learn.microsoft.com/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
 - Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](https://learn.microsoft.com/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
 ## Conclusion
