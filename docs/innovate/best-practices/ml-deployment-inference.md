@@ -17,7 +17,7 @@ Deploying machine learning models in production can be a complex process, but it
 ## Best Practices
 
 1. **Choose the Right Deployment Method:**
-One of the first decisions you'll need to make is how to deploy your ML model. There are two main deployment methods to choose from; real-time, and  inference. Each method has its own advantages and disadvantages, so it's important to choose the one that best suits your organization's needs.
+One of the first decisions you'll need to make is how to deploy your ML model. There are two main deployment methods to choose from; real-time, and batch. Each method has its own advantages and disadvantages, so it's important to choose the one that best suits your organization's needs.
 
     - Real-time (or online) inference involves processing input data as it is received, often with a very low latency requirement. This is important for applications that require immediate responses, such as fraud detection, speech recognition, or recommendation systems. Real-time inference can be more complex and expensive to implement than batch inference because it requires a faster and more reliable infrastructure to process incoming requests and respond quickly.
     - Batch (or offline) processing involves processing a large batch of input data all at once, rather than processing each input data point individually in real time. Batch inference is well-suited for scenarios where a large volume of data needs to be processed efficiently and where the response time is not critical. For example, batch inference can be used for processing a large dataset of images, where predictions are made on all the images in the dataset at once. Batch inference is often less expensive and more efficient than real-time inference.
@@ -77,13 +77,13 @@ Updated diagram needed
 Sizing of the compute nodes used for batch inference is important.  If the nodes are too small, the inference job will take longer to complete.  If the nodes are too large, the job will be more expensive.  Testing and monitoring are essential to determine the right size for your model.
 
 
-- **Implement batch inference:** Azure Machine Learning supports multiple features to enabling scalable processing for improved performance. The number of compute nodes and maximum concurrency parameters are defined during the batch endpoint deployment in Azure Machine Learning, which can by overridden per job to allow customers runtime flexibility and provide out-of-the-box parallelism that works with both tabular and file based inferencing.  If possible, use MLflow for batch inference using batch endpoints, as this means that you don't have to provide a scoring script or an environment for you deployment.
+- **Consider scalability  needs:** Azure Machine Learning supports multiple features to enabling scalable processing for improved performance. The number of compute nodes and maximum concurrency parameters are defined during the batch endpoint deployment in Azure Machine Learning, which can by overridden per job to allow customers runtime flexibility and provide out-of-the-box parallelism that works with both tabular and file based inferencing.  If possible, use MLflow for batch inference using batch endpoints, as this means that you don't have to provide a scoring script or an environment for your deployment. (Is there a reference? I don't understand the recommendation).
 
 - **Batch inference challenges:** Whilst batch inference is a simpler way to use and deploy your model in production, it does present it's own set of challenges:
 
-  - Depending on the frequency at which inference runs, the data produced could be irrelevant by the time it's accessed.  
+  - Depending on the frequency at which inference runs, the prediction generated with inferencing could be irrelevant by the time it's accessed.  
 
-  - A variation of the cold-start problem; results might not be available for new data. For example, if a new user creates and account and starts shopping with a retail recommendation system, product recommendations won't be available until after the next batch inference run. If this is an obstacle for your use case, consider real-time inference.
+  - A variation of the cold-start problem; results might not be available for new data. For example, if a new user creates an account and starts shopping with a retail recommendation system, product recommendations won't be available until after the next batch inference run. If this is an obstacle for your use case, consider real-time inference.
 
   - Deploying to many regions and high availability aren't critical concerns in a batch inference scenario. The model doesn't need to be deployed regionally, however the data store might need to be deployed with a high-availability strategy in many locations. This will normally follow the application HA design and strategy.
 
@@ -113,7 +113,7 @@ The following considerations and best practices are available if real-time infer
 - **Multiregional deployment and high availability:** Regional deployment and high availability architectures need to be considered in real-time inference scenarios, as latency and the model's performance will be critical to resolve. To reduce latency in multiregional deployments, it's recommended to locate the model as close as possible to the consumption point. The model and supporting infrastructure should follow the business' high availability and DR principles and strategy.
 
 - **Security requirements:** Use authentication and authorization to control access to the online endpoint for enhanced security.  
-  - An online endpoint with ingress protection wil only accept scoring requests from hosts inside a virtual network but not from the public internet. A batch endpoint that is created in a private-link enabled workspace will have ingress protection. 
+  - An online endpoint with ingress protection will only accept scoring requests from hosts inside a virtual network but not from the public internet. A batch endpoint that is created in a private-link enabled workspace will have ingress protection. 
   - Use Azure Active Directory Tokens for authentication.
   - Use SSL encryption on the endpoint.  This enabled by default for Azure ML endpoint invocation.<br></br>
 
