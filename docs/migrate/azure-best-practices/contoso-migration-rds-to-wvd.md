@@ -70,7 +70,7 @@ The following diagram outlines the architecture that will be built to migrate RD
 
 - Sync Active Directory to Azure Active Directory.
 - Deploy [AVD Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-- Convert user profile disks (UPDs) to FSLogix profile containers (Optional).
+- Migrate other roaming profile solutions to FSLogix (Optional).
 - Migrate user profile data from FSLogix on-premisses to AVD FSLogix storage (Optional).
 - Migrate on-premisses VMs that most persist (Optional).
 
@@ -203,7 +203,7 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 
 **Next steps:**
 
-- Migrate user profile data that must persist (UPDs or FSLogix).
+- Migrate user profile data that must persist (FSLogix).
 - Migrate VMs that must persist.
 - Configure user assignments to AVD published items.
 
