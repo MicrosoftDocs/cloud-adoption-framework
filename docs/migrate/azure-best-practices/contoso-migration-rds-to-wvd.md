@@ -311,8 +311,6 @@ AVD uses a combination of Microsoft managed components that come with a non-fina
    > [!NOTE]
    > Learn more about BCDR options with [Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery).
 
-Contoso backs up the data on the VMs by using Azure Backup to keep data safe. For more information, see [An overview of Azure VM backup](https://learn.microsoft.com/azure/backup/backup-azure-vms-introduction).
-
 ### Licensing and cost optimization
 
 - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
