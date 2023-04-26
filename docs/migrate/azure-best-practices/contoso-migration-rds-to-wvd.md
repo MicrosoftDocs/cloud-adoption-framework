@@ -13,7 +13,7 @@ ms.custom: think-tank
 
 # Move on-premises Remote Desktop Services to Azure Virtual Desktop (AVD) scenario
 
-[Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview) is a desktop and app virtualization service that runs on the cloud. It's the only desktop and application virtualization infrastructure that delivers simplified management, Windows 10 or Windows 11 Enterprise multi-session (Windows server also available) and optimizations for Microsoft 365 Apps for the enterprise. Deploy and scale Windows desktops and applications on Azure in minutes, and get built-in security and compliance features.
+[Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/overview) is a desktop and app virtualization service that runs on the cloud. It's the only desktop and application virtualization infrastructure that delivers simplified management, Windows 10 or Windows 11 Enterprise multi-session (Windows server also available) and optimizations for Microsoft 365 Apps for the enterprise. Deploy and scale Windows desktops and applications on Azure in minutes, and get built-in security and compliance features.
 
 > [!NOTE]
 > This guidance will not apply for migrating from Citrix or VMware Horizon.
@@ -77,23 +77,25 @@ The following diagram outlines the architecture that will be built to migrate RD
   [![AVD LZA diagram.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png)
   *Figure 1: Proposed architecture: Azure Virtual Desktop Landing Zone Accelerator will deploy the resources contained under the AVD LZ Subscription*.
 
+    [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
+
 ## Migration process
 
 Contoso will go through the following flow to migrate from on-premises RDS to Azure Virtual Desktop:
 
-- Run the assessment tool against its on-premises RDS infrastructure to establish the scale of the Azure Virtual Desktop deployment in Azure.
-- Deploy Azure Virtual Desktop via either Windows 11 or Windows 10 Enterprise multi-session or persistent virtual machines.
-- Optimize the Azure Virtual Desktop multi-session by scaling up and down as needed to manage costs.
-- Virtualize applications and assign users as needed to continue to secure and manage the Azure Virtual Desktop environment.
+- Run the assessment and define Azure Virtual Desktop deployment.
+- Create AVD LZA deployment and migrate objects that must persist (VMs, profiles, images).
+- Manage AVD published items, assignments, monitoring and scaling.
+- Optimize Azure state.
 
-  ![Diagram shows the migration process.](./media/contoso-migration-rds-to-wvd/migration-process-01.png)
+  ![Diagram shows the migration process.](./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png)
   *Figure 2: The migration process.*
 
 ## Migration steps
 
 1. Prerequisites.
-1. Assess the current on-premises environment.
-1. Deploy Azure Virtual Desktop ([AVD Landing Zone Accelerator](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline)).
+1. Assess the current RDS on-premises environment.
+1. Deploy [AVD Landing Zone Accelerator](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
 1. Convert user profiles UPDs to FSLogix profile containers (When needed).
 1. Migrate user profile data from FSLogix on-premises to Azure (When needed).
 1. Migrate any VM or image that most persist (When needed).
@@ -101,37 +103,19 @@ Contoso will go through the following flow to migrate from on-premises RDS to Az
 ### Step 1: Prerequisites
 
 1. An Azure subscription is required ([Subscription requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#subscription-requirements)).
-1. Prior to the deployment of the [AVD Landing Zone Accelerator](https://github.com/Azure/avdaccelerator), ensure the the requirements of the deployment are met ([AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)).
-
- Ensure that domain services, either AD
-or Azure AD Domain Services, are pre-configured and available. Also, make sure that the domain
-service is accessible from the Azure subscription and virtual network available for the Citrix
-Virtual Apps and Desktops service. Follow the Azure AD Connect guide to synchronizing AD
-on‑premises with Azure AD.
 
 1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
 
    > [!NOTE]
    > Review [Azure Virtual Desktop identities and authentication](https://learn.microsoft.com/azure/virtual-desktop/authentication) for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
-
-   <!-- -->
-
    > [!NOTE]
    > Learn more about the options to sync Active Directory on-premises with [Azure AD Connect](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) or  [Azure AD Connect Cloud Sync](https://learn.microsoft.com/active-directory/cloud-sync/concept-how-it-works).
-
-   <!-- -->
-
    > [!NOTE]
-   > Learn about provisioning [Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
+   > Learn more about provisioning [Azure AD DS](https://learn.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance) and synchronizing Azure AD to it.
 
-### Step 2: Assess the current on-premises environment
+1. Prior to the deployment of the AVD Landing Zone Accelerator, ensure the the requirements of the deployment are met ([AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)).
 
-
-
-> [!NOTE]
-> Contoso reviews two scenarios during the assessment: multi-session (shared) instances of RDS and persistent (or personal) virtual machines.
-
-
+### Step 2: Assess the current RDS on-premises environment.
 
 1. In Azure Migrate, select **Discover, assess and migrate**.
 
@@ -194,11 +178,13 @@ on‑premises with Azure AD.
 The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
 
 > [!NOTE]
+> Contoso reviews two scenarios during the assessment: multi-session (Pooled) instances of RDS and persistent (Personal) virtual machines.
+> [!NOTE]
 > Contoso will also need to migrate application servers to Azure to get the company closer to the Azure Virtual Desktop environment and reduce network latency for its users. This same methodology should be applied to Domain Controllers and DNS servers that Azure Virtual Desktops session hosts will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
 
-## Step 2: Create the Azure Virtual Desktop environment with the AVD Landing Zone Accelerator
+## Step 3: Deploy AVD Landing Zone Accelerator
 
-The Azure Virtual Desktop Landing Zone Accelerator is Microsoft's enterprise-ready solution that can be leveraged to deploy an end-to-end AVD environment, see [here](https://github.com/Azure/avdaccelerator).
+The Azure Virtual Desktop Landing Zone Accelerator is Microsoft's enterprise-ready solution that can be used to deploy an end-to-end AVD enterprise ready environment, to deploy the accelerator follow the [AVD LZA Deployment Walk Through](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/deploy-baseline.md) guide.
 
 ## Step 3: Convert the UPDs to FSLogix profile containers
 
