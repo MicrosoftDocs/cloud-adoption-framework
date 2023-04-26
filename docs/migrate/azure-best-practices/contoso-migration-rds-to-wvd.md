@@ -293,9 +293,18 @@ After host pools are assigned to users, Contoso finalizes the migration of those
       Additional user assignment information can be found at the doc [Manage application groups with the Azure portal](https://learn.microsoft.com/azure/virtual-desktop/manage-app-groups)
 
 1. Scaling
-   - AVD LZA deployment has the option to create an AVD scaling plan that is assigned and enabled on the host pool (Pooled host pools), the scaling plan is pre configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules. Scaling rules should be modified to meet the specific needs of the workloads the AVD environment is hosting. Information on configuring scaling plans can be found at the doc [Autoscale scaling plans and example scenarios in Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/autoscale-scenarios)
+   - AVD LZA deployment has the option to create an AVD scaling plan (Enabled by default) that is assigned and enabled on the host pool (Pooled host pools), the scaling plan is pre configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
+
+      ![AVD LZA scaling plan](./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png)
+
+      Scaling rules should be modified to meet the specific needs of the workloads the AVD environment is hosting. Information on configuring scaling plans can be found at the doc [Autoscale scaling plans and example scenarios in Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/autoscale-scenarios).
 
 1. Monitoring
+   - AVD LZA deployment has the option to deploy all diagnostics settings (Enabled by default) required by the AVD insights workbook, including the creation of a new log analytics workspace (option to use existing is available) to gather AVD logs, metrics and events.
+
+      ![AVD LZA insights](./media/contoso-migration-rds-to-wvd/azure-migrate-avd-insights.png)
+
+      More information on AVD monitoring can be found at the doc [Use Azure Virtual Desktop Insights to monitor your deployment](https://learn.microsoft.com/azure/virtual-desktop/insights).
 
 **Next steps:**
 
