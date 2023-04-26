@@ -1,7 +1,7 @@
 ---
 title: Machine learning inference during deployment
 description: Understand how your AI model makes predictions while it's being deployed in production.
-author: DonnaForlin
+author: krisbock
 ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
@@ -12,38 +12,72 @@ ms.custom: think-tank
 
 # Machine learning inference during deployment
 
-When deploying your AI model during production, you need to consider how it will make predictions. The two main processes for AI models are:
+Deploying machine learning models in production can be a complex process, but it's crucial for organizations that want to use AI to enhance their operations. In this article, we'll explore some best practices for deploying ML models in production environments.
 
-- **Batch inference:** An asynchronous process that bases its predictions on a batch of observations. Some key characteristics of batch inference includes:
-  - The predictions are stored as files or in a database for end users or business applications.
+## Best Practices
+
+1. **Choose the Right Deployment Method:**
+One of the first decisions you'll need to make is how to deploy your ML model. There are several deployment methods to choose from, including batch processing, real-time inference, and edge deployment. Each method has its own advantages and disadvantages, so it's important to choose the one that best suits your organization's needs.
+
+    - Real-time (online) inference involves processing input data as it is received, often with a very low latency requirement. This is important for applications that require immediate responses, such as fraud detection, speech recognition, or recommendation systems. Real-time inference can be more complex and expensive to implement than batch inference because it requires a faster and more reliable infrastructure to process incoming requests and respond quickly.
+    - Batch processing involves processing a large batch of input data all at once, rather than processing each input data point individually in real time. Batch inference is well-suited for scenarios where a large volume of data needs to be processed efficiently and where the response time is not critical. For example, batch inference can be used for processing a large dataset of images, where predictions are made on all the images in the dataset at once. Batch inference is often less expensive and more efficient than real-time inference.
+
+    Explore these concepts in more detail [here](https://docs.microsoft.com/en-us/azure/machine-learning/concept-managed-endpoints)
+
+(Azure Machine Learning offers managed endpoints for both real-time and batch processing, allowing you to easily deploy your models in production.)
+
+2. **Ensure Consistency:**
+Consistency is key when deploying ML models in production. It's important to ensure that your model is deployed consistently across different environments, such as development, staging, and production. This can be achieved through the use of containerization or virtualization technologies. 
+
+(Azure Machine Learning provides a consistent environment for model deployment through its containerization capabilities. You can package your model and dependencies into a container, which can then be deployed across different environments with the same runtime environment.)
+
+3. **Monitor Performance:**
+Once your model is deployed in production, it's important to monitor its performance to ensure that it's working as expected. You should track metrics such as accuracy, latency, and throughput, and set up alerts to notify you when performance falls below acceptable levels. 
+
+(Azure Machine Learning provides built-in monitoring capabilities that allow you to monitor the performance of your deployed models in real-time. You can track metrics such as CPU and memory usage, request latency, and throughput. Azure also provides tools to help you visualize and analyze the performance metrics.)
+
+4. **Implement Security Measures:**
+Deploying ML models in production can pose security risks, so it's important to implement security measures to protect your data and systems. This includes setting up authentication and access controls, encrypting data in transit and at rest, and monitoring for suspicious activity. 
+(Azure Machine Learning provides a secure environment for model deployment through its integration with Azure Security Center. You can set up access controls to limit who can deploy or access your models, and encrypt data at rest and in transit. Azure Security Center can also monitor for security threats and provide alerts when suspicious activity is detected.)
+
+5. **Have a Plan for Updates:**
+ML models are not static, and they will need to be updated over time as new data or new algorithms become available. It's important to have a plan in place for updating your model, including a process for testing and validating the updated model before deploying it in production. 
+(Azure Machine Learning provides tools to help you manage model updates, including versioning and deployment slots. You can deploy a new version of your model to a deployment slot for testing and validation before promoting it to production. This allows you to ensure that your updated model is working as expected before it's deployed to your customers.)
+
+Deploying machine learning models in production can be challenging, but following these best practices can help ensure a smooth and successful deployment. By choosing the right deployment method, ensuring consistency, monitoring performance, implementing security measures, and having a plan for updates, your organization can use AI to improve its operations and achieve its goals. 
 
 
-- **Real-time (or interactive) inference:** Frees the model to make predictions at any time and trigger an immediate response. This pattern can be used to analyze streaming and interactive application data.
+## Deployment Methods
 
 Consider the following questions to evaluate your model, compare the two processes, and select the one that suits your model:
 
 - How often should predictions be generated?
 - How soon are the results needed?
+- Are the predictions stored or used immediately?
 - Should predictions be generated individually, in small batches, or in large batches?
 - Is latency to be expected from the model?
 - How much compute power is needed to execute the model?
 - Are there operational implications and costs to maintain the model?
+- How is the prediction triggered?  Is it event-based or scheduled?
 
 The following decision tree can help you to determine which deployment model best fits your use case:
 
 [![A diagram of the real-time or batch inference decision tree.](./media/inference-decision-tree.png)](./media/inference-decision-tree.png#lightbox)
 
-## Batch inference
+### Batch inference
 
-Batch inference, sometimes called offline inference, is a simpler inference process that helps models to run in timed intervals and business applications to store predictions.
+Batch inference, sometimes called offline inference, is a simpler inference process that helps models to run in timed intervals or triggers, and business applications to store predictions.
 
 Consider the following best practices for batch inference:
 
-- **Trigger batch scoring:** Use Azure Machine Learning pipelines and the `ParallelRunStep` feature in Azure Machine Learning to set up a schedule or event-based automation. Navigate to the AI show to perform [batch inference using Azure Machine Learning `ParallelRunStep`](https://channel9.msdn.com/Shows/AI-Show/How-to-do-Batch-Inference-using-AML-ParallelRunStep) and learn more about the process.
+- **Triggered batch scoring:** Use [Azure Machine Learning batch endpoints](https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints?view=azureml-api-2#what-are-batch-endpoints) to create a HTTPS endpoint that clients can call to trigger a batch scoring job from either scheduled or event-based automation. Follow the How-to guide for [Use batch endpoints for batch scoring](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-batch-endpoint?view=azureml-api-2&tabs=azure-cli) and learn more about the process.  The automation could be part of a larger data processing pipeline (see Integrations), or it could be a simple script that runs on a schedule.  The script can be written in any language that supports HTTP requests, such as Python, C#, or Javascript.  
 
-- **Compute options for batch inference:** Since batch inference processes don't run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the following decision tree to identify the right compute instance for your model:
+- **Compute options for batch inference:** Since batch inference processes don't usually run continuously, it's recommended to automatically start, stop, and scale reusable clusters that can handle a range of workloads. Different models require different environments, and your solution needs to be able to deploy a specific environment and remove it when inference is over for the compute to be available for the next model. See the following decision tree to identify the right compute instance for your model:
 
+## Obsolete
   [![Diagram of the compute decision tree.](./media/compute-decision-tree.png)](./media/compute-decision-tree.png#lightbox)
+
+  The recommendation is to use Azure ML Managed Batch Endpoints
 
 - **Implement batch inference:** Azure supports multiple features for batch inference. One feature is `ParallelRunStep` in Azure Machine Learning, which allows customers to gain insights from terabytes of structured or unstructured data stored in Azure. `ParallelRunStep` provides out-of-the-box parallelism and works within Azure Machine Learning pipelines.
 
@@ -55,7 +89,15 @@ Consider the following best practices for batch inference:
 
   - Deploying to many regions and high availability aren't critical concerns in a batch inference scenario. The model doesn't need to be deployed regionally, and the data store might need to be deployed with a high-availability strategy in many locations. This will normally follow the application HA design and strategy.
 
-## Real-time inference
+- **Security requirements:** Use authentication and authorization to control access to the batch endpoint for enhanced security.  
+  - A batch endpoint with ingress protection wil only accept scoring requests from hosts inside a virtual network but not from the public internet. A batch endpoint that is created in a private-link enabled workspace will have ingress protection. 
+  - Use Azure Active Directory Tokens for authentication.
+  - Use SSL encryption on the endpoint.  This enabled by default for Azure ML endpoint invocation
+  - Data security considerations.  Whilst batch endpoints ensure that only authorized users are able to invoke batch deployments, other credentials may be used to read the underlying data.  Use the table in [this link](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-access-data-batch-endpoints-jobs?view=azureml-api-2&tabs=cli#security-considerations-when-reading-data) as a reference for the different data stores and the credentials that are used to access them.
+  
+- **Batch Integration:** Batch inference can be integrated with other Azure services, such as Azure Data Factory, Azure Databricks, and Azure Synapse Analytics. For example, you can use Azure Data Factory to orchestrate the batch inference process and Azure Databricks to prepare the data for batch inference. You can then run Azure Machine Learning to run the batch inference process and also use Azure Synapse Analytics to store the subsequent predictions.  Batch endpoints support Azure Active Directory for authorization and hence the request made to the APIs require a proper authentication handling. Azure services such as Azure Data Factory support using a service principal or a managed identity to authenticate against Batch Endpoints.  See [this link](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-batch-azure-data-factory?view=azureml-api-2) for more details.
+
+### Real-time inference
 
 Real-time, or interactive, inference is architecture where model inference can be triggered at any time, and an immediate response is expected. This pattern can be used to analyze streaming data, interactive application data, and more. This mode allows you to take advantage of your machine learning model in real time and resolves the cold-start problem outlined above in batch inference.
 
@@ -67,7 +109,15 @@ The following considerations and best practices are available if real-time infer
 
 - **Multiregional deployment and high availability:** Regional deployment and high availability architectures need to be considered in real-time inference scenarios, as latency and the model's performance will be critical to resolve. To reduce latency in multiregional deployments, it's recommended to locate the model as close as possible to the consumption point. The model and supporting infrastructure should follow the business' high availability and DR principles and strategy.
 
-## Many-models scenario
+- **Real time Integration:** 
+
+## Additional Considerations
+
+### Integration
+ML Deployments rarely operate in isolation, here are some common integration points to consider:
+
+
+### Many-models scenario
 
 A singular model might not be able to capture the complex nature of real-world problems, such as predicting sales for a supermarket where demographics, brand, SKUs, and other features could cause customer behavior to vary significantly. Regions could cause developing predictive maintenance for smart meters to also vary significantly. Having many models for these scenarios to capture regional data or store-level relationships could produce higher accuracy than a single model. This approach assumes that enough data is available for this level of granularity.
 
@@ -98,6 +148,9 @@ Real-time many-models inference requires low latency and on-demand requests, typ
 The core purpose of this pattern is to use the discovery service to identify a list of services and their metadata. This can be implemented as an Azure function and enables clients to obtain relevant service details of service, that can be invoked with a secure REST URI. A JSON payload be sent to the service, which would summon the relevant model and provide a JSON response back to the client.
 
 Each service is stateless microservice that can handle multiple requests simultaneously and is limited to the physical virtual machine resource. The service can deploy multiple models if multiple groups are selected; homogeneous groupings like the category, SKU, and more are recommended for this. The mapping between the service request and model selected for a given service needs to be baked into the inference logic, typically via the score script. If the size of models is relatively small (a few megabytes), it's recommended to load them in memory for performance reasons; otherwise, each model can be loaded dynamically per request.
+
+### AI at the Edge scenario
+
 
 ## Next steps
 
