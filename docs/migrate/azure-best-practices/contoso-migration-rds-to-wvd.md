@@ -205,7 +205,7 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 
 - Migrate user profile data that must persist (UPDs or FSLogix).
 - Migrate VMs that must persist.
-- Deploy the necessary applications to the users.
+- Configure user assignments to AVD published items.
 
 ### Step 4: Other roaming profile solutions migration to FSLogix
 
@@ -261,8 +261,7 @@ The next step in the migration process for Contoso is to migrate its persistent 
 1. As migrated VMs start running in Azure, Contoso will need to install and configure AVD agents on each migrated:
    - Get host pool registration token, following guidance outline in this doc: [Generate a registration key](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#generate-a-registration-key).
 
-   - Install AVD agents and register VMs on the host pool following the guidance outline in this doc: [Register session hosts to a host pool](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#register-session-hosts-to-a-host-pool)
-   
+   - Install AVD agents and register VMs on the host pool following the guidance outline in this doc: [Register session hosts to a host pool](https://learn.microsoft.com/azure/virtual-desktop/add-session-hosts-host-pool?tabs=powershell%2Cgui#register-session-hosts-to-a-host-pool).
 
 1. As the last step before the final migration, Contoso selects the **Users** item in the AVD settings to map the servers to their respective users and groups.
 
@@ -291,10 +290,15 @@ After host pools are assigned to users, Contoso finalizes the migration of those
 
 ### Step 8: Configure Business continuity and disaster recovery (Optional)
 
-AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements. 
+AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
 
    > [!NOTE]
    > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
+
+[![AVD Multi-region deployment Stage 2](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)
+*Figure 20: Sample of an AVD multi-region architecture.*
+
+[Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.vsdx)
 
 ## Review the deployment
 
