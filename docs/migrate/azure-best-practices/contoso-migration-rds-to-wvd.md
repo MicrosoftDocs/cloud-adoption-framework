@@ -99,8 +99,8 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 1. Other roaming profile solutions migration to FSLogix (Optional).
 1. Migrate FSLogix on-premise data to Azure (Optional).
 1. Migrate VMs that must persist to Azure (Optional).
+1. Manage the AVD environment.
 1. Optimize the AVD environment.
-1. Configure Business continuity and disaster recovery (Optional)
 
 ### Step 1: Prerequisites
 
@@ -279,6 +279,12 @@ After host pools are assigned to users, Contoso finalizes the migration of those
 
 ### Step 7: Optimize AVD environment
 
+1. Security
+   - The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
+
+   > [!NOTE]
+   > Learn more about AVD security with **[AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide)**.
+
 1. Licensing
    - [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop/) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS user CAL licenses. Thanks to AVD licensing entitlement, there is no OS cost for any operating system, including Windows Server.
 
@@ -288,32 +294,21 @@ After host pools are assigned to users, Contoso finalizes the migration of those
    - Contoso will use [AVD Tagging](https://learn.microsoft.com/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
    - Contoso will monitor utilization across their entire AVD deployments using [AVD Insights](https://learn.microsoft.com/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
-### Step 8: Configure Business continuity and disaster recovery (Optional)
+1. Configure Business continuity and disaster recovery (Optional)
 
-AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
+   - AVD uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our AVD Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
 
    > [!NOTE]
    > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for AVD](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
 
-[![AVD Multi-region deployment Stage 2](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)
-*Figure 20: Sample of an AVD multi-region architecture.*
-
-[Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.vsdx)
+   [![AVD Multi-region deployment Stage 2](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png)
+   *Figure 20: Sample of an AVD multi-region architecture.*
+   
+   [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.vsdx)
 
 ## Review the deployment
 
 With the virtual desktops and application servers now running in Azure, Contoso now needs to fully operationalize and secure the deployment.
-
-### Security
-
-The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect AVD landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
-
-   > [!NOTE]
-   > Learn more about AVD security with **[AVD security best practices](https://learn.microsoft.com/azure/virtual-desktop/security-guide)**.
-
-### Licensing and cost optimization
-
-
 
 ## Conclusion
 
