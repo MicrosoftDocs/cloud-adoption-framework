@@ -207,7 +207,7 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 - Migrate VMs that must persist.
 - Configure user assignments to AVD published items.
 
-### Step 4: Other roaming profile solutions migration to FSLogix
+### Step 4: Other roaming profile solutions migration to FSLogix (Optional)
 
 > [!IMPORTANT]
 > FSLogix doesn't provide a direct migration path from other roaming profile solutions. Implementing OneDrive with known folder move or similar cloud or network storage solutions provides users with a location to save their data outside of their profile. For smaller use cases, our **[frx command-line utility](https://learn.microsoft.com/fslogix/utilities/frx/frx)** can help copy local profiles into a new VHD(x).
