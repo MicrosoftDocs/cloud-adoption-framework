@@ -111,7 +111,7 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
    > [!NOTE]
    > Review **[AVD identities and authentication](/azure/virtual-desktop/authentication)** for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
    > [!NOTE]
-   > Learn more about the options to sync Active Directory on-premises with **[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)** or  **[Azure AD Connect Cloud Sync](/active-directory/cloud-sync/concept-how-it-works)**.
+   > Learn more about the options to sync Active Directory on-premises with **[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)** or  **[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)**.
    > [!NOTE]
    > Learn more about provisioning **[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)** and synchronizing Azure AD to it.
 
@@ -202,8 +202,8 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 | Deployment Type | Link |
 |:--|:--|
 | Azure portal UI |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-baseline.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-baseline.json)
-| Command line (Bicep/ARM) | [![Powershell/Azure CLI](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/powershell.png)](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep/readme.md) |
-| Terraform | [![Terraform](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/terraform.png)](https://github.com/Azure/avdaccelerator/tree/main/workload/terraform/greenfield/readme.md) |
+| Command line (Bicep/ARM) | [![Powershell/Azure CLI implementation](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/powershell.png)](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep/readme.md) |
+| Terraform | [![Terraform implementation](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/terraform.png)](https://github.com/Azure/avdaccelerator/tree/main/workload/terraform/greenfield/readme.md) |
 
 > [!NOTE]
 > To improve performance of AVD users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the AVD environment. This same methodology should be applied to platform shared services (Domain Controllers, DNS, network devices, among others) that AVD will rely on. Best practice is to host these services in the same Azure Region as the AVD session hosts.
