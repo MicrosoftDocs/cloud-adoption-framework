@@ -226,10 +226,15 @@ Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso
     - If other browsers are used, export and import bookmarks or favorites to Microsoft Edge.
 3. Enable OneDrive for the users moving to Azure Virtual Desktop.
 4. ***[OPTIONAL]*** Enable [known folder redirection](/sharepoint/redirect-known-folders) to OneDrive.
-5. Non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
+5. Both user and non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
 
 > [!IMPORTANT]
 > Users may still require settings or application data in their profile from third party or other line-of-business applications. If that data is necessary, it should be preserved following the recommendation of the vendor. Microsoft is not responsible for this data.
+
+For more information about FSLogix:
+- [Tutorial: Configure profile containers](/fslogix/tutorial-configure-profile-containers)
+- [Configuration examples](/fslogix/concepts-configuration-examples)
+- [FSLogix FAQ](/fslogix/overview-faq)
 
 At this point, the users have saved or backed up their important profile data. Contoso can begin the next step, [Replicate and persist VMs to Azure Virtual Desktop](#step-4-replicate-and-persist-vms-to-azure-virtual-desktop)
 
