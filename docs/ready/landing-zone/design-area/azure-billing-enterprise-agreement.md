@@ -20,7 +20,7 @@ Enterprise Agreement enrollment represents the commercial relationship between M
 > - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration)
 > - [Get started with your Enterprise Agreement billing account](/azure/cost-management-billing/manage/ea-direct-portal-get-started)
 >
-> Azure Government EA enrollment customers should continue to use The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)).
+> Azure Government EA enrollment customers should continue to use the Azure EA portal ([https://ea.azure.com](https://ea.azure.com)).
 
 ![Diagram that shows Azure Enterprise Agreement hierarchies.](../../enterprise-scale/media/ea.png)
 
