@@ -108,14 +108,14 @@ Contoso will go through the following flow to migrate from on-premises RDS to AV
 
 1. Make sure that domain services, either Active Directory or Azure AD DS, are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy AVD session hosts. AVD requires hybrid user identities for majority of your AVD deployments and desired features. The AVD service requires users UPN or SID to match between on-prem AD and Azure AD.
 
+1. Prior to the deployment of the AVD LZA, ensure the the [AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) are met.
+
    > [!NOTE]
    > Review **[AVD identities and authentication](/azure/virtual-desktop/authentication)** for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
    > [!NOTE]
    > Learn more about the options to sync Active Directory on-premises with **[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)** or  **[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)**.
    > [!NOTE]
    > Learn more about provisioning **[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)** and synchronizing Azure AD to it.
-
-1. Prior to the deployment of the AVD LZA, ensure the the [AVD LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) are met.
 
 ### Step 2: Assess the current RDS on-premises environment
 
@@ -246,11 +246,11 @@ The AVD LZA is Microsoft's enterprise-ready solution that can be used to deploy 
 >
 >For scenarios on which VMs must persist, the steps on this guide provide details on migrating on-premises RDS hosts to AVD.
 
-The next step in the migration process for Contoso is to migrate its persistent VMs to AVD. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created on step 1.
+The next step in the migration process for Contoso is to migrate to Azure the RDS host that need to persist into AVD. To do this, Contoso goes back to the Azure Migrate: Server Migration job it created on step 1.
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
-   ![Screenshot of the Azure Migrate: Server Migration discover option.](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
+   ![Screenshot of the Azure Migrate: Server Migration discover option.](./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png)
    *Figure 16: Discovering a server migration.*
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to AVD. Ensure that the target region is set to **East US 2**, where the AVD environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
