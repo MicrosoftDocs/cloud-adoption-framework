@@ -228,7 +228,7 @@ Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso
 5. Both user and non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
 
 > [!IMPORTANT]
-> Users may still require settings or application data in their profile from third party or other line-of-business applications. If that data is necessary, it should be preserved following the recommendation of the vendor. Microsoft is not responsible for this data.
+> Users might require settings or application data in their profile from third party or other line-of-business applications. If that data is necessary, you should preserve it following the recommendation of the vendor. Microsoft is not responsible for this data.
 
 For more information about FSLogix:
 - [Tutorial: Configure profile containers](/fslogix/tutorial-configure-profile-containers)
