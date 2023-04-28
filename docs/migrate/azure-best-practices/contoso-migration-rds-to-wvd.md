@@ -222,8 +222,7 @@ Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso
 
 <!-- docutune:casing FSLogixMigration -->
 
-1. Enable [Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync).
-    - If other browsers are used, export and import bookmarks or favorites to Microsoft Edge.
+1. Enable [Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync). If other browsers are used, export and import bookmarks or favorites to Microsoft Edge.
 3. Enable OneDrive for the users moving to Azure Virtual Desktop.
 4. ***[OPTIONAL]*** Enable [known folder redirection](/sharepoint/redirect-known-folders) to OneDrive.
 5. Both user and non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
