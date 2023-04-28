@@ -213,32 +213,25 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-host-pool-review-create.png" alt-text="Screenshot that shows reviewing and creating virtual machines." lightbox="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-host-pool-review-create-lightbox.png":::
    *Figure 15: Reviewing and creating virtual machines.*
 
-## Step 3: Convert the UPDs to FSLogix profile containers
+## Step 3: Prepare Users for new profiles using FSLogix
 
-Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso needs to convert all the UPDs to FSLogix via the [FSLogixMigration PowerShell module](https://aka.ms/FSLogixMigrationPreviewModule).
+> [!NOTE]
+> Microsoft does not support migrating profiles from User Profile Disks (UPD) or Roaming User Profiles (RUP) to FSLogix.
+
+Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso will need to prepare their users for new profiles using FSLogix. Starting users with new profiles will provide the best transition from UPD or RUP profiles. Contoso will need to enable the users to save or backup their data before they sign in to their desktops for the first time.
 
 <!-- docutune:casing FSLogixMigration -->
 
-After Contoso imports the FSLogixMigration module, it runs the following PowerShell cmdlets to migrate from UPDs to FSLogix.
+1. Enable [Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync).
+    - If other browsers are used, export and import bookmarks or favorites to Microsoft Edge.
+3. Enable OneDrive for the users moving to Azure Virtual Desktop.
+4. ***[OPTIONAL]*** Enable [known folder redirection](/sharepoint/redirect-known-folders) to OneDrive.
+5. Non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
 
 > [!IMPORTANT]
-> The PowerShell modules for Hyper-V, Active Directory, and Pester are prerequisites to running the cmdlets to convert UPDs to FSLogix.
+> Users may still require settings or application data in their profile from third party or other line-of-business applications. If that data is necessary, it should be preserved following the recommendation of the vendor. Microsoft is not responsible for this data.
 
-A UDP conversion:
-
-```powershell
-Convert-RoamingProfile -ParentPath "C:\Users\" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512
-```
-
-A roaming profile conversion:
-
-```powershell
-Convert-RoamingProfile -ProfilePath "C:\Users\User1" -Target "\\Server\FSLogixProfiles$" -VHDMaxSizeGB 20 -VHDLogicalSectorSize 512 -VHD -IncludeRobocopyDetails -LogPath C:\temp\Log.txt
-```
-
-At this point, the migration has enabled using pooled resources with Windows 10 Enterprise multi-session. Contoso can begin to deploy the necessary applications to the users who will use Windows 10 Enterprise multi-session.
-
-But now Contoso must migrate the persistent virtual machines to Azure.
+At this point, the users have saved or backed up their important profile data. Contoso can begin the next step, [Replicate and persist VMs to Azure Virtual Desktop](#step-4-replicate-and-persist-vms-to-azure-virtual-desktop)
 
 ## Step 4: Replicate and persist VMs to Azure Virtual Desktop
 
