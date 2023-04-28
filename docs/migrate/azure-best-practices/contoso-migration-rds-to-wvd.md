@@ -213,12 +213,12 @@ Using the Azure portal, Contoso will create an Azure Virtual Desktop environment
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-host-pool-review-create.png" alt-text="Screenshot that shows reviewing and creating virtual machines." lightbox="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-host-pool-review-create-lightbox.png":::
    *Figure 15: Reviewing and creating virtual machines.*
 
-## Step 3: Prepare Users for new profiles using FSLogix
+## Step 3: Prepare users for new profiles using FSLogix
 
 > [!NOTE]
 > Microsoft does not support migrating profiles from User Profile Disks (UPD) or Roaming User Profiles (RUP) to FSLogix.
 
-Because Azure Virtual Desktop doesn't support user profile disks (UPDs), Contoso will need to prepare their users for new profiles using FSLogix. Starting users with new profiles will provide the best transition from UPD or RUP profiles. Contoso will need to enable the users to save or backup their data before they sign in to their desktops for the first time.
+Azure Virtual Desktop doesn't support user profile disks (UPDs), so Contoso needs to prepare their users for new profiles using FSLogix. Starting users with new profiles provides the best transition from UPD or RUP profiles. To make this transition, Contoso needs to enable the users to save or backup their data before they sign into their desktops for the first time.
 
 <!-- docutune:casing FSLogixMigration -->
 
@@ -235,7 +235,7 @@ For more information about FSLogix:
 - [Configuration examples](/fslogix/concepts-configuration-examples)
 - [FSLogix FAQ](/fslogix/overview-faq)
 
-At this point, the users have saved or backed up their important profile data. Contoso can begin the next step, [Replicate and persist VMs to Azure Virtual Desktop](#step-4-replicate-and-persist-vms-to-azure-virtual-desktop)
+At this point, the users have saved or backed up their important profile data. Contoso can continue to Step 4 and start replicating and persisting VMs to Azure Virtual Desktop.
 
 ## Step 4: Replicate and persist VMs to Azure Virtual Desktop
 
