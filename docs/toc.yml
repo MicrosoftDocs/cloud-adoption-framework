@@ -228,6 +228,9 @@ items:
     - name: Strategic Migration Assessment and Readiness Tool (SMART)
       href: plan/smart-assessment.md
 
+    - name: Sustainability considerations
+      href: plan/plan-sustainability.md
+      
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
@@ -1503,6 +1506,8 @@ items:
           href: govern/policy-compliance/cloud-policy-review.md
         - name: Data classification
           href: govern/policy-compliance/data-classification.md
+        - name: Sustainability considerations
+          href: govern/policy-compliance/sustainability-considerations.md
     - name: Disciplines of cloud governance
       href: govern/governance-disciplines.md
     - name: Implement disciplines of cloud governance
@@ -1708,6 +1713,8 @@ items:
         href: manage/considerations/platform.md
       - name: Workload operations
         href: manage/considerations/workload.md
+      - name: Sustainability alignment
+        href: manage/considerations/sustainability.md
     - name: Advanced management and system design
       href: manage/design-principles.md
     - name: Manage antipatterns
