@@ -3,7 +3,7 @@ title: Azure Enterprise Agreement enrollment design area guidance
 description: Understand the Enterprise Agreement enrollments and Azure Active Directory tenants design area.
 author: jtracey93
 ms.author: jatracey
-ms.date: 08/23/2021
+ms.date: 04/28/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,7 +12,15 @@ ms.custom: think-tank, UpdateFrequency.5
 
 # Plan for Enterprise Agreement enrollment
 
-Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Azure EA portal (https://EA.Azure.com) helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
+Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Cost Management + Billing blade in the Azure portal helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
+
+>[!NOTE]
+> The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)) has been made read-only for both EA direct and indirect customers and these customers should now use the Cost Management + Billing blade in the Azure portal to manage their enrollments as documented further in:
+>
+> - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration)
+> - [Get started with your Enterprise Agreement billing account](/azure/cost-management-billing/manage/ea-direct-portal-get-started)
+>
+> Azure Government EA enrollment customers should continue to use The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)).
 
 ![Diagram that shows Azure Enterprise Agreement hierarchies.](../../enterprise-scale/media/ea.png)
 
