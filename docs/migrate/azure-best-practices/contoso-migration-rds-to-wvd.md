@@ -219,8 +219,10 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 
    > [!NOTE]
    > Review **[Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication)** for a comprehensive list of requirements and supported features based on your identity strategy and configuration.
+   
    > [!NOTE]
    > Learn more about the options to sync Active Directory on-premises with **[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)** or  **[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)**.
+   
    > [!NOTE]
    > Learn more about provisioning **[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)** and synchronizing Azure AD to it.
 
