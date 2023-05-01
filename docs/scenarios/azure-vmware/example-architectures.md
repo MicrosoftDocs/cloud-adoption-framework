@@ -167,7 +167,7 @@ See the VMware documentation for NVA placement options and for information about
 
 
 
-## A third-party NVA in the hub VNet inspects traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure VNets
+## Third-party firewall solutions in a hub virtual network with Azure Route Server
 
 This scenario has the following customer profile, architectural components, and considerations:
 
