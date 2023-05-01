@@ -784,6 +784,11 @@
          "source_path": "docs/ready/considerations/data-options.md",
          "redirect_url": "/azure/architecture/guide/technology-choices/data-options",
          "redirect_document_id": false 
+      },
+      {
+         "source_path": "docs/decision-guides/encryption/index.md",
+         "redirect_url": "/azure/well-architected/security/design-storage-encryption",
+         "redirect_document_id": false   
       }
    ]
 }

@@ -229,7 +229,6 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    > [!NOTE]
    > The AVD Landing Zone Accelerator has its own set of required URLs in addition to the AVD required URLs, see **[Azure Virtual Desktop Landing Zone Accelerator Baseline Deployment Requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)** to ensure all required URLs are whitelisted for proper connectivity.
 
-
 ### Step 2: Assess the current RDS on-premises environment
 
 1. In Azure Migrate, select **Discover, assess and migrate**.
@@ -379,7 +378,7 @@ The next step in the migration process for Contoso is to migrate to Azure the RD
 
 After host pools are assigned to users, Contoso finalizes the migration of those machines and continues to gradually migrate the rest of the on-premises RDS hosts to Azure Virtual Desktop.
 
-### Step 7: Manage Azure Virtual Desktop
+### Step 6: Manage Azure Virtual Desktop
 
 1. Publish applications and desktops
    - Azure Virtual Desktop LZA deployment creates by default one application group for desktops and has the option to also deploy a remote apps application group. Post deployment there is no need to manage desktops as they are published by default, remote apps can be managed by following the guidance on the docs:
@@ -411,7 +410,7 @@ After host pools are assigned to users, Contoso finalizes the migration of those
 
       More information on Azure Virtual Desktop monitoring can be found at the doc [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights).
 
-### Step 8: Optimize Azure Virtual Desktop
+### Step 7: Optimize Azure Virtual Desktop
 
 1. Security
    - The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Azure Key Vault. Session Hosts should also be protected using Defender for Endpoint or the product of choosing, ensure your vendor supports their product in Azure VDI environments. Also opt to protect Azure Virtual Desktop landing zone subscriptions with Defender for Cloud for increased visibility and compliance controls.
