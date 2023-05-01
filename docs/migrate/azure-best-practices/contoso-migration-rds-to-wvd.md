@@ -277,7 +277,7 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png" alt-text="Screenshot of the Lakeside dashboard." lightbox="./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png":::
    *Figure 10: The Lakeside dashboard.*
 
-1. After an adequate amount of data is captured, Contoso reviews the assessment data to determine the best migration path. This assessment data includes the raw assessment data from the desktops data and the data broken into different user personas. This information includes the:
+1. After (3) standard business cycles with average usage an adequate amount of data is captured and Contoso reviews the assessment data to determine the best migration path. This assessment data includes the raw assessment data from the desktops data and the data broken into different user personas. This information includes the:
 
     - Number of users in each persona.
     - Applications in use by users.
