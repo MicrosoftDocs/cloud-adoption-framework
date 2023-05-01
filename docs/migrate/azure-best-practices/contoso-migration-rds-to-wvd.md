@@ -629,12 +629,14 @@ After host pools are assigned to users, Contoso finalizes the migration of those
    > [!NOTE]
    > Learn more about BCDR options with **[Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)**.
 
-   - For large-scale global deployments of Azure Virtual Desktop, we recommend adopting a multi-region architecture like the following diagram to reduce single point of failures on any single region. Sample diagrams can be found in the Azure Virtual Desktop Landing Zone Accelerator documentation **[AVD Accelerator Diagrams](https://github.com/Azure/avdaccelerator/tree/main/workload/docs/diagrams)**
+   - For large-scale global deployments of Azure Virtual Desktop, we recommend adopting a multi-region architecture to reduce single point of failures on any single region. 
 
-   :::image type="content" border="false" source="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png" alt-text="Azure Virtual Desktop Multi-region deployment Stage 2." lightbox="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.png":::
+   - The following diagram is an example of an AVD multi-region architecture designed for regional AVD deployments to be entirely independent. Depending on the SLA requirements, there can be varying levels of dependencies on the primary region. Sample diagrams for varying levels of depenency can be found in the Azure Virtual Desktop Landing Zone Accelerator documentation **[AVD Accelerator Diagrams](https://github.com/Azure/avdaccelerator/tree/main/workload/docs/diagrams)**
+
+   :::image type="content" border="false" source="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.png" alt-text="Azure Virtual Desktop Multi-region deployment Stage 2." lightbox="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.png":::
    *Figure 22: Sample of an Azure Virtual Desktop multi-region architecture.*
 
-   [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-2.vsdx)
+   [Download the Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx)
 
 ## Conclusion
 
