@@ -2,9 +2,9 @@
 title: Hub-and-spoke network topology
 description: Learn about hub-and-spoke network topologies to manage common communication or security requirements more efficiently.
 author: tracsman
-ms.author: brblanch
+ms.author: martinek
 manager: rossort
-ms.date: 08/23/2021
+ms.date: 06/22/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -19,7 +19,7 @@ ms.custom: think-tank, virtual-network
 
 - **Overcoming subscription limits:** Large cloud-based workloads might require using more resources than a single Azure subscription contains. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-- **A separation of concerns:** You can deploy individual workloads between central IT teams and workload teams.
+- **Instituting a separation of concerns:** You can deploy individual workloads between central IT teams and workload teams.
 
 Smaller cloud estates might not benefit from the added structure and capabilities that this model offers. But larger cloud adoption efforts should consider implementing a hub-and-spoke networking architecture if they have any of the concerns listed previously.
 
@@ -96,11 +96,11 @@ A typical example of this scenario is the case where application processing serv
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level, level 0, becomes the hub of lower spokes, or level 1, of the hierarchy. The spokes are required to forward the traffic to the central hub. This requirement is so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-and-spoke relationship.
 
 > [!NOTE]
-> You can use [Azure Virtual Network Manager (AVNM)]( https://docs.microsoft.com/azure/virtual-network-manager/overview) to create new or onboard existing
-hub and spoke virtual network topologies for central management of connectivity    and security controls.
+> You can use [Azure Virtual Network Manager (AVNM)](/azure/virtual-network-manager/overview) to create new or onboard existing
+hub and spoke virtual network topologies for central management of connectivity and security controls.
 >
 > A connectivity configuration enables you to create a mesh or a hub-and-spoke network topology including direct connectivity between spoke virtual networks.
-> 
+>
 > A security configuration allows you to define a collection of rules that you can apply to one or more network groups at the global level.
 
 ## Next steps

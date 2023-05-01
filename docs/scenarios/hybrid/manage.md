@@ -1,8 +1,8 @@
 ---
 title: Manage your portfolio across hybrid and multicloud operations
 description: Implement effective controls to provide operations management across hybrid and multicloud deployments by using Azure's enterprise control plane.
-author: brianblanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Manage your portfolio across hybrid and multicloud operations
 
-Using a hybrid and multicloud environment leads to natural shifts in how you operate in the cloud. The [Manage methodology](../../manage/index.md) in the Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline and developing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments requires a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best concept to address those shifting requirements.
+Using a hybrid and multicloud environment leads to natural shifts in how you operate in the cloud. The [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework outlines a path for implementing an operations baseline and developing that baseline throughout your cloud adoption lifecycle. Expanding your strategy to include hybrid, multicloud, and edge deployments requires a shift in how you implement proper operations management. [Unified operations](./unified-operations.md) is the best concept to address those shifting requirements.
 
 The following section outlines how you can apply the concept of unified operations and implement best practices to ensure effective hybrid, multicloud, and edge operations.
 
@@ -30,7 +30,7 @@ To get started, [inventory and tag your hybrid and multicloud resources](../../m
 
 <!-- docutune:casing "update management guide" -->
 
-After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. To deploy tools that can control patching across cloud providers, follow the steps in the [Hybrid and multicloud update management guide](../../manage/hybrid/server/best-practices/arc-update-management.md).
+After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. For more information, see [Update Management overview](/azure/automation/update-management/overview).
 
 ## Enhanced baseline
 
@@ -46,10 +46,10 @@ Enhance your operations baseline by bringing on a continuously broader range of 
 
 Along with tagging and bringing on assets, you can also deliver many operations management disciplines by using hybrid and multicloud tools.
 
-One example of a mature operations management discipline is the use of Microsoft Monitoring Agent to manage software installation, antivirus protection, or other configuration management functions. The following articles demonstrate configuration of Monitoring Agent in your hybrid and multicloud environment:
+Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a VM requires software installation or antivirus protection, or if you need to run a script on a VM, you can use a VM extension. These articles provide more information: 
 
-- [Manage VMs with Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md)
-- [Scale configuration of Monitoring Agent](../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md)
+- [Virtual machine extension management with Azure Arc-enabled servers](/azure/azure-arc/servers/manage-vm-extensions)
+- [Enable Azure VM extensions by using ARM templates](/azure/azure-arc/servers/manage-vm-extensions-template)
 
 ## Next steps
 

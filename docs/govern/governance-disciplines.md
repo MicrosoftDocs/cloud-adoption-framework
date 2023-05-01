@@ -1,13 +1,13 @@
 ---
 title: The Five Disciplines of Cloud Governance
 description: The Cloud Adoption Framework covers Cost Management, Security Baseline, Identity Baseline, Resource Consistency, and Deployment Acceleration disciplines.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/28/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # The Five Disciplines of Cloud Governance

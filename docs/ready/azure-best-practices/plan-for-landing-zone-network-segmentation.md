@@ -2,7 +2,7 @@
 title: Plan for landing zone network segmentation
 description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -53,3 +53,6 @@ This section explores key recommendations to deliver highly secure internal netw
   | --- | --- | --- | --- | --- | --- | --- |
   | 100 | `AllowLocal` | `Any` | `VirtualNetwork` | `Any` | `Allow` | Allow traffic during normal operations. With forced tunneling enabled, `0.0.0.0/0` is considered part of the `VirtualNetwork` tag as long as BGP is advertising it to the ExpressRoute or VPN Gateway. |
   | 110 | `DenyInternet` | `Any` | `Internet` | `Any` | `Deny` | Deny traffic directly to the internet if the `0.0.0.0/0` route is withdrawn from the routes advertised (for example, due to an outage or misconfiguration). |
+
+> [!CAUTION]
+> Azure PaaS services that can be injected into a virtual network maybe not compatible with forced tunneling. Control plane operations may still require direct connectivity to specific public IP addresses for the service to operate correctly. It's recommended to check the specific service documentation for networking requirements and eventually exempt the service subnet from the default route propagation. [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) can be used to bypass default route and redirect control plane traffic only, if the specific service tag is available.

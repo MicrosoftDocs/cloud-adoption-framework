@@ -2,12 +2,12 @@
 title: Cloud organizational antipatterns
 description: Avoid cloud adoption antipatterns that can emerge because of organizational issues like misaligned IT departments, partnerships, and engineering assignments.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: think-tank
+ms.custom: think-tank,UpdateFrequency5
 ---
 
 # Cloud organizational antipatterns
@@ -36,7 +36,7 @@ Instead of managing your IT department as a cost center, consider one of these a
 - [Chargeback](../strategy/cloud-accounting.md#chargeback): Business units treat IT costs like operating expenses in their budgets.
 - [Showback or awareness-back](../strategy/cloud-accounting.md#showback-or-awareness-back): IT functions as an agent. In reports back to the business, IT attributes any direct costs to relevant business units.
 
-Use the cloud as a tool to increase cost and business transparency. For instance, implement a [cost management discipline](../govern/cost-management/index.md) to increase cost transparency. Then you'll be more aware of the cost of different business units. You'll view the IT department as an enabler for those units.
+Use the cloud as a tool to increase cost and business transparency. For instance, implement a [Cost Management discipline](../govern/cost-management/index.md) to increase cost transparency. Then you'll be more aware of the cost of different business units. You'll view the IT department as an enabler for those units.
 
 To improve transparency, focus on visibility, accountability, and optimization when moving to the cloud. For more information, see [Build a cost-conscious organization](../organize/cost-conscious-organization.md).
 

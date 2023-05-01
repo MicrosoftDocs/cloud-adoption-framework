@@ -1,8 +1,8 @@
 ---
 title: Planning for Azure server management services
 description: Learn about the tools and prepare for the resources needed to manage Azure server management services.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -88,7 +88,7 @@ In an alternative model for large environments, the application development team
 
 After you've chosen the best way to place and organize workspace and account pairs, make sure that you've created these resources before starting the onboarding process. The automation examples later in this guidance create a workspace and Automation account pair for you. However, if you want to onboard by using the Azure portal and you don't have an existing workspace and Automation account pair, you'll need to create one.
 
-To create a Log Analytics workspace by using the Azure portal, see [Create a workspace](/azure/azure-monitor/logs/quick-create-workspace#create-a-workspace). Next, create a matching Automation account for each workspace by following the steps in [Create an Azure Automation account](/azure/automation/quickstarts/create-account-portal).
+To create a Log Analytics workspace by using the Azure portal, see [Create a workspace](/azure/azure-monitor/logs/quick-create-workspace#create-a-workspace). Next, create a matching Automation account for each workspace by following the steps in [Create an Azure Automation account](/azure/automation/quickstarts/create-azure-automation-account-portal).
 
 > [!NOTE]
 > When you create an Automation account by using the Azure portal, the portal attempts by default to create Run As accounts for both Azure Resource Manager and the classic deployment model resources. If you don't have classic virtual machines in your environment and you're not the Co-Administrator on the subscription, the portal creates a Run As account for Resource Manager, but it generates an error when deploying the classic Run As account. If you don't intend to support classic resources, you can ignore this error.

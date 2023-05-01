@@ -1,24 +1,22 @@
 ---
 title: 'Get started: Manage cloud costs'
 description: Learn the basics of managing costs associated with cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Manage cloud costs
 
-The Cost Management discipline of cloud governance focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio. Enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into a getting started guide that helps create alignment among the involved teams.
+The Cost Management discipline of cloud governance focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio.
 
 However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those supporting functions to help create alignment between the involved teams.
 
 Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team take actions that target its role in cost optimization. Together, these steps will help your organization get started on a journey toward cost optimization.
-
-![Get started with cost optimization](../_images/get-started/cost-map.png)
 
 ## Step 1: Optimize enterprise costs
 

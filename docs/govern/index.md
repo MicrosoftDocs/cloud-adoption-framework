@@ -1,13 +1,13 @@
 ---
 title: Governance in the Microsoft Cloud Adoption Framework for Azure
 description: Use the Cloud Adoption Framework for Azure to learn to assess existing policies, build an initial governance foundation, and iteratively add governance tools.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/08/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Governance in the Microsoft Cloud Adoption Framework for Azure

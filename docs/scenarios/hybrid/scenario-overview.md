@@ -1,8 +1,8 @@
 ---
 title: Introduction to the hybrid and multicloud scenario
 description: Learn about the hybrid and multicloud scenario.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -34,7 +34,7 @@ Delivery of the full journey requires certain key components, or guidance sets:
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-architectures.png"::: | <br> [Reference architectures](/azure/architecture/browse/): These reference solutions aid in accelerating deployment for a number of common hybrid and multicloud scenarios. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices: These level 300+ articles help central IT teams onboard assets to a unified operations solution using Azure Arc, ARM templates, and other relevant Azure products. |
 | <br> :::image type="icon" source="../../_images/hybrid/hybrid-product-docs.png"::: | <br> Feature Azure products: Learn more about the products that support your hybrid and multicloud strategy in Azure. |
-| <br> :::image type="icon" source="../../_images/hybrid/hybrid-skills.png"::: | <br> [Microsoft Learn modules](/learn/azure/): Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions. |
+| <br> :::image type="icon" source="../../_images/hybrid/hybrid-skills.png"::: | <br> [Learn modules](/training/azure/): Gain the hands-on skills required to implement, maintain, and support hybrid and multicloud solutions. |
 
 ## Common customer challenges and supporting guidance
 

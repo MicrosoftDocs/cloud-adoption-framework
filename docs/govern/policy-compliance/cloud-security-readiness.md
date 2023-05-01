@@ -1,13 +1,13 @@
 ---
 title: CISO cloud security readiness guide
 description: Prepare the chief information security office (CISO) for cloud transformation and incremental governance.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # CISO cloud readiness guide
@@ -56,7 +56,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 - [Microsoft Trust Center](https://www.microsoft.com/trust-center)
 - [Common controls hub](https://www.microsoft.com/trust-center/compliance/compliance-overview)
 - [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist)
-- [Regional and country compliance](https://www.microsoft.com/trust-center/compliance/regional-country-compliance)
+- [Regional and country-specific compliance](https://www.microsoft.com/trust-center/compliance/regional-country-compliance)
 
 **Transparency:**
 

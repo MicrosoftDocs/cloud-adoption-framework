@@ -1,13 +1,13 @@
 ---
 title: 'Standard enterprise governance: Improve the Cost Management discipline'
 description: Use the Cloud Adoption Framework for Azure to learn about adding cost controls to a simple governance minimum viable product (MVP).
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Standard enterprise governance guide: Improve the Cost Management discipline
@@ -25,7 +25,7 @@ In the previous phase of this narrative, IT had retired 100% of the DR datacente
 Since then, some things have changed that will affect governance:
 
 - The migration team has begun migrating VMs out of the production datacenter.
-- The application development teams is actively pushing production applications to the cloud through CI/CD pipelines. Those applications can reactively scale with user demands.
+- The application development teams are actively pushing production applications to the cloud through CI/CD pipelines. Those applications can reactively scale with user demands.
 - The business intelligence team within IT has delivered several predictive analytics tools in the cloud. The volumes of data aggregated in the cloud continues to grow.
 - All of this growth supports committed business outcomes. Costs have begun to balloon. Projected budgets are growing faster than expected. The CFO needs improved approaches to managing costs.
 

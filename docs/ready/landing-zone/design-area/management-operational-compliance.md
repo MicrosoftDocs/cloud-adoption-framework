@@ -1,45 +1,52 @@
 ---
 title: Operational compliance considerations
-description: Learn about design area guidance. This guidance helps establish operational compliance across your Azure platform services.
-author: DominicAllen
-ms.author: doalle
-ms.date: 01/04/2022
+description: Overview of operational compliance design considerations and recommendations.
+author: martinekuan
+ms.author: martinek
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Operational compliance considerations
 
-Throughout your cloud journey, your environments will continue to scale and the number of applications and services grow. It's important to put capabilities in place to monitor for deviations from your expected configurations.
+Throughout your cloud adoption journey, your environments will continue to scale and your number of applications and services will continue to grow. It's important that you put capabilities in place to monitor for deviations from your expected configurations.
 
-Your tools should include automation where possible. Automation enables them to scale, covering the growing environment footprint and reducing the risk of gaps in observation.
+Your tools should include automation wherever possible. Automation enables them to scale, covering your growing environment footprint and reducing the risk of gaps in observation.
 
-## Monitoring for configuration drift
+## Monitor for configuration drift
 
 Monitoring your environments for configuration drift is an important part of ensuring stable and consistent operations.
 
-[Azure Policy](/azure/governance/policy/overview) is valuable within cloud management processes. Azure Policy can audit and remediate Azure resources. It can also audit settings inside a machine. The validation is performed by the guest configuration extension and client. The extension, through the client, validates settings like:
+[Azure Policy](/azure/governance/policy/overview) is valuable within cloud management processes. Azure Policy can audit and remediate Azure resources, and can also audit settings inside a machine. Validation is performed by the guest configuration extension and client. The extension, through the client, validates settings such as:
 
-- Operating system configuration.
-- Application configuration or presence.
-- Environment settings.
+- Operating system configuration
+- Application configuration or presence
+- Environment settings
 
-Use this technique as part of your organization management approach within a landing zone. It can assist you with ensuring resources stay in line with the expected configuration.
+Use this technique as part of your organization's management approach within landing zones, where can assist help ensure resources stay in line with an expected configuration.
 
-Learn more about the [guest configuration feature of Azure Policy](/azure/governance/policy/concepts/guest-configuration). Consider how it can be a part of your landing zone management toolkit.
+In addition, using Infrastructure as Code can help you monitor for configuration drift, as well as help you keep your landing zone up to date.  To learn more, see [Keep your Azure landing zone up to date](../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) and [Use infrastructure as code to update Azure landing zones](../../../manage/infrastructure-as-code-updates.md).
+
+Learn about the [guest configuration feature of Azure Policy](/azure/governance/policy/concepts/guest-configuration). Consider how you can use it as part of your landing zone management toolkit.
 
 ## Update management considerations
 
-- Are there existing update management tools used by the organization? Can they be extended to cover the cloud environment or are new tools required?
-- Which teams will be responsible for overseeing update management?
-- Are there groups of resources that share similar update schedules?
-- Are there groups of resources that cannot be updated at the same time for business continuity reasons?
+- Does your organization currently use any update management tools? Can these tools be extended to cover your cloud environment, or will you need new tools?
+- Which teams should be responsible for overseeing update management?
+- Do you have groups of resources that share similar update schedules?
+- Do you have groups of resources that can't be updated at the same time for business continuity reasons?
+
+## Operational compliance recommendations
+
+- Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in your patch management regimen. It also provides your application teams with the ability to manage patch deployment for their VMs, and provides visibility and enforcement capabilities to your central IT team across all VMs.
+- Use Azure Policy to monitor in-guest virtual machine (VM) configuration drift. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps your application team workloads to consume feature capabilities immediately with little effort.
 
 ## Next steps
 
-Learn how workload teams can use a federated model and operationally maintain their workloads.
+Learn how your workload teams can use a federated model and operationally maintain their workloads.
 
 > [!div class="nextstepaction"]
 > [Workloads](management-workloads.md)

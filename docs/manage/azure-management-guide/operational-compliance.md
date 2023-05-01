@@ -1,9 +1,9 @@
 ---
 title: Operational compliance in Azure
 description: Learn how to ensure business stability through operational compliance by reducing the likelihood of outages or vulnerabilities.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -68,12 +68,6 @@ To apply a policy to a resource group:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -95,13 +89,14 @@ Azure Policy is used throughout governance processes. It's also highly valuable 
 
 Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
+An important part of this process is maintaining and updating Azure Policy assignments and updating them as your governance process requires.  Using Infrastructure as Code can help you update and maintain your policy infrastructure.  To learn more, see [Use infrastructure as code to update Azure landing zones](../infrastructure-as-code-updates.md).
+
 ::: zone target="chromeless"
 
 ### Action
 
 Assign a built-in policy to a management group, subscription, or resource group.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/PolicyMenuBlade/GettingStarted]" submitText="Assign Policy" :::
 
 ::: zone-end
 
@@ -120,7 +115,7 @@ To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
 - [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
-- [Cloud Adoption Framework policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
+- [Cloud Adoption Framework: Define corporate policy](../../govern/policy-compliance/policy-definition.md)
 
 ## Azure Blueprints
 
@@ -158,7 +153,6 @@ To create a blueprint:
 1. Select **Next : Artifacts**, and review the artifacts included in the blueprint.
 1. Select **Save draft**.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
 ::: zone-end
 
@@ -187,7 +181,6 @@ To publish blueprint artifacts to your subscription:
 1. In the **Change notes** box, enter your notes.
 1. Select **Publish**.
 
-::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::
 
 ::: zone-end
 

@@ -2,12 +2,12 @@
 title: Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc
 description: Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, devx-track-arm-template
 ---
 
 # Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc
@@ -109,7 +109,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     az deployment group create \
     --resource-group <Name of the Azure resource group> \
     --name <The name of this deployment> \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
     --parameters <The `azuredeploy.parameters.json` parameters file location>
     ```
 
@@ -123,7 +123,7 @@ As mentioned, this deployment will use ARM templates. You will deploy a single t
     az deployment group create \
     --resource-group Arc-Servers-Linux-Demo \
     --name arclinuxdemo \
-    --template-uri https://raw.githubusercontent.com/microsoft/azure-arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
+    --template-uri https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_arc_servers_jumpstart/azure/linux/arm_template/azuredeploy.json \
     --parameters azuredeploy.parameters.json
     ```
 

@@ -1,13 +1,13 @@
 ---
 title: 'Get started: Deliver operational excellence'
 description: Learn the basics of operational excellence during digital transformation.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Deliver operational excellence during digital transformation
@@ -25,8 +25,6 @@ From a cloud perspective, you can manage the impact of risk and cost by making p
 The steps in this article can help the strategy team lead the organizational change management that's required to consistently ensure operational excellence.
 
 Operational excellence across the enterprise and portfolio starts with peer processes of strategy and planning to align and report on organizational change management expectations. The following steps help technical teams deliver the disciplines required to achieve operational excellence.
-
-![Get started with operational excellence](../_images/get-started/operational-excellence-map.png)
 
 ## Step 1: Define a strategy to guide digital transformation and operational excellence expectations
 

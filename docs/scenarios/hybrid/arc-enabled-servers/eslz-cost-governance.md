@@ -7,7 +7,7 @@ ms.date: 10/18/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Cost governance for Azure Arc-enabled servers
@@ -58,11 +58,14 @@ Azure Arc-enabled servers provide two types of services:
 
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 
+> [!Note]
+> In this section, pricing information described in the provided screenshots are examples and provided to allow demonstrating the usage of the Azure Calculator and do not reflect the actual pricing information you might be seeing in your own Azure Arc deployments.
+
 ### Governance
 
-- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+- Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](../../../ready/azure-best-practices/naming-and-tagging.md).
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboards Azure Arc-enabled servers to avoid unnecessary costs.
-- Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and reonboard Azure connected machines.
+- Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and re-onboard Azure connected machines.
 
 ### Azure Monitor
 
@@ -70,17 +73,17 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - Decide on the [required logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for Azure Arc-enabled Windows and Linux servers, to be collected in the Log Analytics workspace.
 - Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to estimate Azure Arc-enabled servers monitoring costs, for Azure Log Analytics ingestion, alerts, and notifications.
 
-[ ![Screenshot that shows the Azure pricing calculator.](../media/pricing-calculator.png)](../media/pricing-calculator.png#lightbox)
+[![Screenshot that shows the Azure pricing calculator.](./media/pricing-calculator.png)](./media/pricing-calculator.png#lightbox)
 
-[ ![Screenshot that shows Azure pricing calculator for Azure Monitor.](../media/pricing-calculator-azure-monitor.png)](../media/pricing-calculator-azure-monitor.png#lightbox)
+[![Screenshot that shows Azure pricing calculator for Azure Monitor.](./media/pricing-calculator-azure-monitor.png)](./media/pricing-calculator-azure-monitor.png#lightbox)
 
 - Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
-[ ![Screenshot that shows Azure Cost Management and Billing.](../media/cost-management-billing-azure.png)](../media/cost-management-billing-azure.png#lightbox)
+[![Screenshot that shows Azure Cost Management and Billing.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
-:::image type="content" source="../media/insights-log-analytics.png" alt-text="Screenshot that shows Log Analytics insights." lightbox="../media/insights-log-analytics.png":::
+:::image type="content" source="./media/insights-log-analytics.png" alt-text="Screenshot that shows Log Analytics insights." lightbox="./media/insights-log-analytics.png":::
 
 - Evaluate possible data ingestion volume reducing. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
 - Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need to be retained for long periods, but security logs may need to be retained for extended periods.
@@ -99,11 +102,11 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure pricing calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-:::image type="content" source="../media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="../media/azure-sentinel-costs.png":::
+:::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
 
 - Use [Azure Cost Management + Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
-:::image type="content" source="../media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="../media/cost-management-azure-sentinel.png":::
+:::image type="content" source="./media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="./media/cost-management-azure-sentinel.png":::
 
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace used by Microsoft Sentinel.
 - Filter the [right level of logs and events](/azure/azure-monitor/agents/log-analytics-agent#data-collected) for the Azure Arc-enabled Windows and Linux servers to be collected in the Log Analytics workspace.
@@ -119,7 +122,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Use Azure Cost Management + Billing to understand the Azure Policy guest configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in guest configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
-:::image type="content" source="../media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="../media/cost-management-policy-azure.png":::
+:::image type="content" source="./media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="./media/cost-management-policy-azure.png":::
 
 ### Azure Automation configuration management
 
@@ -130,21 +133,21 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor certificate renewal and secrets operations on your Azure Arc-enabled servers.
 
-:::image type="content" source="../media/key-vault-insights.png" alt-text="Screenshot that shows Azure Key Vault insights." lightbox="../media/key-vault-insights.png":::
+:::image type="content" source="./media/key-vault-insights.png" alt-text="Screenshot that shows Azure Key Vault insights." lightbox="./media/key-vault-insights.png":::
 
 ### Azure Private Link
 
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
 - Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
-:::image type="content" source="../media/cost-private-endpoints.png" alt-text="Screenshot that shows an example of Azure Private Link costs." lightbox="../media/cost-private-endpoints.png":::
+:::image type="content" source="./media/cost-private-endpoints.png" alt-text="Screenshot that shows an example of Azure Private Link costs." lightbox="./media/cost-private-endpoints.png":::
 
 ## Next steps
 
 For more guidance for your hybrid cloud adoption journey, review the following resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers
-- Review the Cloud Adoption Framework [best practices and recommendations](/azure/cloud-adoption-framework/get-started/manage-costs) to efficiently manage your cloud costs.
-- To learn more about Azure Arc, check out the [Azure Arc learning path on Microsoft Learn](/learn/paths/manage-hybrid-infrastructure-with-azure-arc/)
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Review the Cloud Adoption Framework [best practices and recommendations](../../../get-started/manage-costs.md) to efficiently manage your cloud costs.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
