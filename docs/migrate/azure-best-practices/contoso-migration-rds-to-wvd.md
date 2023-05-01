@@ -333,9 +333,9 @@ Both user and non-user data should be saved or backed up to OneDrive, SharePoint
 
 For more information about FSLogix:
 
--**[Tutorial: Configure profile containers](https://github.com/fslogix/tutorial-configure-profile-containers)**
--**[Configuration examples](https://github.com/fslogix/concepts-configuration-examples)**
--**[FSLogix FAQ](https://github.com/fslogix/overview-faq)**
+- **[Tutorial: Configure profile containers](https://github.com/fslogix/tutorial-configure-profile-containers)**
+- **[Configuration examples](https://github.com/fslogix/concepts-configuration-examples)**
+- **[FSLogix FAQ](https://github.com/fslogix/overview-faq)**
 
 ### Step 5: Migrate VMs that must persist to Azure (Optional)
 
