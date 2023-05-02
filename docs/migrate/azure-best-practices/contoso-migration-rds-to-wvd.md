@@ -385,7 +385,7 @@ After host pools are assigned to users, Contoso finalizes the migration of those
       - [Publish built-in apps in Azure Virtual Desktop](/azure/virtual-desktop/publish-apps).
 
 1. Managing session hosts
-   - Once the session hosts are deployed and joined to the domain, they can be managed using existing tools like SCCM or Group Policy. If the session hosts are Azure AD joined, then they can be managed with Microsoft Intune. To get started with Intune, Contoso can refer to the [Microsoft Intune documentation](https://learn.microsoft.com/en-us/mem/intune/fundamentals/get-started-with-intune).
+   - Once the session hosts are deployed and joined to the domain, they can be managed using existing tools like SCCM and Group Policy. Microsoft Intune can also be used to help you manage your devices and apps. To get started with Intune, refer to the [Microsoft Intune documentation](https://learn.microsoft.com/en-us/mem/intune/fundamentals/get-started-with-intune).
 
 1. User access
    - As the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
