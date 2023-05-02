@@ -428,7 +428,7 @@ After host pools are assigned to users, Contoso finalizes the migration of those
    - Contoso will use Azure Virtual Desktop [Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
    - Contoso will monitor utilization across their entire Azure Virtual Desktop deployments using Azure Virtual Desktop [Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
-1. Configure Business continuity and disaster recovery (Optional)
+1. Configure Business continuity and disaster recovery
 
    - Azure Virtual Desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
 
