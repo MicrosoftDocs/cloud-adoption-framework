@@ -232,7 +232,7 @@ At this point, the users have saved or backed up their important profile data. C
 ### Step 5: Migrate VMs that must persist to Azure (Optional)
 
 > [!IMPORTANT]
-> - Instead of migrating RDS hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace ones, these will ensure compatibility and remove any possible bloat from the existing on-premises images.
+> - Instead of migrating RDS hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from marketplace images, as these will ensure compatibility and remove any possible bloat from the existing on-premises images.
 > - For scenarios on which VMs must persist, the steps on this guide provide details on migrating on-premises RDS hosts to Azure Virtual Desktop.
 
 The next step in the migration process for Contoso is to migrate the RDS session hosts to Azure that need to persist into Azure Virtual Desktop. To do this, Contoso goes back to the *Azure Migrate: Server Migration* job it created on step 1.
