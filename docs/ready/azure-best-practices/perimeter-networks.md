@@ -34,11 +34,11 @@ For example templates you can use to implement your own perimeter networks, see 
 
 ## Perimeter network topology
 
-The following diagram shows an example [hub and spoke network](./hub-spoke-network-topology.md) with two perimeter networks that enforce access to the internet and to an on-premises network.
+The following diagram shows an example [hub and spoke network](./hub-spoke-network-topology.md) with perimeter networks that enforce access to the internet and to an on-premises network.
 
 ![Diagram that shows an example of a hub and spoke network topology with two perimeter networks.](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 
-Both perimeter networks are in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business. This support uses multiple farms of web application firewalls (WAFs) and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows connectivity via virtual private network (VPN) or Azure ExpressRoute as needed.
+The perimeter networks are connected to the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business. This support uses multiple farms of web application firewalls (WAFs) and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows connectivity to on-premises or partner networks via virtual private network (VPN) or Azure ExpressRoute as needed.
 
 ## Virtual networks
 
