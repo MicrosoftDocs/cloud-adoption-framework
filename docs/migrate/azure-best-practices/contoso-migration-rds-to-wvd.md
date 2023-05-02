@@ -41,7 +41,7 @@ With the business drivers in mind, Contoso defines the goals for this migration:
 - Modernize the desktop and application virtualization environment for the cloud.
 - Take advantage of existing [Microsoft 365 licenses](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses) with Azure Virtual Desktop.
 - Improve the security of corporate data while providing service to remote and hybrid users.
-- Optimize the new environment for cost and enterprise scale growth.
+- Optimize the new environment for cost and enterprise-scale growth.
 
 These goals support the decision to use Azure Virtual Desktop and validate it as the best migration method for Contoso.
 
@@ -68,7 +68,7 @@ After assessing current RDS deployment, defining goals and requirements, Contoso
 
 ## Proposed architecture
 
-The following diagram outlines the architecture that will be built to migrate RDS on-premises deployment to Azure Virtual Desktop, the activities will include:
+The following diagram outlines the architecture that will be built to migrate RDS on-premises deployment to Azure Virtual Desktop. This deployment process involves the following things:
 
 - Sync Active Directory to Azure Active Directory.
 - Deploy Azure Virtual Desktop [Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
