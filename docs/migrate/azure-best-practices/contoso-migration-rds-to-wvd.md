@@ -41,7 +41,7 @@ With the business drivers in mind, Contoso defines the goals for this migration:
 - Modernize the desktop and application virtualization environment for the cloud.
 - Take advantage of existing [Microsoft 365 licenses](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses) with Azure Virtual Desktop.
 - Improve the security of corporate data while providing service to remote and hybrid users.
-- Optimize the new environment for cost and enterprise scale growth.
+- Optimize the new environment for cost and enterprise-scale growth.
 
 These goals support the decision to use Azure Virtual Desktop and validate it as the best migration method for Contoso.
 
