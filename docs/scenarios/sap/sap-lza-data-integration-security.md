@@ -23,13 +23,13 @@ Data Ingestion Layer:
     - Azure Data Factory 
     - Self-Hosted Integration Runtime VM
 
-The following diagram is a reference architecture of an SAP Data Integration Security on Azure. Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-extend-security-architecture.vsdx) and modify it to fit your specific business and technical requirements. 
+The following diagram is a reference architecture of an SAP Data Integration Security on Azure. Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-extend-security-architecture-updated.vsdx) and modify it to fit your specific business and technical requirements. 
 
 :::image type="content" source="./media/sap-extend-security-architecture.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure.":::
 
 ### SAP Security 
 The source systems referenced in the diagram - section 1 
-![Screenshot that shows SAP source systems.](./media/sap-extend-security-architecture-sap-sources.png)
+![Screenshot that shows SAP source systems.](./media/sap-extend-security-architecture-sap-sources1.png)
 
 SAP Security Considerations - SAP has detailed security guidance on different SAP Products. Consider analysing the recommendations in SAP’s guidance 
   - [SAP BW security Guide](https://help.sap.com/docs/SAP_BW4HANA/d3b558c9e49d4eb495c99c63a0ae549a/4f0b56878a585f86e10000000a42189b.html?q=SAP%20Bw4HANA%20security) 
@@ -67,7 +67,7 @@ Considerations and Recommendations for Azure Data Lake Gen2
 ### Azure Data Factory security
 
 ADF section 3 
-![Screenshot that shows ADF.](./media/sap-extend-security-architecture-adf.png)
+![Screenshot that shows ADF.](./media/sap-extend-security-architecture-adf1.png)
 
 - Consider the Security considerations for data movement in Azure Data Factory for the following scenarios mentioned [here](https://learn.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations)
     - Cloud scenario: In this scenario, both your source and your destination are publicly accessible through the internet. 
@@ -106,7 +106,7 @@ There are two types of supported managed identities:
 ### Self-Hosted Integration runtime VM connections and security
 
 SHIR - section 4 
-![Screenshot that shows SHIR.](./media/sap-extend-security-architecture-shir.png)
+![Screenshot that shows SHIR.](./media/sap-extend-security-architecture-shir1.png)
 
 - Consider the details mentioned [here](https://learn.microsoft.com/en-us/azure/data-factory/data-movement-security-considerations) for On-premises data store credentials:  The credentials can be stored within data factory or be referenced by data factory during the runtime from Azure Key Vault. If storing credentials within data factory, it is always stored encrypted on the self-hosted integration runtime.
  
@@ -141,14 +141,14 @@ SHIR - section 4
 ### Azure Databricks Security
 
 Azure Databricks Section 5
-![Screenshot that shows Azure DataBricks.](./media/sap-extend-security-architecture-azure-databricks.png)
+![Screenshot that shows Azure DataBricks.](./media/sap-extend-security-architecture-azure-databricks1.png)
 
 Consider the Azure security baseline for Azure Databricks mentioned here - [Azure security baseline for Azure Databricks](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-databricks-security-baseline?toc=%2Fazure%2Fdatabricks%2Ftoc.json). This security baseline applies guidance from the Microsoft cloud security benchmark version 1.0 to Azure Databricks. The Microsoft cloud security benchmark provides recommendations on how you can secure your cloud solutions on Azure.
 
 ### Azure Synapse Security
 
 Azure Synapse Security - Section 6
-![Screenshot that shows Synapse.](./media/sap-extend-security-architecture-synapse.png)
+![Screenshot that shows Synapse.](./media/sap-extend-security-architecture-synapse1.png)
 
 Azure Synapse implements a multi-layered security architecture for end-to-end protection of your data. There are five layers:
 
