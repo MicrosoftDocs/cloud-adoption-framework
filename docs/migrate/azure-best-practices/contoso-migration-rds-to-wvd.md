@@ -15,6 +15,8 @@ ms.custom: think-tank
 
 [Azure Virtual Desktop](/azure/virtual-desktop/overview) is a desktop and application virtualization service that runs on the cloud. It's the only desktop and application virtualization infrastructure that delivers simplified management, Windows 10 and Windows 11 Enterprise multi-session or Windows Server operating systems, and optimizations for Microsoft 365 Apps for the enterprise. You can deploy and scale Windows desktops and applications on Azure in minutes, and get built-in security and compliance features.
 
+In this article, Contoso migrates and modernizes their on-premises VDI environment based on Remote Desktop Services (RDS) in Windows Server to Azure Virtual Desktop.
+
 > [!IMPORTANT]
 > This guidance will not apply for migrating from other VDI solutions like Citrix or VMware Horizon.
 
