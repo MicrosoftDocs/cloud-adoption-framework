@@ -52,7 +52,8 @@ The [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/
 
 ### Audit Logging
 
-From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. Diagnostic settings should be enabled that sends at least the administrative and security log categories (audit) for all sandbox subscriptions. As per Azure Landing Zone guidance, they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview).
+From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. A diagnostic setting that includes at least the administrative and security log categories (audit) should be enabled for all sandbox subscriptions. As per Azure Landing Zone guidance, they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview).
+
 
 The [current Azure Landing Zone policy guidance](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root) already includes an Azure policy definition ("Configure Azure Activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The Sandboxes Management Group should inherit this policy enabling diagnostic logging of the sandbox subscriptions.
 
