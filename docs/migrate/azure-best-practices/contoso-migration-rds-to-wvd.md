@@ -136,7 +136,7 @@ Once adequate amount of data is captured per scenario, Contoso reviews the asses
 1. **Single-session (persistent):** RDS hosts running Windows 10 or Windows 11.
 
 > [!NOTE]
-> To improve performance of Azure Virtual Desktop users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the Azure Virtual Desktop environment. This same methodology should be applied to platform shared services (domain Controllers, DNS, network devices, among others) that Azure Virtual Desktop will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
+> To improve performance of Azure Virtual Desktop users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the Azure Virtual Desktop environment. This same methodology should be applied to platform shared services (domain Controllers, DNS, network devices, among others) that Azure Virtual Desktop will rely on. Best practice is to host these services in the same Azure region as the Azure Virtual Desktop session hosts.
 
 ### Step 3: Deploy Azure Virtual Desktop Landing Zone Accelerator (LZA)
 
