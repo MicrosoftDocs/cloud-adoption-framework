@@ -330,6 +330,9 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
    > [!NOTE]
    > Learn more about BCDR options with *[Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)*.
 
-## Conclusion
+## Next steps
 
-In this article, Contoso moved its RDS deployment to Azure Virtual Desktop.
+Learn more about Azure Virtual Desktop at:
+
+- *[Azure Virtual Desktops Documentation](/azure/virtual-desktop/)*.
+- *[Enterprise-scale support for Microsoft Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)*
