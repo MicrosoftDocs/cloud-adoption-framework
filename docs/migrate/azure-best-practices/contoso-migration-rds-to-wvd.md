@@ -86,14 +86,14 @@ Contoso will go through the following flow to migrate from on-premises RDS to Az
 
 The migration flow will be structured in the following migration steps:
 
-1. [Define prerequisites](./contoso-migration-rds-to-wvd.md#step-1-prerequisites).
-1. [Assess the current RDS on-premises environment](./contoso-migration-rds-to-wvd.md#step-2-assess-the-current-rds-on-premises-environment).
-1. [Deploy Azure Virtual Desktop Landing Zone Accelerator (LZA)](./contoso-migration-rds-to-wvd.md#step-3-deploy-azure-virtual-desktop-landing-zone-accelerator-lza).
-1. [Prepare users for new profiles using FSLogix](./contoso-migration-rds-to-wvd.md#step-4-prepare-users-for-new-profiles-using-fslogix).
-1. [Migrate VMs that must persist to Azure (optional)](./contoso-migration-rds-to-wvd.md#step-5-migrate-vms-that-must-persist-to-azure-optional).
-1. [Migrate VM images that must persist to Azure (optional)](./contoso-migration-rds-to-wvd.md#step-6-migrate-vm-images-that-must-persist-to-azure-optional).
-1. [Manage the Azure Virtual Desktop](./contoso-migration-rds-to-wvd.md#step-7-manage-azure-virtual-desktop).
-1. [Optimize the Azure Virtual Desktop](./contoso-migration-rds-to-wvd.md#step-8-optimize-azure-virtual-desktop).
+1. [Define prerequisites](#step-1-prerequisites).
+1. [Assess the current RDS on-premises environment](#step-2-assess-the-current-rds-on-premises-environment).
+1. [Deploy Azure Virtual Desktop Landing Zone Accelerator (LZA)](#step-3-deploy-azure-virtual-desktop-landing-zone-accelerator-lza).
+1. [Prepare users for new profiles using FSLogix](#step-4-prepare-users-for-new-profiles-using-fslogix).
+1. [Migrate VMs that must persist to Azure (optional)](#step-5-migrate-vms-that-must-persist-to-azure-optional).
+1. [Migrate VM images that must persist to Azure (optional)](#step-6-migrate-vm-images-that-must-persist-to-azure-optional).
+1. [Manage the Azure Virtual Desktop](#step-7-manage-azure-virtual-desktop).
+1. [Optimize the Azure Virtual Desktop](#step-8-optimize-azure-virtual-desktop).
 
 ## Migration
 
