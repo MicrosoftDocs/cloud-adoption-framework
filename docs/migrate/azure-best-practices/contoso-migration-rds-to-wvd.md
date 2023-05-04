@@ -68,12 +68,7 @@ After assessing current RDS deployment, defining goals and requirements, Contoso
 
 ## Proposed architecture
 
-The following diagram outlines the architecture that will be built to migrate RDS on-premises deployment to Azure Virtual Desktop. This deployment process involves the following things:
-
-- Sync Active Directory to Azure Active Directory.
-- Deploy Azure Virtual Desktop [Landing Zone Accelerator (LZA)](https://github.com/Azure/avdaccelerator#avd-accelerator-baseline).
-- Prepare users for new profiles using FSLogix.
-- Migrate on-premises VMs that must persist (optional).
+The following diagram outlines the architecture that will be built to migrate RDS on-premises deployment to Azure Virtual Desktop.
 
    :::image type="content" border="false" source="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png" alt-text="*Figure 1: Proposed architecture: Azure Virtual Desktop LZA will deploy the resources contained under the Azure Virtual Desktop LZ Subscription*" lightbox="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png":::
    *Figure 1: Proposed architecture: Azure Virtual Desktop LZA will deploy the resources contained under the Azure Virtual Desktop LZ Subscription*
@@ -81,13 +76,6 @@ The following diagram outlines the architecture that will be built to migrate RD
    Download [Visio file](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
 
 ## Migration process
-
-Contoso will go through the following flow to migrate from on-premises RDS to Azure Virtual Desktop:
-
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png":::
-   *Figure 2: The migration process.*
-
-## Migration steps
 
 Contoso will now progress through the steps required to complete the Azure Virtual Desktop migration:
 
@@ -98,6 +86,13 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 1. Migrate VMs that must persist to Azure (optional).
 1. Manage the Azure Virtual Desktop.
 1. Optimize the Azure Virtual Desktop.
+
+The following diagram outlines the migrate process flow from on-premises RDS to Azure Virtual Desktop:
+
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png":::
+   *Figure 2: The migration process.*
+
+## Migration
 
 ### Step 1: Prerequisites
 
