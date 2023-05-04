@@ -115,7 +115,7 @@ Contoso will now progress through the steps required to complete the Azure Virtu
        > - *[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
        > - *[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
    > - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
-   > - Firewall rules *[Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines)* to ensure all required URLs are whitelisted for connectivity from hosts and clients to Azure Virtual Desktop resources.
+   > - Firewall rules **[Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines)** to allow all required URLs from hosts and clients to Azure Virtual Desktop resources.
    > - Azure Virtual Desktop *[LZA Baseline Deployment URL Requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)*.
 
 ### Step 2: Assess the current RDS on-premises environment
@@ -280,7 +280,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
    - [Manage application groups using PowerShell or the Azure CLI](/azure/virtual-desktop/manage-app-groups-powershell?tabs=azure-powershell).
    - [Publish built-in apps in Azure Virtual Desktop](/azure/virtual-desktop/publish-apps).
 
-1. **Managing session hosts**: once the session hosts are deployed and joined to the domain, they can be managed using existing tools like SCCM and Group Policy. Microsoft Intune can also be used to help you manage your devices and apps. To get started with Intune, refer to the [Microsoft Intune documentation](https://learn.microsoft.com/en-us/mem/intune/fundamentals/get-started-with-intune).
+1. **Managing session hosts**: once the session hosts are deployed and joined to the domain, they can be managed using existing tools like SCCM and Group Policy. Microsoft Intune can also be used to help you manage your devices and apps. To get started with Intune, refer to the [Microsoft Intune documentation](/mem/intune/fundamentals/get-started-with-intune).
 
 1. **User access assignments**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
 
