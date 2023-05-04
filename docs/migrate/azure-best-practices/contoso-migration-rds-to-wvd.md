@@ -56,7 +56,7 @@ Additional benefits might include:
 - Access to Azure Virtual Desktop from anywhere.
 - Optimized Microsoft 365 Apps for enterprise environment.
 - Azure Virtual Desktop for dev/test environments.
-- Removing the need for RDS CAL (Client Access License) licenses, when replacing Windows server multi-session hosts with Windows 10 or Windows 11 multi-session.
+- Removing the need for RDS CAL (Client Access License) licenses, when replacing Windows Server multi-session hosts with Windows 10 or Windows 11 multi-session.
 
 ## Current architecture
 
