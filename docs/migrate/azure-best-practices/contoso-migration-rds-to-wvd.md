@@ -123,7 +123,7 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 To collect additional data on performance and sizing from the current environment, it is recommended to run an assessment of the RDS on-premises environment, to achieve this Contoso its tool of preference. The assessment will cover the following information for each RDS scenario:
 
 - Number of users in each persona.
-- Top applications and software by user persona.
+- Applications in use by users.
 - Resource consumption by user.
 - Resource utilization averages by user persona.
 - RDS host performance data.
