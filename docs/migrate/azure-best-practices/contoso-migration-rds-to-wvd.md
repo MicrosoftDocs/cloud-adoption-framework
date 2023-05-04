@@ -22,7 +22,7 @@ In this article, Contoso migrates and modernizes their on-premises VDI environme
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environments. <br><br> Run workloads in an Azure Virtual Desktop environment.
+| [Azure Migrate](/azure/migrate/migrate-services-overview) | Run workloads in an Azure Virtual Desktop environment.
 
 ## Business drivers
 
@@ -120,42 +120,21 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 
 ### Step 2: Assess the current RDS on-premises environment
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. In the search bar, type *Azure Migrate* and select the matching service entry.
-1. In **Get started** for Azure Migrate, select **Discover, assess and migrate**.
+To collect additional data on performance and sizing from the current environment, it is recommended to run an assessment of the RDS on-premises environment, to achieve this Contoso its tool of preference. The assessment will cover the following information for each RDS scenario:
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate.":::
-   *Figure 3: Getting started.*
+- Number of users in each persona.
+- Top applications and software by user persona.
+- Resource consumption by user.
+- Resource utilization averages by user persona.
+- RDS host performance data.
+- Users concurrency reports.
+- Top software packages in use.
 
-1. Select **Create project**.
+Once adequate amount of data is captured per scenario, Contoso reviews the assessment's insights and determines the most cost-effective path will be the use of both pooled and personal Azure Virtual Desktop resources, to replace the existing RDS Scenarios:
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button.":::
-   *Figure 4: Creating a new Azure Migrate project.*
+1. **Multi-session (non-persistent):** RDS hosts running Windows server and allowing multiple users connections to the same host.
+1. **Single-session (persistent):** RDS hosts running Windows 10 or Windows 11.
 
-1. Set the subscription, resource group, project name, and geography for the migrate job data, and then select **Create**.
-
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project.":::
-   *Figure 5: Adding job data to the migration.*
-
-   > [!IMPORTANT]
-   > This location isn't where the new Azure Virtual Desktop environment will be deployed. Only the data related to the Azure Migrate project will be stored here.
-
-1. To collect additional data on performance and sizing from the current environment, running an assessment with a preferred tool is recommended. With a preferred tool chosen, Contoso looks for the following information:
-   - Number of users in each persona
-   - Applications in use by users
-   - Resource consumption by user
-   - Resource utilization averages by user persona
-   - VDI server performance data
-   - Concurrent user reports
-   - Top software packages in use
-1. Once adequate amount of data is captured, Contoso reviews the assessment and analyzes the data to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources. 
-
-> [!IMPORTANT]
-> Reviewing the assessment data, Contoso defines two RDS scenarios:
->
-> 1. **Multi-session (non-persistent):** RDS hosts running Windows server and allowing multiple users connections to the same host.
-> 1. **Single-session (persistent):** RDS hosts running Windows 10 or Windows 11.
-> 
 > [!NOTE]
 > To improve performance of Azure Virtual Desktop users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the Azure Virtual Desktop environment. This same methodology should be applied to platform shared services (domain Controllers, DNS, network devices, among others) that Azure Virtual Desktop will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
 
@@ -202,11 +181,31 @@ At this point, the users have saved or backed up their important profile data. C
 
 ### Step 5: Migrate VMs that must persist to Azure (optional)
 
-The next optional step in the migration process for Contoso is to migrate the RDS host (running Windows Server) that must persist to Azure Virtual Desktop. To do this, Contoso goes back to the *Azure Migrate: Server Migration* job it created on step 2.
+The next optional step in the migration process for Contoso is to migrate the RDS host (running Windows Server) that must persist to Azure Virtual Desktop. To do this, Contoso goes through *Azure Migrate: Server Migration* steps:
 
 > [!IMPORTANT]
 > - Instead of migrating RDS hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. Tooling for building new images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*
 > - Azure Migrate only supports Windows Server Operating System migrations. Client Operating Systems such as Windows 10 can be Migrated using *[Azure Site Recovery replication and failover](./azure/site-recovery/migrate-tutorial-on-premises-azure#migrate-with-site-recovery)*, once these VMs are available in Azure, skip to section 5 to install and configure the AVD agents.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. In the search bar, type *Azure Migrate* and select the matching service entry.
+1. In **Get started** for Azure Migrate, select **Discover, assess and migrate**.
+
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate.":::
+   *Figure 3: Getting started.*
+
+1. Select **Create project**.
+
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button.":::
+   *Figure 4: Creating a new Azure Migrate project.*
+
+1. Set the subscription, resource group, project name, and geography for the migrate job data, and then select **Create**.
+
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project.":::
+   *Figure 5: Adding job data to the migration.*
+
+   > [!IMPORTANT]
+   > This location isn't where the new Azure Virtual Desktop environment will be deployed. Only the data related to the Azure Migrate project will be stored here.
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
@@ -303,4 +302,4 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 Learn more about Azure Virtual Desktop at:
 
 - *[Azure Virtual Desktops Documentation](/azure/virtual-desktop/)*.
-- *[Enterprise-scale support for Microsoft Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)*
+- *[Enterprise-scale support for Microsoft Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)*.
