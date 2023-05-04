@@ -140,54 +140,22 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    > [!IMPORTANT]
    > This location isn't where the new Azure Virtual Desktop environment will be deployed. Only the data related to the Azure Migrate project will be stored here.
 
-1. Select **VDI**, and then select **Click here** under **Assessment tools**.
-
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-vdi-add-tool.png" alt-text="Screenshot that shows adding an assessment tool on the VDI page.":::
-   *Figure 6: Adding an assessment tool*
-
-   > [!NOTE]
-   > The migration tool **Azure Migrate: Server Migration** is automatically added during the project creation.
-
-1. Select **Lakeside: SysTrack** as the assessment tool, and then select **Add**.
-
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-select-lakeside-systrack.png" alt-text="Screenshot that shows adding the Lakeside:SysTrack tool to the project.":::
-   *Figure 7: Adding tools to the migration.*
-
-1. Start the assessment of the current environment by selecting **Register with Azure Migrate** in the Lakeside tool.
-
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-register-lakeside.png" alt-text="Screenshot that shows Lakeside registration with Azure Migrate.":::
-   *Figure 8: Register with Azure Migrate.*
-
-1. Contoso connects Azure Migrate and Lakeside, and accepts any requested permissions.
-
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/lakeside-login.png" alt-text="Screenshot of signing in to connect Azure and Lakeside." lightbox="./media/contoso-migration-rds-to-wvd/lakeside-login.png":::
-   *Figure 9: Connecting Azure to Lakeside.*
-
-1. Contoso continues with the Lakeside tool to create a new tenant and start assessing the current on-premises RDS environment. From the dashboard, Contoso can access the deployment guide, download the assessment client to deploy to the current environment, and review the data collected from these agents.
-
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png" alt-text="Screenshot of the Lakeside dashboard." lightbox="./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png":::
-   *Figure 10: The Lakeside dashboard.*
-
-1. After (3) standard business cycles with average usage an adequate amount of data is captured and Contoso reviews the assessment data to determine the best migration path. This assessment data includes the raw assessment data from the desktops data and the data broken into different user personas. This information includes the:
-
-    - Number of users in each persona.
-    - Applications in use by users.
-    - Resource consumption by user.
-    - Resource utilization averages by user persona.
-    - VDI server performance data.
-    - Concurrent user reports.
-    - Top software packages in use.
-
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png" alt-text="Screenshot of Lakeside dashboard reports." lightbox="./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png":::
-   *Figure 11: Lakeside dashboard reports.*
-
-    The data is analyzed by Contoso to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources.
+1. To collect additional data on performance and sizing from the current environment, running an assessment with a preferred tool is recommended. With a preferred tool chosen, Contoso looks for the following information:
+   - Number of users in each persona
+   - Applications in use by users
+   - Resource consumption by user
+   - Resource utilization averages by user persona
+   - VDI server performance data
+   - Concurrent user reports
+   - Top software packages in use
+1. Once adequate amount of data is captured, Contoso reviews the assessment and analyzes the data to determine the most cost-effective use of both pooled Azure Virtual Desktop resources and personal Azure Virtual Desktop resources. 
 
 > [!IMPORTANT]
 > Reviewing the assessment data, Contoso defines two RDS scenarios:
 >
 > 1. **Multi-session (non-persistent):** RDS hosts running Windows server and allowing multiple users connections to the same host.
 > 1. **Single-session (persistent):** RDS hosts running Windows 10 or Windows 11.
+> 
 > [!NOTE]
 > To improve performance of Azure Virtual Desktop users flows, Contoso will also need to migrate application servers and data sources that will be consumed by the Azure Virtual Desktop environment. This same methodology should be applied to platform shared services (domain Controllers, DNS, network devices, among others) that Azure Virtual Desktop will rely on. Best practice is to host these services in the same Azure Region as the Azure Virtual Desktop session hosts.
 
