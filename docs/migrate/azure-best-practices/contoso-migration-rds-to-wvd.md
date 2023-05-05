@@ -231,7 +231,7 @@ The next step in the migration process for Contoso is to migrate the RDS session
    - Install Azure Virtual Desktop agents and register VMs to the host pool following the guidance outlined in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
 
 > [!NOTE]
-> Contoso can also automate this process by using a VM custom script extension to deploy the Azure Virtual Desktop agent (**[Azure Virtual Desktop LZA Automation](https://github.com/Azure/avdaccelerator)**).
+> Another option for Contoso to automate this process, is to use VM custom script extension to deploy the Azure Virtual Desktop agents, this process is contained in the (**[Azure Virtual Desktop LZA Automation](https://github.com/Azure/avdaccelerator)**).
 
 At this point, Contoso finalizes the migration of the machines that must persist and continues to gradually migrate the rest of the on-premises RDS session hosts to Azure Virtual Desktop.
 
