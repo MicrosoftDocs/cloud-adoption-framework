@@ -168,6 +168,8 @@ Azure Virtual Desktop doesn't support user profile disks (UPDs), so Contoso need
 Both user and non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
 1. Both user and non-user data should be saved or backed up to OneDrive, SharePoint or other document repositories.
 
+Contoso has now enabled Microsoft Edge enterprise sync to export browser data and known-folder redirection to OneDrive to save both user and non-user data.
+
 > [!IMPORTANT]
 > Users might require settings or application data in their profile from third party or other line-of-business applications. If that data is necessary, you should preserve it following the recommendation of the vendor. Microsoft is not responsible for this data.
 
@@ -184,7 +186,7 @@ At this point, the users have saved or backed up their important profile data. C
 The next step in the migration process for Contoso is to migrate the RDS session host (running Windows Server) that must persist to Azure Virtual Desktop. To do this, Contoso goes through *Azure Migrate: Server Migration* steps:
 
 > [!IMPORTANT]
-> - Instead of migrating RDS session hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. Tooling for building new images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*
+> - Instead of migrating RDS session hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. 
 > - Azure Migrate only supports Windows Server Operating System migrations. Client Operating Systems such as Windows 10 can be Migrated using *[Azure Site Recovery replication and failover](/azure/site-recovery/migrate-tutorial-on-premises-azure#migrate-with-site-recovery)*, once these VMs are available in Azure, skip to section 5 to install and configure the AVD agents.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -229,34 +231,34 @@ The next step in the migration process for Contoso is to migrate the RDS session
    - Install Azure Virtual Desktop agents and register VMs to the host pool following the guidance outlined in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
 
 > [!NOTE]
-> Contoso can automate this process by using `msiexec` commands and passing in the registration token or by using VM custom script extension to deploy the agents Azure Virtual Desktop (*[LZA Automation](https://github.com/Azure/avdaccelerator)*).
+> Contoso can also automate this process by using a VM custom script extension to deploy the Azure Virtual Desktop agent (**[Azure Virtual Desktop LZA Automation](https://github.com/Azure/avdaccelerator)**).
 
 At this point, Contoso finalizes the migration of the machines that must persist and continues to gradually migrate the rest of the on-premises RDS session hosts to Azure Virtual Desktop.
 
 ### Step 6: Migrate VM images that must persist to Azure (optional)
 
-> [!IMPORTANT]
-> Instead of migrating VM images, Microsoft recommends to use Azure market place or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. Tooling for building new VM images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*.
+> [!Important]
+> Instead of migrating VM images, Microsoft recommends building a new image in Azure based off a vanilla marketplace image. This will ensure compatibility with the image and reduce unwanted dependencies or configurations that may have been present in the original VM image. Additionally, building a new image in Azure from a marketplace image can help streamline the deployment process and ensure that the image is up-to-date with the latest security patches and updates. Tooling for building new images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*
 
 For scenarios on which VM image must persist to Azure Virtual Desktop, the following article provides guidance to  [prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 ### Step 7: Manage Azure Virtual Desktop
 
-1. **Publish applications and desktops**: Azure Virtual Desktop LZA deployment creates by default one application group for desktops and has the option to also deploy a remote apps application group. Post deployment there is no need to manage desktops as they are published by default, remote apps can be managed by following the guidance on the docs:
+1. **Publish applications and desktops**: Azure Virtual Desktop LZA deployment by default creates one application group for desktops and has the option to also deploy a RemoteApp application group. Post deployment there is no need to publish desktops as they are published by default. RemoteApps can be managed by following the guidance:
    - [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
    - [Manage application groups using PowerShell or the Azure CLI](/azure/virtual-desktop/manage-app-groups-powershell?tabs=azure-powershell).
    - [Publish built-in apps in Azure Virtual Desktop](/azure/virtual-desktop/publish-apps).
 
 1. **Managing session hosts**: once the session hosts are deployed and joined to the domain, they can be managed using existing tools like SCCM and Group Policy. Microsoft Intune can also be used to help you manage your devices and apps. To get started with Intune, refer to the [Microsoft Intune documentation](/mem/intune/fundamentals/get-started-with-intune).
 
-1. **User access assignments**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to map the servers to their respective users and groups.
+1. **User access**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to assign users and groups.
 
-      :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="[Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.":::
+      :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.":::
       *Figure 19: The last step prior to the final migration.*
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
 
-1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan (enabled by default) that is assigned and enabled on the host pool (pooled host pools), the scaling plan is preconfigured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
+1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan that is assigned and enabled by default on pooled host pools. The scaling plan is preconfigured with two schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png":::
    *Figure 20: Azure Virtual Desktop scaling plan schedules sample.*
