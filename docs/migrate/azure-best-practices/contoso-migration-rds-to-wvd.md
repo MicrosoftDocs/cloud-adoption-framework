@@ -75,7 +75,7 @@ The following diagram outlines the architecture that will be built to migrate RD
 
    Download [Visio file](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
 
-The diagram outlines resources that are prerequisites for the migration (Identity, management, connectivity, AAD sync) and the resources that are created by the Azure Virtual Desktop Landing Zone Accelerator deployment under the AVD LZ and AVD Shared Services LZ subscriptions. More information on resources deployed can be found in the Azure Virtual Desktop [Landing Zone Accelerator resource organization diagram](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-resource-organization-naming.png).
+The diagram outlines resources that are prerequisites for the migration (Identity, management, connectivity, Azure AD sync) and the resources that are created by the Azure Virtual Desktop Landing Zone Accelerator deployment under the AVD LZ and AVD Shared Services LZ subscriptions. More information on resources deployed can be found in the Azure Virtual Desktop [Landing Zone Accelerator resource organization diagram](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-resource-organization-naming.png).
 
 ## Migration process
 
@@ -144,10 +144,10 @@ Contoso is ready to deploy Azure Virtual Desktop. The Azure Virtual Desktop LZA 
 
 > [!IMPORTANT]
 > Based on the outcome of the assessment phase, two Azure Virtual Desktop LZA deployments in *East US 2* will be required to address Contoso scenarios:
-> 1. **Multi-session (pooled host pool):** Azure Virtual Desktop management plane (workspace, host pool, application group, scaling plan) deployment with Windows 10 or Windows 11 multi-session session hosts and FSLogix to manage users profile data.
-> 1. **Single-session (personal host pool):** Azure Virtual Desktop management plane (workspace, host pool, application group) deployment without the creation of new session hosts (personal VMs will be migrated from RDS).
+> - **Multi-session (pooled host pool):** Azure Virtual Desktop management plane (workspace, host pool, application group, scaling plan) deployment with Windows 10 or Windows 11 multi-session session hosts and FSLogix to manage users profile data.
+> - **Single-session (personal host pool):** Azure Virtual Desktop management plane (workspace, host pool, application group) deployment without the creation of new session hosts (personal VMs will be migrated from RDS).
 
-| Deployment Type | Link |
+| Deployment type | Link |
 |:--|:--|
 | Azure portal UI |[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Farm%2Fdeploy-baseline.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Favdaccelerator%2Fmain%2Fworkload%2Fportal-ui%2Fportal-ui-baseline.json)
 | Command line (Bicep/ARM) | [![Powershell/Azure CLI implementation](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/icons/powershell.png)](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep/readme.md#avd-accelerator-baseline) |
