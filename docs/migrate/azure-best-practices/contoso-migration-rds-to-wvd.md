@@ -26,7 +26,7 @@ In this article, Contoso migrates and modernizes their on-premises VDI environme
 
 ## Business drivers
 
-Working closely with business partners, the Contoso IT team defines the business drivers for a VDI migration to Azure. These drivers might include:
+By working closely with business partners, Contoso IT team defines the business drivers for the RDS on-premises migration to Azure. These drivers might include:
 
 - **Current environment end-of-life:** A datacenter is out of capacity when it reaches the end of a lease or is closing down. Migrating to the cloud provides virtually unlimited capacity. Current software might also be reaching its end of life where it's become necessary to upgrade the software running Contoso's desktops and application virtualization solution.
 - **Reduce cost:** Reduce costs with pooled, multi-session resources. With the new Windows 11 and Windows 10 Enterprise multi-session capability, exclusive to Azure Virtual Desktop, and the Remote Desktop Session Host (RDSH) role on Windows Server, you can greatly reduce the number of virtual machines (VMs) and operating system overhead while still providing the same resources to your users.
@@ -64,7 +64,7 @@ RDS personal and pooled resources are deployed to an on-premises datacenter. Mic
 
 ## Solution design
 
-After assessing current RDS deployment, defining goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
+After assessing current RDS deployment, Contoso defines the goals and requirements that are used to design the  migration process.
 
 ## Proposed architecture
 
@@ -256,7 +256,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
 
-1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan (enabled by default) that is assigned and enabled on the host pool (pooled host pools), the scaling plan is pre-configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
+1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan (enabled by default) that is assigned and enabled on the host pool (pooled host pools), the scaling plan is preconfigured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png":::
    *Figure 20: Azure Virtual Desktop scaling plan schedules sample.*
@@ -284,7 +284,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
    - Contoso will use Azure Virtual Desktop [Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
    - Contoso will monitor utilization across their entire Azure Virtual Desktop deployments using Azure Virtual Desktop [Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
-1. **Configure Business continuity and disaster recovery (BCDR)**: Azure Virtual Desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, these includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
+1. **Configure Business continuity and disaster recovery (BCDR)**: Azure Virtual Desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, these components include: Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
 
     - For large-scale global deployments of Azure Virtual Desktop, we recommend adopting a multi-region architecture to reduce single point of failures on any single region.
     - The following diagram is an example of an Azure Virtual Desktop multi-region architecture designed for regional Azure Virtual Desktop deployments to be entirely independent. Depending on the SLA requirements, there can be varying levels of dependencies on the primary region. Sample diagrams for varying levels of dependency on the primary region, can be found in the Azure Virtual Desktop Landing Zone Accelerator documentation Azure Virtual Desktop *[Landing Zone Accelerator Diagrams](https://github.com/Azure/avdaccelerator/tree/main/workload/docs/diagrams)*
