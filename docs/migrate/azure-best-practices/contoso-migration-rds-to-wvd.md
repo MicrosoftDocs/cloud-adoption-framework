@@ -186,7 +186,7 @@ At this point, the users have saved or backed up their important profile data. C
 The next step in the migration process for Contoso is to migrate the RDS session host (running Windows Server) that must persist to Azure Virtual Desktop. To do this, Contoso goes through *Azure Migrate: Server Migration* steps:
 
 > [!IMPORTANT]
-> - Instead of migrating RDS session hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. Tooling for building new images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*
+> - Instead of migrating RDS session hosts, Microsoft recommends to redeploy VMs using Azure market place images or custom images built from the marketplace, as these will ensure compatibility and remove any possible bloat from the existing on-premises images. 
 > - Azure Migrate only supports Windows Server Operating System migrations. Client Operating Systems such as Windows 10 can be Migrated using *[Azure Site Recovery replication and failover](/azure/site-recovery/migrate-tutorial-on-premises-azure#migrate-with-site-recovery)*, once these VMs are available in Azure, skip to section 5 to install and configure the AVD agents.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -230,9 +230,15 @@ The next step in the migration process for Contoso is to migrate the RDS session
    - Get host pool registration token, following guidance outlined in [Generate a registration key](/azure/virtual-desktop/add-session-hosts-host-pool#generate-a-registration-key).
    - Install Azure Virtual Desktop agents and register VMs to the host pool following the guidance outlined in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
 
+> [!NOTE]
+> Contoso can also automate this process by using a VM custom script extension to deploy the Azure Virtual Desktop agent (**[Azure Virtual Desktop LZA Automation](https://github.com/Azure/avdaccelerator)**).
+
 At this point, Contoso finalizes the migration of the machines that must persist and continues to gradually migrate the rest of the on-premises RDS session hosts to Azure Virtual Desktop.
 
 ### Step 6: Migrate VM images that must persist to Azure (optional)
+
+> [!Important]
+> Instead of migrating VM images, Microsoft recommends building a new image in Azure based off a vanilla marketplace image. This will ensure compatibility with the image and reduce unwanted dependencies or configurations that may have been present in the original VM image. Additionally, building a new image in Azure from a marketplace image can help streamline the deployment process and ensure that the image is up-to-date with the latest security patches and updates. Tooling for building new images is available at the Azure Virtual Desktop LZA *[Custom Image Build - Getting Started](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-custom-image-build.md)*
 
 For scenarios on which VM image must persist to Azure Virtual Desktop, the following article provides guidance to  [prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
