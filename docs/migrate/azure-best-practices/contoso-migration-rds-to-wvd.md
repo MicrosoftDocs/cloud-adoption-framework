@@ -103,7 +103,7 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 
 1. An Azure subscription is required ([subscription requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#subscription-requirements)).
 
-1. Make sure that domain services, either Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS), are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. Azure Virtual Desktop requires hybrid user identities for majority of your Azure Virtual Desktop deployments and desired features. The Azure Virtual Desktop service requires users user principal name (UPN) or security identifier (SID) to match between on-premises AD and Azure AD.
+1. Make sure that domain services, either Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS), are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. Azure Virtual Desktop requires hybrid user identities for majority of your Azure Virtual Desktop deployments and desired features. The Azure Virtual Desktop service requires user principal name (UPN) or security identifier (SID) to match between on-premises AD and Azure AD.
 
 1. Prior to the deployment of the Azure Virtual Desktop LZA, ensure the [Azure Virtual Desktop LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) are met.
 
@@ -160,7 +160,7 @@ At this point, the Azure Virtual Desktop environment is available. Contoso can c
 > [!NOTE]
 > Microsoft does not support migrating profiles from User Profile Disks (UPD) or Roaming User Profiles (RUP) to FSLogix.
 
-Azure Virtual Desktop doesn't support user profile disks (UPDs), so Contoso needs to prepare their users for new profiles using FSLogix. Starting users with new profiles provides the best transition from UPD or RUP profiles. To make this transition, Contoso needs to enable the users to save or backup their data before they sign into their desktops for the first time.
+Azure Virtual Desktop doesn't support user profile disks (UPDs), so Contoso needs to prepare their users for new profiles using FSLogix. Starting users with new profiles provides the best transition from UPD or RUP profiles. To make this transition, Contoso needs to enable the users to save or to backup their data before they sign into their desktops for the first time.
 
 1. Enable **[Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync)**. If other browsers are used, export and import bookmarks or favorites to Microsoft Edge.
 1. Enable OneDrive for the users moving to Azure Virtual Desktop.
@@ -209,7 +209,7 @@ The next optional step in the migration process for Contoso is to migrate the RD
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png" alt-text="Screenshot of the Azure Migrate: Server Migration discover option." lightbox="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png":::
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png" alt-text="Screenshot of the Azure Migrate: server migration discovery option." lightbox="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png":::
    *Figure 16: Discovering a server migration.*
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to *East US 2*, where the Azure Virtual Desktop environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
@@ -256,7 +256,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
 
-1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan (enabled by default) that is assigned and enabled on the host pool (pooled host pools), the scaling plan is pre configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
+1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan (enabled by default) that is assigned and enabled on the host pool (pooled host pools), the scaling plan is pre-configured with to schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png":::
    *Figure 20: Azure Virtual Desktop scaling plan schedules sample.*
@@ -284,7 +284,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
    - Contoso will use Azure Virtual Desktop [Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
    - Contoso will monitor utilization across their entire Azure Virtual Desktop deployments using Azure Virtual Desktop [Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 
-1. **Configure Business continuity and disaster recovery (BCDR)**: Azure Virtual Desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, that includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
+1. **Configure Business continuity and disaster recovery (BCDR)**: Azure Virtual Desktop uses a combination of Microsoft managed components that come with a non-financially backed SLA targeting 99.9% uptime for our Azure Virtual Desktop Gateways, Brokers, Web Access, and diagnostics. These services meta-data and service-data are backed up and replicated behind the scenes to recover to alternate regions in the event of an outage. Contoso is responsible for the customer managed components, these includes Virtual Machines, Storage, Images, Applications, and the network components for their DR requirements.
 
     - For large-scale global deployments of Azure Virtual Desktop, we recommend adopting a multi-region architecture to reduce single point of failures on any single region.
     - The following diagram is an example of an Azure Virtual Desktop multi-region architecture designed for regional Azure Virtual Desktop deployments to be entirely independent. Depending on the SLA requirements, there can be varying levels of dependencies on the primary region. Sample diagrams for varying levels of dependency on the primary region, can be found in the Azure Virtual Desktop Landing Zone Accelerator documentation Azure Virtual Desktop *[Landing Zone Accelerator Diagrams](https://github.com/Azure/avdaccelerator/tree/main/workload/docs/diagrams)*
