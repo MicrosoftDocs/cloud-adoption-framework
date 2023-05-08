@@ -71,7 +71,7 @@ After assessing current RDS deployment, Contoso defines the goals and requiremen
 The following diagram outlines the architecture that will be built to migrate RDS on-premises deployment to Azure Virtual Desktop.
 
    :::image type="content" border="false" source="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png" alt-text="*Figure 1: Proposed architecture: Azure Virtual Desktop LZA will deploy the resources contained under the Azure Virtual Desktop LZ Subscription*" lightbox="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.png":::
-   *Figure 1: Proposed architecture: Azure Virtual Desktop LZA will deploy the resources contained under the Azure Virtual Desktop LZ Subscription*
+   *Figure 1: Proposed architecture: Azure Virtual Desktop LZA will deploy the resources contained under the Azure Virtual Desktop LZ Subscription.*
 
    Download [Visio file](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
 
@@ -193,7 +193,7 @@ The next step in the migration process for Contoso is to migrate the RDS session
 1. In the search bar, type *Azure Migrate* and select the matching service entry.
 1. In **Get started** for Azure Migrate, select **Discover, assess and migrate**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate.":::
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png":::
    *Figure 3: Getting started.*
 
 1. Select **Create project**.
@@ -212,17 +212,17 @@ The next step in the migration process for Contoso is to migrate the RDS session
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png" alt-text="Screenshot of the Azure Migrate: server migration discovery option." lightbox="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png":::
-   *Figure 16: Discovering a server migration.*
+   *Figure 6: Discovering a server migration.*
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to *East US 2*, where the Azure Virtual Desktop environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication.":::
-   *Figure 17: Converting an appliance.*
+   *Figure 7: Converting an appliance.*
 
 1. Contoso downloads, installs, and registers the replication provider to the Azure Migrate project to start the replication to Azure.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png" alt-text="Screenshot that shows downloading and configuring replication.":::
-   *Figure 18: Prerequisites for replicating to Azure.*
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png" alt-text="Screenshot that shows downloading and configuring replication.": lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png":::
+   *Figure 8: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage starts. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
 
@@ -254,21 +254,21 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 1. **User access**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to assign users and groups.
 
       :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.":::
-      *Figure 19: The last step prior to the final migration.*
+      *Figure 9: The last step prior to the final migration.*
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
 
 1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan that is assigned and enabled by default on pooled host pools. The scaling plan is preconfigured with two schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png":::
-   *Figure 20: Azure Virtual Desktop scaling plan schedules sample.*
+   *Figure 10: Azure Virtual Desktop scaling plan schedules sample.*
 
    Scaling rules should be modified to meet the specific needs of the workloads the Azure Virtual Desktop environment is hosting. Information on configuring scaling plans can be found at [Autoscale scaling plans and example scenarios](/azure/virtual-desktop/autoscale-scenarios).
 
 1. **Monitoring**: Azure Virtual Desktop LZA deployment has the option to deploy all diagnostics settings (enabled by default) required by the Azure Virtual Desktop insights workbook, including the creation of a new log analytics workspace (option to use existing is available) to gather Azure Virtual Desktop logs, metrics and events.
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-avd-insights.png" alt-text="Azure Virtual Desktop LZA insights." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-avd-insights.png":::
-   *Figure 21: Azure Virtual Desktop monitor insights sample.*
+   *Figure 11: Azure Virtual Desktop monitor insights sample.*
 
    More information on Azure Virtual Desktop monitoring can be found at [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights).
 
@@ -292,7 +292,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
     - The following diagram is an example of an Azure Virtual Desktop multi-region architecture designed for regional Azure Virtual Desktop deployments to be entirely independent. Depending on the SLA requirements, there can be varying levels of dependencies on the primary region. Sample diagrams for varying levels of dependency on the primary region, can be found in the Azure Virtual Desktop Landing Zone Accelerator documentation Azure Virtual Desktop *[Landing Zone Accelerator Diagrams](https://github.com/Azure/avdaccelerator/tree/main/workload/docs/diagrams)*
     
        :::image type="content" border="false" source="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.png" alt-text="Azure Virtual Desktop Multi-region deployment Stage 3." lightbox="https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.png":::
-       *Figure 22: Sample of an Azure Virtual Desktop multi-region architecture.*
+       *Figure 12: Sample of an Azure Virtual Desktop multi-region architecture.*
     
        Download [Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx)
     
