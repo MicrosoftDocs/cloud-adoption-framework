@@ -17,9 +17,6 @@ ms.custom: think-tank
 
 In this article, Contoso migrates and modernizes their on-premises VDI environment based on Remote Desktop Services (RDS) in Windows Server to Azure Virtual Desktop.
 
-> [!IMPORTANT]
-> This guidance will not apply for migrating from other VDI solutions like Citrix or VMware Horizon.
-
 | Migration options | Outcome |
 |--- | --- |
 | [Azure Migrate](/azure/migrate/migrate-services-overview) | Run workloads in an Azure Virtual Desktop environment.
