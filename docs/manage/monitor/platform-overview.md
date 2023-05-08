@@ -3,15 +3,15 @@ title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/25/2023
+ms.date: 05/03/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
-ms.custom: think-tank, engagement-fy23
+ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
-# Cloud monitoring guide: Monitoring platforms overview
+# Cloud monitoring platforms overview
 
 Microsoft provides a range of monitoring capabilities from multiple products:
 
