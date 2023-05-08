@@ -198,12 +198,12 @@ The next step in the migration process for Contoso is to migrate the RDS session
 
 1. Select **Create project**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button.":::
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png":::
    *Figure 4: Creating a new Azure Migrate project.*
 
 1. Set the subscription, resource group, project name, and geography for the migrate job data, and then select **Create**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project.":::
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png":::
    *Figure 5: Adding job data to the migration.*
 
    > [!IMPORTANT]
@@ -216,7 +216,7 @@ The next step in the migration process for Contoso is to migrate the RDS session
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to *East US 2*, where the Azure Virtual Desktop environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication.":::
+   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png":::
    *Figure 7: Converting an appliance.*
 
 1. Contoso downloads, installs, and registers the replication provider to the Azure Migrate project to start the replication to Azure.
@@ -253,7 +253,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 
 1. **User access**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to assign users and groups.
 
-      :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups.":::
+      :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups." lightbox="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png":::
       *Figure 9: The last step prior to the final migration.*
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
