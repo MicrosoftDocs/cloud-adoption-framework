@@ -18,9 +18,9 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
 - Azure PaaS services are, in their default configuration, generally accessed over publicly available endpoints via the Microsoft Global Network. Some customers may have requirements to reduce the usage of public endpoints, therefore the Azure platform provides optional capabilities for securing these endpoints or even making them entirely private.
 
-  - Some PaaS services allow public access restrictions based on **Resource Instance** system-assigned managed identity E.g. [Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-azure-resource-instances)
+  - Some PaaS services allow public access restrictions based on **Resource Instance** system-assigned managed identity E.g. [Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-azure-resource-instances)
 
-  - Many PaaS services allow public access restrictions based on **Trusted Azure Services** E.g. [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/allow-access-trusted-services#trusted-services)
+  - Many PaaS services allow public access restrictions based on **Trusted Azure Services** E.g. [Azure Container Registry](/azure/container-registry/allow-access-trusted-services#trusted-services)
   
   - **Virtual network injection** provides [dedicated private deployments](/azure/virtual-network/virtual-network-for-azure-services) for supported services. Management plane traffic still flows through public IP addresses.
 
@@ -28,7 +28,7 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
   - Some PaaS services are compatible with [Azure **Private Link**](/azure/private-link/private-endpoint-overview#private-link-resource) which allows private access via an IP address within a customer. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
 
-  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to specific Storage Account. It is also possible to utilise Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
+  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to specific Storage Account. It is also possible to utilise Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
 
 > [What is the difference between service endpoints and private endpoints?](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-) offers an explanation of differences between Private Link endpoints and VNet service endpoints.
 
@@ -49,4 +49,4 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
 - Don't enable virtual network service endpoints by default on all subnets. Follow the above considered approach on a case-by-case basis dependent on the PaaS service feature availbility and your own performance and security requirements.
 
-- Where possible, avoid the use of Forced Tunnelling (directing Internet-bound traffic from an Azure VNet via On-Premises by advertising a default route over a private hybrid connection) as this can increase the complexity of managing control-plane operations with some Azure PaaS services E.g. [Application Gateway V2](https://learn.microsoft.com/en-us/azure/application-gateway/configuration-infrastructure#:~:text=Sometimes%20the%20default,BGP%20route%20propagation).
+- Where possible, avoid the use of Forced Tunnelling (directing Internet-bound traffic from an Azure VNet via On-Premises by advertising a default route over a private hybrid connection) as this can increase the complexity of managing control-plane operations with some Azure PaaS services E.g. [Application Gateway V2](/azure/application-gateway/configuration-infrastructure#:~:text=Sometimes%20the%20default,BGP%20route%20propagation).
