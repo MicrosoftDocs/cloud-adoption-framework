@@ -108,10 +108,10 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    > Learn more about:
    >
    > - *[Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication)* provides a comprehensive list of requirements and supported features based on your identity strategy and configuration.
-   > - Active Directory sync options:
-       > - *[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
-       > - *[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
-   > - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
+   >   - Active Directory sync options:
+   >    - *[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
+   >   - *[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
+   >   - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
    > - Firewall rules **[Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines)** to allow all required URLs from hosts and clients to Azure Virtual Desktop resources.
    > - Azure Virtual Desktop *[LZA Baseline Deployment URL Requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)*.
 
@@ -214,11 +214,13 @@ The next step in the migration process for Contoso is to migrate the RDS session
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to *East US 2*, where the Azure Virtual Desktop environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png":::
-   *Figure 7: Converting an appliance.*
+
+   *Figure 7: Converting an appliance.* 
 
 1. Contoso downloads, installs, and registers the replication provider to the Azure Migrate project to start the replication to Azure.
 
    :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png" alt-text="Screenshot that shows downloading and configuring replication." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png":::
+   
    *Figure 8: Prerequisites for replicating to Azure.*
 
 1. The replication of the hosts into Azure Blob Storage starts. Contoso can continue to let the replication occur until it's ready to test the VMs and then migrate them into production.
