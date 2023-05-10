@@ -55,9 +55,6 @@ While your specific implementation might vary, as a result of specific business 
 Use this architecture as a starting point. Modify it to fit your specific business and technical requirements when planning your landing zone implementation. For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](./design-areas.md#environment-design-areas).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
-
-For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](./design-areas.md#environment-design-areas).
-
 *Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
 ## Azure landing zone portal accelerator
