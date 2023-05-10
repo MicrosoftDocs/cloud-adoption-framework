@@ -108,10 +108,10 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    > Learn more about:
    >
    > - *[Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication)* provides a comprehensive list of requirements and supported features based on your identity strategy and configuration.
-   >   - Active Directory sync options:
+   > - Active Directory sync options:
    >    - *[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
    >    - *[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
-   >   - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
+   > - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
    > - Firewall rules **[Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines)** to allow all required URLs from hosts and clients to Azure Virtual Desktop resources.
    > - Azure Virtual Desktop *[LZA Baseline Deployment URL Requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)*.
 
