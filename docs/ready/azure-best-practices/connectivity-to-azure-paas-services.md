@@ -34,19 +34,19 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
 ## Design recommendations
 
-- For Azure PaaS services that support Virtual network injection, if you require access to resources within your private network (either Virtual Networks or On-Premises via a Virtual Network Gateway), consider enabling the VNet injection feature. Also consider that these services injected into a virtual network still perform management plane operations by using service specific public IP addresses. Connectivity must be guaranteed for the service to operate correctly. Use UDRs and NSGs to lock down this communication within the virtual network. You can use [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) to reduce the number of necessary routes and to override default routes if used.
+- For Azure PaaS services that support virtual network injection, if you require access to resources within your private network (either virtual networks or on-premises via a virtual network gateway), consider enabling the virtual network injection feature. Also consider that these services injected into a virtual network still perform management plane operations by using service specific public IP addresses. Connectivity must be guaranteed for the service to operate correctly. Use UDRs and NSGs to lock down this communication within the virtual network. You can use [Service Tags in UDR](/azure/virtual-network/virtual-networks-udr-overview#service-tags-for-user-defined-routes) to reduce the number of necessary routes and to override default routes if used.
 
 - When data exfiltration protection and use of only Private IP addressing are firm requirements, consider the use of Azure Private Link [where available](/azure/private-link/private-link-overview#availability).
 
-- Consider the use of virtual network service endpoints to secure access to Azure PaaS services from within your virtual network in scenarios where data exfiltration is less of a concern, Private Link is unavailable, or you have a requirement for large data ingest that requires cost optimisation. (Azure Service Endpoints do not incur any costs, contrasted to Azure Private Link which includes a cost component based on per GB of network data).
+- Consider the use of virtual network service endpoints to secure access to Azure PaaS services from within your virtual network in scenarios where data exfiltration is less of a concern, Private Link is unavailable, or you have a requirement for large data ingest that requires cost optimization. (Azure Service Endpoints do not incur any costs, contrasted to Azure Private Link which includes a cost component based on per GB of network data).
 
 ![A diagram showing service endpoint connectivity.](./media/vnet-service-endpoints-overview.png)
 
-- If access to Azure PaaS services is required from on-premises utilise the following options:
+- If access to Azure PaaS services is required from on-premises utilize the following options:
 
-  -  Via the default public endpoint via the Internet and Microsoft Global Network if no private access is required and the On-Premises Internet bandwidth is sufficient
-  -  Via a private hybrid connection ([ExpressRoute with private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering) or Site-to-Site VPN) using either virtual network injection or Azure Private Link. 
+  -  Use the PaaS service's default public endpoint via the Internet and the Microsoft Global Network if no private access is required and the on-premises Internet bandwidth is sufficient.
+  -  Use a private hybrid connection ([ExpressRoute with private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering) or Site-to-Site VPN) with either virtual network injection or Azure Private Link.
 
 - Don't enable virtual network service endpoints by default on all subnets. Follow the above considered approach on a case-by-case basis dependent on the PaaS service feature availbility and your own performance and security requirements.
 
-- Where possible, avoid the use of Forced Tunnelling (directing Internet-bound traffic from an Azure VNet via On-Premises by advertising a default route over a private hybrid connection) as this can increase the complexity of managing control-plane operations with some Azure PaaS services E.g. [Application Gateway V2](/azure/application-gateway/configuration-infrastructure#:~:text=Sometimes%20the%20default,BGP%20route%20propagation).
+- Where possible, avoid the use of forced tunneling (directing Internet-bound traffic from an Azure virtual network via on-premises by advertising a default route over a private hybrid connection) as this can increase the complexity of managing control-plane operations with some Azure PaaS services E.g. [Application Gateway V2](/azure/application-gateway/configuration-infrastructure).
