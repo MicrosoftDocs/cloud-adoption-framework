@@ -25,7 +25,8 @@ Sandbox environments are the best place for hands on Azure learning. Below are s
 -   Developers need a controlled Azure environment to quickly test application design patterns.
 -   Cloud architect needs a sandbox environment to evaluate Azure resources or conduct a PoC for an Azure service or resource before formally approving them for their organization.
 -   A cloud engineer needs a sandbox environment to better understand what happens when a specific setting is changed on an Azure resource.
--   A platform engineer wants to build and test out a new Azure Policy and how it will behave as per the [Canary guidance](https://aka.ms/alz/canary)
+-   A platform engineer wants to build and test out a new Azure Policy and how it will behave as per the [Canary guidance](https://aka.ms/alz/canary).
+
 -   Developers want to experiment with Azure services/resources while building an application.
 
 
