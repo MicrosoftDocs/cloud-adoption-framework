@@ -68,7 +68,8 @@ The sandbox user(s) are given Owner access to the sandbox subscription. When san
 
 ### Sandbox Expiration
 
-Sandboxes should be canceled or deleted at some point in time. Having a strategy to remove a sandbox is a cost saving and security measure. Cost and expiration dates are two important variables for determining when a sandbox should be removed. After a sandbox is expired it should be moved to the [Decommissioned](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#decommissioned) management group. 
+Sandboxes should be canceled or deleted at some point in time. Having a strategy to remove a sandbox is a cost saving and security measure. Cost and expiration dates are two important variables for determining when a sandbox should be removed. After a sandbox has expired it should be moved to the [Decommissioned](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#decommissioned) management group. 
+
 
 
 
