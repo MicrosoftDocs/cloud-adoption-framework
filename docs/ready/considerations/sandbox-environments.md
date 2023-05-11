@@ -71,7 +71,8 @@ Sandboxes should be canceled or deleted at some point in time. Having a strategy
 
 
 
-### Cost
+##### Cost
+
 
 A key concern for any cloud-based sandbox environment is cost tracking. Azure cost management allows the creation of budgets. The [budgets feature](https://learn.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) allows alerts to be generated when actual spending or forecasted spending cross configured thresholds.
 
