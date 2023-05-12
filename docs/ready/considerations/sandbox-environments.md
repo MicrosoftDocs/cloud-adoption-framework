@@ -36,11 +36,7 @@ Sandbox environments are the best place for hands on Azure learning. Below are s
 
 ![Single use case sandbox architecture](./media/single-usecase-sandbox.png)
 
-All sandbox subscriptions should be placed in the Sandboxes Management Group, as specified in the management group and subscription organization in [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). This allows Azure policies specifically created for sandboxes to be placed at the Sandboxes Management Group level. Sandbox environments will also inherit Azure policies from the Management Group hierarchy above it.
-
-
-
-The Azure policies below will be applied directly to the Sandbox Management Group. The policies are already a part of the Azure landing zone default policy set. The table below is meant to outline and detail the specific Azure Landing Zone policies that apply directly to the Sandbox Management Group. 
+All sandbox subscriptions should be placed in the Sandboxes Management Group, as specified in the management group and subscription organization in [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). This allows Azure policies specifically created for sandboxes to be placed at the Sandboxes Management Group level. Sandbox environments will also inherit Azure policies from the Management Group hierarchy above it. 
 
 One of the benefits of creating a sandbox subscription is the ability to manage costs for each program/project. This allows costs to be more easily tracked and for sandboxes to be canceled when budgets or the expiration date of the sandbox has been reached.
 
