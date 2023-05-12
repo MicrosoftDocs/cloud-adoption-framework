@@ -1,6 +1,6 @@
 ---
-title: Sandbox environments
-description: Guidance for the architecture of sandbox environments
+title: Landing zone sandbox environments
+description: Guidance for the architecture of landing zone sandbox environments.
 author: Mr-MSFT
 ms.author: isiahhudson
 ms.date: 04/13/2023
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Sandbox Environments
+# Landing zone sandbox environments
 
-## Sandbox Overview
+## Overview
 
 A sandbox environment is an isolated environment that enables testing and experimentation without impacting any other environments (Production, Development, UAT, etc.). Azure landing zone sandboxes provide users with a controlled environment to test and experiment with Azure resources. Sandbox environments are also a great environment to conduct POCs (proof of concepts) with Azure resources. Each sandbox should be its own Azure subscription controlled by Azure policies applied at the Sandboxes Management Group level which also inherits policy from the Management Group hierarchy above it. A sandbox can be used by one person or a team depending on its purpose.
 
@@ -59,9 +59,9 @@ From a security perspective, it's important to ensure audit logging is enabled f
 
 The [current Azure Landing Zone policy guidance](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root) already includes an Azure policy definition ("Configure Azure Activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The Sandboxes Management Group should inherit this policy enabling diagnostic logging of the sandbox subscriptions.
 
-### Sandbox Permissions
+### Sandbox Access
 
-The sandbox user(s) are given Owner access to the sandbox subscription. When sandboxes are canceled all sandbox users should have the Owner RBAC role removed. 
+The sandbox user(s) are given Owner access to the sandbox subscription. When sandboxes are canceled all sandbox users should have the Owner Role base access control (RBAC) removed. 
 
 
 ## Additional Considerations
@@ -92,7 +92,7 @@ Most organizations will want to expire and delete sandboxes after a certain peri
 
 An Azure [tag](https://learn.microsoft.com/azure/azure-resource-manager/management/tag-resources?tabs=json) with an expiration date can be placed on the subscription when a sandbox is created. Automation can then be used to cancel or delete the subscription when the expiration date is reached.
 
-All sandboxes should have an expiration date.
+
 
 ### Restricting Azure Resources
 
