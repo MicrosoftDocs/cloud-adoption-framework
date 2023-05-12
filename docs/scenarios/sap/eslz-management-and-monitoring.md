@@ -13,7 +13,7 @@ products: azure-monitor
 
 # Operations baseline for SAP on Azure
 
-This article builds on several considerations and recommendations defined in the article about the [Azure landing zone design area for management and monitoring](../../ready/landing-zone/design-area/management.md). The guidance in this article will help you explore how to operationally maintain an SAP platform on Azure enterprise estate, with centralized management and monitoring at the platform level.
+This article builds on considerations and recommendations defined in the Azure landing zone article [Design area: Management for Azure environments](../../ready/landing-zone/design-area/management.md). The guidance in this article will help you explore how to operationally maintain an SAP platform on an Azure enterprise estate, with centralized management and monitoring at the platform level.
 
 This article presents critical recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Because SAP is a mission-critical platform, you should include guidance on the Azure landing zone design areas in your design.
 
@@ -53,7 +53,7 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Consider creating a plan for nonfunctional requirements. Map those requirements with native Azure resources that can address them. For example, Azure Monitor for SAP can monitor central services clusters.
 
-- Review and adopt SAP parameters, especially ABAP memory parameters, while you're performing a OS or database migration. For example, `em/initial_size_MB` is valid only for AIX environments and shouldn't be set for Azure VMs.
+- Review and adopt SAP parameters, especially ABAP memory parameters, while you're performing an OS or database migration. For example, `em/initial_size_MB` is valid only for AIX environments and shouldn't be set for Azure VMs.
 
 - Consider collecting full database statistics for non-HANA databases after migration. For example, implement SAP Note 1020260 for Oracle.
 
