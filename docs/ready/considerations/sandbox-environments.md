@@ -17,7 +17,7 @@ A sandbox environment is an isolated environment that enables testing and experi
 
 
 >[!TIP]
-> Review the default Azure landing zones policy assignments that are documented here in [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
+> Review the default Azure landing zones policy assignments that are documented here in [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#sandbox)
 
 
 Sandbox environments are the best place for hands on Azure learning. Below are some common use cases:
