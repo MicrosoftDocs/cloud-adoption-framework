@@ -12,9 +12,9 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Networking architecture design
 
-This AVS Landing zone connectivity section consists of sample architectures, solutions, and guides that can help you explore hybrid networking with Azure VMware Solution. 
+The Azure VMware Solution (AVS) for Azure Landing Zone connectivity section consists of sample architectures, solutions, and guides that can help you to explore hybrid networking with Azure VMware Solution. 
 
-Azure VMware solution provides a wide range of networking tools and capabilities for connecting with on-premises environments and Azure native workloads. 
+Azure VMware Solution provides a wide range of networking tools and capabilities for connecting with on-premises environments and Azure native workloads. 
 
 Design areas include:
 
@@ -28,9 +28,9 @@ Design areas include:
 [Network Topology and Connectivity](./eslz-network-topology-connectivity.md) This section details general design considerations around ip addressing, bandwidth, and individual components (e.g Expressroute, VNETs)
 
 
-## Outbound connectivity from AVS
+## Hub & Spoke
 
-This [Egress natively from AVS](./egress-from-avs.md) section shows how to establish outbound, hybrid connectivity from your AVS environment. This section includes integration with workloads in Azure and also datacenters or branch offices from the SDCC. 
+This [Egress natively from AVS](./egress-from-avs.md) section shows how to establish hybrid connectivity from your AVS environment in a hub & spoke topology. This section includes integration with workloads in Azure and also datacenters or branch offices with the SDCC. 
 
 
 
@@ -42,9 +42,9 @@ The Azure Landing Zone accelerator provides an additional [reference guides](./e
 - [Inspect traffic between Azure and AVS](./example-architectures.md#network-virtual-appliance-in-azure-virtual-network-to-inspect-all-network-traffic) using an NVA in a Hub VNET
 - Default route propagation for AVS from [on-premises](./example-architectures.md#egress-from-azure-vmware-solution-through-00000-advertisement-from-on-premises) 
 
-## Multiregion Design (Coming Soon)
+## Multiregion Design 
 
-This section explores considerations for hybrid connectivity across two or more regions. 
+[Dual connectivity in a hub & spoke topology](./eslz-dual-region-network-topology.md) This section explores considerations for hybrid connectivity across two or more regions. 
 
 ## Next steps
 
