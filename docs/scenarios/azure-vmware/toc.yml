@@ -15,14 +15,20 @@ items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-connectivity.md
-        items:
+        items: 
           - name: Getting Started
             href: networking-getting-started.md
-          - name: Dual region network topology
-            href: eslz-dual-region-network-topology.md
-          - name: Example Architectures for Azure VMware Solution
-            href: example-architectures.md
+          - name: General Considerations and Recommendations
+            href: eslz-network-topology-connectivity.md
+          - name: Architectures
+            items:
+              - name: Hub and Spoke 
+                href: networking-hubspoke.md
+              - name: Dual region network topology
+                href: eslz-dual-region-network-topology.md
+              - name: Example Architectures for Azure VMware Solution
+                href: example-architectures.md
+          - name: Design Guides (Coming Soon)
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
