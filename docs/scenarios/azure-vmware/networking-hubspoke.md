@@ -12,7 +12,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Enable connectively from Azure VMware Solution 
 ## Introduction
-In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud via the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed and the AVS dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic doesn't traverse over the Expressroute.  
+In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud. This is through the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed which can then connect to the AVS-dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic does not traverse over the Expressroute.  
 
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/publicip2.png)](./media/publicip2.png)
 
@@ -72,9 +72,9 @@ This document assumes and recommends default route advertisement from either on-
 > Some traditional VMware appliances use service insertion to place appliances at the tier-0 router. The tier-0 routers are provisioned and managed by Microsoft and are not consumable by end users. All network appliances and load balancers must be placed at tier-1. The next section discusses default route propagation from a party device in AVS. 
  
 ### Third Party NVA integration in AVS 
-Integration with Third Party appliances is possible with careful consideration. In this design, 3rd party NVA(s) sit behind one or more T-1 edge routers. 
+Integration with Third Party appliances is possible with careful consideration. In this design, third party NVA(s) sit behind one or more T-1 edge routers. 
  
-It is the consumers’ responsibility to bring a license and implement any high availability capabilities native to the device.
+It's the users responsibility to bring a license and implement any high availability capabilities native to the device.
  
 Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: [NSX-T firewall patterns](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/networking/nsx-firewall-patterns)
 
@@ -84,13 +84,13 @@ Be aware of the limits when choosing this implementation. For example, there's a
 ## Landing Zone considerations
 This section references best practices for integrating AVS with your Azure Landing Zone. 
 ### Azure Route Server
-Azure route server (ARS) is used to dynamically propagate learned routes from AVS and supply Branch-to-Branch connectivity to VPN Gateways. VNETs that's peered to the VNET where ARS lives also dynamically learn the routes. This means it's possible to learn routes from AVS to Hub and Spoke environments in Azure. Use cases for Azure route server include:
+Azure route server (ARS) is used to dynamically propagate learned routes from AVS and supply Branch-to-Branch connectivity to VPN Gateways. VNETs that's peered to the VNET where ARS lives also dynamically learn the routes, meaning it's possible to learn routes from AVS to Hub and Spoke environments in Azure. Use cases for Azure route server include:
 
 Dynamic route propagation  
-- Learn specific routes from AVS to local VNETs via BGP (Border Gateway Protocol). Peered VNETs will also learn the routes.
+- Learn specific routes from AVS to local VNETs via BGP (Border Gateway Protocol). The peered VNETs can then learn the routes also.
 - Third Party NVA integration 
-   - Peer ARS with NVA’s so that you don’t need UDRs for each AVS segment to filter traffic.
-   - Return traffic from peered VNETs need a UDR (User Defined Routes) back to the local interface of the firewall 
+   - Peer ARS with NVAs so that you don’t need UDRs for each AVS segment to filter traffic.
+   - Return traffic from peered VNETs needs a UDR (User Defined Routes) back to the local interface of the firewall 
 Transit mechanism from Expressroute to VPN Gateways
 -	VPN Gateway must be of type Site-to-Site and configured in Active-Active 
 
@@ -121,7 +121,7 @@ See how to attach Azure Netapp Files datastores to Azure VMware Solution hosts [
 
 ### VPN connectivity from On-premises
 
-While an Expressroute circuit is recommended, connecting to AVS from on-premises with IPSEC using a transit hub VNET in Azure is also possible. This requires a VPN gateway and Azure Route Server. As referenced earlier, Azure Route Server enables transitivity between the VPN gateway and the AVS Expressroute gateway.
+While an Expressroute circuit is recommended, connecting to AVS from on-premises with IPSEC using a transit hub VNET in Azure is also possible. This scenario requires a VPN gateway and Azure Route Server. As referenced earlier, Azure Route Server enables transitivity between the VPN gateway and the AVS Expressroute gateway.
 
 [![Azure VMware Solution with transit between Expressroute and on-premises VPN Gateway](./media/vpn_to_er.png)](./media/vpn_to_er.png)
 
@@ -130,7 +130,7 @@ As seen earlier, default route advertisement is happening from AVS with the Publ
 
 [![Azure VMware Solution with traffic inspection in Azure with Third party network virtual appliance](./media/hub_and_spoke_w_nva.png)](./media/hub_and_spoke_w_nva.png)
 
-Default route advertisement from Azure is possible with Third party NVA in either a Hub VNET or when using Azure vWAN. In a Hub & Spoke deployment, Azure Firewall isn't possible because it doesn't speak BGP, however use of a third party BGP capable device works. This scenario works for inspecting traffic from 
+Default route advertisement from Azure is possible with Third party NVA in either a Hub VNET or when using Azure vWAN. In a Hub & Spoke deployment, Azure Firewall isn't possible because it doesn't speak BGP, however use of a third party BGP capable device will work. This scenario works for inspecting traffic from 
 -	On premises to Azure
 -	Azure to the internet
 -	AVS to the internet 
@@ -149,7 +149,7 @@ Default route advertisement from Azure is possible with Third party NVA in eithe
 
 ## Additional Information 
 
--	 Access vCenter using Bastion + Jumpbox VM -   If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network.  Validate that the route is allowed in CLI by typing `Test-NetConnection  x.x.x.2 -port 443`
+-	 Access vCenter using Bastion + Jumpbox VM -   If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network.  Validate that the route in CLI by typing `Test-NetConnection  x.x.x.2 -port 443`
 - DNS considerations -  If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
 
 [![Azure VMware Solution subscription and resource group organization](./media/alz-avs-resource-groups.png)](./media/alz-avs-resource-groups.png)
