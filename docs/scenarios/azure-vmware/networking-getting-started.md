@@ -39,7 +39,7 @@ The [Egress natively from AVS](./networking-hubspoke.md) section shows how to es
 The Azure Landing Zone accelerator provides an additional [reference guides](./example-architectures.md)  for some common use patterns for connecting to Azure including: 
 
 - Default route propagation using [Secured Virtual VWAN Hub](./example-architectures.md#secured-virtual-wan-hub-with-default-route-propagation)
-- [Inspect traffic between Azure and AVS](./example-architectures.md##third-party-firewall-solutions-in-a-hub-virtual-network-with-azure-route-server) using an NVA in a Hub VNET
+- [Inspect traffic between Azure and AVS](./example-architectures.md#third-party-firewall-solutions-in-a-hub-virtual-network-with-azure-route-server) using an NVA in a Hub VNET
 - Default route propagation from within the [Azure VMware Solution](./example-architectures.md#egress-from-azure-vmware-solution-with-or-without-nsx-t-or-nva) datacenter. 
 
 ## Multiregion Design 
