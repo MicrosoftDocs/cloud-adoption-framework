@@ -12,11 +12,11 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Enable connectively from Azure VMware Solution 
 ## Introduction
-In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud. This is through the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed which can then connect to the AVS-dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic does not traverse over the Expressroute.  
+In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud. This connection occurs through the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed which can then connect to the AVS-dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic doesn't traverse over the Expressroute.  
 
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/publicip2.png)](./media/publicip2.png)
 
-[!IMPORTANT] If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. Please see the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
+[!IMPORTANT] If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
 
 ### Customer profile
 
@@ -48,7 +48,7 @@ Implement this scenario with:
 
 #### Key Decision
 
-This document assumes and recommends default route advertisement from either on-premises or AVS. If you need the default route to originate from Azure, this is covered in the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
+This document assumes and recommends default route advertisement from either on-premises or AVS. If you need the default route to originate from Azure, refer to the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
  
 ### Considerations 
 
@@ -74,7 +74,7 @@ This document assumes and recommends default route advertisement from either on-
 ### Third Party NVA integration in AVS 
 Integration with Third Party appliances is possible with careful consideration. In this design, third party NVA(s) sit behind one or more T-1 edge routers. 
  
-It's the users responsibility to bring a license and implement any high availability capabilities native to the device.
+It's the users' responsibility to bring a license and implement any high availability capabilities native to the device.
  
 Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: [NSX-T firewall patterns](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/networking/nsx-firewall-patterns)
 
