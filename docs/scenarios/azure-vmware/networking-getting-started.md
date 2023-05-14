@@ -25,12 +25,12 @@ Design areas include:
 
 ## General Design Considerations and Recommendations
 
-[Network Topology and Connectivity](./eslz-network-topology-connectivity.md) This section details general design considerations around ip addressing, bandwidth, and individual components (e.g Expressroute, VNETs)
+[Network Topology and Connectivity:](./eslz-network-topology-connectivity.md) This section details general design considerations around IP addressing, bandwidth, and individual components (e.g ExpressRoute, VNETs)
 
 
 ## Hub & Spoke
 
-This [Egress natively from AVS](./egress-from-avs.md) section shows how to establish hybrid connectivity from your AVS environment in a hub & spoke topology. This section includes integration with workloads in Azure and also datacenters or branch offices with the SDCC. 
+The [Egress natively from AVS](./egress-from-avs.md) section shows how to establish hybrid connectivity from your AVS environment in a hub & spoke topology in a single region. This section includes integration with workloads in Azure and also datacenters or branch offices with the SDCC. 
 
 
 
@@ -39,12 +39,12 @@ This [Egress natively from AVS](./egress-from-avs.md) section shows how to estab
 The Azure Landing Zone accelerator provides an additional [reference guides](./example-architectures.md)  for some common use patterns for connecting to Azure including: 
 
 - Default route propagation using [Secured Virtual VWAN Hub](./example-architectures.md#secured-virtual-wan-hub-with-default-route-propagation)
-- [Inspect traffic between Azure and AVS](./example-architectures.md#network-virtual-appliance-in-azure-virtual-network-to-inspect-all-network-traffic) using an NVA in a Hub VNET
-- Default route propagation for AVS from [on-premises](./example-architectures.md#egress-from-azure-vmware-solution-through-00000-advertisement-from-on-premises) 
+- [Inspect traffic between Azure and AVS](./example-architectures.md##third-party-firewall-solutions-in-a-hub-virtual-network-with-azure-route-server) using an NVA in a Hub VNET
+- Default route propagation from [Azure VMware Solution](./example-architectures.md#egress-from-azure-vmware-solution-with-or-without-nsx-t-or-nva) 
 
 ## Multiregion Design 
 
-[Dual connectivity in a hub & spoke topology](./eslz-dual-region-network-topology.md) This section explores considerations for hybrid connectivity across two or more regions. 
+[Dual connectivity hub & spoke:](./eslz-dual-region-network-topology.md) This section explores considerations for hybrid connectivity across two or more regions. 
 
 ## Next steps
 
