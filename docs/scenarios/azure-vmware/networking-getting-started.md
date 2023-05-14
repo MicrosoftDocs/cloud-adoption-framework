@@ -30,7 +30,7 @@ Design areas include:
 
 ## Hub & Spoke
 
-The [Egress natively from AVS](./egress-from-avs.md) section shows how to establish hybrid connectivity from your AVS environment in a hub & spoke topology in a single region. This section includes integration with workloads in Azure and also datacenters or branch offices with the SDCC. 
+The [Egress natively from AVS](./networking-hubspoke.md) section shows how to establish hybrid connectivity from your AVS environment in a hub & spoke topology in a single region. This section includes integration with workloads in Azure and also datacenters or branch offices with the SDCC. 
 
 
 
