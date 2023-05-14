@@ -76,7 +76,7 @@ Integration with Third Party appliances is possible with careful consideration. 
  
 It is the consumers’ responsibility to bring a license and implement any high availability capabilities native to the device.
  
-Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/networking/nsx-firewall-patterns
+Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: [NSX-T firewall patterns](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/networking/nsx-firewall-patterns)
 
 > [!NOTE] 
 > Microsoft does not support the use of Mobility Optimized Networking when Third party NVAs are used.
@@ -96,7 +96,7 @@ Transit mechanism from Expressroute to VPN Gateways
 
 To use Azure Route Server, you must:
 -	Enable Branch to Branch
--	Use route summarization for > 1000 routes or use NO_ADVERTISE BGP communities' flag Azure Route Server frequently asked questions (FAQs) | Microsoft Learn
+-	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag [Azure Route Server frequently asked questions (FAQs)](https://learn.microsoft.com/en-us/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
 -	Peer  NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number). 
 -	No support for IPV6
 
@@ -115,7 +115,10 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
  
 If you’re seeing unexpected latency, make sure your AVS Private cloud, and ANF deployment are pinned to the same AZ (Azure Availability Zones). For high availability, create ANF volumes in separate AZs and enable `Cross Zone Replication`
 
+> [!IMPORTANT] 
+> Microsoft does not support Fastpath for Secured Azure VWAN hub where the maximum port speed possible is 20Gbps. Consider using hub & spoke VNET's if larger throughput is required. 
 
+See how to attach Azure Netapp Files datastores to Azure VMware Solution hosts [here] (https://learn.microsoft.com/en-us/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal)
 
 ### VPN connectivity from On-premises
 
