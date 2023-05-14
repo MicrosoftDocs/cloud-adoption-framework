@@ -12,7 +12,7 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Networking architecture design
 
-The Azure VMware Solution (AVS) for Azure Landing Zone connectivity section consists of sample architectures, solutions, and guides that can help you to explore hybrid networking with Azure VMware Solution. 
+The Azure VMware Solution (AVS) for Azure Landing Zones connectivity section consists of sample architectures, solutions, and guides that can help you to explore hybrid networking with Azure VMware Solution. 
 
 Azure VMware Solution provides a wide range of networking tools and capabilities for connecting with on-premises environments and Azure native workloads. 
 
@@ -40,7 +40,7 @@ The Azure Landing Zone accelerator provides an additional [reference guides](./e
 
 - Default route propagation using [Secured Virtual VWAN Hub](./example-architectures.md#secured-virtual-wan-hub-with-default-route-propagation)
 - [Inspect traffic between Azure and AVS](./example-architectures.md##third-party-firewall-solutions-in-a-hub-virtual-network-with-azure-route-server) using an NVA in a Hub VNET
-- Default route propagation from [Azure VMware Solution](./example-architectures.md#egress-from-azure-vmware-solution-with-or-without-nsx-t-or-nva) 
+- Default route propagation from within the [Azure VMware Solution](./example-architectures.md#egress-from-azure-vmware-solution-with-or-without-nsx-t-or-nva) datacenter. 
 
 ## Multiregion Design 
 
