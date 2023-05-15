@@ -16,7 +16,7 @@ Microsoft Azure Arc-enabled SQL Managed Instance has near 100% compatibility wit
 
 ## Azure landing zone sandbox subscription
 
-You can practice your skills with an automated, easy-to-deploy sandbox solution named *ArcBox* using an Azure Arc-enabled Kubernetes environment. ArcBox runs in your Azure landing zone sandbox subscription and bootstraps all required Azure resources within a single resource group.
+You can practice your skills with an automated, easy-to-deploy sandbox solution named *ArcBox* using an Azure Arc-enabled Kubernetes environment. ArcBox runs in your [Azure landing zone sandbox subscription](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments.md) and bootstraps all required Azure resources within a single resource group.
 
 [![Diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png)](./media/arcbox-sandbox-subscription.png#lightbox)
 
