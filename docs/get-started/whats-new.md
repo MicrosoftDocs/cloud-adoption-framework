@@ -39,7 +39,7 @@ In this three-part series about SAP applications, learn how to [identify SAP dat
 
 ### SAP workload storage on Azure
 
-Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about about their configuration details and about non-Azure storage service options.
+Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about non-Azure storage service options.
 
 ### Automated Azure VMware Solution implementation options
 
@@ -53,7 +53,7 @@ Explore the benefits of using IaC tools, like Terraform and Azure Bicep, to [kee
 
 ### AI / machine learning strategies for data mesh
 
-Data mesh is a data management approach that can help you move from a centralized data lake or data warehouse to a domain-driven decentralization of analytics data. It doesn't provide explicit guidance about the approach organizations should take to build AI / machine learing models. Explore how to [operationalize data mesh for AI / machine learning domain-driven feature engineering]( /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml).
+Data mesh is a data management approach that can help you move from a centralized data lake or data warehouse to a domain-driven decentralization of analytics data. It doesn't provide explicit guidance about the approach organizations should take to build AI / machine learning models. Explore how to [operationalize data mesh for AI / machine learning domain-driven feature engineering]( /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml).
 
 ### Citrix on Azure landing zone accelerator
 
