@@ -32,7 +32,7 @@ You can implement this architecture with the following components:
 - Outbound internet via a default Azure Virtual Network path
 - Azure ExpressRoute or Azure VPN Gateway for hybrid connectivity to on-premises
 - Azure private endpoints
-- Azure Files storage accounts
+- Azure Files storage accounts or Azure NetApp Files [Compare profile storage options](azure/storage/files/storage-files-netapp-comparison)
 - Azure Key Vault
 
 This scenario also includes the following Citrix components within the Azure landing zone:
