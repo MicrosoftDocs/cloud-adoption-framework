@@ -57,11 +57,11 @@ Data mesh is a data management approach that can help you move from a centralize
 
 ### Citrix on Azure landing zone accelerator
 
-The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone) adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads for scale and success. It’s accommodated by key Citrix design guidance and considerations that are in alignment with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The reference architecture accelerates the future of work. The Citrix on Azure landing zone accelerator tool provides guidance that’s specific to the deployment of Citrix on Azure for a consistent experience and seamless access to vital applications and insights. Employees can use this guidance at the office, on the road, or at home.
+The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone) adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads for scale. It's accommodated by key Citrix design guidance and considerations that align with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The Citrix on Azure landing zone accelerator provides guidance that's specific to the deployment of Citrix on Azure for a consistent experience and seamless access to vital applications and insights. Employees can use this guidance at the office, on the road, or at home.
 
-### CAF relocate
+### Cloud Adoption Framework relocate
 
-The new relocate guidance details the process of moving a workload hosted in Azure to a different Azure region. Relocate walks you through five steps (initiate, evaluate, select, migrate, cutover) and shows you how to pick the right relocation strategy for each workload you want to move. For more information, see [Relocate overview](../relocate/index.md).
+The new relocate guidance describes the process of moving a workload that's hosted on Azure to a different Azure region. The guidance describes five steps (initiate, evaluate, select, migrate, cutover) and explains how to pick the right relocation strategy for each workload that you want to move. For more information, see [Relocate overview](../relocate/index.md).
 
 ## January 2023
 
