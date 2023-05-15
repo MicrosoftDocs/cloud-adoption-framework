@@ -18,44 +18,46 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## April 2023
 
-### Infrastructure as code
+## March 2023
 
-Explore the benefits of using IaC, such as Terraform and Azure Bicep, as a mechanism to [keep your Azure landing zone up to date](/azure/cloud-adoption-framework/manage/infrastructure-as-code-updates). IaC can be used to reduce the effort and error of updates and help manage the update process.
-
-### Citrix on Azure landing zone accelerator
-
-The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone) tool adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads for scale and success. It’s accommodated by key Citrix design guidance and considerations that are in alignment with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The reference architecture accelerates the future of work. The Citrix on Azure landing zone accelerator tool provides guidance that’s specific to the deployment of Citrix on Azure for a consistent experience and seamless access to vital applications and insights. Employees can use this guidance at the office, on the road, or at home.
-
-### AI/ML strategies for data mesh
-
-Data mesh helps organizations move from a centralized data lake or data warehouse to a domain-driven decentralization of analytics data. It’s not explicit about the approach organizations should take to build AI/ML models. Explore how to [operationalize data mesh for AI/ML domain-driven feature engineering]( /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml).
-
-### Automated Azure VMware Solution implementation options
-
-AVS can be implemented in multiple ways, which can be categorized into two broad categories: deployment with connectivity to Azure and deployment with no connection to Azure. Each of these [deployment options](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-platform-automation-and-devops#automated-azure-vmware-solution-implementation-options) can be automated by using Azure Bicep, Terraform, and PowerShell.
-
-### SAP extend and innovate data
-
-In this three-part series about SAP applications, learn how to [identify SAP data sources](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-identify-sap-data-sources), [choose the best SAP connector](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-choose-azure-connectors), and [optimize performance and troubleshooting](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-extraction-performance-troubleshooting). Enterprises use SAP applications as enterprise resource planning systems (ERP), line of business (LOB) SaaS applications, enterprise data warehouses, business intelligence, or integration platforms. Move SAP workloads to Azure to optimally integrate data into your Azure environment.
-
-### SAP workload storage on Azure
-
-Learn about the platform-level SLAs for different high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup with SAP workload on Azure. Also find information about their configuration details and non-Azure storage service options.
-
-### Multiple Azure Active Directory tenant guidance
+### Multiple Azure Active Directory tenant articles
 
 The following articles provide guidance about how to design and implement an Azure environment to accommodate multiple tenants.
 
 | Article | Description |
 |---------|-------------|
-| [Automate Azure landing zones across multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/automation) | Learn about the automation approaches you can use to successfully operate and maintain the ALZ deployment at scale across multiple tenants. |
+| [Automate Azure landing zones across multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/automation) | Learn about the automation approaches you can use to successfully operate and maintain Azure landing zones deployments at scale across multiple tenants. |
 | [Azure landing zones canary approach with multiple tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/canary) | Learn how to handle Azure landing zones canary environments when you have multiple tenants. |
-| [Azure Lighthouse usage in Azure landing zones multi-tenant scenarios](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/lighthouse) | [Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, higher automation, and enhanced governance across resources. Azure Lighthouse can be adopted in Azure landing zone scenarios in single or multi-tenant architectures. |
-| [Azure landing zones and multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview) | Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones and the benefits of using a single tenant. |
-| [Scenarios for multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/scenarios) | Learn about the most common scenarios where an organization might need multiple Azure Active Directory tenants. |
-| [Considerations and recommendations for multi-tenant Azure landing zone scenarios](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/considerations-recommendations) | Learn about the limitations of operating within a single Azure Active Directory tenant. Learn key considerations and recommendations about Azure landing zones and Azure Active Directory multi-tenant scenarios and usage. |
+| [Azure Lighthouse usage in Azure landing zones multi-tenant scenarios](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/lighthouse) | [Azure Lighthouse](/azure/lighthouse/overview) enables multi-tenant management with scalability, increased automation, and enhanced governance across resources. You can use Azure Lighthouse in Azure landing zone scenarios in single-tenant or multi-tenant architectures. |
+| [Azure landing zones and multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview) | Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones. Learn the benefits of using a single tenant. |
+| [Scenarios for multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/scenarios) | Learn about the most common scenarios for which you might need multiple Azure Active Directory tenants. |
+| [Considerations and recommendations for multi-tenant Azure landing zone scenarios](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/considerations-recommendations) | Learn about the limitations of operating within a single Azure Active Directory tenant. Learn key considerations and recommendations for Azure landing zones and Azure Active Directory multi-tenant scenarios. |
+
+### SAP extend and innovate data
+
+In this three-part series about SAP applications, learn how to [identify SAP data sources](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-identify-sap-data-sources), [choose the best SAP connector](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-choose-azure-connectors), and [optimize performance and troubleshooting](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-extraction-performance-troubleshooting). Enterprises use SAP applications as enterprise resource planning (ERP) systems, line of business (LOB) SaaS applications, enterprise data warehouses, business intelligence platforms, or integration platforms. Move SAP workloads to Azure to optimally integrate data into your Azure environment.
+
+### SAP workload storage on Azure
+
+Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about about their configuration details and about non-Azure storage service options.
+
+### Automated Azure VMware Solution implementation options
+
+You can implement Azure VMware Solution in multiple ways. The options can be categorized into two broad categories: deployment with connectivity to Azure, and deployment with no connection to Azure. You can automate each of these [deployment options](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-platform-automation-and-devops#automated-azure-vmware-solution-implementation-options) by using Azure Bicep, Terraform, and PowerShell.
+
+### Infrastructure as code (IaC)
+
+Explore the benefits of using IaC tools, like Terraform and Azure Bicep, to [keep your Azure landing zone up to date](/azure/cloud-adoption-framework/manage/infrastructure-as-code-updates). IaC can help you reduce the amount of effort required for updates, reduce errors, and manage the update process.
 
 ## February 2023
+
+### AI / machine learning strategies for data mesh
+
+Data mesh is a data management approach that can help you move from a centralized data lake or data warehouse to a domain-driven decentralization of analytics data. It doesn't provide explicit guidance about the approach organizations should take to build AI / machine learing models. Explore how to [operationalize data mesh for AI / machine learning domain-driven feature engineering]( /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml).
+
+### Citrix on Azure landing zone accelerator
+
+The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone) adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads for scale and success. It’s accommodated by key Citrix design guidance and considerations that are in alignment with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The reference architecture accelerates the future of work. The Citrix on Azure landing zone accelerator tool provides guidance that’s specific to the deployment of Citrix on Azure for a consistent experience and seamless access to vital applications and insights. Employees can use this guidance at the office, on the road, or at home.
 
 ### CAF relocate
 
@@ -63,7 +65,7 @@ The new relocate guidance details the process of moving a workload hosted in Azu
 
 ## January 2023
 
-### Why update your Azure landing zones
+### Why update your Azure landing zones?
 
 An Azure landing zone is a set of predefined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important that your deployed landing zone environment is kept up to date so you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases. Explore the benefits of [keeping your Azure landing zone updated, secure, and optimized](../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md).
 
