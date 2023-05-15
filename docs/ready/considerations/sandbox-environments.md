@@ -50,7 +50,7 @@ The [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/
 
 ### Audit Logging
 
-From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. A diagnostic setting that includes at least the administrative and security log categories (audit) should be enabled for all sandbox subscriptions. As per [Azure Landing Zone guidance](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root), they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview).
+From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. A diagnostic setting that includes at least the administrative and security log categories (audit) should be enabled for all sandbox subscriptions. As per [Azure Landing Zone guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform#inventory-and-visibility-recommendations), they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview).
 
 
 The [Azure policies included in the enterprise-scale landing zone reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root) already includes an Azure policy definition ("Configure Azure Activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The Sandboxes Management Group should inherit this policy enabling diagnostic logging of the sandbox subscriptions.
@@ -101,3 +101,6 @@ Ensuring any Azure service can be used in sandbox environments will provide the 
 One concern most organizations have about sandbox environments is ensuring sensitive data doesn’t find its way in. The first line of defense for information protection is always user education. Users should be given disclaimers/information before being assigned a sandbox that clearly states any sensitive data shouldn't be added to the sandbox.
 
 [Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
+
+## Next steps
+Understand how to [improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance) to support adoption at scale.
