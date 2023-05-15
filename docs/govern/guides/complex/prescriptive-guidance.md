@@ -7,7 +7,7 @@ ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Complex enterprise governance: Best practices explained
@@ -122,7 +122,7 @@ If any of the patterns in this governance guide don't align with your requiremen
 - [Policy enforcement patterns](../../policy-compliance/policy-definition.md)
 - [Resource consistency patterns](../../../decision-guides/resource-consistency/index.md)
 - [Resource tagging patterns](../../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
-- [Software Defined Networking patterns](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
+- [Software Defined Networking patterns](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md)
 - [Subscription design patterns](../../../ready/landing-zone/design-area/resource-org-subscriptions.md)
 
 ## Next steps

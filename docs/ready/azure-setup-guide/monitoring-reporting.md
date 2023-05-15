@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
+products: azure-monitor
 ---
 
 # Monitoring and reporting in Azure
@@ -46,8 +47,6 @@ To learn more, see [Azure Monitor documentation](/azure/azure-monitor/).
 ::: zone-end
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
 
 ::: zone-end
 

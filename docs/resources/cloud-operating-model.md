@@ -7,7 +7,7 @@ ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal
+ms.custom: internal, UpdateFrequency5
 ---
 
 <!-- docutune:ignore "Cloud Operating Model" -->

@@ -7,7 +7,7 @@ ms.date: 02/02/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Cloud adoption plan and Azure DevOps
@@ -35,8 +35,6 @@ For more support and guidance on this tool, see [Azure DevOps Services demo gene
 After you deploy your project plan, you can use Microsoft Excel to modify it. It's easier to create workloads or assets by using Microsoft Excel compared to the Azure DevOps browser experience.
 
 To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
-
-You might want to use Microsoft Project to track tasks, create a backlog, and assign resources. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/create-your-backlog).
 
 ## Use the cloud adoption plan
 

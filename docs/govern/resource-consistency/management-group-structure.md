@@ -7,14 +7,14 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Management group structure
 
 Management groups are a key construct for managing resource consistency. Management groups are logical containers for subscriptions that are arranged hierarchically. You can apply policies and manage access at the management group level and all child management groups and subscriptions inherit the policies and role assignments.
 
-:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-org.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
+:::image type="complex" source="../../ready/landing-zone/design-area/media/sub-organization.png" alt-text="Diagram of a sample management group hierarchy." border="false":::
 Diagram of a root management group holding both management groups and subscriptions. Some child management groups hold management groups, some hold subscriptions, and some hold both.
 :::image-end:::
 
@@ -46,7 +46,7 @@ The following Azure Resource Graph query lists policy assignments at the managem
 
 ```bash
 PolicyResources
-| where type == 'microsoft.authorization/policyassignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
+| where type == 'microsoft.authorization/policyAssignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
 | project Policy=properties.displayName,AssignedBy=properties.metadata.assignedBy,Scope=properties.scope
 | summarize make_list(Policy) by tostring(Scope)
 | order by Scope

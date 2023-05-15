@@ -2,12 +2,12 @@
 title: Get started on a skills readiness path
 description: Explore a skills readiness path so you can help your organization understand and adopt cloud services.
 author: martinekuan
-ms.author: martinek
-ms.date: 08/02/2022
+ms.author: tozimmergren
+ms.date: 03/03/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Get started on a skills readiness path
@@ -41,6 +41,8 @@ Examples of tailored learning paths that align to the Cloud Adoption Framework i
 - [Evolve your DevOps practices](/training/paths/evolve-your-devops-practices/): DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either in the cloud or on premises.
 
 - [Azure for the data engineer](/training/paths/azure-for-the-data-engineer/): Explore how the world of data has evolved and how the advent of cloud technologies provides new opportunities for business to explore. You'll learn about various data platform technologies, and how a data engineer can take advantage of this technology to an organization's benefit.
+
+- [The Principles of Sustainable Software Engineering](/training/modules/sustainable-software-engineering-overview/): Sustainability, or cloud efficiency, is a fundamental topic to understand to optimize your cloud infrastructure, applications, and workloads. Regarding skilling and sustainability, you might benefit from reading the report on [Closing the Sustainability Skills Gap: Helping businesses move from pledges to progress](https://blogs.microsoft.com/on-the-issues/2022/11/02/closing-sustainability-skills-gap/).
 
 ## Learn more
 

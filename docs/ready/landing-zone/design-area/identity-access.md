@@ -7,7 +7,7 @@ ms.date: 06/24/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Azure identity and access management design area
@@ -48,6 +48,9 @@ These articles examine design considerations and recommendations related to iden
 - [Azure Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
 - [Platform access](identity-access-platform-access.md)
 - [Prerequisites for a landing zone](identity-access-landing-zones.md)
+
+>[!TIP]
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
 
 ## Next steps
 
