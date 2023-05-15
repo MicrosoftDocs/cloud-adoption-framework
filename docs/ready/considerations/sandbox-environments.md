@@ -43,9 +43,9 @@ One of the benefits of creating a sandbox subscription is the ability to manage 
 
 ### Networking
 
-All sandbox networking is left to the sandbox user to create what fits their needs. To keep the sandbox isolated it's important to ensure the networks created inside the sandbox aren't peered with other networks outside of the sandbox. The [Deny VNet peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) policy can be used to ensure each sandbox is its own isolated environment.
+All sandbox subscription networking is left to the sandbox user to create what fits their needs. To keep the sandbox isolated it's important to ensure the networks created inside the sandbox subscriptions aren't peered with other networks outside of the sandbox. The [Deny VNet peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) policy can be used to ensure each sandbox is its own isolated environment.
 
-The [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy can be used to deny creation of Express Route gateways, VPN gateways, and vWan hubs. Denying these resources helps ensure the sandbox environments stay isolated from a network perspective.
+The [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy can be used to deny creation of Express Route gateways, VPN gateways, and vWan hubs. Denying these resources helps ensure the sandbox subscriptions stay isolated from a network perspective.
 
 
 ### Audit Logging
