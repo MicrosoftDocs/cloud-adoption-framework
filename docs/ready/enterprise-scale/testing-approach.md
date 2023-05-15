@@ -139,3 +139,6 @@ Below is guidance on how to implement and use the canary management group hierar
  > If you already have Azure landing zones deployed in production and are now looking to add a canary environment. Consider cloning your current deployment of the production environment hierarchy and amend the names of resources to prefix them with your canary naming scheme.
  >
  > This is to ensure what you are deploying to enable the canary environment is in sync with production from the start. This is easily achieved when using an Infrastructure-as-Code tool alongside a git repository.
+
+## Next steps
+Understand how to implement [landing zone sandbox environments.](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments.md)
