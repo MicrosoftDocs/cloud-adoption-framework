@@ -3,7 +3,7 @@ title: Azure Enterprise Agreement enrollment design area guidance
 description: Understand the Enterprise Agreement enrollments and Azure Active Directory tenants design area.
 author: jtracey93
 ms.author: jatracey
-ms.date: 04/28/2023
+ms.date: 05/16/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
