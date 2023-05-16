@@ -3,7 +3,7 @@ title: Azure billing offers and Active Directory tenants
 description: Understand Azure billing offers and Active Directory tenants
 author: jtracey93
 ms.author: jatracey
-ms.date: 08/23/2021
+ms.date: 05/16/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
