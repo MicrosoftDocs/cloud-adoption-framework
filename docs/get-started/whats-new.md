@@ -20,7 +20,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Network considerations for Azure VMware Solution dual-region deployments
 
-Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions for disaster resiliency. If there are partial or complete regional outages, the network topology in this article allows the unaffected components (private clouds, Azure-native resources, and on-premises sites) to maintain connectivity with each other and with the internet.
+Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions for disaster resiliency. If there are partial or complete regional outages, the [network topology in this article](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-dual-region-network-topology) allows unaffected components (private clouds, Azure-native resources, and on-premises sites) to maintain connectivity with each other and with the internet.
 
 ## March 2023
 
