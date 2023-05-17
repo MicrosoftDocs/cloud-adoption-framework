@@ -103,4 +103,10 @@ One concern most organizations have about sandbox environments is ensuring sensi
 [Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
 
 ## Next steps
-Understand how to [improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance) to support adoption at scale.
+
+To learn more and get hands-on experience with sandbox deployment, visit the [Azure sandbox guide](/azure/architecture/guide/azure-sandbox/azure-sandbox).
+
+Once you're ready to learn how to landing zone governance will help you support adoption at scale, select:
+
+> [!div class="nextstepaction"]
+> [Improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
