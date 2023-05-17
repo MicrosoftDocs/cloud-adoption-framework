@@ -45,7 +45,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - Partners, should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
 
-- Follow and implement the [Customer security best practices](partner-center/customer-security-best-practices)
+- Follow and implement the [Customer security best practices](/partner-center/customer-security-best-practices)
 
 - Partners should follow and implement the [CSP security best practices](/partner-center/csp-security-best-practices)
 
