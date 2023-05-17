@@ -141,4 +141,7 @@ Below is guidance on how to implement and use the canary management group hierar
  > This is to ensure what you are deploying to enable the canary environment is in sync with production from the start. This is easily achieved when using an Infrastructure-as-Code tool alongside a git repository.
 
 ## Next steps
-Understand how to implement [landing zone sandbox environments.](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments.md)
+Learn how to implement landing zone sandbox environments. 
+
+> [!div class="nextstepaction"]
+> [Implement landing zone sandbox environments](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments)
