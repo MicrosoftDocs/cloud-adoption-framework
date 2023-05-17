@@ -16,7 +16,8 @@ In this design pattern, traffic has a dedicated path over the Microsoft backbone
 
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/publicip2.png)](./media/publicip2.png)
 
-[!IMPORTANT] If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
+>[!IMPORTANT] 
+>If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
 
 ### Customer profile
 
@@ -140,7 +141,7 @@ Default route advertisement from Azure is possible with Third party NVA in eithe
 ### A third-party NVA in the hub VNet inspects traffic between AVS and the internet and between AVS and Azure VNets
 | Traffic inspection requirements | Recommended solution design | Considerations | Internet Breakout |
 |----|---|---|---|
-| - Internet ingress <br> - Internet egress </br> - To on-premises datacenter </br> - To Azure Virtual Network   | </br> Use third-party firewall solutions in a hub virtual network with Azure Route Server. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure. </br></br> Use an on-premises third-party firewall NVA. </br></br> Deploy third-party firewall solutions in a hub virtual network with Azure Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to an Azure VMware Solution.| Azure
+| - Internet ingress <br> - Internet egress </br> - To on-premises datacenter </br> - To Azure Virtual Network   |  Use third-party firewall solutions in a hub virtual network with Azure Route Server. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure. </br></br> Use an on-premises third-party firewall NVA. </br></br> Deploy third-party firewall solutions in a hub virtual network with Azure Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to an Azure VMware Solution.| Azure
 
 
 
@@ -164,4 +165,4 @@ Default route advertisement from Azure is possible with Third party NVA in eithe
 Next, observe other design patterns for establishing connectivity to the Azure VMware Solution
 
   > [!div class="nextstepaction"]
-  > [Example Architectures for Azure VMware Solution](./example-architectures.md)
+  > [Multi region network topology ](./eslz-dual-region-network-topology.md)

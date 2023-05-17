@@ -51,4 +51,4 @@ The Azure Landing Zone accelerator provides an additional [reference guides](./e
 Examine design considerations and recommendations related to connectivity that are specific to the deployment of Azure VMware Solution.
 
 > [!div class="nextstepaction"]
-> [Connectivity and Network Topologies for AVS](./eslz-network-topology-connectivity.md)
+> [Network Considerations and Recommendations for AVS](./eslz-network-topology-connectivity.md)
