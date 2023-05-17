@@ -141,7 +141,7 @@ Default route advertisement from Azure is possible with Third party NVA in eithe
 ### A third-party NVA in the hub VNet inspects traffic between AVS and the internet and between AVS and Azure VNets
 | Traffic inspection requirements | Recommended solution design | Considerations | Internet Breakout |
 |----|---|---|---|
-| - Internet ingress <br> - Internet egress </br> - To on-premises datacenter </br> - To Azure Virtual Network   |  Use third-party firewall solutions in a hub virtual network with Azure Route Server. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure. </br></br> Use an on-premises third-party firewall NVA. </br></br> Deploy third-party firewall solutions in a hub virtual network with Azure Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to an Azure VMware Solution.| Azure
+| - Internet ingress <br> - Internet egress </br> - To on-premises datacenter </br> - To Azure Virtual Network   | Use third-party firewall solutions in a hub virtual network with Azure Route Server. </br></br> For HTTP/S traffic, use Azure Application Gateway. For non-HTTP/S traffic, use a third-party firewall NVA on Azure. </br></br> Use an on-premises third-party firewall NVA. </br></br> Deploy third-party firewall solutions in a hub virtual network with Azure Route Server. | Choose this option to advertise the `0.0.0.0/0` route from an NVA in your Azure hub virtual network to an Azure VMware Solution.| Azure
 
 
 
