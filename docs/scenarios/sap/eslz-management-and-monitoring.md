@@ -15,7 +15,7 @@ products: azure-monitor
 
 This article builds on considerations and recommendations defined in the Azure landing zone article [Design area: Management for Azure environments](../../ready/landing-zone/design-area/management.md). The guidance in this article will help you explore how to operationally maintain an SAP platform on an Azure enterprise estate, with centralized management and monitoring at the platform level.
 
-This article presents critical recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Because SAP is a mission-critical platform, you should include guidance on the Azure landing zone design areas in your design.
+This article presents critical recommendations for SAP operations teams to maintain SAP systems within the Azure platform. Because SAP is a mission-critical platform, you should include guidance on the Azure landing zone design areas in your design. If you're looking to build standard operating procedures for managing an SAP workload, see [SAP workload operational procedures](/azure/well-architected/sap/design-areas/operational-procedures) in the Azure Well-Architected Framework.
 
 ## Key points
 
