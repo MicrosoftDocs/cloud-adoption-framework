@@ -76,3 +76,9 @@ Performance efficiency can be difficult to diagnose in any enterprise system. Fo
 The first recommendation is to use Automatic Workload Repository (AWR) reports. AWR reports contain valuable information for diagnosing problems in the Oracle system. We recommend that you run an AWR report during several sessions and choose peak times for it, to ensure broad coverage for the analysis.
 
 The AWR report shows SQL statistics, database information, system and I/O statistics, and other information that you can use to pinpoint problems. For more analysis tools and helpful SQL statements, see [this SAP blog post](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/announcement-sap-on-azure-oracle-performance-efficiency-scripts/ba-p/3725178).
+
+For additional performance efficiency guidance on Oracle workloads, see [Oracle workload performance efficiency](/azure/well-architected/oracle-iaas/performance-efficiency) in the Azure Well-Architected Framework.
+
+## Next steps
+
+Build your [business continuity and disaster recovery for an SAP migration](./eslz-business-continuity-and-disaster-recovery.md).
