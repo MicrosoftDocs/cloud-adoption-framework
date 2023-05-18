@@ -50,7 +50,7 @@ The [Deny ER/VPN/vWAN creation](https://www.azadvertizer.net/azpolicyadvertizer/
 
 ### Audit Logging
 
-From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. A diagnostic setting that includes at least the administrative and security log categories (audit) should be enabled for all sandbox subscriptions. As per [Azure Landing Zone guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform#inventory-and-visibility-recommendations), they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview).
+From a security perspective, it's important to ensure audit logging is enabled for any sandbox environment. A diagnostic setting that includes at least the administrative and security log categories (audit) should be enabled for all sandbox subscriptions. As per [Azure Landing Zone guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform#inventory-and-visibility-recommendations), they should be stored in a central destination (like the Azure Landing Zone default Log Analytics workspace) so that logs can be reviewed as necessary, or integrated with a SIEM like [Microsoft Sentinel](/azure/sentinel/overview).
 
 
 The [Azure policies included in the enterprise-scale landing zone reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root) already includes an Azure policy definition ("Configure Azure Activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The Sandboxes Management Group should inherit this policy enabling diagnostic logging of the sandbox subscriptions.
@@ -72,10 +72,10 @@ Sandboxes should be canceled or deleted at some point in time. Having a strategy
 ##### Cost
 
 
-A key concern for any cloud-based sandbox environment is cost tracking. Azure Cost Management allows for the creation of budgets. The [budgets feature](https://learn.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) allows alerts to be generated when actual spending or forecasted spending cross configured thresholds.
+A key concern for any cloud-based sandbox environment is cost tracking. Azure Cost Management allows for the creation of budgets. The [budgets feature](/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) allows alerts to be generated when actual spending or forecasted spending cross configured thresholds.
 
 
-Whenever a sandbox is deployed, an Azure Cost Management budget can be created for it and assigned to the subscription. This budget alerts the sandbox users when spending thresholds are crossed (50%, 75%, and 100%). Optionally, automation can be used to take action when the 100% spend threshold is crossed, for example, the subscription is [canceled](https://learn.microsoft.com/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted. Note: the alert alone is just a warning mechanism.
+Whenever a sandbox is deployed, an Azure Cost Management budget can be created for it and assigned to the subscription. This budget alerts the sandbox users when spending thresholds are crossed (50%, 75%, and 100%). Optionally, automation can be used to take action when the 100% spend threshold is crossed, for example, the subscription is [canceled](/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted. Note: the alert alone is just a warning mechanism.
 
 
 All sandboxes should have a budget assigned. A default budget can be applied to all sandboxes by utilizing the [Deploy-Budget](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Budget.html) Azure Policy at the Sandboxes Management Group level. The default budget should be set to the maximum cost the organization would tolerate for any sandbox. The default budget would function to alert on cost for any sandbox that hasn't been assigned a more specific budget directly.
@@ -84,9 +84,9 @@ All sandboxes should have a budget assigned. A default budget can be applied to 
 ##### Expiration Date
 
 
-Most organizations will want to expire and delete sandboxes after a certain period. Expiring sandboxes provide cost control and security benefits. Sandbox environments are created for testing and learning purposes. Ideally once the sandbox user performs their test or gains the intended knowledge it makes sense to expire the sandbox as it is no longer needed. Each sandbox should be given an expiration date. When that date is reached the sandbox subscription should be [canceled](https://learn.microsoft.com/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted.
+Most organizations will want to expire and delete sandboxes after a certain period. Expiring sandboxes provide cost control and security benefits. Sandbox environments are created for testing and learning purposes. Ideally once the sandbox user performs their test or gains the intended knowledge it makes sense to expire the sandbox as it is no longer needed. Each sandbox should be given an expiration date. When that date is reached the sandbox subscription should be [canceled](/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or deleted.
 
-An Azure [tag](https://learn.microsoft.com/azure/azure-resource-manager/management/tag-resources?tabs=json) with an expiration date can be placed on the subscription when a sandbox is created. Automation can then be used to cancel or delete the subscription when the expiration date is reached.
+An Azure [tag](/azure/azure-resource-manager/management/tag-resources?tabs=json) with an expiration date can be placed on the subscription when a sandbox is created. Automation can then be used to cancel or delete the subscription when the expiration date is reached.
 
 
 
@@ -100,7 +100,7 @@ Ensuring any Azure service can be used in sandbox environments will provide the 
 
 One concern most organizations have about sandbox environments is ensuring sensitive data doesn’t find its way in. The first line of defense for information protection is always user education. Users should be given disclaimers/information before being assigned a sandbox that clearly states any sensitive data shouldn't be added to the sandbox.
 
-[Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
+[Microsoft Purview](/azure/purview/overview) is a service that can be used to provide information protection for sandbox environments. Purview can be used to alert if data labeled by the organization as sensitive were to be added to sandbox environments.
 
 ## Next steps
 
