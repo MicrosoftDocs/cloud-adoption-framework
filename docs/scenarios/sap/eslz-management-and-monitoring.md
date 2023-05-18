@@ -29,8 +29,6 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Help protect your HANA database by using the [Azure Backup](/azure/backup/sap-hana-db-about) service. If you deploy Azure NetApp Files for your HANA, Oracle, or DB2 database, use the [Azure Application Consistent Snapshot tool (AzAcSnap)](/azure/azure-netapp-files/azacsnap-introduction) to take application-consistent snapshots. AzAcSnap also supports Oracle databases. Consider using AzAcSnap on a central VM rather than on individual VMs.
 
-- Create a monitoring platform by using [SAP telemetry tools](https://github.com/microsoft/saptelemetry) to provide business process insights.
-
 - Use inter-VM latency monitoring for latency-sensitive applications.
 
 - Use [Connection Monitor](/azure/network-watcher/connection-monitor-overview) in Azure Network Watcher to monitor latency metrics for SAP databases and application servers. Or [collect and display network latency measurements by using Azure Monitor](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/collecting-and-displaying-niping-network-latency-measurements/ba-p/1833979).
