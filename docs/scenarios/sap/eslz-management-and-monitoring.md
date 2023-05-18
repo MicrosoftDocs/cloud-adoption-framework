@@ -37,7 +37,7 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) monitoring to maintain the health of the disaster recovery service for SAP application servers.
 
-- All production systems must use premium managed disks with a minimum of 128 GB (P10) for OS disks to avoid performance problems.
+- All production systems must use premium managed disks with a minimum of 128 GiB (P10) for OS disks to avoid performance problems.
 
 - Exclude all the database file systems and executable programs from antivirus scans. Including them could lead to performance problems. Check with the database vendors for prescriptive details on the exclusion list. For example, Oracle recommends excluding */oracle/\<sid>/sapdata* from antivirus scans.
 
