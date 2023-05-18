@@ -82,7 +82,7 @@ The canary environment management group hierarchy is then used to simplify testi
 
 ## What if you don't want to deploy the entire canary environment management group hierarchy?
 
-If you don't want to deploy the entire canary environment management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments.md) as shown in the diagram.
+If you don't want to deploy the entire canary environment management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments) as shown in the diagram.
 
 [![Diagram of the testing approach that uses sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
