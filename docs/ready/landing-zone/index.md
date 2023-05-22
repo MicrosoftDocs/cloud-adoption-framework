@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is a multi-subscription Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone adheres to essential design principles across eight design areas. These design areas are (1) billing and tenant management, (2) identity and access management, (3) resource organization, (4) network topology and connectivity, (5) security, (6) management, (7) governance, (8) platform automation and DevOps.
+An Azure landing zone is a multi-subscription Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone adheres to essential design principles across eight design areas.
 
 Azure landing zones are scalable and modular to fit all deployment needs. They use repeatable infrastructure to apply configuration and controls to each application landing zone as. They also use a modular or extensible to easily scale specific elements of the environment as requirements evolve.
 
@@ -25,19 +25,21 @@ The Azure landing zone conceptual architecture is a target architecture. It sets
 
 Whether you're starting on your first production application on Azure or operating a complex portfolio of tech platforms and workloads, you can [tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md).
 
-**Subscriptions:** The conceptual architecture shows the placement of the subscriptions (yellow boxes) in the management group hierarchy. It also shows a zoomed in view of five subscriptions. THe architecture shows resources in the subscriptions and policies applied.
+**Subscriptions:** The conceptual architecture shows the placement of the subscriptions (yellow boxes) in the management group hierarchy. It also shows a zoomed in view of five subscriptions with Azure resources and policies applied.
 
-**Design areas:** It illustrates the design principles across the eight design areas (A-I). It shows Of these eight design areas, there are environment design areas and compliance design areas.
+**Design areas:** The conceptual architecture illustrates implementation recommendations across eight design areas: (1) Azure billing and Active Directory tenant, (2) identity and access management, (3) resource organization, (4) network topology and connectivity, (5) security, (6) management, (7) governance, (8) platform automation and DevOps (A-I). Of these eight design areas, there are environment design areas and compliance design areas.
 
-**Environment design areas:* Billing and tenant (A), identity and access management (B), management groups and subscriptions (C), and network topology connectivity (E) are the environment design areas.
+*Environment design areas:* Azure billing and Azure Active Directory tenant (A), identity and access management (B), management groups and subscriptions (C), and network topology connectivity (E) are the environment design areas.
 
-**Compliance design areas:* Security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I) are the compliance design areas.
+*Compliance design areas:* Security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I) are the compliance design areas.
 
 For more information, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
 ### Platform landing zone vs. application landing zones
 
 An Azure landing zone has two types of landings zones: platform landing zones and application landing zones. Platform landing zones are for the platform resources your applications need. Application landing zones are environments for your applications.
+
+In the conceptual architecture, platform landing zones are the subscriptions under the 'Platform' management group. The application landing zones are the subscriptions under the "Landing zone" management group.
 
 **Platform landing zone:** A platform landing zones are subscriptions that provide centralized services to workloads and applications. A central team or several central teams aligned to function (networking, identity) manage these subscriptions. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency.
 
