@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is a multi-subscription Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone adheres to essential design principles across seven design areas. An Azure landing zone has two types of landings zones: platform landing zones and application landing zones. Platform landing zones are for the platform resources your applications need. Application landing zones are environments for your applications.
+An Azure landing zone is a multi-subscription Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone adheres to essential design principles across eight design areas. These design areas are (1) billing and tenant management, (2) identity and access management, (3) resource organization, (4) network topology and connectivity, (5) security, (6) management, (7) governance, (8) platform automation and DevOps.
 
 ## Azure landing zone conceptual architecture
 
@@ -21,22 +21,24 @@ The Azure landing zone conceptual architecture is target architecture. It sets a
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
-Before deploying Azure resources, you need to set up your enterprise enrollment (A), identity and access management (B), and management groups and subscriptions (C). You should place your subscriptions in the appropriate management groups. The yellow boxes represent different subscriptions. The diagram shows you the Azure resources in five of these subscriptions.
-
 Whether you're starting on your first production application on Azure or operating a complex portfolio of tech platforms and workloads, you can [tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md).
+
+Before deploying Azure resources, you need to set up your enterprise enrollment (A), identity and access management (B), and management groups and subscriptions (C). You should place your subscriptions in the appropriate management groups. Each yellow box represents a subscription. The arrows coming from each subscription show you the Azure resources five of these subscriptions.
 
 For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](./design-areas.md#environment-design-areas).
 
 ### Platform landing zone vs. application landing zones
 
-There are two types of landing zones:
+An Azure landing zone has two types of landings zones: platform landing zones and application landing zones. Platform landing zones are for the platform resources your applications need. Application landing zones are environments for your applications.
 
-- **Platform landing zone:** A platform landing zones are subscriptions that provide centralized services to workloads and applications. A central team or a number of central teams split by function (networking, identity) manage these subscriptions. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency. In the conceptual architecture, the "Identity subscription", "Management subscription", and "Connectivity subscription" are platform landing zones.
-- **Application landing zone:**  An application landing zone is an environment for an application or workload. You use management groups to assign policy controls to application landing zones. In the conceptual architecture, the "Application landing zone subscription A2" receives the policy controls from 'corp' management group. There are three different approaches to managing application landing zones:
-  
-  - *Central IT team management*: A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform and application landing zones.
-  - *Split management*: With technology platforms such as AKS or AVS, a central IT teams manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions are different from the ones you use to centrally manage application landing zones.  
-  - *Application team management*: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment; whilst still being controlled by the policies applied from the Management Groups above that the platform team control. This might include adding additional policies at the subscription scope and using alternative tooling for deploying, securing or monitoring workloads that is fully controlled and operated by the workload team.
+- **Platform landing zone:** A platform landing zones are subscriptions that provide centralized services to workloads and applications. A central team or several central teams aligned to function (networking, identity) manage these subscriptions. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency. In the conceptual architecture, the "Identity subscription", "Management subscription", and "Connectivity subscription" are platform landing zones.
+- **Application landing zone:**  An application landing zone is an environment for an application or workload. You use management groups to assign policy controls to application landing zones. In the conceptual architecture, the "Application landing zone subscription A2" receives the policy controls from 'corp' management group. Depending on the deployment, a central IT team, application team, or both teams manage the application landing zone (*see table*).
+
+| Management approach | Description |
+| --- | --- |
+| Central IT team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform and application landing zones.
+| Application team management | A platform administration team delegates the entire landing zone to a workload team. The workload team manages and supports the environment. The management group policies control that the platform team controls still controls the workload. This might include adding additional policies at the subscription scope and using alternative tooling for deploying, securing, or monitoring workloads.|
+| Split management | With technology platforms such as AKS or AVS, a central IT teams manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions are different from the ones you use to centrally manage application landing zones.  
 
 ## Azure landing accelerators
 
