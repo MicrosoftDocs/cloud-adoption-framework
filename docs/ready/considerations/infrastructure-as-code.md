@@ -158,7 +158,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Publish and use IaC modules from public registries in the following scenarios:
 
-  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Terraform module for Azure landing zones](../landing-zone/terraform-module.md).
+  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
 
