@@ -18,7 +18,7 @@ Azure landing zones are scalable and modular to fit all deployment needs. They u
 
 ## Azure landing zone architecture
 
-An Azure landing zone is for all deployment types. You should use it if you're onboarding one application to Azure or managed a complex application portfolio. The Azure landing zone conceptual architecture (*see figure 1) represents an approach. The architecture sets a direction for your approach. As you design and implement your Azure landing zone, you should [tailor the architecture to meet your requirements](./tailoring-alz.md).
+An Azure landing zone is for all deployment types. You should use it if you're onboarding one application to Azure or managing a complex application portfolio. The Azure landing zone conceptual architecture (*see figure 1*) represents best practices. It consists of platform landing zones and application landing zones. You should use it as a starting point and then [tailor the Azure landing zone implementation to meet your needs](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
