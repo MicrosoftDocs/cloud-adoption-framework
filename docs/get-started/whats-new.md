@@ -18,6 +18,10 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## April 2023
 
+### Network topology and connectivity for Azure VMware Solution
+
+When you use a VMware software-defined datacenter (SDDC) with an Azure cloud ecosystem, you have a unique set of design considerations to follow for both cloud-native and hybrid scenarios. This article provides [key considerations and best practices](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-network-topology-connectivity) for networking and connectivity to, from, and within Azure and Azure VMware Solution deployments.
+
 ### Network considerations for Azure VMware Solution dual-region deployments
 
 Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions for disaster resiliency. If there are partial or complete regional outages, the [network topology in this article](/azure/cloud-adoption-framework/scenarios/azure-vmware/eslz-dual-region-network-topology) allows unaffected components (private clouds, Azure-native resources, and on-premises sites) to maintain connectivity with each other and with the internet.
