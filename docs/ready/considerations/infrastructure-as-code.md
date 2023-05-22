@@ -29,7 +29,7 @@ There are two approaches you can take when implementing Infrastructure as Code.
 
 ### ARM Templates
 
-Review information about Azure Resource Manager templates.
+Review information about Azure Resource Manager (ARM) templates.
 
 - [What are ARM templates?](/azure/azure-resource-manager/templates/overview)
 
@@ -144,7 +144,7 @@ You have several options for publishing and sharing Terraform modules:
 
 - Use Azure native tools for IaC in the following scenarios:
 
-  - You want to use only Azure native tools. Your organization might have prior ARM or Bicep template deployment experience..
+  - You want to use only Azure native tools. Your organization might have prior ARM or Bicep template deployment experience.
 
   - Your organization wants to have immediate support for all preview and GA versions of Azure services.
 
@@ -161,6 +161,7 @@ You have several options for publishing and sharing Terraform modules:
   - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md).
 
   - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
+    - Make sure you check the support statement from any module provider you evaluate.
 
 - Publish and use IaC modules from private registries or version control systems in the following scenarios:
 
