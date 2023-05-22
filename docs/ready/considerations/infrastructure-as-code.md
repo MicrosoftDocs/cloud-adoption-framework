@@ -29,7 +29,7 @@ There are two approaches you can take when implementing Infrastructure as Code.
 
 ### ARM Templates
 
-Review information about Azure Resource Manager (ARM) templates.
+Review information about Azure Resource Manager templates (ARM templates).
 
 - [What are ARM templates?](/azure/azure-resource-manager/templates/overview)
 
