@@ -21,9 +21,9 @@ The Azure landing zone conceptual architecture is target architecture. It sets a
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
-Before deploying Azure resources, you need to set up your enterprise enrollment (A), identity and access management (B), and management groups and subscriptions (C). Subscriptions are under the appropriate management groups. The yellow boxes represent different subscriptions. The diagram shows you the Azure resources in five of these subscriptions.
+Before deploying Azure resources, you need to set up your enterprise enrollment (A), identity and access management (B), and management groups and subscriptions (C). You should place your subscriptions in the appropriate management groups. The yellow boxes represent different subscriptions. The diagram shows you the Azure resources in five of these subscriptions.
 
-Whether you're starting on your first production application on Azure or you're operating a complex portfolio of tech platforms and workloads, the Azure landing zone implementation options can be tailored to your needs. See [Tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md).
+Whether you're starting on your first production application on Azure or operating a complex portfolio of tech platforms and workloads, you can [tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md).
 
 For more information on the design areas labeled A-I in the visual, see the Azure Landing Zone [environment design areas](./design-areas.md#environment-design-areas).
 
@@ -38,12 +38,12 @@ There are two types of landing zones:
   - *Split management*: With technology platforms such as AKS or AVS, a central IT teams manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions are different from the ones you use to centrally manage application landing zones.  
   - *Application team management*: A platform administration team delegates the entire landing zone to a workload team to fully manage and support the environment; whilst still being controlled by the policies applied from the Management Groups above that the platform team control. This might include adding additional policies at the subscription scope and using alternative tooling for deploying, securing or monitoring workloads that is fully controlled and operated by the workload team.
 
-### Scalable and modular
+## Azure landing accelerators
 
-No single solution fits all technical environments. However, a few Azure landing zone implementation options can help you meet the deployment and operations needs of your growing cloud portfolio.
+Accelerators are infrastructure-as-code implementations that deploy both platform and application landing zones. Since no single solution fits all technical environments, accelerators are scalable and modular.
 
-- **Scalable:** All Azure landing zones support cloud adoption at scale by providing repeatable environments, with consistent configuration and controls, regardless of the workloads or Azure resources deployed to each landing zone instance.
-- **Modular:** All Azure landing zones provide an extensible approach to building out your environment, based on a common set of design areas. The extensibility of an Azure landing zone enables an organization to easily scale specific elements of the environment, as requirements evolve.
+- **Scalable:** Accelerators allow you to create repeatable environments with consistent configuration and controls regardless of the workloads or Azure resources deployed to each landing zone instance.
+- **Modular:** Accelerators provide a modular or extensible approach to building out your environment based on a common set of design areas. The extensibility of an Azure landing zone enables an organization to easily scale specific elements of the environment as requirements evolve.
 
 <!-- markdownlint-disable MD034 -->
 
@@ -53,17 +53,25 @@ No single solution fits all technical environments. However, a few Azure landing
 
 <!-- markdownlint-enable MD034 -->
 
-## Azure landing zone portal accelerator
+### Portal accelerator
 
-For organizations where this conceptual architecture fits with the operating model and resource structure they plan to use, there's a ready-made deployment experience called the **Azure landing zone portal accelerator**.
+There's a ready-made deployment experience called the **Azure landing zone portal accelerator**. The portal accelerator is for organizations where the conceptual architecture fits the operating model and resource structure you plan to use.
 
-Accelerators are Infrastructure as Code implementations that deploy both platform and application landing zones. This accelerator is an Azure portal-based deployment for those who plan to manage their environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
+You should use if you plan to manage your environment with the Azure portal. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture, along with opinionated configurations for key components such as management groups and policies.
 
-Deploying the Azure landing zone accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
+Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. These permissions can be granted by following the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
-There are other accelerators available for platform landing zones, some that deliver the full architecture using third-party deployment technologies, and others that start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md). Application landing zone accelerators are listed in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy)
+### Platform landing zone accelerators
+
+There are other Azure landing zone accelerators available for platform landing zones. Some accelerators deliver the full architecture using third-party deployment technologies. Other accelerators start from a smaller footprint. For more information, see [Implementation options](./implementation-options.md).
+
+### Application landing zone accelerators
+
+Application landing zone accelerators are listed in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy)
+
+### Scenario-based accelerators
 
 The Microsoft Cloud Adoption Framework outlines [cloud adoption scenarios](../../scenarios/overview.md) to help you further refine and accelerate your cloud adoption journey, for application and workload deployment. There are [Infrastructure as Code implementations or accelerators](/azure/architecture/landing-zones/landing-zone-deploy#application) for each of these scenarios.
 
