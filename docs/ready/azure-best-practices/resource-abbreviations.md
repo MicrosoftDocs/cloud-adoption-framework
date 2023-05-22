@@ -3,7 +3,7 @@ title: Abbreviation examples for Azure resources
 description: Abbreviation examples for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 2/10/2023
+ms.date: 4/12/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -20,16 +20,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
 
-## General
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| API management service instance | `Microsoft.ApiManagement/service` | `apim` |
-| Managed Identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
-| Management group | `Microsoft.Management/managementGroups` | `mg` |
-| Policy definition | `Microsoft.Authorization/policyDefinitions` | \<*optional*> |
-| Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
-
 ## AI + machine learning
 
 | Resource | Resource provider namespace | Abbreviation |
@@ -44,11 +34,14 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Azure Analysis Services server | `Microsoft.AnalysisServices/servers` | `as` |
 | Azure Databricks workspace | `Microsoft.Databricks/workspaces` | `dbw` |
-| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Data Explorer cluster | `Microsoft.Kusto/clusters` | `dec` |
 | Azure Data Explorer cluster database | `Microsoft.Kusto/clusters/databases` | `dedb` |
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
 | Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
+| Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
+| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
+| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -91,10 +84,12 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
+| Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
 | Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
+| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc`
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
 | Web app | `Microsoft.Web/sites` | `app` |
 
@@ -108,6 +103,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
 | Container instance | `Microsoft.ContainerInstance/containerGroups` | `ci` |
 | Service Fabric cluster | `Microsoft.ServiceFabric/clusters` | `sf` |
+| Service Fabric managed cluster | `Microsoft.ServiceFabric/managedClusters` | `sfmc` |
 
 ## Databases
 
@@ -125,10 +121,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL database | `Microsoft.Sql/servers/databases` | `sqldb` |
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
-| Azure Synapse Analytics | `Microsoft.Synapse/workspaces` | `syn` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
-| Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| MariaDB server | `Microsoft.DBforMariaDB/servers` | `maria` |
+| MariaDB database | `Microsoft.DBforMariaDB/servers/databases` | `mariadb` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
 | SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
@@ -153,25 +147,30 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
+| API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
 | Logic apps | `Microsoft.Logic/workflows` | `logic` |
-| Service Bus | `Microsoft.ServiceBus/namespaces` | `sb` |
+| Service Bus namespace | `Microsoft.ServiceBus/namespaces` | `sbns` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt` |
+| Service Bus topic subscription | `Microsoft.ServiceBus/namespaces/topics/subscriptions` | `sbts` |
 
 ## Management and governance
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Automation account | `Microsoft.Automation/automationAccounts` | `aa` |
+| Azure Policy definition | `Microsoft.Authorization/policyDefinitions` | <*descriptive*> |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
-| Azure Purview instance | `Microsoft.Purview/accounts` | `pview` |
+| Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
-| Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
+| Management group | `Microsoft.Management/managementGroups` | `mg` |
+| Microsoft Purview instance | `Microsoft.Purview/accounts` | `pview` |
+| Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 | Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
 ## Migration
@@ -188,11 +187,13 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
-| Bastion | `Microsoft.Network/bastionHosts` | `bas` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
 | DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
+| DNS private resolver inbound endpoint | `Microsoft.Network/dnsResolvers/inboundEndpoints` | `in` |
+| DNS private resolver outbound endpoint | `Microsoft.Network/dnsResolvers/outboundEndpoints` | `out` |
 | DNS zone | `Microsoft.Network/privateDnsZones` | \<*DNS domain name*> |
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
@@ -224,10 +225,18 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
+
+## Security
+
+| Resource | Resource provider namespace | Abbreviation |
+|--|--|--|
+| Azure Bastion | `Microsoft.Network/bastionHosts` | `bas` |
+| Key vault | `Microsoft.KeyVault/vaults` | `kv` |
+| Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 | Web Application Firewall (WAF) policy | `Microsoft.Network/firewallPolicies` | `waf` |
 | Web Application Firewall (WAF) policy rule group | `Microsoft.Network/firewallPolicies/ruleGroups` | `wafrg` |
 

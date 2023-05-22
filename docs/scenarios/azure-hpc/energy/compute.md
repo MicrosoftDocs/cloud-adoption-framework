@@ -32,7 +32,7 @@ Azure VMs have many different options, known as VM sizes. There are different se
 
 Not all Azure products are available in all Azure regions. For more information, see the current [list of products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/).
 
-For best practices on your choices in Azure compute, see the [Azure compute blog](https://techcommunity.microsoft.com/t5/azure-compute-blog/bg-p/AzureCompute) or see the[Azure compute service](/azure/architecture/guide/technology-choices/compute-decision-tree) content to choose a service.
+For best practices on your choices in Azure compute, see the [Azure compute blog](https://techcommunity.microsoft.com/t5/azure-compute-blog/bg-p/AzureCompute) or see the [Azure compute service](/azure/architecture/guide/technology-choices/compute-decision-tree) content to choose a service.
 
 **CPU-based virtual machines**
 

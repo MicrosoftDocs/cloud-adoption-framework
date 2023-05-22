@@ -43,7 +43,7 @@ If your organization is considering IaC deployment options, we recommend that yo
 
 Bicep templates offer the same capabilities as Azure Resource Manager templates. The templates are converted to Azure Resource Manager templates during deployment. They define the infrastructure that your organization wants to deploy through specified parameters, variables, expressions, and modules. You can use the template throughout the development lifecycle to deploy repeatable and consistent infrastructure. Deploy [Azure landing zones Bicep modules](https://github.com/Azure/ALZ-Bicep) to deliver and deploy the Azure Landing Zone conceptual architecture in a modular approach.
 
-Terraform is an open-source IaC software tool. Read about [how to use, configure and extend](https://aka.ms/alz/tf) the Azure landing zones Terraform module with your deployments.
+Terraform is an open-source IaC software tool. Read about [how to use, configure, and extend](https://aka.ms/alz/tf) the Azure landing zones Terraform module with your deployments.
 
 ## Next steps
 

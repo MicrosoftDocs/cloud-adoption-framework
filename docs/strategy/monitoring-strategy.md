@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: think-tank, UpdateFrequency2
+products: azure-monitor
 ---
 
 # Cloud monitoring strategy

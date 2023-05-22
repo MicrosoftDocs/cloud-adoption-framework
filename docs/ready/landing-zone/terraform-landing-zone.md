@@ -8,7 +8,7 @@ ms.date: 04/13/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency5
+ms.custom: think-tank, devx-track-terraform, UpdateFrequency5
 ---
 
 <!-- cSpell:ignore eastasia southeastasia vCPUs lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->

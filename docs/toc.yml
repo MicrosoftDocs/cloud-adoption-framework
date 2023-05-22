@@ -1671,6 +1671,10 @@ items:
           href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: How to update ALZ
+      items:
+      - name: Use infrastructure as code to update Azure landing zones
+        href: manage/infrastructure-as-code-updates.md
 
     - name: Management considerations
       items:
@@ -1861,22 +1865,8 @@ items:
         items:
         - name: Identity decision guide
           href: decision-guides/identity/index.md
-        - name: Identity management best practices
-          href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Secure privileged access
-          href: /azure/active-directory/roles/security-planning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Azure role-based access control
           href: ready/considerations/roles.md
-        - name: Choose an authentication method
-          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Storage
-        items:
-        - name: Review storage options
-          href: ready/considerations/storage-options.md
-      - name: Databases
-        items:
-        - name: Review data options
-          href: ready/considerations/data-options.md
       - name: Networking
         items:
         - name: Hub and spoke network topology
