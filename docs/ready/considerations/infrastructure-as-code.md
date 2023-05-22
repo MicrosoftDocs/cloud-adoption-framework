@@ -1,9 +1,9 @@
 ---
 title: Infrastructure as Code
 description: Infrastructure as Code for Azure Landing Zones
-author: emguzman13
-ms.author: emguzman
-ms.date: 04/08/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 05/22/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
