@@ -18,22 +18,14 @@ Azure landing zones are scalable and modular to fit all deployment needs. They u
 
 ## Azure landing zone conceptual architecture
 
-The Azure landing zone conceptual architecture is a target architecture. It sets a direction for the overall approach your organization should take when designing and implementing an Azure landing zone. Use this architecture as a starting point and modify it to fit your specific business and technical requirements.
+An Azure landing zone is for all deployment types. You should use it if you're onboarding one application to Azure or managed a complex application portfolio. The Azure landing zone conceptual architecture (*see figure 1) represents a starting point for your approach. The architecture sets a direction for your approach, and you should [tailor the Azure landing zone conceptual architecture to meet requirements](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
-You can [tailor the Azure landing zone architecture to meet requirements](./tailoring-alz.md). An Azure landing zone is for all deployment types from single workloads and complex application portfolios.
+*Resource organization:* The conceptual architecture shows the placement of the subscriptions (yellow boxes) in the management group hierarchy. It also shows a zoomed in view of five subscriptions with Azure resources and policies applied.
 
-**Resource organization:*** The conceptual architecture shows the placement of the subscriptions (yellow boxes) in the management group hierarchy. It also shows a zoomed in view of five subscriptions with Azure resources and policies applied.
-
-**Design areas:** The conceptual architecture illustrates implementation recommendations across eight design areas: (1) Azure billing and Active Directory tenant, (2) identity and access management, (3) resource organization, (4) network topology and connectivity, (5) security, (6) management, (7) governance, (8) platform automation and DevOps (A-I). Of these eight design areas, there are environment design areas and compliance design areas.
-
-- *Environment design areas:* Azure billing and Azure Active Directory tenant (A), identity and access management (B), management groups and subscriptions (C), and network topology connectivity (E) are the environment design areas.
-
-- *Compliance design areas:* Security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I) are the compliance design areas.
-
-For more information, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
+*Design areas:* The conceptual architecture illustrates implementation recommendations across eight design areas: Azure billing and Active Directory tenant (A), identity and access management (B), resource organization (C), network topology and connectivity (E), security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I). For more information, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
 ### Platform landing zone vs. application landing zones
 
