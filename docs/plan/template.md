@@ -36,8 +36,6 @@ After you deploy your project plan, you can use Microsoft Excel to modify it. It
 
 To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel).
 
-You might want to use Microsoft Project to track tasks, create a backlog, and assign resources. Here are the steps to [connect Microsoft Project to Azure DevOps](/azure/devops/boards/backlogs/create-your-backlog).
-
 ## Use the cloud adoption plan
 
 The cloud adoption plan organizes activities by activity type:

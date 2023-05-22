@@ -7,7 +7,7 @@ ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Security Baseline tools in Azure

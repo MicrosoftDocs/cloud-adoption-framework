@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency.5
 
 # Network topology and connectivity
 
-The network topology and connectivity design area is critical for establishing a foundation for your cloud network design.
+The network topology and connectivity design area are critical for establishing a foundation for your cloud network design.
 
 ## Design area review
 
@@ -22,54 +22,29 @@ The network topology and connectivity design area is critical for establishing a
 
 **Out of scope:** This design area establishes the foundation for networking. It doesn't address compliance-related issues like advanced network security or automated enforcement guardrails. That guidance comes when you review the [security](./security.md) and [governance](./governance.md) compliance design areas. Postponing security and governance discussions lets the cloud platform team address initial networking requirements before they expand their audience for more complex topics.
 
-**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your new Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
-
-**Existing (brownfield) cloud environment:** Consider the following if you are interested in applying proven-practice Azure virtual network (VNet) design principles to existing Azure environments:
-
-- Review our best practices for planning, deploying, and maintaining [Azure VNet hub and spoke topologies](../../azure-best-practices/hub-spoke-network-topology.md)
-- Consider [Azure Virtual Network Manager (Preview)](/azure/virtual-network-manager/overview) to centralize network security group (NSG) security rules across multiple VNets
-- [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) unifies networking, security, and routing to help businesses build hybrid cloud architectures safer and faster
-- Access Azure data services privately with [Azure Private Link](/azure/private-link/private-link-overview). The Private Link service ensures your users and applications communicate with key Azure services by using the Azure backbone network and private IP addresses instead of using the public Internet.
-
-The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice network design and configuration guidance integrated within them.
-
-For instance, the [Azure Landing Zones Bicep - Deployment Flow - Hub and Spoke](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlowHS) workflow includes Bicep modules to accelerate Azure virtual network hub-and-spoke architectures.
-
-For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
-
 ## Design area overview
 
 Network topology and connectivity are fundamental for organizations that are planning their landing zone design. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and on-premises infrastructure. Network topology and connectivity are in the [environmental group](../design-areas.md#environment-design-areas) of Azure landing zone design areas. This grouping is based on their importance in core design and implementation decisions.
 
-This series of articles examines key design considerations and best practices around networking and connectivity to, from, and within Azure.
+[![Diagram of networking areas of ALZ conceptional Management Group Hierarchy.](media/network-design-overview-mg.png)](media/network-design-overview-mg.png#lightbox)
 
-## Topology
+In Azure landing zones, there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
 
-Network topology is a critical element of landing zone architecture because it defines how applications communicate with each other. This section focuses on two core approaches: topologies based on Azure Virtual WAN and traditional topologies.
+### What is the purpose of Connectivity, Corp, and Online Management Groups?
 
-- [Define an Azure network topology](../../azure-best-practices/define-an-azure-network-topology.md) explores technologies and topology approaches for Azure deployments.
-- [Traditional Azure networking topology](../../azure-best-practices/traditional-azure-networking-topology.md) explores the option of implementing a traditional Azure networking topology.
-- [Virtual WAN network topology (Microsoft-managed)](../../azure-best-practices/virtual-wan-network-topology.md) explores the option of implementing a Virtual WAN network topology.
-- [Plan for IP addressing](../../azure-best-practices/plan-for-ip-addressing.md) provides guidance on planning IP addressing for a hybrid implementation. Your organization's IP address space shouldn't overlap across on-premises locations and Azure regions.
+- **Connectivity management group**: This management group contains dedicated subscriptions for connectivity, commonly a single subscription for most organizations. These subscriptions host the Azure networking resources required for the platform, like Azure Virtual WAN, Virtual Network Gateways, Azure Firewall, and Azure DNS private zones. It's also where hybrid connectivity is established between the cloud and on-premises environments, using services like ExpressRoute etc.
+- **Corp management group**: The dedicated management group for corporate landing zones. This group is intended to contain subscriptions that host workloads that require traditional IP routing connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription and therefore form part of the same routing domain. Workloads such as internal systems aren't exposed directly to the internet, but may be exposed via reverse proxies etc., such as Application Gateways.
+- **Online management group**: The dedicated management group for online landing zones. This group is intended to contain subscriptions used for public-facing resources, such as websites, e-commerce applications, and customer-facing services. For example, organizations can use the Online management group to isolate public-facing resources from the rest of the Azure environment, reducing the attack surface and ensuring that public-facing resources are secure and available to customers.
 
-## Connectivity
+### Why did we create Corp and Online management groups to separate workloads?
 
-- [Connectivity to Azure](../../azure-best-practices/connectivity-to-azure.md) expands on network topology to consider recommended models for connecting on-premises locations to Azure.
-- [Connectivity to Azure platform as a service (PaaS)](../../azure-best-practices/connectivity-to-azure-paas-services.md) builds on previous connectivity sections to explore recommended connectivity approaches for Azure PaaS services.
-- [Limit cross-tenant private endpoint connections](../../azure-best-practices/limit-cross-tenant-private-endpoint-connections.md) explores how to limit cross-tenant private endpoint connections to prevent data leakage and meet security and compliance goals.
-- [Connectivity to other cloud providers](../../azure-best-practices/connectivity-to-other-providers.md) describes different connectivity approaches to integrate an Azure enterprise-scale landing zone architecture with other cloud providers.
-- [Connectivity to Oracle Cloud Infrastructure (OCI)](../../azure-best-practices/connectivity-to-other-providers-oci.md) evaluates key design considerations and different approaches to integrate Azure enterprise-scale landing zone architecture to OCI.
-- [Plan for application delivery](../../azure-best-practices/plan-for-app-delivery.md) explores key recommendations to deliver secure, scalable, and highly available internal- and external-facing applications.
+The difference in networking considerations between the Corp and Online management groups in Azure Landing Zones lies in their intended use and primary purpose.  
 
-## Network security
+The Corp management group is used to manage and secure internal resources and services, such as line-of-business applications, databases, and user management. The networking considerations for the Corp management group are focused on providing secure and efficient connectivity between internal resources, while enforcing strict security policies to protect against unauthorized access.
 
-- [Plan for inbound and outbound internet connectivity](../../azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md) describes recommended connectivity models to and from the public internet.
-- [Plan for landing zone network segmentation](../../azure-best-practices/plan-for-landing-zone-network-segmentation.md) explores key recommendations for highly secure internal network segmentation within a landing zone to support a zero-trust network implementation.
-- [Define network encryption requirements](../../azure-best-practices/define-network-encryption-requirements.md) explores key recommendations for network encryption between on-premises and Azure and across Azure regions.
-- [Plan for traffic inspection](../../azure-best-practices/plan-for-traffic-inspection.md) explores key considerations and recommended approaches for mirroring or tapping traffic in Azure Virtual Network. Many organizations require Azure traffic to be mirrored to a network packet collector for deep inspection and packet analysis. This requirement typically focuses on inbound and outbound internet traffic.
+The Online management group in Azure Landing Zones (ALZ) can be considered as an isolated environment used to manage public-facing resources and services that are accessible from the Internet. By using the Online management group to manage public-facing resources, the ALZ architecture provides a way to isolate those resources from internal resources, thereby reducing the risk of unauthorized access and minimizing the attack surface.
 
-## Resources
+In the ALZ architecture, the virtual network in the Online management group is peered with the virtual network in the Corp management group, allowing public-facing resources to communicate with internal resources in a secure and controlled manner. This peering connection ensures that the network traffic between public-facing resources and internal resources is secure and restricted, while still allowing the resources to communicate as needed.
 
-- [Azure Private Link and Domain Name System (DNS) integration at scale](../../azure-best-practices/private-link-and-dns-integration-at-scale.md) describes how to integrate Private Link for PaaS services with Azure Private DNS zones in hub-and-spoke network architectures.
-- [Configure DNS and name resolution for on-premises and Azure resources](../../azure-best-practices/dns-for-on-premises-and-azure-resources.md) explores guidance on planning DNS and name resolution for hybrid implementations. DNS is a critical design topic in enterprise-scale architecture. Some organizations might want to use their existing investments in DNS. Others might see cloud adoption as an opportunity to modernize their internal DNS infrastructure and use native Azure capabilities.
-- [Plan for virtual machine remote access](../../azure-best-practices/plan-for-virtual-machine-remote-access.md) describes how to securely connect into Azure virtual machines.
+> [!TIP]
+> It is is also important to understand and review the Azure Policies that are assigned, and inherited, on each of the Management Groups as part of the Azure landing zone. As these help shape, protect and govern the workloads that are deployed within the subscriptions that are in these Management Groups. The policy assignments for Azure landing zones can be found [here](https://aka.ms/alz/policies).

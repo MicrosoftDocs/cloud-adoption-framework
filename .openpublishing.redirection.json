@@ -781,6 +781,11 @@
          "redirect_document_id": false 
       },
       {
+         "source_path": "docs/decision-guides/encryption/index.md",
+         "redirect_url": "/azure/well-architected/security/design-storage-encryption",
+         "redirect_document_id": false   
+      },
+      {
          "source_path": "docs/ready/landing-zone/terraform-module.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
          "redirect_document_id": false   
