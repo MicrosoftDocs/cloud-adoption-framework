@@ -12,18 +12,18 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is an Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone follows essential design principles across eight design areas. It's for all deployment types from simple to complex. It uses multiple subscriptions to provide a secure home for your platform resources ("platform landing zones") and applications ("application landing zones").
+An Azure landing zone is an Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone follows essential design principles across eight design areas. It's a deployment framework that accommodates simple to complex application portfolios. An Azure landing zone uses multiple subscriptions to provide a secure and scalable home for your platform resources ("platform landing zones") and applications ("application landing zones").
 
 ## Azure landing zone architecture
 
-Azure landing zone architecture is scalable and modular to meet a range of deployment needs. It use repeatable infrastructure to apply configuration and controls to each subscription. It's modular or extensible to easily scale specific elements of the environment as your requirements evolve.
+Azure landing zone architecture is scalable and modular to meet a range of deployment needs. It uses repeatable infrastructure to apply configuration and controls to each subscription. It's also modular to easily scale specific elements of the environment as your requirements evolve.
 
-The Azure landing zone conceptual architecture (*see figure 1*) represents a target architecture. It consists of platform landing zones for shared resources and application landing zones to host your applications. Use the conceptual architecture as a starting point and and then [tailor the architecture to meet your needs](./tailoring-alz.md).
+The Azure landing zone conceptual architecture (*see figure 1*) represents an opinionated, target architecture. It consists of platform landing zones for central, shared resources and application landing zones to host your applications. Use the conceptual architecture as a starting point and and then [tailor the architecture to meet your needs](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
-*Resource organization:* The conceptual architecture shows the management group hierarchy. Subscriptions (yellow boxes) fall under the appropriate management group. Subscriptions for platform landing zones are under the 'Platform' management group. Subscriptions for application landing zones are under the 'Landing zone' management group. The conceptual architecture also shows a zoomed in view of five subscriptions with Azure resources and policies applied.
+*Resource organization:* The conceptual architecture shows a sample management group hierarchy. Subscriptions (yellow boxes) fall under the appropriate management group. The subscriptions for platform landing zones are under the 'Platform' management group. The subscriptions for application landing zones are under the 'Landing zone' management group. The conceptual architecture also shows a zoomed in view of five subscriptions.You can see the resources and policies applied to these subscriptions.
 
 *Design areas:* The conceptual architecture illustrates the implementation of key design principles across eight design areas: Azure billing and Active Directory tenant (A), identity and access management (B), resource organization (C), network topology and connectivity (E), security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I). For more information, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
@@ -49,7 +49,7 @@ There are three main approaches to managing application landing zones: central t
 
 ## Azure landing zone accelerators
 
-Accelerators are infrastructure-as-code implementations that help you rapidly adopt Azure landing zone design principles. There are platform landing zone accelerators and application landing zone accelerators.
+Accelerators are infrastructure-as-code implementations that help you rapidly deploy an Azure landing zone. There's a platform landing zone accelerator and several application landing zone accelerators.
 
 ### Platform landing zone accelerator
 
