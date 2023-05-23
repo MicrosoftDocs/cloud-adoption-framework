@@ -40,7 +40,7 @@ As shown in the preceding diagram, the Log Analytics agent has two configuration
 - **Opt-in:** Even if the agent is installed and connected to the workspace, the solution isn't applied unless it's added to the server's scope configuration in the workspace.
 
 > [!TIP]
-> Consider using [Azure Automanage machine best practices](/azure/automanage/overview-about). This service makes it simple to discover, onboard, and configure certain services in Azure that would benefit your virtual machines and assist with [onboarding at scale](./onboard-at-scale).
+> Consider using [Azure Automanage machine best practices](/azure/automanage/overview-about). This service makes it simple to discover, onboard, and configure certain services in Azure that would benefit your virtual machines and assist with [onboarding at scale](./onboard-at-scale.md).
 
 ## Next steps
 
