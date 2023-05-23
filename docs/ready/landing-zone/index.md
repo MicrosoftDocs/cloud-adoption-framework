@@ -12,13 +12,15 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is a multi-subscription Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone adheres to essential design principles across eight design areas.
+An Azure landing zone is an Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone follows essential design principles across eight design areas. It's for all deployment types from simple to complex. It uses multiple subscriptions to provide a secure home for your platform resources ("platform landing zones") and applications ("application landing zones").
 
-Azure landing zones are scalable and modular to fit all deployment needs. They use repeatable infrastructure to apply configuration and controls to each application landing zone as. They also use a modular or extensible to easily scale specific elements of the environment as requirements evolve.
+
 
 ## Azure landing zone architecture
 
-An Azure landing zone is for all deployment types. You should use it if you're onboarding one application to Azure or managing a complex application portfolio. The Azure landing zone conceptual architecture (*see figure 1*) represents best practices. It consists of platform landing zones and application landing zones. You should use it as a starting point and then [tailor the Azure landing zone implementation to meet your needs](./tailoring-alz.md).
+Azure landing zone architecture is scalable and modular to meet a range of deployment needs. It use repeatable infrastructure to apply configuration and controls to each subscription. It's modular or extensible to easily scale specific elements of the environment as your requirements evolve.
+
+The Azure landing zone conceptual architecture (*see figure 1*) represents a target architecture. It consists of platform landing zones for shared resources and application landing zones for your applications. Use the conceptual architecture as a starting point and and then [tailor the architecture to meet your needs](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
@@ -29,9 +31,7 @@ An Azure landing zone is for all deployment types. You should use it if you're o
 
 ### Platform landing zone vs. application landing zones
 
-An Azure landing zone has two types of landings zones: platform landing zones and application landing zones. Platform landing zones are for the platform resources your applications need. Application landing zones are environments for your applications.
-
-In the conceptual architecture, platform landing zones are the subscriptions under the 'Platform' management group. The application landing zones are the subscriptions under the "Landing zone" management group.
+An Azure landing zone has two types of landings zones: platform landing zones and application landing zones.
 
 **Platform landing zone:** A platform landing zones are subscriptions that provide centralized services to workloads and applications. A central team or several central teams aligned to function (networking, identity) manage these subscriptions. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency.
 
@@ -41,7 +41,7 @@ In the conceptual architecture, the "Identity subscription", "Management subscri
 
 In the conceptual architecture, the "Landing zone A1" and "Landing zone A2" are each an application landing zone.
 
-Depending on the deployment, a central IT team, application team, or shared management (*see table*).
+There are three main approaches to managing application landing zone operations: central IT team management, application team management, or shared management (*see table*).
 
 | Application landing zone management approach | Description |
 | --- | --- |
