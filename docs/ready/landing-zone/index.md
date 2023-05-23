@@ -23,9 +23,9 @@ The Azure landing zone conceptual architecture (*see Figure 1*) represents an op
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
 
-*Resource organization:* The conceptual architecture shows a sample management group hierarchy. Subscriptions (yellow boxes) fall under the appropriate management group. The subscriptions for platform landing zones are under the 'Platform' management group. The subscriptions for application landing zones are under the 'Landing zone' management group. The conceptual architecture also shows a zoomed in view of five subscriptions. You can see the resources and policies applied to these subscriptions.
-
 *Design areas:* The conceptual architecture illustrates the implementation of key design principles across eight design areas: Azure billing and Active Directory tenant (A), identity and access management (B), resource organization (C), network topology and connectivity (E), security (F), management (D, G, H), governance (C, D), and Platform automation and DevOps (I). For more information, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
+
+*Resource organization:* The conceptual architecture shows a sample management group hierarchy. Subscriptions (yellow boxes) fall under the appropriate management group. The subscriptions for platform landing zones are under the 'Platform' management group. The subscriptions for application landing zones are under the 'Landing zone' management group. The conceptual architecture also shows a zoomed in view of five subscriptions. You can see the resources and policies applied to these subscriptions.
 
 ### Platform landing zones vs. application landing zones
 
