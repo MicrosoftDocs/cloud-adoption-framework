@@ -49,11 +49,9 @@ Accelerators are infrastructure-as-code implementations that help you rapidly de
 
 ### Platform landing zone accelerator
 
-**Azure landing zone portal accelerator:** There's a ready-made deployment experience called the Azure landing zone portal accelerator. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture. It also applies opinionated configurations for key components such as management groups and policies. The portal accelerator is for organizations where the conceptual architecture fits the operating model and resource structure you plan to use.
+There's a ready-made deployment experience called the **Azure landing zone portal accelerator**. The Azure landing zone portal accelerator deploys a full implementation of the conceptual architecture. It also applies opinionated configurations for key components such as management groups and policies. The portal accelerator is for organizations where the conceptual architecture fits the operating model and resource structure you plan to use.
 
-You should use the Azure landing zone portal accelerator if you plan to manage your environment with the Azure portal. If you want to use Bicep or Terraform, see the [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
-
-Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. Follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access) to grant these permissions.
+You should use the Azure landing zone portal accelerator if you plan to manage your environment with the Azure portal. If you want to use Bicep or Terraform, see the [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform). Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. Follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access) to grant these permissions.
 
 [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
 
@@ -68,7 +66,7 @@ Application landing zone accelerators help you deploy application landing zones.
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
 <!-- markdownlint-enable MD034 -->
-*Video that describes application landing zones*
+*Video that describes application landing zones and implementation principles*
 
 ## Next steps
 
