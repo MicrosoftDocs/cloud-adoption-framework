@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is an Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone follows essential design principles across eight design areas. It's a deployment framework that accommodates simple to complex application portfolios. An Azure landing zone uses multiple subscriptions to provide a secure and scalable home for your platform resources ("platform landing zones") and applications ("application landing zones").
+An Azure landing zone is an Azure environment that enables application migration, modernization, and innovation at scale. An Azure landing zone follows essential design principles across eight design areas. It's a deployment framework that accommodates simple to complex application portfolios. An Azure landing zone uses multiple subscriptions to provide a secure and scalable home for your applications ("application landing zones") and platform resources ("platform landing zones").
 
 ## Azure landing zone architecture
 
