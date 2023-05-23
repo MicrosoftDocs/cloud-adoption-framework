@@ -31,13 +31,9 @@ The Azure landing zone conceptual architecture (*see figure 1*) represents an op
 
 An Azure landing zone consists of two types of landings zones: platform landing zones and application landing zones.
 
-**Platform landing zone** is a subscription that provides a centralized service (identity, connectivity, management) to applications in application landing zones. One or more central teams manage platform landing zones. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency.
+**Platform landing zone** is a subscription that provides a centralized service (identity, connectivity, management) to applications in application landing zones. One or more central teams manage platform landing zones. Platform landing zones provide key services to workloads and applications. Consolidating these key services often improves operational efficiency. In the conceptual architecture, the "Identity subscription", "Management subscription", and "Connectivity subscription" are each a platform landing zone. The architecture shows representative resources and policies for each platform landing zone.
 
-In the conceptual architecture, the "Identity subscription", "Management subscription", and "Connectivity subscription" are each a platform landing zone. The architecture shows representative resources and policies for each platform landing zone.
-
-**Application landing zone** is an environment for hosting application pre-provisioned through code. You use management groups to assign policy controls to application landing zones.
-
-The conceptual architecture shows representative resources and policies for these application landing zones. In the conceptual architecture, the "Landing zone A1" and "Landing zone A2" are each an application landing zone.
+**Application landing zone** is an environment for hosting application pre-provisioned through code. You use management groups to assign policy controls to application landing zones. The conceptual architecture shows representative resources and policies for these application landing zones. In the conceptual architecture, the "Landing zone A1" and "Landing zone A2" are each an application landing zone.
 
 There are three main approaches to managing application landing zones: central team management, application team management, or shared management (*see table*).
 
