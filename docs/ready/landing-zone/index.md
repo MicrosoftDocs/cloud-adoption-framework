@@ -18,7 +18,7 @@ An Azure landing zone is an Azure environment that enables application migration
 
 Azure landing zone architecture is scalable and modular to meet a range of deployment needs. It uses repeatable infrastructure to apply configuration and controls to each subscription. It's also modular to easily scale specific elements of the environment as your requirements evolve.
 
-The Azure landing zone conceptual architecture (*see figure 1*) represents an opinionated, target architecture. It consists of platform landing zones for central, shared resources and application landing zones to host your applications. Use the conceptual architecture as a starting point and and then [tailor the architecture to meet your needs](./tailoring-alz.md).
+The Azure landing zone conceptual architecture (*see Figure 1*) represents an opinionated, target architecture. It consists of platform landing zones for central, shared resources and application landing zones to host your applications. Use the conceptual architecture as a starting point and and then [tailor the architecture to meet your needs](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
