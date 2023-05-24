@@ -7,7 +7,7 @@ ms.date: 4/1/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank, build-2023, build-2023-dataai
 ---
 
 # Cloud-scale analytics

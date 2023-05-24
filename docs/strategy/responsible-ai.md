@@ -7,7 +7,7 @@ ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank, UpdateFrequency2
+ms.custom: think-tank, UpdateFrequency2, build-2023, build-2023-dataai
 ---
 
 # Responsible AI
