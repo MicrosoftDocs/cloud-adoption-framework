@@ -28,7 +28,7 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
   - Some PaaS services are compatible with [Azure **Private Link**](/azure/private-link/private-endpoint-overview#private-link-resource) which allows private access via an IP address within a customer. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
 
-  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to specific Storage Account. It is also possible to utilise Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
+  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to specific Storage Account. It is also possible to utilize Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
 
 > [What is the difference between service endpoints and private endpoints?](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-) offers an explanation of differences between Private Link endpoints and VNet service endpoints.
 
@@ -47,6 +47,6 @@ This article provides recommended connectivity approaches for using Azure PaaS s
   -  Use the PaaS service's default public endpoint via the Internet and the Microsoft Global Network if no private access is required and the on-premises Internet bandwidth is sufficient.
   -  Use a private hybrid connection ([ExpressRoute with private peering](/azure/expressroute/expressroute-circuit-peerings#privatepeering) or Site-to-Site VPN) with either virtual network injection or Azure Private Link.
 
-- Don't enable virtual network service endpoints by default on all subnets. Follow the above considered approach on a case-by-case basis dependent on the PaaS service feature availbility and your own performance and security requirements.
+- Don't enable virtual network service endpoints by default on all subnets. Follow the above considered approach on a case-by-case basis dependent on the PaaS service feature availability and your own performance and security requirements.
 
 - Where possible, avoid the use of forced tunneling (directing Internet-bound traffic from an Azure virtual network via on-premises by advertising a default route over a private hybrid connection) as this can increase the complexity of managing control-plane operations with some Azure PaaS services E.g. [Application Gateway V2](/azure/application-gateway/configuration-infrastructure).
