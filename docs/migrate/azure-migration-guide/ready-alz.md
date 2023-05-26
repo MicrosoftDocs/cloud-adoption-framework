@@ -1,10 +1,10 @@
 # Readying your Landing Zone for Migration
 
-During the [Ready phase](./ready/), you deployed your [Azure Landing Zone](./ready/landing-zone/).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
+During the [Ready phase](../../ready/), you deployed your [Azure Landing Zone](../../ready/landing-zone/).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
 
 - [Your governing methodology](./govern/)
 - [Your organizational alignment](./plan/initial-org-alignment) and how you intend to [continue to manage it](./organize/)
-- [Ensuring consistency with your naming and tagging standards](./ready/azure-best-practices/naming-and-tagging)
+- [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging)
 
 ## Azure Landing Zone Post-Deployment Activities
 
@@ -25,7 +25,7 @@ Enable Subscription Creation|Operations|Set up subscription vending to enable th
 
 During ALZ deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both.  After ALZ deployment, you still need to configure hybrid connectivity from these gateways, connecting to your existing data center appliances or to your ExpressRoute circuit.
 
-In the Ready phase, you would have planned for your [connectivity to Azure](./ready/azure-best-practices/connectivity-to-azure).  This plan should guide you on what connections you need to perform.  For example, if you are using ExpressRoute, you will need to work with your provider to establish your ExpressRoute circuit.
+In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure).  This plan should guide you on what connections you need to perform.  For example, if you are using ExpressRoute, you will need to work with your provider to establish your ExpressRoute circuit.
 For technical guidance for specific scenarios, review the following:
 
 - [Creating a VPN connection from your Azure VPN Gateway](https://learn.microsoft.com/azure/vpn-gateway/tutorial-site-to-site-portal)
@@ -42,7 +42,7 @@ During the ALZ deployment, organizations will deploy supporting architecture for
 
 This section has guidance for considerations related to Active Directory.  If you are using another identity provider, you will need to follow their guidance on extending your identity to Azure.
 
-Prior to implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](./ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity) when you planned for your Landing Zone.
+Prior to implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity) when you planned for your Landing Zone.
 
 You should also review your [identity baseline](./govern/identity-baseline/) from Govern to determine if there are any Azure AD changes that you might need.
 
@@ -101,7 +101,7 @@ Once the previous activities are completed, you can set the DNS servers for your
 
 If you have deployed a firewall in your hub network, there are a few considerations that you should address to be ready to migrate workloads.  Organizations can run into routing and network access issues by not addressing these earlier in their deployments.
 
-As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](./ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity).
+As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity).
 
 ### Deploy Standard Rulesets
 
