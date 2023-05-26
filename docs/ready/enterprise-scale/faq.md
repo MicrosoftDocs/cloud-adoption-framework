@@ -20,7 +20,7 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 ## What is the Azure landing zone accelerator?
 
-The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture).
+The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-architecture).
 
 ## Which are the recommended accelerators and implementations for Azure landing zones?
 

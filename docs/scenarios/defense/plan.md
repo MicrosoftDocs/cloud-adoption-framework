@@ -26,18 +26,18 @@ Cloud brokers are centralized groups that build and manage cloud platforms. Clou
 
 Cloud brokers provided the following benefits:
 
-**Governed platform landing zone** - The services, solutions, and workloads hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements, and these environments consist of multiple landing zones.
+**Governed platform landing zone** - The services, solutions, and applications hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements, and these environments consist of multiple landing zones.
 
-A landing zone includes all the components defense workloads need for secure, reliable, and cost-effective cloud operations. There are two types of landing zones, platform landing zones and workload landing zones.
+A landing zone includes all the components defense applications need for secure, reliable, and cost-effective cloud operations. An Azure landing zone consists of platform landing zones and application landing zones.
 
-- ***Platform landing zone*** - The platform landing zone provides core services used by multiple workloads. In the sample architecture, the components and subscriptions outlined in teal comprise the platform landing zone. Together, they provide shared services, such as identity, management, and connectivity, to the workloads in this tenant.
+- ***Platform landing zones*** - The platform landing zone provides core services used by multiple applications. In the sample architecture, the components and subscriptions outlined in red are the platform landing zones. Together, they provide shared services, such as identity, management, and connectivity, to the applications in this tenant.
 
-- ***Workload landing zone*** - The workload landing zones are for workloads. The gray boxes outline the workload landing zones. There are two workload landing zone subscriptions in the diagram  (Landing zone A1 and Landing Zone A2). The image only shows one workload landing zone in detail (Landing Zone A2).
+- ***Application landing zones*** - The application landing zones are for applications. The blue boxes outline the application landing zones. There are two application landing zone subscriptions in the diagram ("Application landing zone A1 subscription" and "Application landing zone A2 subscription"). The image only shows one application landing zone in detail ("Application landing zone A2 subscription").
 
-:::image type="content" source="./images/cloud-broker-landing-zone.png" alt-text="Diagram of an Azure landing zone architecture. A sample architecture showing the platform landing zone and workload landing zones. It shows the Azure Active Directory tenant with management groups underneath. The management groups divide into platform, landing zones, decommissioned, and sandbox. Under these management groups and children management groups with subscriptions beneath them. The architecture shows the contents of these subscriptions. The platform landing zone management group contains identity, management, and connectivity subscriptions. There are black boxes around the platform landing zone subscriptions. The workload landing zone management group contains two workload landing zone subscriptions. The contents of one subscription is shown in detail. There are red boxes around the workload landing zone subscriptions." lightbox="./images/cloud-broker-landing-zone.png" border="false":::
-*Diagram 2: Sample architecture showing the platform landing zone and workload landing zones*
+:::image type="content" source="./images/cloud-broker-landing-zone.svg" alt-text="Diagram of an Azure landing zone architecture. A sample architecture showing the platform landing zone and application landing zones. It shows the Azure Active Directory tenant with management groups underneath. The management groups divide into platform, landing zones, decommissioned, and sandbox. Under these management groups and children management groups with subscriptions beneath them. The architecture shows the contents of these subscriptions. The platform landing zone management group contains identity, management, and connectivity subscriptions. There are black boxes around the platform landing zone subscriptions. The application landing zone management group contains two application landing zone subscriptions. The contents of one subscription is shown in detail. There are red boxes around the application landing zone subscriptions." lightbox="./images/cloud-broker-landing-zone.svg" border="false":::
+*Diagram 2: Sample architecture showing the platform landing zones and application landing zones*
 
-Without a cloud broker, mission owners would be responsible for the workload landing zone and platform landing zone. But with a cloud broker, mission owners can focus on optimizing workloads to meet mission objectives. Cloud brokers bear the technical responsibility for the core services in the platform landing zone.
+Without a cloud broker, mission owners are responsible for the application landing zones and platform landing zones. But with a cloud broker, mission owners only have to manage the application landing zones and can focus on modernizing applications to meet mission objectives. Cloud brokers bear the technical responsibility for the core services in the platform landing zones.
 
 Platform landing zones feature design decisions that include the following disciplines:
 
@@ -51,11 +51,9 @@ For more information, see [platform vs. application landing zones](../../ready/l
 
 **Core services** - Cloud brokers implement and manage core services such as identity, networking, and management. In most instances, a cloud broker securely connects the new cloud environment to on-premises networks, builds operational environments, and establishes an identity access management (IAM) solution with policy enforcement based on mission requirements.
 
-**Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications and workloads.
+**Platform authorization to operate (ATO)** - Experienced cloud brokers can help achieve a platform-level ATO quicker than mission owners on their own. A platform-level ATO directly affects the speed at which mission owners can deploy critical applications. For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance).
 
-For more information, see [accelerating ATO](/azure/azure-government/compliance/documentation-accelerate-compliance).
-
-**Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data, and manage platform compliance requirements. This automation enables timely and accurate routing to approval authorities for workload deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
+**Improved efficiency** - A cloud broker can automate the flow of information, eliminating the need to manually generate data, and manage platform compliance requirements. This automation enables timely and accurate routing to approval authorities for application deployment, providing traceability and accountability. Without a cloud broker, mission owners have to navigate the following hurdles:
 
 - Obtaining and allocating funds
 - Managing oversight and compliance requirements
@@ -85,16 +83,13 @@ The factors listed will help you determine if the multiple cloud broker approach
 
 - ***Isolation***: Mission owners might need isolated environments for compliance, governance, or identity reasons. Each tenant (instance of Azure Active Directory) represents an isolated identity environment and can create a firm isolation barrier when needed.
 
-- ***Management***: Separating complex environments might be ideal for managing and modernizing your cloud workloads. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
+- ***Management***: Separating complex environments might be ideal for managing and modernizing your cloud applications. But this management separation creates increased complexity higher in the command chain. It becomes more difficult to have a single view of all cloud assets.
 
 - ***Security***: Data compliance for varying impact levels might require multiple tenants and multiple cloud brokers authorized and with the experience to manage those impact levels.
 
 The multi-cloud-broker strategy can be used at different levels in a defense organization. A broker can be assigned to individual military branches (naval, air, ground) or groups of applications. The choice depends on the needs of your defense organization around ownership, isolation, management, and security.
 
-For more information, see:
-
-- [Planning overview](../../plan/plan-intro.md)
-- [On-premises assessment](../../plan/contoso-migration-assessment.md)
+For more information, see [Planning overview](../../plan/plan-intro.md) and [On-premises assessment](../../plan/contoso-migration-assessment.md).
 
 ## Next step
 
