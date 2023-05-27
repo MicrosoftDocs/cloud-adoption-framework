@@ -14,7 +14,7 @@ ms.custom: devx-track-terraform
 
 Azure provides native services for building your Azure landing zones. Other tools can also help with this effort. One tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
-The [Azure landing zones Terraform module][alz-tf-mod] is the official Terraform module for deploying the platform resources from the [conceptual architecture for Azure landing zones][alz-conceptual-arch]. The module is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
+The [Azure landing zones Terraform module][alz-tf-mod] is the official Terraform module for deploying the platform resources from the [conceptual architecture for Azure landing zones](./index.md#azure-landing-zone-architecture). The module is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
 
 Deployment of resources to application landing zones is outside the scope of the module. Decisions on the deployment method and tooling are for the team that's responsible for the application.
 
@@ -39,7 +39,5 @@ If your organization wants to manage both platform and application resources by 
 
 [terraform]: https://www.terraform.io/ "Terraform by HashiCorp"
 [alz-tf-mod]: terraform-module.md "Azure landing zones terraform module"
-[alz-conceptual-arch]: index.md
-[azurerm-terraform-provider]: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 [caf-terraform-landingzones]: terraform-landing-zone.md "CAF Terraform landing zones"
 [terraform_language_syntax]: https://www.terraform.io/language/syntax/configuration
