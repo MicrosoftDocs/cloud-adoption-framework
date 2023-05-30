@@ -481,11 +481,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/ready/enterprise-scale/terraform-module-caf-enterprise-scale.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-module",
-         "redirect_document_id": true
-      },
-      {
          "source_path": "docs/scenarios/lamp/moodle/vpn-gateway.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/lamp/moodle/migration-overview",
          "redirect_document_id": false
@@ -789,6 +784,16 @@
          "source_path": "docs/decision-guides/encryption/index.md",
          "redirect_url": "/azure/well-architected/security/design-storage-encryption",
          "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/landing-zone/terraform-module.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
+         "redirect_document_id": false   
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/terraform-module-caf-enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
+         "redirect_document_id": true
       }
    ]
 }
