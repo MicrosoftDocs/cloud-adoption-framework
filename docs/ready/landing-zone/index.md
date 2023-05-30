@@ -35,7 +35,7 @@ An Azure landing zone consists of platform landing zones and application landing
 
 **Application landing zone:** An application landing zone is a subscription for hosting an application. You pre-provisioned application landing zones through code, and use management groups to assign policy controls to them. In the conceptual architecture (*see figure 1*), the "Landing zone A1 subscription" and "Landing zone A2 subscription" represent two different application landing zones. The conceptual architecture shows only the "Landing zone A2 subscription" in detail. It depicts representative resources and policies applied to the application landing zone.
 
-There are three main approaches to managing application landing zones. (1) A central team, (2) application team, or (3) both teams together can manage the application landing zone (*see table*).
+There are three main approaches to managing application landing zones. You should use a (1) central team, (2) application team, or (3) shared team management approach depending on your needs (*see table*).
 
 | Application landing zone management approach | Description |
 | --- | --- |
