@@ -7,7 +7,7 @@ ms.date: 04/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency2
+ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
 
 # Azure landing zone frequently asked questions (FAQ)
