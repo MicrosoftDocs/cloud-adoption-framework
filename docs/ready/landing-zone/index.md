@@ -66,7 +66,7 @@ Application landing zone accelerators help you deploy application landing zones.
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xdvm]
 
 <!-- markdownlint-enable MD034 -->
-*Video. Visual explanation of application landing zones and their implementation principles*
+*Video explaining application landing zones and their implementation principles*
 
 ## Next steps
 
