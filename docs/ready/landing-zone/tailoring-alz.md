@@ -72,7 +72,7 @@ The following landing zone archetype examples from the conceptual architecture h
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 
