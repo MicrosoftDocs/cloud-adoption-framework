@@ -137,7 +137,7 @@ For more information on the using multiple Azure AD tenants, see [Azure landing 
 
 ## Management groups
 
-[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. However, ISVs can have different requirements than other organizations. This section describes some ways your ISV organization might choose to adopt different practices than what the landing zone conceptual architecture recommends.
+[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-architecture) recommends using a specific management group hierarchy. However, ISVs can have different requirements than other organizations. This section describes some ways your ISV organization might choose to adopt different practices than what the landing zone conceptual architecture recommends.
 
 ### Top-level management group
 
