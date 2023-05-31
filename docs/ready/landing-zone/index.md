@@ -12,7 +12,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is an environment that implements key design principles across eight design areas. These design principles accommodates all workloads from single applications to vast portfolios and enable application migration, modernization, and innovation at scale. An Azure landing zone uses subscriptions to isolate applications resources and platform resources. Subscriptions for application resources are called application landing zones, and subscriptions for platform resources are called platform landing zones.
+An Azure landing zone is an environment that implements key design principles across eight design areas. These design principles accommodate all workloads from single applications to vast portfolios and enable application migration, modernization, and innovation at scale. An Azure landing zone uses subscriptions to isolate applications resources and platform resources. Subscriptions for application resources are called application landing zones, and subscriptions for platform resources are called platform landing zones.
 
 ## Azure landing zone architecture
 
@@ -40,7 +40,7 @@ There are three main approaches to managing application landing zones. You shoul
 | Application landing zone management approach | Description |
 | --- | --- |
 | Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform landing zones and application landing zones.
-| Application team management | A platform administration team delegates the entire landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can include add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
+| Application team management | A platform administration team delegates the entire landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
 | Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to centrally manage application landing zones.  
 
 ## Azure landing zone accelerators
