@@ -26,16 +26,16 @@ Cloud brokers are centralized groups that build and manage cloud platforms. Clou
 
 Cloud brokers provided the following benefits:
 
-**Governed platform landing zone** - The services, solutions, and applications hosted in a defense environment require governed environments. Cloud brokers build and maintain governed environments that meet compliance requirements, and these environments consist of multiple landing zones.
+**Governed platform landing zone** - The services, solutions, and applications hosted in a defense environment require governed environments. Cloud brokers build and maintain a governed platform environments (platform landing zones) that meets compliance requirements.
 
-A landing zone includes all the components defense applications need for secure, reliable, and cost-effective cloud operations. An Azure landing zone consists of platform landing zones and application landing zones.
+An Azure landing zone provides a target architecture that includes all the components defense applications need for secure, reliable, and cost-effective cloud operations. An Azure landing zone consists of platform landing zones and application landing zones.
 
 - ***Platform landing zones*** - The platform landing zone provides core services used by multiple applications. In the sample architecture, the components and subscriptions outlined in red are the platform landing zones. Together, they provide shared services, such as identity, management, and connectivity, to the applications in this tenant.
 
 - ***Application landing zones*** - The application landing zones are for applications. The blue boxes outline the application landing zones. There are two application landing zone subscriptions in the diagram ("Application landing zone A1 subscription" and "Application landing zone A2 subscription"). The image only shows one application landing zone in detail ("Application landing zone A2 subscription").
 
 :::image type="content" source="./images/cloud-broker-landing-zone.svg" alt-text="Diagram of an Azure landing zone architecture. A sample architecture showing the platform landing zone and application landing zones. It shows the Azure Active Directory tenant with management groups underneath. The management groups divide into platform, landing zones, decommissioned, and sandbox. Under these management groups and children management groups with subscriptions beneath them. The architecture shows the contents of these subscriptions. The platform landing zone management group contains identity, management, and connectivity subscriptions. There are black boxes around the platform landing zone subscriptions. The application landing zone management group contains two application landing zone subscriptions. The contents of one subscription is shown in detail. There are red boxes around the application landing zone subscriptions." lightbox="./images/cloud-broker-landing-zone.svg" border="false":::
-*Diagram 2: Sample architecture showing the platform landing zones and application landing zones*
+*Figure 2: Sample architecture showing the platform landing zones and application landing zones*
 
 Without a cloud broker, mission owners are responsible for the application landing zones and platform landing zones. But with a cloud broker, mission owners only have to manage the application landing zones and can focus on modernizing applications to meet mission objectives. Cloud brokers bear the technical responsibility for the core services in the platform landing zones.
 
