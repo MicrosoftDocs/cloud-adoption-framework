@@ -2,8 +2,9 @@
 
 During the [Ready phase](../../ready/), you deployed your [Azure Landing Zone](../../ready/landing-zone/).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
 
-- [Your governing methodology](./govern/)
-- [Your organizational alignment](./plan/initial-org-alignment) and how you intend to [continue to manage it](./organize/)
+- [Ensure that you have your initial corporate policy defined and well understood](../../govern/guides/standard/initial-corporate-policy)
+- [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant)
+- [Your organizational alignment](../../plan/initial-org-alignment) and how you intend to [continue to manage it](../../organize/index)
 - [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging)
 
 ## Azure Landing Zone Post-Deployment Activities
@@ -18,6 +19,7 @@ This article is intended for use by organizations regardless of how they chose t
 Prepare Identity|Identity|Deploy Domain Controllers to Azure, and enable Azure AD Connect if not already done. |
 Enable Hybrid DNS|Networking|Deploy custom DNS servers and add conditional forwarders
 Configure Hub Firewall|Networking|Apply baseline rules to your Hub Firewall
+Enable Routing|Networking|Plan and enable for common routing scenarios.
 Configure Monitoring Baseline|Operations|Deploy Azure Monitor Baseline or configure alerts
 Enable Subscription Creation|Operations|Set up subscription vending to enable the creation of new subscriptions.
 
@@ -34,7 +36,7 @@ For technical guidance for specific scenarios, review the following:
 - [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](https://learn.microsoft.com/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
 - [Managing Azure Virtual WAN gateway settings](https://learn.microsoft.com/azure/virtual-wan/gateway-settings)
 
-If you are establishing your hybrid connectivity to Azure via a third-party NVA deployed in your virtual network, review their specific guidance.
+If you are establishing your hybrid connectivity to Azure via a third-party NVA deployed in your virtual network, review their specific guidance as well as our [general guidance for highly available NVAs](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare Identity
 
@@ -64,7 +66,7 @@ You can use [this guidance](https://learn.microsoft.com/azure/active-directory/h
 
 Most organizations need to be able to resolve DNS requests for namespaces that are a part of the existing environments.  These namespaces often require integration with Active Directory servers.  In addition, resources in the existing environment will need to be able to resolve resources in Azure.
 
-As a result, configuration of DNS services is needed to support common flows.  Azure Landing Zones deploy many of the resources that you need, but there are some additional items that may be needed.
+As a result, configuration of DNS services is needed to support common flows.  Azure Landing Zones deploy many of the resources that you need, but there are some additional items to review.
 
 To prepare for these activities, review [DNS resolution in Azure](https://learn.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
@@ -76,6 +78,8 @@ Once deployed, it will need to be integrated into your existing DNS platform so 
 
 You can also use [Azure Private Resolver](https://learn.microsoft.com/azure/dns/dns-private-resolver-overview), but this resource is not deployed as part of your Azure Landing Zone deployment.
 
+If your design uses Private DNS Zones, plan actions accordingly such as those commonly used with Private Endpoints, review [Azure Private Endpoint DNS configuration](https://learn.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#specify-dns-servers).  The Private DNS zones will be deployed as part of your Landing Zone, but when you are performing modernization efforts using Private Endpoints, you will have additional configuration for them.
+
 ### Azure Firewall DNS Proxy
 
 The Azure Firewall can act as a [DNS proxy](https://learn.microsoft.com/azure/firewall/dns-details), receiving traffic and either forwarding it to the Azure resolver or to your DNS servers.  This can be used to allow for lookups from on-prem to Azure, but cannot conditionally forward back to on-prem DNS servers.
@@ -84,18 +88,9 @@ As a result, if hybrid DNS resolution is needed, the Azure Firewall DNS Proxy ca
 
 This is an optional step, but using this has several benefits.  It reduces configuration changes later if you change DNS services and enables FQDN rules in the Azure firewall itself.
 
-### Azure Private DNS Zones and Private Link
-
-To resolve Azure Private DNS Zones from all locations, you will need to set conditional forwarders for two scenarios:
-
-- From your on-prem DNS servers, you will need to conditionally forward requests for the zones associated with Private Endpoints to your DNS servers in Azure.
-- From your Azure DNS servers, you will need to conditionally forward requests for the zones associated with Private Endpoints to the Azure DNS service.
-
-The design for [Private Endpoint DNS configuration](https://learn.microsoft.com/azure/private-link/private-endpoint-dns) supports both of these scenarios, and contains additional key guidance on planning for Private Link.
-
 ### Setting Custom DNS servers on Virtual Network
 
-Once the previous activities are completed, you can set the DNS servers for your Azure virtual networks to the custom servers you will use.  This process is defined [here](https://learn.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#specify-dns-servers).
+Once the previous activities are completed, you can set the DNS servers for your Azure virtual networks to the custom servers you will use.  This process is defined [here].
 
 ## Configure Hub Firewall
 
@@ -103,11 +98,31 @@ If you have deployed a firewall in your hub network, there are a few considerati
 
 As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity).
 
+If you are deploy out a third-party NVA to act as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
+
 ### Deploy Standard Rulesets
 
 If you use an Azure Firewall, then all traffic through the firewall will be blocked until explicit allow rules are added.  Many other NVA firewalls work in the same way, where traffic is denied until rules for what traffic is allowed are defined.
 
 While you should add individual rules and rule collections based on workload needs, you should plan to have your standard rules that apply to all workloads enabled, such as access to Active Directory or to other identity and management solutions.
+
+## Routing
+
+Azure itself provides routing for the following scenarios, with no additional configuration:
+
+- Routing between resources in the same virtual network.
+- Routing between resources in peered virtual networks.
+- Routing between resources and a virtual network gateway, either in its own virtual network or a peered one set to use the gateway.
+
+Two common routing scenarios need additional actions taken, both of which involve route tables assigned to subnets to shape routing.  [This article](https://learn.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#custom-routes) provides more information about Azure routing and custom routes.
+
+### Interspoke Routing
+
+As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology), most organizations opt to use a  [hub and spoke network topology](https://learn.microsoft.com/azure/architecture/networking/spoke-to-spoke-networking).
+
+In order to allow routing between spokes, you will need to have routes that take traffic from one spoke to another.  A default route (0.0.0.0/0) to your firewall will be sufficient, and works best to simplify routing.  With this route in place, traffic to any unknown location will head to the firewall, which enables inspection and the application of your firewall rules.
+
+If you want to allow for internet egress you can also assign another route for your private IP space to the firewall, such as 10.0.0.0/8.  This won’t overrule more specific routes, but can be used as a simple route to let interspoke traffic route correctly.
 
 ### Routing From Gateway Subnet
 
