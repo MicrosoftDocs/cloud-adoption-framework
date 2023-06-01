@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Landing zone sandbox environments
 
-A sandbox environment is an isolated environment where you can test and experiment without affecting other environments, like production, development, or user acceptance testing (UAT) environments. Test and experiment with Azure resources in a controlled environment. In a sandbox environment, you can also conduct proof of concepts (POCs) with Azure resources. Each sandbox has its own Azure subscription, and Azure policies control the subscription. The policies are applied at the sandbox management group level, and the management group inherits policies from the hierarchy above it. Depending on its purpose, an individual or a team can use a sandbox.
+A sandbox is an isolated environment where you can test and experiment without affecting other environments, like production, development, or user acceptance testing (UAT) environments. Conduct proof of concepts (POCs) with Azure resources in a controlled environment. Each sandbox has its own Azure subscription, and Azure policies control the subscription. The policies are applied at the sandbox management group level, and the management group inherits policies from the hierarchy above it. Depending on its purpose, an individual or a team can use a sandbox.
 
 >[!TIP]
 > For information about the default Azure landing zones policy assignments, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#sandbox).
@@ -19,7 +19,7 @@ A sandbox environment is an isolated environment where you can test and experime
 Sandbox environments are the best place for hands-on Azure learning. Some common use cases include:
 
 - A developer needs a controlled Azure environment to quickly test application design patterns.
-- A cloud architect needs a sandbox environment to evaluate Azure resources or conduct a POC for an Azure service or resource before formally approving them for their organization.
+- A cloud architect needs a sandbox environment to evaluate Azure resources or conduct POCs for an Azure service or resource before formally approving them for their organization.
 - A cloud engineer needs a sandbox environment to better understand what happens when a setting is changed on an Azure resource.
 - A platform engineer wants to build and test out a new Azure policy and see how it behaves per the [Canary guidance](https://aka.ms/alz/canary).
 - A developer wants to experiment with Azure services or resources while building an application.
@@ -52,17 +52,19 @@ The sandbox user has owner access to the sandbox subscription. When a sandbox is
 
 ## Other considerations
 
+To ensure reliable and efficient sandbox environment performance, consider the following factors.
+
 ### Sandbox expiration
 
-You can cancel or delete a sandbox when necessary. Plan a strategy for removing a sandbox to save on costs and ensure effective security. Consider the cost and sandbox expiration date to determine when to remove a sandbox. After a sandbox expires, move it to the [decommissioned](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#decommissioned) management group.
+You can cancel or delete a sandbox when necessary. Plan a strategy for removing sandboxes to save on costs and ensure that security remains dependable. Consider the cost and sandbox expiration date to determine when to remove a sandbox. After a sandbox expires, move it to the [decommissioned](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#decommissioned) management group.
 
 #### Cost
 
-A key concern for cloud-based sandbox environments is cost tracking. You can create a budget in Microsoft Cost Management. The [budgets feature](/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) sends you alerts when actual spending or forecasted spending crosses a configured threshold.
+A key concern for cloud-based sandbox environments is cost tracking. To make tracking easier, you can create a budget in Microsoft Cost Management. The [budgets feature](/azure/cost-management-billing/costs/tutorial-acm-create-budgets#create-a-budget-in-the-azure-portal) sends you alerts when actual spending or forecasted spending crosses a configured threshold.
 
-When you deploy a sandbox, you can create a Microsoft Cost Management budget for it and assign it to the subscription. The budget feature alerts the sandbox users when spending thresholds cross the percentage that you specify. For example, you can set an alert for when the budget crosses the 100% spend threshold. In that case, you might want to [cancel](/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or delete a subscription. The alert alone is just a warning mechanism.
+When you deploy a sandbox, you can create a Microsoft Cost Management budget and assign it to the subscription. The budget feature alerts the sandbox users when spending thresholds cross the percentage that you specify. For example, you can set an alert for when the budget crosses the 100% spend threshold. In that case, you might want to [cancel](/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or delete a subscription. The alert alone is just a warning mechanism.
 
-Assign a budget to all sandboxes. You can apply a default budget sandboxes by using the [Deploy-Budget](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Budget.html) Azure Policy at the sandbox management group level. Set the default budget to the maximum cost the organization tolerates for a sandbox. The default budget sends cost alerts for any sandbox that isn’t assigned a more specific budget.
+You can assign a budget to all sandboxes. Apply a default budget by using the [Deploy-Budget](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Budget.html) Azure policy at the sandbox management group level. Set the default budget to the maximum cost the organization approves for a sandbox. The default budget sends cost alerts for any sandbox that isn’t assigned a more specific budget.
 
 #### Expiration date
 
@@ -76,13 +78,13 @@ To provide the most robust learning environment for sandbox users, make all Azur
 
 ### Information protection
 
-One concern most organizations have about sandbox environments is ensuring sensitive data doesn’t find its way in. The first line of defense for information protection is user education. Before assigning a user to a sandbox, provide them with disclaimers and information that clearly states not to add sensitive data to the sandbox.
+Most organizations agree that it's important to keep sensitive data out of a sandbox environment. The first line of defense for information protection is user education. Before assigning a user to a sandbox, provide them with disclaimers and information that clearly states not to add sensitive data to the sandbox.
 
 Use [Microsoft Purview](/azure/purview/overview) to provide information protection for sandbox environments. Purview can send alerts if a user adds data that the organization labels as sensitive to sandbox environments.
 
 ## Next steps
 
-To learn more and get hands-on experience with sandbox deployment, visit the [Azure sandbox guide](/azure/architecture/guide/azure-sandbox/azure-sandbox).
+[Azure sandbox guide](/azure/architecture/guide/azure-sandbox/azure-sandbox)
 
 > [!div class="nextstepaction"]
 > [Improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
