@@ -222,7 +222,7 @@ The **Decommissioned** management group is a holding place for Azure subscriptio
 The **Sandboxes** management group usually contains [Azure subscriptions that are used for exploration purposes](../considerations/sandbox-environments.md) and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. You can avoid applying the normal policies and governance to these subscriptions by placing them in the **Sandboxes** management group. This increases the developers' agility and enables them to easily experiment with Azure.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have [direct connectivity to the landing zone subscriptions](../considerations/sandbox-environments#networking.md). Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
+> Subscriptions in the **Sandboxes** management group should not have [direct connectivity to the landing zone subscriptions](../considerations/sandbox-environments.md#networking). Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
 
 The following diagram illustrates two potential options. Option A doesn't include the **Decommissioned** and **Sandbox** management groups, while option B does.
 
