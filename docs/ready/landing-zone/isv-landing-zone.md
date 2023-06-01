@@ -219,10 +219,10 @@ The Azure landing zone [resource organization guidance](./design-area/resource-o
 
 The **Decommissioned** management group is a holding place for Azure subscriptions that are being disabled and will eventually be deleted. You can move a subscription that's no longer in use into this management group to track it until all the resources in the subscription are permanently deleted.
 
-The **Sandboxes** management group usually contains [Azure subscriptions that are used for exploration purposes](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments) and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. You can avoid applying the normal policies and governance to these subscriptions by placing them in the **Sandboxes** management group. This increases the developers' agility and enables them to easily experiment with Azure.
+The **Sandboxes** management group usually contains [Azure subscriptions that are used for exploration purposes](../considerations/sandbox-environments.md) and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. You can avoid applying the normal policies and governance to these subscriptions by placing them in the **Sandboxes** management group. This increases the developers' agility and enables them to easily experiment with Azure.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have [direct connectivity to the landing zone subscriptions](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments#networking). Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
+> Subscriptions in the **Sandboxes** management group should not have [direct connectivity to the landing zone subscriptions](../considerations/sandbox-environments#networking.md). Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
 
 The following diagram illustrates two potential options. Option A doesn't include the **Decommissioned** and **Sandbox** management groups, while option B does.
 

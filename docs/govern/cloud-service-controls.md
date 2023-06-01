@@ -196,7 +196,7 @@ There are several stages that ensure adoption teams aren't blocked during the cr
 
 ![Diagram that shows a new service control lifecycle.](../_images/govern/new-service-control-lifecycle.png)
 
-Adoption teams can use the service in a disconnected [sandbox environment](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments). The sandbox lets the adoption team start working with the service and prototype solutions. The sandbox environment doesn't have any policy controls for the service. A review hasn't been done, so generic compensating controls should be enforced on the environment. These compensating controls might include:
+Adoption teams can use the service in a disconnected [sandbox environment](../ready/considerations/sandbox-environments.md). The sandbox lets the adoption team start working with the service and prototype solutions. The sandbox environment doesn't have any policy controls for the service. A review hasn't been done, so generic compensating controls should be enforced on the environment. These compensating controls might include:
 
 - Agreement from the adoption team to try to work within the cloud policy.
 - Agreement to not store any company data in the sandbox environment.

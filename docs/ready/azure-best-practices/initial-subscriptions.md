@@ -40,7 +40,7 @@ A two-subscription approach offers many benefits:
 
 ## Sandbox subscriptions
 
-If you know your organization's cloud adoption strategy requires innovation, consider creating one or more [sandbox subscriptions](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments). In sandbox subscriptions, you can experiment with Azure capabilities and apply security policies to keep test subscriptions isolated from your production and non-production environments, Use an Azure Dev/Test offer to create these subscriptions.
+If you know your organization's cloud adoption strategy requires innovation, consider creating one or more [sandbox subscriptions](../considerations/sandbox-environments.md). In sandbox subscriptions, you can experiment with Azure capabilities and apply security policies to keep test subscriptions isolated from your production and non-production environments, Use an Azure Dev/Test offer to create these subscriptions.
 
 ![Subscription model showing keys next to boxes labeled production, nonproduction, and sandboxes.](../../_images/ready/initial-subscription-model-with-sandboxes.png)
 
