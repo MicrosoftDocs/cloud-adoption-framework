@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-aks
 
 Azure Kubernetes Service (AKS) can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 
-The most common scalability options for AKS are the [cluster autoscaler](/azure/aks/cluster-autoscaler) (automatically adding/removing nodes. It can watch for pods in your cluster that can't be scheduled because of resource constraints) or the HPA (horizontal pod autoscaler) for your applications to scale in and out based on CPU and memory utilization as well as more advanced metrics.
+The most common scalability options for AKS are the [cluster autoscaler](/azure/aks/cluster-autoscaler) and the [horizontal pod autoscaler](/azure/aks/cluster-autoscaler#configure-the-horizontal-pod-autoscaler). The **cluster autoscaler** adjusts the number of nodes based on the requested compute resources in the node pool. The **horizontal pod autoscaler (HPA)** adjusts the number of pods in a deployment depending on CPU utilization or other configured metrics.
 
 ## Design considerations
 
