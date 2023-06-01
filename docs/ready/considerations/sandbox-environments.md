@@ -1,6 +1,6 @@
 ---
 title: Landing zone sandbox environments
-description: Guidance for the architecture of landing zone sandbox environments.
+description: Learn about Azure landing zone sandboxes, which are isolated environments to perform tests, and learn how to manage a sandbox by using subscriptions and policies.
 author: Mr-MSFT
 ms.author: isiahhudson
 ms.date: 06/01/2023
