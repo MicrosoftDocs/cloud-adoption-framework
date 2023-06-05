@@ -28,7 +28,7 @@ Sandbox environments are the best place for hands-on Azure learning. Some common
 
 The following image shows the management group and subscription layout.
 
-:::image type="content" source="./media/single-usecase-sandbox.png" alt-text="Flowchart that shows a single-use case sandbox architecture." lightbox="./media/single-use-case-sandbox.png#lightbox":::
+:::image type="content" source="./media/single-use-case-sandbox.png" alt-text="Flowchart that shows a single-use case sandbox architecture." lightbox="./media/single-use-case-sandbox.png#lightbox":::
 
 Place the sandbox subscription in the sandbox management group. For more information about management group and subscription organization, see [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Azure policies that are created for sandboxes are placed at the management group level of the sandbox. Sandbox environments inherit Azure policies from the management group hierarchy that's above it.
 
