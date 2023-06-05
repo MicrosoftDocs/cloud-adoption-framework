@@ -86,6 +86,8 @@ Partners can use the Partner Center to review the usage.
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
+### Azure Advisor
+
 Azure Cost Management + Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
 1. Select **Cost Management + Billing**.
@@ -97,6 +99,14 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 ::: zone-end
 
 You can also use **Advisor** and select the **Costs** tab to identify recommendations for potential cost reductions.
+
+### Azure Migrate
+
+Additionally, the [Build business case](/azure/migrate/how-to-build-a-business-case) feature of Azure Migrate can help you quickly shape and justify a use case for migration, including cost-specific angles like:
+
+- A view of on-premises vs. Azure total cost of ownership (TCO)
+- Understand long-term cost savings when moving from a capital expenditure model (CAPEX) to an Operating expenditure model (OPEX) by paying only for what you use.
+- Strengthen your cost planning process and add data insights-driven calculations.
 
 > [!TIP]
 > For services that don't require continuous availability, implementing a solution to start, stop, or pause the service as needed can help manage the cost (for example, Azure Virtual Machines or Azure SQL Data Warehouse).
@@ -111,5 +121,6 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 - [Tutorial: optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)
 - [Explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis)
+- [Build a business case - Azure Migrate](/azure/migrate/how-to-build-a-business-case)
 
 ::: zone-end
