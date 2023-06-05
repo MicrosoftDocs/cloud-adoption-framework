@@ -3,7 +3,7 @@ title: Security in the Microsoft Cloud Adoption Framework for Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate security throughout your cloud adoption journey.
 author: MarkSimos
 ms.author: mas
-ms.date: 04/04/2021
+ms.date: 03/08/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: secure
