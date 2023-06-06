@@ -41,4 +41,4 @@ Internet-bound traffic emitted by Azure VMware Solution virtual machines can be 
 
 ## Next Steps
 - Go back to [Design Phase #3: Inbound Internet Connectivity](network-design-guide-internet-inbound-connectivity.md)
-- Go back to the Azure VMware Solution Network Design Guide [introduction](readmenetwork-design-guide-intro.md)
+- Go back to the Azure VMware Solution Network Design Guide [introduction](network-design-guide-intro.md)
