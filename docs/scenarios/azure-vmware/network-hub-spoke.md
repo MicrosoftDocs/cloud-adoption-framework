@@ -14,7 +14,7 @@ ms.custom: e2e-azure-vmware, think-tank
 ## Introduction
 In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud. This connection occurs through the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed which can then connect to the AVS-dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic doesn't traverse over the Expressroute.  
 
-[![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/publicip2.png)](./media/publicip2.png)
+[![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/public-ip.png)](./media/public-ip.png#lightbox)
 
 >[!IMPORTANT] 
 >If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
@@ -77,7 +77,7 @@ Integration with Third Party appliances is possible with careful consideration. 
  
 It's the users' responsibility to bring a license and implement any high availability capabilities native to the device.
  
-Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: [NSX-T firewall patterns](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/networking/nsx-firewall-patterns)
+Be aware of the limits when choosing this implementation. For example, there's a limit of up to eight virtual network interface cards (NICs) on a virtual machine. For more information on how to place NVAs in AVS, see: [NSX-T firewall patterns](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Concepts/Nsx-Firewall-Patterns)
 
 > [!NOTE] 
 > Microsoft does not support the use of Mobility Optimized Networking when Third party NVAs are used.
@@ -125,7 +125,7 @@ See how to attach Azure Netapp Files datastores to Azure VMware Solution hosts [
 
 While an Expressroute circuit is recommended, connecting to AVS from on-premises with IPSEC using a transit hub VNET in Azure is also possible. This scenario requires a VPN gateway and Azure Route Server. As referenced earlier, Azure Route Server enables transitivity between the VPN gateway and the AVS Expressroute gateway.
 
-[![Azure VMware Solution with transit between Expressroute and on-premises VPN Gateway](./media/vpn_to_er.png)](./media/vpn_to_er.png)
+[![Azure VMware Solution with transit between Expressroute and on-premises VPN Gateway](./media/vpn-to-er.png)](./media/vpn-to-er.png)
 
 ## Traffic Inspection 
 As seen earlier, default route advertisement is happening from AVS with the Public IP down to the NSX Edge option, but it's also possible to continue advertising the default route from on-premises. End-to-end traffic filtering from on-premises to AVS is possible with the firewall placed at either of these endpoints. 
@@ -154,7 +154,7 @@ Default route advertisement from Azure is possible with Third party NVA in eithe
 -	 Access vCenter using Bastion + Jumpbox VM -   If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network.  Validate that the route in CLI by typing `Test-NetConnection  x.x.x.2 -port 443`
 - DNS considerations -  If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
 
-[![Azure VMware Solution subscription and resource group organization](./media/alz-avs-resource-groups.png)](./media/alz-avs-resource-groups.png)
+[![Azure VMware Solution subscription and resource group organization](./media/azure-vmware-resource-groups.png)](./media/azure-vmware-resource-groups.png)
 ## Next steps
 
 - For more information on how to transit from on-premises VPN to Azure VMware Solution, see the following [VPN to ExR transit how to article:](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Step-By-Step-Guides/Hub%20VNET%20with%20VPN%20to%20ExpressRoute%20Gateway%20transit)
