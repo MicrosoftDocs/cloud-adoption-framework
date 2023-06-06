@@ -3,7 +3,7 @@ title: Cloud adoption scenarios
 description: Find guidance for technology-specific and industry-specific cloud adoption scenarios.
 author: mpvenables
 ms.author: martinek
-ms.date: 10/19/2021
+ms.date: 12/30/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
