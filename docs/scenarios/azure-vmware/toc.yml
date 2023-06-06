@@ -21,6 +21,19 @@ items:
             href: eslz-dual-region-network-topology.md
           - name: Example Architectures for Azure VMware Solution
             href: example-architectures.md
+          - name: Network Design Guide
+            href: network-design-guide-intro.md
+            items:
+              - name: Azure VMware Solution networking basics
+                href: network-design-guide-avs-networking-basics.md
+              - name: Design connectivity with on-premises sites
+                href: network-design-guide-onprem-connectivity.md
+              - name: Design connectivity with Azure Virtual Networks
+                href: network-design-guide-vnet-connectivity.md
+              - name: Design inbound Internet connectivity
+                href: network-design-guide-internet-inbound-connectivity.md
+              - name: Design outbound Internet connectivity
+                href: network-design-guide-internet-outbound-connectivity.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
