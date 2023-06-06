@@ -134,4 +134,4 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 - To learn Cloud Adoption Framework enterprise-scale landing zone architectural principles, various design considerations, and best practices for Azure VMware Solution, see the next article in this series:
 
   > [!div class="nextstepaction"]
-  > [Single Region Hub & Spoke Topologies ](./networking-hubspoke.md)
+  > [Single Region Hub & Spoke Topologies ](./network-hub-spoke.md)

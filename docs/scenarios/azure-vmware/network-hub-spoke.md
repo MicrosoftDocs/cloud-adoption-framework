@@ -17,7 +17,7 @@ In this design pattern, traffic has a dedicated path over the Microsoft backbone
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/public-ip.png)](./media/public-ip.png#lightbox)
 
 >[!IMPORTANT] 
->If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
+>If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection). 
 
 ### Customer profile
 
@@ -49,7 +49,7 @@ Implement this scenario with:
 
 #### Key Decision
 
-This document assumes and recommends default route advertisement from either on-premises or AVS. If you need the default route to originate from Azure, refer to the section [Traffic Inspection & Default Route Advertisement](networking-hubspoke.md#traffic-inspection). 
+This document assumes and recommends default route advertisement from either on-premises or AVS. If you need the default route to originate from Azure, refer to the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection). 
  
 ### Considerations 
 
