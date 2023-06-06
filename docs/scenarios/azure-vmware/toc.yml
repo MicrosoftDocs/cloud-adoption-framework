@@ -28,7 +28,6 @@ items:
                 href: eslz-dual-region-network-topology.md
               - name: Example Architectures for Azure VMware Solution
                 href: example-architectures.md
-          - name: Design Guides
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
