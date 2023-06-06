@@ -17,18 +17,18 @@ items:
       - name: Network topology and connectivity
         items: 
           - name: Getting Started
-            href: networking-getting-started.md
+            href: network-get-started.md
           - name: General Considerations and Recommendations
             href: eslz-network-topology-connectivity.md
           - name: Architectures
             items:
               - name: Hub and Spoke 
-                href: networking-hubspoke.md
+                href: network-hub-spoke.md
               - name: Dual region network topology
                 href: eslz-dual-region-network-topology.md
               - name: Example Architectures for Azure VMware Solution
                 href: example-architectures.md
-          - name: Design Guides (Coming Soon)
+          - name: Design Guides
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
