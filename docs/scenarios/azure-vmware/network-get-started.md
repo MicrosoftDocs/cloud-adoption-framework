@@ -29,4 +29,4 @@ The following exercises help guide you through the process of creating a landing
 Examine design considerations and recommendations related to connectivity that are specific to the deployment of Azure VMware Solution.
 
 > [!div class="nextstepaction"]
-> [Network Considerations and Recommendations for AVS](./eslz-network-topology-connectivity.md)
+> [Network Considerations and Recommendations](./eslz-network-topology-connectivity.md)
