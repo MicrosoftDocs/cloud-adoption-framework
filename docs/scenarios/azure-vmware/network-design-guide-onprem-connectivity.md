@@ -1,4 +1,16 @@
-# Design phase #1: Connectivity with on-premises datacenters
+---
+title: Azure VMware Solution Network Design Guide - Connectivity with on-premises sites
+description: Learn how to design Azure VMware Solution network connectivity with on-premises sites.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
+# Design phase #1: Connectivity with on-premises sites
 Connectivity with on-premises datacenters is the most critical design area for Azure VMware Solution networking. The key requirements that must be addressed are the following:
 - High throughput: Migrations from on-premises vSphere environments and disaster recovery solutions require moving large volumes of data between on-premises sites and private clouds.
 - Low latency: Distributed applications may require low latency for connections between Azure VMware Solution virtual machines and on-premises systems.

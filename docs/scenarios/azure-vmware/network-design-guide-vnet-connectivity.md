@@ -1,3 +1,15 @@
+---
+title: Azure VMware Solution Network Design Guide - Connectivity with Azure Virtual Networks
+description: Learn how to design Azure VMware Solution network connectivity with Azure Virtual Networks.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
 # Design phase #2: Connectivity with Azure Virtual Networks
 Azure VMware Solution private clouds connect to Azure VNets through managed ExpressRoute circuits (see section [What is the role played by ExpressRoute](network-design-guide-avs-networking-basics.md#what-is-the-role-played-by-expressroute) for more details). In hub and spoke Azure networks (including those based on Virtual WAN), connecting a private cloud's managed circuit to an ExpressRoute Gateway in the hub VNet (or Virtual WAN hub) provides layer-3 connectivity with the private cloud. However, enforcing security policies (selectively allowing or denying connections between resources in Azure VNets and virtual machines running in the private cloud, or between resources in Azure VNets and the private cloud's management endpoints) is often a requirement. While both Azure VNets and vSphere/NSX-T provide native constructs for network segmentation, firewall solutions deployed as NVAs in Azure VNets are often the preferred option in enterprise-scale environments. Design Phase #2 focuses on the VNet configuration that allows routing traffic between private clouds and Azure VNets through custom next hops, such as firewall NVAs.
 

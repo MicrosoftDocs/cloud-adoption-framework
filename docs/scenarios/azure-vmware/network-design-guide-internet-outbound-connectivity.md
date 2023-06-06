@@ -1,3 +1,15 @@
+---
+title: Azure VMware Solution Network Design Guide - Internet outbound connectivity
+description: Learn how to design Internet outbound connectivity for Azure VMware Solution.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
 # Design phase #4: Internet outbound connectivity
 Design Phase #4 is driven by the outbound Internet connectivity requirements of the applications running on Azure VMware Solution. Such requirements may range from basic Internet access (for example to allow virtual machines running in the private cloud to download software updates) to complex outbound scenarios that require granular control on the source-NAT address pool (for example in B2B collaboration scenarios where access to a third party API is allowed only from whitelisted IP addresses) or the number of supported source-NAT sessions (for example in VDI scenarios). 
 
@@ -28,7 +40,7 @@ Managed source-NAT is the lowest complexity option for outbound Internet access 
 
 - Granular control over the NAT pool is a requirement. For example, specific Azure Public IPs must be used to source-NAT connections initiated by specific virtual machines towards specific public endpoints, to meet  whitelisting requirements. In this case, Public IPs on the NSX-T edge, [covered below](network-design-guide-internet-outbound-connectivity.md#deploy-pips-at-the-nsx-t-edge), should be considered.
 - Public IPs on the NSX-T edge have been selected for Internet inbound connectivity in [Design Phase #3](network-design-guide-internet-inbound-connectivity.md). In this case, Public IPs on the NSX-T must also be used for outbound Internet connectivity. See [next section](network-design-guide-internet-outbound-connectivity.md#deploy-pips-at-the-nsx-t-edge).
-- Outbound Internet connections should be routed via a secure Internet edge running in an Azure VNet (or in an on-premises site). In this case, a default route must be originated from the Internet edge running in Azure and advertised to the private cloud (covered in section [Originate default route from Azure](#originate-default-route-from-azure-customer-managed-vnet-or-vwan)).
+- Outbound Internet connections should be routed via a secure Internet edge running in an Azure VNet (or in an on-premises site). In this case, a default route must be originated from the Internet edge running in Azure and advertised to the private cloud (covered in section [Originate default route from Azure](#originate-default-route-from-azure-customer-managed-vnet-or-virtual-wan)).
 
 ### Deploy PIPs at the NSX-T edge
 When Public IPs to the NSX-T edge are configured, a default route that forwards traffic from T1/T0 gateways towards the Azure network's Internet edge exists in the private cloud. Outbound Internet connections must be source-NATted on T1 gateways using  one of the Public IPs associated to the private cloud. Detailed instructions on how to configure NAT rules on T1 gateways are provided in the [official documentation](/azure/azure-vmware/enable-public-ip-nsx-edge#outbound-internet-access-for-vms).This option can be used to provide direct Internet access to Azure VMware Solution virtual machines. It is however possible to define NSX-T topologies whereby Internet-bound connections initiated by Azure VMware Solution virtual machines are routed to secure Internet edge devices (firewall, forward proxies) deployed as virtual appliances in the private cloud. 

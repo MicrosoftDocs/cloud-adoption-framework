@@ -1,3 +1,15 @@
+---
+title: Azure VMware Solution Network Design Guide - Internet inbound connectivity
+description: Learn how to design Internet inbound connectivity for Azure VMware Solution.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
 # Design phase #3: Internet inbound connectivity
 Design Phase #3 is driven by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, Internet-facing applications are published through network devices that provide security (next generation firewalls, web application firewalls) and load balancing (layer-3/layer-4 load balancers, application delivery controllers, …) functions. Such devices can be deployed on the private cloud itself, or in an Azure VNet connected to the private cloud. Choosing between these two options is the main goal of Design Phase #3. The following considerations may help drive the decision:
 -  Azure VMware Solution customers may want to leverage pre-existing NVAs deployed in Azure VNets (firewalls, application delivery controllers, ...) to publish applications running on their private cloud(s), for cost optimization and for consistency.

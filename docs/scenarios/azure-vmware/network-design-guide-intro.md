@@ -1,3 +1,15 @@
+---
+title: Azure VMware Solution Network Design Guide
+description: Learn how to design network connectivity for Azure VMware Solution.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
 # Azure VMware Solution Landing Zone Accelerator Network Design Guide
 This guide covers network design for Azure VMWare Solution. It encompasses four design areas, summarized below.
 

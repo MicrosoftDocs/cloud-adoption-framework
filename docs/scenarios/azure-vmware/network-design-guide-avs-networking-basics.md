@@ -1,3 +1,15 @@
+---
+title: Azure VMware Solution Network Design Guide - Azure VMware Solution networking basics
+description: Learn the fundamental concepts of Azure VMware Solution networking.
+author: fguerri
+ms.author: fguerri
+ms.date: 06/06/2023
+ms.topic: conceptual
+ms.service: caf
+ms.subservice: caf-scenario-vmware
+ms.custom: think-tank, e2e-azure-vmware
+---
+
 # Azure VMware Solution Networking basics
 This section summarizes some fundamental concepts about Azure VMware Solution networking. They are a pre-requisite for understanding the design options covered in the following sections and for designing complex Azure VMware Solution topologies.
 
@@ -26,13 +38,13 @@ An Azure VMware Solution private cloud infrastructure includes several network s
 
 The network topology of an Azure VMware solution private cloud is shown in the figure below.
 
-![figure4-1](media/fignetwork-design-guide-figure4-1.png) 
+![figure4-1](media/network-design-guide-figure4-1.png) 
 *Network topology of an Azure VMware Solution private cloud.*
 
 ## Dynamic routing in Azure VMware Solution
 Azure VMware Solution private clouds connect to Azure VNets and remote sites over the managed ExpressRoute circuit. BGP is used for dynamic route exchange, as shown in the figure below.
  
-![figure5](media/fnetwork-design-guide-figure5.png) 
+![figure5](media/network-design-guide-figure5.png) 
 *Dynamic routing in Azure VMware Solution.*
 
 In the standard topology shown in the above figure:
