@@ -3,7 +3,7 @@ title: 'Get started: Accelerate migration'
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
 author: martinekuan
 ms.author: martinek
-ms.date: 07/29/2021
+ms.date: 07/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
