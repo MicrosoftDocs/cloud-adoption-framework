@@ -123,7 +123,7 @@ You can implement this scenario with:
 - Azure private endpoints.
 - Azure private DNS zone.
 
-![User's image](media/eslz-network-topology-and-connectivity/image.png)
+![RDP Shortpath for private networks diagram](media/eslz-network-topology-and-connectivity/image.png)
 
 ### Considerations
 
@@ -168,7 +168,7 @@ You can implement this scenario with:
 - Azure private endpoints.
 - Azure private DNS zone.
 
-![User's image](media/eslz-network-topology-and-connectivity/image1.png)
+![RDP Shortpath for public networks diagram](media/eslz-network-topology-and-connectivity/image1.png)
 
 ### Considerations
 
