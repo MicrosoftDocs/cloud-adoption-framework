@@ -130,7 +130,7 @@ While an Expressroute circuit is recommended, connecting to AVS from on-premises
 ## Traffic Inspection 
 As seen earlier, default route advertisement is happening from AVS with the Public IP down to the NSX Edge option, but it's also possible to continue advertising the default route from on-premises. End-to-end traffic filtering from on-premises to AVS is possible with the firewall placed at either of these endpoints. 
 
-[![Azure VMware Solution with traffic inspection in Azure with Third party network virtual appliance](./media/hub_and_spoke_w_nva.png)](./media/hub_and_spoke_w_nva.png)
+[![Azure VMware Solution with traffic inspection in Azure with Third party network virtual appliance](./media/hub-and-spoke-with-nva.png)](./network-hub-spoke.md)
 
 Default route advertisement from Azure is possible with Third party NVA in either a Hub VNET or when using Azure vWAN. In a Hub & Spoke deployment, Azure Firewall isn't possible because it doesn't speak BGP, however use of a third party BGP capable device will work. This scenario works for inspecting traffic from 
 -	On premises to Azure
