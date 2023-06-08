@@ -520,6 +520,8 @@ items:
           href: ready/considerations/landing-zone-operations.md
         - name: Testing approach for Azure landing zones
           href: ready/enterprise-scale/testing-approach.md
+        - name: Landing zone sandbox environments
+          href: ready/considerations/sandbox-environments.md
         - name: Improve landing zone governance
           items:
           - name: Overview
