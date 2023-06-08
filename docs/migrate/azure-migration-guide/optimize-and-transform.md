@@ -1,13 +1,13 @@
 ---
 title: Optimize and promote
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
-author: matticusau
-ms.author: martinek
-ms.date: 02/25/2020
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 05/06/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank, fasttrack-new, AQC
+ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Release workloads (test, optimize, and handoff)
