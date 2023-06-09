@@ -77,7 +77,7 @@ Consider the following best practices for batch inference:
 Sizing of the compute nodes used for batch inference is important.  If the nodes are too small, the inference job will take longer to complete.  If the nodes are too large, the job will be more expensive.  Testing and monitoring are essential to determine the right size for your model.
 
 
-- **Consider scalability  needs:** Azure Machine Learning supports multiple features to enabling scalable processing for improved performance. The number of compute nodes and maximum concurrency parameters are defined during the batch endpoint deployment in Azure Machine Learning, which can by overridden per job to allow customers runtime flexibility and provide out-of-the-box parallelism that works with both tabular and file based inferencing.  
+- **Consider scalability needs:** Azure Machine Learning supports multiple features to enable scalable processing for improved performance. The number of compute nodes and maximum concurrency parameters are defined during the batch endpoint deployment in Azure Machine Learning, which can be overridden per job to allow customers runtime flexibility and provide out-of-the-box parallelism that works with both tabular and file-based inferencing. 
 
 - **Batch inference challenges:** Whilst batch inference is a simpler way to use and deploy your model in production, it does present it's own set of challenges:
 
