@@ -79,7 +79,7 @@ Sizing of the compute nodes used for batch inference is important.  If the nodes
 
 - **Consider scalability needs:** Azure Machine Learning supports multiple features to enable scalable processing for improved performance. The number of compute nodes and maximum concurrency parameters are defined during the batch endpoint deployment in Azure Machine Learning, which can be overridden per job to allow customers runtime flexibility and provide out-of-the-box parallelism that works with both tabular and file-based inferencing. 
 
-- **Batch inference challenges:** Whilst batch inference is a simpler way to use and deploy your model in production, it does present it's own set of challenges:
+- **Batch inference challenges:** While batch inference is a simpler way to use and deploy your model in production, it does present its own set of challenges:
 
   - Depending on the frequency at which inference runs, the prediction generated with inferencing could be irrelevant by the time it's accessed.  
 
