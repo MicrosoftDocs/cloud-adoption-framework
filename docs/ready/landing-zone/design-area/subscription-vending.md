@@ -26,6 +26,8 @@ Subscription vending builds on the concept of subscription democratization and a
 
 ## Why subscription vending?
 
+> [!VIDEO https://www.youtube.com/embed/OoC_0afxACg]
+
 Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for application landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 
 - **Streamlined process:** Subscription vending provides an official front door for application teams to request subscriptions, eliminating the need for them to navigate the subscription process on their own.
