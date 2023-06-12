@@ -125,7 +125,7 @@ Establish a core cloud strategy team built around these key high-level stakehold
 - Is responsible for understanding cloud technologies and migration processes.
 - Identifies the business justification for migrations.
 - Determines the best high-level solutions for migration efforts.
-- Helps identify and work with specific application and business stakeholders to ensure a successful migration.
+- Helps identify and work with specific applications and business stakeholders to ensure a successful migration.
 
 See the Cloud Adoption Framework's [initial organization alignment](../../plan/initial-org-alignment.md) guidance for more information.
 
