@@ -64,7 +64,7 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 - Identify servers to migrate together. This step is helpful if you need clarification on which servers are part of an app deployment you want to migrate.
 - Identify whether servers are in use and which servers you can decommission instead of migrate.
 - Analyze dependencies to ensure nothing is left behind and avoid surprise outages after migration.
-- Consider using the Business case capability in Azure Migrate to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
+- Consider using the Azure Migrate [Business case](/azure/migrate/how-to-build-a-business-case) capability to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
 
 <!-- markdownlint-disable MD024 -->
 
