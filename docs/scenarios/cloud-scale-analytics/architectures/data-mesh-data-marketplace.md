@@ -3,7 +3,7 @@ title: Data marketplace
 description: Learn about data marketplaces in data mesh.
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 04/05/2022
+ms.date: 02/02/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
