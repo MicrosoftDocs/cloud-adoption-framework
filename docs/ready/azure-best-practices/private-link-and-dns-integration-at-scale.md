@@ -456,6 +456,125 @@ At this point, application teams can use the storage account through a private e
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
 
+## Special cases: where region code is part of DNS zone name
+
+There are resources where region code is part of DNS zone name, for example Azure Backup in multiple regions, the above policy does not work because there is no check to ensure that the DNS records is created in the correct Private DNS zone.
+
+If two or more policies are assigned using the same SubResource/GroupId then DNS records will be created randomly in the different private DNS zones, e.g. in privatelink.we.backup.windowsazure.com and in privatelink.sdc.backup.windowsazure.com.
+
+In that cases, the location needs no be added to the policy definition:
+
+```json
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "location",
+            "equals": "[parameters('location')]"
+          },
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/privateEndpoints"
+          },
+          {
+            "count": {
+              "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].groupIds[*]",
+              "where": {
+                "field": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections[*].groupIds[*]",
+                "equals": "[parameters('subResource')]"
+              }
+            },
+            "greaterOrEquals": 1
+          }
+        ]
+      },
+      "then": {
+        "effect": "deployIfNotExists",
+        "details": {
+          "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+          "roleDefinitionIds": [
+            "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7"
+          ],
+          "deployment": {
+            "properties": {
+              "mode": "incremental",
+              "template": {
+                "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                "contentVersion": "1.0.0.0",
+                "parameters": {
+                  "privateDnsZoneId": {
+                    "type": "string"
+                  },
+                  "privateEndpointName": {
+                    "type": "string"
+                  },
+                  "location": {
+                    "type": "string"
+                  }
+                },
+                "resources": [
+                  {
+                    "name": "[concat(parameters('privateEndpointName'), '/deployedByPolicy')]",
+                    "type": "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+                    "apiVersion": "2020-03-01",
+                    "location": "[parameters('location')]",
+                    "properties": {
+                      "privateDnsZoneConfigs": [
+                        {
+                          "name": "privateDnsZone",
+                          "properties": {
+                            "privateDnsZoneId": "[parameters('privateDnsZoneId')]"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "privateDnsZoneId": {
+                  "value": "[parameters('privateDnsZoneId')]"
+                },
+                "privateEndpointName": {
+                  "value": "[field('name')]"
+                },
+                "location": {
+                  "value": "[field('location')]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "privateDnsZoneId": {
+        "type": "String",
+        "metadata": {
+          "displayName": "privateDnsZoneId",
+        }
+      },
+      "subResource": {
+        "type": "String",
+        "metadata": {
+          "displayName": "subResource"
+        }
+      },
+      "location": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Location (Specify the Private Endpoint location)",
+          "description": "Specify the Private Endpoint location",
+          "strongType": "location"
+        }
+      }
+    }
+  }
+```
+
+
 ## Next steps
 
 Review [DNS for on-premises and Azure resources](./dns-for-on-premises-and-azure-resources.md).
