@@ -115,7 +115,7 @@ You must create a resource organization design to ensure consistent alignment wi
 
 Build a subscription strategy:
 
-- [Start with two subscriptions](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs like shared services or sandbox subscriptions.
+- [Start with two subscriptions](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs like shared services or [sandbox subscriptions.](../ready/considerations/sandbox-environments.md)
 - Ensure you can [manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as more subscriptions are needed to support your cloud adoption plan.
 - Establish [clear boundaries based on the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - [Move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) when necessary to adhere to your organization strategy.
