@@ -7,6 +7,7 @@ ms.date: 03/01/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-spring-apps
+ms.custom: devx-track-terraform
 ---
 
 # Azure Spring Apps landing zone accelerator
@@ -26,7 +27,7 @@ The landing zone accelerator is a set of design considerations and reference arc
 
 - **Reference architecture** provides design guidance that applies the recommendations to an example Spring app. The practical approach is used as design guidance for greenfield implementation and as an assessment for brownfield customers that already use Spring Boot apps.
 
-    For more information about this architecture, see [Azure Spring Apps landing zone accelerator.](https://github.com/Azure/springapps-landing-zone-accelerator#azure-spring-apps-landing-zone-accelerator).
+    For more information about this architecture, see [Azure Spring Apps integrated with landing zones](/azure/architecture/web-apps/spring-apps/spring-apps-landing-zone).
 
     [![Diagram that shows Azure App Service landing zone accelerator architecture.](./media/spring-apps-reference-architecture-landing-zone.png)](./media/spring-apps-reference-architecture-landing-zone.png#lightbox)
 

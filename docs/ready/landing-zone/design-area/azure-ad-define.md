@@ -39,7 +39,7 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - If using [Azure Government](/azure/azure-government/documentation-government-welcome) review the guidance around Azure AD tenants in [Planning identity for Azure Government applications](/azure/azure-government/documentation-government-plan-identity)
 
-- If using Azure Government, Azure China 21Vianet, Azure Germany ([closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then review [National clouds](/azure/active-directory/develop/authentication-national-cloud) for further guidance around Azure AD
+- If using Azure Government, Azure China 21Vianet, Azure Germany ([closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then review [National/Regional clouds](/azure/active-directory/develop/authentication-national-cloud) for further guidance around Azure AD
 
 **Design recommendations:**
 

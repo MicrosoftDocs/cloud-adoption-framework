@@ -33,7 +33,7 @@ The landing zone accelerator is a set of design considerations, reference archit
 - **Reference implementation** accompanies the architecture and demonstrates the best practices, deploying all the resources needed for an enterprise-ready AIS platform. Once deployed, all you need to do is upload your own code/workflows/files to start using this environment.
 
     > [!IMPORTANT]
-    > ![GitHub logo](../../../scenarios/_images/github.svg) Refer to the [Azure Integration Services Reference Implementation](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/Reference%20Implementation.md).
+    > ![GitHub logo](../../../scenarios/_images/github.svg) Refer to the [Azure Integration Services Reference Implementation](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/scenario1/Reference%20Implementation.md).
 
 ## Integration with platform landing zones
 

@@ -266,7 +266,7 @@ items:
         href: operating-model/terms.md
     - name: Azure landing zones
       items:
-      - name: What is a landing zone?
+      - name: What is an Azure landing zone?
         href: ready/landing-zone/index.md
       - name: Design principles
         href: ready/landing-zone/design-principles.md
@@ -494,16 +494,8 @@ items:
             href: ready/landing-zone/migrate-landing-zone.md
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
-
         - name: Deploy Azure landing zones with Terraform
-          items:
-          - name: Overview
-            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
-          - name: Azure landing zones Terraform module
-            href: ready/landing-zone/terraform-module.md
-          - name: CAF Terraform landing zones
-            href: ready/landing-zone/terraform-landing-zone.md
-
+          href: ready/landing-zone/deploy-landing-zones-with-terraform.md
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
         - name: Get landing zone help
@@ -528,6 +520,8 @@ items:
           href: ready/considerations/landing-zone-operations.md
         - name: Testing approach for Azure landing zones
           href: ready/enterprise-scale/testing-approach.md
+        - name: Landing zone sandbox environments
+          href: ready/considerations/sandbox-environments.md
         - name: Improve landing zone governance
           items:
           - name: Overview
@@ -1928,4 +1922,5 @@ items:
         href: resources/vdc.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
-
+      - name: CAF Terraform landing zones
+        href: ready/landing-zone/terraform-landing-zone.md
