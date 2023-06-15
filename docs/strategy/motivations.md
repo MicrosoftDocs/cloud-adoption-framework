@@ -56,7 +56,6 @@ Some motivations align well with a migration strategy. Motivations at the top of
 - Optimize internal operations.
 - Increase business agility. Read the [customer story](https://customers.microsoft.com/story/845185-academy-motion-picture-arts-sciences-media-entertainment-azure).
 - Prepare for new technical capabilities.
-- Build new technical capabilities.
 - Scale to market demand.
 - Scale to geographic demand. Read the [customer story](https://customers.microsoft.com/story/792289-walgreens-boots-alliance-retailers-azure-sap-migration).
 
@@ -69,6 +68,7 @@ The motivations below help IT organizations to focus more on innovation than a m
 - Move towards their [Sustainability goals](./business-outcomes/sustainability.md)
 - Increase business agility.
 - Prepare for new technical capabilities.
+- Build new technical capabilities.
 - Scale to market demand.
 - Scale to geographic demand.
 - Improve customer experience and engagement. Read the [customer story](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
