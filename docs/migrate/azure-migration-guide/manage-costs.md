@@ -122,6 +122,10 @@ Even with the best approaches to estimation, there are likely to be overprovisio
 
 Speak with your Microsoft account representative to understand how you can take advantage of current discount options. The following are a few examples of discounts that are commonly used to reduce costs.
 
+### Azure savings plans
+
+Use [Azure savings plans](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) to save up to 65% off pay-as-you-go pricing when you commit to spending a fixed hourly amount on compute services for one or three years. You can pay for a savings plan upfront or monthly. The total cost of the up-front and monthly savings plan is the same.
+
 ### Azure Reservations
 
 [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL Database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
