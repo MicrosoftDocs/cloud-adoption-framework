@@ -73,6 +73,17 @@ Partners can use the Partner Center to review the usage.
 
 ### Resize a SQL database
 
+1. Go to **App Services**.
+1. Select your App Service instance.
+1. Choose **Scale up (App Service plan)** in the left navigation.
+1. Select on of the pricing tiers and choose **Select**.
+
+::: zone target="chromeless"
+
+::: zone-end
+
+### Resize an App Service
+
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
