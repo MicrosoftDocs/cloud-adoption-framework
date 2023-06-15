@@ -68,7 +68,7 @@ The motivations below help IT organizations to focus more on innovation than a m
 - Move towards their [Sustainability goals](./business-outcomes/sustainability.md)
 - Increase business agility.
 - Prepare for new technical capabilities.
-- Build new technical capabilities. Read the [customer story](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure).
+- Build new technical capabilities.
 - Scale to market demand.
 - Scale to geographic demand.
 - Improve customer experience and engagement. Read the [customer story](https://customers.microsoft.com/story/724203-the-descartes-systems-group-travel-and-transportation-azure-sql-database).
