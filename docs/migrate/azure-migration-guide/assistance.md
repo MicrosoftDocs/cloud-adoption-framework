@@ -14,7 +14,7 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.
 
-## [Support plans](#tab/SupportPlans)
+## Support plans
 
 ### Microsoft Support
 
@@ -22,64 +22,26 @@ Microsoft offers a basic support plan to all Azure customers. You have 24x7 acce
 
 If you need help from Microsoft Support while using Azure, follow these steps to create a support request:
 
-::: zone target="docs"
-
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **New support request** to enter details about your issue and contact support.
-
-::: zone-end
-
-::: zone target="chromeless"
-
-1. Select **Help + support**.
-1. Select **New support request** to enter details about your issue and contact support.
-
-::: zone-end
-
-::: zone target="docs"
 
 To view your support requests, follow these steps:
 
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **All support requests** to view your support requests.
 
-::: zone-end
-
-::: zone target="chromeless"
-
-1. Select **Help + support**.
-1. Select **All support requests** to view your support requests.
-
-::: zone-end
-
 Need support engineer assistance for deep technical guidance?
-
-::: zone target="docs"
 
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **Support Plans** to review the plans available to you.
-
-::: zone-end
-
-::: zone target="chromeless"
-
-1. Select **Help + support**.
-1. Select **Support Plans** to review the plans available to you.
-
-::: zone-end
-
-::: zone target="docs"
 
 ### Online communities
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
-::: zone-end
-
-## [Partners](#tab/Partners)
+## Partners
 
 ### Azure solutions partner
 
