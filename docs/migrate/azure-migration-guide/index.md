@@ -16,14 +16,10 @@ The [Migrate methodology](../index.md) of the Cloud Adoption Framework guides re
 
 This article guides you through a simplified migration process to Azure.
 
-::: zone target="docs"
-
 > [!TIP]
 > For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure migration guide**, and then follow the step-by-step instructions.
 
-::: zone-end
-
-## [Migration tools](#tab/MigrationTools)
+## Migration tools
 
 This guide is the suggested path for your first migration to Azure. It exposes you to the methodology and the cloud-native tools most commonly used during migration to Azure. Those tools are presented across the following pages:
 
@@ -37,7 +33,7 @@ This guide is the suggested path for your first migration to Azure. It exposes y
 
 In alignment with the best practices in the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, deploy a landing zone before you continue with this guide.
 
-## [When to use this guide](#tab/WhenToUseThisGuide)
+## When to use this guide
 
 The tools discussed in this guide support a wide variety of migration scenarios. You can use this guide as a baseline for most migrations, and this format works well for planning and migrating most workloads. 
 
@@ -55,10 +51,6 @@ To determine whether this migration guide is suitable for your project, consider
 
 If any of these conditions don't apply to your situation, consider other [best practices for cloud migration](../azure-best-practices/index.md). For more complex migrations, we recommend that you request assistance from one of our Microsoft teams or partners. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
 
-::: zone target="docs"
-
 For more information, see:
 
 - [Best practices for cloud migration](../azure-best-practices/index.md)
-
-::: zone-end
