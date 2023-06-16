@@ -18,16 +18,12 @@ This phase is also an opportunity to optimize your environment and perform possi
 
 The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [optimize and promote](../migration-considerations/optimize/index.md).
 
-## [Right-size assets](#tab/optimize)
+## Right-size assets
 
 All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you're analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
 
 1. Go to **Monitor**.
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
-
-::: zone target="chromeless"
-
-::: zone-end
 
 The following are some common services that you can resize.
 
@@ -44,12 +40,6 @@ However, for virtual machines created or migrated using other methods, or in cas
 
 Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
-::: zone target="chromeless"
-
-::: zone-end
-
-::: zone target="docs"
-
 - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
 - [Resize a Windows VM](/azure/virtual-machines/resize-vm)
 - [Resize a Linux virtual machine via Azure CLI](/azure/virtual-machines/resize-vm)
@@ -58,18 +48,12 @@ Partners can use the Partner Center to review the usage.
 
 - [Azure VM sizing for maximum reservation usage](/partner-center/azure-usage)
 
-::: zone-end
-
 ### Resize a storage account
 
 1. Go to **Storage accounts**.
 1. Select the desired storage account.
 1. Select **Configure** and adjust the properties of the storage account to match your requirements.
 1. Select **Save**.
-
-::: zone target="chromeless"
-
-::: zone-end
 
 ### Resize a SQL database
 
@@ -78,10 +62,6 @@ Partners can use the Partner Center to review the usage.
 1. Choose **Scale up (App Service plan)** in the left navigation.
 1. Select on of the pricing tiers and choose **Select**.
 
-::: zone target="chromeless"
-
-::: zone-end
-
 ### Resize an App Service
 
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
@@ -89,11 +69,7 @@ Partners can use the Partner Center to review the usage.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.
 
-::: zone target="chromeless"
-
-::: zone-end
-
-## [Cost management](#tab/ManageCost)
+## Cost management
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
@@ -104,10 +80,6 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 1. Select **Cost Management + Billing**.
 1. Select **Advisor recommendations** and the **Costs** tab.
 1. Use the **Impact** and **Potential yearly savings** to review the potential benefits.
-
-::: zone target="chromeless"
-
-::: zone-end
 
 You can also use **Advisor** and select the **Costs** tab to identify recommendations for potential cost reductions.
 
@@ -123,15 +95,7 @@ Additionally, the [Build business case](/azure/migrate/how-to-build-a-business-c
 > For services that don't require continuous availability, implementing a solution to start, stop, or pause the service as needed can help manage the cost (for example, Azure Virtual Machines or Azure SQL Data Warehouse).
 >
 
-::: zone target="chromeless"
-
-::: zone-end
-
-::: zone target="docs"
-
 - [Tutorial: optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)
 - [Explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis)
 - [Build a business case - Azure Migrate](/azure/migrate/how-to-build-a-business-case)
-
-::: zone-end
