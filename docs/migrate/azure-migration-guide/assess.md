@@ -14,7 +14,7 @@ ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 
 The resources in this guide help you assess each workload, challenge assumptions about each workload's suitability for migration, and make architectural decisions about migration options.
 
-## [Tools](#tab/Tools)
+## Tools
 
 If you didn't follow the guidance in the links above, you'll need data and an assessment tool to make informed migration decisions. Azure Migrate is the native tool for assessing **and** migrating to Azure. If you haven't already, use these steps to create a new server migration project and collect the necessary data.
 
@@ -42,19 +42,11 @@ Begin server discovery, assessment, and migration by using the following steps f
 5. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
 6. After creating the project, tools are visible, and the user can start with Discovery.
 
-::: zone target="chromeless"
-
-::: zone-end
-
-::: zone target="docs"
-
 #### Learn more
 
 - [Azure Migrate overview](/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)
-
-::: zone-end
 
 ### Dependency analysis
 
@@ -72,7 +64,7 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 
 - [Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization)
 
-## [Challenge assumptions](#tab/Challenge-Assumptions)
+## Challenge assumptions
 
 In an ideal migration, every asset would be compatible with a cloud platform and ready for migration or modernization. But in practice, you shouldn't migrate every workload to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets.
 
@@ -104,7 +96,7 @@ These questions help challenge assumptions and lead to the best path for each wo
 
 For more questions and a process for validating assumptions, see the [overview of assessment process improvements](../migration-considerations/assess/index.md).
 
-## [Scenarios and stakeholders](#tab/Scenarios)
+## Scenarios and stakeholders
 
 ### Scenarios
 
@@ -129,7 +121,7 @@ Establish a core cloud strategy team built around these key high-level stakehold
 
 See the Cloud Adoption Framework's [initial organization alignment](../../plan/initial-org-alignment.md) guidance for more information.
 
-## [Timelines](#tab/Timelines)
+## Timelines
 
 You can usually complete the migration scenario covered by this guide in one to six months.
 
@@ -141,7 +133,7 @@ When evaluating the timeline of your migration, consider the following:
 - **Change management:** Does your business have specific change implementation and approval requirements?
 - **Segment regulations:** Do you have to comply with segment or industry regulations?
 
-## [Cost management](#tab/ManageCost)
+## Cost management
 
 Assessing your environment provides an excellent opportunity to include a cost analysis step. You can analyze and predict costs using the data collected by the assessment activities. This cost prediction should factor in the consumption service costs and any one-time costs, like increased data ingress.
 
@@ -150,10 +142,6 @@ During migration, certain factors affect decisions and execution activities:
 - **Digital estate size:** Understanding the size of your digital estate directly affects decisions and the resources required to migrate.
 - **Accounting models:** Shifting from a structured capital expense model to a fluid operating expense model.
 
-::: zone target="docs"
-
 The following resources provide related information:
 
 - [Estimate cloud costs](../migration-considerations/assess/estimate.md)
-
-::: zone-end
