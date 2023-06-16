@@ -161,6 +161,17 @@ Azure Cosmos DB data migration imports data from various sources into Azure Cosm
 
 For more information, see [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
 
+### Migrate to Azure Storage (blob) or Azure Data Lake Store with Azure Data Factory
+
+Migrate data at scale with Azure Data Factory (ADF). ADF offers a serverless architecture that allows parallelism at different levels, which maximizes data movement throughput for your environment. ADF supports both initial snapshot migration and delta data migration.
+
+For more information, see the following links:
+
+- [Why Azure Data Factory can be used for data migration](/azure/data-factory/data-migration-guidance-overview).
+- [Migrate data from AWS S3 to Azure](/azure/data-factory/data-migration-guidance-s3-azure-storage).
+- [Migrate data from on-premises hadoop cluster to Azure](/azure/data-factory/data-migration-guidance-hdfs-azure-storage)
+- [Migrate data from on-premises Netezza server to Azure](/azure/data-factory/data-migration-guidance-netezza-azure-sqldw).
+
 ## Third-party migration tools
 
 Several third-party migration tools and ISV services can help you with the migration process. Each offers different benefits and strengths. These tools include:

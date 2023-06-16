@@ -35,7 +35,7 @@ In alignment with the best practices in the [Ready methodology](../../ready/inde
 
 ## When to use this guide
 
-The tools discussed in this guide support a wide variety of migration scenarios. You can use this guide as a baseline for most migrations, and this format works well for planning and migrating most workloads. 
+The tools discussed in this guide support a wide variety of migration scenarios. You can use this guide as a baseline for most migrations, and this format works well for planning and migrating most workloads.
 
 To determine whether this migration guide is suitable for your project, consider whether the following conditions apply to your situation:
 
