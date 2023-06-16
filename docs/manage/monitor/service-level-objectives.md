@@ -172,7 +172,7 @@ Combine support SLOs for IT service management processes such as incident and pr
 |-|-|-|
 |Cost|Measure expenditure, billing, and invoices by service, component, or time.|Capital Expense or operating expense|
 |Coverage|% of components, systems, and services under management (compliance)|Compliance|
-|Feed reliability|Failures of heartbeat, connectors, changes, etc.|Tracking changes in mission-critical company data.|
+|Feed reliability|Failures of heartbeat, connectors, changes, and more.|Tracking changes in mission-critical company data.|
 |Productivity|Effectiveness to productively accomplish tasks|Labor, time by employee, analyst productivity.|
 
 ## Considerations
