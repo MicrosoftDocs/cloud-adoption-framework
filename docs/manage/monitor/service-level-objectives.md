@@ -16,49 +16,44 @@ This article is part of a series in [the cloud monitoring guide](./index.md).
 
 This article reviews the fundamental principles of service level objectives, and how to implement and apply them.
 
-## Introduction
+## Overview
 
-Service level objectives (SLOs) are measurable goals for key customer-centric service level indicators (SLIs). They measure your customer's experience of a business or infrastructure workload and determine the business service provider. They meet the promises made in a formally negotiated service level agreement (SLA) or informal agreement between all parties.
+Service level objectives (SLOs) are measurable goals for key customer-centric service level indicators (SLIs). They measure your customer's experience of a business or infrastructure workload and determine whether the business's service provider meets the promises made in a formally negotiated service level agreement (SLA) or informal agreement between all parties.
 
 As a service broker, you rely on Microsoft's commitment to the reliability of services as defined in Microsoft's service level agreements for Azure services. This allows you to focus on your responsibilities in the service chain, such as synthetic monitoring, network connectivity, and security and compliance.
 
 :::image type="content" source="media/service-level-objectives/sla-foundation-with-objectives-and-indicators.png" alt-text="Service Level Agreement foundation building blocks" border="false":::
 
-### Terminology
+## Terminology
 
 Below are the definitions for each of these terms and a brief description. These definitions are taken from Google's [SRE Handbook](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/).
 
-- **Service level agreement (SLA) or service agreement** is usually a binding commitment between a service provider and a customer. It is an explicit or implicit contract with your users that includes consequences of meeting (or missing) the SLOs they contain. Particular aspects of the service are quality, availability, and responsibilities as agreed between the service provider and the service consumer.
-
-- **Monitoring** is the practice of collecting quantitative real-time data about services and systems. Monitoring strategy relies on Metrics, Logs, and Event Traces.
-
-- **Metrics** measure relevant service behavior and can be aggregated into service level indicators (SLIs), which are processed and aggregated to measure the current operational state of a service and quantify its behavior. In some cases, SLIs directly indicate an issue with a service (for example, a high failure rate). In other cases, they show a potentially troubling trend (for example, memory growth). SLIs are the main and real-time indicators of the current health of a service.
-
-- **Logs** starts with the code and reports information about an individual execution of a code path or discreet event. Use this information to help troubleshoot and work towards identifying root cause issues that impact the customer experience and service reliability measured by SLIs/SLOs.
-
-- **Service level objective (SLO)** is a target value for the service level, as measured by service level indicators (SLIs), that sets expectations about how well a service performs. SLOs specifically track end-to-end customer experience. To establish good SLOs, you start by talking to your customers to define their desired experience and then instrument the service code to measure that experience (collect relevant SLIs) and set the target of how you meet customer expectations or not.
-
-- **Service level indicator (SLI)** is a metric that quantifies the quality or reliability of the service. At a minimum, four common SLIs are evaluated: availability, latency, throughput, and error rate.
-
-- **Availability** generally refers to the measurable or observable percentage of time a system is operational and functional. You measure availability as a customer-facing target for continuity of experience, which is affected by one or more reliability issues (and other failure modes related to configuration changes, updates applied, and more).
-
-- **Error budget** is the percentage of your remaining buffer regarding your SLO. Error budgets are the tool DevOps, and IT uses to balance service reliability with the pace of innovation.
+|Term|Description|
+|---|---|
+|**Service level agreement (SLA)**|Usually a binding commitment between a service provider and a customer. An agreement typically includes consequences of missing the **SLO** targets. Particular aspects of the service are quality, availability, and responsibilities as agreed between the service provider and the service consumer.|
+|**Monitoring**|The practice of collecting quantitative real-time data about services and systems.|
+|**Metrics**|Measures relevant service behavior and can be aggregated into service level indicators (**SLIs**), which are processed and aggregated to measure the current operational state of a service and quantify its behavior. SLIs are the main and real-time indicators of the current health of a service.|
+|**Logs**|Starts with the code and reports information about an individual execution of a code path or discreet event. Use this information to help troubleshoot and work towards identifying root cause issues that impact the customer experience and service reliability measured by SLIs/SLOs.|
+|**Service level objective (SLO)**|A target value for the service level, as measured by service level indicators (**SLIs**), that sets expectations about how well a service performs. SLOs specifically track end-to-end customer experience. To establish good SLOs, you typically start by defining the desired experience and then instrument the service code to measure that experience (collect relevant SLIs) and set the target of how you meet customer expectations or not.|
+|**Service level indicator (SLI)**|A metric that quantifies the quality or reliability of the service. At a minimum, four common SLIs are evaluated: **availability**, **latency**, **throughput**, and **error rate**.|
+|**Availability**|Generally refers to the measurable or observable percentage of time a system is operational and functional. You measure availability as a customer-facing target for continuity of experience, which is affected by one or more reliability issues (and other failure modes related to configuration changes, updates applied, and more).|
+|**Error budget**|The percentage of your remaining buffer regarding your SLO. Error budgets are the tool DevOps, and IT uses to balance service reliability with the pace of innovation.|
 
 ## The purpose of SLOs
 
 SLOs serve many essential purposes in the development and operations of cloud workloads, including:
 
-- Give near real-time (NRT) view of the health of a service as experienced by a customer.
-- Drive automated notification of service issues to customers, significantly reducing time to notify (TTN).
-- Act as a primary signal for deployment operations, driving automated rollback if issues occur, thus exposing fewer customers to potential issues.
-- Provide validation that changes achieved the expected customer experience improvement.
-- Help teams understand whether to build features or work on reliability.
-- Enable objective, customer-focused discussions about service health.
-- Speed mitigation and root cause analysis (RCA) of customer issues by directing focus to the responsible service.
-- Act as an essential input into architectural decisions when services take dependencies.
-- Provide a shared understanding of health measures, which builds trust between teams.
-- Expose the same SLIs we use to run our business to our customers so they can run theirs.
-- Enable a horizontal single pane of glass for the services & their dependencies and breakdown silos.
+- **Near real-time (NRT)**: To give an NRT-view of the health of a service as experienced by a customer.
+- **Reducing time-to-notify (TTN)**: Drive automated notification of service issues to customers, significantly reducing time to notify (TTN).
+- **Primary signal to customers**: Act as a primary signal for deployment operations, driving automated rollback if issues occur, thus exposing fewer customers to potential issues.
+- **Change verification**: Provide validation that changes achieved the expected customer experience improvement.
+- **Determine priorities**: Help teams understand whether to build features or work on reliability.
+- **Service health insights**: Enable objective, customer-focused discussions about service health.
+- **Reduce time to analyze**: Speed up mitigation and root cause analysis (RCA) of customer issues by directing focus to the responsible service.
+- **Architectural dependencies**: Act as an essential input into architectural decisions when services take dependencies.
+- **Builds trust**: Provide a shared understanding of health measures, which builds trust between teams.
+- **Bring transparency**: Expose the same SLIs we use to run our business to our customers so they can run theirs.
+- **Single pane of glass**: Enable a horizontal single pane of glass for the services & their dependencies and breakdown silos.
 
 By using SLOs to drive your engineering process, DevOps and IT can get an early understanding of the health of the application or infrastructure service they build or migrate in Azure. This can then be used to drive both the human and the automated decisions that need to be made about the reliability of these services. This transformation in engineering practice will significantly impact the reliability of those services in the near term.
 
