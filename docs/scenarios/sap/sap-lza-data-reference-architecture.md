@@ -2,12 +2,13 @@
 title: SAP data integration with Azure-Performance and troubleshooting
 description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
 author: pankajmeshramCSA
-ms.author: upunatik;dwerifs
-ms.date: 01/16/2023
+ms.author: upunatik
+ms.reviewer: tozimmergren
+ms.date: 06/19/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
 # SAP data integration Reference Architecture

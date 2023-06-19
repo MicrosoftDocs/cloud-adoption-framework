@@ -30,12 +30,12 @@ items:
         href: eslz-platform-automation-and-devops.md
       - name: Security 
         items: 
-        - name: SAP Security on Azure-Database Security
-          href: sap-lza-sap-database-security.md
-        - name: SAP Security on Azure-Sentinel for SAP
+        - name: Database security for SAP on SQL Server
+          href: sap-lza-database-security.md
+        - name: Microsoft Sentinel for SAP on Azure
           href: sap-lza-sentinel-for-sap.md
-        - name: SAP Security on Azure-Security Operations
-          href: sap-lza-sap-security-operations.md  
+        - name: Security operations for SAP on Azure
+          href: sap-lza-security-operations.md  
     - name: Implementation options
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
