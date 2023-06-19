@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap
 This article is Part 2 of the SAP extend and innovate security: Best practices series. For the first article in the series,
 see [Database Security - SQL](./sap-lza-database-security.md)
 
-## Microsoft Sentinel solution for SAP Applications
+## Microsoft Sentinel Solution for SAP Applications
 This article outlines key design considerations for deploying agents and the solution to protect SAP applications using Microsoft Sentinel.
 •	To collect the data from SAP systems, it is required to deploy a connector. 
 •	Each SAP SID/Client number combination requires deployment of a separate connector.
