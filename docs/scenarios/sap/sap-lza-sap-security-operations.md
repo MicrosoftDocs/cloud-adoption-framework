@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 # SAP Security on Azure: Security Operations
 
 - [SAP Security on Azure: SAP on SQL Server Database Security](./sap-lza-sap-database-security.md)
-- [SAP Security on Azure: Sentinel for SAP](./sap-lza-sentinel-for-sap.md)
+- [SAP Security on Azure: Microsoft Sentinel for SAP](./sap-lza-sentinel-for-sap.md)
 - [SAP Security on Azure: Security Operations](./sap-lza-sap-security-operations.md) (This article)
 - [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
@@ -60,7 +60,7 @@ Customers can monitor this security baseline and review recommendations, take re
 
 Keeping your systems up to date is crucial for your security posture. Generally, there are two types of security patching we focus on. Operating System (OS) security patching, and SAP security patching.
 
-## Operating System security patching
+### Operating System security patching
 
 Operating System security patches are critical for SAP workloads to prevent security breaches, comply with industry regulations, improve performance, and protect business's reputation.
 SAP customers running Windows and Linux virtual machines in Azure, on-premises, and in other cloud environments can use Update Management in Azure Automation to manage operating system updates, including security patches.
