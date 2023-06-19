@@ -21,13 +21,15 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 - [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
 
-## Design considerations and recommendations
+The sections below provides the **considerations and recommendations** for SAP on Azure running on SQL database.
 
-The sections below provides the considerations and recommendations for SAP on Azure running on SQL database.
+## Secure-at-rest
 
-### Secure-at-rest
+The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver16) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by SAP (Note 1380493 - SQL Server Transparent Data Encryption (TDE)).
 
-The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver16) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by SAP (Note 1380493 - SQL Server Transparent Data Encryption (TDE)). The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption?view=sql-server-ver16). As all data pages that are read or written to disk must be encrypted or decrypted, TDE comes with a CPU penalty. When applied to a user database the CPU usage increases between 3 % and 8 %. Applications that make heavy use of the TempDB of SQL Server or doing large scans on large tables are more affected, as the system databases including TempDB are encrypted as well when at least one user database on the SQL Server instance is encrypted with TDE. SAP Business Warehouse Systems (SAP BW) are a good example of this kind of application.
+The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption?view=sql-server-ver16).
+
+As all data pages that are read or written to disk must be encrypted or decrypted, TDE comes with a CPU penalty. When applied to a user database the CPU usage increases between 3 % and 8 %. Applications that make heavy use of the TempDB of SQL Server or doing large scans on large tables are more affected, as the system databases including TempDB are encrypted as well when at least one user database on the SQL Server instance is encrypted with TDE. SAP Business Warehouse Systems (SAP BW) are a good example of this kind of application.
 
 > [!NOTE]
 >If the keys or the certificates that are used for the encryption are lost, then the data in the encrypted database is lost. Therefore, extensive processes and steps need to be taken to secure backups of certificates.
@@ -39,10 +41,9 @@ The success of implementing TDE heavily depends on:
 
 Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported, please see SAP OSS note 2812637 -  Real-time replication isn't supported for TDE-enabled MSSQL Server database for details.
 
-### Always Encrypted
+## Always Encrypted
 
-Besides TDE, SQL Server offers more features for data protection.
-These allow partial encryption or masking on database column granularity with:
+Besides TDE, SQL Server offers more features for data protection. These allow partial encryption or masking on database column granularity with:
 
 - [SQL Server column encryption](/sql/relational-databases/security/encryption/encrypt-a-column-of-data?view=sql-server-ver16)
 - [SQL Server Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking?view=sql-server-ver16)
@@ -50,7 +51,7 @@ These allow partial encryption or masking on database column granularity with:
 
 Based on the strong restrictions of these three methods and the changes these would require on many areas of the SAP NetWeaver components, these SQL Server functionalities aren't supported by SAP to be used or applied.
 
-### Backup Encryption
+## Backup Encryption
 
 One can choose to encrypt the backup file while the backup is taken, this is called Backup Encryption. This encrypts all the data pages in the backup file and prevents the unauthorized restore of the backup file, as you need a certificate or asymmetric key for the restore.
 
@@ -58,7 +59,7 @@ If the database wasn't encrypted (with TDE) before the encrypted backup was take
 
 Backup Encryption can be used with TDE, but adds no benefit, as the data is already encrypted, not only in the database files but also in the backup files. When it's used together with TDE, the already encrypted database with the TDE certificate or key encrypted data pages are encrypted again with backup certificate or key. This only prolongs the backup process and adds additional CPU load to the system while the backup process is running.
 
-### Secure-at-transit
+## Secure-in-transit
 
 Server and OS level hardening are essential to a secure running system.
 
@@ -90,7 +91,7 @@ Under "Local Computer Policy -> Computer Configuration -> Administrative Templat
 
 - Consider using SAP tool (SCoTT) to help to analyze problems with disabled protocols or cipher suites. This tool is described in the SAP note 2846170. It can help to analyze connection problems between the SAP System (ABAP and Java) and the SQL Server, either running on Linux or Windows.
 
-### Authentication
+## Authentication
 
 An SAP Netweaver on SQL Server system has specific requirements with regards to the SAP and SQL Server startup accounts, the authentication to the SQL Server instance and the SAP database, and the DBA access. It's described in the SAP note 1645041 - FAQ: Microsoft SQL Server logins and their usage in SAP environment
 
@@ -105,7 +106,7 @@ A high availability system using SQL Server AlwaysOn technology needs special at
 [SQL Injections](/sql/relational-databases/security/sql-injection?view=sql-server-ver16) are
 when malicious code is merged into SQL statements that are executed on the SQL Server. When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report, which are then sent to and transformed by the SAP database layer for SQL Server. This database layer is integrated into the SAP Work process and can't be accessed from the outside. After the transformation into SQL Server specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack) , but this can prevented when the SAP System is using encrypted connections between the work process and the SQL Server database. In the transaction DBACockpit a rudimentary SQL command window is implemented, where some basic SQL statements can be executed. The access to this transaction is described in note 1027512 - MSSQL: DBA cockpit for basis release 7.00 and later.
 
-### Auditing
+## Auditing
 
 The SQL Server feature "xp_cmdshell" enables an SQL Server internal OS command shell and is often classified as a potential risk in security audits. The installation of the SAP System turns this feature on to gather and display operating system data in transaction DBACockpit. The setting can be disabled, and the only effect will be that a minority of monitoring data won't be available in transaction DBACockpit. Any system with xp_cmdshell disabled will display a warning message in the DBACockpit Message Window so that you know why data is missing, see SAP KBA 2283909 - Side effect in monitoring if the xp_cmdshell is turned off for more details. SAP Note 3019299 - Security Audit Questions or Security Customization in NetWeaver and SQL Server systems gives more details on questions on security audits.
 
