@@ -58,7 +58,7 @@ Customers can automatically assess and update SAP virtual machines to maintain s
 
 
 > [!NOTE]
->Please be aware that some Linux images for SAP workload (RHEL-SAP and SLES-SAP) are not supported yet. However, Windows server images are supported. Details for requirements for enabling automatic VM guess patching and supported OS images information can be found [here](https://learn.microsoft.com/en-gb/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
+>Please be aware that some Linux images for SAP workload (RHEL-SAP and SLES-SAP) are not supported yet. However, Windows server images are supported. Details for requirements for enabling automatic VM guess patching and supported OS images information can be found [here](/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
 
 ![Screenshot shows Update Management.](./media/sap-lza-update-management.png)
 
