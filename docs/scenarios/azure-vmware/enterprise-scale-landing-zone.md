@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale for Microsoft Azure VMware Solution
-description: Learn how enterprise-scale can accelerate the adoption of Microsoft Azure VMware Solution.
+title: Landing Zone Accelerator for Microsoft Azure VMware Solution
+description: Learn how the Microsoft Azure VMWare Solution landing zone accelerator can speed adoption of Microsoft Azure VMware Solution.
 author: pgandham
 ms.author: tozimmergren
 ms.reviewer: tozimmergren

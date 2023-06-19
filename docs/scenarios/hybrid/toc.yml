@@ -266,18 +266,12 @@ items:
       items:
       - name: Inventory and tag assets
         href: ../../manage/hybrid/server/best-practices/arc-inventory-tagging.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Patch and Update Management
-        href: ../../manage/hybrid/server/best-practices/arc-update-management.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Apply policies
         href: ../../manage/hybrid/server/best-practices/arc-policies-mma.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Collect and detect security data
         href: ../../manage/hybrid/server/best-practices/arc-security-center.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Investigate and respond to security threats
         href: ../../manage/hybrid/server/best-practices/arc-azure-sentinel.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Manage VMs with Log Analytics agent
-        href: ../../manage/hybrid/server/best-practices/arc-vm-extension-mma.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Scale configuration of Log Analytics agent
-        href: ../../manage/hybrid/server/best-practices/arc-vm-extension-custom-script.md?/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
   - name: Azure product documentation
     items:
     - name: All hybrid and multicloud products

@@ -3,7 +3,7 @@ title: Landing zone implementation options
 description: Determine which landing zone implementation option best fits your requirements.
 author: martinekuan
 ms.author: martinek
-ms.date: 03/31/2022
+ms.date: 05/09/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -49,7 +49,7 @@ Here are some implementation options for landing zones keeping in mind the devel
 | Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
 | Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
 | [CAF enterprise-scale landing zone (Azure China 21Vianet regions)](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#do-it-yourself-deployment-instructions-for-enterprise-scale-using-azure-powershell) | Reference implementation that can be deployed to Azure clouds in China. | [![Dta-button]][DTA-21Vianet] </br> [Deploy](https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md) |
-| [Azure landing zones Terraform module](terraform-module.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. This module is officially verified on the Terraform registry. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. |[Readme](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest) |
+| [Azure landing zones Terraform module](deploy-landing-zones-with-terraform.md) | Deploys an enterprise-ready platform foundation using Terraform. Use this option when managing your platform using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. Shared services, network connectivity, and application workloads can be integrated into your deployment or managed independently. |[Readme](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale#readme) |
 
 ### Customize approach
 
@@ -57,7 +57,6 @@ Here are some implementation options for landing zones keeping in mind the devel
 |---|---|---|
 | [Migration landing zone](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. </br>[Design areas](./migrate-landing-zone.md#design-areas)| [Deploy](/azure/governance/blueprints/samples/caf-foundation/deploy) |
 | [Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. </br>[Design areas](./foundation-blueprint.md#design-areas) | [Deploy](./foundation-blueprint.md) |
-| [CAF Terraform modules](terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | [Readme](https://github.com/Azure/caf-terraform-landingzones-platform-starter) |
 | [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
 ## Next steps

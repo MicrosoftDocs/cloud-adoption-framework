@@ -7,7 +7,7 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Management group structure
@@ -46,7 +46,7 @@ The following Azure Resource Graph query lists policy assignments at the managem
 
 ```bash
 PolicyResources
-| where type == 'microsoft.authorization/policyassignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
+| where type == 'microsoft.authorization/policyAssignments' and properties.scope has '/providers/Microsoft.Management/managementGroups'
 | project Policy=properties.displayName,AssignedBy=properties.metadata.assignedBy,Scope=properties.scope
 | summarize make_list(Policy) by tostring(Scope)
 | order by Scope

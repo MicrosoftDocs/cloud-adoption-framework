@@ -39,6 +39,9 @@ As shown in the preceding diagram, the Log Analytics agent has two configuration
 - **Auto-enroll:** When the Log Analytics agent is installed on a server and configured to connect to a workspace, the solutions that are enabled on that workspace are applied to the server automatically.
 - **Opt-in:** Even if the agent is installed and connected to the workspace, the solution isn't applied unless it's added to the server's scope configuration in the workspace.
 
+> [!TIP]
+> Consider using [Azure Automanage machine best practices](/azure/automanage/overview-about). This service makes it simple to discover, onboard, and configure certain services in Azure that would benefit your virtual machines and assist with [onboarding at scale](./onboard-at-scale.md).
+
 ## Next steps
 
 Learn how to onboard a single VM by using the portal to evaluate the onboarding process.

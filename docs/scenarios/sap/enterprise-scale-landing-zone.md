@@ -1,8 +1,8 @@
 ---
 title: SAP on Azure landing zone accelerator
 description: Learn about the SAP on Azure landing zone accelerator.
-author: JefferyMitchell
-ms.author: martinek
+author: pankajmeshramCSA
+ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 01/10/2023
 ms.topic: conceptual
