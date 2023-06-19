@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP Security on Azure: Sentine for SAP
+# SAP Security on Azure: Sentinel for SAP
 This article is Part 2 of the SAP extend and innovate security: Best practices series. For the first article in the series,
 see [Database Security - SQL](./sap-lza-database-security.md)
 
@@ -24,7 +24,7 @@ This article outlines key design considerations for deploying agents and the sol
 
 - **Architecture** - SAP topology may include multiple SAP products, spread across multiple System IDs, Clients and instance numbers. Several “front-end” ABAP servers may be present, however a connection to only one of the ABAP servers is required. Consider connecting to Message server which routes the connector to the right ABAP server which will be used to gather data for a given SAP system.
 
--	The Connector is deployed as a docker container on a host VM or physical server. It is currently supported to deploy the connector container on an on-premises machine, as well as on Azure-based VM. Data connector does not support a high availability configuration out-of-the-box. If High Availability option is required, consider deploying the connector container into a Kubernetes cluster or on Azure Kubernetes Service [Introduction to Azure Kubernetes Service - Azure Kubernetes Service | Microsoft Learn](https://learn.microsoft.com/en-us/azure/aks/intro-kubernetes)
+-	The Connector is deployed as a docker container on a host VM or physical server. It is currently supported to deploy the connector container on an on-premises machine, as well as on Azure-based VM. Data connector does not support a high availability configuration out-of-the-box. If High Availability option is required, consider deploying the connector container into a Kubernetes cluster or on Azure Kubernetes Service [Introduction to Azure Kubernetes Service - Azure Kubernetes Service | Microsoft Learn](/azure/aks/intro-kubernetes)
 
 For step by step configuration of AKS, please see the doc here – 
 [Deploying Microsoft Sentinel Threat Monitoring for SAP agent into an AKS/Kubernetes cluster](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/deploying-microsoft-sentinel-threat-monitoring-for-sap-agent/ba-p/3528040)
@@ -37,7 +37,7 @@ For step by step configuration of AKS, please see the doc here –
 
 - While using Docker containers, all the data from an SAP system can go into a single Azure Log analytics workspace. 
 
-- The server hosting the connector agents must be able to connect to all ABAP servers from which data retrieval is required. For example, the connector must be able to route and connect to the target ABAP servers using ports outlined in the documentation [Prerequisites for deploying Microsoft Sentinel Solution for SAP](https://learn.microsoft.com/en-us/azure/sentinel/sap/prerequisites-for-deploying-sap-continuous-threat-monitoring#system-prerequisites)
+- The server hosting the connector agents must be able to connect to all ABAP servers from which data retrieval is required. For example, the connector must be able to route and connect to the target ABAP servers using ports outlined in the documentation [Prerequisites for deploying Microsoft Sentinel Solution for SAP](/azure/sentinel/sap/prerequisites-for-deploying-sap-continuous-threat-monitoring#system-prerequisites)
 
 - Consider the strategy for consumption of alerts from Sentinel. Example: Teams alert, email alerts, Mobile alerts, etc.
 
