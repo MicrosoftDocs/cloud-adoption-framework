@@ -11,7 +11,9 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
-# SAP security operations
+# Security operations for SAP on Azure
+
+This article is part of the "SAP extend and innovate security: Best practices" article series.
 
 - [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
