@@ -1,5 +1,5 @@
 ---
-title: Database security for SAP on SQL Server
+title: SQL Server database security for SAP on Azure
 description: Learn how to enable SAP with SQL server database security on Azure 
 author: msclash
 ms.author: pameshra
@@ -11,13 +11,13 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
-# Database security for SAP on SQL Server
+# SQL Server database security for SAP on Azure
 
 This article is part of the "SAP extend and innovate security: Best practices" article series.
 
-- [Database security for SAP on SQL Server](./sap-lza-sap-database-security.md)
+- [Database security for SAP on SQL Server](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
-- [Security operations for SAP on Azure](./sap-lza-sap-security-operations.md) (This article)
+- [Security operations for SAP on Azure](./sap-lza-security-operations.md) (This article)
 - [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
 

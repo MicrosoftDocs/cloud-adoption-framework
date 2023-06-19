@@ -13,9 +13,9 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 # SAP security operations
 
-- [Database security for SAP on SQL Server](./sap-lza-sap-database-security.md)
+- [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
-- [Security operations for SAP on Azure](./sap-lza-sap-security-operations.md) (This article)
+- [Security operations for SAP on Azure](./sap-lza-security-operations.md) (This article)
 - [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
 
