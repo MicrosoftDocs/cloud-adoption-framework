@@ -231,7 +231,7 @@ Typical problems that you may encounter when extracting data from SLT
 > [!NOTE]
 > The LTRC user interface varies between releases and it may look different based on your release type. Here are some screenshots for the same. 
      
-  ![Screenshot that shows SAP s/4 hana screen.](./media/sap-slt-s4hana.png)
+  ![Screenshot that shows SAP S/4HANA screen.](./media/sap-slt-s4hana.png)
       
   ![Screenshot that shows SAP ECC screen.](./media/sap-slt-ecc.png)
 
@@ -249,7 +249,7 @@ For more details please refer to [SLT troubleshooting guide from SAP](https://he
    
 ## Monitoring
 To monitor the SAP Data extraction, we recommend to check these two places 
-  - Monitor SAP Data extraction in ADF/Synapse pipelines - Please refer to ADF monitoring guide to get detailed step by step instructions [Visually monitor Azure Data Factory -  Azure Data Factory | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-factory/monitor-visually)
+  - Monitor SAP Data extraction in ADF/Synapse pipelines - Please refer to ADF monitoring guide to get detailed step by step instructions [Visually monitor Azure Data Factory -  Azure Data Factory | Microsoft Learn](/azure/data-factory/monitor-visually)
   - Monitoring in SAP system for CDC - 
         - ODQMON – Use transaction ODQMON for monitoring the (operational) delta queues. For more details please refer to SAP's [documentation](https://help.sap.com/doc/saphelp_nw74/7.4.16/en-US/7b/5bce89037f4897a69b02ecda028517/frameset.htm) 
         -	Use SM37/36, SM50 transactions in SAP system. 
