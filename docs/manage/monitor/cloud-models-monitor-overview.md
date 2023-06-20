@@ -13,7 +13,7 @@ products: azure-monitor
 
 # Monitoring strategy for cloud deployment models
 
-This article describes the recommended monitoring strategy for each of the cloud deployment models and is part of a series in [the cloud monitoring guide](./index.md).
+This article is part of a series in [the cloud monitoring guide](./index.md).
 
 When you've determined your [cloud monitoring strategy](/azure/cloud-adoption-framework/strategy/monitoring-strategy#high-level-modeling), including the cloud deployment models you'll operate, you need to accommodate for monitor strategies.
 

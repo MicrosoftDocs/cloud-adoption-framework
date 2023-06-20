@@ -38,7 +38,7 @@ This article is part of a series. The following articles are meant to be read to
 
 The articles in this guide _aren't_ how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
 
-### Audience
+## Audience
 
 This guide provides a reference for enterprise decision-makers, IT managers and administrators, IT operations, IT security and compliance, application architects, workload development owners, and developers.
 

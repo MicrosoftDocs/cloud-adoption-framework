@@ -13,7 +13,9 @@ products: azure-monitor
 
 # Cloud monitoring platforms overview
 
-Microsoft provides a range of monitoring capabilities from multiple products:
+This article is part of a series in [the cloud monitoring guide](./index.md).
+
+Microsoft provides a range of cloud monitoring capabilities from multiple products:
 
 - [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications.
 - [System Center Operations Manager](/system-center/scom/welcome) (SCOM), designed for on-premises and then extended to the cloud.
@@ -21,9 +23,7 @@ Microsoft provides a range of monitoring capabilities from multiple products:
 
 These offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
 
-Many organizations are embracing the latest practices for DevOps agility and cloud innovations to manage their heterogeneous environments. Yet they're also concerned about their ability to make appropriate and responsible decisions about monitoring those workloads.
-
-This article provides a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
+The below sections gives you a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
 
 ## Infrastructure requirements
 

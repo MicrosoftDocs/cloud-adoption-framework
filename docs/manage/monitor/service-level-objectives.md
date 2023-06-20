@@ -14,7 +14,7 @@ ms.custom: UpdateFrequency3
 
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
-This article reviews the fundamental principles of service level objectives, and how to implement and apply them.
+In the below sections, you learn about the fundamental principles of service level objectives, and how to implement and apply them.
 
 ## Overview
 

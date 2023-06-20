@@ -52,7 +52,7 @@ Consider the following:
 
 Typically, the owner of a monitoring service and their team adhere to a standard set of activities to create a monitoring configuration. These activities encompass the planning stages, testing and validating in a nonproduction environment, and deploying into production.
 
-To develop monitoring configurations, the team draws upon known failure modes, test results from simulated failures, and the experience of various individuals within the organization, such as the service desk, operations personnel, engineers, and developers. 
+To develop monitoring configurations, the team draws upon known failure modes, test results from simulated failures, and the experience of various individuals within the organization, such as the service desk, operations personnel, engineers, and developers.
 
 These configurations are designed under the assumption that the service already exists, is undergoing migration to the cloud, and hasn't been restructured.
 To ensure that service-level quality results are achieved, monitoring the health and availability of these services early in the development process is essential. If monitoring the service or application's design is only considered an afterthought, the results are likely to be less successful.
