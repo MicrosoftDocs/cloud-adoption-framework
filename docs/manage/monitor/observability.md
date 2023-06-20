@@ -47,33 +47,30 @@ Observability is more than just a focus for your IT teams. An essential goal is 
 
 ## Monitoring systems and observability
 
-Infrastructure and application monitoring is complicated; it always has been and remains so, even with the introduction of cloud computing. Business transformation applies technology to achieve current and help shape its future strategy. The cloud has further influenced the complicated nature of monitoring.
+Infrastructure and application monitoring can be complicated. Business transformation applies technology to achieve and help shape its strategies. The cloud has further influenced the complicated nature of monitoring.
 
 This is demonstrated in the following ways:
 
-- Business (digital) transformation efforts shift toward hyper-exploitation of cloud technology.
+- **Digital transformation shift**: Businesses' digital transformation efforts shift toward hyper-exploitation of cloud technology.
 
-- Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
+- **Built-in monitoring**: Monitoring becomes embedded into Azure resources and resource groups versus separate tooling you manage on-premises.
 
-- Cloud-native monitoring architectures such as Azure Monitor are similar to security incident and event management (SIEM) tools. Azure Monitor is expansive, log-driven, and orders of magnitude more flexible.
+- **Expansive monitoring** Cloud-native architectures such as Azure Monitor are similar to security incident and event management (SIEM) tools. Azure Monitor is expansive, log-driven, and orders of magnitude more flexible than traditional on-premises tooling.
 
-For architects, diagnostics form the core of their exploitation of more cost-effective cloud-native monitoring structures that let IT manage services holistically across the different cloud models.
+_Architects_ must, like _operators_, understand what diagnostic information an infrastructure component or application emits.
 
-Architects must, like operators, understand what diagnostic information an infrastructure component or application emits. Combining multivariate, dynamical, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
+Combining multivariate, dynamic, time-series, eventful, stateful, and telemetric log streams into valuable intelligence depends on the following:
 
-- The knowledge and experience of the developer or system engineer who deeply understands the monitoring target.
+- **Team knowledge**: The knowledge and experience of the developer or system engineer who deeply understands the monitoring target.
+- **Troubleshooting experience**: Support and troubleshooting experience in using data to find or locate the causes of trouble.
+- **Learning from history**: Review past incidents to find non-technology reasons that can be auto-remediated later.
+- **Documentation**: Guidance in documentation, software, training, or consulting by the software or hardware vendor.
 
-- Actual support and troubleshooting experience using the data to find or locate the causes of trouble.
+If you're familiar with System Center Operations Manager, Microsoft and its partners provide management packs.  Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_ by the product engineers at Microsoft and dozens of industries. Operations Manager is designed for on-premises infrastructure, which tend to be **fixed** in components and architectural design patterns relative to cloud services.
 
-- Review past incidents to find non-technology reasons that can be auto-remediated later.
+In the cloud, you have enormous **flexibility** in the types of services to choose from. Monitoring includes how they change over time and can be dynamic, global, and resilient. Azure Monitor's architecture is flexible in supporting all three cloud models. To reach your observability goals with Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to collect, analyze, and act on telemetry.
 
-- Guidance in documentation, software, training, or consulting by the software or hardware vendor.
-
-If you're familiar with System Center Operations Manager, Microsoft and its partners provide _management packs._  Management packs are technology-specific; for example, if you import a SQL management pack Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, observability is more or less predefined by the product engineers at Microsoft and dozens of industries. With Operations Manager, you don't need to worry about north-south and east-west dependencies, so observing the health of SQL is part of the larger IT service with networking, virtualization, and applications included. Owing to a common schema based on the familiar four-part _health model_, Operations Manager is designed for on-premises infrastructure. Infrastructure service architectures tend to be **fixed** in components and architectural design patterns relative to cloud services.
-
-In the cloud, you have enormous flexibility in the types of services to choose from. Monitoring includes how they change over time and can be dynamic, global, and resilient. As a cloud architect, you're not constrained by fixed, on-premises thinking. Operations Manager can participate, but its strength is traditional on-premises infrastructure and applications. In contrast, Azure Monitor's architecture is much more flexible in supporting all three cloud models. To reach your observability goals with Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to collect, analyze, and act on telemetry.
-
-With Azure Monitor, you can take advantage of existing workbooks included in [Insights](/azure/azure-monitor/monitor-reference), which provides functionality similar to a management pack in Operations Manager. Otherwise, you need to review the Azure documentation for each Azure service to understand how to monitor and detect known failures or symptoms that indicate potential failures.
+With Azure Monitor, you can take advantage of existing workbooks included in [Azure Monitor Insights](/azure/azure-monitor/insights/insights-overview), which provides functionality similar to a management pack in Operations Manager. Otherwise, you need to review the Azure documentation for each Azure service to understand how to monitor and detect known failures or symptoms that indicate potential failures.
 
 <!-- docutune:ignore "Observe discipline" -->
 
