@@ -4,7 +4,7 @@ description: Gain an understanding of the response discipline in observability a
 author: Zimmergren
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 04/21/2023
+ms.date: 06/20/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage

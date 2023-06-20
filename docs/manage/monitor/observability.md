@@ -3,7 +3,7 @@ title: Observability in cloud monitoring
 description: Gain an understanding of how observability helps drive maturity in monitoring and help you understand the behavior of your services running in the cloud.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/16/2023
+ms.date: 06/20/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage

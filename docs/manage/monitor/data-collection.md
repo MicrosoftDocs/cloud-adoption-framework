@@ -4,7 +4,7 @@ description: Learn to observe the health and availability of your cloud solution
 author: Zimmergren
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 04/21/2023
+ms.date: 06/20/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
