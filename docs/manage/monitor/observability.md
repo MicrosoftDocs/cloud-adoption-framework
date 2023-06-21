@@ -19,7 +19,7 @@ The sections below aim to drive operational maturity by being observant and cons
 
 ## Defining observability
 
-While observability and monitoring complement each other, there is a notable distinction:
+While observability and monitoring complement each other, there's a notable distinction:
 
 - **Monitoring**: Collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. You're monitoring for known or predictable failures.
 - **Observability**: The ability to understand what's happening inside a system by looking at the output data. An _observability solution_ helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure.
@@ -62,7 +62,7 @@ Combining multivariate, dynamic, time-series, eventful, stateful, and telemetric
 - **Learning from history**: Review past incidents to find non-technology reasons that can be auto-remediated later.
 - **Documentation**: Guidance in documentation, software, training, or consulting by the software or hardware vendor.
 
-Microsoft and its partners provide management packs for System Center Operations Manager. Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_. Operations Manager is primarily designed for on-premises infrastructure, which tend to be **fixed** in components and architectural design patterns relative to cloud services.
+Microsoft and its partners provide management packs for System Center Operations Manager. Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_. Operations Manager is primarily designed for on-premises infrastructure, which tends to be **fixed** in components and architectural design patterns relative to cloud services.
 
 In the cloud, you have enormous **flexibility** in the types of services to choose from. Monitoring includes how services change over time, and can be dynamic, global, and resilient. With Azure Monitor, you can take advantage of existing workbooks included in [Azure Monitor Insights](/azure/azure-monitor/insights/insights-overview) providing functionality similar to a management pack in Operations Manager.
 
@@ -74,7 +74,7 @@ In Azure, there are multiple monitoring data sources, each delivering a differen
 
 ### Observe the platform
 
-In Azure, Microsoft provide the perspective of the _service provider_ through different _platform logs_.
+In Azure, Microsoft provides the perspective of the _service provider_ through different _platform logs_.
 
 Services in Azure can change in different, unpredictable ways over time. We refer to this behavior as dynamic. Managers of cloud services observing the service over time also need to take into account the following:
 
@@ -82,7 +82,7 @@ Services in Azure can change in different, unpredictable ways over time. We refe
 - **Resource changes**: Resources are added, deleted, or modified.
 - **Consumption**: Consumption varies for different services and implementations. Be mindful to monitor the cost, consumption, and the projected spend.
 
-Here are a few examples of tools that enables your platform observability:
+Here are a few examples of tools that enable your platform observability:
 
 |Log source|Description|
 |---|---|
@@ -130,7 +130,7 @@ To set the scene, here are a few ways to gain confidence from  observability:
 
 - **Prioritization of efforts**: Observability insights enable teams to prioritize tasks and allocate resources based on the criticality and impact of identified issues.
 
-- **Confidence in change management**: Observability provides visibility into the impact of changes, ensuring that new deployments or updates do not introduce unforeseen issues.
+- **Confidence in change management**: Observability provides visibility into the impact of changes, ensuring that new deployments or updates don't introduce unforeseen issues.
 
 - **Improved incident response**: With observability, incident response teams can quickly gather relevant information, understand the context, and initiate appropriate actions.
 
@@ -204,11 +204,11 @@ Summarize the plan to ensure it communicates and informs all relevant consumers,
 
 In addition to the key considerations, seek to better understand how these points might influence your monitoring plan for your organization.
 
-- **Minimum viable product (MVP):** Let the plan define what success looks like for the minimum viable product. In other words, what is initially needed to go live, and can we measure success on this? After you are live, you continue to evolve the monitoring solution to maximize value.
+- **Minimum viable product (MVP):** Let the plan define what success looks like for the minimum viable product. In other words, what is initially needed to go live, and can we measure success on this? After you're live, you continue to evolve the monitoring solution to maximize value.
 
-- **Secure your monitoring data:** Security is a crucial aspect for every organization and team today. Make sure you are educated and know the guardrails, or let experts guide you so you don't add risk to your monitoring solutions, for example, by exposing sensitive monitoring data in logs.
+- **Secure your monitoring data:** Security is a crucial aspect for every organization and team today. Make sure you're educated and know the guardrails, or let experts guide you so you don't add risk to your monitoring solutions, for example, by exposing sensitive monitoring data in logs.
 
-- **Consider tie-ins with Microsoft 365:**  Any good plan considers your Azure tenant with Microsoft 365 as a significant component. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with endpoint management.
+- **Consider Microsoft 365:**  Any good plan considers your Azure tenant with Microsoft 365 as a significant component. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with endpoint management.
 
 - **Observability wins:** Focus on total visibility before focusing on alerting, as alerting both is a cost, and can quickly lead to alert fatigue.
 
