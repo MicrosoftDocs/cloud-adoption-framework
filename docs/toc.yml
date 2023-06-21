@@ -1346,7 +1346,7 @@ items:
               href: innovate/best-practices/mlops-process.md
             - name: Machine learning security
               href: innovate/best-practices/ml-security.md
-            - name: Machine learning inference and deployment
+            - name: Deploy machine learning models
               href: innovate/best-practices/ml-deployment-inference.md
             - name: Determine compute instances for your model
               href: innovate/best-practices/dev-train-comp-instances-for-ml.md
