@@ -66,62 +66,38 @@ Combining multivariate, dynamic, time-series, eventful, stateful, and telemetric
 - **Learning from history**: Review past incidents to find non-technology reasons that can be auto-remediated later.
 - **Documentation**: Guidance in documentation, software, training, or consulting by the software or hardware vendor.
 
-If you're familiar with System Center Operations Manager, Microsoft and its partners provide management packs.  Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_ by the product engineers at Microsoft and dozens of industries. Operations Manager is designed for on-premises infrastructure, which tend to be **fixed** in components and architectural design patterns relative to cloud services.
+Microsoft and its partners provide management packs for System Center Operations Manager. Management packs are technology-specific; for example, if you import a SQL management pack, Operations Manager automatically discovers and targets servers hosting SQL Server and begins monitoring them. Here, _observability is more or less predefined_. Operations Manager is primarily designed for on-premises infrastructure, which tend to be **fixed** in components and architectural design patterns relative to cloud services.
 
-In the cloud, you have enormous **flexibility** in the types of services to choose from. Monitoring includes how they change over time and can be dynamic, global, and resilient. Azure Monitor's architecture is flexible in supporting all three cloud models. To reach your observability goals with Azure Monitor, you have more freedom to decide on resources, where to place them geographically, and how to collect, analyze, and act on telemetry.
-
-With Azure Monitor, you can take advantage of existing workbooks included in [Azure Monitor Insights](/azure/azure-monitor/insights/insights-overview), which provides functionality similar to a management pack in Operations Manager. Otherwise, you need to review the Azure documentation for each Azure service to understand how to monitor and detect known failures or symptoms that indicate potential failures.
+In the cloud, you have enormous **flexibility** in the types of services to choose from. Monitoring includes how services change over time, and can be dynamic, global, and resilient. With Azure Monitor, you can take advantage of existing workbooks included in [Azure Monitor Insights](/azure/azure-monitor/insights/insights-overview) providing functionality similar to a management pack in Operations Manager.
 
 <!-- docutune:ignore "Observe discipline" -->
 
-## Monitoring disciplines
-
-The following figure shows the Monitor discipline discussed in [monitoring strategy](../../strategy/monitoring-strategy.md). Later in this section, we discuss how Microsoft Azure plays a central role here.
-
-![Monitoring disciplines](./media/observability/monitoring-and-control-disciplines.png)
-
-## Observability and response
-
-**Observability** is the ability to understand what's happening inside a system by looking at the output data. An **observability solution** helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure.
-
-**Response** is the organization's ability to quickly ascertain the _significance_ of observed monitoring data (detected events, telemetric patterns, correlated information, and more) such that for negative events it can rapidly restore or remediate. For positive events or informational events, it can help to maintain service agreements, improve reliability, and reduce support costs. Events dynamically occur in the system or service, where monitoring solutions provide alerting, control loop automation, and raise incidents, problems, or changes in an external IT service management (ITSM) system. Realize that many events can't or shouldn't be automatically remediated.
-
-**Utility:** In this sense, observability (and response) is about the operational use or value of the monitoring service. Azure Monitor provides Microsoft's perspective of our service resources and delivers similar capabilities as an on-premises monitoring system.
-
-**Responsibility:** Both the service consumer and service provider share the need to learn and improve based on hard data. As such, you need to understand the cloud provider's responsibility vs. the customer/consumer's responsibility. For each Azure resource, you get perspectives based on logs or metrics; this data can be represented in resource-specific dashboards or custom visualizations based on your requirements and shared with the necessary personas in the organization.
-
 ## The art of being observant
 
-Observability relies on what is being monitored and how. In Azure, there are multiple sources, each delivering a different perspective of how something behaves. Azure includes numerous tools to help analyze the various aspects of this data. Observing the health and performance of Azure services and non-Azure resources is the primary way you'll use Azure Monitor and its features. In Azure, Microsoft has an extensive catalog of services, and virtual machines are not the primary focus. In Azure, we provide the perspective of the _service provider_ through different platform logs:
+Observability relies on what and how something is being monitored.
 
-- [Service health](/azure/service-health/service-health-overview) reported by Azure about service incidents and planned maintenance.
-- The [Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log) reports subscription-level events across all the resources deployed in the subscription.
-- [Azure Resource Health](/azure/service-health/resource-health-overview) reports on your resources' current and past health.
-- [Azure Advisor](/azure/advisor/advisor-overview) to receive recommended solutions based on best practices to optimize your Azure deployments.
+In Azure, there are multiple monitoring data sources, each delivering a different perspective of how something behaves. Azure includes numerous tools to help analyze the various aspects of this data. In Azure, Microsoft provide the perspective of the _service provider_ through different platform logs.
 
-All other perspectives, based on metrics and logs, are delivered through the various features of Azure Monitor. Or, depending on the Azure resource, you can view its platform metrics directly from that resource in the portal.
+Here are a few examples:
 
-Observability is a term meant to set the expectation that Azure Monitor gives you total visibility of the health, performance, and other aspects of Azure services in depth and breadth. But, there are other activities or focuses than service and component monitoring. Being observant shouldn't be considered something that only specific roles perform on an as-needed basis, as required by their role or function, or in support of a process. It's similar to astronomy. Observation isn't once and done; you'll want to monitor objects in space occasionally, over set time intervals, or continuously. Some things, such as black holes, are difficult to observe. The kind of monitoring needed depends on the consumer. For example, amateur astronomers observe occasionally, while astrophysicists value the long-term measurement and continuous monitoring of radio emissions.
+|Log source|Description|
+|---|---|
+|[Service health](/azure/service-health/service-health-portal-update)|Service incidents and planned maintenance reported by Microsoft.|
+|[Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log)|Reports subscription-level events across all the resources deployed in the subscription.|
+|[Azure Resource Health](/azure/service-health/resource-health-overview)|Reports on your resources' current and past health.|
+|[Azure Advisor](/azure/advisor/advisor-overview)|Use Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.|
 
-Proper planning allows you to create a medium to complex service in Azure in a few hours versus weeks or longer on-premises. If you did, you'd arrange a combination of more than a dozen Azure resources (service components) across regions. You'll govern and manage these resources using Azure Resource Manager, and from using resource group monitoring in Azure, you'll get a picture of the service. Once in production, the service is dynamic, scalable, and flexible. Consumption starts to ramp up and scale out. Capacity responds to demand. Events will occur, and service consumers can observe monitoring data, look at trends, and establish their significance.
+Additional perspectives, based on metrics and logs, are delivered through the various features of Azure Monitor. In some cases you can also view services' platform metrics directly from that resource in the portal.
 
-The service can change in different, unpredictable ways over time. Hence we refer to this behavior as dynamic. Managers of cloud services observing the service over time need to take into account that:
+Services in Azure can change in different, unpredictable ways over time. Hence we refer to this behavior as dynamic. Managers of cloud services observing the service over time need to take into account the following:
 
-- Resources move across locations or geography
-- Resources are added, deleted, or modified
-- Consumption varies
+- **Resource relocation**: Resources can migrate or move across locations or geography.
+- **Resource changes**: Resources are added, deleted, or modified.
+- **Consumption**: Consumption varies for different services and implementations. Be mindful to monitor the cost, consumption, and the projected spend.
 
-As a monitoring service provider, your job is to facilitate monitoring solutions that provide value listed in the following order of priority: 1) to the service, 2) to stakeholders, and 3) to the primary consumers.
+Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
 
-Your value stream needs to consider service observability much earlier and in the following ways:
-
-- It monitors in sufficient depth and breadth.
-- It provides coverage across the health model (availability, capacity/performance, security, compliance).
-- It monitors utility, meaning functionality delivered by the service meets agreed-upon requirements, including the end-user experience.
-
-In the monitoring strategy, we recommend establishing a monitoring plan that starts with what is minimally viable or most important to monitor and observe. Depending on the resource or system, this can be based on recommendations from Microsoft, other reputable sources, and your internal developers or system engineers. Establish initial visibility of the _consumption_, _performance_, _security_, and _availability_ of the resources in your Azure resource groups and your Azure Active Directory tenant. Through observation, you learn how to interpret the data and learn what's significant in order to fine-tune and optimize how the service is monitored. Value is achieved when incremental, and there's a co-creation of value here in that the consumers are working with the monitoring team (or, in some cases, the service provider) on the co-creation of value.
-
-Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data. Through observability, you gain confidence, and you're able to realize the cause and find answers that can help:
+Through observability, you gain confidence, and you're able to realize the cause and find answers that can help:
 
 - Reduce monitoring blind spots by ensuring coverage of all needed monitoring components.
 - Improve monitoring of resources and services to help identify the issue in the future. Focus on issues or symptoms that are predictable and reliable.
