@@ -102,19 +102,45 @@ Here are a few examples of tools that enables your platform observability:
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
 
-### Confidence in observability
+### Gaining confidence from observability
 
-Through observability, you gain confidence, and you're able to realize the cause and find answers that can help. For example, the more you learn about your data the better you will understand these aspects:
+With proper observability, you gain confidence, and you're able to realize the cause and find answers that can help. The more you learn about your data, the more evolved your processes becomes and your teams gain insights.
 
-- **Coverage**: Reduce monitoring blind spots by ensuring coverage of all needed monitoring components.
-- **Predictability**: Improve monitoring of resources and services to help identify the issue in the future. Focus on issues or symptoms that are predictable and reliable.
-- **Evaluate**: Evaluate whether this wasn't anticipated and how to improve the infrastructure, application, and more.
-- **Determine cause of failure**: Rule out the infrastructure or application as the source, and determine whether a specific browser, browser version or client operating system is the potential issue.
-- **Performance and availability**: Identify, document and implement workarounds to minimize any performance or availability issues with the application, infrastructure, and more.
-- **Application patterns**: Adapt to the dynamic and complex nature of an application. Continue learning its normal behavior patterns to better understand where anomalies occur.
-- **Fine-tune data**: Tune the type of data collected, aggregated, and alerted on to minimize storage cost for data you never analyze, alert on, or visualize.
+To set the scene, here are a few ways to gain confidence from  observability:
 
-#### Stakeholder access
+- **Increase predictability**: Improved monitoring of resources and services helps identify issues proactively, making them predictable and manageable in the future.
+
+- **Early detection of anomalies**: Observability allows for the timely detection of abnormalities or deviations from expected behavior, reducing the impact of potential issues.
+
+- **Root cause identification**: Detailed observability data helps identify the root causes of problems, enabling faster resolution and preventing recurrence.
+
+- **Enhance troubleshooting efficiency**: With observability, teams can quickly diagnose and troubleshoot complex issues by analyzing relevant data and correlating events.
+
+- **Improve system reliability**: By identifying bottlenecks, performance issues, and potential failure points, observability helps in optimizing system performance and enhancing overall reliability.
+
+- **Improve customer experience**: Observability enables a better understanding of how system performance affects end-users, allowing for proactive measures to enhance customer satisfaction.
+
+- **Facilitate collaboration**: Observability platforms provide shared visibility and data access, promoting cooperation between different teams, such as developers, operations, and support.
+
+- **Regulatory compliance**: Observability aids in meeting regulatory requirements by providing traceability, audit logs, and ensuring adherence to security and privacy standards.
+
+- **Faster time to resolution**: By providing rich data and insights, observability accelerates the time to diagnose and resolve issues, minimizing downtime and service disruptions.
+
+- **Proactive capacity management**: Observability data helps predict resource demands, identify capacity gaps, and proactively adjust resources to maintain optimal performance.
+
+- **Risk mitigation**: With observability, you can identify potential risks early, enabling proactive mitigation measures and reducing the likelihood of severe impacts.
+
+- **Continuous monitoring and learning**: Observability allows for ongoing monitoring and learning, helping teams adapt to changing environments, requirements, and user behavior.
+
+- **Performance optimization**: By analyzing observability data, teams can identify and optimize performance bottlenecks, enhancing system efficiency.
+
+- **Prioritization of efforts**: Observability insights enable teams to prioritize tasks and allocate resources based on the criticality and impact of identified issues.
+
+- **Confidence in change management**: Observability provides visibility into the impact of changes, ensuring that new deployments or updates do not introduce unforeseen issues.
+
+- **Improved incident response**: With observability, incident response teams can quickly gather relevant information, understand the context, and initiate appropriate actions.
+
+### Stakeholder access
 
 Like any application or infrastructure service, a diverse list of stakeholders and roles need access to the monitoring capabilities, data, and reports and dashboards.
 
