@@ -150,10 +150,13 @@ During migration, certain factors affect decisions and execution activities:
 - **Digital estate size:** Understanding the size of your digital estate directly affects decisions and the resources required to do the migration.
 - **Accounting models:** Shifting from a structured capital expense model to a fluid operating expense model.
 
+While doing this assessment, it is also important to factor in cost of running the workloads as-is. This helps in creating a business case and gives more clarity on TCO of your workloads.
+
 ::: zone target="docs"
 
 The following resources provide related information:
 
 - [Estimate cloud costs](../migration-considerations/assess/estimate.md)
-
+- [Business Case for Cloud Migration](/docs/strategy/cloud-migration-business-case.md)
+  
 ::: zone-end
