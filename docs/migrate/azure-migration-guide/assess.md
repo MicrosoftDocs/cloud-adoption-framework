@@ -42,11 +42,19 @@ Begin server discovery, assessment, and migration by using the following steps f
 5. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
 6. After creating the project, tools are visible, and the user can start with Discovery.
 
+::: zone target="chromeless"
+
+::: zone-end
+
+::: zone target="docs"
+
 #### Learn more
 
 - [Azure Migrate overview](/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)
+
+::: zone-end
 
 ### Dependency analysis
 
@@ -142,6 +150,10 @@ During migration, certain factors affect decisions and execution activities:
 - **Digital estate size:** Understanding the size of your digital estate directly affects decisions and the resources required to migrate.
 - **Accounting models:** Shifting from a structured capital expense model to a fluid operating expense model.
 
+::: zone target="docs"
+
 The following resources provide related information:
 
 - [Estimate cloud costs](../migration-considerations/assess/estimate.md)
+
+::: zone-end

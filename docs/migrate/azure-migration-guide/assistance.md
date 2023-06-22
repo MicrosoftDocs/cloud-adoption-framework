@@ -22,24 +22,62 @@ Microsoft offers a basic support plan to all Azure customers. You have 24x7 acce
 
 If you need help from Microsoft Support while using Azure, follow these steps to create a support request:
 
+::: zone target="docs"
+
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **New support request** to enter details about your issue and contact support.
+
+::: zone-end
+
+::: zone target="chromeless"
+
+1. Select **Help + support**.
+1. Select **New support request** to enter details about your issue and contact support.
+
+::: zone-end
+
+::: zone target="docs"
 
 To view your support requests, follow these steps:
 
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **All support requests** to view your support requests.
 
+::: zone-end
+
+::: zone target="chromeless"
+
+1. Select **Help + support**.
+1. Select **All support requests** to view your support requests.
+
+::: zone-end
+
 Need support engineer assistance for deep technical guidance?
+
+::: zone target="docs"
 
 1. Select **Help + support** in the [Azure portal](https://portal.azure.com).
 1. Select **Support Plans** to review the plans available to you.
+
+::: zone-end
+
+::: zone target="chromeless"
+
+1. Select **Help + support**.
+1. Select **Support Plans** to review the plans available to you.
+
+::: zone-end
+
+::: zone target="docs"
 
 ### Online communities
 
 The following online communities provide community-based support:
 
+- [Azure Migration and Modernization - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-migration-and/bd-p/AzureMigration)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
+
+::: zone-end
 
 ## Partners
 

@@ -64,6 +64,10 @@ The first time you use Azure Database Migration Service, you must register the r
 1. Select **Resource providers**.
 1. Search for `migration`. In the search results, to the right of **Microsoft.DataMigration**, select **Register**.
 
+::: zone target="chromeless"
+
+::: zone-end
+
 <!-- docutune:casing "Create Migration Service wizard" -->
 
 After you register the resource provider, create an instance of Azure Database Migration Service.
@@ -73,12 +77,20 @@ After you register the resource provider, create an instance of Azure Database M
 
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
 
+::: zone target="chromeless"
+
+::: zone-end
+
+::: zone target="docs"
+
 For more information, see:
 
 - [Azure Database Migration Service overview](/azure/dms/dms-overview)
 - [Create an instance of Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
+
+::: zone-end
 
 ### Azure App Service Migration Assistant
 

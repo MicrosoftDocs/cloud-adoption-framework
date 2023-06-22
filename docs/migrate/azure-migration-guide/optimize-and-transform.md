@@ -25,6 +25,10 @@ All Azure services that provide a consumption-based cost model can be resized th
 1. Go to **Monitor**.
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
 
+::: zone target="chromeless"
+
+::: zone-end
+
 The following are some common services that you can resize.
 
 ### Resize a virtual machine
@@ -40,6 +44,12 @@ However, for virtual machines created or migrated using other methods, or in cas
 
 Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
+::: zone target="chromeless"
+
+::: zone-end
+
+::: zone target="docs"
+
 - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
 - [Resize a Windows VM](/azure/virtual-machines/resize-vm)
 - [Resize a Linux virtual machine via Azure CLI](/azure/virtual-machines/resize-vm)
@@ -47,6 +57,8 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 Partners can use the Partner Center to review the usage.
 
 - [Azure VM sizing for maximum reservation usage](/partner-center/azure-usage)
+
+::: zone-end
 
 ### Resize a storage account
 
@@ -95,7 +107,11 @@ Additionally, the [Build business case](/azure/migrate/how-to-build-a-business-c
 > For services that don't require continuous availability, implementing a solution to start, stop, or pause the service as needed can help manage the cost (for example, Azure Virtual Machines or Azure SQL Data Warehouse).
 >
 
+::: zone target="docs"
+
 - [Tutorial: optimize costs from recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview)
 - [Explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis)
 - [Build a business case - Azure Migrate](/azure/migrate/how-to-build-a-business-case)
+
+::: zone-end
