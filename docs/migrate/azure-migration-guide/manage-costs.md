@@ -28,7 +28,7 @@ The processes described in this article may also require a partnership with IT m
 
 <!-- markdownlint-disable MD024 -->
 
-## [Estimate VM costs prior to migration](#tab/EstimateVMCosts)
+## Estimate VM costs prior to migration
 
 Prior to migration of any asset (infrastructure, app, or data), there is an opportunity to estimate costs and refine sizing based on observed performance criteria for those assets. Estimating costs serves two purposes: it allows for cost control, and it provides a checkpoint to ensure that current budgets account for necessary performance requirements.
 
@@ -67,7 +67,7 @@ The resulting estimate, pictured below, identifies the monthly costs of compute 
 - [Set up and review an assessment with Azure Migrate](/azure/migrate/tutorial-assess-vmware-azure-vm#set-up-an-assessment)
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see [Cost Management discipline guidance](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 
-## [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
+## Estimate and optimize VM costs during and after migration
 
 Estimating cost prior to migration provides a solid target for cost expectations. It also provides opportunities to consider the performance and cost needs of each asset (infrastructure, apps, and data) to be migrated. However, it is still an estimate. Once the asset is migrated and under load, more accurate cost calculations can be made, based on actual or synthesized load.
 
@@ -102,7 +102,7 @@ This analysis will allow you to review total costs, budget (if available), and a
 - For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](/azure/advisor/advisor-cost-recommendations).
 - For more information about Azure Cost Management + Billing, see [Understand and work with scopes](/azure/cost-management-billing/costs/understand-work-scopes) and [explore and analyze costs with cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 
-## [Tips and tricks to optimize costs](#tab/TipsTricks)
+## Tips and tricks to optimize costs
 
 In addition to the tools mentioned in this article, there are some tips and tricks that can help quickly reduce overall cloud costs. The following are a few high-level tips to be aware of:
 
@@ -121,6 +121,10 @@ Even with the best approaches to estimation, there are likely to be overprovisio
 ### Take advantage of available discounts
 
 Speak with your Microsoft account representative to understand how you can take advantage of current discount options. The following are a few examples of discounts that are commonly used to reduce costs.
+
+### Azure savings plans
+
+Use [Azure savings plans](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) to save up to 65% off pay-as-you-go pricing when you commit to spending a fixed hourly amount on compute services for one or three years. You can pay for a savings plan upfront or monthly. The total cost of the up-front and monthly savings plan is the same.
 
 ### Azure Reservations
 
