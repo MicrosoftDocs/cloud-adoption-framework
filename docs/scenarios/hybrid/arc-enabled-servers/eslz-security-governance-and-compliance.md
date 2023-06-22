@@ -56,7 +56,9 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 ### Platform automation
 
 - **Agent provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and protecting access to the onboarding credentials. Consider the level and method of automation for [bulk enrollment](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan. The scope and plan for a deployment should account for objectives, selection criteria, success criteria, training plans, rollback, and risks.
-- **Software updates:** Define a strategy to assess the status of available updates to maintain security compliance, with critical and security updates of your operating systems.
+- **Software updates:**
+  - Define a strategy to assess the status of available updates to maintain security compliance, with critical and security updates of your operating systems.
+  - Define a strategy to inventory the Windows operating system versions and monitor end of support deadlines. For servers that cannot be migrated to Azure or upgraded, plan for [ESU](PLACEHOLDER for link pointing to the ESU through Arc documentation) through Azure Arc.
 
 ## Design recommendations
 
@@ -141,7 +143,7 @@ Centralizing logs drives reports that can be used as additional layers of securi
 
 With Azure Arc-enabled servers, you can manage your enterprise estate with centralized management and monitoring at-scale. More specifically, it provides alerts and recommendations to IT teams, with full operational visibility that includes managing the updates of your Windows and Linux VMs.
 
-Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs, including your Azure Arc-enabled servers. For more information, see [Update Management overview](/azure/automation/update-management/overview).
+Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs, including your Azure Arc-enabled servers and [ESU](PLACEHOLDER for link pointing to the ESU through Arc documentation) deployment to Azure Arc-enabled servers that have Windows versions that have reached end of support. For more information, see [Update Management overview](/azure/automation/update-management/overview).
 
 You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Azure Arc resources.
 
