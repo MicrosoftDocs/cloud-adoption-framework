@@ -126,6 +126,10 @@ Speak with your Microsoft account representative to understand how you can take 
 
 [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL Database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
 
+### Azure Savings Plan
+
+[Azure Savings Plan](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) provides savings up to 65% off pay-as-you-go pricing when you commit to spend a fixed hourly amount on compute services for one or three years. Committing to a savings plan allows you to get discounts, up to the hourly commitment amount, on the resources you use. You can pay for a savings plan up front or monthly. The total cost of the up-front and monthly savings plan is the same.
+
 ### Use Azure Hybrid Benefit
 
 If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server Integration Services.
@@ -133,6 +137,10 @@ If you already have Windows Server or SQL Server licenses in your on-premises de
 ### Low-priority VMs with batch
 
 For lower priority background processes, batch offers a means of managing the background service VMs and reducing costs. However, it is important to understand the performance impact of [low-priority VMs with batch](/azure/batch/batch-low-pri-vms) before choosing this discounted option.
+
+### Azure Dev/Test Pricing
+
+[Azure Dev/Test pricing](https://azure.microsoft.com/en-us/pricing/dev-test) gives customers access to select Azure services for nonproduction workloads at discounted pricing under the Microsoft Customer Agreement. This plan reduces the costs of running and managing applications in development and testing environments, across a range of Microsoft products.
 
 ### Additional resources
 
