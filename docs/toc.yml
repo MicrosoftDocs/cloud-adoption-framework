@@ -713,12 +713,12 @@ items:
 
         - name: SAP
           items:
-          - name: SAP migration guide
-            href: https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/
-          - name: Migrate SAP applications to Azure
-            href: https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/
-          - name: Migration methodologies for SAP on Azure
-            href: https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure/
+          - name: Migrate an SAP platform to Azure
+            href: /azure/cloud-adoption-framework/scenarios/sap/migrate
+          - name: Learning path for Migrate SAP workloads to Azure
+            href: /training/paths/migrate-sap-workloads-to-azure/
+          - name: Migrate an SAP platform to Azure
+            href: https://azure.microsoft.com/en-us/solutions/sap/migration/
 
         - name: Specialized workloads
           items:

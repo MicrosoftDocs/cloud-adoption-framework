@@ -14,7 +14,7 @@ ms.custom: think-tank, fasttrack-new, AQC
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.
 
-## [Support plans](#tab/SupportPlans)
+## Support plans
 
 ### Microsoft Support
 
@@ -74,12 +74,12 @@ Need support engineer assistance for deep technical guidance?
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
+- [Azure Migration and Modernization - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-migration-and/bd-p/AzureMigration)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
 ::: zone-end
 
-## [Partners](#tab/Partners)
+## Partners
 
 ### Azure solutions partner
 
