@@ -135,7 +135,7 @@ You can usually complete the migration scenario covered by this guide in one to 
 
 When evaluating the timeline of your migration, consider:
 
-- **Assets to migrate:** What is the number and diversity of assets like infrastructure, apps, and data?
+- **Time to Assess:** What is the number and diversity of assets like infrastructure, apps, and data? Do they have any dependencies that needs to be migrated too?
 - **Staff readiness:** Is your staff ready to manage the new environment or do they need training?
 - **Funding:** Do you have the appropriate approval and budget to complete the migration?
 - **Change management:** Does your business have specific requirements about change implementation and approval?
