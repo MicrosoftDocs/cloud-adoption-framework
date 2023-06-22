@@ -39,6 +39,16 @@ items:
         href: /azure/azure-government/azure-secure-isolation-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Trusted internet connection
         href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
+      - name: Identity
+        items:
+          - name: Overview
+            href: 
+          - name: Zero trust configuration
+            href:
+          - name: Multi-tenant operations
+            href:
+          - name: Centralize security operations
+            href: 
       - name: DoD documentation
         items: 
           - name: Overview
