@@ -52,7 +52,7 @@ Azure provides a comprehensive set of security controls to help customers protec
 - SOC 1, SOC 2, and SOC 3: Azure is audited under the SOC (Service Organization Controls) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
 - GDPR: Azure is compliant with the General Data Protection Regulation (GDPR), which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features like data protection, data breach notification, and privacy by design.
 
-Customers can monitor this security baseline and review recommendations, take remediation actions for non-compliance baseline for SAP workloads using Microsoft Defender for Cloud. 
+Customers can monitor this security baseline and review recommendations, take remediation actions for non-compliance baseline for SAP workloads using Microsoft Defender for Cloud.
 
    ![Screenshot shows Defender configuration.](./media/sap-lza-defender.png)
 

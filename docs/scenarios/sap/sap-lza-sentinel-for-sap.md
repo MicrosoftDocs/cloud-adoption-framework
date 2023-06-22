@@ -47,7 +47,7 @@ Consider the strategy for alert consumption from Microsoft Sentinel—for exampl
 
 - Consider the following when multiple connectors are hosted on a single machine:
   - Container name uses the `sapcon-<sid>` naming pattern, so connecting to multiple systems with the same SID is not possible.
-  - If connecting to multiple systems (if different Client ID), use --multi-clients undocumented switch while running the kickstart script. 
+  - If connecting to multiple systems (if different Client ID), use --multi-clients undocumented switch while running the kickstart script.
 This causes the container to be created with the following name `sapcon-<sid>-<client>`.
   - Connecting to multiple systems with the same SID and Client ID (and perhaps a different System Number, or different systems (prod/dev/test)
 that use same SID/Client ID/System Nr requires the deployment of the connector on different hosts. Note that Log Analytics data from such systems would be indistinguishable, so when working with systems that have identical SID/Client ID/System Number, it's recommended to use different Log Analytics workspaces to distinguish the data.
@@ -107,7 +107,7 @@ that use same SID/Client ID/System Nr requires the deployment of the connector o
   - Assignment of a sensitive role- Identifies new assignments for a sensitive role to a user.
   - Assignment of a sensitive profile - Identifies new assignments of a sensitive profile to a user.
   - Brute Force (RFC) - Identifies brute force attacks on the SAP system using RFC logons
-  - Multiple Password Changes - Identifies multiple password changes at different levels. 
+  - Multiple Password Changes - Identifies multiple password changes at different levels.
   - Sensitive Role Changes- Identifies changes in sensitive roles.
   - Multiple Logons by IP- Identifies logon of several users from the same IP within a scheduled time interval.
 

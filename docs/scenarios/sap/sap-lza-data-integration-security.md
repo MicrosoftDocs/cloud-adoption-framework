@@ -2,7 +2,7 @@
 title: Data integration security for SAP on Azure
 description: Learn about data integrations security for SAP on Azure
 author: pankajmeshramCSA
-ms.author: upunatik
+ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 06/19/2023
 ms.topic: conceptual
@@ -125,9 +125,13 @@ Self-Hosted Integration Runtime (SHIR) - section 4
 
 - The following images show the use of self-hosted integration runtime for moving data between an on-premises database and Azure services by using ExpressRoute and IPSec VPN (with Azure Virtual Network) – Consider the firewall configurations and allow list setting up for IP addresses mentioned. See [Security considerations for data movement in Azure Data Factory](/azure/data-factory/data-movement-security-considerations)
 
+**ExpressRoute Private Peering**:
+
 :::image type="content" source="./media/sap-security-expressroute.svg" border="false" alt-text="Diagram that shows ExpressRoute on Azure.":::
 
-:::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows ExpressRoute on Azure.":::
+**IPSec VPN**:
+
+:::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows IPSec VPN on Azure.":::
 
 - Ensure that the IP address of the self-hosted integration runtime machine is allowed or configured in the firewall appropriately. The following  cloud data stores require that you allow the IP address of the self-hosted integration runtime machine. Some of these data stores, by default, might not require allow list.
   - Azure SQL Database
@@ -141,7 +145,7 @@ Self-Hosted Integration Runtime (SHIR) - section 4
 ## Azure Databricks Security
 
 Azure Databricks Section 5
-![Screenshot that shows Azure DataBricks.](./media/sap-extend-security-architecture-azure-databricks1.png)
+![Screenshot that shows Azure DataBricks.](./media/sap-extend-security-architecture-azure-databricks.png)
 
 Consider the Azure security baseline for Azure Databricks mentioned here - [Azure security baseline for Azure Databricks](/security/benchmark/azure/baselines/azure-databricks-security-baseline?toc=%2Fazure%2Fdatabricks%2Ftoc.json). This security baseline applies guidance from the Microsoft cloud security benchmark version 1.0 to Azure Databricks. The Microsoft cloud security benchmark provides recommendations on how you can secure your cloud solutions on Azure.
 
