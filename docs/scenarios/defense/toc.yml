@@ -41,7 +41,7 @@ items:
         href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Identity
         items:
-          - name: Overview
+          - name: Essentials for defense
             href: 
           - name: Zero trust configuration
             href:
