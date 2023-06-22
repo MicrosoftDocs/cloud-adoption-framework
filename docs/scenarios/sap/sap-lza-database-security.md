@@ -23,9 +23,9 @@ The sections below provides the **considerations and recommendations** for SAP o
 
 ## Secure-at-rest
 
-The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver16) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by SAP (Note 1380493 - SQL Server Transparent Data Encryption (TDE)).
+The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by SAP (Note 1380493 - SQL Server Transparent Data Encryption (TDE)).
 
-The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption?view=sql-server-ver16).
+The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption).
 
 As all data pages that are read or written to disk must be encrypted or decrypted, TDE comes with a CPU penalty. When applied to a user database the CPU usage increases between 3 % and 8 %. Applications that make heavy use of the TempDB of SQL Server or doing large scans on large tables are more affected, as the system databases including TempDB are encrypted as well when at least one user database on the SQL Server instance is encrypted with TDE. SAP Business Warehouse Systems (SAP BW) are a good example of this kind of application.
 
@@ -43,9 +43,9 @@ Real-time replication between a TDE-enabled database on SQL Server and SAP HANA 
 
 Besides TDE, SQL Server offers more features for data protection. These allow partial encryption or masking on database column granularity with:
 
-- [SQL Server column encryption](/sql/relational-databases/security/encryption/encrypt-a-column-of-data?view=sql-server-ver16)
-- [SQL Server Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking?view=sql-server-ver16)
-- [SQL Server Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine?view=sql-server-ver16)
+- [SQL Server column encryption](/sql/relational-databases/security/encryption/encrypt-a-column-of-data)
+- [SQL Server Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking)
+- [SQL Server Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine)
 
 Based on the strong restrictions of these three methods and the changes these would require on many areas of the SAP NetWeaver components, these SQL Server functionalities aren't supported by SAP to be used or applied.
 
@@ -61,11 +61,11 @@ Backup Encryption can be used with TDE, but adds no benefit, as the data is alre
 
 Server and OS level hardening are essential to a secure running system.
 
-Ensure that you follow the recommendations below when securing your [SQL server](/sql/relational-databases/security/securing-sql-server?view=sql-server-ver16) and your SAP System, please see SAP OSS note 2417205
+Ensure that you follow the recommendations below when securing your [SQL server](/sql/relational-databases/security/securing-sql-server) and your SAP System, please see SAP OSS note 2417205
 
 SQL Server is based on the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP).
 
-The SSL protocol should be disabled as TLS as the successor is widely used and supported. Most of the SQL Server and SAP product support nowadays use the strong [TLS 1.2](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) protocol, with the even stronger [TLS 1.3](/sql/relational-databases/security/networking/tds-8-and-tls-1-3?view=sql-server-ver16) already planned.
+The SSL protocol should be disabled as TLS as the successor is widely used and supported. Most of the SQL Server and SAP product support nowadays use the strong [TLS 1.2](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) protocol, with the even stronger [TLS 1.3](/sql/relational-databases/security/networking/tds-8-and-tls-1-3) already planned.
 
 Most of the security settings for the Schannel Security Support Provider can be controlled through registry changes in the
 corresponding SCHANNEL branch. With these settings one can control the following:
@@ -101,7 +101,7 @@ The SQL Server system administrator account (sa) isn't used from any SAP system 
 
 A high availability system using SQL Server AlwaysOn technology needs special attention when it comes to logins, users, and jobs. All servers that are participating in such a system must have the exact same logins and users, so that the SAP System can connect even after a failover to another node has happened. Furthermore, all SAP-related SQL Server jobs need the same owner on all AlwaysOn nodes. To synchronize these setting for Logins, users, and jobs SAP developed a script, which you can find here: [Always On - Synchronize SAP login, jobs and objects](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/always-on-synchronize-sap-login-jobs-and-objects/ba-p/367942)
 
-[SQL Injections](/sql/relational-databases/security/sql-injection?view=sql-server-ver16) are
+[SQL Injections](/sql/relational-databases/security/sql-injection) are
 when malicious code is merged into SQL statements that are executed on the SQL Server. When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report, which are then sent to and transformed by the SAP database layer for SQL Server. This database layer is integrated into the SAP Work process and can't be accessed from the outside. After the transformation into SQL Server specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack) , but this can prevented when the SAP System is using encrypted connections between the work process and the SQL Server database. In the transaction DBACockpit a rudimentary SQL command window is implemented, where some basic SQL statements can be executed. The access to this transaction is described in note 1027512 - MSSQL: DBA cockpit for basis release 7.00 and later.
 
 ## Auditing
