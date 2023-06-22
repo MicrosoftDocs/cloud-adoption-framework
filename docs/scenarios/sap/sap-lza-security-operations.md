@@ -17,9 +17,7 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 
 - [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
-- [Security operations for SAP on Azure](./sap-lza-security-operations.md) (This article)
-- [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
-- [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
+- [Security operations for SAP on Azure](./sap-lza-security-operations.md)
 
 Implementing a comprehensive security operation for SAP in Microsoft Cloud is critical to ensure that organization's sensitive data and applications are protected from cyber threats. Here are some best practice security operation aspects customer can do to secure their SAP environment in Azure.
 

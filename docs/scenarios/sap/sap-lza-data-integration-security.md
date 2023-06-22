@@ -1,6 +1,6 @@
 ---
 title: Data integration security for SAP on Azure
-description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
+description: Learn about data integrations security for SAP on Azure
 author: pankajmeshramCSA
 ms.author: upunatik
 ms.reviewer: tozimmergren
@@ -17,8 +17,9 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 - [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
 - [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
-- [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md)
-- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md) (this article)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
 
 The sections below describes different security layers in SAP Extend Scenarios, breaks down each component and provides considerations and recommendations on them. Azure Data Factory management resources are built on Azure security infrastructure and use all possible security measures offered by Azure.
 

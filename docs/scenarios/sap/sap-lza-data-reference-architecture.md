@@ -1,6 +1,6 @@
 ---
-title: SAP data integration with Azure-Performance and troubleshooting
-description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
+title: SAP data integration example architecture
+description: Learn more about an example architecture for SAP data integration.
 author: pankajmeshramCSA
 ms.author: upunatik
 ms.reviewer: tozimmergren
@@ -11,7 +11,15 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
-# SAP data integration Reference Architecture
+# SAP data integration example architecture
+
+This article is part of the "SAP extend and innovate data: Best practices" article series.
+
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
 
 This article is Part 5 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md), [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md), [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md) and [SAP Data Integration Security](./sap-lza-data-integration-security.md)
 

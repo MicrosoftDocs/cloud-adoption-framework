@@ -17,9 +17,7 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 
 - [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
-- [Security operations for SAP on Azure](./sap-lza-security-operations.md) (This article)
-- [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
-- [SAP data integration Reference Architecture](./sap-lza-data-reference-architecture.md)
+- [Security operations for SAP on Azure](./sap-lza-security-operations.md)
 
 The sections below outline key design considerations for deploying agents and the solution to protect SAP applications using Microsoft Sentinel. Specifically, the [Microsoft Sentinel Solution for SAP Applications](/azure/sentinel/sap/deployment-overview).
 
