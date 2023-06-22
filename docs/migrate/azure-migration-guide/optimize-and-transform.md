@@ -35,41 +35,21 @@ The following are some common services that you can resize.
 
 Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated with this tool will likely already be sized based on your pre-migration requirements.
 
-However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
-
-1. Go to **Virtual machines**.
-1. Select the desired virtual machine from the list.
-1. Select **Size** and the desired new size from the list. You may need to adjust the filters to find the size you need.
-1. Select **Resize**.
-
-Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
-
-::: zone target="chromeless"
-
-::: zone-end
-
-::: zone target="docs"
-
+However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing. Below links provide more information on resizing a VM:
 - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
-- [Resize a Windows VM](/azure/virtual-machines/resize-vm)
-- [Resize a Linux virtual machine via Azure CLI](/azure/virtual-machines/resize-vm)
+- [Resize a VM](/azure/virtual-machines/resize-vm)
 
 Partners can use the Partner Center to review the usage.
 
 - [Azure VM sizing for maximum reservation usage](/partner-center/azure-usage)
 
-::: zone-end
+Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
-### Resize a storage account
+### Reconfigure a storage account
 
-1. Go to **Storage accounts**.
-1. Select the desired storage account.
-1. Select **Configure** and adjust the properties of the storage account to match your requirements.
-1. Select **Save**.
-
-::: zone target="chromeless"
-
-::: zone-end
+You can upgrade a General purpose v1 storage account to v2 or can change the access tier of storage account. Detailed steps can be found here 
+- [Upgrade a Storage Account](/azure/storage/common/storage-account-upgrade)
+- [Move a Storage Account](/azure/storage/common/storage-account-move)
 
 ### Resize a SQL database
 
@@ -81,6 +61,11 @@ Partners can use the Partner Center to review the usage.
 ::: zone target="chromeless"
 
 ::: zone-end
+
+### Resize an App Service
+
+You can scale up or scale out your app service. Detailed steps can be found here 
+- [Resize an App Service](/azure/app-service/manage-scale-up)
 
 ## [Cost management](#tab/ManageCost)
 
