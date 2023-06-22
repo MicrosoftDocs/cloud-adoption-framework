@@ -34,7 +34,8 @@ You can define and apply security rules and policies that are based on environme
    
 ## HPC Pack User Roles and Security
 
-  - There are several [roles](https://learn.microsoft.com/en-us/powershell/high-performance-computing/understanding-user-roles) that users may be added to Administrator, User, Job Administrator, and Job Operator.
+  - There are several [roles](/powershell/high-performance-computing/understanding-user-roles) that users may be added to Administrator, User, Job Administrator, and Job Operator.
+
     
   - Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (AADDS) is a prerequisite to installing Microsoft HPC Pack because the authentication process for users and computers relies on the services provided by AD DS.
     
