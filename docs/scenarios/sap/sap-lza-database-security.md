@@ -93,9 +93,9 @@ Under "Local Computer Policy -> Computer Configuration -> Administrative Templat
 
 An SAP Netweaver on SQL Server system has specific requirements with regards to the SAP and SQL Server startup accounts, the authentication to the SQL Server instance and the SAP database, and the DBA access. It's described in the SAP note 1645041 - FAQ: Microsoft SQL Server logins and their usage in SAP environment
 
-An SAP ABAP NetWeaver System doesn't require SQL Server logins, all connections are made using Windows Authentication (for example, with the user SAPService<SID> or <sid>adm). Therefore the SQL Server Authentication feature isn't needed and can be switched off.
+An SAP ABAP NetWeaver System doesn't require SQL Server logins, all connections are made using Windows Authentication (for example, with the user `SAPService<SID>` or `<sid>adm`). Therefore the SQL Server Authentication feature isn't needed and can be switched off.
 
-If an SAP JAVA NetWeaver System is used, the SQL Server Authentication is needed, as the system is using a SQL Server login (SAP<SID>DB) for the connection
+If an SAP JAVA NetWeaver System is used, the SQL Server Authentication is needed, as the system is using a SQL Server login (`SAP<SID>DB`) for the connection
 
 The SQL Server system administrator account (sa) isn't used from any SAP system running on SQL Server and can be disabled. One must ensure that another user with sysadmin rights can access the server before disabling the sa account.
 

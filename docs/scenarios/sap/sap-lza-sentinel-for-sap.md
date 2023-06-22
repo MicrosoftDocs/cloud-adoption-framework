@@ -46,9 +46,9 @@ For step-by-step configuration of AKS, see [Deploying Microsoft Sentinel Threat 
 Consider the strategy for alert consumption from Microsoft Sentinel—for example, Teams, email, or Mobile alerts.
 
 - Consider the following when multiple connectors are hosted on a single machine:
-  - Container name uses the sapcon-<sid> naming pattern, so connecting to multiple systems with the same SID is not possible.
+  - Container name uses the `sapcon-<sid>` naming pattern, so connecting to multiple systems with the same SID is not possible.
   - If connecting to multiple systems (if different Client ID), use --multi-clients undocumented switch while running the kickstart script. 
-This causes the container to be created with the following name sapcon-<sid>-<client>.
+This causes the container to be created with the following name `sapcon-<sid>-<client>`.
   - Connecting to multiple systems with the same SID and Client ID (and perhaps a different System Number, or different systems (prod/dev/test)
 that use same SID/Client ID/System Nr requires the deployment of the connector on different hosts. Note that Log Analytics data from such systems would be indistinguishable, so when working with systems that have identical SID/Client ID/System Number, it's recommended to use different Log Analytics workspaces to distinguish the data.
 
