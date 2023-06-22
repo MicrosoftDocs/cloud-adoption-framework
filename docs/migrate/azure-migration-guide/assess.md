@@ -22,7 +22,7 @@ If you didn't follow the guidance in the links above, you'll need data and an as
 
 Azure Migrate provides a centralized hub to assess and migrate to Azure on-premises servers, infrastructure, applications, and data. This service:
 
-- Assesses whether on-premises servers/databases/applications are ready for migration to Azure.
+- Assesses whether on-premises servers, databases or applications are ready for migration to Azure.
 - Estimates the size of Azure virtual machines (VMs), Azure SQL configuration, or number of Azure VMware Solution nodes after migration.
 - Estimates costs for running on-premises servers in Azure.
 - Identifies cross-server dependencies and optimization strategies for moving interdependent servers to Azure.
@@ -135,7 +135,7 @@ You can usually complete the migration scenario covered by this guide in one to 
 
 When evaluating the timeline of your migration, consider:
 
-- **Time to Assess:** What is the number and diversity of assets like infrastructure, apps, and data? Do they have any dependencies that needs to be migrated too?
+- **Assets to migrate:** What is the number and diversity of assets like infrastructure, apps, and data? Do they have any dependencies that needs to be migrated too?
 - **Staff readiness:** Is your staff ready to manage the new environment or do they need training?
 - **Funding:** Do you have the appropriate approval and budget to complete the migration?
 - **Change management:** Does your business have specific requirements about change implementation and approval?
