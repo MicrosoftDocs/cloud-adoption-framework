@@ -91,24 +91,46 @@ Under "Local Computer Policy -> Computer Configuration -> Administrative Templat
 
 ## Authentication
 
-An SAP Netweaver on SQL Server system has specific requirements with regards to the SAP and SQL Server startup accounts, the authentication to the SQL Server instance and the SAP database, and the DBA access. It's described in the SAP note 1645041 - FAQ: Microsoft SQL Server logins and their usage in SAP environment
+Here are some considerations for authentication with SAP on Azure.
 
-An SAP ABAP NetWeaver System doesn't require SQL Server logins, all connections are made using Windows Authentication (for example, with the user `SAPService<SID>` or `<sid>adm`). Therefore the SQL Server Authentication feature isn't needed and can be switched off.
+- **SAP Netweaver on SQL Server**:
+  - A system like this has specific requirements with regards to the SAP and SQL Server startup accounts, authentication to the SQL Server instance, SAP database, and the DBA access. 
+  - For more details, see SAP note 1645041 - FAQ: Microsoft SQL Server logins and their usage in SAP environment
 
-If an SAP JAVA NetWeaver System is used, the SQL Server Authentication is needed, as the system is using a SQL Server login (`SAP<SID>DB`) for the connection
+- **SAP ABAP NetWeaver System**:
+  - It doesn't require SQL Server logins, all connections are made using Windows Authentication. For example, with the user `SAPService<SID>` or `<sid>adm`.
+  - Therefore the SQL Server Authentication feature isn't needed and can be switched off.
 
-The SQL Server system administrator account (sa) isn't used from any SAP system running on SQL Server and can be disabled. One must ensure that another user with sysadmin rights can access the server before disabling the sa account.
+- **SAP JAVA NetWeaver System**:
+  - The SQL Server Authentication is needed  as the system is using a SQL Server login (`SAP<SID>DB`) for the connection.
 
-A high availability system using SQL Server AlwaysOn technology needs special attention when it comes to logins, users, and jobs. All servers that are participating in such a system must have the exact same logins and users, so that the SAP System can connect even after a failover to another node has happened. Furthermore, all SAP-related SQL Server jobs need the same owner on all AlwaysOn nodes. To synchronize these setting for Logins, users, and jobs SAP developed a script, which you can find here: [Always On - Synchronize SAP login, jobs and objects](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/always-on-synchronize-sap-login-jobs-and-objects/ba-p/367942)
+- **SAP on SQL Server**:
+  - The SQL Server system administrator account (sa) isn't used from any SAP system running on SQL Server and can be disabled.
+  - One must ensure that another user with sysadmin rights can access the server before disabling the sa account.
 
-[SQL Injections](/sql/relational-databases/security/sql-injection) are
-when malicious code is merged into SQL statements that are executed on the SQL Server. When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report, which are then sent to and transformed by the SAP database layer for SQL Server. This database layer is integrated into the SAP Work process and can't be accessed from the outside. After the transformation into SQL Server specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack) , but this can prevented when the SAP System is using encrypted connections between the work process and the SQL Server database. In the transaction DBACockpit a rudimentary SQL command window is implemented, where some basic SQL statements can be executed. The access to this transaction is described in note 1027512 - MSSQL: DBA cockpit for basis release 7.00 and later.
+- **A high availability system using SQL Server AlwaysOn**:
+  - Needs special attention when it comes to logins, users, and jobs. All servers that are participating in such a system must have the exact same logins and users, so that the SAP System can connect even after a failover to another node has happened.
+  - Furthermore, all SAP-related SQL Server jobs need the same owner on all AlwaysOn nodes.
+  - To synchronize these setting for Logins, users, and jobs, see [Always On - Synchronize SAP login, jobs and objects](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/always-on-synchronize-sap-login-jobs-and-objects/ba-p/367942)
+
+- **Consider SQL injections**:
+  - [SQL injection](/sql/relational-databases/security/sql-injection) is when malicious code is merged into SQL statements that are executed on the SQL Server.
+  - When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report, which are then sent to and transformed by the SAP database layer for SQL Server.
+  - This database layer is integrated into the SAP Work process and can't be accessed from the outside. After the transformation into SQL Server specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack).
+  - This can prevented when the SAP System is using encrypted connections between the work process and the SQL Server database. In the transaction DBACockpit a rudimentary SQL command window is implemented, where some basic SQL statements can be executed. The access to this transaction is described in note 1027512 - MSSQL: DBA cockpit for basis release 7.00 and later.
 
 ## Auditing
 
-The SQL Server feature "xp_cmdshell" enables an SQL Server internal OS command shell and is often classified as a potential risk in security audits. The installation of the SAP System turns this feature on to gather and display operating system data in transaction DBACockpit. The setting can be disabled, and the only effect will be that a minority of monitoring data won't be available in transaction DBACockpit. Any system with xp_cmdshell disabled will display a warning message in the DBACockpit Message Window so that you know why data is missing, see SAP KBA 2283909 - Side effect in monitoring if the xp_cmdshell is turned off for more details. SAP Note 3019299 - Security Audit Questions or Security Customization in NetWeaver and SQL Server systems gives more details on questions on security audits.
+- **Disable `xp_cmdshell`**
+  - The SQL Server feature `xp_cmdshell` enables an SQL Server internal OS command shell and is often classified as a potential risk in security audits.
+  - Installing SAP turns this feature on to gather and display operating system data in transaction `DBACockpit`.
+  - The setting can be disabled, and the only effect will be that a minority of monitoring data won't be available in transaction `DBACockpit`
+  - Any system with `xp_cmdshell` disabled will display a warning message in the `DBACockpit Message Window` so that you know why data is missing.
+  - If `xp_cmdshell` is turned off, see SAP KBA 2283909 - Side effect in monitoring. 
+  - Additionally, SAP Note 3019299 - Security Audit Questions or Security Customization in NetWeaver and SQL Server systems gives more details on questions on security audits.
 
-SAP supports virus scanners to protect the machines against viruses and other malware. But on the other hand, a wrongly configured virus scanner can cause huge performance problems or even database corruption. See SAP note 106267 - Virus scanner software on Windows on how to setup and configure a virus scanner for the operating system when used for an SAP NetWeaver system. For the usage with a Microsoft SQL Server database several configurations have to be made to avoid performance and corruption problems. These are summarized in this Microsoft Support article:[How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b)
+- **Configure virus scanners correctly**:
+  - SAP supports virus scanners to protect the machines against viruses and other malware. But on the other hand, a wrongly configured virus scanner can cause huge performance problems or even database corruption. See SAP note 106267 - Virus scanner software on Windows on how to setup and configure a virus scanner for the operating system when used for an SAP NetWeaver system. For the usage with a Microsoft SQL Server database several configurations have to be made to avoid performance and corruption problems. These are summarized in this Microsoft Support article:[How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b)
 
 ## Next steps
 
