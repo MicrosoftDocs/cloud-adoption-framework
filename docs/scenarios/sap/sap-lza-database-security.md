@@ -15,7 +15,7 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 This article is part of the "SAP extend and innovate security: Best practices" article series.
 
-- [Database security for SAP on SQL Server](./sap-lza-database-security.md)
+- [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
 - [Security operations for SAP on Azure](./sap-lza-security-operations.md) (This article)
 - [SAP data integration security on Azure](./sap-lza-data-integration-security.md)
