@@ -22,7 +22,7 @@ If you didn't follow the guidance in the links above, you'll need data and an as
 
 Azure Migrate provides a centralized hub to assess and migrate to Azure on-premises servers, infrastructure, applications, and data. This service:
 
-- Assesses whether on-premises servers are ready for migration to Azure.
+- Assesses whether on-premises servers, databases or applications are ready for migration to Azure.
 - Estimates the size of Azure virtual machines (VMs), Azure SQL configuration, or the number of Azure VMware Solution nodes after migration.
 - Estimates costs for running on-premises servers in Azure.
 - Identifies cross-server dependencies and optimization strategies for moving interdependent servers to Azure.
@@ -135,8 +135,8 @@ You can usually complete the migration scenario covered by this guide in one to 
 
 When evaluating the timeline of your migration, consider the following:
 
-- **Assets to migrate:** What is the number and diversity of assets like infrastructure, apps, and data?
-- **Staff readiness:** Is your staff ready to manage the new environment, or do they need training?
+- **Assets to migrate:** What is the number and diversity of assets like infrastructure, apps, and data? Do they have any dependencies that needs to be migrated too?
+- **Staff readiness:** Is your staff ready to manage the new environment or do they need training?
 - **Funding:** Do you have the appropriate approval and budget to complete the migration?
 - **Change management:** Does your business have specific change implementation and approval requirements?
 - **Segment regulations:** Do you have to comply with segment or industry regulations?
@@ -150,10 +150,13 @@ During migration, certain factors affect decisions and execution activities:
 - **Digital estate size:** Understanding the size of your digital estate directly affects decisions and the resources required to migrate.
 - **Accounting models:** Shifting from a structured capital expense model to a fluid operating expense model.
 
+While doing this assessment, it is also important to factor in cost of running the workloads as-is. This helps in creating a business case and gives more clarity on TCO of your workloads.
+
 ::: zone target="docs"
 
 The following resources provide related information:
 
 - [Estimate cloud costs](../migration-considerations/assess/estimate.md)
-
+- [Business Case for Cloud Migration](../../strategy/cloud-migration-business-case.md)
+  
 ::: zone-end
