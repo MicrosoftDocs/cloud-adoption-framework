@@ -22,7 +22,7 @@ If you didn't follow the guidance in the links above, you'll need data and an as
 
 Azure Migrate provides a centralized hub to assess and migrate to Azure on-premises servers, infrastructure, applications, and data. This service:
 
-- Assesses whether on-premises servers are ready for migration to Azure.
+- Assesses whether on-premises servers/databases/applications are ready for migration to Azure.
 - Estimates the size of Azure virtual machines (VMs), Azure SQL configuration, or number of Azure VMware Solution nodes after migration.
 - Estimates costs for running on-premises servers in Azure.
 - Identifies cross-server dependencies and optimization strategies for moving interdependent servers to Azure.
