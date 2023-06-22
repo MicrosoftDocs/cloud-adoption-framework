@@ -157,6 +157,6 @@ While doing this assessment, it is also important to factor in cost of running t
 The following resources provide related information:
 
 - [Estimate cloud costs](../migration-considerations/assess/estimate.md)
-- [Business Case for Cloud Migration](/docs/strategy/cloud-migration-business-case.md)
+- [Business Case for Cloud Migration](../../strategy/cloud-migration-business-case.md)
   
 ::: zone-end
