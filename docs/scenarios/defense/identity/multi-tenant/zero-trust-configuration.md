@@ -90,10 +90,10 @@ With the general availability of [Azure AD certificate-based authentication](/az
 |MFA for all users|All Users|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
 |Require Managed Devices|All Users|All Apps|None|[Require hybrid Azure AD Joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
 |Block risky sign ins|All Users|All Apps|[High Sign-in Risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
-|Secure Azure AD Administration|[AAD Roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
-|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|Secure Azure AD Administration|[AAD Roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|Require Compliant [Privileged Access Workstation](https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|Require Compliant [Privileged Access Workstation](https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-deploymentt) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
 
-For more information, see [Zero Trust identity and device access configuration](/azure/microsoft-365/security/office-365-security/microsoft-365-policies-configurations?view=o365-worldwide).
+For more information, see [Zero Trust identity and device access configuration](/azure/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
 
 **Use the primary tenant identities for accessing all applications.** Applications should use the primary tenant identity for end user access. Establish a policy to [register applications](/azure/active-directory/develop/quickstart-register-app) with the primary tenant, regardless of the application infrastructure hosting location.
 
@@ -101,7 +101,7 @@ For legacy applications that do not support modern authentication protocols, use
 
 If the primary tenant is controlled by a service provider or external agency that does not [delegate application registration permissions](/azure/active-directory/roles/delegate-app-roles), register applications with the secondary tenant your organization controls instead. Assign user access using [external identities](/azure/active-directory/external-identities/external-identities-overview) (B2B guests) for your organization’s users homed in the primary tenant.
 
-For more information, see [Secure applications with zero trust](/azure/security/zero-trust/deploy/applications).
+For more information, see [Secure applications with zero trust](/security/zero-trust/deploy/applications).
 
 **Use Azure AD for managing other cloud environments.** Azure AD is not just an identity platform for Azure and M365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like AWS and GCP. See the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery) for more information.
 
@@ -123,7 +123,7 @@ For more information, see [Secure applications with zero trust](/azure/security/
 
 You should implement the following recommendations in the primary tenant only.
 
-**End users only have one identity in Azure AD.** [Synchronize on-premises Active Directory Domain Services](/azure/security/zero-trust/deploy/identity#connect-all-of-your-users-to-azure-ad-and-federate-with-on-premises-identity-systems) with the primary Azure AD tenant. This populates Azure AD with users, groups, and devices for the organization. External B2B guests might exist in secondary tenants, but users only need to remember one username for all applications and services. The user experience and zero trust outcomes are best when you use the identities in the primary tenant for Windows logon and application access.
+**End users only have one identity in Azure AD.** [Synchronize on-premises Active Directory Domain Services](https://learn.microsoft.com/security/zero-trust/deploy/identity#connect-all-of-your-users-to-azure-ad-and-federate-with-on-premises-identity-systems) with the primary Azure AD tenant. This populates Azure AD with users, groups, and devices for the organization. External B2B guests might exist in secondary tenants, but users only need to remember one username for all applications and services. The user experience and zero trust outcomes are best when you use the identities in the primary tenant for Windows logon and application access.
 
 **Join and manage devices with the Primary tenant.** The primary Azure AD tenant contains all users and devices within the organization. Azure AD Join (or hybrid Azure AD Join) Windows devices to the primary tenant and manage with Microsoft Intune. [Use Intune policy to deploy Microsoft Defender for Endpoint](/azure/mem/intune/protect/mde-security-integration) enabling extended detection and response (XDR) capability.
 
@@ -159,5 +159,5 @@ If device management with Intune or Azure Information Protection is needed for s
 
 ## Related links
 
-- [Zero trust configurations](zero-trust-configurations.md)
+- [Zero trust configurations](zero-trust-configuration.md)
 - [Centralized security operations](security-operations.md)
