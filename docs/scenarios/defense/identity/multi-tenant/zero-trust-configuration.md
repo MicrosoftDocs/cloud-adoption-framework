@@ -27,6 +27,7 @@ Azure Active Directory (Azure AD) tenants are the foundation of your identity ar
 **Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations need multiple Azure AD tenants for security, compliance, and collaboration (*see table 1*).
 
 *Table 1. Reasons to have or create multiple tenants.*
+
 | Reason         | Example                                                                |
 |:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence                                   |
@@ -52,7 +53,7 @@ Some defense organizations consume services from a parent or partner organizatio
 - If your organization uses M365, the tenant with your M365 licensed users is the primary tenant (*see figure 2*). Your M365 tenant is primary even if other Azure AD tenants used for Azure workload migration preceded it.
 - If your organization doesn’t use M365, any Azure AD tenant with EMS licenses is your primary tenant. This tenant is where you have registered and verified your domain name. The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
-:::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it is a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then its a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::
+:::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it is a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then its a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. Decision tree to determine the Azure AD tenant type.*
 
 If your organization does not use M365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
@@ -83,6 +84,7 @@ With the general availability of [Azure AD certificate-based authentication](/az
 **Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a policy baseline including the policies in *table 2*.
 
 *Table 2: Conditional access policy checklist.*
+
 | Policy Name          | Users   | Applications   | Conditions  | Grant Control         |
 |:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
 |MFA for all users|All Users|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
@@ -149,3 +151,13 @@ If device management with Intune or Azure Information Protection is needed for s
 **Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Azure AD roles following [least-privilege Azure AD role by task](/azure/active-directory/roles/delegate-by-task) using [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user). Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/azure/active-directory/fundamentals/multi-tenant-user-management-introduction#cross-tenant-synchronizationv) to reduce management overhead onboarding external identities in the secondary tenant.
 
 **Use Azure Lighthouse to facilitate Sentinel access from the primary tenant**. Using [Azure Lighthouse](/azure/lighthouse/overview), users from a primary tenant can manage Azure resources in subscriptions attached to secondary tenants. This approach is recommended for [managing Microsoft Sentinel across multiple tenants](/azure/sentinel/multiple-tenants-service-providers).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage multi-tenant operations](manage-operations.md)
+
+## Related links
+
+- [Zero trust configurations](zero-trust-configurations.md)
+- [Centralized security operations](security-operations.md)

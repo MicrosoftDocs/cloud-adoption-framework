@@ -46,7 +46,7 @@ items:
           - name: Zero trust configuration
             href: ./identity/multi-tenant/zero-trust-configuration.md
           - name: Manage operations
-            href: ./identity/multi-tenant/management-operations.md
+            href: ./identity/multi-tenant/manage-operations.md
           - name: Security operations
             href: ./identity/multi-tenant/security-operations.md
       - name: DoD documentation

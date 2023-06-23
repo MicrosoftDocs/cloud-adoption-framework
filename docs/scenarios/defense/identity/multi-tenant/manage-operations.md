@@ -78,13 +78,11 @@ Application access is governed in the same Azure AD tenant where applications ar
 - [Automating Identity Governance tasks](/azure/active-directory/governance/identity-governance-automation)
 - Creating [access reviews](/azure/active-directory/governance/entitlement-management-access-reviews-create) for access packages and Azure AD security groups
 
-You should set up application governance using an entitlement management access packages (*see figure 2*).
+You should set up application governance using an entitlement management access packages (*see figure 2*). Here's the process for setting up application governance using an entitlement management access package:
 
 :::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/access-to-primary-tenant.png" border="false":::
 
 *Figure 2. Entitlements management for application assignment. Using the Contoso domain as an example.*
-
-Here's the process for setting up application governance using an entitlement management access package:
 
 1. A primary tenant application administrator works with the developer to create a new app registration for a web app deployed in a secondary tenant.
 2. [Identity governance administrator](/azure/active-directory/roles/permissions-reference#identity-governance-administrator) creates an [access package](/azure/active-directory/governance/entitlement-management-access-package-create) and adds the application as an entitlement and enables the package for request with approval for a 6-month duration. Optionally, the entitlements management administrator can [delegate](/azure/active-directory/governance/entitlement-management-delegate) permissions for managing access packages.
@@ -103,14 +101,12 @@ Here's the process for setting up application governance using an entitlement ma
 
 ### Secondary tenant identity governance
 
-You should use your primary tenant identities to manage operations in the secondary tenant. A self-service model is best. The team managing any secondary tenant is also responsible for entitlements management, external identities, privileged identity management, and Audit in their tenant.
+You should use your primary tenant identities to manage operations in the secondary tenant. A self-service model is best. The team managing any secondary tenant is also responsible for entitlements management, external identities, privileged identity management, and Audit in their tenant. Here's the process for setting up external (B2b) guest using an entitlement management access package:
 
-**Entitlements management.** You need to configure external user governance for Azure management.You should use entitlements management in the secondary tenant to onboard guest users to manage Azure resources using an [end user-initiated scenario using entitlements management](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) (*figure 4*).
+**Entitlements management.** You need to configure external user governance for Azure management. You should use entitlements management in the secondary tenant to onboard guest users to manage Azure resources using an [end user-initiated scenario using entitlements management](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) (*figure 3*).
 
 :::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/access-to-primary-tenant.png" border="false":::
 *Figure 3. Entitlements management for external (B2B) guest access. Using the Contoso domain as an example.*
-
-Here's the process for setting up external (B2b) guest using an entitlement management access package:
 
 1. An administrator in the secondary tenant adds the primary tenant as a [connected organization](/azure/active-directory/governance/entitlement-management-organization) and [creates an access package](/azure/active-directory/governance/entitlement-management-access-package-create) for primary tenant users to request.
 2. Primary tenant user requests the access package in the secondary tenant.
@@ -162,12 +158,19 @@ External identities (B2B guests) can be used to provide primary tenant security 
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Azure resource manager, Defender for Cloud, and other available secondary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the secondary tenant Azure environment.
 
-**Microsoft Defender for Cloud.** Defender for Cloud surfaces security recommendations and alerts for resources in Azure, on-premises, or other cloud providers. Activities include
+**Microsoft Defender for Cloud.** Defender for Cloud surfaces security recommendations and alerts for resources in Azure, on-premises, or other cloud providers. Activities include:
 
 - [Managing recommendations and alerts](/azure/defender-for-cloud/managing-and-responding-alerts) for in Defender for Cloud
 - Assigning [Defender for Cloud roles](/azure/defender-for-cloud/permissions) and configuring Azure Lighthouse to grant access to primary tenant security operators
 
-**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide) actions for servers takes place in the secondary tenant MDE service. Activities include
+**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide) actions for servers takes place in the secondary tenant MDE service. Activities include:
 
 - Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups?view=o365-worldwide) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles?view=o365-worldwide) in Microsoft Defender for Endpoint for the secondary tenant
 - Delegating MDE roles to external users (B2B guests) from the primary tenant
+
+## Related links
+
+- [Identity essentials](essentials.md)
+- [Zero trust configurations](zero-trust-configurations.md)
+- [Manage multi-tenant operations](manage-operations.md)
+- [Centralized security operations](security-operations.md)

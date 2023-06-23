@@ -99,3 +99,13 @@ There are two separate versions of the Azure AD services defense organizations m
 | MS Graph PowerShell |Connect-MgGraph<br>-Environment Global | Connect-MgGraph<br>-Environment USGov | Connect-MgGraph<br>-Environment USGovDoD |
 | Az PowerShell | Connect-AzAccount<br>-Environment AzureCloud | Connect-AzAccount<br>-Environment AzureUSGovernment | Connect-AzAccount<br>-Environment AzureUSGovernment |
 | Azure CLI     | Az cloud set --name AzureCloud | Az cloud set --AzureUSGovernment | Az cloud set --AzureUSGovernment |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Zero trust configurations](zero-trust-configurations.md)
+
+## Related links
+
+- [Manage multi-tenant operations](manage-operations.md)
+- [Centralized security operations](security-operations.md)
