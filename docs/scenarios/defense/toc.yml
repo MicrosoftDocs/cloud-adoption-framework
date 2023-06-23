@@ -39,15 +39,15 @@ items:
         href: /azure/azure-government/azure-secure-isolation-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
       - name: Trusted internet connection
         href: /azure/azure-government/compliance/compliance-tic?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/defense/toc.json
-      - name: Identity for multi-tenant defense organization
+      - name: Multi-tenant organization
         items:
-          - name: Essentials for defense
+          - name: Identity essentials
             href: 
           - name: Zero trust configuration
             href:
-          - name: Management operations
+          - name: Manage operations
             href:
-          - name: Centralized security operations
+          - name: Security operations
             href: 
       - name: DoD documentation
         items: 
