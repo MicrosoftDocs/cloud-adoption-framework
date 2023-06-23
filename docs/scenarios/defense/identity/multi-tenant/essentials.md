@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
-# Identity essentials for multi-tenant Defense organizations
+# Identity essentials for multi-tenant defense organizations
 
 As defense organizations look to strengthen their security posture in the face of evolving cyber threats, Zero Trust architecture is emerging as a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of Zero Trust. It's important to understand how Azure AD serves as a critical component in implementing a Zero Trust model. Understanding its core concepts and functionalities is imperative before delving into the practical aspects of building a Zero Trust environment. The following guide provides essential insights into Azure AD, tailored specifically to defense scenarios.
 
@@ -85,7 +85,7 @@ Microsoft web portals for Entra, Azure, and M365 provide a graphical interface t
 
 ## Sovereign clouds
 
-There are two separate versions of the Azure AD services defense organizations may use on public (internet-connected) networks: Azure AD Global and Azure AD Government.
+There are two separate versions of the Azure AD services defense organizations might use on public (internet-connected) networks: Azure AD Global and Azure AD Government.
 
 **Azure AD Global (AAD)** is for commercial M365 and Azure, M365 GCC Moderate. The login service for Azure AD Global is [https://login.microsoftonline**.com**](https://login.microsoftonline.com).
 
@@ -93,72 +93,19 @@ There are two separate versions of the Azure AD services defense organizations m
 
 Because the different Azure AD services use different logon URLs, you need to use separate web portals and supply environment switches to connect with MS Graph clients and PowerShell modules for managing Azure and M365.
 
-Table . Sovereign cloud endpoints for US Government
+*Table. Sovereign cloud endpoints for US Government*
 
-Global
-
-GCC High
-
-DoD IL5
-
-Entra Portal
-
-[https://entra.microsoft.com](https://entra.microsoft.com)
-
-[https://entra.microsoft.us](https://entra.microsoft.us)
-
-Azure Portal
-
-[https://portal.azure.com](https://portal.azure.com)
-
-[https://portal.azure.us](https://portal.azure.us)
-
-Defender Admin Center
-
-[https://security.microsoft.com](https://security.microsoft.com)
-
-[https://security.microsoft.us](https://security.microsoft.us)
-
-[https://security.apps.mil](https://security.apps.mil)
-
-MS Graph PowerShell
-
-Connect-MgGraph
--Environment Global
-
-Connect-MgGraph
--Environment USGov
-
-Connect-MgGraph
--Environment USGovDoD
-
-Az PowerShell
-
-Connect-AzAccount
--Environment AzureCloud
-
-Connect-AzAccount
--Environment AzureUSGovernment
-
-Azure CLI
-
-Az cloud set --name AzureCloud
-
-Az cloud set --AzureUSGovernment
+| Endpoint | Global | GCC High | DoD IL5 |
+| ---  | --- | --- | --- |
+| Entra Portal | [entra.microsoft.com](https://entra.microsoft.com) | [entra.microsoft.us](https://entra.microsoft.us) | [entra.microsoft.us](https://entra.microsoft.us) |
+| Azure Portal | [portal.azure.com](https://portal.azure.com) | [portal.azure.us](https://portal.azure.us) | [portal.azure.us](https://portal.azure.us) |
+| Defender Admin Center | [security.microsoft.com](https://security.microsoft.com) | [security.microsoft.us](https://security.microsoft.us) | [security.apps.mil](https://security.apps.mil) |
+| MS Graph PowerShell |Connect-MgGraph<br>-Environment Global | Connect-MgGraph<br>-Environment USGov | Connect-MgGraph<br>-Environment USGovDoD |
+| Az PowerShell | Connect-AzAccount<br>-Environment AzureCloud | Connect-AzAccount<br>-Environment AzureUSGovernment | Connect-AzAccount<br>-Environment AzureUSGovernment |
+| Azure CLI     | Az cloud set --name AzureCloud | Az cloud set --AzureUSGovernment | Az cloud set --AzureUSGovernment |
 
 
 
-
-|            | Global             | GCC High             | DoD IL5             |
-|:----------------------|:-------------------------------|:---------------------------------|:---------------------------------|
-| Entra Portal     |                |                 |                 |
-| Azure Portal     |                |                 |                 |
-| Defender Admin Center |                |                 |                 |
-| MS Graph PowerShell  | Connect-MgGraph        | Connect-MgGraph         | Connect-MgGraph         |
-|            | -Environment Global      | -Environment USGov        | -Environment USGovDoD      |
-| Az PowerShell     | Connect-AzAccount       | Connect-AzAccount        | Connect-AzAccount        |
-|            | -Environment AzureCloud    | -Environment AzureUSGovernment  | -Environment AzureUSGovernment  |
-| Azure CLI       | Az cloud set --name AzureCloud | Az cloud set --AzureUSGovernment | Az cloud set --AzureUSGovernment |
 | Reason to create another Azure AD tenant         | Example                                                                |
 |:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence                                   |
