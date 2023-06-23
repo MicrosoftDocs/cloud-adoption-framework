@@ -81,7 +81,7 @@ Many Azure resources can use a [managed identity](/azure/active-directory/manage
 
 ## Microsoft Graph
 
-Microsoft web portals for Entra, Azure, and M365 provide a graphical interface to Azure AD. You can automate programmatic access to read and update Azure AD objects and configuration policies using a RESTful APIs called Microsoft Graph. There are many Microsoft Graph clients in various languages including [PowerShell](/azure/powershell/microsoftgraph/overview?view=graph-powershell-1.0), Go, Python, Java, .Net, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
+Microsoft web portals for Entra, Azure, and M365 provide a graphical interface to Azure AD. You can automate programmatic access to read and update Azure AD objects and configuration policies using a RESTful APIs called Microsoft Graph. There are many Microsoft Graph clients in various languages including [PowerShell](/azure/powershell/microsoftgraph/overview), Go, Python, Java, .Net, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
 
 ## Sovereign clouds
 
@@ -103,7 +103,7 @@ There are two separate versions of the Azure AD services defense organizations m
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Zero trust configurations](zero-trust-configurations.md)
+> [Zero trust configurations](zero-trust-configuration.md)
 
 ## Related links
 
