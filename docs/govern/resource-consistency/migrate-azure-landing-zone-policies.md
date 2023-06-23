@@ -7,7 +7,7 @@ ms.date: 12/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
 
 # Azure landing zone governance guide: Migrate Azure landing zone policies to Azure built-in policies

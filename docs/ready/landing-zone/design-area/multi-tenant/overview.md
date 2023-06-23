@@ -23,7 +23,7 @@ Multiple subscriptions can rely on the same Azure Active Directory tenant. Each 
 
 [![Diagram of a single Azure Active Directory tenant with Azure landing zones deployed.](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
 
-In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](../../index.md#azure-landing-zone-conceptual-architecture) within a single Azure Active Directory tenant.
+In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](../../index.md#azure-landing-zone-architecture) within a single Azure Active Directory tenant.
 
 This approach is recommended for most organizations based on their requirements. This approach gives organizations the best collaboration experience possible and allows them to control, govern, and isolate users and resources within a single Azure Active Directory tenant.
 
@@ -32,7 +32,7 @@ Your organization might be required to use multiple Azure Active Directory tenan
 >[!NOTE]
 > This article focuses on Azure, not Microsoft 365 or other Microsoft Cloud offerings, such as Dynamics 365 or Power Platform.
 >
-> It focuses on [the platform rather than applications](../../index.md#platform-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Azure Active Directory tenants and application architecture, see:
+> It focuses on [the platform rather than applications](../../index.md#platform-landing-zones-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Azure Active Directory tenants and application architecture, see:
 >
 > - [Multi-tenant apps in Azure Active Directory](/azure/active-directory/develop/application-model#multi-tenant-apps)
 > - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)

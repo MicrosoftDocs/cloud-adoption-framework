@@ -46,6 +46,8 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 _For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
 
+*Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
+
 ### Guidance for regional expansion
 While having an Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 

@@ -30,12 +30,12 @@ items:
         href: eslz-platform-automation-and-devops.md
       - name: Security 
         items: 
-        - name: SAP Security on Azure-Database Security
-          href: sap-lza-sap-database-security.md
-        - name: SAP Security on Azure-Sentinel for SAP
+        - name: SQL Server database security for SAP on Azure
+          href: sap-lza-database-security.md
+        - name: Microsoft Sentinel for SAP on Azure
           href: sap-lza-sentinel-for-sap.md
-        - name: SAP Security on Azure-Security Operations
-          href: sap-lza-sap-security-operations.md  
+        - name: Security operations for SAP on Azure
+          href: sap-lza-security-operations.md  
     - name: Implementation options
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
@@ -48,15 +48,15 @@ items:
     items:
     - name: SAP and Data
       items:
-      - name: SAP data integration with Azure-Identify SAP data sources
+      - name: Identify SAP data sources
         href: sap-lza-identify-sap-data-sources.md
-      - name: SAP data integration with Azure-Choose the best SAP connector
+      - name: Choose the best SAP connector
         href: sap-lza-choose-azure-connectors.md
-      - name: SAP data integration with Azure-Performance and troubleshooting
+      - name: Performance and troubleshooting for SAP data extraction
         href: sap-lza-data-extraction-performance-troubleshooting.md
-      - name: SAP Data Integration with Azure - Security
+      - name: Data integration security for SAP on Azure
         href: sap-lza-data-integration-security.md
-      - name: SAP Data Integration with Azure - Generic Architecture
+      - name: SAP data integration generic architecture
         href: sap-lza-data-reference-architecture.md
     href: innovate.md
   - name: Manage SAP platform and workloads

@@ -1,5 +1,5 @@
 ---
-title: SAP data integration with Azure-Identify SAP data sources
+title: Identify SAP data sources
 description: Learn how to identify SAP applications and connectors to integrate SAP data with Azure data services.
 author: pankajmeshramCSA
 ms.author: pameshra
@@ -10,9 +10,15 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP data integration with Azure: Identify SAP data sources
+# Identify SAP data sources
 
-This article is Part 1 of the SAP extend and innovate data: Best practices series.
+This article is part of the "SAP extend and innovate data: Best practices" article series.
+
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
 
 Digital transformation requires a seamless combination of intelligence derived from data across business operations to meet the business objectives of an enterprise. Enterprises use SAP applications as enterprise resource planning systems (ERP), line of business (LOB) SaaS applications, enterprise data warehouses, business intelligence, or integration platforms. The siloed data in SAP systems can be harnessed to drive business transformation. As you progress through your cloud adoption journey and move business-critical workloads to Azure, prioritize moving SAP workloads to Azure. This method optimally integrates data into your Azure environment.
 

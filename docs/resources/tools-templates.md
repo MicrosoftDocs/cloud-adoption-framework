@@ -52,7 +52,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Governance benchmark assessment](https://cafbaseline.com) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
+| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
 | [CAF Foundation blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
 | [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
 | [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. Focuses on cost management. |

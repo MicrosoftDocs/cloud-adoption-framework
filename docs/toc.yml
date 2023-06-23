@@ -228,6 +228,9 @@ items:
     - name: Strategic Migration Assessment and Readiness Tool (SMART)
       href: plan/smart-assessment.md
 
+    - name: Sustainability considerations
+      href: plan/plan-sustainability.md
+      
     - name: Plan antipatterns
       href: antipatterns/plan-antipatterns.md
 
@@ -263,7 +266,7 @@ items:
         href: operating-model/terms.md
     - name: Azure landing zones
       items:
-      - name: What is a landing zone?
+      - name: What is an Azure landing zone?
         href: ready/landing-zone/index.md
       - name: Design principles
         href: ready/landing-zone/design-principles.md
@@ -311,6 +314,41 @@ items:
             href: ready/landing-zone/design-area/identity-access-platform-access.md
           - name: Landing zones
             href: ready/landing-zone/design-area/identity-access-landing-zones.md
+            
+        - name: Resource organization
+          items:
+          - name: Overview
+            href: ready/landing-zone/design-area/resource-org.md
+          - name: Management groups
+            href: ready/landing-zone/design-area/resource-org-management-groups.md
+          - name: Subscriptions
+            href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Tailoring the Azure landing zones architecture
+            href: ready/landing-zone/tailoring-alz.md
+          - name: Adopt policy-driven guardrails
+            href: ready/enterprise-scale/dine-guidance.md
+          - name: Additional information
+            items:
+            - name: Naming and tagging
+              href: ready/azure-best-practices/naming-and-tagging.md
+            - name: Define your naming convention
+              href: ready/azure-best-practices/resource-naming.md
+            - name: Abbreviations for resource types
+              href: ready/azure-best-practices/resource-abbreviations.md
+            - name: Define your tagging strategy
+              href: ready/azure-best-practices/resource-tagging.md
+            - name: Resource naming and tagging decision guide
+              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
+            - name: Move resources
+              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Design options for specific use cases
+            items:
+            - name: Create your initial subscriptions
+              href: ready/azure-best-practices/initial-subscriptions.md
+            - name: Scale with multiple subscriptions
+              href: ready/azure-best-practices/scale-subscriptions.md
+            - name: Organize your subscriptions
+              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Network topology and connectivity
           items:
@@ -358,41 +396,6 @@ items:
                 href: ready/azure-best-practices/dns-for-on-premises-and-azure-resources.md
               - name: Plan for virtual machine remote access
                 href: ready/azure-best-practices/plan-for-virtual-machine-remote-access.md
-
-        - name: Resource organization
-          items:
-          - name: Overview
-            href: ready/landing-zone/design-area/resource-org.md
-          - name: Management groups
-            href: ready/landing-zone/design-area/resource-org-management-groups.md
-          - name: Subscriptions
-            href: ready/landing-zone/design-area/resource-org-subscriptions.md
-          - name: Tailoring the Azure landing zones architecture
-            href: ready/landing-zone/tailoring-alz.md
-          - name: Adopt policy-driven guardrails
-            href: ready/enterprise-scale/dine-guidance.md
-          - name: Additional information
-            items:
-            - name: Naming and tagging
-              href: ready/azure-best-practices/naming-and-tagging.md
-            - name: Define your naming convention
-              href: ready/azure-best-practices/resource-naming.md
-            - name: Abbreviations for resource types
-              href: ready/azure-best-practices/resource-abbreviations.md
-            - name: Define your tagging strategy
-              href: ready/azure-best-practices/resource-tagging.md
-            - name: Resource naming and tagging decision guide
-              href: ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md
-            - name: Move resources
-              href: /azure/azure-resource-manager/management/move-resource-group-and-subscription?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Design options for specific use cases
-            items:
-            - name: Create your initial subscriptions
-              href: ready/azure-best-practices/initial-subscriptions.md
-            - name: Scale with multiple subscriptions
-              href: ready/azure-best-practices/scale-subscriptions.md
-            - name: Organize your subscriptions
-              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Security
           items:
@@ -491,16 +494,8 @@ items:
             href: ready/landing-zone/migrate-landing-zone.md
           - name: CAF Foundation blueprint
             href: ready/landing-zone/foundation-blueprint.md
-
         - name: Deploy Azure landing zones with Terraform
-          items:
-          - name: Overview
-            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
-          - name: Azure landing zones Terraform module
-            href: ready/landing-zone/terraform-module.md
-          - name: CAF Terraform landing zones
-            href: ready/landing-zone/terraform-landing-zone.md
-
+          href: ready/landing-zone/deploy-landing-zones-with-terraform.md
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
         - name: Get landing zone help
@@ -525,6 +520,8 @@ items:
           href: ready/considerations/landing-zone-operations.md
         - name: Testing approach for Azure landing zones
           href: ready/enterprise-scale/testing-approach.md
+        - name: Landing zone sandbox environments
+          href: ready/considerations/sandbox-environments.md
         - name: Improve landing zone governance
           items:
           - name: Overview
@@ -1503,6 +1500,8 @@ items:
           href: govern/policy-compliance/cloud-policy-review.md
         - name: Data classification
           href: govern/policy-compliance/data-classification.md
+        - name: Sustainability considerations
+          href: govern/policy-compliance/sustainability-considerations.md
     - name: Disciplines of cloud governance
       href: govern/governance-disciplines.md
     - name: Implement disciplines of cloud governance
@@ -1679,6 +1678,10 @@ items:
           href: /azure/architecture/resiliency/recovery-loss-azure-region?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
         - name: Recover from data corruption or accidental deletion
           href: /azure/architecture/framework/resiliency/data-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+    - name: How to update ALZ
+      items:
+      - name: Use infrastructure as code to update Azure landing zones
+        href: manage/infrastructure-as-code-updates.md
 
     - name: Management considerations
       items:
@@ -1704,6 +1707,8 @@ items:
         href: manage/considerations/platform.md
       - name: Workload operations
         href: manage/considerations/workload.md
+      - name: Sustainability alignment
+        href: manage/considerations/sustainability.md
     - name: Advanced management and system design
       href: manage/design-principles.md
     - name: Manage antipatterns
@@ -1869,22 +1874,8 @@ items:
         items:
         - name: Identity decision guide
           href: decision-guides/identity/index.md
-        - name: Identity management best practices
-          href: /azure/security/fundamentals/identity-management-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-        - name: Secure privileged access
-          href: /azure/active-directory/roles/security-planning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Azure role-based access control
           href: ready/considerations/roles.md
-        - name: Choose an authentication method
-          href: /azure/active-directory/hybrid/choose-ad-authn?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Storage
-        items:
-        - name: Review storage options
-          href: ready/considerations/storage-options.md
-      - name: Databases
-        items:
-        - name: Review data options
-          href: ready/considerations/data-options.md
       - name: Networking
         items:
         - name: Hub and spoke network topology
@@ -1931,4 +1922,5 @@ items:
         href: resources/vdc.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
-
+      - name: CAF Terraform landing zones
+        href: ready/landing-zone/terraform-landing-zone.md

@@ -1,5 +1,5 @@
 ---
-title: SAP data integration with Azure-Performance and troubleshooting
+title: Performance and troubleshooting for SAP data extraction
 description: Learn about performance and troubleshooting for SAP data extraction with Azure connectors.
 author: pankajmeshramCSA
 ms.author: pameshra
@@ -10,11 +10,17 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP data integration with Azure: Performance and troubleshooting
+# Performance and troubleshooting for SAP data extraction
 
-This article is Part 3 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md) and [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md).
+This article is part of the "SAP extend and innovate data: Best practices" article series.
 
-There are many ways to connect to the SAP system for data integration. The following article describes general and connector-specific considerations and recommendations.
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
+
+There are many ways to connect to the SAP system for data integration. The sections below describes general and connector-specific considerations and recommendations.
 
 ## Performance
 

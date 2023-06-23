@@ -12,6 +12,14 @@ ms.custom: think-tank, e2e-sap
 
 # SAP data integration with Azure: Choose the best SAP connector
 
+This article is part of the "SAP extend and innovate data: Best practices" article series.
+
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
+
 **APPLIES TO:** :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Data Factory :::image type="icon" source="media/applies-to/yes.png" border="false":::Azure Synapse Analytics
 
 This article is Part 2 of the SAP extend and innovate data: Best practices series. For the first article in the series, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md).

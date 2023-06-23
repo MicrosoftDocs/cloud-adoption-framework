@@ -36,7 +36,7 @@ There are two approaches to automate the deployment of Azure landing zones acros
 Both of these approaches are provided as examples and inspiration. You can mix and match the approaches in your deployments based on your organization's requirements.
 
 >[!IMPORTANT]
-> This article covers automating the deployment and operation of Azure landing zones as the platform in each Azure Active Directory tenant that your organization has. The approaches, recommendations, and considerations in this article are **not** intended to be used by application teams that deploy and operate their services and applications into their landing zones (subscriptions). For more information on the different types of landing zones, see [Platform vs. application landing zones](../../index.md#platform-vs-application-landing-zones).
+> This article covers automating the deployment and operation of Azure landing zones as the platform in each Azure Active Directory tenant that your organization has. The approaches, recommendations, and considerations in this article are **not** intended to be used by application teams that deploy and operate their services and applications into their landing zones (subscriptions). For more information on the different types of landing zones, see [Platform vs. application landing zones](../../index.md#platform-landing-zones-vs-application-landing-zones).
 
 ### Approach 1 – Complete isolation
 

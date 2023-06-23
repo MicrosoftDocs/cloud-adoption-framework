@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 
 This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](../../../ready/landing-zone/design-area/governance.md)" and "[Security](../../../ready/landing-zone/design-area/security.md)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
-Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, your governance policies and security checks are extended to any resource in public or private clouds.
+Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, you can extend your governance policies and security to any resource in public or private clouds.
 
 By the end of this article, you'll understand the critical design areas for security, governance, and compliance with clear Microsoft guidance.
 
@@ -84,7 +84,7 @@ The Azure AD system-assigned identity can only be used to update the status of t
 
 ### Secret and certificate management
 
-Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers have managed identity, that is used by the connected machine and other Azure agents, to authenticate back to their respective services. The key vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines.
+Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers have managed identity, which is used by the connected machine and other Azure agents to authenticate back to their respective services. The key vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines.
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
@@ -141,13 +141,13 @@ Centralizing logs drives reports that can be used as additional layers of securi
 
 With Azure Arc-enabled servers, you can manage your enterprise estate with centralized management and monitoring at-scale. More specifically, it provides alerts and recommendations to IT teams, with full operational visibility that includes managing the updates of your Windows and Linux VMs.
 
-Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations to all VMs, including your [Azure Arc-enabled servers](../../../manage/hybrid/server/best-practices/arc-update-management.md).
+Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs, including your Azure Arc-enabled servers. For more information, see [Update Management overview](/azure/automation/update-management/overview).
 
 You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Azure Arc resources.
 
 ### Role-based access control (RBAC)
 
-Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle)-users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, which basically has root access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
+Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle), users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, which basically has root access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
 
 To limit the privilege of a user and only allow them to onboard servers to Azure, the Azure Connected Machine Onboarding role is suitable. This role can only be used to onboard servers and cannot re-onboard or delete the server resource. Make sure to review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more information about access controls.
 
@@ -161,7 +161,7 @@ The Azure connected machine agent uses public key authentication to communicate 
 
 If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system-assigned identity and any resources that identity has access to.
 
-The private key file is protected to only allow the hybrid Instance Metadata Service (himds) account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, and so on). On the operating system volume of your server. We recommend using Azure Policy guest configuration to [audit Windows or Linux machines](/azure/virtual-machines/policy-reference#microsoftcompute), that have the specified applications installed, such as the one's mentioned.
+The private key file is protected to only allow the hybrid Instance Metadata Service (himds) account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, and so on). On the operating system volume of your server. We recommend using Azure Policy guest configuration to [audit Windows or Linux machines](/azure/virtual-machines/policy-reference#microsoftcompute) that have the specified applications installed, such as the ones mentioned.
 
 ## Next steps
 

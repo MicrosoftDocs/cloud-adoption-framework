@@ -15,6 +15,7 @@ ms.custom: internal
 Process modernization creates the mechanisms in your business to gain operational efficiencies that lower the total cost of ownership of your workloads. We recommend adopting a DevOps methodology to modernize your processes.
 
 :::image type="content" source="../../_images/modernize/process-modernization/devops-tools.png" alt-text="Diagram that shows a circle with four segments corresponding to a basic Azure DevOps workflow, showing each service provided: Azure Boards, Azure Test Plans, Azure Repos, Azure Pipelines, and Azure Artifacts." border="false":::
+
 *Diagram 1: High-level DevOps loop with DevOps tools*
 
 The DevOps methodology integrates planning, development, delivery, and operations into a single pipeline. Integration allows teams to name the highest priorities in your organization and resolve them together. The collective focus on the things that matter creates the most value with the least amount of work.
