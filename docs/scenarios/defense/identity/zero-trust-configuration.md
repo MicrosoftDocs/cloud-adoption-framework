@@ -1,6 +1,6 @@
 ---
-title: Zero trust identity requirements for defense
-description: Guidance for configuring zero trust identity for defense organizations
+title: Zero trust configuration for multi-tenant defense organizations
+description: Guidance for configuring zero trust identity for multi-tenant defense organizations
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
