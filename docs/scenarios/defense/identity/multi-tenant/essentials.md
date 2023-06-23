@@ -19,7 +19,7 @@ An instance of Azure AD is called an **Azure AD tenant**. The tenant is boundary
 
 **Organizations should consolidate Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. This setup is the most cohesive experience for users and administrators alike while minimizing licensing cost. A single identity platform for Microsoft 365 (Microsoft 365), Azure, PowerPlatform, line-of-business (LOB) applications, Software-as-a-Service (SaaS) providers, and cloud service providers (CSP) provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity.
 
-**Azure AD is not Active Directory in the cloud.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest but different. Azure AD is a reimagined, hyperscale, modern, distributed identity service.
+**Azure AD is not Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest but different. Azure AD is a reimagined, hyperscale, modern, distributed identity service.
 
 **Tenant domain name.** Each tenant has a unique initial domain name. For example, using *contoso* as an example, the domain would be *contoso.onmicrosoft.com* for all commercial customers, *contoso.onmicrosoft.us* for most government customers, and tenant ID in the form of a Globally Unique Identifier (GUID) like *a976dd56-c1d8-485c-8ea7-facbce6726c2.* Each tenant only has one immutable initial domain. You can't change the initial domain or tenant ID after tenant creation.
 
