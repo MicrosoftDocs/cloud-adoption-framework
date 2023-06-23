@@ -2,7 +2,7 @@
 title: Govern for defense cloud adoption
 description: Recommendations for cloud platform governance in a defense organization
 author: stephen-sumner
-ms.author: mimckann
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
