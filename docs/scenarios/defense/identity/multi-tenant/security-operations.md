@@ -28,8 +28,7 @@ The multi-tenant security operations setup in the next section describes configu
 
 Azure Lighthouse, external identities, and Azure AD Privileged Identity Management are configured (*see figure 1*) *so a security operator is eligible to request privileged access to respond to threats across tenants and services.
 
-![A picture containing text, screenshot, diagram]
-
+:::image type="content" source="./images/lighthouse-setup.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/lighthouse-setup.png" border="false":::
 *Figure 1. Security operations setup for multi-tenant organizations.*
 
 1. Microsoft Sentinel is deployed in subscriptions for security operations (SecOps) in both the primary and secondary tenants. Connectors and Analytics rules are enabled for all applicable data sources including Defender for Cloud. [Enhanced workload protections](/azure/defender-for-cloud/enable-enhanced-security) are enabled for hosted workloads, including Defender for Server.
@@ -43,8 +42,7 @@ Azure Lighthouse, external identities, and Azure AD Privileged Identity Manageme
 
 Once security operators are set up with the accounts and eligible access needed to secure the environment, they must understand how to elevate their access and pivot between primary and secondary Azure AD tenants. *Figure 6* details investigation and response in multiple tenants using the operational setup from *figure 5.*
 
-![A picture containing text, screenshot, diagram, font][]
-
+:::image type="content" source="./images/lighthouse-operations.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/lighthouse-operations.png" border="false":::
 *Figure 2. Multi-tenant security operations for Sentinel, M365 Defender, Defender for Cloud.*
 
 1. The security operator signs into the Azure Portal and requests the SecOps role just-in-time using Azure AD Privileged Identity Management.
@@ -55,4 +53,4 @@ Once security operators are set up with the accounts and eligible access needed 
 
 ## Other security operations patterns
 
-The management pattern presented here is one of many patterns possible using external identities and Azure Lighthouse. Your organization may decide to implement a different pattern that better meets the needs of your security operators.
+The management pattern presented here is one of many patterns possible using external identities and Azure Lighthouse. Your organization might decide to implement a different pattern that better meets the needs of your security operators.

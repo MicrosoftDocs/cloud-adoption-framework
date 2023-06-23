@@ -14,9 +14,8 @@ ms.subservice: scenario
 
 This article defines how defense organizations should manage operations across multiple Azure Active Directory (Azure AD) tenants. An Azure AD tenant is a security boundary and working across these security boundaries introduces operational challenges. There are three primary areas of shared operational responsibility: application management, identity governance, and security operations. Figure 1 provides a blueprint that you should adopt and modify to meet your needs.
 
-![A picture containing text, screenshot, font, design
-
-Description automatically generated]*Figure 1. Operational responsibilities for multi-tenant defense organizations*
+:::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant." lightbox="./images/management-operations.png" border="false":::
+*Figure 1. Operational responsibilities by tenant for multi-tenant defense organizations*
 
 The arrows in *figure 1* represent coordinated activities for application onboarding, entitlement assignment, and detection and response for a multi-tenant organization.
 
@@ -79,18 +78,18 @@ Application access is governed in the same Azure AD tenant where applications ar
 - [Automating Identity Governance tasks](/azure/active-directory/governance/identity-governance-automation)
 - Creating [access reviews](/azure/active-directory/governance/entitlement-management-access-reviews-create) for access packages and Azure AD security groups
 
-*Figure 3* describes the setup for application governance using entitlement management access packages.
+You should set up application governance using an entitlement management access packages (*see figure 2*).
 
-![A picture containing text, screenshot, diagram, font
+:::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/access-to-primary-tenant.png" border="false":::
 
-Description automatically generated]
+*Figure 2. Entitlements management for application assignment. Using the Contoso domain as an example.*
 
-Figure 3. Entitlements management for application assignment using the Contoso domain.
+Here's the process for setting up application governance using an entitlement management access package:
 
 1. A primary tenant application administrator works with the developer to create a new app registration for a web app deployed in a secondary tenant.
-2. [Identity governance administrator](/azure/active-directory/roles/permissions-reference#identity-governance-administrator) creates an [a](/azure/active-directory/governance/entitlement-management-access-package-create)ccess package and adds the application as an entitlement and enables the package for request with approval for a 6-month duration. Optionally, the entitlements management administrator can [delegate](/azure/active-directory/governance/entitlement-management-delegate) permissions for managing access packages.
+2. [Identity governance administrator](/azure/active-directory/roles/permissions-reference#identity-governance-administrator) creates an [access package](/azure/active-directory/governance/entitlement-management-access-package-create) and adds the application as an entitlement and enables the package for request with approval for a 6-month duration. Optionally, the entitlements management administrator can [delegate](/azure/active-directory/governance/entitlement-management-delegate) permissions for managing access packages.
 3. A user [requests](/azure/active-directory/governance/entitlement-management-request-access) the access package for 6 months.
-4. The access package approver [approves the request.](/azure/active-directory/governance/entitlement-management-request-approve)
+4. The access package approver [approves the request](/azure/active-directory/governance/entitlement-management-request-approve).
 5. The user assigned application access for the requested duration.
 6. When the user needs to access the application, they can sign in with their Azure AD identity.
 
@@ -106,13 +105,12 @@ Figure 3. Entitlements management for application assignment using the Contoso d
 
 You should use your primary tenant identities to manage operations in the secondary tenant. A self-service model is best. The team managing any secondary tenant is also responsible for entitlements management, external identities, privileged identity management, and Audit in their tenant.
 
-**Entitlements management.** You should use entitlements management in the secondary tenant to onboard guest users to manage Azure resources using an [end user-initiated scenario using entitlements management](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario).**** *Figure 4* describes the setup for external user governance for Azure management.
+**Entitlements management.** You need to configure external user governance for Azure management.You should use entitlements management in the secondary tenant to onboard guest users to manage Azure resources using an [end user-initiated scenario using entitlements management](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) (*figure 4*).
 
-![A picture containing text, screenshot, diagram, font
+:::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/access-to-primary-tenant.png" border="false":::
+*Figure 3. Entitlements management for external (B2B) guest access. Using the Contoso domain as an example.*
 
-Description automatically generated]
-
-*Figure 4. Entitlements management for B2B guest access using the Contoso domain.*
+Here's the process for setting up external (B2b) guest using an entitlement management access package:
 
 1. An administrator in the secondary tenant adds the primary tenant as a [connected organization](/azure/active-directory/governance/entitlement-management-organization) and [creates an access package](/azure/active-directory/governance/entitlement-management-access-package-create) for primary tenant users to request.
 2. Primary tenant user requests the access package in the secondary tenant.
