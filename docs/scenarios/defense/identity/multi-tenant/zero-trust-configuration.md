@@ -101,7 +101,7 @@ For legacy applications that don't support modern authentication protocols, use 
 
 If a service provider or external agency that doesn't [delegate application registration permissions](/azure/active-directory/roles/delegate-app-roles) controls the tenant, you need to register applications with the secondary tenant that your organization controls instead. Assign user access using [external identities](/azure/active-directory/external-identities/external-identities-overview) (B2B guests) for your organization’s users homed in the primary tenant. For more information, see [Secure applications with zero trust](/security/zero-trust/deploy/applications).
 
-**Use Azure AD for managing other cloud environments.** Azure AD isn't just an identity platform for Azure and Microsoft 365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like AWS and GCP. For more information, see the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery) for more information.
+**Use Azure AD for managing other cloud environments.** Azure AD isn't just an identity platform for Azure and Microsoft 365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like AWS and GCP. For more information, see the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery).
 
 **Use a secure cloud computing architecture (SCCA).** Each Defense organization should deploy an [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in Azure subscriptions attached to the primary tenant.
 
