@@ -14,6 +14,10 @@ ms.subservice: scenario
 
 This article helps you apply baseline zero trust configurations to meet consensus defense requirements. Follow these recommendations to establish the right identity architecture and zero trust environment for zero trust.
 
+:::image type="content" source="./images/multi-tenant-architecture.png" alt-text="Diagram showing a sample multi-tenant architecture with zero trust configurations." lightbox="./images/multi-tenant-architecture.png" border="false":::
+
+*Figure 1: Sample multi-tenant defense architecture with zero trust configurations.*
+
 ## Determine identity architecture
 
 Azure Active Directory (Azure AD) tenants are the foundation of your identity architecture. An organization with one Azure AD tenant has a single tenant architecture. Organizations using more than one Azure AD tenant have a multi-tenant architecture.
@@ -22,8 +26,8 @@ Azure Active Directory (Azure AD) tenants are the foundation of your identity ar
 
 **Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations need multiple Azure AD tenants for security, compliance, and collaboration (*see table 1*).
 
-*Table 1. Reasons to have or create multiple tenants*
-| Reason to create another Azure AD tenant         | Example                                                                |
+*Table 1. Reasons to have or create multiple tenants.*
+| Reason         | Example                                                                |
 |:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence                                   |
 | Delegation and Segmentation of administration      | One organization does not have the ability to manage another organization                               |
@@ -35,30 +39,21 @@ If you require multiple Azure AD tenants, you should understand B2C and B2B feat
 
 ## Identify tenant types
 
-When you manage more than one Azure AD tenant, you need to identify the primary tenant and all secondary tenants (*see figure 2*).
-
-![A picture containing text, diagram, screenshot, design
-
-Description automatically generated]
-
-*Figure 2: Sample multi-tenant architecture with zero trust configurations.*
+When you manage more than one Azure AD tenant, you need to identify the primary tenant and all secondary tenants (*see figure 1*).
 
 **Identity the primary tenant:** Most defense organizations create the primary tenant to use Microsoft 365 (M365). The primary tenant contains all your user identities (1) M365 licenses (2), devices (3), and applications (3). Defense organizations often use Azure AD Connect to synchronize the identities in the primary tenant with Active Directory on-premises.
 
 Some defense organizations consume services from a parent or partner organization. We call this parent or partner organization a shared service provider. Many defense organizations access M365 from a shared service provider. The tenant with your M365 licenses is your primary tenant even if your organization doesn’t manage or control the tenant.
 
-**Identify all secondary tenants (if multi-tenant).** All other tenants that the organization manages are secondary tenants. You may have secondary tenants if components within your organization moved to the cloud before an [enterprise scale landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) was stood up. You typically use secondary tenants to manage Azure workloads (4) with external users (B2B guests) or cloud only accounts (5) (*see figure 2*).
+**Identify all secondary tenants (if multi-tenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if components within your organization moved to the cloud before an [enterprise scale landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) was stood up. You typically use secondary tenants to manage Azure workloads (4) with external users (B2B guests) or cloud only accounts (5) (*see figure 1*).
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity services available and licensed in Azure AD.
 
-- If your organization uses M365, the tenant with your M365 licensed users is the primary tenant (*see figure 3*). Your M365 tenant is primary even if other Azure AD tenants used for Azure workload migration preceded it.
-- If your organization doesn’t use M365, any Azure AD tenant with EMS licenses is your primary tenant. This tenant is where you have registered and verified your domain name. The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 3*).
+- If your organization uses M365, the tenant with your M365 licensed users is the primary tenant (*see figure 2*). Your M365 tenant is primary even if other Azure AD tenants used for Azure workload migration preceded it.
+- If your organization doesn’t use M365, any Azure AD tenant with EMS licenses is your primary tenant. This tenant is where you have registered and verified your domain name. The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
-![A picture containing text, screenshot, font, diagram
-
-Description automatically generated]
-
-Figure . Decision tree to determine your Azure AD tenant type
+:::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it is a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then its a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::
+*Figure 2. Decision tree to determine the Azure AD tenant type.*
 
 If your organization does not use M365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
 
@@ -85,9 +80,9 @@ With the general availability of [Azure AD certificate-based authentication](/az
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a policy baseline including the policies in *table 1*.
+**Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a policy baseline including the policies in *table 2*.
 
-*Table 1: Conditional access policy checklist*
+*Table 2: Conditional access policy checklist.*
 | Policy Name          | Users   | Applications   | Conditions  | Grant Control         |
 |:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
 |MFA for all users|All Users|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
