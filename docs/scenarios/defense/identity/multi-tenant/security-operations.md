@@ -1,6 +1,6 @@
 ---
-title: Multi-tenant operations for defense
-description: Guidance for managing identity in a multi-tenant cloud environment
+title: Centralized security operations with external identities for multi-tenant defense organizations
+description: Guidance for centralized security operations with external identities
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 
-# Centralized security operations with external identities and Azure Lighthouse
+# Centralized security operations with external identities
 
 Defense organizations with a centralized security operations team can monitor, detect, and respond to security threats across all tenants and services with a single identity and [privileged access device](/azure/security/privileged-access-workstations/privileged-access-deployment). This setup avoids multiple user accounts, credentials, and workstations for security operators without sacrificing zero trust capabilities in secondary tenants. Features enabling this operations pattern are described below.
 
