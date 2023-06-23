@@ -138,11 +138,11 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for M365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the M365 environment.
 
-**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/azure/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
+**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
 
-**MDE Response (workstations).** End user devices are joined to and managed by the primary tenant. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for user devices takes place in the primary tenant MDE service. Activities include:
+**MDE Response (workstations).** End user devices are joined to and managed by the primary tenant. [Defender for Endpoint response](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for user devices takes place in the primary tenant MDE service. Activities include:
 
-- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the primary tenant
+- Managing [device groups](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/machine-groups) and [roles](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the primary tenant
 
 ### Secondary tenant security operations
 
@@ -163,9 +163,9 @@ External identities (B2B guests) can be used to provide primary tenant security 
 - [Managing recommendations and alerts](/azure/defender-for-cloud/managing-and-responding-alerts) for in Defender for Cloud
 - Assigning [Defender for Cloud roles](/azure/defender-for-cloud/permissions) and configuring Azure Lighthouse to grant access to primary tenant security operators
 
-**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for servers takes place in the secondary tenant MDE service. Activities include:
+**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for servers takes place in the secondary tenant MDE service. Activities include:
 
-- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant
+- Managing [device groups](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/machine-groups) and [roles](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant
 - Delegating MDE roles to external users (B2B guests) from the primary tenant
 
 ## Related links
