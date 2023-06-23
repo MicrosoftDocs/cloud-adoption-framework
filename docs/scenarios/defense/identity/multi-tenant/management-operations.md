@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Manage multi-tenant operations
 
-This article defines how defense organizations should manage operations across multiple Azure Active Directory (Azure AD) tenants. An Azure AD tenant is a security boundary and working across these security boundaries introduces operational challenges. There are three primary areas of shared operational responsibility: application management, identity governance, and security operations. Figure 1 provides a blueprint that you should adopt and modify to meet your needs.
+This article defines how defense organizations should manage operations across multiple Azure Active Directory (Azure AD) tenants. An Azure AD tenant is a security boundary and working across these security boundaries introduces operational challenges. There are three primary areas of shared operational responsibility: application management, identity governance, and security operations. *Figure 1* provides a blueprint that you should adopt and modify to meet your needs.
 
 :::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant." lightbox="./images/management-operations.png" border="false":::
 *Figure 1. Operational responsibilities by tenant for multi-tenant defense organizations*
