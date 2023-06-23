@@ -89,7 +89,8 @@ There are two separate versions of the Azure AD services defense organizations m
 
 *Azure AD Global (AAD)* is for commercial M365 and Azure, M365 GCC Moderate. The login service for Azure AD Global is [https://login.microsoftonline**.com**](https://login.microsoftonline.com). *Azure AD Government (AAD Gov)* for is Azure Government (IL4), DoD (IL5), M365 GCC High, M365 DoD (IL5). The login service for Azure AD Government is [https://login.microsoftonline**.us**](https://login.microsoftonline.us). Because the different Azure AD services use different logon URLs, you need to use separate web portals and supply environment switches to connect with MS Graph clients and PowerShell modules for managing Azure and M365 (*see table 1*).
 
-*Table 1. Sovereign cloud endpoints for US Government*
+*Table 1. Sovereign cloud endpoints for US Government.*
+
 | Endpoint | Global | GCC High | DoD IL5 |
 | ---  | --- | --- | --- |
 | Entra Portal | [entra.microsoft.com](https://entra.microsoft.com) | [entra.microsoft.us](https://entra.microsoft.us) | [entra.microsoft.us](https://entra.microsoft.us) |
