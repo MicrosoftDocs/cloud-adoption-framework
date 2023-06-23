@@ -91,7 +91,7 @@ You should set up application governance using an entitlement management access 
 5. The user assigned application access for the requested duration.
 6. When the user needs to access the application, they can sign in with their Azure AD identity.
 
-**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. When applications are integrated with the primary tenant, the primary tenant administrators are responsible for configuring B2B collaboration, cross-tenant access policies with partner organizations, and any lifecycle workflows for the guest users and their access. Activities for configuring external identities include:
+**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. For applications you integrate with the primary tenant, the primary tenant administrators have several configuration responsibilities. They must configure external (B2B) collaboration, cross-tenant access policies with partner organizations, and any lifecycle workflows for the guest users and their access. Activities for configuring external identities include:
 
 - [Governing access for users outside your organization](/azure/active-directory/governance/entitlement-management-scenarios#govern-access-for-users-outside-your-organization)
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for partner organizations
@@ -144,9 +144,7 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 
 ### Secondary tenant security operations
 
-Security operations permissions for Microsoft Sentinel and Defender for Cloud use Azure RBAC roles assigned to cloud-only Azure AD users in the secondary tenant or, using Azure Lighthouse, to security operators in the primary tenant.
-
-Azure virtual machines and on-premises servers onboarded with Azure Arc and protected by Defender for Server are automatically onboarded to Microsoft Defender for Endpoint to the tenant where the Azure subscriptions are managed. Users with identities in the secondary Azure AD tenant must perform security operations using Microsoft Defender for Endpoint.
+Microsoft Sentinel and Defender for Cloud use Azure RBAC roles. You assign these roles to Azure AD users in the secondary tenant. Alternatively, you can use Azure Lighthouse, these roles can be assigned to security operators in the primary tenant. These assignments are all for security operations permissions. Azure virtual machines and on-premises servers use Azure Arc. These machines and servers are protected by Defender for Server. They're automatically onboarded to Microsoft Defender for Endpoint. This onboarding is done to the tenant managing the Azure subscriptions. There are users with identities in the secondary Azure AD tenant. These users must perform security operations using Microsoft Defender for Endpoint.
 
 You can use external identities (B2B guests) to provide primary tenant security operators access to MDE in secondary tenants. For more information, see [multi-tenant security operations with external identities and Azure Lighthouse](security-operations.md) for example security operations architecture.
 
