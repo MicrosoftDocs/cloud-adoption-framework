@@ -38,7 +38,7 @@ Azure Lighthouse, external identities, and Azure AD Privileged Identity Manageme
 
 ## Operations
 
-Once security operators are set up with the accounts and eligible access needed to secure the environment, they must understand how to elevate their access and pivot between primary and secondary Azure AD tenants. *Figure 6* details investigation and response in multiple tenants using the operational setup from *figure 5.*
+Security operators need accounts and eligible access to secure the environment. These operators need to learn how to increase their access level. They also need to know how to switch between primary and secondary Azure AD tenants. *Figure 1* explains how to investigate and respond in multiple tenants. This explanation uses the operational setup shown in *figure 2*.
 
 :::image type="content" source="./images/lighthouse-operations.png" alt-text="Diagram showing multi-tenant security operations for Sentinel, Microsoft 365 Defender, Defender for Cloud." lightbox="./images/lighthouse-operations.png" border="false":::
 *Figure 2. Multi-tenant security operations for Sentinel, Microsoft 365 Defender, Defender for Cloud.*
