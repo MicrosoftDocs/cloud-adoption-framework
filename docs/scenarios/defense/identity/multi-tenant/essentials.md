@@ -2,7 +2,7 @@
 title: Identity essentials for multi-tenant Defense organizations
 description: An overview of identity essentials for multi-tenant Defense organizations in Azure Active Directory
 author: stephen-sumner
-ms.author: ssumner
+ms.author: andrmass
 ms.reviewer: ssumner
 ms.date: 06/30/2023
 ms.topic: conceptual
@@ -75,11 +75,11 @@ When Windows devices joined to AD DS are synchronized to Azure AD, these devices
 
 Azure AD is the identity platform for M365 and Azure. When you use M365 services like Microsoft Office, Intune, or M365 Defender, you are using Azure AD. Signing into Microsoft Office, using the people picker in SharePoint and OneDrive, creating a new Team or M365 Group are example actions that Azure AD supports.
 
-All Azure resources must be deployed within an Azure Subscription. The subscription is a billing container and scope for applying [role-based access control (RBAC)](/azure/role-based-access-control/overview) * *The identities managing the subscription, including authentication and authorization for management, use Azure AD. Subscriptions are attached or “pinned” to exactly one Azure AD tenant.
+All Azure resources must be deployed within an Azure Subscription. The subscription is a billing container and scope for applying [role-based access control (RBAC)](/azure/role-based-access-control/overview). The identities managing the subscription, including authentication and authorization for management, use Azure AD. Subscriptions are attached or “pinned” to exactly one Azure AD tenant.
 
-Many Azure resources can use a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview) to interact with other resources. The managed identity is a security principal in the Azure AD tenant that can be granted permissions and authorized to access APIs protected by Azure AD, including [Microsoft Graph](#_Microsoft_Graph).
+Many Azure resources can use a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview) to interact with other resources. The managed identity is a security principal in the Azure AD tenant that can be granted permissions and authorized to access APIs protected by Azure AD, including Microsoft Graph.
 
-## <a id="_Microsoft_Graph"></a>Microsoft Graph
+## Microsoft Graph
 
 Microsoft web portals for Entra, Azure, and M365 provide a graphical interface to Azure AD. You can automate programmatic access to read and update Azure AD objects and configuration policies using a RESTful APIs called Microsoft Graph. There are many Microsoft Graph clients in various languages including [PowerShell](/azure/powershell/microsoftgraph/overview?view=graph-powershell-1.0), Go, Python, Java, .Net, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
 
@@ -87,14 +87,9 @@ Microsoft web portals for Entra, Azure, and M365 provide a graphical interface t
 
 There are two separate versions of the Azure AD services defense organizations might use on public (internet-connected) networks: Azure AD Global and Azure AD Government.
 
-**Azure AD Global (AAD)** is for commercial M365 and Azure, M365 GCC Moderate. The login service for Azure AD Global is [https://login.microsoftonline**.com**](https://login.microsoftonline.com).
+*Azure AD Global (AAD)* is for commercial M365 and Azure, M365 GCC Moderate. The login service for Azure AD Global is [https://login.microsoftonline**.com**](https://login.microsoftonline.com). *Azure AD Government (AAD Gov)* for is Azure Government (IL4), DoD (IL5), M365 GCC High, M365 DoD (IL5). The login service for Azure AD Government is [https://login.microsoftonline**.us**](https://login.microsoftonline.us). Because the different Azure AD services use different logon URLs, you need to use separate web portals and supply environment switches to connect with MS Graph clients and PowerShell modules for managing Azure and M365 (*see table 1*).
 
-**Azure AD Government (AAD Gov)** for is Azure Government (IL4), DoD (IL5), M365 GCC High, M365 DoD (IL5). The login service for Azure AD Government is [https://login.microsoftonline**.us**](https://login.microsoftonline.us).
-
-Because the different Azure AD services use different logon URLs, you need to use separate web portals and supply environment switches to connect with MS Graph clients and PowerShell modules for managing Azure and M365.
-
-*Table. Sovereign cloud endpoints for US Government*
-
+*Table 1. Sovereign cloud endpoints for US Government*
 | Endpoint | Global | GCC High | DoD IL5 |
 | ---  | --- | --- | --- |
 | Entra Portal | [entra.microsoft.com](https://entra.microsoft.com) | [entra.microsoft.us](https://entra.microsoft.us) | [entra.microsoft.us](https://entra.microsoft.us) |
@@ -103,23 +98,3 @@ Because the different Azure AD services use different logon URLs, you need to us
 | MS Graph PowerShell |Connect-MgGraph<br>-Environment Global | Connect-MgGraph<br>-Environment USGov | Connect-MgGraph<br>-Environment USGovDoD |
 | Az PowerShell | Connect-AzAccount<br>-Environment AzureCloud | Connect-AzAccount<br>-Environment AzureUSGovernment | Connect-AzAccount<br>-Environment AzureUSGovernment |
 | Azure CLI     | Az cloud set --name AzureCloud | Az cloud set --AzureUSGovernment | Az cloud set --AzureUSGovernment |
-
-
-
-| Reason to create another Azure AD tenant         | Example                                                                |
-|:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence                                   |
-| Delegation and Segmentation of administration      | One organization does not have the ability to manage another organization                               |
-| Data Sovereignty and/or Ownership            | One organization does not have the legal authority to manage data of another organization                       |
-| Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture |
-| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.                                 |
-| Policy Name          | Users   | Applications   | Conditions  | Grant Control         |
-|:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
-| MFA for all users       | All Users | All Apps     | None     | : phishing-resistant MFA    |
-| Require Managed Devices    | All Users | All Apps     | None     | Require hybrid Azure AD Joined |
-|                |      |          |       | Or               |
-|                |      |          |       | Compliant Device        |
-| Block risky sign ins      | All Users | All Apps     |       |                |
-| Secure Azure AD Administration |      | All Apps     | None     | Require Compliant (PAW) using |
-| Secure Cloud Management    | All Users | Azure Management, | None     | Require Compliant (PAW) using |
-|                |      | ,         |       |                |

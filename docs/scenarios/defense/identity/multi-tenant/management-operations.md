@@ -2,7 +2,7 @@
 title: Manage multi-tenant operations for defense
 description: Guidance for managing identity in a multi-tenant cloud environment
 author: stephen-sumner
-ms.author: ssumner
+ms.author: andrmass
 ms.reviewer: ssumner
 ms.date: 06/30/2023
 ms.topic: conceptual
@@ -60,7 +60,7 @@ Secondary tenants host the infrastructure and platform resources for workloads i
 
 [Connecting Defender for Cloud telemetry to Sentinel](/azure/sentinel/connect-defender-for-cloud) allows the organization’s SOC to have visibility across all cloud environments, including any [on-premises resources](/azure/architecture/hybrid/hybrid-security-monitoring) managed with [Azure Arc](/azure/azure-arc/overview) and connected via API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder?tabs=rsyslog).
 
-**DevSecOps pipelines.** When applications are hosted in Azure subscriptions, [DevSecOps](/azure/devops/devsecops/enable-devsecops-azure-github) pipelines deploying infrastructure resources and application code are integrated with the Azure AD tenant where the subscription is attached. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra workload identities](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-workload-identities) premium helps secure service principals, periodically review existing access, and provide extra protections against leaked credentials.
+**DevSecOps pipelines.** When applications are hosted in Azure subscriptions, [DevSecOps](/azure/devops/devsecops/enable-devsecops-azure-github) pipelines deploying infrastructure resources and application code are integrated with the Azure AD tenant where the subscription is attached. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra workload identities](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps secure service principals, periodically review existing access, and provide extra protections against leaked credentials.
 
 ## Identity Governance
 
@@ -112,7 +112,7 @@ You should use your primary tenant identities to manage operations in the second
 
 Description automatically generated]
 
-Figure . Entitlements management for B2B guest access using the Contoso domain
+*Figure 4. Entitlements management for B2B guest access using the Contoso domain.*
 
 1. An administrator in the secondary tenant adds the primary tenant as a [connected organization](/azure/active-directory/governance/entitlement-management-organization) and [creates an access package](/azure/active-directory/governance/entitlement-management-access-package-create) for primary tenant users to request.
 2. Primary tenant user requests the access package in the secondary tenant.
@@ -144,9 +144,7 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for M365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the M365 environment.
 
-**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service <a id="_Int_LewENZ8H"></a>principals. Activities include:
-
-- Managing components of [Microsoft 365 Defender](/azure/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide) including Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
+**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/azure/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
 
 **MDE Response (workstations).** End user devices are joined to and managed by the primary tenant. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide) actions for user devices takes place in the primary tenant MDE service. Activities include:
 
@@ -158,7 +156,7 @@ Security operations permissions for Microsoft Sentinel and Defender for Cloud us
 
 Azure Virtual Machines (VMs) and on-premises servers onboarded with Azure Arc protected by Defender for Server are automatically onboarded to Microsoft Defender for Endpoint to the tenant where the Azure subscriptions are managed. Security operations using MDE must be performed by identities in the secondary Azure AD.
 
-External identities (B2B guests) can be used to provide primary tenant security operators access to MDE in secondary tenants. See [multi-tenant security operations with external identities and Azure Lighthouse](#_Multi-tenant_security_operations) for example security operations architecture.
+External identities (B2B guests) can be used to provide primary tenant security operators access to MDE in secondary tenants. For more information, see [multi-tenant security operations with external identities and Azure Lighthouse](security-operations.md) for example security operations architecture.
 
 **Sentinel (cloud, on-prem).** A Microsoft Sentinel instance attached to the secondary tenant ingests security logs from Azure resources in subscriptions attached to the secondary tenant. Activities include:
 

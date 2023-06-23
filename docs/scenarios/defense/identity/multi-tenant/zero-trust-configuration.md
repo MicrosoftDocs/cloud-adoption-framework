@@ -2,7 +2,7 @@
 title: Zero trust configuration for multi-tenant defense organizations
 description: Guidance for configuring zero trust identity for multi-tenant defense organizations
 author: stephen-sumner
-ms.author: ssumner
+ms.author: andrmass
 ms.reviewer: ssumner
 ms.date: 06/30/2023
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.subservice: scenario
 
 This article helps you apply baseline zero trust configurations to meet consensus defense requirements. Follow these recommendations to establish the right identity architecture and zero trust environment for zero trust.
 
-## <a id="_Secondary_Azure_AD"></a>Determine identity architecture
+## Determine identity architecture
 
 Azure Active Directory (Azure AD) tenants are the foundation of your identity architecture. An organization with one Azure AD tenant has a single tenant architecture. Organizations using more than one Azure AD tenant have a multi-tenant architecture.
 
@@ -60,7 +60,7 @@ Description automatically generated]
 
 Figure . Decision tree to determine your Azure AD tenant type
 
-If your organization does not use M365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
+If your organization does not use M365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
 
 ## Configure zero trust
 
@@ -108,7 +108,7 @@ For more information, see [Secure applications with zero trust](/azure/security/
 
 **Use Azure AD for managing other cloud environments.** Azure AD is not just an identity platform for Azure and M365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like AWS and GCP. See the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery) for more information.
 
-<a id="_Primary_tenants"></a>**Use SCCA architecture.** Each Defense organization should deploy [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in subscriptions attached to the primary tenant.
+**Use SCCA architecture.** Each Defense organization should deploy [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in subscriptions attached to the primary tenant.
 
 **Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [Azure Mission Landing Zone](https://github.com/Azure/missionlz). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
 
@@ -138,21 +138,19 @@ You should implement the following recommendations in the primary tenant only.
 
 You should implement the following recommendations in the secondary tenant only.
 
-**Procure licenses required for Azure AD management**. [Azure AD Premium P2](https://www.microsoft.com/en-us/security/business/identity-access/azure-active-directory-pricing) licenses should be procured for tenant administrators and emergency access accounts. Using an external identity (B2B guest) management model, at least one Azure AD P2 license must be assigned to a local user in the tenant for enabling premium features like Conditional Access and Entra Identity Governance. For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
+**Procure licenses required for Azure AD management**. [Azure AD Premium P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses should be procured for tenant administrators and emergency access accounts. Using an external identity (B2B guest) management model, at least one Azure AD P2 license must be assigned to a local user in the tenant for enabling premium features like Conditional Access and Entra Identity Governance. For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
 Workload identities with access to resources in the primary tenant, including MS Graph API, should be secured using [Workload Identities Premium](/azure/active-directory/workload-identities/workload-identities-overview).
 
 If device management with Intune or Azure Information Protection is needed for some users in the secondary tenant, you will also need to procure [Enterprise Mobility and Security](/azure/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
-**Configure Cross-Tenant Access Policies (XTAP).** Azure AD external identities (Azure AD B2B) C[ross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the Inbound access trust settings to include:
+**Configure Cross-Tenant Access Policies (XTAP).** Azure AD external identities (Azure AD B2B) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the Inbound access trust settings to include:
 
 - Trust multifactor authentication (MFA) from Azure AD tenants
 - Trust compliant devices
 - Trust hybrid Azure AD joined devices
 - Optional: Automatically redeem invitations with the tenant.
 
-**Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Azure AD roles following [least-privilege Azure AD role by task](/azure/active-directory/roles/delegate-by-task) using [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user).**** 
-
-Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/azure/active-directory/fundamentals/multi-tenant-user-management-introduction#cross-tenant-synchronizationv) to reduce management overhead onboarding external identities in the secondary tenant.
+**Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Azure AD roles following [least-privilege Azure AD role by task](/azure/active-directory/roles/delegate-by-task) using [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user). Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/azure/active-directory/fundamentals/multi-tenant-user-management-introduction#cross-tenant-synchronizationv) to reduce management overhead onboarding external identities in the secondary tenant.
 
 **Use Azure Lighthouse to facilitate Sentinel access from the primary tenant**. Using [Azure Lighthouse](/azure/lighthouse/overview), users from a primary tenant can manage Azure resources in subscriptions attached to secondary tenants. This approach is recommended for [managing Microsoft Sentinel across multiple tenants](/azure/sentinel/multiple-tenants-service-providers).

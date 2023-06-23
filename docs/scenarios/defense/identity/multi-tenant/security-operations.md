@@ -2,7 +2,7 @@
 title: Centralized security operations with external identities for multi-tenant defense organizations
 description: Guidance for centralized security operations with external identities
 author: stephen-sumner
-ms.author: ssumner
+ms.author: andrmass
 ms.reviewer: ssumner
 ms.date: 06/30/2023
 ms.topic: conceptual
@@ -24,32 +24,28 @@ Defense organizations with a centralized security operations team can monitor, d
 
 The multi-tenant security operations setup in the next section describes configuring these features so a primary tenant security operator can sign in once and manage security operations across all tenants and services.
 
-### Setup
+## Setup
 
-Azure Lighthouse, external identities, and Azure AD Privileged Identity Management are configured (*figure 5) *so a security operator is eligible to request privileged access to respond to threats across tenants and services.
+Azure Lighthouse, external identities, and Azure AD Privileged Identity Management are configured (*see figure 1*) *so a security operator is eligible to request privileged access to respond to threats across tenants and services.
 
-![A picture containing text, screenshot, diagram
+![A picture containing text, screenshot, diagram]
 
-Description automatically generated]
-
-Figure . Security operations setup for multi-tenant organizations
+*Figure 1. Security operations setup for multi-tenant organizations.*
 
 1. Microsoft Sentinel is deployed in subscriptions for security operations (SecOps) in both the primary and secondary tenants. Connectors and Analytics rules are enabled for all applicable data sources including Defender for Cloud. [Enhanced workload protections](/azure/defender-for-cloud/enable-enhanced-security) are enabled for hosted workloads, including Defender for Server.
-2. A SecOps [privileged access group](/azure/active-directory/privileged-identity-management/concept-pim-for-groups) is assigned Azure RBAC roles for primary tenant subscriptions, including [roles and permissions for Microsoft Sentinel](/azure/sentinel/roles):** Sentinel Contributor** and** Log Analytics Contributor.** 
+2. A SecOps [privileged access group](/azure/active-directory/privileged-identity-management/concept-pim-for-groups) is assigned Azure RBAC roles for primary tenant subscriptions, including [roles and permissions for Microsoft Sentinel](/azure/sentinel/roles): Sentinel Contributor and Log Analytics Contributor.
 3. [M365 Defender role group](/azure/microsoft-365/security/defender-endpoint/user-roles?view=o365-worldwide) is assigned to SecOps Azure AD Group.
 4. [Azure Lighthouse](/azure/lighthouse/overview) is used to configure RBAC role assignment for Secondary tenant Azure resource subscriptions. The security principal for the assignment is a SecOps group in the primary tenant.
 5. Azure AD Privileged Identity Management (PIM) role is configured for the SecOps group. The Security Operator is assigned eligible to request the PIM role.**** Optionally, permanent read access without elevation can be set up to facilitate monitoring operations.
 6. The security operator is added to the Secondary tenant as an external user (B2B guest) and assigned to an MDE role group. Cross-tenant access policies (XTAP) in the secondary tenant are configured to trust MFA and device compliance claims from the primary tenant. Optionally, PIM can be set up with a privileged access group in the secondary tenant (steps 2,3,5).
 
-Operations
+## Operations
 
-Once security operators are set up with the accounts and eligible access needed to secure the environment, they must understand how to elevate their access and pivot between primary and secondary Azure AD tenants. *Figure 6 *details investigation and response in multiple tenants using the operational setup from *figure 5.*
+Once security operators are set up with the accounts and eligible access needed to secure the environment, they must understand how to elevate their access and pivot between primary and secondary Azure AD tenants. *Figure 6* details investigation and response in multiple tenants using the operational setup from *figure 5.*
 
-![A picture containing text, screenshot, diagram, font
+![A picture containing text, screenshot, diagram, font][]
 
-Description automatically generated]
-
-Figure . Multi-tenant security operations for Sentinel, M365 Defender, Defender for Cloud
+*Figure 2. Multi-tenant security operations for Sentinel, M365 Defender, Defender for Cloud.*
 
 1. The security operator signs into the Azure Portal and requests the SecOps role just-in-time using Azure AD Privileged Identity Management.
 2. Sentinel [cross-workspace queries](/azure/sentinel/extend-sentinel-across-workspaces-tenants) can detect security events in Primary and Secondary instances. Since all [M365 Defender](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE) and [Defender for Cloud](/azure/sentinel/connect-defender-for-cloud) is connected to Sentinel with Azure Lighthouse configured, all incident management and investigations start here.
@@ -57,6 +53,6 @@ Figure . Multi-tenant security operations for Sentinel, M365 Defender, Defender 
 4. Defender for Endpoint response actions for servers in a secondary tenant Azure subscription need to use an identity in the secondary tenant. The security operator must switch directories in the portal to ensure they are using M365 Defender in the secondary tenant. If just-in-time access is configured, they must request the privileged access group assigned to the M365 role using Azure AD PIM.
 5. Defender for Cloud alerts are connected to Sentinel. The security operators can use the Azure Portal to see recommendations and alerts via [Azure Lighthouse](/azure/defender-for-cloud/cross-tenant-management) without switching directory context in the Azure portal.
 
-### Additional security operations patterns
+## Other security operations patterns
 
 The management pattern presented here is one of many patterns possible using external identities and Azure Lighthouse. Your organization may decide to implement a different pattern that better meets the needs of your security operators.
