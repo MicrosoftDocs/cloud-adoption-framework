@@ -35,16 +35,16 @@ All modern applications within the organization should use the primary tenant fo
 - [Creating App Registrations](/azure/active-directory/develop/quickstart-register-app) for applications and APIs
 - [Exposing web APIs](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis) and adding scopes to a registered app
 - Creating and managing [App Roles](/azure/active-directory/develop/howto-add-app-roles-in-apps) for a registered application
-- Defining [API permissions](/azure/active-directory/develop/permissions-consent-overview?WT.mc_id=Portal-Microsoft_AAD_RegisteredApps) for an application
+- Defining [API permissions](/azure/active-directory/develop/permissions-consent-overview) for an application
 
-**Enterprise applications.** Enterprise Applications are the [service principals](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#service-principal-object) for a distinct instance of an application in your directory. When you create an app registration using the Azure Portal, the Enterprise Application is created automatically and inherits certain properties from the application object. Activities include:
+**Enterprise applications.** Enterprise Applications are the [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for a distinct instance of an application in your directory. When you create an app registration using the Azure Portal, the Enterprise Application is created automatically and inherits certain properties from the application object. Activities include:
 
 - Creating enterprise applications from the [Azure AD Gallery](/azure/active-directory/manage-apps/overview-application-gallery) and non-gallery SAML apps
-- Delegate enterprise application management by [assigning owners](/azure/active-directory/manage-apps/assign-app-owners?pivots=portal)
+- Delegate enterprise application management by [assigning owners](/azure/active-directory/manage-apps/assign-app-owners)
 - Managing name, logo, [visibility in My Apps](/azure/active-directory/manage-apps/myapps-overview) for an enterprise application
 - [Assigning users and groups](/azure/active-directory/manage-apps/what-is-access-management#assigning-users-and-groups-to-an-app) for accessing the enterprise application
 - [Managing signing certificates](/azure/active-directory/manage-apps/certificate-signing-options#change-certificate-signing-options-and-signing-algorithm) for SAML apps
-- Granting [consent](https://learn.microsoft.com/EN-US/azure/active-directory/manage-apps/user-admin-consent-overview) for API permissions
+- Granting [consent](/azure/active-directory/manage-apps/user-admin-consent-overview) for API permissions
 - Deploying and managing [Azure AD application proxy](/azure/active-directory/app-proxy/what-is-application-proxy) for on-premises applications
 
 **Conditional Access Policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Azure AD. When applications are integrated with the primary tenant, the primary tenant administrator [controls which policies should apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
@@ -55,11 +55,11 @@ Secondary tenants host the infrastructure and platform resources for workloads i
 
 **Performance monitoring.** Azure includes several tools for monitoring performance of hosted applications including [Azure Monitor](/azure/azure-monitor/overview) and [Application Insights](/azure/azure-monitor/app/azure-web-apps#enable-application-insights). The secondary tenant administrators should set up monitoring to collect performance metrics for application workloads within Azure.
 
-**Application infrastructure.** Whether applications are running in [Azure Kubernetes Service](/azure/aks/tutorial-kubernetes-deploy-application?tabs=azure-cli), [App Service](/azure/app-service/), or hosted on web servers, the administrators in the Azure environment must manage the infrastructure running the applications including networking, platform services, and virtual machines. Application owners should use [Defender for Cloud](/azure/defender-for-cloud/concept-cloud-security-posture-management) to manage security posture and view alerts and recommendations for the deployed resources, and use Azure Policy Initiatives to meet the organization’s [compliance requirements](/azure/compliance/offerings/offering-dod-il2).
+**Application infrastructure.** Whether applications are running in [Azure Kubernetes Service](/azure/aks/tutorial-kubernetes-deploy-application), [App Service](/azure/app-service/), or hosted on web servers, the administrators in the Azure environment must manage the infrastructure running the applications including networking, platform services, and virtual machines. Application owners should use [Defender for Cloud](/azure/defender-for-cloud/concept-cloud-security-posture-management) to manage security posture and view alerts and recommendations for the deployed resources, and use Azure Policy Initiatives to meet the organization’s [compliance requirements](/azure/compliance/offerings/offering-dod-il2).
 
-[Connecting Defender for Cloud telemetry to Sentinel](/azure/sentinel/connect-defender-for-cloud) allows the organization’s SOC to have visibility across all cloud environments, including any [on-premises resources](/azure/architecture/hybrid/hybrid-security-monitoring) managed with [Azure Arc](/azure/azure-arc/overview) and connected via API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder?tabs=rsyslog).
+[Connecting Defender for Cloud telemetry to Sentinel](/azure/sentinel/connect-defender-for-cloud) allows the organization’s SOC to have visibility across all cloud environments, including any [on-premises resources](/azure/architecture/hybrid/hybrid-security-monitoring) managed with [Azure Arc](/azure/azure-arc/overview) and connected via API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder).
 
-**DevSecOps pipelines.** When applications are hosted in Azure subscriptions, [DevSecOps](/azure/devops/devsecops/enable-devsecops-azure-github) pipelines deploying infrastructure resources and application code are integrated with the Azure AD tenant where the subscription is attached. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra workload identities](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps secure service principals, periodically review existing access, and provide extra protections against leaked credentials.
+**DevSecOps pipelines.** When applications are hosted in Azure subscriptions, [DevSecOps](/devops/devsecops/enable-devsecops-azure-github) pipelines deploying infrastructure resources and application code are integrated with the Azure AD tenant where the subscription is attached. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra workload identities](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps secure service principals, periodically review existing access, and provide extra protections against leaked credentials.
 
 ## Identity Governance
 
@@ -138,11 +138,11 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for M365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the M365 environment.
 
-**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/azure/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
+**M365 Defender.** You manage M365 Defender in the primary tenant where you use M365 services. M365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/azure/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
 
-**MDE Response (workstations).** End user devices are joined to and managed by the primary tenant. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide) actions for user devices takes place in the primary tenant MDE service. Activities include:
+**MDE Response (workstations).** End user devices are joined to and managed by the primary tenant. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for user devices takes place in the primary tenant MDE service. Activities include:
 
-- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups?view=o365-worldwide) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles?view=o365-worldwide) in Microsoft Defender for Endpoint for the primary tenant
+- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the primary tenant
 
 ### Secondary tenant security operations
 
@@ -163,14 +163,14 @@ External identities (B2B guests) can be used to provide primary tenant security 
 - [Managing recommendations and alerts](/azure/defender-for-cloud/managing-and-responding-alerts) for in Defender for Cloud
 - Assigning [Defender for Cloud roles](/azure/defender-for-cloud/permissions) and configuring Azure Lighthouse to grant access to primary tenant security operators
 
-**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide) actions for servers takes place in the secondary tenant MDE service. Activities include:
+**MDE Response (servers).** Servers in secondary tenant Azure subscriptions are onboarded to MDE in the secondary tenant when Defender for Server enhanced protection is enabled in Defender for Cloud. [Defender for Endpoint response](/azure/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for servers takes place in the secondary tenant MDE service. Activities include:
 
-- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups?view=o365-worldwide) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles?view=o365-worldwide) in Microsoft Defender for Endpoint for the secondary tenant
+- Managing [device groups](/azure/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/azure/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant
 - Delegating MDE roles to external users (B2B guests) from the primary tenant
 
 ## Related links
 
 - [Identity essentials](essentials.md)
-- [Zero trust configurations](zero-trust-configurations.md)
+- [Zero trust configurations](zero-trust-configuration.md)
 - [Manage multi-tenant operations](manage-operations.md)
 - [Centralized security operations](security-operations.md)

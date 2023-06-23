@@ -58,6 +58,6 @@ The management pattern presented here is one of many patterns possible using ext
 ## Related links
 
 - [Identity essentials](essentials.md)
-- [Zero trust configurations](zero-trust-configurations.md)
+- [Zero trust configurations](zero-trust-configuration.md)
 - [Manage multi-tenant operations](manage-operations.md)
 - [Centralized security operations](security-operations.md)
