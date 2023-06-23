@@ -21,11 +21,6 @@ items:
       - name: Adopt
         href: adopt.md
       - name: Secure
-        items: 
-          - name: Overview
-            href: secure.md
-          - name: Identity
-            href: ../identity/identity.md
         href: secure.md
       - name: Manage
         href: manage.md
