@@ -22,31 +22,14 @@ Azure Active Directory (Azure AD) tenants are the foundation of your identity ar
 
 **Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations need multiple Azure AD tenants for security, compliance, and collaboration (*see table 1*).
 
-*Table 1. Reasons to have or create*
-
-Reason to create another Azure AD tenant
-
-Example
-
-Privacy or Security requires a deeper separation of data
-
-An Office of Inspector General organization must have independence
-
-Delegation and Segmentation of administration
-
-One organization does not have the ability to manage another organization
-
-Data Sovereignty and/or Ownership
-
-One organization does not have the legal authority to manage data of another organization
-
-Network and IT Organization
-
-It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture
-
-SOC Monitoring and Incident Response
-
-SOC needs separate tenant to manage their roles and responsibilities.
+*Table 1. Reasons to have or create multiple tenants*
+| Reason to create another Azure AD tenant         | Example                                                                |
+|:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence                                   |
+| Delegation and Segmentation of administration      | One organization does not have the ability to manage another organization                               |
+| Data Sovereignty and/or Ownership            | One organization does not have the legal authority to manage data of another organization                       |
+| Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture |
+| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.
 
 If you require multiple Azure AD tenants, you should understand B2C and B2B features in Azure AD. These features help support multi-tenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
 
@@ -105,74 +88,13 @@ With the general availability of [Azure AD certificate-based authentication](/az
 **Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a policy baseline including the policies in *table 1*.
 
 *Table 1: Conditional access policy checklist*
-
-Policy Name
-
-Users
-
-Applications
-
-Conditions
-
-Grant Control
-
-MFA for all users
-
-All Users
-
-All Apps
-
-None
-
-[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
-
-Require Managed Devices
-
-All Users
-
-All Apps
-
-None
-
-[Require hybrid Azure AD Joined](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
-
-[Or](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
-
-[Compliant Device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
-
-Block risky sign ins
-
-All Users
-
-All Apps
-
-[High Sign-in Risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)
-
-[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
-
-Secure Azure AD Administration
-
-[AAD Roles](/azure/active-directory/roles/concept-understand-roles)
-
-All Apps
-
-None
-
-Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
-
-Secure Cloud Management
-
-All Users
-
-Azure Management,
-
-[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial),
-
-[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)
-
-None
-
-Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+| Policy Name          | Users   | Applications   | Conditions  | Grant Control         |
+|:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
+|MFA for all users|All Users|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
+|Require Managed Devices|All Users|All Apps|None|[Require hybrid Azure AD Joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
+|Block risky sign ins|All Users|All Apps|[High Sign-in Risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
+|Secure Azure AD Administration|[AAD Roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|Require Compliant [Privileged Access Workstation](/azure/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
 
 For more information, see [Zero Trust identity and device access configuration](/azure/microsoft-365/security/office-365-security/microsoft-365-policies-configurations?view=o365-worldwide).
 
