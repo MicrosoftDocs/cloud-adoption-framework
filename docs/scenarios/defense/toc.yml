@@ -42,13 +42,13 @@ items:
       - name: Multi-tenant organization
         items:
           - name: Identity essentials
-            href: 
+            href: /identity/multi-tenant/essentials.md
           - name: Zero trust configuration
-            href:
+            href: /identity/multi-tenant/zero-trust-configuration.md
           - name: Manage operations
-            href:
+            href: /identity/multi-tenant/management-operations.md
           - name: Security operations
-            href: 
+            href: /identity/multi-tenant/security-operations.md
       - name: DoD documentation
         items: 
           - name: Overview
