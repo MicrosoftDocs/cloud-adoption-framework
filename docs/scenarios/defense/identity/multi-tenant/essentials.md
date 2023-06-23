@@ -11,7 +11,7 @@ ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-Zero Trust architecture is emerging as a key strategy for ensuring the integrity and confidentiality of sensitive information in defense organizations. Identity is a foundational pillar of Zero Trust. It's important to understand how Azure AD serves as a critical component in implementing a Zero Trust model. Understanding its core concepts and functionalities is imperative before delving into the practical aspects of building a Zero Trust environment. The following guide provides essential insights into Azure AD, tailored specifically to defense scenarios.
+Zero trust architecture is emerging as a key strategy for ensuring the integrity and confidentiality of sensitive information in defense organizations. Identity is a foundational pillar of Zero Trust. It's important to understand how Azure AD serves as a critical component in implementing a zero trust model. Understanding its core concepts and functionalities is imperative before delving into the practical aspects of building a Zero Trust environment. The following guide provides essential insights into Azure AD, tailored specifically to defense scenarios.
 
 ## Azure AD tenant
 
