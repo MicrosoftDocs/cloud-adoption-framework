@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Centralized security operations with external identities
 
-Defense organizations with a centralized security operations team can monitor, detect, and respond to security threats across all tenants and services with a single identity and [privileged access device](/azure/security/privileged-access-workstations/privileged-access-deployment). This setup avoids multiple user accounts, credentials, and workstations for security operators without sacrificing zero trust capabilities in secondary tenants. Features enabling this operations pattern are described below.
+Defense organizations with a centralized security operations team can monitor, detect, and respond to security threats across all tenants and services with a single identity and [privileged access device](https://learn.microsoft.com/security/privileged-access-workstations/privileged-access-deployment). This setup avoids multiple user accounts, credentials, and workstations for security operators without sacrificing zero trust capabilities in secondary tenants. Features enabling this operations pattern are described below.
 
 **Azure Lighthouse.** Azure subscriptions attached to secondary tenants can be managed by primary tenant identities using [Azure Lighthouse](/azure/lighthouse/overview). This setup assigns an Azure RBAC role to a security principal (user, group, or service principal) in a different tenant. With this setup, Security operators in a primary tenant can seamlessly manage both [Sentinel](/azure/sentinel/extend-sentinel-across-workspaces-tenants) and [Defender for Cloud](/azure/defender-for-cloud/cross-tenant-management) across tenants.
 
@@ -42,11 +42,11 @@ Azure Lighthouse, external identities, and Azure AD Privileged Identity Manageme
 
 Once security operators are set up with the accounts and eligible access needed to secure the environment, they must understand how to elevate their access and pivot between primary and secondary Azure AD tenants. *Figure 6* details investigation and response in multiple tenants using the operational setup from *figure 5.*
 
-:::image type="content" source="./images/lighthouse-operations.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/lighthouse-operations.png" border="false":::
+:::image type="content" source="./images/lighthouse-operations.png" alt-text="Diagram showing multi-tenant security operations for Sentinel, M365 Defender, Defender for Cloud." lightbox="./images/lighthouse-operations.png" border="false":::
 *Figure 2. Multi-tenant security operations for Sentinel, M365 Defender, Defender for Cloud.*
 
 1. The security operator signs into the Azure Portal and requests the SecOps role just-in-time using Azure AD Privileged Identity Management.
-2. Sentinel [cross-workspace queries](/azure/sentinel/extend-sentinel-across-workspaces-tenants) can detect security events in Primary and Secondary instances. Since all [M365 Defender](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE) and [Defender for Cloud](/azure/sentinel/connect-defender-for-cloud) is connected to Sentinel with Azure Lighthouse configured, all incident management and investigations start here.
+2. Sentinel [cross-workspace queries](/azure/sentinel/extend-sentinel-across-workspaces-tenants) can detect security events in Primary and Secondary instances. Since all [M365 Defender](/azure/sentinel/connect-microsoft-365-defender) and [Defender for Cloud](/azure/sentinel/connect-defender-for-cloud) is connected to Sentinel with Azure Lighthouse configured, all incident management and investigations start here.
 3. The security operator can pivot to M365 Defender for advanced hunt and endpoint response.
 4. Defender for Endpoint response actions for servers in a secondary tenant Azure subscription need to use an identity in the secondary tenant. The security operator must switch directories in the portal to ensure they are using M365 Defender in the secondary tenant. If just-in-time access is configured, they must request the privileged access group assigned to the M365 role using Azure AD PIM.
 5. Defender for Cloud alerts are connected to Sentinel. The security operators can use the Azure Portal to see recommendations and alerts via [Azure Lighthouse](/azure/defender-for-cloud/cross-tenant-management) without switching directory context in the Azure portal.
