@@ -1,6 +1,6 @@
 ---
 title: Initial organization alignment
-description: Use the Cloud Adoption Framework for Azure to learn how to complete your initial organization alignment and get your teams ready for cloud adoption.
+description: Use the Cloud Adoption Framework for Azure to learn how to complete your initial organization alignment and prepare your teams for cloud adoption.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 03/08/2023
@@ -16,21 +16,21 @@ The most important aspect of any cloud adoption plan is the alignment of people 
 
 Proper organizational alignment takes time. It becomes essential to establish long-term organizational alignment, especially as cloud adoption scales across the business and IT culture. Alignment is so important that there's an entire section dedicated to it in the [Organize methodology](../organize/index.md) of the Cloud Adoption Framework.
 
-Full organization alignment isn't a required component of the cloud adoption plan. However, some initial organizational alignment is needed. This article outlines a best-practice starting point for organizational alignment. The guidance here can help complete your plan and prepare your teams for cloud adoption. When ready, you can use the [organization alignment](../organize/index.md) section to customize this guidance to fit your organization.
+Complete organization alignment isn't a required component of the cloud adoption plan. However, some initial organizational alignment is needed. This article outlines a best-practice starting point for organizational alignment. The guidance here can help you finish your plan and prepare your teams for cloud adoption. When ready, you can use the [organization alignment](../organize/index.md) section to customize this guidance to fit your organization.
 
 ## Initial best-practice structure
 
-To create a balance between speed and control, we recommend that during cloud adoption, at a minimum, you have people accountable for *cloud adoption* and *cloud governance*. This might be a team of people sharing responsibilities for these areas or *capabilities*. It might also be individual people who are both accountable for the outcomes and responsible for the work. In either scenario, cloud adoption and cloud governance are two capabilities that involve natural friction between moving quickly and reducing risks. Here's how the two teams fit together:
+To create a balance between speed and control, we recommend that during cloud adoption, at a minimum, you have people accountable for *cloud adoption* and *cloud governance*. This might be a team sharing responsibilities for these areas or *capabilities*. It might also be individual people who are both accountable for the outcomes and responsible for the work. In either scenario, cloud adoption and cloud governance are two capabilities that involve natural friction between moving quickly and reducing risks. Here's how the two teams fit together:
 
 ![Cloud adoption with a cloud center of excellence](../_images/ready/org-ready-best-practice.png)
 
 Cloud adoption requires people to execute the cloud adoption tasks, and therefore few people are surprised that a cloud adoption team is needed. However, those new to the cloud may not fully appreciate the importance of a cloud governance team. This challenge often occurs early in adoption cycles. The cloud governance team provides the necessary checks and balances to ensure that cloud adoption doesn't expose the business to new risks. When risks must be taken, this team ensures that proper processes and controls are implemented to mitigate or govern those risks.
 
-One of the capabilities many newcomers to the cloud tend to overlook is the ability to drive greater velocity through *automation*. As you start your adoption projects, start building your automation muscle. Building automation frees up time, drive greater consistency, and demonstrate the model of the cloud that all parts of the business can benefit from.
+One of the capabilities many newcomers to the cloud tend to overlook is the ability to drive more velocity through *automation*. As you start your adoption projects, start building your automation muscle. Building automation frees up time, drives greater consistency, and demonstrates the model of the cloud that all parts of the business can benefit from.
 
-Imagine a business user being able to self-serve and create cloud resources for a specific task without prior knowledge. Automation doesn't need to be overly complex at the beginning. It could be simple tasks, such as building VMs, storage accounts, or WebApps. Over time, these can evolve into more complex tasks. The Automation Function can enable this velocity by automating many repeatable tasks. See the [automation function](../organize/cloud-automation.md) in the Organize section.
+Imagine a business user can self-serve and create cloud resources for a specific task without prior knowledge. Automation doesn't need to be overly complex at the beginning. It could be simple tasks like building VMs, storage accounts, or WebApps. Over time, these can evolve into more complex tasks. The Automation Function can enable this velocity by automating many repeatable tasks. See the [automation function](../organize/cloud-automation.md) in the Organize section.
 
-For more information about cloud adoption, cloud governance, and other such capabilities, see the brief section on [understanding required cloud capabilities](../organize/index.md#understand-required-cloud-functions).
+For more information about cloud adoption, governance, and other such capabilities, see the brief section on [understanding required cloud capabilities](../organize/index.md#understand-required-cloud-functions).
 
 ## Map people to capabilities
 
@@ -40,7 +40,7 @@ Assuming the suggested structure aligns with your cloud adoption plan, the next 
 - Who will be accountable for the team's ability to deliver technical changes?
 - What person (or group of people) will be responsible for implementing protective governance mechanisms?
 - What person is accountable for defining those governance controls?
-- What person (or group of people) will be responsible for planning the sustainability and cloud efficiency?
+- What person (or group of people) will be responsible for planning sustainability and cloud efficiency?
 - Are there other capabilities or people with accountability or responsibility within the cloud adoption plan?
 
 After documenting the answers to these questions, you can establish [plans for skills readiness](./adapt-roles-skills-processes.md) to define plans to prepare these people for future work.
@@ -49,7 +49,7 @@ After documenting the answers to these questions, you can establish [plans for s
 
 Your cloud adoption evolves, and your organization needs to keep up. Many critical functions need to be addressed, and while they don't need to be handled by dedicated teams, you need to cover these functions and the tasks.
 
-Thinking through your organization, you want to ensure that you have functions that are dedicated to *Strategy*. This group is responsible for driving direction and business alignment.
+Thinking through your organization, you want to ensure that you have functions dedicated to *Strategy*. This group is responsible for driving direction and business alignment.
 
 - *Cloud Center of Excellence* will ensure that you're addressing the cultural change, skills, and systems needed to help build your cloud competency
 - *Governance* defining controls to manage risk
