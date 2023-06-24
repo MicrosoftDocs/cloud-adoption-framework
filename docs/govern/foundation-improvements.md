@@ -32,7 +32,7 @@ At any time, the following best practices can be applied to the initial governan
 
 ## Next steps
 
-In addition to the application of best practices, the Govern methodology of the Cloud Adoption Framework can be customized to fit unique business constraints. After following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
+In addition to applying best practices, the Govern methodology of the Cloud Adoption Framework can be customized to fit unique business constraints after following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
 
 > [!div class="nextstepaction"]
 > [Evaluate corporate policy](./corporate-policy.md)
