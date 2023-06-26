@@ -10,9 +10,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 
-# Manage multi-tenant operations
+# Manage multi-tenant operations for defense
 
-This article defines how defense organizations should manage operations across multiple Azure Active Directory (Azure AD) tenants. An Azure AD tenant is a security boundary and working across these security boundaries introduces operational challenges. In this scenario, an application workload is deployed to subscriptions attached to a secondary tenant and needs to sign in users from the primary tenant. We will look at three areas of shared operational responsibility: application management, identity governance, and security operations. *Figure 1* provides a blueprint that you should adopt and modify to meet your needs.
+This article defines how defense organizations should manage operations across multiple Azure Active Directory (Azure AD) tenants. An Azure AD tenant is a security boundary. Working across security boundaries introduces operational challenges. The guidance address a common multi-tenant scenario. There's an application in Azure. The application is in a subscription attached to a secondary tenant. The application needs to sign in users from the primary tenant.
+
+In this scenario, there are three areas of shared operational responsibility: application management, identity governance, and security operations. *Figure 1* provides a blueprint that you should adopt and modify to meet your needs.
 
 :::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant." lightbox="./images/management-operations.png" border="false":::
 *Figure 1. Operational responsibilities by tenant for multi-tenant defense organizations*
@@ -25,9 +27,9 @@ The primary Azure AD tenant and the secondary Azure AD tenant(s) share applicati
 
 ### Primary tenant application management
 
-All modern applications within the organization should use the primary tenant for identity. You should register all applications deployed to subscriptions in the secondary tenant with the primary tenant. Registering application workloads with the primary tenant enables users to sign into applications with the same identity they use for Microsoft 365. The location of the application infrastructure does not impact which tenants can be used for user sign-in. The team managing the primary tenant is responsible for app registrations, enterprise applications, and conditional access policies:
+All modern applications within the organization should use the primary tenant for their identity. You should register all applications deployed to subscriptions in the secondary tenant with the primary tenant. Registering application workloads with the primary tenant enables users to sign into applications with the same identity they use for Microsoft 365. The location of the application infrastructure doesn't affect which tenants you can use for user sign-in. The team managing the primary tenant is responsible for app registrations, enterprise applications, and conditional access policies:
 
-**App registrations.** Web applications and APIs used by the organization are registered with the primary tenant. The app registration creates an [application object](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#application-object) in Azure AD. The applications object represents the application definition. The application definition includes an application manifest, token claims configuration, app role definitions, and client secrets. Activities for app registration include:
+**App registrations.** Web applications and APIs used by the organization are registered with the primary tenant. The app registration creates an [application object](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#application-object) in Azure AD. The application object represents the application definition. The application definition includes an application manifest, token claims configuration, app role definitions, and client secrets. Activities for app registration include:
 
 - [Delegating app registration permissions](/azure/active-directory/roles/delegate-app-roles) in Azure AD
 - Managing the assignment of the [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer) Azure AD role
@@ -37,7 +39,7 @@ All modern applications within the organization should use the primary tenant fo
 - Creating and managing [App Roles](/azure/active-directory/develop/howto-add-app-roles-in-apps) for a registered application
 - Defining [API permissions](/azure/active-directory/develop/permissions-consent-overview) for an application
 
-**Enterprise applications.** Enterprise applications are the [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for a distinct instance of an application in your directory. When you create an app registration using the Azure portal, the enterprise application is created automatically and inherits certain properties from the application object. Activities include:
+**Enterprise applications.** Enterprise applications are the [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for a distinct instance of an application in your directory. When you create an app registration using the Azure portal, the enterprise application is created automatically and inherits certain properties from the application object. Activities involved managing enterprise applications include:
 
 - Creating enterprise applications from the [Azure AD Gallery](/azure/active-directory/manage-apps/overview-application-gallery) and non-gallery SAML apps
 - Delegate enterprise application management by [assigning owners](/azure/active-directory/manage-apps/assign-app-owners)
@@ -47,7 +49,7 @@ All modern applications within the organization should use the primary tenant fo
 - Granting [consent](/azure/active-directory/manage-apps/user-admin-consent-overview) for API permissions
 - Deploying and managing [Azure AD application proxy](/azure/active-directory/app-proxy/what-is-application-proxy) for on-premises applications
 
-**Conditional Access Policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Azure AD. When applications are integrated with the primary tenant, the primary tenant administrator [controls which policies should apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
+**Conditional access policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Azure AD. When applications are integrated with the primary tenant, the primary tenant administrator [controls which policies should apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
 
 ### Secondary tenant application management
 
@@ -69,7 +71,7 @@ Multi-tenant defense organizations need to govern access to applications in the 
 
 Application access is governed in the same Azure AD tenant where applications are registered – the primary tenant. The team managing the primary tenant is responsible for configuring entitlement management, auditing existing access by conducting access reviews, managing external identities, and configuring privileged identity management.
 
-**Entitlement management.** Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) helps govern access to Azure AD applications, groups, SharePoint Sites, and Teams by bundling entitlements into assignable access packages. The primary tenant administrators manage the Azure AD objects used for application governance. Activities include:
+**Entitlement management.** Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) helps govern access to Azure AD applications, groups, SharePoint Sites, and Teams by bundling entitlements into assignable access packages. The primary tenant administrators manage the Azure AD objects used for application governance. Activities involved in entitlements management include:
 
 - Creating [Azure AD security groups](/azure/active-directory/fundamentals/how-to-manage-groups) for assigning application roles
 - [Delegating group ownership](/azure/active-directory/enterprise-users/groups-self-service-management) for application assignment
@@ -91,7 +93,7 @@ You should set up application governance using an entitlement management access 
 5. The user assigned application access for the requested duration.
 6. When the user needs to access the application, they can sign in with their Azure AD identity.
 
-**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. For applications you integrate with the primary tenant, the primary tenant administrators have several configuration responsibilities. They must configure external (B2B) collaboration, cross-tenant access policies with partner organizations, and any lifecycle workflows for the guest users and their access. Activities for configuring external identities include:
+**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. For applications you integrate with the primary tenant, the primary tenant administrators have several configuration responsibilities. They must configure external (B2B) collaboration, cross-tenant access policies with partner organizations, and any lifecycle workflows for the guest users and their access. Activities involved in managing external identities include:
 
 - [Governing access for users outside your organization](/azure/active-directory/governance/entitlement-management-scenarios#govern-access-for-users-outside-your-organization)
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for partner organizations
@@ -117,7 +119,7 @@ Using primary tenant identities to manage secondary tenants reduces the number o
 
 For more information, see [Govern access for external users in entitlement management](/azure/active-directory/governance/entitlement-management-external-users).
 
-**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables users in the primary tenant to interact with resources in the secondary tenant. The process outlined in *Figure 4* uses external identities from the primary tenant to manage Azure subscriptions attached to the secondary tenant. Activities include:
+**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables users in the primary tenant to interact with resources in the secondary tenant. The process outlined in *Figure 4* uses external identities from the primary tenant to manage Azure subscriptions attached to the secondary tenant. Activities involved in managing external identities include:
 
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for partner organizations
 - Using Identity Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
@@ -132,13 +134,13 @@ A defense organization's security operations team must protect, detect, and resp
 
 Security operators in the primary Azure AD tenant need to monitor and manage alerts generated by the Microsoft 365 environment and any workloads attached to the primary tenant.
 
-**Sentinel (M365).** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant to ingest security logs from Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the same tenant. Security operators monitoring incidents and alerts for Microsoft 365 use the primary tenant. Activities include:
+**Sentinel (Microsoft 365).** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant to ingest security logs from Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the same tenant. Security operators monitoring incidents and alerts for Microsoft 365 use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 include:
 
 - Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Microsoft 365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the Microsoft 365 environment.
 
-**M365 Defender.** You manage Microsoft 365 Defender in the primary tenant where you use Microsoft 365 services. Microsoft 365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
+**Microsoft 365 Defender.** You manage Microsoft 365 Defender in the primary tenant where you use Microsoft 365 services. Microsoft 365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
 
 **MDE Response (workstations).** You join end-user devices to the primary tenant where they are managed using Microsoft Intune. [Defender for Endpoint response](/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for user devices takes place in the primary tenant MDE service. Activities include managing [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the primary tenant.
 
@@ -148,7 +150,7 @@ Microsoft Sentinel and Defender for Cloud use Azure RBAC roles. You assign these
 
 You can use external identities (B2B guests) to provide primary tenant security operators access to MDE in secondary tenants. For more information, see [multi-tenant security operations with external identities and Azure Lighthouse](security-operations.md) for example security operations architecture.
 
-**Sentinel (cloud, on-premises).** A Microsoft Sentinel instance attached to the secondary tenant ingests security logs from Azure resources in subscriptions attached to the secondary tenant, on-premises servers, and network appliances owned and managed by the owner of the secondary tenant. Activities include:
+**Sentinel (cloud, on-premises).** A Microsoft Sentinel instance attached to the secondary tenant ingests security logs from Azure resources in subscriptions attached to the secondary tenant, on-premises servers, and network appliances owned and managed by the owner of the secondary tenant. Activities involved in managing Sentinel for cloud and on-premises include:
 
 - Assigning [Sentinel roles](/azure/sentinel/roles) and configuring Azure Lighthouse to grant access to primary tenant security operators
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Azure Resource Manager, Defender for Cloud, and other available secondary tenant data sources to Microsoft Sentinel
