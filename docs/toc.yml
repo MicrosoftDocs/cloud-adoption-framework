@@ -561,6 +561,8 @@ items:
         items:
         - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
+        - name: Ready Azure Landing Zone
+          href: migrate/azure-migration-guide/ready-alz.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
         - name: Deploy workloads
