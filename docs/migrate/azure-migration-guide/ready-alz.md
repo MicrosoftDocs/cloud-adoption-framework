@@ -1,6 +1,18 @@
+---
+title: Readying your Landing Zone for Migration
+description: Review items that need to be completed after a ALZ deployment, in order to allow for the environment to support migrations.
+author: bstephenson
+ms.author: bstephenson
+ms.date: 06/26/2023
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: migrate
+ms.custom:
+---
+
 # Readying your Landing Zone for Migration
 
-During the [Ready phase](../../ready/), you deployed your [Azure Landing Zone](../../ready/landing-zone/).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
+During the [Ready phase](../../ready/index), you deployed your [Azure Landing Zone](../../ready/landing-zone/index).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
 
 - [Ensure that you have your initial corporate policy defined and well understood](../../govern/guides/standard/initial-corporate-policy)
 - [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant)
