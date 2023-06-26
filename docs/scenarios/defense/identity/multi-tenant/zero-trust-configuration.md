@@ -91,9 +91,9 @@ With the general availability of [Azure AD certificate-based authentication](/az
 |Require Managed Devices|All Users|All Apps|None|[Require hybrid Azure AD Joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
 |Block risky sign ins|All Users|All Apps|[High Sign-in Risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
 |Secure Azure AD Administration|[Azure AD Roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
-|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deploymentt) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
 
-For more information, see [Zero Trust identity and device access configuration](/azure/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
+For more information, see [Zero Trust identity and device access configuration](/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
 
 **Use the primary tenant identities for accessing all applications.** Applications should use the primary tenant identity for end user access. Establish a policy to [register applications](/azure/active-directory/develop/quickstart-register-app) with the primary tenant, regardless of the application infrastructure hosting location.
 
@@ -139,7 +139,7 @@ You should use [workload identities premium](/azure/active-directory/workload-id
 
 You can use Intune or Azure Information Protection to manage the devices in the secondary tenant. To configure, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
-**Configure cross-tenant access policies (XTAP).** Azure AD external identities (Azure AD B2B) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the [inbound trust settings](/graph/api/resources/crosstenantaccesspolicy-overview?view=graph-rest-1.0#inbound-trust-settings-in-cross-tenant-access-settings) to include:
+**Configure cross-tenant access policies (XTAP).** Azure AD external identities (Azure AD B2B) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the [inbound trust settings](/graph/api/resources/crosstenantaccesspolicy-overview) to include:
 
 - Trust multifactor authentication (MFA) from Azure AD tenants
 - Trust compliant devices
