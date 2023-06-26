@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Zero trust configuration for multi-tenant Defense organizations
 
-This article helps you apply baseline zero trust configurations to meet consensus defense requirements. Follow these recommendations to establish the right identity architecture and zero trust environment for zero trust.
+This article helps you apply baseline configurations to secure Azure AD and meet common defense zero trust strategy requirements. Follow these recommendations as part of your multi-tenant identity strategy to establish the right architecture for implementing zero trust in your environment.
 
 :::image type="content" source="./images/multi-tenant-architecture.png" alt-text="Diagram showing a sample multi-tenant architecture with zero trust configurations." lightbox="./images/multi-tenant-architecture.png" border="false":::
 
@@ -22,9 +22,9 @@ This article helps you apply baseline zero trust configurations to meet consensu
 
 Azure Active Directory (Azure AD) tenants are the foundation of your identity architecture. An organization with one Azure AD tenant has a single tenant architecture. Organizations using more than one Azure AD tenant have a multi-tenant architecture.
 
-**Single tenant benefits.** You should strive for a single tenant across their data estate. Microsoft 365 and Azure cloud services. A single tenant is easier to manage and lower costs through operational efficiency. You can more easily configure a zero trust environment without fragmenting or creating siloed solutions that might need to be integrated down the road. If you already have multiple Azure AD tenants, you can consolidate to a single tenant. You need to transfer the Azure subscriptions in your secondary tenants to the primary tenant. For more information, see [Transfer an Azure Subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription).
+**Single tenant benefits.** You should strive for a single tenant across your data estate, Microsoft 365, and Azure cloud services. A single tenant is easier to manage and lower costs through operational efficiency. You can more easily configure a zero trust environment without fragmenting the user experience or creating siloed solutions that might need to be integrated down the road. If you already have multiple Azure AD tenants, you should consider consolidating your environment to use a single tenant. This can be achieved by transferring Azure subscriptions from your secondary tenants to the primary tenant. For more information, see [transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription).
 
-**Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations need multiple Azure AD tenants for security, compliance, and collaboration (*see table 1*).
+**Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations may need multiple Azure AD tenants for security, compliance, and collaboration (*see table 1*).
 
 *Table 1. Reasons to have or create multiple tenants.*
 
@@ -42,7 +42,7 @@ If you require multiple Azure AD tenants, you should understand B2C and B2B feat
 
 In multi-tenant environments, you need to identify the primary tenant and all secondary tenants (*see figure 1*).
 
-**Identity the primary tenant:** Most defense organizations create the primary tenant to use Microsoft 365 (Microsoft 365). The primary tenant contains all your user identities (1) Microsoft 365 licenses (2), devices (3), and applications (3). Defense organizations often use Azure AD Connect to synchronize the identities in the primary tenant with Active Directory on-premises.
+**Identify the primary tenant.** Most defense organizations create the primary tenant to use Microsoft 365. The primary tenant contains all user identities (1) Microsoft 365 licenses (2), devices (3), and applications (3) (*see figure 1*). Defense organizations often use [Azure AD Connect](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/whatis-azure-ad-connect) to synchronize the identities from on-premises Active Directory to the primary Azure AD tenant.
 
 Some defense organizations consume services from a parent or partner organization. We call this parent or partner organization a shared service provider. Many defense organizations access Microsoft 365 from a shared service provider. The tenant with your Microsoft 365 licenses is your primary tenant even if your organization doesn’t manage or control the tenant.
 
@@ -51,7 +51,7 @@ Some defense organizations consume services from a parent or partner organizatio
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity services available and licensed in Azure AD.
 
 - If your organization uses Microsoft 365, the tenant with your Microsoft 365 licensed users is the primary tenant (*see figure 2*). Your Microsoft 365 tenant is primary even if other Azure AD tenants used for Azure workload migration preceded it.
-- If your organization doesn’t use Microsoft 365, any Azure AD tenant with EMS licenses is your primary tenant. This tenant is where you have registered and verified your domain name. The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
+- If your organization doesn’t use Microsoft 365, any Azure AD tenant with [Enterprise Mobility and Security (EMS)](https://learn.microsoft.com/en-us/enterprise-mobility-security/) licenses might be your primary tenant. This tenant is where you have added and verified your organization's [domain name](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. Decision tree to determine the Azure AD tenant type.*
@@ -70,18 +70,18 @@ You should implement the following recommendations in all Azure AD tenants.
 
 **Protect Azure AD from on-premises attacks.** Follow best practices outlined in [Securing Privileged Access](https://aka.ms/privsec). Only assign Azure AD permissions to cloud-only user accounts with phishing-resistant credential like Hardware Passkey or Certificate-Based authentication. Don't use federated identities for administrative purposes. For more information, see [Protect Microsoft 365 from on-premises attacks](/azure/active-directory/fundamentals/protect-m365-from-on-premises-attacks).
 
-**Use Privileged Identity Management.** Use Azure AD PIM to manage role assignments for Azure AD and Azure roles, and eligible group membership for privileged security groups. Establish periodic [access reviews](/azure/active-directory/governance/manage-access-review) for eligible administrators and external users (B2B guests).
+**Use Privileged Identity Management.** Use [Azure AD Privileged Identity Management (PIM)](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure) to manage role assignments for Azure AD and Azure roles, and eligible group membership for privileged security groups. Establish periodic [access reviews](/azure/active-directory/governance/manage-access-review) for eligible administrators and external users (B2B guests).
 
 **Enable Cloud-Based authentication for all users.** Federated authentication exposes Azure AD to on-premises Active Directory compromises. Cloud-based authentication methods are more secure and, when combined with Azure AD joined devices, offer a better single sign-on experience.
 
-With the general availability of [Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication), there's no technical reason to federate Azure AD domains. Azure AD Authentication supports the following [passwordless authentication methods:](/azure/active-directory/authentication/concept-authentication-methods)
+With the general availability of [Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication), there's no technical reason to federate Azure AD domains. Azure AD Authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
 
 - Security Keys (FIDO2 / Passkey)
 - Certificate-Based Authentication
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a policy baseline including the policies in *table 2*.
+**Establish baseline Conditional Access Policy set.** Conditional Access baseline varies by organization and requirements. Establish a core set of Conditional Access policies for all Azure AD tenants. Consider implementing a baseline including the policies in *table 2*.
 
 *Table 2: Conditional access policy checklist.*
 
@@ -101,13 +101,13 @@ For legacy applications that don't support modern authentication protocols, use 
 
 If a service provider or external agency that doesn't [delegate application registration permissions](/azure/active-directory/roles/delegate-app-roles) controls the tenant, you need to register applications with the secondary tenant that your organization controls instead. Assign user access using [external identities](/azure/active-directory/external-identities/external-identities-overview) (B2B guests) for your organization’s users homed in the primary tenant. For more information, see [Secure applications with zero trust](/security/zero-trust/deploy/applications).
 
-**Use Azure AD for managing other cloud environments.** Azure AD isn't just an identity platform for Azure and Microsoft 365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like AWS and GCP. For more information, see the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery).
+**Use Azure AD for managing other cloud environments.** Azure AD isn't just an identity platform for Azure and Microsoft 365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like Amazon Web Services (AWS) and Google Cloud Platform (GCP). For more information, see the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery).
 
 **Use a secure cloud computing architecture (SCCA).** Each Defense organization should deploy an [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in Azure subscriptions attached to the primary tenant.
 
-**Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [Azure Mission Landing Zone](https://github.com/Azure/missionlz). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
+**Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [Enterprise Scale Landing Zone](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
 
-**Use Entra Permissions Management.** [Entra Permission’s Management](/azure/active-directory/cloud-infrastructure-entitlement-management/overview) is Microsoft’s Cloud Infrastructure Entitlement Management (CIEM) solution. You should use Entra Entitlement’s Management for visibility into permissions assigned to all identities within the tenant.
+**Use Entra Permissions Management.** [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/overview) is Microsoft’s Cloud Infrastructure Entitlement Management (CIEM) solution. You should use Entra Permissions Management for visibility into permissions assigned to all identities, and track [permissions creep](https://learn.microsoft.com/en-us/azure/active-directory/cloud-infrastructure-entitlement-management/faqs#what-is-the-permissions-creep-index) across your organization's multi-cloud environment.
 
 **Use Entra Identity Governance.** Use [Entra Identity Governance](/azure/active-directory/governance/identity-governance-overview) to automate access assignment lifecycle for users and guests. Conduct access reviews to avoid proliferation of access within your cloud environment.
 
@@ -123,15 +123,15 @@ You should implement the following recommendations in the primary tenant only.
 
 **End users only have one identity in Azure AD.** [Synchronize on-premises Active Directory Domain Services](/security/zero-trust/deploy/identity#connect-all-of-your-users-to-azure-ad-and-federate-with-on-premises-identity-systems) with the primary Azure AD tenant. The synchronization populates Azure AD with users, groups, and devices for the organization. External B2B guests might exist in secondary tenants, but users only need to remember one username for all applications and services. The user experience and zero trust outcomes are best when you use the identities in the primary tenant for Windows sign-in and application access.
 
-**Join and manage devices with the Primary tenant.** The primary Azure AD tenant contains all users and devices within the organization. Azure AD Join (or hybrid Azure AD Join) Windows devices to the primary tenant and manage with Microsoft Intune. [Use Intune policy to deploy Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration) enabling extended detection and response (XDR) capability.
+**Join and manage devices with the primary tenant.** The primary Azure AD tenant contains all users and devices within the organization. Azure AD Join (or hybrid Azure AD Join) Windows devices to the primary tenant and manage with Microsoft Intune. [Use Intune policy to deploy Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration) enabling extended detection and response (XDR) capability.
 
 **Delegate application registration permissions.** Enterprise Apps, including application code running in any Azure subscription, use the primary Azure AD for user identity. Make developers eligible for the [Application Developer Azure AD role](/azure/active-directory/roles/permissions-reference#application-developer) or a [custom app registration role](/azure/active-directory/roles/custom-available-permissions) using Privileged Identity Management. This configuration allows developers building applications in secondary tenants to register them with the primary tenant for identity.
 
-**Attach platform-as-a-service (PaaS) services that need end user identity.** Azure Files and Azure Virtual Desktop must run in subscriptions attached to the primary Azure AD tenant.
+**Attach platform-as-a-service (PaaS) services that need end user identity.** Some PaaS services like [Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) and [Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview) depend on hybrid identity configuration or license entitlements. Resources for these services must be deployed to Azure subscriptions attached to the primary tenant.
 
 ### Secondary tenants
 
-You should implement the following recommendations in the secondary tenant only.
+You should implement the following recommendations in the secondary tenant.
 
 **Procure licenses required for Azure AD management**. [Azure AD Premium P2](/security/business/identity-access/azure-active-directory-pricing) licenses should be procured for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Azure AD P2 license to a local user in the tenant. This setup allows you to enable premium features like conditional access and Entra identity governance. For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
@@ -139,7 +139,7 @@ You should use [workload identities premium](/azure/active-directory/workload-id
 
 You can use Intune or Azure Information Protection to manage the devices in the secondary tenant. To configure, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
-**Configure cross-tenant access policies (XTAP).** Azure AD external identities (Azure AD B2B) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the Inbound access trust settings to include:
+**Configure cross-tenant access policies (XTAP).** Azure AD external identities (Azure AD B2B) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Azure AD tenant as an organization and update the [inbound trust settings](https://learn.microsoft.com/en-us/graph/api/resources/crosstenantaccesspolicy-overview?view=graph-rest-1.0#inbound-trust-settings-in-cross-tenant-access-settings) to include:
 
 - Trust multifactor authentication (MFA) from Azure AD tenants
 - Trust compliant devices
