@@ -718,7 +718,7 @@ items:
           - name: Learning path for Migrate SAP workloads to Azure
             href: /training/paths/migrate-sap-workloads-to-azure/
           - name: Migrate an SAP platform to Azure
-            href: https://azure.microsoft.com/en-us/solutions/sap/migration/
+            href: https://azure.microsoft.com/solutions/sap/migration/
 
         - name: Specialized workloads
           items:
