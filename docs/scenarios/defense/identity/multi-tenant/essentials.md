@@ -11,19 +11,19 @@ ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information in defense organizations. Identity is a foundational pillar of zero trust. Microsoft's identity service, Azure Active Directory (Azure AD), is a critical zero trust component that all Microsoft cloud customers use. Architects and decision makers must understand how Azure AD's core capabilities, how it works, and its role in zero trust before building the defense enterprise strategy. Defense organization can meet many zero trust requirements with Azure AD. Many already have access to essential Azure AD features through their Microsoft 365 licenses. The following guide provides essential insights into Azure AD, tailored specifically to defense scenarios.
+Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information in defense organizations. Identity is a foundational pillar of zero trust. Microsoft's identity service, Azure Active Directory (Azure AD), is a critical zero trust component that all Microsoft cloud customers use. Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements with Azure AD. Many already have access to essential Azure AD features through their Microsoft 365 licenses. The following guide provides essential insights into Azure AD, tailored specifically to defense scenarios.
 
 ## Azure AD tenant
 
-An instance of Azure AD is called an **Azure AD tenant**. A tenant is a platform and boundary. It's the identity platform for you organization and security boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
+An instance of Azure AD is called an **Azure AD tenant**. A tenant is a platform and boundary. It's the identity platform for your organization and security boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
 **Organizations should consolidate Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. This setup is the most cohesive experience for users and administrators alike while minimizing licensing cost. Use a single identity platform for Microsoft 365, Azure, Power Platform, line-of-business (LOB) applications, Software-as-a-Service (SaaS) applications, and cloud service providers (CSP).  A single tenant provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity.
 
-**Azure AD is not Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is quite different. Azure AD is, hyperscale, modern, and cloud-based identity service.
+**Azure AD is not Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Azure AD is a hyperscale, modern, and cloud-based identity service.
 
 **Tenant domain name.** Each tenant has a unique initial domain name. For example, using *contoso* as an example, the domain would be *contoso.onmicrosoft.com* for all commercial customers, *contoso.onmicrosoft.us* for most government customers, and tenant ID in the form of a Globally Unique Identifier (GUID) like *a976dd56-c1d8-485c-8ea7-facbce6726c2.* Each tenant only has one immutable initial domain. You can't change the initial domain or tenant ID after tenant creation.
 
-Member users in your tenant must have a username with a suffix matching the initial domain, or using a [custom domain](/azure/active-directory/fundamentals/add-custom-domain) you create and verify via DNS records. Custom domains allow users to sign in with a friendly username, usually their email address ([user@contoso.com](mailto:user@contoso.com)). You can only verify a custom domain in one Azure AD tenant globally. Custom domains aren't security or trust boundaries like Active Directory Domain Services (AD DS) Forests. They're simply DNS namespace for globally identifying Azure AD users.
+Member users in your tenant must have a username with a suffix matching the initial domain, or using a [custom domain](/azure/active-directory/fundamentals/add-custom-domain) you create and verify via DNS records. Custom domains allow users to sign in with a friendly username, usually their email address ([user@contoso.com](mailto:user@contoso.com)). You can only verify a custom domain in one Azure AD tenant globally. Custom domains aren't security or trust boundaries like Active Directory Domain Services (AD DS) Forests. They're a DNS namespace for globally identifying Azure AD users.
 
 ## Architecture
 
@@ -41,11 +41,11 @@ You can use Azure AD Connect Sync or Azure AD Connect Cloud Sync to synchronize 
 
 ## Permissions
 
-There is no Domain Admins security group in Azure AD. Azure AD does not use Kerberos, and it isn't vulnerable pass-the-hash or pass-the-ticket attacks. These are common privilege escalation techniques threat actors and advanced persistent threats use to escalate privileges. [Azure AD directory roles](/azure/active-directory/roles/permissions-reference) grant permissions to manage Azure AD objects and configuration. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions. Azure AD makes it easy to assign permissions using [just-in-time (JIT)](/azure/active-directory/privileged-identity-management/pim-configure) and [just-enough-admin (JEA)](/azure/active-directory/roles/delegate-by-task) principles.
+There's no Domain Admins security group in Azure AD. Azure AD doesn't use Kerberos, and it isn't vulnerable to pass-the-hash or pass-the-ticket attacks. Threat actors and advanced persistent threats commonly use these attacks to escalate privileges. [Azure AD directory roles](/azure/active-directory/roles/permissions-reference) grant permissions to manage Azure AD objects and configuration. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions. Azure AD makes it easy to assign permissions using [just-in-time (JIT)](/azure/active-directory/privileged-identity-management/pim-configure) and [just-enough-admin (JEA)](/azure/active-directory/roles/delegate-by-task) principles.
 
 ## Authentication
 
-Unlike Active Directory, users in Azure AD aren't limited to password or smartcard authentication. Azure AD users *can* use passwords. Azure AD supports many additional [authentication and verification methods](/azure/active-directory/authentication/concept-authentication-methods). Azure AD authentication methods include native support for smartcard certificates and derived credentials, Microsoft Authenticator passwordless, FIDO2 security keys (hardware passkey), and device credentials like Windows Hello for Business. Azure AD offers passwordless, phishing-resistant methods in support of [Memorandum 22-09](/azure/active-directory/standards/memo-22-09-multi-factor-authentication) and [DODCIO Zero Trust Strategy capabilities](https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilitiesActivities.pdf).
+Unlike Active Directory, users in Azure AD aren't limited to password or smartcard authentication. Azure AD users *can* use passwords. Azure AD supports many other [authentication and verification methods](/azure/active-directory/authentication/concept-authentication-methods). Azure AD authentication methods include native support for smartcard certificates and derived credentials, Microsoft Authenticator passwordless, FIDO2 security keys (hardware passkey), and device credentials like Windows Hello for Business. Azure AD offers passwordless, phishing-resistant methods in support of [Memorandum 22-09](/azure/active-directory/standards/memo-22-09-multi-factor-authentication) and [DODCIO Zero Trust Strategy capabilities](https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilitiesActivities.pdf).
 
 **Protocol support.** Azure AD applications don't use Kerberos, NTLM, or LDAP. They must use modern open protocols intended for use over the internet, such as [OpenID Connect](/azure/active-directory/develop/v2-protocols-oidc), [OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow), [SAML 2.0](/azure/active-directory/develop/saml-protocol-reference), and [SCIM](/azure/active-directory/fundamentals/sync-scim).
 
@@ -78,7 +78,7 @@ Many Azure resources can use a [managed identity](/azure/active-directory/manage
 
 ## Microsoft Graph
 
-Microsoft web portals for Entra, Azure, and Microsoft 365 provide a graphical interface to Azure AD. You can automate programmatic access to read and update Azure AD objects and configuration policies using RESTful APIs called Microsoft Graph. There are many Microsoft Graph clients in various languages, including [PowerShell](/powershell/microsoftgraph/overview), Go, Python, Java, .NET, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
+Microsoft web portals for Entra, Azure, and Microsoft 365 provide a graphical interface to Azure AD. You can automate programmatic access to read and update Azure AD objects and configuration policies using RESTful APIs called Microsoft Graph. Microsoft Graph supports clients in various languages. Supported languages include [PowerShell](/powershell/microsoftgraph/overview), Go, Python, Java, .NET, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
 
 ## Sovereign clouds
 
@@ -97,8 +97,8 @@ Different Azure AD services use different sign-in URLs. As a result, you need to
 | Azure portal | [portal.azure.com](https://portal.azure.com) | [portal.azure.us](https://portal.azure.us) | [portal.azure.us](https://portal.azure.us) |
 | Defender Admin Center | [security.microsoft.com](https://security.microsoft.com) | [security.microsoft.us](https://security.microsoft.us) | [security.apps.mil](https://security.apps.mil) |
 | MS Graph PowerShell |`Connect-MgGraph<br>-Environment Global` | `Connect-MgGraph<br>-Environment USGov` | `Connect-MgGraph<br>-Environment USGovDoD` |
-| Az PowerShell | `Connect-AzAccount<br>-Environment AzureCloud` | `Connect-AzAccount<br>-Environment AzureUSGovernment` | `Connect-AzAccount<br>-Environment AzureUSGovernment` |
-| Azure CLI | `az cloud set --name AzureCloud` | `az cloud set --AzureUSGovernment` | `az cloud set --AzureUSGovernment` |
+| Az PowerShell module | `Connect-AzAccount<br>-Environment AzureCloud` | `Connect-AzAccount<br>-Environment AzureUSGovernment` | `Connect-AzAccount<br>-Environment AzureUSGovernment` |
+| Azure CLI | `az cloud set --name AzureCloud` | `az cloud set --name AzureUSGovernment` | `az cloud set --name AzureUSGovernment` |
 
 ## Next step
 
