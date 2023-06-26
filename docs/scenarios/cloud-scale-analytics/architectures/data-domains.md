@@ -3,7 +3,7 @@ title: Data domains
 description: Learn about data domains
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 03/21/2022
+ms.date: 02/02/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -24,7 +24,7 @@ Introduced by Eric Evans, Domain-Driven Design is a method for supporting softwa
 
 DDD differentiates between bounded contexts, domains, and subdomains. Domains are problem spaces you want to address. They're areas where knowledge, behavior, laws, and activities come together. You see semantic coupling in domains, behavioral dependencies between components or services. Another aspect of domains is communication. Team members must use a language the whole team shares so everyone can work efficiently. This shared language is called the *ubiquitous language* or *domain language*.
 
-Domains are decomposed into subdomains to better manage complexity. A common example of this is decomposing a domain into subdomains that each correspond to one specific business problem.
+Domains are decomposed into subdomains to better manage complexity. A common example of this is decomposing a domain into subdomains that each correspond to one specific business problem as shown in [Operationalize data mesh for AI/ML](operationalize-data-mesh-for-ai-ml.md).
 
 Not all subdomains are the same. You can, for example, classify domains to be either core, generic, or supporting. Core subdomains are the most important. They're the secret sauce, the ingredients, that make an organization unique. Generic subdomains are nonspecific, and typically easy to solve with off-the-shelf products. Supporting subdomains don't offer competitive advantage, but are necessary to keep an organization running, and are not usually complex.
 

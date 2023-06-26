@@ -20,6 +20,7 @@ According to Conway's law, teams produce Architectures based on their communicat
 
 ![Diagram illustrating Conway's Law.](./media/conways-law.png)
 
+
 From a DevOps perspective, organizations must optimize for rapid response to customer needs. Teams that own, design, and implement their applications and systems find their highest level of autonomy in architectures with the following characteristics:
 
 - Evolutionary architecture that supports constant changes
@@ -29,6 +30,7 @@ From a DevOps perspective, organizations must optimize for rapid response to cus
 Conway's solution is to outmaneuver Conway's Law. If your organization follows a particular structure to produce services and products and is looking to optimize, you need to rethink your organizational structure. Evolve your team and organizational structure to achieve your desired architecture.
 
 ![Diagram of Reverse Conway Maneuver.](./media/reverse-conway-maneuver.png)
+
 
 This principle leads to intentionally designed [team topologies](https://teamtopologies.com/) in which teams are responsible for the end-to-end of any applications, systems, or platforms they own in order to achieve the full discipline of DevOps.
 
@@ -42,13 +44,13 @@ The following table provides a simplified categorization of these teams.
 
 ## Design considerations
 
-- Establish a cross-functional platform team to design, build, provision, manage and maintain your Azure Landing Zone lifecycle. This team can include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. Make sure you avoid [antipatterns](../../antipatterns/ready-antipatterns.md#antipattern-become-a-cloud-provider).
+- Establish a cross-functional platform team to design, build, provision, manage, and maintain your Azure Landing Zone lifecycle. This team can include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. Make sure you avoid [antipatterns](../../antipatterns/ready-antipatterns.md#antipattern-become-a-cloud-provider).
 
 - Consider establishing an enabling team that can provide DevOps functions to support applications and platforms that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
 
 - Don't restrict your application workload teams to central artifacts, since it can hinder their agility. You can use policy-driven governance and Azure role-based access control (Azure RBAC) to enforce consistent baseline configurations and ensure that application (business unit) teams are flexible enough to innovate yet still able to draw from a predefined set of templates.
 
-- Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use Azure Policy to maintain guardrails independent of how resources are deployed in Azure and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
+- Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use [Azure Policy](/azure/governance/policy/overview) helps to enforce organizational standards and to assess compliance at-scale and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
 
 - Blanket application of a DevOps model doesn't instantly establish capable DevOps teams.
 
@@ -81,10 +83,7 @@ The following list provides a recommended set of functions for the platform team
 - Policy management and enforcement (holistic)
 - Security monitoring and audits (holistic)
 - Network management (holistic)
-- Policy management and enforcement (holistic)
-- Security monitoring and audits (holistic)
-- Cost management (holistic)
-
+    
 ### Define functions for your application workload teams
 
 The following list provides a recommended set of functions for your application teams responsible for application workloads:
@@ -123,3 +122,4 @@ The goals of interactions between your teams are to:
 | **Collaboration** | Teams work closely together. |
 | **X-as-a-Service** | Teams consume or provide something to other teams with minimum collaboration, similar to third-party vendor interactions. |
 | **Facilitating** | Teams help or are helped by another team to remove impediments. |
+

@@ -10,8 +10,6 @@ ms.subservice: migrate
 ms.custom: think-tank, fasttrack-new, AQC
 ---
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 # Release workloads (test, optimize, and handoff)
 
 Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
@@ -28,7 +26,6 @@ All Azure services that provide a consumption-based cost model can be resized th
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 
@@ -48,7 +45,6 @@ However, for virtual machines created or migrated using other methods, or in cas
 Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 
@@ -73,7 +69,6 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone target="chromeless"
 
-
 ::: zone-end
 
 ### Resize a SQL database
@@ -84,7 +79,6 @@ Partners can use the Partner Center to review the usage.
 1. Select **Apply**.
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 
@@ -100,7 +94,6 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 
 ::: zone target="chromeless"
 
-
 ::: zone-end
 
 You can also use **Advisor** and select the **Costs** tab to identify recommendations for potential cost reductions.
@@ -110,7 +103,6 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 >
 
 ::: zone target="chromeless"
-
 
 ::: zone-end
 

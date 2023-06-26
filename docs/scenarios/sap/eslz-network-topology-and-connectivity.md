@@ -1,8 +1,8 @@
 ---
 title: Network topology and connectivity for an SAP migration
 description: Understand design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
-author: JefferyMitchell
-ms.author: martinek
+author: pankajmeshramCSA
+ms.author: pameshra
 ms.date: 03/01/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Network topology and connectivity for an SAP migration
 
-This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
+This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Plan for IP addressing
 
@@ -109,7 +109,7 @@ This section explores key recommendations for encrypting networks between on-pre
 
 - It isn't necessary to encrypt traffic over ExpressRoute for SAP deployments. SAP traffic typically consumes a lot of bandwidth and is sensitive to performance. IPsec tunnels encrypt internet traffic by default, and encryption or decryption could negatively affect the traffic's performance.
 
-- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#define-network-encryption-requirements) to understand network encryption options in enterprise-scale landing zones.
+- It's up to the customer to determine whether SAP traffic should be encrypted. Explore [network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to understand network encryption options in enterprise-scale landing zones.
 
 ## Segregate systems
 
@@ -140,11 +140,17 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 - For optimal network latency with SAP applications, consider using [Azure proximity placement groups](/azure/virtual-machines/workloads/sap/sap-proximity-placement-scenarios).
 
+- For migration projects, consider tuning the network parameters. For example, you can improve performance by disabling the acknowledgements during the migration period.
+
 - Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
 
 ## Design Considerations for RISE implementations
 
 When running SAP RISE deployments in Azure, integration of SAP managed environment with your own Azure ecosystem is paramount. To understand the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
 
+SAP RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or virtual network peering. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might be interested in setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [CAF Migration Landing Zone](/azure/governance/blueprints/samples/caf-migrate-landing-zone/) could be a good option. This blueprint can easily be adopted to the specific customer requirement, with specific focus on the virtual network parameters.
 
+Deploying cross-tenant virtual network peering to the SAP RISE tenant also requires some further work. Careful planning of the virtual network architecture is needed to ensure there are no overlapping CIDR ranges. In addition, DNS peering to the SAP RISE tenant must be properly done as per the document referred to above (Integrating Azure with SAP RISE managed workloads).
+
+Finally, if you decide to set up a Virtual WAN solution and also have a need for site-to-site VPN or ExpressRoute connections, you should consider the following [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations).
 

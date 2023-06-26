@@ -3,7 +3,7 @@ title: Data marketplace
 description: Learn about data marketplaces in data mesh.
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 04/05/2022
+ms.date: 02/02/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -23,10 +23,12 @@ To democratize data via your data mesh architecture, focus on several important 
 
 :::image type="content" source="../media/data-marketplace.png" alt-text="Data Marketplace Architecture" lightbox="../media/data-marketplace.png":::
 
-A data marketplace is typically a thin orchestration layer with an appealing look and feel, which offers unique user experiences. Data marketplaces utilize underlying metadata repositories, which can be a mixture of homegrown [metadata](../govern-metadata-standards.md) stores and Azure services like [Microsoft Purview](/azure/purview/). You can extend your data marketplace with extra analytical capabilities like [Cognitive Services](/azure/cognitive-services) and [Machine Learning](/azure/machine-learning).
+A data marketplace is typically a thin orchestration layer with an appealing look and feel, which offers unique user experiences. Data marketplaces utilize underlying metadata repositories, which can be a mixture of homegrown [metadata](../govern-metadata-standards.md) stores and Azure services like [Microsoft Purview](/azure/purview/). You can extend your data marketplace with extra analytical capabilities like [Cognitive Services](/azure/cognitive-services) and [Machine Learning](/azure/machine-learning). For more information on how to adopt AI/ML in data mesh, see [Operationalize data mesh for AI/ML](operationalize-data-mesh-for-ai-ml.md).
 
 Building a data marketplace involves structure, culture, and people. It requires you to trust users, train people, and work on awareness. Don't underestimate these activities. Your users are valuable resources; they own or use specific parts of the data landscape. Making better use of your users increases the efficiency of your data knowledge and usage.
 
 In some cases, you might need an external data marketplace. External data marketplaces enable sharing of your data products with external partners. You can use [Azure Data Share](/azure/data-share) as a component.
+
+See [a demo of the data marketplace concept using Microsoft Purview](https://aka.ms/purviewselfservicedemo) for a discussion of how you can simplify data consumers journey using self-service data discovery and data access management capabilities.
 
 For more information, see [Master Data Management in Data Mesh](data-mesh-master-data-management.md).

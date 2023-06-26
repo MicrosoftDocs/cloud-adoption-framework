@@ -7,7 +7,7 @@ ms.date: 07/18/2022
 ms.topic: tutorial
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank, devx-track-azurecli
 ---
 
 # Tutorial: Set up a data product batch
@@ -557,7 +557,7 @@ To give Data Factory access to the private endpoints for the required services, 
     resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-dp001')==\`true\`].name")
     sqlServerName=$(az sql server list -g $resourceGroupName -o tsv  --query "[?contains(@.name, 'sqlserver001')==\`true\`].name")
     endPointConnectionName=$(az network private-endpoint-connection list -g $resourceGroupName -n $sqlServerName --type Microsoft.Sql/servers -o tsv --query "[?contains(@.properties.privateLinkServiceConnectionState.status, 'Pending')==\`true\`].name")
-    az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $sqlServerName --type Microsoft.Storage/storageAccounts --description "Approved"
+    az network private-endpoint-connection approve -g $resourceGroupName -n $endPointConnectionName --resource-name $sqlServerName --type Microsoft.Sql/servers --description "Approved"
     
     # Key Vault private endpoint approval
     resourceGroupName=$(az group list -o tsv  --query "[?contains(@.name, '-dev-metadata')==\`true\`].name")

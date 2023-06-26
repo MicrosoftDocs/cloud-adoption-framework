@@ -7,7 +7,7 @@ ms.date: 08/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 # Strategic Migration Assessment and Readiness Tool (SMART)

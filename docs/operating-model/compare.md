@@ -7,7 +7,7 @@ ms.date: 09/16/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal, operating-model
+ms.custom: internal, operating-model, UpdateFrequency2
 ---
 
 # Review and compare common cloud operating models
@@ -24,12 +24,12 @@ The following image maps common operating models based on the range of complexit
 
 A cloud operating model is primarily driven by two factors:
 
-- Strategic priorities and motivations
+- Strategic priorities or motivations
 - Scope of the portfolio to be managed
 
 |  | Decentralized operations (ops) | Centralized operations (ops) | Enterprise operations (ops) | Distributed operations (ops) |
 |--|--|--|--|--|
-| **Strategic priority** | Innovation | Control | Democratization | Integration |
+| **Strategic priorities or motivations** | Innovation | Control | Democratization | Integration |
 | **Portfolio scope** | Workload | Landing zone | Cloud platform | Full portfolio |
 | **Workload environment** | High complexity | Low complexity | Medium complexity | Medium or variable complexity |
 | **Landing zone** | N/A | High complexity | Medium to low complexity | Low complexity |

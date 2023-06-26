@@ -7,7 +7,7 @@ ms.date: 12/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Align responsibilities across teams

@@ -3,11 +3,11 @@ title: Cloud Solution Provider service
 description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Azure Active Directory (Azure AD) tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 01/04/2022
+ms.date: 05/17/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for the Cloud Solution Provider service
@@ -42,6 +42,12 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 ## Design recommendations
 
 - Work with your CSP partner to ensure that Azure Lighthouse is used for administer on behalf of (AOBO) access for most support scenarios. For more information, see [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
+
+- Partners, should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
+
+- Follow and implement the [Customer security best practices](/partner-center/customer-security-best-practices)
+
+- Partners should follow and implement the [CSP security best practices](/partner-center/csp-security-best-practices)
 
 - Work with your CSP partner to understand how to create support cases and escalation processes.
 

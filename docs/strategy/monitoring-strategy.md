@@ -3,11 +3,12 @@ title: Cloud monitoring strategy
 description: Learn how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 10/21/2022
+ms.date: 01/24/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
+products: azure-monitor
 ---
 
 # Cloud monitoring strategy
@@ -208,9 +209,9 @@ To help you align monitoring plans to strategy, use the following table to categ
 |-----|---------------------|------------------|
 | 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned datacenters with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the Microsoft 365 and Azure management packs. |
-| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
-| 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. Gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
-| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
+| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager or System Center Operations Manager Managed Instance (preview) and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
+| 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. You can use System Center Operations Manager Managed Instance (preview). If you use System Center Operations Manager, gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
+| 5 | Hybrid forever | System Center Operations Manager Managed Instance (preview), Azure AD, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
 | 6 | Cloud native | Azure Monitor, Azure Policy, Microsoft Defender for Cloud, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
 | 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Microsoft Sentinel. |
 | 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |

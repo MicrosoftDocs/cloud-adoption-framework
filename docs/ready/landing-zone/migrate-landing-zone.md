@@ -3,7 +3,7 @@ title: Deploy a migration landing zone in Azure
 description: Learn how to deploy a migration landing zone in Azure. Use this landing zone to move an on-premises environment into Azure.
 author: martinekuan
 ms.author: martinek
-ms.date: 12/10/2021
+ms.date: 04/12/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -102,7 +102,7 @@ The following decisions are represented in the landing zone blueprint.
 
 | Component                    | Decisions                                                                                         | Alternative approaches                                                                                                                                                                                                                                                                |
 |------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)                                                                                                                                                                                               |
+| Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../migrate/azure-migration-guide/migration-tools-decision-guide.md)                                                                                                                                                                                               |
 | Logging and monitoring       | Operational insights workspace and diagnostic storage account will be provisioned.                |                                                                                                                                                                                                                                                                                       |
 | Network                      | A virtual network will be created with subnets for a gateway, firewall, jump box, and landing zone. | [Networking decisions](./design-area/network-topology-and-connectivity.md)                                                                                                                                                                                                                       |
 | Identity                     | It's assumed that the subscription is already associated with an Azure AD instance. | [Identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) |

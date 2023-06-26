@@ -27,7 +27,7 @@ For your subscriptions, Azure management groups help you efficiently manage:
 
 Each management group contains one or more subscriptions.
 
-Azure arranges management groups in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the *root management group*. You can define up to six levels of management groups in your hierarchy. Only one management group contains a subscription.
+Azure arranges management groups in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the *root management group*. You can define up to six levels of management groups in your hierarchy. A subscription will be a direct member of only one management group.
 
 Azure provides four levels of management scope:
 

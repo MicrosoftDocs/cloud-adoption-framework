@@ -7,7 +7,7 @@ ms.date: 01/04/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Define Azure AD tenants
@@ -18,11 +18,14 @@ Azure AD is also used by software as a service (SaaS) applications such as Micro
 
 Ask basic security questions during the Azure AD design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
 
+>[!TIP]
+> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+
 **Design considerations:**
 
 - An Azure subscription can only trust one Azure AD tenant at a time, further information can be found at [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
-- Multiple Azure AD tenants can function in the same enrollment.
+- Multiple Azure AD tenants can function in the same enrollment. Review [Azure landing zones and multiple Azure Active Directory tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview)
 
 - Azure Lighthouse only supports delegation at the subscription and resource group scopes.
 
@@ -36,13 +39,13 @@ Ask basic security questions during the Azure AD design phase, such as how your 
 
 - If using [Azure Government](/azure/azure-government/documentation-government-welcome) review the guidance around Azure AD tenants in [Planning identity for Azure Government applications](/azure/azure-government/documentation-government-plan-identity)
 
-- If using Azure Government, Azure China 21Vianet, Azure Germany ([closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then review [National clouds](/azure/active-directory/develop/authentication-national-cloud) for further guidance around Azure AD
+- If using Azure Government, Azure China 21Vianet, Azure Germany ([closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then review [National/Regional clouds](/azure/active-directory/develop/authentication-national-cloud) for further guidance around Azure AD
 
 **Design recommendations:**
 
 - Add one or more custom domains to your Azure AD tenant as per [Add your custom domain name using the Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
 
-  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in you on-premises Active Directory Domain Services environment.
+  - Review [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname) if planning to or using Azure AD Connect to ensure custom domain names are reflected in your on-premises Active Directory Domain Services environment.
 
 - Define your Azure single sign-on strategy, using Azure AD Connect, based on one of the supported [topologies](/azure/active-directory/hybrid/plan-connect-topologies).
 

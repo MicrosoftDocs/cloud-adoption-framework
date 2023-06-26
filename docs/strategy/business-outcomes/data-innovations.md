@@ -7,30 +7,30 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 # Data innovations
 
-Many companies want to migrate their existing data warehouse to the cloud. They are motivated by a number of factors, including:
+Many companies want to migrate their existing data warehouse to the cloud. They may be motivated by a number of factors, including:
 
 - No hardware to buy or maintenance costs.
 - No infrastructure to manage.
 - The ability to switch to a secure, scalable, and low-cost cloud solution.
 
-For example, the cloud-native, pay-as-you-go service from Azure called Azure Synapse Analytics provides an analytical database management system for organizations. Azure technologies help modernize your data warehouse after it's migrated and extend your analytical capabilities to drive new business value.
+For example, Azure Synapse Analyticcs is a cloud-native, pay-as-you-go service which provides an analytical database management system for organizations. Azure technologies can help modernize your data warehouse after migration, and extend your analytical capabilities to drive new business value.
 
 A data warehouse migration project involves many components. These include schema, data, extract-transform-load (ETL) pipelines, authorization privileges, users, BI tool semantic access layers, and analytic applications.
 
-After your data warehouse has been migrated to Azure Synapse Analytics, you can take advantage of other technologies in the Microsoft analytical ecosystem. Doing so allows you to not only modernize your data warehouse but also bring together insights produced in other analytical data stores on Azure.
+After your data warehouse has been migrated to Azure Synapse Analytics, you can take advantage of other technologies in the Microsoft analytical ecosystem. Doing so allows you to not only modernize your data warehouse but also bring together insights produced in other analytical data stores in Azure.
 
-You can broaden ETL processing to ingest data of any type into Azure Data Lake Storage. You can prepare and integrate it at scale by using Azure Data Factory. This produces trusted, commonly understood data assets that can be consumed by your data warehouse, and also accessed by data scientists and other applications. You can build real-time, batch-oriented analytical pipelines. You can also create machine learning models that can deploy to run in batch, in real time on streaming data, and on demand.
+You can broaden ETL processing to ingest data of any type into Azure Data Lake Storage, and you can prepare and integrate it at scale by using Azure Data Factory. This produces trusted, commonly understood data assets that can be consumed by your data warehouse, and also be accessed by data scientists and other applications. You can build real-time, batch-oriented analytical pipelines. You can also create machine learning models that can deploy to run in batch, in real-time on streaming data, and on-demand.
 
-In addition, you can use PolyBase to go beyond your data warehouse. This simplifies access to insights being produced in multiple underlying analytical platforms on Azure. You create holistic, integrated views in a logical data warehouse to gain access to streaming, big data, and traditional data warehouse insights from BI tools and applications.
+In addition, you can use PolyBase to go beyond your data warehouse, simplifying access to insights produced in multiple underlying analytical platforms on Azure. You create holistic, integrated views in a logical data warehouse to gain access to streaming, big data, and traditional data warehouse insights from BI tools and applications.
 
 Many companies have had data warehouses running in their datacenters for years, to enable users to produce business intelligence. Data warehouses extract data from known transaction systems, stage the data, and then clean, transform, and integrate it to populate data warehouses.
 
-Use cases, business cases, and technology advances all support how Azure Synapse Analytics can help you with data warehouse migration. The following sections list many of these examples.
+Use cases, business cases, and technology advances all contribute to how Azure Synapse Analytics can help you with data warehouse migration. The following sections list many of these examples.
 
 ## Use cases
 

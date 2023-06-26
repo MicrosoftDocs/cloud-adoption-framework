@@ -19,7 +19,7 @@ To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adop
  - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It's a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
  - You can choose single or multiple subscriptions based on your organization's needs.
      - Multiple subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription. For example, production versus non-production subscriptions, internal versus external, and so on.
-     - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](../../../decision-guides/subscriptions/index.md?source=recommendations).
+     - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md?source=recommendations).
      - It's recommended that you consider Azure Resource Manager throttle limits when going with multiple versus single subscriptions. For more information on throttle limits, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
 
 ## Use Azure resource naming and tagging conventions

@@ -7,7 +7,7 @@ ms.date: 10/20/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Deployment Acceleration discipline
@@ -18,7 +18,7 @@ Deployment acceleration is one of the Five Disciplines of Cloud Governance withi
 
 The following tools are available to govern Azure resources.
 
-- [Azure Policy](/azure/governance/policy/overview) is the primary tool to enforce resource consistency of Azure resources and assess compliance at-scale. Azure Policies can be deployed to either audit or enforce compliance.
+- [Azure Policy](/azure/governance/policy/overview) is the primary tool to enforce resource consistency of Azure resources and assess compliance at-scale. Policies can be deployed to either audit or enforce compliance.
 - [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) are automated processes you can use to build, test, package, release, or deploy any project. Azure Pipelines integrate with source code repositories such as GitHub.
 - [GitHub Actions workflows](https://docs.github.com/en/actions/using-workflows#about-workflows) are automated processes you can use to build, test, package, release, or deploy any project on GitHub.
 

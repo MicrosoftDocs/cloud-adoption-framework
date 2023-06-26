@@ -8,7 +8,7 @@ ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: internal
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Design area: Azure governance
@@ -100,8 +100,6 @@ Change advisory review boards might hinder an organizations innovation and busin
 - Are there groups of resources that should share a common lifecycle?
 - Are there groups of resources that should share common access constraints (such as Role-based access control)?
 - Are there standard resource configurations within your organization that might be used to ensure a consistent baseline configuration?
-- Explore how [tools in Azure can support resource consistency](../../../govern/resource-consistency/toolchain.md) in your landing zone.
-- Are you following guidance in [Why update your Azure landing zones?](../../../govern/resource-consistency/why-update-azure-landing-zone.md) to ensure that your Azure Landing Zone environment is up to date?
 
 ### Security baseline considerations
 

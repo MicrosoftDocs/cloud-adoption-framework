@@ -7,7 +7,7 @@ ms.date: 08/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: general
-ms.custom: internal, operating-model
+ms.custom: internal, operating-model, UpdateFrequency2
 ---
 
 # Operating model terminology

@@ -70,9 +70,4 @@ Application Insights contains different kinds of options for monitoring performa
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
