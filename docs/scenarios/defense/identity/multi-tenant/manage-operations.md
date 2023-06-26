@@ -134,7 +134,7 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 
 **Sentinel (M365).** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant to ingest security logs from Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the same tenant. Security operators monitoring incidents and alerts for Microsoft 365 use the primary tenant. Activities include:
 
-- Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
+- Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Microsoft 365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the Microsoft 365 environment.
 
@@ -144,7 +144,7 @@ Security operators in the primary Azure AD tenant need to monitor and manage ale
 
 ### Secondary tenant security operations
 
-Microsoft Sentinel and Defender for Cloud use Azure RBAC roles. You assign these roles to Azure AD users in the secondary tenant or use [Azure Lighthouse](https://learn.microsoft.com/en-us/azure/lighthouse/overview) to assign these roles to security operators in the primary tenant. However, security operators may need permissions in the secondary tenant that *can't* use Azure Lighthouse. Permissions within Microsoft 365 Defender can only be assigned to users or security groups within the same tenant. When servers are protected by Defender for Server, they are onboarded to Microsoft Defender for Endpoint in the same tenant where the subscription is attached. This means your security operators need to use and identity in the secondary tenant to take any response actions on servers.
+Microsoft Sentinel and Defender for Cloud use Azure RBAC roles. You assign these roles to Azure AD users in the secondary tenant or use [Azure Lighthouse](/azure/lighthouse/overview) to assign these roles to security operators in the primary tenant. However, security operators may need permissions in the secondary tenant that *can't* use Azure Lighthouse. Permissions within Microsoft 365 Defender can only be assigned to users or security groups within the same tenant. When servers are protected by Defender for Server, they are onboarded to Microsoft Defender for Endpoint in the same tenant where the subscription is attached. This means your security operators need to use and identity in the secondary tenant to take any response actions on servers.
 
 You can use external identities (B2B guests) to provide primary tenant security operators access to MDE in secondary tenants. For more information, see [multi-tenant security operations with external identities and Azure Lighthouse](security-operations.md) for example security operations architecture.
 
