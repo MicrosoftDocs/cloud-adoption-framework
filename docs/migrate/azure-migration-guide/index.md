@@ -39,7 +39,7 @@ In alignment with the best practices in the [Ready methodology](../../ready/inde
 
 ## When to use this guide
 
-The tools discussed in this guide support a wide variety of migration scenarios. You can use this guide as a baseline for most migrations, and this format works well for planning and migrating most workloads.
+The tools discussed in this guide support a various migration scenarios. You can use this guide as a baseline for most migrations, and this format works well for planning and migrating most workloads.
 
 To determine whether this migration guide is suitable for your project, consider whether the following conditions apply to your situation:
 
@@ -54,6 +54,8 @@ To determine whether this migration guide is suitable for your project, consider
 <!-- docutune:casing "our Microsoft teams" -->
 
 If any of these conditions don't apply to your situation, consider other [best practices for cloud migration](../azure-best-practices/index.md). For more complex migrations, we recommend that you request assistance from one of our Microsoft teams or partners. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
+
+Consider reviewing the [Mature team structures](/azure/cloud-adoption-framework/organize/organization-structures) guidance to see how different cloud functions can support your migration projects.
 
 ::: zone target="docs"
 

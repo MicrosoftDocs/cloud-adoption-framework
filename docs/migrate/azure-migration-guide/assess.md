@@ -16,7 +16,7 @@ The resources in this guide help you assess each workload, challenge assumptions
 
 ## Tools
 
-If you didn't follow the guidance in the links above, you'll need data and an assessment tool to make informed migration decisions. Azure Migrate is the native tool for assessing **and** migrating to Azure. If you haven't already, use these steps to create a new server migration project and collect the necessary data.
+You need data, an assessment tool and organizational understanding to make informed migration decisions. Azure Migrate is the native tool for assessing **and** migrating to Azure.
 
 ### Azure Migrate
 
@@ -64,7 +64,7 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 - Identify servers to migrate together. This step is helpful if you need clarification on which servers are part of an app deployment you want to migrate.
 - Identify whether servers are in use and which servers you can decommission instead of migrate.
 - Analyze dependencies to ensure nothing is left behind and avoid surprise outages after migration.
-- Consider using the Azure Migrate [Business case](/azure/migrate/how-to-build-a-business-case) capability to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
+- Use the Azure Migrate [Business case](/azure/migrate/how-to-build-a-business-case) capability to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
 
 <!-- markdownlint-disable MD024 -->
 
