@@ -70,7 +70,7 @@ When Windows devices joined to AD DS are synchronized to Azure AD, these devices
 
 Azure AD is the identity platform for Microsoft 365 and Azure.
 
-**Microsoft 365 and Azure AD.** When you use Microsoft 365 services like Microsoft Office, Intune, or Microsoft 365 Defender, you're using Azure AD. Azure AD allows you to sign into Microsoft Office. Azure AD allows you to use the people picker in SharePoint and OneDrive. Azure AD allows you to create a new Team or Microsoft 365 Group.
+**Microsoft 365 and Azure AD.** When you use Microsoft 365 services like Microsoft Office, Intune, or Microsoft 365 Defender, you're using Azure AD. Azure AD allows you to sign into Microsoft Office. Azure AD allows you to use the people picker in SharePoint and OneDrive. Azure AD allows you to create a new Team or Microsoft 365 Group. All Microsoft 365 identity operations including sign in, collaboration, sharing, and permissions assignment use Azure AD.
 
 **Azure and Azure AD.** All Azure resources belong to an [Azure subscription](/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts#azure-subscription-purposes). You can assign permission at the subscription level by applying [role-based access control (RBAC)](/azure/role-based-access-control/overview). The identities managing the subscription, including authentication and authorization for management, use Azure AD. Subscriptions are attached or “pinned” to exactly one Azure AD tenant.
 

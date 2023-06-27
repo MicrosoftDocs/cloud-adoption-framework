@@ -36,7 +36,7 @@ Azure Active Directory (Azure AD) tenants are the foundation of your identity ar
 | Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture |
 | SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.
 
-If you require multiple Azure AD tenants, you should understand B2C and B2B features in Azure AD. These features help support multi-tenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
+If you require multiple Azure AD tenants, you should understand [Azure AD external identities (B2B)](/azure/active-directory/external-identities/what-is-b2b) and [Azure Lighthouse](/azure/lighthouse/overview). These features help support multi-tenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
 
 ## Identify tenant types
 
@@ -44,7 +44,7 @@ In multi-tenant environments, you need to identify the primary tenant and all se
 
 **Identify the primary tenant.** Most defense organizations create the primary tenant to use Microsoft 365. The primary tenant contains all user identities (1) Microsoft 365 licenses (2), devices (3), and applications (3) (*see figure 1*). Defense organizations often use [Azure AD Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect) to synchronize the identities from on-premises Active Directory to the primary Azure AD tenant.
 
-Some defense organizations consume services from a parent or partner organization. We call this parent or partner organization a shared service provider. Many defense organizations access Microsoft 365 from a shared service provider. The tenant with your Microsoft 365 licenses is your primary tenant even if your organization doesn’t manage or control the tenant.
+Some defense organizations consume Microsoft 365 in a shared tenant owned and operated by an outside agency. We call this agency a shared service provider. When you use a shared service provider for Microsoft 365, your users are licensed in the shared tenant and are accustomed to signing in with their account homed in that tenant. It's still your primary tenant even if your organization doesn’t manage or control it directly.”
 
 **Identify all secondary tenants (if multi-tenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if components within your organization moved to the cloud before an [enterprise scale landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation) was stood up. You typically use secondary tenants to manage Azure workloads (4) with external users (B2B guests) or cloud only accounts (5) (*see figure 1*).
 
@@ -72,9 +72,9 @@ You should implement the following recommendations in all Azure AD tenants.
 
 **Use Privileged Identity Management.** Use [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to manage role assignments for Azure AD and Azure roles, and eligible group membership for privileged security groups. Establish periodic [access reviews](/azure/active-directory/governance/manage-access-review) for eligible administrators and external users (B2B guests).
 
-**Enable Cloud-Based authentication for all users.** Federated authentication exposes Azure AD to on-premises Active Directory compromises. Cloud-based authentication methods are more secure and, when combined with Azure AD joined devices, offer a better single sign-on experience.
+**Enable cloud-based authentication for all users.** Federated authentication exposes Azure AD to on-premises Active Directory compromises. Cloud-based authentication methods are more secure and, when combined with Azure AD joined devices, offer a better single sign-on experience.
 
-With the general availability of [Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication), there's no technical reason to federate Azure AD domains. Azure AD Authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
+With the general availability of [Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication), there's no reason to federate Azure AD domains. Azure AD Authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
 
 - Security Keys (FIDO2 / Passkey)
 - Certificate-Based Authentication
@@ -103,7 +103,7 @@ If a service provider or external agency that doesn't [delegate application regi
 
 **Use Azure AD for managing other cloud environments.** Azure AD isn't just an identity platform for Azure and Microsoft 365. Use Azure AD to gain access to other cloud environments for popular Software as a Service (SaaS) and cloud platforms like Amazon Web Services (AWS) and Google Cloud Platform (GCP). For more information, see the [Azure AD Application gallery](/azure/active-directory/manage-apps/overview-application-gallery).
 
-**Use a secure cloud computing architecture (SCCA).** Each Defense organization should deploy an [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in Azure subscriptions attached to the primary tenant.
+**Use a secure cloud computing architecture (SCCA).** Each defense organization should deploy an [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture in Azure subscriptions attached to the primary tenant.
 
 **Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [Enterprise Scale Landing Zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
 
