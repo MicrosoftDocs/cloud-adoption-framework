@@ -25,10 +25,6 @@ All Azure services that provide a consumption-based cost model can be resized th
 1. Go to **Monitor**.
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
 
-::: zone target="chromeless"
-
-::: zone-end
-
 The following are some common services that you can resize.
 
 ### Resize a virtual machine
@@ -43,10 +39,6 @@ However, for virtual machines created or migrated using other methods, or in cas
 1. Select **Resize**.
 
 Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
-
-::: zone target="chromeless"
-
-::: zone-end
 
 ::: zone target="docs"
 
@@ -68,10 +60,6 @@ Partners can use the Partner Center to review the Azure usage.
 1. Select **Configure** and adjust the properties of the storage account to match your requirements.
 1. Select **Save**.
 
-::: zone target="chromeless"
-
-::: zone-end
-
 ::: zone target="docs"
 
 You can also upgrade a General purpose v1 storage account to v2 or can change the access tier of storage account. See [Upgrade a Storage Account](/azure/storage/common/storage-account-upgrade) and [Move a Storage Account](/azure/storage/common/storage-account-move).
@@ -80,25 +68,17 @@ You can also upgrade a General purpose v1 storage account to v2 or can change th
 
 ### Resize a SQL database
 
-1. Go to **App Services**.
-1. Select your App Service instance.
-1. Choose **Scale up (App Service plan)** in the left navigation.
-1. Select on of the pricing tiers and choose **Select**.
-
-::: zone target="chromeless"
-
-::: zone-end
-
-### Resize an App Service
-
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.
 
-::: zone target="chromeless"
+### Resize an App Service
 
-::: zone-end
+1. Go to **App Services**.
+1. Select your App Service instance.
+1. Choose **Scale up (App Service plan)** in the left navigation.
+1. Select on of the pricing tiers and choose **Select**.
 
 ## Cost management
 
