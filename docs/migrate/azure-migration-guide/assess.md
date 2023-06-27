@@ -33,6 +33,8 @@ If you're considering a lift-and-shift approach or are in the early assessment s
 
 #### Create a new project
 
+::: zone target="chromeless"
+
 Begin server discovery, assessment, and migration by using the following steps for Azure Migrate:
 
 1. Select **Azure Migrate**.
@@ -42,13 +44,15 @@ Begin server discovery, assessment, and migration by using the following steps f
 5. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
 6. After creating the project, tools are visible, and the user can start with Discovery.
 
-::: zone target="chromeless"
-
 ::: zone-end
 
 ::: zone target="docs"
 
-#### Learn more
+Begin server discovery, assessment, and migration by creating and managing projects with Azure Migrate.
+
+- See [create and manage projects](/azure/migrate/create-manage-projects) in the Azure Migrate product documentation.
+
+##### Learn more
 
 - [Azure Migrate overview](/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
@@ -56,7 +60,7 @@ Begin server discovery, assessment, and migration by using the following steps f
 
 ::: zone-end
 
-### Dependency analysis
+#### Azure Migrate dependency analysis
 
 Dependency analysis identifies dependencies between discovered on-premises servers. It provides the following advantages:
 
@@ -68,7 +72,7 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 
 <!-- markdownlint-disable MD024 -->
 
-#### Learn more
+##### Learn more
 
 - [Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization)
 
