@@ -48,13 +48,19 @@ Begin server discovery, assessment, and migration by using the following steps f
 
 ::: zone target="docs"
 
-Begin server discovery, assessment, and migration by creating and managing projects with Azure Migrate.
+To begin server discovery, assessment, and migration, you can [create and manage projects](/azure/migrate/create-manage-projects) with Azure Migrate.
 
-- See [create and manage projects](/azure/migrate/create-manage-projects) in the Azure Migrate product documentation.
+#### Assess on-premises workloads
 
-##### Learn more
+Assess various on-premises workloads to measure cloud readiness, identify risks, and estimate costs and complexity. See the following resources to learn how Azure Migrate can help you in your migration assessment:
 
-- [Azure Migrate overview](/azure/migrate/migrate-services-overview)
+- [Create an Azure VM assessment](/azure/migrate/how-to-create-assessment)
+- [Create an Azure SQL assessment](/azure/migrate/how-to-create-azure-sql-assessment)
+- [Create an Azure App Service assessment](/azure/migrate/how-to-create-azure-app-service-assessment)
+- [Create an Azure VMware Solution assessment](/azure/migrate/how-to-create-azure-vmware-solution-assessment)
+
+Additional resources:
+
 - [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)
 
@@ -62,7 +68,7 @@ Begin server discovery, assessment, and migration by creating and managing proje
 
 #### Azure Migrate dependency analysis
 
-Dependency analysis identifies dependencies between discovered on-premises servers. It provides the following advantages:
+[Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization) identifies dependencies between discovered on-premises servers. It provides the following advantages:
 
 - Gather servers into groups for a better assessment.
 - Identify servers to migrate together. This step is helpful if you need clarification on which servers are part of an app deployment you want to migrate.
@@ -71,10 +77,6 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 - Use the Azure Migrate [Business case](/azure/migrate/how-to-build-a-business-case) capability to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
 
 <!-- markdownlint-disable MD024 -->
-
-##### Learn more
-
-- [Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization)
 
 ## Challenge assumptions
 

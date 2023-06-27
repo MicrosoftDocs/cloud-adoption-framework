@@ -722,7 +722,7 @@ items:
 
         - name: Specialized workloads
           items:
-          - name: Move on-premises VMware infrastructure to Azure
+          - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
           - name: Azure NetApp Files
             href: https://azure.microsoft.com/services/netapp/
