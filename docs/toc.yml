@@ -595,6 +595,7 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
+        - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
@@ -612,7 +613,6 @@ items:
           items:
           - name: Migrate to Azure Kubernetes Service (AKS)
             href: /azure/aks/aks-migration
-        - name: Tailwind Traders case study
         - name: Windows Server workloads
           items:
           - name: Rehost a Windows application on Azure VMs
