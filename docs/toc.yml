@@ -595,6 +595,10 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
+        - name: Container workloads
+          items:
+          - name: Migrate to Azure Kubernetes Service (AKS)
+            href: /azure/aks/aks-migration
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
@@ -722,7 +726,7 @@ items:
 
         - name: Specialized workloads
           items:
-          - name: Move on-premises VMware infrastructure to Azure
+          - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
           - name: Azure NetApp Files
             href: https://azure.microsoft.com/services/netapp/
