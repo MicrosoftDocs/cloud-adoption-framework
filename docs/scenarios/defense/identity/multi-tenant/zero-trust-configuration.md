@@ -133,7 +133,7 @@ You should implement the following recommendations in the primary tenant only.
 
 You should implement the following recommendations in the secondary tenant.
 
-**Procure licenses required for Azure AD management**. [Azure AD Premium P2](/security/business/identity-access/azure-active-directory-pricing) licenses should be procured for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Azure AD P2 license to a local user in the tenant. This setup allows you to enable premium features like conditional access and Entra identity governance. For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
+**Procure licenses required for Azure AD management**. [Azure AD Premium P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses should be procured for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Azure AD P2 license to a local user in the tenant. This setup allows you to enable premium features like conditional access and Entra identity governance. For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
 You should use [workload identities premium](/azure/active-directory/workload-identities/workload-identities-overview) to secure workload identities with access to resources in the primary tenant, such as MS Graph API.
 
