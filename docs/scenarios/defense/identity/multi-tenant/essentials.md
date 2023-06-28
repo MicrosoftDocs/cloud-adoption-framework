@@ -17,7 +17,7 @@ Zero trust is a key strategy for ensuring the integrity and confidentiality of s
 
 Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements with Azure AD. Many already have access to essential Azure AD features through their Microsoft 365 licenses.
 
-## Tenants
+## Azure AD tenants
 
 An instance of Azure AD is called an Azure AD tenant. An Azure AD tenant is an identity platform and security boundary. It's the identity platform for your organization. security boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
