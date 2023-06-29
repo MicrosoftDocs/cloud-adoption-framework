@@ -19,7 +19,7 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 - [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
 - [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
 - [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
-- [SAP data integration generic architecture](./sap-lza-data-reference-architecture.md)
+- [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
 
 The sections below describes different security layers in SAP Extend Scenarios, breaks down each component and provides considerations and recommendations on them. Azure Data Factory management resources are built on Azure security infrastructure and use all possible security measures offered by Azure.
 
@@ -175,4 +175,4 @@ To plan for Power BI security, see the Power BI implementation planning [securit
 
 ## Next steps
 
-- [Example Architecture](./sap-lza-data-reference-architecture.md)
+- [Example Architecture](./sap-lza-data-example-architecture.md)

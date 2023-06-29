@@ -57,7 +57,7 @@ items:
       - name: Data integration security for SAP on Azure
         href: sap-lza-data-integration-security.md
       - name: SAP data integration generic architecture
-        href: sap-lza-data-reference-architecture.md
+        href: sap-lza-data-example-architecture.md
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md
