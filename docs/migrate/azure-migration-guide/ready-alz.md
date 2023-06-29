@@ -12,16 +12,16 @@ ms.custom:
 
 # Readying your Landing Zone for Migration
 
-During the [Ready phase](../../ready/index), you deployed your [Azure Landing Zone](../../ready/landing-zone/index).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
+During the [Ready phase](../../ready/index.md), you deployed your [Azure Landing Zone](../../ready/landing-zone/index.md).  If you used one of the ALZ reference implementations (Cloud Adoption Framework enterprise-scale landing zones in Azure - Cloud Adoption Framework | Microsoft Learn), there are still tasks necessary in order to ready your landing zone for a VM migration project.  This article provides a list of the major tasks necessary to make sure you have the configurations in place to support a migration project, and where to find guidance for how to perform the activities necessary.  However, there are also items from other phases that you should consider, such as:
 
-- [Ensure that you have your initial corporate policy defined and well understood](../../govern/guides/standard/initial-corporate-policy)
-- [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant)
-- [Your organizational alignment](../../plan/initial-org-alignment) and how you intend to [continue to manage it](../../organize/index)
-- [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging)
+- [Ensure that you have your initial corporate policy defined and well understood](../../govern/guides/standard/initial-corporate-policy.md)
+- [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md)
+- [Your organizational alignment](../../plan/initial-org-alignment.md) and how you intend to [continue to manage it](../../organize/index.md)
+- [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
 
 ## Azure Landing Zone Post-Deployment Activities
 
-Azure Landing Zone reference implementations often use Infrastructure as Code for automated deployment and for managing the resources over their life cycle.  You can refer to the article on [using infrastructure as code to update Azure landing zones](./manage/infrastructure-as-code-updates) to understand the benefits of using Infrastructure as Code to manage the life cycle of your Landing Zone, as well the guidance to  [keep your Azure landing zone up to date](./govern/resource-consistency/keep-azure-landing-zone-up-to-date) for guidance on how to keep your Landing Zone up to date.
+Azure Landing Zone reference implementations often use Infrastructure as Code for automated deployment and for managing the resources over their life cycle.  You can refer to the article on [using infrastructure as code to update Azure landing zones](./manage/infrastructure-as-code-updates.md) to understand the benefits of using Infrastructure as Code to manage the life cycle of your Landing Zone, as well the guidance to  [keep your Azure landing zone up to date](./govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) for guidance on how to keep your Landing Zone up to date.
 
 This article is intended for use by organizations regardless of how they chose to deploy their Azure Landing Zones.  Some steps are focused on automated deployments, but it will be noted if they are not relevant for manually deployed and managed environments.
 
@@ -39,7 +39,7 @@ Enable Subscription Creation|Operations|Set up subscription vending to enable th
 
 During ALZ deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both.  After ALZ deployment, you still need to configure hybrid connectivity from these gateways, connecting to your existing data center appliances or to your ExpressRoute circuit.
 
-In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure).  This plan should guide you on what connections you need to perform.  For example, if you are using ExpressRoute, you will need to work with your provider to establish your ExpressRoute circuit.
+In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md).  This plan should guide you on what connections you need to perform.  For example, if you are using ExpressRoute, you will need to work with your provider to establish your ExpressRoute circuit.
 For technical guidance for specific scenarios, review the following:
 
 - [Creating a VPN connection from your Azure VPN Gateway](https://learn.microsoft.com/azure/vpn-gateway/tutorial-site-to-site-portal)
@@ -56,9 +56,9 @@ During the ALZ deployment, organizations will deploy supporting architecture for
 
 This section has guidance for considerations related to Active Directory.  If you are using another identity provider, you will need to follow their guidance on extending your identity to Azure.
 
-Prior to implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity) when you planned for your Landing Zone.
+Prior to implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) when you planned for your Landing Zone.
 
-You should also review your [identity baseline](./govern/identity-baseline/) from Govern to determine if there are any Azure AD changes that you might need.
+You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if there are any Azure AD changes that you might need.
 
 ### Extending Active Directory Domain Controllers
 
