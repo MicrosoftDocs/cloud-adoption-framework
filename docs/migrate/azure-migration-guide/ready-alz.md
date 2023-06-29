@@ -42,13 +42,13 @@ During ALZ deployment, most organizations deploy a Connectivity subscription wit
 In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md).  This plan should guide you on what connections you need to perform.  For example, if you are using ExpressRoute, you will need to work with your provider to establish your ExpressRoute circuit.
 For technical guidance for specific scenarios, review the following:
 
-- [Creating a VPN connection from your Azure VPN Gateway](https://learn.microsoft.com/azure/vpn-gateway/tutorial-site-to-site-portal)
-- [Creating an ExpressRoute circuit](https://learn.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
+- [Creating a VPN connection from your Azure VPN Gateway](/azure/vpn-gateway/tutorial-site-to-site-portal)
+- [Creating an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
   - You should also refer to your provider’s specific documentation as well.
-- [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](https://learn.microsoft.com/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
-- [Managing Azure Virtual WAN gateway settings](https://learn.microsoft.com/azure/virtual-wan/gateway-settings)
+- [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
+- [Managing Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings)
 
-If you are establishing your hybrid connectivity to Azure via a third-party NVA deployed in your virtual network, review their specific guidance as well as our [general guidance for highly available NVAs](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha).
+If you are establishing your hybrid connectivity to Azure via a third-party NVA deployed in your virtual network, review their specific guidance as well as our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare Identity
 
@@ -66,13 +66,13 @@ In most migration scenarios, the workloads being migrated to Azure are already j
 
 As a result, you will need to deploy domain controllers to Azure, inside of the identity network area that you deployed.  After deploying the VMs, you would need to follow your normal DC promotion process to add them to the domain.  This can include additional sites created, to support your replication topology.
 
-For a common architecture pattern for deploying these resources, review the article on [Deploy AD DS in an Azure virtual network](https://learn.microsoft.com/azure/architecture/example-scenario/identity/adds-extend-domain) from the Azure Architecture Center.  Note that the AD DS servers could be in a subnet in the hub if you are implementing the [Enterprise-scale for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md), or in their own dedicated virtual network for [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
+For a common architecture pattern for deploying these resources, review the article on [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain) from the Azure Architecture Center.  Note that the AD DS servers could be in a subnet in the hub if you are implementing the [Enterprise-scale for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md), or in their own dedicated virtual network for [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
 
 ### Azure AD Connect
 
 Most organizations already have Azure AD Connect running to populate M365 services like Exchange Online.  However, if you haven’t implemented this, then post LZ deployment you might need to deploy Azure AD Connect to replicate identities.
 
-You can use [this guidance](https://learn.microsoft.com/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Azure AD Connect.
+You can use [this guidance](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Azure AD Connect.
 
 ## Enable Hybrid DNS
 
@@ -80,7 +80,7 @@ Most organizations need to be able to resolve DNS requests for namespaces that a
 
 As a result, configuration of DNS services is needed to support common flows.  Azure Landing Zones deploy many of the resources that you need, but there are some additional items to review.
 
-To prepare for these activities, review [DNS resolution in Azure](https://learn.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
+To prepare for these activities, review [DNS resolution in Azure](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
 ### Custom DNS Resolution
 
@@ -88,13 +88,13 @@ If you are using Active Directory for your DNS resolver, or are deploying a thir
 
 Once deployed, it will need to be integrated into your existing DNS platform so that it is able to perform lookups against your existing namespaces.  For Active Directory DNS servers, this is provided automatically.
 
-You can also use [Azure Private Resolver](https://learn.microsoft.com/azure/dns/dns-private-resolver-overview), but this resource is not deployed as part of your Azure Landing Zone deployment.
+You can also use [Azure Private Resolver](/azure/dns/dns-private-resolver-overview), but this resource is not deployed as part of your Azure Landing Zone deployment.
 
-If your design uses Private DNS Zones, plan actions accordingly such as those commonly used with Private Endpoints, review [Azure Private Endpoint DNS configuration](https://learn.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#specify-dns-servers).  The Private DNS zones will be deployed as part of your Landing Zone, but when you are performing modernization efforts using Private Endpoints, you will have additional configuration for them.
+If your design uses Private DNS Zones, plan actions accordingly such as those commonly used with Private Endpoints, review [Azure Private Endpoint DNS configuration](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#specify-dns-servers).  The Private DNS zones will be deployed as part of your Landing Zone, but when you are performing modernization efforts using Private Endpoints, you will have additional configuration for them.
 
 ### Azure Firewall DNS Proxy
 
-The Azure Firewall can act as a [DNS proxy](https://learn.microsoft.com/azure/firewall/dns-details), receiving traffic and either forwarding it to the Azure resolver or to your DNS servers.  This can be used to allow for lookups from on-prem to Azure, but cannot conditionally forward back to on-prem DNS servers.
+The Azure Firewall can act as a [DNS proxy](/azure/firewall/dns-details), receiving traffic and either forwarding it to the Azure resolver or to your DNS servers.  This can be used to allow for lookups from on-prem to Azure, but cannot conditionally forward back to on-prem DNS servers.
 
 As a result, if hybrid DNS resolution is needed, the Azure Firewall DNS Proxy can be set to forward to your custom DNS servers (such as your domain controllers).
 
@@ -108,9 +108,9 @@ Once the previous activities are completed, you can set the DNS servers for your
 
 If you have deployed a firewall in your hub network, there are a few considerations that you should address to be ready to migrate workloads.  Organizations can run into routing and network access issues by not addressing these earlier in their deployments.
 
-As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
+As part of performing these activities, review the [networking design area](/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
 
-If you are deploy out a third-party NVA to act as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
+If you are deploy out a third-party NVA to act as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
 
 ### Deploy Standard Rulesets
 
@@ -126,11 +126,11 @@ Azure itself provides routing for the following scenarios, with no additional co
 - Routing between resources in peered virtual networks.
 - Routing between resources and a virtual network gateway, either in its own virtual network or a peered one set to use the gateway.
 
-Two common routing scenarios need additional actions taken, both of which involve route tables assigned to subnets to shape routing.  [This article](https://learn.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#custom-routes) provides more information about Azure routing and custom routes.
+Two common routing scenarios need additional actions taken, both of which involve route tables assigned to subnets to shape routing.  [This article](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) provides more information about Azure routing and custom routes.
 
 ### Interspoke Routing
 
-As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology.md), most organizations opt to use a  [hub and spoke network topology](https://learn.microsoft.com/azure/architecture/networking/spoke-to-spoke-networking).
+As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology.md), most organizations opt to use a  [hub and spoke network topology](/azure/architecture/networking/spoke-to-spoke-networking).
 
 In order to allow routing between spokes, you will need to have routes that take traffic from one spoke to another.  A default route (0.0.0.0/0) to your firewall will be sufficient, and works best to simplify routing.  With this route in place, traffic to any unknown location will head to the firewall, which enables inspection and the application of your firewall rules.
 
@@ -145,9 +145,9 @@ If you intend to inspect traffic, there are two configurations needed:
 - In your Connectivity Subscription, you will need a route table created and linked to the GatewaySubnet.  It will need a route for every spoke network you intend to attach, with a next hop of your firewall’s IP address.
 - In each of your Landing Zone Subscriptions, you will need a route table created and linked to each subnet.  It will need BGP propagation disabled on it.
 
-You can review the article on [Azure virtual network traffic routing](https://learn.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#custom-routes) for more information about custom routes and Azure defined routes.
+You can review the article on [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) for more information about custom routes and Azure defined routes.
 
-In addition, if you intend to inspect traffic to Private Endpoints, you will want to make sure that the appropriate routing network policy is enabled on the subnet where the Private Endpoints are hosted.  Refer to [manage network policies for private endpoints](https://learn.microsoft.com/azure/private-link/disable-private-endpoint-network-policy?tabs=network-policy-portal) to learn how these operate.
+In addition, if you intend to inspect traffic to Private Endpoints, you will want to make sure that the appropriate routing network policy is enabled on the subnet where the Private Endpoints are hosted.  Refer to [manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy?tabs=network-policy-portal) to learn how these operate.
 
 If you do not intend to inspect traffic, no changes are needed.  However, if you add route tables to your spoke network subnets, you will want to make sure that BGP propagation is enabled on it, so that it can route back to your gateway.
 
