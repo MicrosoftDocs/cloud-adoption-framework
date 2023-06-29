@@ -56,8 +56,8 @@ SAP SaaS solutions:
 
 - **Licensing** Understand the existing licenses available, and consider the licensing implications before you extract data from SAP systems. Work with your SAP counterparts. Because licensing is a complex subject and the policies might change over time, you can contact your SAP account team for guidance. For more information, see these guides:
 
-  -	[Indirect access guide](https://news.sap.com/wp-content/blogs.dir/1/files/Indirect_Access_Guide_for_SAP_Installed_Base.pdf) for SAP ERP (ECC and SAP S/4HANA) customers with contracts based on SAP pricing policies prior to April 10, 2018.  
-  - [ERP pricing for the digital age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
+- [Indirect access guide](https://news.sap.com/wp-content/blogs.dir/1/files/Indirect_Access_Guide_for_SAP_Installed_Base.pdf) for SAP ERP (ECC and SAP S/4HANA) customers with contracts based on SAP pricing policies prior to April 10, 2018.  
+- [ERP pricing for the digital age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
 
 - **SAP HANA** For SAP HANA, you must differentiate between the runtime database and full-use database licenses. Runtime databases only support software that's licensed from SAP. Full-use databases licensed from SAP support SAP and non-SAP software. Full-use SAP HANA databases are licensed based on a gigabyte-of-memory metric. So, third-party data connectors that access the SAP HANA database directly need to have a full-use SAP HANA database license. For more information, see [HANA licensing technical details](https://blogs.sap.com/2021/01/18/technical-details-hana-licensing/) and the [SAP licensing guide](https://www.sapusers.org/uploads/files/5660).
 
