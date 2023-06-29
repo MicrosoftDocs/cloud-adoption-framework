@@ -24,10 +24,10 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 This article is Part 5 of the SAP extend and innovate data: Best practices series. For more information, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md), [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md), [Performance and troubleshooting](./sap-lza-data-extraction-performance-troubleshooting.md) and [SAP Data Integration Security](./sap-lza-data-integration-security.md)
 
 
-The following diagram is an example reference architecture of an SAP Data Integration on Azure. Use this reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-extend-data-integration-architecture.vsdx) and modify it to fit your specific business and technical requirements. 
+The following diagram is an example reference architecture of an SAP Data Integration on Azure. Use this reference architecture as a starting point.
 
 :::image type="content" source="./media/sap-extend-data-integration-architecture.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure.":::
-
+_Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](./media/sap-extend-data-integration-architecture.vsdx) of this architecture._
 
 # Workflow 
 

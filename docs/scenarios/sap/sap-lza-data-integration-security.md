@@ -30,9 +30,10 @@ Data Ingestion Layer:
 - Azure Data Factory
 - Self-Hosted Integration Runtime VM
 
-The following diagram is a reference architecture of an SAP Data Integration Security on Azure. Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-extend-security-architecture-updated.vsdx) and modify it to fit your specific business and technical requirements.
+The following diagram is a reference architecture of an SAP Data Integration Security on Azure. Use the reference architecture as a starting point.
 
 :::image type="content" source="./media/sap-extend-security-architecture.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure.":::
+_Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](./media/sap-extend-security-architecture.vsdx) of this architecture._
 
 ## SAP security
 
