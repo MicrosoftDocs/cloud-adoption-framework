@@ -595,16 +595,24 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
-        - name: Container workloads
-          items:
-          - name: Migrate to Azure Kubernetes Service (AKS)
-            href: /azure/aks/aks-migration
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
+        - name: AWS
+          items:
+          - name: Discover AWS instances
+            href: /azure/migrate/tutorial-discover-aws
+          - name: Assess AWS instances for migration to Azure
+            href: /azure/migrate/tutorial-assess-aws
+          - name: Migrate AWS instances
+            href: /azure/migrate/tutorial-migrate-aws-virtual-machines
+        - name: Containers
+          items:
+          - name: Migrate to Azure Kubernetes Service (AKS)
+            href: /azure/aks/aks-migration
         - name: Windows Server workloads
           items:
           - name: Rehost a Windows application on Azure VMs

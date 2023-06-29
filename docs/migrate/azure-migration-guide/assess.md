@@ -86,6 +86,14 @@ If you rely on the [Azure Migrate: Discovery and assessment](/azure/migrate/migr
 
 <!-- markdownlint-disable MD024 -->
 
+#### Azure Advisor Service Retirement workbook
+
+Being informed about upcoming Azure services and feature retirements is essential to understand their impact on your workloads and planning migration.
+
+The Service Retirement workbook gives you a centralized resource-level view of service retirements. This workbook will help you assess, evaluate options, and plan for migration from retiring services and features.
+
+To learn more, see [Prepare migration of your workloads impacted by service retirement](/azure/advisor/advisor-how-to-plan-migration-workloads-service-retirement).
+
 ## Challenge assumptions
 
 In an ideal migration, every asset would be compatible with a cloud platform and ready for migration or modernization. But in practice, you shouldn't migrate every workload to the cloud. Not every asset is compatible with cloud platforms. Before migrating a workload to the cloud, assess each workload and all dependent assets.
