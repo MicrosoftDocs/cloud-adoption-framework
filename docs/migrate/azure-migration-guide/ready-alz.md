@@ -108,7 +108,7 @@ Once the previous activities are completed, you can set the DNS servers for your
 
 If you have deployed a firewall in your hub network, there are a few considerations that you should address to be ready to migrate workloads.  Organizations can run into routing and network access issues by not addressing these earlier in their deployments.
 
-As part of performing these activities, review the [networking design area](/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
+As part of performing these activities, review the [networking design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
 
 If you are deploy out a third-party NVA to act as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
 
