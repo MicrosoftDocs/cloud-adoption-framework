@@ -21,7 +21,7 @@ During the [Ready phase](../../ready/index.md), you deployed your [Azure Landing
 
 ## Azure Landing Zone Post-Deployment Activities
 
-Azure Landing Zone reference implementations often use Infrastructure as Code for automated deployment and for managing the resources over their life cycle.  You can refer to the article on [using infrastructure as code to update Azure landing zones](./manage/infrastructure-as-code-updates.md) to understand the benefits of using Infrastructure as Code to manage the life cycle of your Landing Zone, as well the guidance to  [keep your Azure landing zone up to date](./govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) for guidance on how to keep your Landing Zone up to date.
+Azure Landing Zone reference implementations often use Infrastructure as Code for automated deployment and for managing the resources over their life cycle.  You can refer to the article on [using infrastructure as code to update Azure landing zones](../../manage/infrastructure-as-code-updates.md) to understand the benefits of using Infrastructure as Code to manage the life cycle of your Landing Zone, as well the guidance to  [keep your Azure landing zone up to date](../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) for guidance on how to keep your Landing Zone up to date.
 
 This article is intended for use by organizations regardless of how they chose to deploy their Azure Landing Zones.  Some steps are focused on automated deployments, but it will be noted if they are not relevant for manually deployed and managed environments.
 
@@ -108,7 +108,7 @@ Once the previous activities are completed, you can set the DNS servers for your
 
 If you have deployed a firewall in your hub network, there are a few considerations that you should address to be ready to migrate workloads.  Organizations can run into routing and network access issues by not addressing these earlier in their deployments.
 
-As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity).
+As part of performing these activities, review the [networking design area](https://learn.microsoft.com/azure/oud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
 
 If you are deploy out a third-party NVA to act as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
 
@@ -130,7 +130,7 @@ Two common routing scenarios need additional actions taken, both of which involv
 
 ### Interspoke Routing
 
-As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology), most organizations opt to use a  [hub and spoke network topology](https://learn.microsoft.com/azure/architecture/networking/spoke-to-spoke-networking).
+As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology.md), most organizations opt to use a  [hub and spoke network topology](https://learn.microsoft.com/azure/architecture/networking/spoke-to-spoke-networking).
 
 In order to allow routing between spokes, you will need to have routes that take traffic from one spoke to another.  A default route (0.0.0.0/0) to your firewall will be sufficient, and works best to simplify routing.  With this route in place, traffic to any unknown location will head to the firewall, which enables inspection and the application of your firewall rules.
 
@@ -163,4 +163,4 @@ You can also deploy your own custom alerting for resources, if your needs deviat
 
 This section applies to organizations that want to automate their subscription provisioning process.  If you are manually managing your landing zone and subscription creation, you would instead need to establish your own process for creating subscriptions.
 
-Once you begin migrating, you will need to create subscriptions for your workloads.  To automate and accelerate this step, enable [Subscription vending](../../ready/landing-zone/design-area/subscription-vending).  Once established, you should be able to quickly create subscriptions.
+Once you begin migrating, you will need to create subscriptions for your workloads.  To automate and accelerate this step, enable [Subscription vending](../../ready/landing-zone/design-area/subscription-vending.md).  Once established, you should be able to quickly create subscriptions.
