@@ -48,7 +48,8 @@ The [Azure policies included in the enterprise-scale landing zone reference impl
 
 ### Sandbox access
 
-The sandbox user has owner access to the sandbox subscription. When a sandbox is cancelled, remove the owner role-based access control (RBAC) for all sandbox users.
+The sandbox user has owner access to the sandbox subscription. When a sandbox is canceled, remove the owner role-based access control (RBAC) for all sandbox users.
+
 
 ## Other considerations
 
