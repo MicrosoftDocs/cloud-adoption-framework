@@ -1,5 +1,5 @@
 ---
-title: SAP data integration with Azure-Choose the best SAP connector
+title: Choose the best SAP connector
 description: Learn how to choose the best SAP connector for your source application to integrate SAP data with Azure data services.
 author: shah-manish
 ms.author: manshah
@@ -10,7 +10,7 @@ ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP data integration with Azure: Choose the best SAP connector
+# Choose the best SAP connector
 
 This article is part of the "SAP extend and innovate data: Best practices" article series.
 

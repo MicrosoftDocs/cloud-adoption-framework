@@ -39,10 +39,12 @@ The dataflow can be defined with four main pieces:
 1. **Data sources:** A system must connect to a data source to enable data ingestion and analytics. Various data sources exist.
 1. **Data ingestion:** Using Azure Data Factory and Synapse pipelines enables data integration.
 1. **Data storage:** Azure provides Azure Data Lake Storage (ADLS) built on Azure Blob Storage for data storage.
-1. **Data transformation and consumption:** 
-1. **Visualizing and reporting:** 
+1. **Data transformation and consumption:** Data is transformed through various stages, and consumption is enabled through reports with Power BI, or through private endpoints allowing clients to access data securely over a Private Link.
+1. **Data visualization and reporting:** Accessing reports and visualizing data can either be done through the Power BI service, or for example, using external applications.
 
-### Data sources
+The below sections expand further on the dataflow.
+
+#### Data sources
 
 In the example architecture, data sources can include on-premises SQL servers, semi-structured data in, JSON, XML and log files, or other data warehouse systems. The Synapse pipelines copy activities can then ingest this raw data. These source systems could be hosted on-premises, in any private or public cloud, or with SAP RISE subscriptions.
 
@@ -50,7 +52,7 @@ SAP Online Transactional Data Processing (OLTP) or Online Analytical Processing 
 
 With Azure services, integrations are possible no matter where the source is located. Depending on the hosted location, security controls, operations standards, bandwidth, and contractual obligations, the extraction configuration must be planned accordingly.
 
-### Data ingestion
+#### Data ingestion
 
 In this example architecture, data is ingested using Synapse pipelines and processed in stages using the Synapse Spark pool and its Data Lake capabilities.
 
@@ -70,7 +72,7 @@ For more information, see the following resources:
 - [SAP connectors](/azure/data-factory/industry-sap-connectors)
 - [Data Ingestion](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion)
 
-### Data storage
+#### Data storage
 
 Data Lake Storage Gen2 makes Azure Storage the foundation for building enterprise data lakes on Azure. Designed from the start to service multiple petabytes of information while sustaining hundreds of gigabits of throughput, Data Lake Storage Gen2 allows you to manage massive amounts of data easily.
 
@@ -81,7 +83,7 @@ For more information about Azure Data Lake Storage, see these resources:
 - [Data lake Storage](/azure/storage/blobs/data-lake-storage-introduction)
 - [Data lake storage best practices](/azure/storage/blobs/data-lake-storage-best-practices)
 
-### Data transformation and consumption
+#### Data transformation and consumption
 
 In this example architecture, the ingested data from the data sources is stored in an Azure Data Lake Storage Gen2 location.
 
@@ -99,7 +101,7 @@ The Synapse Apache Spark to Synapse SQL connector pushes the normalized data to 
 
 Private endpoints for your Azure Storage accounts allow clients on the virtual network (VNet) to access data over a Private Link securely. The private endpoint uses an IP address from the VNet address space for the storage account service. Network traffic between the clients on the VNet and the storage account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure to the public internet.
 
-### Visualization and reporting
+#### Data visualization and reporting
 
 In the Power BI service, you can use DirectQuery to fetch data from the Synapse SQL pool securely.
 
