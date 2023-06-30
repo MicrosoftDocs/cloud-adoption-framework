@@ -177,9 +177,13 @@ MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/mi
 
 *Configure MDE.* You need to configure a manage [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Centralized security operations](security-operations.md)
+
 ## Related links
 
 - [Identity essentials](essentials.md)
 - [Zero trust configurations](zero-trust-configuration.md)
 - [Manage multi-tenant operations](manage-operations.md)
-- [Centralized security operations](security-operations.md)
