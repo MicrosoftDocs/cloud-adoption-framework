@@ -3,7 +3,7 @@ title: Azure management overview
 description: Learn about the Cloud Adoption Framework for Azure using this information about the basic tools needed to manage Azure production environments.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 11/29/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
