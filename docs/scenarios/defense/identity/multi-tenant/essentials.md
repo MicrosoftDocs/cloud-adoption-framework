@@ -19,7 +19,7 @@ Architects and decision makers must understand the core capabilities of Azure AD
 
 ## Tenants
 
-An instance of Azure AD is called an **Azure AD tenant**. An Azure AD tenant is an identity platform and security boundary. It's the identity platform for your organization. security boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
+An instance of Azure AD is called an **Azure AD tenant**. An Azure AD tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
 **Consolidate Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. A single Azure AD tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
 
