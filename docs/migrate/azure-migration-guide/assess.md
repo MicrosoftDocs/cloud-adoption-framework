@@ -33,32 +33,42 @@ If you're considering a lift-and-shift approach or are in the early assessment s
 
 #### Create a new project
 
+::: zone target="chromeless"
+
 Begin server discovery, assessment, and migration by using the following steps for Azure Migrate:
 
 1. Select **Azure Migrate**.
-2. In **Overview**, select **Discover, assess and migrate**.
-3. Select **Add tools**.
-4. In **Project**, select your Azure subscription, then create a resource group if you don't have one.
-5. In **Project Details**, specify the project name and geography where you want to create the project, then select **Create**.
+2. In **Get started**, select **Discover, assess and migrate**.
+3. In **Servers, databases and web apps**, select **Create project**.
+4. In **Create project**, select the Azure subscription and resource group. Create a resource group if you don't have one.
+5. In **Project Details**, specify the project name and the geography in which you want to create the project, then select **Create**.
 6. After creating the project, tools are visible, and the user can start with Discovery.
-
-::: zone target="chromeless"
 
 ::: zone-end
 
 ::: zone target="docs"
 
-#### Learn more
+To begin server discovery, assessment, and migration, see [create and manage projects](/azure/migrate/create-manage-projects) with Azure Migrate.
 
-- [Azure Migrate overview](/azure/migrate/migrate-services-overview)
+#### Assess on-premises workloads
+
+Assess various on-premises workloads to measure cloud readiness, identify risks, and estimate costs and complexity. See the following resources to learn how Azure Migrate can help you in your migration assessment:
+
+- [Create an Azure VM assessment](/azure/migrate/how-to-create-assessment)
+- [Create an Azure SQL assessment](/azure/migrate/how-to-create-azure-sql-assessment)
+- [Create an Azure App Service assessment](/azure/migrate/how-to-create-azure-app-service-assessment)
+- [Create an Azure VMware Solution assessment](/azure/migrate/how-to-create-azure-vmware-solution-assessment)
+
+Additional resources:
+
 - [Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)
 
 ::: zone-end
 
-### Dependency analysis
+#### Azure Migrate dependency analysis
 
-Dependency analysis identifies dependencies between discovered on-premises servers. It provides the following advantages:
+[Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization) identifies dependencies between discovered on-premises servers. It provides the following advantages:
 
 - Gather servers into groups for a better assessment.
 - Identify servers to migrate together. This step is helpful if you need clarification on which servers are part of an app deployment you want to migrate.
@@ -66,11 +76,23 @@ Dependency analysis identifies dependencies between discovered on-premises serve
 - Analyze dependencies to ensure nothing is left behind and avoid surprise outages after migration.
 - Use the Azure Migrate [Business case](/azure/migrate/how-to-build-a-business-case) capability to help you analyze dependencies and build a business proposal to understand how migrating to Azure brings the most value to your business.
 
+#### Azure Migrate discovery and assessment prerequisites
+
+If you rely on the [Azure Migrate: Discovery and assessment](/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool) tool, make sure you review the prerequisites for various types of assessments, as listed below:
+
+- [Support matrix for VMware discovery](/azure/migrate/migrate-support-matrix-vmware)
+- [Support matrix for Hyper-V assessment](/azure/migrate/migrate-support-matrix-hyper-v)
+- [Support matrix for physical server discovery and assessment](/azure/migrate/migrate-support-matrix-physical)
+
 <!-- markdownlint-disable MD024 -->
 
-#### Learn more
+#### Azure Advisor Service Retirement workbook
 
-- [Azure Migrate dependency analysis](/azure/migrate/concepts-dependency-visualization)
+Being informed about upcoming Azure services and feature retirements is essential to understand their impact on your workloads and planning migration.
+
+The Service Retirement workbook gives you a centralized resource-level view of service retirements. This workbook will help you assess, evaluate options, and plan for migration from retiring services and features.
+
+To learn more, see [Prepare migration of your workloads impacted by service retirement](/azure/advisor/advisor-how-to-plan-migration-workloads-service-retirement).
 
 ## Challenge assumptions
 
@@ -127,7 +149,13 @@ Establish a core cloud strategy team built around these key high-level stakehold
 - Determines the best high-level solutions for migration efforts.
 - Helps identify and work with specific applications and business stakeholders to ensure a successful migration.
 
-See the Cloud Adoption Framework's [initial organization alignment](../../plan/initial-org-alignment.md) guidance for more information.
+It's also recommended to review the following resources prior to starting new migration projects, helping you come more prepared for successful migrations:
+
+- **[Mature team structures](/azure/cloud-adoption-framework/organize/organization-structures)**: Review your alignment to various roles and functions to help throughout each cloud adoption effort. It's recommended to have at least an initial team structure mapped out to support and map dependencies necessary for the migration project.
+
+- **[Share your strategy](/azure/cloud-adoption-framework/strategy/share-your-strategy)**: Consider ensuring that the strategy is understood as all decisions made during migrations ideally should align to the organizational strategy.
+
+- **[Initial organization alignment](../../plan/initial-org-alignment.md)**: Review the guidance on initial organization alignment to come better prepared as cloud adoption and migration projects scales across the business and IT culture.
 
 ## Timelines
 
