@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Manage multi-tenant operations for defense
 
-This article defines how multi-tenant defense organizations should manage operations across Azure Active Directory (Azure AD) tenants. The areas of responsibility are a common challenge. The primary Azure AD tenant and secondary Azure AD tenant(s) have distinct responsibilities in application management, identity governance, and security operations. The primary tenant and secondary tenant(s) must also coordinate on certain things. These responsibilities include application onboarding, entitlement assignment, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configurations.md#identify-tenant-types).
+This article defines how multi-tenant defense organizations should manage operations across Azure Active Directory (Azure AD) tenants. The areas of responsibility are a common challenge. The primary Azure AD tenant and secondary Azure AD tenant(s) have distinct responsibilities in application management, identity governance, and security operations. The primary tenant and secondary tenant(s) must also coordinate on certain things. These responsibilities include application onboarding, entitlement assignment, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
 
 :::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant." lightbox="./images/management-operations.png" border="false":::
 *Figure 1. Shared responsibilities by tenant for multi-tenant defense organizations*

@@ -81,7 +81,7 @@ You should implement the following recommendations in all Azure AD tenants.
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline conditional access policies.** Conditional Access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Azure AD tenants. Use the conditional access policy checklist as you build your baseline (*see table 2*).
+**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Azure AD tenants. Use the conditional access policy checklist as you build your baseline (*see table 2*).
 
 *Table 2: Conditional access policy checklist.*
 
