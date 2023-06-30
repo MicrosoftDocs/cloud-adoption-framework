@@ -1,5 +1,5 @@
 ---
-title: Readying your Landing Zone for Migration
+title: Readying Landing Zone for Migration
 description: Review items that need to be completed after a ALZ deployment, in order to allow for the environment to support migrations.
 author: bstephenson
 ms.author: bstephenson
