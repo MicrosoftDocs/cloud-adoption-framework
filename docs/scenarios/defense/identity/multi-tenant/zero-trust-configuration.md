@@ -40,7 +40,7 @@ If you require multiple Azure AD tenants, you should use [Azure AD external iden
 
 ## Identify tenant types
 
-In multi-tenant environments, there are two types of Azure AD tenant. There's a primary tenant and one or more secondary tenant. To configure zero trust, you need to identify the primary tenant and all secondary tenants (*see figure 1*).
+In multi-tenant environments, there are two types of Azure AD tenant. There's a primary tenant and one or more secondary tenants. To configure zero trust, you need to identify the primary tenant and all secondary tenants (*see figure 1*).
 
 **Identify the primary tenant.** Most defense organizations create the primary tenant when they sign up for Microsoft 365. The primary tenant contains (1) all user identities Microsoft 365 licenses, (2) devices, and (3) applications (*see figure 1*). Defense organizations often use [Azure AD Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect) to synchronize the identities from Active Directory on-premises to the primary Azure AD tenant.
 
@@ -50,7 +50,7 @@ Some defense organizations consume Microsoft 365 in a shared tenant owned and op
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity licenses you have in Azure AD.
 
-- The tenant with your Microsoft 365 licenses is the primary tenant (*see figure 2*). Some defense organizations migrated applications to the cloud before they started using Microsoft 365. You created an Azure AD tenant to migrate those applications to the cloud. The tenant with the Microsoft 365 licenses is still the primary tenant even though you have an older Azure AD tenant.
+- The tenant with your Microsoft 365 licenses is your primary tenant (*see figure 2*). Some defense organizations migrated applications to the cloud before they started using Microsoft 365. You created an Azure AD tenant to migrate those applications to the cloud. The tenant with the Microsoft 365 licenses is still the primary tenant even though you have an older Azure AD tenant.
 - If your organization doesn’t use Microsoft 365, any Azure AD tenant with [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/) licenses is your primary tenant. This tenant is where you have added and verified your organization's [domain name](/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
@@ -107,7 +107,7 @@ When a shared service provider or an external agency that doesn't [delegate appl
 
 **Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
 
-**Use Entra Permissions Management.** [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/overview) is Microsoft’s Cloud Infrastructure Entitlement Management (CIEM) solution. You should use Entra Permissions Management for visibility into permissions assigned to all identities. You should also use it to track [permissions creep](/azure/active-directory/cloud-infrastructure-entitlement-management/faqs#what-is-the-permissions-creep-index) across your organization's multi-cloud environment.
+**Use Entra Permissions Management.** [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/overview) is Microsoft’s Cloud Infrastructure Entitlement Management (CIEM) solution. You should use Entra Permissions Management for visibility into permissions assigned to all identities. You should also use it to track [permissions creep](/azure/active-directory/cloud-infrastructure-entitlement-management/faqs#what-is-the-permissions-creep-index) across your organization's multicloud environment.
 
 **Use Entra Identity Governance.** Use [Entra Identity Governance](/azure/active-directory/governance/identity-governance-overview) to automate access assignment lifecycle for users and guests. Conduct access reviews to remove access to your cloud environment for users that no longer need it.
 
