@@ -15,11 +15,11 @@ The following guide provides essential insights into Azure Active Directory (Azu
 
 Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
 
-Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements with Azure AD. Many already have access to essential Azure AD features through their Microsoft 365 licenses.
+Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Azure AD. Many already have access to essential Azure AD features through their existing Microsoft 365 licenses.
 
 ## Tenants
 
-An instance of Azure AD is called an **Azure AD tenant**. An Azure AD tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
+An instance of Azure AD is called an *Azure AD tenant*. An Azure AD tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
 **Consolidate Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. A single Azure AD tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
 

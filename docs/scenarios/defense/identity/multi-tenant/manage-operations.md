@@ -82,7 +82,7 @@ When you register applications in the primary tenant, the primary tenant governs
 - [Automating Identity Governance tasks](/azure/active-directory/governance/identity-governance-automation).
 - Creating [access reviews](/azure/active-directory/governance/entitlement-management-access-reviews-create) for access packages and Azure AD security groups.
 
-:::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlement management for application assignment." lightbox="./images/access-to-primary-tenant.png" border="false":::
+:::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlement management for application access." lightbox="./images/access-to-primary-tenant.png" border="false":::
 *Figure 2. Entitlement management for application assignment, using contoso.com as an example domain name.*
 
 You should set up application governance using an entitlement management access package and follow this process (*see figure 2*):
@@ -110,7 +110,7 @@ The team managing a secondary tenant has several responsibilities in their secon
 
 **Entitlement management.** You need to configure external user governance for Azure management. You should onboard external identities (B2B guests) from the primary tenant to manage Azure resources using an [end user-initiated scenario using entitlement management](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) (*see figure 3*).
 
-:::image type="content" source="./images/access-to-secondary-tenant.png" alt-text="Diagram showing the process to set up entitlement management for application assignment." lightbox="./images/access-to-secondary-tenant.png" border="false":::
+:::image type="content" source="./images/access-to-secondary-tenant.png" alt-text="Diagram showing the process to set up an access package for Azure management in the secondary tenant." lightbox="./images/access-to-secondary-tenant.png" border="false":::
 *Figure 3. Entitlement management for external (B2B) guest access, using contoso.com as an example domain name.*
 
 You should set up external (B2B) guest access using an entitlement management access package and follow this process (*see figure 3*):
