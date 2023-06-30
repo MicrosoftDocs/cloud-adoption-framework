@@ -14,7 +14,7 @@ ms.subservice: scenario
 
 This article is for multi-tenant defense organizations with a centralized security operations team. It explains they can manage multiple tenants with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). Security operators don't need multiple user accounts, credentials, and workstations to secure your environment. The setup supports zero trust capabilities in secondary tenants.
 
-## Understand the services involved
+## Understand configuration components
 
 This configuration requires Azure Lighthouse, external identities, and Privileged Identity Management.
 
@@ -26,7 +26,7 @@ Azure Lighthouse assigns a security principal (user, group, or service principal
 
  When you enable Defender for Server in a secondary tenant, the MDE extension reports security telemetry to the MDE service associated secondary tenant. It can't report security telemetry to the primary tenant. As a result, you must assign role permissions in that secondary tenant to security principals in the primary tenant. The role permissions allow security principals in the primary tenant to use response actions in MDE for that secondary tenant.
 
-**Privileged Identity Management.** [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time role elevation for Azure and Azure AD roles. [PIM for Groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups) extends this functionality to group membership for Microsoft 365 groups and Azure AD security groups. Once you set up PIM for Groups, you need to review active and eligible membership of the privileged group by [creating an access review of PIM for Groups](/azure/active-directory/governance/create-access-review-pim-for-groups).
+**Use Privileged Identity Management.** [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time role elevation for Azure and Azure AD roles. [PIM for Groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups) extends this functionality to group membership for Microsoft 365 groups and Azure AD security groups. Once you set up PIM for Groups, you need to review active and eligible membership of the privileged group by [creating an access review of PIM for Groups](/azure/active-directory/governance/create-access-review-pim-for-groups).
 
 ## Configure centralized security operations
 
