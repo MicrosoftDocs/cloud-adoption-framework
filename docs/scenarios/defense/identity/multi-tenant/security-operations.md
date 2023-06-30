@@ -12,7 +12,11 @@ ms.subservice: scenario
 
 # Centralized security operations with external identities
 
-This article is for multi-tenant defense organizations with a centralized security operations team. It explains they can manage multiple tenants with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). Security operators don't need multiple user accounts, credentials, and workstations to secure your environment. This configuration requires Azure Lighthouse and supports zero trust capabilities in secondary tenants.
+This article is for multi-tenant defense organizations with a centralized security operations team. It explains they can manage multiple tenants with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). Security operators don't need multiple user accounts, credentials, and workstations to secure your environment. The setup supports zero trust capabilities in secondary tenants.
+
+## Understand the services involved
+
+This configuration requires Azure Lighthouse, external identities, and Privileged Identity Management.
 
 **Use Azure Lighthouse to manage secondary tenants.** You need to use [Azure Lighthouse](/azure/lighthouse/overview) to manage Azure subscriptions attached to secondary tenants. Azure Lighthouse enables multi-tenant management with scalability, higher automation, and enhanced governance across resources.
 
