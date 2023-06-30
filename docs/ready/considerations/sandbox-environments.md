@@ -30,13 +30,13 @@ The following image shows the management group and subscription layout.
 
 :::image type="content" source="./media/single-use-case-sandbox.png" alt-text="Flowchart that shows a single-use case sandbox architecture." lightbox="./media/single-use-case-sandbox.png#lightbox":::
 
-Place the sandbox subscription in the sandbox management group. For more information about management group and subscription organization, see [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Azure policies that are created for sandboxes are placed at the management group level of the sandbox. Sandbox environments inherit Azure policies from the management group hierarchy that's above it.
+Place the sandbox subscription in the sandbox management group. For more information about management groups and subscription organization, see [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Azure policies that are created for sandboxes are placed at the management group level of the sandbox. Sandbox environments inherit Azure policies from the management group hierarchy that's above it.
 
 A sandbox subscription helps manage costs for each program or project. You can easily track costs and cancel sandboxes when budgets decrease or the sandbox expires.
 
 ### Networking
 
-Create the sandbox subscription networking that fits your needs. To keep the sandbox isolated, ensure that the networks that are created inside the sandbox subscriptions aren't peered with other works outside of the sandbox. You can use the [deny virtual network peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) policy to ensure that each sandbox is its own isolated environment.
+Create the sandbox subscription networking that fits your needs. To keep the sandbox isolated, ensure that the networks that are created inside the sandbox subscriptions haven't peered with other networks outside of the sandbox. You can use the [deny virtual network peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) policy to ensure that each sandbox is its own isolated environment.
 
 Use the [deny ExpressRoute/VPN/Virtual WAN creation](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy to deny the creation of ExpressRoute gateways, VPN gateways, and Virtual WAN hubs. When you deny these resources, it ensures that the sandbox subscription networks remain isolated.
 
@@ -49,6 +49,7 @@ The [Azure policies included in the enterprise-scale landing zone reference impl
 ### Sandbox access
 
 The sandbox user has owner access to the sandbox subscription. When a sandbox is canceled, remove the owner role-based access control (RBAC) for all sandbox users.
+
 
 ## Other considerations
 
