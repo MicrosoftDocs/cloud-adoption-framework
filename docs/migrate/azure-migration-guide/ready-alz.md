@@ -164,3 +164,9 @@ You can also deploy your own custom alerting for resources, if your needs deviat
 This section applies to organizations that want to automate their subscription provisioning process.  If you are manually managing your landing zone and subscription creation, you would instead need to establish your own process for creating subscriptions.
 
 Once you begin migrating, you will need to create subscriptions for your workloads.  To automate and accelerate this step, enable [Subscription vending](../../ready/landing-zone/design-area/subscription-vending.md).  Once established, you should be able to quickly create subscriptions.
+
+## Prepare for Defender for Cloud
+
+When you deployed your Landing Zone, you also set policies to enable [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) for your Azure subscriptions.  Defender for Cloud will provide security posture recommendations through [Secure Score](/azure/defender-for-cloud/secure-score-security-controls), which evaluates deployed resources against Microsoft's security baseline.
+
+While no additional technical configuration is needed, you should review the recommendations and put together a plan to [improve your security posture](/azure/defender-for-cloud/review-security-recommendations) as you migrate resources.  Once you begin migrating resources in to Azure, you should be ready to [implement security improvements](/azure/defender-for-cloud/implement-security-recommendations) as part of your migration optimization.
