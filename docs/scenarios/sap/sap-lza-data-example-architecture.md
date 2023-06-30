@@ -44,11 +44,11 @@ The dataflow can be defined with four main pieces:
 
 ### Data sources
 
-SAP can, for example, use data from various data sources. These data sources can include on-premises SQL servers, semi-structured data in, JSON, XML and log files, or other data warehouse systems. The Synapse pipelines copy activities can then ingest this raw data.
+In the example architecture, data sources can include on-premises SQL servers, semi-structured data in, JSON, XML and log files, or other data warehouse systems. The Synapse pipelines copy activities can then ingest this raw data. These source systems could be hosted on-premises, in any private or public cloud, or with SAP RISE subscriptions.
 
 SAP Online Transactional Data Processing (OLTP) or Online Analytical Processing (OLAP) systems constitute central repositories of business data and transactions. Extraction is required to store and ingest into Azure to extract value and insights from the data residing in these business data repositories.
 
-These source systems could be hosted on-premises, in any private or public cloud, or with SAP RISE subscriptions. With Azure services, integrations are possible no matter where the source is located. Depending on the hosted location, security controls, operations standards, bandwidth, and contractual obligations, the extraction configuration must be planned accordingly.
+With Azure services, integrations are possible no matter where the source is located. Depending on the hosted location, security controls, operations standards, bandwidth, and contractual obligations, the extraction configuration must be planned accordingly.
 
 ### Data ingestion
 
