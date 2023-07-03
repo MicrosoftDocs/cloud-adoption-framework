@@ -12,11 +12,13 @@ ms.subservice: migrate
 
 # Readying your landing zone for migration
 
-If your organization relies on [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you'll find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+If your organization relies on [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
 
-Regardless of which ALZ [implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) you have used, there are still tasks necessary to ready your landing zone for a VM migration project.
+Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a migration project.
 
-This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments, but will note if they aren't relevant for manually deployed and managed environments.
+If you aren't using one of the ALZ reference implementations, the steps in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
+
+This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments but will note if they aren't relevant for manually deployed and managed environments.
 
 ## Establishing hybrid connectivity
 
@@ -86,7 +88,9 @@ This is an optional step, but using this has several benefits. It reduces config
 
 ### Setting custom virtual network DNS servers
 
-Once you've completed the previous activities, you can set the DNS servers for your Azure virtual networks to the custom servers you use. This process is defined [here].
+Once you've completed the previous activities, you can set the DNS servers for your Azure virtual networks to the custom servers you use.
+
+To learn more, see [Azure Firewall DNS settings](/azure/firewall/dns-settings).
 
 ## Configure hub firewall
 
