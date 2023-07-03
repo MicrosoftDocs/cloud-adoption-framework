@@ -74,7 +74,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
   - There's no need for transitive connectivity between VPN and ExpressRoute connections.
 
-  - The main hybrid connectivity method in place is ExpressRoute, and the number of VPN connections is less than 30 per VPN Gateway.
+  - The main hybrid connectivity method in place is ExpressRoute, and the number of VPN connections is less than 100 per VPN Gateway.
 
   - There's a dependency on centralized NVAs and granular routing.
 
