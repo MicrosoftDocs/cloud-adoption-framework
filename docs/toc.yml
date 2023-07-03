@@ -580,6 +580,9 @@ items:
           href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
+        - name: Readying Landing Zone for Migration
+          href: migrate/azure-migration-guide/ready-alz.md
+        - name: Assess workloads
         - name: Deploy workloads
           href: migrate/azure-migration-guide/migrate.md
         - name: Release workloads
