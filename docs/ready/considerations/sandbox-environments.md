@@ -19,10 +19,8 @@ A sandbox is an isolated environment where you can test and experiment without a
 Sandbox environments are the best place for hands-on Azure learning. Some common use cases include:
 
 - A developer needs a controlled Azure environment to quickly test application design patterns.
-
 - A cloud architect needs a sandbox environment to evaluate Azure resources or conduct POCs for an Azure service or resource before formally approving them for their organization.
 - A cloud engineer needs a sandbox environment to better understand what happens when a setting is changed on an Azure resource.
-
 - A platform engineer wants to build and test out a new Azure policy and see how it behaves per the [Canary guidance](https://aka.ms/alz/canary).
 - A developer wants to experiment with Azure services or resources while building an application.
 
@@ -34,14 +32,11 @@ The following image shows the management group and subscription layout.
 
 Place the sandbox subscription in the sandbox management group. For more information about management groups and subscription organization, see [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Azure policies that are created for sandboxes are placed at the management group level of the sandbox. Sandbox environments then inherit Azure policies from the management group hierarchy that's above them.
 
-
 A sandbox subscription helps manage costs for each program or project. You can easily track costs and cancel sandboxes when budgets decrease or when the sandbox expires.
-
 
 ### Networking
 
 Create the sandbox subscription networking that fits your needs. To keep the sandbox isolated, ensure that the networks created inside the sandbox subscriptions haven't peered with other networks outside of the sandbox. You can use the [deny virtual network peering cross subscription](https://www.azadvertizer.net/azpolicyadvertizer/Deny-VNET-Peer-Cross-Sub.html) policy to ensure that each sandbox is its own isolated environment.
-
 
 Use the [deny ExpressRoute/VPN/Virtual WAN creation](https://www.azadvertizer.net/azpolicyadvertizer/6c112d4e-5bc7-47ae-a041-ea2d9dccd749.html?desc=compareJson&left=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_1.0.0.json&right=https%3A%2F%2Fwww.azadvertizer.net%2Fazpolicyadvertizerjson%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749_2.0.0.json) policy to deny the creation of ExpressRoute gateways, VPN gateways, and Virtual WAN hubs. When you deny these resources, it ensures that the sandbox subscription networks remain isolated.
 
@@ -54,7 +49,6 @@ The [Azure policies included in the enterprise-scale landing zone reference impl
 ### Sandbox access
 
 The sandbox user has owner access to the sandbox subscription. When a sandbox is canceled, remove the owner role-based access control (RBAC) for all sandbox users.
-
 
 ## Other considerations
 
@@ -71,7 +65,6 @@ A key concern for cloud-based sandbox environments is cost tracking. To make tra
 When you deploy a sandbox, you can create a Microsoft Cost Management budget and assign it to the subscription. The budget feature alerts the sandbox users when spending thresholds cross the percentage that you specify. For example, you can set an alert for when the budget crosses the 100% spend threshold. In that case, you might want to [cancel](/azure/cost-management-billing/manage/cancel-azure-subscription#what-happens-after-subscription-cancellation) or delete a subscription. The alert alone is just a warning mechanism.
 
 You can assign a budget to all sandboxes. Apply a default budget by using the [Deploy-Budget](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Budget.html) Azure policy at the sandbox management group level. Set the default budget to the maximum cost the organization approves for a sandbox. The default budget sends cost alerts for any sandbox that isn’t assigned a more specific budget.
-
 
 #### Expiration date
 
