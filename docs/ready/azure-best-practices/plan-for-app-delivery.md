@@ -3,7 +3,7 @@ title: Plan for application delivery
 description: Examine key design considerations and recommendations surrounding the delivery of applications in a secure way.
 author: martinekuan
 ms.author: martinek
-ms.date: 02/18/2021
+ms.date: 11/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
