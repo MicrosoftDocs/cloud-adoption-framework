@@ -64,7 +64,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 - Use [Update Management](/azure/automation/update-management/overview) in Azure Automation, as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. This allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale.
 - Update Management will also allow you to automate the Azure connected machine agent upgrades, via Windows updates on Azure Arc-enabled Windows servers.
-- If you have Azure Arc-enabled Windows Servers that have reached End of Support and cannot be migrated to Azure or upgraded, enable [ESU](PLACEHOLDER for link pointing to the ESU through Arc documentation) on those servers to keep getting critical and important security patches.
+- If you have Azure Arc-enabled Windows Servers that have reached [End of Support](https://learn.microsoft.com/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-) and cannot be migrated to Azure or upgraded, enable [ESU](PLACEHOLDER for link pointing to the ESU through Arc documentation) on those servers to keep getting critical and important security patches.
 
 ## Next steps
 
