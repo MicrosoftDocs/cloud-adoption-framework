@@ -3,7 +3,7 @@ title: Refactor an on-premises application to an App Service web app and a SQL m
 description: Learn how to rehost an on-premises application by migrating it to an Azure App Service web app and a SQL managed instance.
 author: givenscj
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

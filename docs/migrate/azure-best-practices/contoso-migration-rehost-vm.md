@@ -3,7 +3,7 @@ title: Rehost an application on Azure VMs by using Azure Migrate
 description: Learn how Contoso uses the Azure Migrate service to perform a lift-and-shift migration of on-premises machines to Azure and rehost an on-premises application.
 author: givenscj
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 07/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
