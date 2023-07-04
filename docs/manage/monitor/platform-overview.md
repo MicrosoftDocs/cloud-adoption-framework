@@ -114,19 +114,19 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 ### Operations Manager and SCOM Managed Instance (preview)
 
-Operations Manager provides four basic ways to analyze data after it has been collected:
+Operations Manager provides these basic ways to analyze data after it has been collected:
 
 - **Health Explorer:** Helps you discover which monitors are identifying a health state issue and review knowledge about the monitor and possible causes for actions related to it.
 
-- **[Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview):** Provides a flexible way to analyze and visualize data. By using log queries, metric data, and parameters, you can build comprehensive insights unified into an interactive experience. By using Azure Workbooks, you can use the rich set of built-in capabilities to [visualize](/azure/azure-monitor/visualize/workbooks-visualizations) data.
-
-- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, no feature allows for complex or interactive analysis of collected data.
+- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. To learn more, see Using the [Reporting Workspace in Operations Manager](/system-center/scom/manage-using-reporting-workspace) and [Create reports on Power BI](/system-center/scom/operations-manager-managed-instance-create-reports-on-power-bi)
 
 - **Operations Manager command shell:** Extends Windows PowerShell with another set of cmdlets and can query and visualize collected data. This includes graphs and other visualizations natively with PowerShell or the Operations Manager HTML-based web console.
 
 ### Azure Monitor
 
 With the powerful Azure Monitor analytics engine, you can interactively work with log data and combine them with other monitoring data for trending and other data analysis. Views and dashboards allow you to visualize query data in various ways from the Azure portal, and import it into Power BI. Insights such as Application Insights, Azure VM insights, and Azure Container insights include customized visualizations to support interactive monitoring scenarios.
+
+- **[Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview):** Provides a flexible way to analyze and visualize data. By using log queries, metric data, and parameters, you can build comprehensive insights unified into an interactive experience. By using Azure Workbooks, you can use the rich set of built-in capabilities to [visualize](/azure/azure-monitor/visualize/workbooks-visualizations) data.
 
 ## Alerting
 
