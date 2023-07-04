@@ -128,7 +128,6 @@ With the powerful Azure Monitor analytics engine, you can interactively work wit
 
 Azure Monitor supports several ways to analyze and visualize data, including these:
 
-- The overview page
 - Metrics Explorer
 - Log Analytics
 - Azure Workbooks
