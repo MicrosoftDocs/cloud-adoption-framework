@@ -23,19 +23,19 @@ There are two options to find an ALZ partner (*see image*).
 
 ![A graphic that summarizes the two options to find a partner: the Azure Migration and Modernization Program and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options-v5.png)
 
-## Option 1 - Azure Migration and Modernization Program (AMMP)
+## Option 1 - Azure Migrate and Modernize
 
-The easiest option to find an ALZ partner is through the Azure Migration and Modernization Program (AMMP).
+The easiest option to find an ALZ partner is through Azure Migrate and Modernize.
 
-### How to find an AMMP partner
+### How to find an Azure Migrate and Modernize partner
 
-Take 5 minutes to [fill out the AMMP form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from AMMP will help you find the right partner.
+Take 5 minutes to [fill out the Azure Migrate and Modernize form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from the team will help you find the right partner.
 
-### What to expect from an AMMP partner
+### What to expect from an Azure Migrate and Modernize partner
 
-All the partners in the AMMP program adhere to ALZ best-practices. We vet AMMP partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
+All the partners in the program adhere to ALZ best-practices. We vet partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
-1. *ALZ planning* – The AMMP partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
+1. *ALZ planning* – The Azure Migrate and Modernize partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
 
     - Selecting your operating models
     - Reviewing your ALZ implementation options
@@ -79,7 +79,7 @@ To find a landing zone offer from a partner, follow these steps:
 
 1. *Meet potential partners* – Use the “Contact Me” button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
-1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of AMMP. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
+1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Migrate and Modernize. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
 1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
