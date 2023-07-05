@@ -33,7 +33,7 @@ Data Ingestion Layer:
 The following diagram is an example architecture of SAP Data Integration Security on Azure. Use the example architecture as a starting point.
 
 :::image type="content" source="./media/sap-extend-security-architecture.svg" lightbox="./media/sap-extend-security-architecture.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure.":::
-_Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](./media/sap-extend-security-architecture.vsdx) of this architecture._
+_Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](https://arch-center.azureedge.net/sap-extend-security-architecture.vsdx) of this architecture._
 
 The sections below discusses considerations and recommendations for data integration security for SAP on Azure.
 
