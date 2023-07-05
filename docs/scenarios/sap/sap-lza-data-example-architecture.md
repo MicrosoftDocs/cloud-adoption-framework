@@ -25,7 +25,7 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 The following diagram is an example architecture of an SAP Data Integration on Azure. Use this example architecture as a starting point.
 
-:::image type="content" source="./media/sap-extend-data-integration-architecture.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture.svg":::
+:::image type="content" source="./media/sap-extend-data-integration-architecture-updated.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture-updated.svg":::
 _Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture._
 
 ### Dataflow
