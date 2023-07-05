@@ -74,51 +74,25 @@ that use same SID/Client ID/System Nr requires the deployment of the connector o
 
 ## Design considerations for Rules in Microsoft Sentinel
 
-- During the analysis and design phase, ensure you do the following:
-  - Define scope and use cases
-  - Establish criteria for rule identification and prioritization
-  - Identify and prioritize the rules for implementation (for example, Critical action, SOX)
+During the analysis and design phase, ensure you do the following:
+  
+- **Review existing rules**: Determine what [build-in analytics rules](/azure/sentinel/sap/sap-solution-security-content#built-in-analytics-rules) exist for SAP and Sentinel.
+- **Establish scope:** Define the scope and use cases for your situation.
+- **Rule criteria:** Establish criteria for rule identification and prioritization.
+- **Rule prioritization:** Identify and prioritize the rules for implementation.
 
-- Start with some generally applicable rules, such as:
-  - User Creates and uses new user - Identifies a user creating and using other users.
-  - Change in a Sensitive Privileged User - Identifies changes of sensitive privileged users.
-  - Client Configuration Change - Identifies changes for client configuration such as Client role, Changes recording mode.
-  - Deactivation of Security Audit Log - Identifies deactivation of Security Audit Log
-  - Sensitive User's Password Change and Log in - Identifies password changes for privileged users.
-  - User Unlocks and uses other users - A user unlocked another and then used the other's credentials.
-  - Function Module tested - Identifies testing of a function module.
-  - Login from an unexpected network - Identifies logons from an unexpected network.
-  - Data has Changed during Debugging Activity - Identifies changes for runtime data during a debugging activity.
-  - Execution of Sensitive Function Module - Identifies execution of a sensitive ABAP Function Module.
-  - Dialog logon attempt from a privileged user - Identifies dialog logon attempts by privileged users on the SAP system.
-  - Execution of a Sensitive ABAP Program - Identifies direct execution of a sensitive ABAP program.
-  - System Configuration Change - Identifies changes for system configuration.
-  - Multiple Logons by User - Identifies logon of the same user from several subnets within a scheduled time interval.
-  - Sensitive Tables Direct Access By RFC Logon - Identifies generic table access by RFC logon
-  - Transaction is unlocked - Identifies unlocking of a transaction.
-  - Sensitive Tables Direct Access By Dialog Logon - Identifies generic table access by dialog logon
-  - Security Audit Log Configuration Change - Identifies changes for configuration in Security Audit Log
-  - Critical authorizations assignment - New User Assignment - Identifies assignment of a critical authorization object value to a new user.
-  - Debugging Activities - Identifies all debugging-related activities.
-  - RFC Execution of a Sensitive Function Module- RFC Execution of a Sensitive Function Module
-  - Sensitive privileged user makes a change in another user- Identifies changes of sensitive, privileged users in other users.
-  - Execution of a Sensitive Transaction Code- Identifies execution of a sensitive Transaction Code
-  - Sensitive Privileged User Logged in - Identifies Dialog logon of a sensitive, privileged user.
-  - Assignment of a sensitive role- Identifies new assignments for a sensitive role to a user.
-  - Assignment of a sensitive profile - Identifies new assignments of a sensitive profile to a user.
-  - Brute Force (RFC) - Identifies brute force attacks on the SAP system using RFC logons
-  - Multiple Password Changes - Identifies multiple password changes at different levels.
-  - Sensitive Role Changes- Identifies changes in sensitive roles.
-  - Multiple Logons by IP- Identifies logon of several users from the same IP within a scheduled time interval.
+Establish a process for reviewing/validating alerts to identify false positives and adjust query logic and watchlist entries accordingly.
 
-- Establish a process for reviewing/validating alerts to identify false positives and adjust query logic and watchlist entries accordingly  
 - Use Watchlists to correlate data from a data source you provide with the events in your Microsoft Sentinel environment
   - For example, you might create a watchlist with a list of high-value assets, terminated employees, or service accounts in your environment.
   - Existing rules use static watchlists that contain a list of users; however, rules can be authored to provide Sentinel with a refreshable dynamic data source of assets that Sentinel should evaluate.
   - Analytic rules leverage the use of the SAP_USER_CONFIG watchlist. Suppose a particular user or entity generates an excessive number of alerts. In that case, it can be added to the watchlist with tags, such as MassiveLogonsOK, or MassiveRFCOK, to prevent such users from generating noise.
 
-- Use Workbooks that can be used to identify gaps in data & monitor system health
-- Use exfiltration rules to monitor data loss; for more information, refer here - [Microsoft Sentinel Solution for SAP® Applications - New data exfiltration detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-solution-for-sap-applications-new-data/ba-p/3716881)
+- Use the [built-in workbooks](/azure/sentinel/sap/sap-solution-security-content#built-in-workbooks) that can be used to identify gaps in data & monitor system health
+
+- Use exfiltration rules to monitor data loss:
+  - [Microsoft Sentinel solution for SAP® applications - data exfiltration rules](/azure/sentinel/sap/sap-solution-security-content#data-exfiltration)
+  - [Microsoft Sentinel Solution for SAP® Applications - New data exfiltration detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-solution-for-sap-applications-new-data/ba-p/3716881)
 
 ## Next steps
 
