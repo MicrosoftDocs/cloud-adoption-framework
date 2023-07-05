@@ -4,7 +4,7 @@ description: Learn recommendations for Microsoft Sentinel for SAP.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 05/22/2023
+ms.date: 07/04/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

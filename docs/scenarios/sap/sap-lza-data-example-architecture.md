@@ -4,7 +4,7 @@ description: Learn more about an example architecture for SAP data integration.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 06/19/2023
+ms.date: 07/04/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

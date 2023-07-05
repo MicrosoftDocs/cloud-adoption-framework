@@ -4,7 +4,7 @@ description: Learn the details of SAP security operations on Azure
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 05/22/2023
+ms.date: 07/04/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -23,34 +23,33 @@ Implementing a comprehensive security operation for SAP in Microsoft Cloud is cr
 
 ## Access Control
 
-SAP systems are business critical systems in an enterprise landscape, control and management of access to SAP systems and applications should be based on the principle of least privilege, to ensure that only authorized personnel can access sensitive data and perform critical tasks.
+SAP systems are business critical systems in an enterprise landscape, control and management of access to SAP systems and applications should be based on the principle of least privilege, to ensure that only authorized personnel can access sensitive data and perform critical tasks. Here are some relevant recommendations:
 
-- Use Role-Based Access Control (RBAC) to control access to SAP workload resources deployed in Azure. Every Azure subscription has a trust relationship with an Azure AD tenant. Microsoft recommendations:
-  - Creating Azure AD group for SAP administrators
-  - Use Azure RBAC to grant permissions to the SAP group
+- **Role-Based Access Control (RBAC)**: Use RBAC to control access to SAP workload resources deployed in Azure. Every Azure subscription has a trust relationship with an Azure AD tenant.
+  - Create an Azure AD group for SAP administrators.
+  - Use Azure RBAC to grant permissions to the SAP group.
 
-- Configure Single Sign On between SAP and Azure Active Directory or Azure Directory Federation Service (AD FS) to allow SAP users access SAP application with SAP frontend software (SAP GUI) or a browser with HTTP/S (for example, SAP Fiori)
+- **Single Sign-On (SSo)**: Single Sign On between SAP and Azure Active Directory or Azure Directory Federation Service (AD FS) allows SAP users to access SAP application with SAP frontend software (SAP GUI) or a browser with HTTP/S (for example, SAP Fiori)
 
-- Azure Privileged Identity Management (PIM) - Azure Privileged Identity Management can be used to manage and assign roles to users and groups that allow them to perform privileged actions and these users only have access to the resources when they need to perform their job such as stop/start VM, and more.
+- **Azure Privileged Identity Management (PIM)**: PIM can be used to manage and assign roles to users and groups that allow them to perform privileged actions and these users only have access to the resources when they need to perform their job such as stop/start VM, and more.
 
   Azure PIM also provides automate access request and approval, logging and auditing capabilities for managing and controlling privileged access to your SAP system resources in Azure.
 
-- Just-In-Time (JIT) - Additionally, JIT can be used to control temporary elevated access to critical systems to only authorized personnel. With JIT, administrators can grant temporary access to a specific VM or set of VMs only when it's necessary to perform certain tasks, such as system maintenance or troubleshooting.
+- **Just-In-Time (JIT)** JIT can be used to control temporary elevated access to critical systems to only authorized personnel. With JIT, administrators can grant temporary access to a specific VM or set of VMs only when it's necessary to perform certain tasks, such as system maintenance or troubleshooting.
 
-- Azure Key Vault - When running SAP on Azure, Azure Key Vault can be used to manage and protect sensitive data such as SAP administrator passwords, SAP service account credentials, and encryption keys. Here are some common scenarios where Azure Key Vault can be used in SAP on Azure:
-
-  - Secure storage of SAP passwords: SAP systems require various passwords for different components such as database, application server, and other SAP services. Azure Key Vault can be used to store these passwords securely and then retrieve them during system startup or when it's needed to access the SAP server.
-  - Secure storage of encryption keys: SAP systems often require encryption for data protection. Azure Key Vault can be used to store encryption keys and protect them using HSMs (Hardware Security Modules), which are tamper-resistant devices that protect cryptographic keys.
-  - Secure storage of certificates: Azure Key Vault can be used to store and manage SSL/TLS certificates, which are required for secure communication between SAP systems and other applications.
+- **Azure Key Vault** - When running SAP on Azure, use Azure Key Vault to manage and protect sensitive data such as SAP administrator passwords, SAP service account credentials, and encryption keys. Here are some common scenarios where Azure Key Vault can be used in SAP on Azure:
+  - **Secure storage of SAP passwords**: SAP systems require various passwords for different components such as database, application server, and other SAP services. Azure Key Vault can be used to store these passwords securely and then retrieve them during system startup or when it's needed to access the SAP server.
+  - **Secure storage of encryption keys**: SAP systems often require encryption for data protection. Azure Key Vault can be used to store encryption keys and protect them using HSMs (Hardware Security Modules), which are tamper-resistant devices that protect cryptographic keys.
+  - **Secure storage of certificates**: Azure Key Vault can be used to store and manage SSL/TLS certificates, which are required for secure communication between SAP systems and other applications.
 
 ## Compliance
 
-Azure provides a comprehensive set of security controls to help customers protect their SAP systems deployed on Azure platform. Here are some of the examples compliance offerings that are relevant for SAP systems:
+Azure provides a comprehensive set of security controls to help customers protect their SAP systems deployed on Azure platform. Here are some of the example compliance offerings that are relevant for SAP systems:
 
-- ISO/IEC 27001: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an Information
-    Security Management System (ISMS). This certification covers a broad range of security controls and best practices, including network security, access control, and risk management.
-- SOC 1, SOC 2, and SOC 3: Azure is audited under the SOC (Service Organization Controls) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
-- GDPR: Azure is compliant with the General Data Protection Regulation (GDPR), which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features like data protection, data breach notification, and privacy by design.
+- **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an Information
+Security Management System (ISMS). This certification covers a broad range of security controls and best practices, including network security, access control, and risk management.
+- **SOC 1, SOC 2, and SOC 3**: Azure is audited under the SOC (Service Organization Controls) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
+- **GDPR**: Azure is compliant with the General Data Protection Regulation (GDPR), which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features like data protection, data breach notification, and privacy by design.
 
 Customers can monitor this security baseline and review recommendations, take remediation actions for non-compliance baseline for SAP workloads using Microsoft Defender for Cloud.
 
