@@ -24,12 +24,12 @@ Review the [identity and access management considerations](../../sap/eslz-identi
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for manufacturing HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization for manufacturing HPC](./resource-organization.md)
-- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
-- [Security for HPC in manufacturing industries](./security.md)
-- [Storage for manufacturing HPC](./storage.md)
+- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
+- [Management for Manufacturing HPC](./management.md)
+- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
+- [Resource organization for Manufacturing HPC](./resource-organization.md)
+- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
+- [Security for Manufacturing HPC](./security.md)
+- [Storage for Manufacturing HPC](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

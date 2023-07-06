@@ -24,15 +24,13 @@ Resources to name include VMs, load balancers, DNS labels, availability sets, vi
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the energy industry.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-
-
+- [Azure Billing and Azure Active Directory Tenants for Energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
+- [Management for Energy HPC](./management.md)
+- [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
+- [Governance for Energy HPC](.security-governance-compliance.md)
+- [Security for Energy HPC](./security.md)
+- [Compute for Energy HPC](./compute.md)
+- [Storage for Energy HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

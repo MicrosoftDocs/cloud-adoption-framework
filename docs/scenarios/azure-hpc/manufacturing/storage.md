@@ -98,12 +98,12 @@ One of the biggest challenges with larger workloads is replicating the pure “b
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for energy HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Security governance compliance](./security-governance-compliance.md)
-- [Security for HPC in manufacturing industries](./security.md)
+- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
+- [Management for Manufacturing HPC](./management.md)
+- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
+- [Resource organization for Manufacturing HPC](./resource-organization.md)
+- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
+- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
+- [Security for Manufacturing HPC](./security.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

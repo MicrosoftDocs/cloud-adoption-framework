@@ -29,12 +29,12 @@ For example:
 
 The following articles provide guidance that you might find helpful at various points during the cloud adoption process. They can help you succeed in your cloud adoption scenario for manufacturing HPC environments.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Security for HPC in manufacturing industries](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
+- [Management for Manufacturing HPC](./management.md)
+- [Network topology and connectivity for Manufacturing HPC](/network-topology-connectivity.md)
+- [Resource organization for Manufacturing HPC](./resource-organization.md)
+- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
+- [Security for Manufacturing HPC](./security.md)
+- [Storage for Manufacturing HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

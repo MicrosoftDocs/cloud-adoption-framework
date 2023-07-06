@@ -104,13 +104,13 @@ For more information on reference architecture or cookbooks for relevant HPC ISV
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for HPC in energy industries](./identity-access-management.md)
-- [Management for HPC in energy industries](./management.md)
-- [Network topology and connectivity for energy industries](./network-topology-connectivity.md)
-- [Platform automation and DevOps for in energy industries](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security for HPC in energy industries](./security.md)
-- [Storage for HPC in energy industries](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Azure Active Directory Tenants for Energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
+- [Management for Energy HPC](./management.md)
+- [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
+- [Resource Organization for Energy HPC](./resource-organization.md)
+- [Governance for Energy HPC](./security-governance-compliance.md)
+- [Security for Energy HPC](./security.md)
+- [Storage for Energy HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

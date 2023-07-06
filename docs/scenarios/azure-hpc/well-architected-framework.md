@@ -75,7 +75,7 @@ Azure provides various pricing options namely, Pay As You Go (PAYG), Reserved In
 
 ### Data classification
 
-HPC workloads benefit from high throughput storage, for example, Azure Managed Lustre, Azure Net App Files, BeeGFS Parallel File System, etc. These storage services do deliver the performance and may come at a cost. It's important to have data classified before hand such that only application-specific data reside in these systems. All other data can reside in low cost storages such as Azure Data Lake or Blob. Further, it might be useful to provision HPC storage systems on demand making sure the data is synced to low cost storage service like Azure Blob Storage. This will ensure data is retained in Azure Blob when the high performance storage system is turned off. Azure Managed Lustre and Azure Net App Files do offer a sync service.
+HPC workloads benefit from high throughput storage, for example, Azure Managed Lustre, Azure Net App Files, BeeGFS Parallel File System, etc. These storage services deliver performance and may come at a cost. It's important to have data classified before hand such that only application-specific data reside in these systems. All other data can reside in low cost storage solutions such as Azure Data Lake or Blob. Further, it might be useful to provision HPC storage systems on demand making sure the data is synced to low cost storage service like Azure Blob Storage. This will ensure data is retained in Azure Blob when the high performance storage system is turned off. Azure Managed Lustre and Azure Net App Files do offer a sync service.
 
 ### Set budgets
 
@@ -104,6 +104,7 @@ For more information, see [performance efficiency topics](/azure/architecture/fr
 ### Choosing the right platform for the HPC application
 
 Azure offers a range of platforms for Virtual Machines based on Intel, AMD CPU and/or NVIDIA, AMD GPU. While most of the applications are compatible with what is available, there are some which only benefit from a particular type of CPU and/or GPU. Before deploying the infrastructure on cloud it's important to have a recommendation from the application vendor (ISV) to understand
+
 - Whether the application is memory bound, CPU bound or GPU bound.
 - Whether they have any recommendation on any type of CPU/GPU architecture for performance
 - The type of MPI and its version their application can benefit from

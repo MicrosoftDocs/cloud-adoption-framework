@@ -129,13 +129,13 @@ MPI environments are dedicated as they have unique requirements with the need fo
 
 The following articles provide guidance for each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Azure Active Directory Tenants for Energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
+- [Management for Energy HPC](./management.md)
+- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
+- [Resource Organization for Energy HPC](./resource-organization.md)
+- [Governance for Energy HPC](./security-governance-compliance.md)
+- [Security for Energy HPC](./security.md)
+- [Compute for Energy HPC](./compute.md)
+- [Storage for Energy HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

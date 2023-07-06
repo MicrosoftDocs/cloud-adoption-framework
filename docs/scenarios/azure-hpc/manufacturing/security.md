@@ -36,12 +36,12 @@ You can define and apply security rules and policies that are based on environme
 
 The following articles provide guidance for specific points in cloud adoption of HPC in manufacturing industries.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Identity Access Management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
-- [Storage](./storage.md)
-- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
+- [Management for Manufacturing HPC](./management.md)
+- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
+- [Resource organization for Manufacturing HPC](./resource-organization.md)
+- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
+- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
+- [Storage for Manufacturing HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

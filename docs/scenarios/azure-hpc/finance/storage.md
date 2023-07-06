@@ -59,12 +59,12 @@ The following table provides a comparison of Blob Storage, Azure NetApp Files, a
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC in the finance sector.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure billing offers and Active Directory tenants for Finance HPC](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for Finance HPC](./identity-access-management.md)
+- [Management for finance HPC](./management.md)
+- [Network topology and connectivity for Finance HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Finance HPC](./platform-automation-devops.md)
+- [Resource organization for Finance HPC](./resource-organization.md)
+- [Governance for Finance HPC](./security-governance-compliance.md)
+- [Security for Finance HPC](./security.md)
+- [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

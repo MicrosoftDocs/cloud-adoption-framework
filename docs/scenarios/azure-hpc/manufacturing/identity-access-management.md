@@ -38,12 +38,12 @@ This diagram shows a manufacturing architecture that uses Batch:
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for manufacturing HPC environments.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
+- [Management for Manufacturing HPC](./management.md)
+- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
+- [Resource organization for Manufacturing HPC](./resource-organization.md)
+- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
+- [Security for Manufacturing HPC](./security.md)
+- [Storage for Manufacturing HPC](./storage.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

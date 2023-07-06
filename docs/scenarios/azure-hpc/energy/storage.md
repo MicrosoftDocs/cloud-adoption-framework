@@ -91,14 +91,14 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
 
 ## Next steps
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity Access Management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
-- [Security](./security.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
 
+- [Azure Billing and Azure Active Directory Tenants for Energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
+- [Management for Energy HPC](./management.md)
+- [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
+- [Resource Organization for Energy HPC](./resource-organization.md)
+- [Governance for Energy HPC](./security-governance-compliance.md)
+- [Security for Energy HPC](./security.md)
+- [Compute for Energy HPC](./compute.md)
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

@@ -53,12 +53,12 @@ For more information, see [design recommendations for platform access](../../../
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
-- [Management for manufacturing HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization for manufacturing HPC](./resource-organization.md)
-- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
-- [Security for manufacturing HPC](./security.md)
-- [Storage for manufacturing HPC](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure billing offers and Active Directory tenants for Finance HPC](./azure-billing-active-directory-tenant.md)
+- [Management for finance HPC](./management.md)
+- [Network topology and connectivity for Finance HPC](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Finance HPC](./platform-automation-devops.md)
+- [Resource organization for Finance HPC](./resource-organization.md)
+- [Governance for Finance HPC](./security-governance-compliance.md)
+- [Security for Finance HPC](./security.md)
+- [Storage for Finance HPC](./storage.md)
+- [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
