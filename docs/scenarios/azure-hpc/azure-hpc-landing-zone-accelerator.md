@@ -39,7 +39,7 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
 
 - Energy (Oil and Gas)
-  - [Azure Billing and Azure Active Directory Tenants for Energy HPC](./energy/azure-billing-active-directory-tenant.md)
+  - [Azure Billing and Azure Active Directory tenants for Energy HPC](./energy/azure-billing-active-directory-tenant.md)
   - [Azure Identity and Access Management for Energy HPC](./energy/identity-access-management.md)
   - [Management for Energy HPC](./energy/management.md)
   - [Network Topology and Connectivity for Energy HPC](./energy/network-topology-connectivity.md)
@@ -51,7 +51,7 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Storage for Energy HPC](./energy/storage.md)
   
 - Manufacturing
-  - [Azure Billing and Active Directory Tenants for Manufacturing HPC](./manufacturing/azure-billing-active-directory-tenant.md)
+  - [Azure Billing and Active Directory tenants for Manufacturing HPC](./manufacturing/azure-billing-active-directory-tenant.md)
   - [Azure Identity and Access Management for Manufacturing HPC](./manufacturing/identity-access-management.md)
   - [Management for Manufacturing HPC](./manufacturing/management.md)
   - [Network topology and connectivity for Manufacturing HPC](./manufacturing/network-topology-connectivity.md)
@@ -71,6 +71,9 @@ The architectures of landing zones vary by business sector, in addition to varyi
   - [Governance for Finance HPC](./finance/security-governance-compliance.md)
   - [Security for Finance HPC](./finance/security.md)
   - [Storage for Finance HPC](./finance/storage.md)
+
+- Machine Learning
+    - [Compute for Machine Learning HPC](./machine-learning/compute.md)
 
 ## Example: conceptual reference architecture for energy
 

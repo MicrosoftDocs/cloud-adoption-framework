@@ -21,3 +21,5 @@ Choosing the right SKU for Machine Learning model is important to performance an
 - Bandwidth. Larger, lower latency bandwidth can be an expense when not utilized. Consider InfiniBand for only the largest models that will require the extra bandwidth.
 
 View our GPU optimized SKUs [here](https://learn.microsoft.com/azure/virtual-machines/sizes-gpu)
+
+- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
