@@ -20,7 +20,7 @@ Your tools should include automation wherever possible. Automation enables them 
 
 Monitoring your environments for configuration drift is an important part of ensuring stable and consistent operations.
 
-[Azure Policy](/azure/governance/policy/overview) is valuable within cloud management processes. Azure Policy can audit and remediate Azure resources, and can also audit settings inside a machine. Validation is performed by the guest configuration extension and client. The extension, through the client, validates settings such as:
+[Azure Policy](/azure/governance/policy/overview) is valuable within cloud management processes. Azure Policy can audit and remediate Azure resources, and can also audit settings inside a machine. Validation is performed by the Azure Automanage Machine Configuration extension and client. The extension, through the client, validates settings such as:
 
 - Operating system configuration
 - Application configuration or presence
@@ -30,7 +30,7 @@ Use this technique as part of your organization's management approach within lan
 
 In addition, using Infrastructure as Code can help you monitor for configuration drift, as well as help you keep your landing zone up to date.  To learn more, see [Keep your Azure landing zone up to date](../../../govern/resource-consistency/keep-azure-landing-zone-up-to-date.md) and [Use infrastructure as code to update Azure landing zones](../../../manage/infrastructure-as-code-updates.md).
 
-Learn about the [guest configuration feature of Azure Policy](/azure/governance/policy/concepts/guest-configuration). Consider how you can use it as part of your landing zone management toolkit.
+Learn about [Azure Automanage Machine Configuration](/azure/governance/machine-configuration/overview). Consider how you can use it as part of your landing zone management toolkit.
 
 ## Update management considerations
 
@@ -42,7 +42,7 @@ Learn about the [guest configuration feature of Azure Policy](/azure/governance/
 ## Operational compliance recommendations
 
 - Use [Update Management in Azure Automation](/azure/automation/update-management/overview) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing Update Management configurations through Azure Policy ensures that all VMs are included in your patch management regimen. It also provides your application teams with the ability to manage patch deployment for their VMs, and provides visibility and enforcement capabilities to your central IT team across all VMs.
-- Use Azure Policy to monitor in-guest virtual machine (VM) configuration drift. Enabling [guest configuration](/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps your application team workloads to consume feature capabilities immediately with little effort.
+- Use Azure Policy to monitor in-machine virtual machine (VM) configuration drift. Enabling [Azure Automanage Machine Configuration](/azure/governance/machine-configuration/overview) audit capabilities through policy helps your application team workloads to consume feature capabilities immediately with little effort.
 
 ## Next steps
 
