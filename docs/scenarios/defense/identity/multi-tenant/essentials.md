@@ -11,13 +11,13 @@ ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-The following guide provides essential insights into Azure Active Directory (Azure AD) and focuses on information relevant to defense organizations.
+The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD).
 
 Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
 
 Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Azure AD. Many already have access to essential Azure AD features through their existing Microsoft 365 licenses.
 
-## Tenants
+## Azure AD tenants
 
 An instance of Azure AD is called an *Azure AD tenant*. An Azure AD tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
@@ -27,7 +27,7 @@ You should try to have Microsoft 365, Azure services, Power Platform, line-of-bu
 
 **Azure AD is not Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Azure AD is a hyperscale, modern, and cloud-based identity service.
 
-**Tenant domain name and ID.** Each tenant has a unique initial domain name and tenant ID. For example, an organization named *Contoso* might have the initial domain name `contoso.onmicrosoft.com` for Azure AD and `contoso.onmicrosoft.us` for Azure AD Government.
+**Tenant domain name and tenant ID.** Each tenant has a unique initial domain name and tenant ID. For example, an organization named *Contoso* might have the initial domain name `contoso.onmicrosoft.com` for Azure AD and `contoso.onmicrosoft.us` for Azure AD Government.
 
 Tenant IDs are globally unique identifiers (GUID) like `a976dd56-c1d8-485c-8ea7-facbce6726c2`. Each tenant only has one initial domain and tenant ID. Both values are immutable and can't be changed after tenant creation.
 
@@ -35,7 +35,7 @@ Users sign into Azure AD accounts with their User Principal Name (UPN). The UPN 
 
 You can only verify a custom domain in one Azure AD tenant globally. Custom domains aren't security or trust boundaries like Active Directory Domain Services (AD DS) Forests. They're a DNS namespace for identifying an Azure AD user's home tenant.
 
-## Architecture
+## Azure AD architecture
 
 Azure AD has no domain controllers, organizational units, group policy objects, domain/forest trusts, or Flexible Single Master Operation (FSMO) roles. Azure AD is a software-as-a-service, identity management solution. You can access Azure AD via RESTful APIs. You use [modern authentication](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/setup-with-modern-authentication#modern-authentication) and authorization protocols to access resources protected by Azure AD. The directory has a flat structure and uses [resource-based](/azure/active-directory/roles/admin-units-manage) permissions.
 
@@ -53,19 +53,19 @@ Azure AD has two types of identities. The two identity types are users and servi
 
 ## Permissions
 
-Azure AD uses a different approach compared to traditional on-premises Active Directory Domain Services (AD DS).
+Azure AD uses a different approach to permissions than traditional on-premises Active Directory Domain Services (AD DS).
 
-AD DS uses security groups with well-known [security identifiers (SID)](/windows-server/identity/ad-ds/manage/understand-security-identifiers), such as `S-1-5-domain-512` for *Domain Admins*. When a Domain Administrator performs a local or network sign-in, the Domain Controller issues a Kerberos ticket containing the Domain Admins SID and stores it in a [credential cache](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication). Threat actors commonly exploit this mechanism using [lateral movement](/defender-for-identity/lateral-movement-alerts) and [privilege escalation](/defender-for-identity/persistence-privilege-escalation-alerts) techniques like pass-the-hash and pass-the-ticket.
-
-You assign Azure AD permissions using directory roles. These roles grant access to specific APIs and scopes. To reduce attack surface area, you can delegate granular permissions and activate permissions just-in-time. Client applications, [Web Account Manager (WAM)](/azure/active-directory/develop/scenario-desktop-acquire-token-wam), or the user's web browser (session cookies) can store sign-in tokens. Azure AD isn't susceptible to Kerberos-based attacks and includes extensive protections against session hijacking or replay. Azure AD records token use to prevent replay and can require tokens be [cryptographically bound](/azure/active-directory/conditional-access/concept-token-protection) to the user's device. [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) detects and blocks risky sign-ins while [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enforces access policies in real-time.
-
-**Azure AD roles.** [Azure AD directory roles](/azure/active-directory/roles/permissions-reference) grant permissions to manage Azure AD objects and configuration. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions.
+**Azure AD roles.** You assign permissions in Azure AD using [Azure AD directory roles](/azure/active-directory/roles/permissions-reference). These roles grant access to specific APIs and scopes. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions.
 
 **Elevated permission assignment.** To enhance security and reduce unnecessary privileges, Azure AD provides two principles for permission assignment:
 
-[Just-in-Time (JIT)](/azure/active-directory/privileged-identity-management/pim-configure): Azure AD supports just-in-time access. The JIT feature lets you assign permissions temporarily when needed. JIT access minimizes the exposure of unnecessary privileges and reduces the attack surface.
+*Just-in-Time (JIT)*: Azure AD supports [just-in-time access](/azure/active-directory/privileged-identity-management/pim-configure). The JIT feature lets you assign permissions temporarily when needed. JIT access minimizes the exposure of unnecessary privileges and reduces the attack surface.
 
-Just-Enough-Admin (JEA): Azure AD follows the just-enough-admin principle. [Built-in roles](/azure/active-directory/roles/permissions-reference) let you [delegate admin tasks](/azure/active-directory/roles/delegate-by-task) without granting excessive permissions. [Administrative Units](/azure/active-directory/roles/administrative-units) can further restrict permission scope for Azure AD roles.
+*Just-Enough-Admin (JEA)*: Azure AD follows the just-enough-admin principle. [Built-in roles](/azure/active-directory/roles/permissions-reference) let you [delegate admin tasks](/azure/active-directory/roles/delegate-by-task) without granting excessive permissions. [Administrative Units](/azure/active-directory/roles/administrative-units) can further restrict permission scope for Azure AD roles.
+
+**Azure AD enhanced security.** To reduce attack surface area, you can delegate granular permissions and activate permissions just-in-time. Client applications, [Web Account Manager (WAM)](/azure/active-directory/develop/scenario-desktop-acquire-token-wam), or the user's web browser (session cookies) can store sign-in tokens. Azure AD isn't susceptible to Kerberos-based attacks like AD DS. Azure AD includes extensive protections against session hijacking or replay. Azure AD records token use to prevent replay and can require tokens be [cryptographically bound](/azure/active-directory/conditional-access/concept-token-protection) to the user's device. [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) detects and blocks risky sign-ins while [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enforces access policies in real-time.
+
+However, AD DS is susceptible to Kerberos-based attacks. AD DS uses security groups with well-known [security identifiers (SID)](/windows-server/identity/ad-ds/manage/understand-security-identifiers), such as `S-1-5-domain-512` for *Domain Admins*. When a Domain Administrator performs a local or network sign-in, the Domain Controller issues a Kerberos ticket containing the Domain Admins SID and stores it in a [credential cache](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication). Threat actors commonly exploit this mechanism using [lateral movement](/defender-for-identity/lateral-movement-alerts) and [privilege escalation](/defender-for-identity/persistence-privilege-escalation-alerts) techniques like pass-the-hash and pass-the-ticket.
 
 ## Authentication
 
