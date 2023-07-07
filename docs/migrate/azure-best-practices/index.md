@@ -31,7 +31,7 @@ The following resources provide Azure cloud migration best practices beyond the 
 ## Additional migration best practices
 
 - [Set up networking for workloads migrated to Azure](./migrate-best-practices-networking.md)
-- [Deploy a migration infrastructure](./contoso-migration-infrastructure.md)
+- [Deploy a migration infrastructure](../azure-migration-guide/ready-alz.md)
 - [Cost and size workloads migrated to Azure](./migrate-best-practices-costs.md)
 - [Scale a migration to Azure](./contoso-migration-scale.md)
 

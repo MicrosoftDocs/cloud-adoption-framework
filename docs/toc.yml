@@ -864,7 +864,7 @@ items:
         - name: Set up networking for migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-networking.md
         - name: Deploy a migration infrastructure
-          href: migrate/azure-best-practices/contoso-migration-infrastructure.md
+          href: migrate/azure-migration-guide/ready-alz.md
         - name: Cost optimize migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration

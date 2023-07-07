@@ -42,7 +42,7 @@ After Contoso establishes goals and requirements, they review the IT footprint a
 
 ## Current deployment
 
-Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrastructure.md) and tried out the proof-of-concept (POC) migration combinations in the previous table. Now it's time to embark on a full migration to Azure at scale. Contoso wants to migrate:
+Contoso planned and set up an [Azure infrastructure](../azure-migration-guide/ready-alz.md) and tried out the proof-of-concept (POC) migration combinations in the previous table. Now it's time to embark on a full migration to Azure at scale. Contoso wants to migrate:
 
 | Item | Volume | Details |
 | --- | --- | --- |

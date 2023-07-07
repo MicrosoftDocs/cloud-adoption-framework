@@ -92,7 +92,7 @@ To run this scenario, Contoso must meet the following prerequisites:
 | Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
-| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](../azure-migration-guide/ready-alz.md). |
 
 ## Scenario steps
 
