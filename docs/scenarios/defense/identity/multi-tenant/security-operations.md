@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 
-# Centralized security operations with external identities
+# Centralized security operations with external identities for defense organizations
 
 This article is for multi-tenant defense organizations with a centralized security operations team. It explains they can manage multiple tenants with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). Security operators don't need multiple user accounts, credentials, and workstations to secure your environment. The setup supports zero trust capabilities in secondary tenants.
 
