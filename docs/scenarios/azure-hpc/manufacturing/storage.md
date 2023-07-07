@@ -60,9 +60,11 @@ Here are some things to consider:
 For Hybrid HPC Pack installations where the client needs to upload input datasets to Azure to be used during a HPC Pack job, or download the results after a jobs is completed, you need to determine the right application to use for the file transfer. Will the upload and download be part of a script or a manual process?  
 
 Here are some examples:
-•	For manual transfers [Azcopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy) or Azure Storage Explorer would be suitable to transfer files to Azure Files or Azure Blob. Neither work with Azure NetApp Files directly.
-•	When Azure Blob storage is used, AzCopy is an option to transfer files within a script. AzCopy offers [options](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10?toc=%2Fazure%2Fstorage%2Ffiles%2Ftoc.json#authorize-azcopy) to use a service principle for authentication or SAS tokens. 
-•	When Azure Files is used, AzCopy is an option to transfer files within a script using SAS tokens.  Other options for Azure Files could be to mount the remote Azure File Share to the client machine as a drive letter to let the clients copy files directly to Azure files using a “copy” command. Azure File share mounts require SMB port 445 to be open which some organizations block with their firewall. 
+•	For manual transfers [Azcopy](/azure/storage/common/storage-ref-azcopy) or Azure Storage Explorer would be suitable to transfer files to Azure Files or Azure Blob. Neither work with Azure NetApp Files directly.
+•	When Azure Blob storage is used, AzCopy is an option to transfer files within a script. AzCopy offers [options](/azure/storage/common/storage-use-azcopy-v10#authorize-azcopy) to use a service principle for authentication or SAS tokens. 
+
+•	When Azure Files is used, AzCopy is an option to transfer files within a script using SAS tokens.  Other options for Azure Files could be to mount the remote Azure File Share to the client machine as a drive letter to let the clients copy files directly to Azure files using a `copy` command. Azure File share mounts require SMB port 445 to be open which some organizations block with their firewall. 
+
 
 
 ## Total capacity requirement
