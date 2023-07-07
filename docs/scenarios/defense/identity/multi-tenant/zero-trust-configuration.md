@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Zero trust configuration for multi-tenant defense organizations
 
-This article shows multi-tenant organizations how to apply configurations in Azure Active Directory (Azure AD) to meet common defense zero trust requirements. Follow these recommendations as part of your multi-tenant identity strategy to establish the right architecture for implementing zero trust in your environment.
+This article shows multi-tenant organizations how to apply configurations in Azure Active Directory (Azure AD) and meet common defense zero trust requirements. Follow these recommendations as part of your multi-tenant identity strategy to establish the right architecture for implementing zero trust in your environment.
 
 :::image type="content" source="./images/multi-tenant-architecture.png" alt-text="Diagram showing a sample multi-tenant architecture with zero trust configurations." lightbox="./images/multi-tenant-architecture.png" border="false":::
 
