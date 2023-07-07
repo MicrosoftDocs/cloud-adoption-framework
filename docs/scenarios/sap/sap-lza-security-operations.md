@@ -73,7 +73,7 @@ Customers can automatically assess and update SAP virtual machines to maintain s
 
 ### SAP security patching
 
-Apart from operating system security patching, SAP customers are also recommended to protect the security for other SAP components: database and application security. For these two components, SAP provides best practices, guidance and information in SAP notes, which are available in SAP Support portal.
+Apart from operating system security patching, SAP customers are also recommended to protect the security for other SAP components: database and application security. For these two components, SAP provides best practices, guidance and information in SAP notes, which are available in [SAP Support portal](https://support.sap.com/).
 
 It's highly recommended to review these SAP security OSS notes regularly since sometimes SAP releases high critical security patches (hot fixes) which need to be action immediately to protect your SAP systems.
 

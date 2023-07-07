@@ -23,7 +23,7 @@ The sections below provides the **considerations and recommendations** for SAP o
 
 ## Secure-at-rest
 
-The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by SAP (Note 1380493 - SQL Server Transparent Data Encryption (TDE)).
+The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by [SAP Note 1380493 - SQL Server Transparent Data Encryption (TDE)](https://me.sap.com/notes/1380493).
 
 The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption).
 
@@ -37,7 +37,7 @@ The success of implementing TDE heavily depends on:
 - Good and thorough testing
 - Well-designed processes around the handling of certificates and their backups
 
-Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported, please see SAP OSS note 2812637 -  Real-time replication isn't supported for TDE-enabled MSSQL Server database for details.
+Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported, please see [SAP OSS note 2812637 - Real-time replication is not supported for TDE-enabled MSSQL Server database](https://me.sap.com/notes/2812637/E) for details.
 
 ## Always Encrypted
 
@@ -61,7 +61,7 @@ Backup Encryption can be used with TDE, but adds no benefit, as the data is alre
 
 Server and OS level hardening are essential to a secure running system.
 
-Ensure that you follow the recommendations below when securing your [SQL server](/sql/relational-databases/security/securing-sql-server) and your SAP System, please see SAP OSS note 2417205
+Ensure that you follow the recommendations below when securing your [SQL server](/sql/relational-databases/security/securing-sql-server) and your SAP System, please see [SAP OSS note 2417205](https://me.sap.com/notes/2417205).
 
 SQL Server is based on the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP).
 
@@ -87,15 +87,15 @@ Under "Local Computer Policy -> Computer Configuration -> Administrative Templat
   By changing this list, the priority in which the different cipher suites are used by the system can be changed. Removing cipher suites from this list results in a situation that this cipher suite is no longer usable in the system. This group policy setting has priority over the SCHANNEL registry setting described earlier.
   This setting is often changed and controlled by group policies by the security department, but the resulting connection issues have to be handled by the SAP Basis or SQL Server database administration group.
 
-- Consider using SAP tool (SCoTT) to help to analyze problems with disabled protocols or cipher suites. This tool is described in the SAP note 2846170. It can help to analyze connection problems between the SAP System (ABAP and Java) and the SQL Server, either running on Linux or Windows.
+- Consider using SAP tool (SCoTT) to help to analyze problems with disabled protocols or cipher suites. This tool is described in the [SAP note 2846170](https://me.sap.com/notes/2846170/E). It can help to analyze connection problems between the SAP System (ABAP and Java) and the SQL Server, either running on Linux or Windows.
 
 ## Authentication
 
 Here are some considerations for authentication with SAP on Azure.
 
 - **SAP Netweaver on SQL Server**:
-  - A system like this has specific requirements with regards to the SAP and SQL Server startup accounts, authentication to the SQL Server instance, SAP database, and the DBA access. 
-  - For more details, see SAP note 1645041 - FAQ: Microsoft SQL Server logins and their usage in SAP environment
+  - A system like this has specific requirements with regards to the SAP and SQL Server startup accounts, authentication to the SQL Server instance, SAP database, and the DBA access.
+  - For more details, see [SAP note 1645041 - Microsoft SQL Server logins and their usage in SAP environment](https://me.sap.com/notes/1645041/E).
 
 - **SAP ABAP NetWeaver System**:
   - It doesn't require SQL Server logins, all connections are made using Windows Authentication. For example, with the user `SAPService<SID>` or `<sid>adm`.
@@ -126,11 +126,11 @@ Here are some considerations for authentication with SAP on Azure.
   - Installing SAP turns this feature on to gather and display operating system data in transaction `DBACockpit`.
   - The setting can be disabled, and the only effect will be that a minority of monitoring data won't be available in transaction `DBACockpit`
   - Any system with `xp_cmdshell` disabled will display a warning message in the `DBACockpit Message Window` so that you know why data is missing.
-  - If `xp_cmdshell` is turned off, see SAP KBA 2283909 - Side effect in monitoring. 
-  - Additionally, SAP Note 3019299 - Security Audit Questions or Security Customization in NetWeaver and SQL Server systems gives more details on questions on security audits.
+  - If `xp_cmdshell` is turned off, see SAP KBA 2283909 - Side effect in monitoring.
+  - Additionally, [SAP Note 3019299 - Security Audit Questions or Security Customization in NetWeaver and SQL Server systems](https://me.sap.com/notes/3019299/E) gives more details on questions on security audits.
 
 - **Configure virus scanners correctly**:
-  - SAP supports virus scanners to protect the machines against viruses and other malware. But on the other hand, a wrongly configured virus scanner can cause huge performance problems or even database corruption. See SAP note 106267 - Virus scanner software on Windows on how to setup and configure a virus scanner for the operating system when used for an SAP NetWeaver system. For the usage with a Microsoft SQL Server database several configurations have to be made to avoid performance and corruption problems. These are summarized in this Microsoft Support article:[How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b)
+  - SAP supports virus scanners to protect the machines against viruses and other malware. But on the other hand, a wrongly configured virus scanner can cause huge performance problems or even database corruption. See [SAP note 106267 - Virus scanner software on Windows](https://service.sap.com/sap/support/notes/106267) on how to setup and configure a virus scanner for the operating system when used for an SAP NetWeaver system. For the usage with a Microsoft SQL Server database several configurations have to be made to avoid performance and corruption problems. These are summarized in this Microsoft Support article:[How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b)
 
 ## Next steps
 
