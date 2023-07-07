@@ -1074,7 +1074,7 @@ items:
             - name: Load on-premises data into Azure Synapse Analytics
               href: /sql/integration-services/load-data-to-sql-data-warehouse?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Integrate data - Azure Data Factory to OLAP
-              href: /azure/architecture/data-guide/scenarios/brid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Use Azure Stream Analytics with Azure Synapse Analytics
               href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Reference architecture for ingestion and analysis of new feeds
