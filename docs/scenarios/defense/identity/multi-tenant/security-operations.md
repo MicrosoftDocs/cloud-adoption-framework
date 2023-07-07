@@ -1,6 +1,6 @@
 ---
 title: Centralized security operations with external identities for multi-tenant defense organizations
-description: Guidance for centralized security operations with external identities
+description: Guidance for centralized security operations with external identities for multi-tenant defense organizations with zero trust requirements
 author: stephen-sumner
 ms.author: andrmass
 ms.reviewer: ssumner
@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Centralized security operations with external identities for defense organizations
 
-This article is for multi-tenant defense organizations with a centralized security operations team. It explains they can manage multiple tenants with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). Security operators don't need multiple user accounts, credentials, and workstations to secure your environment. The setup supports zero trust capabilities in secondary tenants.
+This article is for multi-tenant defense organizations with a centralized security operations team. It explains how you can manage multiple tenants and meet zero trust requirements with a single identity and [privileged access device](/security/privileged-access-workstations/privileged-access-deployment). With this configuration, security operators don't need multiple user accounts, credentials, and workstations to secure your environment. The setup supports zero trust capabilities in secondary tenants.
 
 ## Understand configuration components
 
