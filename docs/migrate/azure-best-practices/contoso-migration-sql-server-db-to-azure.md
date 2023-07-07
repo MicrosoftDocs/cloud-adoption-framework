@@ -210,6 +210,10 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 - Each read replica bills based on the compute and storage you select.
 - Use reserved capacity to save on costs.
 
+## Considerations
+
+**Blocked migrations:** If Contoso is currently blocked for migrations for specific SQL Servers, they can evaluate using [Azure Arc-enabled SQL Servers](/sql/sql-server/azure-arc/overview) as a workaround. This solution involves using the existing Software Assurance SQL license with additional benefits by enabling Azure Arc SQL server.
+
 ## Next steps
 
 In this article, Contoso assessed, planned, and migrated their Microsoft SQL Server workloads to Azure.
