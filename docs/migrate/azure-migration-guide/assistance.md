@@ -1,20 +1,20 @@
 ---
 title: How to obtain assistance
 description: Learn how to obtain assistance during your Azure migration process. The right assistance can help accelerate your migration efforts.
-author: matticusau
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank, fasttrack-new, AQC
+ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Get assistance
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.
 
-## [Support plans](#tab/SupportPlans)
+## Support plans
 
 ### Microsoft Support
 
@@ -74,12 +74,12 @@ Need support engineer assistance for deep technical guidance?
 
 The following online communities provide community-based support:
 
-- [MSDN forums](https://social.msdn.microsoft.com/Forums/en-US/home)
+- [Azure Migration and Modernization - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-migration-and/bd-p/AzureMigration)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
 
 ::: zone-end
 
-## [Partners](#tab/Partners)
+## Partners
 
 ### Azure solutions partner
 

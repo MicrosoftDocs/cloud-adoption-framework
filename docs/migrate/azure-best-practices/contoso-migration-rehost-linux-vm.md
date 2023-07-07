@@ -69,7 +69,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 Contoso will complete the migration process as follows:
 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate: Server Migration and prepares the on-premises VMware infrastructure.
-- The company already has the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so it just needs to configure the replication of the VMs through the Azure Migrate: Server Migration tool.
+- The company already has the [Azure infrastructure](../azure-migration-guide/ready-alz.md) in place, so it just needs to configure the replication of the VMs through the Azure Migrate: Server Migration tool.
 - With everything prepared, Contoso can start replicating the VMs.
 - After replication is enabled and working, Contoso will migrate the VM by failing it over to Azure.
 
@@ -88,7 +88,7 @@ Here's what Contoso needs for this scenario.
 Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control (Azure RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Learn how [Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
+| **Azure infrastructure** | Learn how [Contoso set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, or 6.5. <br><br> An ESXi host running version 5.5, 6.0, or 6.5. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux distros](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
@@ -112,7 +112,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
 They set up these components as follows:
 
-1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when the company [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
+1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when the company [deployed the Azure infrastructure](../azure-migration-guide/ready-alz.md)
 
     - The SmartHotel360 application is a production application. The VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
@@ -293,6 +293,6 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure deployment](./contoso-migration-infrastructure.md#set-up-tagging).
+- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure deployment](../azure-migration-guide/ready-alz.md).
 - Contoso has no licensing issues with the Ubuntu servers.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
