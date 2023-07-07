@@ -85,7 +85,7 @@ As part of designing the solution, Contoso compares features between Azure SQL D
 
   - SQL Managed Instance supports SQL Server Agent, which is an important component of SmartHotel360. Without this compatibility, Contoso would have to redesign the maintenance plans that the application requires.
 
-- **License exchange.** With Software Assurance, Contoso can exchange its existing licenses for discounted rates on a SQL managed instance by using the [Azure Hybrid Benefit for SQL Server](/azure/azure-sql/azure-hybrid-benefit?view=azuresql-mi&tabs=azure-portal). For this reason, Contoso can save up to 30 percent on SQL Managed Instance.
+- **License exchange.** With Software Assurance, Contoso can exchange its existing licenses for discounted rates on a SQL managed instance by using the [Azure Hybrid Benefit for SQL Server](/azure/azure-sql/azure-hybrid-benefit). For this reason, Contoso can save up to 30 percent on SQL Managed Instance.
 
 - **Security technology and network isolation.**
 
@@ -442,6 +442,10 @@ With discovery completed, the admins can begin replication of VMware VMs to Azur
 
 > [!NOTE]
 > Update replication settings any time *before* replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
+
+### Alternatives
+
+As an alternative, consider evaluating the Log Replay Service (LRS) for [migrating databases from SQL Server by using Log Replay Service](/azure/azure-sql/managed-instance/log-replay-service-migrate).
 
 ## Step 6: Migrate the database via Azure Database Migration Service
 
