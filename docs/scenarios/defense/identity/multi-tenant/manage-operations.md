@@ -25,7 +25,7 @@ The primary Azure AD tenant and the secondary Azure AD tenant(s) share applicati
 
 You should onboard all modern applications that need to sign in users as enterprise applications in the primary tenant.
 
-You should register Azure applications running in secondary tenant subscriptions with the primary tenant. The primary tenant is where users and licenses are. Registering applications in the primary tenant allows users to sign in with the same identity they use for Microsoft 365. This offers the most seamless experience and lets you apply the same zero trust policy baseline to all application access.
+You should register Azure applications running in secondary tenant subscriptions with the primary tenant. The primary tenant is where users and licenses are. Registering applications in the primary tenant allows users to sign in with the same identity they use for Microsoft 365. This configuration offers the most seamless experience and lets you apply the same zero trust policy baseline to all application access.
 
 The location of the application infrastructure (virtual machines, databases, web apps) has not effect on the tenant you can use for user sign-in. The team managing the primary tenant is responsible for app registrations and enterprise applications. They're also responsible for conditional access policies applied to applications hosted in the primary tenant and any secondary tenants.
 
@@ -139,7 +139,7 @@ The security operations team for a defense organization must protect, detect, an
 
 Security operators in the primary tenant need to monitor and manage alerts from Microsoft 365 in the primary tenant. This work involves managing Microsoft Sentinel and Microsoft 365 Defender services like Microsoft Defender for Endpoint (MDE).
 
-**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connects allow the Sentinel instance to ingest security logs from Office 365, Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
+**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connectors allow the Sentinel instance to ingest security logs from various sources. These sources include Office 365, Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
 
 - Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Microsoft 365 and other available primary tenant data sources to Microsoft Sentinel
@@ -169,7 +169,7 @@ This section describes how you should monitor and protect Azure resources in sub
 
 *Configure Defender for Cloud.* You need to enable Defender for Cloud and [manage recommendations and alerts](/azure/defender-for-cloud/managing-and-responding-alerts). Turn on [enhanced workload protections](/azure/defender-for-cloud/defender-for-cloud-introduction#protect-cloud-workloads) for resources in subscriptions linked to secondary tenants.
 
-**Microsoft Defender for Endpoint (MDE) response (servers).** [Defender for Servers](/azure/defender-for-cloud/plan-defender-for-servers) is a Defender for Cloud [enhanced protection](/azure/defender-for-cloud/get-started) for servers that includes MDE. 
+**Microsoft Defender for Endpoint (MDE) response (servers).** [Defender for Servers](/azure/defender-for-cloud/plan-defender-for-servers) is a Defender for Cloud [enhanced protection](/azure/defender-for-cloud/get-started) for servers that includes MDE.
 
 *Assign permissions.* When you enable a Defender for Server plan in a secondary tenant, the [MDE extension](/azure/defender-for-cloud/integration-defender-for-endpoint) automatically deploys to your VMs. This MDE extension onboards the server to the MDE service for the secondary tenant.
 
