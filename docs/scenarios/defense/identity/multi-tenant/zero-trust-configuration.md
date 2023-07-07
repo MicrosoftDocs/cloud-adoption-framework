@@ -50,8 +50,9 @@ Some defense organizations consume Microsoft 365 in a shared tenant owned and op
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity licenses you have in Azure AD.
 
-- The tenant with your Microsoft 365 licenses is your primary tenant (*see figure 2*). If your organization migrated workloads to Azure before adopting Microsoft 365, then your organization created an Azure AD tenant to manage the Azure subscriptions. However, the tenant with the Microsoft 365 licenses is still the primary tenant even though you have an older Azure AD tenant.
-- If your organization doesn’t use Microsoft 365, any Azure AD tenant with [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/) licenses is your primary tenant. This tenant is where you have added and verified your organization's [domain name](/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
+The tenant with your Microsoft 365 licenses is your primary tenant (*see figure 2*). If your organization migrated workloads to Azure before adopting Microsoft 365, then your organization created an Azure AD tenant to manage the Azure subscriptions. However, the tenant with the Microsoft 365 licenses is still the primary tenant even though you have an older Azure AD tenant.
+
+If your organization doesn’t use Microsoft 365, any Azure AD tenant with [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/) licenses is your primary tenant. This tenant is where you have added and verified your organization's [domain name](/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if an Azure AD tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. A decision tree to determine the Azure AD primary tenant and secondary tenant.*
