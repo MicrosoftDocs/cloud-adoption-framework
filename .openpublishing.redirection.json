@@ -809,8 +809,11 @@
          "source_path": "docs/migrate/azure-migration-guide/migrate.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/deploy",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/optimize-and-transform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/release",
+         "redirect_document_id": false
       }
-      
-
    ]
 }
