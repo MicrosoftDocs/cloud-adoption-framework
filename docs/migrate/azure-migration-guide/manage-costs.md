@@ -1,9 +1,9 @@
 ---
 title: Migration-focused cost control mechanisms
 description: Use the Cloud Adoption Framework for Azure to learn how to set up budgets, payments, and understand invoices for your Azure resources.
-author: bandersmsft
-ms.author: martinek
-ms.date: 08/08/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

@@ -1,16 +1,16 @@
 ---
-title: Optimize and promote
+title: Release, promote and optimize workloads
 description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/06/2023
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
-# Release workloads (test, optimize, and handoff)
+# Release, promote and optimize workloads (test, optimize, and handoff)
 
 Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 

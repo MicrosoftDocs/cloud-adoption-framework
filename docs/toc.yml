@@ -583,7 +583,7 @@ items:
         - name: Readying your landing zone for migration
           href: migrate/azure-migration-guide/ready-alz.md
         - name: Deploy workloads
-          href: migrate/azure-migration-guide/migrate.md
+          href: migrate/azure-migration-guide/deploy.md
         - name: Release workloads
           href: migrate/azure-migration-guide/optimize-and-transform.md
         - name: Migration-focused cost-control mechanisms

@@ -4,7 +4,7 @@ description: Review items that need to be completed after an Azure landing zone 
 author: bstephenson
 ms.author: bstephenson
 ms.reviewer: tozimmergren
-ms.date: 06/26/2023
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

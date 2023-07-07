@@ -3,7 +3,7 @@ title: Azure migration tools decision guide
 description: Use this decision tree as high-level guidance for selecting the best tools to use for your Azure migrations based on your migration decisions.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/04/2019
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide

@@ -804,7 +804,16 @@
          "source_path": "docs/migrate/azure-best-practices/sql-migration.md",
          "redirect_url": "/azure/azure-sql/migration-guides",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/optimize-and-transform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/release",
+         "redirect_document_id": false
       }
-
    ]
 }
