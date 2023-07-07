@@ -431,6 +431,6 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](../azure-migration-guide/ready-alz.md#set-up-tagging) deployment.
+- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](../azure-migration-guide/ready-alz.md) deployment.
 - There are no licensing issues for the Contoso Ubuntu servers.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.

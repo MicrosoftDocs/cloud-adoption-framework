@@ -414,7 +414,7 @@ After the resources are migrated to Azure, Contoso needs to fully operationalize
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso assigns the Azure tags that they decided on during [infrastructure planning](../azure-migration-guide/ready-alz.md#set-up-tagging).
+- After all resources are deployed, Contoso assigns the Azure tags that they decided on during [infrastructure planning](../azure-migration-guide/ready-alz.md).
 - All licensing is built into the cost of the PaaS services that Contoso consumes. This cost is deducted from the Enterprise Agreement.
 - Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they operate within the budgets established by their IT leadership.
 
