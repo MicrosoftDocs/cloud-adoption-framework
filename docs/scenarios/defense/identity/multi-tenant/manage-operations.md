@@ -1,5 +1,5 @@
 ---
-title: Manage multi-tenant operations for defense
+title: Manage multi-tenant operations for defense organizations
 description: Guidance for managing identity in a multi-tenant cloud environment with zero trust requirements
 author: stephen-sumner
 ms.author: andrmass
