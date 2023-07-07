@@ -40,7 +40,7 @@ If you require multiple Azure AD tenants, you should use [Azure AD external iden
 
 ## Identify tenant types
 
-Multi-tenant defense organizations can categorize Azure AD instances they use as either primary or secondary. Each organization should identify and designate one tenant as the primary tenant. All other tenants are secondary. *Figure 1* shows a defense organization with a primary tenant and two secondary tenants.
+Multi-tenant defense organizations can categorize Azure AD instances they use as either primary or secondary. Each organization should identify and designate one tenant as the primary tenant. All other tenants are secondary. *Figure 1* shows a defense organization with a primary tenant and *n* secondary tenants.
 
 **Identify the primary tenant.** Most defense organizations create the primary tenant when they sign up for Microsoft 365. The primary tenant contains (1) all user identities and Microsoft 365 licenses, (2) devices, and (3) applications (*see figure 1*). Defense organizations often use [Azure AD Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect) to synchronize the identities from Active Directory on-premises to the primary Azure AD tenant.
 
