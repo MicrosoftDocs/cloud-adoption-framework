@@ -32,7 +32,7 @@ Azure Lighthouse allows a security principal (user, group, or service principal)
 
 To set up centralized security operations for a multi-tenant environment, you must configure Azure Lighthouse, external identities, and Azure AD Privileged Identity Management. A security operator in the primary tenant can use a single identity secure multiple tenants. They sign in once, elevate their access with PIM, monitor resources across tenants and services, and respond to threats across tenants (*see figure 1*).
 
-:::image type="content" source="./images/lighthouse-setup.png" alt-text="Diagram showing the process to set up entitlements management for application assignment." lightbox="./images/lighthouse-setup.png" border="false":::
+:::image type="content" source="./images/lighthouse-setup.png" alt-text="Diagram showing the configuration for centralized security operations across primary and secondary Azure AD tenants." lightbox="./images/lighthouse-setup.png" border="false":::
 *Figure 1. How to set up security operations in multi-tenant defense organizations.*
 
 **1. Deploy Sentinel and enable Defender for Cloud**. [Create a Microsoft Sentinel instance](/azure/sentinel/quickstart-onboard#enable-microsoft-sentinel-) in subscriptions associated with each tenant. Configure relevant [data connectors](/azure/sentinel/connect-data-sources) and [enable analytics rules](/azure/sentinel/detect-threats-built-in). Enable Defender for Cloud [enhanced workload protections](/azure/defender-for-cloud/enable-enhanced-security) for hosted workloads, including Defender for Server, in all Azure environments, and [connect Defender for Cloud to Microsoft Sentinel](/azure/sentinel/connect-defender-for-cloud).
