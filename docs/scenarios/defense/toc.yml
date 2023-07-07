@@ -38,9 +38,9 @@ items:
         items:
           - name: Identity essentials
             href: ./identity/multi-tenant/essentials.md
-          - name: Zero trust configuration
+          - name: Zero trust configurations
             href: ./identity/multi-tenant/zero-trust-configuration.md
-          - name: Manage operations
+          - name: Management operations
             href: ./identity/multi-tenant/manage-operations.md
           - name: Security operations
             href: ./identity/multi-tenant/security-operations.md
