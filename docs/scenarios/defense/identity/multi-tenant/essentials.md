@@ -1,43 +1,41 @@
 ---
 title: Identity essentials for multi-tenant Defense organizations
-description: An overview of identity essentials for multi-tenant Defense organizations in Azure Active Directory
+description: An overview of identity essentials for multi-tenant defense organizations using Azure Active Directory and implementing zero trust
 author: stephen-sumner
 ms.author: andrmass
 ms.reviewer: ssumner
-ms.date: 06/30/2023
+ms.date: 07/10/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-This article cover identity essentials for multi-tenant defense organizations implementing zero trust with Azure Active Directory (Azure AD).
+The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD).
 
 Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
 
-Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements with Azure AD. Many already have access to essential Azure AD features through their Microsoft 365 licenses.
+Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Azure AD. Many already have access to essential Azure AD features through their existing Microsoft 365 licenses.
 
 ## Azure AD tenants
 
-An instance of Azure AD is called an Azure AD tenant. An Azure AD tenant is an identity platform and security boundary. It's the identity platform for your organization. security boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
+An instance of Azure AD is called an *Azure AD tenant*. An Azure AD tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
-**Consolidate Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. A single Azure AD tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
+**Consolidating Azure AD tenants.** Microsoft recommends one Azure AD tenant per organization. A single Azure AD tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Azure AD tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
 
 You should try to have Microsoft 365, Azure services, Power Platform, line-of-business (LOB) applications, software-as-a-service (SaaS) applications, and other cloud service providers (CSP) use a single Azure AD tenant.
 
-**Azure AD is not Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Azure AD is a hyperscale, modern, and cloud-based identity service.
+**Azure AD versus Active Directory.** Azure AD isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Azure AD is a hyperscale, modern, and cloud-based identity service.
 
-**Tenant domain name and ID.** Each tenant has a unique initial domain name and tenant ID. For example, an organization named *Contoso* might have the initial domain name `contoso.onmicrosoft.com` for Azure AD and `contoso.onmicrosoft.us` for Azure AD Government.
+**Initial domain names and tenant IDs.** Each tenant has a unique initial domain name and tenant ID. For example, an organization named *Contoso* might have the initial domain name `contoso.onmicrosoft.com` for Azure AD and `contoso.onmicrosoft.us` for Azure AD Government. Tenant IDs are globally unique identifiers (GUID) like `a976dd56-c1d8-485c-8ea7-facbce6726c2`. Each tenant only has one initial domain and tenant ID. Both values are immutable and can't be changed after tenant creation.
 
-Tenant IDs are globally unique identifiers (GUID) like `a976dd56-c1d8-485c-8ea7-facbce6726c2`. Each tenant only has one initial domain and tenant ID. Both values are immutable and can't be changed after tenant creation.
+Users sign into Azure AD accounts with their User Principal Name (UPN). The UPN is an Azure AD user attribute, and it needs a [routable suffix](/microsoft-365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization). The initial domain is [the default routable suffix](/azure/active-directory/hybrid/connect/plan-connect-userprincipalname) (`user@contoso.onmicrosoft.com`). You can add [custom domains](/azure/active-directory/fundamentals/add-custom-domain) to create and use a more friendly UPN. The friendly UPN usually matches the user's email address (`user@contoso.com`). The UPN for Azure AD might differ from your users' AD DS userPrincipalName. Having a different UPN and AD DS userPrincipalName is common when the AD DS userPrincipalName values are [nonroutable](/azure/active-directory/hybrid/connect/plan-connect-userprincipalname) or they use a suffix that doesn't match a verified custom domain in the tenant.
 
-Member users in your tenant need to have a username with a suffix that matches the initial domain, or they need to use a [custom domain](/azure/active-directory/fundamentals/add-custom-domain). You have to create and verify the custom domain via DNS records. Custom domains allow users to sign in with a friendly username. The username is usually an email address (`user@contoso.com`).
+You can only verify a custom domain in one Azure AD tenant globally. Custom domains aren't security or trust boundaries like Active Directory Domain Services (AD DS) Forests. They're a DNS namespace for identifying an Azure AD user's home tenant.
 
-You can only verify a custom domain in one Azure AD tenant globally. Custom domains aren't security or trust boundaries like Active Directory Domain Services (AD DS) Forests. They're a DNS namespace for globally identifying Azure AD users.
+## Azure AD architecture
 
-## Architecture
-
-Azure AD has no domain controllers, organizational units, group policy objects, domain/forest trusts, or Flexible Single Master Operation (FSMO) roles. Azure AD is a software-as-a-service, identity management solution. You can access Azure AD via RESTful APIs. You can use modern authentication and authorization protocols and have a flat structure with resource-based delegation.
+Azure AD has no domain controllers, organizational units, group policy objects, domain/forest trusts, or Flexible Single Master Operation (FSMO) roles. Azure AD is a software-as-a-service, identity management solution. You can access Azure AD via RESTful APIs. You use [modern authentication](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/setup-with-modern-authentication#modern-authentication) and authorization protocols to access resources protected by Azure AD. The directory has a flat structure and uses [resource-based](/azure/active-directory/roles/admin-units-manage) permissions.
 
 Each Azure AD tenant is a [highly available](/azure/active-directory/fundamentals/active-directory-architecture) data store for identity management data. It stores identity, policy, and configuration objects and replicates them across Azure regions. An Azure AD tenant provides data redundancy for critical defense information.
 
@@ -49,19 +47,23 @@ Azure AD has two types of identities. The two identity types are users and servi
 
 **Service principals.** Service principals are nonperson entities (NPE) in Azure AD. Service principals can represent applications, service / automation accounts, and Azure resources. Even [non-Azure resources](/azure/azure-arc/servers/managed-identity-authentication), such as on-premises servers, can have a service principal in Azure AD and interact with other Azure resources. Service principals are useful in automating defense workflows and managing applications critical to defense operations. For more information, see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
 
-**Synchronizing identities.** You can use Azure AD Connect Sync or Azure AD Connect Cloud Sync to synchronize user, group, and computer (device) objects in Active Directory Domain Services with Azure AD. This configuration is called [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity).
+**Synchronizing identities.** You can use [Azure AD Connect Sync](/azure/active-directory/hybrid/connect/how-to-connect-sync-whatis) or [Azure AD Connect Cloud Sync](/azure/active-directory/hybrid/cloud-sync/what-is-cloud-sync) to synchronize user, group, and computer (device) objects in Active Directory Domain Services with Azure AD. This configuration is called [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 ## Permissions
 
-Azure AD uses a different approach compared to traditional Domain Admins security group found in on-premises Active Directory environments. Azure AD relies on Azure AD directory roles to grant permissions for managing Azure AD objects and configuration. There's a security benefit to this permissions change. Azure AD doesn't use Kerberos and isn't vulnerable to privilege escalation attacks like pass-the-hash or pass-the-ticket.
+Azure AD uses a different approach to permissions than traditional on-premises Active Directory Domain Services (AD DS).
 
-**Azure AD roles.** [Azure AD directory roles](/azure/active-directory/roles/permissions-reference) grant permissions to manage Azure AD objects and configuration. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions.
+**Azure AD roles.** You assign permissions in Azure AD using [Azure AD directory roles](/azure/active-directory/roles/permissions-reference). These roles grant access to specific APIs and scopes. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions.
 
-**Elevated permission assignment.** To enhance security and reduce unnecessary privileges, Azure AD provides two principles for permission assignment.
+**Elevated permission assignment.** To enhance security and reduce unnecessary privileges, Azure AD provides two principles for permission assignment:
 
-*Just-in-time access.* Azure supports [just-in-time (JIT)](/azure/active-directory/privileged-identity-management/pim-configure) access. The JIT feature lets you assign permissions temporarily when needed. JIT access minimizes the exposure of unnecessary privileges and reduces the attack surface.
+*Just-in-Time (JIT)*: Azure AD supports [just-in-time access](/azure/active-directory/privileged-identity-management/pim-configure). The JIT feature lets you assign permissions temporarily when needed. JIT access minimizes the exposure of unnecessary privileges and reduces the attack surface.
 
-*Just-enough-admin.* Azure AD supports the [just-enough-admin (JEA)](/azure/active-directory/roles/delegate-by-task) principle. The JEA feature lets you delegate admin tasks with limited privileges. JEA ensures administrators have the necessary permissions for specific tasks without granting excessive permissions.
+*Just-Enough-Admin (JEA)*: Azure AD follows the just-enough-admin principle. [Built-in roles](/azure/active-directory/roles/permissions-reference) let you [delegate admin tasks](/azure/active-directory/roles/delegate-by-task) without granting excessive permissions. [Administrative Units](/azure/active-directory/roles/administrative-units) can further restrict permission scope for Azure AD roles.
+
+**Azure AD enhanced security.** To reduce attack surface area, you can delegate granular permissions and activate permissions just-in-time. Client applications, [Web Account Manager (WAM)](/azure/active-directory/develop/scenario-desktop-acquire-token-wam), or the user's web browser (session cookies) can store sign-in tokens. Azure AD isn't susceptible to Kerberos-based attacks like AD DS. Azure AD includes extensive protections against session hijacking or replay. Azure AD records token use to prevent replay and can require tokens be [cryptographically bound](/azure/active-directory/conditional-access/concept-token-protection) to the user's device. [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) detects and blocks risky sign-ins while [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enforces access policies in real-time.
+
+However, AD DS is susceptible to Kerberos-based attacks. AD DS uses security groups with well-known [security identifiers (SID)](/windows-server/identity/ad-ds/manage/understand-security-identifiers), such as `S-1-5-domain-512` for *Domain Admins*. When a Domain Administrator performs a local or network sign-in, the Domain Controller issues a Kerberos ticket containing the Domain Admins SID and stores it in a [credential cache](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication). Threat actors commonly exploit this mechanism using [lateral movement](/defender-for-identity/lateral-movement-alerts) and [privilege escalation](/defender-for-identity/persistence-privilege-escalation-alerts) techniques like pass-the-hash and pass-the-ticket.
 
 ## Authentication
 
@@ -69,37 +71,37 @@ Unlike Active Directory, users in Azure AD aren't limited to password or smartca
 
 **Authentication methods.** Azure AD authentication methods include native support for smartcard certificates and derived credentials, Microsoft Authenticator passwordless, FIDO2 security keys (hardware passkey), and device credentials like Windows Hello for Business. Azure AD offers passwordless, phishing-resistant methods in support of [Memorandum 22-09](/azure/active-directory/standards/memo-22-09-multi-factor-authentication) and [DODCIO Zero Trust Strategy capabilities](https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilitiesActivities.pdf).
 
-**Authentication protocols.** Azure AD doesn't use Kerberos, NTLM, or LDAP. It uses modern open protocols intended for use over the internet such as [OpenID Connect](/azure/active-directory/develop/v2-protocols-oidc), [OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow), [SAML 2.0](/azure/active-directory/develop/saml-protocol-reference), and [SCIM](/azure/active-directory/fundamentals/sync-scim).
+**Authentication protocols.** Azure AD doesn't use Kerberos, NTLM, or LDAP. It uses modern open protocols intended for use over the internet, such as [OpenID Connect](/azure/active-directory/develop/v2-protocols-oidc), [OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow), [SAML 2.0](/azure/active-directory/develop/saml-protocol-reference), and [SCIM](/azure/active-directory/fundamentals/sync-scim).
 
-**Mission partners.** When mission partners use Azure AD, you can use [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) to collaborate with them. You can protect the access you grant to guests by using [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview).
+**Mission partners.** When mission partners use Azure AD, you can use [Azure AD External Identities (B2B)](/azure/active-directory/external-identities/what-is-b2b) to collaborate with them. You can protect the access you grant to guests by using [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview).
 
 ## Applications
 
 Azure AD isn't just for Microsoft applications and services. Azure AD can be the identity provider for any application, cloud service provider, SaaS provider, or identity system that uses the same protocols. It easily supports interoperability with allied defense forces and contractors.
 
-**Policy Enforcement Point (PEP) and Policy Decision Point (PDP)**: Azure AD is a common [policy enforcement point (PEP)](https://csrc.nist.gov/glossary/term/policy_enforcement_point) and [policy decision point (PDP)](https://csrc.nist.gov/glossary/term/policy_decision_point) in zero trust architectures. It enforces security policies and access controls for applications.
+**Policy Enforcement Point (PEP) and Policy Decision Point (PDP).** Azure AD is a common [policy enforcement point (PEP)](https://csrc.nist.gov/glossary/term/policy_enforcement_point) and [policy decision point (PDP)](https://csrc.nist.gov/glossary/term/policy_decision_point) in zero trust architectures. It enforces security policies and access controls for applications.
 
-**Entra Identity Governance:** [Entra Identity Governance](/azure/active-directory/governance/identity-governance-overview) is an Azure AD feature. It helps you manage user access and automate the access lifecycle. It ensures that users have appropriate and timely access to applications and resources.
+**Entra Identity Governance.** [Entra Identity Governance](/azure/active-directory/governance/identity-governance-overview) is an Azure AD feature. It helps you manage user access and automate the access lifecycle. It ensures that users have appropriate and timely access to applications and resources.
 
-**Conditional access:** Conditional access allows you to use attributes to fine-grained authorization for applications. You can define access policies based on various factors. These factors include user attributes, credential strength, application attributes, user and sign-in risk, device health, and location. For more information, see [zero trust security](/azure/security/fundamentals/zero-trust).
+**Conditional access.** Conditional access allows you to use attributes to fine-grained authorization for applications. You can define access policies based on various factors. These factors include user attributes, credential strength, application attributes, user and sign-in risk, device health, and location. For more information, see [zero trust security](/azure/security/fundamentals/zero-trust).
 
 ## Devices
 
 Azure Active Directory (Azure AD) provides secure and seamless access to Microsoft services through device management. You can manage and join Windows devices to Azure AD similar to the way you would with Active Directory Domain Services.
 
-**Azure AD joined devices:** When users sign into an Azure AD joined device, a device-bound key is unlocked using a PIN or gesture. Post validation, Azure AD issues a [primary refresh token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token) to the device. This PRT facilitates single sign-on access to Azure AD protected services like Microsoft Teams. Azure AD Joined devices enrolled in Microsoft Endpoint Manager (Intune) can use device compliance as a grant control within [conditional access](/azure/active-directory/conditional-access/overview).
+**Azure AD joined devices:** When users sign into an Azure AD joined device, a device-bound key is unlocked using a PIN or gesture. Post validation, Azure AD issues a [primary refresh token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token) to the device. This PRT facilitates single sign-on access to Azure AD protected services like Microsoft Teams.
+
+Azure AD Joined devices enrolled in Microsoft Endpoint Manager (Intune) can use device compliance as a grant control within [conditional access](/azure/active-directory/conditional-access/overview).
 
 **Hybrid Azure AD joined devices.** [Hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join) allows Windows devices to be simultaneously connected to both Active Directory Domain Services and Azure AD. These devices first authenticate users against Active Directory, and then they retrieve a primary refresh token from Azure AD.
-
-Windows devices joined to AD DS and synchronized to Azure AD can be joined to both Active Directory and Azure AD simultaneously. This configuration is called a [hybrid Azure AD join]. Hybrid Azure AD devices authenticate users against Active Directory first. Then they retrieve a primary refresh token from Azure AD. Like device compliance, you can use hybrid Azure AD join state as a grant control within conditional access.
 
 ## Microsoft 365 and Azure
 
 Azure Active Directory (Azure AD) is Microsoft's identity platform. It serves both Microsoft 365 and Azure services. Microsoft 365 subscriptions create and use an Azure AD tenant. Azure services also rely on an Azure AD tenant.
 
-**Microsoft 365 identity.** Azure AD is integral to all identity operations within Microsoft 365. It facilitates sign-in, collaboration, sharing, and permissions assignment. It supports identity management for various Microsoft 365 services. These services include Microsoft Office, Intune, and Microsoft 365 Defender. With Azure AD, users can sign in to Microsoft Office. They can utilize the people picker feature in SharePoint and OneDrive. They can create new Teams or Microsoft 365 Groups.
+**Microsoft 365 identity.** Azure AD is integral to all identity operations within Microsoft 365. It handles user sign-in, collaboration, sharing, and permissions assignment. It supports identity management for Office 365, Intune, and Microsoft 365 Defender services. Your users use Azure AD every time they sign into an Office application like Word or Outlook, share a document using OneDrive, invite an external user to a SharePoint site, or create a new team in Microsoft Teams.
 
-**Azure identity.** In Azure, each resource is associated with an [Azure subscription](/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts#azure-subscription-purposes), and subscriptions are linked to a single Azure AD tenant. At the subscription level, you can assign permissions for accessing Azure resources using [role-based access control (RBAC)](/azure/role-based-access-control/overview). The administrators that manage the subscription use Azure AD to manage authentication and authorization.
+**Azure identity.** In Azure, each resource is associated with an [Azure subscription](/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts#azure-subscription-purposes), and subscriptions are [linked](/azure/active-directory/fundamentals/how-subscriptions-associated-directory) to a single Azure AD tenant. You delegate permissions for managing Azure resources by assigning [role-based access control (RBAC)](/azure/role-based-access-control/overview) roles to users, security groups, or service principals.
 
 Managed identities play a crucial role in enabling Azure resources to interact securely with other resources. These managed identities are security principals within the Azure AD tenant. You grant permissions to them on a least-privilege basis. You can authorize a managed identity to access APIs protected by Azure AD, such as Microsoft Graph. When an Azure resource uses a managed identity, the managed identity is a [service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object). The service principle object resides within the same Azure AD tenant as the subscription associated with the resource.
 
