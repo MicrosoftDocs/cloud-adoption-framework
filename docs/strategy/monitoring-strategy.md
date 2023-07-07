@@ -13,6 +13,8 @@ products: azure-monitor
 
 # Cloud monitoring strategy
 
+This article is part of a series in [the cloud monitoring guide](../manage/monitor/index.md).
+
 As your organization migrates to a cloud environment, it's important to plan and develop an effective monitoring strategy with participation from developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively. It should always align with business needs, and produce an agile organization that can proactively monitor complex distributed applications that the business depends on.
 
 ## Where to start?
@@ -277,4 +279,4 @@ Early on, formulate a readiness plan to help your IT staff adopt new skills, pra
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Observability](../manage/monitor/observability.md)
+> [Monitoring strategy for cloud deployment models](../manage/monitor/cloud-models-monitor-overview.md)

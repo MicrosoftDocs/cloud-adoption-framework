@@ -1346,7 +1346,7 @@ items:
               href: innovate/best-practices/mlops-process.md
             - name: Machine learning security
               href: innovate/best-practices/ml-security.md
-            - name: Machine learning inference and deployment
+            - name: Deploy machine learning models
               href: innovate/best-practices/ml-deployment-inference.md
             - name: Determine compute instances for your model
               href: innovate/best-practices/dev-train-comp-instances-for-ml.md
@@ -1650,6 +1650,8 @@ items:
         items:
         - name: Overview
           href: manage/monitor/index.md
+        - name: Monitoring platforms overview
+          href: manage/monitor/platform-overview.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
@@ -1660,8 +1662,6 @@ items:
           href: manage/monitor/data-collection.md
         - name: Response
           href: manage/monitor/response.md
-        - name: Monitoring platforms overview
-          href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring
           href: manage/monitor/suggested-skills.md
       - name: Centralize management operations
