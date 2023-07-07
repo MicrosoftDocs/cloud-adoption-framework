@@ -86,7 +86,7 @@ You should implement the following recommendations in all Azure AD tenants.
 
 *Table 2: Conditional access policy checklist.*
 
-| Policy Name          | Users   | Applications   | Conditions  | Grant Control         |
+| Policy name          | Users   | Applications   | Conditions  | Grant control         |
 |:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
 |MFA for all users|All Users|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
 |Require Managed Devices|All Users|All Apps|None|[Require hybrid Azure AD Joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)

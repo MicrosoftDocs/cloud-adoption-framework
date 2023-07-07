@@ -65,7 +65,7 @@ Application owners should use [Defender for Cloud](/azure/defender-for-cloud/con
 
 **DevSecOps pipelines.** When you host applications in Azure, a [DevSecOps](/devops/devsecops/enable-devsecops-azure-github) pipeline deploys infrastructure resources and application code to Azure. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra Workload Identities](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps to secure service principals. Entra Workload Identities also reviews existing access and provides extra protections based on service principal risk.
 
-## Identity Governance
+## Identity governance
 
 Multi-tenant defense organizations need to govern access to applications in the primary Azure AD tenant and manage external guest identities in the secondary tenant for the Azure environment.
 
