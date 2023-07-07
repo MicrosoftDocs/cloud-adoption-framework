@@ -32,14 +32,15 @@ You can define and apply security rules and policies that are based on environme
 
     - The Azure role-based access control (Azure RBAC) within a single installation of CycleCloud installation might not be sufficient in a true multi-tenant environment. Use separate and isolated installations of CycleCloud for each tenant that has critical data. For more information about Azure RBAC, see [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
    
-## HPC Pack User Roles and Security
+## HPC Pack user roles and security
 
   - There are several [roles](/powershell/high-performance-computing/understanding-user-roles) that users may be added to Administrator, User, Job Administrator, and Job Operator.
 
     
-  - Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (AADDS) is a prerequisite to installing Microsoft HPC Pack because the authentication process for users and computers relies on the services provided by AD DS.
+  - Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS) is a prerequisite to installing Microsoft HPC Pack because the authentication process for users and computers relies on the services provided by AD DS.
     
   - At installation time, the HPC cluster administrator role is automatically granted to all members of the local Administrators security group on the head node. When an identity is added as an HPC cluster administrator, it is also added to the local Administrators security group.
+
 
 
 ## Next steps
