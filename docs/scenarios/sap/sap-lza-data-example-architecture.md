@@ -1,6 +1,6 @@
 ---
 title: SAP data integration example architecture
-description: Learn more about an example architecture for SAP data integration.
+description: Learn about an example architecture for SAP data integration, including the dataflow and necessary components.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
@@ -23,10 +23,10 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 ## Architecture
 
-The following diagram is an example architecture of an SAP Data Integration on Azure. Use this example architecture as a starting point.
+The following diagram is an example architecture of an SAP data integration on Azure. Use this example architecture as a starting point.
 
-:::image type="content" source="./media/sap-extend-data-integration-architecture-updated.svg" border="false" alt-text="Diagram that shows the SAP Data Integration Security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture-updated.svg":::
-_Figure 1: SAP Data Integration Security architecture on Azure. Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture._
+:::image type="content" source="./media/sap-extend-data-integration-architecture-updated.svg" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture-updated.svg":::
+_Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture._
 
 ### Dataflow
 
@@ -36,7 +36,7 @@ Azure Synapse Analytics is used to build a modern data platform to ingest, proce
 
 The dataflow can be defined with four main pieces:
 
-1. **Data sources:** A system must connect to a data source to enable data ingestion and analytics. Various data sources exist.
+1. **Data sources:** A system must connect to a data source to enable data ingestion and analytics.
 1. **Data ingestion:** Using Azure Data Factory and Synapse pipelines enables data integration.
 1. **Data storage:** Azure provides Azure Data Lake Storage (ADLS) built on Azure Blob Storage for data storage.
 1. **Data transformation and consumption:** Data is transformed through various stages, and consumption is enabled through reports with Power BI, or through private endpoints allowing clients to access data securely over a Private Link.

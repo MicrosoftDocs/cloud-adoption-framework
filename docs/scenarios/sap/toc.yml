@@ -46,7 +46,7 @@ items:
     href: migrate.md
   - name: Innovate with SAP and Azure
     items:
-    - name: SAP and Data
+    - name: SAP and data
       items:
       - name: Identify SAP data sources
         href: sap-lza-identify-sap-data-sources.md
