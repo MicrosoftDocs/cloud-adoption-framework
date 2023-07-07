@@ -60,7 +60,7 @@ This guide is the suggested path for your first migration to Azure. It exposes y
 > - [**Assess.**](assess.md) Assess workloads, refine plans, and validate technical readiness and suitability for migration.
 > - [**Deploy.**](migrate.md) Migrate your services and assets. Perform the actual migration by replicating on-premises resources to Azure. This can, as an example, involve a _lift and shift_ or _rehost_ to the cloud.
 > - [**Manage costs and billing.**](manage-costs.md) Understand the tools required for migration-focused cost control mechanisms in Azure.
-> - [**Release workloads.**](optimize-and-transform.md) Optimize for cost and performance balance before you release your workload to production.
+> - [**Release workloads.**](release.md) Optimize for cost and performance balance before you release your workload to production.
 > - [**Get assistance.**](assistance.md) Get help and support during your migration or post-migration activities.
 
 In alignment with the best practices in the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework, consider establishing a Platform Landing Zone before migrating workloads to support common dependencies and services. You can then deploy workloads Application Landing Zones to support segmentation and governance requirements. To learn more, see [Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones)

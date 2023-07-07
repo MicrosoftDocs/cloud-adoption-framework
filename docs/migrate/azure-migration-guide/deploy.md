@@ -253,4 +253,4 @@ Here's an example of a tailored learning path that complements the setup for Dev
 
 ## Cost management
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place other usage requirements on your services, periodic cost analysis helps you avoid unexpected charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Optimize and transform](./optimize-and-transform.md) section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place other usage requirements on your services, periodic cost analysis helps you avoid unexpected charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Release workloads](./release.md) section.

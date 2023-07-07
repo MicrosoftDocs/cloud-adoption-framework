@@ -585,7 +585,7 @@ items:
         - name: Deploy workloads
           href: migrate/azure-migration-guide/deploy.md
         - name: Release workloads
-          href: migrate/azure-migration-guide/optimize-and-transform.md
+          href: migrate/azure-migration-guide/release.md
         - name: Migration-focused cost-control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
         - name: Get assistance
