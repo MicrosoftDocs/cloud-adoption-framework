@@ -179,6 +179,8 @@ To deploy and set up the cluster:
 1. Configure the cloud witness.
 1. Enable SQL Always On availability groups.
 
+Additionally, consider reviewing the guidance for [Performance best practices for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-storage).
+
 ### Set up a storage account as a cloud witness
 
 To set up a cloud witness, Contoso needs an Azure Storage account that holds the blob file for cluster arbitration. The company can use the same storage account to set up cloud witness for multiple clusters.

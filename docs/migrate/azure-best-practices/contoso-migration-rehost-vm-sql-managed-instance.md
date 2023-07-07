@@ -443,6 +443,10 @@ With discovery completed, the admins can begin replication of VMware VMs to Azur
 > [!NOTE]
 > Update replication settings any time *before* replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
 
+### Alternatives
+
+As an alternative, consider evaluating the Log Replay Service (LRS) for [migrating databases from SQL Server by using Log Replay Service](/azure/azure-sql/managed-instance/log-replay-service-migrate).
+
 ## Step 6: Migrate the database via Azure Database Migration Service
 
 The Contoso admins need to create a Database Migration Service project and then migrate the database.
