@@ -597,12 +597,14 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
+
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
+
         - name: AWS
           items:
           - name: Discover AWS instances
@@ -611,15 +613,30 @@ items:
             href: /azure/migrate/tutorial-assess-aws
           - name: Migrate AWS instances
             href: /azure/migrate/tutorial-migrate-aws-virtual-machines
+
         - name: Containers
           items:
           - name: Migrate to Azure Kubernetes Service (AKS)
             href: /azure/aks/aks-migration
-        - name: Windows Server workloads
-          items:
-          - name: Rehost a Windows application on Azure VMs
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
 
+        - name: Windows and Linux servers
+          items:
+          - name: VMWare
+            items:
+            - name: Discover servers running in a VMware environment
+              href: /azure/migrate/tutorial-discover-vmware
+            - name: Assess VMware VMs for migration to Azure VMs
+              href: /azure/migrate/tutorial-assess-vmware-azure-vm
+            - name: Select a VMware migration option
+              href: /azure/migrate/server-migrate-overview
+          - name: Hyper-V
+            items:
+            - name: Discover servers running in a Hyper-V environment
+              href: /azure/migrate/tutorial-discover-hyper-v
+            - name: Assess Hyper-V VMs for migration to Azure
+              href: /azure/migrate/tutorial-assess-hyper-v
+            - name: Migrate Hyper-V VMs to Azure
+              href: /azure/migrate/tutorial-migrate-hyper-v
         - name: Databases and data platforms
           items:
           - name: SQL Server workloads
@@ -1057,7 +1074,7 @@ items:
             - name: Load on-premises data into Azure Synapse Analytics
               href: /sql/integration-services/load-data-to-sql-data-warehouse?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Integrate data - Azure Data Factory to OLAP
-              href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+              href: /azure/architecture/data-guide/scenarios/brid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Use Azure Stream Analytics with Azure Synapse Analytics
               href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Reference architecture for ingestion and analysis of new feeds
