@@ -1,13 +1,13 @@
 ---
 title: Migrate assets
-description: Learn how to start the migration to Azure by identifying the best tools to use, including native tools, third-party tools, and project management tools.
-author: matticusau
-ms.author: martinek
-ms.date: 08/08/2022
+description: Migrate and deploy workloads and assets to Azure. This article helps you find the best tools for your migration. Explore native tools, third-party tools, and project management tools.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank, fasttrack-new, AQC
+ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Migrate assets
