@@ -57,6 +57,16 @@ Here are some things to consider:
 - Expected protocol features (ACLs, encryption)
 - Parallel file system solution
 
+For Hybrid HPC Pack installations where the client needs to upload input datasets to Azure to be used during a HPC Pack job, or download the results after a jobs is completed, you need to determine the right application to use for the file transfer. Will the upload and download be part of a script or a manual process?  
+
+Here are some examples:
+•	For manual transfers [Azcopy](/azure/storage/common/storage-ref-azcopy) or Azure Storage Explorer would be suitable to transfer files to Azure Files or Azure Blob. Neither work with Azure NetApp Files directly.
+•	When Azure Blob storage is used, AzCopy is an option to transfer files within a script. AzCopy offers [options](/azure/storage/common/storage-use-azcopy-v10#authorize-azcopy) to use a service principle for authentication or SAS tokens. 
+
+•	When Azure Files is used, AzCopy is an option to transfer files within a script using SAS tokens.  Other options for Azure Files could be to mount the remote Azure File Share to the client machine as a drive letter to let the clients copy files directly to Azure files using a `copy` command. Azure File share mounts require SMB port 445 to be open which some organizations block with their firewall. 
+
+
+
 ## Total capacity requirement
 
 Storage capacity in Azure is the next consideration. It helps to inform the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering provides lower-cost storage options combined with higher-cost but higher-performance storage in a hot tier. So, evaluate the capacity requirements as follows:
@@ -75,6 +85,8 @@ Here are some things to consider:
 - Local (UID/GID on file server only)
 - Directory (LDAP, Active Directory)
 - UID/GID mapping to Active Directory users?
+
+HPC Pack authentication and authorization are either used by using certificates for job submission or REST API with the client’s username and password credentials. Both of these options are then validated against user groups within HPC Pack to ensure that the users have authorization to submit HPC jobs. 
 
 ## Common Azure storage solutions comparison
 
