@@ -30,33 +30,33 @@ _Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integ
 
 ### Dataflow
 
-The architecture design depicts a general approach to extending SAP solutions with Azure Data Services. This article describes the flow of SAP data from source SAP systems to several downstream targets, each serving a purpose in the Data journey in an Enterprise. These source SAP systems can, for example,  run either on-premises, with SAP RISE on Azure, or SAP on Azure VMs.
+The architecture design extends SAP solutions with Azure data services. This article describes the flow of SAP data from source SAP systems to downstream targets. Each target serves a purpose in the data journey for an enterprise. The source SAP systems can run on-premises with SAP RISE on Azure or SAP on Azure Virtual Machines.
 
-Azure Synapse Analytics is used to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
+Use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
 
-The dataflow can be defined with four main pieces:
+The following dataflow corresponds to the previous diagram:
 
-1. **Data sources:** A system must connect to a data source to enable data ingestion and analytics.
-1. **Data ingestion:** Using Azure Data Factory and Synapse pipelines enables data integration.
-1. **Data storage:** Azure provides Azure Data Lake Storage (ADLS) built on Azure Blob Storage for data storage.
-1. **Data transformation and consumption:** Data is transformed through various stages, and consumption is enabled through reports with Power BI, or through private endpoints allowing clients to access data securely over a Private Link.
-1. **Data visualization and reporting:** Accessing reports and visualizing data can either be done through the Power BI service, or for example, using external applications.
+1. **Data sources:** A system connects to a data source to enable data ingestion and analytics.
+1. **Data ingestion:** Azure Data Factory and Synapse pipelines enable data integration.
+1. **Data storage:** Data is stored in Azure Data Lake Storage that's built on Azure Blob Storage.
+1. **Data transformation and consumption:** Data is transformed in stages, and consumption is enabled through reports with Power BI or through private endpoints that allow you to securely access data over a private link.
+1. **Data visualization and reporting:** You can access reports and visualize data with the Power BI service or an external application.
 
 The below sections expand further on the dataflow.
 
 #### Data sources
 
-In the example architecture, data sources can include on-premises SQL servers, semi-structured data in, JSON, XML and log files, or other data warehouse systems. The Synapse pipelines copy activities can then ingest this raw data. These source systems could be hosted on-premises, in any private or public cloud, or with SAP RISE subscriptions.
+The data sources in this architecture can be on-premises SQL servers, semi-structured data in JSON, XML, and log files, or other data warehouse systems. The Synapse pipelines copy activities can then ingest this raw data. These source systems are hosted on-premises, in a private or public cloud, or with SAP RISE subscriptions.
 
-SAP Online Transactional Data Processing (OLTP) or Online Analytical Processing (OLAP) systems constitute central repositories of business data and transactions. Extraction is required to store and ingest into Azure to extract value and insights from the data residing in these business data repositories.
+SAP Online Transactional Data Processing (OLTP) and Online Analytical Processing (OLAP) systems are central repositories of business data and transactions. Extraction is required to store and ingest into Azure to extract value and insights from the data residing in these business data repositories.
 
-With Azure services, integrations are possible no matter where the source is located. Depending on the hosted location, security controls, operations standards, bandwidth, and contractual obligations, the extraction configuration must be planned accordingly.
+With Azure services, you can integrate data from any source location. Plan the extraction configuration based on the hosted location, security controls, operations standards, bandwidth, and contractual obligations.
 
 #### Data ingestion
 
-In this example architecture, data is ingested using Synapse pipelines and processed in stages using the Synapse Spark pool and its Data Lake capabilities.
+In this architecture, data is ingested by using Synapse pipelines, and it's processed in stages by using the Data Lake capabilities of Synapse Spark pool.
 
-Azure Data Factory and Synapse pipelines support extracting data using the following SAP connectors.
+Azure Data Factory and Synapse pipelines extract data by using the following SAP connectors:
 
 - [SAP Business Warehouse Open Hub](/azure/data-factory/connector-sap-business-warehouse-open-hub)
 - [SAP Business Warehouse via MDX](/azure/data-factory/connector-sap-business-warehouse)
@@ -68,15 +68,15 @@ Azure Data Factory and Synapse pipelines support extracting data using the follo
 
 For more information, see the following resources:
 
-- [Industry SAP Overview](/azure/data-factory/industry-sap-overview)
+- [Industry SAP overview](/azure/data-factory/industry-sap-overview)
 - [SAP connectors](/azure/data-factory/industry-sap-connectors)
-- [Data Ingestion](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion)
+- [Data ingestion](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion)
 
 #### Data storage
 
-Data Lake Storage Gen2 makes Azure Storage the foundation for building enterprise data lakes on Azure. Designed from the start to service multiple petabytes of information while sustaining hundreds of gigabits of throughput, Data Lake Storage Gen2 allows you to manage massive amounts of data easily.
+In Data Lake Storage Gen2, Azure Storage is the foundation for building enterprise data lakes on Azure. With Data Lake Storage Gen2, you can manage massive amounts of data because it services multiple petabytes of information while sustaining hundreds of gigabits of throughput.
 
-Data is encrypted at rest once it's ingested into the data lake. Using your customer-managed keys can further enhance encryption and add more flexibility when managing access controls.
+Data is encrypted at rest after it's ingested into the data lake. Use your customer-managed keys to further enhance encryption and add access control flexibility.
 
 For more information about Azure Data Lake Storage, see these resources:
 
@@ -85,33 +85,33 @@ For more information about Azure Data Lake Storage, see these resources:
 
 #### Data transformation and consumption
 
-In this example architecture, the ingested data from the data sources is stored in an Azure Data Lake Storage Gen2 location.
+In this architecture, the ingested data from the data sources is stored in an Azure Data Lake Storage Gen2 location.
 
-You can manage and run copy activities between a data store in your on-premises environment and the cloud using a self-hosted integration runtime. The Self-Hosted Integration Runtime (SHIR) system should always be in proximity to the source systems.
+You can manage and run copy activities between a data store in your on-premises environment and the cloud by using a self-hosted integration runtime. Always keep the Self-Hosted Integration Runtime (SHIR) system in proximity to the source systems.
 
-Data is stored in the Azure Storage account using stage-specific Azure Data Lake Storage Gen 2 directories like **Bronze**, **Silver**, and **Gold**:
+Store data in the Azure Storage account by using stage-specific Azure Data Lake Storage Gen 2 directories, like **Bronze**, **Silver**, and **Gold**.
 
-1. **Bronze:** The Synapse pipelines copy activities initially ingest data from the source systems. This ingested data is stored in raw format using the data lake's Bronze directory.
-1. **Silver:** The Synapse Spark pool then runs data quality rules to cleanse the raw data. This enriched data is then stored in the data lake's Silver directory.
-1. **Gold:** After the cleansing process, the Spark pool applies any required normalization, data transformations, and business rules to the Silver directory data. This transformed data is then stored in the data lake's Gold directory.
+1. **Bronze:** The Synapse pipelines copy activities ingest data from the source systems. This ingested data is stored in raw format by using the data lake's Bronze directory.
+1. **Silver:** The Synapse Spark pool runs data quality rules to cleanse the raw data. This enriched data is stored in the data lake's Silver directory.
+1. **Gold:** After the cleansing process, the Spark pool applies any required normalization, data transformations, and business rules to the Silver directory data. This transformed data is stored in the data lake's Gold directory.
 
 **Enable consumption:**
 
-The Synapse Apache Spark to Synapse SQL connector pushes the normalized data to the Synapse SQL pool for consumption by downstream applications and reporting services such as Power BI. This connector is designed to optimally transfer data between the serverless Apache Spark pools and the SQL pools in the Azure Synapse Analytics workspace.
+The Synapse Apache Spark to Synapse SQL connector pushes the normalized data to the Synapse SQL pool for consumption by downstream applications and reporting services, such as Power BI. This connector optimally transfers data between the serverless Apache Spark pools and the SQL pools in the Azure Synapse Analytics workspace.
 
-Private endpoints for your Azure Storage accounts allow clients on the virtual network (VNet) to access data over a Private Link securely. The private endpoint uses an IP address from the VNet address space for the storage account service. Network traffic between the clients on the VNet and the storage account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure to the public internet.
+For your Azure Storage accounts, private endpoints allow clients on the virtual network secure access to data over a private link. The private endpoint uses an IP address from the virtual network address space for the Storage account service. Network traffic between the clients on the virtual network and the storage account traverses over the virtual network and a private link on the Microsoft backbone network to eliminate exposure to the public internet.
 
 #### Data visualization and reporting
 
-In the Power BI service, you can use DirectQuery to fetch data from the Synapse SQL pool securely.
+In the Power BI service, use DirectQuery to securely fetch data from the Synapse SQL pool.
 
-A data gateway installed in a virtual machine on the private VNet is a connecting platform between the Power BI service and the Synapse SQL pool, using a Private Endpoint in the same VNet to connect securely.
+A data gateway that's installed in a virtual machine on the private virtual network is a connecting platform between the Power BI service and the Synapse SQL pool, using a private endpoint in the same virtual network to connect securely.
 
-External applications can access data from the Synapse serverless pools or dedicated SQL pools by accessing the appropriate private endpoints connected to the VNet.
+External applications can access data from the Synapse serverless pools or dedicated SQL pools by using private endpoints that are connected to the virtual network.
 
 ## Components
 
-This example solution makes use of several Azure services and capabilities:
+This architecture uses several Azure services and capabilities.
 
 ### Data analysis
 
@@ -129,8 +129,8 @@ This example solution makes use of several Azure services and capabilities:
 
 - [Azure Synapse Analytics Managed Virtual Network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet) creates an isolated managed virtual networking environment for the Azure Synapse workspace, offloading the need for you to manage networking configuration for the workspace resources.
 - [Azure Synapse Managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) establish private links to Azure resources and route traffic between your Azure Synapse workspaces and other Azure resources using only the Microsoft backbone network.
-- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) (VNet) provides private networking capabilities for Azure resources that aren't a part of the Azure Synapse workspace. It allows you to manage access, security, and routing between resources.
-- [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) provides a private IP address from the solution's VNet to Azure managed services, effectively connecting a service to the VNet. This allows secure networking between the Azure Synapse workspace and other Azure services such as Azure Storage, Azure Cosmos DB, Azure SQL Database, or your own Azure Private Link service.
+- [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) provides private networking capabilities for Azure resources that aren't a part of the Azure Synapse workspace. It allows you to manage access, security, and routing between resources.
+- [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) provides a private IP address from the solution's virtual network to Azure managed services, effectively connecting a service to the virtual network. This allows secure networking between the Azure Synapse workspace and other Azure services such as Azure Storage, Azure Cosmos DB, Azure SQL Database, or your own Azure Private Link service.
 
 ### Reporting
 
