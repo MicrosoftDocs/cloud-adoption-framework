@@ -12,7 +12,7 @@ ms.custom: internal
 
 # Landing zone regions
 
-Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions, how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
+Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
 
 ## How landing zones use Azure regions
 
@@ -70,8 +70,8 @@ The below high-level steps can be used as a set of steps to follow to expand int
 1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections
 1. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
 1. Create and configure any required routing: Azure Route Server, User-Defined Routes, and more.
-1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription
+1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution.
+   - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription.
 
 You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
 
@@ -84,9 +84,9 @@ You can now connect application landing zone spokes via Virtual Network Peering 
 1. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
 1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
 1. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, and more.
-1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers, which might be part of the Identity platform landing zone subscription
-   - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection
+1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution.
+   - Some customers might do this on their Active Directory Domain Controllers, which might be part of the Identity platform landing zone subscription.
+   - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection.
 
 You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
 
@@ -108,7 +108,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 
 ## Move your Azure estate to a new region
 
-Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into a region in a neighboring country, and then a new Azure region launches in your home country. You might elect to move all of your workloads to the new region for latency or data residency reasons.
+Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into an Azure region in a neighboring country/region, and then a new Azure region launches in your home country/region. You might elect to move all of your workloads to the new region for latency or data residency reasons.
 
 > [!NOTE]
 > This document only provides information about migrating the landing zone components of your estate. For more information about relocating your workload components, see [Relocate cloud workloads](../../relocate/index.md).
@@ -129,7 +129,7 @@ Consider the following tips when migrating landing zone resources across regions
 
 - **ExpressRoute:** Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other SKUs.
 - **Azure Automation:** Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
-- **Use infrastructure as code:** Complex configuration, such as rules for Azure Firewall, can be exported and re-imported by using Bicep, ARM templates, Terraform, scripting, or a similar approach.
+- **Use infrastructure as code:** Complex configuration, such as rules for Azure Firewall, can be exported and reimported by using Bicep, ARM templates, Terraform, scripting, or a similar approach.
 
 ## Next steps
 
