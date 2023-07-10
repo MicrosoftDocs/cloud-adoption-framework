@@ -16,7 +16,7 @@ Azure landing zone architecture itself is region-agnostic. However, you're asked
 
 ## How landing zones use Azure regions
 
-Azure landing zones consist of a set of resources and configuration. Some of these items, like management groups, policies, and role assignments, are stored at either a tenant or management group level within tge Azure landing zone architecture, so these resources aren't "deployed" to a particular region and instead are deployed globally. However, you still need to specify a deployment region because Azure tracks some of the resource metadata in a regional metadata store.
+Azure landing zones consist of a set of resources and configuration. Some of these items, like management groups, policies, and role assignments, are stored at either a tenant or management group level within the Azure landing zone architecture, so these resources aren't "deployed" to a particular region and instead are deployed globally. However, you still need to specify a deployment region because Azure tracks some of the resource metadata in a regional metadata store.
 
 Other resources are deployed regionally. Depending on your own landing zone configuration, you might have some or all of the following regionally deployed resources:
 
