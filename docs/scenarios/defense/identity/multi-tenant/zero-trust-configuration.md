@@ -1,8 +1,8 @@
 ---
 title: Zero trust configuration for multi-tenant defense organizations
 description: Guidance for configuring zero trust identity for multi-tenant defense organizations
-author: stephen-sumner
-ms.author: andrmass
+author: amasse3
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual

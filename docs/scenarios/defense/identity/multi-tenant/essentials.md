@@ -1,8 +1,8 @@
 ---
 title: Identity essentials for multi-tenant Defense organizations
 description: An overview of identity essentials for multi-tenant defense organizations using Azure Active Directory and implementing zero trust
-author: stephen-sumner
-ms.author: andrmass
+author: amasse3
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
@@ -11,9 +11,7 @@ ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD).
-
-Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
+The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD). Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
 
 Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Azure AD. Many already have access to essential Azure AD features through their existing Microsoft 365 licenses.
 
