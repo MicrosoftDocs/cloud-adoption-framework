@@ -1,10 +1,10 @@
 ---
 title: SQL Server database security for SAP on Azure
-description: Learn how to enable SAP with SQL server database security on Azure 
+description: Learn how to enable SAP with SQL Server database security on Azure 
 author: msclash
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 05/22/2023
+ms.date: 07/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -21,35 +21,35 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 
 The sections below provides the **considerations and recommendations** for SAP on Azure running on SQL database.
 
-## Secure-at-rest
+## Secure data at rest
 
-The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files of user databases and of SQL Server system databases. It ensures that copies of the data and log files or backup files can't be restored and used without the associated certificates. It's known as securing data at rest. As it's a transparent technology to the SAP System it's supported by [SAP Note 1380493 - SQL Server Transparent Data Encryption (TDE)](https://me.sap.com/notes/1380493).
+The [SQL Server transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) encrypts the data and log files for user databases and SQL Server system databases. After it's encrypted, copies of the data and log files or backup files can't be restored and used without the associated certificates. This process is called securing data at rest. It's a transparent technology to the SAP system, so it's supported by [SAP note 1380493 - SQL Server TDE](https://me.sap.com/notes/1380493).
 
-The general procedure is explained in the [SQL Server Encryption Microsoft Learn article](/sql/relational-databases/security/encryption/sql-server-encryption).
+For information about the procedure, see [SQL Server encryption](/sql/relational-databases/security/encryption/sql-server-encryption).
 
-As all data pages that are read or written to disk must be encrypted or decrypted, TDE comes with a CPU penalty. When applied to a user database the CPU usage increases between 3 % and 8 %. Applications that make heavy use of the TempDB of SQL Server or doing large scans on large tables are more affected, as the system databases including TempDB are encrypted as well when at least one user database on the SQL Server instance is encrypted with TDE. SAP Business Warehouse Systems (SAP BW) are a good example of this kind of application.
+All data pages that are read or written to disk must be encrypted or decrypted, so TDE has a CPU penalty. When TDE is applied to a user database, the CPU usage increases between 3% and 8%. Applications that heavily use TempDB of SQL Server or perform large scans on large tables are more affected. When at least one user database on the SQL Server instance is encrypted with TDE, the system databases, like TempDB, are also encrypted. SAP Business Warehouse Systems (SAP BW) is an example of this type of application.
 
 > [!NOTE]
->If the keys or the certificates that are used for the encryption are lost, then the data in the encrypted database is lost. Therefore, extensive processes and steps need to be taken to secure backups of certificates.
+>If the encryption keys or certificates are lost, the data in the encrypted database is lost. It's important to establish extensive processes and steps to secure the certificate backups.
 
-The success of implementing TDE heavily depends on:
+A successful TDE implementation needs:
 
-- Good and thorough testing
-- Well-designed processes around the handling of certificates and their backups
+- Good and thorough testing.
+- Well-designed processes for handling certificates and certificate backups.
 
-Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported, please see [SAP OSS note 2812637 - Real-time replication is not supported for TDE-enabled MSSQL Server database](https://me.sap.com/notes/2812637/E) for details.
+Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported. For more information, see [SAP OSS note 2812637 - Real-time replication isn't supported for TDE-enabled MSSQL Server database](https://me.sap.com/notes/2812637/E).
 
-## Always Encrypted
+## Other SQL Server features
 
-Besides TDE, SQL Server offers more features for data protection. These allow partial encryption or masking on database column granularity with:
+SQL Server also offers other features for data protection. These methods allow partial encryption or masking on database column granularity:
 
 - [SQL Server column encryption](/sql/relational-databases/security/encryption/encrypt-a-column-of-data)
-- [SQL Server Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking)
-- [SQL Server Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine)
+- [SQL Server dynamic data masking](/sql/relational-databases/security/dynamic-data-masking)
+- [SQL Server always encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine)
 
-Based on the strong restrictions of these three methods and the changes these would require on many areas of the SAP NetWeaver components, these SQL Server functionalities aren't supported by SAP to be used or applied.
+Based on the restrictions of these three methods and the changes they require on many areas of the SAP NetWeaver components, these functionalities aren't supported by SAP.
 
-## Backup Encryption
+## Backup encryption
 
 One can choose to encrypt the backup file while the backup is taken, this is called Backup Encryption. This encrypts all the data pages in the backup file and prevents the unauthorized restore of the backup file, as you need a certificate or asymmetric key for the restore.
 

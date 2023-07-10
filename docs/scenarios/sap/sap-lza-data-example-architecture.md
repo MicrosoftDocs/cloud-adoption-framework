@@ -4,7 +4,7 @@ description: Learn about an example architecture for SAP data integration, inclu
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 07/04/2023
+ms.date: 07/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -123,10 +123,10 @@ This architecture uses several Azure services and capabilities.
 
 ### Networks and load balancers
 
-- [Azure Synapse Analytics managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet) creates an isolated and managed environment for the Azure Synapse workspace, so you don't have to manage the networking configuration for the workspace resources.
-- [Azure Synapse managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) establish private links to Azure resources and route traffic between your Azure Synapse workspaces and other Azure resources by using the Microsoft backbone network.
+- [Azure Synapse Analytics-managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet) creates an isolated and managed environment for the Azure Synapse workspace, so you don't have to manage the networking configuration for the workspace resources.
+- [Azure Synapse-managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) establish private links to Azure resources and route traffic between your Azure Synapse workspaces and other Azure resources by using the Microsoft backbone network.
 - [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) provides private networking capabilities for Azure resources that aren't a part of the Azure Synapse workspace. You can manage the access, security, and routing between resources.
-- [Azure Private Endpoint](/azure/private-link/private-endpoint-overview) connects a service to a virtual network by using a private IP address from the solution's virtual network to Azure managed services. This connection secures the networking between the Azure Synapse workspace and other Azure services, such as Storage, Azure Cosmos DB, Azure SQL Database, or your own Azure Private Link service.
+- An [Azure private endpoint](/azure/private-link/private-endpoint-overview) connects a service to a virtual network by using a private IP address from the solution's virtual network to Azure managed services. This connection secures the networking between the Azure Synapse workspace and other Azure services, such as Storage, Azure Cosmos DB, Azure SQL Database, or your own Azure Private Link service.
 
 ### Reporting
 
