@@ -35,7 +35,7 @@ If you deploy a networking topology, you also need to select an Azure region to 
 - Azure Private DNS zones for Azure Private Link
 - Resource groups (for these resources)
 
-## Adding a new region to an existing landing zone
+## Add a new region to an existing landing zone
 
 You might want to expand into or use more Azure regions once you've completed the initial deployment of Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
 
@@ -121,7 +121,7 @@ Most of the globally deployed landing zone configuration doesn't typically need 
 
 Region-specific landing zone resources often require more consideration, because some Azure resources can't be moved between regions. Consider the following approach:
 
-- **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Adding a new region to an existing landing zone](#adding-a-new-region-to-an-existing-landing-zone).
+- **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone).
 - **Migrate your workloads from the source region to the destination region.** During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
 - **Decommission the resources in the source region after the migration is complete.**
 
