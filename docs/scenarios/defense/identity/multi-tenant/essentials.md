@@ -1,8 +1,8 @@
 ---
 title: Identity essentials for multi-tenant Defense organizations
 description: An overview of identity essentials for multi-tenant defense organizations using Azure Active Directory and implementing zero trust
-author: stephen-sumner
-ms.author: andrmass
+author: amasse3
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
