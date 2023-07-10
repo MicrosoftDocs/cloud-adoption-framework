@@ -121,7 +121,7 @@ There are two separate versions of the Azure AD services defense organizations m
 
 *Table 1. Sovereign cloud endpoints for US Government.*
 
-| Endpoint | Global | GCC High | DoD IL5 |
+| Endpoint | Global | GCC High | DoD Impact Level 5 (IL5) |
 | --- | --- | --- | --- |
 | Entra Portal | [entra.microsoft.com](https://entra.microsoft.com) | [entra.microsoft.us](https://entra.microsoft.us) | [entra.microsoft.us](https://entra.microsoft.us) |
 | Azure portal | [portal.azure.com](https://portal.azure.com) | [portal.azure.us](https://portal.azure.us) | [portal.azure.us](https://portal.azure.us) |
