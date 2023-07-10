@@ -10,7 +10,7 @@ ms.custom: think-tank
 ms.date: 11/14/2022
 ---
 
-# Compute large-scale HPC application workloads in Azure VMs
+# Compute large-scale HPC application workloads in Azure VMs for Finance industries
 
 The term big compute (used in reference to HPC) describes large-scale workloads that require a large number of cores, often numbering in the hundreds or thousands. Scenarios include image rendering, fluid dynamics, financial risk modeling, oil exploration, drug design, and engineering stress analysis, among others.
 
