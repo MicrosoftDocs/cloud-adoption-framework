@@ -53,7 +53,7 @@ You might want to expand into or use more Azure regions once you've completed th
 
 ### High-level approach
 
-The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for Networking & Identity. First, decide on new Azure Region to expand into.
+The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for networking & identity. You need to first decide on new Azure region to expand into.
 
 #### Networking
 
@@ -105,6 +105,25 @@ You can now connect application landing zone spokes via Virtual Network Connecti
       - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
       - Create new Active Directory sites & subnets
       - Configuring DNS Server settings like Conditional Forwarders
+
+## Move your Azure estate to a new region
+
+Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your resources into a region in a neighboring country, and then a new Azure region launches in your home country. You might elect to move all of your workloads to the new region for latency or data residency reasons.
+
+> [!NOTE]
+> This document only provides information about migrating the landing zone components of your estate. For more information about relocating your workload components, see [Relocate cloud workloads](../../relocate/index.md).
+
+### Global landing zone configuration
+ 
+Most of the globally deployed landing zone configuration doesn't typically need to be modified when you move regions. However, ensure that you check for any policy definitions that restrict region deployments and update the policy to allow deployments into the new region.
+
+### Regional landing zone resources
+
+Region-specific landing zone resources often require more consideration. In general, the approach to consider is:
+
+- *Add* the destination region as an additional region to your landing zone, following the guidance in [Adding a new region to an existing landing zone](#adding-a-new-region-to-an-existing-landing-zone).
+- *Migrate* your workloads from the source region to the destination region. In the process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
+- *Decommission* the resources in the source region after the migration is complete.
 
 ## Next steps
 
