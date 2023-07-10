@@ -60,7 +60,7 @@ The below high-level steps can be used as a set of steps to follow to expand int
 ##### Traditional hub & spoke architecture
 
 > [!TIP]
-> Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md)
+> Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md).
 
 1. Decide on whether a new platform landing zone subscription is needed or not
    - The same existing subscription is recommended to use for most customers across multiple regions for connectivity
@@ -78,7 +78,7 @@ You can now connect application landing zone spokes via Virtual Network Peering 
 ##### Virtual WAN architecture
 
 > [!TIP]
-> Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md)
+> Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md).
 
 1. Create new Virtual Hub in the existing Virtual WAN in the new target region
 1. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
@@ -93,7 +93,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 #### Identity
 
 > [!TIP]
-> Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md)
+> Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md).
 
 1. Decide on whether a new platform landing zone subscription is needed or not
    - The same existing subscription is recommended to use for most customers across multiple regions for identity
@@ -108,7 +108,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 
 ## Move your Azure estate to a new region
 
-Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your resources into a region in a neighboring country, and then a new Azure region launches in your home country. You might elect to move all of your workloads to the new region for latency or data residency reasons.
+Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into a region in a neighboring country, and then a new Azure region launches in your home country. You might elect to move all of your workloads to the new region for latency or data residency reasons.
 
 > [!NOTE]
 > This document only provides information about migrating the landing zone components of your estate. For more information about relocating your workload components, see [Relocate cloud workloads](../../relocate/index.md).
@@ -119,11 +119,17 @@ Most of the globally deployed landing zone configuration doesn't typically need 
 
 ### Regional landing zone resources
 
-Region-specific landing zone resources often require more consideration. In general, the approach to consider is:
+Region-specific landing zone resources often require more consideration, because some Azure resources can't be moved between regions. Consider the following approach:
 
-- *Add* the destination region as an additional region to your landing zone, following the guidance in [Adding a new region to an existing landing zone](#adding-a-new-region-to-an-existing-landing-zone).
-- *Migrate* your workloads from the source region to the destination region. In the process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
-- *Decommission* the resources in the source region after the migration is complete.
+- **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Adding a new region to an existing landing zone](#adding-a-new-region-to-an-existing-landing-zone).
+- **Migrate your workloads from the source region to the destination region.** During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
+- **Decommission the resources in the source region after the migration is complete.**
+
+Consider the following tips when migrating landing zone resources across regions:
+
+- **ExpressRoute:** Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other SKUs.
+- **Azure Automation:** Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
+- **Use infrastructure as code:** Complex configuration, such as rules for Azure Firewall, can be exported and re-imported by using Bicep, ARM templates, Terraform, scripting, or a similar approach.
 
 ## Next steps
 
