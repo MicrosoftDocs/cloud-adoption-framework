@@ -39,7 +39,7 @@ A successful TDE implementation needs:
 
 Real-time replication between a TDE-enabled database on SQL Server and SAP HANA doesn’t work and isn't supported. For more information, see [SAP OSS note 2812637 - Real-time replication isn't supported for TDE-enabled MSSQL Server database](https://me.sap.com/notes/2812637/E).
 
-## Other SQL Server features
+## Unsupported SQL Server features
 
 SQL Server also offers other features for data protection. These methods allow partial encryption or masking on database column granularity:
 
@@ -51,72 +51,73 @@ Based on the restrictions of these three methods and the changes they require on
 
 ## Backup encryption
 
-One can choose to encrypt the backup file while the backup is taken, this is called Backup Encryption. This encrypts all the data pages in the backup file and prevents the unauthorized restore of the backup file, as you need a certificate or asymmetric key for the restore.
+Backup encryption is when you encrypt the backup file while the backup is taken. It encrypts all the data pages in the backup file and creates a certificate or asymmetric key requirement to restore the backup file, which prevents an unauthorized restore.
 
-If the database wasn't encrypted (with TDE) before the encrypted backup was taken, it will not be encrypted after the restore. It's only the backup files that get encrypted, the database file and its content won't be touched.
+If the database isn’t encrypted with TDE before the encrypted backup is taken, it still isn’t encrypted after the restore. Only the backup files get encrypted. The database file and its content aren’t altered.
 
-Backup Encryption can be used with TDE, but adds no benefit, as the data is already encrypted, not only in the database files but also in the backup files. When it's used together with TDE, the already encrypted database with the TDE certificate or key encrypted data pages are encrypted again with backup certificate or key. This only prolongs the backup process and adds additional CPU load to the system while the backup process is running.
+You can use backup encryption with TDE, but it’s not beneficial  because the data is already encrypted in the database files and in the backup files. When you use backup encryption and TDE together, the encrypted database with the TDE certificate or key-encrypted data pages are encrypted again with the backup certificate or key. This method prolongs the backup process and adds extra CPU load to the system while the backup process runs.
 
-## Secure-in-transit
+## Secure your SQL Server and SAP system
 
-Server and OS level hardening are essential to a secure running system.
+Server and operating system-level hardening are essential to a secure running system.
 
-Ensure that you follow the recommendations below when securing your [SQL server](/sql/relational-databases/security/securing-sql-server) and your SAP System, please see [SAP OSS note 2417205](https://me.sap.com/notes/2417205).
+Adhere to the following recommendations to secure your [SQL Server](/sql/relational-databases/security/securing-sql-server) and your SAP system. For more information, see [SAP OSS note 2417205](https://me.sap.com/notes/2417205).
 
 SQL Server is based on the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP).
 
-The SSL protocol should be disabled as TLS as the successor is widely used and supported. Most of the SQL Server and SAP product support nowadays use the strong [TLS 1.2](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) protocol, with the even stronger [TLS 1.3](/sql/relational-databases/security/networking/tds-8-and-tls-1-3) already planned.
+You can disable the SSL protocol because TLS is widely used and supported. Most of the SQL Server and SAP product support use the strong [TLS 1.2](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) protocol, with the even stronger [TLS 1.3](/sql/relational-databases/security/networking/tds-8-and-tls-1-3) already planned.
 
-Most of the security settings for the Schannel Security Support Provider can be controlled through registry changes in the
-corresponding SCHANNEL branch. With these settings one can control the following:
+You can control most of the security settings for the Schannel SSP through registry changes in the corresponding SCHANNEL branch. With these settings, you can control:
 
-- Which protocols (SSL, TLS) are enabled for the client and server part of the dialog
-- The ciphers (for example, RC2, RC4, Triple DES, AES) that are enabled and in which order.
-- The hash algorithms (for example, MD5, SHA) that can be used.
-- The Key Exchange Algorithms that are usable (for example, Diffie-Hellman, ECDH)
+- Which protocols, like SSL and TLS, are enabled for the client and server part of the dialog.
+- The ciphers, for example RC2, RC4, Triple DES, and AES, that are enabled and the order that they're enabled.
+- The hash algorithms, for example MD5 and SHA.
+- The key exchange algorithms, for example Diffie-Hellman and ECDH.
 
-The various combinations of these parts (Protocol, Cipher, Hash and Key Exchange Algorithm) are represented in so called cipher suites. By disabling one of these parts (for example, protocol SSL 2.0) all cipher suites that contain this part will be unusable for the system.
+The various combinations of these parts (protocol, cipher, hash and key exchange algorithm) are represented in cipher suites. By disabling one of these parts, for example protocol SSL 2.0, all cipher suites that contain this part are unusable for the system.
 
 > [!NOTE]
->Combining multiple changes can easily lead to a situation where the client (e.g., the SAP System) and the server (SQL Server) cannot use a cipher suite to communicate, and the SAP System cannot start anymore.
+>When you combine multiple changes, it can easily lead to a situation where the client, for example the SAP System, and the server, for example SQL Server, can't use a cipher suite to communicate, and the SAP System can no longer start.
 
-- An additional way to control the priority and availability of cipher suites on the system is the local group policy editor.
-Under "Local Computer Policy -> Computer Configuration -> Administrative Templates -> Network -> SSL Configuration Setting" one can define a [custom SSL Cipher Suite Order](/windows/client-management/mdm/policy-csp-admx-ciphersuiteorder)
+You can also control the priority and availability of cipher suites on the system in the local group policy editor.
 
-![Screenshot shows SSL configuration.](./media/sap-lza-ssl-configuration.png)
-  By changing this list, the priority in which the different cipher suites are used by the system can be changed. Removing cipher suites from this list results in a situation that this cipher suite is no longer usable in the system. This group policy setting has priority over the SCHANNEL registry setting described earlier.
-  This setting is often changed and controlled by group policies by the security department, but the resulting connection issues have to be handled by the SAP Basis or SQL Server database administration group.
+1. Go to Local Computer Policy > Computer Configuration > Administrative Templates > Network > SSL Configuration Settings.
+1. Define a [custom SSL cipher suite order](/windows/client-management/mdm/policy-csp-admx-ciphersuiteorder).
 
-- Consider using SAP tool (SCoTT) to help to analyze problems with disabled protocols or cipher suites. This tool is described in the [SAP note 2846170](https://me.sap.com/notes/2846170/E). It can help to analyze connection problems between the SAP System (ABAP and Java) and the SQL Server, either running on Linux or Windows.
+![Screenshot that shows the SSL configuration.](./media/sap-lza-ssl-configuration.png)
+  
+This list order defines the priority that the system uses cipher suites. If you remove a cipher suite from the list, it's no longer usable in the system. The group policy setting has priority over the SCHANNEL registry setting. The security department usually controls this setting based on group policies. But the SAP Basis or SQL Server database administration group handle the resulting connection issues.
+
+Consider using the SAP tool, SCoTT, to analyze problems with disabled protocols or cipher suites. The tool can analyze connection problems between the SAP System, like ABAP and Java, and the SQL Server that runs on Linux or Windows. For more information, see [SAP note 2846170](https://me.sap.com/notes/2846170/E).
 
 ## Authentication
 
 Here are some considerations for authentication with SAP on Azure.
 
 - **SAP Netweaver on SQL Server**:
-  - A system like this has specific requirements with regards to the SAP and SQL Server startup accounts, authentication to the SQL Server instance, SAP database, and the DBA access.
-  - For more details, see [SAP note 1645041 - Microsoft SQL Server logins and their usage in SAP environment](https://me.sap.com/notes/1645041/E).
+  - This type of system has specific requirements for the SAP and SQL Server startup accounts, authentication to the SQL Server instance, SAP database, and DBA access.
+  - For more information, see [SAP note 1645041 - Microsoft SQL Server logins and their usage in SAP environments](https://me.sap.com/notes/1645041/E).
 
 - **SAP ABAP NetWeaver System**:
-  - It doesn't require SQL Server logins, all connections are made using Windows Authentication. For example, with the user `SAPService<SID>` or `<sid>adm`.
-  - Therefore the SQL Server Authentication feature isn't needed and can be switched off.
+  - It doesn't require SQL Server logins because all connections use Windows Authentication. For example, with the user `SAPService<SID>` or `<sid>adm`.
+  - You can disable the SQL Server Authentication feature.
 
 - **SAP JAVA NetWeaver System**:
-  - The SQL Server Authentication is needed  as the system is using a SQL Server login (`SAP<SID>DB`) for the connection.
+  - The SQL Server Authentication is needed because the system uses a SQL Server login (`SAP<SID>DB`) for the connection.
 
 - **SAP on SQL Server**:
-  - The SQL Server system administrator account (sa) isn't used from any SAP system running on SQL Server and can be disabled.
-  - One must ensure that another user with sysadmin rights can access the server before disabling the sa account.
+  - You can disable the SQL Server system administrator account (sa) because the SAP systems on SQL Server don't use the account.
+  - Ensure that another user with sysadmin rights can access the server before disabling the sa account.
 
-- **A high availability system using SQL Server AlwaysOn**:
-  - Needs special attention when it comes to logins, users, and jobs. All servers that are participating in such a system must have the exact same logins and users, so that the SAP System can connect even after a failover to another node has happened.
-  - Furthermore, all SAP-related SQL Server jobs need the same owner on all AlwaysOn nodes.
-  - To synchronize these setting for Logins, users, and jobs, see [Always On - Synchronize SAP login, jobs and objects](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/always-on-synchronize-sap-login-jobs-and-objects/ba-p/367942)
+- **A high-availability system that uses SQL Server AlwaysOn**:
+  - Has specific requirements for logins, users, and jobs. All servers that are connected to the system must have the exact same logins and users, so the SAP System can connect even after a failover to another node occurs.
+  - All SAP-related SQL Server jobs must have the same owner on all AlwaysOn nodes.
+  - To synchronize these setting for logins, users, and jobs, see [Always On - Synchronize SAP login, jobs, and objects](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/always-on-synchronize-sap-login-jobs-and-objects/ba-p/367942).
 
-- **Consider SQL injections**:
-  - [SQL injection](/sql/relational-databases/security/sql-injection) is when malicious code is merged into SQL statements that are executed on the SQL Server.
-  - When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report, which are then sent to and transformed by the SAP database layer for SQL Server.
-  - This database layer is integrated into the SAP Work process and can't be accessed from the outside. After the transformation into SQL Server specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack).
+- **SQL injections**:
+  - [SQL injection](/sql/relational-databases/security/sql-injection) is when malicious code merges into SQL statements that are executed on the SQL Server.
+  - When a report is executed within the SAP system, it generates generic SQL statements from the ABAP code of the report. The statements are sent to and transformed by the SAP database layer for SQL Server.
+  - This database layer is integrated into the SAP work process and isn't accessible from the outside. After the transformation into SQL Server-specific statements, they're sent to the database, executed and the result returned to the calling report. The only place where these statements could be manipulated is between the database layer of the SAP System and the SQL Server instance (Man-in-the-middle attack).
   - This can prevented when the SAP System is using encrypted connections between the work process and the SQL Server database. In the transaction DBACockpit a rudimentary SQL command window is implemented, where some basic SQL statements can be executed. The access to this transaction is described in note 1027512 - MSSQL: DBA cockpit for basis release 7.00 and later.
 
 ## Auditing
