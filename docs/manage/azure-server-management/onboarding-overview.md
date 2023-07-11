@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal
+s.custom: internal
 ---
 
 # Phase 2: Onboarding Azure server management services

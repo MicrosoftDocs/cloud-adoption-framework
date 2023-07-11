@@ -4,8 +4,7 @@ description: Learn about governance for HPC workloads in the finance sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ms.date: 11/10/2022
 ---
 

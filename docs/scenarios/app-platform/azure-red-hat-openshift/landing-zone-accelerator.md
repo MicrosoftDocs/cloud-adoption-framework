@@ -5,8 +5,7 @@ author: UmarMohamedUsman
 ms.author: umarm
 ms.date: 08/17/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-ARO
+s.custom: think-tank, e2e-ARO
 ---
 
 # Azure Red Hat OpenShift (ARO) landing zone accelerator

@@ -5,8 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/17/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+s.custom: internal, UpdateFrequency.5
 ---
 
 # Subscription vending

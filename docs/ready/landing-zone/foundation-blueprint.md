@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom:
   - internal
   - engagement-fy23

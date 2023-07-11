@@ -5,7 +5,6 @@ author: v-hanki
 ms.author: martinek
 ms.date: 06/24/2020
 ms.topic: conceptual
-ms.subservice: plan
 ms.custom: think-tank, UpdateFrequency2
 ---
 

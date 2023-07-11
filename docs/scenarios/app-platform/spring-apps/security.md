@@ -5,8 +5,7 @@ author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
-ms.subservice: caf-scenario-spring-apps
----
+--
 
 # Security considerations for the Azure Spring Apps landing zone accelerator
 

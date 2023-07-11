@@ -5,8 +5,7 @@ author: timleyden
 ms.author: martinek
 ms.date: 09/03/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, fasttrack-edit, AQC, setup
+s.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Azure setup guide overview

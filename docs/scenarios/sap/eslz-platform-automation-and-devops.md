@@ -5,8 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 03/16/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+s.custom: think-tank, e2e-sap
 ---
 
 <!-- docutune:casing Snow -->

@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+s.custom: internal, seo-caf-innovate
 keywords: continuous integration, continuous deployment, ci cd, digital invention, ci cd pipeline
 ---
 

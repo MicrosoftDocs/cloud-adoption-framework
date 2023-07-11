@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.subservice: manage
-products: azure-monitor
+roducts: azure-monitor
 ms.custom: UpdateFrequency2
 ---
 

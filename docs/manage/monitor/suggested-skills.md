@@ -6,8 +6,7 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal, engagement-fy23, UpdateFrequency2
+s.custom: internal, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 

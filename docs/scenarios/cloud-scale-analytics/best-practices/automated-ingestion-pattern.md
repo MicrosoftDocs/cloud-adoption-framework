@@ -5,8 +5,7 @@ author: dmarz
 ms.author: damarzol
 ms.date: 04/03/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Data agnostic ingestion engine

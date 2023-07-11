@@ -5,8 +5,7 @@ author: sablair
 ms.author: sablair
 ms.date: 05/31/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank
+s.custom: e2e-azure-vmware, think-tank
 ---
 # Prepare for connectivity for Azure VMware Solution
 

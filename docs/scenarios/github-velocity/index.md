@@ -5,8 +5,7 @@ author: nkpatterson
 ms.author: martinek
 ms.date: 1/11/2020
 ms.topic: conceptual
-ms.subservice: strategy
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # How GitHub accelerates cloud adoption

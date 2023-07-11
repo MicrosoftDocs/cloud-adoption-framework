@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/15/2022
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 <!-- docutune:casing ARO -->

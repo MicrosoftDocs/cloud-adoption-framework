@@ -5,8 +5,7 @@ author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 06/22/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Design considerations for self-serve data platforms

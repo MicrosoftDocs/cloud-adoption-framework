@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/28/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, readiness, fasttrack-edit
+s.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your tagging strategy

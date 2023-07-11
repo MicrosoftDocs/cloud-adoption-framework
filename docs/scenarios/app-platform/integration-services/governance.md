@@ -5,8 +5,7 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/15/2023
 ms.topic: conceptual
-ms.subservice: caf-scenario-app-plat
----
+--
 # Governance considerations for the Azure Integration Services landing zone accelerator
 
 Governance involves making sure any policies you have in place are being followed, and that you can show your applications are compliant with any legal, financial, regulatory, or internal requirements they are subject to. For smaller applications, governance may be a manual process; for larger applications, automation is essential. Azure contains several offerings designed to make the compliance and governance process easier.

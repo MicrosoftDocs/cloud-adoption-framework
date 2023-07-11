@@ -5,8 +5,7 @@ author: shah-manish
 ms.author: manshah
 ms.date: 01/24/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+s.custom: think-tank, e2e-sap
 ---
 
 # SAP data integration with Azure: Choose the best SAP connector

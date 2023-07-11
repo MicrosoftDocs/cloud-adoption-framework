@@ -5,7 +5,6 @@ author: phduf
 ms.author: martinek
 ms.date: 02/18/2021
 ms.topic: conceptual
-ms.subservice: govern
 ms.custom: think-tank, UpdateFrequency2
 ---
 

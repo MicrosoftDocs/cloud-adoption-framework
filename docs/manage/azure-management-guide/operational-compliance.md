@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/17/2023
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal, fasttrack-edit, AQC
+s.custom: internal, fasttrack-edit, AQC
 ---
 
 # Operational compliance in Azure

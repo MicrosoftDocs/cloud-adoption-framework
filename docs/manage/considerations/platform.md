@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal
+s.custom: internal
 ---
 
 # Platform operations in cloud management

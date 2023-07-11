@@ -4,8 +4,7 @@ description: Learn about the Azure VM instances that are ideal for large-scale H
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ms.date: 11/14/2022
 ---
 

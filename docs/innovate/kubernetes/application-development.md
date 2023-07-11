@@ -5,8 +5,7 @@ author: sabbour
 ms.author: martinek
 ms.date: 03/20/2020
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate
+s.custom: think-tank, seo-caf-innovate
 keywords: application development, application deployment, site reliability engineering
 ---
 

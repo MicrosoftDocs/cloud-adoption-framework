@@ -5,8 +5,7 @@ author: elbatane
 ms.author: elbatane
 ms.date: 06/28/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Test-driven development for Azure landing zones

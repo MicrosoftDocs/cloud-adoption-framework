@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/21/2020
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # The One Migrate approach to migrating the IT portfolio

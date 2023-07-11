@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/30/2021
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom: internal
 ---
 

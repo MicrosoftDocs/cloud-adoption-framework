@@ -5,8 +5,7 @@ author: UmarMohamedUsman
 ms.author: umarm
 ms.date: 11/17/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-aro
+s.custom: think-tank, e2e-aro
 ---
 
 # Security for the Azure Red Hat OpenShift landing zone accelerator

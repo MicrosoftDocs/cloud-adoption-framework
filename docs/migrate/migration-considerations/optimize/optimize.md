@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 5/19/2019
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Benchmark and resize cloud assets

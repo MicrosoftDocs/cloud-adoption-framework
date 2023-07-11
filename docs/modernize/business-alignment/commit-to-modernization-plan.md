@@ -5,8 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/07/2022
 ms.topic: conceptual
-ms.subservice: modernize
-ms.custom: internal, seo-caf-modernize
+s.custom: internal, seo-caf-modernize
 keywords: effort, impact, balance, modern, cloud modernization, cloud adoption framework
 ---
 

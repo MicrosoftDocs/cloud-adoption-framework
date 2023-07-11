@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Guidance for business testing (UAT) during migration

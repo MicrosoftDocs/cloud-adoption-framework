@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/22/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Integrate cloud-scale analytics into your cloud adoption strategy

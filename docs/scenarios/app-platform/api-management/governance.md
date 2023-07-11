@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/12/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal
+s.custom: internal
 ---
 
 # Governance considerations for the API Management landing zone accelerator

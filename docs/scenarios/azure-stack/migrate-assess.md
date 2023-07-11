@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Assess workloads for Azure Stack Hub migration

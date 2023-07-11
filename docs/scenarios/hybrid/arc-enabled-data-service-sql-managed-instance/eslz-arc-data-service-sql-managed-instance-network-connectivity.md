@@ -5,8 +5,7 @@ author: welasco
 ms.author: vsantana
 ms.date: 09/26/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, ignite-2022
+s.custom: e2e-hybrid, think-tank, ignite-2022
 ---
 
 # Network connectivity for Azure Arc-enabled SQL Managed Instance

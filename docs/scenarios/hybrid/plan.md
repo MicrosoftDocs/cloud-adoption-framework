@@ -5,8 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+s.custom: e2e-hybrid, think-tank
 ---
 
 # Plan for hybrid and multicloud

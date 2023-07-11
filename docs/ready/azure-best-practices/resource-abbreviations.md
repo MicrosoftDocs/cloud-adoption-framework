@@ -6,8 +6,7 @@ ms.author: ssumner
 ms.date: 4/12/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, readiness, fasttrack-edit
+s.custom: internal, readiness, fasttrack-edit
 ---
 
 # Abbreviation examples for Azure resources

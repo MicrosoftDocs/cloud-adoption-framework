@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 03/18/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: seo-caf-innovate
+s.custom: seo-caf-innovate
 keywords: collect data, migrate data, data migration, data modernization
 ---
 

@@ -5,8 +5,7 @@ author: LijuKodicheraJayadevan
 ms.author: martinek
 ms.date: 02/08/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, fasttrack-edit, AQC, setup
+s.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Manage access to your Azure environment with Azure role-based access control

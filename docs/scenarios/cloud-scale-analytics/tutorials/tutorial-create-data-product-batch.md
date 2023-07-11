@@ -5,8 +5,7 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Tutorial: Create a data product batch

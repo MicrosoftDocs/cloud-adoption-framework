@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/22/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
+s.custom: internal, readiness, fasttrack-edit, UpdateFrequency3
 ---
 
 # Develop your naming and tagging strategy for Azure resources

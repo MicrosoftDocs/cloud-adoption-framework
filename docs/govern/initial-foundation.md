@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 

@@ -5,8 +5,7 @@ author: chintalavr
 ms.author: vchintala
 ms.date: 04/27/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+s.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Identity and access management for Azure Arc-enabled Kubernetes

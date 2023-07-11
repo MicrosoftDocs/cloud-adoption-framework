@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/15/2022
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom: internal
 ---
 # How to get help building a landing zone

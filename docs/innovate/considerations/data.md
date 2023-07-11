@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+s.custom: internal, seo-caf-innovate
 keywords: What is data democratization, data democratization, democratize data, minimum viable product, data centralization
 ---
 

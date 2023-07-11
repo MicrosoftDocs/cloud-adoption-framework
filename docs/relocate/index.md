@@ -6,8 +6,7 @@ ms.author: ssumner
 ms.date: 02/03/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.subservice: adopt
-ms.custom: internal, seo-caf-relocate
+s.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Relocate cloud workloads

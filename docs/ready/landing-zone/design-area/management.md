@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/30/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+s.custom: internal, UpdateFrequency.5
 products: azure-monitor
 ---
 

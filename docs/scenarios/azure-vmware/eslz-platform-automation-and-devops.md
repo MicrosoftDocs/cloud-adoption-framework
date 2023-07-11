@@ -5,8 +5,7 @@ author: ScottHolden
 ms.author: scholden
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-azure-vmware
+s.custom: think-tank, e2e-azure-vmware
 ---
 
 # Platform automation for Azure VMware Solution enterprise-scale scenario

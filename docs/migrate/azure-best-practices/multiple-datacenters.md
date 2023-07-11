@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Multiple datacenters

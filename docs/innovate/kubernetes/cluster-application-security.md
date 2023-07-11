@@ -5,8 +5,7 @@ author: sabbour
 ms.author: martinek
 ms.date: 04/06/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate
+s.custom: think-tank, seo-caf-innovate
 keywords: application security, security essentials, Kubernetes security
 ---
 

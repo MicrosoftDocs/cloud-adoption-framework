@@ -5,8 +5,7 @@ author: hifaz1012
 ms.author: hifazhassan 
 ms.date: 02/2/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Operationalize data mesh for AI/ML domain driven feature engineering

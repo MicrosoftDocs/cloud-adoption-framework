@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/03/2023
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal
+s.custom: internal
 ---
 
 # Protect and recover in cloud management

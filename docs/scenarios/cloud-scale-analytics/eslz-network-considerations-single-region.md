@@ -5,8 +5,7 @@ author: marvinbuss
 ms.author: mabuss
 ms.date: 03/19/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Single-region data landing zone connectivity

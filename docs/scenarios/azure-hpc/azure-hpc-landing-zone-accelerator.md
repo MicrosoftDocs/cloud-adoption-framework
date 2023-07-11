@@ -5,8 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 11/23/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Azure high-performance computing (HPC) landing zone accelerator

@@ -5,8 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 08/23/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency.5
+s.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for the Microsoft customer agreement service

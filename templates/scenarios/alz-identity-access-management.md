@@ -5,8 +5,7 @@ author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Identity and access management for {{Token-Name}} - {{Insert-accelerator-name}} landing zone accelerator

@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/12/2023
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 <!-- docutune:casing Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->

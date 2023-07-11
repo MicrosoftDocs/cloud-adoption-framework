@@ -6,8 +6,7 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
+s.custom: e2e-azure-vmware, think-tank, engagement-fy23
 ---
 
 # Azure VMware Solution landing zone accelerator

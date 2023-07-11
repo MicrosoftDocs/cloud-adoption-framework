@@ -5,8 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+s.custom: think-tank, e2e-sap
 ---
 
 # Azure landing zone for an SAP on Azure

@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/26/2023
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: UpdateFrequency2
+s.custom: UpdateFrequency2
 ---
 
 # Migrate SQL Server databases to Azure

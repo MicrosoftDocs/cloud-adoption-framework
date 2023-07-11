@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Standard enterprise governance guide: Improve the Security Baseline discipline

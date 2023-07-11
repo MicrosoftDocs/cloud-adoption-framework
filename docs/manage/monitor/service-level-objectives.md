@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: UpdateFrequency3
+s.custom: UpdateFrequency3
 ---
 
 # Cloud monitoring service level objectives

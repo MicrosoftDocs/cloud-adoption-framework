@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2022
 ms.topic: conceptual
-ms.subservice: decision-guide
-ms.custom: internal
+s.custom: internal
 ---
 
 # Resource naming and tagging decision guide

@@ -5,8 +5,7 @@ author: sabbour
 ms.author: martinek
 ms.date: 12/16/2019
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Kubernetes in the Cloud Adoption Framework

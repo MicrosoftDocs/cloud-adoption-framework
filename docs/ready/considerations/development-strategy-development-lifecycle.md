@@ -5,8 +5,7 @@ author: emguzman13
 ms.author: emguzman
 ms.date: 06/18/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Development lifecycle

@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/03/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Virtual Desktop planning

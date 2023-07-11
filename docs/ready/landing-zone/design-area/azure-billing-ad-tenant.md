@@ -5,8 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 05/16/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency.5
+s.custom: think-tank, UpdateFrequency.5
 ---
 
 # Azure billing offers and Active Directory tenants

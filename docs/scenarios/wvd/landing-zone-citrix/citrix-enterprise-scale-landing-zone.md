@@ -5,8 +5,7 @@ author: BenMartinBaur
 ms.author: wasaleem
 ms.date: 02/08/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Enterprise-scale support for Citrix on Azure

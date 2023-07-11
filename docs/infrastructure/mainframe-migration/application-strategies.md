@@ -5,7 +5,6 @@ author: njray
 ms.author: martinek
 ms.date: 08/09/2022
 ms.topic: conceptual
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 

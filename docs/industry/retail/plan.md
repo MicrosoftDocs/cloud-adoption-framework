@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/01/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal, e2e-retail
+s.custom: internal, e2e-retail
 ---
 
 # Cloud adoption plan for the retail industry

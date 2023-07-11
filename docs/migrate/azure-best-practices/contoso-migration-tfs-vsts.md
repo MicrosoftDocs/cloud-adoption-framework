@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/01/2021
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Refactor a Team Foundation Server deployment to Azure DevOps Services

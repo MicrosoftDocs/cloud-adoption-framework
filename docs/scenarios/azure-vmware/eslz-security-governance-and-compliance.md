@@ -5,8 +5,7 @@ author: Mahesh-MSFT
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-azure-vmware
+s.custom: think-tank, e2e-azure-vmware
 ---
 
 # Security, governance, and compliance for Azure VMware Solution

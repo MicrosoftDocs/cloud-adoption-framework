@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/06/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+s.custom: e2e-hybrid, think-tank
 ---
 
 # Unified operations for hybrid, multicloud, and edge

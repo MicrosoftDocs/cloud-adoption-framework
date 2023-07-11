@@ -5,8 +5,7 @@ author: timwarner-msft
 ms.author: timwarner
 ms.date: 02/16/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Security, governance, and compliance for cloud-scale analytics

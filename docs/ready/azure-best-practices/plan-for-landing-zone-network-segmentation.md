@@ -5,8 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 10/28/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Plan for landing zone network segmentation

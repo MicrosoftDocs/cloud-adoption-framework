@@ -5,7 +5,6 @@ author: wayneme75
 ms.author: martinek
 ms.date: 09/18/2020
 ms.topic: conceptual
-ms.subservice: plan
 ms.custom: think-tank
 ---
 

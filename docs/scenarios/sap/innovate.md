@@ -5,8 +5,7 @@ author: PankajMeshramCSA
 ms.author: martinek
 ms.date: 07/01/2010
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+s.custom: think-tank, e2e-sap
 ---
 
 # Innovate with SAP and Azure

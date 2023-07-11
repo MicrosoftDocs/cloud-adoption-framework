@@ -5,8 +5,7 @@ author: motasem13
 ms.author: martinek
 ms.date: 01/09/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal
+s.custom: internal
 ---
 
 # Operations management considerations for the App Service landing zone accelerator

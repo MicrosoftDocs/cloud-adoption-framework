@@ -5,8 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 11/07/2022
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Rehost an application by migrating it to Azure VMs and SQL Server Always On availability groups

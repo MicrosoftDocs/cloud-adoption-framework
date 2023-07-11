@@ -5,8 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Azure Lighthouse usage in Azure landing zones multi-tenant scenarios

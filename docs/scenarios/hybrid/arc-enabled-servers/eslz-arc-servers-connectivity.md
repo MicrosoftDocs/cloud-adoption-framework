@@ -5,8 +5,7 @@ author: Welasco
 ms.author: vsantana
 ms.date: 10/08/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
+s.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
 # Network topology and connectivity for Azure Arc-enabled servers

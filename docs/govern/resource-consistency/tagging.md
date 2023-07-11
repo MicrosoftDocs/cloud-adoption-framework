@@ -5,8 +5,7 @@ author: robbagby
 ms.author: robbag
 ms.date: 10/05/2022
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Tagging overview

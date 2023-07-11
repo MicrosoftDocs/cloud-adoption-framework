@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal, fasttrack-edit, AQC
+s.custom: internal, fasttrack-edit, AQC
 ---
 
 # Protect and recover in Azure

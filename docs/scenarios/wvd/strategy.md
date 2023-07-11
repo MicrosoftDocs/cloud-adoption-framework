@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/27/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Strategic benefits of a virtual desktop

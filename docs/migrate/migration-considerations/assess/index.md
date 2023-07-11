@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/16/2021
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Assess workloads and validate assumptions before migration

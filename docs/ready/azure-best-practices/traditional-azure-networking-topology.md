@@ -5,8 +5,7 @@ author: sitarant
 ms.author: sitarant
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Traditional Azure networking topology

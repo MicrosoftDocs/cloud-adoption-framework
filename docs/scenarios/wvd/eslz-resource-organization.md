@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/19/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Resource organization considerations for Azure Virtual Desktop

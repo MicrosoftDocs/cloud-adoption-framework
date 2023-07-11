@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/22/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Infrastructure as Code

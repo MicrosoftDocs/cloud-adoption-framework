@@ -5,8 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 08/11/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 <!-- docutune:casing "Local, Standard, or Premium SKU" "ExpressRoute Standard or Premium circuits"-->

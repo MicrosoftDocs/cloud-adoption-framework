@@ -6,7 +6,6 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 04/13/2022
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom: think-tank, devx-track-terraform, UpdateFrequency5
 ---
 

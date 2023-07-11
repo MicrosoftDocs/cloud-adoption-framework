@@ -5,8 +5,7 @@ author: Mufajjul
 ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # How to approach machine learning operations

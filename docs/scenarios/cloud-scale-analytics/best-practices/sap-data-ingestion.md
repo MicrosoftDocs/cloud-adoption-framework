@@ -5,8 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 01/24/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # SAP ingestion with cloud-scale analytics in Azure

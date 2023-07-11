@@ -5,8 +5,7 @@ author: mpvenables
 ms.author: jaalmond
 ms.date: 09/24/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal, e2e-retail
+s.custom: internal, e2e-retail
 ---
 
 # Industry priority scenarios

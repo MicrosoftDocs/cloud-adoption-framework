@@ -5,8 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-ms.subservice: strategy
-ms.custom: think-tank, UpdateFrequency2
+s.custom: think-tank, UpdateFrequency2
 ---
 
 # Data innovations

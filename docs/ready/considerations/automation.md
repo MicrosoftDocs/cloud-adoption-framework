@@ -5,8 +5,7 @@ author: MariusStorhaug
 ms.author: mastorha
 ms.date: 06/27/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Automation

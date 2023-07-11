@@ -5,8 +5,7 @@ author: dchimes
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, fasttrack-edit, AQC, setup
+s.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Manage costs and billing for your Azure resources

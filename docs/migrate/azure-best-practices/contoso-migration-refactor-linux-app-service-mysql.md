@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Refactor a Linux application by using Azure App Service, Traffic Manager, and Azure Database for MySQL

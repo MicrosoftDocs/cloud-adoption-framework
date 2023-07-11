@@ -5,8 +5,7 @@ author: umarmohamedusman
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank, fasttrack-new, AQC, seo-caf-innovate
+s.custom: think-tank, fasttrack-new, AQC, seo-caf-innovate
 keywords: Connected devices, ubiquitous computing, device management, edge devices
 ---
 

@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/07/2023
 ms.topic: conceptual
-ms.subservice: adopt
 ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---

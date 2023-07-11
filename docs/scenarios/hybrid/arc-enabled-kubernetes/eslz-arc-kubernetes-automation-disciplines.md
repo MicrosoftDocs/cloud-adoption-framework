@@ -5,8 +5,7 @@ author: mrhoads
 ms.author: mirhoads
 ms.date: 04/29/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, event-tier1-build-2022
+s.custom: e2e-hybrid, event-tier1-build-2022
 ---
 
 # Automation for Azure Arc-enabled Kubernetes

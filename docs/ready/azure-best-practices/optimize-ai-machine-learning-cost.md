@@ -5,8 +5,7 @@ author: emychy
 ms.author: deeikele
 ms.date: 05/24/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Manage budgets, costs, and quota for Azure Machine Learning at organizational scale

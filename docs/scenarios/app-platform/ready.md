@@ -6,8 +6,7 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-aks, engagement-fy23
+s.custom: think-tank, e2e-aks, engagement-fy23
 ---
 
 # Azure landing zones for modern application platforms

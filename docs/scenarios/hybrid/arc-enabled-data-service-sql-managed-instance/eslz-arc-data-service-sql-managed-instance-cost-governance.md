@@ -5,8 +5,7 @@ author: mrhoads
 ms.author: mirhoads
 ms.date: 09/22/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, ignite-2022
+s.custom: e2e-hybrid, think-tank, ignite-2022
 ---
 
 # Cost governance for Azure Arc-enabled SQL Managed Instance

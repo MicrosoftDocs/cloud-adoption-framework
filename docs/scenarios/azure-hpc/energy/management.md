@@ -4,8 +4,7 @@ description: Learn about management considerations in the Azure landing zone for
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ms.date: 11/09/2022
 ---
 

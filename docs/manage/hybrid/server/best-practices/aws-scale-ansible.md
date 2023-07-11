@@ -5,8 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid, devx-track-terraform, devx-track-ansible
+s.custom: think-tank, e2e-hybrid, devx-track-terraform, devx-track-ansible
 ---
 
 # Use Ansible to scale onboarding Amazon Web Services Amazon Elastic Compute Cloud instances to Azure Arc

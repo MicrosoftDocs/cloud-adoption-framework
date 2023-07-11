@@ -5,8 +5,7 @@ author: BenMartinBaur
 ms.author: martinek
 ms.date: 02/08/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Hybrid networking with Citrix Cloud and Azure

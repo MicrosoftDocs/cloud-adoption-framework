@@ -3,8 +3,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 03/09/2022
 ms.topic: include
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 > [!IMPORTANT]

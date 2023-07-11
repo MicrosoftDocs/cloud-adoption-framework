@@ -5,8 +5,7 @@ author: abdale
 ms.author: deeikele
 ms.date: 12/15/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Azure Machine Learning as a data product for cloud-scale analytics

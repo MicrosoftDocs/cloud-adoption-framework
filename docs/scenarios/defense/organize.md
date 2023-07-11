@@ -6,8 +6,7 @@ ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
-ms.subservice: scenario
----
+--
 # Organize for defense cloud adoption
 
 The organize methodology falls within the command domain of cloud adoption.

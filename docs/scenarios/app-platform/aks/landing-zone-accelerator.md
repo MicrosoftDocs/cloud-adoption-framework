@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/25/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-aks
+s.custom: think-tank, e2e-aks
 ---
 
 # AKS landing zone accelerator

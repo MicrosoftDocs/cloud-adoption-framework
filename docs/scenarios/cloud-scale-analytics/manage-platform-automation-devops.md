@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/22/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Platform automation

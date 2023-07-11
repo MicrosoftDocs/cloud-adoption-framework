@@ -5,8 +5,7 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/15/2023
 ms.topic: conceptual
-ms.subservice: caf-scenario-app-plat
----
+--
 
 # Identity and access management considerations for the Azure Integration Services landing zone accelerator
 

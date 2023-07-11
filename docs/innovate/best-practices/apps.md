@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+s.custom: internal, seo-caf-innovate
 keywords: application development services, application development tools, innovation methodologies
 ---
 

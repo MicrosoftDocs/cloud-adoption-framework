@@ -5,8 +5,7 @@ author: alejandra8481
 ms.author: martinek
 ms.date: 04/09/2021
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: azure-fast-track, think-tank
+s.custom: azure-fast-track, think-tank
 ---
 
 # Migration execution with Azure Migrate for servers

@@ -5,8 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 05/01/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap
+s.custom: think-tank, e2e-sap
 ---
 
 <!-- docutune:casing "Azure Fence Agent" -->

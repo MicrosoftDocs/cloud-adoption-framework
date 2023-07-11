@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/14/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-aks, think-tank
+s.custom: e2e-aks, think-tank
 ---
 
 # Innovation on modern application platforms

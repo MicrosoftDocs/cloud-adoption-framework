@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/26/2021
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: internal
+s.custom: internal
 ---
 
 # Business criticality in cloud management

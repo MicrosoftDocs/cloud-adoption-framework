@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 07/07/2023
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
+s.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Assess workloads and refine plans

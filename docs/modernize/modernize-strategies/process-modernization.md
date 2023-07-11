@@ -5,8 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/28/2022
 ms.topic: conceptual
-ms.subservice: modernize
-ms.custom: internal
+s.custom: internal
 ---
 
 # Modernize your processes for the cloud

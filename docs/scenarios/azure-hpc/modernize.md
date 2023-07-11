@@ -5,8 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 10/03/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Modernize your workloads for Azure high-performance computing (HPC)

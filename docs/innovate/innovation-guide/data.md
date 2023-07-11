@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
+s.custom: internal, fasttrack-new, AQC, seo-caf-innovate
 keywords: Democratize, democratize data, democratizing data, data democratization, democratized
 ---
 

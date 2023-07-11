@@ -6,8 +6,7 @@ ms.author: martinek
 ms.date: 05/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Move on-premises Remote Desktop Services to Azure Virtual Desktop scenario

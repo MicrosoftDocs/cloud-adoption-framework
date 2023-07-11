@@ -5,8 +5,7 @@ author: shinchan75034
 ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Machine learning security

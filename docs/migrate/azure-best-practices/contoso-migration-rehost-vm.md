@@ -5,8 +5,7 @@ author: givenscj
 ms.author: martinek
 ms.date: 07/30/2020
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Rehost an on-premises application on Azure VMs by using Azure Migrate

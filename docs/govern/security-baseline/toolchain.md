@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/17/2023
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Security Baseline tools in Azure

@@ -6,8 +6,7 @@ ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: 
+s.custom: 
   - think-tank
   - e2e-sap
   - engagement-fy23

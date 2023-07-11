@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/26/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+s.custom: internal, seo-caf-innovate
 keywords: continuous learning, customer empathy, drive innovation
 ---
 

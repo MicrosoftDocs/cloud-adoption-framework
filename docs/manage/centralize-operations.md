@@ -5,7 +5,6 @@ author: JnHs
 ms.author: martinek
 ms.date: 09/27/2019
 ms.topic: conceptual
-ms.subservice: manage
 ms.custom: think-tank
 ---
 

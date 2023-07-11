@@ -5,7 +5,6 @@ author: wayneme
 ms.author: martinek
 ms.date: 05/13/2022
 ms.topic: conceptual
-ms.subservice: strategy
 ms.custom: internal, UpdateFrequency2
 ---
 

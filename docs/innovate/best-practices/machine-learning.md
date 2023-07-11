@@ -5,8 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate, devx-track-python
+s.custom: think-tank, seo-caf-innovate, devx-track-python
 keywords: what is machine learning, azure machine learning, machine learning tools, mlops, automated machine learning
 ---
 

@@ -5,8 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 12/30/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal
+s.custom: internal
 ---
 
 # Cloud adoption scenarios

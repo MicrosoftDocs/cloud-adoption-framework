@@ -5,8 +5,7 @@ author: nataliakon
 ms.author: nataliak
 ms.date: 05/02/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Security and governance

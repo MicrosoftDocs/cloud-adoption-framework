@@ -5,8 +5,7 @@ author: MarvinBuss
 ms.author: mabuss
 ms.date: 01/11/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Limit cross-tenant private endpoint connections in Azure

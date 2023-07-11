@@ -5,8 +5,7 @@ author: BenMartinBaur
 ms.author: nataliak
 ms.date: 02/06/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Security governance and compliance for Citrix on Azure

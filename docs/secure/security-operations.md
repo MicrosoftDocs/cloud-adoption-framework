@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/24/2022
 ms.topic: conceptual
-ms.subservice: secure
 ms.custom: internal
 ---
 

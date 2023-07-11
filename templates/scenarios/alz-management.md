@@ -5,8 +5,7 @@ author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Management for {{Token-Name}} - {{Insert-accelerator-name}} landing zone accelerator

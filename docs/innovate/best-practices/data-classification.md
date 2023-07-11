@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Classify your organization's data

@@ -5,8 +5,7 @@ author: Prasad3017
 ms.author: martinek
 ms.date: 08/04/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank
+s.custom: e2e-azure-vmware, think-tank
 ---
 
 # Management and monitoring for Azure VMware Solution enterprise-scale scenario

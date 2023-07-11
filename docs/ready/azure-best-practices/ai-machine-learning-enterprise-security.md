@@ -5,8 +5,7 @@ author: jhirono
 ms.author: jhirono
 ms.date: 09/28/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Azure Machine Learning best practices for enterprise security

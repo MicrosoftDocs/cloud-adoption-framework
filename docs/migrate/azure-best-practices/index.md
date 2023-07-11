@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/28/2023
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal, seo-azure-migrate, UpdateFrequency2
+s.custom: internal, seo-azure-migrate, UpdateFrequency2
 ---
 
 # Azure cloud migration best practices checklist

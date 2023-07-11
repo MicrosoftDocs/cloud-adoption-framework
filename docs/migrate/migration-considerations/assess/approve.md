@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/09/2021
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Approve architecture changes before migration

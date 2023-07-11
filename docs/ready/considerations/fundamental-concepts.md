@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/16/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Azure fundamental concepts

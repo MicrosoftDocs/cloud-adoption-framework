@@ -5,8 +5,7 @@ author: zeinam
 ms.author: zeinam
 ms.date: 04/22/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Microsoft Purview deployment best practices for cloud-scale analytics

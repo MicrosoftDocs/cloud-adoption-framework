@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: martinek
 ms.date: 01/04/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-sap, engagement-fy23
+s.custom: think-tank, e2e-sap, engagement-fy23
 products: azure-monitor
 ---
 

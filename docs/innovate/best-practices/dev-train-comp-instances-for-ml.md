@@ -5,8 +5,7 @@ author: SudhandKumar
 ms.author: kumarsud
 ms.date: 01/20/2021
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Determine development, training, and compute instances for your machine learning model

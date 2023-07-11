@@ -5,8 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/15/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank
+s.custom: think-tank
 ---
 
 # Plan for traffic inspection

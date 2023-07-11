@@ -5,8 +5,7 @@ author: sikovatc
 ms.author: sikovatc
 ms.date: 04/27/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Role-based access control for DevOps tools

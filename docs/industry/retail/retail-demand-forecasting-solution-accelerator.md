@@ -5,8 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: internal, e2e-retail
+s.custom: internal, e2e-retail
 ---
 
 # Forecast customer demand with the Demand Forecasting Solution Accelerator

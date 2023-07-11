@@ -5,8 +5,7 @@ author: marvinbuss
 ms.author: mabuss
 ms.date: 01/23/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Scale cloud-scale analytics in Azure

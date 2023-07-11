@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/20/2019
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Create additional subscriptions to scale your Azure environment

@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/22/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank
+s.custom: e2e-azure-vmware, think-tank
 ---
 
 # Migrate workloads for Azure VMware Solution

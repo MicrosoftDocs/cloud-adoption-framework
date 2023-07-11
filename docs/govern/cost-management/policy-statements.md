@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/06/2023
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Cost Management sample policy statements

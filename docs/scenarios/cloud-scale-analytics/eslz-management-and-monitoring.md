@@ -5,8 +5,7 @@ author: christophermschmidt
 ms.author: chrschm
 ms.date: 11/25/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Management and monitoring

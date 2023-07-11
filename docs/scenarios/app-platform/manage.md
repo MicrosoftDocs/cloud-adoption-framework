@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-aks
+s.custom: think-tank, e2e-aks
 ---
 
 # Manage modern application platform clusters

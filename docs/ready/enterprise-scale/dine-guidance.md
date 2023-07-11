@@ -5,7 +5,6 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 12/01/2021
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom: think-tank
 ---
 # Adopt policy-driven guardrails

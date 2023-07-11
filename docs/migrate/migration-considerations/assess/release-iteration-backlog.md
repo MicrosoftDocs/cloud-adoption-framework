@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/20/2021
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Manage change in an incremental migration effort

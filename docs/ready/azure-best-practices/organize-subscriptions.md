@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/12/2021
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Organize and manage multiple Azure subscriptions

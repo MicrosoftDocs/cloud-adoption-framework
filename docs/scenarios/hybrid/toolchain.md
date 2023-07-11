@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/11/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank
+s.custom: e2e-hybrid, think-tank
 ---
 
 # Introduction to hybrid and multicloud products on Azure

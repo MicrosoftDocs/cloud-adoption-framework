@@ -5,8 +5,7 @@ author: Tshah2808
 ms.author: tanshah
 ms.date: 09/06/2022
 ms.topic: conceptual
-ms.subservice: ready
----
+--
 
 # Security control mapping with Azure landing zones
 

@@ -5,8 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 04/04/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-data-management, think-tank
+s.custom: e2e-data-management, think-tank
 ---
 
 # Azure Data Lake Storage key considerations

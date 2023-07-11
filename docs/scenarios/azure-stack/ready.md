@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Ready your cloud environment for Azure Stack Hub migration

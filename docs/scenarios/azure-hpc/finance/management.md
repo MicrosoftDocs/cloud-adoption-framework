@@ -4,8 +4,7 @@ description: Azure landing zones for HPC in finance don't have any specific cons
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ms.date: 11/11/2022
 ---
 

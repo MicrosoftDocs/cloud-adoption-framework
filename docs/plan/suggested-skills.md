@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: tozimmergren
 ms.date: 03/03/2023
 ms.topic: conceptual
-ms.subservice: plan
 ms.custom: internal, UpdateFrequency2
 ---
 

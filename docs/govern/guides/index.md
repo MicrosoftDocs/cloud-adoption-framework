@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/11/2022
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Cloud governance guides

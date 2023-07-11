@@ -5,7 +5,6 @@ author: matt-FFFFFF
 ms.author: tozimmergren
 ms.date: 02/03/2023
 ms.topic: conceptual
-ms.subservice: ready
 ms.custom: devx-track-terraform
 ---
 

@@ -5,8 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 05/17/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, UpdateFrequency.5
+s.custom: think-tank, UpdateFrequency.5
 ---
 
 # Plan for the Cloud Solution Provider service

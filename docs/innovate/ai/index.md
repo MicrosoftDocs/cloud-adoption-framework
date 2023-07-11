@@ -5,8 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate
+s.custom: think-tank, seo-caf-innovate
 keywords: What is the cloud adoption framework, CAF, cloud adoption framework, AI applications, cloud adoption lifecycle
 ---
 

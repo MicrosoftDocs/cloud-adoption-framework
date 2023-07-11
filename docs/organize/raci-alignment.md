@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/29/2021
 ms.topic: conceptual
-ms.subservice: organize
 ms.custom: internal, UpdateFrequency3
 ---
 

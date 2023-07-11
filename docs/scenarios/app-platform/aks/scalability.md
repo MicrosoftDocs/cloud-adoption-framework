@@ -5,8 +5,7 @@ author: xstabel
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-aks
+s.custom: think-tank, e2e-aks
 ---
 
 # Scalability considerations for Azure Kubernetes Service environments

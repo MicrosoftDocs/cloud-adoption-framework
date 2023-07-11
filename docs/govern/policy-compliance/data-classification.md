@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 11/12/2020
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # What is data classification?

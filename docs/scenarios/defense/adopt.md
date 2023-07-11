@@ -6,8 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
-ms.subservice: scenario
----
+--
 # Adopt for defense cloud adoption
 
 The adopt methodology focuses on defense workloads and falls in the mission domain of cloud adoption. Workloads are collections of resources that support a specific capability. The mission domain is cyclical. The domain iterates through the adopt, secure, and manage methodologies throughout the lifecycle of workloads.

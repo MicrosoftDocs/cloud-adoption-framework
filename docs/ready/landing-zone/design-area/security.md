@@ -5,8 +5,7 @@ author: timwarner-msft
 ms.author: timwarner
 ms.date: 06/21/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal, UpdateFrequency.5
+s.custom: internal, UpdateFrequency.5
 ---
 
 # Design area: Security

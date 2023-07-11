@@ -5,8 +5,7 @@ author: manu-kanwarpal
 ms.author: deeikele
 ms.date: 08/08/2022
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: internal
+s.custom: internal
 ---
 
 # Machine learning operations

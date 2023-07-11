@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-azure-vmware, think-tank
+s.custom: e2e-azure-vmware, think-tank
 ---
 
 # Azure landing zone review for Microsoft Azure VMware Solution

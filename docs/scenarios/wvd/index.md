@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/22/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Migrate or deploy Azure Virtual Desktop instances to Azure

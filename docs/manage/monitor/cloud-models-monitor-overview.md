@@ -5,8 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.subservice: manage
-ms.custom: think-tank, engagement-fy23, UpdateFrequency2
+s.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 

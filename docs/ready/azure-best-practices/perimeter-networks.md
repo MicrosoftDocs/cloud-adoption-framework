@@ -5,8 +5,7 @@ author: tracsman
 ms.author: martinek
 ms.date: 01/18/2023
 ms.topic: conceptual
-ms.subservice: ready
-ms.custom: think-tank, virtual-network
+s.custom: think-tank, virtual-network
 ---
 
 # Perimeter networks

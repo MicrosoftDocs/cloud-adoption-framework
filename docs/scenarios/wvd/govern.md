@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd
+s.custom: think-tank, e2e-avd
 ---
 
 # Governing an Azure Virtual Desktop environment

@@ -6,8 +6,7 @@ ms.author: likamrat
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022, ignite-2022, engagement-fy23
+s.custom: think-tank, e2e-hybrid, event-tier1-build-2022, ignite-2022, engagement-fy23
 ---
 
 # Azure Arc-enabled Kubernetes Azure landing zone sandbox

@@ -6,8 +6,7 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 01/04/2023
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank, e2e-avd, engagement-fy23
+s.custom: think-tank, e2e-avd, engagement-fy23
 products: azure-monitor
 ---
 

@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2018
 ms.topic: conceptual
-ms.subservice: manage
 ms.custom: internal
 ---
 

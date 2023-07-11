@@ -5,8 +5,7 @@ author: robbagby
 ms.author: robbag
 ms.date: 10/20/2022
 ms.topic: conceptual
-ms.subservice: govern
-ms.custom: internal, UpdateFrequency2
+s.custom: internal, UpdateFrequency2
 ---
 
 # Policy visibility in the deployment process

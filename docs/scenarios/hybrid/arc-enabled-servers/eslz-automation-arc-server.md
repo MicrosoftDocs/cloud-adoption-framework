@@ -5,8 +5,7 @@ author: DCMattyG
 ms.author: magarret
 ms.date: 10/07/2021
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+s.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
 # Automation disciplines for Azure Arc-enabled servers

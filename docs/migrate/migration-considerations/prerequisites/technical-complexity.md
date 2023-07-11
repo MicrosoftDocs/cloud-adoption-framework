@@ -6,8 +6,7 @@ ms.author: martinek
 ms.date: 09/27/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.subservice: migrate
-ms.custom: internal
+s.custom: internal
 ---
 
 # Prepare for technical complexity: Agile change management

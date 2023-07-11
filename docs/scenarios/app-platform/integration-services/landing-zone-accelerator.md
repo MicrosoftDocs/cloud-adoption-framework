@@ -5,8 +5,7 @@ author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/10/2023
 ms.topic: conceptual
-ms.subservice: caf-scenario-app-plat
----
+--
 
 # Azure Integration Services landing zone accelerator
 

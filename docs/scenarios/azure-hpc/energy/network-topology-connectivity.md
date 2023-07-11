@@ -4,8 +4,7 @@ description: Learn about network topology and connectivity considerations in the
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.subservice: scenario
-ms.custom: think-tank
+s.custom: think-tank
 ms.date: 11/11/2022
 ---
 
