@@ -3,7 +3,7 @@ title: Migrate an application to Azure App Service and SQL Database
 description: Use the Cloud Adoption Framework for Azure to learn how to refactor an application by migrating it to Azure App Service and Azure SQL Database.
 author: martinekuan
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -98,7 +98,7 @@ To run this scenario, Contoso must meet the following prerequisites:
 | Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
-| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](../azure-migration-guide/ready-alz.md). |
 
 ## Scenario steps
 
@@ -342,7 +342,7 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso assigns Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
+- After all resources are deployed, Contoso assigns Azure tags based on their [infrastructure planning](../azure-migration-guide/ready-alz.md).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This cost is deducted from the Enterprise Agreement.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they stay within the budgets established by their IT leadership.
 

@@ -41,7 +41,7 @@ The Contoso cloud team has the following goals for its migration to Azure DevOps
 - Team Foundation Server will be migrated to Azure DevOps Services.
 - Currently, Contoso has one Team Foundation Server collection, named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
 - The projects, work items, bugs, and iterations from the last year will be migrated to Azure DevOps Services.
-- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of the migration planning.
+- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](../azure-migration-guide/ready-alz.md) at the beginning of the migration planning.
 
 :::image type="content" source="./media/contoso-migration-tfs-vsts/architecture.png" alt-text="Diagram of the proposed architecture.":::
 
@@ -78,7 +78,7 @@ Contoso set up its subscriptions as described in [Manage subscriptions](contoso-
 
 ### Azure infrastructure
 
-Contoso set up its Azure infrastructure as described in [Deploy a migration infrastructure](./contoso-migration-infrastructure.md).
+Contoso set up its Azure infrastructure as described in [Deploy a migration infrastructure](../azure-migration-guide/ready-alz.md).
 
 ### On-premises Team Foundation Server instance
 

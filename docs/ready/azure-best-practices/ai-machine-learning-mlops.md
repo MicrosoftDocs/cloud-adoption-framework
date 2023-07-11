@@ -3,7 +3,7 @@ title: Machine learning operations
 description: Review best practices and recommendations from adopting machine learning operations in the enterprise with Azure Machine Learning.
 author: manu-kanwarpal
 ms.author: deeikele
-ms.date: 05/24/2021
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

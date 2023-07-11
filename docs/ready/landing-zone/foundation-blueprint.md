@@ -3,7 +3,7 @@ title: Deploy a CAF Foundation blueprint in Azure
 description: Learn how to deploy a CAF Foundation blueprint in Azure.
 author: martinekuan
 ms.author: martinek
-ms.date: 09/27/2019
+ms.date: 04/21/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

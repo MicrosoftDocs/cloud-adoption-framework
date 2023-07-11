@@ -74,7 +74,7 @@ Citrix DaaS enables secure access to Windows, Linux, and Web apps, and Windows a
 
 [Creating a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
 
-The [2021 Forrester study on the total economic impact of Microsoft Azure Virtual Desktop](https://azure.microsoft.com/resources/the-total-economic-impact-of-microsoft-azure-virtual-desktop-a-commissioned-study-conducted-by-forrester-consulting/) offers an analysis in which the following justifications are typically defendable:
+The [2021 Forrester study "The total economic impact of Microsoft Azure Virtual Desktop"](https://gearup.microsoft.com/download/b10aa03a-3e4e-4245-b97a-fbc88e3b2225) offers an analysis in which the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
