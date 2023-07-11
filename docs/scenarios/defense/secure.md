@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
---
+---
 # Secure for defense cloud adoption
 
 The secure methodology is a critical step in the mission domain of cloud adoption.

@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
---
+---
 # Ready for defense cloud adoption
 
 The ready methodology is the first step in the platform domain of cloud adoption.

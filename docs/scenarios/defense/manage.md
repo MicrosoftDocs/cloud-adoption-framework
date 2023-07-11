@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
---
+---
 # Manage for defense cloud adoption
 
 The manage methodology is in the mission domain of cloud adoption. It's the last methodology covered, but it isn't the end of cloud adoption.

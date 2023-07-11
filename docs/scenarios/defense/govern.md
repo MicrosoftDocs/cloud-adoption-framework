@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
---
+---
 # Govern for defense cloud adoption
 
 The govern methodology focuses on the platform domain. It affects your workload cost management, security baseline, identity access roles, and resource consistency parameters.

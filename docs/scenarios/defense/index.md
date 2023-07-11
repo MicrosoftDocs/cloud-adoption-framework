@@ -6,7 +6,7 @@ ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
---
+---
 # Introduction to the defense scenario
 
 The CAF Defense scenario is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national/regional security. Data must be current, secure, and available from the tactical edge to headquarters distributed around the globe. The defense scenario addresses the challenges mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal is to help accelerate the digital transformation efforts of defense organizations. The defense scenario is divided into the command, platform, and mission domains.

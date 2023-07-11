@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
---
+---
 
 # Centralized security operations with external identities for defense organizations
 
