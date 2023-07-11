@@ -28,7 +28,7 @@ Designing Azure VMware Solution network solutions is a complex endeavor. A solid
 ## Design area prioritization
 The four design areas are not independent of each other. Design decisions made for one area may limit the options available in other areas. It is recommended to tackle the four areas in the order they have been introduced in the previous section. 
 
-![figure1](media/network-design-guide-figure1.png) 
+![Figure1. Flowchart that defines the design area prioritization recommended in this guide.](media/network-design-guide-figure1.png) 
 *Design area prioritization recommended in this guide.*
 
 As shown in the flow chart, this guide advocates the following approach to network design for Azure VMware Solution.

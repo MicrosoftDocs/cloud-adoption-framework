@@ -19,7 +19,7 @@ Design Phase #3 is driven by the requirements of the applications running on Azu
 
 The flow chart below summarizes how to approach Phase #3:
  
-![figure16](media/network-design-guide-figure16.png) 
+![Figure16. Flowchart that shows the design decision making process for inbound Internet connectivity.](media/network-design-guide-figure16.png) 
 *Design Phase #3: Design outbound Internet connectivity based on where NVAs for application publishing will be hosted (Azure VMware Solution or Azure virtual network).*
 
 ## NVAs for application publishing hosted in an Azure virtual network

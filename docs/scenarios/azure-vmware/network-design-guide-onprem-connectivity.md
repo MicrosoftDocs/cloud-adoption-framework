@@ -23,7 +23,7 @@ This section describes the options supported by Azure VMware Solution for connec
 
 The options are presented in order of decreasing ability to meet the key requirements listed above. An option should be discarded, and the next one considered, only if it conflicts with non-negotiable constraints that exist in a specific scenario, as shown in the flowchart below:
    
-![figure6](media/network-design-guide-figure6.png)
+![Figure6. Flowchart that summarizes the design decision making process for connectivity to on-premises sites.](media/network-design-guide-figure6.png)
 *Design phase #1. How to select a hybrid connectivity option for Azure VMware Solution.*
 
 ## ExpressRoute Global Reach
@@ -31,7 +31,7 @@ ExpressRoute Global Reach is the default hybrid connectivity option supported by
 
 The figure below shows the network topology when Global Reach is used for connectivity with on-premises sites.
  
-![figure7](media/network-design-guide-figure7.png)
+![Figure7. Diagram that shows how ExpressRoute Global Reach enables connectivity to on-premises sites.](media/network-design-guide-figure7.png)
 *Hybrid connectivity with ExpressRoute Global Reach. Traffic between private clouds and on-premises sites does not transit through Azure VNets.*
 
 Detailed instructions on how to connect an Azure VMware Solution private cloud to a customer managed ExpressRoute circuit using Global Reach are available in [the official Azure VMware Solution documentation](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud).
@@ -45,13 +45,13 @@ Using Global Reach for connectivity with on-premises sites is not an option in s
   - ExpressRoute Global Reach is unavailable in the Azure region of the Azure VMware Solution private cloud and/or the meet-me location of the customer-managed ExpressRoute circuit. This is an ExpressRoute limitation for which no workaround exists. Please refer to the [official ExpressRoute documentation](/azure/expressroute/expressroute-global-reach#availability) for up-to-date information about Global Reach availability.
   - Non-negotiable network security requirements. If a firewall device cannot be deployed at the on-premises side of the customer-managed ExpressRoute circuit, using Global Reach exposes all Azure VMware Solution network segments, including management networks (vCenter Server and NSX-T Manager), to the entire network connected to the circuit. The most typical scenario where this issue arises is customer-managed ExpressRoute circuits implemented on top of MPLS network services (aka [ExpressRoute "any-to-any" connectivity model](/azure/expressroute/expressroute-connectivity-models)), as shown in the figure below.
  
-![figure8](media/network-design-guide-figure8.png)
+![Figure8. Diagram that shows why ExpressRoute Global Reach may prevent traffic inspection.](media/network-design-guide-figure8.png)
 *ExpressRoute (ER) connectivity implemented on top of MPLS IPVPNs makes it impossible to deploy firewalls in a single location/facility to inspect all traffic to/from Azure VMware Solution. Typically, customers that use MPLS networks deploy firewalls in large datacenters, not in all MPLS connected sites (which can be small branches/offices/stores).*
 
 ## IPSec VPNs
 Connectivity between Azure VMware Solution private clouds and on-premises sites can be implemented by routing traffic through a "transit" virtual network in Azure. The transit network is connected to the Azure VMware Solution private cloud through the managed ExpressRoute circuit. The transit virtual network is connected to the on-premises site using an IPSec VPN, as shown in the diagram below.
 
-![figure9](media/network-design-guide-figure9.png)
+![Figure9. General architecture for IPSec connectivity.](media/network-design-guide-figure9.png)
 *The IPSec VPN connectivity option covered in this section. Traffic between Azure VMware Solution private clouds and on-premises sites is routed through a transit virtual network in Azure.*
 
 Implementing IPSec connectivity between on-premises sites and transit VNets entails three design decisions:
@@ -59,7 +59,7 @@ Implementing IPSec connectivity between on-premises sites and transit VNets enta
 2. Where to host the virtual devices that terminate the IPSec tunnel on the Azure side. The available options are using a customer-managed virtual network or a Virtual WAN hub. 
 3. Which virtual device terminates the IPSec tunnel on the Azure side. The choice of the device also determines the required Azure configuration to route traffic between the IPSec tunnel and the Azure VMware Solution managed circuit. The available options are native Azure VPN gateway or 3rd party IPSec NVAs.
 
-![figure9-1](media/network-design-guide-figure9-1.png)
+![Figure9-1. Flowchart that summarizes the design decision making process for IPSec connectivity.](media/network-design-guide-figure9-1.png)
 *Design process for IPSec connectivity.*
 
 The criteria that drive these design decisions are covered next.
@@ -68,15 +68,15 @@ The criteria that drive these design decisions are covered next.
 This guide strongly advocates considering the three available options for the VPN underlay in the order they are presented below. 
 
 - **Internet connectivity**. An internet connection is used at the on-premises site to reach the edge of the Microsoft network and the public IP of a VPN device hosted in the transit virtual network, which serves as the remote endpoint of the IPSec tunnel. Due to its low complexity and cost, internet connectivity should be always tested and assessed from a performance standpoint (achievable IPSec throughput, see the “IPSec bandwidth considerations” section below). It should be dismissed only when the observed performance is too low and/or not consistent over time.
-![figure10](media/network-design-guide-figure10.png)
+![Figure10. Internet connection as the IPSec tunnel underlay.](media/network-design-guide-figure10.png)
 *Internet connection as the IPSec tunnel underlay.*
 
 - **ExpressRoute "Microsoft" peering**: The ExpressRoute "Microsoft" peering provides layer-3 connectivity to public Azure endpoints over dedicated links. Just like internet connections, it allows reaching the public IP of a VPN device hosted in the transit virtual network, which serves as the remote endpoint of the IPSec tunnel. This option should be dismissed only when the [Microsoft peering's routing requirements](/azure/expressroute/expressroute-routing#ip-addresses-used-for-microsoft-peering) cannot be met.
-![figure11](media/network-design-guide-figure11.png)
+![Figure11. ExpressRoute "Microsoft" peering as the IPSec tunnel underlay.](media/network-design-guide-figure11.png)
 *ExpressRoute "Microsoft" peering as the IPSec tunnel underlay.*
 
 - **ExpressRoute "Private" peering**: The ExpressRoute "Private" peering provides layer-3 connectivity between an on-premises site and Azure virtual networks over dedicated links. As such, it allows establishing an IPSec tunnel from the on-premises site towards the private IP address of a VPN device hosted in a virtual network. The ExpressRoute "Private" peering may introduce bandwidth limitations (due to the presence of the ExpressRoute Gateway in the transit virtual network, which is in the data path unless [ExpressRoute FastPath](/azure/expressroute/about-fastpath) can be used) and requires more complex routing configuration on the on-premises side (see [this article](/azure/vpn-gateway/site-to-site-vpn-private-peering?toc=%2Fazure%2Fexpressroute%2Ftoc.json) for more details).
-![figure12](media/network-design-guide-figure12.png)
+![Figure12. ExpressRoute "Private" peering as the IPSec tunnel underlay.](media/network-design-guide-figure12.png)
 *ExpressRoute "Private" peering as the IPSec tunnel underlay.*
 
 ### IPSec VPN design decision #2: Customer-managed virtual network vs. Virtual WAN hub
@@ -116,7 +116,7 @@ The two options provide different trade-offs between performance, cost (i.e. req
 ### Single virtual network
 In the single virtual network approach, both the private cloud's managed circuit and the customer-owned circuit are connected to the same ExpressRoute gateway, typically the hub network. Traffic between the private cloud and the on-premises site can be routed through firewall NVAs deployed in the hub network. The single virtual network architecture is shown in the figure below.
  
-![figure13](media/network-design-guide-figure13.png)
+![Figure13. Diagram that shows the single virtual network option for ExpressRoute transit.](media/network-design-guide-figure13.png)
 *The single virtual network option for ExpressRoute transit.*
 
 The control plane and the data plane are implemented as follows.
@@ -126,7 +126,7 @@ The control plane and the data plane are implemented as follows.
 ### Auxiliary virtual network
 An auxiliary virtual network can be used to host a second ExpressRoute gateway, only connected to the private cloud's managed circuit. By connecting the private cloud's managed circuit and the customer-managed circuit to different ExpressRoute gateways, and injecting proper routes into them via Route Server instances, it is possible to granularly control route propagation between the private cloud and the on-premises site. Announcing supernets is no longer necessary (as it is the case for the single virtual network option covered in the previous section). Management overhead for UDR's in the GatewaySubnet is also reduced. This approach allows routing traffic between the private cloud and the on-premises site through firewall NVAs in the hub virtual network. The auxiliary virtual network implementation option is shown in the figure below.
  
-![figure14](media/network-design-guide-figure14.png)
+![Figure14. Diagram that shows the auxiliary virtual network implementation option.](media/network-design-guide-figure14.png)
 *The auxiliary virtual network implementation option.*
 
 The control plane and the data plane are implemented as follows.

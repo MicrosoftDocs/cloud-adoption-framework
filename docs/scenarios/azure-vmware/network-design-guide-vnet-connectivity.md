@@ -16,7 +16,7 @@ Azure VMware Solution private clouds connect to Azure virtual networks through m
 
 Design Phase #2 depends on the option selected in selected in [Design Phase #1](network-design-guide-onprem-connectivity.md) for on-premises connectivity. In fact, the managed ExpressRoute circuit that connects a private cloud to an Azure virtual network may also play a role in connectivity with on-premises sites. This is the case when [Transit over ExpressRoute Private peering](network-design-guide-onprem-connectivity.md#transit-over-expressroute-private-peering) is chosen in Design Phase #1, as shown in the flow chart below.
   
-![figure15](media/network-design-guide-figure15.png) 
+![Figure15. Flowchart that shows the design decision making process for connectivity to Azure Virtual Networks.](media/network-design-guide-figure15.png) 
 *Design Phase #2: Connectivity with Azure virtual networks based on the option connectivity with on-premises sites chosen in Design Phase #1.*
 
 ## Connectivity with Azure virtual networks when "Transit over ExpressRoute Private Peering" is used for on-prem traffic

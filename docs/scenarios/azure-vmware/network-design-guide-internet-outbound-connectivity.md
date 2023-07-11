@@ -20,7 +20,7 @@ Almost invariably, outbound Internet access must be secured, by routing connecti
 
 Design phase #4 has a dependency on Phase #3. If ["Public IPs to the NSX-T edge"](network-design-guide-internet-inbound-connectivity.md#nvas-for-application-publishing-hosted-in-azure-vmware-solution-public-ips-on-the-nsx-t-edge) has been selected as the inbound Internet connectivity option, then it must be used for outbound connectivity too. All outbound connections initiated by virtual machines running on Azure VMware Solution will be managed on the NSX-T edge and Source-NATted behind addresses in the Azure Public IP Prefix associated with the private cloud's NSX-T edge. The flow chart below describes how to approach Design Phase #4.
  
-![figure17](media/network-design-guide-figure17.png) 
+![Figure17. Flowchart that shows the design decision making process for outbound Internet connectivity.](media/network-design-guide-figure17.png) 
 *Design Phase #4: Outbound Internet connectivity.*
 
 ## Default routes and outbound Internet connectivity in Azure VMware Solution
@@ -32,7 +32,7 @@ Default routes determine how outbound Internet connections initiated by virtual 
 
 Outbound internet connectivity for workload segments can be configured through the Azure portal, as shown in the figure below. 
 
-![figure18](media/network-design-guide-figure18.png) 
+![Figure18. Outbound Internet connectivity options for workload segments.](media/network-design-guide-figure18.png) 
 *Outbound Internet connectivity options for workload segments. Option #1 disables the platform-managed Internet breakout. Use this option when a custom default route is announced over the Azure VMware Solution ExpressRoute circuit from Azure or on-premises sites. Option #2 provides a platform-managed Internet breakout with a managed NAT pool. Option #3 provides a platform-managed internet breakout with user-managed NAT pool.*
 
 ### Use Azure VMware Solution managed source-NAT
@@ -48,7 +48,7 @@ When Public IPs to the NSX-T edge are configured, a default route that forwards 
 ### Originate default route from Azure (customer-managed virtual network or Virtual WAN)
 Internet-bound traffic emitted by Azure VMware Solution virtual machines can be routed to an Azure-native NVA by announcing a default route over the private cloud's managed ExpressRoute circuit. The private cloud's T0 gateways will honor the default route received from Azure and will send Internet-bound traffic to the next hop specified by the received default route. If the Internet edge NVAs in Azure support BGP, then they can be used as BGP speakers to originate the default route. If the NVAs do not support BGP (or cannot be used as BGP speakers due to security-related constraints), additional NVAs can be deployed to act as BGP speakers. A typical scenario that requires additional BGP-capable NVAs is when the Azure Internet edge is Azure Firewall (Azure Firewall does not support BGP). The resulting network topology is shown in the figure below.
 
-![figure19](media/network-design-guide-figure19.png)  
+![Figure19. Default route origination from Azure virtual networks.](media/network-design-guide-figure19.png)  
 *Default route origination from Azure virtual networks.*
 
 ## Next Steps
