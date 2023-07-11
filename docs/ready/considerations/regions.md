@@ -3,7 +3,7 @@ title: Landing zone regions
 description: Overview of how Azure Landing Zones use regions, and how to add or move regions.
 author: johndowns
 ms.author: jodowns
-ms.date: 07/10/2023
+ms.date: 07/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -108,7 +108,7 @@ You can now connect application landing zone spokes via Virtual Network Connecti
 
 ## Move your Azure estate to a new region
 
-Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into an Azure region in a neighboring country/region, and then a new Azure region launches in your home country/region. You might elect to move all of your workloads to the new region for latency or data residency reasons.
+Occasionally, you might need to move your entire Azure estate to a different region. For example, suppose you deployed your landing zone and workloads into an Azure region in a neighboring country/region, and then a new Azure region launches in your home country/region. You might elect to move all of your workloads to the new region to improve the communication latency, or to comply with data residency requirements.
 
 > [!NOTE]
 > This document only provides information about migrating the landing zone components of your estate. For more information about relocating your workload components, see [Relocate cloud workloads](../../relocate/index.md).
@@ -121,15 +121,16 @@ Most of the globally deployed landing zone configuration doesn't typically need 
 
 Region-specific landing zone resources often require more consideration, because some Azure resources can't be moved between regions. Consider the following approach:
 
-- **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone).
-- **Migrate your workloads from the source region to the destination region.** During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
-- **Decommission the resources in the source region after the migration is complete.**
+1. **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone).
+1. **Deploy centralized components in the destination region.** For example, deploy a new Log Analytics workspace in your destination region so that workloads can begin to use the new component when they're migrated.
+1. **Migrate your workloads from the source region to the destination region.** During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
+1. **Decommission the resources in the source region after the migration is complete.**
 
 Consider the following tips when migrating landing zone resources across regions:
 
-- **ExpressRoute:** Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other SKUs.
-- **Azure Automation:** Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
 - **Use infrastructure as code:** Complex configuration, such as rules for Azure Firewall, can be exported and reimported by using Bicep, ARM templates, Terraform, scripting, or a similar approach.
+- **Azure Automation:** Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
+- **ExpressRoute:** Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other ExpressRoute SKUs.
 
 ## Next steps
 
