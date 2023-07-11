@@ -115,7 +115,7 @@ Occasionally, you might need to move your entire Azure estate to a different reg
 
 ### Global landing zone configuration
  
-Most of the globally deployed landing zone configuration doesn't typically need to be modified when you move regions. However, ensure that you check for any policy definitions that restrict region deployments and update the policy to allow deployments into the new region.
+Most of the globally deployed landing zone configuration doesn't typically need to be modified when you move regions. However, ensure that you check for any policy assignments that restrict region deployments and update the policy to allow deployments into the new region.
 
 ### Regional landing zone resources
 
