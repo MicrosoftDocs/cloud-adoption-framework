@@ -5,7 +5,6 @@ author: DaFitRobsta
 ms.author: Rolightn
 ms.date: 11/15/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---

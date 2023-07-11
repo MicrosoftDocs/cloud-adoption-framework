@@ -5,7 +5,6 @@ author: fguerri
 ms.author: fguerri
 ms.date: 02/09/2023
 ms.topic: conceptual
-ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---

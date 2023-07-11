@@ -6,7 +6,6 @@ ms.author: martinek
 ms.reviewer: ssumner
 ms.date: 1/04/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: internal
 ---

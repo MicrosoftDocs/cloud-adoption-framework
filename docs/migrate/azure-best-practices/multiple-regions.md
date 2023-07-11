@@ -6,7 +6,6 @@ ms.author: dermar
 ms.reviewer: tozimmergren
 ms.date: 11/18/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: internal, engagement-fy23
 ---

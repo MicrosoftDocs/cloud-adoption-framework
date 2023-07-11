@@ -5,7 +5,6 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank, references_regions
 ---

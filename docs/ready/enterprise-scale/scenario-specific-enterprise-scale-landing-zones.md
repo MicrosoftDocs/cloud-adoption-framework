@@ -5,7 +5,6 @@ author: mosabami
 ms.author: aayodeji
 ms.date: 07/13/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---

@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: business value, business value definition, what is business value, business values, business innovation

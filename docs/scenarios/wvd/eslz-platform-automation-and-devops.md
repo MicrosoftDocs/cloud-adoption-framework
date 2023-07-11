@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/22/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---

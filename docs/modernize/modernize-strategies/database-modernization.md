@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/02/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ms.custom: seo-caf-modernize
 keywords: collect data, migrate data, data migration, data modernization

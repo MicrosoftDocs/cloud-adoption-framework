@@ -5,7 +5,6 @@ author: sitarant
 ms.author: sitarant
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---

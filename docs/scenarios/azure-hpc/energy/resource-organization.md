@@ -4,7 +4,6 @@ description: This article provides naming and tagging recommendations to help yo
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/14/2022

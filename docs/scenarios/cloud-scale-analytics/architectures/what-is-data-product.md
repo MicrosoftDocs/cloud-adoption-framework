@@ -5,7 +5,6 @@ author: sasever
 ms.author: sasever
 ms.date: 04/05/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---

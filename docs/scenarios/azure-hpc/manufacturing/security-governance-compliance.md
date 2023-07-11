@@ -4,7 +4,6 @@ description: Learn about governance for HPC workloads.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/08/2022

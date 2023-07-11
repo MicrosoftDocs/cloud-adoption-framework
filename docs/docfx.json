@@ -61,7 +61,35 @@
         }
       }
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "caf"
+      },
+      "ms.subservice": {
+        "strategy/**/*.md": "caf-methodology-strategy",
+        "plan/**/*.md": "caf-methodology-plan",
+        "ready/**/*.md": "caf-methodology-ready",
+        "adopt/**/*.md": "caf-methodology-adopt",
+        "migrate/**/*.md": "caf-methodology-adopt",
+        "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
+        "govern/**/*.md": "caf-methodology-govern",
+        "manage/**/*.md": "caf-methodology-manage",
+        "secure/**/*.md": "caf-methodology-secure",
+        "organize/**/*.md": "caf-methodology-organize",
+        "ready/landing-zone/**/*.md": "caf-alz",
+        "ready/enterprise-scale/**/*.md": "caf-alz",
+        "ready/control-mapping/**/*.md": "caf-alz",
+        "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
+        "scenarios/azure-hpc/**/*.md": "caf-scenario-hpc",
+        "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
+        "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
+        "scenarios/defense/**/*.md": "caf-scenario-defense",
+        "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
+        "scenarios/sap/**/*.md": "caf-scenario-sap",
+        "scenarios/wvd/**/*.md": "caf-scenario-virtual-desktop",
+        "industry/retail/**/*.md": "caf-scenario-retail"
+      }
+    },
     "template": [],
     "dest": "cloud-adoption-framework",
     "markdownEngineName": "markdig"

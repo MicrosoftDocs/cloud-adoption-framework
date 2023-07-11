@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 10/4/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework

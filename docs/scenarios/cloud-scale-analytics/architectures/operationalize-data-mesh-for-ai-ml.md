@@ -5,7 +5,6 @@ author: hifaz1012
 ms.author: hifazhassan 
 ms.date: 02/2/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---

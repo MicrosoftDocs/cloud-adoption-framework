@@ -5,7 +5,6 @@ author: texnokot
 ms.author: martinek
 ms.date: 08/01/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---

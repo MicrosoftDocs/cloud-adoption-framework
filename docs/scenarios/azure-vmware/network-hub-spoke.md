@@ -5,7 +5,6 @@ author: sablair
 ms.author: martinek
 ms.date: 02/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-azure-vmware, think-tank
 ---

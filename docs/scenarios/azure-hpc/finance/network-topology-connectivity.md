@@ -4,7 +4,6 @@ description: This finance HPC guidance builds on considerations and recommendati
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/11/2022

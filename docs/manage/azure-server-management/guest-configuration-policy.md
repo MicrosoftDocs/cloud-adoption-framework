@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: timwarner
 ms.date: 01/06/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: internal, devx-track-azurepowershell
 ---

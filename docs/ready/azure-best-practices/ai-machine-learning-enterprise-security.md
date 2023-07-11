@@ -5,7 +5,6 @@ author: jhirono
 ms.author: jhirono
 ms.date: 09/28/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---

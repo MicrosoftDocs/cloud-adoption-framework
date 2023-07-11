@@ -4,7 +4,6 @@ description: Learn about identity and access management for high-performance com
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/09/2022

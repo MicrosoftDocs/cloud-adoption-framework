@@ -5,7 +5,6 @@ author: MarkSimos
 ms.author: mas
 ms.date: 08/02/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: think-tank, UpdateFrequency3
 ---

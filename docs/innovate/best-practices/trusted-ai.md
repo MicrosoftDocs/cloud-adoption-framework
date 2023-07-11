@@ -5,7 +5,6 @@ author: msteller-Ai
 ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: think-tank
 ---

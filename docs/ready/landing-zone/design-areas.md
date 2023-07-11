@@ -6,7 +6,6 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/08/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---

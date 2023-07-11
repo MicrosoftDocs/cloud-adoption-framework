@@ -5,7 +5,6 @@ author: petpipe-msft
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---

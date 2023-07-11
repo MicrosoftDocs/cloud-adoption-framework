@@ -5,7 +5,6 @@ author: mpvenables
 ms.author: martinek
 ms.date: 04/19/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-azure-vmware, think-tank
 ---

@@ -5,7 +5,6 @@ author: Mahesh-MSFT
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-azure-vmware
 ---

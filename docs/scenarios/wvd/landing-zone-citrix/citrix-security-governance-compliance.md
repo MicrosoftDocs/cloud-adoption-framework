@@ -5,7 +5,6 @@ author: BenMartinBaur
 ms.author: nataliak
 ms.date: 02/06/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---

@@ -5,7 +5,6 @@ author: nkpatterson
 ms.author: martinek
 ms.date: 1/11/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: think-tank
 ---

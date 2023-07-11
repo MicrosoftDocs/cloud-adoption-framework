@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/07/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: modernize
 ms.custom: internal, seo-caf-modernize
 keywords: envision, motivations, approach, modernization, cloud adoption framework

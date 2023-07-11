@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/27/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: digital economy, what is innovation, innovation process, innovation methodology

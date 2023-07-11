@@ -6,7 +6,6 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 10/18/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: 
 - internal

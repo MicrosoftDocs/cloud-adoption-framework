@@ -5,7 +5,6 @@ author: likamrat
 ms.author: martinek
 ms.date: 05/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---

@@ -5,7 +5,6 @@ author: njray
 ms.author: martinek
 ms.date: 12/27/2018
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: think-tank
 ---

@@ -5,7 +5,6 @@ author: nillsf
 ms.author: martinek
 ms.date: 11/15/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---

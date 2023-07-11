@@ -5,7 +5,6 @@ author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 05/19/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---

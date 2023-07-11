@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/21/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: internal, UpdateFrequency2
 ---

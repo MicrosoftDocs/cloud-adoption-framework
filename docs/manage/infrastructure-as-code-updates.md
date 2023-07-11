@@ -5,7 +5,6 @@ author: brsteph
 ms.author: bstephenson
 ms.reviewer: tozimmergren
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.date: 03/03/2023
 ---

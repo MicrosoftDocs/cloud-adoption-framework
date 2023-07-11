@@ -5,7 +5,6 @@ author: Rajani-Janaki-Ram
 ms.author: erd
 ms.date: 09/16/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ---

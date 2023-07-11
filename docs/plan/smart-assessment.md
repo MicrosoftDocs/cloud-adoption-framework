@@ -5,7 +5,6 @@ author: microsoftsonny
 ms.author: martinek
 ms.date: 08/26/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: think-tank, UpdateFrequency2
 ---

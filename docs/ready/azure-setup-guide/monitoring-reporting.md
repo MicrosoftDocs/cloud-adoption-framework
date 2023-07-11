@@ -6,7 +6,6 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 12/13/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
 products: azure-monitor

@@ -5,7 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 03/08/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: internal, UpdateFrequency2, engagement-fy23
 ---

@@ -5,7 +5,6 @@ author: doodlemania2
 ms.author: dermar
 ms.date: 08/16/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: internal
 ---

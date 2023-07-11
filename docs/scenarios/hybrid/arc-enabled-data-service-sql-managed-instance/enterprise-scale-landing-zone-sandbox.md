@@ -6,7 +6,6 @@ ms.author: likamrat
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid, ignite-2022, engagement-fy23
 ---

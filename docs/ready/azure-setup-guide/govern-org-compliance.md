@@ -5,7 +5,6 @@ author: tvuylsteke
 ms.author: martinek
 ms.date: 01/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---

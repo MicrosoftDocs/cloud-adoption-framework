@@ -5,7 +5,6 @@ author: MarvinBuss
 ms.author: mabuss
 ms.date: 01/11/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank
 ---

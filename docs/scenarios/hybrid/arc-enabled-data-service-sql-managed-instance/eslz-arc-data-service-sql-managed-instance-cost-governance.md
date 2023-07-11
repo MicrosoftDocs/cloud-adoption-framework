@@ -5,7 +5,6 @@ author: mrhoads
 ms.author: mirhoads
 ms.date: 09/22/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank, ignite-2022
 ---

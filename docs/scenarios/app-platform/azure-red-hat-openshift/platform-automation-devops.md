@@ -5,7 +5,6 @@ author: dmossberg
 ms.author: daniem
 ms.date: 08/16/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---

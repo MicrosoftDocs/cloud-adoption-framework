@@ -5,7 +5,6 @@ author: mpvenables
 ms.author: mas
 ms.date: 06/16/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: secure
 ms.custom: internal
 ---

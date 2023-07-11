@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/10/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: internal, seo-azure-migrate
 ---

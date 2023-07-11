@@ -5,7 +5,6 @@ author: mpvenables
 ms.author: martinek
 ms.date: 07/28/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: internal, UpdateFrequency2
 ---

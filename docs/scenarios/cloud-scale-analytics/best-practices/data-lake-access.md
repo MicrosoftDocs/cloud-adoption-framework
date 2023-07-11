@@ -5,7 +5,6 @@ author: mboswell
 ms.author: mboswell
 ms.date: 01/05/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---

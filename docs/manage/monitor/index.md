@@ -6,7 +6,6 @@ ms.reviewer: tozimmergren
 ms.date: 06/20/2023
 ms.author: tozimmergren
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor

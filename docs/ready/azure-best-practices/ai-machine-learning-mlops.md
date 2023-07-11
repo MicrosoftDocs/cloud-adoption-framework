@@ -5,7 +5,6 @@ author: manu-kanwarpal
 ms.author: deeikele
 ms.date: 08/08/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal
 ---

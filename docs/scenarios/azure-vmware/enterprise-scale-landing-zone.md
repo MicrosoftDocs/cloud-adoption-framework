@@ -6,7 +6,6 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
 ---

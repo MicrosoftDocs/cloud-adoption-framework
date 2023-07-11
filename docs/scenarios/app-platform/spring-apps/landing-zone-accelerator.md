@@ -5,7 +5,6 @@ author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
-ms.service: caf
 ms.subservice: caf-scenario-spring-apps
 ms.custom: devx-track-terraform
 ---

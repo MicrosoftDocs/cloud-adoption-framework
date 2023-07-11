@@ -6,7 +6,6 @@ ms.author: mubaluny
 ms.reviewer: tozimmergren
 ms.date: 05/23/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---

@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 12/13/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: adopt
 ms.custom: internal, seo-caf-adopt
 keywords: cloud adoption, approaches, strategy, cloud migration, cloud modernization, cloud adoption framework

@@ -5,7 +5,6 @@ author: mgoedtel
 ms.author: magoedte
 ms.date: 01/24/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: think-tank, UpdateFrequency2
 products: azure-monitor

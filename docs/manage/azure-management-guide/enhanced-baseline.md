@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/12/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: manage
 ms.custom: internal, fasttrack-edit, AQC
 ---

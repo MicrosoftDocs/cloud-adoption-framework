@@ -5,7 +5,6 @@ author: Echowan
 ms.author: Echowan
 ms.date: 04/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario 
 ms.custom: think-tank, e2e-data-management
 ---

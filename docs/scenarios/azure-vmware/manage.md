@@ -5,7 +5,6 @@ author: sbkuehn
 ms.author: martinek
 ms.date: 08/28/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-azure-vmware
 ---

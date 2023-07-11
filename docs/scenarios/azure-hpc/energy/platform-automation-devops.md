@@ -4,7 +4,6 @@ description: Learn about platform automation considerations in the Azure landing
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/10/2022

@@ -5,7 +5,6 @@ author: jtracey93
 ms.author: tozimmergren
 ms.date: 04/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
