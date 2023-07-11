@@ -18,19 +18,19 @@ This section summarizes some fundamental concepts about Azure VMware Solution ne
 Azure VMware Solution runs on bare-metal VMware ESXi nodes deployed in Azure datacenters and are attached to a physical network. Just like how ExpressRoute circuits allow Azure customers to establish layer-3 connectivity between their cross-premises networks and Azure virtual networks, a dedicated ExpressRoute implementation provides layer-3 connectivity between physical ESXi nodes and Azure virtual networks.
 When an Azure VMware Solution Private Cloud is provisioned, an associated ExpressRoute circuit is also instantiated in a Microsoft-managed subscription. The private cloud's owner can then connect the circuit to one or more ExpressRoute Virtual Network Gateways in Azure virtual networks, by redeeming authorization keys for the circuit (the same procedure used to create connections between ExpressRoute Gateways and customer-managed circuits). Please refer to the [Azure VMware Solution official documentation](/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal#connect-to-azure-virtual-network-with-expressroute) for detailed instructions.
  
-![figure2](media/network-design-guide-figure2.png) 
+![Figure2. Diagram that shows how Azure VMware Solution private clouds connect to Azure Virtual Networks over ExpressRoute circuits.](media/network-design-guide-figure2.png) 
 *Azure VMware Solution uses a dedicated ExpressRoute implementation to provide layer-3 connectivity between Azure virtual networks and the physical network to which the VMWare ESXi clusters are attached. The VMware ESXi clusters are hosted in the same Microsoft datacenter facilities that host the Azure platform.*
 
 ## What is the role played by ExpressRoute Global Reach?
 
 An Azure ExpressRoute Gateway cannot be used to route traffic between on-premises locations connected to it over different circuits. This limitation applies to the Azure VMware Solution dedicated ExpressRoute implementation too, as shown in the figure below.
  
-![figure3](media/network-design-guide-figure3.png) 
+![Figure3. Diagram that shows that ExpressRoute does not support routing traffic between different circuits connected to the same gateway.](media/network-design-guide-figure3.png) 
 *ExpressRoute does not support routing traffic between different circuits connected to the same gateway.*
 
 Global Reach is an ExpressRoute feature that allows connecting two circuits, so that the networks connected to each circuit can route traffic to each other over the Microsoft backbone. Global Reach is available in the Azure VMware Solution dedicated ExpressRoute implementation. As such, Azure VMware Solution managed ExpressRoute circuits can be connected to customer-managed circuits, providing layer-3 connectivity between on-premises networks and Azure VMware Solution private clouds.
  
-![figure4](media/network-design-guide-figure4.png) 
+![Figure4. Diagram that shows how ExpressRoute Global Reach provides direct, layer-3 connectivity to on-premises sites over ExpressRoute.](media/network-design-guide-figure4.png) 
 *ExpressRoute Global Reach provides direct, layer-3 connectivity over ExpressRoute for on-premises sites.*
 
 ## Azure VMware Solution network topology
@@ -41,14 +41,14 @@ An Azure VMware Solution private cloud infrastructure includes several network s
 
 The network topology of an Azure VMware solution private cloud is shown in the figure below.
 
-![figure4-1](media/network-design-guide-figure4-1.png) 
+![figure4-1. Network topology of an Azure VMware Solution private cloud.](media/network-design-guide-figure4-1.png) 
 *Network topology of an Azure VMware Solution private cloud.*
 
 ## Dynamic routing in Azure VMware Solution
 
 Azure VMware Solution private clouds connect to Azure virtual networks and remote sites over the managed ExpressRoute circuit. BGP is used for dynamic route exchange, as shown in the figure below.
  
-![figure5](media/network-design-guide-figure5.png) 
+![Figure5. Diagram that shows how route propagation works in Azure VMware Solution.](media/network-design-guide-figure5.png) 
 *Dynamic routing in Azure VMware Solution.*
 
 In the standard topology shown in the above figure:
