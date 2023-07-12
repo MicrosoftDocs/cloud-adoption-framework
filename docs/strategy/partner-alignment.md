@@ -74,9 +74,9 @@ During a typical FastTrack for Azure engagement, Microsoft helps to define the b
 
 [Azure Migrate and Modernize](https://azure.microsoft.com/migration/migration-modernization-program/) provides a mixture of technical skill building, step-by-step guidance, free migration tools, and potential offers to reduce migration costs.
 
-The program uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
+Microsoft uses FastTrack for Azure and Azure solution providers to improve customer success during migration.
 
-Watch this short video to get an overview.
+Watch this short video of how Azure Migrate and Modernize can help you:
 
 <!-- markdownlint-disable MD034 -->
 
