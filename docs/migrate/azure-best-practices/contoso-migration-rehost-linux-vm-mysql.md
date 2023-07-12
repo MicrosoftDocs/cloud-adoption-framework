@@ -58,7 +58,7 @@ Contoso will complete the migration process as follows:
 To migrate the web VM:
 
 - As a first step, Contoso sets up the Azure and on-premises infrastructure needed to deploy Azure Migrate.
-- The company already has the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so it just needs to add and configure the replication of the VMs through the Azure Migrate: Server Migration tool.
+- The company already has the [Azure infrastructure](../azure-migration-guide/ready-alz.md) in place, so it just needs to add and configure the replication of the VMs through the Azure Migrate: Server Migration tool.
 - With everything prepared, Contoso can start replicating the VM.
 - After replication is enabled and working, Contoso will complete the move by using Azure Migrate.
 
@@ -85,7 +85,7 @@ Here's what Contoso needs for this scenario.
 | Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control (RBAC)](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](../azure-migration-guide/ready-alz.md). |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
@@ -110,7 +110,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
 To set up the components, Contoso admins follow these steps:
 
-1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
+1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](../azure-migration-guide/ready-alz.md).
 
 1. Provision the Azure Migrate: Server Migration tool.
 
@@ -431,6 +431,6 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](./contoso-migration-infrastructure.md#set-up-tagging) deployment.
+- After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure](../azure-migration-guide/ready-alz.md) deployment.
 - There are no licensing issues for the Contoso Ubuntu servers.
 - Contoso will use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure the company stays within budgets established by the IT leadership.
