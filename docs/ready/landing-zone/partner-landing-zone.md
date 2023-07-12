@@ -17,7 +17,7 @@ We'll show you how to find a partner and what to expect from your partner.
 
 There are two options to find an ALZ partner (*see image*).
 
-- *Option 1* - use the Azure Migration and Modernization Program.
+- *Option 1* - use Azure Migrate and Modernization.
 - *Option 2* - find a partner offer for a landing zone in our marketplace.
 
 
