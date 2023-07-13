@@ -79,7 +79,7 @@ Learn more about the [management](../../../ready/landing-zone/design-area/manage
 
 ### Design recommendations for business continuity and disaster recovery
 
-- Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates. If using a System Assigned Managed identity, this identity and its associated roles and assignments, such as Azure Key Vault secret access, will be removed. If using a User Managed Identity, these assignments will remain, allowing you to associate it back to API Management without loss of access.
+- Use a [user-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) for API Management to prevent downtime during redeployment from ARM templates. If using a system-assigned managed identity, this identity and its associated roles and assignments, such as Azure Key Vault secret access, will be removed if the resource is removed. If using a user-assigned managed identity, these assignments will remain, allowing you to associate it back to API Management without loss of access.
 - Use automated Azure Pipelines to run backups.
 - Decide whether [multiregion deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required.
 
