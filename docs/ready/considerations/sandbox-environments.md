@@ -85,4 +85,4 @@ Use [Microsoft Purview](/azure/purview/overview) to provide information protecti
 [Azure sandbox guide](/azure/architecture/guide/azure-sandbox/azure-sandbox)
 
 > [!div class="nextstepaction"]
-> [Improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
+> [Landing zone regions](regions.md)
