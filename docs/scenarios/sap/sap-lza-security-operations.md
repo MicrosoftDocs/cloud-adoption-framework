@@ -1,6 +1,6 @@
 ---
 title: Security operations for SAP on Azure
-description: Learn the details of SAP security operations on Azure
+description: Learn how to implement a security operation for SAP in Microsoft Cloud to ensure your organization's sensitive data and applications are protected.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
@@ -19,63 +19,59 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
 - [Security operations for SAP on Azure](./sap-lza-security-operations.md)
 
-Implement a comprehensive security operation for SAP in Microsoft Cloud is critical to ensure that organization's sensitive data and applications are protected from cyber threats. Here are some best practice security operation aspects customer can do to secure their SAP environment in Azure.
+Implement a comprehensive security operation for SAP in Microsoft Cloud to ensure your organization's sensitive data and applications are protected from cyber threats. This article describes best practices for security operations to secure your SAP environment in Azure.
 
-## Access Control
+## Access control
 
-SAP systems are business critical systems in an enterprise landscape, control and management of access to SAP systems and applications should be based on the principle of least privilege, to ensure that only authorized personnel can access sensitive data and perform critical tasks. Here are some relevant recommendations:
+SAP systems are business-critical in an enterprise landscape. To ensure that only authorized personnel can access sensitive data and perform critical tasks, use the principle of least privilege when you provide control and management access to SAP systems and applications. Here are some relevant recommendations:
 
-- **Role-Based Access Control (RBAC)**: Use RBAC to control access to SAP workload resources deployed in Azure. Every Azure subscription has a trust relationship with an Azure AD tenant.
-  - Create an Azure AD group for SAP administrators.
-  - Use Azure RBAC to grant permissions to the SAP group.
+- Use **Role-based access control (RBAC)** to manage access to SAP workload resources that deploy in Azure. Every Azure subscription has a trust relationship with an Azure Active Directory (Azure AD) tenant. Create an Azure AD group for SAP administrators, and use RBAC to grant permissions to the SAP group.
 
-- **Single Sign-On (SSo)**: Single Sign On between SAP and Azure Active Directory or Azure Directory Federation Service (AD FS) allows SAP users to access SAP application with SAP frontend software (SAP GUI) or a browser with HTTP/S (for example, SAP Fiori)
+- **Single sign-on (SSO)** between SAP and Azure AD or Azure Directory Federation Services (AD FS) allows SAP users to access SAP applications with SAP front-end software, like SAP GUI, or a browser with HTTP/S, for example SAP Fiori.
 
-- **Azure Privileged Identity Management (PIM)**: PIM can be used to manage and assign roles to users and groups that allow them to perform privileged actions and these users only have access to the resources when they need to perform their job such as stop/start VM, and more.
+- Use **Azure AD Privileged Identity Management (PIM)** to manage and assign roles to users and groups to allow them to perform privileged actions. These users only have access to the resources when they need to perform their job, such as stopping or starting a virtual machine (VM).
 
-  Azure PIM also provides automate access request and approval, logging and auditing capabilities for managing and controlling privileged access to your SAP system resources in Azure.
+  PIM also provides automated access request and approval and logging and auditing capabilities to manage and control privileged access to your SAP system resources.
 
-- **Just-In-Time (JIT)** JIT can be used to control temporary elevated access to critical systems to only authorized personnel. With JIT, administrators can grant temporary access to a specific VM or set of VMs only when it's necessary to perform certain tasks, such as system maintenance or troubleshooting.
+- **Just-in-time (JIT) access** provides authorized personnel temporary elevated access to critical systems. With JIT access, administrators grant temporary access to a specific VM or set of VMs only when it's necessary to perform certain tasks, such as system maintenance or troubleshooting.
 
-- **Azure Key Vault** - When running SAP on Azure, use Azure Key Vault to manage and protect sensitive data such as SAP administrator passwords, SAP service account credentials, and encryption keys. Here are some common scenarios where Azure Key Vault can be used in SAP on Azure:
-  - **Secure storage of SAP passwords**: SAP systems require various passwords for different components such as database, application server, and other SAP services. Azure Key Vault can be used to store these passwords securely and then retrieve them during system startup or when it's needed to access the SAP server.
-  - **Secure storage of encryption keys**: SAP systems often require encryption for data protection. Azure Key Vault can be used to store encryption keys and protect them using HSMs (Hardware Security Modules), which are tamper-resistant devices that protect cryptographic keys.
-  - **Secure storage of certificates**: Azure Key Vault can be used to store and manage SSL/TLS certificates, which are required for secure communication between SAP systems and other applications.
+- When you run SAP on Azure, use **Azure Key Vault** to manage and protect sensitive data, such as SAP administrator passwords, SAP service account credentials, and encryption keys. Common scenarios to use Key Vault are:
+  - **SAP password storage**: SAP systems require passwords for components, such as database, application server, and other SAP services. Use Key Vault to securely store these passwords. Retrieve them during system startup or when you need to access the SAP server.
+  - **Encryption key storage**: SAP systems often require encryption for data protection. Use Key Vault to store encryption keys and protect them by using hardware security modules, which are tamper-resistant devices that protect cryptographic keys.
+  - **Certificate storage**: Use Key Vault to store and manage SSL/TLS certificates, which are required for secure communication between SAP systems and other applications.
 
 ## Compliance
 
-Azure provides a comprehensive set of security controls to help customers protect their SAP systems deployed on Azure platform. Here are some of the example compliance offerings that are relevant for SAP systems:
+Azure provides a comprehensive set of security controls to help you protect your SAP systems that deploy in Azure. Here are some of the example compliance offerings that are relevant for SAP systems:
 
-- **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an Information
-Security Management System (ISMS). This certification covers a broad range of security controls and best practices, including network security, access control, and risk management.
-- **SOC 1, SOC 2, and SOC 3**: Azure is audited under the SOC (Service Organization Controls) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
-- **GDPR**: Azure is compliant with the General Data Protection Regulation (GDPR), which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features like data protection, data breach notification, and privacy by design.
+- **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an information
+security management system (ISMS). This certification covers security controls and best practices, including network security, access control, and risk management.
+- **SOC 1, SOC 2, and SOC 3**: Azure is audited under the service organization controls (SOC) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
+- **General Data Protection Regulation (GDPR)**: Azure is compliant with the GDPR, which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features, like data protection, data breach notification, and privacy by design.
 
-Customers can monitor this security baseline and review recommendations, take remediation actions for non-compliance baseline for SAP workloads using Microsoft Defender for Cloud.
+You can monitor this security baseline, review recommendations, and take remediation actions for non-compliance baseline for SAP workloads by using Microsoft Defender for Cloud.
 
-   ![Screenshot shows Defender configuration.](./media/sap-lza-defender.png)
+:::image type="content" source="./media/sap-lza-defender.png" alt-text="Screenshot that shows the Defender for Cloud configuration." lightbox="./media/sap-lza-defender.png":::
 
-## Security patching
+## Security patches
 
-Keeping your systems up to date is crucial for your security posture. Generally, there are two types of security patching we focus on. Operating System (OS) security patching, and SAP security patching.
+ There are two types of security patching to focus on: operating system security patching and SAP security patching.
 
-### Operating System security patching
+### Operating system security patches
 
-Operating System security patches are critical for SAP workloads to prevent security breaches, comply with industry regulations, improve performance, and protect business's reputation.
-SAP customers running Windows and Linux virtual machines in Azure, on-premises, and in other cloud environments can use Update Management in Azure Automation to manage operating system updates, including security patches.
+Operating system security patches prevent security breaches, comply with industry regulations, improve performance, and protect your business' reputation. If you run Windows and Linux VMs in Azure, on-premises, or in other cloud environments, you can use the **Update management center** in Azure Automation to manage operating system updates, including security patches.
 
-Customers can automatically assess and update SAP virtual machines to maintain security compliance with Critical and Security Updates released each month. This is possible by enabling automatic VM guest patching.
+:::image type="content" source="./media/sap-lza-update-management.png" alt-text="Screenshot that shows the Update management center window." lightbox="./media/sap-lza-update-management.png":::
+
+Critical and security updates are released each month. Automate updates and enable automatic VM guest patching to maintain security compliance for your SAP virtual machines.
 
 > [!NOTE]
->Please be aware that some Linux images for SAP workload (RHEL-SAP and SLES-SAP) are not supported yet. However, Windows server images are supported. Details for requirements for enabling automatic VM guess patching and supported OS images information can be found [here](/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
+>Some Linux images for SAP workload, like Red Hat Enterprise Linux (RHEL) for SAP and SUSE Linux Enterprise Server (SLES) for SAP, aren't supported. Windows server images are supported. For information about requirements to enable automatic VM guess patching and supported operating system images, see [Automatic VM guest patching for Azure VMs](/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
 
-![Screenshot shows Update Management.](./media/sap-lza-update-management.png)
+### SAP security patches
 
-### SAP security patching
+You can also protect the security of other SAP components, like databases and applications. For more information, see the related SAP notes in the [SAP support portal](https://support.sap.com).
 
-Apart from operating system security patching, SAP customers are also recommended to protect the security for other SAP components: database and application security. For these two components, SAP provides best practices, guidance and information in SAP notes, which are available in [SAP Support portal](https://support.sap.com/).
+Routinely review the SAP security OSS notes because SAP releases highly critical security patches, or hot fixes, that require immediate action to protect your SAP systems.
 
-It's highly recommended to review these SAP security OSS notes regularly since sometimes SAP releases high critical security patches (hot fixes) which need to be action immediately to protect your SAP systems.
-
-The priority of an SAP Security Note is determined by its CVSS v3 base score (Common Vulnerability Scoring Systems). The Common Vulnerability Scoring System (CVSS) is an open and vendor-neutral framework for communicating the characteristics and severity of software vulnerabilities. It's designed to unify the approaches to risk assessment across multiple vendors. CVSS is under the custodial care of FIRST (Forum of Incident Response and Security Teams).
-For more information, please refer [SAP Security News](https://support.sap.com/en/my-support/knowledge-base/security-notes-news.html)
+The Common Vulnerability Scoring System (CVSS) v3 base score of the SAP security note determines its priority. The CVSS is an open and vendor-neutral framework that determines the characteristics and severity of software vulnerabilities. It unifies the approaches to risk assessment across multiple vendors. CVSS is under the custodial care of the Forum of Incident Response and Security Teams (FIRST). For more information, see [SAP security news](https://support.sap.com/en/my-support/knowledge-base/security-notes-news.html)
