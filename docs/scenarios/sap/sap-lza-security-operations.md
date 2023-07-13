@@ -4,7 +4,7 @@ description: Learn the details of SAP security operations on Azure
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 07/04/2023
+ms.date: 07/14/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -19,7 +19,7 @@ This article is part of the "SAP extend and innovate security: Best practices" a
 - [Microsoft Sentinel for SAP on Azure](./sap-lza-sentinel-for-sap.md)
 - [Security operations for SAP on Azure](./sap-lza-security-operations.md)
 
-Implementing a comprehensive security operation for SAP in Microsoft Cloud is critical to ensure that organization's sensitive data and applications are protected from cyber threats. Here are some best practice security operation aspects customer can do to secure their SAP environment in Azure.
+Implement a comprehensive security operation for SAP in Microsoft Cloud is critical to ensure that organization's sensitive data and applications are protected from cyber threats. Here are some best practice security operation aspects customer can do to secure their SAP environment in Azure.
 
 ## Access Control
 
