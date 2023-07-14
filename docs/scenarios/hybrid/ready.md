@@ -162,7 +162,7 @@ If customers don't have or aren't planning to deploy an Azure Landing Zone at th
 
 - Customers should review the Azure Arc-enabled Servers landing zone accelerator guidance to review the design considerations and recommendations across critical design areas.
 
-[![Diagram that shows a flow chart for azure arc landing zone guidance](./media/arc-esu-landing-zone-flow-chart.png)](./media/arc-esu-landing-zone-flow-chart.png#lightbox)
+[![Diagram that shows a flow chart for azure arc landing zone guidance.](./media/azure-arc-esu-landing-zone-flow-chart.png)](./media/arc-esu-landing-zone-flow-chart.png#lightbox)
 
 ## Next steps
 
