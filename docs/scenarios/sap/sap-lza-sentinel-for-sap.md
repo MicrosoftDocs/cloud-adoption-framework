@@ -69,7 +69,7 @@ For the step-by-step configuration of AKS, see [Deploy Microsoft Sentinel Threat
 
 - To push the SAP HANA syslog to a Microsoft Sentinel workspace, install [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) parallel to the standard version of Microsoft Operations Management Suite. By default, Operations Management Suite pushes data to the telemetry workspace. You can redirect the Azure Monitor Agent logs to the Microsoft Sentinel workspace.
 
-- By default, the HANA auditing trail is written to a database table called CSTABLE. The security team uses functionalities, like capturing firefighter logins, to consume the audit logs from the databases. Hence we can't repoint the default logging to syslog. However, we can redirect different audit trails to different targets. Thus, all the Microsoft Sentinel-related audit policies point to Level *Alert*. All *Alert* level logs are directed to SYSLOG with this change.
+- By default, the HANA auditing trail is written to a database table called CSTABLE. The security team uses functionalities, like capturing firefighter logins, to consume the audit logs from the databases. You can't repoint the default logging to syslog, but you can redirect different audit trails to different targets, so that all the Microsoft Sentinel-related audit policies point to the alert level. When you implement this change, all alert-level logs go to syslog.
 
 ## Microsoft Sentinel rules
 
@@ -91,9 +91,7 @@ The following design considerations also apply:
 
 - Use the [built-in workbooks](/azure/sentinel/sap/sap-solution-security-content#built-in-workbooks) to identify gaps in the data and monitor system health.
 
-- Use exfiltration rules to monitor data loss:
-  - [Microsoft Sentinel solution for SAP applications - Data exfiltration rules](/azure/sentinel/sap/sap-solution-security-content#data-exfiltration)
-  - [Microsoft Sentinel solution for SAP applications - New data exfiltration detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-solution-for-sap-applications-new-data/ba-p/3716881)
+- Use exfiltration rules to monitor data loss. For more information, see [Data exfiltration rules](/azure/sentinel/sap/sap-solution-security-content#data-exfiltration) and [New data exfiltration detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-solution-for-sap-applications-new-data/ba-p/3716881).
 
 ## Next steps
 
