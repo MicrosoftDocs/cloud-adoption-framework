@@ -1,8 +1,8 @@
 ---
 title: Identity essentials for multi-tenant Defense organizations
 description: An overview of identity essentials for multi-tenant defense organizations using Azure Active Directory and implementing zero trust
-author: stephen-sumner
-ms.author: andrmass
+author: amasse3
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
@@ -11,9 +11,7 @@ ms.subservice: scenario
 ---
 # Identity essentials for multi-tenant defense organizations
 
-The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD).
-
-Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
+The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Azure Active Directory (Azure AD). Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Azure Active Directory (Azure AD) is the Microsoft cloud identity service. Azure AD is a critical zero trust component that all Microsoft cloud customers use.
 
 Architects and decision makers must understand the core capabilities of Azure AD and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Azure AD. Many already have access to essential Azure AD features through their existing Microsoft 365 licenses.
 
@@ -53,7 +51,7 @@ Azure AD has two types of identities. The two identity types are users and servi
 
 Azure AD uses a different approach to permissions than traditional on-premises Active Directory Domain Services (AD DS).
 
-**Azure AD roles.** You assign permissions in Azure AD using [Azure AD directory roles](/azure/active-directory/roles/permissions-reference). These roles grant access to specific APIs and scopes. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions.
+**Azure AD roles.** You assign permissions in Azure AD using [Azure AD directory roles](/azure/active-directory/roles/permissions-reference). These roles grant access to specific APIs and scopes. [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) is the highest privileged role in Azure AD. There are many built-in roles for various limited admin functions. You should delegate granular permissions to reduce attack surface area.
 
 **Elevated permission assignment.** To enhance security and reduce unnecessary privileges, Azure AD provides two principles for permission assignment:
 
@@ -61,19 +59,19 @@ Azure AD uses a different approach to permissions than traditional on-premises A
 
 *Just-Enough-Admin (JEA)*: Azure AD follows the just-enough-admin principle. [Built-in roles](/azure/active-directory/roles/permissions-reference) let you [delegate admin tasks](/azure/active-directory/roles/delegate-by-task) without granting excessive permissions. [Administrative Units](/azure/active-directory/roles/administrative-units) can further restrict permission scope for Azure AD roles.
 
-**Azure AD enhanced security.** To reduce attack surface area, you can delegate granular permissions and activate permissions just-in-time. Client applications, [Web Account Manager (WAM)](/azure/active-directory/develop/scenario-desktop-acquire-token-wam), or the user's web browser (session cookies) can store sign-in tokens. Azure AD isn't susceptible to Kerberos-based attacks like AD DS. Azure AD includes extensive protections against session hijacking or replay. Azure AD records token use to prevent replay and can require tokens be [cryptographically bound](/azure/active-directory/conditional-access/concept-token-protection) to the user's device. [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) detects and blocks risky sign-ins while [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enforces access policies in real-time.
-
-However, AD DS is susceptible to Kerberos-based attacks. AD DS uses security groups with well-known [security identifiers (SID)](/windows-server/identity/ad-ds/manage/understand-security-identifiers), such as `S-1-5-domain-512` for *Domain Admins*. When a Domain Administrator performs a local or network sign-in, the Domain Controller issues a Kerberos ticket containing the Domain Admins SID and stores it in a [credential cache](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication). Threat actors commonly exploit this mechanism using [lateral movement](/defender-for-identity/lateral-movement-alerts) and [privilege escalation](/defender-for-identity/persistence-privilege-escalation-alerts) techniques like pass-the-hash and pass-the-ticket.
-
 ## Authentication
 
-Unlike Active Directory, users in Azure AD aren't limited to password or smartcard authentication. Azure AD users can use passwords and many other [authentication and verification methods](/azure/active-directory/authentication/concept-authentication-methods).
+Unlike Active Directory, users in Azure AD aren't limited to password or smartcard authentication. Azure AD users can use passwords and many other [authentication and verification methods](/azure/active-directory/authentication/concept-authentication-methods). Azure AD uses modern authentication protocols, protects against token-based attacks, and detects suspicious sign-in behavior.
 
 **Authentication methods.** Azure AD authentication methods include native support for smartcard certificates and derived credentials, Microsoft Authenticator passwordless, FIDO2 security keys (hardware passkey), and device credentials like Windows Hello for Business. Azure AD offers passwordless, phishing-resistant methods in support of [Memorandum 22-09](/azure/active-directory/standards/memo-22-09-multi-factor-authentication) and [DODCIO Zero Trust Strategy capabilities](https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilitiesActivities.pdf).
 
 **Authentication protocols.** Azure AD doesn't use Kerberos, NTLM, or LDAP. It uses modern open protocols intended for use over the internet, such as [OpenID Connect](/azure/active-directory/develop/v2-protocols-oidc), [OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow), [SAML 2.0](/azure/active-directory/develop/saml-protocol-reference), and [SCIM](/azure/active-directory/fundamentals/sync-scim).
 
-**Mission partners.** When mission partners use Azure AD, you can use [Azure AD External Identities (B2B)](/azure/active-directory/external-identities/what-is-b2b) to collaborate with them. You can protect the access you grant to guests by using [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview).
+**Protections against token attacks.** Traditional AD DS is susceptible to Kerberos-based attacks. AD DS uses security groups with well-known [security identifiers (SID)](/windows-server/identity/ad-ds/manage/understand-security-identifiers), such as `S-1-5-domain-512` for *Domain Admins*. When a Domain Administrator performs a local or network sign-in, the Domain Controller issues a Kerberos ticket containing the Domain Admins SID and stores it in a [credential cache](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication). Threat actors commonly exploit this mechanism using [lateral movement](/defender-for-identity/lateral-movement-alerts) and [privilege escalation](/defender-for-identity/persistence-privilege-escalation-alerts) techniques like pass-the-hash and pass-the-ticket.
+
+However, Azure AD isn't susceptible to Kerberos attacks. The cloud equivalent is man-in-the-middle techniques, such as session hijacking and session replay, to steal session tokens (sign-in token). Client applications, [Web Account Manager (WAM)](/azure/active-directory/develop/scenario-desktop-acquire-token-wam), or the user's web browser (session cookies) store these session tokens. To protect against token-theft attacks, Azure AD records token use to prevent replay and can require tokens be [cryptographically bound](/azure/active-directory/conditional-access/concept-token-protection) to the user's device.
+
+**Detect suspicious sign-in behavior.** [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) detects and blocks risky sign-ins while [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) enforces access policies in real-time.
 
 ## Applications
 
@@ -121,7 +119,7 @@ There are two separate versions of the Azure AD services defense organizations m
 
 *Table 1. Sovereign cloud endpoints for US Government.*
 
-| Endpoint | Global | GCC High | DoD IL5 |
+| Endpoint | Global | GCC High | DoD Impact Level 5 (IL5) |
 | --- | --- | --- | --- |
 | Entra Portal | [entra.microsoft.com](https://entra.microsoft.com) | [entra.microsoft.us](https://entra.microsoft.us) | [entra.microsoft.us](https://entra.microsoft.us) |
 | Azure portal | [portal.azure.com](https://portal.azure.com) | [portal.azure.us](https://portal.azure.us) | [portal.azure.us](https://portal.azure.us) |
