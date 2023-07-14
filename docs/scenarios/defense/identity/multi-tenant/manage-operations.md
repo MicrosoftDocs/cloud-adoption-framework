@@ -1,8 +1,8 @@
 ---
-title: Manage multi-tenant operations for defense
+title: Manage multi-tenant operations for defense organizations
 description: Guidance for managing identity in a multi-tenant cloud environment with zero trust requirements
-author: stephen-sumner
-ms.author: andrmass
+author: amasse3
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 
-# Manage multi-tenant operations for defense
+# Manage multi-tenant operations for defense organizations
 
 This article defines how multi-tenant defense organizations should manage operations across Azure Active Directory (Azure AD) tenants to meet zero trust requirements. It covers application management, identity governance, and security operations. The primary and secondary Azure AD tenant administrators have distinct responsibilities in each area. Primary and secondary tenant(s) must coordinate application onboarding, entitlement management, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
 
-:::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant." lightbox="./images/management-operations.png" border="false":::
+:::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant for application management, identity governance, and security operations." lightbox="./images/management-operations.png" border="false":::
 *Figure 1. Shared responsibilities by tenant for multi-tenant defense organizations*
 
 ## Application management
