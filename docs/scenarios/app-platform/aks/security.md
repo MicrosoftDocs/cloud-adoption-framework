@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-aks
 
 # Security for AKS
 
-This article walks through aspects of Azure Kubernetes Service (AKS) security governance for you to consider before you implement any solution.
+This article walks you through aspects of Azure Kubernetes Service (AKS) security governance to consider before you implement any solution.
 
 The article focuses on how to implement solutions by using Azure and open-source software. The decisions you make when you create an enterprise-scale landing zone can partially predefine your governance. To understand governance principles, see [Enterprise-scale security governance and compliance](../../../ready/landing-zone/design-area/governance.md).
 
