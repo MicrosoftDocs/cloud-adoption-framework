@@ -54,9 +54,9 @@ items:
         href: sap-lza-choose-azure-connectors.md
       - name: Performance and troubleshooting for SAP data extraction
         href: sap-lza-data-extraction-performance-troubleshooting.md
-      - name: Data integration security for SAP on Azure
+      - name: Data integration security
         href: sap-lza-data-integration-security.md
-      - name: SAP data integration generic architecture
+      - name: SAP data integration architecture
         href: sap-lza-data-example-architecture.md
     href: innovate.md
   - name: Manage SAP platform and workloads

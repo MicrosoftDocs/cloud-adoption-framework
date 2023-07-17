@@ -4,7 +4,7 @@ description: Learn about data integrations security for SAP on Azure, including 
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 07/17/2023
+ms.date: 07/18/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -25,14 +25,14 @@ This article describes the security layers for SAP extend scenarios, provides a 
 
 The data ingestion layer consists of:
 
-- SAP S/4 HANA/SAP BW4HANA/SAP Enterprise HANA
+- SAP S/4HANA, SAP BW/4HANA, or SAP HANA enterprise edition
 - Azure Data Lake Storage Gen2
 - Data Factory
 - A self-hosted integration runtime (SHIR) virtual machine (VM)
 
 The following diagram is an example architecture of SAP data integration security on Azure. Use the example architecture as a starting point.
 
-:::image type="content" source="./media/sap-extend-security-architecture.svg" lightbox="./media/sap-extend-security-architecture.svg" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure.":::
+:::image type="content" source="./media/sap-extend-security-architecture.png" lightbox="./media/sap-extend-security-architecture.png" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure.":::
 _Download a [Visio file](https://arch-center.azureedge.net/sap-extend-security-architecture.vsdx) of this architecture._
 
 ## Considerations and recommendations
@@ -40,8 +40,6 @@ _Download a [Visio file](https://arch-center.azureedge.net/sap-extend-security-a
 The following sections describe data integration security considerations and recommendations for SAP on Azure.
 
 ### SAP security
-
-![Screenshot that shows SAP source system section of the diagram.](./media/sap-extend-security-architecture-sap-sources1.png)
 
 The SAP security guide has detailed guidance for SAP products.
 
@@ -51,15 +49,15 @@ The SAP security guide has detailed guidance for SAP products.
 
 ### Data Lake Storage Gen2 security
 
-![Screenshot that shows the Data Lake Storage Gen2 2 section of the diagram.](./media/sap-extend-security-architecture-adls2.png)
+See the following considerations for Data Lake Storage Gen2 security.
 
 #### Authorize access to data in Azure Storage
 
-When you access data in your Storage account, your client application makes a request over HTTP/HTTPS to Storage. By default, every resource in Storage is secure, and every request to a secure resource must be authorized. Storage offers options for authorizing access to data. We recommend using Azure Active Directory (Azure AD) credentials to authorize requests to data for optimal security and simplicity. For more information, see [Protect your access keys](/azure/storage/common/authorize-data-access#protect-your-access-keys).
+When you access data in your Storage account, your client application makes a request over HTTP/HTTPS to Storage. By default, every resource in Storage is secure, and every request to a secure resource must be authorized. Storage offers many options for authorizing access to data. We recommend using Azure Active Directory (Azure AD) credentials to authorize requests to data for optimal security and simplicity. For more information, see [Protect your access keys](/azure/storage/common/authorize-data-access#protect-your-access-keys).
 
 #### Azure role-based access control (RBAC)
 
-Use RBAC to manage a security principal's permissions to blob, queue, and table resources in a storage account. You can also use Azure attribute-based access control (ABAC) to add conditions to Azure role assignments for blob resources. For more information, see [Authorize access to Azure Blob Storage by using Azure role assignment conditions](/azure/storage/blobs/storage-auth-abac).
+Use RBAC to manage a security principal's permissions to blob, queue, and table resources in a Storage account. You can also use Azure attribute-based access control (ABAC) to add conditions to Azure role assignments for blob resources. For more information, see [Authorize access to Azure Blob Storage by using Azure role assignment conditions](/azure/storage/blobs/storage-auth-abac).
 
 #### Blob storage security
 
@@ -83,19 +81,19 @@ In an ACL entry, don't directly assign individual users or service principals. A
 
 ### Data Factory security
 
-![Screenshot that shows ADF.](./media/sap-extend-security-architecture-adf1.png)
+See the following considerations for Data Factory security.
 
 #### Data movement
 
-There are two data movement scenarios: a cloud scenario and a hybrid scenario. For information about security, see [Security considerations for data movement in Data Factory](/azure/data-factory/data-movement-security-considerations).
+There are two data movement scenarios: a cloud scenario and a hybrid scenario. For information about data movement security, see [Security considerations for data movement in Data Factory](/azure/data-factory/data-movement-security-considerations).
 
-- In a **cloud scenario**, your source and your destination are publicly accessible through the internet. Your source and destination might be managed cloud storage services, such as Azure Storage, Azure Synapse Analytics, Azure SQL Database, Data Lake Storage Gen2, Amazon S3, Amazon Redshift, software-as-a-service (SaaS) services, such as Salesforce, or web protocols, such as file transfer protocol (FTP) and open data protocol (OData). Find a complete list of supported data sources in supported data stores and formats.
+- In a _cloud scenario_, your source and your destination are publicly accessible through the internet. Your source or destination might be managed cloud storage services, such as Azure Storage, Azure Synapse Analytics, Azure SQL Database, Data Lake Storage Gen2, Amazon S3, Amazon Redshift, software-as-a-service (SaaS) services, such as Salesforce, or web protocols, such as file transfer protocol (FTP) and open data protocol (OData). Find a complete list of supported data sources in supported data stores and formats.
 
-- In a **hybrid scenario**, either your source or your destination is behind a firewall or inside an on-premises corporate network. Or the data store is in a private network or virtual network and isn't publicly accessible. In that case, the data store is usually the source. This scenario also includes database servers that are hosted on virtual machines.
+- In a _hybrid scenario_, either your source or your destination is behind a firewall or inside an on-premises corporate network. Or the data store is in a private network or virtual network and isn't publicly accessible. In that case, the data store is usually the source. The hybrid scenario also includes database servers that are hosted on virtual machines.
 
 #### Data access strategies
 
-Your organization wants to protect their data stores, such as on-premises or cloud/SaaS data stores, from unauthorized access over the internet. You can control access in your cloud data store by using:
+Your organization wants to protect their data stores, such as on-premises or cloud/SaaS data stores, from unauthorized access via the internet. You can control access in your cloud data store by using:
 
 - A private link from a virtual network to a private endpoint-enabled data source.
 - Firewall rules that limit connectivity by using an IP address.
@@ -106,20 +104,16 @@ For more information, see [Data access strategies](/azure/data-factory/data-acce
 
 #### Store credentials in Azure Key Vault
 
-You can store credentials for data stores and computes in Key Vault. Data Factory retrieves the credentials when an activity runs that uses the data store or compute.
-
-For more information, see [Store credentials in Key Vault](/azure/data-factory/store-credentials-in-key-vault) and [Use Key Vault secrets in pipeline activities](/azure/data-factory/how-to-use-azure-key-vault-secrets-pipeline-activities).
+You can store credentials for data stores and computes in Key Vault. Data Factory retrieves the credentials when an activity runs that uses the data store or compute. For more information, see [Store credentials in Key Vault](/azure/data-factory/store-credentials-in-key-vault) and [Use Key Vault secrets in pipeline activities](/azure/data-factory/how-to-use-azure-key-vault-secrets-pipeline-activities).
 
 #### Encrypt credentials
 
-Consider encrypting credentials for on-premises data stores in Data Factory. You can encrypt and store credentials for any of your on-premises data stores, such as linked services with sensitive information, on a machine with SHIR. For more information, see [Encrypt credentials for on-premises data stores in Data Factory](/azure/data-factory/encrypt-credentials-self-hosted-integration-runtime).
+In Data Factory, consider encrypting credentials for on-premises data stores. On a machine with a SHIR, you can encrypt and store credentials for any of your on-premises data stores, such as linked services with sensitive information. For more information, see [Encrypt credentials for on-premises data stores in Data Factory](/azure/data-factory/encrypt-credentials-self-hosted-integration-runtime).
 
-#### Use managed identity
+#### Use a managed identity
 
-With managed identities, you don't have to manage credentials. Managed identities provide an identity for the service instance when it connects to resources that support Azure AD authentication.
-There are two types of supported managed identities: System-assigned managed identities and user-assigned managed identities.
-
-For more information, see [Managed identity for Data Factory](/azure/data-factory/data-factory-service-identity) for more details.
+When you use a managed identity, you don't have to manage credentials. A managed identity provides an identity for the service instance when it connects to resources that support Azure AD authentication.
+There are two types of supported managed identities: System-assigned managed identities and user-assigned managed identities. For more information, see [Managed identity for Data Factory](/azure/data-factory/data-factory-service-identity).
 
 #### Encrypt with customer-managed keys
 
@@ -127,9 +121,7 @@ Depending on your security policies, consider encrypting Data Factory with custo
 
 #### Use a managed virtual network
 
-When you create an Azure integration runtime within a Data Factory-managed virtual network, the integration runtime is provisioned with the managed virtual network. It uses private endpoints to securely connect to the supported data stores. A private endpoint is a private IP address within a specific virtual network and subnet. The managed virtual network is only supported in the same region as the Data Factory region.
-
-For more information, see [Data Factory managed virtual network](/azure/data-factory/managed-virtual-network-private-endpoint).
+When you create an Azure integration runtime within a Data Factory-managed virtual network, the integration runtime is provisioned with the managed virtual network. It uses private endpoints to securely connect to the supported data stores. A private endpoint is a private IP address within a specific virtual network and subnet. The managed virtual network is only supported in the same region as the Data Factory region. For more information, see [Data Factory managed virtual network](/azure/data-factory/managed-virtual-network-private-endpoint).
 
 #### Use Azure Private Link
 
@@ -137,27 +129,27 @@ When you use Private Link, you can connect to platform-as-a-service (PaaS) deplo
 
 ### SHIR VM connections and security
 
-![Screenshot that shows SHIR.](./media/sap-extend-security-architecture-shir1.png)
+See the following considerations for SHIR VM connections and security.
 
 #### On-premises data store credentials
 
-You can store on-premises data store credentials in Data Factory or reference the credentials by using Data Factory during the runtime from Key Vault. If you store credentials in Data Factory, always encrypt them on the SHIR. For more information, see [On-premises data store credentials](/azure/data-factory/data-movement-security-considerations#on-premises-data-store-credentials).
+You can store on-premises data store credentials in Data Factory, or reference the credentials by using Data Factory during the runtime from Key Vault. If you store credentials in Data Factory, always encrypt them on a SHIR. For more information, see [On-premises data store credentials](/azure/data-factory/data-movement-security-considerations#on-premises-data-store-credentials).
 
-#### Set up SHIR based on your network configuration
+#### Set up a SHIR based on your network configuration
 
 For a hybrid data movement, the following table summarizes the network and SHIR configuration recommendations based on different combinations of source and destination locations.
 
 | **Source**  | **Destination**   | **Network configuration**   | **Integration runtime setup**  |
 | ----------- | ----------------- |  -------------------------- | -----------------------------  |
-|On-premises| Virtual machines and cloud services deployed in virtual networks | IPSec VPN (point-to-site or site-to-site)|Install SHIR on an Azure virtual machine in the virtual network |
-|On-premises  | Virtual machines and cloud services deployed in virtual networks | Azure ExpressRoute (private peering) | Install SHIR on an Azure virtual machine in the virtual network |
-| On-premises | Azure-based services that have a public endpoint | ExpressRoute (Microsoft peering) | Install SHIR on-premises or on an Azure virtual machine|
+|On-premises| Virtual machines and cloud services deployed in virtual networks | IPSec VPN (point-to-site or site-to-site)|Install a SHIR on an Azure virtual machine in the virtual network |
+|On-premises  | Virtual machines and cloud services deployed in virtual networks | Azure ExpressRoute (private peering) | Install a SHIR on an Azure virtual machine in the virtual network |
+| On-premises | Azure-based services that have a public endpoint | ExpressRoute (Microsoft peering) | Install a SHIR on-premises or on an Azure virtual machine|
 
 #### ExpressRoute or IPSec VPN
 
-The following images show how to use SHIR to move data between an on-premises database and an Azure service by using Azure Virtual Network and ExpressRoute or IPSec VPN.
+The following images show how to use a SHIR to move data between an on-premises database and an Azure service by using Azure Virtual Network and ExpressRoute or IPSec VPN.
 
-For firewall configurations and allow list setup for IP addresses, see [Security considerations for data movement in Data Factory](/azure/data-factory/data-movement-security-considerations).
+For firewall configurations and allowlist setup for IP addresses, see [Security considerations for data movement in Data Factory](/azure/data-factory/data-movement-security-considerations).
 
 This diagram shows how to move data by using ExpressRoute private peering:
 
@@ -167,7 +159,7 @@ This diagram shows how to move data by using IPSec VPN:
 
 :::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows IPSec VPN on Azure.":::
 
-In the firewall, ensure that the IP address of the SHIR machine is allowed and configured appropriately. The following cloud data stores require that you allow the IP address of the SHIR machine. By default, some of these data stores might not require allow list.
+In the firewall, ensure that the IP address of the SHIR machine is allowed and configured appropriately. The following cloud data stores require that you allow the IP address of the SHIR machine. By default, some of these data stores might not require allowlist.
 
 - SQL Database
 - Azure Synapse Analytics
@@ -179,7 +171,7 @@ For more information, see [Security considerations for data movement in Data Fac
 
 ### Azure Databricks security
 
-![Screenshot that shows Azure DataBricks.](./media/sap-extend-security-architecture-azure-databricks.png)
+See the following considerations for Azure Databricks security.
 
 #### Azure security baseline for Azure Databricks
 
@@ -187,23 +179,21 @@ Consider the [Azure security baseline for Azure Databricks](/security/benchmark/
 
 ### Azure Synapse Analytics security
 
-![Screenshot that shows Synapse.](./media/sap-extend-security-architecture-synapse1.png)
-
 Azure Synapse Analytics implements a multi-layered security architecture for end-to-end protection of your data. There are five layers:
 
 - **Data protection** identifies and classifies sensitive data and encrypts data at rest and in motion. For data discovery and classification, governance, and encryption recommendations, see [Data protection](/azure/synapse-analytics/guidance/security-white-paper-data-protection).
 
 - **Access control** determines a user's right to interact with data. Azure Synapse Analytics supports a wide range of capabilities to control who can access what data. For more information, see [Access control](/azure/synapse-analytics/guidance/security-white-paper-access-control).
 
-- **Authentication** proves the identity of users and applications. Azure SQL Auditing can log authentication activities, and an IT administrator can configure reports and alerts whenever there's an attempted login from a suspicious location. For more information, see [Authentication](/azure/synapse-analytics/guidance/security-white-paper-authentication).
+- **Authentication** proves the identity of users and applications. Azure SQL Auditing can log authentication activities, and an IT administrator can configure reports and alerts whenever there's an attempted sign in from a suspicious location. For more information, see [Authentication](/azure/synapse-analytics/guidance/security-white-paper-authentication).
 
 - **Network security** isolates network traffic with private endpoints and virtual private networks. There are many network security options to secure Azure Synapse Analytics. For more information, see [Network security](/azure/synapse-analytics/guidance/security-white-paper-network-security).
 
-- **Threat protection** identifies potential security threats, such as unusual access locations, SQL injection attacks, and authentication attacks. For more information, see [Threat detection](/azure/synapse-analytics/guidance/security-white-paper-threat-protection).
+- **Threat detection** identifies potential security threats, such as unusual access locations, SQL injection attacks, and authentication attacks. For more information, see [Threat detection](/azure/synapse-analytics/guidance/security-white-paper-threat-protection).
 
 ### Data presentation layer
 
-Consider how you can use security capabilities to secure the presentation layer, including Power BI. For more information, see [Power BI security](/power-bi/guidance/whitepaper-powerbi-security) and [Power BI implementation planning: Security](/power-bi/guidance/powerbi-implementation-planning-security-overview).
+Consider how you can use security capabilities to defend the presentation layer, including Power BI. For more information, see [Power BI security](/power-bi/guidance/whitepaper-powerbi-security) and [Power BI implementation planning: Security](/power-bi/guidance/powerbi-implementation-planning-security-overview).
 
 ## Next steps
 
