@@ -175,7 +175,7 @@ This section describes how you should monitor and protect Azure resources in sub
 
 MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal) and [permissions model](/microsoft-365/admin/add-users/about-admin-roles). So you must use external identities (B2B guests) to give security operators in the primary tenant access to MDE. Assign MDE roles to Azure AD security groups and add the guests as group members so they can [take response actions](/microsoft-365/security/defender-endpoint/respond-machine-alerts) on servers.
 
-*Configure MDE.* You need to configure a manage [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant.
+*Configure MDE.* You need to configure and manage [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant.
 
 ## Next step
 
