@@ -4,7 +4,7 @@ description: Learn about an example architecture for SAP data integration, inclu
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
-ms.date: 07/17/2023
+ms.date: 07/18/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -20,6 +20,8 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 - [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
 - [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
+
+This article describes the flow of SAP data from source SAP systems to downstream targets. Each target serves a purpose in the data journey for your enterprise. The architecture design extends SAP solutions by using Azure data services. Use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
 
 ## Architecture
 
@@ -38,13 +40,9 @@ The following dataflow corresponds to the previous diagram:
 1. **Data transformation and consumption.** Data is transformed in stages, and consumption is enabled through reports with Power BI or through private endpoints that allow you to securely access data over a private link.
 1. **Data visualization and reporting.** You can access reports and visualize data with the Power BI service or an external application.
 
-The architecture design extends SAP solutions by using Azure data services. This article describes the flow of SAP data from source SAP systems to downstream targets. Each target serves a purpose in the data journey for your enterprise. The source SAP systems can run on-premises with SAP RISE on Azure or SAP on Azure Virtual Machines.
-
-Use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
-
 #### Data sources
 
-The data sources in this architecture can be on-premises SQL servers, semi-structured data in JSON, XML, and log files, or other data warehouse systems. The Synapse pipelines copy activities can ingest this raw data. The source systems are hosted on-premises, in a private or public cloud, or with SAP RISE subscriptions.
+The source SAP systems can run on-premises with SAP RISE on Azure or SAP on Azure Virtual Machines. They can be on-premises SQL servers, semi-structured data in JSON, XML, and log files, or other data warehouse systems. The Synapse pipelines copy activities can ingest this raw data. The source systems are hosted on-premises, in a private or public cloud, or with SAP RISE subscriptions.
 
 SAP online transactional data processing (OLTP) and online analytical processing (OLAP) systems are central repositories of business data and transactions. Extract, store, and ingest data into Azure to obtain value and insights from the data residing in these business data repositories.
 
@@ -54,13 +52,13 @@ With Azure services, you can integrate data from any source location. Plan the e
 
 In this architecture, data is ingested by using Synapse pipelines, and it's processed in stages by using the Data Lake capabilities of Synapse Spark pool.
 
-Azure Data Factory and Synapse pipelines extract data by using the following SAP connectors:
+Data Factory and Synapse pipelines extract data by using the following SAP connectors:
 
 - [SAP Business Warehouse via Open Hub](/azure/data-factory/connector-sap-business-warehouse-open-hub)
-- [SAP Business Warehouse via MDX](/azure/data-factory/connector-sap-business-warehouse)
-- [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)
+- [SAP Business Warehouse via Multidimensional Expressions (MDX)](/azure/data-factory/connector-sap-business-warehouse)
+- [SAP Customer Data Cloud (CDC)](/azure/data-factory/connector-sap-change-data-capture)
 - [SAP Cloud for Customer](/azure/data-factory/connector-sap-cloud-for-customer)
-- [SAP ECC](/azure/data-factory/connector-sap-ecc)
+- [SAP ERP Central Component (ECC)](/azure/data-factory/connector-sap-ecc)
 - [SAP HANA](/azure/data-factory/connector-sap-hana)
 - [SAP table](/azure/data-factory/connector-sap-table)
 
@@ -111,7 +109,7 @@ This architecture uses several Azure services and capabilities.
 
 - [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) is the core service that ingests, processes, and analyzes data.
 - [Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) is built on top of Storage services and provides data lake capabilities that other services use when storing and processing data.
-- [Azure Synapse Analytics pipelines](/azure/synapse-analytics/get-started-pipelines) copy data from sources to Data Lake Storage locations.
+- [Azure Synapse Analytics pipelines](/azure/synapse-analytics/get-started-pipelines) copy data from sources to Data Lake Storage Gen2 locations.
 - [Apache Spark](/azure/synapse-analytics/spark/apache-spark-overview) cleanses, normalizes, and processes data that's ingested from source locations.
 
 ### Storage
@@ -121,7 +119,7 @@ This architecture uses several Azure services and capabilities.
 
 ### Networks and load balancers
 
-- [Azure Synapse Analytics-managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet) creates an isolated and managed environment for the Azure Synapse workspace, so you don't have to manage the networking configuration for the workspace resources.
+- An [Azure Synapse Analytics-managed virtual network](/azure/synapse-analytics/security/synapse-workspace-managed-vnet) creates an isolated and managed environment for the Azure Synapse workspace, so you don't have to manage the networking configuration for the workspace resources.
 - [Azure Synapse-managed private endpoints](/azure/synapse-analytics/security/synapse-workspace-managed-private-endpoints) establish private links to Azure resources and route traffic between your Azure Synapse workspaces and other Azure resources by using the Microsoft backbone network.
 - [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) provides private networking capabilities for Azure resources that aren't a part of the Azure Synapse workspace. You can manage the access, security, and routing between resources.
 - An [Azure private endpoint](/azure/private-link/private-endpoint-overview) connects a service to a virtual network by using a private IP address from the solution's virtual network to Azure-managed services. This connection secures the networking between the Azure Synapse workspace and other Azure services, such as Storage, Azure Cosmos DB, Azure SQL Database, or your own Azure Private Link service.
@@ -129,3 +127,10 @@ This architecture uses several Azure services and capabilities.
 ### Reporting
 
 - [Power BI](/power-bi/fundamentals/) performs advanced analysis and insights of the processed data.
+
+## Next steps
+
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)

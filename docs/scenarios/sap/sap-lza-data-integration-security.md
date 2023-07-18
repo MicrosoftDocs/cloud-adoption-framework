@@ -153,11 +153,11 @@ For firewall configurations and allowlist setup for IP addresses, see [Security 
 
 This diagram shows how to move data by using ExpressRoute private peering:
 
-:::image type="content" source="./media/sap-security-expressroute.svg" border="false" alt-text="Diagram that shows ExpressRoute on Azure.":::
+:::image type="content" source="./media/sap-security-expressroute.svg" border="false" alt-text="Diagram that shows ExpressRoute on Azure." lightbox="./media/sap-security-expressroute.svg":::
 
 This diagram shows how to move data by using IPSec VPN:
 
-:::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows IPSec VPN on Azure.":::
+:::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows IPSec VPN on Azure." lightbox="./media/sap-extend-security-ipsec.svg":::
 
 In the firewall, ensure that the IP address of the SHIR machine is allowed and configured appropriately. The following cloud data stores require that you allow the IP address of the SHIR machine. By default, some of these data stores might not require allowlist.
 
@@ -197,4 +197,7 @@ Consider how you can use security capabilities to defend the presentation layer,
 
 ## Next steps
 
-- [Example architecture](./sap-lza-data-example-architecture.md)
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
