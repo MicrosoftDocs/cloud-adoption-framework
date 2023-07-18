@@ -1,6 +1,6 @@
 ---
-title: 'Compute large-scale HPC application workloads in Azure VMs'
-description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads in the oil and gas industry, plus HPC use cases, reference architecture, design considerations, and design recommendations.
+title: 'Compute large-scale HPC application workloads in Azure VMs for Finance industries'
+description: Learn about the Azure VM instances that are ideal for large-scale HPC application workloads in the finance industry, plus HPC use cases, reference architecture, design considerations, and design recommendations.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
