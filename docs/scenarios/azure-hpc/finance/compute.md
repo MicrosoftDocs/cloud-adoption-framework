@@ -1,7 +1,7 @@
 ---
 title: 'Azure VMs to run large-scale HPC application workloads for the Finance industry'
 description: The text describes big compute workloads and how Azure offers optimized VM instances for both CPU- and GPU-intensive workloads, including InfiniBand-enabled hardware for improved performance. It is important to select the appropriate VM size for finance workloads.
-author: Brian-Santacruz
+author: bsantacruz
 ms.author: bsantacruz
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -1,7 +1,7 @@
 ---
 title: 'Big compute in the Manufacturing industry'
 description: The text describes how Azure provides optimized virtual machine instances for handling big compute workloads, which require a large number of cores for processing. These workloads can benefit from Azure’s InfiniBand-enabled hardware and a range of VM sizes to ensure optimal performance. It is important to carefully choose the appropriate VM size for manufacturing.
-author: Brian-Santacruz
+author: bsantacruz
 ms.author: bsantacruz
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
