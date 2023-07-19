@@ -97,7 +97,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 - **Clarify what the system can do**. If the AI system uses or generates metrics, it's important to show them all and how they're tracked.
 
-- **Clarify how well the system can do what it does**. Help users understand that AI will not be completely accurate. Set expectations for when the AI system might make mistakes.
+- **Clarify how well the system can do what it does**. Help users understand that AI won't be completely accurate. Set expectations for when the AI system might make mistakes.
 
 ### During interaction
 

@@ -17,7 +17,7 @@ The first step in developing any new innovation is to identify how that innovati
 
 ## What is business value?
 
-*Business value* is an informal term that might vary from business to business. It's the net benefit to the customer and includes all forms of value that determine the health and well-being of the company in the long run.
+*Business value* is an informal term that might vary from business to business. It's the net benefit to the customer and includes all forms of value that determine the long-term health and well-being of the company.
 
 ## Qualifying questions to determine business value
 
