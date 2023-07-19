@@ -244,11 +244,11 @@ In the initial load mode (ODPSLT), there are three steps to extract data from SL
   
   SAP S/4HANA:
 
-  :::image type="content" source="./media/sap-slt-s4hana.png" alt-text="Screenshot that shows the SAP S/4HANA screen." lightbox="./media/sap-slt-s4hana.png":::
+  :::image type="content" source="./media/sap-replication-server-s4hana.png" alt-text="Screenshot that shows the SAP S/4HANA screen." lightbox="./media/sap-replication-server-s4hana.png":::
 
   SAP ECC:
 
-  :::image type="content" source="./media/sap-slt-ecc.png" alt-text="Screenshot that shows the SAP ECC screen." lightbox="./media/sap-slt-ecc.png":::
+  :::image type="content" source="./media/sap-replication-server.png" alt-text="Screenshot that shows the SAP ECC screen." lightbox="./media/sap-replication-server.png":::
 
 ## Monitor
 

@@ -153,7 +153,7 @@ For firewall configurations and allowlist setup for IP addresses, see [Security 
 
 This diagram shows how to move data by using ExpressRoute private peering:
 
-:::image type="content" source="./media/sap-security-expressroute.svg" border="false" alt-text="Diagram that shows ExpressRoute on Azure." lightbox="./media/sap-security-expressroute.svg":::
+:::image type="content" source="./media/sap-security-expressroute.png" border="false" alt-text="Diagram that shows ExpressRoute on Azure." lightbox="./media/sap-security-expressroute.png":::
 
 This diagram shows how to move data by using IPSec VPN:
 
