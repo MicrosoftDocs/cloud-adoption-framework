@@ -231,7 +231,7 @@ In the initial load mode (ODPSLT), there are three steps to extract data from SL
 
 - If the access plan calculation takes a long time and your initial load mode is set to "performance optimized", change it to "resource optimized" and rerun the extraction. If the data load takes a long time, increase the number of parallel threads in the configuration.
 
-- If you use a standalone architecture for SLT replication (dedicated SLT replication server), the network throughput between the source system and replication server might effect the extraction performance.
+- If you use a standalone architecture for SLT replication (dedicated SLT replication server), the network throughput between the source system and replication server might affect the extraction performance.
 
 - For replication:
   - Ensure that you have enough data transfer jobs that aren't reserved for the initial load.

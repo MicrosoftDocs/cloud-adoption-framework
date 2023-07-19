@@ -66,7 +66,7 @@ Here are common administration and management activities of SAP on Azure:
   - Implement [SSO by using OAuth for SAP NetWeaver](/azure/active-directory/saas-apps/sap-netweaver-tutorial#configure-sap-netweaver-for-oauth) to allow third-party or custom applications to access SAP NetWeaver OData services.
   - Implement [SSO to SAP HANA](/azure/active-directory/saas-apps/saphana-tutorial)
 
-- Consider AAD as an identity provider for SAP systems hosted on RISE. For more information, see [Integrating the Service with Azure AD](https://help.sap.com/docs/identity-authentication/identity-authentication/integrating-service-with-microsoft-azure-ad).
+- Consider Azure AD an identity provider for SAP systems hosted on RISE. For more information, see [Integrating the Service with Azure AD](https://help.sap.com/docs/identity-authentication/identity-authentication/integrating-service-with-microsoft-azure-ad).
 - For applications that access SAP, you might want to use [principal propagation to establish SSO](https://github.com/azuredevcollege/SAP/blob/master/sap-oauth-saml-flow/README.md).
 
 - If you're using SAP BTP services or SaaS solutions that require SAP Identity Authentication Service (IAS), [consider implementing SSO between SAP Cloud Identity Authentication Services and Azure AD](/azure/active-directory/saas-apps/sap-hana-cloud-platform-identity-authentication-tutorial) to access those SAP services. This integration lets SAP IAS act as a proxy identity provider and forwards authentication requests to Azure AD as the central user store and identity provider.

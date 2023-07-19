@@ -85,9 +85,9 @@ You can manage and run copy activities between a data store in your on-premises 
 
 Store data in your Storage account by using stage-specific Data Lake Storage Gen2 directories, like **Bronze**, **Silver**, and **Gold**.
 
-1. **Bronze:** The Synapse pipelines copy activities ingest data from the source systems. This ingested data is stored in raw format by using the data lake's Bronze directory.
-1. **Silver:** The Synapse Spark pool runs data quality rules to cleanse the raw data. This enriched data is stored in the data lake's Silver directory.
-1. **Gold:** After the cleansing process, the Spark pool applies any required normalization, data transformations, and business rules to the Silver directory data. This transformed data is stored in the data lake's Gold directory.
+- **Bronze:** The Synapse pipelines copy activities ingest data from the source systems. This ingested data is stored in raw format by using the data lake's Bronze directory.
+- **Silver:** The Synapse Spark pool runs data quality rules to cleanse the raw data. This enriched data is stored in the data lake's Silver directory.
+- **Gold:** After the cleansing process, the Spark pool applies any required normalization, data transformations, and business rules to the Silver directory data. This transformed data is stored in the data lake's Gold directory.
 
 The Synapse Apache Spark to Synapse SQL connector pushes the normalized data to the Synapse SQL pool for consumption by downstream applications and reporting services, such as Power BI. This connector optimally transfers data between the serverless Apache Spark pools and the SQL pools in the Azure Synapse Analytics workspace.
 
