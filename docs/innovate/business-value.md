@@ -53,7 +53,7 @@ If either team fails to answer all four questions in 30 minutes, then alignment 
 
 The Cloud Adoption Framework follows a prescribed path through four phases: strategizing, planning, readiness, and adoption. Cloud and business innovation fits within the adoption phase of this process.
 
-The answers to the third and fourth [qualifying questions](#qualifying-questions-to-determine-business-value) concern outcomes and motivations. When these answers are misaligned, your organization missed something during the strategizing phase of the cloud adoption lifecycle. One or more of the following scenarios are likely to be in play:
+The answers to the third and fourth [qualifying questions](#qualifying-questions-to-determine-business-value) concern outcomes and motivations. When these answers are misaligned, your organization missed something during the strategizing phase of the cloud adoption lifecycle. One or more of the following scenarios are likely to be involved:
 
 - **Alignment opportunity**: When business stakeholders can't agree on motivations and business outcomes related to a cloud and business innovation effort, it's a symptom of a larger challenge. The exercises in the [strategy methodology](../strategy/index.md) can be useful in developing alignment among business stakeholders. We also recommend that the same stakeholders form a [cloud strategy team](../organize/cloud-strategy.md) that meets regularly.
 

@@ -38,13 +38,13 @@ Inclusiveness mandates that AI should consider all human races and experiences. 
 
 ### Reliability and safety
 
-For AI systems to be trusted, they need to be reliable and safe. It's important for a system to perform as it was originally designed and for it to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation.
+For AI systems to be trusted, they need to be reliable and safe. It's important for a system to perform as it was originally designed and to respond safely to new situations. Its inherent resilience should resist intended or unintended manipulation.
 
 An organization should establish rigorous testing and validation for operating conditions to ensure that the system responds safely to edge cases. It should integrate A/B testing and champion/challenger methods into the evaluation process.
 
 An AI system's performance can degrade over time. An organization needs to establish a robust monitoring and model-tracking process to reactively and proactively measure the model's performance (and retrain it for modernization, as necessary).
 
-## Explainability
+## Explainable
 
 Explainability helps data scientists, auditors, and business decision makers ensure that AI systems can justify their decisions and how they reach their conclusions. Explainability also helps ensure compliance with company policies, industry standards, and government regulations.
 
@@ -52,23 +52,23 @@ A data scientist should be able to explain to a stakeholder how they achieved ce
 
 ### Explainability tools
 
-Microsoft has developed [InterpretML](https://interpret.ml/), an open-source toolkit that helps an organization achieve model explainability. It supports glass-box and black-box models:
+Microsoft has developed [InterpretML](https://interpret.ml/), an open-source toolkit that helps organizations achieve model explainability. It supports glass-box and black-box models:
 
 - Glass-box models are interpretable because of their structure. For these models, Explainable Boosting Machine (EBM) provides the state of the algorithm based on a decision tree or linear models. EBM provides lossless explanations and is editable by domain experts.
 
 - Black-box models are more challenging to interpret because of a complex internal structure, the neural network. Explainers like local interpretable model-agnostic explanations (LIME) or SHapley Additive exPlanations (SHAP) interpret these models by analyzing the relationship between the input and output.
 
-[Fairlearn](https://fairlearn.org/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. It uses explainers to understand what mainly influences the model, and it uses and domain experts to validate these influences.
+[Fairlearn](https://fairlearn.org/) is an Azure Machine Learning integration and an open-source toolkit for the SDK and the AutoML graphical user interface. It uses explainers to understand what mainly influences the model, and it uses domain experts to validate these influences.
 
 To learn more about explainability, explore [model interpretability in Azure Machine Learning](/azure/machine-learning/how-to-machine-learning-interpretability).
 
 ### Fairness
 
-Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate or express a bias against a group or individual based on gender, race, sexual orientation, or religion.
+Fairness is a core ethical principle that all humans aim to understand and apply. This principle is even more important when AI systems are being developed. Key checks and balances need to make sure that the system's decisions don't discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.
 
 Microsoft provides an [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) that offers guidance and solutions for AI systems. These solutions are loosely categorized into five stages: envision, prototype, build, launch, and evolve. Each stage lists recommended due-diligence activities that help minimize the impact of unfairness in the system.
 
-Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This should be an integral part of the data science process.
+Fairlearn integrates with Azure Machine Learning and supports data scientists and developers to assess and improve the fairness of their AI systems. It provides unfairness-mitigation algorithms and an interactive dashboard that visualizes the fairness of the model. An organization should use the toolkit and closely assess the fairness of the model while it's being built. This activity should be an integral part of the data science process.
 
 Learn how to [mitigate unfairness in machine learning models](/azure/machine-learning/concept-fairness-ml).
 
@@ -97,7 +97,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 - **Clarify what the system can do**. If the AI system uses or generates metrics, it's important to show them all and how they're tracked.
 
-- **Clarify how well the system can do what it does**. Help users understand that AI won't be completely accurate. Set expectations for when the AI system might make mistakes.
+- **Clarify how well the system can do what it does**. Help users understand that AI isn't completely accurate. Set expectations for when the AI system might make mistakes.
 
 ### During interaction
 
@@ -126,7 +126,7 @@ Human AI design guidelines consist of 18 principles that occur over four periods
 
 The AI designer builds the model and is responsible for:
 
-- Data drift and quality checks. The designer detects outliers and performs data quality checks to identify missing values, standardizes distribution, scrutinizes data, and produces use case and project reports.
+- Data drift and quality checks. The designer detects outliers and performs data quality checks to identify missing values. The designer also standardizes distribution, scrutinizes data, and produces use case and project reports.
 
 - Assessing data in the system's source to identify potential bias.
 
@@ -142,7 +142,7 @@ The AI administrator and officers oversee AI, governance, and audit framework op
 
 - Monitoring a tracking dashboard that assists model monitoring and combines model metrics for production models. The dashboard focuses on accuracy, model degradation, data drift, deviation, and changes in speed/error of inference.
 
-- Implementing flexible deployment and redeployment (preferably, REST API) that allows models to be implemented into open, agnostic architecture. The architecture integrates the model with business processes and generates value for feedback loops.
+- Implementing flexible deployment and redeployment (preferably, through a REST API) that allows models to be implemented into open, agnostic architecture. The architecture integrates the model with business processes and generates value for feedback loops.
 
 - Working toward building model governance and access to set boundaries and mitigate negative business and operational impact. Role-based access control (RBAC) standards determine security controls, which preserve restricted production environments and the IP.
 
