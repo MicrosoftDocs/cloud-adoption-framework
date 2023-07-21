@@ -58,9 +58,9 @@ Use of a tool that enables these capabilities is critical to effectively impleme
 
 These tools should have the following properties:
 
-- Integrate with the entire lifetime of the images from the beginning of the build process to the registry to the runtime.
+- Integration with the entire lifetime of the images, from the beginning of the build process to the registry to the runtime.
 - Visibility into vulnerabilities at all layers of the image, including the base layer of the image, application frameworks, and custom software.
-- Policy-driven enforcement with the right level of granularity allows your organization to create quality gates at each stage of the build and deployment processes.
+- Policy-driven enforcement with the right level of granularity, which allows your organization to create quality gates at each stage of the build and deployment processes.
 
 ### Registry security
 
@@ -83,7 +83,7 @@ As content is built and deployed, the distribution of this content is one of man
 Set up deployment processes to ensure that development tools, networks, and container runtimes are connected to registries only over encrypted channels. Also, be sure that the content comes from a trusted source. To reduce risks from the use of stale images:
 
 - Remove unsafe, vulnerable images that should no longer be used from container registries.
-- Enforce accessing images by using immutable names that specify particular versions of images to be used. This configuration can be implemented by using a *latest* tag or a specific version of the images. A tag doesn't guarantee freshness. For this reason, put a process in place to ensure that the Kubernetes orchestrator is using the most recent unique numbers or that the *latest* tag represents the most up-to-date versions.
+- Enforce accessing images by using immutable names that specify particular versions of images to be used. You can implement this configuration by using a *latest* tag or a specific version of the images. A tag doesn't guarantee freshness. For this reason, put a process in place to ensure that the Kubernetes orchestrator is using the most recent unique numbers or that the *latest* tag represents the most up-to-date versions.
 
 Access to registries that contain sensitive images should require authentication and authorization. All write access should also require authentication. For example, your policy could allow developers to only push images to the specific repositories for which they're responsible.
 
@@ -169,9 +169,9 @@ Using the container-specific OS in AKS nodes typically reduces attack surfaces b
 
 The Azure platform automatically applies OS security patches to Linux and Windows nodes on a nightly basis. If a Linux OS security update requires a host reboot, it won't automatically reboot. AKS provides mechanisms to reboot to apply those specific patches.
 
-Microsoft Defender for servers isn't applicable for AKS Linux and Windows nodes because Microsoft manages their OS. If no other virtual machines are in the subscription where AKS is deployed, you can safely disable Microsoft Defender for servers.
+Microsoft Defender for Servers isn't applicable for AKS Linux and Windows nodes because Microsoft manages their OS. If no other virtual machines are in the subscription where AKS is deployed, you can safely disable Microsoft Defender for Servers.
 
-If the environment has been deployed, including the [enterprise-scale landing zone recommended Azure policies](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), you can configure an exclusion to the policy assignment in the management group that automatically enables Microsoft Defender for servers to avoid unnecessary costs.
+If the environment has been deployed, including the [enterprise-scale landing zone recommended Azure policies](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md), you can configure an exclusion to the policy assignment in the management group that automatically enables Microsoft Defender for Servers to avoid unnecessary costs.
 
 ### Application security
 
@@ -239,7 +239,7 @@ Here are some other design considerations for AKS security governance and compli
 - Decide whether your private container registry is shared across multiple landing zones or if you deploy a dedicated container registry to each landing zone subscription.
 - Consider using a security solution like [Microsoft Defender for Kubernetes](/azure/security-center/defender-for-kubernetes-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
-- Consider disabling Microsoft Defender for servers in the AKS subscription if there are no non-AKS virtual machines, to avoid unnecessary costs.
+- Consider disabling Microsoft Defender for Servers in the AKS subscription if there are no non-AKS virtual machines, to avoid unnecessary costs.
 
 ## Design recommendations
 
