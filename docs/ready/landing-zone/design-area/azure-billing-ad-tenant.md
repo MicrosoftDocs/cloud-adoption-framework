@@ -37,5 +37,5 @@ Explore the further information, considerations and recommendations for each app
 
 - [Enterprise Agreement (EA)](./azure-billing-enterprise-agreement.md)
 - [Microsoft customer agreement (MCA)](./azure-billing-microsoft-customer-agreement.md)
-- [Cloud service provider agreement (CSP)](./azure-billing-cloud-solution-provider.md)
+- [Cloud solution provider agreement (CSP)](./azure-billing-cloud-solution-provider.md)
 - [Define an Azure Active Directory (Azure AD) tenant](./azure-ad-define.md)
