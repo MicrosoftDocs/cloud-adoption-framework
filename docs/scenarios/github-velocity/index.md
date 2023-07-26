@@ -152,4 +152,3 @@ The following links provide more information about GitHub.
 - [Learn modules for GitHub](/training/browse/?products=github)
 - [GitHub Learning Lab](https://github.com/apps/github-learning-lab)
 - [GitHub Docs](https://docs.github.com/en)
-- [Tips for getting started with GitHub DevSecOps](https://resources.github.com/whitepapers/Architects-guide-to-DevOps/)

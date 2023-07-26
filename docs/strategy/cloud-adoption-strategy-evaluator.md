@@ -14,12 +14,6 @@ ms.custom: internal, UpdateFrequency2
 
 The Cloud Adoption Framework provides the Cloud Adoption Strategy Evaluator to help you assess your overall cloud adoption strategy. This assessment offers recommendations based on the cloud economics principles that can help your organization create a robust business case and enable a successful cloud adoption.
 
-Watch the following video to learn how the Cloud Adoption Strategy Evaluator can help your cloud adoption efforts.
-
-<br/>
-
-<iframe src="/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=9fa04265-f18a-4184-a63c-735fff0c6c52" width="640" height="370"></iframe>
-
 ## Cloud Adoption Strategy Evaluator
 
 Every cloud adoption journey is unique, and there's often room for optimization as you start to migrate your organization's services to the cloud. No matter what your situation is, it can be a challenge to build solutions the right way with minimum trial and error. Several cloud services and different [on-ramps to cloud adoption](../ready/landing-zone/landing-zone-journey.md) are available to help you achieve this. Depending on which solution you're considering for your cloud adoption plan, there might be a dozen or more viable paths you can use to start building it. [Microsoft Assessments](/assessments/) make it easier to find tailored guidance to assist your organization in building or hosting your workloads in Azure with relevant SLAs. The assessments help you comprehensively assess the current state of your cloud strategy and close any gaps in your skill sets, stakeholder support, business KPIs and budget targets to ensure you have a successful cloud adoption journey.
