@@ -1,9 +1,9 @@
 ---
-title: Transition existing Azure environments to the Azure landing zone conceptual architecture
-description: Learn how to transition existing Azure environments into the Azure landing zone conceptual architecture
-author: jtracey93
-ms.author: jatracey
-ms.date: 05/16/2023
+title: Single/Few Management Groups to the Azure landing zone conceptual architecture
+description: Learn how to transition existing Azure environments comprised of single or few Management Groups into the Azure landing zone conceptual architecture
+author: sebassem
+ms.author: sebassem
+ms.date: 07/27/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -12,13 +12,11 @@ ms.custom: think-tank
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture
+# Scenario: Single/Few Management Groups to the Azure landing zone conceptual
 
-This page describes an example scenario that might match your current Azure environment. We detail steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario covers a single subscription with no management groups.
+This page describes an example scenario that might match your current Azure environment. We detail steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario covers a single or multiple management groups.
 
-<!-- ## Scenario 1: Single subscription with no management groups (Add this heading and change sub-headings to H3s when another example is added) -->
-
-In this scenario, the customer has already started to use Azure and already hosts a few applications or services within the platform. But, they've realized their current implementation is limiting their scalability and growth per their "cloud first" strategy.
+In this scenario, the customer has already started to use Azure, they have a management group hierarchy (one or more management groups) with multiple subscriptions and already hosts a few applications or services within the platform. But, they've realized their current implementation is limiting their scalability and growth per their "cloud first" strategy.
 
 As part of this expansion, they're also planning to migrate away from their on-premises datacenters into Azure. And they'll modernize and transform their applications or services using cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). But, they appreciate that it will take considerable time and effort, so they plan to "lift-and-shift". Initially, this plan will require hybrid connectivity (VPN/ExpressRoute).
 
@@ -28,18 +26,17 @@ The customer has evaluated the Azure landing zones conceptual architecture. And 
 
 In this scenario, the current state of the customer's Azure environment is as follows:
 
-- Single Azure subscription.
-- No custom management groups.
-- Non-uniform resource distribution. Platform and workload resources are deployed in the same Azure subscription.
-- Minimal usage of Azure Policy. Policy assignments (audit and deny effects) are done per resource group with exceptions.
-- Resource groups are treated as units of management and scale.
-- RBAC role assignments per resource group.
-- Azure Blueprints are being used.
+- One or more custom management groups.
+- Management group hierarchy based on organizational structure or geography
+- An Azure subscription per environment (dev/test/prod)
+- Non-uniform resource distribution. Some platform and workload resources are deployed in the same Azure subscriptions.
+- Minimal usage of Azure Policy. Policy assignments (audit and deny effects) are done at management group or subscription level.
+- RBAC role assignments per subscription.
 - Single VNet
   - No hybrid connectivity (VPN/ExpressRoute).
   - A new subnet is created per application.
-- Multiple self-contained applications in each of the `app-xx-rg` resource groups.
-  - Controlled and operated by different application or service teams.
+- Applications are deployed into the respective subscription per their environment (dev/test/prod)
+  - Controlled and operated by the central IT team.
 
 The following diagram shows the current state of this sample scenario:
 
