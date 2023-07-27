@@ -32,11 +32,10 @@ In this scenario, the current state of the customer's Azure environment is as fo
 - Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
 - Policy assignments (audit and deny effects) are done at a management group and subscription level.
 - RBAC role assignments per subscription and resource groups.
+- A hub VNet for hybrid connectivity (VPN/ExpressRoute).
 - A VNet per application environment.
-  - A hub VNet for hybrid connectivity (VPN/ExpressRoute).
-  - A new subnet is created per application per environment.
 - Applications are deployed into the respective subscription as per their environment classification (dev/test/prod)
-  - Controlled and operated by a central IT team.
+- Centrally controlled and operated by a central IT team.
 
 The following diagram shows the current state of this sample scenario:
 
