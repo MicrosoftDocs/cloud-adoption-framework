@@ -21,6 +21,8 @@ items:
       href: scenarios/hybrid/index.md
     - name: Modern application platform
       href: scenarios/app-platform/index.md
+    - name: Oracle
+      href: scenarios/oracle-iaas/index.yml
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
