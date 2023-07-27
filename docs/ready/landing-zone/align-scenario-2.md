@@ -30,7 +30,7 @@ In this scenario, the current state of the customer's Azure environment is as fo
 - Management group hierarchy based on organizational structure or geography
 - An Azure subscription per application environment (dev/test/prod)
 - Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
-- Policy assignments (audit and deny effects) are done at a subscription level.
+- Policy assignments (audit and deny effects) are done at a management group and subscription level.
 - RBAC role assignments per subscription and resource groups.
 - A VNet per application environment.
   - A hub VNet for hybrid connectivity (VPN/ExpressRoute).
@@ -40,7 +40,7 @@ In this scenario, the current state of the customer's Azure environment is as fo
 
 The following diagram shows the current state of this sample scenario:
 
-![Single subscription environment](./media/alz-align-scenario-single-sub.png)
+![Single subscription environment](./media/alz-align-scenario-multiple-mgs.png)
 
 ## Transition to the Azure landing zone conceptual architecture
 
@@ -63,7 +63,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-align-scenario-multiple-mgs.png" alt-text="Single subscription environment - transition state" lightbox="./media/alz-align-scenario-multiple-mgs.png":::
+:::image type="content" source="./media/alz-align-scenario-multiple-mgs-transition.png" alt-text="Single subscription environment - transition state" lightbox="./media/alz-align-scenario-multiple-mgs.png":::
 
 ## Summary
 
