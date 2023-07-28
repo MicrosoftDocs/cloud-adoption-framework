@@ -21,14 +21,14 @@ This guide covers network design for Azure VMWare Solution. It encompasses four 
 
 4. **Outbound Internet connectivity**. Outbound Internet connectivity is needed when applications running on Azure VMware Solution require access to public endpoints. Typical use cases include downloading software updates, consuming public web sites or APIs, Internet browsing (for example, when Azure VMware Solution is used to run [VDI solutions](/azure/azure-vmware/azure-vmware-solution-horizon)). Azure VMware Solution provides several options to implement outbound Internet connectivity, which may or may not rely on Azure native resources. Security requirements (firewalling, forward proxying, …) typically drive design decisions in this area. 
 
-Azure VMware Solution provides native functionalities to address the most common/basic requirements in each design area, with little or no dependence on customer-managed Azure-native resources. However, in enterprise scenarios, it is common for Azure VMware Solution to be part of a larger infrastructure that includes native Azure IaaS and PaaS services. In such cases, some out-of-the-box connectivity features provided in Azure VMware Solution may be replaced by more advanced solutions based on Azure native services, such as 1st-party network services (Azure Firewall, Azure Application Gateway, …) or 3rd-party Network Virtual Appliances (NVAs).
+Azure VMware Solution provides native functionalities to address the most common/basic requirements in each design area, with no need for you to deploy additional Azure resources. These native functionalities are covered in the [official documentation](/azure/azure-vmware/concepts-networking). However, in enterprise scenarios, it is common for Azure VMware Solution to be part of a larger infrastructure that includes native Azure IaaS and PaaS services. In such cases, some out-of-the-box connectivity features provided in Azure VMware Solution may be replaced by more advanced solutions based on Azure native services, such as 1st-party network services (Azure Firewall, Azure Application Gateway, …) or 3rd-party Network Virtual Appliances (NVAs). This guide helps you design these more advanced solutions.
 
-Designing Azure VMware Solution network solutions is a complex endeavor. A solid understanding of [Azure VMware Solution networking basics](network-design-guide-avs-networking-basics.md) is needed for an effective use of this guide.
+Designing advanced Azure VMware Solution network architectures requires a solid understanding of [Azure VMware Solution networking basics](network-design-guide-avs-networking-basics.md), which are prerequisite knowledge for an effective use of this guide.
 
 ## Design area prioritization
 The four design areas are not independent of each other. Design decisions made for one area may limit the options available in other areas. It is recommended to tackle the four areas in the order they have been introduced in the previous section. 
 
-![Figure1. Flowchart that defines the design area prioritization recommended in this guide.](media/network-design-guide-figure1.png) 
+:::image type="content" source="media/network-design-guide-figure1.png" alt-text="Figure1. Flowchart that defines the design area prioritization recommended in this guide." lightbox="media/network-design-guide-figure1.png":::
 *Design area prioritization recommended in this guide.*
 
 As shown in the flow chart, this guide advocates the following approach to network design for Azure VMware Solution.

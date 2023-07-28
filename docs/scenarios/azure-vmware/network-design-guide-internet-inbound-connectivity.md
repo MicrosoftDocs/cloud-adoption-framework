@@ -12,14 +12,14 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Design phase #3: Internet inbound connectivity
 
-Design Phase #3 is driven by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, Internet-facing applications are published through network devices that provide security (next generation firewalls, web application firewalls) and load balancing (layer-3/layer-4 load balancers, application delivery controllers, …) functions. Such devices can be deployed on the private cloud itself, or in an Azure virtual network connected to the private cloud. Choosing between these two options is the main goal of Design Phase #3. The following considerations may help drive the decision:
--  Azure VMware Solution customers may want to use pre-existing NVAs deployed in Azure virtual networks (firewalls, application delivery controllers, ...) to publish applications running on their private cloud(s), for cost optimization and for consistency.
-- Azure VMware Solution customers may want to use PaaS solutions available on Azure, to reduce management overhead. Azure services that can be used for publishing Internet-facing applications include [Azure Firewall](/azure/firewall/tutorial-firewall-dnat) (both when deployed in a customer managed virtual network and when deployed in a Virtual WAN Hub) and [Azure Application Gateway](/azure/application-gateway/overview).
-- Azure VMware Solution customers that prefer to host the network infrastructure for Internet publishing in their private cloud(s) may want to deploy firewalls and/or application delivery controllers as Azure VMware Solution virtual machines, if supported by the NVA vendor.
+Design Phase #3 is driven by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, Internet-facing applications are published through network devices that provide security (next generation firewalls, web application firewalls) and load balancing (layer-3/layer-4 load balancers, application delivery controllers, …) functions. Such devices can be deployed on the private cloud itself, or in an Azure virtual network connected to the private cloud. Choosing between these two options is the main goal of Design Phase #3. The following considerations may help drive your decision:
+-  You may want to use pre-existing NVAs deployed in Azure virtual networks (firewalls, application delivery controllers, ...) to publish applications running on your private cloud(s), for cost optimization and for consistency.
+- You may want to use PaaS solutions available on Azure, to reduce management overhead. Azure services that can be used for publishing Internet-facing applications include [Azure Firewall](/azure/firewall/tutorial-firewall-dnat) (both when deployed in a customer-managed virtual network and when deployed in a Virtual WAN Hub) and [Azure Application Gateway](/azure/application-gateway/overview).
+- You may prefer to host the network infrastructure for Internet publishing in your private cloud(s) and deploy firewalls and/or application delivery controllers as Azure VMware Solution virtual machines, if supported by the NVA vendor.
 
 The flow chart below summarizes how to approach Phase #3:
- 
-![Figure16. Flowchart that shows the design decision making process for inbound Internet connectivity.](media/network-design-guide-figure16.png) 
+
+:::image type="content" source="media/network-design-guide-figure16.png" alt-text="Figure16. Flowchart that shows the design decision making process for inbound Internet connectivity." lightbox="media/network-design-guide-figure16.png":::
 *Design Phase #3: Design outbound Internet connectivity based on where NVAs for application publishing will be hosted (Azure VMware Solution or Azure virtual network).*
 
 ## NVAs for application publishing hosted in an Azure virtual network

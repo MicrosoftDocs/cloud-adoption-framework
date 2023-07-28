@@ -13,14 +13,14 @@ ms.custom: think-tank, e2e-azure-vmware
 # Design phase #4: Internet outbound connectivity
 Design Phase #4 is driven by the outbound Internet connectivity requirements of the applications running on Azure VMware Solution. Such requirements may range from basic Internet access (for example to allow virtual machines running in the private cloud to download software updates) to complex outbound scenarios that require granular control on the source-NAT address pool (for example in B2B collaboration scenarios where access to a third party API is allowed only from authorized IP addresses) or the number of supported source-NAT sessions (for example in VDI scenarios). 
 
-Almost invariably, outbound Internet access must be secured, by routing connections through a firewall or proxy device. Azure VMware Solution supports deploying such devices in the private cloud itself, or in an Azure virtual network connected to the private cloud. Choosing between these two options is the main goal of Design Phase #4. The following considerations may help drive the decision:
-- Azure VMware Solution customers may want to leverage pre-existing secure internet access NVAs (firewalls, forward proxies) deployed in Azure virtual networks for cost optimization and consistency.
-- Azure VMware Solution customers may want to leverage PaaS solutions available on Azure, to reduce management overhead. Azure Firewall (especially when the Premium SKU features are enabled) can be used for secure Internet access. 
-- Azure VMware Solution customers that prefer to host the network infrastructure that supports their Azure VMware Solution applications entirely on Azure VMware Solution may want to deploy firewalls and/or proxy devices as Azure VMware Solution virtual machines, if supported by the NVA vendor.
+Almost invariably, outbound Internet access must be secured, by routing connections through a firewall or proxy device. Azure VMware Solution supports deploying such devices in the private cloud itself, or in an Azure virtual network connected to the private cloud. Choosing between these two options is the main goal of Design Phase #4. The following considerations may help drive your decision:
+- You may want to leverage pre-existing secure internet access NVAs (firewalls, forward proxies) deployed in Azure virtual networks for cost optimization and consistency.
+- You may want to leverage PaaS solutions available on Azure, to reduce management overhead. Azure Firewall (especially when the Premium SKU features are enabled) can be used for secure Internet access. 
+- You may prefer to host the network infrastructure that supports your Azure VMware Solution applications entirely on Azure VMware Solution and deploy firewalls and/or proxy devices as Azure VMware Solution virtual machines, if supported by the NVA vendor.
 
 Design phase #4 has a dependency on Phase #3. If ["Public IPs to the NSX-T edge"](network-design-guide-internet-inbound-connectivity.md#nvas-for-application-publishing-hosted-in-azure-vmware-solution-public-ips-on-the-nsx-t-edge) has been selected as the inbound Internet connectivity option, then it must be used for outbound connectivity too. All outbound connections initiated by virtual machines running on Azure VMware Solution will be managed on the NSX-T edge and Source-NATted behind addresses in the Azure Public IP Prefix associated with the private cloud's NSX-T edge. The flow chart below describes how to approach Design Phase #4.
- 
-![Figure17. Flowchart that shows the design decision making process for outbound Internet connectivity.](media/network-design-guide-figure17.png) 
+
+:::image type="content" source="media/network-design-guide-figure17.png" alt-text="Figure17. Flowchart that shows the design decision making process for outbound Internet connectivity." lightbox="media/network-design-guide-figure17.png":::
 *Design Phase #4: Outbound Internet connectivity.*
 
 ## Default routes and outbound Internet connectivity in Azure VMware Solution
@@ -50,7 +50,7 @@ When Public IPs to the NSX-T edge are configured, a default route that forwards 
 ### Originate default route from Azure (customer-managed virtual network or Virtual WAN)
 Internet-bound traffic emitted by Azure VMware Solution virtual machines can be routed to an Azure-native NVA by announcing a default route over the private cloud's managed ExpressRoute circuit. The private cloud's T0 gateways will honor the default route received from Azure and will send Internet-bound traffic to the next hop specified by the received default route. If the Internet edge NVAs in Azure support BGP, then they can be used as BGP speakers to originate the default route. If the NVAs do not support BGP (or cannot be used as BGP speakers due to security-related constraints), additional NVAs can be deployed to act as BGP speakers. A typical scenario that requires additional BGP-capable NVAs is when the Azure Internet edge is Azure Firewall (Azure Firewall does not support BGP). The resulting network topology is shown in the figure below.
 
-![Figure19. Default route origination from Azure virtual networks.](media/network-design-guide-figure19.png)  
+:::image type="content" source="media/network-design-guide-figure19.png" alt-text="Figure19. Default route origination from Azure virtual networks." lightbox="media/network-design-guide-figure19.png":::
 *Default route origination from Azure virtual networks.*
 
 ## Next Steps
