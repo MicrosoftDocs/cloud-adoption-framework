@@ -1,8 +1,8 @@
 ---
 title: Plan for Oracle cloud adoption in Azure
 description: Learn about the Plan for Oracle cloud adoption in Azure
-author: jacobjaygbay
-ms.author: jjaygbay1
+author: jjaygbay1
+ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 01/10/2023
 ms.topic: conceptual

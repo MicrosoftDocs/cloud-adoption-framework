@@ -1,8 +1,8 @@
 ---
 title: Oracle on Azure landing zone accelerator
 description: Learn about the Oracle on Azure landing zone accelerator.
-author: jacobjaygbay
-ms.author: jjaygbay1
+author: jjaygbay1
+ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 01/10/2023
 ms.topic: conceptual

@@ -1,8 +1,8 @@
 ---
 title: The strategic impact of Oracle in the Azure cloud
 description: Learn about the strategic impact of Oracle in the Azure cloud
-author: jacobjaygbay
-ms.author: jjaygbay1
+author: jjaygbay1
+ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/27/2023
 ms.topic: conceptual

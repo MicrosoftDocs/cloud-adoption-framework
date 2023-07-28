@@ -1,8 +1,8 @@
 ---
 title: Introduction to an Oracle adoption scenario
 description: Learn about Introduction to an Oracle adoption scenario
-author: jacobjaygbay
-ms.author: jjaygbay1
+author: jjaygbay1
+ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/27/2023
 ms.topic: conceptual

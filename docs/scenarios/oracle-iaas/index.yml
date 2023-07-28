@@ -9,8 +9,8 @@ metadata:
   title: Oracle on Azure landing zone accelerator
   description: Proven guidance and best practices that help you confidently adopt Oracle on Azure landing zone accelerator.
   services: cloud-adoption-framework
-  author: jacobjaygbay
-  ms.author: jjaygbay1
+  author: jjaygbay1
+  ms.author: jacobjaygbay
   ms.date: 07/27/2023
   ms.topic: hub-page
   ms.service: cloud-adoption-framework
