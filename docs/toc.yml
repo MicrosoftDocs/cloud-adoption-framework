@@ -283,7 +283,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
           - name: Microsoft customer agreement
             href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
-          - name: Cloud service provider
+          - name: Cloud solution provider
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
