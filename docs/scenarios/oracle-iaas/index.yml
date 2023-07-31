@@ -20,9 +20,31 @@ metadata:
   - e2e-oracle
   - engagement-fy24
 
-  items:
 
-    # Card
-    - title: Overview 
-      itemType: overview
-      url: enterprise-scale-landing-zone.md 
+# card 1
+  - title: Overview
+    linkLists: 
+      - linkListType: overview
+        links:
+          - text: Oracle on Azure landing zone accelerator overview
+            url: enterprise-scale-landing-zone.md
+          - text: The strategic impact of Oracle in the Azure cloud
+            url: oracle-landing-zone-strategy.md
+          - text: Plan for Oracle cloud adoption in Azure
+            url: oracle-landing-zone-plan.md
+
+# card 2  
+  - title: Prepare environment
+    linkLists: 
+      - linkListType: how-to
+        links:
+          - text: Azure landing zone for Oracle
+            url: azure-landing-zones.md
+
+# card 3
+  - title: Implementation options
+    linkLists: 
+      - linkListType: conceptual
+        links:
+          - text: Oracle on Azure landing zone accelerator
+            url: oracle-landing-zone-strategy.md

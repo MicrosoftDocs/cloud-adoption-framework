@@ -1,6 +1,6 @@
 items:
   - name: Oracle adoption - Microsoft Cloud Adoption Framework for Azure
-    href: index.yml
+    href: intro-oracle-landing-zone.md
   - name: The strategic impact of Oracle in the cloud
     href: oracle-landing-zone-strategy.md
   - name: Technical planning
@@ -8,7 +8,7 @@ items:
   - name: Prepare your environment
     items:
     - name: Azure landing zones
-      href: azure-landing-zones.md
+      href: oracle-landing-zones.md
   - name: Implementation options
     items:
       - name: Introduction to an Oracle adoption scenario
