@@ -51,7 +51,7 @@ Each Azure VMWare Solution Cloud Region connects back to on-premise via Global R
 
 The diagram depicts how each Azure VMWare Solution Cloud will learn routes from their local and cross-regional hubs. All blue routes are from Region 1, and all red routes are from Region 2. 
 
-![image](media/dual-region-virtual-wan-2.png)
+[![Diagram of Dual-Region Azure VMWare Solution with Azure VMWare Solution private clouds.](./media/dual-region-virtual-wan-2.png)](./media/dual-region-virtual-wan-2#lightbox)
 
 **Traffic Flow**
 | From |   To |  Hub 1 Virtual Networks | On-Premise | Hub 2 Virtual Networks | Cross-Regional Azure VMWare Solution Private Cloud|
@@ -67,7 +67,7 @@ On-Premise can communicate to Azure VMWare Solution Cloud Region 1 via orange co
 
 The diagram shows how On-Premise will learn routes from both regional hubs and both Azure VMWare Solution Private clouds. All blue routes are from Region 1, and all red routes are from Region 2. Black routes are on-premise routes and are advertised back to Azure.
 
-![image](media/dual-region-virtual-wan-3.png)
+[![Diagram of Dual-Region Azure VMWare Solution with on-premise.](./media/dual-region-virtual-wan-3.png)](./media/dual-region-virtual-wan-3#lightbox)
 
 **Traffic Flow**
 | From |   To |  Hub 1 Virtual Networks | Hub 2 Virtual Networks | Azure VMWare Solution Region 1| Azure VMWare Solution Region 2| 
@@ -80,7 +80,7 @@ This section will focus only on connectivity from an Azure Virtual Network persp
 
 The diagram shows how all Azure native resources in Virtual Network1 and Virtual Network2 will learn routes under their "Effective Routes". A Secure Hub with Routing Intent enabled will always send the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any additional prefixes that have been added as "Private Traffic Prefixes" - see https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies#azurefirewall. In our case, since Routing Intent is enabled, all resources within Virtual Network1 and Virtual Network2 will have the default RFC 1918 address with a next-hop of their local regional hub firewall. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. Please see the traffic flow below for more detailed information.
 
-![image](media/dual-region-virtual-wan-4.png)
+[![Diagram of Dual-Region Azure VMWare Solution with virtual networks.](./media/dual-region-virtual-wan-4.png)](./media/dual-region-virtual-wan-4#lightbox)
 
 **Traffic Flow**
 | From |   To |  On-Premise | Azure VMWare Solution Region 1 | Azure VMWare Solution Region 2| Cross-Region Virtual Network| 
@@ -112,7 +112,7 @@ In conclusion, you will have Azure VMWare Solution Private Clouds using internet
 
 Another thing to keep note is with Routing Intent you have the option to disable advertising the default route over any ExpressRoute of your choosing. We recommend not to advertise the default route to your on-premise ExpressRoute connections. 
 
-![image](media/dual-region-virtual-wan-5.png)
+[![Diagram of Dual-Region Azure VMWare Solution with internet.](./media/dual-region-virtual-wan-5.png)](./media/dual-region-virtual-wan-5#lightbox)
 
 **Traffic Flow**
 | From |   To |  Primary Internet Route | Backup Internet Route
