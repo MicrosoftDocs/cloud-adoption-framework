@@ -1,8 +1,7 @@
-### YamlMime:Hub
+### YamlMime:Landing
 
 title: Oracle on Azure landing zone accelerator
 summary: Proven guidance and best practices that help you confidently adopt Oracle on Azure landing zone accelerator.
-brand: azure
 
 metadata:
 
@@ -20,7 +19,9 @@ metadata:
   - e2e-oracle
   - engagement-fy24
 
+
 # card 1
+landingContent:
   - title: Overview
     linkLists: 
       - linkListType: overview
@@ -35,15 +36,15 @@ metadata:
 # card 2  
   - title: Prepare environment
     linkLists: 
-      - linkListType: how-to
+      - linkListType: concept
         links:
           - text: Azure landing zone for Oracle
-            url: azure-landing-zones.md
+            url: oracle-landing-zones.md
 
 # card 3
   - title: Implementation options
     linkLists: 
-      - linkListType: conceptual
+      - linkListType: concept
         links:
           - text: Oracle on Azure landing zone accelerator
             url: oracle-landing-zone-strategy.md
