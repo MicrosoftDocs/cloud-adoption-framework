@@ -1,16 +1,16 @@
 ---
-title: Migrate to or deploy Azure Virtual Desktop session hosts to Azure
-description: Use the Cloud Adoption Framework best practices to migrate or deploy Azure Virtual Desktop instances.
+title: Migrate end-user desktops to Azure Virtual Desktop
+description: Use the Cloud Adoption Framework best practices to migrate end-user desktops to Azure Virtual Desktop.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/18/2021
+ms.date: 07/19/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Migrate or deploy Azure Virtual Desktop instances to Azure
+# Migrate end-user desktops to Azure Virtual Desktop
 
 Migrating an organization's end-user desktops to the cloud is a common scenario in cloud migrations. Doing so helps improve employee productivity and accelerate the migration of various workloads to support the organization's user experience.
 
@@ -21,7 +21,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 - **Cloud Adoption Framework:** These articles walk through the considerations and recommendations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of Azure Virtual Desktop as a central part of your technology strategy.
 - **Reference architectures:** These reference solutions aid in accelerating deployment of Azure Virtual Desktop.
 - **Featured Azure products:** Learn more about the products that support your virtual desktop strategy in Azure.
-- **Learn modules:** Gain the hands-on skills required to implement, maintain, and support a virtual desktop environment.
+- **Training modules:** Gain the hands-on skills required to implement, maintain, and support an Azure Virtual Desktop environment.
 
 ## Common customer journeys
 
@@ -31,7 +31,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 - **Prepare for governance and operations at scale:** Enterprise-scale support for Azure Virtual Desktop demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of virtual desktop environments.
 
-- **Implement specific Azure products:** Accelerate and improve virtual desktop capabilities using different kinds of Azure products outlined in the featured products section.
+- **Implement specific Azure products:** Accelerate and improve virtual desktop capabilities using different Azure products outlined in the featured products section.
 
 ## Next steps
 

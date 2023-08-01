@@ -3,7 +3,7 @@ title: Scale cloud-scale analytics in Azure
 description: Learn how to scale cloud-scale analytics in Azure by using data landing zones. Your scalable platform can have one or more landing zones, as required.
 author: marvinbuss
 ms.author: mabuss
-ms.date: 03/31/2022
+ms.date: 01/23/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

@@ -17,7 +17,7 @@ When using a VMware software-defined datacenter (SDDC) with an Azure cloud ecosy
 The article builds on several Cloud Adoption Framework [enterprise-scale landing zones](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) architectural principles and recommendations for managing network topology and connectivity at scale. You can use this Azure landing zone design area guidance for mission-critical Azure VMware Solution platforms. Design areas include:
 
 - **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
-- **Performance and reliability at scale** for workload scalability and consistent, low-latency experience.
+- **Performance and reliability at scale** for workload scalability and consistent, low-latency experience. A subsequent article covers [Dual region deployments](eslz-dual-region-network-topology.md).
 - **Zero-trust-based network security** for network perimeter and traffic flow security. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
 - **Extensibility** for easy expansion of network footprints without any need for design reworks.
 
@@ -134,4 +134,4 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 - To learn Cloud Adoption Framework enterprise-scale landing zone architectural principles, various design considerations, and best practices for Azure VMware Solution, see the next article in this series:
 
   > [!div class="nextstepaction"]
-  > [Security, governance, and compliance disciplines for Azure VMware Solution](./eslz-security-governance-and-compliance.md)
+  > [Single Region Hub & Spoke Topologies ](./network-hub-spoke.md)

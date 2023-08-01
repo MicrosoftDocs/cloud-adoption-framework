@@ -1,13 +1,13 @@
 ---
 title: Migrate SQL Server databases to Azure
 description: Learn how Contoso migrates their on-premises SQL databases to Azure.
-author: deltadan
-ms.author: martinek
-ms.date: 10/17/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank
+ms.custom: UpdateFrequency2
 ---
 
 # Migrate SQL Server databases to Azure
@@ -65,6 +65,8 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 | **Pros** | Azure provides a single pane of glass into the database workloads. <br><br> You can monitor costs with Azure Cost Management + Billing. <br><br> Azure Billing APIs make business chargeback billing easier. <br><br> Server and software maintenance is reduced to only the IaaS-based environments. |
 | **Cons** | Due to the requirement of IaaS-based virtual machines, the team must still manage the software on those machines. |
 
+Further, Contoso reviews the [considerations and recommendations for Azure SQL Database](/azure/well-architected/services/data/azure-sql-database-well-architected-framework) with the Azure Well-Architected Framework.
+
 ### Budget and management
 
 Before migration occurs, set up the necessary Azure structure to support the solution's administrative and billing aspects.
@@ -72,6 +74,8 @@ Before migration occurs, set up the necessary Azure structure to support the sol
 For the management requirements, the company creates several [management groups](/azure/governance/management-groups/overview) to support the organizational structure.
 
 For the billing requirements, the company [tags](/azure/azure-resource-manager/management/tag-resources) each of the Azure resources with the appropriate billing tags.
+
+To better understand the cost of various services in Azure, use the [Pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ### Migration process
 
@@ -109,6 +113,8 @@ The assessment determines that Contoso uses mainly .NET-based applications. But 
 - ~50 PHP applications
 - 25 Node.js applications
 - 10 Java applications
+
+Further, learn how to [Assess an application's data access layer with Data Migration Assistant](/sql/dma/dma-assess-app-data-layer).
 
 #### Step 3: Database assessment
 
@@ -203,6 +209,10 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 - Implement [Elastic pools](/azure/azure-sql/database/service-tiers-dtu) for databases that have compatible resource utilization patterns.
 - Each read replica bills based on the compute and storage you select.
 - Use reserved capacity to save on costs.
+
+## Considerations
+
+**Blocked migrations:** If Contoso is currently blocked for migrations for specific SQL Servers, they can evaluate using [Azure Arc-enabled SQL Servers](/sql/sql-server/azure-arc/overview) as a workaround. This solution involves using the existing Software Assurance SQL license with additional benefits by enabling Azure Arc SQL server.
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: Traditional Azure networking topology
 description: Learn about key design considerations and recommendations surrounding network topologies in Microsoft Azure.
 author: sitarant
 ms.author: sitarant
-ms.date: 08/18/2021
+ms.date: 02/17/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -58,7 +58,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - ExpressRoute has certain limits; there are a maximum number of ExpressRoute connections per ExpressRoute gateway, and ExpressRoute private peering can identify a maximum number of routes from Azure to on-premises. For more information about ExpressRoute limits, see [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits).
 
-- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. A VPN gateway supports up to 30 site-to-site or network-to-network tunnels.
+- A VPN gateway's maximum aggregated throughput is 10 gigabits per second. A VPN gateway supports up to 100 site-to-site or network-to-network tunnels.
 
 - If an NVA is part of the architecture, consider Azure Route Server to simplify dynamic routing between your network virtual appliance (NVA) and your virtual network. Azure Route Server allows you to exchange routing information directly through Border Gateway Protocol (BGP) routing protocol between any NVA that supports the BGP routing protocol and the Azure software defined network (SDN) in the Azure virtual network (VNet) without the need to manually configure or maintain route tables.
 
@@ -74,7 +74,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
   - There's no need for transitive connectivity between VPN and ExpressRoute connections.
 
-  - The main hybrid connectivity method in place is ExpressRoute, and the number of VPN connections is less than 30 per VPN Gateway.
+  - The main hybrid connectivity method in place is ExpressRoute, and the number of VPN connections is less than 100 per VPN Gateway.
 
   - There's a dependency on centralized NVAs and granular routing.
 

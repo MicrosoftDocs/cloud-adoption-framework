@@ -3,7 +3,7 @@ title: Rehost an application on Azure VMs by using Azure Migrate
 description: Learn how Contoso uses the Azure Migrate service to perform a lift-and-shift migration of on-premises machines to Azure and rehost an on-premises application.
 author: givenscj
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 07/30/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -75,7 +75,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 Contoso will migrate the application front-end and database VMs to Azure VMs by using the agentless method in the Azure Migrate: Server Migration tool.
 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate: Server Migration, and prepares the on-premises VMware infrastructure.
-- The [Azure infrastructure](./contoso-migration-infrastructure.md) is in place, so Contoso just needs to configure the replication of the VMs through the Azure Migrate: Server Migration tool.
+- The [Azure infrastructure](../azure-migration-guide/ready-alz.md) is in place, so Contoso just needs to configure the replication of the VMs through the Azure Migrate: Server Migration tool.
 - With everything prepared, Contoso can start replicating the VMs.
 - After replication is enabled and working, Contoso will migrate the VM by testing the migration and failing it over to Azure, if successful.
 
@@ -94,7 +94,7 @@ Contoso and other users must meet the following prerequisites for this scenario.
 | Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
+| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) for Azure Migrate: Server Migration. |
 | **On-premises servers** | On-premises vCenter servers should be running version 5.5, 6.0, 6.5, or 6.7. <br><br> ESXi hosts should run version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs should be running on the ESXi host. |
 
 ## Scenario steps
@@ -111,7 +111,7 @@ Here's how Contoso admins will run the migration:
 
 To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs will be located when they're created during migration. It also needs the Azure Migrate: Server Migration tool (OVA file) provisioned and configured.
 
-1. Set up a network. Contoso already set up one that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
+1. Set up a network. Contoso already set up one that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](../azure-migration-guide/ready-alz.md).
 
     - The SmartHotel360 application is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
