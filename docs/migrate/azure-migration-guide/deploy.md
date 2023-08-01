@@ -1,20 +1,20 @@
 ---
 title: Migrate assets
-description: Learn how to start the migration to Azure by identifying the best tools to use, including native tools, third-party tools, and project management tools.
-author: matticusau
-ms.author: martinek
-ms.date: 08/08/2022
+description: Migrate and deploy workloads and assets to Azure. This article helps you find the best tools for your migration. Explore native tools, third-party tools, and project management tools.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 07/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: think-tank, fasttrack-new, AQC
+ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Migrate assets
 
 In this phase of the adoption journey, use the output of the assessment phase to begin migrating your environment. Migrating your environment involves deploying workloads and assets, like infrastructure, apps, and data. This article helps you find the best tools for your migration. Explore native tools, third-party tools, and project management tools.
 
-## [Native migration tools](#tab/Tools)
+## Native migration tools
 
 The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](./migration-tools-decision-guide.md).
 
@@ -77,19 +77,13 @@ After you register the resource provider, create an instance of Azure Database M
 
 The service is now ready to migrate the supported source databases to target platforms such as SQL Server, MySQL, PostgreSQL, or MongoDB.
 
-::: zone target="chromeless"
-
-::: zone-end
-
-::: zone target="docs"
-
 For more information, see:
 
 - [Azure Database Migration Service overview](/azure/dms/dms-overview)
 - [Create an instance of Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal)
+::: zone target="docs"
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
-
 ::: zone-end
 
 ### Azure App Service Migration Assistant
@@ -173,7 +167,18 @@ Azure Cosmos DB data migration imports data from various sources into Azure Cosm
 
 For more information, see [Azure Cosmos DB data migration tool](/azure/cosmos-db/import-data).
 
-## [Third-party migration tools](#tab/third-party-tools)
+### Migrate to Azure Storage (blob) or Azure Data Lake Store with Azure Data Factory
+
+Migrate data at scale with Azure Data Factory (ADF). ADF offers a serverless architecture that allows parallelism at different levels, which maximizes data movement throughput for your environment. ADF supports both initial snapshot migration and delta data migration.
+
+For more information, see the following links:
+
+- [Why Azure Data Factory can be used for data migration](/azure/data-factory/data-migration-guidance-overview).
+- [Migrate data from AWS S3 to Azure](/azure/data-factory/data-migration-guidance-s3-azure-storage).
+- [Migrate data from on-premises hadoop cluster to Azure](/azure/data-factory/data-migration-guidance-hdfs-azure-storage)
+- [Migrate data from on-premises Netezza server to Azure](/azure/data-factory/data-migration-guidance-netezza-azure-sqldw).
+
+## Third-party migration tools
 
 Several third-party migration tools and ISV services can help you with the migration process. Each offers different benefits and strengths. These tools include:
 
@@ -217,7 +222,7 @@ Visit the [Azure migration and modernization center](https://azure.microsoft.com
 
 Visit the [Azure Database Migration Guide](/data-migration/) to see a range of database migration options and step-by-step guidance with native and partners.
 
-## [Project management tools](#tab/project-management-tools)
+## Project management tools
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, it's important to use a project management tool. There are many different tools available. Project managers in your organization might already have a favorite.
 
@@ -246,6 +251,6 @@ Here's an example of a tailored learning path that complements the setup for Dev
 
 [Build applications with Azure DevOps](/training/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
-## [Cost management](#tab/ManageCost)
+## Cost management
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place other usage requirements on your services, periodic cost analysis helps you avoid unexpected charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Optimize and transform](./optimize-and-transform.md) section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. Since the migration process can place other usage requirements on your services, periodic cost analysis helps you avoid unexpected charges. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Release workloads](./release.md) section.

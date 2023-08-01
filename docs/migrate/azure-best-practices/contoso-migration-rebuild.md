@@ -99,7 +99,7 @@ Here's what Contoso needs for this scenario:
 | Requirements | Details |
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
-| Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
+| Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). |
 | Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
@@ -683,7 +683,7 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
+- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](../azure-migration-guide/ready-alz.md).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the Enterprise Agreement.
 - Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 

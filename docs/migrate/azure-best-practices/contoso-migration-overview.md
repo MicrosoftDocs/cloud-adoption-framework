@@ -60,7 +60,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 | Article | Details |
 | --- | --- |
-| [Deploy Azure infrastructure](./contoso-migration-infrastructure.md) | This article shows how an organization can prepare its on-premises infrastructure and its Azure infrastructure for migration. The infrastructure example established in this article is referenced in the other samples provided in this section. |
+| [Deploy Azure infrastructure](../azure-migration-guide/ready-alz.md) | This article shows how an organization can prepare its on-premises infrastructure and its Azure infrastructure for migration. The infrastructure example established in this article is referenced in the other samples provided in this section. |
 
 ### Windows Server workloads
 
