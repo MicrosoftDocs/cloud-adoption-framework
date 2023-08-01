@@ -3,7 +3,7 @@ title: Plan for virtual machine remote access
 description: Plan for virtual machine remote access
 author: sitarant
 ms.author: sitarant
-ms.date: 02/25/2022
+ms.date: 09/06/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready

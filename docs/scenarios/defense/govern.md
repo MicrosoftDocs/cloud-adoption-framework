@@ -2,12 +2,12 @@
 title: Govern for defense cloud adoption
 description: Recommendations for cloud platform governance in a defense organization
 author: stephen-sumner
-ms.author: mimckann
+ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: organize
+ms.subservice: scenario
 ---
 # Govern for defense cloud adoption
 
@@ -53,7 +53,7 @@ For more on governance automation, see
 - [Overview of Azure Policy](/azure/governance/policy/)
 - [Compliance in Azure](/azure/azure-government/documentation-government-plan-compliance)
 - [Azure compliance standards](/azure/compliance/)
-- [Governance visualization tool](https://github.com/microsoft/CloudAdoptionframework/tree/master/govern/AzureGovernanceVisualizer)
+- [Governance visualization tool](https://aka.ms/alz/azgovviz)
 - [Microsoft Sentinel workbooks](/azure/sentinel/top-workbooks)
 
 ## Create a cost governance strategy

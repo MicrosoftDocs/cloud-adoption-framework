@@ -22,7 +22,7 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 
 As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
-Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure Governance Visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
+Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
