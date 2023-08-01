@@ -7,7 +7,7 @@ items:
     href: oracle-landing-zone-plan.md
   - name: Prepare your environment
     items:
-    - name: Azure landing zones
+    - name: Azure landing zone for Oracle
       href: oracle-landing-zones.md
   - name: Implementation options
     items:
