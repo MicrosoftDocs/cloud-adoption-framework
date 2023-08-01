@@ -32,7 +32,7 @@ The following articles provide guidance that you might find helpful at various p
 - [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
 - [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
 - [Management for Manufacturing HPC](./management.md)
-- [Network topology and connectivity for Manufacturing HPC](/network-topology-connectivity.md)
+- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
 - [Resource organization for Manufacturing HPC](./resource-organization.md)
 - [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
 - [Security for Manufacturing HPC](./security.md)

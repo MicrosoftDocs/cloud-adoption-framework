@@ -29,7 +29,7 @@ The following articles provide guidance that you might find helpful at various p
 - [Management for Energy HPC](./management.md)
 - [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
-- [Governance for Energy HPC](.security-governance-compliance.md)
+- [Governance for Energy HPC](./security-governance-compliance.md)
 - [Security for Energy HPC](./security.md)
 - [Compute for Energy HPC](./compute.md)
 - [Storage for Energy HPC](./storage.md)
