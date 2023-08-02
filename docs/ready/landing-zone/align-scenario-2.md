@@ -47,7 +47,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 1. Review the [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md) and [Azure landing zone design areas](./design-areas.md).
 
-2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy.md#platform) into the same Azure AD tenant in parallel with the current environment.
+2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment.
 
    Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment is not affected by these changes.
 
