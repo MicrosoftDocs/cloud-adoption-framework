@@ -55,5 +55,31 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Don't use public IP addresses for virtual networks, especially if the public IP addresses don't belong to your organization.
 
-- Take the services you are going to use into consideration, there are some services with reserved ips, like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
+- Take the services you're going to use into consideration, there are some services with reserved ips, like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
 
+# IP Address Management (IPAM) tools
+
+An IPAM tool is crucial for Azure IP address planning as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. With an IPAM tool, your organization can efficiently allocate IP addresses, ensuring seamless connectivity between on-premises locations and Azure regions. It automates the process and helps reducing manual errors.
+
+**Design considerations:**
+
+- There are many different IPAM tools available that you could use, all depending on your requirements and the size of your organization. You have a range of options, from open-source solutions to paid enterprise products with extended support and functionality.
+
+- Your operating model need to be considered when implementing an IPAM tool to sort out any bottlenecks or dependencies for requesting new IP address spaces to application teams.
+
+- An important part of the IPAM tool functionality is to inventory IP address space usage and logically organize it.
+
+**Design recommendations:**
+
+- The process of reserving non-overlapping IP address spaces should support requesting different sizes based on the needs of the individual application landing zones.
+  - For example you could adopt T-shirt sizing to make it easy for application teams to describe their needs:
+    - Small - `/24` - 256 ip addresses
+    - Medium - `/22` - 1,024 ip addresses
+    - Large - `/20` - 4,096 ip addresses
+
+- Your IPAM tool should have an API for reserving non-overlapping IP address spaces to support an Infrastructure as Code (IaC) approach. This requirement is also essential for integrating IPAM into your [subscription vending process](/azure/architecture/landing-zones/subscription-vending) and eliminate dependencies on human intervention.
+  - An example of an IaC approach is [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) with its deployment script functionality or [Terraform](/azure/developer/terraform/overview) data sources to dynamically fetch data from the IPAM API.
+
+- Create a systematic arrangement for your IP address spaces by structuring them according to Azure regions and workload archetypes, ensuring a clean and traceable network inventory.
+
+- The decommissioning process for workloads should include the removal of IP address spaces that is no longer used, which can later be repurposed for upcoming new workloads, promoting efficient resource utilization.
