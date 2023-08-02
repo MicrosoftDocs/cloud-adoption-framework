@@ -12,7 +12,7 @@ ms.subservice: migrate
 
 # Readying your landing zone for migration
 
-If your organization relies on [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+If your organization aligns to [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you will find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
 
 Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a migration project.
 
