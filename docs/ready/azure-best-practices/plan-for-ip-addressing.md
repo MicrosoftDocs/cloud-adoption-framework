@@ -57,7 +57,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Take the services you're going to use into consideration, there are some services with reserved ips, like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
 
-# IP Address Management (IPAM) tools
+## IP Address Management (IPAM) tools
 
 An IPAM tool is crucial for Azure IP address planning as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. With an IPAM tool, your organization can efficiently allocate IP addresses, ensuring seamless connectivity between on-premises locations and Azure regions. It automates the process and helps reducing manual errors.
 
