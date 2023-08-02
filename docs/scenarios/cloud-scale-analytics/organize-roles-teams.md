@@ -27,7 +27,7 @@ Each of these teams aligns to a particular part of Cloud-scale analytics and whi
 
 ## Data landing zone teams
 
-The data landing zone group consists of three teams:
+The data landing zone group consists of two teams:
 
 **Data Application teams (one team per application)**:
 
