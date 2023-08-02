@@ -45,7 +45,7 @@ The following diagram shows the current state of this sample scenario:
 
 To transition from this scenario's current state to an Azure landing zone conceptual architecture, we suggest this approach:
 
-1. Review the [Azure landing zone conceptual architecture](./index.md) and [Azure landing zone design areas](./design-areas.md).
+1. Review the [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md) and [Azure landing zone design areas](./design-areas.md).
 
 2. Deploy the [Azure landing zone accelerator](./index.md#platform-landing-zone-accelerator) into the same Azure AD tenant in parallel with the current environment.
 
