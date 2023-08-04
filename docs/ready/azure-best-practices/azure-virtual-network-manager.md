@@ -21,7 +21,7 @@ Azure Virtual Network Manager allows you to create three types of topologies acr
 - Hub and spoke with spokes that are directly connected to each other, without any hops in the middle.
 - A meshed group of virtual networks that are interconnected.
 
-![Diagram that shows Azure Virtual Network topologies](../../_images/azure-virtual-network-manager-best-practice/network-topologies.png)
+![Diagram that shows Azure Virtual Network topologies](../../_images/azure-best-practices/avnm-network-topologies.png)
 
 When you create a hub-and-spoke topology with Azure Virtual Network Manager in which spokes are connected to each other, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups)are automatically created bi-directionally. By using Azure Virtual Network Manager, you can statically or dynamically make spoke virtual networks members of a specific network group, which automatically creates the connectivity for any virtual network.
 
