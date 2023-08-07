@@ -16,9 +16,9 @@ An Azure landing zone is an environment that follows key design principles acros
 
 ## Azure landing zone architecture
 
-An Azure landing zone architecture is scalable and modular to meet a range of deployment needs. A repeatable infrastructure allows you to consistently apply configurations and controls to every subscription. Modules make it easy to deploy and modify specific components of the Azure landing zone architecture as your requirements evolve.
+An Azure landing zone architecture is scalable and modular to meet various deployment needs. A repeatable infrastructure allows you to apply configurations and controls to every subscription consistently. Modules make it easy to deploy and modify specific Azure landing zone architecture components as your requirements evolve.
 
-The Azure landing zone conceptual architecture (*see figure 1*) represents an opinionated, target architecture for your Azure landing zone. You should use this conceptual architecture as a starting point and [tailor the architecture to meet your needs](./tailoring-alz.md).
+The Azure landing zone conceptual architecture (*see figure 1*) represents an opinionated target architecture for your Azure landing zone. You should use this conceptual architecture as a starting point and [tailor the architecture to meet your needs](./tailoring-alz.md).
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 *Figure 1: Azure landing zone conceptual architecture. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture.*
@@ -33,23 +33,23 @@ An Azure landing zone consists of platform landing zones and application landing
 
 **Platform landing zone:** A platform landing zone is a subscription that provides shared services (identity, connectivity, management) to applications in application landing zones. Consolidating these shared services often improves operational efficiency. One or more central teams manage the platform landing zones. In the conceptual architecture (*see figure 1*), the "Identity subscription", "Management subscription", and "Connectivity subscription" represent three different platform landing zones. The conceptual architecture shows these three platform landing zones in detail. It depicts representative resources and policies applied to each platform landing zone.
 
-**Application landing zone:** An application landing zone is a subscription for hosting an application. You pre-provision application landing zones through code, and use management groups to assign policy controls to them. In the conceptual architecture (*see figure 1*), the "Landing zone A1 subscription" and "Landing zone A2 subscription" represent two different application landing zones. The conceptual architecture shows only the "Landing zone A2 subscription" in detail. It depicts representative resources and policies applied to the application landing zone.
+**Application landing zone:** An application landing zone is a subscription for hosting an application. You pre-provision application landing zones through code and use management groups to assign policy controls to them. In the conceptual architecture (*see figure 1*), the "Landing zone A1 subscription" and "Landing zone A2 subscription" represent two different application landing zones. The conceptual architecture shows only the "Landing zone A2 subscription" in detail. It depicts representative resources and policies applied to the application landing zone.
 
-There are three main approaches to managing application landing zones. You should use a (1) central team, (2) application team, or (3) shared team management approach depending on your needs (*see table*).
+There are three main approaches to managing application landing zones. You should use a (1) central team, (2) application team, or (3) shared team management approach, depending on your needs (*see table*).
 
 | Application landing zone management approach | Description |
 | --- | --- |
-| Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to both the platform landing zones and application landing zones.
+| Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to the platform and application landing zones.
 | Application team management | A platform administration team delegates the entire application landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
-| Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to centrally manage application landing zones.  
+| Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to manage application landing zones centrally.  
 
 ## Azure landing zone accelerators
 
-Accelerators are infrastructure-as-code implementations that help you deploy an Azure landing zone the right way. We have a platform landing zone accelerator and several application landing zone accelerators that you can deploy.
+Accelerators are infrastructure-as-code implementations that help you deploy an Azure landing zone correctly. We have a platform landing zone accelerator and several application landing zone accelerators you can deploy.
 
 ### Platform landing zone accelerator
 
-There's a ready-made deployment experience called the **Azure landing zone portal accelerator**. The Azure landing zone portal accelerator deploys the conceptual architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It's suitable for organizations where the conceptual architecture aligns with the planned operating model and resource structure.
+There's a ready-made deployment experience called the **Azure landing zone portal accelerator**. The Azure landing zone portal accelerator deploys the conceptual architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose conceptual architecture aligns with the planned operating model and resource structure.
 
 You should use the Azure landing zone portal accelerator if you plan to manage your environment with the Azure portal. If you want to use Bicep or Terraform, see the [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform). Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. Follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access) to grant these permissions.
 
@@ -70,7 +70,7 @@ Application landing zone accelerators help you deploy application landing zones.
 
 ## Next steps
 
-An Azure landing zone is an environment adheres to key design principles across eight design areas. You should familiarize yourself with these design principles to tailor them to your needs.
+An Azure landing zone is an environment that adheres to crucial design principles across eight design areas. You should familiarize yourself with these design principles to tailor them to your needs.
 
 > [!div class="nextstepaction"]
 > [Design principles](./design-principles.md)
