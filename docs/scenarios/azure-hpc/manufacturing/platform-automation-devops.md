@@ -28,12 +28,12 @@ Keep in mind that it could be important to understand any decisions made previou
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC in the manufacturing industry.
 
-- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
-- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
-- [Management for Manufacturing HPC](./management.md)
-- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
-- [Resource organization for Manufacturing HPC](./resource-organization.md)
-- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
-- [Security for Manufacturing HPC](./security.md)
-- [Storage for Manufacturing HPC](./storage.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
+- [Security for HPC in manufacturing industries](./security.md)
+- [Manufacturing HPC storage](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

@@ -22,12 +22,12 @@ Keep in mind that it could be important to understand any decisions made previou
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC environments in the finance sector.
 
-- [Azure billing offers and Active Directory tenants for Finance HPC](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for Finance HPC](./identity-access-management.md)
-- [Management for finance HPC](./management.md)
-- [Network topology and connectivity for Finance HPC](./network-topology-connectivity.md)
-- [Resource organization for Finance HPC](./resource-organization.md)
-- [Governance for Finance HPC](./security-governance-compliance.md)
-- [Security for Finance HPC](./security.md)
-- [Storage for Finance HPC](./storage.md)
+- [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
+- [Finance HPC Azure identity and access management](./identity-access-management.md)
+- [Management for HPC in the finance sector](./management.md)
+- [Network topology and connectivity for HPC in the finance sector](./network-topology-connectivity.md)
+- [Resource organization for Azure HPC in the finance sector](./resource-organization.md)
+- [Governance for finance HPC](./security-governance-compliance.md)
+- [Security for HPC in the finance sector](./security.md)
+- [Storage for HPC in the finance sector](./storage.md)
 - [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

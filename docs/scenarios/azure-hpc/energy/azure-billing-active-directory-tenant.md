@@ -24,13 +24,13 @@ You might also want to review the [identity and access management considerations
 
 The following articles provide guidance that you might find helpful at various points throughout the cloud adoption process. They can help you succeed in your cloud adoption for energy HPC environments.
 
-- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
-- [Management for Energy HPC](./management.md)
-- [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
-- [Resource Organization for Energy HPC](./resource-organization.md)
-- [Governance for Energy HPC](./security-governance-compliance.md)
-- [Security for Energy HPC](./security.md)
-- [Compute for Energy HPC](./compute.md)
-- [Storage for Energy HPC](./storage.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
+- [Security for Azure HPC in energy](./security.md)
+- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
+- [Storage for HPC energy environments](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

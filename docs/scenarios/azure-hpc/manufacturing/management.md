@@ -14,7 +14,7 @@ ms.date: 11/11/2022
 
 Azure [landing zones for HPC](../ready.md) in the manufacturing industry don't have any specific considerations or recommendations that influence management decisions. Management is one of several design areas considered in this documentation.
 
-## Previous recommendations 
+## Previous recommendations
 
 Keep in mind that it could be important to understand any decisions made previously by the cloud platform team so you know about existing [management recommendations](../../../ready/landing-zone/design-area/management.md).
 
@@ -22,12 +22,12 @@ Keep in mind that it could be important to understand any decisions made previou
 
 The following articles provide guidance that you might find helpful at various points throughout the cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC environments in manufacturing.
 
-- [Azure Billing and Active Directory Tenants for Manufacturing HPC](./azure-billing-active-directory-tenant.md)
-- [Azure Identity and Access Management for Manufacturing HPC](./identity-access-management.md)
-- [Network topology and connectivity for Manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization for Manufacturing HPC](./resource-organization.md)
-- [Azure governance for Manufacturing HPC](./security-governance-compliance.md)
-- [Security for Manufacturing HPC](./security.md)
-- [Storage for Manufacturing HPC](./storage.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
+- [Security for HPC in manufacturing industries](./security.md)
+- [Manufacturing HPC storage](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

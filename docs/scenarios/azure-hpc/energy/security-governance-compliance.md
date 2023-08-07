@@ -1,6 +1,6 @@
 ---
 title: Governance for Azure HPC in energy industries
-description: Azure landing zones for HPC in Energy have no specific considerations or recommendations that affect decisions about governance.
+description: Azure landing zones for HPC in energy have no specific considerations or recommendations that affect decisions about governance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
@@ -20,13 +20,13 @@ However, it might be important to understand any decisions that your cloud platf
 
 The following articles provide guidance for specific points in cloud adoption of HPC in energy industries.
 
-- [Azure Billing and Azure Active Directory Tenants for Energy HPC](./azure-billing-active-directory-tenant.md)
-- [Azure Identity and Access Management for Energy HPC](./identity-access-management.md)
-- [Management for Energy HPC](./management.md)
-- [Network Topology and Connectivity for Energy HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for Energy HPC](./platform-automation-devops.md)
-- [Resource Organization for Energy HPC](./resource-organization.md)
-- [Security for Energy HPC](./security.md)
-- [Compute for Energy HPC](./compute.md)
-- [Storage for Energy HPC](./storage.md)
+- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
+- [Security for Azure HPC in energy](./security.md)
+- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
+- [Storage for HPC energy environments](./storage.md)
 - [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
