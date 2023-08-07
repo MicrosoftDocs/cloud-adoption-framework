@@ -53,7 +53,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Use a federated Azure Key Vault model to avoid transaction scale limits.
 
-- Azure RBAC is the recommended authorization system for the Azure Key Vault data plane.
+- Azure RBAC is the recommended authorization system for the Azure Key Vault data plane. See [Azure role-based access control (Azure RBAC) vs. access policies (legacy)](/azure/key-vault/general/rbac-access-policy) for more information.
 
 - Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
