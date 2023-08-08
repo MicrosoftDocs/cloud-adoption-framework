@@ -59,13 +59,21 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 ## IP Address Management (IPAM) tools
 
-An IPAM tool is crucial for Azure IP address planning as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. With an IPAM tool, your organization can efficiently allocate IP addresses, ensuring seamless connectivity between on-premises locations and Azure regions. It automates the process and helps reducing manual errors.
+An IPAM tool is crucial for Azure IP address planning as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. With an IPAM tool, your organization can efficiently allocate IP addresses, ensuring seamless connectivity between on-premises locations and Azure regions.
 
 **Design considerations:**
 
-- There are many different IPAM tools available that you could use, all depending on your requirements and the size of your organization. You have a range of options, from open-source solutions to paid enterprise products with extended support and functionality.
+- Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solutions and comprehensive enterprise products with advanced features and extended support.
+  - Consider these points when evaluating what tool to implement:
+    - Minimum features required by your organization
+    - Total cost of ownership (TCO), including licensing and ongoing maintenance
+    - Audit trails and role-based access controls
+    - Authentication and authorization through Azure AD (Entra ID)
+    - Integrations with other network management tools and systems
+    - Active community support or the level of vendor support
+  - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://github.com/Azure/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
 
-- Your operating model need to be considered when implementing an IPAM tool to sort out any bottlenecks or dependencies for requesting new IP address spaces to application teams.
+- Consider your organizations operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
 
 - An important part of the IPAM tool functionality is to inventory IP address space usage and logically organize it.
 
