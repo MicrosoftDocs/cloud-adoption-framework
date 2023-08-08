@@ -66,7 +66,7 @@ The subscription automation needs to set up the required networking components, 
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
 - [Add or remove address range](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range)
 
-**Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment.
+**Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment. For more information and IPAM guidance, see [IP Address Management (IPAM) tools](../../azure-best-practices/plan-for-ip-addressing.md#ip-address-management-ipam-tools)
 
 **Grant the app team autonomy.** You should grant application teams with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
 

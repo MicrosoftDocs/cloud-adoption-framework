@@ -59,7 +59,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 ## IP Address Management (IPAM) tools
 
-An IPAM tool is crucial for Azure IP address planning as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. With an IPAM tool, your organization can efficiently allocate IP addresses, ensuring seamless connectivity between on-premises locations and Azure regions.
+Using an IPAM tool can assist you with IP address planning in Azure as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. This section guides you through essential considerations and recommendations when adopting an IPAM tool.
 
 **Design considerations:**
 
@@ -70,8 +70,8 @@ An IPAM tool is crucial for Azure IP address planning as it provides centralized
     - Audit trails and role-based access controls
     - Authentication and authorization through Azure AD (Entra ID)
     - Integrations with other network management tools and systems
-    - Active community support or the level of vendor support
-  - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://github.com/Azure/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
+    - Active community support or the level of support from the software provider
+  - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://azure.github.io/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
 
 - Consider your organizations operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
 
@@ -85,7 +85,7 @@ An IPAM tool is crucial for Azure IP address planning as it provides centralized
     - Medium - `/22` - 1,024 ip addresses
     - Large - `/20` - 4,096 ip addresses
 
-- Your IPAM tool should have an API for reserving non-overlapping IP address spaces to support an Infrastructure as Code (IaC) approach. This requirement is also essential for integrating IPAM into your [subscription vending process](/azure/architecture/landing-zones/subscription-vending) and eliminate dependencies on human intervention.
+- Your IPAM tool should have an API for reserving non-overlapping IP address spaces to support an Infrastructure as Code (IaC) approach. This feature is also crucial for seamless integration of IPAM into your [subscription vending process](../landing-zone/design-area/subscription-vending.md), thereby reducing the risk of errors and the need for manual intervention.
   - An example of an IaC approach is [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) with its deployment script functionality or [Terraform](/azure/developer/terraform/overview) data sources to dynamically fetch data from the IPAM API.
 
 - Create a systematic arrangement for your IP address spaces by structuring them according to Azure regions and workload archetypes, ensuring a clean and traceable network inventory.
