@@ -63,7 +63,7 @@ Using an IPAM tool can assist you with IP address planning in Azure as it provid
 
 **Design considerations:**
 
-- Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solutions and comprehensive enterprise products with advanced features and extended support.
+- Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solution or comprehensive enterprise products with advanced features and support.
   - Consider these points when evaluating what tool to implement:
     - Minimum features required by your organization
     - Total cost of ownership (TCO), including licensing and ongoing maintenance
