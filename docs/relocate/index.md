@@ -3,7 +3,7 @@ title: How to relocate cloud workloads
 description: Discover the process for relocating cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 02/03/2023
+ms.date: 08/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

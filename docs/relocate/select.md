@@ -3,7 +3,7 @@ title: How to select a strategy for relocating cloud workloads
 description: Learn how to select the right strategy for relocating cloud workloads and applications.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 02/03/2023
+ms.date: 08/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -32,6 +32,11 @@ Cold relocation is for workloads that can withstand downtime. It's the most cost
 1. Deploy the cloud services to the new target region.
 1. Restore workload data.
 
+> [!NOTE]
+> You might choose to perform step 2 last if one of the following situations apply:
+> - You use Azure Resource Mover to relocate your resources; or
+> - You need to test the workloads in the new target region before taking the source region offline.  
+
 Cold relocation can take a few minutes or a few days depending on the number of services and volume of data.
 
 ### Hot relocation
@@ -58,7 +63,7 @@ Warm relocation is for critical workloads that don't support hot relocation. War
 
 ## Select service-relocation automation
 
-There are three primary service-relocation approaches. The following paragraphs give an overview of each with links to more guidance. If you use infrastructure as code (IaC) automation to move the workload, you need to find a separate [data-relocaiton approach](#select-data-relocation-automation). You should review the capabilities of each service-relocation tool and select the tool that best meets your needs.
+There are three primary service-relocation approaches. The following paragraphs give an overview of each with links to more guidance. If you use infrastructure as code (IaC) automation to move the workload, you need to find a separate [data-relocation approach](#select-data-relocation-automation). You should review the capabilities of each service-relocation tool and select the tool that best meets your needs.
 
 **Azure Resource Mover:** Azure Resource Mover is a built-in Azure service that allows you to move Azure resources between regions, subscriptions, and resource groups. Azure Resource Mover can move [supported Azure resources](/azure/resource-mover/overview#what-resources-can-i-move-across-regions) with its dependencies by analyzing and preparing the resources before the move. For more information, see [Azure Resource Mover overview](/azure/resource-mover/overview).
 
@@ -68,7 +73,7 @@ There are three primary service-relocation approaches. The following paragraphs 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Infrastructure as code (IaC) custom automation:** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
+**Redeploy by using Infrastructure as code (IaC) custom automation:** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template, Bicep file, or Terraform file for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md). Deploying a new instance of an Azure service using IaC provides the opportunity to deploy multiple copies of the resource in parallel and then use one of the suggested cutover techniques to redirect connections to the workloads in the new target region.
 
 ## Select data-relocation automation
 
@@ -87,6 +92,9 @@ If your service-relocation automation doesn't move data, you also need to pick a
 - **Azure Storage Explorer:** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [How to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
 - **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
+
+> [!NOTE]
+> Existing backup restore points in the source region aren’t transferred to the new target region.
 
 - **Manual backup and restore:** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore it manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
 
@@ -112,6 +120,11 @@ Cutover is when you transition from the old workload to the new one. You direct 
 - **App Service:** Application-layer services, such as Azure App Service, have features that allow you to update the domain name. For more information, see [Migrate an active DNS name to Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain?tabs=a%2Cazurecli).
 
 - **Gateway Routing:** If the workload uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service, such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover. You use their backend targets and routing-rules features.
+
+When planning the cutover approach, be sure to consider the following questions:
+- How do other systems connect to the relocated workload? Will these approaches continue to work, and will any security considerations change?
+- What’s required to cut over internal users to the relocated workloads?
+- What’s required to cut over external customers to the relocated workloads?
 
 ## Next step
 
