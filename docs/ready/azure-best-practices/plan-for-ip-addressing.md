@@ -63,16 +63,18 @@ Using an IPAM tool can assist you with IP address planning in Azure as it provid
 
 **Design considerations:**
 
-- Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solution or comprehensive enterprise products with advanced features and support.
-  - Consider these points when evaluating what tool to implement:
-    - Minimum features required by your organization
-    - Total cost of ownership (TCO), including licensing and ongoing maintenance
-    - Audit trails, logging, and role-based access controls
-    - Authentication and authorization through Azure AD (Entra ID)
-    - Accessible via API
-    - Integrations with other network management tools and systems
-    - Active community support or the level of support from the software provider
-  - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://azure.github.io/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
+Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solution or comprehensive enterprise products with advanced features and support.
+
+- Consider these factors when evaluating what IPAM tool to implement:
+  - Minimum features required by your organization
+  - Total cost of ownership (TCO), including licensing and ongoing maintenance
+  - Audit trails, logging, and role-based access controls
+  - Authentication and authorization through Azure AD (Entra ID)
+  - Accessible via API
+  - Integrations with other network management tools and systems
+  - Active community support or the level of support from the software provider
+
+- Consider evaluating an open-source IPAM tool like [Azure IPAM](https://azure.github.io/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
 
 - Consider your organizations operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
 
