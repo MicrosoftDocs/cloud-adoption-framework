@@ -93,7 +93,7 @@ The following section provides example names for common Azure resource types in 
 > Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more: CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the 
-[Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
+[Azure Naming Tool](https://github.com/mspnp/AzureNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 > [!NOTE]
 > The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
