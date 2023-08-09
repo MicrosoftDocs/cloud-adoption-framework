@@ -34,7 +34,7 @@ You should use the objectives to scope your relocation plan. Identify all the wo
 When defining the scope of your relocation plan, it’s important to understand the integrations each workload may have with other services. For example, consider these questions:
 
 - Does the relocated workload need to communicate with workloads that remain in your source region?
-- Are there scripts, automation tools or CI/CD pipelines associated with the migrated workloads that will need to be updated to reflect the new region?
+- Are there scripts, automation tools or CI/CD pipelines associated with the migrated workloads that need to be updated to reflect the new region?
 - How will network ingress and egress work for the workload once relocated?
 
 ## Prioritize workloads
@@ -43,15 +43,15 @@ The order you relocate workloads should reflect the priority of your objectives.
 
 ## Create a relocation plan
 
-You should create a relocation plan that addresses service capacity and high-level project planning. At the service level, you want to verify the target region meets the capacity needs for each workload service. At the workload architecture level, you want to verify that the target region can support the architectural approach used by your applications. For example, if you have a multi-region workload that uses Azure region pairs for global scaling or geo-redundancy, then check whether your destination region supports region pairing. Similarly, if you're moving from or to a region with availability zone support, consider how you’ll use zonal or zone-redundant deployment approaches.
+You should create a relocation plan that addresses service capacity and high-level project planning. At the service level, you want to verify the target region meets the capacity needs for each workload service. At the workload architecture level, you want to verify that the target region can support the architectural approach used by your applications. For example, if you have a multi-region workload that uses Azure region pairs for global scaling or geo-redundancy, then check whether your destination region supports region pairing. Similarly, if you're moving from or to a region with availability zone support, consider how you use zonal or zone-redundant deployment approaches.
 
 The rest of your relocation plan should center on the relocation project and getting stakeholder approval to proceed. Most stakeholders want to know about the schedule, team, and cost. Rather than spending time trying to estimate the schedule, resources, and cost, start the relocation process and refine the estimates as you learn more. Here are recommendations for creating a minimum viable plan to get started.
 
-**Build a soft schedule.** The schedule depends on the complexity of the workloads being relocated and the experience of the team involved. Instead of spending time figuring out how long it will take, start relocating the first workload. The experience allows you to better estimate a completion date, and it saves you time.
+**Build a soft schedule.** The schedule depends on the complexity of the workloads being relocated and the experience of the team involved. Instead of spending time figuring out how long it takes, start relocating the first workload. The experience allows you to better estimate a completion date, and it saves you time.
 
 **Use a multi-disciplinary team.** The relocation team needs technical, business, and legal/compliance expertise. The business stakeholders own the workload and should guide the technical team to meet the objectives. You need the legal or compliance teams if the workload is being relocated due to regulatory requirements.
 
-**Know cost factors.** Relocation has a cost. Moving data and using services isn't free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee. For some Azure services, the price will vary for each region, so be sure to review the pricing before you start the relocation project. If you use Azure Reservations to reduce your Azure costs in your source region, consider whether you can exchange them to your destination region.
+**Know cost factors.** Relocation has a cost. Moving data and using services isn't free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee. For some Azure services, the price varies for each region, so be sure to review the pricing before you start the relocation project. If you use Azure Reservations to reduce your Azure costs in your source region, consider whether you can exchange them to your destination region.
 
 ## Evaluate potential side effects of the relocation
 
