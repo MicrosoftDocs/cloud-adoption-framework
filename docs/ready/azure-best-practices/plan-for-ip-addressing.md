@@ -67,7 +67,7 @@ Using an IPAM tool can assist you with IP address planning in Azure as it provid
   - Consider these points when evaluating what tool to implement:
     - Minimum features required by your organization
     - Total cost of ownership (TCO), including licensing and ongoing maintenance
-    - Audit trails and role-based access controls
+    - Audit trails, logging, and role-based access controls
     - Authentication and authorization through Azure AD (Entra ID)
     - Integrations with other network management tools and systems
     - Active community support or the level of support from the software provider
