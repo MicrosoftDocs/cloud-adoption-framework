@@ -55,7 +55,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Don't use public IP addresses for virtual networks, especially if the public IP addresses don't belong to your organization.
 
-- Take the services you're going to use into consideration, there are some services with reserved ips, like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
+- Take the services you're going to use into consideration, there are some services with reserved IPs (IP Addresses), like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
 
 ## IP Address Management (IPAM) tools
 
