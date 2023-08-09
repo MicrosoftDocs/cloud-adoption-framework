@@ -233,6 +233,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Azure Bastion | `Microsoft.Network/bastionHosts` | `bas` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
+| Key Vault Managed HSM | `Microsoft.KeyVault/managedHSMs` | `kvmhsm` |
 | Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
