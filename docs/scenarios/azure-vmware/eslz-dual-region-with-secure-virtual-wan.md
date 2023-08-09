@@ -26,7 +26,7 @@ https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies
 Secure Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Secure Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party NVA, or SaaS. In the scenario, we have a network topology that spans two regions. There is one Virtual WAN with two Hubs, Hub1 and Hub2. Hub1 is in Region 1, and Hub2 is in Region 2.Each Hub in both regions has its instance of Azure Firewall deployed(Hub1Fw, Hub2Fw), essentially making them Secure Virtual WAN Hubs. Having Secure Virtual WAN hubs is a technical prerequisite to Routing Intent. Secure Virtual WAN Hub1 and Hub2 have Routing Intent enabled.  
 
 Each region has its own Azure VMWare Solution Private Cloud and an Azure Virtual Network. There is also an on-premise site connecting to both regions, which we will review in more detail later in this document.  
-[![Diagram of Dual-Region Azure VMWare Solution Scenario.](./media/dual-region-virtual-wan-1.png)](./media/dual-region-virtual-wan-1#lightbox)
+[![Diagram of Dual-Region Azure VMWare Solution Scenario.](/media/dual-region-virtual-wan-1.png)
 
 ### Understanding Topology Connectivity 
 Connection Color | Description  |
