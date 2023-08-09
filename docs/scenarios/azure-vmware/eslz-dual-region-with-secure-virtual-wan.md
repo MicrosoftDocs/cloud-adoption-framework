@@ -1,9 +1,9 @@
 ---
 title: Network considerations for Azure VMware Solution dual-region deployments with Secure Virtual WAN Hub
 description: Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions with Secure Virtual WAN.
-author: jmedina
-ms.author: jmedina
-ms.date: 07/31/2023
+author: jasonmedina
+ms.author: jasonmedina
+ms.date: 08/09/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
@@ -16,12 +16,12 @@ This article describes the best practices for connectivity, traffic flows, and h
 
 The document assumes readers have a basic understanding of Virtual WAN and Secure Virtual WAN with Routing Intent.
 
-**What is Azure Virtual WAN?**  
-https://learn.microsoft.com/azure/virtual-wan/virtual-wan-about
+**Virtual WAN**  
+[What is Virtual WAN?](https://learn.microsoft.com/azure/virtual-wan/virtual-wan-about)
 
-**How to configure Virtual WAN Hub routing intent and routing policies**  
-https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies
-
+**Virtual WAN Routing Intent**  
+[How to configure Virtual WAN Hub routing intent and routing policies](https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies)
+  
 ## Dual-region with Secure Virtual WAN scenario  
 Secure Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Secure Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party NVA, or SaaS. In the scenario, we have a network topology that spans two regions. There is one Virtual WAN with two Hubs, Hub1 and Hub2. Hub1 is in Region 1, and Hub2 is in Region 2.Each Hub in both regions has its instance of Azure Firewall deployed(Hub1Fw, Hub2Fw), essentially making them Secure Virtual WAN Hubs. Having Secure Virtual WAN hubs is a technical prerequisite to Routing Intent. Secure Virtual WAN Hub1 and Hub2 have Routing Intent enabled.  
 
@@ -78,7 +78,7 @@ The diagram shows how On-Premise will learn routes from both regional hubs and b
 
 This section will focus only on connectivity from an Azure Virtual Network perspective. As shown in the diagram below, both Virtual Network1 and Virtual Network2 will have a Virtual Network peering directly to its local regional hub. 
 
-The diagram shows how all Azure native resources in Virtual Network1 and Virtual Network2 will learn routes under their "Effective Routes". A Secure Hub with Routing Intent enabled will always send the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any additional prefixes that have been added as "Private Traffic Prefixes" - see https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies#azurefirewall. In our case, since Routing Intent is enabled, all resources within Virtual Network1 and Virtual Network2 will have the default RFC 1918 address with a next-hop of their local regional hub firewall. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. Please see the traffic flow below for more detailed information.
+The diagram shows how all Azure native resources in Virtual Network1 and Virtual Network2 will learn routes under their "Effective Routes". A Secure Hub with Routing Intent enabled will always send the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any additional prefixes that have been added as "Private Traffic Prefixes" - see [Routing Intent Private Address Prefixes](https://learn.microsoft.com/azure/virtual-wan/how-to-routing-policies#azurefirewall). In our case, since Routing Intent is enabled, all resources within Virtual Network1 and Virtual Network2 will have the default RFC 1918 address with a next-hop of their local regional hub firewall. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. Please see the traffic flow below for more detailed information.
 
 ![Diagram of Dual-Region Azure VMWare Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)
 
@@ -90,7 +90,7 @@ The diagram shows how all Azure native resources in Virtual Network1 and Virtual
 
 ### Internet connectivity
 
-This section will focus only on how internet connectivity will be provided for Azure native resources in Virtual Networks and Azure VMWare Solution Private Clouds in both regions. There are several options to provide internet connectivity to Azure VMWare Solution. - see https://learn.microsoft.com/azure/azure-vmware/concepts-design-public-internet-access
+This section will focus only on how internet connectivity will be provided for Azure native resources in Virtual Networks and Azure VMWare Solution Private Clouds in both regions. There are several options to provide internet connectivity to Azure VMWare Solution. - see [Internet Access Concepts for Azure VMWare Solution](https://learn.microsoft.com/azure/azure-vmware/concepts-design-public-internet-access)
 
 Option 1: Internet Service hosted in Azure  
 Option 2: VMWare Solution Managed SNAT  
@@ -125,6 +125,6 @@ Another thing to keep note is with Routing Intent you have the option to disable
 
 ## Next steps
 
-- For more information on Azure VMware Solution network features, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
-- For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure/azure-vmware/concepts-design-public-internet-access).
-- For more information on Azure VMware Solution network topologies, see [Example architectures for Azure VMware Solutions](./example-architectures.md)
+- For more information on Azure VMware Solution network features, see [Azure VMware Solution networking and interconnectivity concepts](https://learn.microsoft.com/azure/azure-vmware/concepts-networking).
+- For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](https://learn.microsoft.com/azure/azure-vmware/concepts-design-public-internet-access).
+- For more information on Azure VMware Solution network topologies, see [Example architectures for Azure VMware Solutions](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures)
