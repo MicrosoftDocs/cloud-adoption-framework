@@ -3,7 +3,7 @@ title: How to migrate a cloud workload to another region
 description: Learn how to migrate cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 02/03/2023
+ms.date: 08/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -19,9 +19,12 @@ The Migrate step of relocation is where you move the workload to the new region.
 
 ## Prepare
 
-You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure landing zone footprint, you should use the Azure landing zone guidance and return to this article to relocate the workload. For more information, see [How to add regions to Azure landing zones](../ready/enterprise-scale/faq.md#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.  Doing so will ensure you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity.
+You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure landing zone footprint, you should use the Azure landing zone guidance and return to this article to relocate the workload. For more information, see [How to add regions to Azure landing zones](../ready/enterprise-scale/faq.md#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.  Doing so will ensure you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity. Consider the network topology, routing, and connectivity requirements of the landing zone in the new target region. Also consider whether integration is required with the landing zone in the source region. You might decide not to relocate every resources to the new target region, in which case a cross-region network topology is required indefinitely.
 
-**Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. You should approach relocations as an as-is effort because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
+> [!NOTE]
+> Azure Virtual WAN is a service that can help you build cross-region networking topologies. Virtual WAN also provides secure, long-term connectivity between your virtual networks.
+
+**Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. Try to keep the workload in its existing subscription if possible, because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
 
 **Configure a new domain name if needed.** When there's a change in the custom domain of the workload, you need to configure a new domain name. Create the new hostname, assign it to your application or service, and then validate the name resolution. You might also plan to lower and configure the time-to-live (TTL) and set it in the cutover stage for auto expiry. For more information, see [Add your custom domain](/azure/active-directory/fundamentals/add-custom-domain) and [Map DNS name to App Service plan](/azure/app-service/manage-custom-dns-buy-domain#prepare-the-app).
 
