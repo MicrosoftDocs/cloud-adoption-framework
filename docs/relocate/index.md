@@ -41,6 +41,9 @@ Relocation has two phases. The first phase is to initiate the relocation project
 
 **Move phase:** The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
 
+> [!NOTE]
+> Some resources can’t be moved between regions and might need to be redeployed. For more information about the resource types that support region moves, see Special conditions to consider when moving a resource.
+
 | Relocate step | Main goal |
 | --- | --- |
 |1. Initiate | Establish relocation project. |
