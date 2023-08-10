@@ -90,11 +90,11 @@ The following conceptual reference architecture is an example that shows design 
 
 :::image type="content" alt-text="Diagram that shows an example architecture for an energy environment, including compute, storage, subnets, a database, and a front end for on-premises users." source="./media/network-interconnect.png" lightbox="./media/network-interconnect.png":::
 
-## Example: conceptual reference architecture for finane
+## Example: conceptual reference architecture for finance
 
-The following conceptual reference architecture is an example that shows design areas and best practices for *finane* environments.
+The following conceptual reference architecture is an example that shows design areas and best practices for *finance* environments.
 
-[ ![Diagram that shows an example architecture for a finane environment, including on-premises resources, virtual network, subnets, and network security groups.](./media/hpc-finane-architecture-example.png)](./media/hpc-finane-architecture-example.png#lightbox)
+[ ![Diagram that shows an example architecture for a finance environment, including on-premises resources, virtual network, subnets, and network security groups.](./media/hpc-finance-architecture-example.png)](./media/hpc-finance-architecture-example.png#lightbox)
 
 ## Example: conceptual reference architecture for manufacturing
 
