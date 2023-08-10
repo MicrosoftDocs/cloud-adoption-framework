@@ -81,6 +81,8 @@ Contoso will go through the following flow to migrate from on-premises RDS to Az
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png":::
    *Figure 2: The migration process.*
 
+   ` All steps marked with (*) are optional `
+
 The migration flow will be structured in the following migration steps:
 
 1. [Define prerequisites](#step-1-prerequisites).
