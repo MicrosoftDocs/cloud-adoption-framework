@@ -126,5 +126,5 @@ Another thing to keep note is with Routing Intent you have the option to disable
 ## Next steps
 
 - For more information on Azure VMware Solution network features, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-vmware/concepts-networking).
-- For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure-vmware/concepts-networking).
+- For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure/azure-vmware/concepts-design-public-internet-access).
 - For more information on Azure VMware Solution network topologies, see [Example architectures for Azure VMware Solutions](/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures)
