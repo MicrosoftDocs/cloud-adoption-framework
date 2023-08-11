@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-azure-VMware
 
 # Network considerations for Azure VMware Solution dual-region deployments using Secure Virtual WAN Hub with Routing-Intent
 
-This article describes the best practices for connectivity, traffic flows, and high availability of dual-region Azure VMware Solution when using Azure Secure Virtual WAN with Routing Intent. This article breaks down Virtual WAN with Routing Intent topology from the perspective of Azure VMware Solution private clouds, On-premise sites, and Azure native. The implementation and configuration of Secure Virtual WAN with Routing Intent are beyond the scope and are not discussed in this document.
+This article describes the best practices for connectivity, traffic flows, and high availability of dual-region Azure VMware Solution when using Azure Secure Virtual WAN with Routing Intent. This article breaks down Virtual WAN with Routing Intent topology from the perspective of Azure VMware Solution private clouds, on-premises sites, and Azure native. The implementation and configuration of Secure Virtual WAN with Routing Intent are beyond the scope and are not discussed in this document.
 
 The document assumes readers have a basic understanding of Virtual WAN and Secure Virtual WAN with Routing Intent.
 
@@ -25,7 +25,7 @@ The document assumes readers have a basic understanding of Virtual WAN and Secur
 ## Dual-region with Secure Virtual WAN scenario  
 Secure Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Secure Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party NVA, or SaaS. In the scenario, we have a network topology that spans two regions. There is one Virtual WAN with two Hubs, Hub 1 and Hub 2. Hub 1 is in Region 1, and Hub 2 is in Region 2. Each Hub in both regions has its instance of Azure Firewall deployed(Hub1Fw, Hub2Fw), essentially making them Secure Virtual WAN Hubs. Having Secure Virtual WAN hubs is a technical prerequisite to Routing Intent. Secure Virtual WAN Hub1 and Hub2 have Routing Intent enabled.  
 
-Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual Network. There is also an on-premise site connecting to both regions, which we review in more detail later in this document.  
+Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual Network. There is also an on-premises site connecting to both regions, which we review in more detail later in this document.  
 ![Diagram of Dual-Region Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
 ### Understanding Topology Connectivity 
@@ -33,46 +33,46 @@ Connection Color | Description  |
 |:-------------------- |:--------------------  |
 | Brown Connections | Azure VMware Solution private cloud connection to its local regional hub.  |
 | Pink Connections | Azure VMware Solution private cloud connection to its cross-regional hub.  |
-| Orange Connection | Azure VMware Solution Region 1 Global Reach connection back to on-premise.  |
-| Green Connection | Azure VMware Solution Region 2 Global Reach connection back to on-premise.  |
+| Orange Connection | Azure VMware Solution Region 1 Global Reach connection back to on-premises.  |
+| Green Connection | Azure VMware Solution Region 2 Global Reach connection back to on-premises.  |
 | Purple Connection | Azure VMware Solution Global Reach connection between the two private clouds' managed circuits.  |
-| Black Connections | On-premise connectivity via ExpressRoute to both regional hubs.  |
+| Black Connections | on-premises connectivity via ExpressRoute to both regional hubs.  |
 | Inter-Hub Connection | When two hubs are deployed under the same Virtual WAN  |
 
 ## Dual-region Secure Virtual WAN Traffic Flows
 
-The upcoming sections will cover traffic flows and connectivity for Azure VMware Solution, On-Premises, Azure Virtual Networks, and the Internet.
+The upcoming sections will cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure Virtual Networks, and the Internet.
 
 ### Azure VMware Solution cross-region connectivity & traffic flows
 
 This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure VMware Solution Cloud Region 2. Each Azure VMware Solution private cloud has an ExpressRoute connection to its local regional hub (brown connections) and an ExpressRoute connection to the cross-regional hub (pink connections).
 
-Each Azure VMware Solution Cloud Region connects back to on-premise via Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown in orange as "Global Reach (A)". Azure VMware Solution Cloud Region 2 Global Reach connection is shown in green as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown in purple as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
+Each Azure VMware Solution Cloud Region connects back to on-premises via Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown in orange as "Global Reach (A)". Azure VMware Solution Cloud Region 2 Global Reach connection is shown in green as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown in purple as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
 
 The diagram depicts how each Azure VMware Solution Cloud learns routes from their local and cross-regional hubs. All blue routes are from Region 1, and all red routes are from Region 2. 
 
 ![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)
 
 **Traffic Flow**
-| From |   To |  Hub 1 Virtual Networks | On-Premise | Hub 2 Virtual Networks | Cross-Regional Azure VMware Solution Private Cloud|
+| From |   To |  Hub 1 Virtual Networks | on-premises | Hub 2 Virtual Networks | Cross-Regional Azure VMware Solution Private Cloud|
 | -------------- | -------- | ---------- | ---| ---| ---|
 | Azure VMware Solution Cloud Region 1    | &#8594;| Hub1Fw>Virtual Network1|  GlobalReach(A)>OnPremise   | Hub2Fw>Virtual Network2 | Global Reach(C)>Azure VMware Solution Cloud Region 2|
 | Azure VMware Solution Cloud Region 2   | &#8594;|  Hub1Fw>Virtual Network1 |  GlobalReach(B)>OnPremise   | Hub2Fw>Virtual Network2 | Global Reach(C)>Azure VMware Solution Cloud Region 1|
 
-### On-Premise connectivity & traffic flow
+### on-premises connectivity & traffic flow
 
-This section focuses only on the on-premise site. As shown in the diagram, the On-Premise site has an ExpressRoute connection to both Region 1 and Region 2 hubs (black connections).
+This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (black connections).
 
-On-Premise can communicate to Azure VMware Solution Cloud Region 1 via orange connection "Global Reach (A)". On-Premise is also able to communicate with Azure VMware Solution Cloud Region 2 via the green connection "Global Reach (B)".
+on-premisess can communicate to Azure VMware Solution Cloud Region 1 via orange connection "Global Reach (A)". on-premises is also able to communicate with Azure VMware Solution Cloud Region 2 via the green connection "Global Reach (B)".
 
-The diagram illustrates how On-Premise learns routes from both regional hubs and both Azure VMware Solution Private clouds. All blue routes are from Region 1, and all red routes are from Region 2. Black routes are on-premise routes and are advertised back to Azure.
+The diagram illustrates how on-premises learns routes from both regional hubs and both Azure VMware Solution Private clouds. All blue routes are from Region 1, and all red routes are from Region 2. Black routes are on-premises routes and are advertised back to Azure.
 
-![Diagram of Dual-Region Azure VMware Solution with On-Premise](./media/dual-region-virtual-wan-3.png)
+![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)
 
 **Traffic Flow**
 | From |   To |  Hub 1 Virtual Networks | Hub 2 Virtual Networks | Azure VMware Solution Region 1| Azure VMware Solution Region 2| 
 | -------------- | -------- | ---------- | ---| ---| ---|
-| On-Premise    | &#8594;| Hub1Fw>Virtual Network1|  Hub2Fw>Virtual Network2  | Global Reach(A)>Azure VMware Solution Cloud Region 1 | Global Reach(B)>Azure VMware Solution Cloud Region 2| 
+| on-premises    | &#8594;| Hub1Fw>Virtual Network1|  Hub2Fw>Virtual Network2  | Global Reach(A)>Azure VMware Solution Cloud Region 1 | Global Reach(B)>Azure VMware Solution Cloud Region 2| 
 
 ### Azure Virtual Network connectivity & traffic flow
 
@@ -83,7 +83,7 @@ The diagram illustrates how all Azure native resources in Virtual Network1 and V
 ![Diagram of Dual-Region Azure VMware Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)
 
 **Traffic Flow**
-| From |   To |  On-Premise | Azure VMware Solution Region 1 | Azure VMware Solution Region 2| Cross-Region Virtual Network| 
+| From |   To |  on-premises | Azure VMware Solution Region 1 | Azure VMware Solution Region 2| Cross-Region Virtual Network| 
 | -------------- | -------- | ---------- | ---| ---| ---|
 | Virtual Network1    | &#8594;| Hub1Fw>OnPremise|  Hub1Fw>Azure VMware Solution Cloud Region 1  | Hub1Fw>Azure VMware Solution Cloud Region 2 | Hub1Fw>Hub2Fw>Virtual Network2 |
 | Virtual Network2    | &#8594;| Hub2Fw>OnPremise|  Hub2Fw>Azure VMware Solution Cloud Region 1  | Hub2Fw>Azure VMware Solution Cloud Region 2 | Hub2Fw>Hub1Fw>Virtual Network1 |
@@ -111,7 +111,7 @@ The goal here is to use BGP prepending for only the default routes across cross 
 
 In summary, Azure VMware Solution Private Clouds prioritize internet access through their regional local hubs, with the cross-regional hub serving as a backup in case of a local hub outage. See traffic flow section more information.
 
-Another important point is that with Routing Intent, you can choose to not advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premise ExpressRoute connections. 
+Another important point is that with Routing Intent, you can choose to not advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premises ExpressRoute connections. 
 
 ![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)
 
