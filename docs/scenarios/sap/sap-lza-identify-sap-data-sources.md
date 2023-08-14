@@ -1,5 +1,5 @@
 ---
-title: SAP data integration with Azure-Identify SAP data sources
+title: Identify SAP data sources
 description: Learn how to identify SAP applications and connectors to integrate SAP data with Azure data services.
 author: pankajmeshramCSA
 ms.author: pameshra
@@ -8,9 +8,15 @@ ms.topic: conceptual
 s.custom: think-tank, e2e-sap
 ---
 
-# SAP data integration with Azure: Identify SAP data sources
+# Identify SAP data sources
 
-This article is Part 1 of the SAP extend and innovate data: Best practices series.
+This article is part of the "SAP extend and innovate data: Best practices" article series.
+
+- [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)
+- [Choose the best SAP connector](./sap-lza-choose-azure-connectors.md)
+- [Performance and troubleshooting for SAP data extraction](./sap-lza-data-extraction-performance-troubleshooting.md)
+- [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
+- [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
 
 Digital transformation requires a seamless combination of intelligence derived from data across business operations to meet the business objectives of an enterprise. Enterprises use SAP applications as enterprise resource planning systems (ERP), line of business (LOB) SaaS applications, enterprise data warehouses, business intelligence, or integration platforms. The siloed data in SAP systems can be harnessed to drive business transformation. As you progress through your cloud adoption journey and move business-critical workloads to Azure, prioritize moving SAP workloads to Azure. This method optimally integrates data into your Azure environment.
 
@@ -48,8 +54,8 @@ SAP SaaS solutions:
 
 - **Licensing** Understand the existing licenses available, and consider the licensing implications before you extract data from SAP systems. Work with your SAP counterparts. Because licensing is a complex subject and the policies might change over time, you can contact your SAP account team for guidance. For more information, see these guides:
 
-  -	[Indirect access guide](https://news.sap.com/wp-content/blogs.dir/1/files/Indirect_Access_Guide_for_SAP_Installed_Base.pdf) for SAP ERP (ECC and SAP S/4HANA) customers with contracts based on SAP pricing policies prior to April 10, 2018.  
-  - [ERP pricing for the digital age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
+- [Indirect access guide](https://news.sap.com/wp-content/blogs.dir/1/files/Indirect_Access_Guide_for_SAP_Installed_Base.pdf) for SAP ERP (ECC and SAP S/4HANA) customers with contracts based on SAP pricing policies prior to April 10, 2018.  
+- [ERP pricing for the digital age](https://news.sap.com/wp-content/blogs.dir/1/files/Pricing_for_Digital_Age_Overview.pdf) for the outcome-based ERP pricing introduced on April 10, 2018.
 
 - **SAP HANA** For SAP HANA, you must differentiate between the runtime database and full-use database licenses. Runtime databases only support software that's licensed from SAP. Full-use databases licensed from SAP support SAP and non-SAP software. Full-use SAP HANA databases are licensed based on a gigabyte-of-memory metric. So, third-party data connectors that access the SAP HANA database directly need to have a full-use SAP HANA database license. For more information, see [HANA licensing technical details](https://blogs.sap.com/2021/01/18/technical-details-hana-licensing/) and the [SAP licensing guide](https://www.sapusers.org/uploads/files/5660).
 

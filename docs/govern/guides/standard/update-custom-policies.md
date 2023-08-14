@@ -29,13 +29,13 @@ This section describes the general high-level steps to update your Azure landing
 Use the following authoritative options to determine that one or more of your Azure landing zone custom policies are outdated:
 
 - Periodically review [`What's New`](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new), and note that one or more policies are updated, such as [this example](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-11).
-- Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) and note that one or more policies are marked as outdated.
+- Use the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) and note that one or more policies are marked as outdated.
 
 ### Apply updates
 
 To determine whether to apply updated custom policies to your Azure landing zone deployment:
 
-1. Determine whether your Azure estate currently assigns any outdated custom policies at any scope. If you use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), you can see your currently assigned policies by checking the **TenantSummary**.
+1. Determine whether your Azure estate currently assigns any outdated custom policies at any scope. If you use the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz), you can see your currently assigned policies by checking the **TenantSummary**.
 1. Determine whether any of the outdated custom policies are part of an Azure landing zone custom policy initiative.
 1. Determine whether your Azure estate currently assigns any of the outdated custom policy initiatives at any scope.
 

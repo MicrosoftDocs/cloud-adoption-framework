@@ -27,13 +27,13 @@ This section describes the generic, high-level steps to migrate Azure landing zo
 You can detect that one or more Azure landing zone policies are superseded by built-in Azure policies with the following options:
 
 - Periodically review [Azure Enterprise Scale What's new wiki](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) and note any policies indicated as being superseded. See [an example of a superseded policy here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy-13).
-- Use the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) script and note any policies marked as obsolete.
+- Use the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) script and note any policies marked as obsolete.
 
 ### Migration steps for Azure landing zone policies
 
 You can migrate Azure landing zone environments with the following steps:
 
-1. Determine if the Azure landing zone policies in scope for migration are currently assigned at any scope in your Azure estate. If you're using the [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting), you can determine policy scope by checking the **TenantSummary**.
+1. Determine if the Azure landing zone policies in scope for migration are currently assigned at any scope in your Azure estate. If you're using the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz), you can determine policy scope by checking the **TenantSummary**.
 1. Check if the Azure landing zone policies being migrated are part of a landing zone custom policy initiative that should be updated.
 1. See if Azure landing zone custom policy initiatives in scope for migration are currently assigned at any scope in your Azure estate.
 
