@@ -30,7 +30,7 @@ In this scenario, the current state of the customer's Azure environment is as fo
 - Management group hierarchy based on organizational structure or geography
 - An Azure subscription per application environment (dev/test/prod)
 - Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
-- Policy assignments (audit and deny effects) are done at a management group and subscription level.
+- Policy assignments (audit and deny effects) are assigned at management group and subscription level.
 - RBAC role assignments per subscription and resource groups.
 - A hub VNet for hybrid connectivity (VPN/ExpressRoute).
 - A VNet per application environment.
