@@ -16,7 +16,7 @@ ms.custom: think-tank
 
 This page describes an example scenario that might match your current Azure environment. We detail steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario covers single or multiple management groups.
 
-In this scenario, the customer has already started to use Azure, they have a management group hierarchy (one or more management groups) with multiple subscriptions and already hosts a few applications or services within the platform. But, they've realized their current implementation is limiting their scalability and growth per their "cloud first" strategy.
+In this scenario, the customer has already started to use Azure, they have a management group hierarchy (one or more management groups) each with multiple subscriptions that already hosts a few applications or services within the platform. But, they've realized their current implementation is limiting their scalability and growth per their "cloud first" strategy.
 
 As part of this expansion, they're also planning to migrate away from their on-premises datacenters into Azure. And they'll modernize and transform their applications or services using cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). But, they appreciate that it will take considerable time and effort, so they plan to "lift-and-shift". Initially, this plan will require hybrid connectivity (VPN/ExpressRoute).
 
