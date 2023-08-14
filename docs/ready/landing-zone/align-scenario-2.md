@@ -20,7 +20,7 @@ In this scenario, the customer has already started to use Azure, they have a man
 
 As part of this expansion, they're also planning to migrate away from their on-premises datacenters into Azure. As part of the migration they'll lead with modernizing and transforming their applications or services to use cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). But, they appreciate that it will take considerable time and effort, so to start they plan to "lift-and-shift". Initially, this plan will require hybrid connectivity (VPN/ExpressRoute).
 
-The customer has evaluated the Azure landing zones conceptual architecture. And they've decided to move from their existing approach to the Azure landing zones conceptual architecture. Doing so supports their "cloud first" strategy while having a robust platform that scales with them as they eliminate their on-premises datacenters.
+The customer has evaluated the Azure landing zones conceptual architecture. And they've decided to move from their existing approach to the Azure landing zones conceptual architecture. Doing so supports their "cloud first" strategy while having a robust platform that scales with them as they retire their on-premises datacenters.
 
 ## Current state
 
