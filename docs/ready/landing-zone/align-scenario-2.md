@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 # Scenario: Single/Few Management Groups to the Azure landing zone conceptual architecture
 
-This page describes an example scenario that might match your current Azure environment. We detail steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario covers a single or multiple management groups.
+This page describes an example scenario that might match your current Azure environment. We detail steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. The scenario covers single or multiple management groups.
 
 In this scenario, the customer has already started to use Azure, they have a management group hierarchy (one or more management groups) with multiple subscriptions and already hosts a few applications or services within the platform. But, they've realized their current implementation is limiting their scalability and growth per their "cloud first" strategy.
 
