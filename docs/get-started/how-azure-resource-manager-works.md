@@ -5,7 +5,7 @@ author: alexbuckgit
 ms.author: robbag
 ms.date: 10/05/2022
 ms.topic: conceptual
-ms.subservice: ready
+ms.subservice: caf-methodology-ready
 ms.custom: internal, UpdateFrequency3, devx-track-arm-template
 ---
 
