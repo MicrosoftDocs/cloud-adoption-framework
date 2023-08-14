@@ -508,7 +508,11 @@ items:
         - name: Transition to the Azure landing zone conceptual architecture
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
-          href: ready/landing-zone/align-scenarios.md
+          items:
+            - name: Single Subscription to the Azure landing zone conceptual architecture
+              href: ready/landing-zone/align-scenarios.md
+            - name: Single/Few Management Groups to the Azure landing zone conceptual architecture
+              href: ready/landing-zone/align-scenarios-1.md
         - name: Brownfield landing zone considerations
           href: ready/landing-zone/brownfield-considerations.md
 
