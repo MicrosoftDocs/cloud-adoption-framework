@@ -18,7 +18,7 @@ ms.custom:
 
 Use the guidance in this article to set up and operate Oracle workloads inside your Azure landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
 
-The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) 
+The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) 
 
 Adapt the architecture to your organization:
 
@@ -44,8 +44,7 @@ You need to understand and plan for all critical areas of your deployment archit
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone accelerator.  
 
-(media/reference-architecture-oracle-landing-zone-accelerator.png)
-
+:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing the reference architecture of Oracle on Azure landing zone accelerator.":::
 ## High-level Oracle landing zone architecture
 
 Use the reference architecture as a starting point. You can download the [Visio file](https://microsofteur.sharepoint.com/:u:/t/DataMod/ETuAV2_4kd9ErT3xmusXJL8B9nIv8xKMQi709VE2iV_omA?e=fC5kNW) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
