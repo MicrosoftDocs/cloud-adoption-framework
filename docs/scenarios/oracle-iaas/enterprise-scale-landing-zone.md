@@ -28,15 +28,12 @@ Oracle on Azure landing zone architectures vary by organization. Technical consi
 
 As you plan the implementation of your Oracle landing zone, you need to make design decisions relating to several areas. These articles provide design guidelines and recommendations for each area:
 
-Network topology and connectivity (link to article)
+- Network topology and connectivity (link to article)
+- Management and monitoring (link to article)
+- Business continuity and disaster recovery (link to article)
+- Security, governance, and compliance (link to article)
 
-Management and monitoring (link to article)
-
-Business continuity and disaster recovery (link to article)
-
-Security, governance, and compliance (link to article) 
-
-## Architecture 
+## Architecture
 
 You need to understand and plan for all critical areas of your deployment architecture. This article describes the key components of the landing zone architecture in Azure about Oracle database services.
 
