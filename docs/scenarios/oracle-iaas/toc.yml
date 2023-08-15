@@ -1,4 +1,6 @@
 items:
+  - name: Oracle on Azure landing zone accelerator
+    href: enterprise-scale-landing-zone.md
   - name: Oracle adoption - Microsoft Cloud Adoption Framework for Azure
     href: intro-oracle-landing-zone.md
   - name: The strategic impact of Oracle in the cloud
