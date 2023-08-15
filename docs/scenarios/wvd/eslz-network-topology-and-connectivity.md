@@ -2,11 +2,10 @@
 title: Networking for Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Virtual Desktop workloads.
 author: danycontre
-ms.author: martinek
-ms.date: 04/27/2022
+ms.author: tozimmergren
+ms.date: 08/15/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenario-virtual-desktop
 ms.custom: think-tank, e2e-avd
 ---
 
@@ -16,7 +15,7 @@ The design and implementation of Azure Virtual Desktop Azure networking capabili
 
 The design foundations include:
 
-- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multi-cloud](../hybrid/enterprise-scale-landing-zone.md).
+- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
 - **Performance and reliability at scale** for consistent, low-latency experience, and scalability for workloads.
 - **Zero-trust based network security** to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
 - **Extensibility** for easily expanding network footprint without design rework.
@@ -74,7 +73,7 @@ You can implement this scenario with:
 - AD DS servers and custom DNS servers.
 - Network security groups.
 - Network Watcher.
-- Outbound internet via default Azure vNet path.
+- Outbound internet via default Azure virtual network path.
 - Express route or VPN virtual network gateway for hybrid connectivity to on-premises.
 - Azure private DNS zone.
 - Azure private endpoints.
@@ -94,14 +93,16 @@ You can implement this scenario with:
 - Azure private DNS zones are used to resolve private endpoint namespaces:
   - Storage account file service (privatelink.file.core.windows.net).
   - Key vaults (privatelink.vaultcore.azure.net).
-- Even though for this scenario network filtering is not enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
+- Even though for this scenario network filtering isn't enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
 
-## Scenario 2: Hub & Spoke with hybrid connectivity and RDP Shortpath Connectivity over managed networks
+## Scenario 2: Hub and spoke with hybrid connectivity over managed networks using RDP Shortpath
 
 See [RDP Shortpath Connectivity for managed networks Microsoft Learn page](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks) for detailed deployment guidance.
+
 ### Customer profile
 
 This scenario is ideal if:
+
 - You want to limit the amount of over the internet connections to AVD Session Hosts.
 - You have pre-existing hybrid connectivity from on-premises to Azure (Express Route or S2S/P2S VPN).
 - You have direct line of sight network connectivity between RDP clients and AVD hosts. Typically, this is on-premises networks routed to AVD Azure networks or client VPN connections routed to AVD Azure virtual networks.
@@ -114,10 +115,11 @@ This scenario is ideal if:
 ### Architectural components
 
 You can implement this scenario with:
+
 - Express route or VPN virtual network gateway for hybrid connectivity to on-premises with sufficient bandwidth.
 - AD DS servers and custom DNS servers.
 - Network security groups.
-- Outbound internet via default Azure vNET path.
+- Outbound internet via default Azure virtual network path.
 - Group Policy or Local Policy Objects.
 - Azure files service on storage accounts.
 - Azure private endpoints.
@@ -136,16 +138,19 @@ You can implement this scenario with:
 - Outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
 - Connections from session hosts to Azure files (storage accounts) are established using private endpoints.
 - Azure private DNS zones are used to resolve private endpoint namespaces.
-- Even though for this scenario network filtering is not enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
+- Even though for this scenario network filtering isn't enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
 
 _**NOTE:  At this time, AVD does not support using Private Link and RDP Shortpath at the same time**_
-## Scenario 3: Hub & Spoke with Public Network RDP Short Path Connectivity
+
+## Scenario 3: Hub and spoke with public networks using RDP Shortpath
 
 See [RDP Shortpath Connectivity for public networks Microsoft Learn page](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks) for detailed deployment guidance.
+
 ### Customer profile
 
 This scenario is ideal if:
-- Your AVD Client Connections are traversing the public internet. Typical scenarios include, but not limited to, work from home users, remote branch office users not connected to corporate networks, and remote contractor users. 
+
+- Your AVD Client Connections are traversing the public internet. Typical scenarios include, but not limited to, work from home users, remote branch office users not connected to corporate networks, and remote contractor users.
 - You have a high latency or low bandwidth connections to Azure Virtual Desktops session hosts.
 - You need to limit bandwidth usage of AVD session hosts via QoS network policies.
 - You want to prioritize AVD traffic on your network via QoS policies.
@@ -158,11 +163,12 @@ This scenario is ideal if:
 ### Architectural components
 
 You can implement this scenario with:
-- Express route or VPN virtual network gateway for hybrid connectivity to on-premises with sufficient bandwidth to support connections to on-premises applications, data, or AD DS connections. Microsoft does not recommend force tunneling of all AVD traffic through on-premises routers.
+
+- Express route or VPN virtual network gateway for hybrid connectivity to on-premises with sufficient bandwidth to support connections to on-premises applications, data, or AD DS connections. Microsoft doesn't recommend force tunneling of all AVD traffic through on-premises routers.
 - AD DS servers and custom DNS servers.
 - Network security groups.
 - Network Watcher,
-- Outbound internet via default Azure vNET path.
+- Outbound internet via default Azure virtual network path.
 - Group Policy or Local Policy Objects.
 - Azure files service on storage accounts.
 - Azure private endpoints.
@@ -180,7 +186,7 @@ You can implement this scenario with:
 - [DSCP markers must be configured](/azure/virtual-desktop/rdp-quality-of-service-qos) on the session hosts vial local policy or domain group policy for network devices to apply QoS policies for AVD traffic.  
 - Connections from session hosts to Azure files (storage accounts) are established using private endpoints.
 - Azure private DNS zones are used to resolve private endpoint namespaces.
-- Even though for this scenario network filtering is not enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
+- Even though for this scenario network filtering isn't enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
 
 ## General design considerations and recommendations
 
@@ -199,29 +205,37 @@ The identity services connectivity requirements of Azure Virtual Desktop session
 
 ### DNS
 
-Azure Virtual Desktop session hosts have the same name resolution requirements as any other IaaS workload, therefore connectivity to custom DNS servers or access (via vNet network link) to Azure Private DNS zones is required. Additional Azure private DNS zones are required to host the private endpoint namespaces of certain (storage accounts, key) Platform As A Service (PaaS) services.
+Azure Virtual Desktop session hosts have the same name resolution requirements as any other IaaS workload, therefore connectivity to custom DNS servers or access (via virtual network link) to Azure Private DNS zones is required. Additional Azure private DNS zones are required to host the private endpoint namespaces of certain (storage accounts, key) Platform As A Service (PaaS) services.
 
 - [Azure private endpoint DNS configuration](/azure/private-link/private-endpoint-dns)
 
-To facilitate end user Azure Virtual Desktop client configuration (subscription to RDS feed), it is recommended to set up email discovery in the public DNS domain and [set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
+To facilitate end user Azure Virtual Desktop client configuration (subscription to RDS feed), it's recommended to set up email discovery in the public DNS domain and [set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
 
 ### Bandwidth and latency
 
 Azure Virtual Desktops use Remote Desktop Protocol (RDP). To know more about RDP, see [Remote Desktop Protocol (RDP) bandwidth requirements](/azure/virtual-desktop/rdp-bandwidth).
 
-The connection latency varies depending on the location of the users and the virtual machines. Azure Virtual Desktop services continuously rolls out to new geographies to improve latency. To minimize the latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients. You can use this information to place session hosts in the closest region with the lowest RTT to the end users ([interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
+The connection latency varies depending on the location of the users and the virtual machines. Azure Virtual Desktop services continuously roll out to new geographies to improve latency. To minimize the latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients. You can use this information to place session hosts in the closest region with the lowest RTT to the end users ([interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
 
 ### Quality of Service (QoS) with RDP Shortpath
 
-RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive.
-RDP Shortpath can be used in two ways:
-- Managed networks, where direct connectivity is established between the client and the session host when using a private connection, such as a ExpressRoute, or virtual private network (VPN).
-- Public networks, where direct connectivity is established between the client and the session host when using a public connection – i.e., home internet, coffee shop internet, hotel network, etc. There are two connection types when using a public connection:
-   - A direct UDP connection using the Simple Traversal Underneath NAT (STUN) protocol between a client and session host.
-   - An indirect UDP connection using the Traversal Using Relay NAT (TURN) protocol with a relay between a RDP client and session host. This option will be used if the gateway/router does not allow for direct UDP connections. NOTE:  At GA the TURN service will only be available in specific regions, then will expand over time. You can check the available regions in the link below.
-   
-_NOTE:  RDP Shortpath extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it. Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport (TCP). All connection attempts are ignored unless they match the reverse connect session first. RDP Shortpath (UDP) is established after authentication, and if successfully established, the reverse connect transport is dropped and all traffic flows over one of the RDP Shortpath methods listed above_
+RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and the Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic sensitive to network delays to "cut in line" in front of less sensitive traffic.
+
+You can use RDP Shortpath in two ways:
+
+- **Managed networks**, where direct connectivity is established between the client and the session host when using a private connection, such as an ExpressRoute, or virtual private network (VPN).
+- **Public networks**, where direct connectivity is established between the client and the session host when using a public connection. Examples of public connections are home network, coffee shop network, hotel network, and more. There are two connection types when using a public connection:
+  - **A direct UDP connection** between a client and session host using the Simple Traversal Underneath NAT (STUN) protocol.
+  - **An indirect UDP connection** using the Traversal Using Relay NAT (TURN) protocol with a relay between an RDP client and session host. This option is used if the gateway/router doesn't allow direct UDP connections. NOTE:  When launched, the TURN service will only be available in specific regions, then will expand over time. You can check the available regions in the link below.
+
+Note that RDP path extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it.
+
+Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport (TCP). All connection attempts are ignored unless they match the reverse connect session first.
+
+RDP Shortpath (UDP) is established after authentication, and if successfully established, the reverse connect transport is dropped, and all traffic flows over one of the RDP Shortpath methods listed above
+
 For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
+
 ### Internet
 
 Azure Virtual Desktop compute resources and clients require access to specific public endpoints, so they need internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure Virtual Desktop requirements are met.
@@ -245,5 +259,3 @@ Learn about resource organization for an Azure Virtual Desktop enterprise-scale 
 
 > [!div class="nextstepaction"]
 > [Resource organization](./eslz-resource-organization.md)
-
-
