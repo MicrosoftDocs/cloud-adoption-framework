@@ -5,7 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 06/30/2023
 ms.topic: conceptual
-ms.subservice: scenario
+ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
