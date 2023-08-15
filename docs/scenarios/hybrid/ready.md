@@ -142,6 +142,28 @@ Customers might develop latency-sensitive applications or applications with data
 
 In this scenario, customers should project the Azure Arc resources for their application into the same application landing zone subscription that they deploy Azure resources into. Customers can then apply one set of controls to all resources from a single control plane no matter where the resources are.
 
+#### Example four: Projecting on-premises servers that reached end of support into Azure to use Extended Security Updates delivered through Azure Arc
+
+Many customers have Windows Server versions that are nearing end of support and can't meet the end-of-support deadline but need to stay on-premises. In this scenario they would look to purchase [Extended Security Updates](/windows-server/get-started/extended-security-updates-overview) enabled by [Azure Arc](https://azure.microsoft.com/products/azure-arc/).
+
+If customers are deploying an Azure Landing Zone or already have one deployed, customers can treat their on-premises datacenters as normal landing zones and place them into new or existing landing zones as they see fit. Some common approaches include:
+
+- Moving project resources into dedicated landing zone subscriptions for on-premises datacenter resources.
+
+- In larger environments with multiple datacenters across the globe, customers might have one landing zone per geopolitical region. These landing zones also contain the resources from that region to provide a logical separation of the on-premises datacenters into Azure.
+
+- This approach can also assist with the security, governance, and compliance requirements for different on-premises datacenters.
+
+- Moving project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
+
+- Customers should review the Azure Arc-enabled Servers landing zone accelerator guidance to review the design considerations and recommendations across critical design areas.
+
+If customers don't have or aren't planning to deploy an Azure Landing Zone at the moment:
+
+- Customers should review the Azure Arc-enabled Servers landing zone accelerator guidance to review the design considerations and recommendations across critical design areas.
+
+[![Diagram that shows a flow chart for azure arc landing zone guidance.](./media/azure-arc-esu-landing-zone-flow-chart.png)](./media/azure-arc-esu-landing-zone-flow-chart.png#lightbox)
+
 ## Next steps
 
 For more information about your hybrid and multicloud cloud journey, see the following articles.

@@ -20,11 +20,13 @@ Step 1 is to create the platform subscriptions. Step 2 is to create the platform
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
-- [Platform vs. application landing zones](../index.md#platform-vs-application-landing-zones)
+- [Platform landing zones vs. application landing zones](../index.md#platform-landing-zones-vs-application-landing-zones)
 - [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
+
+> [!VIDEO https://www.youtube.com/embed/OoC_0afxACg]
 
 Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for application landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 

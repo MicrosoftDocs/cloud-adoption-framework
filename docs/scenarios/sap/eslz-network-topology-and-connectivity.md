@@ -1,9 +1,9 @@
 ---
 title: Network topology and connectivity for an SAP migration
 description: Understand design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
-author: JefferyMitchell
-ms.author: martinek
-ms.date: 03/01/2021
+author: pankajmeshramCSA
+ms.author: pameshra
+ms.date: 04/21/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
@@ -148,5 +148,9 @@ It isn't recommended to host the database management system (DBMS) and applicati
 
 When running SAP RISE deployments in Azure, integration of SAP managed environment with your own Azure ecosystem is paramount. To understand the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
 
+SAP RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or virtual network peering. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might be interested in setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [CAF Migration Landing Zone](/azure/governance/blueprints/samples/caf-migrate-landing-zone/) could be a good option. This blueprint can easily be adopted to the specific customer requirement, with specific focus on the virtual network parameters.
 
+Deploying cross-tenant virtual network peering to the SAP RISE tenant also requires some further work. Careful planning of the virtual network architecture is needed to ensure there are no overlapping CIDR ranges. In addition, DNS peering to the SAP RISE tenant must be properly done as per the document referred to above (Integrating Azure with SAP RISE managed workloads).
+
+Finally, if you decide to set up a Virtual WAN solution and also have a need for site-to-site VPN or ExpressRoute connections, you should consider the following [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations).
 

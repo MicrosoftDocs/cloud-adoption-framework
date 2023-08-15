@@ -3,7 +3,7 @@ title: What is a data mesh?
 description: Learn about data mesh in Azure.
 author: simonlid
 ms.author: simonlid
-ms.date: 04/01/2022
+ms.date: 03/12/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

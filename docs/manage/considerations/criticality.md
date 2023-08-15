@@ -3,7 +3,7 @@ title: Business criticality in cloud management
 description: Use the Cloud Adoption Framework for Azure to understand workload criticality and prevent adverse impact on revenue and profitability.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 04/26/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: manage
@@ -38,6 +38,7 @@ It's common for businesses to include additional criticality classifications tha
 - **Compliance-critical:** In heavily regulated industries, some workloads might be critical as part of an effort to maintain compliance requirements.
 - **Security-critical:** Some workloads might not be mission critical, but outages could result in loss of data or unintended access to protected information.
 - **Safety-critical:** When lives or the physical safety of employees and customers is at risk during an outage, it can be wise to classify workloads as safety-critical.
+- **Sustainability-critical:** If your business focuses on the sustainability of some of its systems, consider this as a classification. 
 
 ## Importance of accurate criticality
 

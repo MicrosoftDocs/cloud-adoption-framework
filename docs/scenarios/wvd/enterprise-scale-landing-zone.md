@@ -46,6 +46,8 @@ The following diagram shows a conceptual reference architecture that demonstrate
 
 _For more information on the design areas labeled A-J in the visual, see the Azure Landing Zone [environment design areas](../../ready/landing-zone/design-areas.md#environment-design-areas). To learn more about the design areas for Azure Virtual Desktop, see [network topology and connectivity for Azure Virtual Desktop](./eslz-network-topology-and-connectivity.md)_
 
+*Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
+
 ### Guidance for regional expansion
 While having an Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 
@@ -83,7 +85,7 @@ Some customers may require deploying Azure Virtual Desktop across multiple Azure
 
 The Azure Virtual Desktop landing zone accelerator includes an open-source collection of Azure Resource Manager and Bicep templates to help you quickly set up your Azure Virtual Desktop environment following best practices and Cloud Adoption Framework. The accelerator creates an Azure Virtual Desktop environment, including virtual machines, virtual networks, and storage in Azure.
 
-The Azure Virtual Desktop accelerator is available in the [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) GitHub repository. It contains Infrastructure as Code based on [Common Azure Resource Modules Library (CARML)](https://github.com/Azure/ResourceModules). The Azure Virtual Desktop landing zone accelerator ([deployment prerequisites](https://github.com/Azure/avdaccelerator/wiki/Getting-Started#Getting-Started)) can be deployed using integration into your CI/CD pipelines, command line [PowerShell or Azure CLI](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or Azure portal deployments:
+The Azure Virtual Desktop accelerator is available in the [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) GitHub repository. It contains Infrastructure as Code based on [Common Azure Resource Modules Library (CARML)](https://github.com/Azure/ResourceModules). The Azure Virtual Desktop landing zone accelerator ([deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md)) can be deployed using integration into your CI/CD pipelines, command line [PowerShell or Azure CLI](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) or Azure portal deployments:
 
 **Optional: Custom Image Build:**
 Deploy a custom image based on the latest version of the Azure Marketplace image to an Azure Compute Gallery.

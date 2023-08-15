@@ -3,7 +3,7 @@ title: Access control and data lake configurations in Azure Data Lake Storage Ge
 description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2 and how to use role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
-ms.date: 02/24/2022
+ms.date: 01/05/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

@@ -204,7 +204,7 @@ conceptualContent:
     # Card
     - title: Governance benchmark
       links:
-        - url: https://www.cafbaseline.com
+        - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e
           itemType: quickstart
           text: Identify gaps between your current state and business priorities. Get the right resources to help you address the gaps.
 
@@ -252,9 +252,14 @@ additionalContent:
           url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
-        - title: Azure Migration and Modernization Program
+        - title: Azure Migrate and Modernize
           summary: Get support migrating workloads to the cloud
           url: https://azure.microsoft.com/migration/migration-modernization-program/
+
+        # Card
+        - title: Partner-led Workshops
+          summary: Obtain best practices on Cloud Adoption Framework from certified partners
+          url: https://www.microsoft.com/azure/partners/ammp-w/events/?utm_source=MS+Docs&utm_medium=landing+page&utm_id=Docs
 
         # Card
         - title: Find a partner

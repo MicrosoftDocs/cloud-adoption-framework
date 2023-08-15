@@ -3,7 +3,7 @@ title: Tailor the Azure landing zone architecture
 description: Understand how to tailor the Azure landing zone architecture to meet your business requirements.
 author: jtracey93
 ms.author: jatracey
-ms.date: 3/11/2022
+ms.date: 05/26/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -66,13 +66,13 @@ The following landing zone archetype examples from the conceptual architecture h
 
 | Landing zone archetype (management group) | Purpose or use                                                                                                                                                                                                                                                          |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Corp                                      | Workloads such as internal systems used to run the business that shouldn't be publicly facing on the internet directly. They can be used via a firewall or network virtual appliance in the central hub virtual networks in the connectivity subscriptions. They can be thought of as "private" workloads. |
-| Online                                    | Workloads, such as directly publicly facing, internet, web apps. They might also have hybrid connectivity and peering to other virtual networks, which includes on-premises.                                                                                                          |
-| Sandbox | Workloads in the early stages of development, testing, or ideation that require a less restrictive resultant set of policies applied to allow innovation. For example, you might allow access to services that are otherwise restricted in the rest of your hierarchy within the sandbox management group.
+| Corp                                      | The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
+| Online                                    | The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network.     |
+| Sandbox | The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-conceptual-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
 

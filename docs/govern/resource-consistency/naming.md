@@ -7,7 +7,7 @@ ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Naming overview
@@ -45,7 +45,7 @@ Use the following resources to understand the components of a good naming conven
 - Read [Define your naming convention](../../ready/azure-best-practices/resource-naming.md) to learn about the important components of a well-defined naming convention, and see some example names for common Azure resource types.
 - Read or reference [Abbreviation examples for Azure resources](../../ready/azure-best-practices/resource-abbreviations.md) to help determine the abbreviations you'll use for the Azure resources you're using.
 - Read or reference [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules) to understand the rules and restrictions on names for the Azure resources you're using.
-- Install and configure the [Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) with the organizational standards you determined above. Use the tool to generate names for resources.
+- Install and configure the [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool) with the organizational standards you determined above. Use the tool to generate names for resources.
 
 ## Enforce
 
@@ -89,7 +89,7 @@ The following Azure Resource Graph example query identifies improperly named vir
 
 ```azurecli
 Resources
-| where type == 'microsoft.network/virtualnetworks'
+| where type == 'microsoft.network/virtualNetworks'
 | project name, id
 | extend valid = name matches regex @"(^vnet-\w+-(prod|dev)-\w+-\d\d\d$)"
 | where valid == false
