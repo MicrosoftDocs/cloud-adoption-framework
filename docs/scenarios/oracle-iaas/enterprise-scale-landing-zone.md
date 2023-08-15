@@ -51,6 +51,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 Use the reference architecture as a starting point. You can download the [Visio file](https://microsof.sharepoint.com/:u:/t/DataMod/ETuAV2_4kd9ErT3xmusXJL8B9nIv8xKMQi709VE2iV_omA?e=fC5kNW) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
+
 ## Subscriptions
 
  The example Oracle workload architecture uses the following two subscriptions:
@@ -65,11 +66,11 @@ As shown in  the reference architectural diagram, the Oracle databases are deplo
 
 The example Oracle on Azure architecture is contained inside a single or potentially two VNETs. This can be used for either a hybrid connectivity scenario, or for scenarios where your Oracle workload isn't enabled for hybrid connectivity. For hybrid connectivity scenarios the Oracle spoke virtual network should be connected to a hub virtual network in accordance with ALZ general principles, either through regular peering or through Virtual WAN.  
 
-The architecture subdivides the virtual network address space into subnets. You can associate each subnet with a network security group that defines the access policies for the subnet. Place application servers on a separate subnet so that you can more easily provide security for them. 
+The architecture subdivides the virtual network address space into subnets. You can associate each subnet with a network security group that defines the access policies for the subnet. Place application servers on a separate subnet so that you can more easily provide security for them.
 
 You can manage the subnet security policies instead of managing individual servers. When you associate a network security group with a subnet, the network security group applies to all the servers in the subnet, and you have fine-grained control over the servers.
 
-This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets. 
+This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
 **Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
@@ -91,11 +92,9 @@ For more information about Basic HA configuration, see the [Oracle BCDR document
 
 An Azure availability zone is a unique physical location within a region. Each zone is made up of one or more datacenters that are equipped with independent power, cooling, and networking.
 
-For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones. 
+For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones.
 
-Depending on your application requirements you should  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [VMSS Flex]([https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes)),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This also extends to other parts of the infrastructure such as Application Gateway, ExpressRoute, etc.
-
-The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
+Depending on your application requirements you should  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
 For more information about advanced HA/DR configuration, see (link to Oracle BCDR documentation).
 
@@ -127,9 +126,9 @@ The components are separate in the example Oracle systems architecture to provid
 
 The example architecture has components that you can use for Oracle operations. There are different strategies for [Backup services on Azure for Oracle database](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) that helps you to extend and improve your Oracle data platform with cloud-native Azure data services. A few of the backup recommendations are:
 
-- [Azure storage-based backup & recovery](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-storage?tabs=azure-portal)
+- [Azure storage-based backup and recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-storage?tabs=azure-portal)
 
-- [Azure Backup services-based backup and recovery](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-backup?tabs=azure-portal) 
+- [Azure Backup services-based backup and recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-backup?tabs=azure-portal)
 
 - [RMAN Based streaming backup](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143)
 
@@ -147,5 +146,5 @@ Review the following design areas for your Oracle on Azure landing zone accelera
 
 - Network topology and connectivity
 - Management and monitoring
-- Business continuity and disaster recovery + Backup 
+- Business continuity and disaster recovery + Backup and recovery
 - Security, governance, and compliance
