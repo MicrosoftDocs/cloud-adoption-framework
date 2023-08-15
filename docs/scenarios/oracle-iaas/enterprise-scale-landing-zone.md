@@ -52,13 +52,13 @@ Use the reference architecture as a starting point. You can download the [Visio 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 ## Subscriptions
 
- The example Oracle workload architecture uses the following two subscriptions: 
+ The example Oracle workload architecture uses the following two subscriptions:
 
 **An Azure virtual hub subscription** that contains the hub virtual network if necessary for hybrid connectivity. If your Oracle workloads are internet facing only, they may not require this specifically.  
 
 **An Azure Oracle production subscription**, where the production and disaster recovery systems are configured.  
 
-**An Azure Oracle non-production subscription**, where a non-production system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone. 
+**An Azure Oracle non-production subscription**, where a non-production system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone.
 
 ## Networking
 
@@ -68,7 +68,7 @@ The architecture subdivides the virtual network address space into subnets. You 
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets. 
 
-**Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
+**Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
 **Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
 
@@ -88,9 +88,9 @@ For more information about Basic HA configuration, see the [Oracle BCDR document
 
 An Azure availability zone is a unique physical location within a region. Each zone is made up of one or more datacenters that are equipped with independent power, cooling, and networking.
 
-For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones. Depending on your application requirements you should  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [VMSS Flex]([https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes)), [Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This also extends to other parts of the infrastructure such as Application Gateway, ExpressRoute, etc.
+For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones. Depending on your application requirements you should  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [VMSS Flex]([https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes)),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This also extends to other parts of the infrastructure such as Application Gateway, ExpressRoute, etc.
 
-The Azure uptime SLA for virtual machines configured for availability zones is 99.99% 
+The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
 For more information about advanced HA/DR configuration, see (link to Oracle BCDR documentation).
 
@@ -126,7 +126,7 @@ The example architecture has components that you can use for Oracle operations. 
 
 - [Azure Backup services-based backup and recovery](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-backup?tabs=azure-portal) 
 
-- [RMAN Based streaming backup](https://review.learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143) 
+- [RMAN Based streaming backup](https://review.learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143)
 
 Apart from backup Azure provides methods for setting up [disaster recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery) capabilities for Oracle on Azure VMs.
 
