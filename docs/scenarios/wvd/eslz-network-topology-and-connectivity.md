@@ -5,7 +5,8 @@ author: danycontre
 ms.author: tozimmergren
 ms.date: 08/15/2023
 ms.topic: conceptual
-ms.subservice: caf-scenario-virtual-desktop
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
