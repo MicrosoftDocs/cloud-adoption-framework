@@ -120,7 +120,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Use Intune for Azure Virtual Desktop personal session hosts](/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
-- [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) is currently in Public Preview. Currently, you can apply configuration policies defined in the OS scope and apps configured to install in the system context to Azure Virtual Desktop multi-session VMs. All multi-session configurations must be targeted to devices or device groups.
+- [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
 - Audit and configure the hardening of your session hosts' operating system by using [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
