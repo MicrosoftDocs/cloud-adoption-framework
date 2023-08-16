@@ -49,7 +49,7 @@ You need to understand and plan for all critical areas of your deployment archit
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an SAP on Azure landing zone accelerator:
 
-:::image type="content" source="./media/enterprise-scale-architecture-sap.png" border="false" alt-text="Diagram that shows the SAP on Azure landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-sap.png":::
+:::image type="content" source="./media/enterprise-scale-architecture-sap.svg" border="false" alt-text="Diagram that shows the SAP on Azure landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
 
 > [!NOTE]
 > When deploying a high-availability SAP workload on Azure, it's important to consider the various deployment types available and how they can be applied across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
