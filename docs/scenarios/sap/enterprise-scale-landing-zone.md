@@ -53,7 +53,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 _Figure 1: SAP on Azure landing zone accelerator architecture. Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-sap.vsdx) of this architecture._
 
-Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture-sap.vsdx)
+
 
 > [!NOTE]
 > When deploying a high-availability SAP workload on Azure, it's important to consider the various deployment types available and how they can be applied across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
