@@ -3,7 +3,7 @@ title: Democratize data for minimum viable products
 description: Create a minimum viable product to start your development. Learn about data democratization, the process of getting data to test hypotheses and drive innovation.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 04/28/2021
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate

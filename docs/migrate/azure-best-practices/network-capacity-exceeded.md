@@ -3,7 +3,7 @@ title: Best practices when data requirements exceed network capacity during a mi
 description: Best practices when data requirements exceed network capacity during a migration effort
 author: martinekuan
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 04/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
