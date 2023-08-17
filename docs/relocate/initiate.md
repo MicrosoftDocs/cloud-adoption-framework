@@ -53,9 +53,7 @@ The rest of your relocation plan should center on the relocation project and get
 
 **Know cost factors.** Relocation has a cost. Moving data and using services isn't free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee. For some Azure services, the price varies for each region, so be sure to review the pricing before you start the relocation project. If you use Azure Reservations to reduce your Azure costs in your source region, consider whether you can [exchange them to your destination region](/azure/cost-management-billing/reservations/exchange-and-refund-azure-reservations).
 
-## Understand the side effects of relocating each workload
-
-When you move a workload between regions, there are often side effects, including how IP addresses and DNS names are used, and how your automation processes might need to adapt. Consider which of these side effects apply to each workload, and incorporate this information in your prioritization process. For more information about potential side effects during a region move, see [Evaluate potential side effects of the relocation](evaluate.md#evaluate-potential-side-effects-of-the-relocation).
+**Understand the side effects of relocating each workload.** When you move a workload between regions, there are often side effects, including how IP addresses and DNS names are used, and how your automation processes might need to adapt. Consider which of these side effects apply to each workload, and incorporate this information in your prioritization process. For more information about potential side effects during a region move, see [Evaluate potential side effects of the relocation](evaluate.md#evaluate-potential-side-effects-of-the-relocation).
 
 ## Next step
 
