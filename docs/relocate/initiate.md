@@ -53,30 +53,9 @@ The rest of your relocation plan should center on the relocation project and get
 
 **Know cost factors.** Relocation has a cost. Moving data and using services isn't free. To minimize cost, you should move data once and avoid duplicating services or environments for extended periods of time. A hidden cost you might not consider comes from suppliers, partners, or third-party technical support. You might need their help to relocate a workload, and they typically charge a fee. For some Azure services, the price varies for each region, so be sure to review the pricing before you start the relocation project. If you use Azure Reservations to reduce your Azure costs in your source region, consider whether you can exchange them to your destination region.
 
-## Evaluate potential side effects of the relocation
+## Understand the side effects of relocating each workload
 
-In any migration project, there’s a risk of something breaking during the relocation process. Outages can happen by accident, or due to the way that the service being relocated is designed. Wherever possible, it’s best to identify these issues during the discovery stage so that you can put a plan in place to mitigate the risk of an outage or misconfiguration. Here are some points to consider:
-
-- **Automation, scripts and infrastructure as code:** Your organization might have invested in automation techniques, which can be helpful with the relocation process. However, be sure to identify and change any references to Azure regions, service names, or service URLs to reflect the destination Azure region. Ideally, values that can change during the lifecycle of an application should be looked up dynamically, or configured as parameters within the code, to make the changes less onerous.
-
-- **Public IP addresses:** Azure allocates public IP addresses from a range unique to each Azure region. This means that when a new public IP address is provisioned in the new target Azure region, the public IP addresses used by your resources will have changed from what it is currently. As you go live with the services in the new Azure region, plan how you update your external DNS records to reflect the new IP addresses in use. If external parties have allowlisted your organization’s public IP addresses, then they need to be supplied with the new IP addressed of the relocated services.
-
-- **Resource DNS names and URLs:** Many Azure resources can be configured with globally unique DNS names. For example, Azure Storage uses DNS names similar to `<unique_name>.blob.core.windows.net`, and Azure App Service uses DNS names similar to `<unique_name>.azurewebsites.net`. Similarly, if you have any public IP address resources that you attach to virtual machines or networking resources, they might be configured to use a DNS name similar to `<unique-name>.<region-name>.cloudapp.azure.com`.
-
-  Evaluate whether your migration plan requires you to provision new instances of services within the new target Azure region while the current service is still provisioned in the old Azure region. If you do, there might be a naming conflict: two resources can’t share the same DNS name at the same time. Consider whether you can use different names for each resource.
-
-  In some situations, your DNS records might be able to provide a layer of abstraction by using CNAME records, which makes a service name change easier to manage.
-
-- **Private endpoints:** Many Azure services enable you to access your resources by using a private endpoint in your own virtual network. Often, this approach uses the resource’s URL, such as in your private DNS zones. The preceding consideration described how a resource’s URL can change during the migration process, so ensure that you plan how you configure your private endpoints and DNS zones.
-
-- **Azure Backup recovery points:** When virtual machines are relocated to the new target Azure region, they first need to be de-registered with the current Azure Backup service and then re-registered with a new instance of Azure Backup located in the new region. This process causes existing recovery points for that virtual machine to be unavailable, because recovery points can’t be relocated to a different vault.
-
-- **Log Analytics workspaces:** It’s best to deploy a separate Log Analytics workspace for each region, which means you should deploy a new workspace in your target region. It’s not possible to move a Log Analytics Workspace to another region, which means the data from your original workspace won’t be available in the target region’s workspace.
-
-  If it’s important that you keep the historical Log Analytics data, consider either of the following approaches:
-  - Keep the current workspace until you're confident you no longer require the data. Treat the workspace as read-only.
-  - Export the workspace’s data to a storage account in the new target Azure region.
-
+When you move a workload between regions, there are often side effects, including how IP addresses and DNS names are used, and how your automation processes might need to adapt. Consider which of these side effects apply to each workload, and incorporate this information in your prioritization process. For more information about potential side effects during a region move, see [Evaluate potential side effects of the relocation](evaluate.md#evaluate-potential-side-effects-of-the-relocation).
 
 ## Next step
 
