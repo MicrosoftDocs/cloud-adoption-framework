@@ -35,7 +35,7 @@ Cold relocation is for workloads that can withstand downtime. It's the most cost
 > [!NOTE]
 > You might choose to perform step 2 last if one of the following situations apply:
 > - You use Azure Resource Mover to relocate your resources; or
-> - You need to test the workloads in the new target region before taking the source region offline.  
+> - You need to test the workloads in the new target region before you take the resources in the source region offline.  
 
 Cold relocation can take a few minutes or a few days depending on the number of services and volume of data.
 
@@ -73,7 +73,9 @@ There are three primary service-relocation approaches. The following paragraphs 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Redeploy by using Infrastructure as code (IaC) custom automation:** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template, Bicep file, or Terraform file for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md). Deploying a new instance of an Azure service using IaC provides the opportunity to deploy multiple copies of the resource in parallel and then use one of the suggested cutover techniques to redirect connections to the workloads in the new target region.
+**Redeploy by using infrastructure as code (IaC) custom automation:** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template, Bicep file, or Terraform file for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
+
+Deploying a new instance of an Azure service by using IaC provides you with an opportunity to deploy multiple copies of the resource in parallel, and then use one of the suggested cutover techniques to redirect connections to the workloads in the new target region.
 
 ## Select data-relocation automation
 
@@ -94,7 +96,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 - **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
 
 > [!NOTE]
-> Existing backup restore points in the source region aren’t transferred to the new target region.
+> Existing backup restore points in the source region aren’t transferred to the new target region. If you need to retain backups for a specified period of time, consider keeping the vault in your source region until the backups are no longer required.
 
 - **Manual backup and restore:** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore it manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
 
@@ -122,6 +124,7 @@ Cutover is when you transition from the old workload to the new one. You direct 
 - **Gateway Routing:** If the workload uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service, such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover. You use their backend targets and routing-rules features.
 
 When planning the cutover approach, be sure to consider the following questions:
+
 - How do other systems connect to the relocated workload? Will these approaches continue to work, and will any security considerations change?
 - What’s required to cut over internal users to the relocated workloads?
 - What’s required to cut over external customers to the relocated workloads?
