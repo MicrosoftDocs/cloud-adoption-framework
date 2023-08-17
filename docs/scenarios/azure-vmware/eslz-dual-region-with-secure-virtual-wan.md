@@ -29,14 +29,14 @@ Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual
 ![Diagram of Dual-Region Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
 ### Understanding Topology Connectivity 
-Connection Color | Description  |
+Connection | Description  |
 |:-------------------- |:--------------------  |
-| Brown Connections | Azure VMware Solution private cloud connection to its local regional hub.  |
-| Pink Connections | Azure VMware Solution private cloud connection to its cross-regional hub.  |
-| Orange Connection | Azure VMware Solution Region 1 Global Reach connection back to on-premises.  |
-| Green Connection | Azure VMware Solution Region 2 Global Reach connection back to on-premises.  |
-| Purple Connection | Azure VMware Solution Global Reach connection between the two private clouds' managed circuits.  |
-| Black Connections | on-premises connectivity via ExpressRoute to both regional hubs.  |
+| Brown Connections (E) | Azure VMware Solution private cloud connection to its local regional hub.  |
+| Pink Connections (D) | Azure VMware Solution private cloud connection to its cross-regional hub.  |
+| Orange Connection (A) | Azure VMware Solution Region 1 Global Reach connection back to on-premises.  |
+| Green Connection (B) | Azure VMware Solution Region 2 Global Reach connection back to on-premises.  |
+| Purple Connection (C) | Azure VMware Solution Global Reach connection between the two private clouds' managed circuits.  |
+| Black Connections (F) | on-premises connectivity via ExpressRoute to both regional hubs.  |
 | Inter-Hub Connection | When two hubs are deployed under the same Virtual WAN  |
 
 ## Dual-region Secure Virtual WAN Traffic Flows
@@ -45,7 +45,7 @@ The upcoming sections cover traffic flows and connectivity for Azure VMware Solu
 
 ### Azure VMware Solution cross-region connectivity & traffic flows
 
-This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure VMware Solution Cloud Region 2. Each Azure VMware Solution private cloud has an ExpressRoute connection to its local regional hub (brown connections) and an ExpressRoute connection to the cross-regional hub (pink connections).
+This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure VMware Solution Cloud Region 2. Each Azure VMware Solution private cloud has an ExpressRoute connection to its local regional hub (brown connections labeled as "E") and an ExpressRoute connection to the cross-regional hub (pink connections, labeled as "D").
 
 Each Azure VMware Solution Cloud Region connects back to on-premises via Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown in orange as "Global Reach (A)". Azure VMware Solution Cloud Region 2 Global Reach connection is shown in green as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown in purple as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
 
@@ -61,7 +61,7 @@ The diagram depicts how each Azure VMware Solution Cloud learns routes from thei
 
 ### on-premises connectivity & traffic flow
 
-This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (black connections).
+This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (black connections labeled as "F").
 
 on-premises can communicate to Azure VMware Solution Cloud Region 1 via orange connection "Global Reach (A)". on-premises is also able to communicate with Azure VMware Solution Cloud Region 2 via the green connection "Global Reach (B)".
 
@@ -102,11 +102,11 @@ As mentioned earlier, when you enable Routing Intent on the Secure Hub, it adver
 
  Each Virtual Network will egress to the internet using its local regional hub firewall. The default route is never advertised across regional hubs over the "inter-hub" link. Therefore, Virtual Networks can only use their local regional hub for internet access. 
 
-From an Azure VMware Solution Private Cloud perspective, when advertising the default route across regional connections (pink connections), you need to configure route maps with BGP prepending on the Secure Virtual WAN hubs. When you do not use BGP prepending, Azure VMware Solution Cloud regions load balance internet traffic between their local and regional hubs. This load balance would introduce asymmetric traffic and impact internet performance. 
+From an Azure VMware Solution Private Cloud perspective, when advertising the default route across regional connections (pink connections labeled as "D"), you need to configure route maps with BGP prepending on the Secure Virtual WAN hubs. When you do not use BGP prepending, Azure VMware Solution Cloud regions load balance internet traffic between their local and regional hubs. This load balance would introduce asymmetric traffic and impact internet performance. 
 
 Before we continue, let's go over what BGP prepending is. BGP prepending is a technique in inter-domain routing where an AS artificially extends the AS Path by adding its own AS number multiple times to influence inbound traffic. By making the path appear longer, the AS aims to divert traffic away from the prepended route and towards other potentially more favorable paths. You can use any BGP Private AS when using BGP prepending. 
 
-The goal here is to use BGP prepending for only the default routes across cross regional ExpressRoute links (pink connections) down to Azure VMware Solution Private clouds. We are not prepending the default route across local ExpressRoute links (brown connections) to the Azure VMware Solution Private Clouds. There is a new feature in Virtual WAN called Route Maps where you can configure a Route Map and apply the Route Map to the ExpressRoute connection of your choosing. 
+The goal here is to use BGP prepending for only the default routes across cross regional ExpressRoute links (pink connections labeled as "D") down to Azure VMware Solution Private clouds. We are not prepending the default route across local ExpressRoute links (brown connections labeled as "E") to the Azure VMware Solution Private Clouds. There is a new feature in Virtual WAN called Route Maps where you can configure a Route Map and apply the Route Map to the ExpressRoute connection of your choosing. 
 
 
 In short, Azure VMware Solution Private Clouds prioritize internet access via regional local hubs, using the cross-regional hub as backup during local hub outages. See traffic flow section more information.
