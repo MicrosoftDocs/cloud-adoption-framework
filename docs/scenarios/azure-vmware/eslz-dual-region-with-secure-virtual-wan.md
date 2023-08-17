@@ -6,7 +6,7 @@ ms.author: jasonmedina
 ms.date: 08/09/2023
 ms.topic: conceptual
 ms.service: caf
-ms.subservice: scenarios
+ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
