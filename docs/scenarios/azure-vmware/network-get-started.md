@@ -23,11 +23,11 @@ The following exercises help guide you through the process of creating a landing
 | ![The letter D](./media/diagram-legends/d.png) | [Example Architectures](./example-architectures.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. |
 | ![The letter E](./media/diagram-legends/e.png) | [Design Considerations and Recommendations](./eslz-network-topology-connectivity.md) | As cloud adoption scales, considerations and best practices for network design and operational management have an impact on scale, governance, and adoption patterns. |
 
-## Well-architected Workload Networking 
+## Well-Architected workload networking
 
-Within the VMware environment, Workload Networking is the setup of networking services and configurations that ensure communication and connectivity among the virtual machines and services hosted within the VMware infrastructure. Well-architected networks enable seamless connectivity, fine-tuned response times, effectively distribute traffic, and ensure the uninterrupted availability of workloads within the Azure VMware Solution.
+Within the VMware environment, workload networking is the setup of networking services and configurations that ensure communication and connectivity among the virtual machines and services hosted within the VMware infrastructure. Well-architected networks enable seamless connectivity, fine-tuned response times, effectively distribute traffic, and ensure the uninterrupted availability of workloads within the Azure VMware Solution.
 
-See the [Azure VMware Solution Well-architected workload](/azure/well-architected/azure-vmware/networking.md) networking guidance for more information. 
+See the [Networking considerations for Azure VMware Solution workloads](/azure/well-architected/azure-vmware/networking) for more information.
 
 ## Next steps
 
