@@ -25,10 +25,9 @@ The following exercises help guide you through the process of creating a landing
 
 ## Well-architected Workload Networking 
 
-Within the VMware environment, Workload Networking is the setup of networking services and configurations that ensure communication and connectivity among the virtual machines and services hosted within the VMware infrastructure.
+Within the VMware environment, Workload Networking is the setup of networking services and configurations that ensure communication and connectivity among the virtual machines and services hosted within the VMware infrastructure. Well-architected networks enable seamless connectivity, fine-tuned response times, effectively distribute traffic, and ensure the uninterrupted availability of workloads within the Azure VMware Solution.
 
-Well-architected networks enable seamless connectivity, fine-tuned response times, effectively distribute traffic, and ensure the uninterrupted availability of workloads within the context of Azure VMware Solution.
-[Azure VMware Solution Well-architected workload](./azure/well-architected/azure-vmware/networking.md) networking guidance for more information. 
+See the [Azure VMware Solution Well-architected workload](./azure/well-architected/azure-vmware/networking.md) networking guidance for more information. 
 
 ## Next steps
 
