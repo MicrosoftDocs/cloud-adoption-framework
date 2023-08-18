@@ -3,7 +3,7 @@ title: Management levels in cloud management
 description: Learn how to narrow cloud management options to a consistent set of processes and tools that you can offer for workloads hosted in the cloud.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 04/22/2021
 ms.topic: conceptual
 s.custom: internal
 ---

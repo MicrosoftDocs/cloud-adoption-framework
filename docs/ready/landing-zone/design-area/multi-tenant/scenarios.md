@@ -41,11 +41,11 @@ Some organizations that have offices and users around the globe with stricter da
 Another scenario is when organizations require [Azure Government (US Government)](/azure/azure-government/documentation-government-welcome) or [Azure China (operated by 21Vianet)](/azure/china/overview-operations). These national Azure cloud instances require their own Azure Active Directory tenants. The Azure Active Directory tenants are solely for that national Azure cloud instance and are used for the Azure subscriptions identity and access management services within that Azure cloud instance.
 
 >[!TIP]
-> For more information about Azure national cloud’s identity scenarios, see:
+> For more information about Azure national/regional cloud’s identity scenarios, see:
 >
 > - [Azure Government Identity](/azure/azure-government/documentation-government-plan-identity#identity-scenarios-for-subscription-administration-in-azure-government)
 > - [Azure China Cross-border connectivity and interoperability](/azure/china/overview-connectivity-and-interoperability)
-> - [Azure Active Directory authentication & national clouds](/azure/active-directory/develop/authentication-national-cloud)
+> - [Azure Active Directory authentication & national/regional clouds](/azure/active-directory/develop/authentication-national-cloud)
 
 Like in the previous scenarios, if your organization has a regulatory or country/region compliance framework to comply with, you might not require multiple Azure Active Directory tenants as the default approach. Most organizations can comply with the frameworks within a single Azure Active Directory tenant by using features, such as [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Administrative units](/azure/active-directory/roles/administrative-units).
 

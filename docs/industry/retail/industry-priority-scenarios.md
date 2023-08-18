@@ -3,7 +3,7 @@ title: Industry priority scenarios in the retail industry
 description: Learn Microsoft's approach to the retail industry's priority scenarios.
 author: mpvenables
 ms.author: jaalmond
-ms.date: 09/24/2021
+ms.date: 11/11/2021
 ms.topic: conceptual
 s.custom: internal, e2e-retail
 ---
