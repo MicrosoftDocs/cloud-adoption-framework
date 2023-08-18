@@ -32,7 +32,7 @@ Publishing Azure VMware Solution applications via Azure first-party services (Az
 ### Considerations for Azure Application Gateway
 [Azure Application Gateway](/azure/application-gateway/overview-v2) is the preferred option for exposing HTTP(S) applications running on Azure VMware Solution through a first-party layer-7 device with HTTP request routing and WAF capabilities. Application Gateway is an HTTP reverse proxy. It terminates TCP connections from the client and establishes upstream connections between itself and the target application servers. As a result, the application servers receive traffic whose source IP address is the Application Gateway's IP. It should be noted that the client's IP address can be carried in HTTP requests (typically, as a [custom "X-Forwarded-For" header](/azure/application-gateway/how-application-gateway-works#modifications-to-the-request)) if the application logic requires access to such information. Please refer to the official documentation for instructions on [how to publish an Azure VMware Solution application through Application Gateway](/azure/application-gateway/quick-create-portal).
 
-> **Note** <br>
+> [!NOTE]
 > Azure Application Gateway is currently the only supported first-party load balancer to expose web apps running on Azure VMware Solution virtual machines. This is because it allows pointing directly to the private IP addresses of virtual machines running on Azure VMware Solution when configuring its backend pool. In contrast, other load balancing services, such as Azure Load Balancer, do not allow this currently.
 
 ### Considerations for third-party NVAs
@@ -53,5 +53,5 @@ Publishing Azure VMware Solution applications via third-party NVAs deployed on A
 
 ## Next Steps
 - Go to the next section to learn about [outbound Internet connectivity](network-design-guide-internet-outbound-connectivity.md)
-- Go back to [Design Phase #2: Connectivity between Azure VMware Solution and Azure Virtual Networks](network-design-guide-vnet-connectivity.md)
+- Go back to [Design Phase #2: Connectivity between Azure VMware Solution and Azure virtual networks](network-design-guide-vnet-connectivity.md)
 - Go back to the Azure VMware Solution Network Design Guide [introduction](network-design-guide-intro.md)
