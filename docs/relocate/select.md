@@ -3,7 +3,7 @@ title: How to select a strategy for relocating cloud workloads
 description: Learn how to select the right strategy for relocating cloud workloads and applications.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 08/09/2023
+ms.date: 08/21/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
