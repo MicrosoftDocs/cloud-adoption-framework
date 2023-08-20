@@ -34,8 +34,8 @@ You should use the objectives to scope your relocation plan. Identify all the wo
 When defining the scope of your relocation plan, it’s important to understand the integrations each workload may have with other services. For example, consider these questions:
 
 - Does the relocated workload need to communicate with workloads that remain in your source region?
+- How will inbound and outbound network connectivity be secured?
 - Are there scripts, automation tools or CI/CD pipelines associated with the migrated workloads that need to be updated to reflect the new region?
-- How will network ingress and egress work for the workload once relocated?
 
 ## Prioritize workloads
 
