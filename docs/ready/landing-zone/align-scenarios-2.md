@@ -27,7 +27,7 @@ The customer has evaluated the Azure landing zones conceptual architecture. And 
 In this scenario, the current state of the customer's Azure environment is as follows:
 
 - Multiple custom management groups.
-- Management group hierarchy based on Dev/Test/Prod environments at the first level then based on geography on the second level.
+- Management Group hierarchy based on Dev/Test/Prod environments at the first level then based on geography on the second level.
 - An Azure subscription per application geography and environment (dev/test/prod).
 - Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
 - Applications are deployed into the respective subscription as per their region and environment classification (dev/test/prod).
