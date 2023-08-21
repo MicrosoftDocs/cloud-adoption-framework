@@ -3,7 +3,7 @@ title: Innovation tools to democratize data
 description: Learn about Azure Data Catalog and other data collection services that help you quickly test a hypothesis before expanding into broader, more costly digital inventions.
 author: martinekuan
 ms.author: martinek
-ms.date: 10/17/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
