@@ -15,7 +15,6 @@ items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-connectivity.md
         items: 
           - name: Getting Started
             href: network-get-started.md
