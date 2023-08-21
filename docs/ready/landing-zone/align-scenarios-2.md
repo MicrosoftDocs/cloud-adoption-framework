@@ -28,9 +28,9 @@ In this scenario, the current state of the customer's Azure environment is as fo
 
 - Multiple custom management groups.
 - Management Group hierarchy based on Dev/Test/Prod environments at the first level then based on geography on the second level.
-- An Azure subscription per application geography and environment (dev/test/prod).
+- An Azure subscription per geography and application environment (dev/test/prod).
 - Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
-- Applications are deployed into the respective subscription as per their region and environment classification (dev/test/prod).
+- Applications are deployed into the respective subscriptions as per their region and environment classification (dev/test/prod).
 - Policy assignments (audit and deny effects) are assigned at management group and subscription level.
 - All applications in the same region and in the same environment type, have the same set of Azure Policies applied.
 - RBAC role assignments per subscription and resource groups.
