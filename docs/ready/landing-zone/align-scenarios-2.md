@@ -77,4 +77,4 @@ The following diagram shows the state during the migration approach of this samp
 
 ## Summary
 
-In this scenario, the customer has established the necessary foundation to enable scalability of their workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
+In this scenario, the customer has established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
