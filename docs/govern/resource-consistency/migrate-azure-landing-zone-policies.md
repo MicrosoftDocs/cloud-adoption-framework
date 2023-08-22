@@ -5,7 +5,7 @@ author: Jfaurskov
 ms.author: Janfaurs
 ms.date: 12/21/2022
 ms.topic: conceptual
-s.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
+ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
 
 # Azure landing zone governance guide: Migrate Azure landing zone policies to Azure built-in policies

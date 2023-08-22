@@ -5,7 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 02/24/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Use Azure Databricks within cloud-scale analytics in Azure

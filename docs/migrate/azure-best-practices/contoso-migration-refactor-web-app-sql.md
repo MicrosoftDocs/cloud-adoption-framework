@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/31/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Migrate an application to Azure App Service and SQL Database

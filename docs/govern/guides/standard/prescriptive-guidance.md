@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/17/2023
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Standard enterprise governance: Best practices explained

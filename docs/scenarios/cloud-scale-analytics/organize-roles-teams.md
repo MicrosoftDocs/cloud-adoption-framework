@@ -5,7 +5,7 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 08/06/2021
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Understand the teams for cloud-scale analytics in Azure

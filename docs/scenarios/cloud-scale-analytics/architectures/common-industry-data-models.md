@@ -5,7 +5,7 @@ author: sasever
 ms.author: sasever
 ms.date: 04/11/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Common Data Model & industry data models

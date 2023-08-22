@@ -4,7 +4,7 @@ description: This article provides recommendations to help you align HPC impleme
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 

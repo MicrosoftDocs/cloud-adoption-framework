@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: ssumner
 ms.date: 09/28/2022
 ms.topic: conceptual
-s.custom: internal, readiness, fasttrack-edit
+ms.custom: internal, readiness, fasttrack-edit
 ---
 
 # Define your naming convention

@@ -5,7 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 01/04/2022
 ms.topic: conceptual
-s.custom: think-tank, UpdateFrequency.5
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Define Azure AD tenants

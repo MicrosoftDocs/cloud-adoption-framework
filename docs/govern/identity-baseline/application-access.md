@@ -5,7 +5,7 @@ author: brsteph
 ms.author: bstephenson
 ms.date: 10/26/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Application access governance

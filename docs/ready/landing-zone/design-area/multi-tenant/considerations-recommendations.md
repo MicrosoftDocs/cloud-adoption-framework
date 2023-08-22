@@ -5,7 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Considerations and recommendations for multi-tenant Azure landing zone scenarios

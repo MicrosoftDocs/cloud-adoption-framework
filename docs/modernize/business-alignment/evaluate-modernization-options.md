@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/07/2022
 ms.topic: conceptual
-s.custom: internal, seo-caf-modernize
+ms.custom: internal, seo-caf-modernize
 keywords: evaluate, technical, financial indicators, workloads, modernize, cloud adoption framework
 ---
 # Evaluate cloud modernization readiness

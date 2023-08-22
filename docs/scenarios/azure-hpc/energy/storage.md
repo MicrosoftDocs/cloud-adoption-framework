@@ -4,7 +4,7 @@ description: 'Large-scale HPC energy workloads have demands for data storage and
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 09/23/2022
 ---
 

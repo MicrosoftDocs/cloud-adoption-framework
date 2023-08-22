@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-s.custom: internal, seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: digital inventions, digital invention, best practices, digital best practices
 ---
 

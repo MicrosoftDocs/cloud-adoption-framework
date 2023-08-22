@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 04/22/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-azure-vmware
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Govern Azure VMware Solution

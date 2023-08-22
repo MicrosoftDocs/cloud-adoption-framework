@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/19/2021
 ms.topic: conceptual
-s.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Introduction to hybrid and multicloud

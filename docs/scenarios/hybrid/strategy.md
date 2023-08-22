@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 04/21/2021
 ms.topic: conceptual
-s.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Strategic considerations of hybrid and multicloud operations

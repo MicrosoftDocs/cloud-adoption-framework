@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/05/2023
 ms.topic: conceptual
-s.custom: UpdateFrequency2
+ms.custom: UpdateFrequency2
 ---
 
 # Sustainability alignment in cloud management

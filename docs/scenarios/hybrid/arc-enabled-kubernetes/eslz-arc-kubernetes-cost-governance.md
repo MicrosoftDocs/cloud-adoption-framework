@@ -5,7 +5,7 @@ author: sebassem
 ms.author: sebassem
 ms.date: 04/29/2022
 ms.topic: conceptual
-s.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes, event-tier1-build-2022
 ---
 
 # Cost governance for Azure Arc-enabled Kubernetes

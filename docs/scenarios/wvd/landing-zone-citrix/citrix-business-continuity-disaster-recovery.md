@@ -5,7 +5,7 @@ author: BenMartinBaur
 ms.author: martinek
 ms.date: 02/06/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Business continuity and disaster recovery considerations for Citrix on Azure

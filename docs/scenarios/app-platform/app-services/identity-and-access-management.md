@@ -5,7 +5,7 @@ author: motasem13
 ms.author: martinek
 ms.date: 01/06/2023
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Identity and access management considerations for the App Service landing zone accelerator

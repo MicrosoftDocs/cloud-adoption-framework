@@ -5,7 +5,7 @@ author: sbkuehn
 ms.author: martinek
 ms.date: 08/28/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-azure-vmware
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Manage Azure VMware Solution

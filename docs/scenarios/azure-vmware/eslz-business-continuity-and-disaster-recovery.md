@@ -5,7 +5,7 @@ author: sonmitt
 ms.author: martinek
 ms.date: 10/18/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-azure-vmware
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Business continuity and disaster recovery for Azure VMware Solution

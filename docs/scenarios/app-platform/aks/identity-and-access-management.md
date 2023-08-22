@@ -5,7 +5,7 @@ author: xuhongl
 ms.author: xuhliu
 ms.date: 11/21/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Identity and access management considerations for AKS

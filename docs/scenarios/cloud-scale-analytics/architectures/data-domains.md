@@ -5,7 +5,7 @@ author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 02/02/2023
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Data domains

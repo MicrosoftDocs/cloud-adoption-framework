@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/14/2020
 ms.topic: conceptual
-s.custom: e2e-hybrid, think-tank
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Govern your portfolio of hybrid and multicloud workloads

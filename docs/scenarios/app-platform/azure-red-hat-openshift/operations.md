@@ -5,7 +5,7 @@ author: SriniPadala
 ms.author: srpadala
 ms.date: 08/19/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-aro
+ms.custom: think-tank, e2e-aro
 ---
 
 # Operations baseline guidance for Azure Red Hat OpenShift

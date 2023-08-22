@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Phase 2: Onboarding Azure server management services

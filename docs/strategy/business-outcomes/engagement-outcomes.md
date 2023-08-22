@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 03/02/2021
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Examples of customer engagement outcomes

@@ -5,7 +5,7 @@ author: anlucen
 ms.author: martinek
 ms.date: 06/28/2022
 ms.topic: conceptual
-s.custom: think-tank, UpdateFrequency.5
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Azure Active Directory (Azure AD) and hybrid identity

@@ -5,7 +5,7 @@ author: givenscj
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance

@@ -5,7 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 04/03/2021
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Getting started checklist

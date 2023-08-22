@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 11/28/2018
 ms.topic: conceptual
-s.custom: internal, virtual-network
+ms.custom: internal, virtual-network
 ---
 
 # Azure role-based access control

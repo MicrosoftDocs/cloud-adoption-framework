@@ -4,7 +4,7 @@ description: Learn how to align with the Ready methodology of the Cloud Adoption
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 

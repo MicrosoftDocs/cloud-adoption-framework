@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 07/07/2023
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
+ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Migrate assets

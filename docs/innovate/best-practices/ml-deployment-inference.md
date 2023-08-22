@@ -5,7 +5,7 @@ author: DonnaForlin
 ms.author: krbock
 ms.date: 06/21/2023
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Deploy machine learning models in production environments

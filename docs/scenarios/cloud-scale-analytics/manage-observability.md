@@ -5,7 +5,7 @@ author: sudivate
 ms.author: mboswell
 ms.date: 03/18/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Data observability

@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Decisions that affect migration

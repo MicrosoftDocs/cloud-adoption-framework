@@ -5,7 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate

@@ -5,7 +5,7 @@ author: simonlid
 ms.author: simonlid
 ms.date: 03/12/2023
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # What is a data mesh?

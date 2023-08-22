@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 11/29/2021
 ms.topic: conceptual
-s.custom: internal, fasttrack-edit, AQC
+ms.custom: internal, fasttrack-edit, AQC
 ---
 
 ::: zone target="docs"

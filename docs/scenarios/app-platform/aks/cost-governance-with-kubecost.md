@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/20/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Cost governance with Kubecost

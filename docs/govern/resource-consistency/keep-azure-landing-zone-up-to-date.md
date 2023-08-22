@@ -5,7 +5,7 @@ author: Jfaurskov
 ms.author: Janfaurs
 ms.date: 01/10/2023
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Keep your Azure landing zone up to date

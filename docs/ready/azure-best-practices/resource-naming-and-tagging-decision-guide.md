@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2022
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Resource naming and tagging decision guide

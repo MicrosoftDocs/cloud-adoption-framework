@@ -5,7 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 03/02/2023
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Data lake zones and containers

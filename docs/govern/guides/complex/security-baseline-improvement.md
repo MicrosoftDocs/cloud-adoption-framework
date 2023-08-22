@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/25/2021
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Governance guide for complex enterprises: Improve the Security Baseline discipline

@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid, devx-track-azurecli
+ms.custom: think-tank, e2e-hybrid, devx-track-azurecli
 ---
 
 # Apply inventory tagging to Azure Arc-enabled servers

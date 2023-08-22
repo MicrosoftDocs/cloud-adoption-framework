@@ -5,7 +5,7 @@ author: sitarant
 ms.author: sitarant
 ms.date: 02/17/2023
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Traditional Azure networking topology

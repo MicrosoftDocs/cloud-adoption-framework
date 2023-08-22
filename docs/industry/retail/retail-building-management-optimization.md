@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/04/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Building management optimization in the retail industry

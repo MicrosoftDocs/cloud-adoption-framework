@@ -4,7 +4,7 @@ description: Azure landing zones for HPC don't have specific considerations or r
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/11/2022
 ---
 

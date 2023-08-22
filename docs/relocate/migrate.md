@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 02/03/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-s.custom: internal, seo-caf-relocate
+ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Migrate a cloud workload to another region

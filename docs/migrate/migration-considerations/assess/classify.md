@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/20/2021
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Workload classification before migration

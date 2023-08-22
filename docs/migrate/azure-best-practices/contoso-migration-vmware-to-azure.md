@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/27/2023
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Move on-premises VMware infrastructure to Azure VMWare Solution

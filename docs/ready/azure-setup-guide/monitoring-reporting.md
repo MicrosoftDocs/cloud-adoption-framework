@@ -6,7 +6,7 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 12/13/2022
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
+ms.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
 products: azure-monitor
 ---
 

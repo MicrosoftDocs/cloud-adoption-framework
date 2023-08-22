@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
-s.custom: internal, devx-track-azurepowershell
+ms.custom: internal, devx-track-azurepowershell
 ---
 
 # Common Azure Policy examples

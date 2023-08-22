@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/02/2021
 ms.topic: conceptual
-s.custom: internal, seo-caf-innovate
+ms.custom: internal, seo-caf-innovate
 keywords: Innovative applications, citizen developers, application development
 ---
 

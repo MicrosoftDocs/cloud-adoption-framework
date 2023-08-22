@@ -5,7 +5,7 @@ author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 03/16/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Metadata standards

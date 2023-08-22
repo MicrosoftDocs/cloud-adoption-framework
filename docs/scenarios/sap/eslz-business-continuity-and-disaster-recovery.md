@@ -5,7 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 02/21/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap
 ---
 
 <!-- docutune:ignore DB -->

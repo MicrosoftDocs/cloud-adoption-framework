@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/22/2020
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Support business with data innovation

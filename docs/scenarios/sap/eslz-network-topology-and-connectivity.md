@@ -5,7 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 04/21/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap
 ---
 
 # Network topology and connectivity for an SAP migration

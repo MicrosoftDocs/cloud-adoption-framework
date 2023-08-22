@@ -5,7 +5,7 @@ author: billyclaymyersmsft
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
+ms.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 

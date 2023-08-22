@@ -5,7 +5,7 @@ author: sitarant
 ms.author: sitarant
 ms.date: 09/06/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Plan for virtual machine remote access

@@ -4,7 +4,7 @@ description: This article provides recommendations for implementing security in 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 

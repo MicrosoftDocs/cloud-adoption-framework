@@ -5,7 +5,7 @@ author: deepakonics
 ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap
 ---
 
 # Migrate an SAP platform to Azure

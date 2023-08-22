@@ -5,7 +5,7 @@ author: chintalavr
 ms.author: vchintala
 ms.date: 04/27/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid, event-tier1-build-2022
+ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
 ---
 
 # Network connectivity for Azure Arc-enabled Kubernetes

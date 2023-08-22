@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/05/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Best practices when data requirements exceed network capacity during a migration effort

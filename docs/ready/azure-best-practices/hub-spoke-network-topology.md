@@ -6,7 +6,7 @@ ms.author: martinek
 manager: rossort
 ms.date: 06/22/2022
 ms.topic: conceptual
-s.custom: think-tank, virtual-network
+ms.custom: think-tank, virtual-network
 ---
 
 # Hub-and-spoke network topology

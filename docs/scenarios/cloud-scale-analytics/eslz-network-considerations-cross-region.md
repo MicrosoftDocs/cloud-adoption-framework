@@ -5,7 +5,7 @@ author: marvinbuss
 ms.author: mabuss
 ms.date: 03/22/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Cross-region data landing zone connectivity

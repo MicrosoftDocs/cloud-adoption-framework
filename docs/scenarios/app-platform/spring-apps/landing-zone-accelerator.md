@@ -5,7 +5,7 @@ author: pagewriter-msft
 ms.author: prwilk
 ms.date: 03/01/2023
 ms.topic: conceptual
-s.custom: devx-track-terraform
+ms.custom: devx-track-terraform
 ---
 
 # Azure Spring Apps landing zone accelerator

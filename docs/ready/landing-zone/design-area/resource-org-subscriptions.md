@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 6/24/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency.5
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Subscription considerations and recommendations

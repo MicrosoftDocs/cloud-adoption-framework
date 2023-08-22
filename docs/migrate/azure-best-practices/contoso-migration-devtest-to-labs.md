@@ -5,7 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Migrate a dev/test environment to Azure DevTest Labs

@@ -6,7 +6,7 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 01/04/2022
 ms.topic: conceptual
-s.custom: internal, engagement-fy23, UpdateFrequency.5
+ms.custom: internal, engagement-fy23, UpdateFrequency.5
 ---
 
 # Service enablement framework

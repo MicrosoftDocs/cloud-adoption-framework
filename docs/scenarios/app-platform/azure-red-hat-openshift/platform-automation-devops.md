@@ -5,7 +5,7 @@ author: dmossberg
 ms.author: daniem
 ms.date: 08/16/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Plan platform automation and DevOps for Azure Red Hat OpenShift

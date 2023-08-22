@@ -5,7 +5,7 @@ author: wahidsaleemi
 ms.author: wasaleem
 ms.date: 02/22/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Identity and access management considerations for Azure Virtual Desktop

@@ -5,7 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 11/25/2021
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Secure cloud-scale analytics in Azure

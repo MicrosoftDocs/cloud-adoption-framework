@@ -5,7 +5,7 @@ author: wayneme75
 ms.author: martinek
 ms.date: 01/24/2023
 ms.topic: conceptual
-s.custom: think-tank, UpdateFrequency2
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 <!-- docutune:casing Ally.io -->

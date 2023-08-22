@@ -5,7 +5,7 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 07/18/2022
 ms.topic: tutorial
-s.custom: e2e-data-management, think-tank, references_regions
+ms.custom: e2e-data-management, think-tank, references_regions
 ---
 
 # Tutorial: Create a data landing zone

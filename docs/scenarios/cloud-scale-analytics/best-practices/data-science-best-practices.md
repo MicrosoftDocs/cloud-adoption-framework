@@ -5,7 +5,7 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 03/19/2023
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Best practices for data science projects with cloud-scale analytics in Azure

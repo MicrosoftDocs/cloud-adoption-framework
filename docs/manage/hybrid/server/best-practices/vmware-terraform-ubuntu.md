@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid, devx-track-terraform
+ms.custom: think-tank, e2e-hybrid, devx-track-terraform
 ---
 
 # Use a Terraform plan to deploy a VMware Ubuntu virtual machine and connect it to Azure Arc

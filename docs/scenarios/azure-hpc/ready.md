@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 11/10/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Azure landing zone for HPC

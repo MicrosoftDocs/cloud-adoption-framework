@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 05/09/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Create a VMware vSphere template for Windows Server 2019

@@ -3,7 +3,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 03/15/2022
 ms.topic: include
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 The data catalog registers and maintains the data information in a centralized place and makes it available for the organization. It ensures that enterprises avoid duplicate data products caused by redundant data ingestion by different project teams.

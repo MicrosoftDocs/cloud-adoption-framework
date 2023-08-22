@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc

@@ -4,7 +4,7 @@ description: Azure landing zones for HPC in Energy have no specific consideratio
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/23/2022
 ---
 

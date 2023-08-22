@@ -5,7 +5,7 @@ author: anlucen
 ms.author: anlucena
 ms.date: 06/27/2022
 ms.topic: conceptual
-s.custom: think-tank, UpdateFrequency.5
+ms.custom: think-tank, UpdateFrequency.5
 ---
 
 # Identity for Azure platform resources

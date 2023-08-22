@@ -5,7 +5,7 @@ author: alguadam
 ms.author: alguadam
 ms.date: 06/24/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency.5
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Platform automation and DevOps

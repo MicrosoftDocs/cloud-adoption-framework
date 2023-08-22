@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Personalization in the retail industry

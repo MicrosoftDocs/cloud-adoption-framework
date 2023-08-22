@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/13/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks, engagement-fy23
+ms.custom: think-tank, e2e-aks, engagement-fy23
 products: azure-monitor
 ---
 

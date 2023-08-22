@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/22/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Strategic impact of cloud adoption for the retail industry

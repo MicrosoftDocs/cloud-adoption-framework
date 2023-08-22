@@ -5,7 +5,7 @@ author: UmakanthOS
 ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # How to follow up after a Moodle migration

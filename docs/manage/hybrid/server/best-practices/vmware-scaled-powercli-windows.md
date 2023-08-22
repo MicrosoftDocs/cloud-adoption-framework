@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Use VMware PowerCLI to scale onboarding VMware vSphere Windows Server virtual machines to Azure Arc

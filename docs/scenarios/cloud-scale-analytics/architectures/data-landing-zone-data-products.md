@@ -5,7 +5,7 @@ author: sasever
 ms.author: sasever
 ms.date: 03/18/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Cloud-scale analytics data products in Azure

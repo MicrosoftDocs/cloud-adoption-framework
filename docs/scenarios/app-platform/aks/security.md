@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 03/24/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Security for AKS

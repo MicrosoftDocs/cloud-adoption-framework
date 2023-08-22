@@ -5,7 +5,7 @@ author: sablair
 ms.author: janet
 ms.date: 12/19/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-azure-vmware
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 

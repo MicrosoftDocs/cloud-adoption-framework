@@ -6,7 +6,7 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd, engagement-fy23
+ms.custom: think-tank, e2e-avd, engagement-fy23
 ---
 
 # Enterprise-scale support for Microsoft Azure Virtual Desktop

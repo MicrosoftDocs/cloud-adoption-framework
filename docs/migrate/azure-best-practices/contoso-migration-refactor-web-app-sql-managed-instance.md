@@ -5,7 +5,7 @@ author: givenscj
 ms.author: martinek
 ms.date: 08/31/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Refactor an on-premises application to an App Service web app and a SQL managed instance

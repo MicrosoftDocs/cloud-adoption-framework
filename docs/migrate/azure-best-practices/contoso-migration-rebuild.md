@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 7/1/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Rebuild an on-premises application in Azure

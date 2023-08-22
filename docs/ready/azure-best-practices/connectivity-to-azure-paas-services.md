@@ -5,7 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 06/22/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Connectivity to Azure PaaS services

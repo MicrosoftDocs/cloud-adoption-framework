@@ -5,7 +5,7 @@ author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 09/21/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Lamna Healthcare scenario for cloud-scale analytics in Azure

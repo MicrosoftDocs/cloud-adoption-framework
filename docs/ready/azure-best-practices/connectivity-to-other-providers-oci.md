@@ -5,7 +5,7 @@ author: alexandreweiss
 ms.author: martinek
 ms.date: 06/01/2021
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Connectivity to Oracle Cloud Infrastructure

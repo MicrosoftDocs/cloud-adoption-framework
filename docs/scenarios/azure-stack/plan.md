@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Plan your Azure Stack Hub migration

@@ -5,7 +5,7 @@ author: DaFitRobsta
 ms.author: Rolightn
 ms.date: 11/15/2022
 ms.topic: conceptual
-s.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
+ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
 
 # Update Azure landing zone custom policies

@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Azure Synapse Analytics solutions and migration for Netezza

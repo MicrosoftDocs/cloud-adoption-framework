@@ -5,7 +5,7 @@ author: pratimdas
 ms.author: martinek
 ms.date: 03/15/2022
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Develop a plan for cloud-scale analytics

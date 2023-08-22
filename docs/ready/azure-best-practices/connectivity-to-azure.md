@@ -5,7 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 10/28/2021
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Connectivity to Azure

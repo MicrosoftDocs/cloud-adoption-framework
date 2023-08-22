@@ -5,7 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 12/07/2021
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 <!-- docutune:ignore "Azure VPN Gateway" -->

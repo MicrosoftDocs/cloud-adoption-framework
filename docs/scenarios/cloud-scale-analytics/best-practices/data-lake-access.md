@@ -5,7 +5,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 01/05/2023
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Access control and data lake configurations in Azure Data Lake Storage Gen2

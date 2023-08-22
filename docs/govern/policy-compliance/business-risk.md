@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Understand business risk during cloud migration

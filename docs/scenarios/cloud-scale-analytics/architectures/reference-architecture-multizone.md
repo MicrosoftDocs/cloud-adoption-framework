@@ -5,7 +5,7 @@ author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 02/28/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Multiple data zones for cloud-scale analytics in Azure

@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 03/26/2021
 ms.topic: conceptual
-s.custom: think-tank, seo-caf-innovate
+ms.custom: think-tank, seo-caf-innovate
 keywords: AI applications, examples of AI applications, AI application checklist, applications of AI, AI agents
 ---
 

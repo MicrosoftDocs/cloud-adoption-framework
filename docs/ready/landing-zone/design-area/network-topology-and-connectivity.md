@@ -5,7 +5,7 @@ author: timwarner-msft
 ms.author: timwarner
 ms.date: 06/22/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency.5
+ms.custom: internal, UpdateFrequency.5
 ---
 
 # Network topology and connectivity

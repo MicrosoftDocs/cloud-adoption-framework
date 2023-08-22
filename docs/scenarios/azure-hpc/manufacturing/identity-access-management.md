@@ -4,7 +4,7 @@ description: This article describes considerations and provides recommendations 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 

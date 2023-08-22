@@ -5,7 +5,7 @@ author: elbatane
 ms.author: elbatane
 ms.date: 06/17/2022
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Environments

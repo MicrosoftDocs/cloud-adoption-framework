@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/07/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Supply chain optimization in the retail industry

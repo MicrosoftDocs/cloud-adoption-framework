@@ -5,7 +5,7 @@ author: robbagby
 ms.author: robbag
 ms.date: 10/05/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Business constraints

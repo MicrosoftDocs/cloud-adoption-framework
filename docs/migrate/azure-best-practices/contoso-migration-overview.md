@@ -5,7 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 03/04/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Overview of application migration examples for Azure

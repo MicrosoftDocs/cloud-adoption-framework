@@ -5,7 +5,7 @@ author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 02/28/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Adatum Corporation scenario for cloud-scale analytics in Azure

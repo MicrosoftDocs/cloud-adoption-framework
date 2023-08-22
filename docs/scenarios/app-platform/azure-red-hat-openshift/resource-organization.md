@@ -5,7 +5,7 @@ author: rotorr
 ms.author: rolandotorio
 ms.date: 08/19/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-ARO
+ms.custom: think-tank, e2e-ARO
 ---
 
 # Resource organization considerations for Azure Red Hat OpenShift (optional)

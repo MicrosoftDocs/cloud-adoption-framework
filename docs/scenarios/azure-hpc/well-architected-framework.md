@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 10/11/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # The Azure Well-Architected Framework for HPC

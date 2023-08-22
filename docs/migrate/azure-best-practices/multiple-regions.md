@@ -6,7 +6,7 @@ ms.author: dermar
 ms.reviewer: tozimmergren
 ms.date: 11/18/2022
 ms.topic: conceptual
-s.custom: internal, engagement-fy23
+ms.custom: internal, engagement-fy23
 ---
 
 # Azure regions decision guide

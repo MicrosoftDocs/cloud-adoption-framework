@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 11/25/2021
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # Enterprise enrollment

@@ -5,7 +5,7 @@ author: Rajani-Janaki-Ram
 ms.author: erd
 ms.date: 09/16/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Plan for Azure high-performance computing (HPC)

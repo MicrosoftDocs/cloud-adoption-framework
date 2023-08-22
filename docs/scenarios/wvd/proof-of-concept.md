@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/18/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Azure Virtual Desktop proof of concept

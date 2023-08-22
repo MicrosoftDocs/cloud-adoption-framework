@@ -5,7 +5,7 @@ author: dmichaels713
 ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # How to set up machine learning workspaces

@@ -5,7 +5,7 @@ author: petpipe-msft
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Manage secrets in a secure way

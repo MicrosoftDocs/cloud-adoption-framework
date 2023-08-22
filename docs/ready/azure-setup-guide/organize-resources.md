@@ -5,7 +5,7 @@ author: laraaleite
 ms.author: martinek
 ms.date: 10/04/2022
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-edit, AQC, setup
+ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
 # Organize your Azure resources effectively

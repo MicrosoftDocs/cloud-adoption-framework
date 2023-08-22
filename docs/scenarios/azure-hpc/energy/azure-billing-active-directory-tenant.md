@@ -4,7 +4,7 @@ description: Learn about Azure billing and Azure Active Directory tenants for en
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/08/2022
 ---
 

@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 03/23/2022
 ms.topic: conceptual
-s.custom: internal, devx-track-terraform
+ms.custom: internal, devx-track-terraform
 ---
 
 # Azure App Service landing zone accelerator

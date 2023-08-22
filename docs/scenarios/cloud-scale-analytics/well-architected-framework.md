@@ -5,7 +5,7 @@ author: pratimdas
 ms.author: prdasgu
 ms.date: 01/27/2021
 ms.topic: conceptual
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 # The Azure Well-Architected Framework for data workloads

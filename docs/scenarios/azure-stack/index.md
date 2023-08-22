@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Azure Stack: A strategic option for running Azure in your datacenter

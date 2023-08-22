@@ -5,7 +5,7 @@ author: motasem13
 ms.author: martinek
 ms.date: 01/09/2023
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Platform automation and DevOps for the App Service landing zone accelerator

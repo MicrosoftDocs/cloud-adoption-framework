@@ -5,7 +5,7 @@ author: sablair
 ms.author: martinek
 ms.date: 02/14/2023
 ms.topic: conceptual
-s.custom: e2e-azure-vmware, think-tank
+ms.custom: e2e-azure-vmware, think-tank
 ---
 
 # Enable connectively from Azure VMware Solution 

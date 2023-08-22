@@ -5,7 +5,7 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 07/04/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap
 ---
 
 # Performance and troubleshooting for SAP data extraction

@@ -5,7 +5,7 @@ author: jelledruyts
 ms.author: martinek
 ms.date: 11/04/2022
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-new, AQC, setup
+ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 
 # Stay current with Azure

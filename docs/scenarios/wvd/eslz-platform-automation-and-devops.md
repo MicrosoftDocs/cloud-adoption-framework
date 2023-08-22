@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/22/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Platform automation and DevOps considerations for Azure Virtual Desktop

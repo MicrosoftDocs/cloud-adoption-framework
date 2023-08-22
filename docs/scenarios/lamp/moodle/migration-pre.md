@@ -5,7 +5,7 @@ author: UmakanthOS
 ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
-s.custom: think-tank, devx-track-azurecli
+ms.custom: think-tank, devx-track-azurecli
 ---
 
 # How to prepare for a Moodle migration

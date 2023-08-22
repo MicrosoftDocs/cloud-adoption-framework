@@ -5,7 +5,7 @@ author: shah-manish
 ms.author: manshah
 ms.date: 01/24/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-sap
+ms.custom: think-tank, e2e-sap
 ---
 
 # Choose the best SAP connector

@@ -5,7 +5,7 @@ author: matticusau
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-s.custom: think-tank, fasttrack-edit, AQC, sep-caf-innovate
+ms.custom: think-tank, fasttrack-edit, AQC, sep-caf-innovate
 keywords: Innovative solutions, cloud adoption framework, innovation solutions
 ---
 

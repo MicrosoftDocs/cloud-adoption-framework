@@ -5,7 +5,7 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 09/30/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Private Link and DNS integration at scale

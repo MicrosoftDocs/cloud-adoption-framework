@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/01/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Modern application platform solutions in Azure

@@ -5,7 +5,7 @@ author: E-G-C
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-s.custom: e2e-azure-vmware, think-tank
+ms.custom: e2e-azure-vmware, think-tank
 ---
 
 # Enterprise-scale identity and access management for Azure VMware Solution

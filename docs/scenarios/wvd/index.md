@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/19/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Migrate end-user desktops to Azure Virtual Desktop

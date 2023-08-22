@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: timwarner
 ms.date: 01/06/2023
 ms.topic: conceptual
-s.custom: internal, devx-track-azurepowershell
+ms.custom: internal, devx-track-azurepowershell
 ---
 
 # Azure Policy guest configuration extension

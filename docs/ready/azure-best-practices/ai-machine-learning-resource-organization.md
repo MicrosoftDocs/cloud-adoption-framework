@@ -5,7 +5,7 @@ author: denniseik
 ms.author: deeikele
 ms.date: 08/29/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Organize and set up Azure Machine Learning environments

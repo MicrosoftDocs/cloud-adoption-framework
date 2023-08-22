@@ -5,7 +5,7 @@ author: AnalyticJeremy
 ms.author: jepeach
 ms.date: 11/25/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 ---
 
 # Overview of reference architectures for cloud-scale analytics in Azure

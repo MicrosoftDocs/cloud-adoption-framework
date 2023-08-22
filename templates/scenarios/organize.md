@@ -5,7 +5,7 @@ author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Organize team members for {{Token-LongName}} in Azure

@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/08/2022
 ms.topic: conceptual
-s.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Governance guide for complex enterprises

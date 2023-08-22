@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 09/24/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Governance for the retail industry

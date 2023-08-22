@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/16/2023
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Best practices to set up networking for workloads migrated to Azure

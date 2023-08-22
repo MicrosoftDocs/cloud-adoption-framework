@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/12/2022
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Business alignment for cloud modernization

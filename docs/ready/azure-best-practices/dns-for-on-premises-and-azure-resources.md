@@ -5,7 +5,7 @@ author: sitarant
 ms.author: sitarant
 ms.date: 12/06/2022
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # DNS for on-premises and Azure resources

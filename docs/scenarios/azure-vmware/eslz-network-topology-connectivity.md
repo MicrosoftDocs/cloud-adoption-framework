@@ -5,7 +5,7 @@ author: rodrigosantosms
 ms.author: martinek
 ms.date: 10/17/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-azure-vmware
+ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Network topology and connectivity for Azure VMware Solution

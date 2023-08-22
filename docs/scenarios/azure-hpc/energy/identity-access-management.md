@@ -4,7 +4,7 @@ description: Learn about identity and access management for high-performance com
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 

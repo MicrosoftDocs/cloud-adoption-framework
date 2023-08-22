@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/28/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Managing the cloud for the retail industry

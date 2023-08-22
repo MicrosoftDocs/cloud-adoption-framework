@@ -5,7 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Migrate open-source databases to Azure

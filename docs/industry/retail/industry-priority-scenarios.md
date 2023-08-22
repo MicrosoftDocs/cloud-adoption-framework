@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: jaalmond
 ms.date: 11/11/2021
 ms.topic: conceptual
-s.custom: internal, e2e-retail
+ms.custom: internal, e2e-retail
 ---
 
 # Industry priority scenarios

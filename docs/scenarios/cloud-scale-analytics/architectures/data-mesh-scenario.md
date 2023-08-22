@@ -5,7 +5,7 @@ author: PietheinStrengholt
 ms.author: pstrengholt
 ms.date: 02/28/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-data-management
+ms.custom: think-tank, e2e-data-management
 adobe-target: true
 ---
 

@@ -6,7 +6,7 @@ ms.author: martinek
 ms.date: 09/27/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Prepare for technical complexity: Agile change management

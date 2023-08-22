@@ -5,7 +5,7 @@ author: daltondhcp
 ms.author: martinek
 ms.date: 05/26/2021
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Connectivity to other cloud providers

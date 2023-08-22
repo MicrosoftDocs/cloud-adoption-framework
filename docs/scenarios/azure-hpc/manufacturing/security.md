@@ -4,7 +4,7 @@ description: Azure landing zones in manufacturing industries don't have any spec
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/23/2022
 ---
 

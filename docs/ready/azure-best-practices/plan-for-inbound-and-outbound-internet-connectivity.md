@@ -6,7 +6,7 @@ ms.author: martinek
 ms.date: 06/22/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
-s.custom: think-tank, csu
+ms.custom: think-tank, csu
 ---
 
 # Plan for inbound and outbound internet connectivity

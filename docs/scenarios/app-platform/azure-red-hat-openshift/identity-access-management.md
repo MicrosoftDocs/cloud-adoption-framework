@@ -5,7 +5,7 @@ author: jpocloud
 ms.author: johnpoole
 ms.date: 08/18/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-aro
+ms.custom: think-tank, e2e-aro
 ---
 
 # Identity and access management considerations for Azure Red Hat OpenShift

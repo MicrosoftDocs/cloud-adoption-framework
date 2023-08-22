@@ -6,7 +6,7 @@ ms.author: martinek
 ms.date: 9/16/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Database-restore points for Azure Synapse Analytics

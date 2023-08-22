@@ -5,7 +5,7 @@ author: UmakanthOS
 ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ---
 
 # Moodle manual migration steps

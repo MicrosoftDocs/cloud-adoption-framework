@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/31/2019
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Automate onboarding

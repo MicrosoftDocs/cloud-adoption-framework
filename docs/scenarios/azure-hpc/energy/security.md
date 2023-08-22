@@ -4,7 +4,7 @@ description: Learn about security considerations in the Azure landing zone for h
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-s.custom: think-tank
+ms.custom: think-tank
 ms.date: 11/15/2022
 ---
 

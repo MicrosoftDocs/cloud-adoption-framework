@@ -5,7 +5,7 @@ author: mpvenables
 ms.author: martinek
 ms.date: 09/29/2021
 ms.topic: conceptual
-s.custom: think-tank, e2e-retail
+ms.custom: think-tank, e2e-retail
 ---
 
 # Improve retail experience with a Retail Recommender Solution Accelerator

@@ -6,7 +6,7 @@ ms.author: mubaluny
 ms.reviewer: tozimmergren
 ms.date: 05/23/2023
 ms.topic: conceptual
-s.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks
 ---
 
 # Network topology and connectivity considerations for AKS

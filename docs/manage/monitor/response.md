@@ -6,7 +6,7 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-s.custom: think-tank, engagement-fy23
+ms.custom: think-tank, engagement-fy23
 products: azure-monitor
 ---
 

@@ -3,7 +3,7 @@ author: mboswell
 ms.author: mboswell
 ms.date: 06/21/2021
 ms.topic: include
-s.custom: e2e-data-management, think-tank
+ms.custom: e2e-data-management, think-tank
 ---
 
 Data lake layers use different terminology depending on technology and vendor. This table provides guidance on how to apply terms for cloud-scale analytics:

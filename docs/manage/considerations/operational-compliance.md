@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 11/01/2019
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Operational compliance in cloud management

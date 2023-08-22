@@ -5,7 +5,7 @@ author: motasem13
 ms.author: martinek
 ms.date: 01/05/2023
 ms.topic: conceptual
-s.custom: internal
+ms.custom: internal
 ---
 
 # Network topology and connectivity considerations for the App Service landing zone accelerator

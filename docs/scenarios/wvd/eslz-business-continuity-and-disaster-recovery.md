@@ -5,7 +5,7 @@ author: igorpag
 ms.author: martinek
 ms.date: 08/24/2022
 ms.topic: conceptual
-s.custom: think-tank, e2e-avd
+ms.custom: think-tank, e2e-avd
 ---
 
 # Business continuity and disaster recovery considerations for Azure Virtual Desktop
