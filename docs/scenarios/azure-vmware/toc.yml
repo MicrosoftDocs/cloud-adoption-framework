@@ -15,16 +15,16 @@ items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-connectivity.md
         items: 
           - name: Getting Started
             href: network-get-started.md
           - name: General Considerations and Recommendations
             href: eslz-network-topology-connectivity.md
           - name: Network Design Guide
-            href: network-design-guide-intro.md
             items:
-              - name: Azure VMware Solution networking basics
+              - name: Introduction
+                href: network-design-guide-intro.md
+              - name: Basics and prerequisites
                 href: network-design-guide-avs-networking-basics.md
               - name: Design connectivity with on-premises sites
                 href: network-design-guide-onprem-connectivity.md
