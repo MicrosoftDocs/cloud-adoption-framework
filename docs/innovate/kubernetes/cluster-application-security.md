@@ -26,7 +26,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 **Security checklist:**
 
-- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://aka.ms/securingk8s-whitepaper).
+- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://cdn2.hubspot.net/hubfs/1665891/Assets/The%20Definitive%20Guide%20to%20Securing%20Kubernetes.pdf).
 
 - **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. To learn more, see [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image).
 
