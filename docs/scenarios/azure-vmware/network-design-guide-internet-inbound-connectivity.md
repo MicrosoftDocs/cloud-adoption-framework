@@ -23,7 +23,7 @@ The flow chart below summarizes how to approach Phase #3:
 *Design Phase #3: Design inbound Internet connectivity based on where NVAs for application publishing will be hosted (Azure VMware Solution or Azure virtual network).*
 
 ## NVAs hosted in an Azure virtual network
-Publishing Azure VMware Solution applications via Azure first-party services (Azure Firewall, Azure Application Gateway) or third-party NVAs hosted in a virtual network only requires layer-3 connectivity between the virtual network and the Azure VMware Solution private cloud, covered in section [Azure virtual network connectivity](network-design-guide-vnet-connectivity.md). 
+Publishing Azure VMware Solution applications via Azure first-party services (Azure Firewall, Azure Application Gateway) or third-party NVAs hosted in a virtual network only requires layer-3 connectivity between the virtual network and the Azure VMware Solution private cloud, covered in section [Azure virtual network connectivity](network-design-guide-virtualnetwork-connectivity.md). 
 
 The following sections provide guidance for each option.
 
