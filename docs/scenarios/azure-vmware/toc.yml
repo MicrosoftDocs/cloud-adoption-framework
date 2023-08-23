@@ -29,7 +29,7 @@ items:
               - name: Design connectivity with on-premises sites
                 href: network-design-guide-onprem-connectivity.md
               - name: Design connectivity with Azure Virtual Networks
-                href: network-design-guide-vnet-connectivity.md
+                href: network-design-guide-virtualnetwork-connectivity.md
               - name: Design inbound Internet connectivity
                 href: network-design-guide-internet-inbound-connectivity.md
               - name: Design outbound Internet connectivity
