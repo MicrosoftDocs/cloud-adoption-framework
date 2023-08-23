@@ -5,8 +5,6 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 11/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 

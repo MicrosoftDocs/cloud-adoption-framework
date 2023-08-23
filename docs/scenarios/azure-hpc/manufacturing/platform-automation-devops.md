@@ -4,8 +4,6 @@ description: Azure landing zones for HPC in manufacturing don't have any specifi
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/14/2022
 ---

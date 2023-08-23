@@ -5,8 +5,6 @@ author: Mr-MSFT
 ms.author: isiahhudson
 ms.date: 06/01/2023
 ms.topic: overview
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ---
 
 # Landing zone sandbox environments
