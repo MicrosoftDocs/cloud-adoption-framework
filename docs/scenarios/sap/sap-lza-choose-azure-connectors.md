@@ -5,8 +5,6 @@ author: shah-manish
 ms.author: manshah
 ms.date: 01/24/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 

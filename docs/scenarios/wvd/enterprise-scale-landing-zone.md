@@ -6,8 +6,6 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-avd, engagement-fy23
 ---
 
@@ -49,6 +47,7 @@ _For more information on the design areas labeled A-J in the visual, see the Azu
 *Download a [Visio file](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/diagrams/avd-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
 
 ### Guidance for regional expansion
+
 While having an Azure Virtual Desktop deployment in a single Azure region will be enough for many customers, some customers may require expanding their Azure Virtual Desktop deployment to another Azure region. A couple of reasons that would require a customer to expand their Azure Virtual Desktop deployment across Azure regions include:
 
 - **Scenario A:** Customer requires to deploy additional Azure Virtual Desktop Virtual Machines, but there is no additional capacity in the existing Azure region.

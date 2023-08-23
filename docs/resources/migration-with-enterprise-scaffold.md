@@ -5,8 +5,7 @@ author: rdendtler
 ms.author: martinek
 ms.date: 09/22/2018
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: caf-general
 ms.custom: think-tank, UpdateFrequency5
 ROBOTS: NOINDEX,NOFOLLOW
 ---

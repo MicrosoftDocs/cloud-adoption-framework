@@ -5,8 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 05/31/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 

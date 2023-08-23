@@ -4,8 +4,6 @@ description: Learn about the key design considerations and best practices for ne
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/17/2022
 ---

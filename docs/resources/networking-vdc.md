@@ -6,8 +6,7 @@ ms.author: martinek
 manager: rossort
 ms.date: 03/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: caf-general
 ms.custom: think-tank, virtual-network, UpdateFrequency5
 ---
 

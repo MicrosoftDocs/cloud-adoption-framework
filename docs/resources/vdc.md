@@ -5,8 +5,7 @@ author: tracsman
 ms.author: martinek
 ms.date: 06/16/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: caf-general
 ms.custom: think-tank, UpdateFrequency5
 ---
 

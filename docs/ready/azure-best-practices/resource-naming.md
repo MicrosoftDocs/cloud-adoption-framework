@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: ssumner
 ms.date: 09/28/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 

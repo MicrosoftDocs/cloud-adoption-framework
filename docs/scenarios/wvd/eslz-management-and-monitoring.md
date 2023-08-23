@@ -6,8 +6,6 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 01/04/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-avd, engagement-fy23
 products: azure-monitor
 ---

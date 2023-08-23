@@ -5,8 +5,6 @@ author: sabbour
 ms.author: martinek
 ms.date: 04/02/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: application development, application deployment, site reliability engineering
 ---
