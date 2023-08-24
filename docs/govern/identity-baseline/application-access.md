@@ -5,8 +5,6 @@ author: brsteph
 ms.author: bstephenson
 ms.date: 10/26/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 

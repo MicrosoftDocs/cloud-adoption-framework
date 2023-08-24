@@ -5,8 +5,6 @@ author: simonlid
 ms.author: simonlid
 ms.date: 03/12/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

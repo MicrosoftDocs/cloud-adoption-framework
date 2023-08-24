@@ -6,8 +6,6 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 11/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
 ms.custom: internal, engagement-fy23, UpdateFrequency3
 ---
 

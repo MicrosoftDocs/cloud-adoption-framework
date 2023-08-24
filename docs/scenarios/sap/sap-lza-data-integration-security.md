@@ -6,8 +6,7 @@ ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 

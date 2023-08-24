@@ -5,8 +5,6 @@ author: mpvenables
 ms.author: martinek
 ms.date: 11/24/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 
