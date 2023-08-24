@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 07/19/2023
+ms.date: 08/24/2023
 ---
 
 # Azure VMs to run large-scale HPC application workloads for the Finance industry
@@ -15,17 +15,6 @@ ms.date: 07/19/2023
 These workloads, also known as big compute, require a large number of cores and can include tasks such as financial risk modeling and engineering stress analysis.
 
 Big compute applications typically have the following characteristics:
-- The workload can be divided into discrete tasks that can be run simultaneously across many cores.
-- Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
-- The application doesn’t need to run 24/7, but it must be able to handle node failures or crashes.
-- Tasks could be independent or tightly coupled, requiring high-speed networking technologies such as InfiniBand and RDMA.
-- Compute-intensive VM sizes such as H16r, H16mr, and A9 could be used depending on the workload.
-
-Azure offers a range of VM instances optimized for both CPU- and GPU-intensive workloads. It is also the only cloud platform that offers InfiniBand-enabled hardware, providing a significant performance advantage for running reservoir simulation and seismic workloads. This improved performance results in near or better performance than current on-premises infrastructures.
-
-Azure VMs can be used to run large-scale HPC application workloads for the finance industry. These workloads, also known as big compute, require a large number of cores and can include tasks such as financial risk modeling and engineering stress analysis.
-
-Big compute applications typically have the following characteristics:
 
 - The workload can be divided into discrete tasks that can be run simultaneously across many cores.
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
@@ -33,10 +22,10 @@ Big compute applications typically have the following characteristics:
 - Tasks could be independent or tightly coupled, requiring high-speed networking technologies such as InfiniBand and RDMA.
 - Compute-intensive VM sizes such as H16r, H16mr, and A9 could be used depending on the workload.
 
-Azure offers a range of VM instances optimized for both CPU- and GPU-intensive workloads. It is also the only cloud platform that offers InfiniBand-enabled hardware, providing a significant performance advantage for running reservoir simulation and seismic workloads. This improved performance results in near or better performance than current on-premises infrastructures.
+Azure offers a range of VM instances optimized for both CPU and GPU intensive workloads that can run into Virtual Machine Scale Sets to provide resiliency and load balance. It is also the only cloud platform that offers InfiniBand-enabled hardware, providing a significant performance advantage for running tasks such as financial risk modeling and engineering stress analysis. This improved performance results in near or better performance than current on-premises infrastructures.
 
 Azure VMs offer a variety of options, known as VM sizes, for HPC and GPU-optimized computing. It’s important to select the appropriate VM size for your workload, and you can use the [Sizes for VMs in Azure selector tool](/azure/virtual-machines/sizes) to help you choose.
-Keep in mind that not all Azure products are available in all regions. 
+Keep in mind that not all Azure products are available in all regions.
 
 You can check the current [list of products available by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/) to see what’s available in your area.
 
@@ -70,3 +59,4 @@ The following articles provide guidance that you might find helpful during vario
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Spot Virtual Machines](https://learn.microsoft.com/en-us/azure/architecture/guide/spot/spot-eviction)
