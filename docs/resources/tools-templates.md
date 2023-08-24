@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/13/2022
 ms.topic: article
-ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: caf-general
 ms.custom: internal, UpdateFrequency5
 ---
 
@@ -37,7 +36,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 | Resource | Description |
 |----------|-------------|
 | [Readiness checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/ready/readiness-checklist.docx) | Use this checklist to prepare your environment for adoption. It includes preparations for your first migration landing zone, personalizing the blueprint, and expanding it. |
-| [Azure naming tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
+| [Azure naming tool](https://github.com/mspnp/AzureNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
 | [Naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) | Document your decisions about naming and tagging standards to ensure consistency across resources and reduce onboarding time. |
 | [CAF Foundation blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
 | [CAF Migration landing zone blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision - and prepare to host your workloads that are migrated from on-premises environments into Azure. Read more on how to [deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md) blueprint. |

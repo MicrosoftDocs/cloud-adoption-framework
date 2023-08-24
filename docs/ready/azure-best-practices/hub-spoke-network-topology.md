@@ -6,8 +6,6 @@ ms.author: martinek
 manager: rossort
 ms.date: 06/22/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, virtual-network
 ---
 

@@ -5,8 +5,6 @@ author: sabbour
 ms.author: martinek
 ms.date: 12/16/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank
 ---
 

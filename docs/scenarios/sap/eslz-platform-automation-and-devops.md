@@ -5,8 +5,6 @@ author: pankajmeshramCSA
 ms.author: pameshra
 ms.date: 03/16/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 

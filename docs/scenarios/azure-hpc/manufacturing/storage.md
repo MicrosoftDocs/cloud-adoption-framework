@@ -4,8 +4,6 @@ description: Learn about storage access, various storage solution capabilities, 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/16/2022
 ---

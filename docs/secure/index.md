@@ -5,8 +5,6 @@ author: MarkSimos
 ms.author: mas
 ms.date: 03/08/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 

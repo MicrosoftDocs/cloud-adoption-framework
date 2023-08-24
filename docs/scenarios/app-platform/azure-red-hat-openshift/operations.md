@@ -5,8 +5,6 @@ author: SriniPadala
 ms.author: srpadala
 ms.date: 08/19/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
