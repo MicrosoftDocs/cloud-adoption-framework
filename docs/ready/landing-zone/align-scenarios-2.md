@@ -58,18 +58,14 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 5. Review the [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md) to understand how to minimize disruption to applications and services during the migration.
 
-6. Consider cloning the _Landing Zones_ Management Group as well as it’s children (Corp & Online), including all the policy assignments with configuring them to _audit only_ mode. This approach allows getting into the new desired target architecture very quickly and then the applications teams can start to assess the policies applied without the risk of impacting any of the running applications. Then, once the application teams have worked with the platform teams to get their policy compliance into the required state, their subscriptions can simply be moved, safe in the knowledge of what are the assigned policies and their effect to be able to operate their workloads efficiently and in a compliant manner.
-
-    ![Duplicate brownfield landing zones with audit only policies](./media/alz-duplicate-brownfield-auditonly.png)
-
-7. (optional) Work with application or service teams to migrate the workloads deployed in the original subscriptions into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
+6. (optional) Work with application or service teams to migrate the workloads deployed in the original subscriptions into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
 
    Review the policy section in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy) for details about the effect on resources when migrating. Eventually, the existing Azure subscription can be canceled and placed in the decommissioned management group.
 
    > [!NOTE]
    > The existing applications or services do not necessarily have to be migrated into new landing zones (Azure subscriptions)
 
-8. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group (corporate or online).
+7. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group (corporate or online).
 
 The following diagram shows the state during the migration approach of this sample scenario:
 

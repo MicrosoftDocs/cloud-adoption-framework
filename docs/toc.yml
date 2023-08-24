@@ -515,6 +515,8 @@ items:
               href: ready/landing-zone/align-scenarios-1.md
             - name: Regional organization to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios-2.md
+            - name: Migration approach using duplicate Landing Zones Management Group with policies in “Audit Only” mode
+              href: ready/landing-zone/align-scenarios-3.md
         - name: Brownfield landing zone considerations
           href: ready/landing-zone/brownfield-considerations.md
 
