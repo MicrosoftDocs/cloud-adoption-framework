@@ -34,7 +34,7 @@ You can even use [Kubeflow](https://www.kubeflow.org/docs/distributions/azure/) 
 
 ## Build machine learning models in Python or R
 
-Start training on your local machine using the Azure Machine Learning [Python SDK](python/api/overview/azure/ai-ml-readme) or [R](/azure/machine-learning/how-to-r-overview-r-capabilities). Then, you can scale out to the cloud. With many available [compute targets](/azure/machine-learning/concept-compute-target), like Azure Machine Learning compute and [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), and with [advanced hyperparameter tuning services](/azure/machine-learning/how-to-tune-hyperparameters), you can build better models faster by using the power of the cloud. You can also [automate model training and tuning](/azure/machine-learning/concept-automated-ml) using the SDK.
+Start training on your local machine using the Azure Machine Learning [Python SDK](/python/api/overview/azure/ai-ml-readme) or [R](/azure/machine-learning/how-to-r-overview-r-capabilities). Then, you can scale out to the cloud. With many available [compute targets](/azure/machine-learning/concept-compute-target), like Azure Machine Learning compute and [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), and with [advanced hyperparameter tuning services](/azure/machine-learning/how-to-tune-hyperparameters), you can build better models faster by using the power of the cloud. You can also [automate model training and tuning](/azure/machine-learning/concept-automated-ml) using the SDK.
 
 ## Build machine learning models with no-code tools
 
@@ -89,7 +89,7 @@ Azure Machine Learning provides fully managed resources such as:
 
 - **Compute instances:** Cloud-based VMs that are pre-configured with the SDK and popular data science tools such as Jupyter Notebooks and JupyterLab. For more information, see [Create and manage compute instances](/azure/machine-learning/how-to-create-compute-instance).
 - **Compute clusters:** Train models at scale by using dynamically scaling clusters of Azure virtual machines. For more information, see [Create and manage compute clusters](/azure/machine-learning/how-to-create-attach-compute-cluster).
-- **Serverless compute clusters:** Train models on dynamically created, dynamically scaling clusters of Azure virtual machines. For more information, see [Model training on serverless compute (preview)](/azure/machine-learning/how-to-train-use-serverless-compute).
+- **Serverless compute clusters:** Train models on dynamically created, dynamically scaling clusters of Azure virtual machines. For more information, see [Model training on serverless compute (preview)](/azure/machine-learning/how-to-use-serverless-compute).
 - **Serverless Apache Spark:** Use dynamically created Apache Spark clusters for interactive data wrangling or training machine learning models. For more information, see [Serverless Spark compute](/azure/machine-learning/apache-spark-azure-ml-concepts#serverless-spark-compute).
 - **Managed online endpoints:** Deploy models as web services that can be consumed by client applications. For more information, see [Online endpoints](/azure/machine-learning/concept-endpoints-online#managed-online-endpoints-vs-kubernetes-online-endpoints).
 - **Managed virtual network:** Provides network isolation for Azure Machine Learning managed resource and other Azure services that Azure Machine Learning relies on. For more information, see [Workspace managed network isolation](/azure/machine-learning/how-to-managed-network).
