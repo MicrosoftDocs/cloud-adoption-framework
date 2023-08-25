@@ -6,8 +6,6 @@ ms.author: wayneme
 ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ---
 # Introduction to the defense scenario
 

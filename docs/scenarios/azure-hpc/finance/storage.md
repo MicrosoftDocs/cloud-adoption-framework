@@ -4,8 +4,6 @@ description: This article provides recommendations for implementing storage in H
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/15/2022
 ---

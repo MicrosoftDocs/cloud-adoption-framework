@@ -5,8 +5,6 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 08/11/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -64,8 +62,6 @@ Explore key design considerations and recommendations for virtual wide area netw
 - You can connect ExpressRoute circuits to a Virtual WAN hub by using a Local, Standard, or Premium SKU.
 
 - ExpressRoute Standard or Premium circuits, in locations supported by Azure ExpressRoute Global Reach, can connect to a Virtual WAN ExpressRoute gateway. And they have all the Virtual WAN transit capabilities (VPN-to-VPN, VPN, and ExpressRoute transit). ExpressRoute Standard or Premium circuits that are in locations not supported by Global Reach can connect to Azure resources, but can't use Virtual WAN transit capabilities.
-
--  Azure Virtual WAN hub supports ExpressRoute Local if the spoke VNets connected to a Virtual WAN hub are in the same region as the Virtual WAN hub.
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 

@@ -5,8 +5,6 @@ author: Zimmergren
 ms.author: martinek
 ms.date: 01/04/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-sap, engagement-fy23
 products: azure-monitor
 ---
@@ -53,7 +51,7 @@ Here are some key design considerations and recommendations for monitoring and m
 
 - Review and adopt SAP parameters, especially ABAP memory parameters, while you're performing an OS or database migration. For example, `em/initial_size_MB` is valid only for AIX environments and shouldn't be set for Azure VMs.
 
-- Consider collecting full database statistics for non-HANA databases after migration. For example, implement SAP Note 1020260 for Oracle.
+- Consider collecting full database statistics for non-HANA databases after migration. For example, implement [SAP note 1020260 - Delivery of Oracle statistics](https://service.sap.com/sap/support/notes/1020260).
 
 - Consider using Oracle Automatic Storage Management (ASM) for all Oracle deployments that use SAP on Azure.
 

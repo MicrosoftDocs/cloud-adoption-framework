@@ -5,8 +5,6 @@ author: xuhongl
 ms.author: xuhliu
 ms.date: 11/21/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 

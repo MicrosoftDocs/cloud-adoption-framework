@@ -5,8 +5,6 @@ author: johndowns
 ms.author: jodowns
 ms.date: 07/12/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 

@@ -1,12 +1,10 @@
 ---
 title: Landing zone sandbox environments
-description: Learn about Azure landing zone sandboxes, which are isolated environments to perform tests, and learn how to manage a sandbox by using subscriptions and policies.
+description: Learn about Azure landing zone sandboxes, which are isolated environments to perform tests. Learn how to manage a sandbox by using subscriptions and policies.
 author: Mr-MSFT
 ms.author: isiahhudson
 ms.date: 06/01/2023
 ms.topic: overview
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ---
 
 # Landing zone sandbox environments
@@ -87,4 +85,5 @@ Use [Microsoft Purview](/azure/purview/overview) to provide information protecti
 [Azure sandbox guide](/azure/architecture/guide/azure-sandbox/azure-sandbox)
 
 > [!div class="nextstepaction"]
-> [Landing zone regions](regions.md)
+> [Improve landing zone governance](/azure/cloud-adoption-framework/ready/considerations/landing-zone-governance)
+> 
