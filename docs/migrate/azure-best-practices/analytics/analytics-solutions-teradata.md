@@ -162,6 +162,11 @@ You should be aware of a few differences in SQL Data Manipulation Language (DML)
     `SELECT * FROM CUSTOMER WHERE (POSTCODE LIKE 'CV1%') OR (POSTCODE LIKE 'CV2%') OR (POSTCODE LIKE 'CV3%') ;`
 
 - Depending on system settings, character comparisons in Teradata might not be case-specific by default. In Azure Synapse, these comparisons are always case-specific.
+- `Recursive views` are available in Teradata but not available in Azure Synapse
+- `Multi-column IN/NOT IN` clauses are supported in Teradata but not available in Azure Synapse
+- Teradata performs auto-truncation of data during insertion. For example, you can insert a VARCHAR(100) field into a VARCHAR(50) field. Although only the first 50 characters would be inserted, Teradata will not complain or warn about it.
+- Teradata can group by the ordinality of the column in the select clause. For example, `select employee, dept_id from emp_dept group by 1`. In Azure Synapse, this query needs to be written by replacing the ordinal position by the column name.
+- Teradata can use a column alias in the same query but Azue Synapse cannot. For example, you can write a query like `select employee as emp_name, dept_id where emp_name = 'Steve'`. In Azure Synapse, the column name would not be recognized.
 
 ## Functions, stored procedures, triggers, and sequences
 
