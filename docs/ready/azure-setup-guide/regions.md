@@ -64,7 +64,7 @@ An organization might operate in multiple geographic regions for several reasons
 - **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads.
-- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that are aren't available in your primary Azure region.
+- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in your primary Azure region.
 
 If you plan to operate a cloud environment over multiple geographic regions, be aware of the following complexities:
 
@@ -73,7 +73,7 @@ If you plan to operate a cloud environment over multiple geographic regions, be 
 - **User access profiles.** If a single user will work with components in multiple regions, understand how you'll manage their identities and access profiles across regions.
 - **Compliance requirements.** Verify that each region satisfies your compliance requirements, including for data sovereignty.
 - **Regional resiliency.** Even when you use a multi-region architecture, you should ensure that you design your solution to be highly available within the region as well. Use availability zones where you can, and ensure that you have considered how to achieve high resiliency within the region.
-- **Failover.** When you use mulitple regions for resiliency purposes, you might design your solution to use an active-passive approach, which requires you to detect a regional outage and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
+- **Failover.** When you use multiple regions for resiliency purposes, you might design your solution to use an active-passive approach, which requires you to detect a regional outage and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
 
 ## High availability and disaster recovery across regions
 
@@ -103,7 +103,7 @@ If you deploy into a region with a pair, you can consider using a multi-region r
 
 - Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy?branch=main#redundancy-in-a-secondary-region). In Azure Storage GRS, three copies of your data are stored in your primary region, and three more copies are stored in the paired region. You can't change the storage pairing for GRS.
 - Services that rely on Azure Storage GRS can take advantage of this paired region capability. Your applications and your network must be configured to support paired regions.
-- If you don't plan to use GRS to support your regional resiliency needs, you shouldn't use the paired region as your secondary. If a regional failure occurs, intense pressure is put on resources in the paired region as resources migrate. You can avoid that pressure by recovering to an alternate site and gain speed during your recovery.
+- If you don't plan to use GRS to support your regional resiliency needs, you shouldn't use the paired region as the secondary region. If a regional failure occurs, intense pressure is put on resources in the paired region as resources migrate. You can avoid that pressure by recovering to an alternate site and gain speed during your recovery.
 
 > [!WARNING]
 > Don't attempt to use Azure Storage GRS for virtual machine backups or recovery. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workload.
