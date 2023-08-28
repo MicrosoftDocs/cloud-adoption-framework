@@ -26,6 +26,7 @@ After you consider network topology, determine whether more documentation and pr
 - Document the user base. Will employees, partners, or customers in the identified country/region be affected by the cloud migration?
 - Document datacenters and assets. Are there assets in the identified country/region that might be included in the migration effort?
 - Document regional SKU availability and failover requirements.
+- Document your resiliency requirements to determine if availability zones are required.
 
 Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
 
