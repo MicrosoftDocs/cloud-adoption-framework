@@ -14,7 +14,7 @@ ms.custom: internal, engagement-fy23
 TODO
 
 > [!NOTE]
-> This article covers considerations that are specific to workload migrations. To learn about general principles for selecting Azure regions for any organization or workload, see [Select Azure region](../../ready/azure-setup-guide/regions.md).
+> This article covers considerations that are specific to workload migrations. To learn about general principles for selecting Azure regions for any organization or workload, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
 
 ## Document your scenario complexity
 
