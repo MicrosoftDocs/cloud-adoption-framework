@@ -13,6 +13,11 @@ ms.custom: internal, engagement-fy23
 
 TODO
 
+
+> [!NOTE]
+> This article covers considerations that are specific to workload migrations. To learn about general principles for selecting Azure regions for any organization or workload, see [Select Azure region](../../ready/azure-setup-guide/regions.md).
+
+
 ## Implement a general approach
 
 The following approach uses a data-driven model to address global migration complexities. When the scope for a migration includes multiple regions, the cloud adoption team should evaluate the following readiness considerations:
