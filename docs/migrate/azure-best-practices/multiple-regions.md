@@ -4,14 +4,23 @@ description: Learn about selecting an Azure cloud region when you are migrating 
 author: doodlemania2
 ms.author: dermar
 ms.reviewer: tozimmergren
-ms.date: 11/18/2022
+ms.date: 08/29/2023
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23
 ---
 
 # Select Azure regions for a migration
 
-When you migrate an existing environment into Azure, you need to select an Azure region or set of regions to host your components. This article provides some guidance on how to choose Azure regions that meet your needs.
+When you migrate an existing environment into Azure, you need to select an Azure region or set of regions to host the migrated components. Consider the following elements:
+
+- **Review the core Azure region selection guidance** to understand how to select Azure regions that meet your requirements.
+- **Inventory and document the current state** of your environment.
+- **Implement a general approach** to your migration, including whether to run in a single region, to use multiple availability zones, or to use multiple regions.
+- **Assess process changes** that might be required.
+- **Plan a migration process.**
+- **Optimize and promote process changes.**
+
+This article provides some guidance on how to choose Azure regions that meet your migration needs.
 
 > [!NOTE]
 > This article covers considerations that are specific to workload migrations. You should also understand general principles for selecting Azure regions for any organization or workload. For more information, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
@@ -57,6 +66,7 @@ The location of existing datacenters might affect a migration strategy. Consider
 
 The following approach uses a data-driven model to address global migration complexities. When the scope for a migration includes multiple regions, the cloud adoption team should evaluate the following readiness considerations:
 
+- Determine whether your business requirements for high availability, resiliency, performance, and cost can be met by using multiple availability zones, or if you need to consider a multi-region approach.
 - Data sovereignty might require localization of some assets, but many assets might not be governed by those compliance constraints. Things like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions or multiple regions. The cloud adoption team should evaluate data sovereignty by using a shared service model for those services as outlined in the [reference architecture for a hub-spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 - When you're deploying multiple instances of similar environments, using an environment factory can help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
@@ -88,7 +98,7 @@ When your organization faces global asset and user base complexities in a migrat
 
 **Identify global user impact**: The outputs from the prerequisite user profile analysis should identify any workload that's affected by global user profiles. When a migration candidate is in the list of affected workloads, the migration architect should consult networking and operations subject matter experts. These experts help validate network routing and performance expectations. At a minimum, the architecture should include an ExpressRoute connection between the closest network operations center and Azure. The [reference architecture for ExpressRoute connections](/azure/architecture/reference-architectures/hybrid-networking/expressroute) can help you configure the necessary network connections.
 
-**Design for compliance**: The outputs from the prerequisite user profile analysis also should identify any workload that's affected by data sovereignty requirements. During the architecture activities of the assess process, the assigned architect should consult compliance subject matter experts. These experts can help the architect understand any requirements for migration and deployment across multiple regions. Those requirements significantly affect design strategies. The reference architectures for [multiregion web applications](/azure/architecture/reference-architectures/app-service-web-app/multi-region) and [multiregion n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server) can help with the design.
+**Design for compliance**: The outputs from the prerequisite user profile analysis also should identify any workload that's affected by data sovereignty requirements. During the architecture activities of the assess process, the assigned architect should consult compliance subject matter experts. These experts can help the architect understand any requirements for migration and deployment across multiple regions. Those requirements significantly affect design strategies. The reference architectures for [zone-redundant web applications](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant), [multiregion web applications](/architecture/web-apps/app-service/architectures/multi-region) and [multiregion n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server) can help with the design.
 
 > [!WARNING]
 > When you're using the reference architecture for ExpressRoute or the reference architectures for applications, you might need to exclude specific data elements from replication processes to meet data sovereignty requirements. The task of excluding specific data elements adds a step in the promotion process.
@@ -105,7 +115,7 @@ When you migrate an application that must be deployed to multiple regions, the c
 
 **Network bandwidth design**: During replication and ongoing synchronization, you move binary data over the network, from the source datacenter to the Site Recovery vault in the target Azure datacenter. The process of replication and synchronization consumes bandwidth. Duplicating the workload to a second region doubles the amount of bandwidth that's consumed. If bandwidth is limited or if a workload involves substantial configuration or data drift, replicating data to a second region might interfere with the time it takes to complete the migration. More importantly, these constraints might affect the experience of users or applications that still depend on the bandwidth that was available in the source datacenter.
 
-**Data synchronization**: Often, the largest bandwidth drain comes from synchronizing the data platform. As defined in the reference architectures for [multiregion web applications](/azure/architecture/reference-architectures/app-service-web-app/multi-region) and [multiregion n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server), data synchronization often is required to keep applications aligned. If keeping applications synchronized is the operational state you want for your applications, you might want to synchronize the source data platform with each cloud platform. You should do this before you migrate the application and middle-tier assets.
+**Data synchronization**: Often, the largest bandwidth drain comes from synchronizing the data platform. If you deploy across multiple availability zones, you might be able to use zone-redundant data services that automatically synchronize your data across multiple availability zones. If you deploy across multiple regions, data synchronization often is required to keep applications aligned. This approach is defined in the reference architectures for [multiregion web applications](/azure/architecture/reference-architectures/app-service-web-app/multi-region) and [multiregion n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server). If keeping applications synchronized is the operational state you want for your applications, you might want to synchronize the source data platform with each cloud platform. You should do this before you migrate the application and middle-tier assets.
 
 **Azure-to-Azure disaster recovery**: An alternative option might reduce complexity further. If timelines and data synchronization mean you might need to do a two-step deployment, [Azure-to-Azure disaster recovery](/azure/site-recovery/azure-to-azure-architecture) might be an acceptable solution. In the scenario, you migrate the workload to the first Azure datacenter by using a single Site Recovery vault and configuration or process server design. After you test the workload, you can recover the workload to a second Azure datacenter from the migrated assets. The approach reduces the effect on resources in the source datacenter and takes advantage of faster transfer speeds and high bandwidth limits between Azure datacenters.
 
@@ -114,7 +124,7 @@ When you migrate an application that must be deployed to multiple regions, the c
 
 ## Optimize and promote process changes
 
-As you address global complexity during optimization and promotion, you might require identical efforts in each of the other regions. When a single deployment is acceptable, you might still need to replicate business testing and business change plans.
+As you address global complexity during optimization and promotion, you might require identical efforts in each region that you deploy to. If you use a single region, you might still need to replicate business testing and business change plans.
 
 ### Suggested action during the optimize and promote process
 

@@ -3,7 +3,7 @@ title: Select Azure regions
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: johndowns
 ms.author: jodowns
-ms.date: 08/28/2023
+ms.date: 08/29/2023
 ms.topic: conceptual
 ---
 
