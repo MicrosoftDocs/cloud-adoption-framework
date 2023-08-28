@@ -20,7 +20,7 @@ Different Azure regions have different characteristics. Two common ways that Azu
 
 ### Availability zones
 
-Many Azure regions include availability zones, which are physically separate locations within the region. By using availability zones, you can achieve higher availabilty and resilence your deployments, with less complexity than a multi-region deployment. For more information about availability zones, including a list of Azure regions and services that support availability zones, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support).
+Many Azure regions include availability zones, which are physically separate locations within the region. By using availability zones, you can achieve higher availability and resilence your deployments, with less complexity than a multi-region deployment. For more information about availability zones, including a list of Azure regions and services that support availability zones, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support).
 
 ### Paired regions
 
@@ -43,7 +43,7 @@ The Azure services you can deploy in each region differ depending on various fac
 
 Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, you might want to consult with your local Azure field team, or your Azure account manager to confirm that you can deploy at the scale you need.
 
-Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). In addition, constraints somare sometimes placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country.
+Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). In addition, constraints are sometimes placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country.
 
 ## Understand data residency
 
@@ -63,8 +63,8 @@ Consider the latency and performance expectations from these external components
 
 An organization might operate in multiple geographic regions for several reasons. Common reasons to use multiple Azure regions include:
 
-- **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from mulitple countries, it might make sense to have Azure resources in each location.
-- **Comply with data sovereignty requirements**. Your organization might be subjec to limits on the geographic areas where certain data can be stored.
+- **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location.
+- **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads.
 
 If you plan to operate a cloud environment over multiple geographic regions, be aware of the following complexities:
@@ -120,8 +120,8 @@ If you deploy into a region with a pair, you can consider using a multi-region r
 
 Newer Azure regions have no regional pair, and achieve high availability by using availability zones. 
 
-- When you use these regions, you can use locally redundant or zone-redundant storage (LRS/ZRS). Regions without a pair will not have geo-redundant storage (GRS). Such regions follow data residency guidelines allowing the option to keep data resident within the same region. 
+- When you use these regions, you can use locally redundant or zone-redundant storage (LRS/ZRS). Regions without a pair don't support geo-redundant storage (GRS). Such regions follow data residency guidelines allowing the option to keep data resident within the same region. 
 - Consider your data resiliency needs. Regardless of where your data is located, you can move, copy, or access their data from any location globally.
 - In the rare event that an entire Azure region is unavailable, you need to plan for cross-region disaster recovery. For more information, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support#azure-services-with-availability-zone-support) and [Azure Resiliency – Business Continuity and Disaster Recovery](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/resiliency-whitepaper-2022.pdf).
 
-Some services such as Azure Backup have a dependency on geo-redundant storage when configured in geo-redundant mode. With Azure regions without a paired region, services such as Azure Backup will be limited to locally-redundant storage (LRS).
+Some services such as Azure Backup have a dependency on geo-redundant storage when configured in geo-redundant mode. With Azure regions without a paired region, services such as Azure Backup will be limited to locally redundant storage (LRS).
