@@ -14,7 +14,7 @@ When you design your strategy to use Microsoft Azure, you can choose from many A
 > [!NOTE]
 > If you're migrating existing workloads from an on-premises datacenter into Azure, there are some additional considerations when you select a region. For more information, see [Select Azure regions for a migration](../../migrate/azure-best-practices/multiple-regions.md).
 
-## Understand Azure region topologies
+## Understand Azure region types
 
 Different Azure regions have different characteristics. Two common ways that Azure regions vary are around their use of availability zones, and whether they have a paired region. Also, some regions are operated by sovereign entities in particular countries. To learn more about how Azure regions work, see [What are Azure regions and availability zones?](/azure/reliability/availability-zones-overview).
 
@@ -37,13 +37,11 @@ Some regions are dedicated to specific sovereign entities. Although all regions 
     Azure Germany is being deprecated in favor of standard non-sovereign Azure regions in Germany.
 - [Azure Government - US](/azure/azure-government/documentation-government-welcome)
 
-## Region services and capacity
+## Consider region services and capacity
 
-The Azure services you can deploy in each region differ depending on various factors. Select a region for the service you need for your workload. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
+Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). In addition, constraints are sometimes placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. Also, the Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
 Each region has a maximum capacity. A region's maximum capacity might affect what types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, you might want to consult with your local Azure field team, or your Azure account manager to confirm that you can deploy at the scale you need.
-
-Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). In addition, constraints are sometimes placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country.
 
 ## Understand data residency
 
@@ -63,32 +61,25 @@ Consider the latency and performance expectations from these external components
 
 An organization might operate in multiple geographic regions for several reasons. Common reasons to use multiple Azure regions include:
 
-- **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location.
+- **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads.
 
 If you plan to operate a cloud environment over multiple geographic regions, be aware of the following complexities:
 
-- Asset distribution
-- Data synchronization
-- User access profiles
-- Compliance requirements
-- Regional resiliency
+- **Resource distribution and management.** When you have multiple resources in different regions, you accept a higher operational burden. You also have to pay for each resource.
+- **Data synchronization.** Understand whether you need to synchronize or replicate data between regions, and if you do, whether to do it asynchronously or synchronously. Configuring a multi-region data storage tier can be complex and can result in tradeoffs between resiliency, performance, and cost.
+- **User access profiles.** If a single user will work with components in multiple regions, understand how you'll manage their identities and access profiles across regions.
+- **Compliance requirements.** Verify that each region satisfies your compliance requirements, including for data sovereignty.
+- **Regional resiliency.** Even when you use a multi-region architecture, you should ensure that you design your solution to be highly available within the region as well. Use availability zones where you can, and ensure that you have considered how to achieve high resiliency within the region.
+- **Failover.** When you use mulitple regions for resiliency purposes, you might design your solution to use an active-passive approach, which requires you to detect a regional outage and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
 
-## Network considerations
-
-- Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Make sure that the network is optimized, so data transfers remain on the Microsoft backbone, and they use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview), if possible. Some larger organizations that have global deployments might instead use [Azure ExpressRoute Premium](/azure/expressroute/expressroute-introduction) to route traffic between regions and potentially save regional egress charges.
-
-- Many platform as a service (PaaS) services in Azure support [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) or [Azure Private Link](/azure/private-link/private-link-overview). Both these solutions might significantly influence how you design your network as you consider regional resiliency, migration, and governance.
-
-- In addition to deploying to multiple regions to support disaster recovery, many organizations choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running active-active in multiple regions.
-
-## High availability and disaster recovery
+## High availability and disaster recovery across regions
 
 Azure regions are highly available. Azure service-level agreements are applied to the services running in specific regions.
 
 > [!WARNING]
-> You should never deploy mission-critical workloads within a single-region. For these workloads, always plan for regional failure, and practice recovery and mitigation steps. For more information about mission-critical workloads, see [Mission-critical workloads](/azure/well-architected/mission-critical/mission-critical-overview).
+> When you design mission-critical workloads, always plan for regional failure, and avoid deploying within a single region. You should also practice recovery and mitigation steps. For more information about mission-critical workloads, see [Mission-critical workloads](/azure/well-architected/mission-critical/mission-critical-overview).
 
 ### Understand Azure service deployments
 
@@ -125,3 +116,7 @@ Newer Azure regions have no regional pair, and achieve high availability by usin
 - In the rare event that an entire Azure region is unavailable, you need to plan for cross-region disaster recovery. For more information, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support#azure-services-with-availability-zone-support) and [Azure Resiliency – Business Continuity and Disaster Recovery](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/resiliency-whitepaper-2022.pdf).
 
 Some services such as Azure Backup have a dependency on geo-redundant storage when configured in geo-redundant mode. With Azure regions without a paired region, services such as Azure Backup will be limited to locally redundant storage (LRS).
+
+### Consider networking for backups
+
+Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Be sure that the network is optimized, so data transfers remain on the Microsoft backbone, and they use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview), if possible. Some larger organizations that have global deployments might instead use [Azure ExpressRoute Premium](/azure/expressroute/expressroute-introduction) to route traffic between regions and potentially save regional egress charges. These considerations are particularly important when you transfer data across regions.
