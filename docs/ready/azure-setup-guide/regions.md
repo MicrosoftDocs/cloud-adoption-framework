@@ -64,6 +64,7 @@ An organization might operate in multiple geographic regions for several reasons
 - **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads.
+- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that are aren't available in your primary Azure region.
 
 If you plan to operate a cloud environment over multiple geographic regions, be aware of the following complexities:
 
