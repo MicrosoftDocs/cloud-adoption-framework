@@ -67,4 +67,4 @@ The following articles provide guidance that you might find helpful at various p
 - [Resource organization for Azure HPC in the finance sector](./resource-organization.md)
 - [Governance for finance HPC](./security-governance-compliance.md)
 - [Security for HPC in the finance sector](./security.md)
-- [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

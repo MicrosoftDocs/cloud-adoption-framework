@@ -82,7 +82,7 @@ Choosing the right SKU of GPU optimized compute for AI workloads is important fo
 - Job Sizing. When considering the compute SKU for your AI workloads, consider the size of the job. Smaller jobs, such as those approximately OPT 1.3B may not take advantage larger SKU sizes and may leave CPU and GPU power idle depending on the stage of the job (inferencing, training).
 - Bandwidth. Larger, lower latency bandwidth can be an expense when not utilized. Consider InfiniBand for only the largest models that will require the extra bandwidth.
 
-View our GPU optimized SKUs [here](/azure/virtual-machines/sizes-gpu).
+View Azure's [GPU optimized virtual machine sizes](/azure/virtual-machines/sizes-gpu).
 
 ## Example: conceptual reference architecture for energy
 

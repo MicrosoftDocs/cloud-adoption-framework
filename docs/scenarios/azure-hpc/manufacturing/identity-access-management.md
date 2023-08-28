@@ -46,4 +46,5 @@ The following articles provide guidance that you might find helpful at various p
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

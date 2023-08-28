@@ -55,4 +55,5 @@ The following articles provide guidance for specific points in cloud adoption of
 - [Manufacturing HPC resource organization](./resource-organization.md)
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Manufacturing HPC storage](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

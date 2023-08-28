@@ -37,4 +37,5 @@ The following articles provide guidance that you might find helpful at various p
 - [Manufacturing HPC resource organization](./resource-organization.md)
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

@@ -69,7 +69,7 @@ Parallel file systems distribute block level storage across multiple networked s
 
 Multiple storage devices and multiple paths to data are utilized to provide a high degree of parallelism, reducing bottlenecks imposed by accessing only a single node at a time. However, parallel I/O can be difficult to coordinate and optimize if working directly at the level of API or POSIX I/O Interface. By introducing intermediate data access and coordination layers, parallel file systems provide application developers a high-level interface between the application layer and the I/O layer.
 
-energy MPI workloads have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect. Lustre/BeeGFS is typically used to handle the large throughput requirements of primarily seismic processing (but also reservoir simulation).
+Energy MPI workloads have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect. Lustre/BeeGFS is typically used to handle the large throughput requirements of primarily seismic processing (but also reservoir simulation).
 
 Parallel file systems such as Lustre are used for HPC energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
 
@@ -101,4 +101,4 @@ The following list of articles will take you to guidance found at specific point
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
 - [Security for Azure HPC in energy](./security.md)
 - [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

@@ -138,4 +138,4 @@ The following articles provide guidance for each step in the cloud adoption jour
 - [Security for Azure HPC in energy](./security.md)
 - [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
 - [Storage for HPC energy environments](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
