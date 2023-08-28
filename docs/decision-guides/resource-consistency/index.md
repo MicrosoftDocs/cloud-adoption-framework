@@ -34,7 +34,7 @@ Resource groups are containers for resources with a common lifecycle and shared 
 If you answered *no* to any of the above points, place the resource in another resource group.
 
 > [!IMPORTANT]
-> Resource groups are region specific; but it's common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
+> Resource groups are region specific; but it's common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
 
 ## Deployment consistency
 
