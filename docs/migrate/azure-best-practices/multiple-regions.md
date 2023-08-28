@@ -11,14 +11,14 @@ ms.custom: internal, engagement-fy23
 
 # Select Azure regions for a migration
 
-TODO
+When you migrate an existing environment into Azure, you need to select an Azure region or set of regions to host your components. This article provides some guidance on how to choose Azure regions that meet your needs.
 
 > [!NOTE]
-> This article covers considerations that are specific to workload migrations. To learn about general principles for selecting Azure regions for any organization or workload, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
+> This article covers considerations that are specific to workload migrations. You should also understand general principles for selecting Azure regions for any organization or workload. For more information, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
 
 ## Document your scenario complexity
 
-After you consider network topology, determine whether more documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
+Determine whether documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
 
 - Consider a more robust readiness and governance implementation.
 - Inventory the affected geographies. Compile a list of the countries/regions that are affected.
@@ -30,12 +30,12 @@ After you consider network topology, determine whether more documentation and pr
 
 Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
 
-| Region        | Country     | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
-|---------------|-------------|-----------------|------------------------|-----------------------------|-------------------------------|
-| North America | United States         | Yes             | Partners and customers | Yes                         | No                            |
-| North America | Canada      | No              | Customers              | Yes                         | Yes                           |
-| Europe        | Germany     | Yes             | Partners and customers | No - network only           | Yes                           |
-| Asia Pacific  | South Korea | Yes             | Partners               | Yes                         | No                            |
+| Region        | Country       | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
+|---------------|---------------|-----------------|------------------------|-----------------------------|-------------------------------|
+| North America | United States | Yes             | Partners and customers | Yes                         | No                            |
+| North America | Canada        | No              | Customers              | Yes                         | Yes                           |
+| Europe        | Germany       | Yes             | Partners and customers | No - network only           | Yes                           |
+| Asia Pacific  | South Korea   | Yes             | Partners               | Yes                         | No                            |
 
 ### Why is the location of users relevant?
 
