@@ -1,6 +1,6 @@
 ---
-title: Azure regions decision guide
-description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
+title: Select Azure regions for a migration
+description: Learn about selecting an Azure cloud region when you are migrating into Azure.
 author: doodlemania2
 ms.author: dermar
 ms.reviewer: tozimmergren
@@ -13,10 +13,8 @@ ms.custom: internal, engagement-fy23
 
 TODO
 
-
 > [!NOTE]
 > This article covers considerations that are specific to workload migrations. To learn about general principles for selecting Azure regions for any organization or workload, see [Select Azure region](../../ready/azure-setup-guide/regions.md).
-
 
 ## Implement a general approach
 
