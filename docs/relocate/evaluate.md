@@ -64,6 +64,10 @@ Beyond technical discovery, the discovery phase should also include other non-te
 > [!TIP]
 > Resource tags can be another way of discovering information about workloads, such as their owners and which environment the resource corresponds to.
 
+## Identify global and regional resources
+
+Some Azure resources are deployed globally, which means they aren't deployed to a specific region. These resources don't need to be recreated, but they might need to be reconfigured. For example, an Azure Front Door profile is a global resource, so it doesn't need to be moved between the source and target regions. However, it might refer to the IP address of a resource that will be moved, and so its configuration might need to be updated when you move your other resources.
+
 ## Find region supportability
 
 Not every region in Azure offers the same services, so you must make sure the services your workload needs to run are available in the target region. It might seem late in the process to make this determination, but you need the discovery details to ensure supportability. To determine region supportability for your workload, see the [products and services available in each Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region).
