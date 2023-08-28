@@ -83,10 +83,10 @@ Numerous IPAM tools are available for your consideration, depending on your requ
 **Design recommendations:**
 
 - The process of reserving non-overlapping IP address spaces should support requesting different sizes based on the needs of the individual application landing zones.
-  - For example you could adopt T-shirt sizing to make it easy for application teams to describe their needs:
-    - Small - `/24` - 256 ip addresses
-    - Medium - `/22` - 1,024 ip addresses
-    - Large - `/20` - 4,096 ip addresses
+  - For example, you could adopt T-shirt sizing to make it easy for application teams to describe their needs:
+    - Small - `/24` - 256 IP addresses
+    - Medium - `/22` - 1,024 IP addresses
+    - Large - `/20` - 4,096 IP addresses
 
 - Your IPAM tool should have an API for reserving non-overlapping IP address spaces to support an Infrastructure as Code (IaC) approach. This feature is also crucial for seamless integration of IPAM into your [subscription vending process](../landing-zone/design-area/subscription-vending.md), thereby reducing the risk of errors and the need for manual intervention.
   - An example of an IaC approach is [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) with its deployment script functionality or [Terraform](/azure/developer/terraform/overview) data sources to dynamically fetch data from the IPAM API.
