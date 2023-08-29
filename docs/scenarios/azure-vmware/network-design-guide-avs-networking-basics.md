@@ -3,7 +3,7 @@ title: Azure VMware Solution Network Design Guide - Azure VMware Solution networ
 description: Learn the fundamental concepts of Azure VMware Solution networking.
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
