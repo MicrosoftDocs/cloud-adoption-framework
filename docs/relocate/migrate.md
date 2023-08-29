@@ -34,7 +34,9 @@ You might need to prepare the target region before relocating the workload. If t
 
 ## Migrate services
 
-You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. Infrastructure-as-code automation also has guidance, though the specific steps depend on your scripts. For more information, see:
+You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation.
+
+For resources that can't be moved automatically, consider how you'll redeploy them. You can create infrastructure as code (IaC) templates, scripts, or run deployment steps manually in the Azure portal. The specific steps you need to follow depend on the Azure services you use and their configuration. For more information, see:
 
 - [Azure Resource Mover tutorials](/azure/resource-mover/tutorial-move-region-virtual-machines)
 - [Azure Site Recovery tutorials](/azure/site-recovery/azure-to-azure-how-to-enable-replication)

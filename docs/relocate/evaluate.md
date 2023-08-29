@@ -43,8 +43,6 @@ Beyond technical discovery, the discovery phase should also include other non-te
 
 **Try Azure Resource Mover first.** You should try to use Azure Resource Mover first. It's the easiest discovery tool to use, and you can also relocate services and data. Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [Supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
-**Then redeploy if necessary.** For resources that are not able to be moved, they may need to be redeployed either by using Infrastructure-as-Code, scripts, or directly in the Azure Portal.
-
 **Use visualization tools.** If Azure Resource Mover doesn't meet all your needs, you can use visualization tools to aid your discovery. Azure has several visualization tools that you can use to map dependencies. Pick the tool that best supports your needs.
 
 - *Resource group visualizer:* You can you visualize the connections between the resources in a resource group. In the Azure portal, navigate to the resource group and select *Resource visualizer* from the left navigation.
