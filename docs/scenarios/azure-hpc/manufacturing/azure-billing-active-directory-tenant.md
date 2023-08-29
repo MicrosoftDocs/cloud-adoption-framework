@@ -22,7 +22,7 @@ Review the [identity and access management considerations](../../sap/eslz-identi
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
 - [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
 - [Management for HPC in the manufacturing industry](./management.md)

@@ -46,7 +46,7 @@ A sample use case would be to tag all Azure development VMs with the tag of Dev.
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
 - [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
 - [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)

@@ -51,7 +51,7 @@ For more information, see [design recommendations for platform access](../../../
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for finance HPC environments.
 
 - [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
 - [Management for HPC in the finance sector](./management.md)
