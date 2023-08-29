@@ -8,7 +8,7 @@ ms.custom: think-tank
 ms.date: 11/09/2022
 ---
 
-# Azure identity and access management for HPC in manufacturing 
+# Azure identity and access management for HPC in manufacturing
 
 This article builds on considerations and recommendations that are described in the article [Azure identity and access management design](../../../ready/landing-zone/design-area/identity-access.md). It can help you examine design considerations for identity and access management that are specific to the deployment, on Azure, of HPC applications designed for the manufacturing industry.
 
@@ -36,12 +36,13 @@ This diagram shows a manufacturing architecture that uses Batch:
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in your cloud adoption scenario for manufacturing HPC environments.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
+- [Security for HPC in manufacturing industries](./security.md)
+- [Manufacturing HPC storage](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+
