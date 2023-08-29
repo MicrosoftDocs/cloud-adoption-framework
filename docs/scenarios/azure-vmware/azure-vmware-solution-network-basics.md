@@ -11,9 +11,11 @@ ms.custom: think-tank, e2e-azure-vmware
 ---
 
 # Prerequisite knowledge
+
 This section summarizes some fundamental concepts about Azure VMware Solution networking. They are a prerequisite for understanding the network architectures presented in the next articles of the guide.
 
 ## ExpressRoute circuits and Azure VMware Solution private clouds
+
 Azure VMware Solution runs on bare-metal VMware ESXi nodes, which are deployed in an Azure datacenter and attached to its physical network. In the same way as ExpressRoute circuits allow establishing layer-3 connectivity between external networks and Azure virtual networks, a dedicated ExpressRoute implementation provides layer-3 connectivity between physical ESXi nodes and Azure virtual networks.
 When an Azure VMware Solution private cloud is provisioned, an associated ExpressRoute circuit is also instantiated in a Microsoft-managed subscription. The private cloud's owner can then connect the circuit to one or more ExpressRoute virtual network Gateways in Azure virtual networks, by redeeming authorization keys for the circuit (the same procedure used to create connections between ExpressRoute Gateways and customer-managed circuits). Refer to the [Azure VMware Solution documentation](/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal#connect-to-azure-virtual-network-with-expressroute) for detailed instructions.
  
