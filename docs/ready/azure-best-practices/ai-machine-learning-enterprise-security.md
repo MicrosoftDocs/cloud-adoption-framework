@@ -3,7 +3,7 @@ title: Machine learning enterprise security
 description: This article provides best practices when planning or managing a secure Azure Machine Learning deployment.
 author: jhirono
 ms.author: jhirono
-ms.date: 09/28/2021
+ms.date: 08/29/2023
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -67,7 +67,7 @@ When designing an Azure Virtual Network, subnets, and private endpoints, conside
 
 - Machine learning workspace default storage needs two private endpoints, one for Azure Blob Storage and another for Azure File Storage.
 
-- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same VNet.
+- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same virtual network.
 
 - If you have multiple workspaces, use a virtual network for each workspace to create an explicit network boundary between workspaces.
 
@@ -89,7 +89,7 @@ Private IP addresses minimize your Azure resources' exposure to the internet. Ma
 | **Hosting resources** |
 | Managed online endpoint | Private endpoint | [Network isolation with managed online endpoints](/azure/machine-learning/concept-secure-online-endpoint) |
 | Online endpoint (Kubernetes) | Private endpoint | [Secure Azure Kubernetes Service online endpoints](/azure/machine-learning/how-to-secure-inferencing-vnet#secure-azure-kubernetes-service-online-endpoints) |
-| Batch endpoints | Private IP (inherited from compute cluster) | [[Network isolation in batch endpoints](/azure/machine-learning/how-to-secure-batch-endpoint) |
+| Batch endpoints | Private IP (inherited from compute cluster) | [Network isolation in batch endpoints](/azure/machine-learning/how-to-secure-batch-endpoint) |
 
 #### Control virtual network inbound and outbound traffic
 
@@ -272,7 +272,7 @@ Learn more about machine learning security configurations:
 
 Get started with a machine learning template-based deployment:
 
-- [Azure quickstart templates (`microsoft.com`)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
+- [Azure Quickstart Templates (`microsoft.com`)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
 - [Enterprise-scale analytics and AI data landing zone](https://github.com/Azure/data-landing-zone)
 
 Read more articles about architectural considerations for deploying machine learning:
