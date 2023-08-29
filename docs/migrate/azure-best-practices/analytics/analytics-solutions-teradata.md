@@ -165,8 +165,32 @@ You should be aware of a few differences in SQL Data Manipulation Language (DML)
 - `Recursive views` are available in Teradata but not available in Azure Synapse
 - `Multi-column IN/NOT IN` clauses are supported in Teradata but not available in Azure Synapse
 - Teradata performs auto-truncation of data during insertion. For example, you can insert a VARCHAR(100) field into a VARCHAR(50) field. Although only the first 50 characters would be inserted, Teradata will not complain or warn about it.
-- Teradata can group by the ordinality of the column in the select clause. For example, `select employee, dept_id from emp_dept group by 1`. In Azure Synapse, this query needs to be written by replacing the ordinal position by the column name.
-- Teradata can use a column alias in the same query but Azue Synapse cannot. For example, you can write a query like `select employee as emp_name, dept_id where emp_name = 'Steve'`. In Azure Synapse, the column name would not be recognized.
+- Teradata can group by the ordinality of the column in the select clause. 
+For example, this is a valid query in Teradata but not in Synapse 
+```sql
+              select 
+                employee, 
+                dept_id 
+              from emp_dept 
+              group by 1, 2
+``` 
+In Azure Synapse, this query needs to be written by replacing the ordinal position by the column name. 
+```sql
+              select 
+                employee, 
+                dept_id 
+              from emp_dept 
+              group by employee, dept_id
+```
+- Teradata can use a column alias in the same query but Azue Synapse cannot. 
+For example, you can write a query like 
+```sql
+select employee as emp_name, dept_id from emp_dept where emp_name = "Steve"
+``` 
+In Azure Synapse, the column name would not be recognized and you have to reqrite the query as
+```sql
+select t.emp_name, t.dept_id from (select employee as emp_name, dept_id from emp_dept) t where t.emp_name = "Steve"
+```
 
 ## Functions, stored procedures, triggers, and sequences
 
