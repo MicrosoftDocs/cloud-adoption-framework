@@ -16,7 +16,7 @@ This guide covers network design for the Azure VMware Solution landing zone acce
 
 - **Connectivity with on-premises datacenters**. Connectivity between Azure VMware Solution private clouds and on-premises sites supports a broad set of use cases: HCX migrations, hybrid applications, and remote vCenter or NSX-T Data Center administration. Azure VMware Solution supports multiple options for hybrid connectivity, including Azure ExpressRoute circuits and internet-based IPSec virtual private networks.
 
-- **Connectivity with Azure Virtual Network**. Azure VMware Solution runs on bare-metal VMware vSphere clusters that can be connected to native Azure virtual networks via Azure ExpressRoute. ExpressRoute connections between Azure VMware Solution private clouds and Azure virtual networks enable you to build applications that span the two environments or use jump box virtual machines in Azure to log in to vCenter (vSphere Client) and NSX-T Manager console for administration purposes.
+- **Connectivity with Azure Virtual Network**. Azure VMware Solution runs on bare-metal VMware vSphere clusters that can be connected to native Azure virtual networks via Azure ExpressRoute. ExpressRoute connections between Azure VMware Solution private clouds and Azure virtual networks enable you to build applications that span the two environments or to use jump box virtual machines in Azure to log in to vCenter (vSphere Client) and NSX-T Manager console for administration purposes.
 
 - **Inbound internet connectivity**. Inbound internet connectivity enables applications running on Azure VMware Solution to be exposed to the internet via public IP addresses. Internet-facing applications are almost invariably published through security devices (application delivery controllers, web application firewalls, L3/L4 next-generation firewalls, and so on). Design decisions about inbound connectivity are primarily driven by the placement of such devices (in Azure VMware Solution or in Azure virtual networks). 
 
@@ -30,7 +30,7 @@ To design advanced Azure VMware Solution network architectures, you need a solid
 
 The four design areas aren't independent of each other. Design decisions made for one area can limit the available options in other areas. We recommend that you address the four areas in the order shown here:
 
-:::image type="content" source="media/flowchart.png" alt-text="Flowchart that shows the order in which to address each design area." lightbox="media/network-design-guide-figure1.png":::
+:::image type="content" source="media/flowchart.png" alt-text="Flowchart that shows the order in which to address each design area." lightbox="media/flowchart.png":::
 
 As shown in the preceding flowchart, we recommend the following four-step approach to network design for Azure VMware Solution:
 
@@ -44,7 +44,7 @@ As shown in the preceding flowchart, we recommend the following four-step approa
 
 3. **Decide how internet-facing applications running on Azure VMware Solution should be published (inbound internet connectivity).** Azure VMware Solution supports using Public IPs associated with either virtual appliances running in Azure VMware Solution or virtual appliances running in an Azure virtual network. Both options can be used regardless of the decisions made for connectivity with on-premises sites and Azure virtual networks during phases 1 and 2. Read [Design phase 3: Inbound internet connectivity](network-design-guide-internet-inbound-connectivity.md) to learn about the options for inbound internet connectivity that Azure VMware Solution supports and how to choose one.
 
-4. **Decide how Azure VMware Solution workloads connect to the internet (outbound internet connectivity).** This design decision might be constrained by the decisions you make for inbound internet connectivity during phase 3. If [Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge) is used for inbound connectivity, it must be used for outbound connections too. If not, more options are available. Read  [Design phase 4: Internet outbound connectivity](network-design-guide-internet-outbound-connectivity.md) to learn about supported options and how to choose one.
+4. **Decide how Azure VMware Solution workloads connect to the internet (outbound internet connectivity).** This design decision might be constrained by the decisions you make for inbound internet connectivity during phase 3. If you use [Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge) for inbound connectivity, you need to use it for outbound connections too. If not, more options are available. Read  [Design phase 4: Internet outbound connectivity](network-design-guide-internet-outbound-connectivity.md) to learn about supported options and how to choose one.
 
 ## Next steps
 
