@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Design phase #1: Connectivity with on-premises sites
+# Design phase 1: Connectivity with on-premises sites
 Connectivity with on-premises datacenters is the most critical design area for Azure VMware Solution networking. The key requirements that must be addressed include:
 - High throughput: Migrations from on-premises vSphere environments and disaster recovery solutions require moving large volumes of data between on-premises sites and Azure VMware Solution private clouds quickly.
 - Low latency: Distributed applications may require low latency for connections between Azure VMware Solution virtual machines and on-premises systems.
