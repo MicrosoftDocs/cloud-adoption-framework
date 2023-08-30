@@ -29,13 +29,13 @@ For CycleCloud deployments, extra security practices should be followed:
 
 The following articles provide guidance for each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
+- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
+- [Storage for HPC energy environments](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
