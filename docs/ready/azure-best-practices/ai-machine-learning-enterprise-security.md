@@ -3,7 +3,7 @@ title: Machine learning enterprise security
 description: This article provides best practices when planning or managing a secure Azure Machine Learning deployment.
 author: jhirono
 ms.author: jhirono
-ms.date: 09/28/2021
+ms.date: 08/29/2023
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -12,15 +12,31 @@ ms.custom: internal
 
 This article explains security best practices for planning or managing a secure Azure Machine Learning deployment. Best practices come from Microsoft and customer experience with Azure Machine Learning. Each guideline explains the practice and its rationale. The article also provides links to how-to and reference documentation.
 
-## Recommended network security architecture
+## Recommended network security architecture (managed network)
 
-The recommended machine learning network security architecture is a virtual network with the following subnets:
+The recommended machine learning network security architecture is a *managed virtual network* (preview). An Azure Machine Learning managed virtual network secures the workspace, its associated Azure resources, and all managed compute resources. It simplifies the configuration and management of network security by preconfiguring required outputs and automatically creating managed resources within the network. You can use private endpoints to allow Azure services to access the network, and can optionally define outbound rules to allow the network to access the internet.
+
+The managed virtual network has two modes that it can be configured for:
+
+* **Allow internet outbound** - This mode allows outbound communication with resources located on the internet, such as the public PyPi or Anaconda package repositories.
+
+    :::image type="content" source="./media/azure-ml-recommended-managed-internet-outbound.svg" alt-text="A diagram of the recommended architecture with the internet outbound mode.":::
+
+* **Allow only approved outbound** - This mode allows only the minimum outbound communication required for the workspace to function. This mode is recommended for workspaces that need to be isolated from the internet. Or where outbound access is only allowed to specific resources via service endpoints, service tags, or fully qualified domain names.
+
+  :::image type="content" source="./media/azure-ml-recommended-managed-allowed-outbound.svg" alt-text="A diagram of the recommended architecture with the only allowed outbound mode.":::
+
+For more information, see [Managed virtual network isolation](/azure/machine-learning/how-to-managed-network).
+
+## Recommended network security architecture (Azure Virtual Network)
+
+If you can't use a managed virtual network due to your business requirements, you can use an Azure virtual network with the following subnets:
 
 - **Training** contains compute resources used for training, such as machine learning compute instances or compute clusters.
 - **Scoring** contains compute resources used for scoring, such as Azure Kubernetes Service (AKS).
 - **Firewall** contains the firewall that allows traffic to and from the public internet, such as Azure Firewall.
 
-:::image type="content" source="./media/azure-ml-recommended-secure-network-architecture.png" alt-text="A diagram of the recommended secure architecture." border="false":::
+:::image type="content" source="./media/azure-ml-recommended-secure-network-architecture.png" alt-text="A diagram of the recommended architecture when using Azure virtual network." border="false":::
 
 The virtual network also contains a *private endpoint* for your machine learning workspace, and the following dependent services:
 
@@ -39,9 +55,9 @@ The virtual network also contains a *private endpoint* for your machine learning
 
 Remote clients connect to the virtual network by using either Azure ExpressRoute or a virtual private network (VPN) connection.
 
-## Virtual network and private endpoint design
+### Virtual network and private endpoint design
 
-When designing virtual networks, subnets, and private endpoints, consider the following requirements:
+When designing an Azure Virtual Network, subnets, and private endpoints, consider the following requirements:
 
 - In general, create separate subnets for training and scoring, and use the training subnet for all private endpoints.
 
@@ -51,34 +67,35 @@ When designing virtual networks, subnets, and private endpoints, consider the fo
 
 - Machine learning workspace default storage needs two private endpoints, one for Azure Blob Storage and another for Azure File Storage.
 
-- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same VNet.
+- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same virtual network.
 
 - If you have multiple workspaces, use a virtual network for each workspace to create an explicit network boundary between workspaces.
 
-### Use private IP addresses
+#### Use private IP addresses
 
 Private IP addresses minimize your Azure resources' exposure to the internet. Machine learning uses many Azure resources, and the machine learning workspace private endpoint isn't enough for end-to-end private IP. The following table shows the major resources machine learning uses, and how to enable private IP for the resources. Compute instances and compute clusters are the only resources that don't have the private IP feature.
 
 | Resources | Private IP solution | Documentation |
 | ----- | ----- | ----- |
 | Workspace | Private endpoint | [Configure a private endpoint for an Azure Machine Learning workspace](/azure/machine-learning/how-to-configure-private-link?tabs=python)
+| Registry | Private endpoint | [Network isolation with Azure Machine Learning registries](/azure/machine-learning/how-to-registry-network-isolation) |
 | **Associated resources** |
 | Storage | Private endpoint | [Secure Azure Storage accounts with service endpoints](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-storage-accounts-with-service-endpoints) |
 | Key Vault | Private endpoint | [Secure Azure Key Vault](/azure/machine-learning/how-to-secure-workspace-vnet#secure-azure-key-vault) |
-|  Container Registry | Private endpoint | [Enable Azure Container Registry](/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr) |
+| Container Registry | Private endpoint | [Enable Azure Container Registry](/azure/machine-learning/how-to-secure-workspace-vnet#enable-azure-container-registry-acr) |
 | **Training resources** |
-| Compute instance | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
-| Compute cluster | Private IP (no public IP preview) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
-| **More hosting resources** |
-| Kubernetes cluster | Private endpoint | [Secure inferencing environments](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#secure-vnet-traffic) |
-| Machine learning load balancer on AKS | Private load balancer | [Secure inferencing environments](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#secure-vnet-traffic) |
-| Azure Container Instances | Private endpoint | **Note:** You can't use a private endpoint with container instances if the container registry also uses a private endpoint.|
+| Compute instance | Private IP (no public IP) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio#compute-instance) |
+| Compute cluster | Private IP (no public IP) | [Secure training environments](/azure/machine-learning/how-to-secure-training-vnet?tabs=azure-studio%2Cipaddress#compute-cluster) |
+| **Hosting resources** |
+| Managed online endpoint | Private endpoint | [Network isolation with managed online endpoints](/azure/machine-learning/concept-secure-online-endpoint) |
+| Online endpoint (Kubernetes) | Private endpoint | [Secure Azure Kubernetes Service online endpoints](/azure/machine-learning/how-to-secure-inferencing-vnet#secure-azure-kubernetes-service-online-endpoints) |
+| Batch endpoints | Private IP (inherited from compute cluster) | [Network isolation in batch endpoints](/azure/machine-learning/how-to-secure-batch-endpoint) |
 
-### Control virtual network inbound and outbound traffic
+#### Control virtual network inbound and outbound traffic
 
 Use a firewall or Azure network security group (NSG) to control virtual network inbound and outbound traffic. For more information on inbound and outbound requirements, see [Configure inbound and outbound network traffic](/azure/machine-learning/how-to-access-azureml-behind-firewall?tabs=ipaddress). For more information on how traffic flows between components, see [Network traffic flow in a secured workspace](/azure/machine-learning/concept-secure-network-traffic-flow).
 
-### Ensure access to your workspace
+#### Ensure access to your workspace
 
 To ensure that your private endpoint can access your machine learning workspace, take the following steps:
 
@@ -175,7 +192,7 @@ Azure Machine Learning provides curated Docker images that you can use for train
 
 - Use the images as-is, without using machine learning environment management. This approach gives you a higher degree of control, but also requires you to carefully construct the Python environment as part of the image. You need to meet all the dependencies needed to run the code, and any new dependencies require rebuilding the image.
 
-For more information, see [Train a model using a custom Docker image](/azure/machine-learning/how-to-train-with-custom-image).
+For more information, see [Manage environments](/azure/machine-learning/how-to-manage-environments-v2).
 
 ## Data encryption
 
@@ -242,7 +259,9 @@ Use compute instances with a private endpoint-enabled workspace. The compute ins
 
 ### Azure Policy support
 
-You can use Azure Policy to ensure that every compute cluster or instance is created in a virtual network, and specify the default virtual network and subnet. You can also use a policy to disable non-Azure AD authentication, such as SSH.
+When using an *Azure virtual network*, you can use Azure Policy to ensure that every compute cluster or instance is created in a virtual network, and specify the default virtual network and subnet. The policy isn't needed when using a *managed virtual network*, as the compute resources are automatically created in the managed virtual network.
+
+You can also use a policy to disable non-Azure AD authentication, such as SSH.
 
 ## Next steps
 
@@ -253,7 +272,7 @@ Learn more about machine learning security configurations:
 
 Get started with a machine learning template-based deployment:
 
-- [Azure quickstart templates (`microsoft.com`)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
+- [Azure Quickstart Templates (`microsoft.com`)](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Machinelearningservices)
 - [Enterprise-scale analytics and AI data landing zone](https://github.com/Azure/data-landing-zone)
 
 Read more articles about architectural considerations for deploying machine learning:
