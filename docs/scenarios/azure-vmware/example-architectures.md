@@ -5,8 +5,6 @@ author: sablair
 ms.author: janet
 ms.date: 12/19/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

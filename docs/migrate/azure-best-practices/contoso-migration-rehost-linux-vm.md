@@ -5,8 +5,6 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/21/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 

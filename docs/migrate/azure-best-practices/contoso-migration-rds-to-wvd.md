@@ -6,8 +6,6 @@ ms.author: martinek
 ms.date: 05/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 

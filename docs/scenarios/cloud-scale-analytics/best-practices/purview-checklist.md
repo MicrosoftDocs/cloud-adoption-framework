@@ -5,8 +5,6 @@ author: zeinam
 ms.author: zeinam
 ms.date: 05/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

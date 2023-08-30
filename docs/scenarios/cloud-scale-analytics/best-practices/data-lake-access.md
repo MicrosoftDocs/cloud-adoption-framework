@@ -3,10 +3,8 @@ title: Access control and data lake configurations in Azure Data Lake Storage Ge
 description: Learn about access control and data lake configurations in Azure Data Lake Storage Gen2 and how to use role-based access control and access control lists.
 author: mboswell
 ms.author: mboswell
-ms.date: 01/05/2023
+ms.date: 08/29/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -110,6 +108,9 @@ There are two approaches for nested ACL groups.
 ### Option 1: The parent execute group
 
 Before you create files and folders, begin with a parent group. Assign that group run permissions to both default and access ACLs at the container level. Then add the groups that require data access to the parent group.
+
+> [!WARNING]
+> We would recommend against this pattern where you have recursive deletes and instead use [Option 2: The access control list other entry](#option-2-the-access-control-list-other-entry).
 
 This technique is known as nesting groups. The member group inherits the permissions of the parent group, which provides global run permissions to all member groups. The member group doesn't need run permissions because these permissions are inherited. More nesting might provide greater flexibility and agility. Add security groups that represent teams or automated jobs to the data access reader and writer groups.
 

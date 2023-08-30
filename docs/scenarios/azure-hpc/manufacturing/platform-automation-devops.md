@@ -4,8 +4,6 @@ description: Azure landing zones for HPC in manufacturing don't have any specifi
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/14/2022
 ---
@@ -28,12 +26,13 @@ Keep in mind that it could be important to understand any decisions made previou
 
 The following articles provide guidance that you might find helpful at various points during your cloud adoption process. They can help you succeed in the cloud adoption scenario for HPC in the manufacturing industry.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network topology and connectivity](./network-topology-connectivity.md)
-- [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Manufacturing HPC storage](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 05/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, UpdateFrequency.5
 ---
 

@@ -4,8 +4,6 @@ description: 'Large-scale HPC energy workloads have demands for data storage and
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 09/23/2022
 ---
@@ -36,7 +34,7 @@ Oil and gas companies must be able to effectively manage and store exabytes of s
 
 [Data storage](/azure/architecture/topics/high-performance-computing#storage) and access needs vary widely, depending on workload scale. Azure supports several approaches for managing the speed and capacity of HPC applications.
 
-Large-scale Batch and HPC workloads in Energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
+Large-scale Batch and HPC workloads in energy industry have demands for data storage and access that exceed the capabilities of traditional cloud file systems. The high-performance I/O requirements and massive scalability needs of [high-performance computing (HPC)](https://azure.microsoft.com/solutions/high-performance-computing/) introduces unique challenges for data storage and access.
 
 HPC is used to solve complex problems, such as Seismic and Reservoir simulation and modeling, that are not practical or cost effective to handle with traditional computing techniques. It does this through a combination of parallel processing and massive scalability to perform large and complicated computing tasks quickly, efficiently, and reliably.
 
@@ -71,7 +69,7 @@ Multiple storage devices and multiple paths to data are utilized to provide a hi
 
 Energy MPI workloads have unique requirements with the need for low latency communications between nodes. The nodes are connected via high-speed interconnect and are not very amenable to sharing with other workloads. MPI applications leverage the entire high-performance interconnects using Pass-Through mode in virtualized environments. Storage for MPI nodes is usually a parallel file system like Lustre also accessed via the high-speed interconnect. Lustre/BeeGFS is typically used to handle the large throughput requirements of primarily seismic processing (but also reservoir simulation).
 
-Parallel file systems such as Lustre are used for HPC Energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
+Parallel file systems such as Lustre are used for HPC energy workloads that require access to large files, simultaneous access from multiple compute nodes, and massive amounts of data. The implementation of parallel file systems makes it easy to scale in terms of capability and performance. Such file systems take advantage of RDMA transfers with large bandwidth and reduced CPU usage. The parallel file system is usually used as scratch space and intended for work that requires optimized I/O. Examples include workload setup, pre-processing, running, and post-processing.
 
 When using an orchestrated parallel file service, such as Lustre or BeeGFS, works for up to 50,000 cores, with read/write rates up to 50 GiB/s, and 500 TB storage. For even larger clusters, a bare-metal approach may be more cost-effective. For example, Cray ClusterStor is a managed HPC storage solution with the flexibility to support larger elastic clusters on the fly with more than 50,000 cores, read/write rates more than 30 GiB/s and more than 500 TB data storage.
 
@@ -84,21 +82,21 @@ For more information on Parallel Virtual file system on Azure, see [Parallel Vir
  - HPC Cache is also very useful in the hybrid scenario, when there is a requirement to sync data between on premises and the cloud, with a ready-heavy or high-read I/O pattern for energy workloads.
  - Standard or Premium Blob is a cost effective being the lowest cost cloud offering. provides exabyte scale, high throughput, low latency access where necessary, familiar file system and multi-protocol access (REST, HDFS, NFS). You can make use of the NFS v3.0 at the blob service endpoint for high throughput and read heavy workloads.  You can optimize costs by moving to cooler tiers with the ability to perform lifecycle management with last update/ last access time, intelligent tiering with customizable policies.
 
- - The Oil and Gas Energy workloads may also require large data size and volumes transfer mechanism from on-premises to Cloud and vice versa that can be achieved by
+ - The Oil and Gas energy workloads may also require large data size and volumes transfer mechanism from on-premises to Cloud and vice versa that can be achieved by
      - Offline - device based migration (DataBox)
      - Online - over the network (ExpressRoute) based migration.
 
 
 ## Next steps
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for energy HPC environments.
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity Access Management](./identity-access-management.md)
-- [Management](./management.md)
-- [Network Topology Connectivity](./network-topology-connectivity.md)
-- [Platform Automation DevOps](./platform-automation-devops.md)
-- [Resource Organization](./resource-organization.md)
-- [Security Governance Compliance](./security-governance-compliance.md)
-- [Security](./security.md)
-- Back to [landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
 
+- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
+- [Governance for HPC in energy industries](./security-governance-compliance.md)
+- [Security for Azure HPC in energy](./security.md)
+- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

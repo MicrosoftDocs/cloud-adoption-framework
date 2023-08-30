@@ -5,8 +5,6 @@ author: julie-ng
 ms.author: julng
 ms.date: 04/21/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
