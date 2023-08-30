@@ -1,25 +1,26 @@
 ---
-title: Azure VMware Solution Network Design Guide
-description: Learn how to design network connectivity for Azure VMware Solution.
+title: Azure VMware Solution network design guide
+description: Learn how to design network connectivity for Azure VMware Solution. Learn about connectivity with on-premises datacenters, virtual networks, and more. 
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/06/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Azure VMware Solution Landing Zone Accelerator Network Design Guide
-This guide covers network design for the Azure VMware Solution landing zone accelerator. It encompasses four design areas, summarized below.
+# Azure VMware Solution landing zone accelerator network design guide
 
-1. **Connectivity with on-premises datacenters**. Connectivity between Azure VMware Solution private clouds and on-premises sites supports a broad set of use cases: HCX migrations, hybrid applications, remote vCenter or NSX-T Data Center administration. Azure VMware Solution supports multiple options for hybrid connectivity, including Azure ExpressRoute circuits and internet-based IPSec VPNs. 
+This guide covers network design for the Azure VMware Solution landing zone accelerator. It encompasses four design areas:
 
-2. **Connectivity with Azure Virtual Networks**. Azure VMware Solution runs on bare-metal VMware vSphere clusters that can be connected to native Azure Virtual Networks through Azure ExpressRoute. ExpressRoute connections between Azure VMware Solution private clouds and Azure virtual networks enable building applications that span the two environments or using “jump-box” virtual machines in Azure to log into vCenter (vSphere Client) and NSX-T Manager console for administration purposes.
+- **Connectivity with on-premises datacenters**. Connectivity between Azure VMware Solution private clouds and on-premises sites supports a broad set of use cases: HCX migrations, hybrid applications, and remote vCenter or NSX-T Data Center administration. Azure VMware Solution supports multiple options for hybrid connectivity, including Azure ExpressRoute circuits and internet-based IPSec virtual private networks.
 
-3. **Inbound Internet connectivity**. Inbound Internet connectivity enables applications running on Azure VMware Solution to be exposed to the Internet behind public IP addresses. Internet-facing applications are almost invariably published through security devices (application delivery controllers, web application firewalls, L3/L4 next-gen firewalls, …). Design decisions about inbound connectivity are primarily driven by the placement of such devices (in Azure VMware Solution or in Azure virtual networks). 
+- **Connectivity with Azure Virtual Network**. Azure VMware Solution runs on bare-metal VMware vSphere clusters that can be connected to native Azure virtual networks via Azure ExpressRoute. ExpressRoute connections between Azure VMware Solution private clouds and Azure virtual networks enable you to build applications that span the two environments or use jump box virtual machines in Azure to log into vCenter (vSphere Client) and NSX-T Manager console for administration purposes.
 
-4. **Outbound Internet connectivity**. Outbound Internet connectivity is needed when applications running on Azure VMware Solution require access to public endpoints. Typical use cases include downloading software updates, consuming public web sites or APIs, Internet browsing (for example, when Azure VMware Solution is used to run [VDI solutions](/azure/azure-vmware/azure-vmware-solution-horizon)). Azure VMware Solution provides several options to implement outbound Internet connectivity, which may or may not rely on Azure native resources. Security requirements (firewalling, forward proxying, …) typically drive design decisions in this area. 
+- **Inbound Internet connectivity**. Inbound Internet connectivity enables applications running on Azure VMware Solution to be exposed to the Internet behind public IP addresses. Internet-facing applications are almost invariably published through security devices (application delivery controllers, web application firewalls, L3/L4 next-gen firewalls, …). Design decisions about inbound connectivity are primarily driven by the placement of such devices (in Azure VMware Solution or in Azure virtual networks). 
+
+- **Outbound Internet connectivity**. Outbound Internet connectivity is needed when applications running on Azure VMware Solution require access to public endpoints. Typical use cases include downloading software updates, consuming public web sites or APIs, Internet browsing (for example, when Azure VMware Solution is used to run [VDI solutions](/azure/azure-vmware/azure-vmware-solution-horizon)). Azure VMware Solution provides several options to implement outbound Internet connectivity, which may or may not rely on Azure native resources. Security requirements (firewalling, forward proxying, …) typically drive design decisions in this area. 
 
 Azure VMware Solution provides native functionality to address the most common requirements in each design area, with no need for you to deploy more Azure resources. These native functionalities are covered in the [official documentation](/azure/azure-vmware/concepts-networking). However, in enterprise scenarios, it is common for Azure VMware Solution to be part of a larger infrastructure that includes 1st-party network services (Azure Firewall, Azure Application Gateway, …) or third-party Network Virtual Appliances (NVAs). This guide helps you design these more advanced solutions.
 

@@ -25,7 +25,7 @@ items:
               - name: Introduction
                 href: network-design-guide-intro.md
               - name: Basics and prerequisites
-                href: network-design-guide-avs-networking-basics.md
+                href: azure-vmware-solution-network-basics.md
               - name: Design connectivity with on-premises sites
                 href: network-design-guide-onprem-connectivity.md
               - name: Design connectivity with Azure Virtual Networks

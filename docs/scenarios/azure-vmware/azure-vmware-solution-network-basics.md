@@ -1,5 +1,5 @@
 ---
-title: Azure VMware Solution Network Design Guide - Azure VMware Solution networking basics
+title: 'Azure VMware Solution network design guide: networking basics'
 description: Learn the fundamental concepts of Azure VMware Solution networking.
 author: fguerri
 ms.author: fguerri
