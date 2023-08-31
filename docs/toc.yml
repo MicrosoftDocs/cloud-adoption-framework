@@ -1069,8 +1069,6 @@ items:
               href: /azure/architecture/data-guide/scenarios/data-lake?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Collect data
             items:
-            - name: Migrate on-premises data to Azure from SQL, Oracle, or NoSQL platforms
-              href: innovate/best-practices/data-dms.md
             - name: Integrate cloud data sources with a SQL Analytics data warehouse
               href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-integrate?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
             - name: Load on-premises data into Azure Synapse Analytics
