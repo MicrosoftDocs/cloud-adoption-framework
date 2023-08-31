@@ -510,15 +510,15 @@ items:
         - name: Alignment scenarios
           items:
             - name: Single Subscription to the Azure landing zone conceptual architecture
-              href: ready/landing-zone/align-scenarios.md
-            - name: Single/Few Management Groups to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios-1.md
-            - name: Regional organization to the Azure landing zone conceptual architecture
+            - name: Single/Few Management Groups to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios-2.md
+            - name: Regional organization to the Azure landing zone conceptual architecture
+              href: ready/landing-zone/align-scenarios-3.md
         - name: Alignment approaches
           items:
             - name: Migration approach using "Audit Only" mode policies and hierarchy
-              href: ready/landing-zone/align-migration-approaches-1.md
+              href: ready/landing-zone/align-approaches-1.md
 
         - name: Brownfield landing zone considerations
           href: ready/landing-zone/brownfield-considerations.md
