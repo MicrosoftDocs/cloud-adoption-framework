@@ -17,7 +17,7 @@ ms.custom:
 
 # Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS
 
-This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(VMs). 
+This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(VMs). 
 
 The first step to building a resilient architecture for your workload environment is to determine availability requirements for your solution by the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO is the maximum time an application is unavailable after an incident and RPO is the maximum amount of data loss during a disaster. After you determine the  requirements for your solution, the next step is to design your architecture to provide the established levels of resiliency and availability.
 
@@ -25,14 +25,11 @@ Oracle on Azure workloads primarily use Data Guard, the built-in replication tec
 
 ## High availability of Oracle workloads on Azure IaaS
 
-Azure VM instances that run Oracle workloads benefit from Availability Set architecture. High availability configuration provides near real-time data replication with potentially fast failover capabilities but doesn't provide protection for Azure data center level or region level failures. 
+Azure VM instances that run Oracle workloads benefit from Availability Set architecture. High availability configuration provides near real-time data replication with potentially fast failover capabilities but doesn't provide protection for Azure data center level or region level failures.
 
 Use the following flowchart to choose the best high availability option for your Oracle database.
   
-
-![](media/image1.emf)
-
-Figure 1: Oracle on Azure service protection design process map
+![Figure 1: Oracle on Azure service protection design process map](media/image1.emf)
 
 ### High availability using Data Guard in maximum availability mode
 
@@ -47,7 +44,7 @@ When using FSFO for automatic failover, you can achieve an RTO in the degree of 
 
 Figure 2: Oracle on Azure high availability configuration with Data Guard
 
-Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) for a step-by-step configuration of Data Guard on Azure.
+Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) for a step-by-step configuration of Data Guard on Azure.
 
 ### High availability using Data Guard in maximum protection mode
 
@@ -69,9 +66,7 @@ One advantage of using availability zones over availability sets is that your SL
 
 Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adapt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
-![](media/image3.emf)
-
-Figure 3: Oracle on Azure reference architecture with Pacemaker cluster
+![Figure 3: Oracle on Azure reference architecture with Pacemaker cluster](media/image3.emf)
 
 Use the following links to learn more on how to configure Pacemaker cluster:
 
@@ -95,12 +90,7 @@ This document focuses on scenarios where primary and secondary servers are both 
 
 Use the flowchart in figure 4 to decide the best disaster recovery option for your Oracle database.
 
-
-![](media/image4.png)
-
-Figure 4: Oracle on Azure data protection design process map
-
-- <br>
+![Figure 4: Oracle on Azure data protection design process map](media/image4.png)
 
 ### Disaster recovery using Data Guard
 
@@ -115,9 +105,7 @@ Latency between Azure datacenters that are separated far from each other and lat
 
 Additionally, when you send data across Azure regions or data centers, you face egress costs for data (ex: redo logs) that's sent to a disaster recovery site. If you don't need to replicate all data in your database, you can replicate only partial data as needed using Golden Gate based replication and save on egress costs.
 
-![](media/image5.emf)
-
-Figure 5: Disaster recovery using Data Guard
+![Figure 5: Disaster recovery using Data Guard](media/image5.emf)
 
 Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](configure-oracle-dataguard.md) for a step-by-step configuration of Data Guard on Azure.
 
@@ -143,7 +131,7 @@ Consider using one of the following approaches to maintain the disaster recovery
 
 One approach is you don't maintain any physical deployment at the disaster recovery site, thereby avoiding the maintenance effort and cost for it. You can use infrastructure-as-code (IaC) and site reliability engineering practices to develop and maintain a repository that can replicate deployment as configuration with one-click at the time of failover to a disaster recovery site. This method optimizes cost as it doesn't use any physical resources until the time of failover.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > You must ensure the solution's RTO requirements can be met if you create entire deployment from scratch during failover. Routine simulation and testing of disaster recovery scenario is needed to ensure the deployment code is not broken.
 
 A second approach is to deploy and maintain a scaled version of your production environment, that can function accurately for a small workload and can potentially be scaled up as necessary during failover to serve for production load. This is the most used method, especially for complex deployments where you don't want to take the risk of creating the entire environment or when you would like to failover quickly in order to provide a lower RTO.
