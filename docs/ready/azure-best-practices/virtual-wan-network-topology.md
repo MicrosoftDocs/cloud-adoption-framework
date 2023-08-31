@@ -16,7 +16,7 @@ Explore key design considerations and recommendations for virtual wide area netw
 
 ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
 
-_Figure 1: Virtual WAN network topology. Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture._
+_Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture._
 
 ## Virtual WAN network design considerations
 
