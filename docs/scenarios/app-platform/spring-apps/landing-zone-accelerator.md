@@ -33,9 +33,9 @@ The landing zone accelerator is a set of design considerations and reference arc
 
 - **Reference implementation** accompanies the architecture and demonstrates the best practices. It provides infrastructure as code (IaC) templates for a sample Spring app.
 
-For more information, see [Azure Spring Apps reference implementation](https://github.com/Azure/springapps-landing-zone-accelerator).
+For more information, see [Azure Spring Apps Landing Zone Accelerator](https://github.com/Azure/azure-spring-apps-landing-zone-accelerator).
 
-For information about the previous Azure Spring Apps reference architecture, see the [archived article](/previous-versions/azure/spring-apps/reference-architecture). 
+The landing zone accelerator is the next evolution of the reference architecture. However, if you need to refer to the previous reference architecture, see the [archived article](/previous-versions/azure/spring-apps/reference-architecture). 
 
 ## Integration with platform landing zones
 
