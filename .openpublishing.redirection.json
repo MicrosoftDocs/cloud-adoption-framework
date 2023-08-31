@@ -819,6 +819,12 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-infrastructure.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz",
          "redirect_document_id": false
-      }  
+      },
+      {
+         "source_path": "docs/innovate/best-practices/data-dms.md",
+         "redirect_url": "/azure/dms/dms-overview",
+         "redirect_document_id": false
+      },
+      
    ]
 }
