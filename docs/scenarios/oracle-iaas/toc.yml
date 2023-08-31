@@ -7,6 +7,10 @@ items:
     href: oracle-landing-zone-strategy.md
   - name: Technical planning
     href: oracle-landing-zone-plan.md
+  - name: Disaster recovery
+    items:
+      - name: Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS
+        href: oracle-disaster-recovery-iaas.md     
   - name: Prepare your environment
     items:
     - name: Azure landing zone for Oracle
