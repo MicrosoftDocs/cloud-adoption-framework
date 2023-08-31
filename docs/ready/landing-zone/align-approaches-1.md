@@ -28,7 +28,7 @@ To transition to an Azure landing zone conceptual architecture leveraging this a
 
 3. Review the [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md) to understand how to minimize disruption to applications and services during the migration.
 
-4. Duplicate the _Landing Zones_ Management Group as well as it’s children (Corp & Online), including all the policy assignments with configuring them to _audit only_ mode. This approach allows getting into the new desired target architecture very quickly and then the applications teams can start to assess the policies applied without the risk of impacting any of the running applications.
+4. Duplicate the _Landing Zones_ Management Group as well as it’s children (Corp & Online), including all the policy assignments with configuring them to _audit only_ mode, by setting the [_Enforcement Mode_ on the policy assignments to DoNotEnforce/Disabled](/azure/governance/policy/concepts/assignment-structure#enforcement-mode). This approach allows getting into the new desired target architecture very quickly and then the applications teams can start to assess the policies applied without the risk of impacting any of the running applications.
 
     ![Duplicate brownfield landing zones with audit only policies](./media/alz-duplicate-brownfield-auditonly.png)
 
