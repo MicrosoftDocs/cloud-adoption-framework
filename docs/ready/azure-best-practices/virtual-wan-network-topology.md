@@ -65,8 +65,6 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - Azure Firewall Manager supports deployment of Azure Firewall in the Virtual WAN hub, known as secured virtual hub. For more information, see the [Azure Firewall Manager overview](/azure/firewall-manager/overview) for secured virtual hubs and the latest [constraints](/azure/firewall-manager/overview#known-issues).
 
-- Virtual WAN hub-to-hub traffic, by way of Azure Firewall, isn't currently supported when the Azure Firewall deploys inside of the Virtual WAN hub itself (secured virtual hub). Depending on your requirements, you have workarounds. You can place the [Azure Firewall in a spoke virtual network](/azure/virtual-wan/scenario-route-through-nva), or use NSGs for traffic filtering.
-
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
 - You can share an Azure DDoS Protection Standard plan across all VNets in a single Azure AD tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
