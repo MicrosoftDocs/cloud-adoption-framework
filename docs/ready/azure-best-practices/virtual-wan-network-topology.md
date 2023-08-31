@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Explore key design considerations and recommendations for virtual wide area networks (Virtual WAN) in Microsoft Azure.
 
-![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
+[ ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png) ](./media/virtual-wan-topology.png#lightbox)
 
 _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture._
 
