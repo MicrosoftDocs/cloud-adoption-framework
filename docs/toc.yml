@@ -516,7 +516,7 @@ items:
             - name: Regional organization to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios-2.md
             - name: Migration approach using duplicate Landing Zones Management Group with policies in “Audit Only” mode
-              href: ready/landing-zone/align-migration-approach.md
+              href: ready/landing-zone/align-migration-approach-1.md
         - name: Alignment approaches
           items:
             - name: Migration approach using "Audit Only" mode policies and hierarchy
