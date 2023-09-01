@@ -1,20 +1,16 @@
 ---
-title: "Get started: Build a cloud operations team"
+title: 'Get started: Build a cloud operations team'
 description: This guide helps a cloud operations team understand scope, deliverables, and the functionality that the team is responsible for.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Build a cloud operations team
 
 An operations team focuses on monitoring, repairing, and remediating issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
-
-![Get started building a cloud operations team](../../_images/get-started/operations-team-map.png)
 
 ## Step 1: Determine whether a cloud operations team is needed
 
@@ -71,7 +67,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Guidance to support deliverable completion:**
 
-- For additional guidance on cadences for meetings, see the "deliverables" section of [cloud operations functions](../../organize/cloud-operations.md#deliverables).
+- For additional guidance on cadences for meetings, see [Cloud operations functions: Deliverables](../../organize/cloud-operations.md#deliverables).
 
 <br>
 
@@ -137,7 +133,7 @@ By continually making operational improvements, the team can:
 - Improve platform operations.
 - Implement workload-specific operations.
 
-As additional workloads are transitioned to cloud operations, the need for operations improvements become clearer.
+As additional workloads are transitioned to cloud operations, the need for operations improvements becomes clearer.
 
 **Deliverables:**
 
@@ -194,6 +190,6 @@ As adoption and operations scale, it's important to define and automate governan
 Learn more about:
 
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
-- [Organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
 Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

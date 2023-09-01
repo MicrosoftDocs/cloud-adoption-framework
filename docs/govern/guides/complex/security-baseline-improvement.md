@@ -1,13 +1,11 @@
 ---
-title: "Complex enterprise governance: Improve the Security Baseline discipline"
+title: 'Complex enterprise governance: Improve the Security Baseline discipline'
 description: Use the Cloud Adoption Framework for Azure to learn about adding security controls that support moving protected data to the cloud.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/25/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Governance guide for complex enterprises: Improve the Security Baseline discipline
@@ -24,7 +22,7 @@ For the past 12 months, the cloud adoption teams have cleared most of the 5,000 
 
 The cloud governance team continues to change along with the narrative. The two founding members of the team are now among the most respected cloud architects in the company. The collection of configuration scripts has grown as new teams tackle innovative new deployments. The cloud governance team has also grown. Most recently, members of the IT operations team have joined cloud governance team activities to prepare for cloud operations. The cloud architects who helped foster this community are seen both as cloud guardians and cloud accelerators.
 
-While the difference is subtle, it's an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a defender of the Five Disciplines of Cloud Governance.
+While the difference is subtle, it's an important distinction when building a governance-focused IT culture. A cloud custodian cleans up the messes made by innovative cloud architects, and the two roles have natural friction and opposing objectives. A cloud guardian helps keep the cloud safe, so other cloud architects can move more quickly with fewer messes. A cloud accelerator performs both functions but is also involved in the creation of templates to accelerate deployment and adoption, becoming an innovation accelerator as well as a guardian of the Five Disciplines of Cloud Governance.
 
 ### Changes in the current state
 
@@ -84,9 +82,11 @@ The following changes to policy will help remediate the new risks and guide impl
 1. The cloud vendor must be capable of supporting the existing edge device solution and any required configurations to protect any publicly exposed network boundary.
 1. The cloud vendor must be capable of supporting a shared connection to the global WAN, with data transmission routed through the existing edge device solution.
 1. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
-1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets. 18. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
+1. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
+1. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.
 1. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
-1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users. 1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
+1. Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
+1. Cloud governance processes must include quarterly reviews with identity baseline teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 ## Incremental improvement of best practices
 
@@ -132,12 +132,12 @@ In prior iterative changes to the best practice, we defined network security gro
     1. In the prior iteration, a network security group was created blocking all public traffic and allowing all internal traffic. Now we want to shift this network security group a bit.
     2. The new network security group configuration should block all public traffic, along with all traffic from the local datacenter.
     3. Traffic entering this virtual network should only come from the virtual network on the other side of the virtual network peer.
-3. Azure Security Center implementation:
-    1. Configure Azure Security Center for any management group that contains protected data classifications.
+3. Microsoft Defender for Cloud implementation:
+    1. Configure Microsoft Defender for Cloud for any management group that contains protected data classifications.
     2. Set automatic provisioning to on by default to ensure patching compliance.
     3. Establish OS security configurations. IT security to define the configuration.
-    4. Support IT security in the initial use of Azure Security Center. Transition use of Security Center to IT security, but maintain access for governance continuous improvement purposes.
-    5. Create a Resource Manager template reflecting the changes required for Azure Security Center configuration within a subscription.
+    4. Support IT security in the initial use of Defender for Cloud. Transition use of Defender for Cloud to IT security, but maintain access for governance continuous improvement purposes.
+    5. Create a Resource Manager template reflecting the changes required for Microsoft Defender for Cloud configuration within a subscription.
 4. Update Azure Policy for all subscriptions.
     1. Audit and enforce criticality and data classification across all management groups and subscriptions to identify any subscriptions with protected data classifications.
     2. Audit and enforce use of approved OS images only.
@@ -150,7 +150,7 @@ In prior iterative changes to the best practice, we defined network security gro
     5. Audit and enforce the limitation of user-defined routing tables.
 6. Azure blueprint:
     1. Create an Azure blueprint named `protected-data`.
-    2. Add the virtual network peer, network security group, and Azure Security Center templates to the blueprint.
+    2. Add the virtual network peer, network security group, and Microsoft Defender for Cloud templates to the blueprint.
     3. Ensure the template for Active Directory from the previous iteration is **not** included in the blueprint. Any dependencies on Active Directory will be provided by the corporate IT subscription.
     4. Terminate any existing Active Directory VMs deployed in the previous iteration.
     5. Add the new policies for protected data subscriptions.
@@ -163,7 +163,7 @@ Adding these processes and changes to the governance MVP helps remediate many of
 
 ## Next steps
 
-As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed. A critical part of the security governance narrative will be to review best practices that Microsoft has built for security. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. [Read here.](/azure/security/benchmarks/overview)
+As cloud adoption continues and delivers additional business value, risks and cloud governance needs also change. For the fictional company in this guide, the next step is to support mission-critical workloads. This is the point when resource consistency controls are needed. A critical part of the security governance narrative is reviewing best practices that Microsoft has built for security. The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. For more information, see [Overview of the Azure Security Benchmark](/security/benchmark/azure/overview).
 
 > [!div class="nextstepaction"]
 > [Improve the Resource Consistency discipline](./resource-consistency-improvement.md)

@@ -1,13 +1,11 @@
 ---
 title: Understand business risk during cloud migration
 description: Use the Cloud Adoption Framework for Azure to learn risk management processes that help you assess, understand, balance, and remediate migration risks.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Understand business risk during cloud migration
@@ -54,7 +52,7 @@ Once the business risk MVP is established, they can be converted to [policies](.
 
 ## Incremental risk mitigation
 
-As your organization deploys more workloads to the cloud, development teams will make use of increasing amounts of cloud resources. At each iteration, new assets are created and staged. At each release, workloads are readied for production promotion. Each of these cycles has the potential to introduce previously unidentified business risks.
+As your organization deploys more workloads to the cloud, development teams will make use of increasing amounts of cloud resources. At each iteration, new assets are created and staged. At each release, workloads are readied for production promotion. These cycles have the potential to introduce previously unidentified business risks.
 
 Assuming a business risk MVP is the starting point for your initial cloud adoption efforts, governance can mature in parallel with your increasing use of cloud resources. When the cloud governance team operates in parallel with cloud adoption teams, the growth of business risks can be addressed as they're identified, providing a stable ongoing model for developing governance maturity.
 

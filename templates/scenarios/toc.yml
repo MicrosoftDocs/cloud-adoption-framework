@@ -1,0 +1,67 @@
+items:
+  - name: {{Token-Name}} - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    items: 
+    - name: Azure Landing Zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Azure billing and Active Directory tenant
+        href: alz-azure-billing-active-directory-tenant.md
+      - name: Identity and access management
+        href: alz-identity-access-management.md
+      - name: Network topology and connectivity
+        href: alz-network-topology-connectivity.md
+      - name: Resource organization
+        href: alz-resource-organization.md
+      - name: Security
+        href: alz-security.md
+      - name: Management
+        href: alz-management.md
+      - name: Governance discipline
+        href: alz-security-governance-compliance.md
+      - name: Platform automation and DevOps
+        href: alz-platform-automation-devops.md
+    - name: Implementation options
+      items:
+      - name: Enterprise-scale for {{Token-LongName}}
+        href: enterprise-scale-landing-zone.md
+      - name: TODO - Add reference to smaller RA from AAC here
+        href: enterprise-scale-landing-zone.md?add-toc-breadcrumb-here
+  - name: Secure {{Token-Name}}
+    href: secure.md
+  - name: Organize {{Token-Name}}
+    href: organize.md
+  - name: Migrate {{Token-Name}} to Azure
+    href: migrate.md
+  - name: Modernize
+    href: modernize.md
+  - name: Innovate with {{Token-Name}} on Azure
+    href: innovate.md
+  - name: Govern {{Token-Name}} in Azure
+    href: govern.md
+  - name: Manage {{Token-Name}} platform and workloads
+    href: manage.md
+  - name: Well-architected considerations
+    href: well-architected-framework.md
+
+  - name: {{Token-Name}} Architectures - Add links to product architectures
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Azure product documentation - Add links to product docs
+    items:
+    - name: Example
+      href: /azure
+
+  - name: Build skills on Learn - Add links to Learn modules
+
+    items:
+    - name: Example
+      href: /training

@@ -1,12 +1,10 @@
 ---
 title: Benchmark and resize cloud assets
 description: Learn how to benchmark and optimize your cloud assets so you can find the balance between performance and costs.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 5/19/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 

@@ -1,12 +1,10 @@
 ---
 title: Rebuild an on-premises application in Azure
 description: Learn how Contoso rebuilds an application in Azure by using Azure App Service, Azure Kubernetes Service (AKS), Azure Cosmos DB, Azure Functions, and Azure Cognitive Services.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 7/1/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 
@@ -99,8 +97,8 @@ Here's what Contoso needs for this scenario:
 | Requirements | Details |
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
-| Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [The Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
+| Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com/vs/community/) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads/) <li> [Azure CLI](/cli/azure/install-azure-cli) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install/), set to use Windows containers |
 
 ## Scenario steps
 
@@ -229,7 +227,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
      ![Screenshot of adding another Docker Compose task in Azure DevOps.](./media/contoso-migration-rebuild/vsts7.png)
     *Figure 18: Adding another Docker Compose task.*
 
-9. They select the first task to build and configure the build with the Azure subscription, authorization, and Container Registry.
+9. They select the first task to build and configure the build with the Azure subscription, the authorization, and the container registry.
 
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)
     *Figure 19: Building and configuring the build.*
@@ -396,7 +394,7 @@ Contoso admins provision an Azure Cosmos DB database to be used for pet informat
     ![Screenshot showing the creation of an Azure Cosmos DB database in Azure Marketplace.](./media/contoso-migration-rebuild/cosmos1.png)
     *Figure 43: Creating an Azure Cosmos DB database.*
 
-2. They specify a name `contososmarthotel`, select the SQL API, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
+2. They specify a name `contososmarthotel`, select **Azure Cosmos DB for NoSQL**, and place it in the production resource group `ContosoRG` in the main region `East US 2`.
 
     ![Screenshot of the Azure Cosmos DB database name and other settings.](./media/contoso-migration-rebuild/cosmos2.png)
     *Figure 44: Naming an Azure Cosmos DB database.*
@@ -417,7 +415,7 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 
 1. The admins create a **Computer Vision** instance in Azure Marketplace.
 
-     ![Screenshot of creating a new computer vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
+     ![Screenshot of creating a new Computer Vision instance in Azure Marketplace.](./media/contoso-migration-rebuild/vision1.png)
     *Figure 47: A new instance in Azure Marketplace.*
 
 2. They provision the API (`smarthotelpets`) in the production resource group `ContosoRG`, in the main region (`East US 2`).
@@ -478,7 +476,7 @@ Contoso admins create two different projects for the front-end site.
 
 2. They import the [`SmartHotel360-Website`](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
 
-3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
+3. For the function app, they create another Azure DevOps project (`SmartHotelPetChecker`) and import the [PetChecker](https://github.com/ramon-tomas-c/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
 ### Configure the web app
 
@@ -547,7 +545,7 @@ Contoso admins can now publish the website.
 
 9. They add an artifact and select the build that they've configured.
 
-    ![Screenshot of adding an artifact, with Build as the source type.](./media/contoso-migration-rebuild/vsts-publish-front5.png)
+    ![Screenshot of adding an artifact, with **Build** as the source type.](./media/contoso-migration-rebuild/vsts-publish-front5.png)
     *Figure 64: Adding an artifact.*
 
 10. They select the lightning bolt icon on the artifact and then set continuous deployment to **Enabled**.
@@ -564,7 +562,7 @@ Contoso admins can now publish the website.
 
 13. In the **Pipeline**, they add a new stage.
 
-    ![Screenshot of the Pipeline tab and adding a new stage.](./media/contoso-migration-rebuild/vsts-publish-front8.png)
+    ![Screenshot of the **Pipeline** tab and adding a new stage.](./media/contoso-migration-rebuild/vsts-publish-front8.png)
     *Figure 67: Adding a new stage.*
 
 14. They select **Azure App Service deployment with slot** and then name the environment **Prod**.
@@ -630,12 +628,12 @@ Contoso admins deploy the application by doing the following:
 
 10. They name the environment **Prod** and then select the subscription. They set the **App type** to **Function App** and the app service name as `smarthotelpetchecker`.
 
-    ![Screenshot of the app type and app service name.](./media/contoso-migration-rebuild/petchecker2.png)
+    ![Screenshot of the **App type** and **App service name**.](./media/contoso-migration-rebuild/petchecker2.png)
     *Figure 76: The function app.*
 
 11. They add an artifact, **Build**.
 
-    ![Screenshot of adding an artifact, with the Build source type.](./media/contoso-migration-rebuild/petchecker3.png)
+    ![Screenshot of adding an artifact, with the **Build** source type.](./media/contoso-migration-rebuild/petchecker3.png)
     *Figure 77: Adding an artifact.*
 
 12. They enable **Continuous deployment trigger** and then select **Save**.
@@ -683,7 +681,7 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
+- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](../azure-migration-guide/ready-alz.md).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the Enterprise Agreement.
 - Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
@@ -695,10 +693,8 @@ In this article, Contoso rebuilds the SmartHotel360 application in Azure. The on
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. With Microsoft Learn, you can earn points, rise through levels, and achieve more.
 
-Here are two examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 application in Azure.
+Here are two examples of tailored learning paths that align with the Contoso SmartHotel360 application in Azure.
 
-<!-- docsTest:casing "computer vision functionality" -->
+- [Deploy a website to Azure with Azure App Service](/training/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
 
-- [Deploy a website to Azure with Azure App Service](/learn/paths/deploy-a-website-with-azure-app-service/): By creating web apps in Azure, you can publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to help provide secure access to your site.
-
-- [Process and classify images with the Azure cognitive vision services](/learn/paths/process-classify-images-with-azure-cognitive-vision-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Azure cognitive vision services to detect faces, tag and classify images, and identify objects.
+- [Create computer vision solutions with Azure Cognitive Services](/training/paths/create-computer-vision-solutions-azure-cognitive-services/): Azure Cognitive Services offers prebuilt functionality to enable Computer Vision functionality in your applications. Learn how to use the vision APIs in Azure Cognitive Services to detect faces, tag and classify images, and identify objects.

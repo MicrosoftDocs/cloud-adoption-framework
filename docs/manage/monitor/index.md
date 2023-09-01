@@ -1,69 +1,46 @@
 ---
 title: Cloud monitoring guide
 description: Learn about Azure Monitor, System Center Operations Manager, and the recommended strategy for monitoring each of the cloud deployment models.
-author: MGoedtel
-ms.author: brblanch
-ms.date: 03/19/2021
+author: Zimmergren
+ms.reviewer: tozimmergren
+ms.date: 06/20/2023
+ms.author: tozimmergren
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank
+ms.custom: think-tank, engagement-fy23, UpdateFrequency2
+products: azure-monitor
 ---
 
-# Cloud monitoring guide: Introduction
+# The cloud monitoring guide
 
-The cloud fundamentally changes how enterprises procure and use technology resources. In the past, enterprises assumed ownership of and responsibility for all levels of technology, from infrastructure to software. Now, the cloud offers the potential for enterprises to provision and consume resources as needed.
+IT departments must effectively monitor applications or services in and outside Azure while maintaining optimized DevOps processes. Digital transformation allows for infrastructure, workload, and application modernization. Adopting a hybrid cloud model might be part of the migration journey from on-premises to the cloud based on business strategy.
 
-Although the cloud offers nearly unlimited flexibility in terms of design choices, enterprises seek proven and consistent methodology for the adoption of cloud technologies. Each enterprise has different goals and timelines for cloud adoption, making a one-size-fits-all approach to adoption nearly impossible.
+Stakeholders often desire SaaS-based monitoring and management tools for cloud solutions. Understanding available services is crucial to achieving end-to-end visibility, cost reduction, and less focus on traditional IT operations tools.
 
-![Diagram of cloud adoption strategies](./media/monitoring-management-guidance-cloud-and-on-premises/introduction-cloud-adoption.png)
+This article is part of a series. The following articles are meant to be read together, in this order:
 
-This digital transformation also enables an opportunity to modernize your infrastructure, workloads, and applications. Depending on business strategy and objectives, adopting a hybrid cloud model is likely part of the migration journey from on-premises to operating fully in the cloud. During this journey, IT teams are challenged to adopt and realize rapid value from the cloud. IT must also understand how to effectively monitor the application or service that's migrating to Azure, and continue to deliver effective IT operations and DevOps.
+- **[Monitoring platforms overview](./platform-overview.md)**: Make informed decisions for cloud monitoring in Azure and hybrid environments. Learn about infrastructure requirements, data collection options, health monitoring, alerting, analyzing monitoring data, and how to extend the base platform.
 
-Stakeholders want to use cloud-based, software as a service (SaaS) monitoring and management tools. They need to understand what services and solutions deliver to achieve end-to-end visibility, reduce costs, and focus less on infrastructure and maintenance of traditional software-based IT operations tools.
+- **[Cloud monitoring strategy](../../strategy/monitoring-strategy.md)**: Understand high-level modeling, how monitoring informs your strategy, and considerations for scale, privacy, and security. Also, explore how to formulate monitoring requirements and establish minimum governance and readiness.
 
-However, IT often prefers to use the tools they've already made a significant investment in. This approach supports their service operations processes to monitor both cloud models, with the eventual goal of transitioning to a SaaS-based offering. IT prefers this approach not only because it takes time, planning, resources, and funding to switch. It's also because of confusion about which products or Azure services are appropriate or applicable to achieve the transition.
+- **[Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)**: Discover recommended monitoring strategies for Azure, hybrid environments, or private clouds like Azure Stack.
 
-The goal of this guide is to provide a detailed reference to help enterprise IT managers, business decision makers, application architects, and application developers understand:
+- **[Observability](./observability.md)**: Learn about observability and why it's crucial. Consider the monitoring plan, the business, service, and technology perspectives, and the key considerations.
 
-- Azure monitoring platforms, with an overview and comparison of their capabilities.
-- The best-fit solution for monitoring hybrid, private, and Azure native workloads.
-- The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these common workloads to Azure.
+- **[Service Level Objectives](./service-level-objectives.md)**: Discover what purpose SLOs serve and what approach you can take to establish them. Learn more about the types of SLOs, how to define them, and their considerations.
 
-This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
+- **[Collect the right data](./data-collection.md)**: Dive into how to collect the right data and considerations for developing monitoring configurations.
 
-If you're unfamiliar with Azure Monitor and System Center Operations Manager, and you want to get a better understanding of what makes them unique and how they compare to each other, review the [overview of our monitoring platforms](./platform-overview.md).
+- **[Response](./response.md)**: Explore the response discipline, which is a result of defining one or more actions based on data-driven decisions from monitoring.
+
+- **[Relevant skills](./suggested-skills.md)**: Understand the necessary skills for cloud monitoring.
+
+The articles in this guide _aren't_ how-to articles for individual Azure services and solutions. Instead, it references those sources when applicable.
 
 ## Audience
 
-This guide is useful primarily for enterprise administrators, IT operations, IT security and compliance, application architects, workload development owners, and workload operations owners.
-
-## How this guide is structured
-
-This article is part of a series. The following articles are meant to be read together, in order:
-
-- Introduction (this article)
-- [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)
-- [Monitoring platform strategy for cloud deployment models](./cloud-models-monitor-overview.md)
-- [Observability](./observability.md)
-- [Collect the right data](./data-collection.md)
-- [Alerting](./alerting.md)
-
-## Products and services
-
-A few software and services are available to help you monitor and manage a variety of resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
-
-- [System Center Operations Manager](/system-center/scom/welcome)
-- [Azure Monitor](/azure/azure-monitor/overview) (includes Log Analytics and Application Insights)
-- [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview)
-- [Azure Arc](/azure/azure-arc/)
-- [Azure Automation](/azure/automation/automation-intro)
-- [Azure Logic Apps](/azure/logic-apps/logic-apps-overview)
-- [Azure Event Hubs](/azure/event-hubs/event-hubs-about)
-
-This first version of the guide covers our current monitoring platforms: Azure Monitor and System Center Operations Manager. It also outlines our recommended strategy for monitoring each of the cloud deployment models. Also included is the first set of monitoring recommendations, starting with data collection, observability, and alerting.
+This guide provides a reference for enterprise decision-makers, IT managers and administrators, IT operations, IT security and compliance, application architects, workload development owners, and developers.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Monitoring strategy for cloud deployment models](./cloud-models-monitor-overview.md)
+> [Monitoring strategy for cloud deployment models](./platform-overview.md)

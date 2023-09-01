@@ -1,13 +1,11 @@
 ---
-title: "Get started: Deliver operational excellence"
+title: 'Get started: Deliver operational excellence'
 description: Learn the basics of operational excellence during digital transformation.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Deliver operational excellence during digital transformation
@@ -26,8 +24,6 @@ The steps in this article can help the strategy team lead the organizational cha
 
 Operational excellence across the enterprise and portfolio starts with peer processes of strategy and planning to align and report on organizational change management expectations. The following steps help technical teams deliver the disciplines required to achieve operational excellence.
 
-![Get started with operational excellence](../_images/get-started/operational-excellence-map.png)
-
 ## Step 1: Define a strategy to guide digital transformation and operational excellence expectations
 
 A clear business strategy is the foundation for any digital transformation and operational excellence effort. IT can reduce costs and streamline IT processes. Without a clear strategy, it's difficult to understand how those changes might affect the business outcomes identified in the broader transformation effort.
@@ -40,7 +36,7 @@ A clear business strategy is the foundation for any digital transformation and o
 **Guidance to support deliverable completion:**
 
 - [Understand motivations](../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive. These areas can increase the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps you prioritize your cost management.
-- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management governance discipline.
+- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in your Cost Management discipline.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. It can be a good source for initial budgeting efforts.
 - [Learning metrics](../strategy/learning-metrics.md): To maintain alignment between the overarching business strategy and the more tactical change-management plans, establish learning metrics. These metrics should be designed to show iterative and incremental progress toward the plan.
 

@@ -1,12 +1,10 @@
 ---
 title: How to measure customer impact and business metrics
 description: Learn about business metrics and how to measure customer impact and strategic metric goals. Establish learning metrics to measure customer behavior and adoption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/23/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: customer impact, how to measure impact, what are metrics in business, business metrics, learning metrics
 ---
@@ -74,4 +72,4 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
 
-Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [`The Lean Startup`](http://theleanstartup.com/book), written by Eric Ries.

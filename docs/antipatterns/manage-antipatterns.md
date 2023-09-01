@@ -2,12 +2,11 @@
 title: Cloud operation and management antipatterns
 description: Introducing or modernizing IT tools doesn't necessarily guarantee faster deliveries or better business outcomes.
 author: lpassig
-ms.author: brblanch
+ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank
+ms.subservice: caf-methodology-manage
+ms.custom: think-tank,UpdateFrequency5
 ---
 
 # Cloud operation and management antipatterns

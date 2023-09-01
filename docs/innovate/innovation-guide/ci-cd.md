@@ -1,13 +1,10 @@
 ---
 title: Empower digital transformation
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation. Get digital transformation services on Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
 keywords: Digital transformation, digital transformation services, cloud adoption
 ---
@@ -22,10 +19,10 @@ You know that innovation and digital transformation is critical to business succ
 
 > [!div class="checklist"]
 >
-> - In every industry, every organization is trying to do one thing: drive constant value generation.
+> - In every industry, each organization is trying to do one thing: drive constant value generation.
 > - The focus on innovation is essentially a process to help your organization find new ways to generate value.
 > - Perhaps the biggest mistake organizations make is trying to create new value by introducing new technologies.
-> - Sometimes the attitude is "if we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
+> - Sometimes the attitude is, "If we just use more technology, we'll see things improve." But innovation is first and foremost a people story.
 > - Innovation is about the combination of people and technology.
 
 Organizations that successfully innovate toward digital transformation see vision, strategy, culture, unique potential, and capabilities as the foundational elements. They then turn to technology with a specific purpose in mind. Every company is becoming a software company. The hiring of software engineers is growing at a faster rate outside the tech industry than inside, according to LinkedIn data.
@@ -73,7 +70,6 @@ To create a DevOps project:
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 ::: zone-end
 
@@ -128,8 +124,6 @@ LiveOps also helps to humanize data. A LiveOps approach makes data more actionab
 ### LiveOps transition
 
 Game development is one example of an industry that's embracing LiveOps today. Modern games are the iconic LiveOps applications. Games have been going through a quiet revolution, transforming from packaged goods with a lifetime measured in hours to active communities with a lifetime measured in years. With more than 2 billion gamers out there, and tens of thousands of new games shipping every year fighting for attention, game developers are turning toward LiveOps to better engage and retain their player base over time. Innovation happens through continuous player engagement: content updates, special events, promotions, and offers.
-
-<!-- cSpell:ignore playfab -->
 
 ### Azure PlayFab
 

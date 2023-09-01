@@ -1,18 +1,16 @@
 ---
 title: Security Baseline discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Security Baseline discipline in each phase of cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 09/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 01/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Security Baseline discipline improvement
 
-The Security Baseline discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, the Security Baseline discipline includes classification of the digital estate and data. It also includes documentation of risks, business tolerance, and mitigation strategies associated with the security of the data, assets, and network. From a technical perspective, this also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../decision-guides/software-defined-network/index.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and the [processes](./compliance-processes.md) used to develop Security Baseline policies for the cloud.
+The Security Baseline discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, the Security Baseline discipline includes classification of the digital estate and data. It also includes documentation of risks, business tolerance, and mitigation strategies associated with the security of the data, assets, and network. From a technical perspective, this also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../ready/landing-zone/design-area/network-topology-and-connectivity.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and the [processes](./compliance-processes.md) used to develop Security Baseline policies for the cloud.
 
 This article outlines some potential tasks your company can engage in to better develop and mature the Security Baseline discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
@@ -61,10 +59,10 @@ Several technical and nontechnical prerequisites are required to successful migr
 
 - Determine your organization's [encryption](../../decision-guides/encryption/index.md) strategy for cloud-hosted data.
 - Evaluate your cloud deployment's [identity](../../decision-guides/identity/index.md) strategy. Determine how your cloud-based identity solution will coexist or integrate with on-premises identity providers.
-- Determine network boundary policies for your [Software Defined Networking (SDN)](../../decision-guides/software-defined-network/index.md) design to ensure secure virtualized networking capabilities.
+- Determine network boundary policies for your [Software Defined Networking (SDN)](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) design to ensure secure virtualized networking capabilities.
 - Evaluate your organization's [least-privilege access](/azure/active-directory/roles/delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
-- Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
+- Automate [security policies](../policy-compliance/processes.md#automation-of-monitoring-and-compliance) where possible.
 - Review your Security Baseline policy and determine whether you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
 
 ## Adopt and migrate
@@ -110,6 +108,6 @@ Once the transformation is complete, governance and operations must live on for 
 Now that you understand the concept of cloud security governance, move on to learn more about [what security and best practices guidance Microsoft provides](./azure-security-guidance.md) for Azure.
 
 > [!div class="nextstepaction"]
-> [Learn about security guidance for Azure](./azure-security-guidance.md)
+> Learn about [security guidance for Azure](./azure-security-guidance.md)
 > [Introduction to Azure security](/azure/security/fundamentals/overview)
-> [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)
+> Learn about [logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)

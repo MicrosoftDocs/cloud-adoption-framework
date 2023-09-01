@@ -1,12 +1,10 @@
 ---
 title: A strategic option for running Azure in your datacenter - Azure Stack
 description: Deploy Azure in your datacenter by using Azure Stack Hub.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: strategy
 ms.custom: internal
 ---
 
@@ -20,7 +18,7 @@ Azure Stack Hub acts as another instance of a sovereign cloud, whether it's oper
 
 Each organization has a unique journey to the cloud, depending on its history, business specifics, culture and, maybe most importantly, its starting point. Its journey provides many options, features, and functionalities. It also presents opportunities to improve its existing governance and operations, implement new ones, and even redesign its applications to take advantage of the cloud architectures.
 
-Your organization's journey might identify clear benefits to using the cloud as part of your IT and business strategy. However, your journey could identify equally strong motivations to keep the cloud in your existing datacenter, at least for now. If you're facing these two competing drivers, you don't have to choose. At its core, Azure Stack Hub is [infrastructure as a service (IaaS)](https://azure.microsoft.com/blog/azure-stack-iaas-part-one). It also provides platform as a service (PaaS) services that allow you to run a subset of Azure services in your own datacenter.
+Your organization's journey might identify clear benefits to using the cloud as part of your IT and business strategy. However, your journey could identify equally strong motivations to keep the cloud in your existing datacenter, at least for now. If you're facing these two competing drivers, you don't have to choose. At its core, Azure Stack Hub is [infrastructure as a service (IaaS)](https://azure.microsoft.com/blog/azure-stack-iaas-part-one/). It also provides platform as a service (PaaS) services that allow you to run a subset of Azure services in your own datacenter.
 
 ## Azure Stack Hub in your strategy
 

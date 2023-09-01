@@ -1,13 +1,11 @@
 ---
-title: "Get started: Align your organization"
+title: 'Get started: Align your organization'
 description: Recommended steps for aligning your organization so that you're ready for successful cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Align your organization
@@ -70,6 +68,8 @@ Watch this video to get an overview of common team structures at various stages 
 
 <!-- markdownlint-disable MD034 -->
 
+<br/>
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
 
 <!-- markdownlint-enable MD034 -->
@@ -81,5 +81,5 @@ At each level of maturity, accountability for various cloud functions shifts to 
 ## Additional information
 
 - [Adapt existing roles, skills, and processes for the cloud](../plan/adapt-roles-skills-processes.md)
-- [Organizational antipatterns: silos and fiefdoms](../organize/fiefdoms-silos.md)
+- [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md)
 - [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

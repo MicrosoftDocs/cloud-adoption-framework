@@ -1,12 +1,10 @@
 ---
 title: Migration backlog review
 description: Use the Cloud Adoption Framework for Azure to understand the importance of creating and reviewing a migration backlog.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 

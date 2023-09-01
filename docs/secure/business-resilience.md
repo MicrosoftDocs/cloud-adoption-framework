@@ -1,12 +1,10 @@
 ---
 title: Business resilience
 description: Learn what your organization should do before, during, and after an attack to keep services and products online and available.
-author: NaomiOooo
-ms.author: naomio
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -28,6 +26,10 @@ Resilience requires taking a pragmatic view that assumes a breach. It needs cont
 
 - **After an incident:** If business operations are damaged during an attack, repairs must start immediately to restore full business operations. These repairs apply even if that means restoring operations without data that was lost in an attack, for example ransomware or a destructive attack like NotPetya.
 - **Feedback loop:** Attackers repeat themselves, or repeat what other attackers have found to work. Attackers learn from attacking your organization, so you must continuously learn from their attacks. Focus on taking the proven and available techniques that were attempted before. Then ensure you can block, detect, rapidly respond, and recover from them. Your efforts raise the cost of attack on your organization and deter or slow down future attacks.
+
+Watch the following video to learn how to build and maintain your business's resilience to security attacks. 
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu7w]
 
 ## Resilience goals
 

@@ -2,15 +2,11 @@
 title: Migrate MariaDB databases to Azure
 description: Learn how Contoso migrated its on-premises MariaDB databases to Azure.
 author: deltadan
-ms.author: abuck
+ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
-
-<!-- cSpell:ignore mysqldump -->
 
 # Migrate MariaDB databases to Azure
 
@@ -184,7 +180,7 @@ Contoso needs to:
 - Configure any outbound IP requirements to allow connections to the MariaDB [gateway IP addresses](/azure/mariadb/concepts-connectivity-architecture).
 - Update all applications to [require SSL](/azure/mariadb/concepts-ssl-connection-security) connections to the databases.
 - Set up [Private Link](/azure/mariadb/concepts-data-access-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Microsoft Defender for Identity](/azure/mariadb/concepts-data-access-and-security-threat-protection).
+- Enable [Microsoft Defender for Identity](/azure/security-center/defender-for-databases-usage).
 - Configure Log Analytics to monitor and send alerts on security and logs entries of interest.
 
 ### Backups

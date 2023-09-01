@@ -2,12 +2,10 @@
 title: Examples of performance outcomes
 description: Use the Cloud Adoption Framework for Azure to understand performance outcomes in the context of a cloud transformation.
 author: mpvenables
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/02/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: strategy
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Examples of performance outcomes
@@ -15,8 +13,6 @@ ms.custom: internal
 As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: performance.
 
 In today's technological society, customers assume that applications will perform well and always be available. When this expectation isn't met, it causes reputation damage that can be costly and long-lasting.
-
-[GE Aviation's Digital Group](https://customers.microsoft.com/story/846315-ge-aviation-manufacturing-azure) deployed Microsoft Azure Digital Twins and other Azure resources to ingest and model data from multiple sources, building a complete digital aircraft view with built-in digital traceability of individual components that helps customers drive greater fuel efficiency, reduce maintenance costs, and boost their fleets' flight-readiness.
 
 ## Performance
 

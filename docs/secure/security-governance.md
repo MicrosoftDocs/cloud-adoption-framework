@@ -1,12 +1,10 @@
 ---
 title: Security governance, risk, and compliance
 description: Learn about security governance, risk, and compliance. Includes topics like architecture and standards, and security posture management.
-author: NaomiOooo
-ms.author: brblanch
-ms.date: 04/04/2021
+author: martinekuan
+ms.author: martinek
+ms.date: 02/24/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -17,6 +15,10 @@ Security governance bridges your business priorities with technical implementati
 :::image type="content" source="./media/governance-structure.png" alt-text="Security Governance" lightbox="./media/governance-structure-popout.png":::
 
 **Business goals and risk** provide the best direction for security. This direction ensures that security focuses their efforts on important matters for the organization. It also informs risk owners using familiar language and processes in the risk management framework.
+
+To learn more about security governance, watch the following video.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVBWy]
 
 ## Compliance and reporting
 

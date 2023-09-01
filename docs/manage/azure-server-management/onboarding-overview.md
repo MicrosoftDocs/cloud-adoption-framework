@@ -1,12 +1,10 @@
 ---
 title: Onboard Azure server management services
 description: Onboard Azure server management services with information for virtual machines in Azure and on-premises servers.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -25,7 +23,7 @@ This section of the guidance covers the following onboarding processes for both 
 - **Configure management services for a subscription by using the portal.** This process helps you configure the Azure environment so that any new VMs that are provisioned will automatically use management services. Use this approach if you prefer the Azure portal experience to scripts and command lines.
 - **Configure management services for a subscription by using Azure Automation.** This process is fully automated. Just create a subscription, and the scripts will configure the environment to use management services for any newly provisioned VM. Use this approach if you're familiar with PowerShell scripts and Azure Resource Manager templates, or if you want to learn to use them.
 
-The procedures for each of these approaches are different.
+The procedures for each approach differ.
 
 > [!NOTE]
 > When you use the Azure portal, the sequence of onboarding steps differs from the automated onboarding steps. The portal offers a simpler onboarding experience.
@@ -38,6 +36,9 @@ As shown in the preceding diagram, the Log Analytics agent has two configuration
 
 - **Auto-enroll:** When the Log Analytics agent is installed on a server and configured to connect to a workspace, the solutions that are enabled on that workspace are applied to the server automatically.
 - **Opt-in:** Even if the agent is installed and connected to the workspace, the solution isn't applied unless it's added to the server's scope configuration in the workspace.
+
+> [!TIP]
+> Consider using [Azure Automanage machine best practices](/azure/automanage/overview-about). This service makes it simple to discover, onboard, and configure certain services in Azure that would benefit your virtual machines and assist with [onboarding at scale](./onboard-at-scale.md).
 
 ## Next steps
 

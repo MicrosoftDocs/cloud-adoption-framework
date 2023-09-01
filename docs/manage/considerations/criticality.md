@@ -1,12 +1,10 @@
 ---
 title: Business criticality in cloud management
 description: Use the Cloud Adoption Framework for Azure to understand workload criticality and prevent adverse impact on revenue and profitability.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 04/26/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -38,6 +36,7 @@ It's common for businesses to include additional criticality classifications tha
 - **Compliance-critical:** In heavily regulated industries, some workloads might be critical as part of an effort to maintain compliance requirements.
 - **Security-critical:** Some workloads might not be mission critical, but outages could result in loss of data or unintended access to protected information.
 - **Safety-critical:** When lives or the physical safety of employees and customers is at risk during an outage, it can be wise to classify workloads as safety-critical.
+- **Sustainability-critical:** If your business focuses on the sustainability of some of its systems, consider this as a classification. 
 
 ## Importance of accurate criticality
 
@@ -63,7 +62,7 @@ Apply the [operational compliance](./operational-compliance.md) content to ensur
 
 Next, review and use the [overview of the Azure Security Benchmark](/security/benchmark/azure/overview) content to ensure the various control domains are identified and mapped to your operational-compliance.
 
-Lastly, ensure the incorporation of the governance and security content in [Security control v2: governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
+Lastly, ensure the incorporation of the governance and security content in [Security control v2: Governance and strategy](/security/benchmark/azure/security-controls-v2-governance-strategy) is documented within your overall business operational methodologies.
 
 ## Use the template
 

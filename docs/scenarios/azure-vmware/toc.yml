@@ -1,0 +1,70 @@
+items:
+  - name: Azure VMware Solution - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+    pdf_name: Azure VMware Solution - Microsoft Cloud Adoption Framework for Azure
+  - name: Strategic impact
+    href: strategy.md
+  - name: Technical planning
+    href: plan.md
+  - name: Prepare your environments
+    items:
+    - name: Azure landing zones
+      href: ready.md
+    - name: Design areas
+      items:
+      - name: Identity and access management
+        href: eslz-identity-and-access-management.md
+      - name: Network topology and connectivity
+        items: 
+          - name: Getting Started
+            href: network-get-started.md
+          - name: General Considerations and Recommendations
+            href: eslz-network-topology-connectivity.md
+          - name: Architectures
+            items:
+              - name: Hub and Spoke 
+                href: network-hub-spoke.md
+              - name: Dual region network topology
+                href: eslz-dual-region-network-topology.md
+              - name: Example Architectures for Azure VMware Solution
+                href: example-architectures.md
+      - name: Governance discipline
+        href: eslz-security-governance-and-compliance.md
+      - name: Management and monitoring
+        href: eslz-management-and-monitoring.md
+      - name: Business continuity and disaster recovery
+        href: eslz-business-continuity-and-disaster-recovery.md
+      - name: Platform automation and DevOps
+        href: eslz-platform-automation-and-devops.md
+    - name: Implementation options
+      items:
+      - name: Azure VMware Solution landing zone accelerator
+        href: enterprise-scale-landing-zone.md
+  - name: Migrate Azure VMware Solution to Azure
+    href: migrate.md
+  - name: Govern Azure VMware Solution in Azure
+    href: govern.md
+  - name: Manage Azure VMware Solution platform and workloads
+    href: manage.md
+
+  - name: Well-architected
+    items:
+    - name: Azure VMware Solution Well-architected workload
+      href: /azure/well-architected/azure-vmware?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: Assessment
+      href: /azure/well-architected/azure-vmware/assessment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+   
+  - name: Best practices
+    items:
+    - name: Assessment overview (migrate to Azure VMware Solution)
+      href: /azure/migrate/concepts-azure-vmware-solution-assessment-calculation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+
+  - name: Microsoft products
+    items:
+    - name: Azure VMware Solution documentation
+      href: /azure/azure-vmware/
+
+  - name: Learn modules
+    items:
+    - name: Run VMware workloads on Azure VMware Solution
+      href: /training/paths/run-vmware-workloads-azure-vmware-solution/

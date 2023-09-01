@@ -1,129 +1,160 @@
 ---
-title: Networking for Windows Virtual Desktop at enterprise scale
-description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Windows Virtual Desktop workloads.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/07/2021
+title: Networking for Azure Virtual Desktop
+description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that your landing zone needs to support Azure Virtual Desktop workloads.
+author: danycontre
+ms.author: martinek
+ms.date: 02/22/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.custom: think-tank, e2e-avd
 ---
 
-# Network topology and connectivity for Windows Virtual Desktop at enterprise scale
+# Network topology and connectivity for Azure Virtual Desktop
 
-## Review network options
+The design and implementation of Azure Virtual Desktop Azure networking capabilities is critical for your Azure Virtual Desktop landing zone. This article builds on several Cloud Adoption Framework [enterprise-scale landing zone](../../ready/landing-zone/design-area/network-topology-and-connectivity.md) architectural principles and recommendation to manage network topology and connectivity at scale.
 
-Designing and implementing Windows Virtual Desktop Azure networking capabilities is critical for your Windows Virtual Desktop landing zone. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
+The design foundations include:
 
-## Identify workload networking requirements
+- **Hybrid integration** for connectivity between on-premises, multicloud, edge, and global users. For more information, see [Enterprise-scale support for hybrid and multi-cloud](../hybrid/enterprise-scale-landing-zone.md).
+- **Performance and reliability at scale** for consistent, low-latency experience, and scalability for workloads.
+- **Zero-trust based network security** to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
+- **Extensibility** for easily expanding network footprint without design rework.
 
-Identify the networking capabilities that your landing zone needs to support. Assess each application and service in your workloads to determine their connectivity network control requirements. After you identify and document the requirements, create policies for your landing zone. Policies control networking resources and configuration based on your workload needs.
+## Networking components and concepts
 
-For each application or service you'll deploy to your landing zone, use the following decision tree to help you determine the networking tools or services to use:
+- [**Azure Virtual Network**](/azure/virtual-network/virtual-networks-overview) is the fundamental building block for private networks in Azure. With Azure Virtual Network, many types of Azure resources, such as Azure Virtual Machines (VMs), can securely communicate with each other, the internet, and on-premises datacenters. A virtual network is similar to a traditional network that you operate in your own datacenter, but has the Azure infrastructure benefits of scale, availability, and isolation.
 
-![Azure networking services decision tree](../../_images/ready/network-decision-tree.png)
+- [**Hub-spoke network topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli), a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and helps to isolate workloads.
 
-The following questions help you make decisions based on the Azure networking services decision tree:
+- [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
 
-- What is the size of your virtual network?
+- [**Network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
 
-  In Azure, Windows Virtual Desktop virtual machines are part of virtual networks. Your virtual network needs to be the right size. Use appropriate address ranges as defined in your existing networking architecture.
+- In [**Forced tunneling**](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm#:~:text=Forced%20tunneling%20in%20Azure%20is%20configured%20via%20virtual,virtual%20networks%2C%20see%20User-defined%20routes%20and%20IP%20forwarding.) scenario all internet-bound traffic originating on Azure VMs is routed or "forced" to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
 
-- Will your workloads require connectivity between virtual networks and your on-premises datacenter?
+- [**Network security groups (NSGs)**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 
-  Azure provides two solutions for establishing hybrid networking capabilities:
+- [**Application security groups**](/azure/virtual-network/application-security-groups) enable you to configure network security as a natural extension of an application's structure. You can use them to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
 
-  - Azure VPN Gateway connects your on-premises networks to Azure through Site-to-Site VPNs similar to how you might set up and connect to a remote branch office. VPN Gateway has a maximum bandwidth of 10 Gbps. For more information, see [What is Azure VPN Gateway?](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
-  - Azure ExpressRoute offers higher reliability and lower latency by using a private connection between Azure and your on-premises infrastructure. Bandwidth options for ExpressRoute range from 50 Mbps to 100 Gbps. For more information, see [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
+- [**User Defined Routes (UDR)**](/azure/virtual-network/virtual-networks-udr-overview) can be used to override Azure's default system routes, or to add additional routes to a subnet's route table.
 
-- Will you need to inspect and audit outgoing traffic by using on-premises network devices?
+## Networking scenarios
 
-  Cloud-native workloads can use Azure Firewall or third-party network virtual appliances for internet traffic. For more information, see [What is Azure Firewall?](/azure/firewall/overview)
+To establish the Azure Virtual Desktop landing zone, the design and implementation of networking capabilities is critical. Azure networking products and services support a wide variety of capabilities. Which architecture to choose and how to structure services depends on your organization's workloads, governance, and requirements.
 
-  Your security policies might require internet-bound outgoing traffic to pass through centrally managed devices in the on-premises environment. Forced tunneling supports these scenarios, but not all managed services support forced tunneling. For more information, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview). The following services and features support this configuration inside a virtual network:
+The following key requirements and considerations affect your Azure Virtual Desktop deployment decisions:
 
-  - [App Service Environment in Azure App Service](/azure/app-service/environment/intro)
-  - [Azure API Management](/azure/api-management/api-management-key-concepts)
-  - [Azure Kubernetes Service](/azure/aks/intro-kubernetes)
-  - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
-  - [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks)
-  - [Azure HDInsight](/azure/hdinsight/)
+- Internet ingress and egress requirements.
+- NVA use in the current architecture.
+- Azure Virtual Desktop connectivity to a standard hub virtual network or Virtual WAN hub.
+- Session host connection model (native and [RDP Shortpath](/azure/virtual-desktop/rdp-shortpath)).
+- Traffic inspection requirements for:
+  - Internet egress from Azure Virtual Desktop.
+  - Internet ingress to Azure Virtual Desktop.
+  - Azure Virtual Desktop to on-premises datacenters.
+  - Azure Virtual Desktop to other Azure Virtual Network.
+  - Traffic within the Azure Virtual Desktop virtual network.
 
-- Do you need to connect multiple virtual networks?
+The most common networking scenario for Azure Virtual Desktop is hub and spoke with hybrid connectivity.
 
-  You can use virtual network peering to connect instances of Azure Virtual Network. Peering can support connections across subscriptions and regions. For more information, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview).
+## Scenario: Hub and spoke with hybrid connectivity
 
-  Virtual network peering provides connectivity between only two peered networks. You might provide services across multiple subscriptions or need to manage a large number of network peerings. Consider adopting a hub and spoke networking architecture or using Azure Virtual WAN. For more information, see:
+### Customer profile
 
-  - [Software Defined Networking: hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)
-  - [What is Azure Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
+This scenario is ideal if:
 
-- Will you need to support custom DNS management?
+- You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
+- You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
+- You don't need traffic inspection of internet outbound traffic from Azure Virtual Desktop networks.
+- You don't need to control the public IPs use to SNAT Azure Virtual Desktop internet outbound connections.
+- You don't enforce Azure Virtual Desktops networks internal traffic.
+- You have pre-existing hybrid connectivity to on-premises (Express Route or S2S VPN).
+- You have pre-existing AD DS and DNS custom servers.
+- You consume Azure Virtual Desktop with standard connection model (No RDP Shortpath).
 
-  Azure DNS is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. For more information, see [What is Azure DNS?](/azure/dns/dns-overview)
+### Architectural components
 
-  Your workloads might require name resolution support beyond Azure DNS. If your workloads also require Active Directory services, consider using Azure Active Directory Domain Services to augment Azure DNS capabilities. To add capabilities, deploy custom IaaS virtual machines. For more information, see:
+You can implement this scenario with:
 
-- [What is Azure Active Directory Domain Services?](/azure/active-directory-domain-services/overview)
-  - [Name resolution for resources in Azure Virtual Network](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
+- AD DS servers and custom DNS servers.
+- Network security groups.
+- Network Watcher.
+- Outbound internet via default Azure vNet path.
+- Express route or VPN virtual network gateway for hybrid connectivity to on-premises.
+- Azure private DNS zone.
+- Azure private endpoints.
+- Azure Files service on storage accounts.
+- Azure key vault.
 
-## Understand common networking scenarios
+[![Diagram of the hub and spoke with hybrid connectivity scenario](./media/network-topology-scenario-1.png)](./media/network-topology-scenario-1.png#lightbox)
 
-Azure networking includes products and services that provide different networking capabilities. As part of your networking design process, compare your workload requirements to networking scenarios. Identify the Azure tools or services that provide these networking capabilities:
+### Considerations
 
-| Scenario | Networking product or service |
-| --- | --- |
-| I need networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](/azure/virtual-network/) |
-| I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](/azure/load-balancer/) |
-| I want to optimize delivery from application server farms while increasing application security with a web application firewall. | [Azure Application Gateway](/azure/application-gateway/) and [Azure Front Door](/azure/frontdoor/) |
-| I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN Gateway](/azure/vpn-gateway/) |
-| I need ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](/azure/dns/) |
-| I need to accelerate the delivery of high-bandwidth content to customers worldwide. This content includes applications, stored content, and streaming video. | [Azure Content Delivery Network (CDN)](/azure/cdn/) |
-| I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](/azure/ddos-protection/ddos-protection-overview) |
-| I need to distribute traffic optimally to services globally across Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](/azure/traffic-manager/) and [Azure Front Door](/azure/frontdoor/) |
-| I need to add private network connectivity to access Microsoft cloud services from my corporate networks as if they were on-premises. | [Azure ExpressRoute](/azure/expressroute/) |
-| I want to monitor and diagnose conditions at a network level. | [Azure Network Watcher](/azure/network-watcher/) |
-| I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](/azure/firewall/overview) |
-| I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](/azure/virtual-wan/) |
-| I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](/azure/frontdoor/) |
+- This scenario doesn't account for client direct network connectivity to session public or private (no RDP Shortpath) hosts.
+- Azure Virtual Desktop control plane gateway (public endpoint) manages client connections. Therefore, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information, see [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list).
+- No public IPs or any other public inbound path to session hosts is needed, traffic from clients to session hosts flows through Azure Virtual Desktop control plane gateway.
+- No virtual network peering between Azure Virtual Desktop spokes, all the traffic goes through the connectivity hub.
+- Outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT using dynamic Azure public IPs (no customer control on outbound public IPs used).
+- Connections from session hosts to Azure Files (storage accounts) are established using private endpoints.
+- Azure private DNS zones are used to resolve private endpoint namespaces:
+  - Storage account file service (privatelink.file.core.windows.net).
+  - Key vaults (privatelink.vaultcore.azure.net).
+- Even though for this scenario network filtering is not enforced, NSGs are placed on all subnets to enable monitoring and insights by using network watcher NSG flow logs and traffic analytics.
 
-## Choose a networking architecture
+## General design considerations and recommendations
 
-After you identify the Azure networking services to support your workloads, design the architecture to combine these services. To learn about networking architecture patterns for your landing zone, see the [Software Defined Networking decision guide](../../decision-guides/software-defined-network/index.md).
+Here are some general design considerations and recommendations for Azure Virtual Desktop network topology and connectivity:
 
-The following table summarizes the primary scenarios that these patterns support:
+### Hub and spoke vs. Virtual Wide Area Network (WAN) network topology
 
-| Scenario  | Suggested network architecture |
-| --- | --- |
-| All of the Azure-hosted workloads in your landing zone are platform as a service (PaaS) resources. These resources don't require a virtual network and aren't part of a wider cloud adoption effort that includes infrastructure as a service (IaaS) resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
-| Your Azure-hosted workloads deploy IaaS-based resources like virtual machines or the workloads require a virtual network. These resources don't require connectivity to your on-premises environment.  | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
-| Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted. | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md) |
-| Your Azure-hosted workloads require limited access to on-premises resources. You plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment. | [Hybrid](../../decision-guides/software-defined-network/hybrid.md) |
-| You deploy and manage a large number of virtual machines and workloads, you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. For more information, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits). | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) |
-| You have many branch offices that need to connect to each other and to Azure. | [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) |
+Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er), but doesn't support hub-and-spoke topology.
 
-<!-- TODO: Refactor VDC content below. -->
-<!-- docutune:casing "Azure Virtual Datacenter" -->
+### Identity services
 
-In addition to using one of these architecture patterns, if you plan to host more than 1,000 assets, including applications, infrastructure, and data assets, in the cloud within 24 months, consider an enterprise-scale landing zone. The enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure.
+The identity services connectivity requirements of Azure Virtual Desktop session hosts depend on the identity model.
 
-For organizations that meet some of the following criteria, you may also want to start with an enterprise-scale landing zone:
+- Azure AD Domain Services (AD DS) joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
+- [Azure AD (Azure AD) joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to Azure AD public endpoints, therefore no private connectivity configurations required.
 
-- Your enterprise is subject to regulatory compliance requirements for centralized monitoring and audit capabilities.
-- You maintain common policy, governance compliance, and centralized IT control over core services.
-- Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This situation is common in large enterprises in finance, oil and gas, or manufacturing.
-- Your existing IT governance policies require tight parity with existing features, even during early stage adoption.
+### DNS
 
-For more information, see [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md).
+Azure Virtual Desktop session hosts have the same name resolution requirements as any other IaaS workload, therefore connectivity to custom DNS servers or access (via vNet network link) to Azure Private DNS zones is required. Additional Azure private DNS zones are required to host the private endpoint namespaces of certain (storage accounts, key) Platform As A Service (PaaS) services.
 
-## Follow Azure networking best practices
+- [Azure private endpoint DNS configuration](/azure/private-link/private-endpoint-dns)
 
-As part of your networking design process, see these articles:
+To facilitate end user Azure Virtual Desktop client configuration (subscription to RDS feed), it is recommended to set up email discovery in the public DNS domain and [set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
 
-- [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
-- [Azure best practices for network security](/azure/security/fundamentals/network-best-practices). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](../../migrate/azure-best-practices/migrate-best-practices-networking.md). Get more guidance about how to implement Azure networking to support workloads.
+### Bandwidth and latency
+
+Azure Virtual Desktops use Remote Desktop Protocol (RDP). To know more about RDP, see [Remote Desktop Protocol (RDP) bandwidth requirements](/azure/virtual-desktop/rdp-bandwidth).
+
+The connection latency varies depending on the location of the users and the virtual machines. Azure Virtual Desktop services continuously rolls out to new geographies to improve latency. To minimize the latency perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to get round trip time (RTT) sample from clients. You can use this information to place session hosts in the closest region with the lowest RTT to the end users ([interpreting results from estimator tool](/azure/virtual-desktop/connection-latency)).
+
+### Quality of Service (QoS) with RDP Shortpath
+
+RDP Shortpath for managed networks provides a direct UDP-based transport between Remote Desktop Client and Session host. RDP Shortpath for managed networks enables configuration of Quality of Service (QoS) policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of traffic that's less sensitive.
+
+For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
+
+### Internet
+
+Azure Virtual Desktop compute resources and clients require access to specific public endpoints, so they need internet-bound connections. Network scenarios like forced tunneling to enhance security and filtering are supported when Azure Virtual Desktop requirements are met.
+
+See [Required URL list and check tool](/azure/virtual-desktop/safe-url-list) to understand the requirements for AVD session hosts and client devices.
+
+### Ports and protocols requirements
+
+The Azure Virtual Desktop connection flow uses:
+
+- [Standard model](/azure/virtual-desktop/network-connectivity): 443/TCP
+- [RDP Shortpath model](/azure/virtual-desktop/shortpath): 443/TCP and 3390/UDP
+
+### Business continuity and disaster recovery (BCDR)
+
+A networking setup with the same capabilities as the one on the source environment or that at least has connectivity to identity and DNS services is required to deploy and recover these resources to a target environment.
 
 ## Next steps
 
-[Management and monitoring](eslz-management-and-monitoring.md)
+Learn about resource organization for an Azure Virtual Desktop enterprise-scale scenario.
+
+> [!div class="nextstepaction"]
+> [Resource organization](./eslz-resource-organization.md)

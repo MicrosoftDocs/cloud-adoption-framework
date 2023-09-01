@@ -1,25 +1,23 @@
 ---
 title: Choose the landing zone for your organization
 description: Learn how to choose the right landing zone for your organization. You can start small and expand or implement an enterprise-scale option.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 01/20/2021
-ms.topic: guide
-ms.service: cloud-adoption-framework
-ms.subservice: ready
+author: martinekuan
+ms.author: martinek
+ms.date: 02/17/2022
+ms.topic: conceptual
 ms.custom: internal
 ---
 
 # Choose the landing zone for your organization
 
-There are different approaches to implementing landing zones in the Cloud Adoption Framework. The right approach for your organization has the necessary services to support your business applications without extra overhead to manage. Starting with an implementation that doesn't meet your needs can waste your time and effort.
+There are different approaches to implementing landing zones in the Cloud Adoption Framework. Starting with an implementation that doesn't meet your needs can waste your time and effort. The right approach for your organization has the necessary services to support your business applications without extra overhead to manage.
 
 Microsoft offers two implementation options for landing zones:
 
 - Start small and expand
 - Enterprise-scale
 
-Watch the following 15-minute video to learn more about how to choose the Azure landing zone implementation options that best fit your needs.
+Watch the following 15-minute video to learn more about how to choose the Azure landing zone implementation option that best fits your needs.
 
 <!-- markdownlint-disable MD034 -->
 
@@ -77,39 +75,39 @@ The following table summarizes considerations for each landing zone implementati
         **Adoption plan considerations**
     :::column-end:::
     :::column:::
-        Provides long-term self-sufficiency
+        Long-term self-sufficiency
     :::column-end:::
     :::column:::
         Requires Cloud Adoption Framework Govern and Manage methodologies to achieve long-term self-sufficiency.
     :::column-end:::
     :::column:::
-        Enterprise-scale architecture landing zones approach and architecture prepare your organization for long-term self-sufficiency. Provides reserved instances to get started.
+        Enterprise-scale architecture landing zones approach and architecture prepare your organization for long-term self-sufficiency. Provides reserved instances to get you started.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
     :::column-end:::
     :::column:::
-        Enables adoption velocity across the organization
+        Adoption velocity across the organization
     :::column-end:::
     :::column:::
-        Quickly enable low-risk adoption. Build toward security governance and compliance over time.
+        Quickly implement low-risk adoption. Build toward security governance and compliance over time.
     :::column-end:::
     :::column:::
-        Start with security governance and compliance to enable compliant adoption sooner.
+        Start with security governance and compliance to implement compliant adoption sooner.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
     :::column-end:::
     :::column:::
-        Achieves operational excellence
+        Operational excellence
     :::column-end:::
     :::column:::
         Requires Cloud Adoption Framework Govern and Manage methodologies to achieve operational excellence.
     :::column-end:::
     :::column:::
-        Enables operational excellence with autonomy for platform and application teams built on policy-driven governance and management.
+        Implement operational excellence with autonomy for platform and application teams that is built on policy-driven governance and management.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -120,23 +118,23 @@ The following table summarizes considerations for each landing zone implementati
         Path to attain security governance and compliance
     :::column-end:::
     :::column:::
-        Iterative approach. Requires Govern and Manage methodologies to support sensitive data or mission critical workloads.
+        An iterative approach. Requires Govern and Manage methodologies to support sensitive data or mission critical workloads.
     :::column-end:::
     :::column:::
-        Enterprise-scale architecture includes designs for governance, security segmentation, and separation of duties. This approach empowers teams to act within appropriate landing zones.
+        Enterprise-scale architecture includes designs for governance, security segmentation, and separation of duties. Empowers teams to act within appropriate landing zones.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
     :::column-end:::
     :::column:::
-        Associated risks while building out security governance and compliance
+        Risks while building out security governance and compliance
     :::column-end:::
     :::column:::
-        There is a risk of extensive refactoring or even redeployment to attain required needs.
+        There's a risk of extensive refactoring or even redeployment to attain required needs.
     :::column-end:::
     :::column:::
-        There is a risk of enabling cloud-native operations products that may not align to your operating model.
+        There's a risk of enabling cloud-native operations products that might not align with your operating model.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -144,10 +142,10 @@ The following table summarizes considerations for each landing zone implementati
         **Deployment considerations**
     :::column-end:::
     :::column:::
-        Best practices from cloud provider?
+        Best practices from cloud provider
     :::column-end:::
     :::column:::
-        More best practices are required to be added using Cloud Adoption Framework methodologies to apply security governance and compliance.
+        Add more best practices by using Cloud Adoption Framework methodologies to apply security governance and compliance.
     :::column-end:::
     :::column:::
         Enterprise-scale includes Azure best practices and is the target technical state for your Azure environment.
@@ -157,10 +155,10 @@ The following table summarizes considerations for each landing zone implementati
     :::column:::
     :::column-end:::
     :::column:::
-        All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
+        Presence and proper consideration of all critical services, following recommended best practices for identity/access management, governance, security, network, and logging
     :::column-end:::
     :::column:::
-        Partial. Some resources are deployed. Additional offerings aligned to Cloud Adoption Framework methodologies required to apply best practices to support security governance and compliance.
+        Partial. Some resources are deployed. Other offerings aligned to Cloud Adoption Framework methodologies are required to apply best practices to support security governance and compliance.
     :::column-end:::
     :::column:::
         Enterprise-scale architecture is the target technical state recommendation for your Azure environment that aligns with the Azure platform roadmap.
@@ -173,10 +171,10 @@ The following table summarizes considerations for each landing zone implementati
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps
     :::column-end:::
     :::column:::
-        Azure Resource Manager, Azure Policy, and Azure Blueprints can be used to create your own continuous integration/continuous development pipeline.
+        Use Azure Resource Manager, Azure Policy, and Azure Blueprints to create your own continuous integration and continuous development (CI/CD) pipeline.
     :::column-end:::
     :::column:::
-        Azure Resource Manager, Azure Policy, and GitHub/Azure DevOps. CI/CD pipeline options are included in the reference implementation guidance.
+        You can use Azure Resource Manager, Azure Policy, and GitHub/Azure DevOps. CI/CD pipeline options are included in the reference implementation guidance.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -184,7 +182,7 @@ The following table summarizes considerations for each landing zone implementati
         **Timeline considerations**
     :::column-end:::
     :::column:::
-        Timeline to adopt or migrate a low-risk workload:
+        Timeline to adopt or migrate a low-risk workload
     :::column-end:::
     :::column:::
         3 to 10 days
@@ -197,43 +195,43 @@ The following table summarizes considerations for each landing zone implementati
     :::column:::
     :::column-end:::
     :::column:::
-        Timeline to achieve security governance and compliance requirements for all workloads:
+        Timeline to achieve security governance and compliance requirements for all workloads
     :::column-end:::
     :::column:::
         Four to six months
     :::column-end:::
     :::column:::
-       Six to eight weeks
+        Six to eight weeks
     :::column-end:::
 :::row-end:::
 
 ## Initial considerations
 
-Which operating model better describes your organization? Be aware of not just how your organization looks now but what you expect and want it to be in three months to a year or further.
+Which operating model better describes your organization? Be aware of both how your organization is now and what you expect and want it to be in three months to a year and beyond.
 
 - Centralized operations: In this small environment, centralized teams for IT operations, security, and other roles manage production and workloads.
 
-- Enterprise operations: In this typically larger or industry specialized environments, enterprise operations have a stable, steady state that's managed centrally.
+- Enterprise operations: In this typically larger or industry specialized environment, enterprise operations have a stable, steady state that's managed centrally.
 
-Centralized operations favor a start-small-and-expand approach. Enterprise operations might be better addressed with enterprise-scale.
+Centralized operations favor a start small and expand approach. Enterprise operations favor an enterprise-scale approach.
 
-Do you need a baseline architecture or environment? The start-small-and-expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
+Do you need a baseline architecture or environment? The start small and expand approach offers a simple starting point where you can build your own solution. The enterprise-scale approach provides an environment for the entire Azure tenant, which includes cloud-native operations.
 
-For more information about operations types, see [Compare common cloud operating models](../../operating-model/compare.md).
+For more information about operations types, learn how to [Compare common cloud operating models](../../operating-model/compare.md).
 
 ## Adoption plan considerations
 
-The following considerations are key to your adoption plan for either type:
+The following considerations are key to your adoption plan for either approach:
 
 - Long-term self-sufficiency
-- Adoption velocity across the organization
+- Adoption velocity across your organization
 - Operational excellence
 
-Enterprise-scale provides long-term self-sufficiency and operational excellence immediately. Enterprise-scale also helps to accelerate compliance adoption across your organization. The enterprise-scale approach builds out a foundation for you. Enterprise-scale includes the guardrails around security, identity, and network. The approach includes CI/CD pipeline options for DevOps and automation.
+Enterprise-scale immediately provides long-term self-sufficiency and operational excellence. It lays out a foundation with guardrails around security, identity, and network, and helps accelerate compliance adoption across your organization. The enterprise-scale approach also includes CI/CD pipeline options for DevOps and automation.
 
-If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](../enterprise-scale/design-guidelines.md), to iteratively improve your design.
+If you start small and expand, there are ways to achieve self-sufficiency, adoption velocity, and operational excellence. Use the Govern and Manage methodologies of the Cloud Adoption Framework to iteratively build those pieces into the landing zone solution. Use the eight areas of design, [Cloud Adoption Framework enterprise-scale design guidelines](./design-areas.md), to iteratively improve your design.
 
-To learn more about operational excellence, see [Deliver operational excellence during digital transformation](../../get-started/operational-excellence.md).
+To better understand operational excellence, learn how to [Deliver operational excellence during digital transformation](../../get-started/operational-excellence.md).
 
 ## Compliance considerations
 
@@ -242,61 +240,62 @@ Consider the following issues around compliance for your organization:
 - Path to reach security governance and compliance
 - Risks while building out security governance and compliance
 
-Your organization might need to have a particular workload or application that needs to be compliant in a short amount of time, and this requirement could affect your choice.
+Your organization might need a particular workload or application that needs to be compliant in a short amount of time. This requirement can affect your choice.
 
-Start small and expand is an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, see the [Govern methodology for the cloud](../../govern/methodology.md) and [IT management and operations in the cloud](../../manage/considerations/index.md).
+Start small and expand architecture takes an iterative approach to compliance. Use the Cloud Adoption Framework Govern and Manage methodologies to support sensitive data or critical workloads. For more information, review the [Govern methodology for the cloud](../../govern/methodology.md) and [IT management and operations in the cloud](../../manage/considerations/index.md).
 
-The enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](../enterprise-scale/security-governance-and-compliance.md#service-enablement-framework) to determine how to achieve appropriate levels of governance, security, and compliance.
+Enterprise-scale architecture includes designs for segmentation and separation to support compliance goals and a [service enablement framework](./design-area/governance.md). These designs determine how you can achieve appropriate levels of governance, security, and compliance.
 
-If possible, identify low-risk workloads to implement first. This technique helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you understand how the cloud works.
+If possible, identify low-risk workloads to implement first. This strategy helps you build infrastructure and skills over time. You can add the Govern and Manage methodologies as you gain understanding of how the cloud works.
 
 ## Deployment considerations
 
 Deploying your landing zone or landing zones raises several considerations for choosing an implementation:
 
-- Best practices from cloud provider.
+- Best practices from cloud provider
 
-- All critical services are present and properly configured according to recommended best practices for identity/access management, governance, security, network, and logging.
+- Presence and proper consideration of all critical services, following recommended best practices for identity/access management, governance, security, network, and logging
 
-- Automation capabilities like IaC and Azure DevOps.
+- Automation capabilities like IaC and Azure DevOps
 
-Both implementation offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security governance and compliance.
+Both implementations offer best practices. Start small and expand lets you add best practices using Cloud Adoption Framework methodologies to apply security governance and compliance. It comes with some resources deployed. Enterprise-scale comes with all critical services configured.
 
-Enterprise-scale comes with all critical services configured. Start small and expand comes with some resources deployed.
+For more information about best practices, review the [Best practices for Azure readiness](./design-areas.md).
 
-For more information, see [Best practices for Azure readiness](../azure-best-practices/index.md).
+Both methodologies offer automation capabilities:
 
-Both methodologies offer automation capabilities.
+- **Start small and expand:** ARM templates, Azure Policy, and Azure Blueprints are included. You can create your own CI/CD development pipeline.
+- **Enterprise-scale:** ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included.
 
-- **Start small and expand:** ARM templates, Azure Policy, and Azure Blueprints. Can create your own CI/CD pipeline.
-- **Enterprise-scale:** ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included in the reference implementation guidance.
-
-Start small and expand uses ARM templates, Azure Policy, and Azure Blueprints.
+The start small and expand approach uses ARM templates, Azure Policy, and Azure Blueprints:
 
 - [CAF Foundation blueprint](./foundation-blueprint.md)
 - [CAF Migration landing zone blueprint](./migrate-landing-zone.md)
 
-Enterprise-scale uses ARM templates, Azure Policy, and offers three reference implementation and different deployments.
+The enterprise-scale approach uses ARM templates and Azure Policy, and offers three reference implementations and different deployments:
 
 - [Enterprise-scale foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)
 - [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)
 - [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md)
 
-Whether you implement start small and expand or enterprise-scale, you can use templates and a portal-based experience. You can include IaC later in the process. Explore this [IaC overview](/dotnet/architecture/cloud-native/infrastructure-as-code) for more information.
+Whether you implement the start small and expand or enterprise-scale approach, you can use templates and a portal-based experience. You can include IaC later in the process. Explore this [IaC overview](/dotnet/architecture/cloud-native/infrastructure-as-code) for more information.
 
 ## Timeline considerations
 
 Landing zone options take different amounts of time to implement. There are two types of timelines:
 
-- A timeline to adopt or migrate a low-risk workload.
-- A timeline to reach security governance and compliance requirements for all workloads.
+- Timeline to adopt or migrate a low-risk workload
+- Timeline to reach security governance and compliance requirements for all workloads
 
-With a start-small-and-expand approach, you can have a low-risk workload up and running in 3 to 10 days. For workloads with high security governance and compliance requirements, it could take four to six months.
+With a start-small-and-expand approach, you can get a low-risk workload up and running in 3 to 10 days. For a workload with high security governance and compliance requirements, it can take four to six months.
 
-For an enterprise-scale implementation, you can still adopt a low-risk workload in 3 to 10 days, but more elaborate workloads can be ready in six to eight weeks.
+For an enterprise-scale implementation, you can also adopt a low-risk workload in 3 to 10 days. Adopting a more elaborate workload can take six to eight weeks.
 
 ## Next steps
 
-[Start small and expand](./migrate-landing-zone.md)
+Choose a landing zone implementation option:
 
-[Start with enterprise-scale](../enterprise-scale/index.md)
+> [!div class="nextstepaction"]
+> [Start small and expand](./migrate-landing-zone.md)
+>
+> [Start with enterprise-scale](../enterprise-scale/index.md)

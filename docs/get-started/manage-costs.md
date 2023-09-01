@@ -1,24 +1,20 @@
 ---
-title: "Get started: Manage cloud costs"
+title: 'Get started: Manage cloud costs'
 description: Learn the basics of managing costs associated with cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Manage cloud costs
 
-The Cost Management discipline of cloud governance focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio. Enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into a getting started guide that helps create alignment among the involved teams.
+The Cost Management discipline of cloud governance focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio.
 
 However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those supporting functions to help create alignment between the involved teams.
 
 Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team take actions that target its role in cost optimization. Together, these steps will help your organization get started on a journey toward cost optimization.
-
-![Get started with cost optimization](../_images/get-started/cost-map.png)
 
 ## Step 1: Optimize enterprise costs
 
@@ -41,7 +37,7 @@ These deliverables are the result of a few recurring tasks:
 
 **Guidance to support deliverable completion:**
 
-- Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
+- Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for `cost center` and `technical owner`.
 - On a regular basis, review and apply [Cost Management discipline best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Important governance practices include:
 
   - Acting on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and costs and to stop unused machines.

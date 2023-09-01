@@ -2,121 +2,124 @@
 title: Create a VMware vSphere template for Windows Server 2019
 description: Create a VMware vSphere template for Windows Server 2019.
 author: likamrat
-ms.author: brblanch
-ms.date: 01/29/2021
+ms.author: martinek
+ms.date: 05/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
 # Create a VMware vSphere template for Windows Server 2019
 
-This article provides guidance for creating a Windows Server 2019 VMware vSphere virtual machine template.
+This article guides you through the process for creating a Windows Server 2019 VMware vSphere virtual machine (VM) template.
 
 ## Prerequisites
 
 > [!NOTE]
-> This guide assumes that you have some VMware vSphere familiarity and you have knowledge on how to install Windows Server. It also does not review either VMware or Windows best practices.
+> This guide assumes that you have some familiarity with VMware vSphere and know how to install Windows Server.
 
-- [Download the latest Windows Server ISO file](https://www.microsoft.com/windows-server/trial)
+- Make sure you have [the latest Windows Server ISO file](https://www.microsoft.com/windows-server/trial) downloaded.
+    - It's recommended to upload the Windows Server ISO file to a vSphere datastore or to vCenter content library for faster development. Note that the ISO file can also be used locally.
 
-- VMware vSphere 6.5 and above
+- Make sure you have VMware vSphere version 6.5 or above.
 
-- Although it can be used locally, for faster deployment, it is recommended to upload the file to a vSphere datastore or to vCenter content library.
+## Create a Windows Server 2019 VM template
 
-## Creating Windows Server 2019 VM template
+Learn how to deploy and install Windows Server and convert VM to a template.
 
-### Deploying and installing Windows Server
+### Deploy and install Windows Server
 
 1. Deploy a new virtual machine.
 
-    ![A screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-1.png)
+    ![Screenshot of vSphere client window that shows where you select the New Virtual Machine option.](./media/vmware-template/windows-template-new-vm-1.png)
 
-    ![Second screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-2.png)
+    ![Screenshot of the "Select a creation type" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-2.png)
 
-    ![Third screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-3.png)
+    ![Screenshot of the "Select a name and folder" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-3.png)
 
-    ![Fourth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-4.png)
+    ![Screenshot of the "Select a compute resource" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-4.png)
 
-    ![Fifth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-5.png)
+    ![Screenshot of the "Select storage" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-5.png)
 
-    ![Sixth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-6.png)
+    ![Screenshot of the "Select compatibility" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-6.png)
 
-2. Make sure to select **Microsoft Windows Server 2016 or later (64-bit)** as the guest OS.
+2. Make sure you select **Microsoft Windows Server 2016 or later (64-bit)** as the guest OS.
 
-    ![A screenshot of Windows Server guest OS.](./media/vmware-template/windows-template-guest-os.png)
+    ![Screenshot of the "Select a guest OS" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-guest-os.png)
 
 3. Point to the Windows Server ISO file location.
 
-    ![Seventh screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-7.png)
+    ![Screenshot of the "Customize hardware" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-7.png)
 
-    ![Eighth screenshot of how to create a new VMware vSphere virtual machine.](./media/vmware-template/windows-template-new-vm-8.png)
+    ![Screenshot of the "Ready to complete" section of the New Virtual Machine creation pane.](./media/vmware-template/windows-template-new-vm-8.png)
 
-- Power on the VM and start the Windows Server installation.
+- Power on your new VM and install Windows Server.
 
-    ![First screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-1.png)
+    ![Screenshot of the Windows Server run button in the vSphere client.](./media/vmware-template/windows-template-installation-1.png)
 
-    ![Second screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-2.png)
+    ![Screenshot of Windows Setup window containing options for language and other preferences.](./media/vmware-template/windows-template-installation-2.png)
 
-    ![Third screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-3.png)
+    ![Screenshot of Windows Setup window showing the "Install now" button.](./media/vmware-template/windows-template-installation-3.png)
 
-    ![Fourth screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-4.png)
+    ![Screenshot of Windows Setup window where you select which operating system you want to install.](./media/vmware-template/windows-template-installation-4.png)
 
-    ![Fifth screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-5.png)
+    ![Screenshot of Windows Setup window displaying Applicable notices and license terms.](./media/vmware-template/windows-template-installation-5.png)
 
-    ![Sixth screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-6.png)
+    ![Screenshot of Windows Setup window where you select the location for your Windows Server installation.](./media/vmware-template/windows-template-installation-6.png)
 
-    ![Seventh screenshot of a Windows Server installation.](./media/vmware-template/windows-template-installation-7.png)
+    ![Screenshot of Windows Setup window showing the installation status.](./media/vmware-template/windows-template-installation-7.png)
 
 ### Post-installation
 
-Before converting the VM to a template, several actions are required.
+Before you convert your VM to a template, complete the following steps.
 
-1. Install VMware tools and restart.
+1. Install VMware Tools and restart.
 
-    ![First screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-1.png)
+    ![Screenshot showing the Install VMware tools button location.](./media/vmware-template/windows-template-tools-1.png)
 
-    ![Second screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-2.png)
+    ![Screenshot showing install instructions for VMware tools.](./media/vmware-template/windows-template-tools-2.png)
 
-    ![Third screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-3.png)
+    ![Screenshot of VMware Tools DVD Drive in the Windows Explorer window.](./media/vmware-template/windows-template-tools-3.png)
 
-    ![Fourth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-4.png)
+    ![Screenshot of VMware Tools Setup window containing the installation wizard.](./media/vmware-template/windows-template-tools-4.png)
 
-    ![Fifth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-5.png)
+    ![Screenshot of the VMware Tools Setup window where you select the "Typical" installation type.](./media/vmware-template/windows-template-tools-5.png)
 
-    ![Sixth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-6.png)
+    ![Screenshot of the VMware Tools Setup window saying it's ready to install.](./media/vmware-template/windows-template-tools-6.png)
 
-    ![Seventh screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-7.png)
+    ![Screenshot of the VMware Tools Setup window showing that setup is complete.](./media/vmware-template/windows-template-tools-7.png)
 
-    ![Eighth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-8.png)
+    ![Screenshot of the VMware Tools Setup dialog box requiring a system restart.](./media/vmware-template/windows-template-tools-8.png)
 
-    ![Ninth screenshot of a VMware Tools installation.](./media/vmware-template/windows-template-tools-9.png)
+    ![Screenshot of the vSphere client showing VMware Tools status.](./media/vmware-template/windows-template-tools-9.png)
 
 2. Perform Windows updates.
 
-3. Change PowerShell execution policy to `Bypass` by running the `Set-ExecutionPolicy -ExecutionPolicy Bypass` command in PowerShell (can be later tuned on via group policy or a PowerShell script).
+3. Change PowerShell execution policy to `Bypass` by running the `Set-ExecutionPolicy -ExecutionPolicy Bypass` command in PowerShell (you can also turn this on later using group policy or a PowerShell script).
 
-4. Allow WinRM communication to the OS by running the [`allow_winrm`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/allow_winrm.ps1) PowerShell script.
+4. Allow communication between WinRM and the OS by running the [`allow_winrm`](https://github.com/microsoft/azure_arc/blob/main/azure_arc_servers_jumpstart/vmware/winsrv/terraform/scripts/allow_winrm.ps1) PowerShell script
 
-5. None of the below are mandatory but should be considered for a Windows template:
+5. Consider following these extra steps when creating a windows template:
 
-    - Disabling user account control (can be later tuned on via group policy or a PowerShell script)
-    - Turn off Windows Defender Firewall (can be later tuned on via group policy or a PowerShell script)
-    - Disabling Internet Explorer Enhanced Security Configuration (ESC) (can be later tuned on via group policy or a PowerShell script)
-    - Enable Remote Desktop
-    - In PowerShell, install [Chocolatey](https://chocolatey.org/install)
+    - Disable user account control (you can also turn this on later using group policy or a PowerShell script).
+    - Turn off Windows Defender Firewall (you can also turn this on later using group policy or a PowerShell script).
+    - - Disable Internet Explorer Enhanced Security Configuration (ESC) (you can also turn this on later using group policy or a PowerShell script).
+    - Enable Remote Desktop Services.
+    - Use PowerShell to install [Chocolatey](https://chocolatey.org/install).
 
       ```powershell
       Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
       ```
 
-    - Install all baseline applications you may want to include in your template.
+    - Install all baseline applications you might want to include in your template.
+    
+> [!NOTE]
+> This guide is about creating VM templates. Additional care should be taken to make sure your VM deployments have appropriate controls in place to meet your security requirements.
 
-### Convert to template
+### Convert VM to a template
 
-Reduce the VM CPU count and memory resources to the minimum and convert the VM to template, switch the CD/DVD drive to client device as well disconnect it and convert the VM to template.
+- Reduce the VM's CPU count and memory resources to the minimum.
+- Switch the CD/DVD drive to client device, disconnect it, and convert the VM to a template.
 
-![A screenshot of how to reduce a virtual machine's CPU count and memory.](./media/vmware-template/windows-template-reduce.png)
+![Screenshot of the virtual hardware settings page options.](./media/vmware-template/windows-template-reduce.png)
 
-![A screenshot of how to convert a virtual machine to a template.](./media/vmware-template/windows-template-convert.png)
+![Screenshot of the vSphere client showing Convert to Template button location.](./media/vmware-template/windows-template-convert.png)

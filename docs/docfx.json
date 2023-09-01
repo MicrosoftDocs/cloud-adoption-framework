@@ -48,11 +48,12 @@
       "breadcrumb_path": "/azure/cloud-adoption-framework/_bread/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/cloud-adoption-framework",
-      "feedback_product_url": "https://azure-architecture.uservoice.com/forums/918625-architecture-guidance",
-      "ms.service": "cloud-adoption-framework",
+      "feedback_product_url": "",
+      "ms.service": "caf",
       "titleSuffix": "Cloud Adoption Framework",
       "brand": "azure",
       "uhfHeaderId": "azure",
+      "searchScope": [ "Azure", "Cloud Adoption Framework" ],
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "architecture-center",
@@ -60,7 +61,38 @@
         }
       }
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.subservice": {
+        "adopt/**/*.md": "caf-methodology-adopt",
+        "digital-estate/**/*.md": "caf-methodology-plan",
+        "get-started/**/*.md": "caf-get-started",
+        "govern/**/*.md": "caf-methodology-govern",
+        "industry/retail/**/*.md": "caf-scenario-retail",
+        "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
+        "innovate/**/*.md": "caf-methodology-adopt-innovate",
+        "manage/**/*.md": "caf-methodology-manage",
+        "migrate/**/*.md": "caf-methodology-adopt-migrate",
+        "modernize/**/*.md": "caf-methodology-adopt-modernize",
+        "operating-model/**/*.md": "caf-methodology-ready",
+        "organize/**/*.md": "caf-methodology-organize",
+        "plan/**/*.md": "caf-methodology-plan",
+        "ready/**/*.md": "caf-methodology-ready",
+        "ready/control-mapping/**/*.md": "caf-alz",
+        "ready/enterprise-scale/**/*.md": "caf-alz",
+        "ready/landing-zone/**/*.md": "caf-alz",
+        "relocate/**/*.md": "caf-methodology-adopt-relocate",
+        "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
+        "scenarios/azure-hpc/**/*.md": "caf-scenario-hpc",
+        "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
+        "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
+        "scenarios/defense/**/*.md": "caf-scenario-defense",
+        "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
+        "scenarios/sap/**/*.md": "caf-scenario-sap",
+        "scenarios/wvd/**/*.md": "caf-scenario-virtual-desktop",
+        "secure/**/*.md": "caf-methodology-secure",
+        "strategy/**/*.md": "caf-methodology-strategy"
+      }
+    },
     "template": [],
     "dest": "cloud-adoption-framework",
     "markdownEngineName": "markdig"

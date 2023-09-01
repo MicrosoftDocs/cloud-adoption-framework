@@ -1,13 +1,11 @@
 ---
 title: Security Baseline sample policy statements
 description: Refer to these sample Security Baseline policy statements to help draft policy statements to address your organization's needs.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Security Baseline sample policy statements
@@ -26,7 +24,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** All deployed assets must be categorized by criticality and data classification. Classifications must be reviewed by the cloud governance team and the application owner before deployment to the cloud.
 
-**Potential design option:** Establish [resource tagging standards](../../decision-guides/resource-tagging/index.md) and ensure IT staff apply them consistently to any deployed resources using [Azure resource tags](/azure/azure-resource-manager/management/tag-resources).
+**Potential design option:** Establish [resource tagging standards](../../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md) and ensure IT staff apply them consistently to any deployed resources using [Azure resource tags](/azure/azure-resource-manager/management/tag-resources).
 
 ## Data encryption
 
@@ -74,7 +72,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Governance tooling must audit and enforce network configuration requirements defined by the security baseline team.
 
-**Potential design option:** In Azure, network activity can be monitored using [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and [Azure Security Center](/azure/security-center/security-center-network-recommendations) can help identify security vulnerabilities. Azure Policy allows you to restrict network resources and resource configuration policy according to limits defined by the security team.
+**Potential design option:** In Azure, network activity can be monitored using [Azure Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview), and [Microsoft Defender for Cloud](/azure/security-center/security-center-network-recommendations) can help identify security vulnerabilities. Azure Policy allows you to restrict network resources and resource configuration policy according to limits defined by the security team.
 
 ## Security review
 
@@ -82,7 +80,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Azure Security Center](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](/azure/advisor/advisor-overview) and [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 

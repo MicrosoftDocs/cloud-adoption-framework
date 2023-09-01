@@ -1,12 +1,10 @@
 ---
 title: Technology adoption challenges and blockers
 description: Use the Cloud Adoption Framework for Azure to understand common cloud adoption and innovation challenges. Overcome the challenges to adopting new technology.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 04/01/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: innovation challenges, cloud adoption challenges, challenges to innovation, technology adoption, challenges to adopting new technology
 ---

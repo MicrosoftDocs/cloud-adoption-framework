@@ -1,12 +1,10 @@
 ---
 title: Prerequisites to migration
 description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 
@@ -20,7 +18,7 @@ Ensure business, culture, and technical readiness prior to beginning an iterativ
 
 ## Review business drivers
 
-Before beginning any cloud migration, review the [Plan methodology](../../../plan/index.md) and the [Ready methodology](../../../ready/index.md) in the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
+Before beginning any cloud migration, review the [Plan methodology](../../../plan/index.md) and the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
 
 - [Get started: Accelerate migration](../../../get-started/migrate.md)
 - [Why are we moving to the cloud?](../../../strategy/motivations.md)

@@ -1,17 +1,15 @@
 ---
 title: Innovation application development tools
 description: Find out about Azure application development tools that align to the Innovate methodology of the Cloud Adoption Framework.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/17/2019
+author: martinekuan
+ms.author: martinek
+ms.date: 09/17/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: application development services, application development tools, innovation methodologies
 ---
 
-# Tools to engage via applications in Azure
+# Tools to engage with applications in Azure
 
 Build cloud-native applications to connect customers in new ways. Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They are based on microservices architecture, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market.
 
@@ -19,7 +17,7 @@ As described in [Engage via applications](../considerations/apps.md), applicatio
 
 ![Diagram that shows the Cloud Adoption Framework approach to engaging via applications.](../../_images/innovate/engage-via-apps.png)
 
-## Alignment to the innovation methodology
+## Alignment with the Innovate methodology
 
 You can accelerate this type of digital invention through each of the following approaches. Technical guidance for accelerating digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by their approaches to aligning guidance with the overall Innovate methodology.
 
@@ -27,7 +25,7 @@ For this article, assume all inventions that result in an application stem from 
 
 Based on these assumptions, the following three paths are the most common for cloud adoption teams who are developing digital inventions:
 
-- **Citizen developers:** Before engaging professional developers, business subject matter experts use citizen developer tools. These tools rapidly test and validate that a customer hypothesis can meet the needs of that customer.
+- **Low-code application platform:** Empower business subject matter experts to create apps and automate business processes with visual tools that don't require professional developer skills.
 - **Intelligent experiences:** Create modern experiences by using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
 - **Cloud-native:** Build a new invention that naturally takes advantage of cloud capabilities.
 

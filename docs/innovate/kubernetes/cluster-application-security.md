@@ -2,16 +2,12 @@
 title: Cluster and application security
 description: Learn about Kubernetes security essentials in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
-ms.author: brblanch
+ms.author: martinek
 ms.date: 04/06/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: application security, security essentials, Kubernetes security
 ---
-
-<!-- cSpell:ignore kured -->
 
 # Cluster and application security
 
@@ -28,7 +24,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 **Security checklist:**
 
-- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [The definitive guide to securing Kubernetes (white paper)](https://clouddamcdnprodep.azureedge.net/gdc/gdc8LXmoZ/original).
+- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://cdn2.hubspot.net/hubfs/1665891/Assets/The%20Definitive%20Guide%20to%20Securing%20Kubernetes.pdf).
 
 - **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. To learn more, see [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image).
 
@@ -68,8 +64,8 @@ As you prepare the application for production, implement a minimum set of best p
 - **Configure a container and cluster scanning solution.** Scan containers pushed into Azure Container Registry and gain deeper visibility to your cluster nodes, cloud traffic, and security controls.
 
   For more information, see:
-  - [Azure Container Registry integration with Security Center](/azure/security-center/defender-for-container-registries-introduction) <br>
-  - [Azure Kubernetes Service integration with Security Center](/azure/security-center/defender-for-kubernetes-introduction)
+  - [Azure Container Registry integration with Defender for Cloud](/azure/security-center/defender-for-container-registries-introduction) <br>
+  - [Azure Kubernetes Service integration with Defender for Cloud](/azure/security-center/defender-for-kubernetes-introduction)
 
 ## Optimize and scale
 

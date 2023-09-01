@@ -2,12 +2,10 @@
 title: Moodle migration architecture and templates
 description: Learn about the Azure Resource Manager (ARM) templates for Moodle Azure infrastructure deployment and how to deploy or edit them.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: plan
-ms.custom: think-tank
+ms.custom: think-tank, devx-track-arm-template
 ---
 
 # Moodle migration architecture and templates
@@ -39,9 +37,9 @@ A predefined deployment template uses one of four predefined Moodle sizes: minim
 
   [![Button that launches the minimal Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-minimal.json)
 
-- *Small-to-mid deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Azure Cache for Redis.
+- *Small-to-midsize deployment* supports up to 1,000 concurrent users. This deployment uses NFS, without high availability, and MySQL on eight vCores. This deployment doesn't include options like Elasticsearch or Azure Cache for Redis.
 
-  [![Button that launches the small-to-mid Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
+  [![Button that launches the small-to-midsize Moodle deployment ARM template.](./images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FMoodle%2Fmaster%2Fazuredeploy-small2mid-noha.json)
 
 - *Large, high-availability deployment* supports more than 2,000 concurrent users. This deployment uses Azure Files, MySQL with 16 vCores, and Azure Cache for Redis without other options like Elasticsearch.
 
@@ -59,7 +57,7 @@ To deploy one of the predefined ARM templates:
 
 1. On the **Custom deployment** page in the Azure portal, complete the mandatory **Subscription**, **Resource group**, **Region**, and **SSH Public Key** fields. For information on how to add the SSH key, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-   :::image type="content" source="images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
+   :::image type="content" source="./images/custom-deployment.png" alt-text="Screenshot showing the Azure Custom deployment screen for a Moodle deployment ARM template." border="false":::
 
 1. Select **Review + create**.
 

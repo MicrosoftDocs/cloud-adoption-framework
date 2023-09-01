@@ -1,12 +1,10 @@
 ---
-title: Innovation methodology and maturity modeling
+title: Innovate methodology and maturity modeling
 description: Learn about Azure tools that use the Innovate methodology to remove friction and empower adoption incrementally as hypotheses mature through the maturity model.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: toolchain, maturity model, continuous integration, innovate methodology
 ---
@@ -17,7 +15,7 @@ As described in [Empower adoption](../considerations/ci-cd.md), building true in
 
 ![Diagram that shows the Cloud Adoption Framework approach to empower adoption.](../../_images/innovate/empower-adoption-maturity.png)
 
-## Alignment to the innovation methodology
+## Alignment with the Innovate methodology
 
 You can accelerate this type of digital invention through the following levels of maturity. Technical guidance to accelerate digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by maturity model level.
 

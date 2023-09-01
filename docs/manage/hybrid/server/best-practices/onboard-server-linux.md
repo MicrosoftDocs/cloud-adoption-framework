@@ -2,11 +2,9 @@
 title: Connect an existing Linux server to Azure Arc
 description: Connect an existing Linux server to Azure Arc.
 author: likamrat
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -77,9 +75,9 @@ Upon successful completion, you will have your Linux server, connected as a new 
 
 ![A screenshot of the `az_connect_linux.sh` Linux script running.](./media/onboard-server/az-connect-linux.png)
 
-![A screenshot of an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/linux-resource.png)
+![A screenshot of an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/linux-resource.png)
 
-![A screenshot of details from an Azure Arc enabled resource in the Azure portal.](./media/onboard-server/linux-resource-detail.png)
+![A screenshot of details from an Azure Arc-enabled resource in the Azure portal.](./media/onboard-server/linux-resource-detail.png)
 
 ## Delete the deployment
 

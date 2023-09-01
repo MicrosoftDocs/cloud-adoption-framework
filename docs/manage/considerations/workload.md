@@ -1,12 +1,10 @@
 ---
 title: Workload operations in cloud management
 description: Understand an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal
 ---
 

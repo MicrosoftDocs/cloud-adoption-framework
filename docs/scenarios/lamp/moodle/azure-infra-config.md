@@ -2,15 +2,11 @@
 title: How to set up Moodle worker nodes
 description: Learn how to configure a virtual machine scale set for Moodle. See how to access the scale set from the controller by using a private IP address.
 author: UmakanthOS
-ms.author: brblanch
+ms.author: martinek
 ms.date: 11/30/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: plan
 ms.custom: think-tank
 ---
-
-<!-- cspell:ignore moodledata mbstring mcrypt bcmath -->
 
 # How to set up Moodle worker nodes
 

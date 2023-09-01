@@ -1,12 +1,10 @@
 ---
 title: Risk management insights
 description: Learn how to integrate security insights into your risk management framework and digital initiatives.
-author: NaomiOooo
-ms.author: naomio
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -20,6 +18,10 @@ Operating a business comes with risk. A security team's role is to inform and ad
 > The person who owns and accepts the risk is the person that explains to the world what went wrong (often in front of TV cameras).
 
 When mature, the goal of security is to expose and mitigate risks, and then empower the business to change with minimal risk. That level of maturity requires risk insights and deep security integration. At any level of maturity for your organization, the top security risks should appear on the risk register. Those risks are then managed down to an acceptable level.
+
+Watch the following video to learn about security alignment and how you can manage risk within your organization.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu5K]
 
 ## What is cybersecurity risk?
 

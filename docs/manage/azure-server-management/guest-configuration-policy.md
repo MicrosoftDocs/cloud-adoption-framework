@@ -1,23 +1,21 @@
 ---
-title: Azure Policy Guest Configuration extension
-description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure VM.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 05/10/2019
+title: Azure Policy guest configuration extension
+description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy guest configuration extension to audit the configuration settings in an Azure VM.
+author: martinekuan
+ms.author: timwarner
+ms.date: 01/06/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: internal
+ms.custom: internal, devx-track-azurepowershell
 ---
 
-# Azure Policy Guest Configuration extension
+# Azure Policy guest configuration extension
 
-You can use the [Azure Policy Guest Configuration extension](/azure/governance/policy/concepts/guest-configuration) to audit the configuration settings in a virtual machine. Guest configuration is currently supported only on Azure VMs.
+You can use the [Azure Policy guest configuration extension](/azure/governance/policy/concepts/guest-configuration) to audit the configuration settings in a virtual machine. Guest configuration supports Azure VMs natively and non-Azure physical and virtual servers through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview).
 
-To find the list of guest configuration policies, search for **Guest Configuration** on the Azure Policy portal page, or run this cmdlet in a PowerShell window to find the list:
+To find the list of guest configuration policies, search for *guest configuration* on the Azure Policy portal page, or run this cmdlet in a PowerShell window to find the list:
 
 ```powershell
-Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "Guest Configuration"}
+Get-AzPolicySetDefinition | Where-Object {$_.Properties.metadata.category -eq "Guest Configuration"}
 ```
 
 > [!NOTE]
@@ -30,11 +28,11 @@ Use the following example PowerShell script to deploy these policies to:
 - Verify that password security settings in Windows and Linux computers are set correctly.
 - Verify that certificates aren't close to expiration on Windows VMs.
 
- Before you run this script, use the [`Connect-AzAccount`](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
+Before you run this script, use the [`Connect-AzAccount`](/powershell/module/az.accounts/connect-azaccount) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
 
 ```powershell
 
-    # Assign Guest Configuration policy.
+    # Assign guest configuration policy.
 
     param (
         [Parameter(Mandatory=$true)]

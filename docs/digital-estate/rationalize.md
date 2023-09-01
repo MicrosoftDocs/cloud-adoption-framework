@@ -1,12 +1,10 @@
 ---
 title: Rationalize the digital estate
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 02/25/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: plan
 ms.custom: internal
 ---
 
@@ -15,7 +13,12 @@ ms.custom: internal
 Cloud rationalization is the process of evaluating assets to determine the best approach to hosting them in the cloud. After you've determined an [approach](./approach.md) and aggregated an [inventory](./inventory.md), cloud rationalization can begin. Cloud rationalization discusses the most common rationalization options.
 
 Watch the following video to get a quick overview about completing a comprehensive assessment that will help you plan and prioritize your migration efforts.
+
+<!-- markdownlint-disable MD034 -->
+
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWDpel]
+
+<!-- markdownlint-enable MD034 -->
 
 ## Traditional view of rationalization
 

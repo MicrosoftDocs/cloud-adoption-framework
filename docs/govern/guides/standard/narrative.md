@@ -1,13 +1,11 @@
 ---
-title: "Standard enterprise governance: Narrative behind governance strategy"
+title: 'Standard enterprise governance: Narrative behind governance strategy'
 description: Use the Cloud Adoption Framework for Azure to learn about establishing a use case for governance during a standard enterprise cloud adoption journey.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/05/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Standard enterprise governance guide: The narrative behind the governance strategy
@@ -24,7 +22,7 @@ In the past, the company's CIO has been excluded from these strategic conversati
 
 The company has the following business profile:
 
-- All sales and operations reside in a single country, with a low percentage of global customers.
+- All sales and operations reside in a single country/region, with a low percentage of global customers.
 
 - The business operates as a single business unit, with budget aligned to functions, including sales, marketing, operations, and IT.
 

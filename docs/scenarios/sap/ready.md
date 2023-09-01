@@ -2,17 +2,15 @@
 title: Review your environment or Azure landing zone for an SAP enterprise-scale migration
 description: Prepare your Azure environment or Azure landing zone for an SAP enterprise-scale migration.
 author: JefferyMitchell
-ms.author: brblanch
+ms.author: martinek
 ms.date: 03/01/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, e2e-sap
 ---
 
 # Azure landing zone for an SAP on Azure
 
-The [Ready methodology in the Cloud Adoption Framework](../../ready/index.md) guides the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
+The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework helps guide the creation of all Azure environments using [Azure landing zones](../../ready/landing-zone/index.md). Azure landing zones provide many [implementation options](../../ready/landing-zone/implementation-options.md) built around a set of [common design areas](../../ready/landing-zone/design-areas.md).
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options, which will include operations, security, and governance services in the initial environment.
 
@@ -47,14 +45,14 @@ The primary difference between the two options above resides in how separation o
 
 Regardless of your initial implementation option, all Azure landing zones for SAP should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the SAP team evaluate any landing zone to ensure it is ready to host the SAP platform in production:
 
-- [Enterprise enrollment](eslz-enterprise-enrollment.md)
-- [Identity and access management](eslz-identity-and-access-management.md)
-- [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Resource Organization](eslz-resource-organization.md)
-- [Governance disciplines](eslz-security-governance-and-compliance.md)
-- [Operations baseline](eslz-management-and-monitoring.md)
-- [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
-- [Deployment options](eslz-platform-automation-and-devops.md)
+- [Enterprise enrollment](./eslz-enterprise-enrollment.md)
+- [Identity and access management](./eslz-identity-and-access-management.md)
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
+- [Resource Organization](./eslz-resource-organization.md)
+- [Governance disciplines](./eslz-security-governance-and-compliance.md)
+- [Operations baseline](./eslz-management-and-monitoring.md)
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
+- [Deployment options](./eslz-platform-automation-and-devops.md)
 
 ## Next step: Migrate an SAP platform to Azure
 

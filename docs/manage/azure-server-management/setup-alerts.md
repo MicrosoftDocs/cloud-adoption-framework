@@ -1,12 +1,10 @@
 ---
 title: Set up basic alerts
 description: Learn how to use Azure server management services to set up alerts and notifications that help keep your IT teams aware of any problems.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/10/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -24,7 +22,7 @@ Azure Monitor offers [alerting](/azure/azure-monitor/alerts/alerts-overview) cap
 - The health of the underlying Azure platform.
 - Tests for website availability.
 
-See the [list of Azure Monitor data sources](/azure/azure-monitor/agents/data-sources) for a more detailed description of the sources of monitoring data that this service collects.
+See the [list of Azure Monitor data sources](/azure/azure-monitor/data-sources) for a more detailed description of the sources of monitoring data that this service collects.
 
 For details about manually creating and managing alerts by using the Azure portal, see the [Azure Monitor documentation](/azure/azure-monitor/alerts/alerts-metric).
 

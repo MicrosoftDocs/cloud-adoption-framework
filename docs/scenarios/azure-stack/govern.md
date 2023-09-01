@@ -1,12 +1,10 @@
 ---
 title: Govern an Azure instance in your datacenter
 description: Learn how to govern an Azure instance running on Azure Stack Hub in your datacenter.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 05/19/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal
 ---
 

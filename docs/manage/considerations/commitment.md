@@ -1,12 +1,10 @@
 ---
 title: Business commitment in cloud management
 description: Calculate future returns from the classification and impact of interruptions to various workloads to make better business decisions and commitments.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal
 ---
 
@@ -33,7 +31,7 @@ As you're establishing a commitment with the business, there are a few key aspec
 - Loss avoidance ROI.
 - Validation of management level.
 
-To aid in your decision process, the remainder of this article describes each of these aspects in greater detail.
+To aid in your decision process, the remainder of this article describes these aspects in greater detail.
 
 ## IT operations prerequisites
 

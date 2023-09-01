@@ -1,13 +1,11 @@
 ---
 title: Review rationalization decisions
 description: Use the Cloud Adoption Framework for Azure to learn how to review rationalization decisions and prepare to facilitate a conversation with the business.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 07/01/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: plan
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Review rationalization decisions

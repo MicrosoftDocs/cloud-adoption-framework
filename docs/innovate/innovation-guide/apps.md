@@ -2,12 +2,9 @@
 title: Build applications and engage using app services
 description: Build cloud-native applications and easily modernize your existing web and API apps. Learn about Azure App Service, Azure DevOps, and Visual Studio App Center.
 author: billyclaymyersmsft
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.localizationpriority: high
 ms.custom: think-tank, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
@@ -40,12 +37,6 @@ To configure or monitor Azure App Service deployments:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites]" submitText="Go to App Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Azure Cognitive Services
@@ -64,12 +55,6 @@ To configure or monitor Azure Cognitive Services deployments:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Azure Bot Service
@@ -86,12 +71,6 @@ To configure or monitor Azure Bot Service deployments:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FBotServices]" submitText="Go to Bot Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Azure DevOps
@@ -102,12 +81,12 @@ During your innovation journey, you'll eventually find yourself on the path to D
 
 As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your cloud-native applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](/appcenter/).
 
-Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](/appcenter/push/).
+Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually.
 
 ### Learn more
 
 - [App Service overview](/azure/app-service/overview)
-- [Web App for Containers: run a custom container](/azure/app-service/quickstart-custom-container?pivots=platform-linux)
+- [Web App for Containers: Run a custom container](/azure/app-service/quickstart-custom-container?pivots=platform-linux)
 - [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 - [Azure for .NET and .NET Core developers](/dotnet/azure/)
 - [Azure SDK for Python documentation](/azure/developer/python/)
@@ -151,12 +130,6 @@ To configure or monitor an AKS service:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FManagedClusters]" submitText="Go to Azure Kubernetes Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Serverless solutions
@@ -185,12 +158,6 @@ To configure or monitor Azure Functions deployments:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites/kind/functionapp]" submitText="Go to Azure Functions" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Serverless solutions: Azure Logic Apps
@@ -207,12 +174,6 @@ To configure or monitor Azure Logic Apps:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Logic%2FWorkflows]" submitText="Go to Azure Logic Apps" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Serverless solutions: API Management
@@ -228,12 +189,6 @@ To configure or monitor API Management services:
 3. Manage existing services: select the desired service from the list.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -254,12 +209,6 @@ To configure or monitor container instances:
 3. Manage existing container instances: select the desired container instance from the list.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ContainerInstance%2FContainerGroups]" submitText="Go to Container instances" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -289,12 +238,6 @@ To configure or monitor Front Door instances:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FFrontDoors]" submitText="Go to Front Doors" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Traffic Manager
@@ -311,12 +254,6 @@ To configure or monitor Traffic Manager profiles:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2FTrafficManagerProfiles]" submitText="Go to Traffic Manager profiles" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
-
 ::: zone-end
 
 ### Azure Content Delivery Network
@@ -332,12 +269,6 @@ To configure or monitor Azure CDN profiles:
 3. Manage existing profiles: select the desired profile from the list.
 
 ::: zone target="chromeless"
-
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Cdn%2FProfiles]" submitText="Go to CDN profiles" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

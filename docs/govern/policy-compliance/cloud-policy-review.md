@@ -1,13 +1,11 @@
 ---
 title: Conduct a cloud policy review
 description: Learn to modernize existing corporate IT policies to provide an equivalent level of risk management for cloud-based resources.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Conduct a cloud policy review
@@ -37,7 +35,7 @@ Cloud policy reviews align existing IT governance and IT security policies with 
 - [Resource Consistency discipline](../resource-consistency/index.md)
 - [Deployment Acceleration discipline](../deployment-acceleration/index.md).
 
-For each of these disciplines, the review process follows these steps:
+For these disciplines, the review process follows these steps:
 
 1. Review existing on-premises policies related to the specific discipline, looking for two key data points: legacy dependencies and identified business risks.
 2. Evaluate each business risk by asking a simple question: does the business risk still exist in a cloud model?

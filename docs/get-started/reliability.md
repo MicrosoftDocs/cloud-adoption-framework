@@ -1,13 +1,11 @@
 ---
-title: "Get started: Improve reliability with the right controls"
+title: 'Get started: Improve reliability with the right controls'
 description: Learn the basics of improving reliability through governance controls and a management baseline.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Improve reliability with the right controls
@@ -24,8 +22,6 @@ The steps in this article help the operations team balance reliability and cost 
 Operations management and governance are equal partners in enterprise reliability. The decisions you make about operational practices set the baseline for reliability. The approaches used to govern the overall environment ensure consistency across all resources.
 
 The first two steps in this article help both teams get started. They're listed sequentially, but you can perform them in parallel. The subsequent steps help you get the entire enterprise started on a shared journey toward more reliable solutions throughout the enterprise.
-
-![Get started with enterprise reliability](../_images/get-started/reliability-map.png)
 
 ## Step 1: Establish operations management requirements
 
@@ -59,10 +55,9 @@ Not all workloads are created equal. In any environment, there are workloads tha
 
 Enterprise reliability requires consistent application of the management baseline. That consistency comes from appropriate corporate policy, IT processes, and automated tools. These resources govern the implementation of the management baseline for all affected resources.
 
-**Deliverables:**
+**Deliverable:**
 
-- Ensure proper application of the management baseline for all affected systems.
-- Document your Resource Consistency policies, processes, and design guidance in the [Resource Consistency discipline template](../govern/resource-consistency/template.md).
+Ensure proper application of the management baseline for all affected systems.
 
 **Guidance to support deliverable completion:**
 

@@ -1,13 +1,11 @@
 ---
 title: Cost Management discipline improvement
 description: Understand the potential tasks a company performs to develop and mature its Cost Management discipline in each phase of cloud adoption.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Cost Management discipline improvement
@@ -40,7 +38,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Validate learning metrics that you use to report on the successful allocation of funding.
 - Understand the desired cloud accounting model that affects how cloud costs should be accounted for.
 - Become familiar with the digital estate plan and validate accurate costing expectations.
-- Evaluate buying options to determine whether it's better to "pay as you go" or to make a precommitment by purchasing an Enterprise Agreement.
+- Evaluate buying options to determine whether it's better to pay as you go or to make a precommitment by purchasing an Enterprise Agreement.
 - Align business goals with planned budgets and adjust budgetary plans as necessary.
 - Develop a goals and budget reporting mechanism to notify technical and business stakeholders at the end of each cost cycle.
 
@@ -57,7 +55,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 
 **Potential activities:**
 
-- Align your budgetary plans with the [subscription strategy](../../decision-guides/subscriptions/index.md) that defines your core ownership model.
+- Align your budgetary plans with the [subscription strategy](../../ready/landing-zone/design-area/resource-org-subscriptions.md) that defines your core ownership model.
 - Use the [Resource Consistency discipline strategy](../../decision-guides/resource-consistency/index.md) to enforce architecture and cost guidelines over time.
 - Determine whether any cost anomalies affect your adoption and migration plans.
 

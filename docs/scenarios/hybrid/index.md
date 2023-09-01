@@ -1,18 +1,24 @@
 ---
 title: Introduction to hybrid and multicloud
 description: Learn about hybrid and multicloud.
-author: brianblanchard
-ms.author: brblanch
-ms.date: 01/11/2021
+author: martinekuan
+ms.author: martinek
+ms.date: 10/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
-ms.custom: e2e-hybrid
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Introduction to hybrid and multicloud
 
-Microsoft Azure provides all of the products and features required to help you build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and/or public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
+Microsoft Azure provides all of the products and features required to help you build and operate your technology solutions in the cloud. We also understand that there are sound business reasons that may drive the necessity of using multiple private and public clouds. As a first step in your hybrid and multicloud journey, this article outlines and expands on Microsoft's unique perspective on important cloud computing terms.
+
+Watch the following video to learn more.
+
+<!-- markdownlint-disable MD034 -->
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMBdw]
+
+<!-- markdownlint-enable MD034 -->
 
 ## Defining hybrid and multicloud
 
@@ -26,7 +32,7 @@ Multicloud computing refers to the use of multiple cloud computing services from
 
 This scenario follows a common hybrid and multicloud narrative, and provides guidance on what you can do differently to be successful during your organization's cloud adoption effort. This general narrative is not restricted to a single cloud adoption methodology, but takes a view of the entire cloud adoption journey.
 
-A hybrid cloud platform gives your organization many advantages: greater flexibility, control, and scalability, with more deployment options, global scale, integrated cross-platform security, unified compliance, and [improved workload, operational, and cost efficiencies](https://customers.microsoft.com/doclink/846315-ge-aviation-manufacturing-azure) across the enterprise, **consistently achieving more value from existing infrastructure**. When computing and processing demand fluctuates, hybrid cloud computing enables you to seamlessly scale up your on-premises infrastructure to the public cloud to handle any overflow, without giving third-party datacenters access to the entirety of your data. By running certain workloads in the cloud, your organization gains the flexibility and innovation the public cloud provides, while retaining highly sensitive data in your own datacenter to meet client needs, or remain in compliance with regulatory requirements.
+A hybrid cloud platform gives your organization many advantages: greater flexibility, control, and scalability, with more deployment options, global scale, integrated cross-platform security, unified compliance, and improved workload, operational, and cost efficiencies across the enterprise, **consistently achieving more value from existing infrastructure**. When computing and processing demand fluctuates, hybrid cloud computing enables you to seamlessly scale up your on-premises infrastructure to the public cloud to handle any overflow, without giving third-party datacenters access to the entirety of your data. By running certain workloads in the cloud, your organization gains the flexibility and innovation the public cloud provides, while retaining highly sensitive data in your own datacenter to meet client needs, or remain in compliance with regulatory requirements.
 
 This allows you to scale computing resources, while modernizing and protecting [mission-critical applications and data](https://azure.microsoft.com/solutions/business-critical-applications/). Eliminate the need to make massive capital expenditures to meet short-term spikes in demand, or being forced to free up local resources for more sensitive data. With cloud billing models, your organization will only pay for resources you temporarily use, instead of having to purchase, program, and maintain additional resources and equipment that could remain idle for long periods.
 
@@ -49,7 +55,7 @@ We recognize that there are many valid reasons for customers to choose to distri
 
 - Minimize or avoid single cloud provider lock-in
 - Business units, subsidiaries, or acquired companies have already adopted different cloud platforms
-- Different cloud providers may have regulatory and data sovereignty requirements in different countries
+- Different cloud providers may have regulatory and data sovereignty requirements in different geopolitical regions
 - Improve business continuity and disaster recovery by duplicating workloads across two cloud providers
 - Maximize performance by running applications close to user locations, which may require hybrid or multicloud adoption
 - Enable easy migration for some data platforms or industry-specific applications by adopting multicloud strategies

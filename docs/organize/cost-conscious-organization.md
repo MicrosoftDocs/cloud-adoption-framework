@@ -1,13 +1,11 @@
 ---
 title: Building a cost-conscious organization
 description: Use the Cloud Adoption Framework for Azure to learn best practices for building a cost-conscious organization.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/10/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: organize
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Build a cost-conscious organization
@@ -37,7 +35,7 @@ The following sections describe the roles that various teams play in developing 
 
 Building cost consciousness into cloud-adoption efforts starts at the leadership level. To be effective in the long term, the [cloud strategy team](./cloud-strategy.md) should include a member of the finance team. If your financial structure holds business managers accountable for solution costs, they should be invited to join the team as well. In addition to the core activities that are typically assigned to the cloud strategy team, all members of the cloud strategy team should also be responsible for:
 
-- **Visibility:** The cloud strategy team and [cloud governance team](./cloud-governance.md) need to know the actual costs of the cloud-adoption efforts. Given the executive-level view of this team, they should have access to multiple cost scopes to analyze spending decisions. Typically, an executive needs visibility into the total costs across all cloud "spend." But as active members of the cloud strategy team, they should also be able to view costs per business unit or per billing unit to validate showback, chargeback, or other [cloud accounting models](../strategy/cloud-accounting.md).
+- **Visibility:** The cloud strategy team and [cloud governance team](./cloud-governance.md) need to know the actual costs of the cloud-adoption efforts. Given the executive-level view of this team, they should have access to multiple cost scopes to analyze spending decisions. Typically, an executive needs visibility into the total costs across all *cloud spend*. But as active members of the cloud strategy team, they should also be able to view costs per business unit or per billing unit to validate showback, chargeback, or other [cloud accounting models](../strategy/cloud-accounting.md).
 
 - **Accountability:** Budgets should be established between the cloud strategy, [cloud governance](./cloud-governance.md), and [cloud adoption](./cloud-adoption.md) teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
 
@@ -58,7 +56,7 @@ The [cloud adoption team](./cloud-adoption.md) is at the center of all adoption 
 
 ## Cloud governance team
 
-Generally, the [cloud governance team](./cloud-governance.md) is responsible for cost management across the entire cloud-adoption effort. As outlined in the [Cost Management discipline](../govern/cost-management/index.md) topic of the Cloud Adoption Framework's Govern methodology, cost management is the first of the Five Disciplines of Cloud Governance. Those articles outline a-series of deeper responsibilities for the cloud governance team.
+Generally, the [cloud governance team](./cloud-governance.md) is responsible for cost management across the entire cloud-adoption effort. As outlined in the [Cost Management discipline](../govern/cost-management/index.md) topic of the Govern methodology of the Cloud Adoption Framework, cost management is the first of the Five Disciplines of Cloud Governance. Those articles outline a-series of deeper responsibilities for the cloud governance team.
 
 This effort focuses on the following activities that are related to the development of a cost-conscious organization:
 

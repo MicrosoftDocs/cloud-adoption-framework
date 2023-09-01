@@ -1,12 +1,10 @@
 ---
 title: Types of innovation and digital invention
 description: Review the types of innovations to balance invention and adoption for the development of products while keeping customer adoption and empathy in mind.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: types of innovation, different types of innovation, innovation product development, digital invention
 ---

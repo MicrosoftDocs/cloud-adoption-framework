@@ -1,0 +1,1 @@
+<!-- Add all relevant image files to this subfolder. This file can be deleted prior to publication. -->

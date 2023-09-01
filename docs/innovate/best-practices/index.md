@@ -1,12 +1,10 @@
 ---
 title: Best practices for digital inventions
 description: Start browsing best practices for using the Cloud Adoption Framework in Azure and Innovate methodology to create a toolchain for digital invention.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, seo-caf-innovate
 keywords: digital inventions, digital invention, best practices, digital best practices
 ---

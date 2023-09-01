@@ -1,13 +1,11 @@
 ---
 title: Cloud-native Security Baseline policy
 description: See a sample cloud-native policy for the Security Baseline discipline, in which Azure tools and platforms are sufficient to manage business risks.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 # Cloud-native Security Baseline policy
@@ -35,7 +33,7 @@ Identity is becoming the new boundary control plane for security, taking over th
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
-- Authorized access to resources with Azure role-based access control (Azure RBAC), multi-factor authentication, and single sign-on (SSO).
+- Authorized access to resources with Azure role-based access control (Azure RBAC), multifactor authentication, and single sign-on (SSO).
 - Quick mitigation of user identities suspected of compromise.
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
 - Extended user identity and access to policies across multiple environments through Azure Active Directory.
@@ -51,7 +49,7 @@ A cloud-native policy for network controls may include requirements like the fol
 - Hybrid connections to on-premises resources, might not be allowed in a cloud-native policy. Should a hybrid connection prove necessary, a more robust enterprise security policy sample would be a more relevant reference.
 - Users can establish secure connections to and within Azure using virtual networks and network security groups.
 - The native Windows Azure Firewall protects hosts from malicious network traffic by limiting port access. A good example of this policy is a requirement to block or not enable traffic directly to a VM over SSH/RDP.
-- Services like the Azure Web Application Firewall (WAF) on Azure Application Gateway and Azure DDoS protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled.
+- Services like the Azure Web Application Firewall (WAF) on Azure Application Gateway and Azure DDoS Protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled.
 
 ### Data protection
 
@@ -66,17 +64,15 @@ While these features are built into Azure, each of the above requires configurat
 
 ### Security monitoring
 
-Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Azure Security Center provides unified security baseline and Microsoft Defender for Identity across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
+Security monitoring is a proactive strategy that audits your resources to identify systems that do not meet organizational standards or best practices. Microsoft Defender for Cloud provides unified security baseline and Microsoft Defender for Identity across hybrid cloud workloads. With Defender for Cloud, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks, including:
 
-- Unified view of security across all on-premises and cloud workloads with Azure Security Center.
+- Unified view of security across all on-premises and cloud workloads with Microsoft Defender for Cloud.
 - Continuous monitoring and security assessments to ensure compliance and remediate any vulnerabilities.
 - Interactive tools and contextual threat intelligence for streamlined investigation.
 - Extensive logging and integration with existing security information.
 - Reduces the need for expensive, nonintegrated, one off security solutions.
 
 ### Extend cloud-native policies
-
-Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations used to worry about whether the cloud was secure, most now understand that the level of investment in people and specialized infrastructure made by vendors like Microsoft makes the cloud more secure than most on-premises datacenters.
 
 Using the cloud can reduce some of the security burden. Microsoft provides physical security for Azure datacenters and helps protect the cloud platform against infrastructure threats such as a DDoS attack. Given that Microsoft has thousands of cybersecurity specialists working on security every day, the resources to detect, prevent, or mitigate cyberattacks are considerable. In fact, while organizations used to worry about whether the cloud was secure, most now understand that the level of investment in people and specialized infrastructure made by vendors like Microsoft makes the cloud more secure than most on-premises datacenters.
 

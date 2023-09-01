@@ -10,7 +10,7 @@ The following decisions come from teams outside of the cloud governance team. Th
 Identity Baseline is the fundamental starting point for all governance. Before attempting to apply governance, identity must be established. The established identity strategy will then be enforced by the governance solutions.
 In this governance guide, the Identity Management team implements the [Directory Synchronization](~/decision-guides/identity/index.md#directory-synchronization) pattern:
 
-- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "Same Sign-On" that was implemented during company's migration to Microsoft 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
+- RBAC will be provided by Azure Active Directory (Azure AD), using the directory synchronization or "same sign-on" that was implemented during company's migration to Microsoft 365. For implementation guidance, see [Reference Architecture for Azure AD Integration](/azure/architecture/reference-architectures/identity/azure-ad).
 - The Azure AD tenant will also govern authentication and access for assets deployed to Azure.
 
 In the governance MVP, the governance team will enforce application of the replicated tenant through subscription governance tooling, discussed later in this article. In future iterations, the governance team could also enforce rich tooling in Azure AD to extend this capability.
@@ -39,7 +39,7 @@ At this point, a [cloud-native pattern for encryption](~/decision-guides/encrypt
 
 ## Policy enforcement
 
-The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the [Automated Enforcement](~/decision-guides/policy-enforcement/index.md#automated-enforcement) pattern.
+The first decision to make regarding Deployment Acceleration is the pattern for enforcement. In this narrative, the governance team decided to implement the [Automated Enforcement](../docs/govern/policy-compliance/processes.md#automation-of-monitoring-and-compliance) pattern.
 
 - Azure Security Center will be made available to the security and identity teams to monitor security risks. Both teams are also likely to use Security Center to identify new risks and improve corporate policy.
 - RBAC is required in all subscriptions to govern authentication enforcement.

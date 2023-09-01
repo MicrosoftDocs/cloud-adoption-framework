@@ -2,11 +2,9 @@
 title: MLOps with Azure Machine Learning
 description: Learn about MLOps principles and practices that increase workflow efficiencies like continuous integration, delivery, and deployment.
 author: v-hanki
-ms.author: janet
+ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank
 ---
 
@@ -20,7 +18,7 @@ ms.custom: think-tank
 
 Azure Machine Learning provides the following MLOps capabilities:
 
-- **Create reproducible pipelines.** Machine Learning pipelines enable you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
+- **Create reproducible pipelines.** Machine learning pipelines enable you to define repeatable and reusable steps for your data preparation, training, and scoring processes.
 - **Create reusable software environments** for training and deploying models.
 - **Register, package, and deploy models from anywhere.** You can track the associated metadata required to use the model.
 - **Capture the governance data for the end-to-end lifecycle.** The logged information can include who is publishing models, why changes were made, and when models were deployed or used in production.
@@ -38,14 +36,14 @@ MLOps with Azure helps you:
 - Simplify model packaging, validation, and deployment for quality control and a/B testing.
 - Explain and observe model behavior, and automate the retraining process.
 
-MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment).
+MLOps improves the quality and consistency of your machine learning solutions. To learn more about how to use Azure Machine Learning to manage the lifecycle of your models, see [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment).
 
 ## Next steps
 
 Learn more by reading and exploring the following resources:
 
-- [MLOps: model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
-- How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-and-where)
+- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](/azure/machine-learning/concept-model-management-and-deployment)
+- How and where to [deploy models with Azure Machine Learning](/azure/machine-learning/how-to-deploy-managed-online-endpoints)
 - Tutorial: [deploy an image classification model in Azure Container Instances](/azure/machine-learning/tutorial-deploy-models-with-aml)
 - [End-to-end MLOps examples repo](https://github.com/microsoft/MLOps)
 - [CI/CD of machine learning models with Azure Pipelines](/azure/devops/pipelines/targets/azure-machine-learning)

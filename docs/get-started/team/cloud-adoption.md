@@ -1,16 +1,16 @@
 ---
-title: "Get started: Build a cloud adoption team"
+title: 'Get started: Build a cloud adoption team'
 description: Establish a cloud adoption team's scope, deliverables, and the capabilities to prepare for successful cloud adoption.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Build a cloud adoption team
+
+Enterprises employ cloud adoption as a method to increase the flexibility of their services while lowering cost and risk. Companies do this by using cloud computing which allows them to store, manage, and process large amounts of data on remote computers housed in the internet
 
 Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require more fluid team structures.
 
@@ -19,8 +19,6 @@ Some cloud adoption teams focus exclusively on cloud migration, and others focus
 A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
 
 As cloud adoption expands, customers benefit from a team that's dedicated to the [cloud platform function](../../organize/cloud-platform.md). That team uses automated deployment and code reuse to accelerate successful adoption. People focused on a cloud platform function can implement infrastructure, application patterns, governance, and other supporting assets to drive further efficiencies and consistency, and to instill cloud principles in your organization. Small organizations and small adoption teams don't have the luxury of a dedicated cloud platform team. We recommend that you establish an automation capability in your adoption team to begin building this important cloud muscle.
-
-![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
 ## Step 1: Determine the type of adoption team you need
 
@@ -141,4 +139,4 @@ Cloud adoption is a great goal, but ungoverned adoption can produce unexpected r
 
 Aligning with the cloud governance team creates balance across cloud adoption efforts, but this is considered a minimum viable product (MVP), because it might not be sustainable. Each team is wearing many hats, as outlined in the [RACI charts](../../organize/raci-alignment.md).
 
-Learn more about overcoming [organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md).
+Learn more about overcoming [silos and fiefdoms](../../organize/fiefdoms-silos.md).

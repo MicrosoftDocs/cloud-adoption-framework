@@ -1,20 +1,16 @@
 ---
-title: "Get started: Environment design and configuration"
+title: 'Get started: Environment design and configuration'
 description: Get started with unblocking the design and configuration of your cloud environment.
-author: JanetCThomas
-ms.author: janet
+author: martinekuan
+ms.author: martinek
 ms.date: 05/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: overview
-ms.custom: internal
+ms.custom: internal, UpdateFrequency3
 ---
 
 # Get started: Environment design and configuration
 
 Environment design and configuration are the most common blockers to adoption efforts that are focused on migration or innovation. Quickly implementing a design that supports your long-term adoption plan can be difficult. This article establishes an approach and series of steps that help to overcome common blockers and accelerate your adoption efforts.
-
-![Get started with design and configuration](../_images/get-started/environment-map.png)
 
 The technical effort required to create an effective environmental design and configuration can be complex. You can manage the scope to improve the odds of success for the cloud platform team. The greatest challenge is alignment among multiple stakeholders. Some of these stakeholders have the authority to stop or slow the adoption efforts. These steps outline ways to quickly meet short-term objectives and establish long-term success.
 
@@ -68,7 +64,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 
 Your cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect assessment results, rationalization, needed skills, and partner contracting.
 
-A review of the short-term cloud adoption plan and backlog helps the cloud platform team understand the needs of the environment for the next few months. This background helps them to tighten the "definition of done" for the first few landing zones.
+A review of the short-term cloud adoption plan and backlog helps the cloud platform team understand the needs of the environment for the next few months. This background helps them to tighten their *definition of done* for the first few landing zones.
 
 **Deliverables:**
 
@@ -147,7 +143,7 @@ Migrating to the cloud without understanding ongoing operations is risky. In par
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
+- Identify any workloads that require a Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
   - Review the workbook: estimate one hour per application owner.
   - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
@@ -179,7 +175,7 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 **Guidance to support deliverable completion:**
 
 - [Refactor landing zones](../ready/landing-zone/refactor.md)
-- [Test-driven development of landing zones](../ready/considerations/test-driven-development.md)
+- [Test-driven development of landing zones](../ready/considerations/development-strategy-test-driven-development.md)
 - [Expand landing zone governance](../ready/considerations/landing-zone-governance.md)
 - [Expand landing zone operations](../ready/considerations/landing-zone-operations.md)
 - [Expand landing zone security](../ready/considerations/landing-zone-security.md)

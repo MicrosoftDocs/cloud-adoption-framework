@@ -1,12 +1,10 @@
 ---
 title: Build a growth mindset with retrospectives
 description: Learn how retrospectives help build a growth mindset and empower teams to create sustainable growth.
-author: BrianBlanchard
-ms.author: brblanch
+author: martinekuan
+ms.author: martinek
 ms.date: 04/04/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 

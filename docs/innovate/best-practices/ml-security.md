@@ -2,11 +2,9 @@
 title: Machine learning security
 description: Machine learning presents unique security considerations for businesses, and companies should consider several security principles when designing and assessing machine learning architectures.
 author: shinchan75034
-ms.author: brblanch
+ms.author: martinek
 ms.date: 01/20/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank
 ---
 
@@ -45,6 +43,6 @@ You can configure AKS to use an internal and private load balancer with a privat
 
 ## Next steps
 
-- Reference how to [secure an Azure Machine Learning inferencing environment with virtual networks](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#secure-vnet-traffic) to see an IP address range and the steps to perform inference in a virtual network.
+- Reference how to [secure an Azure Machine Learning inferencing environment with virtual networks](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#secure-vnet-traffic) to see an IP address range and the steps to perform inference in a virtual network.
 
-- See the [Network Contributor role section](/azure/machine-learning/how-to-secure-inferencing-vnet?tabs=python#network-contributor-role) to learn how to configure a private load balancer and set up a Network Contributor role.
+- See the [Network Contributor role section](/azure/machine-learning/v1/how-to-secure-inferencing-vnet#network-contributor-role) to learn how to configure a private load balancer and set up a Network Contributor role.
