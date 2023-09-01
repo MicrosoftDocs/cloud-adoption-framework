@@ -26,8 +26,8 @@ landingContent:
     linkLists: 
       - linkListType: overview
         links:
-          - text: Oracle on Azure landing zone accelerator overview
-            url: enterprise-scale-landing-zone.md
+          - text: Migrate an Oracle workload to Azure Iaas
+            url: migrate-oracle-workload.md
           - text: The strategic impact of Oracle in the Azure cloud
             url: oracle-landing-zone-strategy.md
           - text: Plan for Oracle cloud adoption in Azure
