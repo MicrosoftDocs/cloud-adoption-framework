@@ -1,16 +1,21 @@
 items:
-  - name: Oracle on Azure landing zone accelerator
-    href: enterprise-scale-landing-zone.md
-  - name: Oracle adoption - Microsoft Cloud Adoption Framework for Azure
-    href: intro-oracle-landing-zone.md
+  - name: Migrate an Oracle workload to Azure Iaas
+    href: migrate-oracle-workload.md
   - name: The strategic impact of Oracle in the cloud
     href: oracle-landing-zone-strategy.md
   - name: Technical planning
     href: oracle-landing-zone-plan.md
-  - name: Disaster recovery
+  - name: Design considerations
     items:
       - name: Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS
-        href: oracle-disaster-recovery-iaas.md     
+        href: oracle-disaster-recovery-iaas.md 
+      - name: Network topology and connectivity for Oracle on Azure IaaS  
+        href: oracle-network-topology.md
+      - name: Manage and monitor Oracle workloads on Azure IaaS
+        href: oracle-manage-monitor-workload.md
+      - name: Security guidelines for Oracle on Azure IaaS
+        href: oracle-security-guideline-landing-zone.md
+      
   - name: Prepare your environment
     items:
     - name: Azure landing zone for Oracle
@@ -18,4 +23,4 @@ items:
   - name: Implementation options
     items:
       - name: Introduction to an Oracle adoption scenario
-        href: intro-oracle-landing-zone.md  
+        href: oracle-landing-zones.md  
