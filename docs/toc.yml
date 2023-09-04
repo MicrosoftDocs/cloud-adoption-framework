@@ -509,7 +509,7 @@ items:
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
           items:
-            - name: Single Subscription to the Azure landing zone conceptual architecture
+            - name: Single Subscription with no management groups to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios.md
             - name: Single/Few Management Groups to the Azure landing zone conceptual architecture
               href: ready/landing-zone/align-scenarios-1.md
