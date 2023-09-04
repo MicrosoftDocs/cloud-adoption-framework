@@ -1,6 +1,6 @@
 ---
-title: Single Subscription to the Azure landing zone conceptual architecture
-description: Learn how to transition existing Azure environments comprised of a single Subscription into the Azure landing zone conceptual architecture
+title: Single subscription with no management groups to the Azure landing zone conceptual architecture
+description: Learn how to transition existing Azure environments comprised of a single Subscription with no management groups into the Azure landing zone conceptual architecture
 author: jtracey93
 ms.author: jatracey
 ms.date: 05/16/2023
