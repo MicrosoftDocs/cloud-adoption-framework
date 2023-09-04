@@ -38,22 +38,27 @@ Network topology is a critical element of the landing zone architecture because 
 
 *Figure 2: A traditional Azure network topology.*
 
-# Azure Virtual Network Manager in Azure Landing Zones
+## Azure Virtual Network Manager in Azure Landing Zones
 
-Azure Landing Zones conceptual architecture recommends one of two networking topologies: an Azure Virtual WAN-based network topology, or a network topology based on a hub and spoke architecture.  
+Azure Landing Zones conceptual architecture recommends one of two networking topologies: an Azure Virtual WAN-based network topology, or a network topology based on a traditional hub and spoke architecture.  
 
 As the business requirements change over time (e.g., migration of on-prem applications to Azure that requires hybrid connectivity), AVNM allows you to expand and implement networking changes without disruption to what is already in Azure.  
 
 Azure Virtual Network Manager allows you to create three types of topologies across subscriptions, for both existing and new virtual networks:
-- Hub and spoke with spokes that aren't connected to each other.
-- Hub and spoke with spokes that are directly connected to each other, without any hops in the middle.
-- A meshed group of virtual networks that are interconnected.
+- Hub and spoke topology
+- Hub and spoke topology with direct connectivity
+- Mesh topology (Preview)
 
 ![Diagram that shows Azure Virtual Network topologies](../../_images/azure-best-practices/avnm-network-topologies.png)
 
-When you create a hub-and-spoke topology with Azure Virtual Network Manager in which spokes are connected to each other, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups)are automatically created bi-directionally. By using Azure Virtual Network Manager, you can statically or dynamically make spoke virtual networks members of a specific network group, which automatically creates the connectivity for any virtual network.
+>[!NOTE]
+> Azure Virtual Network Manager does not support Azure Virtual WAN hubs as part of a network group or as the hub in a topology at this time. See the [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq) for more information.
 
-You can create multiple network groups to isolate clusters of spokes virtual networks from direct connectivity. Each network group provides the same region and multi-region support for spoke-to-spoke connectivity. Be sure to stay below the maximum limits for Azure Virtual Network Manager that are described in the [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq#limits)
+When you create a Hub and spoke topology with direct connectivity in Azure Virtual Network Manager where the spokes are connected to each other directly, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) are automatically created bi-directionally via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
+
+Azure Virtual Network Manager, allows you to statically or dynamically add virtual networks to become members of a specific [network groups](/azure/virtual-network-manager/concept-network-groups), which defines and creates the desired topology based on you connectivity configuration within Azure Virtual Network Manager.
+
+You can create multiple network groups to isolate groups of different virtual networks from direct connectivity. Each network group provides the same region and multi-region support for spoke-to-spoke connectivity. Ensure you stay within the limits defined for Azure Virtual Network Manager that are described in the [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq#limits)
 
 
 **Design considerations:**
@@ -61,18 +66,18 @@ You can create multiple network groups to isolate clusters of spokes virtual net
 - Compared to traditional Hub and Spoke deployment (where VNet peering connections are manually created and maintained), Virtual Network Manager introduces a layer of automation for virtual network peering, making large and complex network topologies like mesh easier to manage at scale.
 - The security requirements of different business functions determine the need for creating network groups. A network group is a set of virtual networks selected manually or by using conditional statements as described previously. When a network group is created, the user must specify a policy, or AVNM can create a policy if the user explicitly allows it. This allows Azure Network Manager to get notified about changes, updating of existing Azure policy initiatives require deploying changes to the network group within the Azure Virtual Network Manager resource.	
 - Evaluate which parts of your network share common security characteristics to design the appropriate network group.
-For example, you can create network groups for Corp- connected and online etc. to manage their connectivity and security rules at scale.
-- When multiple Virtual Networks across your organization’s subscription share security attributes, Virtual Network Manager allows you to apply those in an efficient way. 
+For example, you can create network groups for corp and online etc. to manage their connectivity and security rules at scale.
+- When multiple Virtual Networks across your organization’s subscriptions share the same security attributes, Virtual Network Manager allows you to apply those in an efficient way. 
 For example, all the systems used by a Business unit like HR or Finance would belong in a separate network group because they need different sets of admin rules to be applied.
 - Virtual Network Manager can be used to centrally apply security admin rules, which have higher priority than NSG rules applied at the subnet level. This enables the network and security teams to effectively enforce company policies and create security guard rails at scale, while product teams can simultaneously maintain control of NSGs within their landing zone subscriptions.
-- Virtual Network Manager provides the ability to permit specific inbound connectivity to all resources even when NSG rules would otherwise block it (security posture independently of NSG) – known as always allow rules.
+- Virtual Network Manager's [Security Admin Rules (preview)](/azure/virtual-network-manager/concept-security-admins) feature provides the ability to explicitly allow or deny specific network flows regardless of NSG configurations at subnet or network interface levels. This is useful for allowing management services network flows to always be permitted, that cannot be overridden by NSGs controlled by application teams for example.
+- A virtual network can be part of up to only two connected groups
 
 
 **Design recommendations:**
 
-- Enable direct connectivity between spokes when selected spokes need to communicate frequently with each other in addition to access common services or NVA in the hub.
-- Enable Global Mesh when all the spokes need to communicate frequently with each other.  
-- Assign priority to each rule, a lower priority takes precedence over higher values.
-- Use deny rules in the [security admin](/azure/virtual-network-manager/concept-security-admins) rule for traffic that is restricted by the ALZ owner, network administrator cannot override these in NSG rule
-    - Use always allow when traffic must be permitted regardless of NSG rules. This is useful in scenarios where management and security agents always require specific ports and IPs to be allowed through rules
-- Use allows rules in the security admin rule when the policing of traffic must be delegated to the network administrator who can define rules in their NSG.
+- Enable direct connectivity between spokes when selected spokes need to communicate frequently, with low-latency and high throughput requirements, with each other, in addition to access common services or NVAs in the hub.
+- Enable Global Mesh when all the virtual networks, across regions, need to communicate with each other.  
+- Assign a priority to each security admin rule within rule collections, a lower priority takes precedence over higher values.
+- Use [security admin rules](/azure/virtual-network-manager/concept-security-admins) to explicitly allow or deny network flows outside of NSG configurations controlled by application teams.
+    - This further allows you delegate the control of NSGs and their rules to application teams fully.
