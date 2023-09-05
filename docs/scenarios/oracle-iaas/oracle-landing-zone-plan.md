@@ -16,30 +16,30 @@ ms.custom:
 
 # Plan for Oracle on Azure IaaS  
 
-As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure can be high only if you right size your Oracle workload on Azure Infrastructure which also provides an opportunity to optimize Oracle licensing cost. The infrastructure capacity planning exercises will provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
+As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure can be high only if you right size your Oracle workload on Azure Infrastructure, which also provides an opportunity to optimize Oracle licensing cost. The infrastructure capacity planning exercises will provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
 
 The strategy and plan template and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
 
 ## Oracle digital estate planning 
 
-Like most complex platforms, your Oracle digital estate will include three asset categories that should be recognized in your plan: platform, foundational, and workload assets.   **Platform assets**: Your Oracle estate runs on different types of infrastructure or potentially appliances. Regardless of what your organization does with Oracle, those assets are defined by Oracle deployment requirements. This could include RAC or Exadata configurations as well.
+Like most complex platforms, your Oracle digital estate will include three asset categories that should be recognized in your plan: platform, foundational, and workload assets.   **Platform assets**: Your Oracle estate runs on different types of infrastructure or potential appliances. Regardless of what your organization does with Oracle, those assets are defined by Oracle deployment requirements. These deployment requirements could include RAC or Exadata configurations as well.
 **Foundational assets**: Your Oracle platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this article series will later describe how Azure landing zone provides them.
 
-**Workload assets**: Your Oracle platform can consist of Oracle first party applications like e-commerce suite or 3rd party/bespoke applications. Each workload with a dependency on the Oracle workloads should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
+**Workload assets**: Your Oracle platform can consist of Oracle first party applications like e-commerce suite or third party/bespoke applications. Each workload with a dependency on the Oracle workloads should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
 For guidance on Oracle digital estate planning, look through the processes outlined in the article series on digital estate planning. The best practice article on assessing on-premises workloads for migration to Azure proposes the OMAT tool or capture AWR script tool to make the theoretical guidance from the prior article actionable.
 
 Several considerations should be included in those processes when planning for Oracle adoption: 
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information. Make sure you generated the AWR and statspack reports on peak-load. If you are unsure about the peak-load, we provide you with a script for each AWR and statspack report, that helps you define the top 5 busiest times.  
+**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information. Make sure you generated the AWR and statspack reports on peak-load. If you're unsure about the peak-load, we provide you with a script for each AWR and statspack report, that helps you define the top five busiest times.  
 
-**Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or 3rd party applications as well as any custom developed applications. Thereby, it is also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the vCPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS. 
+**Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or 3rd party applications and any custom developed applications. Thereby, it's also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the vCPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS. 
 
 **Evaluate dependencies**: Dependencies on a core platform like Oracle are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio.  
 
 **Environment planning**: Are you moving production and nonproduction Oracle workload at the same time or separately? Customers often move their nonproduction workload to Azure initially, creating an environment for learning and reducing risk. Once the team is comfortable with how the Oracle solution performs and operates on Azure, the path to migrating the production is smoother. 
 
-**Platform rationalization**: The most important consideration is how to rationalize an Oracle solution’s assets; consider how you'll migrate the platform using lift & shift approach.  
+**Platform rationalization**: The most important consideration is how to rationalize an Oracle solution’s assets; consider how you migrate the platform using lift & shift approach.  
 
 Once these considerations are integrated into your digital estate evaluation, you can refine your business justification. You'll also be ready to build out your Oracle cloud adoption plan. 
 
@@ -51,7 +51,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 
 - Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines. 
 
-- Evaluate your database assets [AWR/statspack report based]. This should include a performance analysis to review the current behavior of the database. as well as right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct VM SKU on Azure – based on OMA Tool 
+- Evaluate your database assets [AWR/statspack report based]. This should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct VM SKU on Azure – based on OMA Tool 
 
 - Choose the right deployment architecture - based on architecture guidelines. 
 
