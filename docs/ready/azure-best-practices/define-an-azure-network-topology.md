@@ -42,7 +42,7 @@ Network topology is a critical element of the landing zone architecture because 
 
 Azure Landing Zones conceptual architecture recommends one of two networking topologies: an Azure Virtual WAN-based network topology, or a network topology based on a traditional hub and spoke architecture.  
 
-As the business requirements change over time (e.g., migration of on-prem applications to Azure that requires hybrid connectivity), AVNM allows you to expand and implement networking changes without disruption to what is already in Azure.  
+As the business requirements change over time (e.g., migration of on-prem applications to Azure that requires hybrid connectivity), AVNM allows you to expand and implement networking changes, in many cases without disruption to what is already deployed in Azure.  
 
 Azure Virtual Network Manager allows you to create three types of topologies across subscriptions, for both existing and new virtual networks:
 - Hub and spoke topology
@@ -60,10 +60,20 @@ Azure Virtual Network Manager, allows you to statically or dynamically add virtu
 
 You can create multiple network groups to isolate groups of different virtual networks from direct connectivity. Each network group provides the same region and multi-region support for spoke-to-spoke connectivity. Ensure you stay within the limits defined for Azure Virtual Network Manager that are described in the [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq#limits)
 
+From a security perspective, Azure Virtual Network Manager provides an efficent way of managing Admin security policies to centrally control NSG. This provides network security administrators the ability to both enforce access controls and empower application owners to manage their own lower level rules.
+
+AVNM allows grouping of Virtual Networks to apply configurations to these groups rather than on the individual Vnet.
+This allows more efficient management of connectivity, configuration and topology, security rules and deployment to one or more regions at the same time, all while maintaining fine-grained control.
+
+Networks can be segmented to suit your need, whether that’s by environment, teams, location, line of business or some other function. Network groups can be defined statically or dynamic by defining a set of conditions that govern group membership.
+
+AVNM allows to implement the design principles of Azure Landing Zone to accomodate all application migration, modernization, and innovation at scale.
+
 
 **Design considerations:**
 
 - Compared to traditional Hub and Spoke deployment (where VNet peering connections are manually created and maintained), Virtual Network Manager introduces a layer of automation for virtual network peering, making large and complex network topologies like mesh easier to manage at scale.
+See [AVNM network group overview](/azure/virtual-network-manager/concept-network-groups) for more information.
 - The security requirements of different business functions determine the need for creating network groups. A network group is a set of virtual networks selected manually or by using conditional statements as described previously. When a network group is created, the user must specify a policy, or AVNM can create a policy if the user explicitly allows it. This allows Azure Network Manager to get notified about changes, updating of existing Azure policy initiatives require deploying changes to the network group within the Azure Virtual Network Manager resource.	
 - Evaluate which parts of your network share common security characteristics to design the appropriate network group.
 For example, you can create network groups for corp and online etc. to manage their connectivity and security rules at scale.
