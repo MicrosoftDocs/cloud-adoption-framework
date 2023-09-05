@@ -1,6 +1,6 @@
 ---
-title: Migrate an Oracle workload to Azure Iaas
-description: Learn about how to migrate an Oracle workload to Azure Iaas.
+title: Introduction to an Oracle migration scenario
+description: Introduces an Oracle migration scenario.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Migrate an Oracle workload to Azure
+# Introduction to an Oracle migration scenario
 
 These articles describe how Oracle workloads impact your overall strategy, cloud adoption plan, and environmental readiness efforts, with detailed guidance on specific efforts. Once an environment is established, the series explains the processes for migrating an Oracle platform and how to use cloud technologies to innovate on that workload. To support your cloud adoption needs, the series also outlines considerations and best practices for managing governance and operations throughout an Oracle migration and subsequent operation of your Oracle environment on Azure.
 
@@ -26,3 +26,7 @@ Migrating Oracle workloads to the cloud incorporates and addresses most of the m
 
 ## Next steps
 
+- [The strategic impact of Oracle on Azure IaaS](oracle-iaas-strategic-impact.md)  
+- [Plan for Oracle on Azure IaaS](oracle-iaas-plan.md)  
+- [Azure landing zone for Oracle](oracle-iaas-landing-zone.md)  
+- [Migrate an Oracle platform to Azure IaaS](oracle-iaas-migrate.md)  
