@@ -36,9 +36,9 @@ Use the following flowchart to choose the best high availability option for your
  
 ### High availability using Data Guard in maximum availability mode
 
- Data Guard in maximum availability mode provides the highest availability with zero data loss promise (RPO=0). For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
+Data Guard in maximum availability mode provides the highest availability with zero data loss promise (RPO=0). For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
 
-    :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Iaas.":::
+:::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Iaas.":::
 
 See [Implement Oracle Data Guard on an Azure Linux virtual machine](configure-oracle-dataguard.md) for a step-by-step configuration of Data Guard on Azure.
 
@@ -79,7 +79,7 @@ Disaster recovery architecture provides resilience against failures that impact 
 
 As stated earlier, disaster recovery architecture should be based on your solution requirements as indicated by RTO and RPO. Since disaster recovery architecture is built for exceptional failure cases, failover process is manual as opposed to high availability design. Generally you should have more relaxed requirements for RTO and RPO, which can enable more cost-effective designs.
 
-This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](.oracle-disaster-recovery.md).
+This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](oracle-disaster-recovery-iaas.md).
 
 ### Choose the right disaster recovery option
 
@@ -102,7 +102,7 @@ Additionally, when you send data across Azure regions or data centers, you face 
 
 :::image type="content" source="media/disaster-recovery-configuration-data-guard.png" alt-text="Diagram showing disaster recovery configuration with Data Guard for Oracle on Azure Iaas.":::
 
-Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](configure-oracle-dataguard.md) for a step-by-step configuration of Data Guard on Azure.
+Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](../azure-vmware/.md) for a step-by-step configuration of Data Guard on Azure.
 
 ### Disaster recovery using Golden Gate
 
@@ -110,7 +110,7 @@ Golden Gate is a logical replication software that enables real-time replication
 
 Golden Gate can be used to replicate data from a primary database to secondary in a disaster recovery configuration. Golden Gate can be more practical for instance, when not all data if your data needs to be protected. Golden Gate allows you to selectively replicate tables and even filter out table rows during replication to avoid replicating unnecessary data.
 
-Refer to [Implement Oracle Golden Gate on an Azure Linux VM](configure-oracle-golden-gate.md) for a step-by-step guide to implement Golden Gate on Azure.
+For a step-by-step guide on how to implement Golden Gate on Azure, see [Implement Oracle Golden Gate on an Azure Linux VM](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-golden-gate.md).
 
 ### Disaster recovery using backup
 
@@ -120,7 +120,7 @@ Backup and restore have been a traditional method for disaster recovery architec
 
 - Ensure up to date deployment at the disaster recovery site. This is achieved by replicating the same deployment of all network components, application servers and configuration to the disaster recovery site.
 
-When it comes to replicating data using backup, you have several different options you can explore as explained in [Backup strategies for Oracle Databases on Azure](oracle-database-backup-strategies.md).
+When it comes to replicating data using backup, you have several different options you can explore as explained in [Backup strategies for Oracle Databases on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies.md).
 
 Consider using one of the following approaches to maintain the disaster recovery site:
 
@@ -137,7 +137,7 @@ A third approach is you deploy and maintain your entire solution to the disaster
 
 #### Use FarSync
 
-Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to [Oracle reference architectures on Azure](oracle-reference-architecture.md) for more information on how to use Far Sync on Azure.
+Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to the [Oracle reference architectures on Azure](oracle-reference-architecture.md) for more information on how to use Far Sync on Azure.
 
 #### Choose the right data replication technology
 
