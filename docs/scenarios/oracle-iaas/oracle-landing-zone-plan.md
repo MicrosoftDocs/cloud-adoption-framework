@@ -67,6 +67,4 @@ This project's team members could be Oracle or Azure experts, but it's unlikely 
 
 ## Next steps  
 
-The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting Oracle in Azure.
-
-- [Migrate an Oracle platform to Azure](inro-oracle-landing-zone.md)
+- [Oracle on Azure landing zone accelerator](inro-oracle-landing-zone.md)
