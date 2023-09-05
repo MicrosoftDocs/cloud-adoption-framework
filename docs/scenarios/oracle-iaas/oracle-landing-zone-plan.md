@@ -61,10 +61,10 @@ You can use the Azure DevOps web interface to add those line items to the pl
 
 ## Oracle readiness plan
 
-Once you have a general work plan, you can begin aligning team members and estimating the work. 
+Once you have a general work plan, you can begin aligning team members and estimating the work.
 
 This project's team members could be Oracle or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework building a skills readiness plan article and strategy and plan template can help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint.
 
 ## Next steps  
 
-- [Oracle on Azure landing zone accelerator](inro-oracle-landing-zone.md)
+- [Oracle on Azure landing zone accelerator](intro-oracle-landing-zone.md)

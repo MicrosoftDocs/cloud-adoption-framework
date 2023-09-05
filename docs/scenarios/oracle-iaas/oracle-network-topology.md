@@ -16,7 +16,7 @@ ms.custom:
 
 # Network topology and connectivity for Oracle on Azure IaaS
 
-This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity). The guidance in this article will provide key design considerations and best practices for networking and connectivity of your Oracle instance running on Azure virtual machines (VMs).  Since Oracle supports mission-critical workloads, the guidance on the Azure landing zone design areas should be included in your design.
+This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article will provide key design considerations and best practices for networking and connectivity of your Oracle instance running on Azure virtual machines (VMs).  Since Oracle supports mission-critical workloads, the guidance on the Azure landing zone design areas should be included in your design.
 
 ## Security is always the priority
 
@@ -35,9 +35,9 @@ The following architecture diagram shows networking considerations for Oracle in
 - Monitor and filter traffic using Azure Monitor, Azure network security groups (NSGs), or application security groups.
 - The Oracle subnet should include a network security group (NSG) that allows the following traffic:
   - Inbound port 22 from the Azure Bastion Subnet only.
-  - A Jumpbox VM may be used in place of Azure Bastion, which requires inbound port 3389.
+  - A Jumpbox VM can be used in place of Azure Bastion, which requires inbound port 3389.
   - Inbound port 1521 from the front-end subnet only.
-  - Ports may be changed when security requires obfuscation (not use default ports). 
+  - Ports can be changed when security requires obfuscation (not use default ports). 
 - The front-end subnet should follow [best practices for internet facing workloads](https://learn.microsoft.com/events/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
 - Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](https://learn.microsoft.com/azure/bastion/) to connect securely to the VMs in the Oracle subnet.
 - The **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
@@ -52,5 +52,3 @@ The following architecture diagram shows networking considerations for Oracle in
 Learn about design considerations for Oracle on Azure IaaS Compute & Storage guidelines in an enterprise-scale scenario. 
 
 [Business continuity and disaster recovery for Oracle on Azure IaaS](https://microsofteur.sharepoint.com/:w:/t/DataMod/EV0lkrFLXaNGnSkrAz8gLToB7fnA5hCCqhg0vA1zV7Do2g?e=TgAFlf)
-
-## Feedback

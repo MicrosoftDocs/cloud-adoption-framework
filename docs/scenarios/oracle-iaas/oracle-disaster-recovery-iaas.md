@@ -40,7 +40,7 @@ Data Guard in maximum availability mode provides the highest availability with z
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Iaas.":::
 
-See [Implement Oracle Data Guard on an Azure Linux virtual machine](configure-oracle-dataguard.md) for a step-by-step configuration of Data Guard on Azure.
+See [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) for a step-by-step configuration of Data Guard on Azure.
 
 ### High availability using Data Guard in maximum protection mode
 
@@ -60,8 +60,7 @@ One advantage of using availability zones over availability sets is that your SL
 
 Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adapt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
-:::image type="content" source="media/high-availability-configuration-pacemaker.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure Iaas.":::
-
+:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure Iaas.":::
 
 Use the following links to learn more on how to configure Pacemaker cluster:
 

@@ -22,15 +22,15 @@ This article uses the [strategy and plan template]() and other resources fro
 
 ## Why move an Oracle workload to Azure?
 
-Oracle is an influential platform, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans: 
+Oracle is an influential platform, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
-   - Migration motivations: If other assets depend on Oracle to migrate successfully, then customers tend to focus on reducing costs, complexities, or operational overhead. 
+- Migration motivations: If other assets depend on Oracle to migrate successfully, then customers tend to focus on reducing costs, complexities, or operational overhead.
 
-    - **Cost optimization motivations**: At scale, cloud optimizes cost with scale when required – pay as you go & right sizing of Oracle on cloud can bring licensing and infrastructure cost down 
+- **Cost optimization motivations**: At scale, cloud optimizes cost with scale when required – pay as you go & right sizing of Oracle on cloud can bring licensing and infrastructure cost down.
 
-    - **Innovation motivations**: The cloud unlocks new opportunities like AI & Data Modernization for the Oracle workload to be transformed and modernized, although this may not be in scope for the initial migration. 
+  - **Innovation motivations**: The cloud unlocks new opportunities like AI & Data Modernization for the Oracle workload to be transformed and modernized, although this may not be in scope for the initial migration.
 
-    - **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads. 
+  - **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
 
 Customers are often motivated by several if not all the categories mentioned above. To successfully migrate an Oracle workload in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
 
