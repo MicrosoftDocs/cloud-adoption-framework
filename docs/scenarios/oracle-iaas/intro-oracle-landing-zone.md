@@ -1,6 +1,6 @@
 ---
 title: Oracle on Azure landing zone accelerator
-description: Learn about the Oracle on Azure landing zone accelerator.
+description: Learn about Oracle on Azure landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -139,9 +139,9 @@ To implement the reference architecture, you can either follow the guidance prov
 
 ## Next steps
 
-Review the following design areas for your Oracle on Azure landing zone accelerator architecture:
+For more information about the design areas for your Oracle on Azure landing zone accelerator architecture, see the following articles:
 
-- Network topology and connectivity
-- Management and monitoring
-- Business continuity and disaster recovery + Backup and recovery
-- Security, governance, and compliance
+- [Network topology and connectivity for Oracle on Azure IaaS](oracle-network-topology.md)
+- [Manage and monitor Oracle workloads on Azure IaaS](manage-monitor-oracle-workload.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS](oracle-disaster-recovery-iaas.md)
+- [Security guidelines for Oracle on Azure IaaS](oracle-security-guideline-landing-zone.md)

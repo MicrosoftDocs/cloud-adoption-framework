@@ -28,5 +28,5 @@ Migrating Oracle workloads to the cloud incorporates and addresses most of the m
 
 - [The strategic impact of Oracle on Azure IaaS](oracle-iaas-strategic-impact.md)  
 - [Plan for Oracle on Azure IaaS](oracle-iaas-plan.md)  
-- [Azure landing zone for Oracle](oracle-iaas-landing-zone.md)  
-- [Migrate an Oracle platform to Azure IaaS](oracle-iaas-migrate.md)  
+- [Azure landing zone accelerator for Oracle](oracle-iaas-landing-zone.md)  
+- [Migrate an Oracle platform to Azure IaaS](migrate-oracle-workload.md)  
