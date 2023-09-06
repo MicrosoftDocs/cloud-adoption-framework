@@ -34,32 +34,48 @@ Global Reach is an ExpressRoute feature that enables you to connect two ExpressR
 
 ## Azure VMware Solution network topology
 
-An Azure VMware Solution private cloud infrastructure includes several network segments. The segments are realized by VMware's network virtualization stack (virtual distributed switches) and connected to the underlying physical infrastructure through the ESXi hosts' physical NICs.
+An Azure VMware Solution private cloud infrastructure includes several network segments. The segments are implemented by VMware's network virtualization stack (distributed virtual switches) and connected to the underlying physical infrastructure through the ESXi hosts' physical NICs.
 
-- **Management networks** support  basic vSphere cluster functions (vCenter Server and NSX-T management virtual machines, vMotion, replication, vSAN, …). The management networks’ address space is allocated from the /22 address block assigned to each Azure VMware Solution private cloud at provisioning time. See the [Azure VMware Solution official documentation](/azure/azure-vmware/tutorial-network-checklist#routing-and-subnet-considerations) for details on how IP address ranges from the /22 block are assigned to management networks.
-- **Workload segments** are customer-defined NSX-T segments to which Azure VMware Solution virtual machines attach. The address range for a workload segment is customer-defined. It cannot overlap with: (i) The Azure VMware Solution private cloud's /22 management block; (ii) Address ranges used in peered Azure virtual networks; (iii) Address ranges used in remote networks connected to the private cloud. Workload segments can be attached to Tier-1 gateways. An Azure VMware Solution private cloud can have one or more Tier-1 gateways. Tier-1 gateways can be linked to the private cloud's default Tier-0 gateway, which provides connectivity to the physical network outside the vSphere/NSX-T cluster.
+- **Management networks** support  basic vSphere cluster functions, like vCenter Server and NSX-T management virtual machines, vMotion, replication, and vSAN. The management networks' address space is allocated from the /22 address block that's assigned to each Azure VMware Solution private cloud during provisioning. See [Routing and subnet considerations](/azure/azure-vmware/tutorial-network-checklist#routing-and-subnet-considerations) for details on how IP address ranges from the /22 block are assigned to management networks.
+- **Workload segments** are customer-defined NSX-T segments to which Azure VMware Solution virtual machines attach. The address range for a workload segment is customer-defined. It can't overlap with:
+  - The Azure VMware Solution private cloud's /22 management block. 
+  - Address ranges used in peered Azure virtual networks. 
+  - Address ranges used in remote networks that are connected to the private cloud.
+  
+  Workload segments can be attached to tier-1 gateways. An Azure VMware Solution private cloud can have one or more tier-1 gateways. You can link tier-1 gateways to the private cloud's default tier-0 gateway, which provides connectivity to the physical network outside the vSphere/NSX-T cluster.
 
-The network topology of an Azure VMware solution private cloud is shown in the figure below.
+The network topology of an Azure VMware Solution private cloud is shown here:
 
-:::image type="content" source="media/network-design-guide-figure4-1.png" alt-text="Figure 4-1. Network topology of an Azure VMware Solution private cloud." lightbox="media/network-design-guide-figure4-1.png":::
-*Network topology of an Azure VMware Solution private cloud.*
+:::image type="content" source="media/network-design-guide-figure-4-1.png" alt-text="Diagram that shows a network topology of an Azure VMware Solution private cloud." lightbox="media/network-design-guide-figure-4-1.png" border="false":::
 
 ## Dynamic routing in Azure VMware Solution
-Azure VMware Solution private clouds connect to Azure virtual networks and remote sites over the managed ExpressRoute circuit. Border Gateway Protocol (BGP) is used for dynamic route exchange, as shown in the figure below.
 
-:::image type="content" source="media/network-design-guide-figure5.png" alt-text="Figure 5. Diagram that shows how route propagation works in Azure VMware Solution." lightbox="media/network-design-guide-figure5.png":::
-*Dynamic routing in Azure VMware Solution.*
+Azure VMware Solution private clouds connect to Azure virtual networks and remote sites over the managed ExpressRoute circuit. Border Gateway Protocol (BGP) is used for dynamic route exchange, as shown here:
 
-In the standard topology shown in the above figure:
-- Routes for management and workload segments in the Azure VMware Solution private cloud are announced to all ExpressRoute Gateways connected to the private cloud's managed circuit. In the opposite direction, ExpressRoute Gateways announce routes for: (i) The prefixes that comprise the address space of their own virtual network; (ii) The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (dotted-line arrow in the figure). 
-- Routes for management and workload segments in the Azure VMware Solution private cloud are announced to all ExpressRoute circuits connected to the private cloud's managed circuit via Global Reach. In the opposite direction, all routes announced from the on-premises site over the customer-managed ExpressRoute circuit are propagated to the Azure VMware Solution private cloud (solid-line arrow in the figure).
-- The routes announced from the on-premises site over the customer-managed ExpressRoute circuit are learned by all ExpressRoute Gateways connected to the circuit. The routes are injected into: (i) The route table of the Gateway's virtual network; (ii) The route table of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity). In the opposite direction, ExpressRoute Gateways announce routes for: (i) The prefixes that comprise the address space of their own virtual network; (ii) The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (dashed-line arrow in the figure).
+:::image type="content" source="media/network-design-guide-figure-5.png" alt-text="Diagram that shows how route propagation works in Azure VMware Solution." lightbox="media/network-design-guide-figure-5.png" border="false":::
+
+In the standard topology shown in the preceding figure:
+
+- Routes for management and workload segments in the Azure VMware Solution private cloud are announced to all ExpressRoute gateways that are connected to the private cloud's managed circuit. In the opposite direction, ExpressRoute gateways announce routes for: 
+
+   - The prefixes that comprise the address space of their own virtual network. 
+   - The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (the red dotted line in the diagram). 
+- Routes for management and workload segments in the Azure VMware Solution private cloud are announced to all ExpressRoute circuits connected to the private cloud's managed circuit via Global Reach. In the opposite direction, all routes announced from the on-premises site over the customer-managed ExpressRoute circuit are propagated to the Azure VMware Solution private cloud (the solid yellow line in the diagram).
+- The routes announced from the on-premises site over the customer-managed ExpressRoute circuit are learned by all ExpressRoute gateways that are connected to the circuit. The routes are injected into: 
+   - The route table of the Gateway's virtual network.
+   - The route table of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity). 
+   
+  In the opposite direction, ExpressRoute gateways announce routes for: 
+    - The prefixes that comprise the address space of their own virtual network. 
+    - The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (the green dashed line in the diagram).
 
 > [!NOTE]
-> ExpressRoute Gateways do not propagate routes across circuit connections. In the above figure, the ExpressRoute Gateway does not propagate routes learned in the dotted BGP session to the dashed BGP session, and vice versa. This is the reason why Global Reach is required to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
+> ExpressRoute gateways don't propagate routes across circuit connections. In the preceding figure, the ExpressRoute gateway doesn't propagate routes learned in the BGP session represented by the red line to the BGP session represented by the green line, or vice versa. That's why Global Reach is needed to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
 
 ## Outbound data transfer charges
-The managed ExpressRoute circuit associated to an Azure VMware Solution private cloud is instantiated in a Microsoft-owned subscription. Your subscriptions are not billed for any costs (monthly fees and data transfer fees) associated to the managed circuit. More specifically, your subscriptions are not billed for:
+
+A managed ExpressRoute circuit that's associated with an Azure VMware Solution private cloud is instantiated in a Microsoft-owned subscription. Your subscriptions are not billed for any costs (monthly fees and data transfer fees) associated to the managed circuit. More specifically, your subscriptions are not billed for:
+
 - ExpressRoute monthly fees for the managed circuit;
 - Traffic transferred from an Azure virtual network to the private cloud over the managed circuit;
 - ExpressRoute Global Reach ingress and egress traffic charges. When an ExpressRoute circuit that you own is connected via Global Reach to an Azure VMware Solution managed circuit, Global Reach ingress and egress charges are suppressed on your circuit too, if your circuit is in the same [geopolitical region](/azure/expressroute/expressroute-locations#locations) as the private cloud.
