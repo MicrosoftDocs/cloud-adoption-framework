@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Security Guidelines for Oracle on Azure IaaS
+# Security guidelines for Oracle on Azure IaaS
 
 This article describes how to securely deploy Oracle workloads on Azure IaaS throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
 ## Overview - Oracle workload on Azure IaaS security
