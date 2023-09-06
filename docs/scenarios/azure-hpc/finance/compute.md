@@ -37,12 +37,22 @@ HPC SKUs are specifically designed for high-performance scenarios, but other SKU
 
 ## Design considerations
 
-When designing your HPC infrastructure, there are several tools and services available to help you manage and schedule your workloads. 
+When designing your HPC infrastructure, there are several tools and services available to help you manage and schedule your workloads.
 
 [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and Big Compute clusters in Azure. With Azure CycleCloud, users can dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads, by using various work load managers (such as Grid Engine, HPC Pack, HTCondor, LSF, PBS Pro, Slurm, or Symphony) on Azure.
 
+### Finance architecture design example
+The following architecture is an example that shows the use of VMs in HPC for Finance workloads.
+
+![Azure Batch Architecture Diagram](_images/hpc-finance-architecture-example.jpg "Azure Batch Architecture Diagram")
+
+This workload is utilizing HPC Pack HB-Series.
+The HB-series (Virtual Machine series | Microsoft Azure)VMs are optimized for HPC applications, such as financial analysis, weather simulation, and silicon RTL modeling. HB VMs feature up to 120 AMD EPYC™ 7003-series CPU cores, 448 GB of RAM, and no hyperthreading. HB-series VMs also provide 350 GB/sec of memory bandwidth, up to 32 MB of L3 cache per core, up to 7 GB/s of block device SSD performance, and clock frequencies up to 3.675 GHz.
+At the same time another VM for the HPC head node is in use utilizing a different size, the D16s_v4, categorized as General Purpose. Virtual Machine series | Microsoft Azure.
+
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for manufacturing use cases, see:
 
+- [Virtual Machine Series](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/)
 - [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Standalone reference architecture might not be compliant with the ALZ paradigm.
 
