@@ -136,7 +136,7 @@ A third approach is you deploy and maintain your entire solution to the disaster
 
 #### Use FarSync
 
-Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to the [Oracle reference architectures on Azure](oracle-reference-architecture.md) for more information on how to use Far Sync on Azure.
+Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to the [Oracle reference architectures on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-reference-architecture#oracle-data-guard-far-sync) for more information on how to use Far Sync on Azure.
 
 #### Choose the right data replication technology
 

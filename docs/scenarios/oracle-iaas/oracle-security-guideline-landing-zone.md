@@ -68,11 +68,11 @@ Operating System Hardening - Ensure the operating system is hardened to eliminat
      - Alias potentially destructive Linux commands (such as rm and mv) to force them to interactive mode, so you're prompted at least once before an irreversible command is executed.  Advanced users know how to unalias if they wish.
      - Set the Oracle database unified system logs to send copies of the Oracle audit logs to the Azure Log Analytics using the Linux SYSLOG utility.
      
-## Using Network Security
+## Use network security
 
-Using network security is the fundamental component of a layered security approach for [Oracle workloads on Azure](configure-azure-oci-networking.md). 
+Using network security is the fundamental component of a layered security approach for [Oracle workloads on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking). 
 
-- Using Network Security Groups (NSG)- You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. By using NSG, the traffic between on-premises network to/from Azure can be filtered as well by using IP address ranges and specific ports. For more information, please see [Network security group](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview).
+- Using [Network Security Groups (NSG)](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview)- You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. By using NSG, the traffic between on-premises network to/from Azure can be filtered as well by using IP address ranges and specific ports. For more information, see [Network security group](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview).
 
     General inbound port assignments for Oracle database VMs can be listed as in the following table:
 
