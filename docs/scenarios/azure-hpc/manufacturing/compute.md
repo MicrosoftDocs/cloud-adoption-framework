@@ -40,6 +40,17 @@ When designing your HPC infrastructure, there are several tools and services ava
 
 [Azure CycleCloud](/azure/cyclecloud/) is a tool for creating, managing, operating, and optimizing HPC and Big Compute clusters in Azure. With Azure CycleCloud, users can dynamically configure HPC Azure clusters and orchestrate data and jobs for hybrid and cloud workflows. Azure CycleCloud provides the simplest way to manage HPC workloads, by using various work load managers (such as Grid Engine, HPC Pack, HTCondor, LSF, PBS Pro, Slurm, or Symphony) on Azure.
 
+### Manufacturing architecture design example
+The following architecture is an example that shows the use of VMs in HPC in Manufacturing.
+
+![Azure Batch Architecture Diagram](media/hpc-manufacturing-architecture-example.jpg "Azure Batch Architecture Diagram")
+
+This architecture diagram shows an arrangement that utilizes Azure File Shares and Storage accounts connected to a private link subnet.
+
+CycleCloud is present utilizing its own subnet and an arrangement of cluster nodes is connected utilizing the HC-Series.
+The HC-series VMs are optimized for HPC applications driven by intensive computation, such as implicit finite element analysis, reservoir simulation, and computational chemistry. HC VMs feature 44 Intel Xeon Platinum 8168 processor cores, 8 GB of RAM per CPU core, no hyperthreading, and up to 4 Managed Disks. The Intel Xeon Platinum platform supports Intel’s rich ecosystem of software tools and features an all-cores clock speed of 3.4 GHz for most workloads.
+
+
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for manufacturing use cases, see:
 
 - [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
