@@ -1,18 +1,18 @@
 ---
-title: Baseline monitoring considerations
+title: Monitor Azure platform landing zone components
 description: Learn how to deploy baseline monitoring for your Azure platform services.
 author: Jfaurskov
 ms.author: janfaurs
-ms.date: 07/13/2023
+ms.date: 09/06/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
-# Monitor your Azure platform landing zone components
+# Monitor Azure platform landing zone components
 
-Monitor your Azure platform landing zone components to ensure availability, reliability, security, and scalability of the platform services. It enables your organization to:
+Monitor your Azure platform landing zone components to ensure availability, reliability, security, and scalability. It enables your organization to:
 
 - Promptly detect and resolve issues, optimize resource utilization, and proactively address security threats.
 - Continuously monitor performance and health, which helps your organizations minimize downtime, optimize costs, and ensure efficient operation.
@@ -22,9 +22,9 @@ Monitor the platform landing zone services to maintain a stable and secure envir
 
 ## Monitoring guidance for Azure landing zone
 
-To ensure consistent alerting and monitoring for Azure landing zone, there are a set of baseline alerts for the landing zone platform components and some landing zone components. The alerts are a combination of metric, activity log, and log query alerts based on Microsoft recommended practices for proactive monitoring, including setting up alerts, thresholds, and notifications for timely issue detection and response. With the guidance and tooling provided, your organization can achieve real-time visibility into the performance, utilization, and security of your platform landing zone implementation. You will be able to proactively address issues, optimize resource allocation, and ensure a reliable and secure environment.
+There are baseline metric, activity log, and log query alerts for the landing zone platform components and other selected landing zone components. These baseline alerts ensure consistent alerting and monitoring for your Azure landing zone. They're based on Microsoft-recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response. Use the following guidance to achieve real-time visibility into the performance, utilization, and security of your platform landing zone implementation. Learn how to proactively address issues, optimize resource allocation, and ensure a reliable and secure environment.
 
-A subset of the Azure components for which one or more alerts are defined includes:
+The following subsets of Azure components have one or more alerts defined:
 
 - Azure ExpressRoute
 - Azure Firewall
