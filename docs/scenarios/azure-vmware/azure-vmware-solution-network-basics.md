@@ -74,19 +74,20 @@ In the standard topology shown in the preceding figure:
 
 ## Outbound data transfer charges
 
-A managed ExpressRoute circuit that's associated with an Azure VMware Solution private cloud is instantiated in a Microsoft-owned subscription. Your subscriptions are not billed for any costs (monthly fees and data transfer fees) associated to the managed circuit. More specifically, your subscriptions are not billed for:
+A managed ExpressRoute circuit that's associated with an Azure VMware Solution private cloud is instantiated in a Microsoft-owned subscription. Your subscriptions aren't billed for any costs (monthly fees or data transfer fees) that are associated with the managed circuit. More specifically, your subscriptions aren't billed for:
 
-- ExpressRoute monthly fees for the managed circuit;
-- Traffic transferred from an Azure virtual network to the private cloud over the managed circuit;
+- ExpressRoute monthly fees for the managed circuit.
+- Traffic transferred from an Azure virtual network to the private cloud over the managed circuit.
 - ExpressRoute Global Reach ingress and egress traffic charges. When an ExpressRoute circuit that you own is connected via Global Reach to an Azure VMware Solution managed circuit, Global Reach ingress and egress charges are suppressed on your circuit too, if your circuit is in the same [geopolitical region](/azure/expressroute/expressroute-locations#locations) as the private cloud.
 
-The ExpressRoute virtual network gateway connected to the private cloud's managed circuit is instantiated in a virtual network that you own and, as such, billed at the [standard ExpressRoute virtual network gateway rates](https://azure.microsoft.com/pricing/details/expressroute/). 
+The ExpressRoute virtual network gateway that's connected to the private cloud's managed circuit is instantiated in a virtual network that you own, so it's billed at the [standard ExpressRoute virtual network gateway rates](https://azure.microsoft.com/pricing/details/expressroute/). 
 
-Any other network-related resources (Azure VPN Gateways, Azure Route Servers, virtual network Peerings, Public IP addresses, ...) required by the topologies discussed in this guide must be deployed in your subscription. They are billed at the standard rates.  
+Any other network-related resources, like Azure VPN gateways, Azure route servers, virtual network peerings, and public IP addresses, that are required by the topologies discussed in this guide must be deployed in your subscription. They're billed at the standard rates.  
 
-More details on billing for Azure VMware Solution are provided in the [official documentation](/azure/azure-vmware/faq#billing).
+For more information about billing for Azure VMware Solution, see the [Common questions article](/azure/azure-vmware/faq#billing).
 
-## Next Steps
+## Next steps
+
 Learn about connectivity between Azure VMware Solution and on-premises sites.
 
 > [!div class="nextstepaction"]
