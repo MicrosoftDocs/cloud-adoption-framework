@@ -1,3 +1,14 @@
+---
+title: Sovereignty considerations for Azure Landing Zones
+description: Discuss Sovereign Landing Zone variant of ALZ.
+author: pikestel
+ms.author: pikestel
+ms.date: 09/06/2023
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: internal
+---
 # Sovereignty considerations for Azure Landing Zones
 
 ## Microsoft Cloud for Sovereignty
