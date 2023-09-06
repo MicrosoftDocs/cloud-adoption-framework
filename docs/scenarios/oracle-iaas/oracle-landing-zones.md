@@ -1,6 +1,6 @@
 ---
-title: Azure landing zone for Oracle on IaaS
-description: Learn about Azure landing zone for Oracle on IaaS.
+title: Azure landing zone for Oracle on Azure VMs landing zone accelerator
+description: Learn about Azure landing zone for Oracle on VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Azure landing zone for Oracle
+# Azure landing zone for Oracle on Azure VMs landing zone accelerator
 
 The Ready methodology of the Cloud Adoption Framework helps guide the creation of all Azure environments using Azure landing zones. Azure landing zones provide many implementation options built around a set of common design areas.
 

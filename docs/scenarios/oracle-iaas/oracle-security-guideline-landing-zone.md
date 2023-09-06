@@ -1,6 +1,6 @@
 ---
-title: Security guidelines for Oracle on Azure IaaS
-description: Learn about security guidelines for Oracle on Azure IaaS.
+title: Security guidelines for Oracle on Azure VMs landing zone accelerator
+description: Learn about security guidelines for Oracle on Azure VMs  landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Security guidelines for Oracle on Azure IaaS
+# Security guidelines for Oracle on Azure VMs landing zone accelerator
 
 This article describes how to securely deploy Oracle workloads on Azure IaaS throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
 ## Overview - Oracle workload on Azure IaaS security

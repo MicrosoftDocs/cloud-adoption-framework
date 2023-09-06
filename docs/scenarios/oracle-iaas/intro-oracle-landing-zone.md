@@ -1,6 +1,6 @@
 ---
-title: Oracle on Azure landingzone accelerator
-description: Learn about Oracle on Azure landing zone accelerator.
+title: Oracle on Azure Virtual Machines landing zone accelerator
+description: Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Oracle on Azure landingzone accelerator
+# Oracle on Azure Virtual Machines landing zone accelerator
 
 Use the guidance in this article to set up and operate Oracle workloads inside your Azure landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
 

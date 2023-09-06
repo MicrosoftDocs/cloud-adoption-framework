@@ -1,6 +1,6 @@
 ---
-title: Manage and monitor Oracle workloads on Azure IaaS
-description: Learn how to manage and monitor Oracle workloads on Azure IaaS
+title: Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
+description: Learn how to manage and monitor Oracle workloads Azure VMs  landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Manage and monitor Oracle workloads on Azure IaaS
+# Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
 
 Monitoring and managing Oracle and underlying VMs on Azure is the key to maintaining your workload performance and free from failures. Strong practices described in this article must be followed to ensure you have highly available & reliable workload-based business operations on Azure as a possibility.
 

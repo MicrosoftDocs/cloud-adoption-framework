@@ -1,6 +1,6 @@
 ---
-title: Strategic impact of Oracle on Azure IaaS 
-description: Learn about the strategic impact of Oracle in the Azure Iaas.
+title: Strategic impact of Oracle on Azure VMs landing zone accelerator 
+description: Learn about the strategic impact of Oracle on Azure VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,13 +14,13 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Strategic impact of Oracle on Azure IaaS
+# Strategic impact of Oracle on Azure VMs landing zone accelerator
 
 Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a LoB application or as a combined suite for enterprise resource planning, HR, SCM or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly impact cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
 
 This article uses the [strategy and plan template]() and other resources from the Cloud Adoption Framework to capture the strategic impact of Oracle workload on Azure.
 
-## Why move an Oracle workload to Azure?
+## Why move an Oracle workload to Azure VMs for landing zone accelerator?
 
 Oracle is an influential platform, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 

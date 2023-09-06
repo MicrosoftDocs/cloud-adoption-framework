@@ -1,6 +1,6 @@
 ---
-title: Compute and storage guidelines for Oracle Workload as IaaS on Azure
-description: Learn about compute and storage guidelines for Oracle Workload as IaaS on Azure.
+title: Compute and storage guidelines for Oracle Workload on Azure VMs landing zone accelerator
+description: Learn about compute and storage guidelines for Oracle Workload on Azure VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -15,7 +15,7 @@ ms.custom:
 ---
 
 
-# Compute and storage guidelines for Oracle Workload as IaaS on Azure
+# Compute and storage guidelines for Oracle Workload on Azure VMs landing zone accelerator
 
 This article builds on several considerations and recommendations defined in the Azure cloud adoption framework. It provides guidelines on how to select optimized infrastructure for your Oracle workloads on Microsoft Azure IaaS  Compute (VM) and Storage.  
 

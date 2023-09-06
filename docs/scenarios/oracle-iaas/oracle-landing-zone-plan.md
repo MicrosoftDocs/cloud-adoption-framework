@@ -1,6 +1,6 @@
 ---
-title: Plan for Oracle on Azure IaaS 
-description: Learn about how to plan for Oracle on Azure IaaS  
+title: Plan for Oracle on Azure VMs landing zone accelerator
+description: Learn about how to plan for Oracle on Azure VMs landing zone accelerator.  
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Plan for Oracle on Azure IaaS  
+# Plan for Oracle on Azure VMs landing zone accelerator  
 
 As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure can be high only if you right size your Oracle workload on Azure Infrastructure, which also provides an opportunity to optimize Oracle licensing cost. The infrastructure capacity planning exercises will provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
 

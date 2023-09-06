@@ -1,6 +1,6 @@
 ---
-title: Introduction to an Oracle migration scenario
-description: Introduces an Oracle migration scenario.
+title: Introduction to Oracle on Azure VMs landing zone accelerator migration scenario 
+description: Introduces Oracle on Azure VMs landing zone accelerator migration scenario.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Introduction to an Oracle migration scenario
+# Introduction to Oracle on Azure VMs landing zone accelerator migration scenario
 
 These articles describe how Oracle workloads impact your overall strategy, cloud adoption plan, and environmental readiness efforts, with detailed guidance on specific efforts. Once an environment is established, the series explains the processes for migrating an Oracle platform and how to use cloud technologies to innovate on that workload. To support your cloud adoption needs, the series also outlines considerations and best practices for managing governance and operations throughout an Oracle migration and subsequent operation of your Oracle environment on Azure.
 

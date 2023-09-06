@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity for Oracle on Azure IaaS
-description: Learn about network topology and connectivity for Oracle on Azure IaaS.
+title: Network topology and connectivity for Oracle on Azure VMs  landing zone accelerator
+description: Learn about network topology and connectivity for Oracle VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni

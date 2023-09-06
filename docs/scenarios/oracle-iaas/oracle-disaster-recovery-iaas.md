@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS
-description: Learn about business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS.
+title: Business continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator
+description: Learn about continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -15,7 +15,7 @@ ms.custom:
 --- 
 
 
-# Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS
+# Business continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator
 
 This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(VMs).
 

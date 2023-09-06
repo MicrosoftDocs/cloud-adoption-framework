@@ -1,6 +1,6 @@
 ---
-title: Governance and compliance for Oracle on Azure IaaS
-description: Learn about governance and compliance for Oracle on Azure IaaS.
+title: Governance and compliance for Oracle on Azure VMs landing zone accelerator
+description: Learn about governance and compliance for Oracle on Azure VMs landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Governance and compliance for Oracle on Azure IaaS
+# Governance and compliance for Oracle on Azure VMs landing zone accelerator
 
 This article describes how holistically govern Oracle workload on Azure IaaS throughout its lifecycle. The article explores specific design elements and provides target recommendations for Oracle workload on Azure IaaS governance and compliance.
 

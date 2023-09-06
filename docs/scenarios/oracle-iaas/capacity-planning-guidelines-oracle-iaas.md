@@ -1,6 +1,6 @@
 ---
-title: Capacity planning guidelines for Oracle workload as IaaS on Azure 
-description: Learn about capacity planning guidelines for Oracle workload as IaaS on Azure. 
+title: Capacity planning guidelines for Oracle on Azure VMs landing zone accelerator 
+description: Learn about capacity planning guidelines for Oracle on Azure VMs landing zone accelerator. 
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Capacity planning guidelines for Oracle workload as IaaS on Azure
+# Capacity planning guidelines for Oracle on Azure VMs landing zone accelerator
 
 This article builds on several considerations and recommendations defined in the [Azure cloud adoption framework](https://learn.microsoft.com/azure/cloud-adoption-framework/adopt/cloud-adoption). Following the guidance, this article  provides you with the right guidelines for infrastructure capacity planning for your Oracle workloads on Microsoft Azure. Since Oracle is a mission-critical & high-performance workload, all the guidance on the Azure landing zone design areas should also be included in your design.
 

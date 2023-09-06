@@ -1,6 +1,6 @@
 ---
-title: Enterprise enrollment for Oracle on Azure IaaS 
-description: Learn about enterprise enrollment for Oracle on Azure IaaS. 
+title: Enterprise enrollment for Oracle on Azure VMs landing zone accelerator
+description: Learn about enterprise enrollment for Oracle on Azure VMs landing zone accelerator. 
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Enterprise enrollment for Oracle on Azure IaaS
+# Enterprise enrollment for Oracle on Azure VMs landing zone accelerator
 
 This article describes enterprise enrollment for Oracle on Azure IaaS. Azure landing zones for Oracle don't have specific considerations or recommendations that impact [enterprise enrollment or Active Directory tenant decisions](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant).
 
