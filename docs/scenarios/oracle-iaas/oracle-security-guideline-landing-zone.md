@@ -100,15 +100,15 @@ In addition to that, you can always create custom policies to address your organ
 
 ## Secure data using encryption
 
-    - Encryption in transit - Applies to the state of data moving from one location to another, usually across a network connection. Data in transit can be encrypted in several ways, depending on the nature of the connection. As Azure does not provide encryption for data in transit on Azure networks by default, so if encryption in transit is required, customers must enable it.  For more information in the Azure documentation, see encryption of data in transit.
-     
-    Microsoft recommends using Oracle’s Native Network Encryption and Data Integrity feature, and for more information see the Oracle documentation  HERE.
-    - **Encrypt data at rest** - In addition to protecting data as it is in transit, it is also necessary to protect data when it is written to storage, while it is at rest.  Storage media can be removed and the data within examined, and storage media can be accessed while in use and confidential information revealed, so it is important that data be encrypted so that only authorized and authenticated users can view or modify it. Azure provides three layers of encryption at rest.
-    - All data is encrypted at the lowest level when it is persisted into any Azure storage device, which is called Azure Storage service-side encryption.
-        - This level of encryption is designed to ensure that it is not necessary to erase or destroy the storage media when an Azure tenant is done using storage.  When the data is always encrypted at rest, the data is gone forever if the platform managed key is discarded, and this is a lot faster and safer than attempting to erase all traces of data from storage.
-    - Azure also provides an     opportunity to doubly-encrypt stored data within the Azure Storage infrastructure using Azure Storage infrastructure encryption, using two separate platform-managed keys.
-    	- In addition, Azure disk encryption is at-rest encryption managed within the guest OS (i.e. Bitlocker for Windows, DM-CRYPT for Linux)https://learn.microsoft.com/azure/storage/common/storage-service-encryption#client-side-encryption-for-blobs-and-queues. Then, as well as these one, two, or three possible layers of encryption at rest in the Azure Storage infrastructure, the Oracle Database also offers transparent data encryption (TDE) of the database files, yet another level of encryption at rest, as part of the Oracle Advanced Security option.
-    Furthermore, the Oracle Advanced Security option also offers a feature called Data Redaction, which is a form of dynamic data masking.  As the database retrieves data, it masks the data value, without altering the data value stored.
+- Encryption in transit - Applies to the state of data moving from one location to another, usually across a network connection. Data in transit can be encrypted in several ways, depending on the nature of the connection. As Azure does not provide encryption for data in transit on Azure networks by default, so if encryption in transit is required, customers must enable it.  For more information in the Azure documentation, see encryption of data in transit.
+
+Microsoft recommends using Oracle’s Native Network Encryption and Data Integrity feature, and for more information see the Oracle documentation  HERE.
+
+- **Encrypt data at rest** - In addition to protecting data as it is in transit, it is also necessary to protect data when it is written to storage, while it is at rest.  Storage media can be removed and the data within examined, and storage media can be accessed while in use and confidential information revealed, so it is important that data be encrypted so that only authorized and authenticated users can view or modify it. Azure provides three layers of encryption at rest
+- All data is encrypted at the lowest level when it is persisted into any Azure storage device, which is called Azure Storage service-side encryption.
+- This level of encryption is designed to ensure that it is not necessary to erase or destroy the storage media when an Azure tenant is done using storage.  When the data is always encrypted at rest, the data is gone forever if the platform managed key is discarded, and this is a lot faster and safer than attempting to erase all traces of data from storage.
+- Azure also provides an     opportunity to doubly-encrypt stored data within the Azure Storage infrastructure using Azure Storage infrastructure encryption, using two separate platform-managed keys.
+- In addition, Azure disk encryption is at-rest encryption managed within the guest OS (i.e. Bitlocker for Windows, DM-CRYPT for Linux)https://learn.microsoft.com/azure/storage/common/storage-service-encryption#client-side-encryption-for-blobs-and-queues. With one, two, or three possible layers of encryption at rest in the Azure Storage infrastructure, the Oracle Database also offers transparent data encryption (TDE) of the database files, and another level of encryption at rest, as part of the Oracle Advanced Security option.   Furthermore, the Oracle Advanced Security option also offers a feature called Data Redaction, which is a form of dynamic data masking.  As the database retrieves data, it masks the data value, without altering the data value stored.
 These multiple layers of encryption at rest represent the very definition of defense in depth.  If for some reason one of the forms of encryption at rest are compromised, there are still other layers of encryption protecting the data.
 
 ## Key management
@@ -119,6 +119,7 @@ However, you can utilize Oracle Key Vault as a key management solution on Azure.
 ### Integrating Audit trails
 
 Application log monitoring is essential for detecting security threats at the application level. We recommend using the Microsoft Sentinel Solution for Oracle Database workloads. The Oracle Database Audit connector retrieves and ingests all Oracle database audit records into Azure Log Analytics using an industry-standard SYSLOG interface, permitting those records to be reviewed along with Azure infrastructure audit records and guest OS (that is, Linux or Windows) audit records.  It’s a cloud-native security information and event management (SIEM) solution built for your Oracle workload running on a Linux or Windows VM. For more information, please see Oracle Database Audit connector for Microsoft Sentinel.
-## Next step
+
+## Next steps
 
 [Network topology and connectivity for Oracle on Azure IaaS](oracle-network-topology.md)

@@ -99,9 +99,9 @@ Latency between Azure datacenters that are separated far from each other and lat
 
 Additionally, when you send data across Azure regions or data centers, you face egress costs for data (ex: redo logs) that's sent to a disaster recovery site. If you don't need to replicate all data in your database, you can replicate only partial data as needed using Golden Gate based replication and save on egress costs.
 
-:::image type="content" source="media/disaster-recovery-configuration-data-guard.png" alt-text="Diagram showing disaster recovery configuration with Data Guard for Oracle on Azure Iaas.":::
+:::image type="content" source="media/disaster-recovery-data-guard.png" alt-text="Diagram showing disaster recovery configuration with Data Guard for Oracle on Azure Iaas.":::
 
-Refer to [Implement Oracle Data Guard on an Azure Linux virtual machine](../azure-vmware/.md) for a step-by-step configuration of Data Guard on Azure.
+For a step-by-step configuration of Data Guard on Azure, see [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) .
 
 ### Disaster recovery using Golden Gate
 

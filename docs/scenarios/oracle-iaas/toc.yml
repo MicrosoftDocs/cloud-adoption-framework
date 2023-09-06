@@ -15,7 +15,15 @@ items:
         href: oracle-manage-monitor-workload.md
       - name: Security guidelines for Oracle on Azure IaaS
         href: oracle-security-guideline-landing-zone.md
-      
+      - name: Capacity planning guidelines for Oracle workload as IaaS on Azure
+        href: capacity-planning-guidelines-oracle-iaas.md
+      - name: Compute and storage guidelines for Oracle Workload as IaaS on Azure
+        href: compute-storage-guidelines-oracle-iaas.md
+      - name: Governance and compliance for Oracle on Azure IaaS
+        href: governance-complaince-oraccle-iaas.md
+      - name: Enterprise enrollment for Oracle on Azure IaaS
+        href: enterprise-enrollment-oracle.md
+
   - name: Prepare your environment
     items:
     - name: Azure landing zone for Oracle

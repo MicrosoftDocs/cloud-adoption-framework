@@ -56,8 +56,8 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 5. Monitor Azure NetApp Files (ANF) metrics   
 If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
-  - [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
-  - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
+- [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
+- [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
 
 While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth and to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, ANF isn't restricted by the cumulative VM’s IO throughput limits on any VM instance type. Instead, ANF is restricted only by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. See examples in the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
 
