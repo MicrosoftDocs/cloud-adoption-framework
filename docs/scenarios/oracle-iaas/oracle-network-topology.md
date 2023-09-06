@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Network topology and connectivity for Oracle on Azure IaaS
+# Network topology and connectivity for Oracle on Azure VMs  landing zone accelerator
 
 This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article will provide key design considerations and best practices for networking and connectivity of your Oracle instance running on Azure virtual machines (VMs).  Since Oracle supports mission-critical workloads, the guidance on the Azure landing zone design areas should be included in your design.
 
