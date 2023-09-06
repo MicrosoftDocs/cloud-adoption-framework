@@ -414,6 +414,8 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/management.md
+          - name: Baseline monitoring
+            href: ready/landing-zone/design-area/management-monitor.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
           - name: Protect and recover
