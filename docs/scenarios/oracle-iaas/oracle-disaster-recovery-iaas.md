@@ -31,7 +31,7 @@ Azure VM instances that run Oracle workloads benefit from Availability Set archi
 
 Use the following flowchart to choose the best high availability option for your Oracle database.
 
-:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Azure Iaas.":::
+:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Azure Iaas." lightbox="media/service-protection-design-process-map.png":::
 
  
 ### High availability using Data Guard in maximum availability mode
