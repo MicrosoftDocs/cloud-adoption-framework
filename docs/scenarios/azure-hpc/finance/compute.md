@@ -48,7 +48,7 @@ The following architecture is an example that shows the use of VMs in HPC for Fi
 
 This workload is utilizing HPC Pack HB-Series.
 The HB-series (Virtual Machine series | Microsoft Azure)VMs are optimized for HPC applications, such as financial analysis, weather simulation, and silicon RTL modeling. HB VMs feature up to 120 AMD EPYC™ 7003-series CPU cores, 448 GB of RAM, and no hyperthreading. HB-series VMs also provide 350 GB/sec of memory bandwidth, up to 32 MB of L3 cache per core, up to 7 GB/s of block device SSD performance, and clock frequencies up to 3.675 GHz.
-At the same time another VM for the HPC head node is in use utilizing a different size, the D16s_v4, categorized as General Purpose. Virtual Machine series | Microsoft Azure.
+At the same time another VM for the HPC head node is in use utilizing a different size, the D16s_v4, categorized as General Purpose.
 
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for manufacturing use cases, see:
 
