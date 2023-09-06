@@ -53,6 +53,7 @@ The HC-series VMs are optimized for HPC applications driven by intensive computa
 
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for manufacturing use cases, see:
 
+- [Virtual Machine Series](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/)
 - [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Standalone reference architecture might not be compliant with the ALZ paradigm.
 
