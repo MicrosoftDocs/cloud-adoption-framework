@@ -39,7 +39,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
