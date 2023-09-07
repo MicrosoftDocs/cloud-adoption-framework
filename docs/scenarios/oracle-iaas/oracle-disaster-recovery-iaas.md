@@ -33,8 +33,7 @@ Use the following flowchart to choose the best high availability option for your
 
 :::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Azure Iaas." lightbox="media/service-protection-design-process-map.png":::
 
- 
-### High availability using Data Guard in maximum availability mode
+ ### High availability using Data Guard in maximum availability mode
 
 Data Guard in maximum availability mode provides the highest availability with zero data loss promise (RPO=0). For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
 
@@ -134,6 +133,8 @@ A third approach is you deploy and maintain your entire solution to the disaster
 
 ### Special considerations for disaster recovery
 
+The following sections describe special considerations for disaster recovery.
+
 #### Use FarSync
 
 Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to the [Oracle reference architectures on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-reference-architecture#oracle-data-guard-far-sync) for more information on how to use Far Sync on Azure.
@@ -183,26 +184,24 @@ Business continuity requires an integrated approach that includes all components
 
 ## Summary of resiliency against different failure types
 
-| Failure Scenario | Oracle on Azure HA/DR Scenario | RPO/RTO |
-|------|------|------|
-| Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same availability set in the same data center:   - Protects against single instance failure.   Causes downtime if entire data center is down | PO=0 RTO<=2mins    - Using Observer for Fast Failover - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard|
-| Data  Center failure | Data Guard with two nodes in separate availability zones:   - Protects against data center failure
-- Will cause downtime if whole region is down
-- Requires additional failover configuration for app servers to manage network latency. | RPO<=5mins RTO<=5mins  
-- Using MAX_PERFORMANCE mode for Data Guard
-RPO=0 RTO<=5mins  
-- Using MAX_AVAILABILITY mode for Data Guard  |
-
-| Region failure | Data Guard with two nodes in separate Azure regions:
-
-- Protects against regional failures
-- Requires additional failover configuration for app servers to manage network latency. | RPO>=10mins RTO>=15mins  
-- Using MAX_PERFORMANCE mode for Data Guard|
-| Region failure  | Backups shipped to a different Azure region:
-- Protects against regional failures.
-- Requires entire Azure environment to be setup in the target region during failover. | RPO>=24hrs RTO>=4hrs |
-
-## Summary
+|Failure Scenario |Oracle on Azure HA/DR Scenario |RPO/RTO |
+|:----|:----|:----|
+|Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2mins  |
+| |·Protects against single instance failure. |·Using Observer for Fast Failover |
+| |·Will cause downtime if entire data center is down |·Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
+| | | |
+|Data Centre failure |Data Guard with two nodes in separate availability zones |RPO<=5mins RTO<=5mins  |
+| |·Protects against data center failure |·    Using MAX_PERFORMANCE mode for Data Guard |
+| |·Will cause downtime if whole region is down |RPO=0 RTO<=5mins  |
+| |·Requires additional failover configuration for app servers to manage network latency.  |·Using MAX_AVAILABILITY mode for Data Guard |
+| | | |
+|Region failure |Data Guard with two nodes in separate Azure regions: |RPO>=10mins RTO>=15mins  |
+| |·Protects against regional failures |·Using MAX_PERFORMANCE mode for Data Guard |
+| |·Requires additional failover configuration for app servers to manage network latency. | |
+| | | |
+| |Backups shipped to a different Azure region: |RPO>=24hrs RTO>=4hrs |
+| |·Protects against regional failures | |
+| |·Requires entire Azure environment to be setup in the target region during failover. | |
 
 Azure provides services and capabilities to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure IaaS. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
