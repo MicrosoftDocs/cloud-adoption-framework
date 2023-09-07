@@ -20,7 +20,7 @@ items:
             href: network-get-started.md
           - name: General Considerations and Recommendations
             href: eslz-network-topology-connectivity.md
-          - name: Network Design Guide
+          - name: Network design guide
             items:
               - name: Introduction
                 href: network-design-guide-intro.md
