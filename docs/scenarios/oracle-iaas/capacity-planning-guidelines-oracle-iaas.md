@@ -20,7 +20,7 @@ This article builds on several considerations and recommendations defined in the
 
 ## Defining the capacity planning
 
-Capacity planning plays a crucial role in ensuring optimal performance and cost efficiency for Oracle workloads running on Azure as Infrastructure as a Service (IaaS).  The article covers key guidelines, methodologies, and tools that can help organizations accurately assess and allocate resources to meet performance requirements while optimizing costs in terms of Azure and Oracle licensing. Your Oracle workloads capacity planning varies depending on the type of data that is processed, such as transactional workloads (OLTP), analytical processing and reporting or mixed workloads. Generally, Oracle databases require ample memory, data storage performance and CPU power. Capacity planning provides you with guidelines to choose & scale your infrastructure as well deploy your Oracle workload selecting the right Oracle architecture on Azure. Knowing database storage capacity also key to plan capacity for Oracle on Azure IaaS. 
+Capacity planning plays a crucial role in ensuring optimal performance and cost efficiency for Oracle workloads running on Azure as Infrastructure as a Service (IaaS).  The article covers key guidelines, methodologies, and tools that can help organizations accurately assess and allocate resources to meet performance requirements while optimizing costs in terms of Azure and Oracle licensing. Your Oracle workloads capacity planning varies depending on the type of data that is processed, such as transactional workloads (OLTP), analytical processing and reporting or mixed workloads. Generally, Oracle databases require ample memory, data storage performance and CPU power. Capacity planning provides you with guidelines to choose & scale your infrastructure as well deploy your Oracle workload selecting the right Oracle architecture on Azure. Knowing database storage capacity also key to plan capacity for Oracle on Azure VMs on landing zone accelerator.
 
 ## Key guidelines for capacity planning
 
@@ -30,19 +30,19 @@ Capacity planning starts with the discovery of your existing Oracle workload –
 
 AWR reports should be taken from specific heavy usage time periods of the databases (such as peak hours, nightly backup and batch processing, or end of month processing etc.) The AWR based right sizing analysis takes all key performance indicators and provides a buffer for unexpected peaks during the calculation of required VM specifications.  
 
-Capacity for Oracle on Azure fundamentally consists of VM SKU & Storage. We generally recommend the M and E series machines as the right VM SKUs for your Oracle Workload. 
+Capacity for Oracle on Azure fundamentally consists of VM SKU & Storage. We generally recommend the M and E series machines as the right VM SKUs for your Oracle Workload.
 
 Since your Oracle workload is usually licensed by processor core, selecting a VM with the least number of suitable cores provides the best licensing savings. Azure [constrained](https://learn.microsoft.com/azure/virtual-machines/constrained-vcpu) VMs are recommended for the majority of cases since they provide larger amounts of memory and IOPS capabilities while keeping the number of available cores at a reasonable level.  
 
 Also, Azure VMs have capped value for IOPS, disk and network throughput. Considering the maximum number of disks supported by the VM, IOPS and MB/sec throughput per disk and overall capped values at VM level is important. The number of network interfaces supported for the VM is another point to consider.  
 
-For storage, Azure provides multiple native and first party options. You can get the detailed guidance under storage to [select the right storage option](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-storage) from your selected VM SKU. Your Oracle hosting on Azure can require other Azure cloud capabilities like backup and recovery, networking, security etc. Refer to the respective design guidelines for Oracle on Azure IaaS.
+For storage, Azure provides multiple native and first party options. You can get the detailed guidance under storage to [select the right storage option](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-storage) from your selected VM SKU. Your Oracle hosting on Azure can require other Azure cloud capabilities like backup and recovery, networking, security etc. Refer to the respective design guidelines for Oracle on Azure VMs on landing zone accelerator.
 
 ## Capacity planning methodologies
 
 Before you determine the required VM size on Azure for Oracle workloads, you must carefully [analyze your database workloads by using AWR reports](https://github.com/Azure/Oracle-Workloads-for-Azure/tree/main/az-oracle-sizing) to determine the right VM size on Azure, that meets the workload performance requirements.
 
-Don't take the hardware specifications of the existing, on-premises Oracle servers or appliances and map one-to-one to Azure VM specifications. Most Oracle environments are heavily oversized both from a hardware and Oracle licensing perspective to meet peak workloads and future growth. 
+Don't take the hardware specifications of the existing, on-premises Oracle servers or appliances and map one-to-one to Azure VM specifications. Most Oracle environments are heavily oversized both from a hardware and Oracle licensing perspective to meet peak workloads and future growth.
 
 The output of the AWR based workload analysis indicates the required amount of memory, number of virtual cores, number, size, and type of disks, and number of network interfaces. However, it's still up to the user to decide on which Azure VM type to select among the [many that Azure offers](https://azure.microsoft.com/pricing/details/virtual-machines/series/).  
 
