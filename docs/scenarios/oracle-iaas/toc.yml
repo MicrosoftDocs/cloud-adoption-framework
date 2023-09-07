@@ -1,4 +1,6 @@
 items:
+  - name: Oracle on Azure VMs landing zone accelerator
+    href: index.yml
   - name: Introduction to Oracle on Azure VMs landing zone accelerator migration scenario
     href: migrate-oracle-workload.md
   - name: Strategic impact of Oracle on Azure VMs landing zone accelerator
