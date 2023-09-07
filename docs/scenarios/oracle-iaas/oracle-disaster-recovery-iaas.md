@@ -187,14 +187,14 @@ Business continuity requires an integrated approach that includes all components
 |Failure Scenario |Oracle on Azure HA/DR Scenario |RPO/RTO |
 |:----|:----|:----|
 |Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2mins  |
-| |·Protects against single instance failure. |·Using Observer for Fast Failover |
-| |·Will cause downtime if entire data center is down |·Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
+| |· Protects against single instance failure. |·Using Observer for Fast Failover |
+| |· Will cause downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
 |Data Centre failure |Data Guard with two nodes in separate availability zones |RPO<=5mins RTO<=5mins  |
-| |·Protects against data center failure |·    Using MAX_PERFORMANCE mode for Data Guard |
-| |·Will cause downtime if whole region is down |RPO=0 RTO<=5mins  |
-| |·Requires additional failover configuration for app servers to manage network latency.  |·Using MAX_AVAILABILITY mode for Data Guard |
+| |· Protects against data center failure |· Using MAX_PERFORMANCE mode for Data Guard |
+| |· Will cause downtime if whole region is down |RPO=0 RTO<=5mins  |
+| |· Requires additional failover configuration for app servers to manage network latency.  |· Using MAX_AVAILABILITY mode for Data Guard |
 |Region failure |Data Guard with two nodes in separate Azure regions: |RPO>=10mins RTO>=15mins  |
-| |·Protects against regional failures |· Using MAX_PERFORMANCE mode for Data Guard |
+| |· Protects against regional failures |· Using MAX_PERFORMANCE mode for Data Guard |
 | |· Requires additional failover configuration for app servers to manage network latency. | |
 | |Backups shipped to a different Azure region: |RPO>=24hrs RTO>=4hrs |
 | |·Protects against regional failures | |
