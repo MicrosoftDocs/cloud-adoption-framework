@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Select Azure regions
 
-When you design your strategy to use Microsoft Azure, you can choose from many Azure regions around the world. Region selection is a key part of your overall cloud adoption strategy. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics, so it's essential to choose the best regions for your Azure resources. 
+When you design your strategy to use Microsoft Azure, you can choose from many Azure regions around the world. Region selection is a key part of your overall cloud adoption strategy. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics, so it's essential to choose the best regions for your Azure resources.
 
 > [!NOTE]
 > If you're migrating existing workloads from an on-premises datacenter into Azure, there are some additional considerations when you select a region. For more information, see [Select Azure regions for a migration](../../migrate/azure-best-practices/multiple-regions.md).
@@ -61,14 +61,14 @@ Consider the latency and performance expectations from these external components
 
 ## Operate in multiple geographic regions
 
-An organization might operate in multiple geographic regions for several reasons. Common reasons to use multiple Azure regions include:
+It's common for an organization to operate in multiple geographic regions. Common reasons to use multiple Azure regions include:
 
+- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in your primary Azure region.
 - **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads.
-- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in your primary Azure region.
 
-If you plan to operate a cloud environment over multiple geographic regions, be aware of the following complexities:
+When you plan to operate a cloud environment over multiple geographic regions, be aware of the following considerations:
 
 - **Resource distribution and management.** When you have multiple resources in different regions, you accept a higher operational burden. You also have to pay for each resource.
 - **Data synchronization.** Understand whether you need to synchronize or replicate data between regions, and if you do, whether to do it asynchronously or synchronously. Configuring a multi-region data storage tier can be complex and can result in tradeoffs between resiliency, performance, and cost.
