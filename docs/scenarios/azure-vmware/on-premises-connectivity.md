@@ -1,9 +1,9 @@
 ---
-title: 'Azure VMware Solution network design guide: connectivity with on-premises sites'
+title: 'Azure VMware Solution network design guide: Connectivity with on-premises sites'
 description: Learn how to design Azure VMware Solution network connectivity with on-premises sites. Considerations include throughput and latency. 
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/14/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
@@ -13,46 +13,53 @@ ms.custom: think-tank, e2e-azure-vmware
 # Design phase 1: Connectivity with on-premises sites
 
 Connectivity with on-premises datacenters is the most critical design area for Azure VMware Solution networking. The key requirements that must be addressed include:
-- High throughput: Migrations from on-premises vSphere environments and disaster recovery solutions require moving large volumes of data between on-premises sites and Azure VMware Solution private clouds quickly.
-- Low latency: Distributed applications may require low latency for connections between Azure VMware Solution virtual machines and on-premises systems.
-- Performance predictability: Mission critical applications deployed on Azure VMware Solution may require dedicated connectivity services between on-premises sites and the Microsoft network (ExpressRoute), for predictable throughput and latency.
 
-This section describes the options supported by Azure VMware Solution for connectivity with on-premises sites: 
+- High throughput: Migrations from on-premises vSphere environments and disaster recovery solutions require moving large volumes of data between on-premises sites and Azure VMware Solution private clouds quickly.
+- Low latency: Distributed applications might require low latency for connections between Azure VMware Solution virtual machines and on-premises systems.
+- Performance predictability: To achieve predictable throughput and latency, business-critical applications that are deployed on Azure VMware Solution might require dedicated connectivity services (Azure ExpressRoute) between on-premises sites and the Microsoft network.
+
+This section describes the options supported by Azure VMware Solution for connectivity with on-premises sites:
+ 
 - [ExpressRoute Global Reach](#expressroute-global-reach)
 - [IPSec VPNs](#ipsec-vpns)
 - [Transit over ExpressRoute private peering](#transit-over-expressroute-private-peering)
 
-The options are presented in order of decreasing ability to meet the key requirements listed above. An option should be discarded, and the next one considered, only if it conflicts with non-negotiable constraints that exist in a specific scenario.
+The options are presented in order of decreasing ability to meet the key requirements listed earlier. An option should be discarded, and the next one considered, only if it conflicts with the non-negotiable constraints of a specific scenario.
 
-:::image type="content" source="media/network-design-guide-figure6.png" alt-text="Figure 6. Flowchart that summarizes the design decision making process for connectivity to on-premises sites." lightbox="media/network-design-guide-figure6.png":::
-*Design phase #1. How to select a hybrid connectivity option for Azure VMware Solution.*
+This flowchart summarizes the process for choosing a hybrid connectivity option for Azure VMware Solution:
 
+:::image type="content" source="media/network-design-guide-figure-6.png" alt-text="Flowchart that summarizes the decision-making process for choosing a connectivity option." lightbox="media/network-design-guide-figure-6.png" border="false":::
+ 
 ## ExpressRoute Global Reach
-ExpressRoute Global Reach is the default hybrid connectivity option supported by Azure VMware Solution. It provides plain layer-3 connectivity between an Azure VMware Solution private cloud and a remote site connected to a customer-managed ExpressRoute circuit, with minimal complexity. The customer-managed ExpressRoute circuit can be used to connect to Azure native services too. For security or bandwidth reservation purposes, it's possible to deploy a separate customer-managed circuit exclusively dedicated to Azure VMware Solution traffic. 
 
-The figure shows the network topology when Global Reach is used for connectivity with on-premises sites.
+ExpressRoute Global Reach is the default hybrid connectivity option supported by Azure VMware Solution. It provides, with minimal complexity, Layer 3 connectivity between an Azure VMware Solution private cloud and a remote site that's connected to a customer-managed ExpressRoute circuit. You can also use the customer-managed ExpressRoute circuit to connect to Azure native services. To improve security or reserve bandwidth, you can also deploy a separate customer-managed circuit that's exclusively dedicated to Azure VMware Solution traffic.
+
+The following diagram shows a network topology that uses Global Reach for connectivity with on-premises sites. Traffic between Azure VMware Solution private clouds and on-premises sites doesn't traverse Azure virtual networks.
  
- :::image type="content" source="media/network-design-guide-figure7.png" alt-text="Figure 7. Diagram that shows how ExpressRoute Global Reach enables connectivity to on-premises sites." lightbox="media/network-design-guide-figure7.png":::
-*Hybrid connectivity with ExpressRoute Global Reach. Traffic between Azure VMware Solution private clouds and on-premises sites does not transit through Azure virtual networks.*
+ :::image type="content" source="media/network-design-guide-figure-7.png" alt-text="Diagram that shows how ExpressRoute Global Reach enables connectivity to on-premises sites." lightbox="media/network-design-guide-figure-7.png" border="false":::
 
-Detailed instructions on how to connect an Azure VMware Solution private cloud to a customer-managed ExpressRoute circuit using Global Reach are available in [the Azure VMware Solution documentation](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud).
+For instructions on how to connect an Azure VMware Solution private cloud to a customer-managed ExpressRoute circuit by using Global Reach, see [Peer on-premises environments to Azure VMware Solution](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud).
 
-Global Reach connectivity fully addresses the three key requirements:  
-- High throughput: ExpressRoute allows connecting to the Microsoft network from your premises over dedicated lines (up to 10 Gbps for provider-based ExpressRoute, or 100 Gbps for ExpressRoute Direct). 
-- Low latency: Global Reach allows routing traffic directly from the edge of the Microsoft network to the Azure VMware Solution vSphere clusters. Global Reach minimizes the number of network hops between on-premises sites and private clouds.
-- Predictable performance: When using ExpressRoute Global Reach, traffic is routed over links that will not experience congestion issues (up to the maximum provisioned capacity). Therefore, the round-trip time (RTT) between virtual machines running on Azure VMware Solution and on-premises hosts remains constant over time.
-
-Global Reach is not an option in scenarios where one or more of the following constraints apply:
-  - ExpressRoute Global Reach is unavailable in the Azure region of the Azure VMware Solution private cloud and/or the meet-me location of the customer-managed ExpressRoute circuit. No workarounds exist for this limitation. Refer to the [ExpressRoute documentation](/azure/expressroute/expressroute-global-reach#availability) for up-to-date information about Global Reach availability.
-  - Non-negotiable network security requirements. If a firewall device cannot be deployed at the on-premises side of the customer-managed ExpressRoute circuit, using Global Reach exposes all Azure VMware Solution network segments, including management networks (vCenter Server and NSX-T Manager), to the entire network connected to the circuit. The most typical scenario where this issue arises is customer-managed ExpressRoute circuits implemented on top of MPLS network services (also known as [ExpressRoute "any-to-any" connectivity model](/azure/expressroute/expressroute-connectivity-models)), as shown in the figure.
+Global Reach connectivity fully addresses the three key requirements:
  
-:::image type="content" source="media/network-design-guide-figure8.png" alt-text="Figure 8. Diagram that shows why ExpressRoute Global Reach may prevent traffic inspection." lightbox="media/network-design-guide-figure8.png":::
-*ExpressRoute connectivity implemented on top of MPLS IPVPNs makes it impossible to deploy firewalls in a single location/facility to inspect all traffic to/from Azure VMware Solution. Typically, organizations that use MPLS networks deploy firewalls in large datacenters, not in all of their sites (which can be small branches/offices/stores).*
+- High throughput: ExpressRoute enables you to connect to the Microsoft network from your premises over dedicated lines (up to 10 Gbps for provider-based ExpressRoute, or 100 Gbps for ExpressRoute Direct). 
+- Low latency: Global Reach enables you to route traffic directly from the edge of the Microsoft network to Azure VMware Solution vSphere clusters. Global Reach minimizes the number of network hops between on-premises sites and private clouds.
+- Predictable performance: When you use ExpressRoute Global Reach, traffic is routed over links that don't experience congestion issues (up to the maximum provisioned capacity). Therefore, the round-trip time (RTT) between virtual machines running on Azure VMware Solution and on-premises hosts remains constant over time.
+
+You can't use Global Reach in scenarios where one or more of the following constraints apply:
+
+  - ExpressRoute Global Reach is unavailable in the Azure region of the Azure VMware Solution private cloud or the meet-me location of the customer-managed ExpressRoute circuit. No workarounds exist for this limitation. See [About ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach#availability) for up-to-date information about Global Reach availability.
+  - Non-negotiable network security requirements exist. If a firewall device can't be deployed on the on-premises side of the customer-managed ExpressRoute circuit, using Global Reach exposes all Azure VMware Solution network segments, including management networks (vCenter Server and NSX-T management), to the entire network that's connected to the circuit. The most typical scenario in which this issue arises is when customer-managed ExpressRoute circuits are implemented on top of MPLS network services (also known as the [ExpressRoute any-to-any connectivity model](/azure/expressroute/expressroute-connectivity-models)). This scenario is shown here: 
+ 
+    :::image type="content" source="media/network-design-guide-figure-8.png" alt-text="Diagram that shows why ExpressRoute Global Reach might prevent traffic inspection." lightbox="media/network-design-guide-figure-8.png" border="false":::
+
+    When ExpressRoute connectivity is implemented on top of MPLS IPVPNs, it's impossible to deploy firewalls in a single location to inspect all traffic to and from Azure VMware Solution. Typically, organizations that use MPLS networks deploy firewalls in large datacenters, not in all of their sites (which can be small branches, offices, or stores).
 
 ## IPSec VPNs
-Connectivity between Azure VMware Solution private clouds and on-premises sites can be implemented by routing traffic through a "transit" virtual network in Azure. The transit network is connected to the Azure VMware Solution private cloud through the managed ExpressRoute circuit. The transit virtual network is connected to the on-premises site using an IPSec VPN, as shown in the diagram.
 
-:::image type="content" source="media/network-design-guide-figure9.png" alt-text="Figure 9. General architecture for IPSec connectivity." lightbox="media/network-design-guide-figure9.png":::
+You can implement connectivity between Azure VMware Solution private clouds and on-premises sites by routing traffic through a *transit* virtual network in Azure. The transit network is connected to the Azure VMware Solution private cloud through the managed ExpressRoute circuit. The transit virtual network is connected to the on-premises site via an IPSec VPN, as shown here:
+
+:::image type="content" source="media/network-design-guide-figure-9.png" alt-text="Diagram that shows a general architecture for IPSec connectivity." lightbox="media/network-design-guide-figure-9.png":::
 *The IPSec VPN connectivity option covered in this section. Traffic between Azure VMware Solution private clouds and on-premises sites is routed through a transit virtual network in Azure.*
 
 Security policies for connections between on-premises sites and the Azure VMware Solution private cloud (dashed line in the figure) can be enforced by routing traffic through a firewall, if the VPN device does not provide firewall features itself. This configuration requires [Virtual WAN with Routing Intent](/azure/virtual-wan/how-to-routing-policies), as discussed in the section [IPSec VPN design decision #2: Customer-managed virtual network vs. Virtual WAN hub](#ipsec-vpn-design-decision-2-customer-managed-virtual-network-vs-virtual-wan-hub) below.
