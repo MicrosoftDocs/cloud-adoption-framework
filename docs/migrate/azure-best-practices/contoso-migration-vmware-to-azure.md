@@ -1,16 +1,14 @@
 ---
-title: Move on-premises VMware infrastructure to Azure
-description: Learn how fictional company Contoso moves on-premises VMware VMs to Azure.
-author: deltadan
-ms.author: martinek
-ms.date: 07/28/2022
+title: Move on-premises VMware infrastructure to Azure VMWare Solution
+description: Learn how fictional company Contoso moves on-premises VMware VMs to Azure VMWare Solution (AVS).
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 06/27/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
-# Move on-premises VMware infrastructure to Azure
+# Move on-premises VMware infrastructure to Azure VMWare Solution
 
 When the Contoso company decides to move its VMware virtual machines (VMs) from an on-premises datacenter to Azure, the IT team has two migration options to consider:
 

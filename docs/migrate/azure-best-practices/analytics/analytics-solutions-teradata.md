@@ -5,8 +5,6 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -164,6 +162,64 @@ You should be aware of a few differences in SQL Data Manipulation Language (DML)
     `SELECT * FROM CUSTOMER WHERE (POSTCODE LIKE 'CV1%') OR (POSTCODE LIKE 'CV2%') OR (POSTCODE LIKE 'CV3%') ;`
 
 - Depending on system settings, character comparisons in Teradata might not be case-specific by default. In Azure Synapse, these comparisons are always case-specific.
+
+- Recursive views are available in Teradata but aren't available in Azure Synapse. There is no direct conversion of a recursive view in Azure Synapse. This has to be handled in a similar fashion to how you would flatten hierarchical data.
+
+- Multi-column `IN` and `NOT IN` clauses are supported in Teradata but not available in Azure Synapse.
+  
+  For example:
+  
+  ```sql
+  SELECT employee, dept_id 
+  FROM emp_dept 
+  WHERE (employee, dept_id) IN 
+  (
+    SELECT employee, dept_id
+    FROM Ext_emp_dept
+  )
+  ```
+
+  The converted query in Azure Synapse is:
+
+  ```sql
+  SELECT  employee, dept_id 
+  FROM emp_dept ed
+  WHERE EXISTS (
+    SELECT 1
+    FROM Ext_emp_dept eed
+    WHERE ed.employee = edd.employee AND ed.dept_id = edd.dept_id
+  )
+  ```
+
+- Teradata performs auto-truncation of data during insertion. For example, you can insert a `VARCHAR(100)` field into a `VARCHAR(50)` field. Although only the first 50 characters would be inserted, Teradata won't complain or warn about it.
+
+- Teradata can group by the ordinality of the column in the select clause.
+  
+  For example:
+  
+  ```sql
+  SELECT employee, dept_id FROM emp_dept GROUP BY 1, 2
+  ```
+
+  The converted query in Azure Synapse is written by replacing the ordinal position by the column name.
+
+  ```sql
+  SELECT employee, dept_id FROM emp_dept GROUP BY employee, dept_id
+  ```
+
+- Teradata can use a column alias in the same query but Azue Synapse can't.
+
+  For example:
+  
+  ```sql
+  SELECT employee as emp_name, dept_id FROM emp_dept WHERE emp_name = "Steve"
+  ```
+  
+  In Azure Synapse, the column name wouldn't be recognized, and you have to write the query as:
+  
+  ```sql
+  SELECT t.emp_name, t.dept_id FROM (SELECT employee as emp_name, dept_id FROM emp_dept) t WHERE t.emp_name = "Steve"
+  ```
 
 ## Functions, stored procedures, triggers, and sequences
 

@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 

@@ -3,10 +3,8 @@ title: Refactor an on-premises application to an App Service web app and a SQL m
 description: Learn how to rehost an on-premises application by migrating it to an Azure App Service web app and a SQL managed instance.
 author: givenscj
 ms.author: martinek
-ms.date: 07/01/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -102,7 +100,7 @@ To implement this scenario, Contoso must meet the following prerequisites:
 | Requirement | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. If you use an existing subscription and you're not the administrator, the admin needs to assign Owner or Contributor permissions to you. |
-| **Azure infrastructure** | Contoso set up an Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Contoso set up an Azure infrastructure as described in [Azure infrastructure for migration](../azure-migration-guide/ready-alz.md). |
 
 ## Scenario steps
 
@@ -414,7 +412,7 @@ After the resources are migrated to Azure, Contoso needs to fully operationalize
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso assigns the Azure tags that they decided on during [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
+- After all resources are deployed, Contoso assigns the Azure tags that they decided on during [infrastructure planning](../azure-migration-guide/ready-alz.md).
 - All licensing is built into the cost of the PaaS services that Contoso consumes. This cost is deducted from the Enterprise Agreement.
 - Contoso will use [Azure Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview) to ensure that they operate within the budgets established by their IT leadership.
 

@@ -5,8 +5,6 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -92,7 +90,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 Contoso migrates its development application and database VMs to new Azure VMs by using DevTest Labs.
 
-- Contoso already has the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, including the development virtual network.
+- Contoso already has the [Azure infrastructure](../azure-migration-guide/ready-alz.md) in place, including the development virtual network.
 - With everything prepared, Contoso provisions and configures DevTest Labs.
 - Contoso configures the development virtual network, assigns a resource group, and sets policies.
 - Contoso creates Azure Virtual Desktop instances for developers to use at remote locations.
@@ -108,7 +106,7 @@ For Contoso to run this scenario, they need these prerequisites.
 | Requirements | Details |
 | --- | --- |
 | **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p/) to reduce costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the admin of your subscription, and you can perform all actions. <br><br> If you use an existing subscription and you're not the admin, work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). |
 
 ## Scenario steps
 

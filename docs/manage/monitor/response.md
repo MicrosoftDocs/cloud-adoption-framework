@@ -1,48 +1,40 @@
 ---
 title: Cloud monitoring and response
 description: Gain an understanding of the response discipline in observability and recommended approaches to acting on significant events detected.
-author: MGoedtel
-ms.author: martinek
+author: Zimmergren
+ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 12/13/2022
+ms.date: 06/20/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, engagement-fy23
 products: azure-monitor
 ---
 
-# Cloud monitoring guide: Response
+# Cloud monitoring and response
 
-In the [Observability](observability.md) article, you learned about the five monitoring principles. In this article, the focus is on the response discipline. Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
+This article is part of a series in [the cloud monitoring guide](./index.md).
 
-* Act smart, based on the good use of well-tuned monitoring data.
-* Apply monitoring throughout incident/problem activities.
-* Automate investigation, diagnosis, resolution, recovery, and remediation.
+Response is the result of defining one or more _actions_ based on data-driven decisions from monitoring that let service consumers:
 
-## Overview
+- **Make it actionable**: Use well-tuned monitoring configurations to create actionable signals.
+- **Continuously monitor**: Apply monitoring throughout the incident and troubleshooting activities to further help diagnose problems.
+- **Automate**: Configure automatic investigation, diagnosis, resolution, recovery, and remediation based on identified signals.
 
-The principle of *significance* applies here as a sort of process flow decision or policy for action, which is also valuable for tuning and optimizing alerts, notifications, and report digests. Cloud monitoring can now do much more than notify humans that something is wrong, and monitoring plays a critical role in a wide range of scenarios:
+ The principle of _significance_ applies here. This helps with process flow or policy for action to tune and optimize alerts, notifications, and report digests. Cloud monitoring is much more than notifying humans that something is wrong. It is also about providing signals to systems and services to react.
 
-* Dynamic control of service/system behavior to avoid and eliminate incidents.
-* Inform or provide routine signaling or telemetry for dynamic processes, compliance, automatic scaling, and visualizations.
-* Help the IT organization act on and manage change.
+Monitoring plays a critical role in a wide range of scenarios:
 
-A *current event* can be any event worth watching or knowing about that could be significant to raise an *alert.*  Cloud services emit diagnostic and security *logs* that can now be more easily ingested, combined, correlated, and queried. As a result, you can decide what mitigation action to take, from raising an alert or creating a bug in DevOps to retaining past events for future predictive analyses.
+- **Enabling dynamic service behavior**: Dynamically control systems and services to react based on monitoring data and eliminate incidents automatically.
+- **Continuously evaluate signals**: Constantly inform and provide telemetry for dynamic processes, compliance, automatic scaling, and visualizations.
+- **Organizational actions**: Help the IT organization act on and manage change.
 
 ## Alerting
 
-There's less need for alerts to serve the fundamental reactive function of notifying humans when something is wrong and triggering work ticketing systems. Focus less on integrating monitoring with IT Service Management (ITSM) systems for Incident Management, and seize new opportunities that let cloud automation replace more expensive service management processes, thereby eliminating incidents.
+Automation replaces more expensive service management processes in the modern cloud landscape, eliminating more incidents. Alerts play a crucial role in awareness but must be actionable to avoid alert fatigue or noise.
 
-Alerting helps proactively ensure that the service/system remains healthy, responsive, and secure. It's an integral part of any service that guarantees performance, availability, and privacy to the business where you need to act on the data immediately. Escalating an alert isn't crucial to observability, and today it shouldn't be considered the first line of defense.
+Defining alerts helps proactively ensure that the services and systems remain healthy, responsive, reliable, and secure. Guaranteeing performance, upholding [Service Level Objectives](./service-level-objectives.md) (SLO), availability, and privacy needs a proper alerting strategy. Escalating alerts isn't crucial to observability, and today it shouldn't be considered the first line of defense. Instead, automation should play a critical role here.
 
-A more primitive role of monitoring was to raise alerts for a reactionary response, as follows:
-
-|Detected condition |Action |
-|----|----|
-|<li>Cluster is down</li> <li>Database is full</li> <li>High CPU utilization</li> <li>Security threat</li> |Alert and notify, or raise an incident record. |
-
-This approach is considered outdated and conflicting with modern service management or cloud operations recommended practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of cloud efficiency through agility, minimum cost, and optimization.
+Traditionally, monitoring meant raising an alert that someone could act on, implying an entirely reactive process. This approach must be revised following modern service management or cloud operations practices. This approach closely follows the traditional ITIL Incident Management path, which doesn't match the goals of cloud efficiency through agility, minimum cost, and optimization.
 
 A modern approach might have a frequency of detected conditions that are much more informative and automated, for example:
 
@@ -52,22 +44,23 @@ A modern approach might have a frequency of detected conditions that are much mo
 
 Here's a list of relevant resources for alerting and automation capabilities in Azure:
 
-* [What are Azure Monitor Alerts?](/azure/azure-monitor/alerts/alerts-overview)
-* [Integrate Azure Monitor with supported IT Service Management (ITSM) Integration products](/azure/azure-monitor/alerts/itsmc-overview).
+- [What are Azure Monitor Alerts?](/azure/azure-monitor/alerts/alerts-overview)
+- [Integrate Azure Monitor with supported IT Service Management (ITSM) Integration products](/azure/azure-monitor/alerts/itsmc-overview).
+- [Automate threat response in Microsoft Sentinel with automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules)
 
-## Cloud monitoring
+## Modern cloud monitoring
 
 Compared to monitoring platforms and related tools that were available in the past, cloud computing offers:
 
-* Much more flexibility to devise response options.
-* Easier ways to develop and enable automated responses.
-* Cloud protocols or API methods more easily integrate with work management systems, including DevOps.
+- Much more flexibility to devise response options.
+- Easier ways to develop and enable automated responses.
+- Cloud protocols or API methods more easily integrate with work management systems, including DevOps.
 
-And consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery, or resolution:
+Consider the following modes for the range of automated action, whether that be for investigation, enrichment, routing, assignment, remediation, recovery, or resolution:
 
 |Orchestration method|Description|
 |-|-|
-|**Fully Automated**|Actions are performed automatically. Full automation should be proven reliable, efficient, and durable to where its usefulness isn't short-lived, and is safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
+|**Fully Automated**|Actions are performed automatically. Full automation should be proven reliable, efficient, and durable to where its usefulness isn't short-lived and is safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
 |**Semi-automated**|Approval is required for any remediation action.|
 |**Manual**|An operator selects an automation example or playbook from a curated library.|
 
@@ -75,7 +68,7 @@ Alerting depends on the instrumented data based on security events, performance 
 
 Expand your reading with these resources to learn more about automation based on metric alerts and security events:
 
-* [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started) using Azure Monitor.
+- [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started) using Azure Monitor.
 
 ## Cost efficiency
 
@@ -85,90 +78,72 @@ Every reported incident has a cost. Suppose the organization invests in orchestr
 
 ## Automation
 
-Cloud automation offers significant advantages for security and health monitoring. Speed, flexibility, and precision are three archetypes that cloud automation bring to responsive operations. Often this is called orchestration, and the Microsoft cloud offers several services.
+Cloud automation offers significant advantages for security and health monitoring. Speed, flexibility, and precision are three archetypes that cloud automation brings to responsive operations. Often this is called orchestration, and the Microsoft cloud offers several services.
 
 For example:
 
 1. An identity-driven threat is detected from one or more logs, raising an alert.
-2. Automation is immediately triggered to gather more information and correlate more logs - to enrich the alert.
+2. Automation is immediately triggered to gather more information and correlate more logs to enrich the alert.
 3. An operator takes action by selecting the right automation from a library, such as disabling a user account.
 
-And later, the example or use case can be fully automated.
+The example or use case can be fully automated.
 
-The role of automation then provides a sort of *playbook* that reduces costs and saves time:
+The role of automation then provides a sort of _playbook_ that reduces costs and saves time:
 
-* No security incident was needed to follow through a lengthy investigation, diagnosis, resolution, and recovery.
-* The detection-to-correction cycle could be in seconds or minutes versus hours.
+- No security incident was needed to follow through a lengthy investigation, diagnosis, resolution, and recovery.
+- The detection-to-correction cycle could be in seconds or minutes versus hours.
 
-Next, your team needs to build a list or library of automation examples that can be flexibly used - either from raw material found on public websites or internally curated and stored in a source control repository.
+Next, your team needs to build a list or library of automation examples that can be flexibly used - either from raw material on public websites or internally curated and stored in a source control repository.
 
 Here's a list of suggested reading for more automation based on identity- or security events:
 
-* [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
-* [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
-
-## Agile work management
-
-Traditional monitoring was tied to your ITSM system, notably for Incident Management. This is no longer as useful in the cloud, for the reasons that were cited above, but it's still vital for traditional incident-significant service disruption events.
-
-Agile and DevOps processes are now needed:
-
-* You'll need a repository or source control of automation playbooks, scripts, and documentation, for example
-* You manage a library of cloud automation using Agile work management methods.
-
-You then get two things:
-
-* Monitoring solutions in production can then call or get the latest from the repository when needed, or
-* DevOps Work Management pushes the latest updates from the repository to the cloud service where the library is kept.
-
-This is a derivative of incident management in DevOps, and to learn more, see [DevOps Incident Management: A Guide With Best Practices](https://www.xplg.com/devops-incident-management-best-practices/).
-
-There are many services in Azure that help you monitor and diagnose the infrastructure, platform, and software layers managed by Microsoft and can't be controlled by you, the customer. These services automatically generate logs that record the status of an event and complement the diagnostic or any other telemetry you collect from the different resources in Azure.
-
-It's important to understand how you can structure all that data that has been gathered to meet your analysis requirements, and when combined with data from each part of the service and data generated from other dependencies that might not be in the same region, subscription, or resource group. This information requires careful correlation to ensure that data is combined accurately.
-
-Use this exercise to determine how the monitoring data can be used to identify potential failures, resource bottlenecks, under- or over-utilization, and more. Then evaluate if they're the right conditions to use orchestration as the first response, escalate to IT Operations, or follow a workflow in the DevOps Operate phase.
-
-Under certain circumstances, some alerts can be informational to inform you that:
-
-* A VM was automatically shut down to minimize waste and control costs based on a schedule or low utilization detected.
-* IaaS or PaaS resources are idle for an extended period or not provisioned based on Azure Advisor recommendations.
-
-In the first example, the orchestration was used based on a native scheduling feature and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why. In the second example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today, and with the cloud *alerting* is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
-
-Keep in mind that learning is key.
+- [Automatically create incidents from Microsoft security alerts](/azure/sentinel/create-incidents-from-alerts) with Microsoft Sentinel.
+- [Security Orchestration, Automation, and Response (SOAR) in Microsoft Sentinel](/azure/sentinel/automation)
 
 ## Successful alerting strategy
 
-*You can't fix what you don't know is broken.*
+_You can't fix what you don't know is broken._
 
 Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. You can improve the observability of your services and applications only if you fully understand their composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This configuration includes the predictable failure states (the symptoms, not the cause of the failure) that make sense to alert for.
 
+### Informational alerts
+
+Under certain circumstances, some alerts can be _informational_. We can use this to learn about how our systems behave. For example, you might want to get these informational alerts:
+
+- **A VM was shut down**: A VM was automatically shut down to _minimize waste and control costs_ based on a schedule or low utilization detected.
+
+  In this example, the orchestration was used based on a native scheduling feature and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why.
+
+- **Idle resources**: IaaS or PaaS resources are idle for an extended period or not provisioned based on Azure Advisor recommendations.
+
+  In this example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, _alerting_ is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
+
+### Alerting strategy considerations
+
+Keep in mind that learning is key, and when designed right, informational alerts can give you many insights into your cloud ecosystem and health.
+
 Consider the following principles for determining whether a symptom is an appropriate candidate for alerting:
 
-* **Does it matter?** Is the issue symptomatic of a real problem or issue influencing the application's overall health? For example, do you care whether the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should trigger an alert. But you don't need to notify the team because it doesn't help point to what is causing the condition in the first place. However, alerting and reporting on the SQL query process utilization issue is relevant and actionable.
+- **Actionable:** Does the issue matter? Does it reflect a real problem in your application's health? For example, you might want to send an alert when CPU utilization is too high over a sustained period for a resource or a SQL query is consistently causing performance issues, but you might not want to send an alert when the CPU spikes over a short period. Make things actionable to reduce false positives and avoid alert fatigue.
 
-* **Is it urgent?** Is the issue real, and does it need urgent attention? If so, the responsible team should be immediately notified.
+- **Urgency:** Does the issue need urgent attention? If so, the responsible team should be immediately notified.
 
-* **Are your customers affected?** Are users of the service or application affected by the issue?
+- **Customer impact:** Are users of the service or application affected by the issue?
 
-* **Are other dependent systems affected?** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
+- **Impact on dependent systems:** Are there alerts from interrelated dependencies that can be correlated to avoid notifying different teams all working on the same problem?
 
-Ask these questions when you're initially developing a monitoring configuration. Test and validate the assumptions in a nonproduction environment and then deploy them into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and experience from different team members.
+With these initial considerations, you can start developing your monitoring configuration. You can test and validate the assumptions across environments. For example, continuously evaluate these considerations and questions in nonproduction as well as production environments. Continuous improvement is key to successful response on monitoring signals.
 
-After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users or the cloud provider (through their tools), and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine whether you're improving.
+When continuously evaluating what's working, consider asking yourself these questions to help drive awareness of your monitoring response effectiveness:
 
-[Azure Monitor](/azure/azure-monitor/overview) support alerts based on static or even dynamic thresholds, and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Azure Monitor also [integrates with various IT service management (ITSM) solutions](/azure/azure-monitor/alerts/itsmc-overview) to automate the creation of incident records and escalate to the right support team or any other alert management system that uses a webhook.
+- **Alert volume:** Do you get a high alert volume? Are there many non-actionable alerts that could've been avoided?
+- **Unnoticed issues:** Do you get reports or tickets from users experiencing issues that were not caught by the monitoring configuration?
+- **False positives:** Do you get alerts or signals that were incorrectly flagged?
+- **Alert or event:** Do you really need to send an alert, or could some of the raised alerts just be events flagged in the system? If the signals show up when you query for it, as opposed to sending an alert, would that suffice to avoid alert fatigue and non-actionable notifications?
 
-If you are in a hybrid scenario or are migrating resources directly to the cloud, you can still utilize [System Center Operations Manager](/system-center/scom/welcome), which has similar capabilities for alert automation. However, for cloud-native workloads and the more modern monitoring needs, Azure Monitor usually covers the common use cases.
+See the [monitoring platforms overview](./platform-overview.md) in this article series for a deeper understanding of the  capabilities across the Microsoft monitoring solutions.
 
-You can also, as an example, use the following Azure services or service-related features to help automate response and recovery actions:
+## Next steps
 
-* [Azure Automation](/azure/automation/overview).
-* [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
-* [Azure Functions](/azure/azure-functions/functions-overview).
-* Azure Kubernetes Service using the [Kubernetes container orchestration](/azure/architecture/microservices/design/orchestration) engine supporting containerized microservices.
-* [Security Orchestration, Automation, and Response (SOAR)](/azure/sentinel/automation) in Microsoft Sentinel.
-* Further, learn more about [best practices for Autoscaling](/azure/architecture/best-practices/auto-scaling) various services in Azure.
-
-While notifying the responsible teams is the most common action for alerting, automating corrective actions is often appropriate. This automation can help streamline the entire incident management process, and automating these recovery tasks can also reduce the risk of human error.
+> [!div class="nextstepaction"]
+> [Skills readiness for cloud monitoring](./suggested-skills.md)

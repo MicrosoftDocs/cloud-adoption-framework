@@ -4,8 +4,6 @@ description: Learn about network topology and connectivity considerations in the
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/11/2022
 ---
@@ -129,13 +127,13 @@ MPI environments are dedicated as they have unique requirements with the need fo
 
 The following articles provide guidance for each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing and Azure Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Compute](./compute.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
+- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Security for Azure HPC in energy](./security.md)
+- [Compute large-scale HPC application workloads in Azure VMs](./compute.md)
+- [Storage for HPC energy environments](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

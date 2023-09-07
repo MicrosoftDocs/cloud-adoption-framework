@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 6/24/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
@@ -152,7 +150,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Use subscriptions as scale units, and scale out resources and subscriptions as required. Your workload can then use the required resources for scaling out without hitting subscription limits in the Azure platform.
 
-- Use reserved instances to manage capacity in some regions. Your workload can then have the required capacity for high demand resources in a specific region.
+- Use capacity reservations to manage capacity in some regions. Your workload can then have the required capacity for high demand resources in a specific region.
 
 - Establish a dashboard with custom views to monitor used capacity levels, and set up alerts if capacity is approaching critical levels (90 percent CPU usage).
 

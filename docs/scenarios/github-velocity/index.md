@@ -5,8 +5,6 @@ author: nkpatterson
 ms.author: martinek
 ms.date: 1/11/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: strategy
 ms.custom: think-tank
 ---
 
@@ -152,4 +150,3 @@ The following links provide more information about GitHub.
 - [Learn modules for GitHub](/training/browse/?products=github)
 - [GitHub Learning Lab](https://github.com/apps/github-learning-lab)
 - [GitHub Docs](https://docs.github.com/en)
-- [Tips for getting started with GitHub DevSecOps](https://resources.github.com/whitepapers/Architects-guide-to-DevOps/)

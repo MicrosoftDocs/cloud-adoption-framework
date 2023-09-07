@@ -4,8 +4,6 @@ description: Learn about storage access, various storage solution capabilities, 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/16/2022
 ---
@@ -96,14 +94,15 @@ One of the biggest challenges with larger workloads is replicating the pure “b
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for energy HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Security governance compliance](./security-governance-compliance.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

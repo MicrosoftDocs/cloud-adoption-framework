@@ -5,8 +5,6 @@ author: akasnik
 ms.author: akasnik
 ms.date: 10/12/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: azure-fast-track
 ---
 

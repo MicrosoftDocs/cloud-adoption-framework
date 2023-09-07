@@ -5,8 +5,6 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -89,7 +87,7 @@ Contoso evaluates the proposed design by listing pros and cons.
 Contoso migrates its development front end and database to Azure VMs by using the agentless method in the Azure Migrate: Server Migration tool.
 
 - Contoso prepares and sets up Azure components for Azure Migrate: Server Migration and prepares the on-premises VMware infrastructure.
-- The [Azure infrastructure](./contoso-migration-infrastructure.md) is in place, so Contoso configures the replication of the VMs through the Azure Migrate: Server Migration tool.
+- The [Azure infrastructure](../azure-migration-guide/ready-alz.md) is in place, so Contoso configures the replication of the VMs through the Azure Migrate: Server Migration tool.
 - With everything prepared, Contoso starts replicating the VMs.
 - After replication is enabled and working, Contoso migrates the VMs by testing the migration. If successful, it's failed over to Azure.
 - After the development VMs are up and running in Azure, Contoso reconfigures its development workstations to point at the VMs now running in Azure.
@@ -109,7 +107,7 @@ To run this scenario, Contoso needs:
 | Requirements | Details |
 | --- | --- |
 | **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p/) to reduce costs up to 80 percent. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/). <br><br> If you create a free account, you're the admin of your subscription, and you can perform all actions. <br><br> If you use an existing subscription, but you're not the admin, work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with Azure role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Learn how Contoso [set up an Azure infrastructure](../azure-migration-guide/ready-alz.md). |
 | **On-premises servers** | On-premises vCenter servers should run version 5.5, 6.0, 6.5, or 6.7. <br><br> ESXi hosts should run version 5.5, 6.0, 6.5, or 6.7. <br><br> One or more VMware VMs should run on the ESXi host. |
 
 ## Scenario steps
@@ -129,7 +127,7 @@ Contoso migrates the VMs to a virtual network where the Azure VMs reside when th
 
 ### Set up a network
 
-Contoso already set up a network that can be for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
+Contoso already set up a network that can be for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](../azure-migration-guide/ready-alz.md).
 
   - The VMs that are migrated are used for development. They're migrated to the Azure development virtual network (`VNET-DEV-EUS2`) in the primary `East US 2` region.
   - Both VMs are placed in the `ContosoDevRG` resource group, which is used for development resources.

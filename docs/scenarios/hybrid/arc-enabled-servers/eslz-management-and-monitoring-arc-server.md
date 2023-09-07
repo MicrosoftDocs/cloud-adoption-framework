@@ -5,8 +5,6 @@ author: sebassem
 ms.author: sebassem
 ms.date: 09/20/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
@@ -18,7 +16,7 @@ This article will help you operate Azure Arc-enabled servers on Azure enterprise
 
 ## Architecture
 
-The following diagram shows conceptual reference architecture, that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
+The following diagram shows conceptual reference architecture that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
 
 [![Diagram that shows Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
 
@@ -64,6 +62,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 
 - Use [Update Management](/azure/automation/update-management/overview) in Azure Automation, as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. This allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale.
 - Update Management will also allow you to automate the Azure connected machine agent upgrades, via Windows updates on Azure Arc-enabled Windows servers.
+- If you have Azure Arc-enabled Windows Servers that have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-) and cannot be migrated to Azure or upgraded, enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical and important security patches.
 
 ## Next steps
 

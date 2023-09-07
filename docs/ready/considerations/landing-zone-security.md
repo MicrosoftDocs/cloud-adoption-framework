@@ -3,10 +3,8 @@ title: Improve landing zone security
 description: Improve landing zone security.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/15/2020
+ms.date: 06/21/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 

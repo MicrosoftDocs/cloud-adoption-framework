@@ -3,10 +3,8 @@ title: Migrate workloads for the retail industry
 description: Learn about different options and services for migrating workloads to Azure, like Azure Marketplace for retail.
 author: mpvenables
 ms.author: martinek
-ms.date: 09/24/2021
+ms.date: 11/24/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: internal, e2e-retail
 ---
 

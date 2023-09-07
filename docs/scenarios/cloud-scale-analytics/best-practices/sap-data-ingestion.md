@@ -3,10 +3,8 @@ title: SAP ingestion with cloud-scale analytics in Azure
 description: Learn about SAP ingestion with cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 08/06/2021
+ms.date: 01/24/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

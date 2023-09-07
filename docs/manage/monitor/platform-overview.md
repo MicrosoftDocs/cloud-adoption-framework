@@ -3,27 +3,25 @@ title: Cloud monitoring platforms overview
 description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/25/2023
+ms.date: 06/20/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank, engagement-fy23
+ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
 
-# Cloud monitoring guide: Monitoring platforms overview
+# Cloud monitoring platforms overview
 
-Microsoft provides a range of monitoring capabilities from multiple products:
+This article is part of a series in [the cloud monitoring guide](./index.md).
+
+Microsoft provides a range of cloud monitoring capabilities from multiple products:
 
 - [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications.
-- [System Center Operations Manager](/system-center/scom/welcome) (SCOM), designed for on-premises and then extended to the cloud.
-- [Azure Monitor System Center Operations Manager Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview?) (SCOM Managed Instance (preview)), a PaaS offering of System Center Operations Manager hosted in Azure.
+- [Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview), a PaaS offering of System Center Operations Manager hosted in Azure.
+- [System Center Operations Manager](/system-center/scom/welcome), designed for on-premises and then extended to the cloud.
 
 These offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
 
-Many organizations are embracing the latest practices for DevOps agility and cloud innovations to manage their heterogeneous environments. Yet they're also concerned about their ability to make appropriate and responsible decisions about monitoring those workloads.
-
-This article provides a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
+The below sections give you a high-level overview of our monitoring platforms to help you understand how each delivers core monitoring functionality.
 
 ## Infrastructure requirements
 
@@ -35,13 +33,13 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ### Azure Monitor SCOM Managed Instance (preview)
 
-[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) (SCOM Managed Instance (preview)) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
+[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
 
 ![Diagram of Operations Manager Managed Instance (preview) architecture.](./media/platforms/scom-managed-instance-architecture.png).
 
 ### Azure Monitor
 
-Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It performs monitoring, analytics, and diagnostics at scale. It's available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.
+Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It performs monitoring, analytics, and diagnostics at scale. It's available in all national/regional clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.
 
 ![Diagram of Azure Monitor](./media/monitoring-management-guidance-cloud-and-on-premises/azure-monitor-2.svg)
 
@@ -114,19 +112,29 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 ### Operations Manager and SCOM Managed Instance (preview)
 
-Operations Manager provides four basic ways to analyze data after it has been collected:
+Operations Manager provides these basic ways to analyze data after it has been collected:
 
 - **Health Explorer:** Helps you discover which monitors are identifying a health state issue and review knowledge about the monitor and possible causes for actions related to it.
 
-- **[Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview):** Provides a flexible way to analyze and visualize data. By using log queries, metric data, and parameters, you can build comprehensive insights unified into an interactive experience. By using Azure Workbooks, you can use the rich set of built-in capabilities to [visualize](/azure/azure-monitor/visualize/workbooks-visualizations) data.
-
-- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. However, no feature allows for complex or interactive analysis of collected data.
+- **Reports:** Allow you to summarize historical data that's stored in the Operations Manager data warehouse. You can customize the data that views and reports are based on. To learn more, see Using the [Reporting Workspace in Operations Manager](/system-center/scom/manage-using-reporting-workspace) and [Create reports on Power BI](/system-center/scom/operations-manager-managed-instance-create-reports-on-power-bi)
 
 - **Operations Manager command shell:** Extends Windows PowerShell with another set of cmdlets and can query and visualize collected data. This includes graphs and other visualizations natively with PowerShell or the Operations Manager HTML-based web console.
 
 ### Azure Monitor
 
 With the powerful Azure Monitor analytics engine, you can interactively work with log data and combine them with other monitoring data for trending and other data analysis. Views and dashboards allow you to visualize query data in various ways from the Azure portal, and import it into Power BI. Insights such as Application Insights, Azure VM insights, and Azure Container insights include customized visualizations to support interactive monitoring scenarios.
+
+Azure Monitor supports several ways to analyze and visualize data, including these:
+
+- Metrics Explorer
+- Log Analytics
+- Azure Workbooks
+- Azure dashboards
+- Grafana
+- Power BI
+- Azure Monitor partner integrations
+
+To learn more, see [Analyze and visualize monitoring data](/azure/azure-monitor/best-practices-analysis).
 
 ## Alerting
 
@@ -174,4 +182,4 @@ Monitor supports several methods to collect monitoring or management data from A
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Monitoring the cloud deployment models](./cloud-models-monitor-overview.md)
+> [Cloud monitoring strategy](../../strategy/monitoring-strategy.md)

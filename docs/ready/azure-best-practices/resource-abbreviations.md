@@ -6,8 +6,6 @@ ms.author: ssumner
 ms.date: 4/12/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
@@ -15,7 +13,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 This page gives you abbreviation examples for many of the resources in Azure. The following table has *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-**Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool).
+**Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/mspnp/AzureNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
@@ -41,7 +39,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -233,6 +231,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Azure Bastion | `Microsoft.Network/bastionHosts` | `bas` |
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
+| Key Vault Managed HSM | `Microsoft.KeyVault/managedHSMs` | `kvmhsm` |
 | Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |

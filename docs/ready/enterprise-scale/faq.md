@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: tozimmergren
 ms.date: 04/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
 
@@ -110,7 +108,7 @@ So, if you have 30 different workloads that each require a management group and 
 
 [![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png)](./media/eslz-dev-test-prod-bad.png#lightbox)
 
-To summarize, there should be no difference in policies applied between "dev/test/production" environments if you develop and build them to production standard from the start. There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners. You might also consider using [sandbox subscriptions](../considerations/sandbox-environments.md) for true development purposes where a less restricted environment is required, such as when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
+Landing Zone MG should have universal polices that enforce guardrails for both Corp and Online. Corp and Online have unique polices to enforce company guidelines around public and private facing workloads. If it needs to be implemented at a higher Management Group level, then it should be talked about with Cloud Platform Team or another team. There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners. You might also consider using [sandbox subscriptions](../considerations/sandbox-environments.md) for true development purposes where a less restricted environment is required, such as when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
 A common challenge to this approach is that you might need some policies to apply differently, depending on the environment. You have a few options:
 
@@ -134,99 +132,17 @@ _Some management groups have been removed for illustration clarity purposes._
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 
-When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name).
+When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deploymene metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
-Management groups, Azure Policies, and Azure RBAC are all stored at either a tenant or management group level within Azure landing zone architecture, so these resources aren't "deployed" to a particular region. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace and an automation account, if required.
 
-The region selector on the **Deployment location** tab is also used to select which Azure region the following resources are deployed to (if enabled):
+If you deploy a networking topology on the **Network topology and connectivity** tab, you need to select an Azure region to deploy the networking resources to. This region can be different from the region selected on the **Deployment location** tab.
 
-- Log Analytics workspace (including selected solutions)
-- Automation account
-- Resource groups (for the other resources)
-
-If you deploy a networking topology on the **Network topology and connectivity** tab, you need to select an Azure region to deploy the networking resources to. This region can be different from the region selected on the **Deployment location** tab. Depending on the topology you select, the networking resources that you deploy might include:
-
-- Azure Virtual WAN (including Virtual WAN Hub)
-- Azure Virtual Network
-- VPN gateway
-- ExpressRoute gateway
-- Azure Firewall
-- Azure DDoS Standard protection plan
-- Azure Private DNS zones for Azure Private Link
-- Resource groups (for these resources)
+For more information about the regions that landing zone resources use, see [Landing zone regions](../considerations/regions.md).
 
 ## How do we enable more Azure regions when we use Azure landing zone architecture?
 
-Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy Azure landing zone architecture. For more information, see [Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for](#why-are-we-asked-to-specify-azure-regions-during-the-azure-landing-zone-accelerator-deployment-and-what-are-they-used-for).
-
-You might want to expand into or use more Azure regions once you've completed the initial deployment of Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
-
-| Area | Recommendation |
-| ---- | -------------- |
-| Management groups | No action necessary. Management groups aren't tied to a region. |
-| Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
-| Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
-| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the Management subscription. See the recommendations in the Azure landing zone critical design area for [Management and monitoring](../landing-zone/design-area/management.md). |
-| Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke VNETs in the new region for resolution. Remember that Azure DNS Zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
-| Identity | If you deployed Active Directory Domain Services or Azure Active Directory Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
-
-> [!NOTE]
-> You might be able to use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) instead of deploying into an additional Azure region. Review and assess whether this is possible based on your requirements and whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
-
-### High-level approach
-
-The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for Networking & Identity. First, decide on new Azure Region to expand into.
-
-#### Networking
-
-##### Traditional Hub & Spoke Architecture
-
-> [!TIP]
-> Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md)
-
-1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is recommended to use for most customers across multiple regions for connectivity
-2. Create new Resource Group in subscription in the new target region
-3. Create new hub Virtual Network in the new target region
-4. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
-5. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections
-6. Establish Virtual Network Peering between the new hub Virtual Network and the other hub Virtual Networks
-7. Create and configure any required routing: Azure Route Server, User-Defined Routes, and more.
-8. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription
-
-You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
-
-##### Virtual WAN Architecture
-
-> [!TIP]
-> Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md)
-
-1. Create new Virtual Hub in the existing Virtual WAN in the new target region
-2. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub
-3. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
-4. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, and more.
-5. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution
-   - Some customers might do this on their Active Directory Domain Controllers, which might be part of the Identity platform landing zone subscription
-   - In Virtual WAN deployments, today, this must be in a spoke Virtual Network that is connected to the Virtual Hub via a Virtual Network Connection
-
-You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
-
-#### Identity
-
-> [!TIP]
-> Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md)
-
-1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is recommended to use for most customers across multiple regions for identity
-2. Create new Resource Group in subscription in the new target region
-3. Create new Virtual Network in the new target region
-4. Establish Virtual Network Peering back to the newly created regional hub Virtual Network in the connectivity subscription
-5. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
-    - You might need to perform more setup and configuration of the workloads once provisioned, like:
-      - Promoting the Active Directory Domain Controller Virtual Machines to the existing Active Directory Domain
-      - Create new Active Directory sites & subnets
-      - Configuring DNS Server settings like Conditional Forwarders
+To understand how to add new regions to a landing zone, or how to move landing zone resources to a different region, see [Landing zone regions](../considerations/regions.md).
 
 ## Should we create a new Azure Subscription every time or should we reuse Azure Subscriptions?
 

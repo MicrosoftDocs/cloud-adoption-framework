@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/25/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 

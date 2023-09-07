@@ -5,8 +5,6 @@ author: arsenvlad
 ms.author: arsenv
 ms.date: 03/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
