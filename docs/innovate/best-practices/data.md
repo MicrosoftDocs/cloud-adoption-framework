@@ -101,4 +101,4 @@ Below you'll find articles to help you get started with each of the tools in thi
 Learn about tools to create applications that engage customers beyond raw data.
 
 > [!div class="nextstepaction"]
-> [Innovation application development tools](./apps.md)
+> [Engage via applications](./apps.md)
