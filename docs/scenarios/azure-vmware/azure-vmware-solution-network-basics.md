@@ -62,7 +62,7 @@ In the standard topology shown in the preceding figure:
    - The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (the red dotted line in the diagram). 
 - Routes for management and workload segments in the Azure VMware Solution private cloud are announced to all ExpressRoute circuits connected to the private cloud's managed circuit via Global Reach. In the opposite direction, all routes announced from the on-premises site over the customer-managed ExpressRoute circuit are propagated to the Azure VMware Solution private cloud (the solid yellow line in the diagram).
 - The routes announced from the on-premises site over the customer-managed ExpressRoute circuit are learned by all ExpressRoute gateways that are connected to the circuit. The routes are injected into: 
-   - The route table of the Gateway's virtual network.
+   - The route table of the gateway's virtual network.
    - The route table of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity). 
    
   In the opposite direction, ExpressRoute gateways announce routes for: 
@@ -70,7 +70,7 @@ In the standard topology shown in the preceding figure:
     - The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (the green dashed line in the diagram).
 
 > [!NOTE]
-> ExpressRoute gateways don't propagate routes across circuit connections. In the preceding figure, the ExpressRoute gateway doesn't propagate routes learned in the BGP session represented by the red line to the BGP session represented by the green line, or vice versa. That's why Global Reach is needed to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
+> ExpressRoute gateways don't propagate routes across circuit connections. In the preceding diagram, the ExpressRoute gateway doesn't propagate routes learned in the BGP session represented by the red line to the BGP session represented by the green line, or vice versa. That's why Global Reach is needed to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
 
 ## Outbound data transfer charges
 
@@ -82,7 +82,7 @@ A managed ExpressRoute circuit that's associated with an Azure VMware Solution p
 
 The ExpressRoute virtual network gateway that's connected to the private cloud's managed circuit is instantiated in a virtual network that you own, so it's billed at the [standard ExpressRoute virtual network gateway rates](https://azure.microsoft.com/pricing/details/expressroute/). 
 
-Any other network-related resources, like Azure VPN gateways, Azure route servers, virtual network peerings, and public IP addresses, that are required by the topologies discussed in this guide must be deployed in your subscription. They're billed at the standard rates.  
+Any other network-related resources, like Azure VPN gateways, Azure route servers, virtual network peerings, and public IP addresses, that are required by the topologies discussed in this guide must be deployed in your subscription. They're billed at standard rates.  
 
 For more information about billing for Azure VMware Solution, see the [Common questions article](/azure/azure-vmware/faq#billing).
 
