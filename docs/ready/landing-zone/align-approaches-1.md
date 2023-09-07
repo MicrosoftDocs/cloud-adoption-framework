@@ -1,6 +1,6 @@
 ---
 title: Migration approach using duplicate Landing Zones Management Group with policies in “Audit Only” mode
-description: Migration approach to transition to the Azure landing zone conceptual architecture by duplicating the landing zones management group
+description: Migration approach to transition to the Azure landing zone conceptual architecture by duplicating the landing zones management group with policies in “Audit Only” mode
 author: sebassem
 ms.author: sebassem
 ms.date: 07/27/2023
