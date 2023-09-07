@@ -71,7 +71,15 @@ When the resources are moved into a new resource group in the same subscription,
 
 ## Scenarios
 
-We have provided guidance in [Scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios.md) for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
+We have provided guidance for common scenarios that our customers may match, or be similar to, that they wish to migrate and transition from into the Azure landing zone conceptual architecture.
+
+- **Alignment scenarios**
+  - [Single Subscription with no management groups to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios.md)
+  - [Single/Few Management Groups to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios-1.md)
+  - [Regional organization to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios-2.md)
+
+- **Alignment approaches**
+  - [Migration approach using duplicate landing zones management group with policies in “Audit Only” mode](./../landing-zone/align-approaches-1.md)
 
 > [!div class="nextstepaction"]
 > [Review scenarios: Transitioning existing Azure environments to the Azure landing zone conceptual architecture](./../landing-zone/align-scenarios.md)
