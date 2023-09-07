@@ -91,5 +91,5 @@ For more information about billing for Azure VMware Solution, see the [Common qu
 Learn about connectivity between Azure VMware Solution and on-premises sites.
 
 > [!div class="nextstepaction"]
-> [Connectivity with on-premises sites](./network-design-guide-onprem-connectivity.md)
+> [Connectivity with on-premises sites](./on-premises-connectivity.md)
 
