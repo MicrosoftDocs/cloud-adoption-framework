@@ -161,6 +161,6 @@ The following table compares the features of the three network models in AKS: Ku
 | Cluster scale                                                              | 400 nodes and 250 pods/node | 1000 nodes and 250 pods/node | 1000 nodes and 250 pods/node |
 | Network configuration                                                      | Complex - requires route tables and UDRs on cluster subnet for pod networking | Simple - no additional configuration required for pod networking | Simple - no additional configuration required for pod networking |
 | Pod connectivity performance                                               | Additional hop adds minor latency | Performance on par with VMs in a VNet | Performance on par with VMs in a VNet |
-| Kubernetes Network Policies                                                | Calico                     | Azure Network Policies, Calico, Cilium | Calico                    |
+| Kubernetes Network Policies                                                | Calico                     | Azure Network Policies, Calico, Cilium | Azure Network Policies, Calico, Cilium      |
 | OS platforms supported                                                     | Linux only                 | Linux and Windows Server 2022 | Linux and Windows Server 2022 |
 | Application Gateway as an Ingress Controller (AGIC)                        | Supported                  | Supported                     | Not supported
