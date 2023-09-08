@@ -48,7 +48,7 @@ Once subscriptions are moved to a management group with existing Azure RBAC and 
 - Any Azure RBAC that is inherited to the moved subscriptions can take up to 30 minutes before the user tokens in the management group cache are refreshed. To expedite this process, you can refresh the token by signing out and in or request a new token.
 - Any policy where the assignment scope includes the moved subscriptions, will perform audit operations only on the existing resources. More specifically:
   - Any existing resource in the subscription subject to a `DeployIfNotExists` policy effect will appear as noncompliant and won't be remediated automatically but requires user interaction to perform the remediation manually.
-  - Any existing resource in the subscription subject to `Deny` policy effect will appear as noncompliant and will not be rejected. User must manually mitigate this result as appropriate.
+  - Any existing resource in the subscription subject to `Deny` policy effect will appear as noncompliant and won't be rejected. User must manually mitigate this result as appropriate.
   - Any existing resource in the subscription subject to `Append` and `Modify` policy effect will appear as noncompliant and requires user interaction to mitigate.
   - Any existing resource in the subscription subject to `Audit` and `AuditIfNotExist` policy effect will appear as noncompliant and requires user interaction to mitigate.
 - All new writes to resources in the moved subscription are subject to the assigned policies at real-time as normal.
@@ -57,7 +57,7 @@ Once subscriptions are moved to a management group with existing Azure RBAC and 
 
 The primary use cases to perform a resource move is when you want to consolidate resources into the same resource group if they share the same lifecycle, or move resources to a different subscription due to cost, ownership, or Azure RBAC requirements.
 
-When performing a resource move, both the source resource group and the target resource group are locked (this lock will not affect any of the resources in the resource group) during the move operation, meaning you cannot add, update, or delete resources in the resource groups. A resource move operation will not change the location of the resources.
+When performing a resource move, both the source resource group and the target resource group are locked (this lock won't affect any of the resources in the resource group) during the move operation, meaning you cannot add, update, or delete resources in the resource groups. A resource move operation won't change the location of the resources.
 
 For more guidance about how to move resources across resource groups and subscriptions in the same tenant, see [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
