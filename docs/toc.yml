@@ -517,7 +517,7 @@ items:
               href: ready/landing-zone/align-scenarios-2.md
         - name: Alignment approaches
           items:
-            - name: Migration approach using "Audit Only" mode policies and hierarchy
+            - name: Migration approach using duplicate landing zones management group with policies in “Audit Only” mode
               href: ready/landing-zone/align-approaches-1.md
 
         - name: Brownfield landing zone considerations
