@@ -25,11 +25,11 @@ Some resources in Azure can be moved post creation, and there are different appr
 | Resources in resource groups | Can be moved to new resource group in same or different subscription | Allows you to modify resource composition in a resource group after deployment | - Not supported by all resourceTypes <br> - Some resourceTypes have specific limitations or requirements <br> - resourceIds are updated and impacts existing monitoring, alerts, and control plane operations <br> - resource groups are locked during the move period <br> - Requires assessment of policies and RBAC pre and post-move operation |
 | Subscriptions in a tenant | Can be moved to different management groups | No impact to existing resources within the subscription, as no resourceId values will be changed | Requires assessment of policies and RBAC pre and post-move operation |
 
-To understand which move strategy you should use, we will go through examples of both:
+To understand which move strategy you should use, we'll go through examples of both:
 
 ## Subscription move
 
-The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves focuses on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer). For more guidance about how to move subscriptions across management groups in the same tenant, see [Moving management groups and subscriptions](/azure/governance/management-groups/manage#moving-management-groups-and-subscriptions).
+The common use cases for moving subscriptions are to organize subscriptions into management groups or when transferring subscriptions to a new Azure Active Directory tenant. Subscription moves focus on moving subscriptions to management groups. Moving a subscription to a new tenant is mainly for [transferring billing ownership](/azure/cost-management-billing/manage/billing-subscription-transfer). For more guidance about how to move subscriptions across management groups in the same tenant, see [Moving management groups and subscriptions](/azure/governance/management-groups/manage#moving-management-groups-and-subscriptions).
 
 ### Azure RBAC requirements
 
@@ -39,7 +39,7 @@ If the user has an inherited Owner role permission on the subscription from an e
 
 ### Policy
 
-Existing subscriptions may be subject to Azure policies assigned either directly, or at the management group where they are currently located. It's important to assess current policies, and the policies that may exist in the new management group/management group hierarchy.
+Existing subscriptions may be subject to Azure policies assigned either directly, or at the management group where they're currently located. It's important to assess current policies, and the policies that may exist in the new management group/management group hierarchy.
 
 Azure Resource Graph can be used to perform an inventory of existing resources and compare their configuration with the policies existing at the destination.
 
@@ -47,11 +47,11 @@ Once subscriptions are moved to a management group with existing Azure RBAC and 
 
 - Any Azure RBAC that is inherited to the moved subscriptions can take up to 30 minutes before the user tokens in the management group cache are refreshed. To expedite this process, you can refresh the token by signing out and in or request a new token.
 - Any policy where the assignment scope includes the moved subscriptions, will perform audit operations only on the existing resources. More specifically:
-  - Any existing resource in the subscription subject to a `DeployIfNotExists` policy effect will appear as noncompliant and will not be remediated automatically but requires user interaction to perform the remediation manually.
+  - Any existing resource in the subscription subject to a `DeployIfNotExists` policy effect will appear as noncompliant and won't be remediated automatically but requires user interaction to perform the remediation manually.
   - Any existing resource in the subscription subject to `Deny` policy effect will appear as noncompliant and will not be rejected. User must manually mitigate this result as appropriate.
   - Any existing resource in the subscription subject to `Append` and `Modify` policy effect will appear as noncompliant and requires user interaction to mitigate.
   - Any existing resource in the subscription subject to `Audit` and `AuditIfNotExist` policy effect will appear as noncompliant and requires user interaction to mitigate.
-- All new writes to resources in the moved subscription is subject to the assigned policies at real-time as normal.
+- All new writes to resources in the moved subscription are subject to the assigned policies at real-time as normal.
 
 ## Resource move
 
