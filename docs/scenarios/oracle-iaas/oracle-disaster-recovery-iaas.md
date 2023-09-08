@@ -49,6 +49,8 @@ Other attributes of this architecture are the same as maximum availability mode 
 
 ### Special usage considerations for high availability
 
+The following sections describe special considerations for high availability.
+
 #### Use availability zones versus availability sets for high availability
 
 Azure availability zones are Azure datacenters within the same Azure region that is guaranteed to have <2 ms roundtrip latency. Although normally used for disaster recovery purposes as discussed later, it's possible to use them for high availability instead of availability sets. However, you must make sure that your solution can run with the latency and throughput provided between availability zones you use.
@@ -81,9 +83,9 @@ This document focuses on scenarios where primary and secondary servers are both 
 
 ### Choose the right disaster recovery option
 
-Use the flowchart in figure 4 to decide the best disaster recovery option for your Oracle database.
+Use the following flowchart to decide the best disaster recovery option for your Oracle database.
 
-:::image type="content" source="media/data-protection-design-process-map.png" alt-text="Diagram showing the data protection design process map of Oracle on Azure Iaas.":::
+:::image type="content" source="media/data-protection-design-process-map.png" alt-text="Diagram showing the data protection design process map of Oracle on Azure VMs landing zone accelerator.":::
 
 ### Disaster recovery using Data Guard
 
@@ -98,7 +100,7 @@ Latency between Azure datacenters that are separated far from each other and lat
 
 Additionally, when you send data across Azure regions or data centers, you face egress costs for data (ex: redo logs) that's sent to a disaster recovery site. If you don't need to replicate all data in your database, you can replicate only partial data as needed using Golden Gate based replication and save on egress costs.
 
-:::image type="content" source="media/disaster-recovery-data-guard.png" alt-text="Diagram showing disaster recovery configuration with Data Guard for Oracle on Azure Iaas.":::
+:::image type="content" source="media/disaster-recovery-data-guard.png" alt-text="Diagram showing disaster recovery configuration with Data Guard for Oracle on Azure VMs landing zone accelerator.":::
 
 For a step-by-step configuration of Data Guard on Azure, see [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) .
 
@@ -189,7 +191,7 @@ Business continuity requires an integrated approach that includes all components
 |Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2mins  |
 | |·    Protects against single instance failure. |·    Using Observer for Fast Failover |
 | |·    Will cause downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
-|Data Centre failure |Data Guard with two nodes in separate availability zones |RPO<=5mins RTO<=5mins  |
+|Data Center failure |Data Guard with two nodes in separate availability zones |RPO<=5mins RTO<=5mins  |
 | |·    Protects against data center failure |·    Using MAX_PERFORMANCE mode for Data Guard |
 | |·    Will cause downtime if whole region is down |RPO=0 RTO<=5mins  |
 | |·    Requires additional failover configuration for app servers to manage network latency.  |·    Using MAX_AVAILABILITY mode for Data Guard |
@@ -200,7 +202,7 @@ Business continuity requires an integrated approach that includes all components
 | |·    Protects against regional failures | |
 | |·    Requires entire Azure environment to be setup in the target region during failover. | |
 
-Azure provides services and capabilities to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure IaaS. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
+Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure IaaS. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
 ## Next steps
 
