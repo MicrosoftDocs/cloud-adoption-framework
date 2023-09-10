@@ -59,13 +59,13 @@ If the database files are stored in Azure NetApp Files (ANF) volumes, you should
 - [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
 - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth and to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, ANF isn't restricted by the cumulative VM’s IO throughput limits on any VM instance type. Instead, ANF is restricted only by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. See examples in the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
+While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, ANF isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
-1. Recommended alert rules for Azure virtual machines    
+1. Recommended alert rules for Azure virtual machines.
 
-Alerts in Azure Monitor identify when a resource isn't healthy. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules that  provide you with initial monitoring for a common set of metrics including CPU percentage and available memory. Learn about how to [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
+Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
 
 Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://github.com/Azure/alz-monitor) as a common set of Azure resources/services that are configured in a similar way across organizations. 
 

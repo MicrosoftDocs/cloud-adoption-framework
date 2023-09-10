@@ -71,11 +71,11 @@ Use the following links to learn more on how to configure Pacemaker cluster:
 
 #### Use proximity placement groups
 
-Consider using [proximity placement groups](https://learn.microsoft.com/azure/virtual-machines/co-location) to ensure minimum latency between database servers in the same availability set and between database servers and application servers.  This proximity placement is important when using Pacemaker/Corosync with shared managed disk, or it can be useful to minimize network latency when running Oracle Data Guard in MAX_PROTECTION or MAX_AVAILABILITY mode within a single Azure availability set.
+Consider using [proximity placement groups](https://learn.microsoft.com/azure/virtual-machines/co-location) to ensure minimum latency between database servers in the same availability set and between database servers and application servers. This proximity placement is important when using Pacemaker/Corosync with shared managed disk. It can be useful to minimize network latency when running Oracle Data Guard in MAX_PROTECTION or MAX_AVAILABILITY mode within a single Azure availability set.
 
 ### Disaster recovery for Oracle on Azure workloads
 
-Disaster recovery architecture provides resilience against failures that impact Azure datacenter or region or that hinder application functionality across entire region. In any case, you would want to move your entire workload to another datacenter or region.
+Disaster recovery architecture provides resilience against failures that affect Azure datacenter or region or that hinder application functionality across entire region. In any case, you would want to move your entire workload to another datacenter or region.
 
 As stated earlier, disaster recovery architecture should be based on your solution requirements as indicated by RTO and RPO. Since disaster recovery architecture is built for exceptional failure cases, failover process is manual as opposed to high availability design. Generally you should have more relaxed requirements for RTO and RPO, which can enable more cost-effective designs.
 
@@ -89,14 +89,14 @@ Use the following flowchart to decide the best disaster recovery option for your
 
 ### Disaster recovery using Data Guard
 
-Data Guard can be used to replicate data to your disaster recovery site. That site could be another availability zone in the same region or could be a different region depending on your requirements for data protection and on the availability zone structure provided on your production site. Using Data Guard in a disaster recovery scenario is similar to the high availability scenario discussed earlier with a few important differences.
+Data Guard can be used to replicate data to your disaster recovery site. That site could be another availability zone in the same region or could be a different region depending on your requirements for data protection. It's also dependent on the availability zone structure provided on your production site. Using Oracle Data Guard in a disaster recovery scenario is similar to the high availability scenario discussed earlier with a few important differences.
 
 - When you fail over to secondary replica in high availability scenario, you send Azure Load Balancer to redirect requests to new primary.
 - When you fail over to disaster recovery site, you fail over the **entire** solution to the new site.
 
-If the disaster recovery site is in another region, you'll need to design it for the failover depending on your requirements.
+If the disaster recovery site is in another region, you need to design it for the failover depending on your requirements.
 
-Latency between Azure datacenters that are separated far from each other and latency between regions or datacenters is higher than latency within the same datacenter. For that reason, the least complex and least expensive recommendation is to use Data Guard in maximum performance mode for disaster recovery purposes.  If maximum performance mode is too risky, then it's possible to use maximum availability mode in conjunction with the FarSync mechanism. However, use of a FarSync instance triggers Active Data Guard licensing on both the primary and standby environments. For more detailed information, review the [License details](https://apex.oracle.com/pls/apex/features/r/dbfeatures/licenses?license_id=20).
+Latency between Azure datacenters that are separated far from each other and latency between regions or datacenters is higher than latency within the same datacenter. For that reason, the least complex and least expensive recommendation is to use Data Guard in maximum performance mode for disaster recovery purposes.  If maximum performance mode is too risky, then it's possible to use maximum availability mode with the FarSync mechanism. However, use of a FarSync instance triggers Active Data Guard licensing on both the primary and standby environments. For more detailed information, review the [License details](https://apex.oracle.com/pls/apex/features/r/dbfeatures/licenses?license_id=20).
 
 Additionally, when you send data across Azure regions or data centers, you face egress costs for data (ex: redo logs) that's sent to a disaster recovery site. If you don't need to replicate all data in your database, you can replicate only partial data as needed using Golden Gate based replication and save on egress costs.
 
@@ -118,7 +118,7 @@ Backup and restore have been a traditional method for disaster recovery architec
 
 - Ensure up to date data at the disaster recovery site by extracting and moving backup of data from database.
 
-- Ensure up to date deployment at the disaster recovery site. This is achieved by replicating the same deployment of all network components, application servers and configuration to the disaster recovery site.
+- Ensure up to date deployment at the disaster recovery site. You update the si by site by replicating the same deployment of all network components, application servers and configuration to the disaster recovery site.
 
 When it comes to replicating data using backup, you have several different options you can explore as explained in [Backup strategies for Oracle Databases on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies.md).
 
@@ -129,7 +129,7 @@ Consider using one of the following approaches to maintain the disaster recovery
 > [!IMPORTANT]
 > You must ensure the solution's RTO requirements can be met if you create entire deployment from scratch during failover. Routine simulation and testing of disaster recovery scenario is needed to ensure the deployment code is not broken.
 
-- A second approach is to deploy and maintain a scaled version of your production environment, that can function accurately for a small workload and can potentially be scaled up as necessary during failover to serve for production load. This is the most used method, especially for complex deployments where you don't want to take the risk of creating the entire environment or when you would like to failover quickly in order to provide a lower RTO.
+- A second approach is to deploy and maintain a scaled version of your production environment. A version that can function accurately for a small workload and can potentially be scaled up as necessary during failover to serve for production load. This option is the most used method, especially for complex deployments where you don't want to take the risk of creating the entire environment or when you would like to fail over quickly in order to provide a lower RTO.
 
 A third approach is you deploy and maintain your entire solution to the disaster recovery site for the fastest RTO and failover times at the expense of potentially doubling your cost.
 
@@ -139,7 +139,7 @@ The following sections describe special considerations for disaster recovery.
 
 #### Use FarSync
 
-Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss if primary server failure, refer to the [Oracle reference architectures on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-reference-architecture#oracle-data-guard-far-sync) for more information on how to use Far Sync on Azure.
+Oracle Data Guard Far Sync doesn't help with the high availability capabilities but it allows you to achieve zero data loss protection capability replication for Oracle Databases. If your workload requires zero data loss when your primary fails, see [Oracle reference architectures on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-reference-architecture#oracle-data-guard-far-sync) for more information on how to use Far Sync on Azure.
 
 #### Choose the right data replication technology
 
@@ -153,54 +153,54 @@ Apart from native technologies described in this document, you can use any techn
 
 **Data loss:** Amount of data loss expected in an abrupt failure of primary database should comply with your solution requirements.
 
-**Total cost of ownership:** Cost of acquisition (in the case of a third party replication solution) and amount of effort required to configure and maintain the replication solution should also be considered and verified to be within solution requirements.
+**Total cost of ownership:** Cost of acquisition (a third-party replication solution) and amount of effort required to configure and maintain the replication solution should also be considered and verified to be within solution requirements.
 
 ### Optimize failover instance
 
-When you use Data Guard in high availability or high protection mode, it's also possible to configure for automatic failover so that when the primary server fails, the secondary server is brought up automatically. By configuring application servers accordingly, you can ensure that application downtime is close to zero during failover.
+When you use data guard in high availability or high protection mode, it's also possible to configure for automatic failover so that when the primary server fails, the secondary server is brought up automatically. By configuring application servers accordingly, you can ensure that application downtime is close to zero during failover.
 
- In this implementation, since the database is supposed to serve the same way after failover, a secondary server needs to be configured with the same CPU, memory, and I/O capacity as the primary server. In that case, you would need to maintain a high capacity with a secondary server, which will increase your Azure costs and Oracle database license costs and secondary server will not be serving user requests most of the time.
+ In this implementation, since the database is supposed to serve the same way after failover, a secondary server needs to be configured with the same CPU, memory, and I/O capacity as the primary server. In that case, you would need to maintain a high capacity with a secondary server that would increase your Azure costs and Oracle database license costs. The secondary server won't process user requests most of the time.
 
 Azure already provides 99.9% availability for virtual machines in an availability zone as indicated in [VM uptime service-level agreement (SLA)](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services). When you maintain a secondary replica of your database in the same availability zone, another availability zone or another region using any data replication technology, it's possible to optimize the secondary capacity.
 
-In this approach, the secondary database(s) are configured with just the capacity they need to keep up to date. When a failure occurs, the secondary database is resized to bring it up to the same capacity as the original primary. This operation is done only on failure so during normal operation you only pay for a fraction of the cost of the original server. Since the primary database isn't operational at that moment you won’t need other Oracle database licenses.
+With this approach, the secondary database(s) are configured with the capacity they need to keep up to date. When a failure occurs, the secondary database is resized to bring it up to the same capacity as the original primary. This operation is done only on failure, so during normal operation you only pay for a fraction of the cost of the original server. Since the primary database isn't operational at that moment, you won’t require other Oracle database licenses.
 
-Capacity needed to operate secondary database as a replication destination depends on the replication technology you use. Essentially, workload on a transactional OLTP system is composed mostly of read requests. For example, 90%-10% or 95%-5% read-write rations are common in OLTP application. Data replication essentially replicates the result of writing requests in the source database. With this, it's reasonable to expect secondary database to operate with 1/10th (in case of 90%-10% read-write ratio) or even 1/10th of capacity of primary database.
+Capacity needed to operate secondary database as a replication destination depends on the replication technology you use. Essentially, workload on a transactional OLTP system is composed mostly of read requests. For example, 90%-10% or 95%-5% read-write rations are common in OLTP application. Data replication essentially replicates the result of writing requests in the source database. With this setup, it's reasonable to expect secondary database to operate with 1/10th (if 90%-10% read-write ratio) or even 1/10th of capacity of primary database.
 
-It's also possible and recommended to implement failover procedures as IaC (infrastructure as code) so  enterprise standards can be ensured during failover process. The same process can be developed to include server resizing operations, which will streamline the end-to-end process.
+It's also possible and recommended to implement failover procedures as IaC (infrastructure as code) to ensure  enterprise standards during the failover process. The same process can be developed to include server resizing operations, that streamline the end-to-end process.
 
 ### Network topology for service protection and data protection
 
-Achieving high availability and disaster recovery requires a financial and business decision that balances the recovery time (RTO) and the potential data loss (RPO) against the other Oracle licensing, virtual machine servicing and data transfer costs to implement. Hosting a workload on a single Azure virtual machine offers basic protection for common hardware failure and delivers the least costly solution. However, because a failure on a single virtual machine  likely experiences downtime and data loss, production environments should include a secondary Oracle database hosted on a separate virtual machine with Oracle Data Guard properly configured for data replication with one of the following designs.
+Achieving high availability and disaster recovery requires a financial and business decision that balances the recovery time (RTO) and the potential data loss (RPO) against the other Oracle licensing, virtual machine servicing and data transfer costs to implement. Hosting a workload on a single Azure virtual machine offers basic protection for common hardware failure and delivers the least costly solution. However, because a failure on a single virtual machine is likely to cause downtime and data loss, production environments should include a secondary Oracle database hosted on a separate virtual machine with Oracle Data Guard. Configure the data guard properly for data replication with one of the following designs.
 
-- **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate virtual machine within the same availability set and within a proximity placement group as the primary database.
-- **Data protection from a data center failure**. Placing the secondary virtual machine in a second database increases data protection in the event an entire data center fails. Latency between the primary and secondary database may be as much as 2 ms, which could impact performance, RTO and RPO.
-- **Data protection from a regional failure**. To extend protection to prevent data loss from an Azure regional failure, the secondary database can be placed in another region. As latency between regions can be between 30 ms and 300 ms, the impact on the production workload and RTO and RPO can increase and should be estimated in advance.
+- **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate virtual machine within the same availability zone and within a proximity placement group as the primary database.
+- **Data protection from a data center failure**. Placing the secondary virtual machine in a second database increases data protection in the event an entire data center fails. Latency between the primary and secondary database can be as much as 2 ms, which could affect performance, RTO and RPO.
+- **Data protection from a regional failure**. To extend protection to prevent data loss from an Azure regional failure, the secondary database can be placed in another region. As latency between regions can be between 30 ms and 300 ms, the impact on the production workload and RTO and RPO can increase. Estimate this latency in advance.
 
 Business continuity requires an integrated approach that includes all components of the workload. Network infrastructure is a primary component for any workload on Azure and it needs to align with the high availability and disaster recovery architecture.
 
 - Oracle Data Guard provides high availability and (in most scenarios) provides sufficient support for common failures. While virtual machines should be placed in separate availability sets, all virtual machines should reside within a single availability zone to reduce network latency.
-- For other protection, virtual machines can be strategically placed in separate availability zones rather than a single availability zone. This approach can prevent downtime in the event of a data center failure.
-- For extreme protection, a secondary database can be placed in another Azure region with continuous updates applied with Oracle Data Guard using Global VNet peering. This enables data updates to be applied to the secondary region privately through the Microsoft backbone. Resources communicate directly, without gateways, extra hops, or transit over the public internet. This allows a high-bandwidth, low-latency connection across peered virtual networks in different regions. You can use Global VNet peering to connect your primary site to disaster recovery site in another region through a high-speed network.
+- For other protection, virtual machines can be strategically placed in separate availability zones rather than a single availability zone. This approach can prevent downtime during a data center failure.
+- For extreme protection, a secondary database can be placed in another Azure region with continuous updates applied with Oracle Data Guard using Global VNet peering. This protection enables data updates to be applied to the secondary region privately through the Microsoft backbone. Resources communicate directly, without gateways, extra hops, or transit over the public internet. This networking option allows a high-bandwidth, low-latency connection across peered virtual networks in different regions. You can use Global VNet peering to connect your primary site to disaster recovery site in another region through a high-speed network.
 - Azure Load Balancer is a layer-4 load balancer that can be employed to route Oracle calls to the Primary database under normal conditions. A health probe can detect when the Primary becomes unavailable to route calls to the Secondary database. A manual configuration update should be done to route database calls to a Secondary database in another region.
 
 ## Summary of resiliency against different failure types
 
 |Failure Scenario |Oracle on Azure HA/DR Scenario |RPO/RTO |
 |:----|:----|:----|
-|Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2mins  |
+|Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2 mins  |
 | |·    Protects against single instance failure. |·    Using Observer for Fast Failover |
-| |·    Will cause downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
-|Data Center failure |Data Guard with two nodes in separate availability zones |RPO<=5mins RTO<=5mins  |
+| |·    Causes downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
+|Data Center failure |Data Guard with two nodes in separate availability zones |RPO<=5 mins RTO<=5mins  |
 | |·    Protects against data center failure |·    Using MAX_PERFORMANCE mode for Data Guard |
-| |·    Will cause downtime if whole region is down |RPO=0 RTO<=5mins  |
+| |·    Will cause downtime if whole region is down |RPO=0 RTO<=5 mins  |
 | |·    Requires additional failover configuration for app servers to manage network latency.  |·    Using MAX_AVAILABILITY mode for Data Guard |
-|Region failure |Data Guard with two nodes in separate Azure regions: |RPO>=10mins RTO>=15mins  |
+|Region failure |Data Guard with two nodes in separate Azure regions: |RPO>=10mins RTO>=15 mins  |
 | |·    Protects against regional failures |·    Using MAX_PERFORMANCE mode for Data Guard |
 | |·    Requires additional failover configuration for app servers to manage network latency. | |
-| |Backups shipped to a different Azure region: |RPO>=24hrs RTO>=4hrs |
+| |Backups shipped to a different Azure region: |RPO>=24 hrs RTO>=4 hrs |
 | |·    Protects against regional failures | |
-| |·    Requires entire Azure environment to be setup in the target region during failover. | |
+| |·    Requires entire Azure environment to be set up in the target region during failover. | |
 
 Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure IaaS. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 

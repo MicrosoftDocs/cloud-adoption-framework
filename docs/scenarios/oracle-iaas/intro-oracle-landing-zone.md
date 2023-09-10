@@ -51,7 +51,7 @@ As shown in  the reference architectural diagram, the Oracle databases are deplo
 
 ## Subscriptions
 
- The example Oracle workload architecture uses the following two subscriptions:
+ For example, Oracle workload architecture uses the following two subscriptions:
 
 **An Azure virtual hub subscription** that contains the hub virtual network if necessary for hybrid connectivity. If your Oracle workloads are internet facing only, they may not require this specifically.  
 
@@ -61,7 +61,7 @@ As shown in  the reference architectural diagram, the Oracle databases are deplo
 
 ## Networking
 
-The example Oracle on Azure architecture is contained inside a single or potentially two VNETs. This can be used for either a hybrid connectivity scenario, or for scenarios where your Oracle workload isn't enabled for hybrid connectivity. For hybrid connectivity scenarios the Oracle spoke virtual network should be connected to a hub virtual network in accordance with ALZ general principles, either through regular peering or through Virtual WAN.  
+For example, Oracle on Azure architecture is contained inside a single or two VNETs. This architecture can be used for either a hybrid connectivity scenario, or for scenarios where your Oracle workload isn't enabled for hybrid connectivity. For hybrid connectivity scenarios, the Oracle spoke virtual network should be connected to a hub virtual network in accordance with Azure landing zone accelerator general principles, either through regular peering or through Virtual WAN.  
 
 The architecture subdivides the virtual network address space into subnets. You can associate each subnet with a network security group that defines the access policies for the subnet. Place application servers on a separate subnet so that you can more easily provide security for them.
 
@@ -91,11 +91,11 @@ An Azure availability zone is a unique physical location within a region. Each z
 
 For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones.
 
-Depending on your application requirements you should  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
+Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
 For more information about advanced HA/DR configuration, see (link to Oracle BCDR documentation).
 
-## Azure NetApp Files and Azure Files
+## Azure NetApp files and Azure files
 
 Azure NetApp Files and Azure Files with Network File System (NFS) provide high-availability file share services for Oracle database servers and redo log archiving.
 

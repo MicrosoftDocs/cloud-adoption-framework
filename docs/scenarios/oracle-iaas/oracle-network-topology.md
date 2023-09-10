@@ -16,11 +16,11 @@ ms.custom:
 
 # Network topology and connectivity for Oracle on Azure VMs  landing zone accelerator
 
-This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article will provide key design considerations and best practices for networking and connectivity of your Oracle instance running on Azure virtual machines (VMs).  Since Oracle supports mission-critical workloads, the guidance on the Azure landing zone design areas should be included in your design.
+This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article provides key design considerations and best practices for networking and connectivity of your Oracle instance running on Azure virtual machines (VMs).  Since Oracle supports mission-critical workloads, the guidance on the Azure landing zone design areas should be included in your design.
 
 ## Security is always the priority
 
-As with most production databases, securing an Oracle workload is essential.  The database must remain private with no public endpoints.  Access to the data should be deliberately controlled from authorized cloud services only (for example, a business application or web front-end services). Management of any production database should be completed by a select few authorized individuals and achieved by using the secure Azure Bastion service. 
+As with most production databases, securing an Oracle workload is essential.  The database must remain private with no public endpoints.  Access to the data should be deliberately controlled from authorized cloud services only (for example, a business application or web front-end services). A select few authorized individuals can manage any production database by using the secure Azure Bastion service.
 
 ## High-level network design
 
@@ -41,8 +41,8 @@ The following architecture diagram shows networking considerations for Oracle in
 - The front-end subnet should follow [best practices for internet facing workloads](https://learn.microsoft.com/events/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
 - Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](https://learn.microsoft.com/azure/bastion/) to connect securely to the VMs in the Oracle subnet.
 - The **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
-- Oracle workloads should be evaluated in advance and deployed on the proper sized VM as well as storage requirements as described in the [Capacity planning guidelines for Oracle workload as IaaS on Azure]() design guide.
-- Because Oracle is optimized for Linux, it's recommended to run it on a Linux distribution. However, it will function properly on a virtualized Window platform as well.
+- Oracle workloads should be evaluated in advance and deployed on the proper sized VM and storage requirements.
+- Because Oracle is optimized for Linux, it's recommended to run it on a Linux distribution. However, it functions properly on a virtualized Window platform as well.
 - Use [Oracle DataGuard](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) or another backup strategy. For example, [Oracle GoldenGate](https://docs.oracle.com/goldengate/c1230/gg-winux/GGCON/introduction-oracle-goldengate.htm) should be employed to enable high availability with a load balancer to properly route traffic to the primary or secondary database server.
 - Oracle VMs should be strategically placed in either [Availability sets](https://learn.microsoft.com/azure/virtual-machines/availability-set-overview) or [Availability zones](https://learn.microsoft.com/azure/reliability/availability-zones-overview). The option choice depends on the level of availability or disaster recovery as described in the [High availability and disaster recovery for Oracle on Azure]() design guide
 - All services should be deployed using [accelerated networking](https://learn.microsoft.com/azure/virtual-network/accelerated-networking-overview)

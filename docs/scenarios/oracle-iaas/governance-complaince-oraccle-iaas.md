@@ -56,7 +56,7 @@ Use Azure compliance capabilities to ensure compliance with industry and regulat
 
 - Monitor Azure service health.
 
-    - Monitor resources to detect usage pattern changes and proactively initiate changes. E.g.,  increase memory or number of vCPUs by upgrading to a different virtual machine SKU. 
+    - Monitor resources to detect usage pattern changes and proactively initiate changes. For example,  increase memory or number of vCPUs by upgrading to a different virtual machine SKU. 
 
 - Create alerts to detect early warning signs for potential problems.
 

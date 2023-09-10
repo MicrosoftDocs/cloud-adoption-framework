@@ -16,9 +16,9 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure VMs landing zone accelerator
 
-Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a LoB application or as a combined suite for enterprise resource planning, HR, SCM or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly impact cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
+Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a LoB application or as a combined suite for enterprise resource planning, HR, SCM or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
 
-This article uses the [strategy and plan template]() and other resources from the Cloud Adoption Framework to capture the strategic impact of Oracle workload on Azure.
+This article uses the [Plan for Oracle on Azure VMs landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle workload on Azure landing zone accelerator.
 
 ## Why move an Oracle workload to Azure VMs for landing zone accelerator?
 
@@ -28,19 +28,19 @@ Oracle is an influential platform, and organizations have several motivations to
 
 - **Cost optimization motivations**: At scale, cloud optimizes cost with scale when required – pay as you go & right sizing of Oracle on cloud can bring licensing and infrastructure cost down.
 
-  - **Innovation motivations**: The cloud unlocks new opportunities like AI & Data Modernization for the Oracle workload to be transformed and modernized, although this may not be in scope for the initial migration.
+  - **Innovation motivations**: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity may not be in scope for the initial migration.
 
   - **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
 
-Customers are often motivated by several if not all the categories mentioned above. To successfully migrate an Oracle workload in the cloud, it's imperative for a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](). This input will help the cloud adoption team to make informed decisions throughout the implementation process.
+Customers are motivated by several, if not all, the opportunities offered. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](). This input helps the cloud adoption team to make informed decisions throughout the implementation process.
 
-Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives. The following topics are also relevant to your organization if your team is reviewing this migration scenario: 
+Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives. The following sections are also relevant to your organization if your team is reviewing this migration scenario:
 
  1. Cycles to refresh Oracle infrastructure require significant capital expenditures. If your Oracle infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs. 
 
-1. Oracle Licenses are a one-time purchase, which are negotiated for a specific number of years. If you want to migrate your Oracle workloads to Azure, please review the following official document to understand the license implications on Azure: Licensing Oracle Software in the Cloud Computing Environment 
+1. Oracle Licenses are a one-time purchase, which is negotiated for a specific number of years. If you want to migrate your Oracle workloads to Azure, review the following official document to understand the license implications on Azure: Licensing Oracle Software in the Cloud Computing Environment 
 
-1. If your Oracle maintenance contracts are coming up for renewal which typically happens on a yearly basis, this too may be a trigger to consider moving to cloud. Also, an upcoming refresh to a newer Oracle software version triggered by Oracle upgrade cycles, application requirements, or a business driver should also be reason to consider cloud options.  
+1. If your Oracle maintenance contracts are coming up for renewal, which typically happens on a yearly basis, your contract renewal too can be a trigger to consider moving to cloud. Also, an upcoming refresh to a newer Oracle software version triggered by Oracle upgrade cycles, application requirements, or a business driver should also be reason to consider cloud options.  
 
 ## Measure progress during an Oracle migration
 
