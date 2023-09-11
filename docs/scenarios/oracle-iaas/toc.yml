@@ -9,22 +9,22 @@ items:
       href: oracle-landing-zone-plan.md
   - name: Design areas
     items:
-        - name: Enterprise enrollment
-          href: enterprise-enrollment-oracle.md
-        - name: Identity and access management
-          href: manage-identity-access-azure-landing-zone.md
-        - name: Network topology and connectivity
-          href: oracle-network-topology.md
-        - name: Resource organization
-          href: manage-resources-oracle-landing-zone.md
-        - name: Governance
-          href: governance-complaince-oraccle-iaas.md
-        - name: Disaster recovery and business continuity
-          href: oracle-disaster-recovery-iaas.md
-        - name: Manage and monitor Oracle workloads
-          href: oracle-manage-monitor-workload.md
-        - name: Security guidelines
-          href: oracle-security-guideline-landing-zone.md
+    - name: Enterprise enrollment
+      href: enterprise-enrollment-oracle.md
+    - name: Identity and access management
+      href: manage-identity-access-azure-landing-zone.md
+    - name: Network topology and connectivity
+      href: oracle-network-topology.md
+    - name: Resource organization
+      href: manage-resources-oracle-landing-zone.md
+    - name: Governance
+      href: governance-complaince-oraccle-iaas.md
+    - name: Disaster recovery and business continuity
+      href: oracle-disaster-recovery-iaas.md
+    - name: Manage and monitor Oracle workloads
+      href: oracle-manage-monitor-workload.md
+    - name: Security guidelines
+      href: oracle-security-guideline-landing-zone.md
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
