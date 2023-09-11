@@ -57,7 +57,7 @@ Review the following considerations and recommendations for infrastructure manag
 - Collect and log session host performance counters.
 - Use network performance monitoring for user experience management.
 - Set up an alerting model for the collected logs and metrics.
-- Use Windows Update Management for the session hosts between feature updates. 
+- Use Windows Update Management for the session hosts between feature updates.
 
 ### Design recommendations
 
