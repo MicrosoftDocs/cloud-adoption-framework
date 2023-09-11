@@ -22,7 +22,7 @@ Monitor the platform landing zone services to maintain a stable and secure envir
 
 The following video discusses the solution that's described in this article and demonstrates how to deploy Azure Monitor.
 
-> [!VIDEO https://youtu.be/xeuxetAfHRg?si=vqaOHNz7vmAq41sf]
+> [!VIDEO https://www.youtube.com/embed/xeuxetAfHRg?si=1dmmOyIAkdf8nMgV]
 
 ## Azure landing zone monitoring guidance
 
