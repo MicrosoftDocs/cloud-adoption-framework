@@ -70,7 +70,7 @@ In the standard topology shown in the preceding figure:
     - The prefixes that comprise the address space of all directly peered virtual networks, if peering is configured to [allow gateway transit](/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) (the green dashed line in the diagram).
 
 > [!NOTE]
-> ExpressRoute gateways don't propagate routes across circuit connections. In the preceding diagram, the ExpressRoute gateway doesn't propagate routes learned in the BGP session represented by the red line to the BGP session represented by the green line, or vice versa. That's why Global Reach is needed to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
+> ExpressRoute gateways don't propagate routes across circuit connections. In the preceding diagram, the ExpressRoute gateway doesn't propagate routes learned in the BGP session represented by the red dotted line to the BGP session represented by the green dashed line, or vice versa. That's why Global Reach is needed to enable connectivity between the Azure VMware Solution private cloud and the on-premises site.
 
 ## Outbound data transfer charges
 

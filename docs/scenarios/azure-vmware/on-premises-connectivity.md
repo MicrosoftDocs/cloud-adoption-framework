@@ -139,7 +139,7 @@ The following sections provide details about the two implementation options, inc
 
 When you use the single virtual network approach, both the Azure VMware Solution private cloud's managed circuit and the customer-owned circuit are connected to the same ExpressRoute gateway, typically the hub network. Traffic between the private cloud and the on-premises site can be routed through firewall NVAs that are deployed in the hub network. The single virtual network architecture is shown here:
 
-:::image type="content" source="media/network-design-guide-figure13.png" alt-text="Figure 13. Diagram that shows the single virtual network option for ExpressRoute transit." lightbox="media/network-design-guide-figure13.png":::
+:::image type="content" source="media/network-design-guide-figure13.png" alt-text="Diagram that shows the single virtual network option for ExpressRoute transit." lightbox="media/network-design-guide-figure13.png":::
 *The single virtual network option for ExpressRoute transit.*
 
 The control plane and the data plane are implemented as follows.
