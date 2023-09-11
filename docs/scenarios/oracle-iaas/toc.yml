@@ -1,10 +1,8 @@
 items:
-  - name: Oracle on Azure VMs landing zone accelerator
-    href: index.yml
+  - name: Oracle Migration - Microsoft Cloud Adoption
+    href: intro-oracle-landing-zone.md
   - name: Get started
     items:
-    - name: Oracle Migration - Microsoft Cloud Adoption Framework for Azure
-      href: intro-oracle-landing-zone.md
     - name: Strategic impact
       href: oracle-landing-zone-strategy.md
     - name: Technical planning
