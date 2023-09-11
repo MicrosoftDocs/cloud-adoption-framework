@@ -1,22 +1,23 @@
 ---
-title: Azure VMware Solution Network Design Guide - Connectivity with Azure virtual networks
-description: Learn how to design Azure VMware Solution network connectivity with Azure virtual networks.
+title: 'Azure VMware Solution network design guide: Connectivity with Azure virtual networks'
+description: Learn how to design Azure VMware Solution network connectivity with Azure virtual networks. This article is part of the Azure VMware Solution design guide.
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/14/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Design phase #2: Connectivity with Azure virtual networks
+# Design phase 2: Connectivity with Azure virtual networks
 
-Azure VMware Solution private clouds connect to Azure virtual networks through managed ExpressRoute circuits. See section [ExpressRoute circuits and Azure VMware Solution private clouds](network-design-guide-avs-networking-basics.md#expressroute-circuits-and-azure-vmware-solution-private-clouds) for more details. In hub-spoke Azure networks (including networks built with Virtual WAN), connecting a private cloud's managed circuit to an ExpressRoute Gateway in the hub network (or Virtual WAN hub) provides layer-3 connectivity with the private cloud. However, enforcing security policies to selectively allow/deny connections between resources is often a requirement, such as between:
-- Azure virtual networks and VMs running in the Azure VMware Solution private cloud
-- Azure virtual networks and the Azure VMware Solution private cloud's management endpoints 
+Azure VMware Solution private clouds connect to Azure virtual networks via managed Azure ExpressRoute circuits. For more information, see [ExpressRoute circuits and Azure VMware Solution private clouds](azure-vmware-solution-network-basics.md#azure-expressroute-circuits-and-azure-vmware-solution-private-clouds). In hub-spoke Azure networks (including networks that are built with Azure Virtual WAN), connecting a private cloud's managed circuit to an ExpressRoute gateway in the hub network (or Virtual WAN hub) provides Layer 3 connectivity with the private cloud. However, enforcing security policies to selectively allow or deny connections between resources is often a requirement. This requirement can exist between:
 
-While both Azure virtual networks and vSphere/NSX-T provide native constructs for network segmentation, firewall solutions deployed as NVAs in Azure virtual networks are often the preferred option in enterprise-scale environments. Design Phase #2 focuses on the virtual network configuration that allows routing traffic between private clouds and Azure virtual networks through custom next hops, such as firewall NVAs.
+- Azure virtual networks and VMs running in the Azure VMware Solution private cloud.
+- Azure virtual networks and the Azure VMware Solution private cloud's management endpoints.
+
+Although both Azure virtual networks and vSphere/NSX-T provide native constructs for network segmentation, firewall solutions deployed as network virtual appliancess (NVAs) in Azure virtual networks are often the preferred option in enterprise-scale environments. This article focuses on a virtual network configuration that allows you to route traffic between private clouds and Azure virtual networks by using custom next hops, such as firewall NVAs.
 
 Design Phase #2 depends on the option selected in [Design Phase #1](network-design-guide-onprem-connectivity.md) for on-premises connectivity. In fact, the managed ExpressRoute circuit that connects a private cloud to an Azure virtual network may also play a role in connectivity with on-premises sites. This is the case when [Transit over ExpressRoute Private peering](network-design-guide-onprem-connectivity.md#transit-over-expressroute-private-peering) is chosen in Design Phase #1, as shown in the following flow chart:
 
