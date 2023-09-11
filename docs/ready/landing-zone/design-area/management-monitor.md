@@ -20,11 +20,11 @@ Monitor your Azure platform landing zone components to ensure availability, reli
 
 Monitor the platform landing zone services to maintain a stable and secure environment, maximize performance, and effectively meet the evolving needs of your business.
 
-The following video discusses the solution that's desccribed in this article and demonstrates how to deploy Azure Monitor.
+The following video discusses the solution that's described in this article and demonstrates how to deploy Azure Monitor.
 
-> [!VIDEO https://aka.ms/alz/monitor/video]
+> [!VIDEO https://youtu.be/xeuxetAfHRg?si=vqaOHNz7vmAq41sf]
 
-## Monitoring guidance for Azure landing zone
+## Azure landing zone monitoring guidance
 
 Baseline metric, activity log, and log query alerts are available for landing zone platform components and other selected landing zone components. These alerts ensure consistent alerting and monitoring for your Azure landing zone. They're based on Microsoft-recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response. Use the following guidance to achieve real-time visibility into the performance, utilization, and security of your platform landing zone implementation. Proactively address issues, optimize resource allocation, and ensure a reliable and secure environment.
 
@@ -42,11 +42,11 @@ The following subsets of Azure components have one or more alerts defined:
 
 For more information, see [Alert details](https://aka.ms/alz/monitor/alertdetails).
 
-To ensure that your organization's resources are properly monitored and secured, you also need to ensure that you properly configure alerts and that you have appropriate processes in place to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff are notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
+To ensure that your organization's resources are properly monitored and secured, you also need to properly configure alerts and implement appropriate processes to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff are notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
 
-In accordance with [Azure landing zone principles for policy driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance#why-use-dine-and-modify-policies), a framework solution is available that provides an easy way to scale alerting by using Azure Policy. These policies use the *DeployIfNotExists* effect to deploy relevant alert rules, alert processing rules, and action groups when you create a resource in your Azure landing zone environment, in both platform services or landing zones.
+In accordance with [Azure landing zone principles for policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance#why-use-dine-and-modify-policies), a framework solution is available that provides an easy way to scale alerting by using Azure Policy. These policies use the *DeployIfNotExists* effect to deploy relevant alert rules, alert processing rules, and action groups when you create a resource in your Azure landing zone environment, in both platform services and landing zones.
 
-Azure Policy provides a default baseline configuration, but you can configure the policies to suit your needs. If you require alerting on different metrics than what the repository provides, the solution provides a framework for you to develop your own policies for deploying alert rules. For more information, see the [Azure Monitor Baseline Alerts (AMBA) contributor guide](https://aka.ms/amba/contributing) and [Introduction to an landing zone monitor deployment](https://aka.ms/amba/alz/deploy). The solution is integrated into the Azure landing zone installation experience, so new implementations of Azure landing zone offer you the opportunity to set up baseline alerting at installation time.
+Azure Policy provides a default baseline configuration, but you can configure the policies to suit your needs. If you require alerting on different metrics than what the repository provides, the solution provides a framework for you to develop your own policies for deploying alert rules. For more information, see the [Azure Monitor Baseline Alerts (AMBA) contributor guide](https://aka.ms/amba/contributing) and [Introduction to an Azure Monitor deployment](https://aka.ms/amba/alz/deploy). The solution is integrated into the Azure landing zone installation experience, so new implementations of Azure landing zone offer you the opportunity to set up baseline alerting at installation time.
 
 Deploy alerts via policies to provide flexibility and scalability, and to ensure that alerts are deployed inside and outside the Azure landing zone scope. Alerts are only deployed when the corresponding resources are created, which avoids unnecessary cost and ensures updated alerts configurations at deployment time. This function coincides with the Azure landing zone principle of policy-driven governance.
 
@@ -89,13 +89,13 @@ Testing helps you ensure that your alerting and policy configurations meet your 
 
 Testing is an essential step in the development and deployment of alerting and policy configurations, and can help you ensure the security, reliability, and performance of your organization's resources.
 
-For more information about test processes and procedures, see [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach).
+For more information, see [Testing approach for Azure landing zones](/azure/cloud-adoption-framework/ready/enterprise-scale/testing-approach).
 
 >[!NOTE]
 >If you implement alerting by using a different approach, like infrastructure as code (IaC), for example Azure Resource Manager, Bicep, or Terraform, or via the portal, the guidance for alerts, severity, and thresholds that's in the repository still applies for determining which alert rules to configure and for notifications.
 
 ## Next steps
 
-- [Introduction to deploying Azure landing zone monitor](https://aka.ms/amba/alz/deploy)
+- [Introduction to deploying Azure Monitor](https://aka.ms/amba/alz/deploy)
 
 - [Business continuity and disaster recovery](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery)
