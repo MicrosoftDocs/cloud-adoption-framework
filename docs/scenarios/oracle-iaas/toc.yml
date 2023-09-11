@@ -9,10 +9,8 @@ items:
       href: oracle-landing-zone-strategy.md
     - name: Technical planning
       href: oracle-landing-zone-plan.md
-  - name: Prepare your environment
+  - name: Design areas
     items:
-      - name: Design areas
-        items:
         - name: Enterprise enrollment
           href: enterprise-enrollment-oracle.md
         - name: Identity and access management
