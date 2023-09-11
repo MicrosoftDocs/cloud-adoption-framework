@@ -146,7 +146,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 - Review [data retention costs](/azure/sentinel/azure-sentinel-billing#data-retention-costs) for data ingested into the Log Analytics workspace Microsoft Sentinel uses.
 - Filter the [right level of logs and events](/azure/azure-monitor/containers/container-insights-agent-config) for your Azure Arc-enabled Kubernetes clusters to be collected in the Log Analytics workspace.
 - Use [Log Analytics queries](/azure/sentinel/azure-sentinel-billing#run-queries-to-understand-your-data-ingestion) and the [Workspace Usage Report workbook](/azure/sentinel/azure-sentinel-billing#deploy-a-workbook-to-visualize-data-ingestion) to understand your data ingestion trends.
-- Create a [cost management playbook](/azure/sentinel/azure-sentinel-billing#use-a-playbook-for-cost-management-alerts) to send notifications if your Microsoft Sentinel workspace exceeds your budget.
+- Create a [cost management playbook](/azure/sentinel/billing-monitor-costs#use-a-playbook-for-cost-management-alerts) to send notifications if your Microsoft Sentinel workspace exceeds your budget.
 - Microsoft Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
 - Consider using [Commitment Tier](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
