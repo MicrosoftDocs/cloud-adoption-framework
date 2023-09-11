@@ -176,5 +176,5 @@ The control plane and the data plane are implemented as described here:
 Learn about connectivity between Azure VMware Solution and Azure virtual networks.
 
 > [!div class="nextstepaction"]
-> [Connectivity between Azure VMware Solution and Azure virtual networks](network-design-guide-virtualnetwork-connectivity.md) 
+> [Connectivity between Azure VMware Solution and Azure virtual networks](virtual-network-connectivity.md) 
 
