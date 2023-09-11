@@ -42,7 +42,7 @@ The following subsets of Azure components have one or more alerts defined:
 
 For more information, see [Alert details](https://aka.ms/alz/monitor/alertdetails).
 
-To ensure that your organization's resources are properly monitored and secured, you also need to properly configure alerts and implement appropriate processes to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff are notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
+To ensure that your organization's resources are properly monitored and secured, you also need to properly configure alerts and implement appropriate processes to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff is notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
 
 In accordance with [Azure landing zone principles for policy-driven governance](/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance#why-use-dine-and-modify-policies), a framework solution is available that provides an easy way to scale alerting by using Azure Policy. These policies use the *DeployIfNotExists* effect to deploy relevant alert rules, alert processing rules, and action groups when you create a resource in your Azure landing zone environment, in both platform services and landing zones.
 
@@ -62,7 +62,7 @@ Use this process if you have an existing Azure landing zone implementation and y
 
 1. Import relevant policies and initiatives from the AMBA repository.
 2. Assign the required policies in your environment.
-3. Remediate non-compliant policies.
+3. Remediate noncompliant policies.
 
 For more information about policies relevant to your environment and the steps to apply them, see [Determine your management group hierarchy](https://aka.ms/amba/alz/brownfield).
 
@@ -72,7 +72,7 @@ Use this process if you have a non-Azure landing zone aligned implementation and
 
 1. Import relevant policies and initiatives from the AMBA repository to the top-most management group from which you wish to assign the policies.
 2. Assign the required policies in your environment.
-3. Remediate non-compliant policies.
+3. Remediate noncompliant policies.
 
 For more information about policies relevant to your environment and the steps to apply them, see [Determine your management group hierarchy](https://aka.ms/amba/alz/brownfield).
 
@@ -85,7 +85,7 @@ Test policies and alerting before a deployment to production so you can:
 - Detect and fix problems before they become larger. Avoid false positives or negatives and reduce the risk of costly mistakes.
 - Optimize configurations for better performance and avoid performance-related issues in production.
 
-Testing helps you ensure that your alerting and policy configurations meet your organization's requirements and comply with regulations and standards. This can help you avoid security breaches, compliance violations, and other risks that can have consequences for your organization.
+Testing helps you ensure that your alerting and policy configurations meet your organization's requirements and comply with regulations and standards. With regulations in place, you can avoid security breaches, compliance violations, and other risks that can have consequences for your organization.
 
 Testing is an essential step in the development and deployment of alerting and policy configurations, and can help you ensure the security, reliability, and performance of your organization's resources.
 
