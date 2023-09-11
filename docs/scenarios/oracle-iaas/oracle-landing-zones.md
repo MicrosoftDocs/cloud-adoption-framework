@@ -14,7 +14,7 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Azure landing zone for Oracle on Azure VMs
+# Azure landing zone accerator for Oracle on Azure VMs
 
 The Ready methodology of the Cloud Adoption Framework helps guide the creation of all Azure environments using Azure landing zones. Azure landing zones provide many implementation options built around a set of common design areas.
 

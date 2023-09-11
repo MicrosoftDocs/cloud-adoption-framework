@@ -1,39 +1,34 @@
 items:
   - name: Oracle on Azure VMs landing zone accelerator
     href: index.yml
-  - name: Introduction to Oracle on Azure VMs landing zone accelerator migration scenario
-    href: migrate-oracle-workload.md
-  - name: Strategic impact of Oracle on Azure VMs landing zone accelerator
-    href: oracle-landing-zone-strategy.md
-  - name: Plan for Oracle on Azure VMs landing zone accelerator
-    href: oracle-landing-zone-plan.md
-  - name: Design considerations
+  - name: Get started
     items:
-      - name: Business continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator
-        href: oracle-disaster-recovery-iaas.md 
-      - name: Network topology and connectivity for Oracle on Azure VMs  landing zone accelerator  
-        href: oracle-network-topology.md
-      - name: Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
-        href: oracle-manage-monitor-workload.md
-      - name: Security guidelines for Oracle on Azure VMs landing zone accelerator
-        href: oracle-security-guideline-landing-zone.md
-      - name: Capacity planning guidelines for Oracle on Azure VMs landing zone accelerator
-        href: capacity-planning-guidelines-oracle-iaas.md
-      - name: Compute and storage guidelines for Oracle Workload on Azure VMs landing zone accelerator
-        href: compute-storage-guidelines-oracle-iaas.md
-      - name: Governance and compliance for Oracle on Azure VMs landing zone accelerator
-        href: governance-complaince-oraccle-iaas.md
-      - name: Enterprise enrollment for Oracle on Azure VMs landing zone accelerator
-        href: enterprise-enrollment-oracle.md
-
+    - name: Oracle Migration - Microsoft Cloud Adoption Framework for Azure
+      href: intro-oracle-landing-zone.md
+    - name: Strategic impact
+      href: oracle-landing-zone-strategy.md
+    - name: Technical planning
+      href: oracle-landing-zone-plan.md
   - name: Prepare your environment
     items:
-    - name: Oracle on Azure VMs landing zone accelerator
-      href: oracle-landing-zones.md
-  - name: Implementation options
-    items:
-      - name: Oracle on Azure Virtual Machines landing zone accelerator
-        href: intro-oracle-landing-zone.md  
+      - name: Design areas
+        items:
+        - name: Enterprise enrollment
+          href: enterprise-enrollment-oracle.md
+        - name: Identity and access management
+          href: manage-identity-access-azure-landing-zone.md
+        - name: Network topology and connectivity
+          href: oracle-network-topology.md
+        - name: Resource organization
+          href: manage-resources-oracle-landing-zone.md
+        - name: Governance
+          href: governance-complaince-oraccle-iaas.md
+        - name: Disaster recovery and business continuity
+          href: oracle-disaster-recovery-iaas.md
+        - name: Manage and monitor Oracle workloads
+          href: oracle-manage-monitor-workload.md
+        - name: Security guidelines
+          href: oracle-security-guideline-landing-zone.md
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
