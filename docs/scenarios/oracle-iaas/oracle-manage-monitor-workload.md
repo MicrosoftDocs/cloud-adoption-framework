@@ -83,9 +83,8 @@ Recently, an initiative developed as an easy way to deploy alert rules. The purp
 |Azure Services |Description |ULR |
 |:----|:----|:----|
 |Azure Virtual Network |Oracle database on Azure VMs landing zone accelerator use virtual network for Availability Set, Availability Zone, HA and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/en-us/azure/virtual-network/monitor-virtual-network |
-| | |https://learn.microsoft.com/en-us/azure/virtual-network/monitor-virtual-network-reference |
-
-|. Azure Backup |Azure Backup can be monitored and can be set the alert.  |https://learn.microsoft.com/en-us/azure/backup/backup-azure-monitoring-use-azuremonitor |
+| | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
+|. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |
 | | |Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format: |
 | | | |
 | | |status – AzBackup – script – version: message |
