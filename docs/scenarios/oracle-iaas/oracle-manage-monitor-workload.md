@@ -36,7 +36,7 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 4. Monitor Managed Disk Metrics:
 
 If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. The types of storage suitable for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
-Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (ASM) or Linux Logical Volume Manager (LVM).
+Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
 ### Azure managed disk metrics
 
@@ -60,7 +60,7 @@ For more information about Disk performance related metrics, see [Disk metrics -
 
 - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, ANF isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
+While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
@@ -82,7 +82,7 @@ Recently, an initiative developed as an easy way to deploy alert rules. The purp
 
 |Azure Services |Description |ULR |
 |:----|:----|:----|
-|Azure Virtual Network |Oracle database on Azure VMs landing zone accelerator use virtual network for Availability Set, Availability Zone, HA and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/en-us/azure/virtual-network/monitor-virtual-network |
+|Azure Virtual Network |Oracle database on Azure VMs landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
 | | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
 |. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |
 | | |Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format: |
@@ -114,7 +114,7 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 
 |Approach & Option |Description |URL  |
 |:----|:----|:----|
-|AWR(Automatic Workload Repository)  |AWR provides the monitoring features of collects, processes, and maintains performance statistics for problem detection and self-tuning. This helps you to realize historical analytics and identify the problems. |https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A |
+|AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A |
 | | | |
 |Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more detail, see the following link   |Performance tuning with STATSPACK, part I:  https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf |
 | | |Performance tuning with STATSPACK, part II:  https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf |
