@@ -79,7 +79,7 @@ Disaster recovery architecture provides resilience against failures that affect 
 
 As stated earlier, disaster recovery architecture should be based on your solution requirements as indicated by RTO and RPO. Since disaster recovery architecture is built for exceptional failure cases, failover process is manual as opposed to high availability design. Generally you should have more relaxed requirements for RTO and RPO, which can enable more cost-effective designs.
 
-This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](oracle-disaster-recovery-landing-zone.md).
+This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery#scenario-2-primary-site-on-premises-and-dr-site-on-azure).
 
 ### Choose the right disaster recovery option
 
