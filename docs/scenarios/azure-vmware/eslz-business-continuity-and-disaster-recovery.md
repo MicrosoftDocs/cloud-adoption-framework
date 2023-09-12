@@ -61,17 +61,17 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server. Ensure than AVS vSAN datastore has enough capacity to hold restored backup.
 
-- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server. When using DPM protection agent on any Azure VMware Solution VM for application backup(e.g. SQL, Sharepoint, etc.), disable realtime monitoring of *dpmra.exe*.  
+- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server. When using DPM protection agent on any Azure VMware Solution VM for application backup(e.g. SQL, Sharepoint, etc.), disable realtime monitoring of *dpmra.exe*.
 
 - Configure appropriate NSG (Network Security Group) rules on subnet hosting Azure Backup Server to allow network communication from DPM protection agent running on protected VM in Azure VMware Solution. DPM protection agent communicates with Azure Backup Server on any dynamic port [between 1024 and 65535](/system-center/dpm/configure-firewall-settings-for-dpm).
-  
+
 - Currently, Azure Backup Server doesn't support cross-region restore for Azure VMware Solution private cloud. Refer to [partner backup solutions](/azure/azure-vmware/ecosystem-back-up-vms) and [disaster recovery section](./eslz-business-continuity-and-disaster-recovery.md#disaster-recovery-design-considerations) when cross-region Azure VMware Solution recovery is required.
 
 ## Disaster recovery design considerations
 
 - Align business requirements with recovery time objectives (RTO), capacity, and recovery point objectives (RPO) for applications. Plan and design accordingly to achieve these objectives using the most appropriate replication technology. For example, natively replicate SQL databases using SQL Always On availability group, or use a disaster recovery tool such as VMware Site Recovery Manager.
 
-- Determine the target disaster recovery site for the protected Azure VMware Solution private cloud. This site influences which disaster recovery tooling is suitable for the environment. For example, if you want to recover Azure VMware Solution workloads to Azure native IaaS virtual machines, [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery) is the only solution.
+- Determine the target disaster recovery site for the protected Azure VMware Solution private cloud. This site influences which disaster recovery tooling is suitable for the environment. For example, if you want to recover Azure VMware Solution workloads to Azure native IaaS virtual machines, you can consider [Azure Site Recovery](/azure/site-recovery/avs-tutorial-prepare-azure) or [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery).
 
 - Determine which subset of Azure VMware Solution workloads requires protection if there's a disaster recovery event. Consider categorizing the workloads based on priority: P0 for business-critical workloads, and P1, P2, P3 for other workloads that are important but not as critical for the business to operate. The customer's business continuity plan defines the priority levels, which helps to control the costs associated with disaster recovery implementation.
 
@@ -122,7 +122,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - For business-critical applications, Zerto and JetStream are available as disaster recovery solutions for Azure VMware Solution private cloud. JetStream and Zerto are built on the foundation of continuous data protection (CDP), using VMware vSphere API for I/O filtering (VAIO) framework, which enables minimal or close to no data loss. It also enables cost-effective disaster recovery by using minimal resources.
 
-- Use Zerto if Azure IaaS virtual machines are the disaster recovery target for the Azure VMware Solution private cloud.
+- Use [Azure Site Recovery](/azure/site-recovery/avs-tutorial-prepare-azure) or [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery), if Azure IaaS virtual machines are the disaster recovery target for the Azure VMware Solution private cloud.
 
 - Minimize manual input by using automated recovery plans within each of the respective disaster recovery solutions. These plans are helpful when working with either VMware Site Recovery Manager or partner solutions. A recovery plan gathers machines into recovery groups for failover. It then helps to define a systematic recovery process by creating independent units that can failover.
 
