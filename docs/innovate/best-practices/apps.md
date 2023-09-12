@@ -48,7 +48,7 @@ Depending on the path that the cloud adoption team takes, Azure provides applica
 Below you'll find articles to help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> The links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+> The following links will leave the Cloud Adoption Framework, as they reference supporting content that's beyond the scope of CAF.
 
 ### Low-code application platform
 

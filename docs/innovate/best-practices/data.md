@@ -62,7 +62,7 @@ As the invention approaches adoption at scale, the aspects of each solution requ
 Below you'll find articles to help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> The links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+> The following links will leave the Cloud Adoption Framework, as they reference supporting content that's beyond the scope of CAF.
 
 ### Share data with experts
 

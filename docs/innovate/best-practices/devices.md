@@ -40,7 +40,7 @@ In Azure, you commonly use the following tools to accelerate digital invention a
 Below you'll find articles to help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> The links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+> The following links will leave the Cloud Adoption Framework, as they reference supporting content that's beyond the scope of CAF.
 
 ### Mobile experience
 
