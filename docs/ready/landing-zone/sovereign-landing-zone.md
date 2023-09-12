@@ -28,7 +28,7 @@ Public sector customers with sovereignty needs that want to start using Azure ca
 
 ## Sovereign Landing Zone
 
-The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the Azure Landing Zone conceptual architecture and is intended for organizations that need advanced sovereign controls. An SLZ aligns Azure capabilities such as service residency, customer-managed keys, private links, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
+The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the Azure Landing Zone conceptual architecture and is intended for organizations that need advanced sovereign controls. A Sovereign Landing Zone (Preview) aligns Azure capabilities such as service residency, customer-managed keys, private links, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
 
 ## Sovereign landing zone design area's
 
@@ -52,10 +52,9 @@ From a management group organization perspective, "Confidential Corp" and "Confi
 
 #### Microsoft Cloud for Sovereignty Policy Baseline
 
-The SLZ Preview comes with the Sovereignty Policy Baseline built-in and enables other policy sets to be deployed within the SLZ. This enables customers to add additional policies to be layered on top of SLZ, for example ALZ Policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark. The Sovereignty Policy Baseline consists of policies to enforce the use of confidential computing resources when workloads are deployed into the confidential management groups. These policies create a platform where workloads are protected at rest, in transit, and while in use, removing
-Microsoft from the trust chain. Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed. Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy. The policies and opinions that the SLZ Preview layers on top of the Azure Landing Zone creates a platform that is biased towards increased security and confidentiality by default.
+The Sovereign Landing Zone (Preview) comes with the Sovereignty Policy Baseline built-in and enables other policy sets to be deployed within the Sovereign Landing Zone (Preview). This enables customers to add additional policies to be layered on top of a Sovereign Landing Zone (Preview), for example ALZ Policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark. The Sovereignty Policy Baseline consists of policies to enforce the use of confidential computing resources when workloads are deployed into the confidential management groups. These policies create a platform where workloads are protected at rest, in transit, and while in use, removing Microsoft from the trust chain. Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed. Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy. The policies and opinions that the Sovereign Landing Zone (Preview) layers on top of the Azure Landing Zone creates a platform that is biased towards increased security and confidentiality by default.
 
-For more information on the Sovereignty Policy Baseline initiative, review the documentation [Microsoft Cloud for Sovereignty policy portfolio \| Microsoft Learn](https://review.learn.microsoft.com/en-us/industry/sovereignty/policy-portfolio-baseline?branch=pr-en-us-950)
+For more information on the Sovereignty Policy Baseline initiative, review the documentation [Microsoft Cloud for Sovereignty policy portfolio \| Microsoft Learn](https://learn.microsoft.com/en-us/industry/sovereignty/policy-portfolio-baseline)
 
 ### Network topology and connectivity
 
@@ -72,30 +71,33 @@ Customers should consult the best practices on internet inbound and outbound con
 ### Security
 
 #### Azure Key Vault managed HSM
-The Sovereign Landing Zone architecture leverages the use of confidential computing in the confidential landing zones. Azure Key
-Vault is a necessary service for deploying confidential computing resources. Customers are encouraged to consult the design considerations and recommendations found at \< Reference to ALZ section on key management [Encryption and key management in Azure - Cloud Adoption Framework \| Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys), and may have to choose Azure Key Vault Managed HSM for compliancy requirements.
+
+The Sovereign Landing Zone architecture leverages the use of confidential computing in the confidential landing zones. Azure Key Vault is a necessary service for deploying confidential computing resources. Customers are encouraged to consult the design considerations and recommendations found at [Encryption and key management in Azure - Cloud Adoption Framework \| Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys), and may have to choose Azure Key Vault Managed HSM for compliancy requirements.
 
 #### Azure Attestation
 
 Customers using Azure confidential computing may want to leverage Azure Attestation by enabling guest attestation. The guest attestation feature helps to confirm that a confidential VM runs on a hardware-based trusted execution environment (TEE) with security features (isolation, integrity) enabled.
+
 For more information enabling guest attestation, review the documentation [What is guest attestation for confidential VMs? \|  Microsoft Learn](https://learn.microsoft.com/en-us/azure/confidential-computing/guest-attestation-confidential-vms)
 
 ### Governance
 
-#### Compliance dashboard
-
-As part of the Sovereign Landing Zone (Preview) deployment, a compliance dashboard will be deployed to help customers validate the SLZ Preview against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the SLZ Preview as well as additional custom compliance that has been deployed. The compliance dashboard documentation can be found at <...>
-
 ### Platform Automation and DevOps
+
+#### Deployment options
 
 The Sovereign Landing Zone (Preview) is available as a GitHub repository <https://github.com/Azure/sovereign-landing-zone-preview> and can be deployed as a whole or on a component per component basis, which allows for integration in customer's existing deployment workflows.
 
 The components are:
 
-1. Bootstrap: Sets up the management group hierarchy and creates the subscriptions as dictated by the architecture of the SLZ Preview. This is deployed under the tenant root group of the Azure customer tenant.
+1. Bootstrap: Sets up the management group hierarchy and creates the subscriptions as dictated by the architecture of the Sovereign Landing Zone (Preview). This is deployed under the tenant root group of the Azure customer tenant.
 
-2. Platform: Sets up the hub network and logging resources used by the SLZ Preview platform and workloads.
+2. Platform: Sets up the hub network and logging resources used by the Sovereign Landing Zone (Preview) platform and workloads.
 
 3. Compliance: Creates and assigns the default policy sets, and provided custom policies, enforced in the environment.
 
 4. Dashboard: Provides customers with a visual representation of their resource compliance.
+
+#### Compliance dashboard
+
+As part of the Sovereign Landing Zone (Preview) deployment, a compliance dashboard will be deployed to help customers validate the Sovereign Landing Zone (Preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the Sovereign Landing Zone (Preview) as well as additional custom compliance that has been deployed. The compliance dashboard documentation can be found in the documenation section in the GitHub repository.
