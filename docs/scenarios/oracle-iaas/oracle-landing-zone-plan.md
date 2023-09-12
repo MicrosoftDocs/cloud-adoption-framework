@@ -16,13 +16,17 @@ ms.custom:
 
 # Plan for Oracle on Azure VMs landing zone accelerator  
 
-As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure can be high only if you right size your Oracle workload on Azure Infrastructure, which also provides an opportunity to optimize Oracle licensing cost. The infrastructure capacity planning exercises provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
+This article describes how to plan for Oracle on Azure VMs landing zone accelerator. As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure are high only if you right size your Oracle workload on Azure Infrastructure. Getting the   sizing right also provides an opportunity to optimize Oracle licensing cost.
+
+The infrastructure capacity planning exercises provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
 
 The strategy and plan template and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
 
 ## Oracle digital estate planning 
 
-Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.   **Platform assets**: Your Oracle estate runs on different types of infrastructure or potential appliances. Regardless of what your organization does with Oracle, Oracle deployment requirements define those assets. These deployment requirements could include RAC or Exadata configurations as well.
+Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
+
+**Platform assets**: Your Oracle estate runs on different types of infrastructure or potential appliances. Regardless of what your organization does with Oracle, Oracle deployment requirements define those assets. These deployment requirements could include RAC or Exadata configurations as well.
 **Foundational assets**: Your Oracle platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this article series describes how Azure landing zone provides them.
 
 **Workload assets**: Your Oracle platform can consist of Oracle first party applications like e-commerce suite or third party/bespoke applications. Each workload with a dependency on the Oracle workloads should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
@@ -37,7 +41,7 @@ Several considerations should be included in those processes when planning for O
 
 **Evaluate dependencies**: Dependencies on a core platform like Oracle are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio.  
 
-**Environment planning**: Are you moving production and nonproduction Oracle workload at the same time or separately? Customers often move their nonproduction workload to Azure initially, creating an environment for learning and reducing risk. Once the team is comfortable with how the Oracle solution performs and operates on Azure, the path to migrating the production is smoother. 
+**Environment planning**: Are you moving production and nonproduction Oracle workload at the same time or separately? Customers often move their nonproduction workload to Azure initially, creating an environment for learning and reducing risk. Once the team is comfortable with how the Oracle solution performs and operates on Azure, the path to migrating the production is smoother.
 
 **Platform rationalization**: The most important consideration is how to rationalize an Oracle solution’s assets; consider how you migrate the platform using lift & shift approach.  
 

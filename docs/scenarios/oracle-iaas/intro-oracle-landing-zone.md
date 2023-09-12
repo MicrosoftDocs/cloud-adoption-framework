@@ -81,7 +81,7 @@ As Oracle Databases are backend services for a host of different applications wi
 
 ## Virtual machines and availability sets
 
-For the basic HA configuration, the virtual machines in the Data Guard setup are grouped in an availability set. There's no charge for creating an availability set. You pay only for each virtual machine that you create.  Azure uptime SLA for virtual machines in an availability set is 99.95%. 
+For the basic HA configuration, the virtual machines in the Data Guard setup are grouped in an availability set. There's no charge for creating an availability set. You pay only for each virtual machine that you create.  Azure uptime SLA for virtual machines in an availability set is 99.95%.
 
 For more information about Basic HA configuration, see the [Oracle BCDR documentation](Oracle BCDR documentation).
 
@@ -91,7 +91,7 @@ An Azure availability zone is a unique physical location within a region. Each z
 
 For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones.
 
-Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration),[Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
+Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration), [Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
 For more information about advanced HA/DR configuration, see (link to Oracle BCDR documentation).
 

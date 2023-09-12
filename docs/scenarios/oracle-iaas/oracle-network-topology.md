@@ -51,4 +51,4 @@ The following architecture diagram shows networking considerations for Oracle in
 
 Learn about design considerations for Oracle on Azure IaaS Compute & Storage guidelines in an enterprise-scale scenario. 
 
-[Business continuity and disaster recovery for Oracle on Azure IaaS](https://microsofteur.sharepoint.com/:w:/t/DataMod/EV0lkrFLXaNGnSkrAz8gLToB7fnA5hCCqhg0vA1zV7Do2g?e=TgAFlf)
+[Business continuity and disaster recovery for Oracle on Azure IaaS](oracle-disaster-recovery-oracle-landing-zone.md)

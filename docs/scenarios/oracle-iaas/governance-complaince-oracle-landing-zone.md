@@ -16,13 +16,13 @@ ms.custom:
 
 # Governance and compliance for Oracle on Azure VMs landing zone accelerator
 
-This article describes how holistically govern Oracle workload on Azure IaaS throughout its lifecycle. The article explores specific design elements and provides target recommendations for Oracle workload on Azure IaaS governance and compliance.
+This article describes how to holistically control Oracle workload on Azure VMs landing zone accelerator throughout its lifecycle. You also learn to explore specific design elements and provide governance and compliance recommendations for Oracle workload on Azure VMs landing zone accelerator.
 
 ## Design considerations
 
 When you deploy your Oracle workload to Azure, take the following design consideration to build robust environments.
 
-### Security and access control 
+### Security and access control
 
 - Ensure encrypted communication between database and its clients.
 - Use RBAC to ensure the least privileged access to your database server and data (including backups). 
@@ -30,7 +30,7 @@ When you deploy your Oracle workload to Azure, take the following design conside
 
 ### Compliance
 
-Use Azure compliance capabilities to ensure compliance with industry and regulatory requirements. For more information on industry and regulatory standards supported, see the following resources:
+Use Azure compliance capabilities to abide by industry and regulatory requirements. For more information on industry and regulatory standards supported, see the following resources:
 
 - [Azure compliance documentation](https://learn.microsoft.com/azure/compliance/)
 
@@ -40,7 +40,7 @@ Use Azure compliance capabilities to ensure compliance with industry and regulat
 
 ### Capacity allocation and sizing
 
-- Ensure the right sizing for your Oracle Workload on Azure IaaS, both for primary and for secondary (BCDR) environments.  
+- Ensure the right sizing for your Oracle Workload on Azure VMs, both for primary and for secondary (BCDR) environments.  
 
 - Cost monitoring and management
 
@@ -48,7 +48,7 @@ Use Azure compliance capabilities to ensure compliance with industry and regulat
 
 ### Logging and monitoring  
 
-- [Monitor availability](https://learn.microsoft.com/azure/architecture/best-practices/monitoring#availability-monitoring) in Azure. 
+- [Monitor availability](https://learn.microsoft.com/azure/architecture/best-practices/monitoring#availability-monitoring) in Azure.
 
 - Monitor Oracle virtual machines for both metrics and logs.
 
@@ -56,7 +56,7 @@ Use Azure compliance capabilities to ensure compliance with industry and regulat
 
 - Monitor Azure service health.
 
-    - Monitor resources to detect usage pattern changes and proactively initiate changes. For example,  increase memory or number of vCPUs by upgrading to a different virtual machine SKU. 
+    - Monitor resources to detect usage pattern changes and proactively initiate changes. For example,  increase memory or number of vCPUs by upgrading to a different virtual machine SKU.
 
 - Create alerts to detect early warning signs for potential problems.
 
@@ -68,11 +68,13 @@ Use Azure compliance capabilities to ensure compliance with industry and regulat
 
 ## Design Recommendations
 
-### Adopt Azure Policy 
+The following sections provide design recommendations for Oracle workload on Azure VMs landing zone accelerator.
+
+### Adopt Azure policy
 
 Azure Policy helps to enforce organizational standards and to assess, monitor and enforce compliance at-scale. Use Azure Policy at the heart of your compliance design to enforce standards set for your environment.
 
-### Microsoft Defender for Cloud 
+### Microsoft Defender for cloud
 
 Enable [Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) to improve your security posture and protect your workload.
 
@@ -86,7 +88,7 @@ Depending on your requirements, you can use [Azure data encryption at-rest](http
 
 Use [immutable data retention policies](https://learn.microsoft.com/azure/storage/blobs/immutable-time-based-retention-policy-overview) for your [Oracle on Azure backups](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) to ensure compliance with your regulatory requirements.
 
-### Data residency 
+### Data residency
 
 Use Azure policy to ensure database instances can only be created where your data residency requirements dictate. For an example, see the built-in policy definition [Azure Cosmos DB Allowed Locations](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F0473574d-2d43-4217-aefe-941fcdf7e684) .
 

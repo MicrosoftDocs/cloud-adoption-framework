@@ -16,8 +16,8 @@ ms.custom:
 
 # Manage identity and access for Oracle on Azure VMs landing zone accelerator
 
-This article builds on many considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md). Azure landing zones for Oracle on Azure VMs don't have any specific considerations or recommendations using IAM for Oracle databases, how ever IAM provides role based access to the users who can manage Azure Infrastructure (VM & Storage) on which Oracle workload is migrated.
- 
+This article builds on many recommendations defined in the [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md) article. Azure VMs landing zones for Oracle don't have any specific recommendations for using identity and Access Management (IAM) for Oracle databases. However, IAM provides role based access to the users who manage the  Azure Infrastructure (VM and Storage) on which the Oracle workload resides.
+
 ## Design considerations
 
 Implement single sign-on (SSO) using Azure AD or Active Directory Federation Services (AD FS) so the database administrator(s) can connect to on-premises and cloud-based Oracle databases.  
