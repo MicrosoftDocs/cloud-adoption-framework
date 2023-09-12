@@ -37,7 +37,48 @@ In Azure, you commonly use the following tools to accelerate digital invention a
 
 ## Get started
 
-The table of contents on the left side of this page outlines many articles. These articles help you get started with each of the tools in this toolchain.
+Below you'll find articles to help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+> The following links will leave the Cloud Adoption Framework, as they reference supporting content that's beyond the scope of CAF.
+
+### Mobile experience
+
+- [Extend a legacy claims-processing application with a web and mobile experience](/azure/architecture/solution-ideas/articles/adding-a-modern-web-and-mobile-frontend-to-a-legacy-claims-processing-application)
+- [Optimize reports to share data on a mobile app](/power-bi/create-reports/desktop-create-phone-report)
+- [Extend Power Apps canvas application to a mobile experience](/powerapps/mobile/run-powerapps-on-mobile)
+- [Extend Power Automate to add a mobile experience](/power-automate/create-mobile-task-flow)
+- **Secure mobile experiences**
+- [Protect mobile reports with face, touch, or passcodes](/power-bi/consumer/mobile/mobile-native-secure-access)
+- [Secure mobile task flows with Intune](/power-automate/intune-support)
+- [Secure data in common data services](/power-platform/admin/wp-security)
+
+### Mixed reality
+
+- [Develop mixed reality experiences with Unity](/windows/mixed-reality/develop/unity/unity-development-overview)
+- [Quickstarts to add Azure Spatial Anchors to a mixed reality solution](/azure/spatial-anchors/)
+
+### Integrated reality and IoT
+
+- [Visualize sensor data with Azure IoT in Power BI](/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi)
+- [Visualize sensor data with Azure IoT Hub in a web solution](/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps)
+- [Securing an IoT solution](/azure/iot-fundamentals/iot-security-architecture)
+- [Get started with Azure Sphere](https://azure.microsoft.com/services/azure-sphere/get-started/)
+- [Create a deployment with Azure Sphere](/azure-sphere/deployment/create-a-deployment)
+- [Get started with Azure Kinect DK](/azure/Kinect-dk/about-azure-kinect-dk)
+- [Build your first Azure Kinect DK application](/azure/Kinect-dk/build-first-app)
+
+### Adjusted reality
+
+- ["Azure Digital Twins + HoloLens: Adjusting virtual reality"](https://azure.microsoft.com/resources/videos/)
+- [Get started with Azure Digital Twins](/azure/digital-twins/overview)
+- [Monitor a building with Azure Digital Twins](/previous-versions/azure/digital-twins/tutorial-facilities-setup)
+- [Azure IoT for cloud-to-device communications guide](/azure/iot-hub/iot-hub-devguide-c2d-guidance)
+- [Azure IoT configuration for cloud-to-device communications](/azure/iot-hub/iot-hub-devguide-c2d-guidance)
+
+## Next steps
+
+Learn about tools for predictive analysis and integration of their output into applications.
+
+> [!div class="nextstepaction"]
+> [Predict and influence](./predict.md)
