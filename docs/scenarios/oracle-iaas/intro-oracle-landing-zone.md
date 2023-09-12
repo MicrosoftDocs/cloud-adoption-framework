@@ -16,11 +16,11 @@ ms.custom:
 
 # Oracle on Azure Virtual Machines landing zone accelerator
 
-Use the guidance in this article to set up and operate Oracle workloads inside your Azure landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
+Use the guidance in this article to set up and operate Oracle workloads inside your Azure VMs landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
 
 The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) 
 
-Adapt the architecture to your organization:
+## Adapt the architecture to your organization
 
 Oracle on Azure landing zone architectures vary by organization. Technical considerations and design recommendations lead to configurations that are unique to your organization's specific scenario. The recommendations that this article describes should lead to an architecture that puts your organization on a path to sustainable scaling. 
 
