@@ -17,29 +17,32 @@ ms.custom:
 # Security guidelines for Oracle on Azure VMs landing zone accelerator
 
 This article describes how to securely deploy Oracle workloads on Azure VMs landing zone accelerator throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
+
 ## Overview
 
 Ensuring security is crucial when it comes to any architecture, and Azure offers a comprehensive range of tools to effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure VMs. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
 
 Most databases store sensitive data. To have a secure architecture in which to land these workloads, implementing security only at the database level isn't sufficient.  Defense in depth is a comprehensive approach to security that involves implementing multiple layers of defense mechanisms to protect data. Instead of relying on a single security measure at a level that is network defense in depth strategy employs a combination of different layer security measures to create a robust security posture. Defense-in-depth approach can be architected for Oracle workloads through strong authentication and authorization framework, hardened network security and encryption of data at rest and in-transit.
-Oracle workloads currently can be deployed as infrastructure as a service (IaaS) cloud model on Azure. Shared responsibility matrix should be revisited to have a clear understanding of the specific tasks and responsibilities assigned to both the cloud provider and the customer. For more information about the shared responsibility model, see [Shared responsibility in the cloud.](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
+Oracle workloads currently can be deployed on Azure VMs landing zone accelerator. Shared responsibility matrix should be revisited to have a clear understanding of the specific tasks and responsibilities assigned to both the cloud provider and the customer. For more information about the shared responsibility model, see [Shared responsibility in the cloud.](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
 
-We suggest periodically assessing the services and technologies you employ to ensure that your security measures align with the changing threat landscape 
+We suggest periodically assessing the services and technologies you employ to ensure that your security measures align with the changing threat landscape.
+
 ## Use centralized identity management
 
-Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees who join for stipulated time, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
+Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
 Oracle application – Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
 
 | Oracle application | link to document |
 | --- | --- |
 |Oracle application	Link to documentation
-|E-business Suite (EBS)|	Enable Single-Sign-On for EBS R12.2|
+|E-business Suite (EBS)|Enable Single-Sign-On for EBS R12.2|
 |JD Edwards (JDE)|Setting up JDE Single-Sign-On|
 |Peoplesoft|Enable Single-Sign-On for PeopleSoft|
 |Hyperion|Oracle Support doc #2144637.1|
-|Siebel	|Oracle Support doc #2664515.1|
+|Siebel|Oracle Support doc #2664515.1|
 
 ## Operating system level security
+
 Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Azure AD.  For more information, see the following resources:
 - Sign in to a Linux virtual machine in Azure by using Azure AD and OpenSSH
     -	As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OEL. 
@@ -48,23 +51,23 @@ Oracle workloads can run on various variants of the Linux operating system or Wi
 -	For well architected on security, see the Oracle WAF Security guide.
 Operating System Hardening - Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
 
-     - Use SSH key-pairs for Linux account access instead of passwords.
-     - Disable passworded Linux accounts, enable only on request for a short period.\\
-     - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
-     - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-     - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
-     - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-     - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-     - Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
-     - Apply security patches and operating system patches/updates regularly from trusted sources only
-    - Implement restrictions to limit access to the operating system.
-     - Restrict unauthorized access to server.
-     - Control server access at the network level to enhance overall security.
-     - Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs) 
-     - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
-     - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure that access to those ports is controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.
-     - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
-      - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
+   - Use SSH key-pairs for Linux account access instead of passwords.
+   - Disable passworded Linux accounts, enable only on request for a short period.
+   - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
+   - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
+  - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
+  - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
+  - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
+  - Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
+  - Apply security patches and operating system patches/updates regularly from trusted sources only
+  - Implement restrictions to limit access to the operating system.
+  - Restrict unauthorized access to server.
+  - Control server access at the network level to enhance overall security.
+  - Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs). 
+  - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
+  - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure that access to those ports is controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.
+  - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
+  - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
      - Alias potentially destructive Linux commands (such as rm and mv) to force them to interactive mode, so you're prompted at least once before an irreversible command is executed.  Advanced users know how to unalias if they wish.
      - Set the Oracle database unified system logs to send copies of the Oracle audit logs to the Azure Log Analytics using the Linux SYSLOG utility.
      
@@ -95,7 +98,7 @@ Using network security is the fundamental component of a layered security approa
 
 ## Azure Policy based security
 
-There are no specific built-in Azure Policy definitions for Oracle on IaaS in Azure. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
+There are no specific built-in Azure Policy definitions for Oracle on Azure VMs landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
 Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle VM, enforce storage encryption, NSG rules etc. 
 
 ## Secure data using encryption
@@ -122,4 +125,4 @@ Application log monitoring is essential for detecting security threats at the ap
 
 ## Next steps
 
-[Network topology and connectivity for Oracle on Azure IaaS](oracle-network-topology.md)
+[Network topology and connectivity for Oracle on Azure VMs landing zone accelerator](oracle-network-topology.md)

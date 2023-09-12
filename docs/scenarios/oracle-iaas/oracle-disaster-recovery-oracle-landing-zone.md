@@ -17,13 +17,13 @@ ms.custom:
 
 # Business continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator
 
-This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(VMs).
+This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(VMs).
 
 The first step to building a resilient architecture for your workload environment is to determine availability requirements for your solution by the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO is the maximum time an application is unavailable after an incident and RPO is the maximum amount of data loss during a disaster. After you determine the  requirements for your solution, the next step is to design your architecture to provide the established levels of resiliency and availability.
 
 Oracle on Azure workloads primarily use Data Guard, the built-in replication technology of Oracle databases (as a feature of Enterprise Edition), to fulfill both high availability and disaster recovery needs. Data Guard offers three protection modes: Maximum Performance, Availability, and Protection. The choice of protection mode depends on the architectural design and the specific RPO and RTO requirements.
 
-## High availability of Oracle workloads on Azure IaaS
+## High availability of Oracle workloads on Azure VMs landing zone accelerator
 
 Azure VM instances that run Oracle workloads benefit from Availability Set architecture. High availability configuration provides near real-time data replication with potentially fast failover capabilities but doesn't provide protection for Azure data center level or region level failures.
 
@@ -31,13 +31,13 @@ Azure VM instances that run Oracle workloads benefit from Availability Set archi
 
 Use the following flowchart to choose the best high availability option for your Oracle database.
 
-:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Azure Iaas." lightbox="media/service-protection-design-process-map.png":::
+:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Azure VMs landing zone accelerator." lightbox="media/service-protection-design-process-map.png":::
 
- ### High availability using Data Guard in maximum availability mode
+### High availability using Data Guard in maximum availability mode
 
 Data Guard in maximum availability mode provides the highest availability with zero data loss promise (RPO=0). For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
 
-:::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Iaas.":::
+:::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure VMs landing zone accelerator.":::
 
 See [Implement Oracle Data Guard on an Azure Linux virtual machine](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) for a step-by-step configuration of Data Guard on Azure.
 
@@ -61,7 +61,7 @@ One advantage of using availability zones over availability sets is that your SL
 
 Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adapt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
-:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure Iaas.":::
+:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure VMs landing zone accelerator.":::
 
 Use the following links to learn more on how to configure Pacemaker cluster:
 
@@ -79,7 +79,7 @@ Disaster recovery architecture provides resilience against failures that affect 
 
 As stated earlier, disaster recovery architecture should be based on your solution requirements as indicated by RTO and RPO. Since disaster recovery architecture is built for exceptional failure cases, failover process is manual as opposed to high availability design. Generally you should have more relaxed requirements for RTO and RPO, which can enable more cost-effective designs.
 
-This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](oracle-disaster-recovery-iaas.md).
+This document focuses on scenarios where primary and secondary servers are both on Azure. It's also possible to have a primary server on-premises and secondary server on Azure for disaster recovery purposes. Learn more about this scenario in [Disaster recovery for an Oracle database 12c database in an Azure environment](oracle-disaster-recovery-landing-zone.md).
 
 ### Choose the right disaster recovery option
 
@@ -202,10 +202,10 @@ Business continuity requires an integrated approach that includes all components
 | |·    Protects against regional failures | |
 | |·    Requires entire Azure environment to be set up in the target region during failover. | |
 
-Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure IaaS. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
+Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure VMs landing zone accelerator. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
 ## Next steps
 
-Learn about design considerations for Oracle on Azure IaaS security in an enterprise-scale scenario. 
+Learn about design considerations for Oracle on Azure VMs landing zone accelerator security in an enterprise-scale scenario.
 
-[Security guidelines for Oracle on Azure IaaS](https://microsofteur.sharepoint.com/:w:/t/DataMod/EcSpeXRTMBlHqYhoi-NF7_YBvq3CvuyF93DyG4fNFyVDQg?e=bMnwx2)
+[Security guidelines for Oracle on Azure VMs landing zone accelerator](https://microsofteur.sharepoint.com/:w:/t/DataMod/EcSpeXRTMBlHqYhoi-NF7_YBvq3CvuyF93DyG4fNFyVDQg?e=bMnwx2)
