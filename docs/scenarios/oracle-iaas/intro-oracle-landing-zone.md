@@ -28,36 +28,51 @@ Oracle on Azure landing zone architectures vary by organization. Technical consi
 
 As you plan the implementation of your Oracle landing zone, you need to make design decisions relating to several areas. These articles provide design guidelines and recommendations for each area:
 
-- Network topology and connectivity (link to article)
-- Management and monitoring (link to article)
-- Business continuity and disaster recovery (link to article)
-- Security, governance, and compliance (link to article)
+- Enterprise enrollment
+- Identity and access management
+- Network topology and connectivity
+- Resource organization
+- Governance and compliance  
+- Business continuity and disaster recovery
+- Manage and monitor Oracle workloads
+- Security guidance
 
 ## Architecture
 
 You need to understand and plan for all critical areas of your deployment architecture. This article describes the key components of the landing zone architecture in Azure about Oracle database services.
 
-## Landing zone architecture
+## Azure landing zone architecture
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone accelerator.  
 
 :::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
+When developing a long-term vision for landing zones, consider the design above. Working within this scenario, you focus on the most appropriate starting point to meet your strategic and planning requirements for Oracle on Azure. This article is about the starting point, not necessarily all the details required to reach the longer-term target.  
+
 ## High-level Oracle landing zone architecture
 
-Use the reference architecture as a starting point. You can download the [Visio file](https://microsof.sharepoint.com/:u:/t/DataMod/ETuAV2_4kd9ErT3xmusXJL8B9nIv8xKMQi709VE2iV_omA?e=fC5kNW) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use the reference architecture as a starting point. You can download the [Visio file](azure-landing-zone-architecture-oracle.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
+## Strategic and planning considerations for Oracle VMs landing zones  
+
+Prioritization decisions made during [strategy](oracle-landing-zone-strategy.md) and [plan](oracle-landing-zone-plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your Oracle workloads implementations. What follows  are important questions to consider during the planning phase:  
+
+- Will the initial deployment require mature processes for operations, security, and governance prior to launch?  
+- What type of migration is planned, big bang or gradual switchover?  
+- Does the migration plan require a smaller initial implementation of Oracle for POC, development, or testing efforts on a shorter timeline?  
+- Are there business continuity requirements to consider during the migration?  
+
 ## Subscriptions
 
- For example, Oracle workload architecture uses the following two subscriptions:
+ For example, Oracle workload architecture uses the following three subscriptions:
 
-**An Azure virtual hub subscription** that contains the hub virtual network if necessary for hybrid connectivity. If your Oracle workloads are internet facing only, they may not require this specifically.  
+- **An Azure virtual hub subscription** that contains the hub virtual network if necessary for hybrid connectivity. If your Oracle workloads are internet facing only, they may not require this specifically.  
 
-**An Azure Oracle production subscription**, where the production and disaster recovery systems are configured.  
+- **An Azure Oracle production subscription**, where the production and disaster recovery systems are configured.  
 
-**An Azure Oracle non-production subscription**, where a non-production system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone.
+- **An Azure Oracle non-production subscription**, where a non-production system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone.
 
 ## Networking
 
@@ -69,13 +84,13 @@ You can manage the subnet security policies instead of managing individual serve
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
-**Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
+- **Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
-**Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
+- **Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
 
-**Oracle applications**: A subnet that contains Oracle application servers.
+- **Oracle applications**: A subnet that contains Oracle application servers.
 
-**Database**: A subnet that contains only database virtual machines.
+- **Database**: A subnet that contains only database virtual machines.
 
 As Oracle Databases are backend services for a host of different applications with different architectures and requirements, more subnets may be required. For example, if you have a three-tier architecture, you might have a separate subnet for the web tier.
 

@@ -35,38 +35,38 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 3. Collect [custom logs](https://learn.microsoft.com/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
 4. Monitor Managed Disk Metrics:
 
-If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. The types of storage suitable for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
-Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
+    If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. The types of storage suitable for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
+    Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
-### Azure managed disk metrics
+    ### Azure managed disk metrics
 
-The Oracle administrator should monitor disk performance metrics related to IO like the following metrics:
+    The Oracle administrator should monitor disk performance metrics related to IO like the following metrics:
 
-- OS Disk IOPS Consumed Percentage
-- Data Disk IOPS Consumed Percentage
-- Data Disk Read Bytes/Sec
-- Data Disk Write Bytes/Sec
-- Disk Queue Depth
+    - OS Disk IOPS Consumed Percentage
+    - Data Disk IOPS Consumed Percentage
+    - Data Disk Read Bytes/Sec
+    - Data Disk Write Bytes/Sec
+    - Disk Queue Depth
 
-While monitoring the disk metrics, it's important to ensure that the database VM limits aren't exceeded. VM limits specific to managed disks is detailed in the [Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series#edsv5-series) section and table. 
+    While monitoring the disk metrics, it's important to ensure that the database VM limits aren't exceeded. VM limits specific to managed disks is detailed in the [Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series#edsv5-series) section and table. 
 
-Use the table and column **Max un cached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the VM can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the VM max un cached disk throughput, the VM IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
+    Use the table and column **Max un cached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the VM can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the VM max un cached disk throughput, the VM IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
 
-For more information about Disk performance related metrics, see [Disk metrics - Azure virtual machines](https://learn.microsoft.com/azure/virtual-machines/disks-metrics).
+    For more information about Disk performance related metrics, see [Disk metrics - Azure virtual machines](https://learn.microsoft.com/azure/virtual-machines/disks-metrics).
 
 5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
-- [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
+    - [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
 
-- [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
+    - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
+    While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
 1. Recommended alert rules for Azure virtual machines. Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
 
-Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://github.com/Azure/alz-monitor) as a common set of Azure resources/services that are configured in a similar way across organizations.
+    Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://github.com/Azure/alz-monitor) as a common set of Azure resources/services that are configured in a similar way across organizations.
 
 2. Configure other recommended alert rules for Oracle Database on Azure VMs landing zone accelerator. From these metrics, disk load and wait generation can be checked.　 If the threshold is exceeded, it's recommended that an alert is issued.  
 
@@ -81,7 +81,7 @@ Recently, an initiative developed as an easy way to deploy alert rules. The purp
 ### Monitor related Azure services
 
 |Azure Services |Description |ULR |
-|:----|:----|:----|
+|:-------|:--------|:----|
 |Azure Virtual Network |Oracle database on Azure VMs landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
 | | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
 |. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |

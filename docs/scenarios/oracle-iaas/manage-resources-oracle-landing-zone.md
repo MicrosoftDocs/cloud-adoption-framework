@@ -16,7 +16,7 @@ ms.custom:
 
 # Organize resources for Oracle on Azure VMs landing zone accelerator
 
-To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags. 
+To align with the [Ready methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags. 
 
 ## Use Azure resource naming and tagging conventions
 
@@ -24,11 +24,11 @@ The business side of this strategy ensures that resource names and tags include 
 
  The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
 
-Resources to name include VMs, storage, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags. A sample use case could be to tag all Azure development VMs with the tag Dev. This naming convention eases reporting and billing operations to pull a report for all things Dev. For more information, see Develop your naming and tagging strategy for Azure resources.
+Resources to name include VMs, storage, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags. A sample use case could be to tag all Azure development VMs with the tag Dev. This naming convention eases reporting and billing operations to pull a report for all things Dev. For more information, see [Develop your naming and tagging strategy for Azure resources](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
 
 ## Key Azure resources required for Oracle workload
 
-The two key resources required to migrate Oracle to Azure are Azure VMs & Storage. From AWR report, using OMAT (Oracle Migration Assistance Tool), you can determine the right SKU, size of the VM along with optimal storage option. Once you have your VM and storage recommendations, please do follow the naming and tagging conventions.
+The two key resources required to migrate Oracle to Azure are [Azure VMs](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-vm-solutions) and [storage](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-storage). From AWR report, using [OMAT](https://github.com/Azure/Oracle-Workloads-for-Azure/tree/main/omat) (Oracle Migration Assistance Tool), you can determine the right SKU, size of the VM along with optimal storage option. Once you have your VM and storage recommendations, please do follow the naming and tagging conventions.
 
 Since Oracle products are usually licensed by processor core, selecting a VM with the least number of suitable cores provides the best licensing savings for the customers.
 

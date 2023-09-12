@@ -1,0 +1,81 @@
+### YamlMime:Landing
+
+title: Oracle on Azure VMs landing zone accelerator
+summary: Proven guidance and best practices to adopt Oracle on Azure VMs landing zone accelerator.
+
+metadata:
+
+  title: Oracle on Azure landing zone accelerator
+  description: Proven guidance and best practices that help you confidently adopt Oracle on Azure landing zone accelerator.
+  services: cloud-adoption-framework
+  author: jjaygbay1
+  ms.author: jacobjaygbay
+  ms.date: 07/27/2023
+  ms.topic: hub-page
+  ms.service: cloud-adoption-framework
+  ms.subservice: overview
+  ms.custom: 
+  - think-tank
+  - e2e-oracle
+  - engagement-fy24
+
+
+# card 1
+landingContent:
+  - title: Overview
+    linkLists: 
+      - linkListType: overview
+        links:
+          - text: Introduction to Oracle on Azure VMs landing zone accelerator migration scenario
+            url: migrate-oracle-workload.md
+          - text: Strategic impact of Oracle on Azure VMs landing zone accelerator
+            url: oracle-landing-zone-strategy.md
+          - text: Plan for Oracle on Azure VMs landing zone accelerator
+            url: oracle-landing-zone-plan.md
+
+# card 2  
+  - title: Design considerations
+    linkLists: 
+      - linkListType: concept
+        links:
+          - text: Business continuity and disaster recovery (BCDR) for Oracle on Azure VMs landing zone accelerator
+            url: oracle-disaster-recovery-iaas.md
+          - text: Network topology and connectivity for Oracle on Azure VMs  landing zone accelerator
+            url: oracle-network-topology.md
+          - text: Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
+            url: oracle-manage-monitor-workload.md
+          - text: Security guidelines for Oracle on Azure VMs landing zone accelerator
+            url: oracle-security-guideline-landing-zone.md
+          - text: Capacity planning guidelines for Oracle on Azure VMs landing zone accelerator
+            url: capacity-planning-guidelines-oracle-iaas.md
+          - text: Compute and storage guidelines for Oracle Workload on Azure VMs landing zone accelerator
+            url: compute-storage-guidelines-oracle-iaas.md
+          - text: Governance and compliance for Oracle on Azure VMs landing zone accelerator
+            url: governance-complaince-oraccle-iaas.md
+          - text: Enterprise enrollment for Oracle on Azure VMs landing zone accelerator
+            url: enterprise-enrollment-oracle.md
+
+# card 3
+  - title: Prepare your environment
+    linkLists: 
+      - linkListType: concept
+        links:
+          - text: Oracle on Azure VMs landing zone accelerator
+            url: oracle-landing-zones.md
+
+# card 4
+  - title: Implementation options
+    linkLists: 
+      - linkListType: concept
+        links:
+          - text: Oracle on Azure Virtual Machines landing zone accelerator
+            url: intro-oracle-landing-zone.md
+          
+# card 5
+  - title: Reference
+    linkLists: 
+      - linkListType: reference
+        links:
+          - text: Oracle workloads on Azure Virtual Machines
+            url: https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/
+
