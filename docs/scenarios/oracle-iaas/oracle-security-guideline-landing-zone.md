@@ -100,7 +100,7 @@ Using network security is the fundamental component of a layered security approa
 
 ## Azure policy-based security
 
-There are no specific[built-in  Azure policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies) for Oracle on Azure Virtual Machines landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
+There are no specific [built-in  Azure policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies) for Oracle on Azure Virtual Machines landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
 Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle Virtual Machine, enforce storage encryption, NSG rules etc.
 
 ## Secure data using encryption
