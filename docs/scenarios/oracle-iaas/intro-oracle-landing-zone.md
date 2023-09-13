@@ -53,7 +53,7 @@ When developing a long-term vision for landing zones, consider the design above.
 
 Use the reference architecture as a starting point. You can download the [Visio file](https://microsofteur.sharepoint.com/:u:/t/DataMod/EdaC0TOEfXpIvnD2CE2J9ykBPMsgE0eGuG0HyKwZ8srJXQ?e=uBTzEF) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
-As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
+As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
 ## Strategic and planning considerations for Oracle VMs landing zones  
 
