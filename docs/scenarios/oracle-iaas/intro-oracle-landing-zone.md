@@ -92,7 +92,7 @@ This architecture has three or four subnets, depending on the tier. For example,
 
 - **Database**: A subnet that contains only database virtual machines.
 
-As Oracle Databases are backend services for a host of different applications with different architectures and requirements, more subnets may be required. For example, if you have a three-tier architecture, you might have a separate subnet for the web tier.
+As Oracle Databases are backend services for a host of different applications with different architectures and requirements, more or less subnets may be required for your specific implementation. 
 
 ## Virtual machines and availability sets
 
