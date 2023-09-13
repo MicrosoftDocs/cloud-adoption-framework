@@ -5,8 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/28/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal, seo-azure-migrate, UpdateFrequency2
 ---
 

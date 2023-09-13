@@ -6,8 +6,6 @@ ms.author: bstephenson
 ms.reviewer: tozimmergren
 ms.date: 07/07/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ---
 
 # Readying your landing zone for migration

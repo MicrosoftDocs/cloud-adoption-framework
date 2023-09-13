@@ -5,8 +5,6 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: ai applications, what are ai applications, speech recognition apis, computer vision apis, decision logic apis
 ---

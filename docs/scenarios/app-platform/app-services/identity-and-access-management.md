@@ -5,8 +5,6 @@ author: motasem13
 ms.author: martinek
 ms.date: 01/06/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: internal
 ---
 

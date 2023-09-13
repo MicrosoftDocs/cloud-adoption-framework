@@ -3,8 +3,6 @@ author: mboswell
 ms.author: mboswell
 ms.date: 03/11/2022
 ms.topic: include
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

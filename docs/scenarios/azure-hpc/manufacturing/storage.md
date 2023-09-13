@@ -4,8 +4,6 @@ description: Learn about storage access, various storage solution capabilities, 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/16/2022
 ---
@@ -57,16 +55,6 @@ Here are some things to consider:
 - Expected protocol features (ACLs, encryption)
 - Parallel file system solution
 
-For Hybrid HPC Pack installations where the client needs to upload input datasets to Azure to be used during a HPC Pack job, or download the results after a jobs is completed, you need to determine the right application to use for the file transfer. Will the upload and download be part of a script or a manual process?  
-
-Here are some examples:
-•	For manual transfers [Azcopy](/azure/storage/common/storage-ref-azcopy) or Azure Storage Explorer would be suitable to transfer files to Azure Files or Azure Blob. Neither work with Azure NetApp Files directly.
-•	When Azure Blob storage is used, AzCopy is an option to transfer files within a script. AzCopy offers [options](/azure/storage/common/storage-use-azcopy-v10#authorize-azcopy) to use a service principle for authentication or SAS tokens. 
-
-•	When Azure Files is used, AzCopy is an option to transfer files within a script using SAS tokens.  Other options for Azure Files could be to mount the remote Azure File Share to the client machine as a drive letter to let the clients copy files directly to Azure files using a `copy` command. Azure File share mounts require SMB port 445 to be open which some organizations block with their firewall. 
-
-
-
 ## Total capacity requirement
 
 Storage capacity in Azure is the next consideration. It helps to inform the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering provides lower-cost storage options combined with higher-cost but higher-performance storage in a hot tier. So, evaluate the capacity requirements as follows:
@@ -85,8 +73,6 @@ Here are some things to consider:
 - Local (UID/GID on file server only)
 - Directory (LDAP, Active Directory)
 - UID/GID mapping to Active Directory users?
-
-HPC Pack authentication and authorization are either used by using certificates for job submission or REST API with the client’s username and password credentials. Both of these options are then validated against user groups within HPC Pack to ensure that the users have authorization to submit HPC jobs. 
 
 ## Common Azure storage solutions comparison
 
@@ -108,14 +94,15 @@ One of the biggest challenges with larger workloads is replicating the pure “b
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for energy HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Security governance compliance](./security-governance-compliance.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+

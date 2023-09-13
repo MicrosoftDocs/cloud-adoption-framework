@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/12/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: decision-guide
+ms.subservice: caf-general
 ms.custom: internal
 ---
 

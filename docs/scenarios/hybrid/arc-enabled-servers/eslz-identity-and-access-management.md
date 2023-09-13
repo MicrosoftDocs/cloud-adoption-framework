@@ -5,8 +5,6 @@ author: chintalavr
 ms.author: vchintala
 ms.date: 11/12/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 

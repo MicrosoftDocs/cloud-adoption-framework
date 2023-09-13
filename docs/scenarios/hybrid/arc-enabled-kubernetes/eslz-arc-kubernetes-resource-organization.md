@@ -5,8 +5,6 @@ author: lanicolas
 ms.author: lanicola
 ms.date: 04/28/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, event-tier1-build-2022
 ---
 

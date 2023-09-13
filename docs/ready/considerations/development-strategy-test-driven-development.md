@@ -5,8 +5,6 @@ author: elbatane
 ms.author: elbatane
 ms.date: 06/28/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
