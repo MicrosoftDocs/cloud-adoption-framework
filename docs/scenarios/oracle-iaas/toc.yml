@@ -1,6 +1,6 @@
 items:
   - name: Oracle Migration - Microsoft Cloud Adoption
-    href: intro-oracle-landing-zone.md 
+    href: introduction-oracle-landing-zone.md 
   - name: Get started
     items:
     - name: Strategic impact
@@ -19,7 +19,7 @@ items:
       href: manage-resources-oracle-landing-zone.md
     - name: Governance
       href: governance-complaince-oracle-landing-zone.md
-    - name: Disaster recovery and business continuity
+    - name: Business continuity and disaster recovery
       href: oracle-disaster-recovery-oracle-landing-zone.md
     - name: Manage and monitor Oracle workloads
       href: oracle-manage-monitor-workload.md

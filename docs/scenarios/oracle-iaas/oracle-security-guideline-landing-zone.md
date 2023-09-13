@@ -1,6 +1,6 @@
 ---
-title: Security guidelines for Oracle on Azure VMs landing zone accelerator
-description: Learn about security guidelines for Oracle on Azure VMs  landing zone accelerator.
+title: Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
+description: Learn about security guidelines for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,16 +14,16 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Security guidelines for Oracle on Azure VMs landing zone accelerator
+# Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article describes how to securely deploy Oracle workloads on Azure VMs landing zone accelerator throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
+This article describes how to securely deploy Oracle workloads on Azure Virtual Machines landing zone accelerator throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
 
 ## Overview
 
-Ensuring security is crucial when it comes to any architecture, and Azure offers a comprehensive range of tools to effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure VMs. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
+Ensuring security is crucial when it comes to any architecture, and Azure offers a comprehensive range of tools to effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure Virtual Machines. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
 
 Most databases store sensitive data. To have a secure architecture in which to land these workloads, implementing security only at the database level isn't sufficient.  Defense in depth is a comprehensive approach to security that involves implementing multiple layers of defense mechanisms to protect data. Instead of relying on a single security measure at a level that is network defense in depth strategy employs a combination of different layer security measures to create a robust security posture. Defense-in-depth approach can be architected for Oracle workloads through strong authentication and authorization framework, hardened network security and encryption of data at rest and in-transit.
-Oracle workloads currently can be deployed on Azure VMs landing zone accelerator. Shared responsibility matrix should be revisited to have a clear understanding of the specific tasks and responsibilities assigned to both the cloud provider and the customer. For more information about the shared responsibility model, see [Shared responsibility in the cloud.](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
+Oracle workloads currently can be deployed on Azure Virtual Machines landing zone accelerator. Shared responsibility matrix should be revisited to have a clear understanding of the specific tasks and responsibilities assigned to both the cloud provider and the customer. For more information about the shared responsibility model, see [Shared responsibility in the cloud.](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
 
 We suggest periodically assessing the services and technologies you employ to ensure that your security measures align with the changing threat landscape.
 
@@ -48,12 +48,12 @@ Oracle workloads can run on various variants of the Linux operating system or Wi
     -	As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OEL. 
      -	As of July 2023, IBM has chosen to cease openly sharing RHEL source, so it's likely that OL and RHEL may diverge in future, and the above statement may become no longer true.
 - [Sign in to a Windows virtual machine in Azure by using Azure AD](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
--	For well architected on security, see the [Oracle WAF Security guide](https://learn.microsoft.com/azure/well-architected/oracle-iaas/security).
+-For well architected on security, see the [Oracle WAF Security guide](https://learn.microsoft.com/azure/well-architected/oracle-iaas/security).
 
 **Operating System Hardening** - Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
 
    - Use SSH key-pairs for Linux account access instead of passwords.
-   - Disable passworded Linux accounts, enable only on request for a short period.
+   - Disable password-protected Linux accounts, enable only on request for a short period.
    - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
    - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
   - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
@@ -78,30 +78,30 @@ Using network security is the fundamental component of a layered security approa
 
 - Using [Network Security Groups (NSG)](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview)- You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. By using NSG, the traffic between on-premises network to/from Azure can be filtered as well by using IP address ranges and specific ports. For more information, see [Network security group](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview).
 
-    General inbound port assignments for Oracle database VMs can be listed as in the following table:
+    General inbound port assignments for Oracle database Virtual Machines can be listed as in the following table:
 
     | Protocol | port number | service name        | comments|
     | -------- | ----------- | ------------------- | --------|
-    | TCP      | 22   | SSH                 | Management port for Linux VMs |
+    | TCP      | 22   | SSH                 | Management port for Linux Virtual Machines |
     | TCP      | 1521        | Oracle TNS listener | Other port numbers frequently used for security or for connection load balancing purposes |
-    | TCP |   3389   | RDP |  Management port for Windows VMs|
-- Decide How to Connect to Your VM- The VM on which the Oracle database workload resides must be secured against unauthorized access.  Management access is particularly sensitive due to the higher permissions required for management users.  In Azure, authorized users have several mechanisms available to manage the VM securely such as:
+    | TCP |   3389   | RDP |  Management port for Windows Virtual Machines|
+- Decide How to Connect to Your Virtual Machine- The Virtual Machine on which the Oracle database workload resides must be secured against unauthorized access.  Management access is particularly sensitive due to the higher permissions required for management users.  In Azure, authorized users have several mechanisms available to manage the Virtual Machine securely such as:
      -	[Microsoft Defender for Cloud's just-in-time (JIT) access](https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks).
      - [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) 
-    Microsoft Defender JIT access makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your VM.  The Azure Bastion is a Platform-as-a-Service (PaaS) deployment in Azure for a jump box.  Either solution can effectively secure management of your Oracle database VM, and both solutions can even be used together in an advanced [multi-layered approach](https://learn.microsoft.com/azure/architecture/solution-ideas/articles/multilayered-protection-azure-vm), if desired.
+    Microsoft Defender JIT access makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your Virtual Machine.  The Azure Bastion is a Platform-as-a-Service (PaaS) deployment in Azure for a jump box.  Either solution can effectively secure management of your Oracle database Virtual Machine, and both solutions can even be used together in an advanced [multi-layered approach](https://learn.microsoft.com/azure/architecture/solution-ideas/articles/multilayered-protection-azure-vm), if desired.
 
     In general, JIT access minimizes (but doesn't eliminate) exposures to risks by restricting the times when management ports for SSH or RDP are available, but it does leave open the possibility for access by other sessions “tailgating” during an obtained JIT window, but such tailgaters still must break past the exposed SSH or RDP ports, so the risk exposed is small.  However, such exposures may make JIT access less palatable for blocking access from the open internet.
 
     In general, a Bastion is a hardened jump box especially designed to protect access from the open internet, but there are [numerous limitations to the Azure Bastion](https://learn.microsoft.com/azure/bastion/bastion-faq), which should be considered in addition.
-    - **X-Windows and VNC** - The installation of Oracle database software usually requires using [X-Windows](https://en.wikipedia.org/wiki/X_Window_System) and because connectivity between the Linux VM in Azure and your desktop or laptop may traverse across  firewalls and Azure network security groups, it's recommended to use SSH port forwarding to tunnel the X-Windows or VNC connections through SSH, as illustrated with the -L 5901:localhost:5901 parameter for the following section about [SSH command described in the Oracle document](https://docs.oracle.com/en/learn/install-vnc-oracle-linux/#open-a-vnc-client-and-test-your-deployment).
-    - **Cross-cloud Interconnect Options**- For connectivity from Oracle database workloads running in Azure and workloads in Oracle cloud (OCI), private links or pipelines between applications can be created using the Azure/OCI interconnect between specific regions in Azure and OCI.  Review the documentation for setting up an interconnect between Azure ExpressRoute and OCI FastConnect.
+    - **X-Windows and VNC** - The installation of Oracle database software usually requires using [X-Windows](https://en.wikipedia.org/wiki/X_Window_System) and because connectivity between the Linux Virtual Machine in Azure and your desktop or laptop may traverse across  firewalls and Azure network security groups, it's recommended to use SSH port forwarding to tunnel the X-Windows or VNC connections through SSH, as illustrated with the -L 5901:localhost:5901 parameter for the following section about [SSH command described in the Oracle document](https://docs.oracle.com/en/learn/install-vnc-oracle-linux/#open-a-vnc-client-and-test-your-deployment).
+    -**Cross-cloud Interconnect Options**- For connectivity from Oracle database workloads running in Azure and workloads in Oracle cloud (OCI), private links or pipelines between applications can be created using the Azure/OCI interconnect between specific regions in Azure and OCI.  Review the documentation for setting up an interconnect between Azure ExpressRoute and OCI FastConnect.
 
-    The documentation to [set up a direct interconnection between Azure and Oracle Cloud Infrastructure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking) doesn't cover the creation of firewalls on either side of the Azure/OCI interconnect, which is generally a requirement for any ingress or egress across clouds, employing [Microsoft’s ZeroTrust Networking recommendations](https://www.microsoft.com/security/blog/2018/06/14/building-zero-trust-networks-with-microsoft-365/).
+    The documentation to set up a direct interconnection between Azure and Oracle Cloud Infrastructure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking) doesn't cover the creation of firewalls on either side of the Azure/OCI interconnect, which is generally a requirement for any ingress or egress across clouds, employing [Microsoft’s ZeroTrust Networking recommendations](https://www.microsoft.com/security/blog/2018/06/14/building-zero-trust-networks-with-microsoft-365/).
 
-## Azure policy based security
+## Azure policy-based security
 
-There are no specific [built-in  Azure policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies)  for Oracle on Azure VMs landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
-Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle VM, enforce storage encryption, NSG rules etc.
+There are no specific[built-in  Azure policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies) for Oracle on Azure Virtual Machines landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
+Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle Virtual Machine, enforce storage encryption, NSG rules etc.
 
 ## Secure data using encryption
 
@@ -118,13 +118,13 @@ These multiple layers of encryption at rest represent the very definition of def
 
 ## Key management
 
-If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database VM.  
+If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database Virtual Machine.  
 However, you can utilize Oracle Key Vault as a key management solution on Azure. For detailed information, refer to the documentation on [Provisioning Oracle Key Vault in Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.6/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).
 
 ### Integrating audit trails
 
-Application log monitoring is essential for detecting security threats at the application level. We recommend using the Microsoft Sentinel Solution for Oracle Database workloads. The Oracle Database Audit connector retrieves and ingests all Oracle database audit records into Azure Log Analytics using an industry-standard SYSLOG interface, permitting those records to be reviewed along with Azure infrastructure audit records and guest OS (that is, Linux or Windows) audit records.  It’s a cloud-native security information and event management (SIEM) solution built for your Oracle workload running on a Linux or Windows VM. For more information, see [Oracle Database Audit connector for Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/data-connectors/oracle-database-audit).
+Application log monitoring is essential for detecting security threats at the application level. We recommend using the Microsoft Sentinel Solution for Oracle Database workloads. The Oracle Database Audit connector retrieves and ingests all Oracle database audit records into Azure Log Analytics using an industry-standard SYSLOG interface, permitting those records to be reviewed along with Azure infrastructure audit records and guest OS (that is, Linux or Windows) audit records.  It’s a cloud-native security information and event management (SIEM) solution built for your Oracle workload running on a Linux or Windows Virtual Machine. For more information, see [Oracle Database Audit connector for Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/data-connectors/oracle-database-audit).
 
 ## Next steps
 
-[Network topology and connectivity for Oracle on Azure VMs landing zone accelerator](oracle-network-topology.md)
+[Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](oracle-network-topology.md)

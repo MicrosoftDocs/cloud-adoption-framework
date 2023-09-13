@@ -1,6 +1,6 @@
 ---
-title: Strategic impact of Oracle on Azure VMs landing zone accelerator 
-description: Learn about the strategic impact of Oracle on Azure VMs landing zone accelerator.
+title: Strategic impact of Oracle on Azure Virtual Machines landing zone accelerator 
+description: Learn about the strategic impact of Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,13 +14,13 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Strategic impact of Oracle on Azure VMs landing zone accelerator
+# Strategic impact of Oracle on Azure Virtual Machines landing zone accelerator
 
 Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a LoB application or as a combined suite for enterprise resource planning, HR, SCM or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
 
-This article uses the [Plan for Oracle on Azure VMs landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle workload on Azure landing zone accelerator.
+This article uses the [Plan for Oracle on Azure Virtual Machines landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle workload on Azure landing zone accelerator.
 
-## Why move an Oracle workload to Azure VMs for landing zone accelerator?
+## Why move an Oracle workload to Azure Virtual Machines for landing zone accelerator?
 
 Oracle is an influential platform, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
@@ -52,4 +52,4 @@ Given the potential impact of an Oracle migration, you need to define several ob
 
 Building a business justification for cloud migration can dispel several common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces associated with Oracle cloud adoption.
 
-Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to gather inventory and develop a plan. Once your digital estate is catalogued and assessed, you can refine your justification and present clearer plans for financial returns.
+Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to gather inventory and develop a plan. Once your digital estate is cataloged and assessed, you can refine your justification and present clearer plans for financial returns.

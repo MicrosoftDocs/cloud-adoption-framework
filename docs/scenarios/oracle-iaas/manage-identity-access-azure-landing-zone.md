@@ -1,6 +1,6 @@
 ---
-title: Manage identity and access for Oracle on Azure VMs landing zone accelerator
-description: Learn how to manage identity and access for Oracle on Azure VMs landing zone accelerator.
+title: Manage identity and access for Oracle on Azure Virtual Machines landing zone accelerator
+description: Learn how to manage identity and access for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,9 +14,9 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Manage identity and access for Oracle on Azure VMs landing zone accelerator
+# Manage identity and access for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article builds on many recommendations defined in the [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md) article. Azure VMs landing zones for Oracle don't have any specific recommendations for using identity and Access Management (IAM) for Oracle databases. However, IAM provides role based access to the users who manage the  Azure Infrastructure (VM and Storage) on which the Oracle workload resides.
+This article builds on many recommendations defined in the [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md) article. Azure Virtual Machines landing zones for Oracle don't have any specific recommendations for using identity and Access Management (IAM) for Oracle databases. However, IAM provides role based access to the users who manage the  Azure Infrastructure (Virtual Machine and Storage) on which the Oracle workload resides.
 
 ## Design considerations
 
@@ -26,7 +26,7 @@ If you're using other Oracle enterprise services like Fusion ERP, you should int
 
 It's recommended to use the [automated user provisioning](https://learn.microsoft.com/azure/active-directory/app-provisioning/user-provisioning) feature of Azure AD. With this integration, user accounts are seamlessly be created in Azure AD when employees join the organization.  
 
-The following table shows common Azure admin activities involved in  managing Oracle on Azure VMs & storage.
+The following table shows common Azure admin activities involved in  managing Oracle on Azure Virtual Machines & storage.
 
 |Azure resource  |Azure resource provider  |Activities  |
 |:----|:----|:----|

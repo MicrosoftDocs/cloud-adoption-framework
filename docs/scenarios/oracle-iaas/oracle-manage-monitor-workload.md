@@ -1,6 +1,6 @@
 ---
-title: Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
-description: Learn how to manage and monitor Oracle workloads Azure VMs  landing zone accelerator.
+title: Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator
+description: Learn how to manage and monitor Oracle workloads Azure Virtual Machines  landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,23 +14,23 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Manage and monitor Oracle workloads on Azure VMs landing zone accelerator
+# Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator
 
-This article describes how to successfully manage and monitor Oracle on Azure VMs landing zone accelerator. This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the [Azure enterprise-scale landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
+This article describes how to successfully manage and monitor Oracle on Azure Virtual Machines landing zone accelerator. This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the [Azure enterprise-scale landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
-Following the guidance, this article further explains key design considerations and best practices for managing your Oracle workload deployments on Microsoft Azure virtual machine (VM) landing zone accelerator. Since Oracle is a mission-critical and high-performance workload, the guidance on the Azure landing zone design areas should also be included in your planning. Monitoring Oracle workload on Azure VMs to discover failures and abnormalities is critical to ensuring the health of your mission critical workloads.
+Following the guidance, this article further explains key design considerations and best practices for managing your Oracle workload deployments on Microsoft Azure Virtual Machine  landing zone accelerator. Since Oracle is a mission-critical and high-performance workload, the guidance on the Azure landing zone design areas should also be included in your planning. Monitoring Oracle workload on Azure Virtual Machines to discover failures and abnormalities is critical to ensuring the health of your mission critical workloads.
 
-## Monitor Oracle databases on Azure VMs landing zone accelerator
+## Monitor Oracle databases on Azure Virtual Machines landing zone accelerator
 
-The first step of monitoring is to set up general Azure VM monitoring and define threshold for the metrics.  After you configure the general Azure VM monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
+The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics.  After you configure the general Azure Virtual Machine monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
 
-### Log  monitoring by Azure monitor
+### Log monitoring by Azure monitor
 
-Oracle workload on Azure VMs landing zone accelerator, you need to monitor VM and Oracle Database on Azure VM. Azure Monitor provides numerous ways to monitor log of the VM and Oracle workload.
+Oracle workload on Azure Virtual Machines landing zone accelerator, you need to monitor Virtual Machine and Oracle Database on Azure Virtual Machine. Azure Monitor provides numerous ways to monitor log of the Virtual Machine and Oracle workload.
 
-The first step of monitoring for you is to set up general Azure VM monitoring.
+The first step of monitoring for you is to set up general Azure Virtual Machine monitoring.
 
-1. Enable VM [insights](https://learn.microsoft.com/azure/azure-monitor/vm/vminsights-enable-portal)
+1. Enable Virtual Machine [insights](https://learn.microsoft.com/azure/azure-monitor/vm/vminsights-enable-portal)
 2. Deploy AMA (Azure Monitoring Agent) and configure [DCR](https://learn.microsoft.com/azure/azure-monitor/essentials/data-collection-rule-overview) (Data Collection Rule)
 3. Collect [custom logs](https://learn.microsoft.com/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
 4. Monitor Managed Disk Metrics:
@@ -48,11 +48,11 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
     - Data Disk Write Bytes/Sec
     - Disk Queue Depth
 
-    While monitoring the disk metrics, it's important to ensure that the database VM limits aren't exceeded. VM limits specific to managed disks is detailed in the [Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series#edsv5-series) section and table. 
+    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks is detailed in the [Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series#edsv5-series) section and table. 
 
-    Use the table and column **Max un cached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the VM can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the VM max un cached disk throughput, the VM IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
+    Use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
 
-    For more information about Disk performance related metrics, see [Disk metrics - Azure virtual machines](https://learn.microsoft.com/azure/virtual-machines/disks-metrics).
+    For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/disks-metrics).
 
 5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
@@ -60,7 +60,7 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 
     - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-    While monitoring ANF metrics, it's also important to monitor the VM’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative VMs IO throughput limits on any VM instance type. Instead, ANF is only restricted by the network bandwidth on the database VM series. The VM limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
+    While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
@@ -82,10 +82,10 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 
 |Azure Services |Description |ULR |
 |:-------|:--------|:----|
-|Azure Virtual Network |Oracle database on Azure VMs landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
+|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
 | | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
 |. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |
-| | |Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format: |
+| | |Monitor the Oracle database “alert log” file on the database Virtual Machine for lines starting with the following format: |
 | | | |
 | | |status – AzBackup – script – version: message |
 | | |where: |
@@ -95,7 +95,7 @@ The first step of monitoring for you is to set up general Azure VM monitoring.
 | | |. version = version number in decimal format |
 | | |. message = free-format text |
 | | |. Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
-|Azure database VM |Database “alert log” file, OS console messages file |Database “alert log” file is typically located in the subdirectory “$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace” on the database VM. |
+|Azure database Virtual Machine |Database “alert log” file, OS console messages file |Database “alert log” file is typically located in the subdirectory “$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace” on the database Virtual Machine. |
 | | |OS console log located at “/var/log/messages” |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager cloud control
@@ -108,7 +108,7 @@ Oracle Enterprise Manager is an Oracle integrated enterprise management product.
 
 ### Azure monitor and alerts
 
-Utilize Azure Monitor to collect telemetry data and gain insights into the health, performance, and availability of your Azure resources. Oracle Enterprise Manager can be deployed on a separate VM to monitor, maintain, and manage Oracle environments. Oracle Enterprise Manager text logs can be loaded to Log Analytics and used with Azure Monitor for a single pane of glass monitoring.
+Utilize Azure Monitor to collect telemetry data and gain insights into the health, performance, and availability of your Azure resources. Oracle Enterprise Manager can be deployed on a separate Virtual Machine to monitor, maintain, and manage Oracle environments. Oracle Enterprise Manager text logs can be loaded to Log Analytics and used with Azure Monitor for a single pane of glass monitoring.
 
 ## Oracle diagnostic tools
 
@@ -125,4 +125,4 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 - [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md)  
 - [Oracle on Azure landing zone accelerator](intro-oracle-landing-zone.md)
 
-- [Business continuity and disaster recovery for Oracle on Azure VMs landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
+- [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)

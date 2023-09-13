@@ -1,6 +1,6 @@
 ---
-title: Governance and compliance for Oracle on Azure VMs landing zone accelerator
-description: Learn about governance and compliance for Oracle on Azure VMs landing zone accelerator.
+title: Governance and compliance for Oracle on Azure Virtual Machines landing zone accelerator
+description: Learn about governance and compliance for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,9 +14,9 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Governance and compliance for Oracle on Azure VMs landing zone accelerator
+# Governance and compliance for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article describes how to holistically control Oracle workload on Azure VMs landing zone accelerator throughout its lifecycle. You also learn to explore specific design elements and provide governance and compliance recommendations for Oracle workload on Azure VMs landing zone accelerator.
+This article describes how to holistically control Oracle workload on Azure Virtual Machines landing zone accelerator throughout its lifecycle. You also learn to explore specific design elements and provide governance and compliance recommendations for Oracle workload on Azure Virtual Machines landing zone accelerator.
 
 ## Design considerations
 
@@ -25,7 +25,7 @@ When you deploy your Oracle workload to Azure, take the following design conside
 ### Security and access control
 
 - Ensure encrypted communication between database and its clients.
-- Use RBAC to ensure the least privileged access to your database server and data (including backups). 
+- Use RBAC to ensure the least privileged access to your database server and data (including backups).
 - Enforce zero-trust [network security](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#zero-trust) across the network perimeter.
 
 ### Compliance
@@ -40,7 +40,7 @@ Use Azure compliance capabilities to abide by industry and regulatory requiremen
 
 ### Capacity allocation and sizing
 
-- Ensure the right sizing for your Oracle Workload on Azure VMs, both for primary and for secondary (BCDR) environments.  
+- Ensure the right sizing for your Oracle Workload on Azure Virtual Machines, both for primary and for secondary (BCDR) environments.  
 
 - Cost monitoring and management
 
@@ -66,9 +66,9 @@ Use Azure compliance capabilities to abide by industry and regulatory requiremen
 
 - If your workload has specific requirements for data residency, ensure your design incorporates necessary policies to ensure data always resides in the geography where requirements dictate. 
 
-## Design Recommendations
+## Design recommendations
 
-The following sections provide design recommendations for Oracle workload on Azure VMs landing zone accelerator.
+The following sections provide design recommendations for Oracle workload on Azure Virtual Machines landing zone accelerator.
 
 ### Adopt Azure policy
 
@@ -98,9 +98,9 @@ Use Azure policy to ensure database instances can only be created where your dat
 
 - Configure diagnostic settings to forward resource logs to [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/overview) logs.
 
-- Enable [Azure VM insights](https://learn.microsoft.com/azure/azure-monitor/vm/vminsights-overview).
+- Enable [Azure Virtual Machine insights](https://learn.microsoft.com/azure/azure-monitor/vm/vminsights-overview).
 
-- Monitor reachability, latency, and network topology changes between the VM and the endpoint using [Azure Network Watcher](https://learn.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview).
+- Monitor reachability, latency, and network topology changes between the Virtual Machine and the endpoint using [Azure Network Watcher](https://learn.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview).
 
 - Design your log analytics environment with geographical location, data isolation and data retention configurations according to best practices defined in [Design Log Analytics Workspace](https://learn.microsoft.com/azure/storage/blobs/immutable-time-based-retention-policy-overview).  
 

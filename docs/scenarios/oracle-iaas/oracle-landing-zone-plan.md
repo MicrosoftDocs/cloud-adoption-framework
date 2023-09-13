@@ -1,6 +1,6 @@
 ---
-title: Plan for Oracle on Azure VMs landing zone accelerator
-description: Learn about how to plan for Oracle on Azure VMs landing zone accelerator.  
+title: Plan for Oracle on Azure Virtual Machines landing zone accelerator
+description: Learn about how to plan for Oracle on Azure Virtual Machines landing zone accelerator.  
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,9 +14,9 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Plan for Oracle on Azure VMs landing zone accelerator  
+# Plan for Oracle on Azure Virtual Machines landing zone accelerator  
 
-This article describes how to plan for Oracle on Azure VMs landing zone accelerator. As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure are high only if you right size your Oracle workload on Azure Infrastructure. Getting the   sizing right also provides an opportunity to optimize Oracle licensing cost.
+This article describes how to plan for Oracle on Azure Virtual Machines landing zone accelerator. As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure are high only if you right size your Oracle workload on Azure Infrastructure. Getting the   sizing right also provides an opportunity to optimize Oracle licensing cost.
 
 The infrastructure capacity planning exercises provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
 
@@ -55,7 +55,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 
 - Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines. 
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct VM SKU on Azure – based on OMA Tool 
+- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct Virtual Machine SKU on Azure – based on OMA Tool 
 
 - Choose the right deployment architecture - based on architecture guidelines. 
 
