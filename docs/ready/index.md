@@ -12,7 +12,32 @@ ms.custom: internal
 
 Before adoption can begin, create a landing zone to host the workloads that you plan to build in or migrate to the cloud. This section of the framework guides you through how a landing zone is created.
 
-The following exercises help guide you through the process of creating a landing zone to support cloud adoption.
+## Landing zone concepts
+
+If you understand Azure landing zones, skip ahead to the [Azure setup guide](./azure-setup-guide/index.md) to start the process of preparing your Azure environment for landing zones. If not, review these landing zone concepts before proceeding:
+
+- Abstractly speaking, a ***landing zone*** helps you plan for and design an Azure deployment, by conceptualizing a designated area for placement and integration of resources. There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones):
+   - ***platform landing zone:*** provides centralized enterprise-scale foundational services for workloads and applications.
+   - ***application landing zone:*** provides services specific to an application or workload. 
+
+- Concretely, a landing zone can be viewed through two lenses:
+  - **reference architecture**: a specific design that illustrates resource deployment to one or more Azure subscriptions, which meet the requirements of the landing zone. 
+  - **reference implementation**: artifacts that deploy Azure resources into the landing zone subscription(s), according to the reference architecture. Many landing zones offer multiple deployment options, but the most common is a ready-made Infrastructure as Code (IaC) template referred to as a ***landing zone accelerator***. Accelerators automate and accelerate the deployment of a reference implementation, using IaC technology such as ARM, Bicep, Terraform, and others. 
+
+- A workload deployed to an application landing zone integrates with and is dependent upon services provided by the platform landing zone. These infrastructure services run workloads such as networking, identity access management, policies, and monitoring. This operational foundation enables migration, modernization, and innovation at enterprise-scale in Azure. 
+
+In summary, [Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone) provide a destination for cloud workloads, a prescriptive model for managing workload portfolios at scale, and consistency and governance across workload teams. 
+
+## Next steps
+
+To get ready for cloud adoption and preparing your Azure environment for landing zones, review the [Azure setup guide](./azure-setup-guide/index.md).
+
+
+
+<br><br><br><br><br><br><br><br><br>  
+
+## **`TO BE DELETED - START`**  
+The following exercises help guide you through the process of creating a landing zone to support cloud adoption.  
 
 | Step | Description |
 |--|--|
@@ -21,4 +46,5 @@ The following exercises help guide you through the process of creating a landing
 | <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Journey to the target architecture](./landing-zone/landing-zone-journey.md): Validate your starting point for landing zone implementation against the three core concepts of start, align and enhance. |
 | <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Azure landing zone design areas](./landing-zone/design-areas.md): Explore the process and guidance for designing your Azure landing zone. |
 
-To get ready for cloud adoption, review the [Azure setup guide](./azure-setup-guide/index.md).
+## **`TO BE DELETED - END`**  
+
