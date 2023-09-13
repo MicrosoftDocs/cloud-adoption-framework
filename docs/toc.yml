@@ -416,6 +416,8 @@ items:
             href: ready/landing-zone/design-area/management.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
+          - name: Baseline monitoring
+            href: ready/landing-zone/design-area/management-monitor.md
           - name: Protect and recover
             href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
           - name: Operational compliance
