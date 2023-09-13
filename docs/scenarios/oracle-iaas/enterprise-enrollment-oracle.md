@@ -1,6 +1,6 @@
 ---
 title: Azure billing and Active Directory tenant for Oracle on Azure VMs landing zone accelerator
-description: Learn about enterprise enrollment for Oracle on Azure VMs landing zone accelerator. 
+description: Learn about Azure billing and Active Directory tenant for Oracle on Azure VMs landing zone accelerator. 
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
