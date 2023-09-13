@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD
 title: Enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator
 description: Learn about enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator. 
-=======
-title: Azure billing and Active Directory tenant for Oracle on Azure VMs landing zone accelerator
-description: Learn about Azure billing and Active Directory tenant for Oracle on Azure VMs landing zone accelerator. 
->>>>>>> 12242da8945b30c66a41641969096d7736d127f6
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
