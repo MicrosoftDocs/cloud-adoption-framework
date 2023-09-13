@@ -39,7 +39,7 @@ As you work your way through the Ready guide, consider your progress as a contin
 
 See the graphic below for an illustration of the 4 phases, all of which will be covered in more detail as you progress through the Ready guide.
 
-:::image type="content" source="../landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing organization and naming of Azure resources deployed by the Azure Virtual Desktop landing zone accelerator." border="false" lightbox="../landing-zone/media/customer-landing-zone-journey.png" :::
+:::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing organization and naming of Azure resources deployed by the Azure Virtual Desktop landing zone accelerator." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
 
 ## Next steps
 
