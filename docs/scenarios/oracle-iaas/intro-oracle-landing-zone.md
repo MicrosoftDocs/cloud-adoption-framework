@@ -122,7 +122,7 @@ Azure NetApp Files can host Oracle data and log files. Use this configuration fo
 
 **Private endpoints** are in a virtual network and have a private IP address within the address space of that virtual network.
 
-The example Oracle database server architecture uses [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) so that database servers access them only over [private link](https://learn.microsoft.com/azure/private-link/private-link-overview), which improves security.
+It is recommended to leverage [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) where appropriate to route traffic from database server to Azure Files via [private link](https://learn.microsoft.com/azure/private-link/private-link-overview).
 
 ## Landscape consolidation
 
