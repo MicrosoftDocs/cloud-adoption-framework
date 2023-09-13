@@ -36,4 +36,4 @@ Since Oracle products are usually licensed by processor core, selecting a Virtua
 
 - [Strategic impact of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
 - [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md)  
-- [Oracle on Azure landing zone accelerator](intro-oracle-landing-zone.md) 
+- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md) 
