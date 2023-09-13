@@ -43,7 +43,7 @@ You need to understand and plan for all critical areas of your landing zone arch
 
 ## Azure landing zone architecture
 
-The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone accelerator.  
+The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
 
 :::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
