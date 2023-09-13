@@ -39,11 +39,11 @@ As you plan the implementation of your Oracle landing zone, you need to make des
 
 ## Architecture
 
-You need to understand and plan for all critical areas of your deployment architecture. This article describes the key components of the landing zone architecture in Azure about Oracle database services.
+You need to understand and plan for all critical areas of your landing zone architecture. This article describes the key components of the landing zone architecture in Azure for Oracle on IaaS.
 
 ## Azure landing zone architecture
 
-The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone accelerator.  
+The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
 
 :::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
@@ -53,7 +53,7 @@ When developing a long-term vision for landing zones, consider the design above.
 
 Use the reference architecture as a starting point. You can download the [Visio file](https://microsofteur.sharepoint.com/:u:/t/DataMod/EdaC0TOEfXpIvnD2CE2J9ykBPMsgE0eGuG0HyKwZ8srJXQ?e=uBTzEF) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
-As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
+As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
 ## Strategic and planning considerations for Oracle VMs landing zones  
 
@@ -92,7 +92,7 @@ This architecture has three or four subnets, depending on the tier. For example,
 
 - **Database**: A subnet that contains only database virtual machines.
 
-As Oracle Databases are backend services for a host of different applications with different architectures and requirements, more subnets may be required. For example, if you have a three-tier architecture, you might have a separate subnet for the web tier.
+As Oracle Databases are backend services for a host of different applications with different architectures and requirements, more or less subnets may be required for your specific implementation. 
 
 ## Virtual machines and availability sets
 
@@ -122,7 +122,7 @@ Azure NetApp Files can host Oracle data and log files. Use this configuration fo
 
 **Private endpoints** are in a virtual network and have a private IP address within the address space of that virtual network.
 
-The example Oracle database server architecture uses [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) so that database servers access them only over [private link](https://learn.microsoft.com/azure/private-link/private-link-overview), which improves security.
+It is recommended to leverage [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) where appropriate to route traffic from database server to Azure Files via [private link](https://learn.microsoft.com/azure/private-link/private-link-overview).
 
 ## Landscape consolidation
 
