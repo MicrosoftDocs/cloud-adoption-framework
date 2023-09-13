@@ -16,7 +16,7 @@ ms.custom:
 
 # Oracle on Azure Virtual Machines landing zone accelerator
 
-Use the guidance in this article to set up and operate Oracle workloads inside your Azure VMs landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
+Use the guidance in this article to set up and operate Oracle workloads inside your Azure Virtual Machines landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
 
 The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) 
 
@@ -55,7 +55,7 @@ Use the reference architecture as a starting point. You can download the [Visio 
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
-## Strategic and planning considerations for Oracle VMs landing zones  
+## Strategic and planning considerations for Oracle Virtual Machines landing zones  
 
 Prioritization decisions made during [strategy](oracle-landing-zone-strategy.md) and [plan](oracle-landing-zone-plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your Oracle workloads implementations. What follows  are important questions to consider during the planning phase:  
 
@@ -144,7 +144,7 @@ The example architecture has components that you can use for Oracle operations. 
 
 - [RMAN Based streaming backup](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143)
 
-Apart from backup Azure provides methods for setting up [disaster recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery) capabilities for Oracle on Azure VMs.
+Apart from backup Azure provides methods for setting up [disaster recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery) capabilities for Oracle on Azure Virtual Machines.
 
 ## Oracle landscape architecture examples  
 
@@ -159,4 +159,4 @@ For more information about the design areas for your Oracle on Azure landing zon
 - [Network topology and connectivity for Oracle on Azure IaaS](oracle-network-topology.md)
 - [Manage and monitor Oracle workloads on Azure IaaS](oracle-manage-monitor-workload.md)
 - [Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS](oracle-disaster-recovery-oracle-landing-zone.md)
-- [Security guidelines for Oracle on Azure VMs landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
+- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
