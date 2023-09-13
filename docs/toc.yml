@@ -414,7 +414,7 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/management.md
-          - name: Baseline monitoring
+          - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-monitor.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
