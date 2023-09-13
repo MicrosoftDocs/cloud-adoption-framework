@@ -98,4 +98,4 @@ For more information, see [Testing approach for Azure landing zones](/azure/clou
 
 - [Introduction to deploying Azure Monitor](https://aka.ms/amba/alz/deploy)
 
-- [Inventory and visibility considerations](management-platform.md)
+- [Business continuity and disaster recovery](management-business-continuity-disaster-recovery.md)
