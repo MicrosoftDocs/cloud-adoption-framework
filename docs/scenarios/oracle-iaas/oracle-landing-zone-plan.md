@@ -71,4 +71,4 @@ This project's team members could be Oracle or Azure experts, but it's unlikely 
 
 ## Next steps  
 
-- [Oracle on Azure landing zone accelerator](intro-oracle-landing-zone.md)
+- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md)
