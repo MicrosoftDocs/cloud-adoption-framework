@@ -17,7 +17,7 @@ Azure VMware Solution private clouds connect to Azure virtual networks via manag
 - Azure virtual networks and VMs running in the Azure VMware Solution private cloud.
 - Azure virtual networks and the Azure VMware Solution private cloud's management endpoints.
 
-Although both Azure virtual networks and vSphere/NSX-T provide native constructs for network segmentation, firewall solutions deployed as network virtual appliancess (NVAs) in Azure virtual networks are often the preferred option in enterprise-scale environments. This article focuses on a virtual network configuration that allows you to route traffic between private clouds and Azure virtual networks by using custom next hops, such as firewall NVAs.
+Although both Azure virtual networks and vSphere/NSX-T provide native constructs for network segmentation, firewall solutions deployed as network virtual appliances (NVAs) in Azure virtual networks are often the preferred option in enterprise-scale environments. This article focuses on a virtual network configuration that allows you to route traffic between private clouds and Azure virtual networks by using custom next hops, such as firewall NVAs.
 
 The choice you make in this design phase depends on the option that you selected in [design phase 1](on-premises-connectivity.md) for on-premises connectivity. In fact, the managed ExpressRoute circuit that connects a private cloud to an Azure virtual network can also play a role in connectivity with on-premises sites. This is the case if you choose [transit over ExpressRoute private peering](on-premises-connectivity.md#transit-over-expressroute-private-peering) during design phase 1. This flowchart shows the process for choosing an option for connectivity with Azure virtual networks:
 
@@ -31,7 +31,7 @@ When you use [transit over ExpressRoute private peering](on-premises-connectivit
 
 In the opposite direction, traffic from the private cloud enters the hub virtual network or the auxiliary virtual network, depending on the implementation option chosen during design phase 1 ([single virtual network](on-premises-connectivity.md#single-virtual-network) or [auxiliary virtual network](on-premises-connectivity.md#auxiliary-virtual-network)). It's then routed through the ExpressRoute gateway that's connected to the managed circuit and to the firewall NVA. After inspection, traffic is forwarded (if it's not dropped by the firewall) to the on-premises destination via the customer-owned ExpressRoute circuit. 
 
-The single virtual network and the auxiliary virtual network options both include routing configuration that causes all traffic from a private cloud to be forwarded to the firewall NVAs in the hub network, regardlesss of its destination (Azure virtual network or on-premises sites). Firewall rules to allow or drop connections between virtual machines running in the private cloud and Azure resources must be added to the firewall policy.
+The single virtual network and the auxiliary virtual network options both include routing configuration that causes all traffic from a private cloud to be forwarded to the firewall NVAs in the hub network, regardless of its destination (Azure virtual network or on-premises sites). Firewall rules to allow or drop connections between virtual machines running in the private cloud and Azure resources must be added to the firewall policy.
 
 ## ExpressRoute Global Reach is used for on-premises traffic
 

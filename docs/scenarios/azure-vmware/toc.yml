@@ -28,7 +28,7 @@ items:
                 href: azure-vmware-solution-network-basics.md
               - name: Design connectivity with on-premises sites
                 href: on-premises-connectivity.md
-              - name: Design connectivity with Azure Virtual Networks
+              - name: Design connectivity with Azure virtual networks
                 href: virtual-network-connectivity.md
               - name: Design inbound Internet connectivity
                 href: network-design-guide-internet-inbound-connectivity.md
