@@ -16,6 +16,8 @@ Before adoption can begin, you'll create a landing zone to host the workloads th
 
 If you understand Azure landing zones, skip ahead to the [Landing zone journey section](#landing-zone-journey). If not, review these landing zone concepts before proceeding:
 
+[!INCLUDE [Landing zone concepts](~/../crr-aac-repo/docs/landing-zones/includes/concepts.md)]
+
 - Abstractly speaking, a ***landing zone*** helps you plan for and design an Azure deployment, by conceptualizing a designated area for placement and integration of resources. There are [two types of landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-vs-application-landing-zones):
    - ***platform landing zone:*** provides centralized enterprise-scale foundational services for workloads and applications.
    - ***application landing zone:*** provides services specific to an application or workload. 
