@@ -19,11 +19,8 @@ ms.custom:
   - engagement-fy24
 ---
 
-<<<<<<< HEAD
+
 # Enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator
-=======
-# Azure billing and Active Directory tenant for Oracle on Azure VMs landing zone accelerator
->>>>>>> 12242da8945b30c66a41641969096d7736d127f6
 
 This article describes enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific  recommendations that impact [enterprise enrollment or Active Directory tenant decisions](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant).
 
