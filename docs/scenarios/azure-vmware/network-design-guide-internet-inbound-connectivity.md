@@ -1,37 +1,41 @@
 ---
-title: Azure VMware Solution Network Design Guide - Internet inbound connectivity
-description: Learn how to design Internet inbound connectivity for Azure VMware Solution.
+title: 'Azure VMware Solution network design guide: Inbound internet  connectivity'
+description: Learn how to design inbound internet connectivity for Azure VMware Solution. This article is part of the Azure VMware Solution design guide.
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/15/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Design phase #3: Internet inbound connectivity
+# Design phase 3: Inbound internet connectivity
 
-Design Phase #3 is driven by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, Internet-facing applications are published through network devices that provide security (next generation firewalls, web application firewalls) and load balancing (layer-3/layer-4 load balancers, application delivery controllers, …) functions. Such devices can be deployed on the private cloud itself, or in an Azure virtual network connected to the private cloud, based on the following considerations:
--  Pre-existing NVAs deployed in Azure virtual networks (firewalls, application delivery controllers, ...) can be used to publish applications running on your private cloud(s), for cost optimization and for consistency.
-- Azure PaaS services that can be used for publishing Internet-facing applications such as [Azure Firewall](/azure/firewall/tutorial-firewall-dnat) (both when deployed in a customer-managed virtual network and when deployed in a Virtual WAN Hub) and [Azure Application Gateway](/azure/application-gateway/overview) may help reduce management overhead.
-- Firewalls and application delivery controllers can be deployed as virtual appliances on Azure VMware Solution, if supported by the vendor.
+The choices you make during this design phase are determined by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, internet-facing applications are published via network devices that provide security (next-generation firewalls, web application firewalls) and load balancing (Layer 3 or Layer 4 load balancers, application delivery controllers). You can deploy these devices in the private cloud itself or in an Azure virtual network that's connected to the private cloud. Your choice is based on these considerations:
 
-The flow chart below summarizes how to approach Phase #3:
+-  For cost optimization and consistency, you can use pre-existing NVAs that are deployed in Azure virtual networks (like firewalls and application delivery controllers) to publish applications running on your private clouds.
+- Azure PaaS services that can be used for publishing internet-facing applications, like [Azure Firewall](/azure/firewall/tutorial-firewall-dnat) (both when deployed in a customer-managed virtual network and when deployed in an Azure Virtual WAN hub) and [Azure Application Gateway](/azure/application-gateway/overview), might help reduce management overhead.
+- You can deploy firewalls and application delivery controllers as virtual appliances on Azure VMware Solution, if that's supported by the vendor.
 
-:::image type="content" source="media/network-design-guide-figure16.png" alt-text="Figure16. Flowchart that shows the design decision making process for inbound Internet connectivity." lightbox="media/network-design-guide-figure16.png":::
-*Design Phase #3: Design inbound Internet connectivity based on where NVAs for application publishing will be hosted (Azure VMware Solution or Azure virtual network).*
+The following flowchart summarizes how to approach this phase:
+
+:::image type="content" source="media/network-design-guide-figure-16.png" alt-text="Flowchart that shows the design-decision making process for inbound internet connectivity." lightbox="media/network-design-guide-figure-16.png" border="false":::
 
 ## NVAs hosted in an Azure virtual network
-Publishing Azure VMware Solution applications via Azure first-party services (Azure Firewall, Azure Application Gateway) or third-party NVAs hosted in a virtual network only requires layer-3 connectivity between the virtual network and the Azure VMware Solution private cloud, covered in section [Azure virtual network connectivity](network-design-guide-virtualnetwork-connectivity.md). 
+
+Publishing Azure VMware Solution applications via Azure services (Azure Firewall, Application Gateway) or third-party NVAs that are hosted in a virtual network only requires Layer 3 connectivity between the virtual network and the Azure VMware Solution private cloud. For more information, see [Design phase 2: Connectivity with Azure virtual networks](virtual-network-connectivity.md).
 
 The following sections provide guidance for each option.
 
 ### Considerations for Azure Firewall
-[Azure Firewall](/azure/firewall/overview) is the preferred option for exposing generic TCP or UDP endpoints through a first party layer-3/layer-4 device. To publish an Azure VMware Solution application through Azure Firewall, a DNAT rule must be configured, which maps the one of the firewall's public IPs to the Azure VMware Solution application endpoint's private IP. Azure Firewall automatically Source-NATs inbound connections from the Internet behind its private IP address. As a result, Azure VMware Solution virtual machines receive traffic whose source IP address is the Firewall's IP. For more information, see [how to configure DNAT rules on Azure Firewall](/azure/firewall/tutorial-firewall-dnat). 
+
+[Azure Firewall](/azure/firewall/overview) is the preferred option for exposing generic TCP or UDP endpoints through a Microsoft Layer 3 or layer 4 device. To publish an Azure VMware Solution application through Azure Firewall, you need to configure a DNAT rule that maps one of the firewall's public IPs to the Azure VMware Solution application endpoint's private IP. Azure Firewall automatically uses SNAT to translate IP addresses that are inbound from the internet to its own private IP address. As a result, Azure VMware Solution virtual machines receive traffic whose source IP address is the firewall's IP. For more information, see [Filter inbound internet traffic with Azure Firewall DNAT using the Azure portal](/azure/firewall/tutorial-firewall-dnat).
 
 ### Considerations for Azure Application Gateway
+
 [Azure Application Gateway](/azure/application-gateway/overview-v2) is the preferred option for exposing HTTP(S) applications running on Azure VMware Solution. As a first-party HTTP reverse proxy it provides:
+
 - HTTP request routing
 - WAF capabilities
 
