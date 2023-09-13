@@ -65,7 +65,7 @@ To transition from this scenario's current state to an Azure landing zone concep
    > [!NOTE]
    > The existing applications or services do not necessarily have to be migrated into new landing zones (Azure subscriptions)
 
-7. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group (corporate or online).
+7. Create new Azure subscriptions to provide landing zones that can support new applications/workloads. Place them under the proper management group (corporate or online).
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
