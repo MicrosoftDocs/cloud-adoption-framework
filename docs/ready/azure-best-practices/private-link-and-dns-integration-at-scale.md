@@ -51,7 +51,17 @@ From the previous diagram, it's important to highlight that:
 - All Azure VNets use the DNS servers hosted in the hub VNet (`10.100.2.4` and `10.100.2.5`) as the primary and secondary DNS servers.
 - If the DNS servers `10.100.2.4` and `10.100.2.5` aren't authoritative for customer's corporate domains (for example, Active Directory domain names), they should have conditional forwarders for the customer's corporate domains, pointing to the on-premises DNS Servers (`172.16.1.10` and `172.16.1.11`) or DNS servers deployed in Azure that are authoritative for such zones.
 
-While the previous diagram depicts a single hub and spoke architecture, this guidance also applies to scenarios where multiple hub and spoke networks exist across multiple Azure regions. In that case, link the hub VNets in all regions to the same Azure Private DNS zones.
+While the previous diagram depicts a single hub and spoke architecture, customer might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints (PE’s).
+
+![A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multi region.][image-1a]
+
+The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution deployed in the hub (one per region) where name resolution for Private Link resources is done via Azure Private DNS
+It is recommended to deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist, enable per-region Privatelink and Private DNS Zones. When working with PaaS services with built-in DR capabilities (geo-redundant storage accounts, SQL DB failover groups), multiple region Private endpoints are mandatory.
+
+For other use cases, a single global Private endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions. 
+This scenario requires manual maintenance of the PrivateLink DNS recordSet in every region as there is currently no automated lifecycle management for these.
+
+To enable connectivity from on premise networks to the Privatelink, the DNS forwarding ruleset needs to be provisioned in the DNS forwarder.
 
 There are two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
 
@@ -489,6 +499,7 @@ Below are helpful links to review when creating Private Endpoint with Bicep and 
 [link-15]: https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0
 [link-16]: https://github.com/Azure/azure-policy#new-built-in-policy-proposals
 [image-1]: ./media/private-link-example-central-dns.png
+[image-1a]: ./media/private-link-example-central-dns-multi-regions.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg
 [image-4]: ./media/validation.jpg
