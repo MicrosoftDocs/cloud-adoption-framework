@@ -39,7 +39,7 @@ As you plan the implementation of your Oracle landing zone, you need to make des
 
 ## Architecture
 
-You need to understand and plan for all critical areas of your deployment architecture. This article describes the key components of the landing zone architecture in Azure about Oracle database services.
+You need to understand and plan for all critical areas of your landing zone architecture. This article describes the key components of the landing zone architecture in Azure for Oracle on IaaS.
 
 ## Azure landing zone architecture
 
