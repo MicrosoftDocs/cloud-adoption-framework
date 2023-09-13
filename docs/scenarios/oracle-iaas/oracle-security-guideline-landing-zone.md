@@ -100,12 +100,12 @@ Using network security is the fundamental component of a layered security approa
 
 ## Azure policy based security
 
-There are no specific built-in Azure Policy definitions for Oracle on Azure VMs landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
-Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle VM, enforce storage encryption, NSG rules etc. 
+There are no specific [built-in  Azure policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies)  for Oracle on Azure VMs landing zone accelerator. However, Azure Policy offers comprehensive coverage for the fundamental resources that is used by any Oracle solution on Azure, including virtual machines, storage, and networking. See the available built-in Azure policies for those resources.
+Furthermore, you can always create custom policies to address your organization’s requirements to bridge the gap. Some examples of customized Oracle policies can be listed as no public IP assigned to Oracle VM, enforce storage encryption, NSG rules etc.
 
 ## Secure data using encryption
 
-- Encryption in transit - Applies to the state of data moving from one location to another, usually across a network connection. Data in transit can be encrypted in several ways, depending on the nature of the connection. As Azure doesn't provide encryption for data in transit on Azure networks by default, so if encryption in transit is required, customers must enable it.  For more information in the Azure documentation, see [encryption of data in transit](https://learn.microsoft.com/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
+- **Encryption in transit** - Applies to the state of data moving from one location to another, usually across a network connection. Data in transit can be encrypted in several ways, depending on the nature of the connection. As Azure doesn't provide encryption for data in transit on Azure networks by default, so if encryption in transit is required, customers must enable it.  For more information in the Azure documentation, see [encryption of data in transit](https://learn.microsoft.com/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
 
 Microsoft recommends using Oracle’s Native Network Encryption and Data Integrity feature, and for more information, see [Configuring Oracle Database Native Network Encryption and Data Integrity](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/configuring-network-data-encryption-and-integrity.html#GUID-7F12066A-2BA1-476C-809B-BB95A3F727CF) by Oracle.
 
