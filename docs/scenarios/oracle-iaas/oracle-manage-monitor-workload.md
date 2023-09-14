@@ -81,13 +81,13 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 ### Monitor related Azure services
  
  The following table lists a number of other typical solution components that should be monitored to some extent or other.
-|Azure Services |Description |ULR |
+ 
+|Azure Services |Description |URL |
 |:-------|:--------|:----|
 |Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
 | | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
 |. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |
 | | |Monitor the Oracle database “alert log” file on the database Virtual Machine for lines starting with the following format: |
-| | | |
 | | |status – AzBackup – script – version: message |
 | | |where: |
 | | |. status = “INFO”, “WARN”, or “FAIL” |
