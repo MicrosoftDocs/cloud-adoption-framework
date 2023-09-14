@@ -18,12 +18,22 @@ Before adoption can begin, you'll create a landing zone to host the workloads th
 
 ## Landing zone journey
 
-As you work your way through the Ready guide, consider your progress as a continuous journey that will prepare you for landing zone creation. The journey consists of 4 major phases:
+As you work your way through the Ready guide, consider your progress as a continuous journey that will prepare you for landing zone creation. The journey consists of 4 major phases and related resources:
 
 - Bootstrap your environment
+  - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
+  - [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
+  - [ALZ ](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
+
 - Deploy Azure landing zone platform components
+  - [ALZ accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
+  - [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
+  - [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
 - Subscription vending process
+  - [LZ vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
+  - [LZ vending module (Bicep)](https://github.com/Azure/bicep-lz-vending)
 - Landing zone accelerator deployment
+  - [Cloud adoption scenarios and related accelerators](/azure/cloud-adoption-framework/scenarios/overview#scenarios-to-support-your-cloud-adoption-strategy)
 
 See the graphic below for an illustration of the 4 phases, all of which will be covered in more detail as you progress through the Ready guide.
 
@@ -32,20 +42,3 @@ See the graphic below for an illustration of the 4 phases, all of which will be 
 ## Next steps
 
 Continue with cloud adoption and preparing your Azure environment for landing zones, by reviewing the [Azure setup guide](./azure-setup-guide/index.md).
-
-
-
-<br><br><br><br><br><br><br><br><br>  
-
-## **`TO BE DELETED - START`**  
-The following exercises help guide you through the process of creating a landing zone to support cloud adoption.  
-
-| Step | Description |
-|--|--|
-| <br> :::image type="icon" source="../_images/icons/1.png"::: | <br> [Cloud operating model](../operating-model/index.md): Explore guidance on how to find the right operating model to support your cloud adoption. |
-| <br> :::image type="icon" source="../_images/icons/2.png"::: | <br> [Azure landing zones](./landing-zone/index.md): Learn about the Azure landing zone conceptual architecture and Azure landing zone accelerator. |
-| <br> :::image type="icon" source="../_images/icons/3.png"::: | <br> [Journey to the target architecture](./landing-zone/landing-zone-journey.md): Validate your starting point for landing zone implementation against the three core concepts of start, align and enhance. |
-| <br> :::image type="icon" source="../_images/icons/4.png"::: | <br> [Azure landing zone design areas](./landing-zone/design-areas.md): Explore the process and guidance for designing your Azure landing zone. |
-
-## **`TO BE DELETED - END`**  
-
