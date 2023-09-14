@@ -18,7 +18,9 @@ Before adoption can begin, you'll create a landing zone to host the workloads th
 
 ## Landing zone journey
 
-As you work your way through the Ready guide, consider your progress as a continuous journey that will prepare you for landing zone creation. The journey consists of 4 major phases and related resources:
+:::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing the Azure landing zone customer journey." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
+
+As you work your way through the Ready guide, consider your progress as a continuous journey that will prepare you for landing zone creation. The journey consists of 4 major phases and related processes:
 
 - Bootstrap your environment
   - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
@@ -35,9 +37,7 @@ As you work your way through the Ready guide, consider your progress as a contin
 - Landing zone accelerator deployment
   - [Cloud adoption scenarios and related accelerators](/azure/cloud-adoption-framework/scenarios/overview#scenarios-to-support-your-cloud-adoption-strategy)
 
-See the graphic below for an illustration of the 4 phases, all of which will be covered in more detail as you progress through the Ready guide.
-
-:::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing organization and naming of Azure resources deployed by the Azure Virtual Desktop landing zone accelerator." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
+The phases and processes are covered in more detail as you progress through the Ready guide.
 
 ## Next steps
 
