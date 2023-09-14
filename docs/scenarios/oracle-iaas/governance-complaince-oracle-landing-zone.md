@@ -26,7 +26,7 @@ When you deploy your Oracle workload to Azure, take the following design conside
 
 - Ensure encrypted communication between database and its clients.
 - Use RBAC to ensure the least privileged access to your database server and data (including backups).
-- Enforce zero-trust [network security](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#zero-trust) across the network perimeter.
+- Consider enforcing zero-trust [network security](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security#zero-trust) across the network perimeter.
 
 ### Compliance
 
@@ -59,6 +59,7 @@ Use Azure compliance capabilities to abide by industry and regulatory requiremen
     - Monitor resources to detect usage pattern changes and proactively initiate changes. For example,  increase memory or number of vCPUs by upgrading to a different virtual machine SKU.
 
 - Create alerts to detect early warning signs for potential problems.
+- For Oracle database application monitoring consider implementing Oracle Enterprise Manager for database specific insights.
 
 ### Data management
 

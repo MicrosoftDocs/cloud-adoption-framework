@@ -32,11 +32,11 @@ Oracle is an influential platform, and organizations have several motivations to
 
   - **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
 
-Customers are motivated by several, if not all, the opportunities offered. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input helps the cloud adoption team to make informed decisions throughout the implementation process.
+To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input helps the cloud adoption team to make informed decisions throughout the implementation process.
 
 Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives. The following sections are also relevant to your organization if your team is reviewing this migration scenario:
 
- 1. Cycles to refresh Oracle infrastructure require significant capital expenditures. If your Oracle infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs. 
+ 1. Cycles to refresh Oracle on-premises infrastructure require significant capital expenditures. If your Oracle infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs. 
 
 1. Oracle licenses are a one-time purchase negotiated for a specific number of years. If you want to migrate your Oracle workloads to Azure, review the following official document to understand the license implications on Azure: [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/assets/cloud-licensing-070579.pdf).
 

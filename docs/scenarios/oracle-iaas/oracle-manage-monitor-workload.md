@@ -35,7 +35,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 3. Collect [custom logs](https://learn.microsoft.com/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
 4. Monitor Managed Disk Metrics:
 
-    If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. The types of storage suitable for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
+    If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. Suitable managed disk SKUs for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
     Data disk performance metrics are important because the Oracle database files are stored on the managed disks. Consider the cumulative IOPS and throughput of data disks when disk striping technologies are used such as Oracle Automatic Storage Management (classic deployment model) or Linux Logical Volume Manager (LVM).
 
     ### Azure managed disk metrics
@@ -64,11 +64,11 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 
 ### Configure the alerts for Azure virtual machine metrics
 
-1. Recommended alert rules for Azure virtual machines. Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
+1. Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
 
-    Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://github.com/Azure/alz-monitor) as a common set of Azure resources/services that are configured in a similar way across organizations.
+    Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki) as a common set of Azure resources/services that are configured in a similar way across organizations.
 
-2. Configure other recommended alert rules for Oracle Database on Azure VMs landing zone accelerator. From these metrics, disk load and wait generation can be checked.　 If the threshold is exceeded, it's recommended that an alert is issued.  
+2. The following disk related metrics should also be monitored. If thresholds are exceeded, it's recommended that an alert is issued.  
 
 | **Alert Rule Name** | **Condition** |
 |---|---|
@@ -79,7 +79,8 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 | Disk Queue Depth | |
   
 ### Monitor related Azure services
-
+ 
+ The following table lists a number of other typical solution components that should be monitored to some extent or other.
 |Azure Services |Description |ULR |
 |:-------|:--------|:----|
 |Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |

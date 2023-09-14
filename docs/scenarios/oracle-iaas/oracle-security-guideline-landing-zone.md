@@ -22,7 +22,7 @@ This article describes how to securely deploy Oracle workloads on Azure Virtual 
 
 Ensuring security is crucial when it comes to any architecture, and Azure offers a comprehensive range of tools to effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure Virtual Machines. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
 
-Most databases store sensitive data. To have a secure architecture in which to land these workloads, implementing security only at the database level isn't sufficient.  Defense in depth is a comprehensive approach to security that involves implementing multiple layers of defense mechanisms to protect data. Instead of relying on a single security measure at a level that is network defense in depth strategy employs a combination of different layer security measures to create a robust security posture. Defense-in-depth approach can be architected for Oracle workloads through strong authentication and authorization framework, hardened network security and encryption of data at rest and in-transit.
+Most databases store sensitive data. To have a secure architecture in which to land these workloads, implementing security only at the database level isn't sufficient.  Defense in depth is a comprehensive approach to security that involves implementing multiple layers of defense mechanisms to protect data. Instead of relying on a single security measure at a specific level, such as for example focusing on network security mechanisms, the defense in depth strategy employs a combination of different layer security measures to create a robust security posture. Defense-in-depth approach can be architected for Oracle workloads through strong authentication and authorization framework, hardened network security and encryption of data at rest and in-transit.
 Oracle workloads currently can be deployed on Azure Virtual Machines landing zone accelerator. Shared responsibility matrix should be revisited to have a clear understanding of the specific tasks and responsibilities assigned to both the cloud provider and the customer. For more information about the shared responsibility model, see [Shared responsibility in the cloud.](https://docs.microsoft.com/azure/security/fundamentals/shared-responsibility)
 
 We suggest periodically assessing the services and technologies you employ to ensure that your security measures align with the changing threat landscape.
@@ -30,7 +30,7 @@ We suggest periodically assessing the services and technologies you employ to en
 ## Use centralized identity management
 
 Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
-Oracle application – Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
+### Oracle application Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
 
 | Oracle application | link to document |
 | --- | --- |
@@ -41,7 +41,7 @@ Oracle application – Users can access the Oracle applications without having t
 |Hyperion|Oracle Support doc #2144637.1|
 |Siebel|Oracle Support doc #2664515.1|
 
-## Operating system level security
+### Operating system level security
 
 Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Azure AD.  For more information, see the following resources:
 - [Sign in to a Linux virtual machine in Azure by using Azure AD and OpenSSH](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
