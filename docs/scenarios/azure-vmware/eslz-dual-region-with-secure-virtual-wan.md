@@ -50,7 +50,7 @@ This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure 
 
 Each Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown as "Global Reach (A)". The Azure VMware Solution Cloud Region 2 Global Reach connection is shown as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
 
-The diagram depicts how each Azure VMware Solution Cloud learns routes from their local and cross-regional hubs. All blue routes are from Region 1, and all red routes are from Region 2. 
+The diagram depicts how each Azure VMware Solution Cloud learns routes from their local and cross-regional hubs.
 
 ![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)
 **Traffic Flow**
@@ -66,7 +66,7 @@ This section focuses only on the on-premises site. As shown in the diagram, the 
 
 On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)".
 
-The diagram illustrates how on-premises learns routes from both regional hubs and both Azure VMware Solution Private clouds. All blue routes are from Region 1, and all red routes are from Region 2. Black routes are on-premises routes and are advertised back to Azure.
+The diagram illustrates how on-premises learns routes from both regional hubs and both Azure VMware Solution Private clouds.
 
 ![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)
 **Traffic Flow**
@@ -99,7 +99,7 @@ Option 3: Azure Public IPv4 address to NSX-T Data Center Edge
 
 Although you can use all three options with Dual Region Secure Virtual WAN with Routing Intent,  "Option 1: Internet Service hosted in Azure" is the best option when using Secure Virtual WAN with Routing Intent and is the option that is used to provide internet connectivity in the scenario.  
 
-As mentioned earlier, when you enable Routing Intent on the Secure Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. The blue default route came from Hub1 via HubFw1, and the red one from Hub2 through HubFw2.
+As mentioned earlier, when you enable Routing Intent on the Secure Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. The preferred default route is advertised via connection "E", and the backup default route from is advertised via connection "D".
 
  Each Virtual Network will egress to the internet using its local regional hub firewall. The default route is never advertised across regional hubs over the "inter-hub" link. Therefore, Virtual Networks can only use their local regional hub for internet access. 
 
