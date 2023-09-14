@@ -44,7 +44,6 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
   - `168.63.129.16/32` (internal DNS)
 
 - For environments that have limited availability of private IP addresses, consider using IPv6. Virtual networks can be IPv4-only or dual stack [IPv4+IPv6](/azure/virtual-network/ip-services/ipv6-overview).
-- Use [nonroutable landing zone spoke virutal networks](azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
 
   ![Diagram that shows IPv4 and IPv6 dual stack.](./media/azure-ipv4-ipv6.png)
 
@@ -55,6 +54,8 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 - Don't use public IP addresses for virtual networks, especially if the public IP addresses don't belong to your organization.
 
 - Take the services you're going to use into consideration, there are some services with reserved IPs (IP Addresses), like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
+
+- Use [nonroutable landing zone spoke virutal networks](azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
 
 ## IP Address Management (IPAM) tools
 
