@@ -118,7 +118,8 @@ Microsoft recommends using Oracle’s Native Network Encryption and Data Integri
 
 ## Key management
 
-If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database Virtual Machine.  
+If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database Virtual Machine.
+  
 However, you can utilize Oracle Key Vault as a key management solution on Azure. For detailed information, refer to the documentation on [Provisioning Oracle Key Vault in Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.6/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).
 
 ### Integrating audit trails
