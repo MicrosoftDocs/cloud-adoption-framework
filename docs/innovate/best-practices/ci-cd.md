@@ -59,7 +59,7 @@ Below you'll find articles to help you get started with each of the tools in thi
 ### Continuous integration
 
 - [Continuous integration with Azure Pipelines and GitHub](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/)
-- [MLOps with Azure Machine Learning](/manage/mlops-machine-learning.md)
+- [MLOps with Azure Machine Learning](../../manage/mlops-machine-learning.md)
 
 ### Reliable testing
 
