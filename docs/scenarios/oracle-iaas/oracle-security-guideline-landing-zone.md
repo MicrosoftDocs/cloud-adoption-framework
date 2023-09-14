@@ -30,11 +30,11 @@ We suggest periodically assessing the services and technologies you employ to en
 ## Use centralized identity management
 
 Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
-### Oracle application Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
+
+Oracle application Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
 
 | Oracle application | link to document |
 | --- | --- |
-|Oracle application	Link to documentation
 |E-business Suite (EBS)|[Enable Single-Sign-On for EBS R12.2](https://docs.oracle.com/cd/E26401_01/doc.122/e22952/T156458T580814.htm)|
 |JD Edwards (JDE)|[Setting up JDE Single-Sign-On](https://docs.oracle.com/cd/E24705_01/doc.91/e24258/sso_thru_oam.htm#EOTSC00408)|
 |Peoplesoft|[Enable Single-Sign-On for PeopleSoft](https://docs.oracle.com/en/solutions/sso-peoplesoft-azure-ad/configure-oracle-peoplesoft1.html#GUID-470A312A-7F22-4688-AE95-80F164371875)|
