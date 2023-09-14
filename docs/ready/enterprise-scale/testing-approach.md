@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 10/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -82,7 +80,7 @@ The canary environment management group hierarchy is then used to simplify testi
 
 ## What if you don't want to deploy the entire canary environment management group hierarchy?
 
-If you don't want to deploy the entire canary environment management group hierarchy, you can test platform resources within the production environment hierarchy by using sandbox subscriptions as shown in the diagram.
+If you don't want to deploy the entire canary environment management group hierarchy, you can test platform resources within the production environment hierarchy by using [sandbox subscriptions](../considerations/sandbox-environments.md) as shown in the diagram.
 
 [![Diagram of the testing approach that uses sandboxes.](./media/canary-sandboxes.png)](./media/canary-sandboxes.png#lightbox)
 
@@ -139,3 +137,9 @@ Below is guidance on how to implement and use the canary management group hierar
  > If you already have Azure landing zones deployed in production and are now looking to add a canary environment. Consider cloning your current deployment of the production environment hierarchy and amend the names of resources to prefix them with your canary naming scheme.
  >
  > This is to ensure what you are deploying to enable the canary environment is in sync with production from the start. This is easily achieved when using an Infrastructure-as-Code tool alongside a git repository.
+
+## Next steps
+Learn how to implement landing zone sandbox environments. 
+
+> [!div class="nextstepaction"]
+> [Implement landing zone sandbox environments](../considerations/sandbox-environments.md)

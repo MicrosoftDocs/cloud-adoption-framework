@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 12/01/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 # Adopt policy-driven guardrails
@@ -41,7 +39,7 @@ The Azure landing zones reference implementations use [DINE](/azure/governance/p
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies.
 - Organizational requirements that all workload resource configuration, including auxiliary resources, supporting resources, and settings, are defined in Infrastructure as Code (IaC) by the workload application teams.
 
-If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-conceptual-architecture) and adhere to its [design principles](../landing-zone/design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance).
+If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-architecture) and adhere to its [design principles](../landing-zone/design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance).
 
 >[!IMPORTANT]
 > Throughout this article, you'll see two possible values used for the enforcement mode terms:

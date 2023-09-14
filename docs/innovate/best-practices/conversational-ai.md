@@ -5,8 +5,6 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: think-tank, seo-caf-innovate
 keywords: ai agent, ai agents, bot framework, conversational interface, build a bot, azure bot service
 ---
@@ -112,4 +110,3 @@ There are common patterns used for implementation of a conversational AI applica
 - Review machine learning white papers and e-books about [Azure Bot Service](https://azure.microsoft.com/resources/whitepapers/search/?service=bot-service).
 - Review [AI + machine learning architectures](/azure/architecture/browse/?azure_categories=ai-machine-learning).
 - [Building intelligent applications with cognitive APIs (e-book)](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
-- [FAQ chatbot architecture](https://azure.microsoft.com/resources/faq-chatbot-architecture/).

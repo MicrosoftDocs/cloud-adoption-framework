@@ -5,14 +5,14 @@ author: Jfaurskov
 ms.author: Janfaurs
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 
 # Keep your Azure landing zone up to date
 
 An Azure landing zone is a set of pre-defined Azure resources and configurations that provide a foundation for a cloud-based application or workload. It's important to ensure that your deployed landing zone environment is up to date so that you can maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
+
+> [!VIDEO https://www.youtube.com/embed/VvZDftlF20w]
 
 ## Why update your Azure landing zones?
 

@@ -266,7 +266,7 @@ items:
         href: operating-model/terms.md
     - name: Azure landing zones
       items:
-      - name: What is a landing zone?
+      - name: What is an Azure landing zone?
         href: ready/landing-zone/index.md
       - name: Design principles
         href: ready/landing-zone/design-principles.md
@@ -283,7 +283,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-enterprise-agreement.md
           - name: Microsoft customer agreement
             href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
-          - name: Cloud service provider
+          - name: Cloud solution provider
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
           - name: Define an Azure Active Directory tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
@@ -416,6 +416,8 @@ items:
             href: ready/landing-zone/design-area/management.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
+          - name: Baseline monitoring
+            href: ready/landing-zone/design-area/management-monitor.md
           - name: Protect and recover
             href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
           - name: Operational compliance
@@ -520,6 +522,10 @@ items:
           href: ready/considerations/landing-zone-operations.md
         - name: Testing approach for Azure landing zones
           href: ready/enterprise-scale/testing-approach.md
+        - name: Landing zone sandbox environments
+          href: ready/considerations/sandbox-environments.md
+        - name: Landing zone regions
+          href: ready/considerations/regions.md
         - name: Improve landing zone governance
           items:
           - name: Overview
@@ -578,10 +584,12 @@ items:
           href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
+        - name: Readying your landing zone for migration
+          href: migrate/azure-migration-guide/ready-alz.md
         - name: Deploy workloads
-          href: migrate/azure-migration-guide/migrate.md
+          href: migrate/azure-migration-guide/deploy.md
         - name: Release workloads
-          href: migrate/azure-migration-guide/optimize-and-transform.md
+          href: migrate/azure-migration-guide/release.md
         - name: Migration-focused cost-control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
         - name: Get assistance
@@ -593,25 +601,90 @@ items:
           href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
+
         - name: Tailwind Traders case study
           items:
           - name: Assessment and migration planning with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
-        - name: Windows Server workloads
-          items:
-          - name: Rehost a Windows application on Azure VMs
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
 
-        - name: SQL Server workloads
+        - name: AWS
           items:
-          - name: Migrate SQL Server databases to Azure
-            href: migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md
-          - name: Rehost an application on Azure VMs and Azure SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
-          - name: Rehost an application on Azure VMs and SQL Server Always On availability groups
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
+          - name: Discover AWS instances
+            href: /azure/migrate/tutorial-discover-aws
+          - name: Assess AWS instances for migration to Azure
+            href: /azure/migrate/tutorial-assess-aws
+          - name: Migrate AWS instances
+            href: /azure/migrate/tutorial-migrate-aws-virtual-machines
+
+        - name: Containers
+          items:
+          - name: Migrate to Azure Kubernetes Service (AKS)
+            href: /azure/aks/aks-migration
+
+        - name: Windows and Linux servers
+          items:
+          - name: VMWare
+            items:
+            - name: Discover servers running in a VMware environment
+              href: /azure/migrate/tutorial-discover-vmware
+            - name: Assess VMware VMs for migration to Azure VMs
+              href: /azure/migrate/tutorial-assess-vmware-azure-vm
+            - name: Select a VMware migration option
+              href: /azure/migrate/server-migrate-overview
+          - name: Hyper-V
+            items:
+            - name: Discover servers running in a Hyper-V environment
+              href: /azure/migrate/tutorial-discover-hyper-v
+            - name: Assess Hyper-V VMs for migration to Azure
+              href: /azure/migrate/tutorial-assess-hyper-v
+            - name: Migrate Hyper-V VMs to Azure
+              href: /azure/migrate/tutorial-migrate-hyper-v
+        - name: Databases and data platforms
+          items:
+          - name: SQL Server workloads
+            items:
+            - name: Migrate from SQL Server to Azure SQL
+              href: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide
+            - name: Migrate from SQL Server to Azure SQL Managed Instance
+              href: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide
+            - name: Migrate from SQL Server to SQL Server on Azure VM
+              href: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
+          - name: DB2
+            items:
+            - name: Migrate from DB2 to Azure SQL
+              href: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
+            - name: Migrate from DB2 to Azure SQL Managed Instance
+              href: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
+            - name: Migrate from DB2 to Azure SQL on Azure VM
+              href: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
+          - name: Oracle
+            items:
+            - name: Migrate from Oracle to Azure SQL
+              href: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
+            - name: Migrate from Oracle to Azure SQL Managed Instance
+              href: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
+            - name: Migrate from Oracle to Azure SQL on Azure VM
+              href: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
+          - name: Access         
+            items:
+            - name: Migrate from Access to Azure SQL
+              href: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
+          - name: Linux and open-source databases
+            items:
+            - name: Migrate open-source databases to Azure
+              href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
+            - name: Migrate from MySQL to Azure SQL
+              href: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
+            - name: Migrate PostgreSQL to Azure
+              href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
+            - name: Migrate MariaDB to Azure
+              href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
+            - name: Rehost a Linux application on Azure VMs
+              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
+            - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
+              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
 
         - name: Storage migration
           items:
@@ -619,21 +692,6 @@ items:
             href: /azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Tools for unstructured storage migration
             href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: Linux and open-source databases
-          items:
-          - name: Migrate open-source databases to Azure
-            href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
-          - name: Migrate MySQL to Azure
-            href: migrate/azure-best-practices/contoso-migration-mysql-to-azure.md
-          - name: Migrate PostgreSQL to Azure
-            href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
-          - name: Migrate MariaDB to Azure
-            href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
-          - name: Rehost a Linux application on Azure VMs
-            href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
-          - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
-            href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
 
         - name: Open-source platforms
           items:
@@ -711,111 +769,26 @@ items:
 
         - name: SAP
           items:
-          - name: SAP migration guide
-            href: https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/
-          - name: Migrate SAP applications to Azure
-            href: https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/
-          - name: Migration methodologies for SAP on Azure
-            href: https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure/
+          - name: Migrate an SAP platform to Azure
+            href: /azure/cloud-adoption-framework/scenarios/sap/migrate
+          - name: Learning path for Migrate SAP workloads to Azure
+            href: /training/paths/migrate-sap-workloads-to-azure/
+          - name: SAP on Azure migration
+            href: https://azure.microsoft.com/solutions/sap/migration/
+          - name: Migrate from SAP ASE to Azure SQL
+            href: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
 
         - name: Specialized workloads
           items:
-          - name: Move on-premises VMware infrastructure to Azure
+          - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
           - name: Azure NetApp Files
             href: https://azure.microsoft.com/services/netapp/
-          - name: Oracle in Azure
-            href: https://azure.microsoft.com/solutions/oracle/
           - name: Cray in Azure
             href: https://azure.microsoft.com/solutions/high-performance-computing/cray/
           - name: VDI
             href: migrate/azure-best-practices/contoso-migration-rds-to-wvd.md
-
-        - name: Data platforms
-          items:
-          - name: Overview
-            href: migrate/azure-best-practices/sql-migration.md
-          - name: Azure Database Migration Guide
-            items:
-            - name: Refactor SQL Server to Azure SQL Database
-              href: /data-migration/
-            - name: Refactor SQL Server to Azure SQL Managed Instance
-              href: /data-migration/
-            - name: Refactor SQL Server to SQL Server on Azure VMs
-              href: /data-migration/
-            - name: Refactor SQL Server to Azure SQL Data Warehouse
-              href: /data-migration/
-            - name: MySQL
-              items:
-              - name: Refactor MySQL to Azure SQL Database
-                href: /data-migration/
-              - name: Refactor MySQL to Azure Database for MySQL
-                href: /data-migration/
-            - name: PostgreSQL
-              items:
-              - name: Refactor PostgreSQL to Azure Database for PostgreSQL
-                href: /data-migration/
-            - name: MariaDB
-              items:
-              - name: Refactor MariaDB to Azure Database for MariaDB
-                href: /data-migration/
-            - name: MongoDB
-              items:
-              - name: Refactor MongoDB to Azure Cosmos DB
-                href: /data-migration/
-            - name: Cassandra
-              items:
-              - name: Refactor Cassandra to Azure Cosmos DB
-                href: /data-migration/
-            - name: Oracle
-              items:
-              - name: Refactor Oracle to Azure SQL Database
-                href: /data-migration/
-              - name: Refactor Oracle to Azure Database for PostgreSQL
-                href: /data-migration/
-              - name: Rearchitect Oracle to Azure SQL Data Warehouse
-                href: /data-migration/
-            - name: DB2
-              items:
-              - name: Refactor DB2 to Azure SQL Database
-                href: /data-migration/
-            - name: SAP ASE
-              items:
-              - name: Refactor SAP ASE to Azure SQL Database
-                href: /data-migration/
-            - name: Access
-              items:
-              - name: Refactor Access database to Azure SQL Database
-                href: /data-migration/
-          - name: Azure Database Migration Service tutorials
-            items:
-            - name: Azure Database Migration Service overview
-              href: /azure/dms/dms-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Database offline
-              href: /azure/dms/tutorial-sql-server-to-azure-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Database online
-              href: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate SQL Server to Azure SQL Managed Instance offline
-              href: /azure/dms/tutorial-sql-server-to-managed-instance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate SQL Server to Azure SQL Managed Instance online
-              href: /azure/dms/tutorial-sql-server-managed-instance-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Amazon RDS SQL Server to Azure SQL Database or Azure SQL Managed Instance online
-              href: /azure/dms/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-mysql-azure-mysql-offline-portal?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate Amazon RDS MySQL to Azure Database for MySQL online
-              href: /azure/dms/tutorial-mysql-azure-mysql-offline-portal?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-postgresql-azure-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Amazon RDS PostgreSQL to Azure Database for PostgreSQL online
-              href: /azure/dms/tutorial-rds-postgresql-server-azure-db-for-postgresql-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB offline
-              href: /azure/dms/tutorial-mongodb-cosmos-db?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate MongoDB to Azure Cosmos DB for MongoDB online
-              href: /azure/dms/tutorial-mongodb-cosmos-db-online?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Migrate Oracle to Azure Database for PostgreSQL online
-              href: /azure/postgresql/howto-migrate-from-oracle?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
+        
         - name: Azure Stack
           items:
           - name: Overview
@@ -895,7 +868,7 @@ items:
         - name: Set up networking for migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-networking.md
         - name: Deploy a migration infrastructure
-          href: migrate/azure-best-practices/contoso-migration-infrastructure.md
+          href: migrate/azure-migration-guide/ready-alz.md
         - name: Cost optimize migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration
@@ -1059,276 +1032,13 @@ items:
         - name: Overview and Azure toolchain
           href: innovate/best-practices/index.md
         - name: Democratize data
-          items:
-          - name: Overview
-            href: innovate/best-practices/data.md
-          - name: Share data with experts
-            items:
-            - name: Quickly generate data insights
-              href: /power-bi/create-reports/service-insights?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Sharing data with coworkers and partners
-              href: /power-bi/collaborate-share/service-share-dashboards?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Embed reports in a website or portal
-              href: /power-bi/collaborate-share/service-embed-secure?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Create new workspaces in Power BI
-              href: /power-bi/collaborate-share/service-create-the-new-workspaces?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Govern data
-            items:
-            - name: Classify data
-              href: innovate/best-practices/data-classification.md
-            - name: Secure data
-              href: /azure/architecture/data-guide/scenarios/securing-data-solutions?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Annotate data with Azure Data Catalog
-              href: /azure/data-catalog/data-catalog-how-to-annotate?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Document data sources with Azure Data Catalog
-              href: /azure/data-catalog/data-catalog-how-to-documentation?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Centralize data
-            items:
-            - name: Create and query an Azure Synapse Analytics SQL pool
-              href: /azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Best practices for loading data for data warehousing
-              href: /azure/synapse-analytics/sql/data-loading-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Visualize warehouse data with Power BI
-              href: /power-bi/connect-data/service-azure-sql-data-warehouse-with-direct-connect?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Reference architecture for enterprise BI with Azure Synapse Analytics
-              href: /azure/architecture/reference-architectures/data/enterprise-bi-synapse?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Manage enterprise big data with Azure Data Lake Storage
-              href: /azure/storage/blobs/data-lake-storage-introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: What is a data lake?
-              href: /azure/architecture/data-guide/scenarios/data-lake?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Collect data
-            items:
-            - name: Migrate on-premises data to Azure from SQL, Oracle, or NoSQL platforms
-              href: innovate/best-practices/data-dms.md
-            - name: Integrate cloud data sources with a SQL Analytics data warehouse
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-integrate?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Load on-premises data into Azure Synapse Analytics
-              href: /sql/integration-services/load-data-to-sql-data-warehouse?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Integrate data - Azure Data Factory to OLAP
-              href: /azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Use Azure Stream Analytics with Azure Synapse Analytics
-              href: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-integrate-azure-stream-analytics?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Reference architecture for ingestion and analysis of new feeds
-              href: /azure/architecture/example-scenario/ai/news-feed-ingestion-and-near-real-time-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Load data into Azure Synapse Analytics SQL pool
-              href: /azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
+          href: innovate/best-practices/data.md
         - name: Engage via applications
-          items:
-          - name: Overview
-            href: innovate/best-practices/apps.md
-          - name: Low-code application platform
-            items:
-            - name: Power Apps overview
-              href: /powerapps/powerapps-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Creating applications in Power Apps
-              href: /powerapps/maker/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Power Apps patterns
-              items:
-                - name: Patterns overview
-                  href: /powerapps/guidance/patterns/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Approval pattern
-                  href: /powerapps/guidance/patterns/approval-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Asset management/resource booking pattern
-                  href: /powerapps/guidance/patterns/asset-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Calculation/transformation pattern
-                  href: /powerapps/guidance/patterns/calculator-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Communication/announcement pattern
-                  href: /powerapps/guidance/patterns/communication-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Inspection/audit pattern
-                  href: /powerapps/guidance/patterns/inspection-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: Project management pattern
-                  href: /powerapps/guidance/patterns/project-management-pattern?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-                - name: More patterns
-                  href: /powerapps/guidance/patterns/more-patterns?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Plan a Power Apps project
-              href: /powerapps/guidance/planning/introduction
-            - name: Real-world architecture examples
-              href: /power-platform/guidance/architecture/real-world-examples/overview
-            - name: Create a workflow with Power Automate
-              href: /power-automate/getting-started?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Automate tasks with robotic process automation (RPA)
-              href: /power-automate/desktop-flows/introduction?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Plan a Power Automate project
-              href: /power-automate/guidance/planning/introduction
-          - name: Intelligent experiences
-            items:
-            - name: Modern web apps
-              items:
-              - name: Reference solutions for web apps
-                href: /azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Create a .NET Core application with Azure SQL Database
-                href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
-              - name: Create a .NET application with Azure SQL Database
-                href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Create a PHP application with MySQL
-                href: /azure/app-service/tutorial-php-mysql-app?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Create a Node.js with MongoDB
-                href: /azure/app-service/tutorial-nodejs-mongodb-app?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Infusing intelligence
-              items:
-              - name: Computer vision service
-                href: /azure/cognitive-services/computer-vision/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Translate text in real time
-                href: /azure/cognitive-services/translator/quickstart-translator?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Understand sentiment using LUIS
-                href: /azure/cognitive-services/LUIS/tutorial-machine-learned-entity?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread%/toc.json#publish-the-app-to-access-it-from-the-http-endpoint
-              - name: Recognize speech from a microphone
-                href: /azure/cognitive-services/speech-service/get-started-speech-to-text?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Bing web search
-                href: /azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Visual search from an image
-                href: /azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Intelligent low-code apps
-                href: /ai-builder/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Chatbots
-                items:
-                - name: Choose the right chatbot solution
-                  href: /azure/bot-service/bot-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-                - name: Create a bot with Composer
-                  href: /composer/quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-                - name: Create and deploy a Power Virtual Agents bot
-                  href: /power-virtual-agents/fundamentals-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-                - name: Create a bot with Bot Framework SDK
-                  href: /azure/bot-service/bot-service-quickstart-create-bot?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Cloud-native applications
-            items:
-            - name: Microservices architecture
-              items:
-              - name: Design, build, and operate microservices in Azure
-                href: /azure/architecture/guide/architecture-styles/microservices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
-                href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
-              - name: Reference architecture for serverless microservices
-                href: /samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Containers
-              items:
-              - name: What is Kubernetes?
-                href: https://azure.microsoft.com/topic/what-is-kubernetes/
-              - name: Prepare an application for Azure Kubernetes Service (AKS)
-                href: /azure/aks/tutorial-kubernetes-prepare-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Create an Azure Red Hat OpenShift cluster
-                href: /azure/openshift/tutorial-create-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Spring Boot microservices
-              items:
-              - name: Launch an Azure Spring Cloud application
-                href: /azure/spring-cloud/quickstart?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Distributed tracing with Azure Spring Cloud
-                href: /azure/spring-cloud/how-to-distributed-tracing?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: /azure/spring-cloud/how-to-bind-cosmos?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Event-driven applications
-              items:
-              - name: Learning path for creating serverless applications
-                href: /training/paths/create-serverless-applications/
-              - name: Azure Functions developer guide
-                href: /azure/azure-functions/functions-reference?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Azure Serverless Computing Cookbook
-                href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook/
-              - name: Azure Functions introduction
-                href: /azure/azure-functions/functions-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
+          href: innovate/best-practices/apps.md
         - name: Empower adoption
-          items:
-          - name: Overview
-            href: innovate/best-practices/ci-cd.md
-          - name: Shared solution
-            items:
-            - name: Get started with a shared repository via GitHub
-              href: https://guides.github.com/introduction/git-handbook/
-            - name: Get started with a shared backlog
-              href: /azure/devops/boards/backlogs/backlogs-boards-plans?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
-            - name: Synchronize Power Apps with Azure DevOps
-              href: /power-platform/alm/devops-build-tools?&preserve-view=true&toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Feedback loops
-            items:
-            - name: Manage feedback with Azure DevOps
-              href: /azure/devops/project/feedback/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/toc.json
-          - name: Continuous integration
-            items:
-            - name: Continuous integration with Azure Pipelines and GitHub
-              href: https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration/
-            - name: MLOps with Azure Machine Learning
-              href: manage/mlops-machine-learning.md
-          - name: Reliable testing
-            items:
-            - name: Manage and track test plans
-              href: /azure/devops/test/track-test-status?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json&view=azure-devops&preserve-view=true
-          - name: Solution deployment
-            items:
-            - name: Continuous deployment with Azure Pipelines and GitHub
-              href: https://www.azuredevopslabs.com/labs/azuredevops/continuousdeployment/
-          - name: Integrated metrics
-            items:
-            - name: Monitor ASP.NET applications
-              href: /azure/azure-monitor/azure-monitor-app-hub?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Monitor ASP.NET Core web applications
-              href: /azure/azure-monitor/azure-monitor-app-hub?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Monitor Node.js applications
-              href: /azure/azure-monitor/app/nodejs-quick-start?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Monitor mobile applications
-              href: /azure/azure-monitor/app/mobile-center-quickstart?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Monitor web applications
-              href: /azure/azure-monitor/app/website-monitoring?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Monitor VMs hosting traditional applications
-              href: /azure/azure-monitor/vm/monitor-virtual-machine?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
+          href: innovate/best-practices/ci-cd.md
         - name: Interact with devices
-          items:
-          - name: Overview
-            href: innovate/best-practices/devices.md
-          - name: Mobile experience
-            items:
-            - name: Extend a legacy claims-processing application with a web and mobile experience
-              href: /azure/architecture/solution-ideas/articles/adding-a-modern-web-and-mobile-frontend-to-a-legacy-claims-processing-application
-            - name: Optimize reports to share data on a mobile app
-              href: /power-bi/create-reports/desktop-create-phone-report?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Extend Power Apps canvas application to a mobile experience
-              href: /powerapps/mobile/run-powerapps-on-mobile?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Extend Power Automate to add a mobile experience
-              href: /power-automate/create-mobile-task-flow?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Secure mobile experiences
-              items:
-              - name: Protect mobile reports with face, touch, or passcodes
-                href: /power-bi/consumer/mobile/mobile-native-secure-access?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Secure mobile task flows with Intune
-                href: /power-automate/intune-support?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: Secure data in common data services
-                href: /power-platform/admin/wp-security?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Mixed reality
-            items:
-            - name: Develop mixed reality experiences with Unity
-              href: /windows/mixed-reality/develop/unity/unity-development-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Quickstarts to add Azure Spatial Anchors to a mixed reality solution
-              href: /azure/spatial-anchors/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Integrated reality and IoT
-            items:
-            - name: Visualize sensor data with Azure IoT in Power BI
-              href: /azure/iot-hub/iot-hub-live-data-visualization-in-power-bi?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Visualize sensor data with Azure IoT Hub in a web solution
-              href: /azure/iot-hub/iot-hub-live-data-visualization-in-web-apps?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Securing an IoT solution
-              href: /azure/iot-fundamentals/iot-security-architecture?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Get started with Azure Sphere
-              href: https://azure.microsoft.com/services/azure-sphere/get-started/
-            - name: Create a deployment with Azure Sphere
-              href: /azure-sphere/deployment/create-a-deployment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Get started with Azure Kinect DK
-              href: /azure/Kinect-dk/about-azure-kinect-dk?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Build your first Azure Kinect DK application
-              href: /azure/Kinect-dk/build-first-app?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Adjusted reality
-            items:
-            - name: "Azure Digital Twins + HoloLens: Adjusting virtual reality"
-              href: https://azure.microsoft.com/resources/videos/
-            - name: Get started with Azure Digital Twins
-              href: /azure/digital-twins/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Monitor a building with Azure Digital Twins
-              href: /previous-versions/azure/digital-twins/tutorial-facilities-setup?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Azure IoT for cloud-to-device communications guide
-              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-            - name: Azure IoT configuration for cloud-to-device communications
-              href: /azure/iot-hub/iot-hub-devguide-c2d-guidance?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          href: innovate/best-practices/devices.md
 
         - name: Innovate with AI
           items:
@@ -1344,7 +1054,7 @@ items:
               href: innovate/best-practices/mlops-process.md
             - name: Machine learning security
               href: innovate/best-practices/ml-security.md
-            - name: Machine learning inference and deployment
+            - name: Deploy machine learning models
               href: innovate/best-practices/ml-deployment-inference.md
             - name: Determine compute instances for your model
               href: innovate/best-practices/dev-train-comp-instances-for-ml.md
@@ -1648,6 +1358,8 @@ items:
         items:
         - name: Overview
           href: manage/monitor/index.md
+        - name: Monitoring platforms overview
+          href: manage/monitor/platform-overview.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md
         - name: Observability
@@ -1658,8 +1370,6 @@ items:
           href: manage/monitor/data-collection.md
         - name: Response
           href: manage/monitor/response.md
-        - name: Monitoring platforms overview
-          href: manage/monitor/platform-overview.md
         - name: Skills relevant to monitoring
           href: manage/monitor/suggested-skills.md
       - name: Centralize management operations

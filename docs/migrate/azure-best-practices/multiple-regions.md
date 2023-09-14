@@ -6,8 +6,6 @@ ms.author: dermar
 ms.reviewer: tozimmergren
 ms.date: 11/18/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal, engagement-fy23
 ---
 
@@ -39,7 +37,7 @@ Region selection is a key part of your overall cloud adoption strategy. Begin wi
 
 Any robust cloud deployment requires a well-considered network that takes into account differences in Azure regions. You should account for the following factors:
 
-- Azure regions are deployed in pairs. Each region is paired with another region in the same geopolitical boundary to provide resiliency if a catastrophic region failure occurs. One exception is `Brazil South`, which is paired with `South Central US`. 
+- [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies). Each region is paired with another region in the same geopolitical boundary to provide resiliency if a catastrophic region failure occurs. One exception is `Brazil South`, which is paired with `South Central US`. 
 
   Consider deploying to paired regions as a primary and secondary resiliency strategy. Here's more information to consider:
 

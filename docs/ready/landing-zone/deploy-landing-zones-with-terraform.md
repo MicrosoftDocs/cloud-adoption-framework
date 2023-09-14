@@ -5,8 +5,6 @@ author: matt-FFFFFF
 ms.author: tozimmergren
 ms.date: 02/03/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: devx-track-terraform
 ---
 
@@ -15,7 +13,6 @@ ms.custom: devx-track-terraform
 Azure provides native services for building your Azure landing zones. Other tools can also help with this effort. One tool that customers and partners often use to deploy landing zones is [Terraform by HashiCorp][terraform].
 
 Deployment of resources to application landing zones is outside the scope of the module. Decisions on the deployment method and tooling are for the team that's responsible for the application.
-
 
 The [Azure landing zones Terraform module][caf-enterprise-scale] provides a rapid implementation of the platform resources that you need to manage [Azure landing zones][msdocs_alz_architecture] at scale by using Terraform. The module is designed to simplify the deployment of the management group hierarchy, policies, and resources in the connectivity and management subscriptions.
 
@@ -63,7 +60,7 @@ You can configure the module to deploy sets of resources that align with the fol
 
 Packaging these capabilities into a single Terraform module makes it easier to build and enforce consistency across the Azure platform when you're operating at scale.
 
-These resources align with the [Azure landing zones conceptual architecture](index.md#azure-landing-zone-conceptual-architecture):
+These resources align with the [Azure landing zones conceptual architecture](index.md#azure-landing-zone-architecture):
 
 :::image type="content" source="../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="Diagram of the Azure landing zone conceptual architecture." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
@@ -317,7 +314,7 @@ Learn how to [deploy the Azure landing zones Terraform module][hcl-deploy-es] th
 [caf-enterprise-scale]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest "See the Azure landing zones Terraform module on the Terraform Registry."
 [caf-es-dependencies]: https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/latest?tab=dependencies "See dependencies for the Azure landing zones Terraform module on the Terraform Registry."
 
-[msdocs_alz_architecture]: index.md#azure-landing-zone-conceptual-architecture "Conceptual architecture for Azure landing zones."
+[msdocs_alz_architecture]: index.md#azure-landing-zone-architecture "Conceptual architecture for Azure landing zones."
 
 [alz_resourceorg]:  design-area/resource-org.md "Resource organization for Azure landing zones on the Cloud Adoption Framework."
 [alz_security]:     design-area/security.md "Security for Azure landing zones on the Cloud Adoption Framework."

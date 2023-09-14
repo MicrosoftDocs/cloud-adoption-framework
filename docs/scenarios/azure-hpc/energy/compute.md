@@ -4,8 +4,6 @@ description: Learn about the Azure VM instances that are ideal for large-scale H
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/14/2022
 ---
@@ -104,13 +102,13 @@ For more information on reference architecture or cookbooks for relevant HPC ISV
 
 The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
 
-- [Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for HPC in energy industries](./identity-access-management.md)
-- [Management for HPC in energy industries](./management.md)
-- [Network topology and connectivity for energy industries](./network-topology-connectivity.md)
-- [Platform automation and DevOps for in energy industries](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
+- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Identity and access management for Azure HPC in energy](./identity-access-management.md)
+- [Management for Azure HPC in energy](./management.md)
+- [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)
+- [Resource organization for HPC in the energy industry](./resource-organization.md)
 - [Governance for HPC in energy industries](./security-governance-compliance.md)
-- [Security for HPC in energy industries](./security.md)
-- [Storage for HPC in energy industries](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Security for Azure HPC in energy](./security.md)
+- [Storage for HPC energy environments](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

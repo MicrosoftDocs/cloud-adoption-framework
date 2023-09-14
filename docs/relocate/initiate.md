@@ -6,8 +6,6 @@ ms.author: ssumner
 ms.date: 02/03/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: adopt
 ms.custom: internal, seo-caf-relocate
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
@@ -33,7 +31,7 @@ You should use the objectives to scope your relocation plan. Identify all the wo
 
 ## Prioritize workloads
 
-The order you relocate workloads should reflect the priority of your objectives. Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](../ready/landing-zone/index.md#platform-vs-application-landing-zones).
+The order you relocate workloads should reflect the priority of your objectives. Any technical dependencies, such as platforms and landing zones, should go first. Outside of technical dependencies, the order is up to you. For more information, see [Platform vs application landing zones](../ready/landing-zone/index.md#platform-landing-zones-vs-application-landing-zones).
 
 ## Create a relocation plan
 

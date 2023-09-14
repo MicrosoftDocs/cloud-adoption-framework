@@ -5,8 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
@@ -20,11 +18,13 @@ Step 1 is to create the platform subscriptions. Step 2 is to create the platform
 
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
-- [Platform vs. application landing zones](../index.md#platform-vs-application-landing-zones)
+- [Platform landing zones vs. application landing zones](../index.md#platform-landing-zones-vs-application-landing-zones)
 - [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)  
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
+
+> [!VIDEO https://www.youtube.com/embed/OoC_0afxACg]
 
 Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for application landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 
@@ -64,7 +64,7 @@ The subscription automation needs to set up the required networking components, 
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
 - [Add or remove address range](/azure/virtual-network/manage-virtual-network#add-or-remove-an-address-range)
 
-**Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment.
+**Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment. For more information and IPAM guidance, see [IP Address Management (IPAM) tools](../../azure-best-practices/plan-for-ip-addressing.md#ip-address-management-ipam-tools).
 
 **Grant the app team autonomy.** You should grant application teams with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
 

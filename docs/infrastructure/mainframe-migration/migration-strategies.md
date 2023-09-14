@@ -5,8 +5,6 @@ author: njray
 ms.author: martinek
 ms.date: 12/26/2018
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -22,7 +20,7 @@ This section provides technical guidance for making the switch from a mainframe 
 
 There is no universal mapping formula that exists for determining the number of virtual central processing units (vCPUs) needed to run mainframe workloads. However, the metric of a million instructions per second (MIPS) is often mapped to vCPUs on Azure. MIPS measures the overall compute power of a mainframe by providing a constant value of the number of cycles per second for a given machine.
 
-A small organization might require less than 500 MIPS, while a large organization typically uses more than 5,000 MIPS. At $1,000 per single MIPS, a large organization spends approximately $5 million annually to deploy a 5,000-MIPS infrastructure. The annual cost estimate for a typical Azure deployment of this scale is approximately one-tenth the cost of a MIPS infrastructure. For details, see *Table 4* in the [`Demystifying Mainframe-to-Azure Migration`](https://azure.microsoft.com/resources/demystifying-mainframe-to-azure-migration/) white paper.
+A small organization might require less than 500 MIPS, while a large organization typically uses more than 5,000 MIPS. At $1,000 per single MIPS, a large organization spends approximately $5 million annually to deploy a 5,000-MIPS infrastructure. The annual cost estimate for a typical Azure deployment of this scale is approximately one-tenth the cost of a MIPS infrastructure. For details, see *Table 4* in the [`Demystifying Mainframe-to-Azure Migration`](https://azure.microsoft.com/resources/demystifying-mainframe-to-azure-migration-white-paper/) white paper.
 
 An accurate calculation of MIPS to vCPUs with Azure depends on the type of vCPU and the exact workload you are running. However, benchmark studies provide a good basis for estimating the number and type of vCPUs you will need. A recent HPE zRef benchmark provides the following estimates:
 

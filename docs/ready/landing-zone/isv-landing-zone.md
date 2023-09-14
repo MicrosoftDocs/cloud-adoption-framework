@@ -5,8 +5,6 @@ author: arsenvlad
 ms.author: arsenv
 ms.date: 03/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
@@ -137,7 +135,7 @@ For more information on the using multiple Azure AD tenants, see [Azure landing 
 
 ## Management groups
 
-[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-conceptual-architecture) recommends using a specific management group hierarchy. However, ISVs can have different requirements than other organizations. This section describes some ways your ISV organization might choose to adopt different practices than what the landing zone conceptual architecture recommends.
+[The Azure landing zone conceptual architecture](index.md#azure-landing-zone-architecture) recommends using a specific management group hierarchy. However, ISVs can have different requirements than other organizations. This section describes some ways your ISV organization might choose to adopt different practices than what the landing zone conceptual architecture recommends.
 
 ### Top-level management group
 
@@ -219,10 +217,10 @@ The Azure landing zone [resource organization guidance](./design-area/resource-o
 
 The **Decommissioned** management group is a holding place for Azure subscriptions that are being disabled and will eventually be deleted. You can move a subscription that's no longer in use into this management group to track it until all the resources in the subscription are permanently deleted.
 
-The **Sandboxes** management group usually contains Azure subscriptions that are used for exploration purposes and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. You can avoid applying the normal policies and governance to these subscriptions by placing them in the **Sandboxes** management group. This increases the developers' agility and enables them to easily experiment with Azure.
+The **Sandboxes** management group usually contains [Azure subscriptions that are used for exploration purposes](../considerations/sandbox-environments.md) and have loose or no policies applied to them. For example, you might provide individual developers with their own subscriptions for development and testing. You can avoid applying the normal policies and governance to these subscriptions by placing them in the **Sandboxes** management group. This increases the developers' agility and enables them to easily experiment with Azure.
 
 > [!IMPORTANT]
-> Subscriptions in the **Sandboxes** management group should not have direct connectivity to the landing zone subscriptions. Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
+> Subscriptions in the **Sandboxes** management group should not have [direct connectivity to the landing zone subscriptions](../considerations/sandbox-environments.md#networking). Avoid connecting sandbox subscriptions to production workloads or to any non-production environments that mirror production environments.
 
 The following diagram illustrates two potential options. Option A doesn't include the **Decommissioned** and **Sandbox** management groups, while option B does.
 

@@ -3,11 +3,9 @@ title: Move on-premises Remote Desktop Services to Azure Virtual Desktop
 description: Learn how to migrate an on-premises Remote Desktop Services environment to Azure Virtual Desktop in the cloud.
 author: benstegink
 ms.author: martinek
-ms.date: 09/07/2021
+ms.date: 05/09/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -79,7 +77,7 @@ The diagram outlines resources that are prerequisites for the migration (Identit
 Contoso will go through the following flow to migrate from on-premises RDS to Azure Virtual Desktop:
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png":::
-   *Figure 2: The migration process.*
+   *Figure 2: The migration process. "\*" indicates an optional step.*
 
 The migration flow will be structured in the following migration steps:
 

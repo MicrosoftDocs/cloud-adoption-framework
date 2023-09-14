@@ -5,8 +5,6 @@ author: likamrat
 ms.author: martinek
 ms.date: 05/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid
 ---
 
@@ -113,6 +111,9 @@ Before you convert your VM to a template, complete the following steps.
       ```
 
     - Install all baseline applications you might want to include in your template.
+    
+> [!NOTE]
+> This guide is about creating VM templates. Additional care should be taken to make sure your VM deployments have appropriate controls in place to meet your security requirements.
 
 ### Convert VM to a template
 

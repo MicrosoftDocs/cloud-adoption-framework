@@ -5,8 +5,6 @@ author: Echowan
 ms.author: Echowan
 ms.date: 04/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario 
 ms.custom: think-tank, e2e-data-management
 ---
 
@@ -34,7 +32,6 @@ In data mesh, each solution accelerator is a data product. One might be a recomm
 | Digital Documentation Shipping Industry                                                       | Azure Blockchain, Azure Cosmos DB, AKS, Container Registry                                                                    | Build a fully distributed tokenized order process business application quickly                                                       | [Public GitHub Repository](https://aka.ms/DigitalShippingDocs)         |
 | Financial Analytics Customer Revenue Growth Factor                                            | Azure Synapse, ADLS, Azure Machine Learning, ACI, Power BI                                                              | Bring together data from different systems to quickly identify top factors for customer revenue growth                     | [Public GitHub Repository](https://aka.ms/CustomerGrowthFactor)        |
 | Knowledge Mining                                                                              | Cognitive Search, Azure Storage, Power BI                                                                               | Quickly create a Cognitive Search Solution within your data                                                                           | [Public GitHub Repository](https://aka.ms/KnowledgeMiningSA)           |
-| Knowledge Mining - AML                                                                        | Azure Machine Learning, Cognitive Search                                                                                | Enrich your data using an AI custom skill to identify custom entities                                                              | [Public GitHub Repository](https://aka.ms/KnowledgeMiningAML)          |
 | Machine Learning Patient Risk Analyzer                                                        | Azure Synapse AML, Cognitive Services (TTS, Form Recognizer), PVA, PowerApps, AKS                                       | Create a healthcare portal with patient risk analysis capabilities for providers and enhanced user experience for patients            | [Public GitHub Repository](https://aka.ms/PatientRiskAnalyzerSA)       |
 | Many Models (Demand Forecasting)                                                              | Azure Machine Learning, Power BI                                                                                        | Solve complex problems by training many machine learning models to make accurate predictions for multiple specific instances          | [Public GitHub Repository](https://aka.ms/ManyModels)                  |
 | Part Comparator                                                                               | Azure Synapse, Azure Machine Learning, AKS, Logic Apps, Power BI                                                        | Quickly solve for supply chain issues through similarity matching that locates viable replacement parts                               | [Public GitHub Repository](https://aka.ms/PartComparator)              |

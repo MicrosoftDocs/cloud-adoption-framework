@@ -6,8 +6,6 @@ ms.author: likamrat
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022, ignite-2022, engagement-fy23
 ---
 
@@ -30,7 +28,7 @@ To practice your skills in an Azure Arc-enabled servers environment, use ArcBox,
 
 ## Azure landing zone sandbox subscription
 
-The ArcBox solution is designed to run in your Azure landing zone sandbox subscription and will bootstrap all the required Azure resources inside a single resource group.
+The ArcBox solution is designed to run in your [Azure landing zone sandbox subscription](../../../ready/considerations/sandbox-environments.md) and will bootstrap all the required Azure resources inside a single resource group.
 
 [![A diagram of ArcBox in a sandbox subscription.](./media/arcbox-sandbox-subscription.png).](./media/arcbox-sandbox-subscription.png#lightbox)
 

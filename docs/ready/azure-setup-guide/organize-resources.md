@@ -3,10 +3,8 @@ title: Organize your Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
 ms.author: martinek
-ms.date: 10/06/2021
+ms.date: 10/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 

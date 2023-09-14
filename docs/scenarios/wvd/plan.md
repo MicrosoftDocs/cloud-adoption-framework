@@ -1,18 +1,16 @@
 ---
-title: Plan your Azure Virtual Desktop migration
-description: Use the Cloud Adoption Framework for Azure to plan your Azure Virtual Desktop migration using best practices that reduce complexity and standardize the migration process.
+title: Plan your virtual desktop migration
+description: Use the Cloud Adoption Framework for Azure to plan your virtual desktop migration using best practices that reduce complexity and standardize the migration process.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/18/2021
+ms.date: 02/03/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 
-# Virtual Desktop planning
+# Virtual desktop planning
 
-Virtual Desktop deployment scenarios follow the same Migrate methodology as other migration efforts.
+Virtual desktop deployment scenarios follow the same Migrate methodology as other migration efforts.
 
 This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.
 
@@ -42,11 +40,9 @@ The following items should be included in a business case:
 
 - There's no requirement for Client Access Licenses (CALs) with Windows 10 and Windows 11 Enterprise multi-session.
 
-- In Azure Virtual Desktop, if you deploy Windows Server 2012 R2, 2016, or 2019, there's no requirement to purchase a Windows Server license.
+- In Azure Virtual Desktop, if you deploy Windows Server as a session host operating system, there's no requirement to purchase a Windows Server license.
 
-- All Azure Virtual Desktop virtual machines are charged at the base compute rate. Azure Virtual Desktop is entitled through another license that you might already own, Microsoft 365 E3+, which includes a Windows license.
-
-- All Windows 7 virtual machines in Azure Virtual Desktop received free extended security updates until January 14, 2023.
+- All Azure Virtual Desktop virtual machines are charged at the base compute rate. Azure Virtual Desktop is entitled through another license that you might already own, such as Microsoft 365 E3, which includes a Windows license, or [enroll external users with per-user access pricing](/azure/virtual-desktop/remote-app-streaming/per-user-access-pricing). Learn more about [license entitlement for Azure Virtual Desktop](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses).
 
 - Citrix DaaS supports using Azure capabilities along with a broader range of identity providers, OS types, peripherals, collaboration solutions, and locations, such as existing on-premises datacenters. This extensibility streamlines the migration process by enabling deployment of Azure Virtual Desktop use cases while supporting existing systems with a consistent user experience.
 

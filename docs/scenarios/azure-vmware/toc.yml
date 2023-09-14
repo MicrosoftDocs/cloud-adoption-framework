@@ -15,12 +15,19 @@ items:
       - name: Identity and access management
         href: eslz-identity-and-access-management.md
       - name: Network topology and connectivity
-        href: eslz-network-topology-connectivity.md
-        items:
-          - name: Dual region network topology
-            href: eslz-dual-region-network-topology.md
-          - name: Example Architectures for Azure VMware Solution
-            href: example-architectures.md
+        items: 
+          - name: Getting Started
+            href: network-get-started.md
+          - name: General Considerations and Recommendations
+            href: eslz-network-topology-connectivity.md
+          - name: Architectures
+            items:
+              - name: Hub and Spoke 
+                href: network-hub-spoke.md
+              - name: Dual region network topology
+                href: eslz-dual-region-network-topology.md
+              - name: Example Architectures for Azure VMware Solution
+                href: example-architectures.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
@@ -42,13 +49,11 @@ items:
 
   - name: Well-architected
     items:
-    - name: Compute services on Azure and AWS
-      href: /azure/architecture/aws-professional/compute?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
-    - name: AWS to Azure services comparison
-      href: /azure/architecture/aws-professional/services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
-    - name: Azure for AWS professionals
-      href: /azure/architecture/aws-professional/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
-
+    - name: Azure VMware Solution Well-architected workload
+      href: /azure/well-architected/azure-vmware?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+    - name: Assessment
+      href: /azure/well-architected/azure-vmware/assessment?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/azure-vmware/toc.json
+   
   - name: Best practices
     items:
     - name: Assessment overview (migrate to Azure VMware Solution)

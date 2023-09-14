@@ -5,12 +5,13 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/01/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
+
+>[!NOTE]
+> With the release of Team Foundation Server (TFS) 2019, TFS was renamed to Azure DevOps Server. Most of this article will still refer to Team Foundation Server, for the sake of aligning with the actual product name of older versions of TFS and the intent of the article. For example, the Team Foundation Server migration tool, is now referred to as the Azure DevOps Server migration tool.
 
 This article shows how the fictional company Contoso refactors its on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. In this scenario, the Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, the team wants to move to a cloud-based solution for developer and testing work, and for source control. Azure DevOps Services plays a key role as the Contoso team moves to an Azure DevOps Services model and develops new cloud-native applications.
 
@@ -41,17 +42,22 @@ The Contoso cloud team has the following goals for its migration to Azure DevOps
 - Team Foundation Server will be migrated to Azure DevOps Services.
 - Currently, Contoso has one Team Foundation Server collection, named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
 - The projects, work items, bugs, and iterations from the last year will be migrated to Azure DevOps Services.
-- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of the migration planning.
+- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](../azure-migration-guide/ready-alz.md) at the beginning of the migration planning.
 
 :::image type="content" source="./media/contoso-migration-tfs-vsts/architecture.png" alt-text="Diagram of the proposed architecture.":::
 
 ## Migration process
 
-The migration process is as follows:
+The general migration process illustrated in this article is as follows:
 
 1. Upgrade the Team Foundation Server implementation to a supported level.
 
-   Contoso is currently running Team Foundation Server 2017 Update 3. However, to use database migration it needs to run a supported 2018 version with the latest updates.
+   Contoso is currently running Team Foundation Server 2017 Update 3. However, to use database migration it needs to run a supported version with the latest updates. Although it's no longer supported as an upgrade version, in this fictitious example the Contoso admin team upgrades to Team Foundation Server 2018 upgrade 3.
+   
+   >[!IMPORTANT]
+   > See [Migrate data from Azure DevOps Server to Azure DevOps Services](/azure/devops/migrate/migration-overview) for the list of versions of Azure DevOps Server (formerly known as Team Foundation Services) supported for migration. For upgrade assistance, see [Upgrade your deployment to the latest version of Azure DevOps Server](/azure/devops/server/upgrade/get-started), and be sure to select your version in the upper left Version dropdown. 
+   >
+   > For a complete discussion supported versions upgrading, refer to "Chapter 3: Upgrade" of the guide included in the migration tool, downloaded later in section "Step 3: Validate the Team Foundation Server collection".
 
 1. Run the Team Foundation Server migration tool and validate its collection.
 
@@ -67,7 +73,7 @@ The migration process is as follows:
 
 To run this scenario, Contoso must meet the following prerequisites:
 
-### Azure subscriptions
+#### Azure subscriptions
 
 Contoso set up its subscriptions as described in [Manage subscriptions](contoso-migration-infrastructure.md#manage-subscriptions):
 
@@ -76,13 +82,13 @@ Contoso set up its subscriptions as described in [Manage subscriptions](contoso-
 - If you use an existing subscription and you're not the admin, work with the admin to assign you Owner or Contributor permissions.
 - If you need more granular permissions, see [Manage Azure Site Recovery access with role-based access control](/azure/site-recovery/site-recovery-role-based-linked-access-control).
 
-### Azure infrastructure
+#### Azure infrastructure
 
-Contoso set up its Azure infrastructure as described in [Deploy a migration infrastructure](./contoso-migration-infrastructure.md).
+Contoso set up its Azure infrastructure as described in [Deploy a migration infrastructure](../azure-migration-guide/ready-alz.md).
 
-### On-premises Team Foundation Server instance
+#### On-premises Team Foundation Server instance
 
-The on-premises instance needs to either run Team Foundation Server 2018 upgrade 3 or be upgraded to it as part of this process.
+In this fictitiouis example, the on-premises instance needs to either run Team Foundation Server 2018 upgrade 3 or be upgraded to it as part of this process.
 
 ## Scenario steps
 
@@ -91,9 +97,10 @@ Here's how Contoso admins complete the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Create an Azure Storage account**. This storage account is used during the migration process.
-> - **Step 2: Upgrade Team Foundation Server**. Upgrade the deployment to Team Foundation Server 2018 upgrade 3.
+> - **Step 2: Upgrade Team Foundation Server**. Upgrade the deployment to a version of Azure DevOps Server that supports migration.
 > - **Step 3: Validate the Team Foundation Server collection**. Validate the Team Foundation Server collection in preparation for the migration.
 > - **Step 4: Build the migration files**. Create the migration files by using the Team Foundation Server migration tool.
+> - **Step 5: Migrate to Azure DevOps Services**. With the preparation complete, Contoso admins can focus on migration.
 
 ## Step 1: Create an Azure Storage account
 
@@ -111,15 +118,14 @@ Here's how Contoso admins complete the migration:
 
 ## Step 2: Upgrade Team Foundation Server
 
-Contoso admins upgrade the Team Foundation Server instance to Team Foundation Server 2018 Update 3.
+Upgrade the Team Foundation Server instance to a version of Azure DevOps Server that supports migration, using the following general steps. In all cases, be sure to select your version in the upper left Version dropdown:
 
-**Prerequisites:**
+1. Review [Upgrade your deployment to the latest version of Azure DevOps Server](/azure/devops/server/upgrade/get-started). 
+1. Refer to [Azure DevOps Server Downloads](/azure/devops/server/download/azuredevopsserver) for the latest downloads.
+1. Verify the [Requirements for Azure DevOps on-premises](/azure/devops/server/requirements). 
+2. Read the [release notes](/azure/devops/server/release-notes).
 
-- Download [Team Foundation Server 2018 Update 3](https://go.microsoft.com/fwlink/?LinkId=2008534).
-- Verify the [hardware requirements](/azure/devops/server/requirements).
-- Read the [release notes](/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade notes](/azure/devops/server/upgrade/get-started).
-
-Contoso admins upgrade as follows:
+The following is an example of the steps the Contoso admins took to upgrade a server to Team Foundation Server 2018 Update 3:
 
 1. Back up the Team Foundation Server instance, which is running on a VMware virtual machine (VM), and take a VMware snapshot.
 
@@ -127,21 +133,21 @@ Contoso admins upgrade as follows:
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade1.png" alt-text="Screenshot of the Getting Started page for upgrading Team Foundation Server.":::
 
-1. Choose the installation location. The installer requires internet access.
+2. Choose the installation location. The installer requires internet access.
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade2.png" alt-text="Screenshot of the Team Foundation Server installation site in Visual Studio.":::
 
     After the installation finishes, the Server Configuration Wizard starts.
 
-1. On the **Welcome** page, select **Next** to continue.
+3. On the **Welcome** page, select **Next** to continue.
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade3.png" alt-text="Screenshot of the Team Foundation Server 2018 Update 2 configuration wizard.":::
 
-1. After you review and accept the Server Configuration Wizard settings, it completes the upgrade.
+4. After you review and accept the Server Configuration Wizard settings, it completes the upgrade.
 
      :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade4.png" alt-text="Screenshot of the Team Foundation Server configuration wizard upgrade progress pane.":::
 
-1. Verify the Team Foundation Server installation by reviewing the projects, work items, and code.
+5. Verify the Team Foundation Server installation by reviewing the projects, work items, and code.
 
      :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade5.png" alt-text="Screenshot of the **Product backlog** pane for verifying the Team Foundation Server installation.":::
 
@@ -156,7 +162,9 @@ Learn about [upgrading Team Foundation Server](/azure/devops/server/upgrade/get-
 
 Contoso admins run the Team Foundation Server migration tool against the `contosodev` collection database to validate it before migration:
 
-1. Download and unzip the [Team Foundation Server migration tool](https://www.microsoft.com/download/details.aspx?id=54274). Download the version for the Team Foundation Server update that's running. Select the version in the admin console.
+1. Download and unzip the [Team Foundation Server migration tool](https://www.microsoft.com/download/details.aspx?id=54274). The download page provides 3 .zip files containing the migration tool, for the 3 latest supported versions. Refer to the admin console to verify the version you're currently running.
+
+    Here's the version information and download selections used by the Contoso admins, at the time of their migration:
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/collection1.png" alt-text="Screenshot of the Team Foundation Server pane for verifying the product version.":::
 

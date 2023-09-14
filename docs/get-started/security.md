@@ -3,10 +3,8 @@ title: 'Get started: Secure the enterprise environment'
 description: Get started integrating security at critical points during your cloud adoption efforts and operations.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/15/2020
+ms.date: 07/05/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
 ms.custom: internal, UpdateFrequency3
 ---
 

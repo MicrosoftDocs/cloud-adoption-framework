@@ -3,10 +3,8 @@ title: Limit cross-tenant private endpoint connections in Azure
 description: Learn how to limit cross-tenant private endpoint connections to prevent data leakage and meet security and compliance goals.
 author: MarvinBuss
 ms.author: mabuss
-ms.date: 09/27/2021
+ms.date: 01/11/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 

@@ -5,8 +5,6 @@ author: alguadam
 ms.author: alguadam
 ms.date: 06/24/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
@@ -50,7 +48,7 @@ The following table provides a simplified categorization of these teams.
 
 - Don't restrict your application workload teams to central artifacts, since it can hinder their agility. You can use policy-driven governance and Azure role-based access control (Azure RBAC) to enforce consistent baseline configurations and ensure that application (business unit) teams are flexible enough to innovate yet still able to draw from a predefined set of templates.
 
-- Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use Azure Policy to maintain guardrails independent of how resources are deployed in Azure and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
+- Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use [Azure Policy](/azure/governance/policy/overview) helps to enforce organizational standards and to assess compliance at-scale and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
 
 - Blanket application of a DevOps model doesn't instantly establish capable DevOps teams.
 

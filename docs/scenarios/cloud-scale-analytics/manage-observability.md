@@ -3,10 +3,8 @@ title: Data observability
 description: Learn about data mesh observability in Azure.
 author: sudivate
 ms.author: mboswell
-ms.date: 03/03/2021
+ms.date: 03/18/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

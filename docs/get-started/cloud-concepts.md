@@ -6,8 +6,6 @@ ms.author: martinek
 ms.reviewer: tozimmergren
 ms.date: 11/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
 ms.custom: internal, engagement-fy23, UpdateFrequency3
 ---
 
@@ -22,7 +20,7 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 
 As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
-Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure Governance Visualizer](https://github.com/microsoft/CloudAdoptionFramework/tree/master/govern/AzureGovernanceVisualizer). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
+Suppose you already have an environment running in Azure. In that case, you can accelerate your documentation using the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz). The visualizer provides insight into Azure role-based access control (Azure RBAC), Azure Blueprints, policies, subscriptions, and more. It also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
@@ -115,7 +113,7 @@ You must create a resource organization design to ensure consistent alignment wi
 
 Build a subscription strategy:
 
-- [Start with two subscriptions](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs like shared services or sandbox subscriptions.
+- [Start with two subscriptions](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs like shared services or [sandbox subscriptions.](../ready/considerations/sandbox-environments.md)
 - Ensure you can [manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as more subscriptions are needed to support your cloud adoption plan.
 - Establish [clear boundaries based on the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
 - [Move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) when necessary to adhere to your organization strategy.

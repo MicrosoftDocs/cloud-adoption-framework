@@ -5,8 +5,6 @@ author: njray
 ms.author: martinek
 ms.date: 08/09/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -176,6 +174,6 @@ For more information, see the following resources:
 
 - [Get started with Azure](/azure/)
 
-- [Deploy IBM DB2 pureScale on Azure](https://azure.microsoft.com/resources/deploy-ibm-db2-purescale-on-azure/)
+- [Deploy IBM DB2 pureScale on Azure](/azure/virtual-machines/workloads/mainframe-rehosting/ibm/deploy-ibm-db2-purescale-azure/)
 
 - [Host Integration Server documentation](/host-integration-server/)

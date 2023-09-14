@@ -1,13 +1,11 @@
 ---
 title: Scale a migration to Azure
 description: Learn how to use the Cloud Adoption Framework for Azure to plan for and perform a migration at scale to Azure.
-author: martinekuan
-ms.author: martinek
-ms.date: 07/01/2020
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 06/12/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
-ms.custom: internal
+ms.custom: internal, UpdateFrequency2
 ---
 
 <!-- docutune:casing Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
@@ -42,7 +40,7 @@ After Contoso establishes goals and requirements, they review the IT footprint a
 
 ## Current deployment
 
-Contoso planned and set up an [Azure infrastructure](./contoso-migration-infrastructure.md) and tried out the proof-of-concept (POC) migration combinations in the previous table. Now it's time to embark on a full migration to Azure at scale. Contoso wants to migrate:
+Contoso planned and set up an [Azure infrastructure](../azure-migration-guide/ready-alz.md) and tried out the proof-of-concept (POC) migration combinations in the previous table. Now it's time to embark on a full migration to Azure at scale. Contoso wants to migrate:
 
 | Item | Volume | Details |
 | --- | --- | --- |
@@ -224,33 +222,6 @@ Contoso uses Azure Migrate:
 - Without installing any Site Recovery components on-premises.
 
 The tool gathers information about compatible and incompatible VMs, disks per VM, and data churn per disk. It identifies network bandwidth requirements and the Azure infrastructure needed for successful replication and failover.
-
-Contoso runs the planner tool on a Windows Server machine that matches the minimum requirements for the Site Recovery configuration server. The configuration server is a Site Recovery machine that's needed to replicate on-premises VMware VMs.
-
-##### Identify Site Recovery requirements
-
-- Site Recovery requires several components for VMware migration.
-
-   | Component | Details |
-   | --- | --- |
-   | Configuration server | - Usually a VMware VM that's configured through an OVF template. <br> - The configuration server component coordinates communications between on-premises and Azure, and it manages data replication. |
-   | Process server | - Installed by default on the configuration server. <br> - The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. <br> - The process server also installs the Azure Site Recovery Mobility service on VMs that you want to replicate and performs automatic discovery of on-premises machines. <br> - Scaled deployments need extra standalone process servers to handle large volumes of replication traffic. |
-   | Mobility service | - The Mobility service agent is installed on each VMware VM that's migrated with Azure Site Recovery. |
-
- <br>
-
-- Contoso determines how to deploy these components based on capacity considerations.
-
-   
-
-   | Component | Capacity requirements |
-   | --- | --- |
-   | Maximum daily change rate | - A single process server can handle a daily change rate up to 2 terabytes (TB). Because a VM can only use one process server, the maximum daily data change rate that's supported for a replicated VM is 2 TB. |
-   | Maximum throughput | - A standard Azure Storage account can handle a maximum of 20,000 requests per second. I/O operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has five disks and each disk generates 120 IOPS (8K size) on the VM, it's within the Azure per-disk IOPS limit of 500. <br> - The number of storage accounts needed equals the total source machine IOPS divided by 20,000. A replicated machine can belong to only a single storage account in Azure. |
-   | Configuration server | Based on Contoso's estimate of replicating 100 to 200 VMs together and the [configuration server sizing requirements](/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimates that it needs the server machine configuration: - CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <br> - Memory: 32 GB <br> - Cache disk: 1 TB <br> - Data change rate: 1 TB to 2 TB <br> Contoso must ensure that the configuration server is optimally located on the same network and LAN segment as the VMs to be migrated. |
-   | Process server | Contoso deploys a standalone dedicated process server that can replicate 100 to 200 VMs: <br> - CPU: 16 vCPUs (2 sockets &#215; 8 cores @ 2.5 GHz) <br> - Memory: 32 GB <br> - Cache disk: 1 TB <br> - Data change rate: 1 TB to 2 TB <br> The process server works hard, so it's located on an ESXi host that can handle the disk I/O, network traffic, and CPU required for the replication. Contoso considers a dedicated host for this purpose. |
-   | Networking | - Contoso reviewed the current Site-to-Site VPN infrastructure and decided to implement Azure ExpressRoute. The implementation is critical because it lowers latency and improves bandwidth to Contoso's primary Azure region (`East US 2`). <br> - Contoso carefully monitors data that flows from the process server. If the data overloads the network bandwidth, Contoso considers [throttling the process server bandwidth](/azure/site-recovery/site-recovery-plan-capacity-vmware#control-network-bandwidth). |
-   | Azure Storage | - For migration, Contoso identifies the right type and number of target Azure Storage accounts. Site Recovery replicates VM data to Azure Storage. <br> - Site Recovery can replicate to Standard SSD or Premium SSD storage accounts. <br> - Contoso reviews [storage limits](/azure/virtual-machines/disks-types) and considers the expected growth and future increased usage. Given the speed and priority of migrations, Contoso decides to use Premium SSDs. <br> - Contoso decides to use managed disks for VMs deployed to Azure. The IOPS required helps determine if the disks are Standard HDD, Standard SSD, or Premium SSD. |
 
 #### Azure Database Migration Service
 

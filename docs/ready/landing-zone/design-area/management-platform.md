@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/21/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
@@ -80,3 +78,7 @@ This emphasis doesn't prevent use of the same workspace for VM-based application
 In this model, application teams benefit from the use of existing platform infrastructure as it reduces their management overhead.
 
 For non-compute resources, like web apps or Azure Cosmos DB databases, your application teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
+
+## Next steps
+
+[Monitor your Azure platform landing zone components](management-monitor.md)

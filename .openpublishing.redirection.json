@@ -794,6 +794,37 @@
          "source_path": "docs/ready/enterprise-scale/terraform-module-caf-enterprise-scale.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
          "redirect_document_id": true
-      }
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-mysql-to-azure.md",
+         "redirect_url": "/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/sql-migration.md",
+         "redirect_url": "/azure/azure-sql/migration-guides",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/optimize-and-transform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-infrastructure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/innovate/best-practices/data-dms.md",
+         "redirect_url": "/azure/dms/dms-overview",
+         "redirect_document_id": false
+      },
+      
    ]
 }

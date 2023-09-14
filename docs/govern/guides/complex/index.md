@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 06/08/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 
@@ -27,7 +25,7 @@ These best practices serve as a foundation for your organization to quickly and 
 
 ### Resource organization
 
-Refer to the [management group](../../../ready/landing-zone/design-area/resource-org-management-groups.md) and [subscription](../../../ready/landing-zone/design-area/resource-org-subscriptions.md) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment. The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](../../../ready/landing-zone/index.md#azure-landing-zone-conceptual-architecture).
+Refer to the [management group](../../../ready/landing-zone/design-area/resource-org-management-groups.md) and [subscription](../../../ready/landing-zone/design-area/resource-org-subscriptions.md) organization and governance Cloud Adoption Framework documentation to find detailed guidance relative to designing your cloud environment. The governance MVP used in this scenario incorporates the recommendations provided in the above documentation and follows the design pattern provided in the [Azure landing zone conceptual architecture](../../../ready/landing-zone/index.md#azure-landing-zone-architecture).
 
 The following diagram contains the governance MVP hierarchy for resource organization.
 

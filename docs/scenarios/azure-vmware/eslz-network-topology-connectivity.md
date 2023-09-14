@@ -5,8 +5,6 @@ author: rodrigosantosms
 ms.author: martinek
 ms.date: 10/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
@@ -134,4 +132,4 @@ Configure all necessary ports for an on-premises firewall to ensure proper acces
 - To learn Cloud Adoption Framework enterprise-scale landing zone architectural principles, various design considerations, and best practices for Azure VMware Solution, see the next article in this series:
 
   > [!div class="nextstepaction"]
-  > [Network considerations for Azure VMware Solution dual-region deployments](./eslz-dual-region-network-topology.md)
+  > [Single Region Hub & Spoke Topologies ](./network-hub-spoke.md)

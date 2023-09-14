@@ -5,8 +5,6 @@ author: timwarner-msft
 ms.author: timwarner
 ms.date: 06/22/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
@@ -28,7 +26,7 @@ Network topology and connectivity are fundamental for organizations that are pla
 
 [![Diagram of networking areas of ALZ conceptional Management Group Hierarchy.](media/network-design-overview-mg.png)](media/network-design-overview-mg.png#lightbox)
 
-In Azure landing zones, there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
+In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/ns-arch-cust-expanded.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
 
 ### What is the purpose of Connectivity, Corp, and Online Management Groups?
 
@@ -38,13 +36,13 @@ In Azure landing zones, there are two main management groups hosting workloads: 
 
 ### Why did we create Corp and Online management groups to separate workloads?
 
-The difference in networking considerations between the Corp and Online management groups in Azure Landing Zones lies in their intended use and primary purpose.  
+The difference in networking considerations between the Corp and Online management groups in the conceptual Azure landing zone architecture lies in their intended use and primary purpose.  
 
 The Corp management group is used to manage and secure internal resources and services, such as line-of-business applications, databases, and user management. The networking considerations for the Corp management group are focused on providing secure and efficient connectivity between internal resources, while enforcing strict security policies to protect against unauthorized access.
 
-The Online management group in Azure Landing Zones (ALZ) can be considered as an isolated environment used to manage public-facing resources and services that are accessible from the Internet. By using the Online management group to manage public-facing resources, the ALZ architecture provides a way to isolate those resources from internal resources, thereby reducing the risk of unauthorized access and minimizing the attack surface.
+The Online management group in the conceptual Azure landing zone architecture can be considered as an isolated environment used to manage public-facing resources and services that are accessible from the Internet. By using the Online management group to manage public-facing resources, the Azure landing zone architecture provides a way to isolate those resources from internal resources, thereby reducing the risk of unauthorized access and minimizing the attack surface.
 
-In the ALZ architecture, the virtual network in the Online management group is peered with the virtual network in the Corp management group, allowing public-facing resources to communicate with internal resources in a secure and controlled manner. This peering connection ensures that the network traffic between public-facing resources and internal resources is secure and restricted, while still allowing the resources to communicate as needed.
+In the conceptual Azure landing zone architecture, the virtual network in the Online management group can be, optionally, peered with virtual networks in the Corp management group, either directly or indirectly via the hub and associated routing requirements via an Azure Firewall or NVA, allowing public-facing resources to communicate with internal resources in a secure and controlled manner. This topology ensures that the network traffic between public-facing resources and internal resources is secure and restricted, while still allowing the resources to communicate as needed. 
 
 > [!TIP]
 > It is is also important to understand and review the Azure Policies that are assigned, and inherited, on each of the Management Groups as part of the Azure landing zone. As these help shape, protect and govern the workloads that are deployed within the subscriptions that are in these Management Groups. The policy assignments for Azure landing zones can be found [here](https://aka.ms/alz/policies).
