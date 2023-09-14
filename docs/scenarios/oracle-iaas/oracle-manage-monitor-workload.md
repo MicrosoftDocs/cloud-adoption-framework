@@ -84,8 +84,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
  
 |Azure Services |Description |URL |
 |:-------|:--------|:----|
-|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network |
-| | |https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference |
+|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network    https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference  |
 |. Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor |
 | | |Monitor the Oracle database “alert log” file on the database Virtual Machine for lines starting with the following format: |
 | | |status – AzBackup – script – version: message |
@@ -117,8 +116,7 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 |:----|:----|:----|
 |AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A |
 | | | |
-|Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more detail, see the following link   |Performance tuning with STATSPACK, part I:  https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf |
-| | |Performance tuning with STATSPACK, part II:  https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf |
+|Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more detail, see the following link   |Performance tuning with STATSPACK, part I:  https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf   Performance tuning with STATSPACK, part II:  https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf |
 
 ## Next steps
 
