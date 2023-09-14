@@ -55,7 +55,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Take the services you're going to use into consideration, there are some services with reserved IPs (IP Addresses), like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
 
-- Use [nonroutable landing zone spoke virutal networks](https://learn.microsoft.com/azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](https://learn.microsoft.com/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
+- Use [nonroutable landing zone spoke virtual networks](https://learn.microsoft.com/azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](https://learn.microsoft.com/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
 
 ## IP Address Management (IPAM) tools
 
