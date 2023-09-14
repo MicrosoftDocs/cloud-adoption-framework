@@ -31,50 +31,44 @@ We suggest periodically assessing the services and technologies you employ to en
 
 Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
 
-Oracle application Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
+1. **Oracle application** - Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
 
-| Oracle application | link to document |
-| --- | --- |
-|E-business Suite (EBS)|[Enable Single-Sign-On for EBS R12.2](https://docs.oracle.com/cd/E26401_01/doc.122/e22952/T156458T580814.htm)|
-|JD Edwards (JDE)|[Setting up JDE Single-Sign-On](https://docs.oracle.com/cd/E24705_01/doc.91/e24258/sso_thru_oam.htm#EOTSC00408)|
-|Peoplesoft|[Enable Single-Sign-On for PeopleSoft](https://docs.oracle.com/en/solutions/sso-peoplesoft-azure-ad/configure-oracle-peoplesoft1.html#GUID-470A312A-7F22-4688-AE95-80F164371875)|
-|Hyperion|Oracle Support doc #2144637.1|
-|Siebel|Oracle Support doc #2664515.1|
+    | Oracle application | link to document |
+    | --- | --- |
+    |E-business Suite (EBS)|[Enable Single-Sign-On for EBS R12.2](https://docs.oracle.com/cd/E26401_01/doc.122/e22952/T156458T580814.htm)|
+    |JD Edwards (JDE)|[Setting up JDE Single-Sign-On](https://docs.oracle.com/cd/E24705_01/doc.91/e24258/sso_thru_oam.htm#EOTSC00408)|
+    |Peoplesoft|[Enable Single-Sign-On for PeopleSoft](https://docs.oracle.com/en/solutions/sso-peoplesoft-azure-ad/configure-oracle-peoplesoft1.html#GUID-470A312A-7F22-4688-AE95-80F164371875)|
+    |Hyperion|[Oracle Support doc #2144637.1](https://support.oracle.com/knowledge/Enterprise%20Performance%20Management%20and%20Business%20Intelligence/2144637_1.html)|
+    |Siebel|[Oracle Support doc #2664515.1](https://support.oracle.com/knowledge/Siebel/2664515_1.html)|
 
-### Operating system level security
+1. **Operating system level security** - Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Azure AD.  For more information, see the following resources:
 
-Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Azure AD.  For more information, see the following resources:
-- [Sign in to a Linux virtual machine in Azure by using Azure AD and OpenSSH](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
-    -	As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OEL. 
+   - [Sign in to a Linux virtual machine in Azure by using Azure AD and OpenSSH](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
+
+    - As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OEL. 
      -	As of July 2023, IBM has chosen to cease openly sharing RHEL source, so it's likely that OL and RHEL may diverge in future, and the above statement may become no longer true.
-- [Sign in to a Windows virtual machine in Azure by using Azure AD](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
--For well architected on security, see the [Oracle WAF Security guide](https://learn.microsoft.com/azure/well-architected/oracle-iaas/security).
+     - [Sign in to a Windows virtual machine in Azure by using Azure AD](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
+     - For well architected on security, see the [Oracle WAF Security guide](https://learn.microsoft.com/azure/well-architected/oracle-iaas/security).
 
-**Operating System Hardening** - Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
-
-   - Use SSH key-pairs for Linux account access instead of passwords.
-   - Disable password-protected Linux accounts, enable only on request for a short period.
-   - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
-   - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-  - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
-  - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-  - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-  - Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
-  - Apply security patches and operating system patches/updates regularly from trusted sources only
-  - Implement restrictions to limit access to the operating system.
-  - Restrict unauthorized access to server.
-  - Control server access at the network level to enhance overall security.
-  - Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs). 
-  - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
-  - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure that access to those ports is controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.
-  - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
-  - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
+1. **Operating system hardening** - Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
+     - Use SSH key-pairs for Linux account access instead of passwords.
+     - Disable password-protected Linux accounts, enable only on request for a short period.
+     - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
+     - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
+     - Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
+     - Apply security patches and operating system patches/updates regularly from trusted sources only
+     - Implement restrictions to limit access to the operating system.
+     - Restrict unauthorized access to server.
+     - Control server access at the network level to enhance overall security.
+     - Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs).
+     - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
+     - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
      - Alias potentially destructive Linux commands (such as rm and mv) to force them to interactive mode, so you're prompted at least once before an irreversible command is executed.  Advanced users know how to unalias if they wish.
      - Set the Oracle database unified system logs to send copies of the Oracle audit logs to the Azure Log Analytics using the Linux SYSLOG utility.
-     
+
 ## Use network security
 
-Using network security is the fundamental component of a layered security approach for [Oracle workloads on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking). 
+Using network security is the fundamental component of a layered security approach for [Oracle workloads on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking).
 
 - Using [Network Security Groups (NSG)](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview)- You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. By using NSG, the traffic between on-premises network to/from Azure can be filtered as well by using IP address ranges and specific ports. For more information, see [Network security group](https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview).
 
@@ -85,9 +79,10 @@ Using network security is the fundamental component of a layered security approa
     | TCP      | 22   | SSH                 | Management port for Linux Virtual Machines |
     | TCP      | 1521        | Oracle TNS listener | Other port numbers frequently used for security or for connection load balancing purposes |
     | TCP |   3389   | RDP |  Management port for Windows Virtual Machines|
-- Decide How to Connect to Your Virtual Machine- The Virtual Machine on which the Oracle database workload resides must be secured against unauthorized access.  Management access is particularly sensitive due to the higher permissions required for management users.  In Azure, authorized users have several mechanisms available to manage the Virtual Machine securely such as:
+- Decide How to Connect to Your Virtual Machine- The Virtual Machine on which the Oracle database workload resides must be secured against unauthorized access.  Management access is particularly sensitive due to the higher permissions required for management users.  In Azure, authorized users have several mechanisms available to manage the Virtual Machine securely. 
+
      - [Microsoft Defender for Cloud's just-in-time (JIT) access](https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks).
-     - [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) 
+     - [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview)
      Microsoft Defender JIT     access makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your Virtual Machine.  The Azure Bastion is a Platform-as-a-Service (PaaS) deployment in Azure for a jump box.  Either solution can effectively secure management of your Oracle database Virtual Machine, and both solutions can even be used together in an advanced [multi-layered approach](https://learn.microsoft.com/azure/architecture/solution-ideas/articles/multilayered-protection-azure-vm), if desired.
 
      In general, JIT access minimizes (but doesn't eliminate) exposures to risks by restricting the times when management ports for SSH or RDP are available, but it does leave open the possibility for access by other sessions “tailgating” during an obtained JIT window, but such tailgaters still must break past the exposed SSH or RDP ports, so the risk exposed is small.  However, such exposures may make JIT access less palatable for blocking access from the open internet.
@@ -109,11 +104,11 @@ Furthermore, you can always create custom policies to address your organization�
 
 Microsoft recommends using Oracle’s Native Network Encryption and Data Integrity feature, and for more information, see [Configuring Oracle Database Native Network Encryption and Data Integrity](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/configuring-network-data-encryption-and-integrity.html#GUID-7F12066A-2BA1-476C-809B-BB95A3F727CF) by Oracle.
 
-- **Encrypt data at rest** - In addition to protecting data as it is in transit, it's also necessary to protect data when it's written to storage, while it is at rest.  Storage media can be removed and the data within examined, and storage media can be accessed while in use and confidential information revealed, so it's important that data be encrypted so that only authorized and authenticated users can view or modify it. Azure provides three layers of encryption at rest
-    - All data is encrypted at the lowest level when it's persisted into any Azure storage device, which is called [Azure Storage service-side encryption](https://learn.microsoft.com/azure/storage/common/storage-service-encryption#about-azure-storage-service-side-encryption).
-    - This level of encryption is designed to ensure that it isn't necessary to erase or destroy the storage media when an Azure tenant is done using storage.  When the data is always encrypted at rest, the data is gone forever if the platform managed key is discarded, and this is a lot faster and safer than attempting to erase all traces of data from storage.
-    - Azure also provides an opportunity to [doubly encrypt](https://learn.microsoft.com/azure/storage/common/infrastructure-encryption-enable?tabs=portal) stored data within the Azure Storage infrastructure using Azure Storage infrastructure encryption, using two separate platform-managed keys.
-    - In addition, [Azure disk encryption](https://learn.microsoft.com/azure/virtual-machines/disk-encryption) is at-rest encryption managed within the guest OS. That is,[BitLocker for Windows, DM-CRYPT for Linux](https://learn.microsoft.com/azure/storage/common/storage-service-encryption#client-side-encryption-for-blobs-and-queues). With one, two, or three possible layers of encryption at rest in the Azure storage infrastructure, the Oracle Database also offers transparent data encryption (TDE) of the database files, and another level of encryption at rest, as part of the [Oracle Advanced Security option](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE).   Furthermore, the Oracle Advanced Security option also offers a feature called [Data Redaction](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE), which is a form of dynamic data masking.  As the database retrieves data, it masks the data value, without altering the data value stored.
+- **Encrypt data at rest** - In addition to protecting data as it is in transit, it's also necessary to protect data when it's written to storage, while it is at rest.  Storage media can be removed and the data within examined, and storage media can be accessed while in use and confidential information revealed, so it's important that data be encrypted so that only authorized and authenticated users can view or modify it. Azure provides three layers of encryption at rest.
+     - All data is encrypted at the lowest level when it's persisted into any Azure storage device, which is called [Azure Storage service-side encryption](https://learn.microsoft.com/azure/storage/common/storage-service-encryption#about-azure-storage-service-side-encryption).
+     - This level of encryption is designed to ensure that it isn't necessary to erase or destroy the storage media when an Azure tenant is done using storage.  When the data is always encrypted at rest, the data is gone forever if the platform managed key is discarded, and this is a lot faster and safer than attempting to erase all traces of data from storage.
+     - Azure also provides an opportunity to [doubly encrypt](https://learn.microsoft.com/azure/storage/common/infrastructure-encryption-enable?tabs=portal) stored data within the Azure Storage infrastructure using Azure Storage infrastructure encryption, using two separate platform-managed keys.
+     - In addition, [Azure disk encryption](https://learn.microsoft.com/azure/virtual-machines/disk-encryption) is at-rest encryption managed within the guest OS. That is,[BitLocker for Windows, DM-CRYPT for Linux](https://learn.microsoft.com/azure/storage/common/storage-service-encryption#client-side-encryption-for-blobs-and-queues). With one, two, or three possible layers of encryption at rest in the Azure storage infrastructure, the Oracle Database also offers transparent data encryption (TDE) of the database files, and another level of encryption at rest, as part of the [Oracle Advanced Security option](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE).   Furthermore, the Oracle Advanced Security option also offers a feature called [Data Redaction](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE), which is a form of dynamic data masking.  As the database retrieves data, it masks the data value, without altering the data value stored.
     These multiple layers of encryption at rest represent the very definition of defense in depth.  If for some reason one of the forms of encryption at rest are compromised, there are still other layers of encryption protecting the data.
 
 ## Key management

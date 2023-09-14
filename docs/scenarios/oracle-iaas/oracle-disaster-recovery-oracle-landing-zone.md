@@ -189,8 +189,8 @@ Business continuity requires an integrated approach that includes all components
 |Failure Scenario |Oracle on Azure HA/DR Scenario |RPO/RTO |
 |:----|:----|:----|
 |Single component failure (host, rack, cooling, networking, power) |Data Guard with two nodes in the same availability set in the same data center |RPO=0 RTO<=2 mins  |
-| |·    Protects against single instance failure. |·    Using Observer for Fast Failover |
-| |·    Causes downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
+| |· Protects against single instance failure. |·    Using Observer for Fast Failover |
+| |· Causes downtime if entire data center is down |· Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard |
 |Data Center failure |Data Guard with two nodes in separate availability zones |RPO<=5 mins RTO<=5 mins  |
 | |·    Protects against data center failure |·    Using MAX_PERFORMANCE mode for Data Guard |
 | |·    Causes downtime if whole region is down |RPO=0 RTO<=5 mins  |
