@@ -129,4 +129,4 @@ Now that the application is in production, use the application deployment checkl
 
   To learn more, see:
   - [Introduction to site reliability engineering (SRE)](/training/modules/intro-to-site-reliability-engineering/)
-  - [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
+  
