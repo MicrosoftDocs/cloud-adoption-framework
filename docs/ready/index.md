@@ -31,10 +31,10 @@ As you work your way through the Ready guide, consider your progress as a contin
   - [ALZ accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
   - [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
   - [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
-- Subscription vending process
+- Subscription (LZ) vending process
   - [LZ vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
   - [LZ vending module (Bicep)](https://github.com/Azure/bicep-lz-vending)
-- Landing zone accelerator deployment
+- Deploy workload landing zone components
   - [Cloud adoption scenarios and related accelerators](/azure/cloud-adoption-framework/scenarios/overview#scenarios-to-support-your-cloud-adoption-strategy)
 
 The phases and processes are covered in more detail as you progress through the Ready guide.
