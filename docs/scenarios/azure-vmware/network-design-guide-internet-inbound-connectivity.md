@@ -3,7 +3,7 @@ title: 'Azure VMware Solution network design guide: Inbound internet  connectivi
 description: Learn how to design inbound internet connectivity for Azure VMware Solution. This article is part of the Azure VMware Solution design guide.
 author: fguerri
 ms.author: fguerri
-ms.date: 09/15/2023
+ms.date: 09/19/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
@@ -56,14 +56,15 @@ Third-party NVAs can provide Layer 3 or Layer 4 firewall capabilities or Layer 7
 
 ## NVAs hosted in Azure VMware Solution (Public IP on the NSX-T Data Center Edge)
 
-To publish Azure VMware Solution applications via third-party NVAs that are deployed on Azure VMware Solution, you need to enable [Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge) for the private cloud. This feature associates Azure Public IPs from an [Azure Public IP prefix](/azure/virtual-network/ip-services/public-ip-address-prefix) with the private cloud and configures the Microsoft backbone to route internet traffic destined those IPs to the private cloud's NSX-T T0 or T1 gateways. T1 gateways can then be configured to use DNAT to translate inbound connections to the private IPs of NVAs that are attached to NSX-T segments. For guidance on configuring Public IPs to the NSX-T edge and configuring DNAT rules for inbound internet connectivity, see [Enable Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge#inbound-internet-access-for-vms). When you use Azure VMware Solution with Public IP on the NSX-T Data Center Edge, the following considerations apply:
+To publish Azure VMware Solution applications via third-party NVAs that are deployed on Azure VMware Solution, you need to enable [Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge) for the private cloud. This feature associates Azure Public IPs from an [Azure Public IP prefix](/azure/virtual-network/ip-services/public-ip-address-prefix) with the private cloud and configures the Microsoft backbone to route internet traffic destined those IPs to the private cloud's NSX-T T0 or T1 gateways. T1 gateways can then be configured to use DNAT to translate inbound connections to the private IPs of NVAs that are attached to NSX-T segments. For guidance on configuring Public IP on the NSX-T Data Center Edge and configuring DNAT rules for inbound internet connectivity, see [Enable Public IP on the NSX-T Data Center Edge](/azure/azure-vmware/enable-public-ip-nsx-edge#inbound-internet-access-for-vms). When you use Azure VMware Solution with Public IP on the NSX-T Data Center Edge, the following considerations apply:
 
 - Perform NAT on T1 gateways, not on T0 gateways. In Azure VMware Solution private clouds, T0 gateways are active-active device pairs, so they can't handle stateful NAT sessions. 
-- You need to associate Public IPs to an Azure Public IP prefix. It is currently unsupported to use IPs from [Custom IP Prefixes (BYOIP)](/azure/virtual-network/ip-services/custom-ip-address-prefix).
-- When an Azure VMware Solution Private Cloud is configured with Public IPs to the NSX-T edge, a default route is installed in T0/T1 gateways, which routes outbound Internet connections via the Microsoft backbone's edge. As a result, using Public IPs on the NSX-T edge for Internet inbound connectivity also defines the implementation option for outbound connectivity, covered in the [next section](network-design-guide-internet-outbound-connectivity.md).
+- You need to associate Public IPs to an Azure Public IP prefix. Using IPs from [custom IP address prefixes (BYOIP)](/azure/virtual-network/ip-services/custom-ip-address-prefix) isn't currently supported.
+- When an Azure VMware Solution private cloud is configured with Public IP on the NSX-T Data Center Edge, a default route is installed in T0/T1 gateways. It routes outbound internet connections via the Microsoft backbone's edge. As a result, the use of Public IP on the NSX-T Data Center Edge for inbound internet connectivity also determines the implementation option for outbound connectivity, which is covered in the [next article in this guide](network-design-guide-internet-outbound-connectivity.md).
 
-## Next Steps
-Learn about outbound Internet connectivity.
+## Next steps 
+
+Learn about outbound internet connectivity.
 
 > [!div class="nextstepaction"]
-> [Outbound Internet connectivity](network-design-guide-internet-outbound-connectivity.md)
+> [Outbound internet connectivity](network-design-guide-internet-outbound-connectivity.md)
