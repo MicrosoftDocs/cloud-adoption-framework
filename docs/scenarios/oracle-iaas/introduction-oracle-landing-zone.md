@@ -108,9 +108,9 @@ For Oracle implementations latency between availability zones may be a concern, 
 
 Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration), [Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
-For more information about advanced HA/DR configuration, see (link to Oracle BCDR documentation).
+For more information about advanced HA/DR configuration, see the [Oracle BCDR documentation](oracle-disaster-recovery-oracle-landing-zone.md).
 
-## Azure NetApp files and Azure files
+## Azure NetApp Files and Azure Files
 
 Azure NetApp Files and Azure Files with Network File System (NFS) provide high-availability file share services for Oracle database servers and redo log archiving.
 
@@ -148,9 +148,17 @@ Apart from backup Azure provides methods for setting up [disaster recovery](http
 
 ## Oracle landscape architecture examples  
 
-The following reference architectures are an extension of the high-level architecture that appears earlier in this article. The below table describes example use cases with differing resiliency features.  
+The following reference architectures are an extension of the high-level architecture that appears earlier in this article.
 
-To implement the reference architecture, you can either follow the guidance provided in this and supporting documents or you can choose to apply the Oracle Infrastructure landing zone accelerator (link to GitHub repo). For step-to-step guidance on how to deploy the infrastructure automatically  see [Oracle LZA deployment guide](link to Oracle LZA deployment guide).
+:::image type="content" source="media/resource-group-oracle-landing-zone.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
+
+**Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more details on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](introduction-oracle-landing-zone.md).  
+
+:::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
+
+**Advanced HA/DR configuration** This is the most advanced configuration for HA/DR leveraging availability zones and regions. Note that extra configuration for HA/DR for application servers and frontend services will be required as this is not covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
+
+:::image type="content" source="media/resource-group-oracle-landing-zone-3.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator."::: 
 
 ## Next steps
 

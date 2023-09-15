@@ -27,11 +27,10 @@ The strategy and plan template and other resources in the Cloud Adoption Fra
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
 **Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is particularly true if your on-premises implementations include Oracle Real Application Clusters or Exadata configurations.
-**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools etc. These articles describe how these assets translates in an Azure environment .
 
-**Workload assets**: Your Oracle platform can consist of Oracle first party applications like e-commerce suite or third party/bespoke applications. Each workload with a dependency on the Oracle workloads should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
+**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These articles describe how these assets translates in an Azure environment .
 
-For guidance on Oracle digital estate planning, look through the processes outlined in the article series on digital estate planning. The best practice article on assessing on-premises workloads for migration to Azure proposes the OMAT tool or capture AWR script tool to make the theoretical guidance from the prior article actionable.
+**Workload assets**: Your existing Oracle solution can consist of Oracle first-party, third-party, or bespoke applications. Each workload with a dependency on Oracle database services should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
 Consider the following when planning for migrating Oracle workloads to Azure: 
 

@@ -44,7 +44,7 @@ Motivations to migrate an Oracle implementation to the cloud are often based on 
 
 ## Measure progress during an Oracle migration
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide migration activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on business outcomes. 
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide migration activities. 
 
 Given the potential impact of an Oracle migration, you need to define several objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down the migration process into manageable efforts. Read objectives and key results to understand OKRs in more detail.
 
