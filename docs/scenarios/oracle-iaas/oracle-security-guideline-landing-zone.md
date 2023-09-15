@@ -50,21 +50,25 @@ Identity management is a fundamental framework that governs access to important 
      - [Sign in to a Windows virtual machine in Azure by using Azure AD](https://learn.microsoft.com/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
      - For well architected on security, see the [Oracle WAF Security guide](https://learn.microsoft.com/azure/well-architected/oracle-iaas/security).
 
-1. **Operating system hardening** - Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
-     - Use SSH key-pairs for Linux account access instead of passwords.
-     - Disable password-protected Linux accounts, enable only on request for a short period.
-     - Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
-     - Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
-     - Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
-     - Apply security patches and operating system patches/updates regularly from trusted sources only
-     - Implement restrictions to limit access to the operating system.
-     - Restrict unauthorized access to server.
-     - Control server access at the network level to enhance overall security.
-     - Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs).
-     - Ensure that the Linux firewall daemon is configured to start automatically at boot time.
-     - Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
-     - Alias potentially destructive Linux commands (such as rm and mv) to force them to interactive mode, so you're prompted at least once before an irreversible command is executed.  Advanced users know how to unalias if they wish.
-     - Set the Oracle database unified system logs to send copies of the Oracle audit logs to the Azure Log Analytics using the Linux SYSLOG utility.
+## Operating system hardening
+
+Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database. Ensure that the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
+
+- Use SSH key-pairs for Linux account access instead of passwords.
+- Disable password-protected Linux accounts, enable only on request for a short period.
+- Disable login access for privileged Linux accounts (that is, root, oracle, etc.), allowing login access to only personalized accounts.
+     
+- Instead of direct login, use “sudo” for granting access to privileged Linux accounts (that is, root, oracle, etc.) from personalized accounts.
+- Ensure that Linux audit trail logs and “sudo” access logs are captured into Azure Log Analytics using Linux SYSLOG utility
+- Apply security patches and operating system patches/updates regularly from trusted sources only
+- Implement restrictions to limit access to the operating system.
+- Restrict unauthorized access to server.
+- Control server access at the network level to enhance overall security.
+- Consider using the Linux firewall daemon as local protection above and beyond Azure network security groups (NSGs).
+- Ensure that the Linux firewall daemon is configured to start automatically at boot time.
+- Periodically scan network ports being listened upon (that is, Linux command netstat –l) to understand which potential access points, and be sure access to those ports are controlled by either Azure network security groups (NSGs) or the Linux firewall daemon.  
+- Alias potentially destructive Linux commands (such as rm and mv) to force them to interactive mode, so you're prompted at least once before an irreversible command is executed.  Advanced users know how to unalias if they wish.
+- Set the Oracle database unified system logs to send copies of the Oracle audit logs to the Azure Log Analytics using the Linux SYSLOG utility.
 
 ## Use network security
 
@@ -111,9 +115,7 @@ Microsoft recommends using Oracle’s Native Network Encryption and Data Integri
      - In addition, [Azure disk encryption](https://learn.microsoft.com/azure/virtual-machines/disk-encryption) is at-rest encryption managed within the guest OS. That is,[BitLocker for Windows, DM-CRYPT for Linux](https://learn.microsoft.com/azure/storage/common/storage-service-encryption#client-side-encryption-for-blobs-and-queues). With one, two, or three possible layers of encryption at rest in the Azure storage infrastructure, the Oracle Database also offers transparent data encryption (TDE) of the database files, and another level of encryption at rest, as part of the [Oracle Advanced Security option](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE).   Furthermore, the Oracle Advanced Security option also offers a feature called [Data Redaction](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE), which is a form of dynamic data masking.  As the database retrieves data, it masks the data value, without altering the data value stored.
     These multiple layers of encryption at rest represent the very definition of defense in depth.  If for some reason one of the forms of encryption at rest are compromised, there are still other layers of encryption protecting the data.
 
-## Key management
-
-If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database Virtual Machine.
+- **Key management** - If you choose to implement Oracle Transparent Data Encryption (TDE) as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions (for example, Azure Key Vault, etc.) provided by Azure or other cloud providers. Now, the primary solution for the Oracle Wallet location is the default location within the filesystem of the Oracle database Virtual Machine.
   
 However, you can utilize Oracle Key Vault as a key management solution on Azure. For detailed information, refer to the documentation on [Provisioning Oracle Key Vault in Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.6/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).
 
