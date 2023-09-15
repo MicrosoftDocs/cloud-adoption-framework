@@ -1,24 +1,26 @@
 ---
-title: Azure VMware Solution Network Design Guide - Internet outbound connectivity
-description: Learn how to design Internet outbound connectivity for Azure VMware Solution.
+title: 'Azure VMware Solution metwork design guide: Outbound internet  connectivity'
+description: Learn how to design outbound internet connectivity for Azure VMware Solution. This article is part of the Azure VMware Solution network design guide.
 author: fguerri
 ms.author: fguerri
-ms.date: 06/06/2023
+ms.date: 09/19/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware
 ---
 
-# Design phase #4: Internet outbound connectivity
-Design Phase #4 is driven by the outbound Internet connectivity requirements of the applications deployed on Azure VMware Solution. Basic Internet access may be sufficient for virtual machines hosted on the private cloud to download software updates. B2B collaboration scenarios where access to a third party API is allowed only from authorized IP addresses may require granular control over the NAT pool. In VDI scenarios, the volume of internet browsing sessions to be supported may require control over the size of the NAT pool.
+# Design phase 4: Outbound internet connectivity
 
-Almost invariably, outbound Internet access must be secured, by routing connections through a firewall or proxy device. Azure VMware Solution supports deploying such devices in the private cloud itself, or in an Azure virtual network connected to the private cloud. Choosing between these two options is the main goal of Design Phase #4, based on the following considerations:
-- Pre-existing secure internet access NVAs (firewalls, forward proxies) deployed in Azure virtual networks can be used for cost optimization and consistency.
-- PaaS solutions available on Azure may help reduce management overhead. Azure Firewall (especially when the Premium SKU features are enabled) can be used for secure Internet access. 
-- 3rd-party firewalls and/or proxy devices can be deployed as virtual appliances on Azure VMware Solution. Refer to the vendor's documentation for installation instructions and recommended topologies.
+The choices you make during this design phase are determined by the outbound internet connectivity requirements of the applications that are deployed on Azure VMware Solution. Basic internet access might be sufficient to enable virtual machines that are hosted on the private cloud to download software updates. B2B collaboration scenarios in which access to a third-party API is allowed only from authorized IP addresses might require granular control over the NAT pool. In Virtual Desktop Infrastructure (VDI) scenarios, the volume of internet browsing sessions that need to be supported might necessitate control over the size of the NAT pool.
 
-Design phase #4 has a dependency on the choices made in Phase #3. If ["Public IPs to the NSX-T edge"](network-design-guide-internet-inbound-connectivity.md#nvas-hosted-in-azure-vmware-solution-public-ips-on-the-nsx-t-edge) has been selected as the inbound Internet connectivity option, then it must be used for outbound connectivity too. All outbound connections initiated by virtual machines in Azure VMware Solution are managed on the NSX-T edge. Connections are source-NATted behind addresses in the Azure Public IP Prefix associated with the private cloud's NSX-T edge. The flow chart below describes how to approach Design Phase #4.
+Almost invariably, you need to enhance the security of outbound internet access by routing connections through a firewall or proxy device. Azure VMware Solution supports deploying such devices in the private cloud itself or in an Azure virtual network that's connected to the private cloud. Choosing between these two options is the main goal of this design phase. You choice is determined by these considerations:
+
+- For cost optimization and consistency, you can use pre-existing enhanced-security internet access NVAs (like firewalls and forward proxies) that are deployed in Azure virtual networks.
+- Azure platform as a service (PaaS) solutions might reduce management overhead. You can use Azure Firewall for enhanced-security internet access,especially if you enable Premium SKU features. 
+- You can deploy third-party firewalls and/or proxy devices as virtual appliances on Azure VMware Solution. Refer to the vendor's documentation for installation instructions and recommended topologies.
+
+The choices you make during this design phase are dependent on the choices you make during phase 3. If [Public IPs to the NSX-T edge](network-design-guide-internet-inbound-connectivity.md#nvas-hosted-in-azure-vmware-solution-public-ips-on-the-nsx-t-data-center-edge) has been selected as the inbound Internet connectivity option, then it must be used for outbound connectivity too. All outbound connections initiated by virtual machines in Azure VMware Solution are managed on the NSX-T edge. Connections are source-NATted behind addresses in the Azure Public IP Prefix associated with the private cloud's NSX-T edge. The flow chart below describes how to approach Design Phase #4.
 
 :::image type="content" source="media/network-design-guide-figure17.png" alt-text="Figure 17. Flowchart that shows the design decision making process for outbound Internet connectivity." lightbox="media/network-design-guide-figure17.png":::
 *Design Phase #4: Outbound Internet connectivity.*
