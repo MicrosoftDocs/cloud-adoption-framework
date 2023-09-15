@@ -17,7 +17,9 @@ ms.custom:
 
 # Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure virtual machines(Virtual Machines).
+This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure Virtual Machines.
+
+Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure Virtual Machines landing zone accelerator. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
 The first step to building a resilient architecture for your workload environment is to determine availability requirements for your solution by the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO is the maximum time an application is unavailable after an incident and RPO is the maximum amount of data loss during a disaster. After you determine the  requirements for your solution, the next step is to design your architecture to provide the established levels of resiliency and availability.
 
@@ -192,8 +194,6 @@ Business continuity requires an integrated approach that includes all components
 | Data Centre failure | Data Guard with two nodes in separate availability zones. <br> - Protects against data center failure. <br> Will cause downtime if whole region is down. <br> - Requires additional failover configuration for app servers to manage network latency.  | RPO<=5mins RTO<=5mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
 |Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires additional failover configuration for app servers to manage network latency.  |  RPO>=10mins RTO>=15mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
 |  |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be setup in the target region during failover.   | RPO>=24hrs RTO>=4hrs   |
-
-Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure Virtual Machines landing zone accelerator. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
 ## Next steps
 
