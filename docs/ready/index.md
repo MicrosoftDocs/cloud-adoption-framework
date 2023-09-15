@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Prepare for cloud adoption
 
-Before adoption can begin, you'll create a landing zone to host the workloads that you plan to build in or migrate to the cloud. This section of the framework guides you through environment preparation and landing zone creation.
+Before adoption can begin, you create a landing zone to host the workloads that you plan to build in or migrate to the cloud. This section of the framework guides you through environment preparation and landing zone creation.
 
 ## Landing zone concepts
 
@@ -20,14 +20,14 @@ Before adoption can begin, you'll create a landing zone to host the workloads th
 
 :::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing the Azure landing zone customer journey." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
 
-As you work your way through the Ready guide, consider your progress as a continuous journey that will prepare you for landing zone creation. The journey consists of 4 major phases and related processes:
+As you work your way through the Ready guide, consider your progress as a continuous journey that prepares you for landing zone creation. The journey consists of four major phases and related processes:
 
 - Bootstrap your environment
   - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
   - [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
   - [ALZ ](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
 
-- Deploy Azure landing zone platform components
+- Deploy Azure platform landing zone components
   - [ALZ accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
   - [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
   - [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
