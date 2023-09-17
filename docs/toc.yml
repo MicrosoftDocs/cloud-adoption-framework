@@ -416,6 +416,8 @@ items:
             href: ready/landing-zone/design-area/management.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
+          - name: Baseline monitoring
+            href: ready/landing-zone/design-area/management-monitor.md
           - name: Protect and recover
             href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
           - name: Operational compliance
@@ -782,7 +784,7 @@ items:
             href: /azure/cloud-adoption-framework/scenarios/sap/migrate
           - name: Learning path for Migrate SAP workloads to Azure
             href: /training/paths/migrate-sap-workloads-to-azure/
-          - name: Migrate an SAP platform to Azure
+          - name: SAP on Azure migration
             href: https://azure.microsoft.com/solutions/sap/migration/
           - name: Migrate from SAP ASE to Azure SQL
             href: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
