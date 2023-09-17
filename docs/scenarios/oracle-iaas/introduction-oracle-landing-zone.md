@@ -156,7 +156,7 @@ The following reference architectures are an extension of the high-level archite
 
 :::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing a Diagram showing an advanced high availability configuration of Oracle on Azure landing zone accelerator.":::
 
-**Advanced HA/DR configuration** This is the most advanced configuration for HA/DR leveraging availability zones and regions. Note that extra configuration for HA/DR for application servers and frontend services will be required as this is not covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
+**Advanced HA/DR configuration** - This is the most advanced configuration for HA/DR leveraging availability zones and regions. Note that extra configuration for HA/DR for application servers and frontend services will be required as this is not covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
 
 :::image type="content" source="media/resource-group-oracle-landing-zone-3.png" alt-text="Diagram showing an advanced high availability configuration with secure subnets of Oracle on Azure landing zone accelerator."::: 
 
