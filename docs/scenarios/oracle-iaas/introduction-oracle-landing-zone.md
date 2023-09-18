@@ -47,7 +47,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 :::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
-When developing a long-term vision for landing zones, consider the design above. Working within this scenario, you focus on the most appropriate starting point to meet your strategic and planning requirements for Oracle on Azure. This article is about the starting point, not necessarily all the details required to reach the longer-term target.  
+When developing a long-term vision for landing zones, consider the design of the landing zone implementation. Working within this scenario, you focus on the most appropriate starting point to meet your strategic and planning requirements for Oracle on Azure. This article is about the starting point, not necessarily all the details required to reach the longer-term target.  
 
 ## High-level Oracle landing zone architecture
 
@@ -57,7 +57,7 @@ As shown in  the reference architectural diagram, the Oracle databases are deplo
 
 ## Strategic and planning considerations for Oracle Virtual Machines landing zones  
 
-Prioritization decisions made during [strategy](oracle-landing-zone-strategy.md) and [plan](oracle-landing-zone-plan.md) conversations will have a direct impact on the most appropriate landing zone configuration to support your Oracle workloads implementations. What follows  are important questions to consider during the planning phase:  
+Prioritization decisions made during [strategy](oracle-landing-zone-strategy.md) and [plan](oracle-landing-zone-plan.md) conversations have a direct impact on the most appropriate landing zone configuration to support your Oracle workloads implementations. What follows  are important questions to consider during the planning phase:  
 
 - Will the initial deployment require mature processes for operations, security, and governance prior to launch?  
 - What type of migration is planned, big bang or gradual switchover?  
@@ -72,11 +72,11 @@ Prioritization decisions made during [strategy](oracle-landing-zone-strategy.m
 
 - **An Azure Oracle production subscription**, where the production and disaster recovery systems are configured.  
 
-- **An Azure Oracle non-production subscription**, where a non-production system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone.
+- **An Azure Oracle non-production subscription**, where a nonproduction system includes a sandbox or development, quality assurance, or preproduction systems. This configuration is optional. You can use a subscription for each workload zone.
 
 ## Networking
 
-For example, Oracle on Azure architecture is contained inside a single or two VNETs. This architecture can be used for either a hybrid connectivity scenario, or for scenarios where your Oracle workload isn't enabled for hybrid connectivity. For hybrid connectivity scenarios, the Oracle spoke virtual network should be connected to a hub virtual network in accordance with Azure landing zone accelerator general principles, either through regular peering or through Virtual WAN.  
+For example, Oracle on Azure architecture is contained inside a single or two VNETs. This architecture can be used for either a hybrid connectivity scenario, or for scenarios where your Oracle workload isn't enabled for hybrid connectivity. For hybrid connectivity scenarios, the Oracle spoke virtual network should be connected to a hub virtual network in accordance with Azure landing zone accelerator general principles. You can connect either through regular peering or through Virtual WAN.  
 
 The architecture subdivides the virtual network address space into subnets. You can associate each subnet with a network security group that defines the access policies for the subnet. Place application servers on a separate subnet so that you can more easily provide security for them.
 
@@ -122,7 +122,7 @@ Azure NetApp Files can host Oracle data and log files. Use this configuration fo
 
 **Private endpoints** are in a virtual network and have a private IP address within the address space of that virtual network.
 
-It is recommended to leverage [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) where appropriate to route traffic from database server to Azure Files via [private link](https://learn.microsoft.com/azure/private-link/private-link-overview).
+It's recommended to apply [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) where appropriate to route traffic from database server to Azure Files via [private link](https://learn.microsoft.com/azure/private-link/private-link-overview).
 
 ## Landscape consolidation
 
@@ -152,11 +152,11 @@ The following reference architectures are an extension of the high-level archite
 
 :::image type="content" source="media/resource-group-oracle-landing-zone.png" alt-text="Diagram showing a basic high availability configuration of Oracle on Azure landing zone accelerator.":::
 
-**Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more details on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](introduction-oracle-landing-zone.md).  
+**Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more information on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](introduction-oracle-landing-zone.md).  
 
 :::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing a Diagram showing an advanced high availability configuration of Oracle on Azure landing zone accelerator.":::
 
-**Advanced HA/DR configuration** - This is the most advanced configuration for HA/DR leveraging availability zones and regions. Note that extra configuration for HA/DR for application servers and frontend services will be required as this is not covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
+**Advanced HA/DR configuration** - This is the most advanced configuration for HA/DR using availability zones and regions. Extra configuration for HA/DR for application servers and frontend services are required as this isn't covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
 
 :::image type="content" source="media/resource-group-oracle-landing-zone-3.png" alt-text="Diagram showing an advanced high availability configuration with secure subnets of Oracle on Azure landing zone accelerator."::: 
 
