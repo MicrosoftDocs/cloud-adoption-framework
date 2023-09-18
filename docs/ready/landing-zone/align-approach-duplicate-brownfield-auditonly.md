@@ -21,7 +21,7 @@ To transition to an Azure landing zone conceptual architecture using this approa
 
 1. Review the [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md) and [Azure landing zone design areas](./design-areas.md).
 
-2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment.
+2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment. This allows for a smooth and phased transition to the new landing zone architecture with minimal disruption to running workloads.
 
    Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment isn't affected by these changes.
 
@@ -42,6 +42,8 @@ To transition to an Azure landing zone conceptual architecture using this approa
    > The existing applications or services do not necessarily have to be migrated into new landing zones (Azure subscriptions)
 
 6. Once the application teams have worked with the platform teams to get their policy compliance into the required state, their subscriptions can be moved to the proper management group (corporate or online), safe in the knowledge of the assigned policies and their effect to be able to operate their workloads efficiently and in a compliant manner.
+
+7. Review the [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 
 The following diagram shows the state during the migration approach of this sample scenario:
 

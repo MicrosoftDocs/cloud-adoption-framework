@@ -46,17 +46,21 @@ The following diagram shows the current state of this sample scenario:
 To transition from this scenario's current state to an Azure landing zone conceptual architecture, we suggest this approach:
 
 1. Review the [Azure landing zone conceptual architecture](./index.md) and [Azure landing zone design areas](./design-areas.md).
-2. Deploy the [Azure landing zone accelerator](./index.md#platform-landing-zone-accelerator) into the same Azure AD tenant in parallel with the current environment.
+
+2. Deploy the [Azure landing zone accelerator](./index.md#platform-landing-zone-accelerator) into the same Azure AD tenant in parallel with the current environment.  This allows for a smooth and phased transition to the new landing zone architecture with minimal disruption to running workloads.
 
    Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment isn't affected by these changes.
-1. (optional) Work with application or service teams to migrate the workloads deployed in the original subscription into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
-  
+
+3. (optional) Work with application or service teams to migrate the workloads deployed in the original subscription into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
+
    Review the policy section in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy) for details about the effect on resources when migrating. Eventually, the existing Azure subscription can be canceled and placed in the decommissioned management group.
 
    > [!NOTE]
    > The existing applications or services do not necessarily have to be migrated into new landing zones (Azure subscriptions)
 
 4. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group (corporate or online).
+
+5. Review the [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 
 The following diagram shows the state during the migration approach of this sample scenario:
 

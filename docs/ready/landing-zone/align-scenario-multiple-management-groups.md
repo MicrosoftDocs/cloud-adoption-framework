@@ -15,7 +15,7 @@ ms.service: caf
 
 This page describes an example scenario that might match your current environment. The guide below details steps and considerations about migrating and transitioning your existing environment into the conceptual architecture of Azure landing zones. The scenario covers single or multiple management groups.
 
-In this scenario, the customer has already started to use Azure; they have a management group hierarchy with one or more management groups, each with multiple subscriptions that already host a few applications or services within the platform. But, they've realized their current implementation limits their scalability and growth per their "cloud first" strategy.
+In this scenario, the customer has already started to use Azure; they have a management group hierarchy with multiple subscriptions that already host a few applications or services within the platform. But, they've realized their current implementation limits their scalability and growth per their "cloud first" strategy.
 
 As part of this expansion, they plan to migrate away from their on-premises datacenters into Azure. As part of the migration, they lead with modernizing and transforming their applications or services to use cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). But, they appreciate that it takes considerable time and effort, so they plan to "lift-and-shift" to start. Initially, this plan requires hybrid connectivity (VPN/ExpressRoute).
 
@@ -46,7 +46,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 1. Review the [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md) and [Azure landing zone design areas](./design-areas.md).
 
-2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment.
+2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment. This allows for a smooth and phased transition to the new landing zone architecture with minimal disruption to running workloads.
 
    Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment isn't affected by these changes.
 
@@ -61,9 +61,11 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 5. Create new Azure subscriptions to provide landing zones supporting migration projects from on-premises. Place them under the proper management group (corporate or online).
 
+6. Review the [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
+
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-align-multiple-mgs-transition.png" alt-text="Single subscription environment - transition state" lightbox="./media/alz-align-multiple-mgs-transition.png":::
+:::image type="content" source="./media/alz-align-multiple-mgs-transition.svg" alt-text="Single subscription environment - transition state" lightbox="./media/alz-align-multiple-mgs-transition.svg":::
 
 ## Summary
 
