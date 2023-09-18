@@ -33,8 +33,8 @@ In this scenario, the current state of the customer's Azure environment is as fo
 - Policy assignments (audit and deny effects) are assigned at management group and subscription level.
 - All applications in the same region and in the same environment type, have the same set of Azure Policies applied.
 - RBAC role assignments per subscription and resource groups.
-- A hub VNet for hybrid connectivity (VPN/ExpressRoute).
-- A VNet per application environment.
+- A hub virtual network for hybrid connectivity (VPN/ExpressRoute).
+- A virtual network per application environment.
 - Each region has a central IT team that controls and operates the respective Management Group.
 
 The following diagram shows the current state of this sample scenario:
@@ -49,11 +49,11 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Azure AD tenant in parallel with the current environment.
 
-   Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment is not affected by these changes.
+   Doing so creates a new management group structure. This structure is aligned with Azure landing zones design principles and recommendations. It also ensures that the existing environment isn't affected by these changes.
 
 3. Review the ["dev/test/production" workload landing zones guidance](./../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) to understand how to handle "dev/test/production" workload landing zones.
 
-4. Review the [Azure Landing zone sandbox environments guidance](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments) to understand how to leverage the sandbox management group hierarchy to empower developers to test and experiment without affecting other environments.
+4. Review the [Azure Landing zone sandbox environments guidance](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments) to understand how to use the sandbox management group hierarchy to empower developers to test and experiment without affecting other environments.
 
 5. Review the [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md) to understand how to minimize disruption to applications and services during the migration.
 
