@@ -48,7 +48,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
     - Data Disk Write Bytes/Sec
     - Disk Queue Depth
 
-    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks is detailed in the [Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series#edsv5-series) section and table. 
+    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. See [here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes) for more details. 
 
     Use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
 
