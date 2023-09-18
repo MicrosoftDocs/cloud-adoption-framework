@@ -26,6 +26,8 @@ Migrating Oracle workloads to the cloud incorporates and addresses most of the m
 
 ## Next steps
 
-- [Strategic impact of Oracle on Azure IaaS](oracle-landing-zone-strategy.md)  
-- [Plan for Oracle on Azure IaaS](oracle-landing-zone-plan.md)  
-- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md)  
+- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](oracle-network-topology.md)
+- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](oracle-manage-monitor-workload.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
+- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
+
