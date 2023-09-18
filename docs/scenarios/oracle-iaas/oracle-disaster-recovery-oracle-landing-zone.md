@@ -37,7 +37,7 @@ Use the following flowchart to choose the best high availability option for your
 
 ### High availability using Data Guard in maximum availability mode
 
-Data Guard in maximum availability mode provides the highest availability with zero data loss promise (RPO=0). For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
+Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within an availability set, Azure provides 99.95% SLA for service availability.
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Virtual Machines landing zone accelerator.":::
 
