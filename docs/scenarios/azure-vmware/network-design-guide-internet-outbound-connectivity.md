@@ -20,13 +20,13 @@ Almost invariably, you need to enhance the security of outbound internet access 
 - Azure platform as a service (PaaS) solutions might reduce management overhead. You can use Azure Firewall for enhanced-security internet access, especially if you enable Premium SKU features. 
 - You can deploy third-party firewalls and/or proxy devices as virtual appliances on Azure VMware Solution. Refer to the vendor's documentation for installation instructions and recommended topologies.
 
-The choices you make during this design phase are dependent on the choices you make during phase 3. If you selected [Public IP on the NSX-T Data Center Edge](network-design-guide-internet-inbound-connectivity.md#nvas-hosted-in-azure-vmware-solution-public-ip-on-the-nsx-t-data-center-edge) as your inbound internet connectivity option, you also need to use it for outbound connectivity. All outbound connections initiated by virtual machines in Azure VMware Solution are managed on the NSX-T edge. Connections are translated via Source Network Address Translation (SNAT) to addresses in the Azure Public IP prefix that's associated with the private cloud's NSX-T edge. 
+The choices you make during this design phase are dependent on the choices you make during phase 3. If you select [Public IP on the NSX-T Data Center Edge](network-design-guide-internet-inbound-connectivity.md#nvas-hosted-in-azure-vmware-solution-public-ip-on-the-nsx-t-data-center-edge) as your inbound internet connectivity option, you also need to use it for outbound connectivity. All outbound connections initiated by virtual machines in Azure VMware Solution are managed on the NSX-T edge. Connections are translated via Source Network Address Translation (SNAT) to addresses in the Azure Public IP prefix that's associated with the private cloud's NSX-T edge. 
 
 The following flowchart summarizes how to approach this design phase:
 
 :::image type="content" source="media/network-design-guide-figure-17.png" alt-text="Flowchart that shows the decision-making process for outbound internet connectivity." lightbox="media/network-design-guide-figure-17.png" border="false":::
  
-## Default routes and outbound Internet connectivity in Azure VMware Solution
+## Default routes and outbound internet connectivity in Azure VMware Solution
 
 Routing for outbound internet connections initiated by virtual machines in an Azure VMware Solution private cloud is determined by the configured default routes. Different default routes are used for management and workload segments:
 
@@ -36,7 +36,7 @@ Routing for outbound internet connections initiated by virtual machines in an Az
     - Internet access through a platform-managed breakout, with SNAT configured by the user in NSX-T. Users are responsible for: 
        - Provisioning Azure Public IP prefixes for the SNAT pool. 
        - Defining NAT rules on the NSX-T edge. For more information, see [Azure Public IPv4 address to NSX-T Data Center Edge](/azure/azure-vmware/concepts-design-public-internet-access#azure-public-ipv4-address-to-nsx-t-data-center-edge).
-    - A default route that's announced over the private cloud's Azure ExpressRoute circuit. This default route can be originated by a BGP-capable device in an Azure virtual network or in an on-premises site. SNAT is the user's responsibility and must be performed by network devices in Azure virtual networks or on-premises. For more information, see [Internet Service hosted on Azure](/azure/azure-vmware/concepts-design-public-internet-access#internet-service-hosted-in-azure).
+    - A default route that's announced over the private cloud's Azure ExpressRoute circuit. This default route can be originated by a BGP-capable device in an Azure virtual network or in an on-premises site. SNAT is the user's responsibility and must be performed by network devices in Azure virtual networks or on-premises. For more information, see [Internet service hosted on Azure](/azure/azure-vmware/concepts-design-public-internet-access#internet-service-hosted-in-azure).
 
 You can configure outbound internet connectivity for workload segments by using the Azure portal. Select one of the options that are discussed in the next sections. For more information, see [Internet connectivity design considerations](/azure/azure-vmware/concepts-design-public-internet-access).
 
@@ -46,7 +46,7 @@ Managed SNAT is the easiest way to implement outbound internet access in Azure V
 
 - You need granular control over the NAT pool. For example, if you need to use SNAT to translate, via Public IPs, connections initiated by specific virtual machines to point toward specific public endpoints. In this case, you should consider using [Public IP on the NSX-T Data Center Edge](network-design-guide-internet-outbound-connectivity.md#deploy-public-ip-on-the-nsx-t-data-center-edge).
 - You selected Public IP on the NSX-T Data Center Edge for inbound internet inbound connectivity during [design phase 3](network-design-guide-internet-inbound-connectivity.md). In this case, you also need to use Public IP on the NSX-T Data Center Edge for outbound Internet connectivity. For more information, see the next section.
-- You want to route outbound internet connections via an enhanced-security internet edge that's hosted in an Azure virtual network (or in an on-premises site). In this case, a default route must be originated from the internet edge on Azure and advertised to the private cloud. For more information, see the [Originate default route from Azure](#originate-a-default-route-from-azure-customer-managed-virtual-network-or-azure-virtual-wan) section of this article.
+- You want to route outbound internet connections via an enhanced-security internet edge that's hosted in an Azure virtual network (or in an on-premises site). In this case, a default route must be originated from the internet edge on Azure and advertised to the private cloud. For more information, see the [Originate a default route from Azure](#originate-a-default-route-from-azure-customer-managed-virtual-network-or-azure-virtual-wan) section of this article.
 
 ### Deploy Public IP on the NSX-T Data Center Edge
 
