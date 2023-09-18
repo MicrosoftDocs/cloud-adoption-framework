@@ -162,9 +162,7 @@ The following reference architectures are an extension of the high-level archite
 
 ## Next steps
 
-For more information about the design areas for your Oracle on Azure landing zone accelerator architecture, see the following articles:
-
-- [Network topology and connectivity for Oracle on Azure IaaS](oracle-network-topology.md)
-- [Manage and monitor Oracle workloads on Azure IaaS](oracle-manage-monitor-workload.md)
-- [Business continuity and disaster recovery (BCDR) for Oracle on Azure IaaS](oracle-disaster-recovery-oracle-landing-zone.md)
+- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](oracle-network-topology.md)
+- [Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator](oracle-manage-monitor-workload.md)
+- [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
 - [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
