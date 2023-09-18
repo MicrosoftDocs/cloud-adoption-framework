@@ -31,7 +31,7 @@ The following architecture diagram shows networking considerations for Oracle in
 - All cloud services should reside within a single virtual network (virtual network) to provide the client the opportunity to deploy within a Hub & Spoke, Virtual WAN, and others.
 - Use Azure Firewall or any of the market-available network virtual appliances (NVAs).
 - For more advanced network security measures, implement a network DMZ. For more information, see [Implement a Secure Hybrid Network](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
-- All Virtual Machines that directly support the Oracle database should reside in a dedicated subnet and be securely separated from the internet and on-premises network by directing all traffic through the hub virtual network.
+-All virtual machines directly supporting the Oracle database should reside in a dedicated subnet and securely separated from the internet 
 - Monitor and filter traffic using Azure Monitor, Azure network security groups (NSGs), or application security groups.
 - The Oracle subnet should include a network security group (NSG) that allows the following traffic:
   - Inbound port 22 from the Azure Bastion Subnet only.
