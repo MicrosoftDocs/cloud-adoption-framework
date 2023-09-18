@@ -18,8 +18,6 @@ ms.custom:
 
 This article describes how to plan for Oracle on Azure Virtual Machines landing zone accelerator. As discussed in the Oracle strategy article, the potential returns from implementing Oracle on Azure are high only if you right size your Oracle workload on Azure Infrastructure. Getting the   sizing right also provides an opportunity to optimize Oracle licensing cost.
 
-The infrastructure capacity planning exercises provide value of your Oracle workload adoption on Azure and enable the cloud adoption team with the data needed to plan the following technical activities.
-
 The strategy and plan template and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
 
 ## Oracle digital estate planning 

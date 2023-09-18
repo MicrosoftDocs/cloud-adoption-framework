@@ -42,8 +42,6 @@ Use Azure compliance capabilities to abide by industry and regulatory requiremen
 
 - Ensure the right sizing for your Oracle Workload on Azure Virtual Machines, both for primary and for secondary (BCDR) environments.  
 
-- Cost monitoring and management
-
 - Use [tagging](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming-and-tagging-decision-guide) to monitor and manage costs and use Azure Policy to enforce tagging standards. 
 
 ### Logging and monitoring  
