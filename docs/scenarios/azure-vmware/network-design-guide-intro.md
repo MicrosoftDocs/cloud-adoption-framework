@@ -3,7 +3,7 @@ title: Azure VMware Solution network design guide
 description: Learn how to design network connectivity for Azure VMware Solution. Learn about connectivity with on-premises datacenters, virtual networks, and more. 
 author: fguerri
 ms.author: fguerri
-ms.date: 09/06/2023
+ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware

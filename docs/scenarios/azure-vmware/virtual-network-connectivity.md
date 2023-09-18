@@ -3,7 +3,7 @@ title: 'Azure VMware Solution network design guide: Connectivity with Azure virt
 description: Learn how to design Azure VMware Solution network connectivity with Azure virtual networks. This article is part of the Azure VMware Solution design guide.
 author: fguerri
 ms.author: fguerri
-ms.date: 09/15/2023
+ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
