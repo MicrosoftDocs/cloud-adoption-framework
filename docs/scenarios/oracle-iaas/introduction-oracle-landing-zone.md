@@ -45,7 +45,7 @@ You need to understand and plan for all critical areas of your landing zone arch
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
 
-:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator-large.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
+:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
 When developing a long-term vision for landing zones, consider the design of the landing zone implementation. Working within this scenario, you focus on the most appropriate starting point to meet your strategic and planning requirements for Oracle on Azure. This article is about the starting point, not necessarily all the details required to reach the longer-term target.  
 
