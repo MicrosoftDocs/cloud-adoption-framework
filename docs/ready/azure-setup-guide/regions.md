@@ -24,7 +24,9 @@ Many Azure regions include availability zones, which are physically separate loc
 
 ### Paired regions
 
-Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), typically located in the same geopolitical area. Region pairing provides resiliency if a catastrophic region failure occurs. Newer regions aren't paired and instead use availability zones for high availability and resiliency.
+Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), typically located in the same geopolitical area. Region pairing provides resiliency if a catastrophic region failure occurs. Region pairing is mostly used for [geo-redundant storage](#use-geo-redundant-storage-in-paired-regions) and by other Azure services that depend on Azure Storage for replication.
+
+Newer regions aren't paired and instead use availability zones for high availability and resiliency.
 
 For more information, see [Azure paired regions](/azure/best-practices-availability-paired-regions).
 
@@ -43,7 +45,7 @@ Some Azure regions are recommended for many workloads. Other Azure regions are i
 
 Additionally, the Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
-Each region has a maximum capacity. A region's maximum capacity might affect which types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, it's a good idea to speak with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
+Azure is a massively scalable platform, but each region has a maximum capacity. A region's maximum capacity might affect which types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, it's a good idea to speak with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
 
 Some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
 
@@ -84,6 +86,17 @@ When you plan to operate a cloud environment over multiple geographic regions, b
 - **Regional resiliency.** Even when you use a multi-region architecture, you should ensure that you design your solution to be highly available within the region as well. Use availability zones where you can, and ensure that you have considered how to achieve high resiliency within the region.
 - **Failover.** When you use multiple regions for resiliency purposes, you might design your solution to use an active-passive approach, which requires you to detect a regional outage and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running simultaneously in multiple regions.
 
+## Relocate across regions
+
+Occasionally, you might need to relocate resources or workloads from one Azure region to another. Changes in business requirements, company acquisitions, data residency laws, or other factors might mean you need to relocate.
+
+> [!TIP]
+> Relocating resources across regions can be complex. When possible, aim to deploy your resources into the correct region from the start.
+
+Azure provides several tools and different relocation capabilities, but the details vary for each Azure service. Some resource types can be [directly moved across regions](/azure/azure-resource-manager/management/move-support-resources), and others can be moved by using [Azure Resource Mover](/azure/resource-mover/overview). Some resource types can't be moved and must be redeployed.
+
+To learn more about relocating across regions, see [Relocate cloud workloads](../../relocate/index.md).
+
 ## High availability and disaster recovery across regions
 
 Azure regions are highly available. Azure service-level agreements are applied to the services running in specific regions. This section provides some considerations that apply if you choose to deploy across multiple regions to increase your resiliency.
@@ -112,10 +125,11 @@ If you deploy into a region that has an associated paired region, you can use th
 
 Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy?branch=main#redundancy-in-a-secondary-region). In Azure Storage GRS, three copies of your data are stored in your primary region, and three more copies are stored in the paired region. You can't change the storage pairing for GRS. Other Azure services that rely on Azure Storage often take advantage of this paired region capability. Your applications and your network must be configured to support paired regions and to use GRS storage appropriately.
 
-You might choose not to use GRS to support your regional resiliency needs, and instead have your application tier access multiple regions, or use another multi-region approach. In this situation, it's a good practice not to use the paired region as your secondary region. If a regional failure occurs, intense pressure is put on resources in the paired region as resources migrate. You can avoid that pressure by recovering to an alternate region, gaining speed during your recovery.
+> [!TIP]
+> You might choose not to use Azure Storage GRS to support your regional resiliency needs, and instead run your application tier access multiple regions, or use another multi-region deployment approach. In this scenario, it's a good practice not to use the paired region as your secondary region. If a regional failure occurs, intense pressure is put on resources in the paired region as resources are migrated and cross-region failover occurs. You can avoid that pressure by recovering to an alternate region, gaining speed during your recovery.
 
 > [!WARNING]
-> Don't attempt to use Azure Storage GRS for virtual machine backups or recovery. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workloads.
+> Don't attempt to use Azure Storage with GRS replication for your virtual machine backups. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workloads.
 
 ### Deploy to regions without a pair
 
