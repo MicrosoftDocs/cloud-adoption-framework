@@ -20,7 +20,7 @@ This article describes how to plan for Oracle on Azure Virtual Machines landing 
 
 The strategy and plan template and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
 
-## Oracle digital estate planning 
+## Oracle digital estate planning
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
