@@ -22,4 +22,4 @@ However, it's important to understand decisions previously made by the cloud pla
 
 ## Next steps
 
-- [ Organize resources for Oracle on Azure Virtual Machines landing zone accelerator](manage-resources-oracle-landing-zone.md).  
+- [Organize resources for Oracle on Azure Virtual Machines landing zone accelerator](manage-resources-oracle-landing-zone.md).  

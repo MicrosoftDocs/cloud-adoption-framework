@@ -45,5 +45,4 @@ The following architecture diagram shows networking considerations for Oracle in
 
 ## Next steps
 
-
 [Business continuity and disaster recovery for Oracle Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
