@@ -79,12 +79,12 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
     | Disk Queue Depth | Adjust to system performance trends |
   
 ### Monitor related Azure services
- 
+
  The following table lists a number of other typical solution components that should be monitored to some extent or other.
 
 |Azure Services |Description |URL |
 |:-----------------|:-------------------|:-------------|
-|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network    https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference|
+|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network <br> https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference|
 | Azure Backup |Azure Backup can be monitored and can be set the alert.| https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor <br> Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script"<br> - version = version number in decimal format <br> message = free-format text <br>Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
 |Azure database Virtual Machine |Database “alert log” file, OS console messages file | - Database “alert log” file is typically located in the subdirectory “$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace” on the database Virtual Machine<br> - OS console log located at “/var/log/messages” |
 
@@ -104,7 +104,7 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 
 |Approach & Option |Description |URL  |
 |:---------------|:---------------|:-------------|
-|AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |[Gathering Database Statistics](https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A)|
+|AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |[Gathering database statistics](https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A)|
 |Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more detail, see the following link   |Performance tuning with STATSPACK, part I:  https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf   Performance tuning with STATSPACK, part II:  https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf |
 
 ## Next steps
