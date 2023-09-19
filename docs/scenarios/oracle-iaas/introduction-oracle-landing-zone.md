@@ -55,7 +55,7 @@ Use the reference architecture as a starting point. You can download the [Visio 
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
-## Strategic and planning considerations for Oracle Virtual Machines landing zones  
+## Strategy and planning considerations for Oracle Virtual Machines landing zones  
 
 Prioritization decisions made during [strategy](oracle-landing-zone-strategy.md) and [plan](oracle-landing-zone-plan.md) conversations have a direct impact on the most appropriate landing zone configuration to support your Oracle workloads implementations. What follows  are important questions to consider during the planning phase:  
 

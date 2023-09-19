@@ -17,7 +17,7 @@ items:
       href: oracle-network-topology.md
     - name: Resource organization
       href: manage-resources-oracle-landing-zone.md
-    - name: Governance
+    - name: Governance and compliance
       href: governance-complaince-oracle-landing-zone.md
     - name: Business continuity and disaster recovery
       href: oracle-disaster-recovery-oracle-landing-zone.md

@@ -24,13 +24,13 @@ This article uses the [Plan for Oracle on Azure Virtual Machines landing zone 
 
 Oracle is an influential platform, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
-- Migration motivations: If other assets depend on Oracle to migrate successfully, then customers tend to focus on reducing costs, complexities, or operational overhead.
+- **Migration motivations**: If other assets depend on Oracle to migrate successfully, then customers tend to focus on reducing costs, complexities, or operational overhead.
 
 - **Cost optimization motivations**: At scale, cloud optimizes cost with scale when required – pay as you go & right sizing of Oracle on cloud can bring licensing and infrastructure cost down.
 
-  - **Innovation motivations**: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity may not be in scope for the initial migration.
+- **Innovation motivations**: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity may not be in scope for the initial migration.
 
-  - **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
+- **Infrastructure scale flexibility requirements**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
 
 To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input helps the cloud adoption team to make informed decisions throughout the implementation process.
 
