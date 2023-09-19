@@ -23,7 +23,7 @@ Azure provides services to design highly available and resilient architecture. T
 
 The first step to building a resilient architecture for your workload environment is to determine availability requirements for your solution by the recovery time objective (RTO) and recovery point objective (RPO) for different levels of failure. RTO is the maximum time an application is unavailable after an incident and RPO is the maximum amount of data loss during a disaster. After you determine the  requirements for your solution, the next step is to design your architecture to provide the established levels of resiliency and availability.
 
-Oracle on Azure workloads primarily use Data Guard, the built-in replication technology of Oracle databases (as a feature of Enterprise Edition), to fulfill both high availability and disaster recovery needs. Data Guard offers three protection modes: Maximum Performance, Availability, and Protection. The choice of protection mode depends on the architectural design and the specific RPO and RTO requirements.
+Oracle on Azure workloads primarily use Data Guard, the built-in replication technology of Oracle databases (as a feature of Enterprise Edition), to fulfill both high availability and disaster recovery needs. Data Guard offers three protection modes: Maximum Performance, Maximum Availability, and Maximum Protection. The choice of protection mode depends on the architectural design and the specific RPO and RTO requirements.
 
 ## High availability of Oracle workloads on Azure Virtual Machines landing zone accelerator
 
@@ -63,17 +63,15 @@ One advantage of using availability zones over availability sets is that your SL
 
 Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adapt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
+**NOTE:** PCS Cluster is not an Oracle certified solution. Consider this when determining your high availability architecture.
+
 :::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure Virtual Machines landing zone accelerator.":::
 
-Use the following links to learn more on how to configure Pacemaker cluster:
 
-- [Setting up Pacemaker on SUSE Linux Enterprise Server in Azure](https://learn.microsoft.com/azure/sap/workloads/high-availability-guide-suse-pacemaker)
-- [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](https://learn.microsoft.com/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi)
-- [Sample script to configure Pacemaker/Corosync (PCS) cluster for an Oracle database](https://github.com/Azure/Oracle-Workloads-for-Azure/tree/main/orapcs)
 
 #### Use proximity placement groups
 
-Consider using [proximity placement groups](https://learn.microsoft.com/azure/virtual-machines/co-location) to ensure minimum latency between database servers in the same availability set and between database servers and application servers. This proximity placement is important when using Pacemaker/Corosync with shared managed disk. It can be useful to minimize network latency when running Oracle Data Guard in MAX_PROTECTION or MAX_AVAILABILITY mode within a single Azure availability set.
+Consider using [proximity placement groups](https://learn.microsoft.com/azure/virtual-machines/co-location) to ensure minimum latency between database servers in the same availability set and between database servers and application servers to minimize network latency. 
 
 ### Disaster recovery for Oracle on Azure workloads
 
@@ -169,11 +167,11 @@ With this approach, the secondary database(s) are configured with the capacity t
 
 Capacity needed to operate secondary database as a replication destination depends on the replication technology you use. Essentially, workload on a transactional OLTP system is composed mostly of read requests. For example, 90%-10% or 95%-5% read-write rations are common in OLTP application. Data replication essentially replicates the result of writing requests in the source database. With this setup, it's reasonable to expect secondary database to operate with 1/10th (if 90%-10% read-write ratio) or even 1/10th of capacity of primary database.
 
-It's also possible and recommended to implement failover procedures as IaC (infrastructure as code) to ensure  enterprise standards during the failover process. The same process can be developed to include server resizing operations, that streamline the end-to-end process.
+It's also recommended to automate failover procedures to ensure  enterprise standards during the failover process. The same process can be developed to include server resizing operations, that streamline the end-to-end process.
 
 ### Network topology for service protection and data protection
 
-Achieving high availability and disaster recovery requires a financial and business decision that balances the recovery time (RTO) and the potential data loss (RPO) against the other Oracle licensing, virtual machine servicing and data transfer costs to implement. Hosting a workload on a single Azure virtual machine offers basic protection for common hardware failure and delivers the least costly solution. However, because a failure on a single virtual machine is likely to cause downtime and data loss, production environments should include a secondary Oracle database hosted on a separate virtual machine with Oracle Data Guard. Configure the data guard properly for data replication with one of the following designs.
+Achieving high availability and disaster recovery requires a financial and business decision that balances the recovery time (RTO) and the potential data loss (RPO) against the other Oracle licensing, virtual machine servicing and data transfer costs to implement. Hosting a workload on a single Azure virtual machine offers basic protection for common hardware failure and delivers the least costly solution. However, because a failure on a single virtual machine is likely to cause downtime and data loss, production environments should include a secondary Oracle database hosted on a separate virtual machine with Oracle Data Guard. Configure the data guard properly for data replication with one or more of the following architectures, depending on your requirements.
 
 - **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate virtual machine within the same availability zone and within a proximity placement group as the primary database.
 - **Data protection from a data center failure**. Placing the secondary virtual machine in a second database increases data protection in the event an entire data center fails. Latency between the primary and secondary database can be as much as 2 ms, which could affect performance, RTO and RPO.
@@ -181,10 +179,9 @@ Achieving high availability and disaster recovery requires a financial and busin
 
 Business continuity requires an integrated approach that includes all components of the workload. Network infrastructure is a primary component for any workload on Azure and it needs to align with the high availability and disaster recovery architecture.
 
-- Oracle Data Guard provides high availability and (in most scenarios) provides sufficient support for common failures. While virtual machines should be placed in separate availability sets, all virtual machines should reside within a single availability zone to reduce network latency.
+- Oracle Data Guard provides high availability and (in most scenarios) provides sufficient support for common failures. When virtual machines are placed in availability sets, all virtual machines and services in a single solution should reside within the same availability zone to reduce network latency. Also for the same reason the services should share the same virtual network.
 - For other protection, virtual machines can be strategically placed in separate availability zones rather than a single availability zone. This approach can prevent downtime during a data center failure.
 - For extreme protection, a secondary database can be placed in another Azure region with continuous updates applied with Oracle Data Guard using Global virtual network peering. This protection enables data updates to be applied to the secondary region privately through the Microsoft backbone. Resources communicate directly, without gateways, extra hops, or transit over the public internet. This networking option allows a high-bandwidth, low-latency connection across peered virtual networks in different regions. You can use Global virtual network peering to connect your primary site to disaster recovery site in another region through a high-speed network.
-- Azure Load Balancer is a layer-4 load balancer that can be employed to route Oracle calls to the Primary database under normal conditions. A health probe can detect when the Primary becomes unavailable to route calls to the Secondary database. A manual configuration update should be done to route database calls to a Secondary database in another region.
 
 ## Summary of resiliency against different failure types
 

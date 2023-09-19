@@ -20,7 +20,7 @@ This article builds on several considerations and recommendations defined in [Az
 
 ## Security is always the priority
 
-As with most production databases, securing an Oracle workload is essential.  The database must remain private with no public endpoints.  Access to the data should be deliberately controlled from authorized cloud services only (for example, a business application or web front-end services). A select few authorized individuals can manage any production database by using the secure Azure Bastion service.
+As with most production databases, securing an Oracle workload is essential.  The database must remain private with no public endpoints.  Access to the data should be deliberately controlled from authorized cloud services only (for example, a business application or web front-end services). A select few authorized individuals can manage any production database by using a secured service as described [here](../../ready/azure-best-practices/plan-for-virtual-machine-remote-access.md).
 
 ## High-level network design
 
@@ -28,27 +28,22 @@ The following architecture diagram shows networking considerations for Oracle in
 
 :::image type="content" source="media/network-considerations-oracle-landing-zone.png" alt-text="Diagram showing the conceptual architecture of Oracle on Azure landing zone accelerator.":::
 
-- All cloud services should reside within a single virtual network (virtual network) to provide the client the opportunity to deploy within a Hub & Spoke, Virtual WAN, and others.
-- Use Azure Firewall or any of the market-available network virtual appliances (NVAs).
+- All solution services should reside within a single virtual network (virtual network).
+- Use Azure Firewall, Azure Application Gateway or other security mechanisms to ensure that only essential traffic is allowed to the solution.
 - For more advanced network security measures, implement a network DMZ. For more information, see [Implement a Secure Hybrid Network](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 -All virtual machines directly supporting the Oracle database should reside in a dedicated subnet and securely separated from the internet 
 - Monitor and filter traffic using Azure Monitor, Azure network security groups (NSGs), or application security groups.
-- The Oracle subnet should include a network security group (NSG) that allows the following traffic:
-  - Inbound port 22 from the Azure Bastion Subnet only.
-  - A Jumpbox Virtual Machine can be used in place of Azure Bastion, which requires inbound port 3389.
+- The Oracle database subnet should include a network security group (NSG) that allows the following traffic:
+  - Inbound port 22 or 3389 if Oracle database services are running on Windows from a secure source only. See [here](../../ready/azure-best-practices/plan-for-virtual-machine-remote-access.md) for more details on secure virtual machine access.
   - Inbound port 1521 from the front-end subnet only.
   - Ports can be changed when security requires obfuscation (not use default ports). 
 - The front-end subnet should follow [best practices for internet facing workloads](https://learn.microsoft.com/events/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
 - Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](https://learn.microsoft.com/azure/bastion/) to connect securely to the Virtual Machines in the Oracle subnet.
-- The **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
-- Oracle workloads should be evaluated in advance and deployed on the proper sized Virtual Machine and storage requirements.
-- Because Oracle is optimized for Linux, it's recommended to run it on a Linux distribution. However, it functions properly on a virtualized Window platform as well.
-- Use [Oracle DataGuard](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard) or another backup strategy. For example, [Oracle GoldenGate](https://docs.oracle.com/goldengate/c1230/gg-winux/GGCON/introduction-oracle-goldengate.htm) should be employed to enable high availability with a load balancer to properly route traffic to the primary or secondary database server.
-- Oracle Virtual Machines should be strategically placed in either [Availability sets](https://learn.microsoft.com/azure/virtual-machines/availability-set-overview) or [Availability zones](https://learn.microsoft.com/azure/reliability/availability-zones-overview). This option depends on the level of availability or disaster recovery as described in the [High availability and disaster recovery for Oracle on Azure](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery.md) design guide.
+- If using Azure Bastion to access the Oracle database server, the **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
+- Remember to configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
 - All services should be deployed using [accelerated networking](https://learn.microsoft.com/azure/virtual-network/accelerated-networking-overview)
 
 ## Next steps
 
-Learn about design considerations for Oracle on Azure IaaS Compute & Storage guidelines in an enterprise-scale scenario. 
 
 [Business continuity and disaster recovery for Oracle Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
