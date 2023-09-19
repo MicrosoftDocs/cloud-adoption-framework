@@ -16,7 +16,7 @@ Identity is the security perimeter in a public cloud so  Identity and access man
 
 The technological landscape in the enterprise is becoming complex and heterogenous. To manage compliance and security for this environment, identity and access management lets the right individuals access the right resources at the right time for the right reasons.
 
-Robust identity and access management forms the basis of modern security. Authorisation and access controls ensure that only authenticated users with verified devices can access and administer resources. It also provides reliable audit logging and non-repudiation of user action.
+Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer resources. It also provides reliable audit logging and nonrepudiation of user action.
 
 Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure, operationally efficient environments.
 
@@ -54,7 +54,7 @@ These articles examine design considerations and recommendations related to iden
 Fix the link below to the new file name
 -->
 
-- [Azure Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+- [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
 - [Platform access](identity-access-platform-access.md)
 - [Prerequisites for a landing zone](identity-access-landing-zones.md)
 
