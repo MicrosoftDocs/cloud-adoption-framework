@@ -84,8 +84,8 @@ Using network security is the fundamental component of a layered security approa
 
 - **Decide How to Connect to Your Virtual Machine** - The Virtual Machine on which the Oracle database workload resides must be secured against unauthorized access.  Management access is sensitive due to the higher permissions required for management users.  In Azure, authorized users have several mechanisms available to manage the Virtual Machine securely.
 
-     - [Microsoft Defender for Cloud's just-in-time (JIT) access](https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks) Microsoft Defender JIT access makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your Virtual Machine.
-     - [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) The Azure Bastion is a Platform-as-a-Service (PaaS) deployment in Azure for a jump box.
+     - [Microsoft Defender for Cloud's just-in-time (JIT) access](https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks) makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your Virtual Machine.
+     - [Azure Bastion](https://docs.microsoft.com/azure/bastion/bastion-overview) is a Platform-as-a-Service (PaaS) deployment in Azure for a jump box.
      
     Either solution can effectively secure management of your Oracle database Virtual Machine, and both solutions can even be used together in an advanced [multi-layered approach](https://learn.microsoft.com/azure/architecture/solution-ideas/articles/multilayered-protection-azure-vm), if desired.
 
