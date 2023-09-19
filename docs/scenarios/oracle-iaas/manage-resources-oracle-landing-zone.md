@@ -17,7 +17,7 @@ ms.custom:
 
 #  Organize resources for Oracle on Azure Virtual Machines landing zone
 
-This article describes how to manage resources for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific recommendations that impact [Resource organization design area decisions](../../ready/landing-zone/design-area/resource-org).
+This article describes how to manage resources for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific recommendations that impact [Resource organization design area decisions](../../ready/landing-zone/design-area/resource-org.md).
 
 However, it's important to understand decisions previously made by the cloud platform team to determine resource organization requirements.
 
