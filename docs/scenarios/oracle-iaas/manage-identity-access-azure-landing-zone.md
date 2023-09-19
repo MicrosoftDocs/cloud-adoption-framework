@@ -16,7 +16,7 @@ ms.custom:
 
 # Manage identity and access for Oracle on Azure Virtual Machines landing zone
 
-This article describes how to manage identity and access for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific recommendations that impact [Azure identity and access management design area decisions](../../ready/landing-zone/design-area/identity-access).
+This article describes how to manage identity and access for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific recommendations that impact [Azure identity and access management design area decisions](../../ready/landing-zone/design-area/identity-access.md).
 
 However, it's important to understand decisions previously made by the cloud platform team to determine identity and access management outcomes.
 
