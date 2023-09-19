@@ -152,7 +152,7 @@ The following reference architectures are an extension of the high-level archite
 
 :::image type="content" source="media/resource-group-oracle-landing-zone.png" alt-text="Diagram showing a basic high availability configuration of Oracle on Azure landing zone accelerator.":::
 
-**Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more information on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](introduction-oracle-landing-zone.md).  
+**Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more information on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md).  
 
 :::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing a Diagram showing an advanced high availability configuration of Oracle on Azure landing zone accelerator.":::
 
