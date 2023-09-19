@@ -25,15 +25,15 @@ As you work your way through the Ready guide, consider your progress as a contin
 - Bootstrap your environment
   - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
   - [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
-  - [ALZ ](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
+  - [Subscription vending modules](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
 
 - Deploy Azure platform landing zone components
-  - [ALZ accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
-  - [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
-  - [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
-- Subscription (LZ) vending process
-  - [LZ vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
-  - [LZ vending module (Bicep)](https://github.com/Azure/bicep-lz-vending)
+  - [Accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
+  - [Bicep modules](https://github.com/Azure/ALZ-Bicep)
+  - [Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
+- Subscription landing zone vending process
+  - [Vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
+  - [Vending module (Bicep)](https://github.com/Azure/bicep-lz-vending)
 - Deploy workload landing zone components
   - [Cloud adoption scenarios and related accelerators](/azure/cloud-adoption-framework/scenarios/overview#scenarios-to-support-your-cloud-adoption-strategy)
 
