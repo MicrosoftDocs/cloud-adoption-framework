@@ -24,15 +24,15 @@ The strategy and plan template and other resources in the Cloud Adoption Fra
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is particularly true if your on-premises implementations include Oracle Real Application Clusters or Exadata configurations.
+**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is true if your on-premises implementations include Oracle Real Application Clusters or Exadata configurations.
 
-**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These articles describe how these assets translates in an Azure environment .
+**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These articles describe how these assets translate in an Azure environment.
 
 **Workload assets**: Your existing Oracle solution can consist of Oracle first-party, third-party, or bespoke applications. Each workload with a dependency on Oracle database services should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
-Consider the following when planning for migrating Oracle workloads to Azure: 
+Consider the following items when planning for migrating Oracle workloads to Azure:
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information performance information. AWR reports or statspack report should be taken when the system is running at peak load. 
+**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information performance information. AWR reports or statspack report should be taken when the system is running at peak load.
 
 **Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or third party applications and any custom developed applications. Thereby, it's also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the CPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS. 
 
@@ -50,11 +50,11 @@ The Cloud Adoption Framework includes a tool and several templates for creating 
 
 Whether you use templates or your own project planning tools, factor in the following Oracle-specific actions:
 
-- Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines. 
+- Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines.
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct Virtual Machine SKU on Azure – based on OMA Tool 
+- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct Virtual Machine SKU on Azure – based on OMA Tool.
 
-- Choose the right deployment architecture - based on architecture guidelines. 
+- Choose the right deployment architecture - based on architecture guidelines.
 
 - Account for each workload (or wave of workloads) to be migrated.
 
