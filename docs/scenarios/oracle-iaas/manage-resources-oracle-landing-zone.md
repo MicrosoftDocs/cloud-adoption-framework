@@ -1,6 +1,6 @@
 ---
-title: Organize resources for Oracle on Azure Virtual Machines landing zone accelerator
-description: Learn about organizing resources for Oracle on Azure Virtual Machines landing zone accelerator.
+title: Organize resources for Oracle on Azure Virtual Machines landing zone 
+description: Learn about organizing resources for Oracle on Azure Virtual Machines landing zone.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
@@ -14,26 +14,13 @@ ms.custom:
   - engagement-fy24
 ---
 
-# Organize resources for Oracle on Azure Virtual Machines landing zone accelerator
 
-To align with the [Ready methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/) of the Cloud Adoption Framework, implement a naming and tagging strategy that includes business and operational details as components of resource names and metadata tags. 
+#  Organize resources for Oracle on Azure Virtual Machines landing zone
 
-## Use Azure resource naming and tagging conventions
+This article describes how to manage resources for Oracle on Azure Virtual Machines landing zone accelerator. Azure landing zones for Oracle don't have specific recommendations that impact [Resource organization design area decisions](../../ready/landing-zone/design-area/resource-org).
 
-The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs.
-
- The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
-
-Resources to name include Virtual Machines, storage, availability sets, virtual networks, subnets, ExpressRoute, NSGs, application security groups, tags. A sample use case could be to tag all Azure development Virtual Machines with the tag Dev. This naming convention eases reporting and billing operations to pull a report for all things Dev. For more information, see [Develop your naming and tagging strategy for Azure resources](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
-
-## Key Azure resources required for Oracle workload
-
-The two key resources required to migrate Oracle to Azure are [Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-vm-solutions) and [storage](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-storage). From AWR report, using [OMAT](https://github.com/Azure/Oracle-Workloads-for-Azure/tree/main/omat) (Oracle Migration Assistance Tool), you can determine the right SKU, size of the Virtual Machine along with optimal storage option. Once you have your Virtual Machine and storage recommendations, follow the naming and tagging conventions.
-
-Since Oracle products are usually licensed by processor core, selecting a Virtual Machine with the least number of suitable cores provides the best licensing savings for the customers.
+However, it's important to understand decisions previously made by the cloud platform team to determine resource organization requirements.
 
 ## Next steps
 
-- [Strategic impact of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
-- [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md)  
-- [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md) 
+- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology.md).
