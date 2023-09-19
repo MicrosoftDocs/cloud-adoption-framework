@@ -1,109 +1,131 @@
 ---
-title: #Required; "What is <product>?"
-description: #Required; article description that is displayed in search results.
-author: #Required; your GitHub user alias, with correct capitalization.
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: overview #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-
-#CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
+title: Azure identity and access management design area
+description: Understand the identity and access management design area as part of the Azure landing zone design areas.
+author: soderholmd
+ms.author: dsoderholm 
+ms.service: cloud-adoption-framework
+ms.topic: conceptual
+ms.date: 09/19/2023
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
+Identity and resource access management
 
-This template provides the basic structure of a Overview article pattern. See the [instructions - Overview](../level4/article-overview.md) in the pattern library.
+Once you have identified yourr Identity architecture, the next step is about authorization. Consider what resources each authenticated principal has or needs access to, and how to mitigate risks of unauthorized access to your resources. Refer to this document to understand more about Enterprise access strategy in Azure, and the different control planes that need to be secured.
+Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. The design principle of subscription democratisation allows application administrators to manage their own workloads within the policy guiderails set by the platform owner. Consider whether users require permissions on a narrow scope, such as an administrator for a single application, or broad scope, such as a network administrator across multiple application workloads. In either case, follow the principle of just-enough-access, and ensure that the user has only the roles required for their normal activities, using custom roles and privileged identity management (PIM) where necessary.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
+Design considerations
 
-Overview is an article pattern that covers two aspects of a product or service:
+Role-Based Access Control (RBAC)
 
-* What is it?
-* What is it used for?
+•	Understand the difference between Microsoft Entra ID roles and Azure RBAC roles.
 
-An Overview article talks about the product or service from a technical point of view. It's not intended to define the benefits or value proposition. That just duplicates marketing.
+o	Entra ID roles control the administrative privileges to tenant-wide services such as Microsoft Entra ID, as well as other Microsoft services including Teams, Exchange Online, and Intune. 
 
-<!-- 1. H1 -----------------------------------------------------------------------------
+o	Azure RBAC roles control the administrative privileges to Azure resources such as virtual machines, subscriptions, and resource groups. For more information, see What is Azure role-based access control (Azure RBAC)?
 
-Required: This is the primary heading at the top of the article.
+o	The Global Administrator Azure AD role (if allowed), and the Owner and User Access Administrator Azure RBAC roles, can modify the role assignments on Azure resources.
 
-Use the format "What is <service>?" 
+o	Classic resources and classic administrators will be retired on August 31, 2024. Remove unnecessary Co-Administrators and use Azure RBAC for fine-grained access control. See Resource Manager and classic deployment - Azure Resource Manager | Microsoft Learn for more information on migrating from Classic resources to Azure Resource Manager.
 
-You can also use this in the TOC if your service name doesn’t cause the phrase to wrap.
+o	Azure Active Directory roles can be assigned to groups with the isAssignableToRole property set to true (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by, Global Administrators or Privileged Role Administrators, or the group’s owner. See Use Azure AD groups to manage role assignments - Microsoft Entra | Microsoft Learn
 
--->
+o	Only some roles can reset the password or MFA settings for another administrator. This is to prevent an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See Azure AD built-in roles - who can reset passwords to understand administrator password reset rights.
 
-# What is <product/service>? 
-TODO: Add your heading
+o	Some roles support Attribute-Based Access Control (ABAC), or role assignment conditions. These allow you administrators to dynamically assign roles based on attributes of the resource. For example, assigning the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See What is Azure attribute-based access control (Azure ABAC)? | Microsoft Learn for more information.
 
-<!-- 2. Introductory paragraph ----------------------------------------------------------
 
-Required: Lead with a light intro that describes what the article covers. Answer the fundamental “why would I want to know this?” question. Keep it short.
 
-Many services add artwork or videos below the Introduction.
+•	The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown in the diagram below.
+ 
+ 
 
--->
 
-[Introductory paragraph]
-TODO: Add your introductory paragraph
+•	If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group, subscription, and resource group scopes. For more information, see Azure custom roles - Azure RBAC | Microsoft Learn
 
-<!---Avoid notes, tips, and important boxes. Readers tend to skip over them. Better to put that info
-directly into the article text.
+•	For built-in Azure AD role-based access control (RBAC) roles, you can use the free version of Azure AD, but for custom Azure AD roles, you need Azure AD Premium. For more information, see  Create custom roles in Azure AD role-based access control - Microsoft Entra | Microsoft Learn
 
---->
+•	When you lay down a framework for identity and access management (IAM) and governance, consider the following maximum service limits for roles, role assignments, and custom roles. For more information, see  Troubleshoot Azure RBAC limits - Azure RBAC | Microsoft Learn.
 
-<!-- 3. H2s (Article body)------------------------------------------------------------ 
+o	4,000 role assignments per subscription.
 
-Required: The article body should discuss the features that answer the "Why should I care?" question with a bit more depth.
+o	500 role assignments per management group.
 
-Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
-Add images, code blocks, or other graphical elements after the information it illustrates.
+o	30 Azure AD custom roles in an Azure AD organization.
 
-* Call out any basic requirements and dependencies.
-* Call out limitations or overhead.
-* Don't catalog every feature. Some might only need to be mentioned as available, without any discussion.
-* Give each H2 a heading that sets expectations for the content that follows.
-* Follow the H2 headings with a sentence about how the section contributes to the whole.
-* Images, code blocks, or other graphical elements come after the text block it illustrates.
-Don't number H2s.
 
--->
+Design recommendations
+•	Enforce multifactor authentication (MFA) for users with rights to the Azure environments. Many compliance frameworks require multi-factor authentication enforcement. Multi-factor authentication greatly lowers the risk of credential theft and unauthorized access. 
 
-## [Section 1 heading]
-TODO: add your content
+•	Use Azure AD Conditional Access policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
-## [Section 2 heading]
-TODO: add your content
+•	Enable Defender for Identity to protect user identities and make it harder to  compromise user credentials. Defender for Identity identifies suspicious user activities and provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
 
-## [Section n heading]
-TODO: add your content
+•	Use Azure Sentinel to provide additional threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Azure Active Directory, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more informaition, see Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel | Microsoft Learn
 
-<!-- 4. Next step/Related content ------------------------------------------------------------------------ 
+•	Use separate, cloud-only accounts for administrative activity. Do not use the same account for web browsing and e-mail access as you do for Azure administration. For more information on securing administrative access, see Secure access practices for administrators in Azure AD - Microsoft Entra | Microsoft Learn.
 
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
+•	Create emergency access or “break glass” accounts to avoid accidentally being locked out of your Azure Active Directory organisation. Emergency access accounts are highly privileged and are not assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster. 
 
--->
+•	Use Entra Identity Governance and create Access Packages to control group membership, with an approval process and regular access reviews for privileged group members. See What is entitlement management? - Microsoft Entra | Microsoft Learn for more information.
 
-## Next step
+•	To make role assignments more manageable, avoid assigning roles directly to users. Instead, assign roles to groups. Assigning roles to groups instead of users also helps minimize the number of role assignments, which has a limit of role assignments per subscription.
 
-TODO: Add your next step link(s)
+Privileged Identity Management (PIM)
+•	Use Azure AD Privileged Identity Management (PIM) to establish zero-trust and least privilege access. Map your organization's roles to the minimum access levels needed. Azure AD PIM can use Azure native tools, extend current tools and processes, or use both current and native tools as needed.
 
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
+•	Use PIM access reviews to regularly validate resource entitlements. Access reviews are part of many compliance frameworks, so many organizations already have an access review process in place.
 
-<!-- OR -->
+•	Use privileged identities for automation runbooks that require elevated access permissions, or for privileged deployment pipelines. Use the same tools and policies to govern automated workflows that access critical security boundaries as you use to govern users of equivalent privilege.
 
-## Related content
+•	Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator on a subscription or management group, using Privileged Identity Management (PIM) for Groups - Microsoft Entra | Microsoft Learn. With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Azure Active Directory roles.
 
-TODO: Add your next step link(s)
+•	Use Administrative Units to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. This allows delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organisation. Use the Restricted management administrative units feature to further protect specific objects from modification.
 
-- [Write concepts](article-concept.md)
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
+•	Use Protected actions with PIM (Privileged Identity Management) to add additional layer of protection. Protected actions in Azure Active Directory (Azure AD) are permissions that have been assigned Conditional Access policies. When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the Phishing-resistant MFA policy. See What are protected actions in Azure AD? - Microsoft Entra | Microsoft Learn for more information.
+
+
+
+•	Use Azure AD built-in roles to manage the following identity settings:
+Scope	Entra ID role	Note
+Tenant administration	Global Administrator	Don't assign more than five people accounts to this role.
+Hybrid environment	Hybrid Identity Administrator	
+Authentication	Security Administrator	
+Enterprise Application or Application Proxy	Application Administrator	No consent global admin.
+•	If the Azure built-in roles don't meet your organization's specific needs, you can create your own custom roles. Consider the following key role definitions when you create custom roles within the Azure AD tenant. The wildcard * under Actions means the principal assigned to this role can do all actions. The actions under NotActions are subtracted from Actions. 
+ 
+Role	Usage	Actions	NotActions
+Azure platform owner (such as the built-in Owner role)	Management group and subscription lifecycle management	*	
+Network management (NetOps)	Platform-wide global connectivity management: Virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others	*/read, 
+Microsoft.Network/*, 
+Microsoft.Resources/deployments/*,
+Microsoft.Support/*	
+Security operations (SecOps)	Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy	*/read, */register/action, 
+Microsoft.KeyVault/locations/deletedVaults/purge/action, 
+Microsoft.PolicyInsights/*, 
+Microsoft.Authorization/policyAssignments/*,
+Microsoft.Authorization/policyDefinitions/*,
+Microsoft.Authorization/policyExemptions/*,
+Microsoft.Authorization/policySetDefinitions/*,
+Microsoft.Insights/alertRules/*, 
+Microsoft.Resources/deployments/*, 
+Microsoft.Security/*, 
+Microsoft.Support/*	
+Subscription owner	Delegated role for subscription owner generated from subscription Owner role	*	Microsoft.Authorization/*/write, 
+Microsoft.Network/vpnGateways/*, 
+Microsoft.Network/expressRouteCircuits/*, 
+Microsoft.Network/routeTables/write, 
+Microsoft.Network/vpnSites/*
+Application owners (DevOps, AppOps)	Contributor role granted for application/operations team at resource group level	*	Microsoft.Authorization/*/write, 
+Microsoft.Network/
+publicIPAddresses/write, 
+Microsoft.Network/virtualNetworks/write, 
+Microsoft.KeyVault/locations/
+deletedVaults/purge/action
+ 
+Identity and access management in the Azure landing zone accelerator
+Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers their environments require.
+The implementation also includes options to:
+•	Assign recommended policies to govern identity and domain controllers.
+•	Create a virtual network, and connect to the hub via virtual network peering. 
+

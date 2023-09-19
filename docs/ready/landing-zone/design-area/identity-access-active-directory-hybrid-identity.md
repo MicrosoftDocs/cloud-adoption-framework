@@ -1,109 +1,68 @@
 ---
-title: #Required; "What is <product>?"
-description: #Required; article description that is displayed in search results.
-author: #Required; your GitHub user alias, with correct capitalization.
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: overview #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-
-#CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
+title: Azure identity and access management design area
+description: Understand the identity and access management design area as part of the Azure landing zone design areas.
+author: soderholmd
+ms.author: dsoderholm 
+ms.service: cloud-adoption-framework
+ms.topic: conceptual
+ms.date: 09/19/2023
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
+# Identity Solution and Authentication options
 
-This template provides the basic structure of a Overview article pattern. See the [instructions - Overview](../level4/article-overview.md) in the pattern library.
+Microsoft Entra ID provides a base level of access control and identity management for Azure resources. If your organization has an on-premises Active Directory infrastructure, your cloud-based workloads might require directory synchronization with Azure AD for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of Active Directory Domain Services (AD DS) in the cloud.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
+Cloud-based identity management is an iterative process. You could start with a cloud-native solution with a small set of users and corresponding roles for an initial deployment. As your migration matures, you might need to integrate your identity solution using directory synchronization or add domains services as part of your cloud deployments. Revisit your identity strategy in every iteration of your migration process.
 
-Overview is an article pattern that covers two aspects of a product or service:
+Please refer to these links to decide on the solution:
+Identity decision guide - Cloud Adoption Framework | Microsoft Learn
 
-* What is it?
-* What is it used for?
+## Azure and on-premises (Hybrid Identity)
 
-An Overview article talks about the product or service from a technical point of view. It's not intended to define the benefits or value proposition. That just duplicates marketing.
+User objects that are wholly created in Azure Active Directory are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local login on devices using Windows 10 or Windows 11.
 
-<!-- 1. H1 -----------------------------------------------------------------------------
+However, many organisations are already using AD DS directories that they have been operating for a long time, and which may be integrated with other systems such as HR or ERP using LDAP. These domains may have many domain-joined computers and applications that use Kerberos or the older NTLMv2 protocols for authentication. In these environments, user objects can be synchronized to Microsoft Entra ID so that users can log onto both on-premises systems and cloud resources with a single identity. This is known as ‘hybrid identity’.  These domains can be extended into Azure Landing Zones:
 
-Required: This is the primary heading at the top of the article.
+- Active Directory domain users can be synchronised with Entra ID using AAD Connect or AAD Cloud Sync, to maintain a single user object in both cloud and on-premises environments. Review the supported topologies to determine the recommended configuration for your environment.
 
-Use the format "What is <service>?" 
+- Active Directory domain controllers or Azure Active Directory Domain Services (AAD DS) can be deployed in Azure to allow Windows virtual machines and other services to be domain-joined. This allows Active Directory users to log into Windows servers, Azure Files shares, and other resources that use Active Directory as an authentication source. It also facilitates the use of other AD DS technologies such as Group Policy. Please refer to  Common deployment scenarios for Azure AD Domain Services.
 
-You can also use this in the TOC if your service name doesn’t cause the phrase to wrap.
+With hybrid identity, authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Azure AD offers. For more information, see Authentication for Azure AD hybrid identity solutions.
 
--->
+### Design recommendations
 
-# What is <product/service>? 
-TODO: Add your heading
+- For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see Integrate on-premises AD with Azure.
 
-<!-- 2. Introductory paragraph ----------------------------------------------------------
+- If you have Active Directory Federation Services (AD FS) federation with Azure AD, you can use password hash synchronization as a backup. AD FS doesn't support seamless single sign-on (SSO).
 
-Required: Lead with a light intro that describes what the article covers. Answer the fundamental “why would I want to know this?” question. Keep it short.
+- Determine the right synchronization tool for your cloud identity. For more information, see Determine directory synchronization requirements.
 
-Many services add artwork or videos below the Introduction.
+- If you have AD FS, move to the cloud to centralize identity and reduce operational effort. If AD FS is still part of your identity solution, install and use Azure AD Connect.
 
--->
+- Identify applications using legacy authentication protocols and migrate them to more modern services.
 
-[Introductory paragraph]
-TODO: Add your introductory paragraph
+## Azure AD, Azure AD DS, and Windows Server AD DS
 
-<!---Avoid notes, tips, and important boxes. Readers tend to skip over them. Better to put that info
-directly into the article text.
+Administrators should familiarize themselves with the different options available for implementing Active Directory Domain Services:
 
---->
+- AD DS domain controllers can be deployed into Azure as Windows virtual machines that administrators have full control of. They can be joined to an existing Active Directory domain, or create a new one with a trust relationship with existing on-premises domains. See Deploy AD DS in an Azure virtual network.
 
-<!-- 3. H2s (Article body)------------------------------------------------------------ 
+- Azure AD DS is an Azure managed service that creates a new AD DS domain hosted in Azure. The domain can be part of a trust relationship with existing domains and can synchronize identities from MEID. Administrators do not have direct access to the domain controllers and are not responsible for patching and other maintenance operations. For more information, see Overview of Azure Active Directory Domain Services | Microsoft Learn.
 
-Required: The article body should discuss the features that answer the "Why should I care?" question with a bit more depth.
+Once AD DS or AAD DS is configured, Azure virtual machines and file shares can be domain-joined in the same way as on-premises computers. For more information on the different options, see Compare Active Directory-based services in Azure | Microsoft Learn.
 
-Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
-Add images, code blocks, or other graphical elements after the information it illustrates.
+### Design recommendations
 
-* Call out any basic requirements and dependencies.
-* Call out limitations or overhead.
-* Don't catalog every feature. Some might only need to be mentioned as available, without any discussion.
-* Give each H2 a heading that sets expectations for the content that follows.
-* Follow the H2 headings with a sentence about how the section contributes to the whole.
-* Images, code blocks, or other graphical elements come after the text block it illustrates.
-Don't number H2s.
+- To access applications that use on-premises authentication remotely through Azure AD, use Azure AD Application Proxy.
 
--->
+- Evaluate the compatibility of workloads for Azure AD DS and for AD DS on Windows Server.
 
-## [Section 1 heading]
-TODO: add your content
+- Deploy domain controllers into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads.
 
-## [Section 2 heading]
-TODO: add your content
+- Make sure to design your network so resources that require AD DS on Windows Server for local authentication and management can access their domain controllers. For AD DS on Windows Server, consider shared service environments that offer local authentication and host management in a larger enterprise-wide network context.
 
-## [Section n heading]
-TODO: add your content
+- When you deploy Azure AD DS or integrate on-premises environments into Azure, use locations with Availability Zones for increased availability.
 
-<!-- 4. Next step/Related content ------------------------------------------------------------------------ 
+- Deploy Azure AD DS within the primary region, because you can only project this service into one subscription. You can expand Azure AD DS to further regions with replica sets.
 
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
-
--->
-
-## Next step
-
-TODO: Add your next step link(s)
-
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
-
-<!-- OR -->
-
-## Related content
-
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
+- If Kerberos is required for Azure Files file shares for Windows users, consider using Azure AD Kerberos rather than deploying domain controllers into the cloud.

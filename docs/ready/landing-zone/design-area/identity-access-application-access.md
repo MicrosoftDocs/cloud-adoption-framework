@@ -1,109 +1,55 @@
 ---
-title: #Required; "What is <product>?"
-description: #Required; article description that is displayed in search results.
-author: #Required; your GitHub user alias, with correct capitalization.
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: overview #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-
-#CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
+title: Azure identity and access management design area
+description: Understand the identity and access management design area as part of the Azure landing zone design areas.
+author: soderholmd
+ms.author: dsoderholm 
+ms.service: cloud-adoption-framework
+ms.topic: conceptual
+ms.date: 09/19/2023
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
+Application access management
 
-This template provides the basic structure of a Overview article pattern. See the [instructions - Overview](../level4/article-overview.md) in the pattern library.
+Individual application workloads will have authentication and authorisation requirements beyond those that apply to administrators. Users will require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to others, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates non-compliant resources or users using can use their Microsoft or social identities to access applications or services build by developers.
 
-You can provide feedback about this template at: https://aka.ms/patterns-feedback
+Design Considerations
 
-Overview is an article pattern that covers two aspects of a product or service:
+•	Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML(Security Assertion Markup Language). See What is identity and access management (IAM)? - Microsoft Entra | Microsoft Learn for more information.
 
-* What is it?
-* What is it used for?
+•	Developers should consider using Microsoft Identity Platform as the Identity solution for their applications. The Microsoft Identity Platform provides an OpenID Connect standard-compliant authentication service enabling developers to authentication several identity types, including:
+o	Work or school accounts, provisioned through Azure AD
+o	Personal Microsoft accounts (Skype, Xbox, Outlook.com)
+o	Social or local accounts, by using Azure AD 
+See Microsoft identity platform overview - Microsoft Entra | Microsoft Learn for more information
 
-An Overview article talks about the product or service from a technical point of view. It's not intended to define the benefits or value proposition. That just duplicates marketing.
+•	Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Applications can use managed identities to obtain Azure AD tokens without having to manage any credentials. See Connecting from your application to resources without handling credentials for an in-depth discussion.
 
-<!-- 1. H1 -----------------------------------------------------------------------------
+o	Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
-Required: This is the primary heading at the top of the article.
+o	It's easy to confuse how service principals and managed identities access Azure resources. For an explanation, see Demystifying Service Principals - Managed Identities.  
 
-Use the format "What is <service>?" 
+o	Consider whether to use system-assigned or user-assigned managed identities. See Choose system or user-assigned managed identities for guidance. 
 
-You can also use this in the TOC if your service name doesn’t cause the phrase to wrap.
+o	To check which Azure resources managed identities support, see Azure services that can use managed identities to access other services. For more information, see Managed identities for Azure resources - Microsoft Entra | Microsoft Learn.
 
--->
+o	You can't transfer Azure resources with user-assigned or system-assigned identities to another Azure subscription. Managed identities are also not preserved if you move a subscription from one directory to another. You must carry out the move and recreate the managed identities manually.
 
-# What is <product/service>? 
-TODO: Add your heading
+o	System-assigned managed identities can be used to support signing in to a VM using Azure AD authentication. For more information, see Log in to a Windows virtual machine in Azure by using Azure AD - Microsoft Entra | Microsoft Learn.  
 
-<!-- 2. Introductory paragraph ----------------------------------------------------------
+•	Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve Azure AD B2B or Azure AD B2C configurations. For more information, see External Identities in Azure Active Directory - Microsoft Entra | Microsoft Learn.  
 
-Required: Lead with a light intro that describes what the article covers. Answer the fundamental “why would I want to know this?” question. Keep it short.
 
-Many services add artwork or videos below the Introduction.
+•	Find out which services or applications within your landing zone support Azure AD authentication. To check which Azure services support Azure AD authentication, see Azure services that support Azure AD authentication - Microsoft Entra | Microsoft Learn.  
 
--->
+•	Consider the methods that virtual machine users will use to connect interactively. Azure Bastion, Just-in-Time (JIT), and RDP or SSH have different network requirements and security implications. See Plan for virtual machine remote access for more information.
 
-[Introductory paragraph]
-TODO: Add your introductory paragraph
+Design recommendations
+•	Use managed identities for Azure resources that don't need to use credentials. Applications that need to authenticate against an Azure service can use managed identities. Ensure that managed identities follow the principle of least privilege when granting access.
 
-<!---Avoid notes, tips, and important boxes. Readers tend to skip over them. Better to put that info
-directly into the article text.
+•	Use Azure Key Vault to manage secrets, keys, certificates used by applications. Use RBAC to allow administrative access and management for management. Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: Use a managed identity to access Azure Key Vault - Windows - Microsoft Entra | Microsoft Learn.
 
---->
+•	If you are using DevOps pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. See Authenticate your Azure deployment pipeline by using service principals for more information.
 
-<!-- 3. H2s (Article body)------------------------------------------------------------ 
+•	To access applications that use on-premises authentication remotely through Azure AD, use Azure AD Application Proxy. Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Azure AD, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
-Required: The article body should discuss the features that answer the "Why should I care?" question with a bit more depth.
-
-Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
-Add images, code blocks, or other graphical elements after the information it illustrates.
-
-* Call out any basic requirements and dependencies.
-* Call out limitations or overhead.
-* Don't catalog every feature. Some might only need to be mentioned as available, without any discussion.
-* Give each H2 a heading that sets expectations for the content that follows.
-* Follow the H2 headings with a sentence about how the section contributes to the whole.
-* Images, code blocks, or other graphical elements come after the text block it illustrates.
-Don't number H2s.
-
--->
-
-## [Section 1 heading]
-TODO: add your content
-
-## [Section 2 heading]
-TODO: add your content
-
-## [Section n heading]
-TODO: add your content
-
-<!-- 4. Next step/Related content ------------------------------------------------------------------------ 
-
-Optional: You have two options for manually curated links in this pattern: Next step and Related content. You don't have to use either, but don't use both.
-  - For Next step, provide one link to the next step in a sequence. Use the blue box format
-  - For Related content provide 1-3 links. Include some context so the customer can determine why they would click the link. Add a context sentence for the following links.
-
--->
-
-## Next step
-
-TODO: Add your next step link(s)
-
-> [!div class="nextstepaction"]
-> [Write concepts](article-concept.md)
-
-<!-- OR -->
-
-## Related content
-
-TODO: Add your next step link(s)
-
-- [Write concepts](article-concept.md)
-
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
--->
+•	Use attribute-based access control (ABAC) where supported, to further restrict permissions on data in blob storage and prevent unauthorised access to data. See Allow read access to blobs based on tags and custom security attributes (Preview) - Azure ABAC | Microsoft Learn for more information. 
