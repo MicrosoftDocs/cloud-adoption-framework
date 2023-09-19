@@ -45,7 +45,7 @@ You need to understand and plan for all critical areas of your landing zone arch
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
 
-:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
+:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator-large.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
 When developing a long-term vision for landing zones, consider the design of the landing zone implementation. Working within this scenario, you focus on the most appropriate starting point to meet your strategic and planning requirements for Oracle on Azure. This article is about the starting point, not necessarily all the details required to reach the longer-term target.  
 
@@ -154,7 +154,7 @@ The following reference architectures are an extension of the high-level archite
 
 **Basic HA Configuration** - This is the most basic configuration for Oracle High availability inside a single availability zone. For more information on specific configuration, see [Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md).  
 
-:::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing a Diagram showing an advanced high availability configuration of Oracle on Azure landing zone accelerator.":::
+:::image type="content" source="media/resource-group-oracle-landing-zone-2.png" alt-text="Diagram showing an advanced high availability configuration of Oracle on Azure landing zone accelerator.":::
 
 **Advanced HA/DR configuration** - This is the most advanced configuration for HA/DR using availability zones and regions. Extra configuration for HA/DR for application servers and frontend services are required as this isn't covered by the accelerator. Also note that this architecture is recommended to be combined with basic HA configuration for maximum availability in all scenarios.
 

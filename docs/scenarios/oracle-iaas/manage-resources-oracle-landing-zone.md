@@ -21,6 +21,12 @@ This article describes how to manage resources for Oracle on Azure Virtual Machi
 
 However, it's important to understand decisions previously made by the cloud platform team to determine resource organization requirements.
 
+## Use Azure resource naming and tagging conventions
+
+The business side of this strategy ensures that resource names and tags include the organizational information you need to identify the teams. Use a resource name along with the business owners who are responsible for resource costs.
+
+The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other useful information for managing resources.
+
 ## Next steps
 
 - [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology.md).

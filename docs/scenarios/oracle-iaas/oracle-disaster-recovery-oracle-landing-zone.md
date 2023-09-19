@@ -63,11 +63,9 @@ One advantage of using availability zones over availability sets is that your SL
 
 Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adapt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
-**NOTE:** PCS Cluster is not an Oracle certified solution. Consider this when determining your high availability architecture.
+**NOTE:** PCS Cluster isn't an Oracle certified solution. Consider this when determining your high availability architecture.
 
 :::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing high availability configuration with Pacemaker for Oracle on Azure Virtual Machines landing zone accelerator.":::
-
-
 
 #### Use proximity placement groups
 
@@ -187,10 +185,10 @@ Business continuity requires an integrated approach that includes all components
 
 | Failure Scenario | Oracle on Azure HA/DR Scenario | RPO/RTO  |
 |:-----------|:-----------|:-----------|
-| Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same availability set in the same data center.<br>  - Protects against single instance failure. <br> - Will cause downtime if entire data center is down. | RPO=0 RTO<=2mins <br> - Using Observer for Fast Failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
-| Data Centre failure | Data Guard with two nodes in separate availability zones. <br> - Protects against data center failure. <br> - Will cause downtime if whole region is down. <br> - Requires additional failover configuration for app servers to manage network latency.  | RPO<=5mins RTO<=5mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
-|Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires additional failover configuration for app servers to manage network latency.  |  RPO>=10mins RTO>=15mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
-|  |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be setup in the target region during failover.   | RPO>=24hrs RTO>=4hrs   |
+| Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same availability set in the same data center.<br>  - Protects against single instance failure. <br> - Will cause downtime if entire data center is down. | RPO=0 RTO<=2 mins <br> - Using Observer for Fast Failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
+| Data Center failure | Data Guard with two nodes in separate availability zones. <br> - Protects against data center failure. <br> - Will cause downtime if whole region is down. <br> - Requires more failover configuration for app servers to manage network latency.  | RPO<=5 mins RTO<=5 mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5 mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
+|Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires more failover configuration for app servers to manage network latency.  |  RPO>=10 mins RTO>=15 mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
+|  |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be set up in the target region during failover.   | RPO>=24 hrs RTO>=4 hrs   |
 
 ## Next steps
 
