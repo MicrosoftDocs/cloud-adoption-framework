@@ -41,13 +41,13 @@ Some regions are dedicated to specific sovereign entities. Although all regions 
 
 ## Consider region service availability and capacity
 
-Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category).
+Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). Additionally, some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
 
-Additionally, the Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
+The Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
 Azure is a massively scalable platform, but each region has a maximum capacity. A region's maximum capacity might affect which types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, it's a good idea to speak with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
 
-Some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
+When you use regions for disaster recovery purposes, consider whether the destination region provides the capacity you need to support your workloads. For virtual machine-based workloads, consider using [capacity reservations](/azure/virtual-machines/capacity-reservation-overview) to guarantee the availability of capacity in the regions you use.
 
 ## Understand data residency
 
@@ -69,10 +69,11 @@ For more information about latency between Azure regions and other geographic ar
 
 It's common for an organization to operate in multiple geographic regions. Common reasons to use multiple Azure regions include:
 
-- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in your primary Azure region.
+- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in a specific Azure region.
 - **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
 - **Achieve high resiliency**, especially for mission-critical workloads. Mission-critical workloads require the high availability provided by availability zones as well as protection from region-wide outages and disasters.
+- **Improve network connectivity and performance**. In a hybrid or multi-cloud scenario, you might improve your network performance by using multiple Azure regions. Traffic can enter and exit the high-speed Microsoft backbone network at locations that are close to another cloud provider's locations or to your on-premises systems.
 - **Optimize costs**. Different Azure resource types can have different prices in different regions. When you use tools like the [Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and the [Azure service pricing information](https://azure.microsoft.com/pricing/), ensure that you select the correct region to view accurate pricing information.
 - **Scale beyond resource quotas**. Some Azure resources have [quotas and limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that restrict how many instances of a resource can be created in each region by each subscription. To scale beyond these limits, you might need to consider using additional subscriptions or multiple regions.
 
@@ -141,7 +142,7 @@ In the rare event that an entire Azure region is unavailable, you need to plan f
 
 Consider your data resiliency needs. Regardless of where your data is located, you can move, copy, or access your data from any location globally.
 
-Some Azure services enable you to store or replicate your data in multiple regions even without the regions being paired. For example, [Azure Cosmos DB provides global data distribution](/azure/cosmos-db/distribute-data-globally), [Azure SQL Database provides active geo-replication to another Azure region](/azure/azure-sql/database/active-geo-replication-overview), and [Azure NetApp Files provides cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction#supported-region-pairs).
+Some Azure services enable you to store or replicate your data in multiple regions even without the regions being paired. For example, [Azure Cosmos DB provides global data distribution](/azure/cosmos-db/distribute-data-globally), [Azure SQL Database provides active geo-replication to another Azure region](/azure/azure-sql/database/active-geo-replication-overview), [Azure Site Recovery supports recovery to any region](/azure/site-recovery/azure-to-azure-quickstart), and [Azure NetApp Files provides cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction#supported-region-pairs).
 
 ### Consider networking for backups
 
