@@ -30,7 +30,7 @@ The following architecture diagram shows networking considerations for Oracle in
 
 - All solution services should reside within a single virtual network.
 - Use Azure Firewall, Azure Application Gateway or other security mechanisms to ensure that only essential traffic is allowed to the solution.
-- For more advanced network security measures, implement a network DMZ. For more information, see [Implement a Secure Hybrid Network](https://learn.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
+- For more advanced network security measures, implement a network DMZ. For more information, see [Implement a Secure Hybrid Network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 -All virtual machines directly supporting the Oracle database should reside in a dedicated subnet and securely separated from the internet 
 - Monitor and filter traffic using Azure Monitor, Azure network security groups (NSGs), or application security groups.
 - The Oracle database subnet should include a network security group (NSG) that allows the following traffic:
@@ -38,10 +38,10 @@ The following architecture diagram shows networking considerations for Oracle in
   - Inbound port 1521 from the front-end subnet only.
   - Ports can be changed when security requires obfuscation (not use default ports).
 - The front-end subnet should follow [best practices for internet facing workloads](https://learn.microsoft.com/events/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
-- Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](https://learn.microsoft.com/azure/bastion/) to connect securely to the Virtual Machines in the Oracle subnet.
+- Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](/azure/bastion/) to connect securely to the Virtual Machines in the Oracle subnet.
 - If using Azure Bastion to access the Oracle database server, the **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
 - Remember to configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
-- All services should be deployed using [accelerated networking](https://learn.microsoft.com/azure/virtual-network/accelerated-networking-overview)
+- All services should be deployed using [accelerated networking](/azure/virtual-network/accelerated-networking-overview)
 
 ## Next steps
 

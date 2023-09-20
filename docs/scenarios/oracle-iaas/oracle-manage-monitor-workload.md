@@ -30,9 +30,9 @@ Oracle workload on Azure Virtual Machines landing zone accelerator, you need to 
 
 The first step of monitoring for you is to set up general Azure Virtual Machine monitoring.
 
-1. Enable Virtual Machine [insights](https://learn.microsoft.com/azure/azure-monitor/vm/vminsights-enable-portal)
-2. Deploy AMA (Azure Monitoring Agent) and configure [DCR](https://learn.microsoft.com/azure/azure-monitor/essentials/data-collection-rule-overview) (Data Collection Rule)
-3. Collect [custom logs](https://learn.microsoft.com/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
+1. Enable Virtual Machine [insights](/azure/azure-monitor/vm/vminsights-enable-portal)
+2. Deploy AMA (Azure Monitoring Agent) and configure [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) (Data Collection Rule)
+3. Collect [custom logs](/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
 4. Monitor Managed Disk Metrics:
 
     If you're storing Oracle database files in Azure managed disks, you should monitor the performance related metrics for managed disks. Suitable managed disk SKUs for Oracle databases are Premium SSD, Premium SSD v2, and Ultra disk.
@@ -48,23 +48,23 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
     - Data Disk Write Bytes/Sec
     - Disk Queue Depth
 
-    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information, see  [Sizes for virtual machines in Azure](https://learn.microsoft.com/azure/virtual-machines/sizes) for more details.
+    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information, see  [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes) for more details.
 
     Selecting the appropriate VM SKU, use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
 
-    For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](https://learn.microsoft.com/azure/virtual-machines/disks-metrics).
+    For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
 
 5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
-    - [Ways to monitor Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/monitor-azure-netapp-files)
+    - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
 
-    - [Metrics for Azure NetApp Files](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-metrics)
+    - [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-    While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](https://learn.microsoft.com/azure/virtual-machines/edv5-edsv5-series).
+    While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
-1. Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](https://learn.microsoft.com/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
+1. Alerts in Azure Monitor identify unhealthy resources. When you create a new Azure virtual machine (VM), you can enable a set of recommended alert rules for a common set of metrics. This initial set of common metrics includes CPU percentage,  or available memory. For more information, see [Enable recommended alert rules for Azure VM](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-recommended). You can also configure Advanced [metric alert rules](/azure/azure-monitor/alerts/alerts-dynamic-thresholds) if you need more situational.
 
     Recently, an initiative developed as an easy way to deploy alert rules. The purpose of this project is to focus on [monitoring for Azure Landing Zone](https://aka.ms/amba/alz/wiki) as a common set of Azure resources/services that are configured in a similar way across organizations.
 
@@ -84,8 +84,8 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
 
 |Azure Services |Description |URL |
 |:-----------------|:-------------------|:-------------|
-|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | [Azure virtual network overview](https://learn.microsoft.com/azure/virtual-network/virtual-networks-overview) <br> [Monitoring Azure virtual network data reference](https://learn.microsoft.com/azure/virtual-network/monitor-virtual-network-reference)
-| Azure Backup |Azure Backup can be monitored and can be set the alert.| [Monitor at scale by using Azure monitor](https://learn.microsoft.com/azure/backup/backup-azure-monitoring-use-azuremonitor) <br> Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script"<br> - version = version number in decimal format <br> message = free-format text <br>Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
+|Azure Virtual Network |Oracle database on Azure Virtual Machines landing zone accelerator uses virtual network for Availability Set, Availability Zone, HA, and BCDR by using Oracle Data Guard and Golden Gate. | [Azure virtual network overview](/azure/virtual-network/virtual-networks-overview) <br> [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference)
+| Azure Backup |Azure Backup can be monitored and can be set the alert.| [Monitor at scale by using Azure monitor](/azure/backup/backup-azure-monitoring-use-azuremonitor) <br> Monitor the Oracle database “alert log” file on the database VM for lines starting with the following format:<br> status – AzBackup – script – version: message <br> - where: status = “INFO”, “WARN”, or “FAIL” <br> - AzBackup (boilerplate text) <br> - script = “pre-script" or “post-script"<br> - version = version number in decimal format <br> message = free-format text <br>Example:  INFO - AzBackup pre-script v1.02: BEGIN BACKUP |
 |Azure database Virtual Machine |Database “alert log” file, OS console messages file | - Database “alert log” file is typically located in the subdirectory “$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace” on the database Virtual Machine<br> - OS console log located at “/var/log/messages” |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager cloud control
