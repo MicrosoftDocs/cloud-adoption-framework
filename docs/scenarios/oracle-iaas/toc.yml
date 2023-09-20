@@ -28,4 +28,4 @@ items:
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
-        href: https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/
+        href: /azure/virtual-machines/workloads/oracle/

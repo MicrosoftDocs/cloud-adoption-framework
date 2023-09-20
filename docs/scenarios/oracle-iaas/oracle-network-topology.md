@@ -37,7 +37,7 @@ The following architecture diagram shows networking considerations for Oracle in
   - Inbound port 22 or 3389 if Oracle database services are running on Windows from a secure source only. For more information on secure virtual machine access, see [Plan for virtual machine remote access](../../ready/azure-best-practices/plan-for-virtual-machine-remote-access.md).
   - Inbound port 1521 from the front-end subnet only.
   - Ports can be changed when security requires obfuscation (not use default ports).
-- The front-end subnet should follow [best practices for internet facing workloads](/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
+- The front-end subnet should follow [best practices for internet facing workloads](/events/azure-iaas-day-2021/best-practices-securing-internet-facing-cloud-architecture-azure).
 - Oracle management access should be limited to a minimal number of authorized users using [Azure Bastion](/azure/bastion/) to connect securely to the Virtual Machines in the Oracle subnet.
 - If using Azure Bastion to access the Oracle database server, the **AzureBastionSubnet** should include a Network Security Group (NSG) that allows inbound traffic on port 443.
 - Remember to configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
