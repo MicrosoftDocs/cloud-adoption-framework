@@ -18,7 +18,7 @@ ms.custom:
 
 Use the guidance in this article to set up and operate Oracle workloads inside your Azure Virtual Machines landing zone. The article provides a specific architectural approach and reference implementation for your Oracle database systems on Azure.
 
-The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) 
+The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
 
 ## Adapt the architecture to your organization
 
@@ -84,7 +84,7 @@ You can manage the subnet security policies instead of managing individual serve
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
-- **Azure NetApp Files**: [A delegated subnet](/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
+- **Azure NetApp Files**: [A delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
 - **Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
 
