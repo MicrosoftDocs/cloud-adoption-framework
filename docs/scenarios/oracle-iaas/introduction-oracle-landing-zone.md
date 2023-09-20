@@ -106,7 +106,7 @@ An Azure availability zone is a unique physical location within a region. Each z
 
 For Oracle implementations latency between availability zones may be a concern, specifically regarding traffic between application servers and database servers if in different availability zones. The advanced HA/DR configuration places the database servers in different availability zones and possibly different regions.
 
-Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration), [Azure Site Recovery]( <https://learn.microsoft.com/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
+Depending on the requirements of your application, you can  ensure that application servers are configured for zone redundancy. This configuration can be achieved through such technologies as [Virtual machine scale sets Flex](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration), [Azure Site Recovery](/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery>) or other options. This option also extends to other parts of the infrastructure such as Application Gateway, or ExpressRoute. The Azure uptime SLA for virtual machines configured for availability zones is 99.99%
 
 For more information about advanced HA/DR configuration, see the [Oracle BCDR documentation](oracle-disaster-recovery-oracle-landing-zone.md).
 
@@ -122,7 +122,7 @@ Azure NetApp Files can host Oracle data and log files. Use this configuration fo
 
 **Private endpoints** are in a virtual network and have a private IP address within the address space of that virtual network.
 
-It's recommended to apply [private endpoints](/azure/storage/files/storage-files-networking-overview#private-endpoints) where appropriate to route traffic from database server to Azure Files via [private link](.././azure/private-link/private-link-overview).
+It's recommended to apply [private endpoints](/azure/storage/files/storage-files-networking-overview#private-endpoints) where appropriate to route traffic from database server to Azure Files via [private link](/azure/private-link/private-link-overview).
 
 ## Landscape consolidation
 
