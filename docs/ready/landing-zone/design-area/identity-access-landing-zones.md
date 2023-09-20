@@ -41,7 +41,7 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
 - The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown in the diagram.
 
-![Microsoft Entra ID and Azure RBAC roles](media/azure-rbac-roles.png)
+![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group, subscription, and resource group scopes. For more information, see Azure custom roles - Azure RBAC | Microsoft Learn
 
