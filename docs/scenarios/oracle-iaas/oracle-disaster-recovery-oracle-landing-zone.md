@@ -108,7 +108,7 @@ Golden Gate is a logical replication software that enables real-time replication
 
 Golden Gate can be used to replicate data from a primary database to secondary in a disaster recovery configuration. Golden Gate can be more practical for instance, when not all data if your data needs to be protected. Golden Gate allows you to selectively replicate tables and even filter out table rows during replication to avoid replicating unnecessary data.
 
-For a step-by-step guide on how to implement Golden Gate on Azure, see [Implement Oracle Golden Gate on an Azure Linux Virtual Machine](/azure/virtual-machines/workloads/oracle/configure-oracle-golden-gate.md).
+For a step-by-step guide on how to implement Golden Gate on Azure, see [Implement Oracle Golden Gate on an Azure Linux Virtual Machine](/azure/virtual-machines/workloads/oracle/configure-oracle-golden-gate).
 
 ### Disaster recovery using backup
 
@@ -118,7 +118,7 @@ Backup and restore have been a traditional method for disaster recovery architec
 
 - Ensure up to date deployment at the disaster recovery site. You update the site by replicating the same deployment of all network components, application servers and configuration to the disaster recovery site.
 
-When it comes to replicating data using backup, you have several different options you can explore as explained in [Backup strategies for Oracle Databases on Azure](/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies.md).
+When it comes to replicating data using backup, you have several different options you can explore as explained in [Backup strategies for Oracle Databases on Azure](/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies).
 
 Consider using one of the following approaches to maintain the disaster recovery site:
 

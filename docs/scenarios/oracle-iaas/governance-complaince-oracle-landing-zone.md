@@ -85,7 +85,7 @@ Depending on your requirements, you can use [Azure data encryption at-rest](/azu
 
 ### Data retention  
 
-Use [immutable data retention policies](https://learn.microsoft.com/azure/storage/blobs/immutable-time-based-retention-policy-overview) for your [Oracle on Azure backups](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) to ensure compliance with your regulatory requirements.
+Use [immutable data retention policies](/azure/storage/blobs/immutable-time-based-retention-policy-overview) for your [Oracle on Azure backups](/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) to ensure compliance with your regulatory requirements.
 
 ### Data residency
 
