@@ -30,7 +30,7 @@ As a general rule, be prepared to balance requirements and functionality. Your j
 
 Use subscriptions as units of management, and scale to accelerate application migrations and new application development. Align subscriptions with business needs and priorities to support business areas and portfolio owners. Provide subscriptions to business units to support the design, development, and testing of new workloads and the migration of existing workloads.
 
-To help the organization operate effectively at scale, support a subscription with a suitable [Management Group hierarchy](../../landing-zone/design-area/resource-org-management-groups.md). This hierarchy allows efficient subscription management and organization.
+To help the organization operate effectively at scale, support a subscription with a suitable [Management Group hierarchy](./../landing-zone/design-area/resource-org-management-groups.md). This hierarchy allows efficient subscription management and organization.
 
 > [!TIP]
 > For more information about subscription democratization, see the recent YouTube video [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)

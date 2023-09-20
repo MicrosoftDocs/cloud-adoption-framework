@@ -85,7 +85,7 @@ You can manage the subnet security policies instead of managing individual serve
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
-- **Azure NetApp Files**: [A delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet.md) for using Azure NetApp Files for different Oracle on Azure scenarios.
+- **Azure NetApp Files**: [A delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
 - **Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
 
