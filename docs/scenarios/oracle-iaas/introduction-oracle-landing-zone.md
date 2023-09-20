@@ -116,13 +116,13 @@ Azure NetApp Files and Azure Files with Network File System (NFS) provide high-a
 
 Azure NetApp Files can host Oracle data and log files. Use this configuration for situations where performance requirements for the Oracle database installation exceed what is possible with managed disks.
 
-[Azure Files](https://learn.microsoft.com/azure/storage/files/storage-files-introduction) provides two main types of endpoints for accessing Azure file shares:
+[Azure Files](/azure/storage/files/) provides two main types of endpoints for accessing Azure file shares:
 
 **Public endpoints** have a public IP address that can be accessed from anywhere in the world.
 
 **Private endpoints** are in a virtual network and have a private IP address within the address space of that virtual network.
 
-It's recommended to apply [private endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) where appropriate to route traffic from database server to Azure Files via [private link](https://learn.microsoft.com/azure/private-link/private-link-overview).
+It's recommended to apply [private endpoints](/azure/storage/files/storage-files-networking-overview#private-endpoints) where appropriate to route traffic from database server to Azure Files via [private link](.././azure/private-link/private-link-overview).
 
 ## Landscape consolidation
 

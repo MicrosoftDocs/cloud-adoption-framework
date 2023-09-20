@@ -109,8 +109,8 @@ Governance framework is a crucial component of any cloud-based solution to ensur
 
 This article is based on the Cloud Adoption Framework enterprise-scale landing zone architectural design principles and guidelines. For more information, see the following articles:
 
-- [Azure landing zone design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
+- [Azure landing zone design principles](../azure/cloud-adoption-framework/ready/landing-zone/design-principles)
 
-- [Azure landing zone design guidelines](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+- [Azure landing zone design guidelines](../azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 
 - [Manage and monitor Oracle workloads on Azure IaaS](oracle-manage-monitor-workload.md)
