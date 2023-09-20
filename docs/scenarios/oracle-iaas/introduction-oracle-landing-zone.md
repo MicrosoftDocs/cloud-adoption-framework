@@ -51,7 +51,7 @@ When developing a long-term vision for landing zones, consider the design of the
 
 ## High-level Oracle landing zone architecture
 
-Use the reference architecture as a starting point. You can download the [Visio file](https://microsofteur.sharepoint.com/:u:/t/DataMod/EdaC0TOEfXpIvnD2CE2J9ykBPMsgE0eGuG0HyKwZ8srJXQ?e=uBTzEF) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+Use the reference architecture as a starting point. You can download the [Visio file](https://github.com/jjaygbay1/specialized-workloads/blob/5a8cd70e9afb07be25c324cfbcb5cd4ee46d1937/Azure-Landing-Zone-Architecture-Oracle.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
@@ -84,7 +84,7 @@ You can manage the subnet security policies instead of managing individual serve
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
-- **Azure NetApp Files**: [A delegated subnet](https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
+- **Azure NetApp Files**: [A delegated subnet](/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different Oracle on Azure scenarios.
 
 - **Azure Application Gateway**: A subnet that handles traffic coming from the internet.  
 
@@ -136,15 +136,15 @@ The components are separate in the example Oracle systems architecture to provid
 
 ## Component information
 
-The example architecture has components that you can use for Oracle operations. There are different strategies for [Backup services on Azure for Oracle database](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) that helps you to extend and improve your Oracle data platform with cloud-native Azure data services. A few of the backup recommendations are:
+The example architecture has components that you can use for Oracle operations. There are different strategies for [Backup services on Azure for Oracle database](/azure/virtual-machines/workloads/oracle/oracle-database-backup-strategies) that helps you to extend and improve your Oracle data platform with cloud-native Azure data services. A few of the backup recommendations are:
 
-- [Azure storage-based backup and recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-storage?tabs=azure-portal)
+- [Azure storage-based backup and recovery](/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-storage?tabs=azure-portal)
 
-- [Azure Backup services-based backup and recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-backup?tabs=azure-portal)
+- [Azure Backup services-based backup and recovery](/azure/virtual-machines/workloads/oracle/oracle-database-backup-azure-backup?tabs=azure-portal)
 
-- [RMAN Based streaming backup](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143)
+- [RMAN Based streaming backup](/azure/virtual-machines/workloads/oracle/oracle-rman-streaming-backup?branch=pr-en-us-234143)
 
-Apart from backup Azure provides methods for setting up [disaster recovery](https://learn.microsoft.com/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery) capabilities for Oracle on Azure Virtual Machines.
+Apart from backup Azure provides methods for setting up [disaster recovery](/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery) capabilities for Oracle on Azure Virtual Machines.
 
 ## Oracle landscape architecture examples  
 
