@@ -3,7 +3,7 @@ title: Select Azure regions
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: johndowns
 ms.author: jodowns
-ms.date: 09/01/2023
+ms.date: 09/22/2023
 ms.topic: conceptual
 ---
 
@@ -126,11 +126,12 @@ If you deploy into a region that has an associated paired region, you can use th
 
 Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy?branch=main#redundancy-in-a-secondary-region). In Azure Storage GRS, three copies of your data are stored in your primary region, and three more copies are stored in the paired region. You can't change the storage pairing for GRS. Other Azure services that rely on Azure Storage often take advantage of this paired region capability. Your applications and your network must be configured to support paired regions and to use GRS storage appropriately.
 
-> [!TIP]
-> You might choose not to use Azure Storage GRS to support your regional resiliency needs, and instead run your application tier access multiple regions, or use another multi-region deployment approach. In this scenario, it's a good practice not to use the paired region as your secondary region. If a regional failure occurs, intense pressure is put on resources in the paired region as resources are migrated and cross-region failover occurs. You can avoid that pressure by recovering to an alternate region, gaining speed during your recovery.
+Don't attempt to use Azure Storage with GRS replication for your virtual machine backups. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workloads.
 
-> [!WARNING]
-> Don't attempt to use Azure Storage with GRS replication for your virtual machine backups. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workloads.
+> [!TIP]
+> Multi-region solutions don't have to use Azure Storage GRS. Instead, you can run your application tier access multiple regions, use [object replication](/azure/storage/blobs/object-replication-overview), or use another multi-region deployment approach.
+>
+> In these scenarios, when you select a secondary region, consider using a region that isn't the paired region. If a regional failure occurs in your primary region, intense pressure is put on resources in the paired region as resources are migrated and cross-region failover occurs. You can avoid that pressure by recovering to an alternate region, which means you gain speed during your recovery.
 
 ### Deploy to regions without a pair
 
