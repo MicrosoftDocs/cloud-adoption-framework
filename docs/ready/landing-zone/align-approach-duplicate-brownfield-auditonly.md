@@ -47,7 +47,7 @@ To transition to an Azure landing zone conceptual architecture using this approa
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-duplicate-brownfield-auditonly-transition.png" alt-text="Single subscription environment - transition state" lightbox="./media/alz-duplicate-brownfield-auditonly-transition.png":::
+:::image type="content" source="./media/alz-duplicate-brownfield-auditonly-transition.svg" alt-text="Single subscription environment - transition state" lightbox="./media/alz-duplicate-brownfield-auditonly-transition.svg":::
 
 ## Summary
 
