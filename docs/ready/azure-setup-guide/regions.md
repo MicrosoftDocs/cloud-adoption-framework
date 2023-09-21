@@ -67,7 +67,7 @@ For more information about latency between Azure regions and other geographic ar
 
 ## Operate in multiple geographic regions
 
-It's common for an organization to operate in multiple geographic regions. Common reasons to use multiple Azure regions include:
+It's common for an organization to operate in multiple geographic regions. Typical reasons to use multiple Azure regions include:
 
 - **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in a specific Azure region.
 - **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
