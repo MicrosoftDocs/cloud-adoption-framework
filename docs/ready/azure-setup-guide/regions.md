@@ -132,7 +132,7 @@ Azure Storage supports [geo-redundant storage (GRS)](/azure/storage/common/stora
 Don't attempt to use Azure Storage with GRS replication for your virtual machine backups. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/), and [Azure managed disks](/azure/virtual-machines/managed-disks-overview) to support resiliency for your infrastructure as a service (IaaS) workloads.
 
 > [!TIP]
-> Multi-region solutions don't have to use Azure Storage GRS. Instead, you can run your application tier access multiple regions, use [object replication](/azure/storage/blobs/object-replication-overview), or use another multi-region deployment approach.
+> Multi-region solutions don't have to use Azure Storage GRS. Instead, you can run your application tier access multiple regions, use a globally distributed database service like [Azure Cosmos DB](/azure/cosmos-db/distribute-data-globally) or [Azure SQL Database](/azure/azure-sql/database/active-geo-replication-overview), use [blob object replication](/azure/storage/blobs/object-replication-overview), or use another multi-region deployment approach.
 >
 > In these scenarios, when you select a secondary region, consider using a region that isn't the paired region. If a regional failure occurs in your primary region, intense pressure is put on resources in the paired region as resources are migrated and cross-region failover occurs. You can avoid that pressure by recovering to an alternate region, which means you gain speed during your recovery.
 
