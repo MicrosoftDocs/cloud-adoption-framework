@@ -30,6 +30,9 @@ Newer regions aren't paired and instead use availability zones for high availabi
 
 For more information, see [Azure paired regions](/azure/best-practices-availability-paired-regions).
 
+> [!TIP]
+> To learn how to design a workload that uses regions and availability zones, see [Recommendations for using availability zones and regions](/azure/well-architected/resiliency/regions-availability-zones).
+
 ### Sovereign regions
 
 Some regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are:
