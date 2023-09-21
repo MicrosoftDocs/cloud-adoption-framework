@@ -44,11 +44,19 @@ The [Applications Pillar](../../../../zero-trust/deploy/applications) has deploy
 
 ### Data Pillar
 
-The [Data Pillar](../../../../zero-trust/deploy/data) has deployment objectives focused on ...
+The [Data Pillar](../../../../zero-trust/deploy/data) has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
+
+The landing zone subscription model creates access and network isolation for data resources, and proper logging provides a foundation.  There are policies inside of the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation#reference-implementation) for the logging and management of data resources.
+
+However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](../../../../purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/) deployment can provide a solution to implement at scale.
 
 ### Infrastructure Pillar
 
-The [Infrastructure Pillar](../../../../zero-trust/deploy/data) has deployment objectives focused on ...
+The [Infrastructure Pillar](../../../../zero-trust/deploy/data) has deployment objectives focused on monitoring abnormal behavior in workloads, managing identities used by infrastructure, limiting human access, and using resource segmentation.
+
+The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](../../../../azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](../../../../azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your Landing Zone can be used to advance these deployment objectives.
+
+The [Azure Landing Zone reference implementations](../../enterprise-scale/implementation#reference-implementation) provides policies to block unauthorized deployments and to grant access.  However, because there are considerations for individual workloads that will be adopted in to Azure later, you will need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
 
 ### Networks Pillar
 
