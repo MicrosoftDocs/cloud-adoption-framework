@@ -33,19 +33,46 @@ The decisions you make during strategic impact assessment and technical planning
 As you can see from these questions, the deployment model will vary depending on your business, industry, and application usage.
 
 ## Azure landing zone acceleration for HPC
+[Azure Batch](https://learn.microsoft.com/en-us/azure/batch/batch-technical-overview) and [Azure HPC OnDemand Platform](https://azure.github.io/az-hop) are both services provided by Microsoft Azure, but they serve different purposes and have different features.
 
-[Azure HPC OnDemand Platform](https://azure.github.io/az-hop) provides an end-to-end deployment mechanism for a complete HPC cluster solution on Azure. Industry-standard tools like Terraform, Ansible, and Packer provision and configure the environment. 
+### Azure Batch:
+- It is designed to run large-scale parallel and high-performance computing (HPC) batch jobs efficiently in Azure.
+- Azure Batch creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes.
+- There’s no cluster or job scheduler software to install, manage, or scale.
+- It works well with intrinsically parallel workloads. These workloads have applications which can run independently, with each instance completing part of the work.
+- You can also use Batch to run tightly coupled workloads, where the applications you run need to communicate with each other, rather than running independently.
+- Batch tasks can run directly on virtual machines (nodes) in a Batch pool, but you can also set up a Batch pool to run tasks in Docker-compatible containers on the nodes.
 
-The environment contains:
+### Azure HPC OnDemand Platform (AzHop):
+- AzHop provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure.
+- It delivers a complete HPC cluster solution ready for users to run applications, which is easy to deploy and manage for HPC administrators.
+- AzHop leverages the various Azure building blocks and can be used as-is, or easily customized and extended to meet any uncovered requirements.
+- It includes an OpenOn Demand Portal for a unified user access, remote shell access, remote visualization access, job submission, file access and more.
+- It uses an Active Directory for user authentication and domain control.
+- It uses Open PBS or SLURM as a Job Scheduler.
+- Dynamic resources provisioning and autoscaling is done by Azure CycleCloud pre-configured job queues and integrated health-checks to quickly avoid non-optimal nodes.
+- A common shared file system for home directory and applications is delivered by Azure Netapp Files.
 
-- An OpenOn Demand portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
-- Active Directory, for user authentication and domain control.
-- An OpenPBS or Slurm job scheduler.
-- Azure CycleCloud, to handle autoscaling of nodes through job scheduler integration.
-- A jump box to provide admin access.
-- Azure Netapp Files for home directory and data storage.
-- A Lustre cluster for scratch storage, with HSM capabilities to Azure blobs through a Robinhood integration.
-- Grafana dashboards to monitor your cluster.
+### Comparison chart
+
+|Feature              |Azure Batch             |Azure CycleCloud     |
+|---------------|------------------------|------------------------|
+|Scheduler |Batch APIs and tools and command-line scripts in the Azure portal (Cloud Native).  |Use standard HPC schedulers such as Slurm, PBS Pro, LSF, Grid Engine, and HTCondor, or extend CycleCloud autoscaling plugins to work with your own scheduler.|
+|Compute Resources |Software as a Service Nodes – Platform as a Service |Platform as a Service Software – Platform as a Service |
+|Monitor Tools |Azure Monitor |Azure Monitor, Grafana |
+|Customization |Custom image pools, Third Party images, Batch API access. |Use the comprehensive RESTful API to customize and extend functionality, deploy your own scheduler, and support into existing workload managers |
+|Integration | Synapse Pipelines, Azure Data Factory, Azure CLI |Built-In CLI for Windows and Linux |
+|User type |Developers |Classic HPC administrators and users |
+|Work Type |Batch, Workflows |Tightly coupled (Message Passing Interface/MPI).|
+|Windows Support |Yes |Varies, depending on scheduler choice |
+
+Azure CycleCloud and Azure Batch are both powerful tools for high-performance computing (HPC) tasks on Azure, but they are designed for different use cases.
+
+Azure CycleCloud is an enterprise-friendly tool for orchestrating and managing HPC environments on Azure. It is targeted at HPC administrators and users who want to deploy an HPC environment with a specific scheduler in mind. CycleCloud provides powerful tooling to construct complete HPC environments on Azure, including NFS servers, parallel file systems, login hosts, license servers, and directory services. It is particularly useful for organizations that have operated HPC environments for a while and have accumulated years of expertise and in-house tooling around a specific scheduler.
+
+On the other hand, Azure Batch is mostly aimed at developers and teams building a capability into their own product or service. It includes its own scheduler to run jobs and is designed to run large-scale parallel jobs efficiently without the need for cluster or job scheduler software. Azure Batch is particularly useful when management of a workload scheduler isn’t needed.
+
+In summary, use Azure CycleCloud when you want to deploy an HPC environment with a specific scheduler in mind and have the need for a complete HPC environment. Use Azure Batch when you are developing a product or service that requires large-scale parallel processing and do not want to manage a workload scheduler.
 
 ## Next steps
 
