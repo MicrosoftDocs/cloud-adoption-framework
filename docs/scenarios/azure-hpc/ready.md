@@ -33,7 +33,7 @@ The decisions you make during strategic impact assessment and technical planning
 As you can see from these questions, the deployment model will vary depending on your business, industry, and application usage.
 
 ## Azure landing zone acceleration for HPC
-[Azure Batch](https://learn.microsoft.com/en-us/azure/batch/batch-technical-overview) and [Azure HPC OnDemand Platform](https://azure.github.io/az-hop) are both services provided by Microsoft Azure, but they serve different purposes and have different features.
+ **Azure Batch** and **Azure HPC OnDemand Platform** are both services provided by Microsoft Azure, but they serve different purposes and have different features.
 
 ### Azure Batch:
 - It is designed to run large-scale parallel and high-performance computing (HPC) batch jobs efficiently in Azure.
