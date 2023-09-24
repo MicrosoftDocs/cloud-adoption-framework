@@ -12,6 +12,7 @@ ms.custom:
   - think-tank
   - e2e-oracle
   - engagement-fy24
+
 --- 
 
 # Manage identity and access for Oracle on Azure Virtual Machines landing zone
@@ -20,12 +21,7 @@ This article describes how to manage identity and access for Oracle on Azure Vir
 
 However, it's important to understand decisions previously made by the cloud platform team to determine identity and access management outcomes.
 
-## Design considerations
-
-Implement single sign-on (SSO) using Azure AD or Active Directory Federation Services (AD FS) so the database administrator(s) can connect to on-premises and cloud-based Oracle databases.  
-
-If you're using other Oracle enterprise services like Fusion ERP, you should integrate all Oracle services with Azure AD. This integration enables management for all users within a single control plane of Azure AD.
-
 ## Next steps
 
 - [Organize resources for Oracle on Azure Virtual Machines landing zone accelerator](manage-resources-oracle-landing-zone.md).  
+
