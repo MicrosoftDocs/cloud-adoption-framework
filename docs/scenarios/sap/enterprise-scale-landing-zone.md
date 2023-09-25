@@ -216,9 +216,9 @@ The [SAP deployment automation framework on Azure](https://github.com/azure/sap-
   - Network
   - Storage
 - **Ansible playbooks.** Use Ansible playbooks to:
-  - Set up and deploy virtual machines
-  - Install SAP HANA
-  - Install other required applications
+  - Set up and deploy virtual machines.
+  - Install SAP HANA.
+  - Install other required applications.
 
 Deploy and install Ansible playbook components on your infrastructure by using Terraform on Azure modules.
 
@@ -230,7 +230,7 @@ Deploy and install Ansible playbook components on your infrastructure by using T
 
 Virtual Instance for SAP solutions is the foundation of Azure Center for SAP solutions. You can use Virtual Instance for SAP solutions to create and manage SAP systems in a way that makes sense to you, at the SID level or at the individual component level.
 
-You can use the Azure Center for SAP solutions for the following tasks:
+You can use the Azure Center for SAP solutions for the following steps:
 
 1. Deploy. Choose how to deploy your SAP system on Azure.
 1. Represent. Create a logical representation of each system as you deploy or register existing deployments.
