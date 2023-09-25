@@ -1,6 +1,6 @@
 ---
 title: SAP on Azure landing zone accelerator
-description: Learn about the SAP on Azure landing zone accelerator.
+description: Use the SAP on Azure landing zone accelerator to deploy SAP systems on Azure. See a reference implementation for SAP workload landing zones.
 author: pankajmeshramCSA
 ms.author: pameshra
 ms.reviewer: tozimmergren
@@ -20,7 +20,7 @@ Deploy the SAP on Azure landing zone accelerator after you successfully implemen
 
 ## Adapt the accelerator to your architecture
 
-The architecture of the SAP on Azure landing zone accelerator varies by organization. Technical considerations and design recommendations lead to configurations that are unique to your organization's specific scenario. The recommendations that this article describes can lead to an architecture that will put your organization on a path to sustainable scaling.
+The architecture of the SAP on Azure landing zone accelerator varies by organization. Technical considerations and design recommendations lead to configurations that are unique to your organization's specific scenario. The recommendations that this article describes can lead to an architecture that puts your organization on a path to sustainable scaling.
 
 The SAP on Azure landing zone accelerator is modular. You can customize environment variables. The customizable approach to landing zones includes the following assets to support your planning and implementation:
 
@@ -49,16 +49,14 @@ The following diagram is a conceptual reference architecture that shows the crit
 
 :::image type="content" source="./media/enterprise-scale-architecture-sap.svg" border="false" alt-text="Diagram that shows the SAP on Azure landing zone accelerator architecture." lightbox="./media/enterprise-scale-architecture-sap.svg":::
 
-_Figure 1: SAP on Azure landing zone accelerator architecture. Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-sap.vsdx) of this architecture._
-
-
+*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/enterprise-scale-architecture-sap.vsdx) of this architecture.*
 
 > [!NOTE]
-> When deploying a high-availability SAP workload on Azure, it's important to consider the various deployment types available and how they can be applied across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
+> When you deploy a high-availability SAP workload on Azure, it's important to consider the various deployment types that are available. Also consider how to apply them across different Azure regions, such as across zones, in a single zone, or in a region with no zones.
 >
 > For the highest availability, deploy SAP systems across different zones in a region.
 >
-> We advise using a flexible virtual machine scale set with FD=1 to achieve this. For more information and all the options on high availability deployment for SAP workload, see [High-availability architecture and scenarios for SAP NetWeaver](/azure/sap/workloads/sap-high-availability-architecture-scenarios).
+> We recommend that you use a flexible virtual machine scale set with a `platformFaultDomainCount` (FD) value of **1** to achieve this availability level. For more information and a discussion of all the high-availability deployment options for an SAP workload, see [High-availability architecture and scenarios for SAP NetWeaver](/azure/sap/workloads/sap-high-availability-architecture-scenarios).
 
 ### High-level SAP systems architecture
 
@@ -66,7 +64,7 @@ The following diagram is a reference architecture of an SAP systems landscape th
 
 Use the reference architecture as a starting point. You can download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
-:::image type="content" source="./media/sap-landscape-high-level-architecture.svg" border="false" alt-text="Diagram that shows the high-level architecture of an SAP systems landscape, with production and non-production systems, on Azure.":::
+:::image type="content" source="./media/sap-landscape-high-level-architecture.svg" border="false" alt-text="Diagram that shows the high-level architecture of an SAP systems landscape, with production and non-production systems, on Azure." lightbox="./media/sap-landscape-high-level-architecture.svg":::
 
 ### Workflow
 
@@ -74,7 +72,7 @@ This article provides an example of a high-level, overall SAP architecture that'
 
 The SAP systems example architecture describes an SAP systems landscape that has production and non-production systems. Both systems are deployed on virtual machines. You can change the sizes and numbers of virtual machines to accommodate your organization's needs.
 
-This example architecture uses availability sets to deploy SAP systems on Azure. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
+This example architecture uses virtual machine scale sets to deploy SAP systems on Azure. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
 ### Recommendations
 
@@ -92,7 +90,7 @@ The example SAP systems architecture uses the following three subscriptions:
 
 #### Networking
 
-The example SAP systems architecture uses a hub-spoke topology. The hub virtual network acts as a central point of connectivity to an on-premises network. The spokes are an SAP virtual network that's peered with the hub. You can use the spokes to isolate workloads.
+The example SAP systems architecture uses a hub-spoke topology. The hub virtual network acts as a central point of connectivity to an on-premises network. The spokes are SAP virtual networks that are peered with the hub. You can use the spokes to isolate workloads.
 
 The architecture uses one SAP virtual network per workload zone. It uses a different SAP virtual network for production, development, quality assurance, and the sandbox. In the architecture, the Azure hub virtual network is peered with the production, development, quality assurance, and sandbox virtual networks. Traffic flows between the on-premises datacenter and the hub through a gateway connection.
 
@@ -111,11 +109,11 @@ This architecture has three or four subnets, depending on the tier. For example,
 - **Database**: A subnet that contains only database virtual machines.
   
 > [!NOTE]
-> The example SAP systems architecture shows the explicit definition of web dispatchers in a separate availability set. The web dispatcher component is a load balancer for SAP traffic among the SAP application servers. To achieve [high availability for SAP Web Dispatcher](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/48/9a9a6b48c673e8e10000000a42189b/frameset.htm), Azure Load Balancer implements either the failover cluster or the parallel web dispatcher setup. Set up a standalone solution architecture in a perimeter network for internet-facing communications to help satisfy security concerns. [Embedded Web Dispatcher on ASCS](https://help.sap.com/docs/SLTOOLSET/00b4e4853ef3494da20ebcaceb181d5e/2e708e2d42134b4baabdfeae953b24c5.html?locale=en-US&version=CURRENT_VERSION) describes a specific option. Take into account the sizing that's required because of other workloads on SAP ASCS.
+> The example SAP systems architecture shows the explicit definition of web dispatchers in a separate virtual machine scale set. The web dispatcher component is a load balancer for SAP traffic among the SAP application servers. To achieve [high availability for SAP Web Dispatcher](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/48/9a9a6b48c673e8e10000000a42189b/frameset.htm), Azure Load Balancer implements either the failover cluster or the parallel web dispatcher setup. Set up a standalone solution architecture in a perimeter network for internet-facing communications to help satisfy security concerns. [Embedded Web Dispatcher on ASCS](https://help.sap.com/docs/SLTOOLSET/00b4e4853ef3494da20ebcaceb181d5e/2e708e2d42134b4baabdfeae953b24c5.html?locale=en-US&version=CURRENT_VERSION) describes a specific option. Take into account the sizing that's required because of other workloads on SAP ASCS.
 
-#### Virtual machines and availability sets
+#### Virtual machine scale sets
 
-For all pools and clusters (SAP Web Dispatcher, SAP application servers, SAP Central Services, and SAP HANA), group the virtual machines in separate availability sets. There's no charge for creating an availability set. You pay only for each virtual machine that you create.
+For all pools and clusters (SAP Web Dispatcher, SAP application servers, SAP Central Services, and SAP HANA), group the virtual machines in separate virtual machine scale sets. There's no charge for creating a virtual machine scale set. You pay only for each virtual machine that you create.
 
 #### Virtual machines and availability zones
 
@@ -193,7 +191,7 @@ For more information about all architecture components, see [SAP S/4HANA in Linu
 
 ### SAP landscape architecture example with three SAP products
 
-The following reference architecture is an extension of the high-level architecture that appears earlier in this article. The diagram describes an example use case with three SAP products. It shows just one of the options you can use to deploy SAP systems to Azure by using availability sets.
+The following reference architecture is an extension of the high-level architecture that appears earlier in this article. The diagram describes an example use case with three SAP products. It shows just one of the options you can use to deploy SAP systems to Azure by using virtual machine scale sets.
 
 Use this architecture as a starting point. Download the [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/sap-landscape-multiple-systems-ref-architecture.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
 
@@ -218,9 +216,9 @@ The [SAP deployment automation framework on Azure](https://github.com/azure/sap-
   - Network
   - Storage
 - **Ansible playbooks.** Use Ansible playbooks to:
-     - Set up and deploy virtual machines
-     - Install SAP HANA
-     - Install other required applications
+  - Set up and deploy virtual machines
+  - Install SAP HANA
+  - Install other required applications
 
 Deploy and install Ansible playbook components on your infrastructure by using Terraform on Azure modules.
 
@@ -232,9 +230,15 @@ Deploy and install Ansible playbook components on your infrastructure by using T
 
 Virtual Instance for SAP solutions is the foundation of Azure Center for SAP solutions. You can use Virtual Instance for SAP solutions to create and manage SAP systems in a way that makes sense to you, at the SID level or at the individual component level.
 
-![Diagram that describes how Azure Center for SAP solutions works.](./media/center-for-sap-solutions.png)
+You can use the Azure Center for SAP solutions for the following tasks:
 
-Azure Center for SAP solutions provides these capabilities: 
+1. Deploy. Choose how to deploy your SAP system on Azure.
+1. Represent. Create a logical representation of each system as you deploy or register existing deployments.
+1. Manage. Configure operations with management capabilities.
+
+:::image type="content" source="./media/center-sap-solutions.png" border="false" alt-text="Diagram that describes how Azure Center for SAP solutions works.":::
+
+Azure Center for SAP solutions provides these capabilities:
 
 **Guided SAP deployment**
 
