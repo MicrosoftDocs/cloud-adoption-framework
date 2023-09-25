@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-# Network considerations for Azure VMware Solution dual-region deployments using Secure Virtual WAN Hub with Routing-Intent
+# Dual-region deployments using Secure Virtual WAN Hub with Routing-Intent
 
 This article describes the best practices for connectivity, traffic flows, and high availability of dual-region Azure VMware Solution when using Azure Secure Virtual WAN with Routing Intent. This article breaks down Virtual WAN with Routing Intent topology from the perspective of Azure VMware Solution private clouds, on-premises sites, and Azure native. The implementation and configuration of Secure Virtual WAN with Routing Intent are beyond the scope and are not discussed in this document.
 
