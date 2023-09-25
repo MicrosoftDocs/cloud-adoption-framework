@@ -54,7 +54,7 @@ The Sovereign Landing Zone (Preview) comes with the Sovereignty Policy Baseline 
 The Sovereignty Policy Baseline consists of:
 
 * Policies to enforce the use of confidential computing resources when workloads are deployed into the confidential management groups. These policies create a platform where workloads are protected at rest, in transit, and while in use, removing Microsoft from the trust chain.
-* Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed. 
+* Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed.
 * Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy.
 
 The policies and opinions that the Sovereign Landing Zone (Preview) layers on top of the Azure Landing Zone creates a platform that is biased towards increased security and confidentiality by default.
