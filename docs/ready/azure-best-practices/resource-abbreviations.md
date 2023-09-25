@@ -39,7 +39,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
 | Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
-| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/sqlPools` | `synsp` |
+| Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -220,10 +220,11 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
+| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
+| Virtual network manager | `Microsoft.Network/networkManagers` | `vnm`|
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
-| Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 
 ## Security
 

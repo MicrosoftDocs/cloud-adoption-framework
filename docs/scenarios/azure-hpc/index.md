@@ -20,8 +20,6 @@ Industries such as automotive, energy, health and life sciences, silicon, financ
 
 While the computation of their data is being orchestrated, each industry customer can focus more on analyzing and creating value from the results to prioritize and achieve their business goals in a cost effective and timely manner.
 
-
-
 ## HPC narrative
 
 As customers from different industries have specific needs that require HPC investment, there's also the concern of sustainability. Compared to deploying huge on-premises infrastructure, having your HPC workloads in the cloud helps to use minimal computing resources only as and when is needed with flexible scalability to support sustainability goals.
@@ -34,11 +32,12 @@ When customers choose the relevant Azure HPC solution for their specialized comp
 
 - **Energy industry organizations** such as oil and gas benefit from an up-scaled, end-to-end AI ecosystem that provides nurturing new ideas into safety operations and taking vast data repositories into AI solutions that promote operational advances such as predictive maintenance, simulation workloads, and automating completion reports to reduce data extraction times from months to hours.
 - **Finance organizations** use HPC to modernizing approaches to risk management, portfolio optimization, and implementing effective compliance and governance practices to protect consumer data. Computationally intensive workloads in Azure HPC have reduced costs and increased/instantaneous scalability for on-demand pricing model calculations.
-- **Manufacturing organizations** utilize HPC to fuel real-time product simulations that reduce time to market and improve product quality. Thousands of on-demand simulation jobs are executed to deliver faster solutions and more improved insights for following health and safety regulations.  
+- **Manufacturing organizations** utilize HPC to fuel real-time product simulations that reduce time to market and improve product quality. Thousands of on-demand simulation jobs are executed to deliver faster solutions and more improved insights for following health and safety regulations.
 
 ## Next step: Integrate HPC into your cloud adoption journey
 
 Get started with the below list of guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario for your HPC environment.
+
 - [Strategy for HPC](./strategy.md)
 - [Plan for HPC](./plan.md)
 - [Review your environment or Azure Landing Zone(s)](./ready.md)
