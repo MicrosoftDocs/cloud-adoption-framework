@@ -56,7 +56,7 @@ The following diagram is a conceptual reference architecture that shows the crit
 >
 > For the highest availability, deploy SAP systems across different zones in a region.
 >
-> We recommend that you use a flexible virtual machine scale set with a `platformFaultDomainCount` (FD) value of **1** to achieve this availability level. For more information and a discussion of all the high-availability deployment options for an SAP workload, see [High-availability architecture and scenarios for SAP NetWeaver](/azure/sap/workloads/sap-high-availability-architecture-scenarios).
+> We recommend that you use a flexible virtual machine scale set with a `platformFaultDomainCount` (FD) value of **1** to achieve this availability level. For more information and a discussion of various high-availability deployment options for an SAP workload, see [High-availability architecture and scenarios for SAP NetWeaver](/azure/sap/workloads/sap-high-availability-architecture-scenarios).
 
 ### High-level SAP systems architecture
 
@@ -103,7 +103,7 @@ The architecture subdivides the virtual network address space into subnets. You 
 
 This architecture has three or four subnets, depending on the tier. For example, a production system might have the following four subnets.
 
-- **Azure NetApp Files**: [A delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different SAP on Azure scenarios.
+- **Azure NetApp Files**: A [delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different SAP on Azure scenarios.
 - **Azure Application Gateway**: A subnet that handles traffic coming from the internet. For example, this subnet might handle Fiori apps.
 - **SAP applications**: A subnet that contains SAP application servers, SAP Central Services, SAP enqueue replication services instances, and web dispatchers.
 - **Database**: A subnet that contains only database virtual machines.
@@ -230,7 +230,7 @@ Deploy and install Ansible playbook components on your infrastructure by using T
 
 Virtual Instance for SAP solutions is the foundation of Azure Center for SAP solutions. You can use Virtual Instance for SAP solutions to create and manage SAP systems in a way that makes sense to you, at the SID level or at the individual component level.
 
-You can use the Azure Center for SAP solutions for the following steps:
+You can use the Azure Center for SAP solutions to take the following steps:
 
 1. Deploy. Choose how to deploy your SAP system on Azure.
 1. Represent. Create a logical representation of each system as you deploy or register existing deployments.
