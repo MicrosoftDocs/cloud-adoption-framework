@@ -30,7 +30,6 @@ A *centralized identity* uses a single location in the cloud and the integration
 
 When you grant access to resources, use Azure AD-only groups for Azure control-plane resources and Azure AD Privileged Identity Management. Add on-premises groups to the Azure AD-only group if a group management system is already in place. Note that *Azure AD-only* is also known as *cloud only*.
 
-
 By using Azure AD-only groups, you can add both users and groups that are synchronized from on-premises by using Azure AD Connect. You can also add Azure AD-only users and groups to a single Azure AD-only group, including guest users.
 
 Groups that are synchronized from on-premises can only be managed and updated from the identity source of truth, which is the on-premises Active Directory. These groups can only contain members from the same identity source, which doesn't provide flexibility the way that Azure AD-only groups do.

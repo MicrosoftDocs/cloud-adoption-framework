@@ -3,7 +3,6 @@ title: Azure identity and access management design area
 description: Understand the identity and access management design area as part of the Azure landing zone design areas.
 author: soderholmd
 ms.author: dsoderholm 
-ms.service: cloud-adoption-framework
 ms.topic: conceptual
 ms.date: 09/19/2023
 ---
@@ -58,6 +57,8 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
 ## Design recommendations
 
+### RBAC recommendations
+
 - Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multi-factor authentication enforcement. Multi-factor authentication greatly lowers the risk of credential theft and unauthorized access.
 
 - Use Microsoft Entra [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
@@ -73,20 +74,6 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 - Use Entra Identity Governance and create Access Packages to control group membership, with an approval process and regular access reviews for privileged group members. See [What is entitlement management? - Microsoft Entra](/azure/active-directory/governance/entitlement-management-overview) for more information.
 
 - To make role assignments more manageable, avoid assigning roles directly to users. Instead, assign roles to groups. Assigning roles to groups instead of users also helps minimize the number of role assignments, which has a [limit of role assignments per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
-
-### Privileged Identity Management (PIM)
-
-- Use Microsoft Entra [Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-trust and least privilege access. Map your organization's roles to the minimum access levels needed. Microsoft Entra PIM can use Azure native tools, extend current tools and processes, or use both current and native tools as needed.
-
-- Use [PIM access reviews](/azure/active-directory/privileged-identity-management/pim-create-roles-and-resource-roles-review) to regularly validate resource entitlements. Access reviews are part of many compliance frameworks, so many organizations already have an access review process in place.
-
-- Use privileged identities for automation runbooks that require elevated access permissions, or for privileged deployment pipelines. Use the same tools and policies to govern automated workflows that access critical security boundaries as you use to govern users of equivalent privilege.
-
-- Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator on a subscription or management group, using [Privileged Identity Management (PIM) for Groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Microsoft Entra ID roles.
-
-- Use [Administrative Units](/azure/active-directory/roles/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/azure/active-directory/roles/admin-units-restricted-management) feature to further protect specific objects from modification.
-
-- Use Protected actions with PIM (Privileged Identity Management) to add additional layer of protection. Protected actions in Microsoft Entra ID are permissions that have been assigned [Conditional Access policies](/azure/active-directory/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [Phishing-resistant MFA policy](/azure/active-directory/authentication/concept-authentication-strengths#built-in-authentication-strengths). See [What are protected actions in Microsoft Entra](/azure/active-directory/roles/protected-actions-overview) for more information.
 
 - Use [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference) to manage the following identity settings from a tenant level:
 
@@ -108,6 +95,22 @@ Consider whether users require permissions on a narrow scope, such as an adminis
    | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`,<br> `*/register/action`,<br> `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br>`Microsoft.PolicyInsights/*`,<br> `Microsoft.Authorization/policyAssignments/*`,<br>`Microsoft.Authorization/policyDefinitions/*`,<br>`Microsoft.Authorization/policyExemptions/*`,<br>`Microsoft.Authorization/policySetDefinitions/*`,<br>`Microsoft.Insights/alertRules/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Security/*`, `Microsoft.Support/*` | |
    | Subscription owner  | Delegated role for subscription owner generated from subscription Owner role  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`,<br> `Microsoft.Network/expressRouteCircuits/*`,<br> `Microsoft.Network/routeTables/write`,<br> `Microsoft.Network/vpnSites/*` |
    | Application owners (DevOps, AppOps) | Contributor role granted for application/operations team at Subscription scope  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, <br>`Microsoft.Network/virtualNetworks/write`, <br>`Microsoft.KeyVault/locations/deletedVaults/purge/action`  |
+
+### Privileged Identity Management (PIM) recommendations
+
+- Use Microsoft Entra [Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-trust and least privilege access. Map your organization's roles to the minimum access levels needed. Microsoft Entra PIM can use Azure native tools, extend current tools and processes, or use both current and native tools as needed.
+
+- Use [PIM access reviews](/azure/active-directory/privileged-identity-management/pim-create-roles-and-resource-roles-review) to regularly validate resource entitlements. Access reviews are part of many compliance frameworks, so many organizations already have an access review process in place.
+
+- Use privileged identities for automation runbooks that require elevated access permissions, or for privileged deployment pipelines. Use the same tools and policies to govern automated workflows that access critical security boundaries as you use to govern users of equivalent privilege.
+
+- Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator on a subscription or management group, using [Privileged Identity Management (PIM) for Groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Microsoft Entra ID roles.
+
+- Use [Administrative Units](/azure/active-directory/roles/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/azure/active-directory/roles/admin-units-restricted-management) feature to further protect specific objects from modification.
+
+- Use Protected actions with PIM (Privileged Identity Management) to add additional layer of protection. Protected actions in Microsoft Entra ID are permissions that have been assigned [Conditional Access policies](/azure/active-directory/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [Phishing-resistant MFA policy](/azure/active-directory/authentication/concept-authentication-strengths#built-in-authentication-strengths). See [What are protected actions in Microsoft Entra](/azure/active-directory/roles/protected-actions-overview) for more information.
+
+For more information on PIM, see [Privileged Identity Management (PIM) - Microsoft Entra](/azure/active-directory/privileged-identity-management/pim-configure).
 
 ## Identity and access management in the Azure landing zone accelerator
 
