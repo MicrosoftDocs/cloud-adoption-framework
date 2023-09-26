@@ -825,6 +825,10 @@
          "redirect_url": "/azure/dms/dms-overview",
          "redirect_document_id": false
       },
-      
+      {
+         "source_path": "docs/ready/landing-zone/design-area/identity-access-platform-access.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access",
+         "redirect_document_id": false
+      }
    ]
 }

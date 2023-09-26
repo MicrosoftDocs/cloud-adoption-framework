@@ -1,9 +1,8 @@
 ---
 title: Azure identity and access management design area
-description: Understand the identity and access management design area as part of the Azure landing zone design areas.
+description: Understand Microsoft Entra ID and hybrid identity considerations and recommendations.
 author: soderholmd
 ms.author: dsoderholm 
-ms.service: cloud-adoption-framework
 ms.topic: conceptual
 ms.date: 09/19/2023
 ---
@@ -29,7 +28,7 @@ However, many organizations are already using Active Directory Domain Services(A
 
 With hybrid identity, authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Microsoft Entra ID offers. For more information, see [Authentication for Microsoft Entra hybrid identity solutions](/azure/active-directory/hybrid/connect/choose-ad-authn).
 
-### Design recommendations
+### Hybrid identity recommendations
 
 - For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see [Integrate on-premises AD with Azure](/azure/architecture/reference-architectures/identity/).
 
@@ -38,6 +37,7 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 - Determine the right synchronization tool for your cloud identity. For more information, see [Tools for synchronization](/azure/active-directory/hybrid/sync-tools#selecting-the-right-tool).
 
 - If you are using Active Directory Federation Services(AD FS), move to the cloud to centralize identity and reduce operational effort. If AD FS is still part of your identity solution, install and use Microsoft Entra Connect.
+
 > [!IMPORTANT]
 >
 >Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. For more information, see [**Resources for decommissioning AD FS**](/windows-server/identity/ad-fs/ad-fs-decommission)
@@ -55,7 +55,7 @@ Administrators should familiarize themselves with the different options availabl
 
 Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file shares can be domain-joined in the same way as on-premises computers. For more information on the different options, see [Compare Microsoft Directory-based services](/azure/active-directory-domain-services/compare-identity-solutions).
 
-### Design recommendations
+### Microsoft Entra ID and Active Directory Domain Services recommendations
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy).
 
