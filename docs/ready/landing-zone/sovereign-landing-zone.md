@@ -35,7 +35,7 @@ The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [
 
 ## Sovereign landing zone design area's
 
-The Azure Landing Zone architecture consists of 8 design area's. Each design area describes what to consider before deploying a landing zone. The following sections will specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview)
+The Azure Landing Zone architecture consists of 8 design area's. Each design area describes what to consider before deploying a landing zone. The following sections will specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview) on top of what Azure Landing Zones already advises.
 
 ### Resource organization
 
