@@ -12,7 +12,7 @@ ms.date: 09/19/2023
 
 Once you have identified your Identity architecture, the next step is about authorization. Consider what resources each authenticated principal has or needs access to, and how to mitigate risks of unauthorized access to your resources. Refer to this document to understand more about [Enterprise access strategy in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model), and the different control planes that need to be secured.
 
-Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. The design principle of subscription democratization allows application administrators to manage their own workloads within the policy guiderails set by the platform owner.
+Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. The design principle of subscription democratization allows application administrators to manage their own workloads within the policy guardrails set by the platform owner.
 
 Consider whether users require permissions on a narrow scope, such as an administrator for a single application, or broad scope, such as a network administrator across multiple application workloads. In either case, follow the principle of just-enough-access, and ensure that the user has only the roles required for their normal activities, using custom roles and privileged identity management (PIM) where necessary.
 
@@ -28,9 +28,9 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
   - Entra ID roles control the administrative privileges to tenant-wide services such as Microsoft Entra ID, and other Microsoft services including Teams, Exchange Online, and Intune.
 
-  - Azure RBAC roles control the administrative privileges to Azure resources such as virtual machines, subscriptions, and resource groups. For more information, see [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)
+  - Azure RBAC roles control the administrative privileges to Azure resources such as virtual machines, subscriptions, and resource groups. For more information, see [What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview).
 
-  - The Microsoft Entra Global Administrator role (if allowed), and the Owner and User Access Administrator Azure RBAC roles, can modify the role assignments on Azure resources.
+  - The Azure RBAC Owner and User Access Administrator roles can modify the role assignments on Azure resources. By default, the Microsoft Entra Global Administrator role does not have permission to manage access to Azure resources, as this must be explicitly enabled. See [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin) for more information.
 
   - Classic resources and classic administrators will be retired on August 31, 2024. Remove unnecessary Co-Administrators and use Azure RBAC for fine-grained access control. See [Resource Manager and classic deployment - Azure Resource Manager](/azure/azure-resource-manager/management/deployment-models#migrate-from-classic-to-resource-manager) for more information on migrating from Classic resources to Azure Resource Manager.
 
@@ -105,15 +105,21 @@ Consider whether users require permissions on a narrow scope, such as an adminis
    |---|---|---|---|
    | Azure platform owner (such as the built-in Owner role) | Management group and subscription lifecycle management | `*` | |
    | Network management (NetOps) | Platform-wide global connectivity management: Virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others  | `*/read`, <br>`Microsoft.Network/*`,<br> `Microsoft.Resources/deployments/*`,<br> `Microsoft.Support/*` | |
-   | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`,<br> `*/register/action`,<br> `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br>`Microsoft.PolicyInsights/*`,<br> `Microsoft.Authorization/policyAssignments/*`,<br>`Microsoft.Authorization/policyDefinitions/*`,<br>`Microsoft.Authorization/policyExemptions/*`,<br>`Microsoft.Authorization/policySetDefinitions/*`,<br>`Microsoft.Insights/alertRules/*`, `Microsoft.Resources/deployments/*`, `Microsoft.Security/*`, `Microsoft.Support/*` | |
+   | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`,<br> `*/register/action`,<br> `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br>`Microsoft.PolicyInsights/*`,<br> `Microsoft.Authorization/policyAssignments/*`,<br>`Microsoft.Authorization/policyDefinitions/*`,<br>`Microsoft.Authorization/policyExemptions/*`,<br>`Microsoft.Authorization/policySetDefinitions/*`,<br>`Microsoft.Insights/alertRules/*`, <br> `Microsoft.Resources/deployments/*`, <br>`Microsoft.Security/*`, <br>`Microsoft.Support/*` | |
    | Subscription owner  | Delegated role for subscription owner generated from subscription Owner role  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`,<br> `Microsoft.Network/expressRouteCircuits/*`,<br> `Microsoft.Network/routeTables/write`,<br> `Microsoft.Network/vpnSites/*` |
    | Application owners (DevOps, AppOps) | Contributor role granted for application/operations team at Subscription scope  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, <br>`Microsoft.Network/virtualNetworks/write`, <br>`Microsoft.KeyVault/locations/deletedVaults/purge/action`  |
 
 ## Identity and access management in the Azure landing zone accelerator
 
-Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where customers can deploy the Active Directory domain controllers their environments require.
+Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where organizations can deploy Active Directory domain controllers required for their environments.
 
 The implementation also includes options to:
 
 - Assign recommended policies to govern identity and domain controllers.
 - Create a virtual network, and connect to the hub via virtual network peering.
+
+## Next Steps
+>
+>[!div class="nextstepaction"]
+> [Application access management](identity-access-application-access.md)
+>
