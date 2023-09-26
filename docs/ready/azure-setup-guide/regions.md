@@ -35,12 +35,7 @@ For more information, see [Azure paired regions](/azure/best-practices-availabil
 
 ### Sovereign regions
 
-Some regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are:
-
-- [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all)
-- [Azure Germany](https://azure.microsoft.com/global-infrastructure/services/?regions=germany-north,germany-west-central&products=all&rar=true)  
-    Azure Germany is being deprecated in favor of standard non-sovereign Azure regions in Germany.
-- [Azure Government - US](/azure/azure-government/documentation-government-welcome)
+Some regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all) and [Azure Government - US](/azure/azure-government/documentation-government-welcome).
 
 ## Consider region service availability and capacity
 
