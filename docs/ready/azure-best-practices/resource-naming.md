@@ -154,6 +154,7 @@ The following section provides some example names for common Azure resource type
 | **Azure Cognitive Search** | Global | *srch-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `srch-navigator-prod` <li> `srch-emissions-dev` |
 | **Azure Cognitive Services** | Resource group | *cog-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `cog-navigator-prod` <li> `cog-emissions-dev` |
 | **Azure Machine Learning workspace** | Resource group | *mlw-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `mlw-navigator-prod` <li> `mlw-emissions-dev` |
+| **Azure OpenAI** | Global | *oia-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `oia-navigator-prod` <li> `oia-emissions-dev` |
 
 ### Example names: Analytics and IoT
 
