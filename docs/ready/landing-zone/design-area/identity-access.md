@@ -39,7 +39,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 - Operational management of elevated privileges
 - Automated guardrails to prevent common identity and access mistakes
 
-These topics are addressed in the compliance design areas related to [security](./security.md) and [governance](./governance.md).
+These topics are addressed in the compliance design areas related to [security](./security.md) and [governance](./governance.md). Additionally, the [Azure Identity Management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices) guide provides a comprehensive set of recommendations for identity and access management.
 
 ## Design area overview
 
