@@ -13,8 +13,7 @@ Microsoft Entra ID provides a base level of access control and identity manageme
 
 Cloud-based identity management is an iterative process. You could start with a cloud-native solution with a small set of users and corresponding roles for an initial deployment. As your migration matures, you might need to integrate your identity solution using directory synchronization or add domains services as part of your cloud deployments. Revisit your identity strategy in every iteration of your migration process.
 
-Refer to this links to decide on the solution:
-[Identity decision guide - Cloud Adoption Framework | Microsoft Learn](/azure/cloud-adoption-framework/decision-guides/identity/)
+Refer the [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity/) for help with your identity strategy.
 
 ## Azure and on-premises (Hybrid Identity)
 
@@ -61,9 +60,7 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 - Evaluate the compatibility of workloads for Microsoft Entra DS and for AD DS on Windows Server. See [Common use-cases and scenarios](/azure/active-directory-domain-services/scenarios).
 
-- Deploy domain controllers into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads.
-
-- When using Domain controllers in Azure ensure they are deployed in Identity Subscription under the Platform Management group so that it can be segregated for Identity access management and also ensure that the resources requiring access to these servers for authentication or authorization purpose have access to required ports and services running on these servers.
+- Deploy domain controllers into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads. Resources using the domain controllers for authentication must have a network route to the domain controller subnet.
 
 - When you deploy Microsoft Entra DS or integrate on-premises environments into Azure, use locations with Availability Zones for increased availability.
 
