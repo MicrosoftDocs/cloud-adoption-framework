@@ -94,8 +94,8 @@ Consider whether users require permissions on a narrow scope, such as an adminis
    |---|---|---|
    | Global Admin | Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities. | Don't assign more than five people to this role.|
    | Hybrid Identity Administrator | Can manage Active Directory to Microsoft Entra cloud provisioning, Microsoft Entra Connect, Pass-through Authentication (PTA), Password hash synchronization (PHS), Seamless Single sign-on (Seamless SSO), and federation settings. | |
-   | Security Administrator | Authentication | |
-   | Application Administrator | Enterprise Application or Application Proxy | Cannot grant tenant-wide admin consent|
+   | Security Administrator | Can read security information and reports, and manage configuration in Microsoft Entra ID and Office 365. | |
+   | Application Administrator | Can create and manage all aspects of app registrations and enterprise apps. | Cannot grant tenant-wide admin consent|
 
 - Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles) to provide predefined role assignments to Azure resources. General platform roles, as well as specific Resource roles exist.
 
