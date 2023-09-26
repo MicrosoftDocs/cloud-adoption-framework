@@ -63,7 +63,7 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 - Deploy domain controllers into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads.
 
-- Make sure to design your network so resources that require AD DS on Windows Server for local authentication and management can access their domain controllers. For AD DS on Windows Server, consider shared service environments that offer local authentication and host management in a larger enterprise-wide network context.
+- When using Domain controllers in Azure ensure they are deployed in Identity Subscription under the Platform Management group so that it can be segregated for Identity access management and also ensure that the resources requiring access to these servers for authentication or authorization purpose have access to required ports and services running on these servers.
 
 - When you deploy Microsoft Entra DS or integrate on-premises environments into Azure, use locations with Availability Zones for increased availability.
 
