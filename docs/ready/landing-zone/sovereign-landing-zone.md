@@ -97,7 +97,10 @@ Consider enabling Customer Lockbox for Microsoft Azure. Note that enabling this 
 
 #### Deployment options
 
-The Sovereign Landing Zone (Preview) is available as a GitHub repository <https://github.com/Azure/sovereign-landing-zone-preview> and can be deployed as a whole or on a component per component basis, which allows for integration in a customer's existing deployment workflow. Deployment guidance is located [here](https://github.com/Azure/sovereign-landing-zone-preview/blob/main/docs/03-Deployment-Overview.md)
+The Sovereign Landing Zone (Preview) is available as a GitHub repository <https://github.com/Azure/sovereign-landing-zone-preview> and can be deployed as a whole or on a component per component basis, which allows for integration in a customer's existing deployment workflow. Deployment guidance is located [here](https://github.com/Azure/sovereign-landing-zone-preview/blob/main/docs/03-Deployment-Overview.md).
+
+> [!NOTE]
+> The Sovereign Landing Zone (Preview), being a variant of the Azure Landing Zone, does not yet offer all of the deployment choices that are available for the Azure Landing Zone architecture. Customers should follow the Sovereign Landing Zone (Preview) deployment guidance which is located [here](https://github.com/Azure/sovereign-landing-zone-preview/blob/main/docs/03-Deployment-Overview.md). 
 
 The deployed components are:
 
