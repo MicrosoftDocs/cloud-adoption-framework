@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 08/24/2023
+ms.date: 09/27/2023
 ---
 
 # Azure VMs to run large-scale HPC application workloads for the Finance industry
@@ -69,4 +69,4 @@ The following articles provide guidance that you might find helpful during vario
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-- [Spot Virtual Machines](./azure/architecture/guide/spot/spot-eviction)
+- [Spot Virtual Machines](/azure/architecture/guide/spot/spot-eviction.md)

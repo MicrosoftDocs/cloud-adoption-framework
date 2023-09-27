@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ms.custom: think-tank
-ms.date: 07/19/2023
+ms.date: 09/27/2023
 ---
 
 # Big compute in the Manufacturing industry
