@@ -102,8 +102,6 @@ Starbucks has been using reinforcement learning technology to provide a personal
 
 ## Next steps
 
-Try the live [Synapse/AI-Retail-Recommender](https://synapsefornextgenretail.azurewebsites.net/) demo.
-
 Use the Azure DevOps template to deploy in your own environment. Follow the steps included in the [Retail Recommender Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/):
 
 1. Sign in to the generator.
