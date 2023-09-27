@@ -11,7 +11,7 @@ ms.date: 09/19/2023
 
 Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to others, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
 
-### Design Considerations
+## Design Considerations
 
 - Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML(Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
 
@@ -41,16 +41,16 @@ Individual application workloads have authentication and authorization requireme
 
 - Find out which services or applications within your landing zone support Microsoft Entra authentication. To check which Azure services support Microsoft Entra authentication, see [Azure services that support Microsoft Entra authentication](/azure/active-directory/managed-identities-azure-resources/services-id-authentication-support).  
 
-- Consider the methods that virtual machine users use to connect interactively. Azure Bastion, Just-in-Time (JIT), and RDP or SSH have different network requirements and security implications. See [Plan for virtual machine remote access](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access) for more information.
+- Consider the methods that virtual machine users use to connect interactively. Azure Bastion, Just-in-Time (JIT), and RDP or SSH have different network requirements and security implications. For more information, see [Plan for virtual machine remote access](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access).
 
-### Design recommendations
+## Design recommendations
 
 - Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that don't need to use credentials. Applications that need to authenticate against an Azure service can use managed identities. Ensure that managed identities follow the principle of least privilege when granting access.
 
 - Use Azure Key Vault to manage secrets, keys, certificates used by applications. Use RBAC to allow administrative access and management for management. Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: [Use a managed identity to access Azure Key Vault](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
 
-- If you are using DevOps pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. See [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/) for more information.
+- If you are using DevOps pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
-- Use attribute-based access control (ABAC) where supported, to further restrict permissions on data in blob storage and prevent unauthorized access to data. See [Allow read access to blobs based on tags and custom security attributes](/azure/role-based-access-control/conditions-custom-security-attributes) for more information.
+- Use attribute-based access control (ABAC) where supported, to further restrict permissions on data in blob storage and prevent unauthorized access to data. For more information, see [Allow read access to blobs based on tags and custom security attributes](/azure/role-based-access-control/conditions-custom-security-attributes).
