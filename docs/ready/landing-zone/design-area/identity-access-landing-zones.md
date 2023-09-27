@@ -31,17 +31,13 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
   - The Azure RBAC Owner and User Access Administrator roles can modify the role assignments on Azure resources. By default, the Microsoft Entra Global Administrator role does not have permission to manage access to Azure resources, as this must be explicitly enabled. See [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin) for more information.
 
-  - Classic resources and classic administrators will be retired on August 31, 2024. Remove unnecessary Co-Administrators and use Azure RBAC for fine-grained access control. See [Resource Manager and classic deployment - Azure Resource Manager](/azure/azure-resource-manager/management/deployment-models#migrate-from-classic-to-resource-manager) for more information on migrating from Classic resources to Azure Resource Manager.
-
-  - Microsoft Entra ID roles can be assigned to groups with the isAssignableToRole property set to true (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept)
-
-  - Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/azure/active-directory/roles/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
-
-  - Some roles support Attribute-Based Access Control (ABAC), or role assignment conditions. Conditions allow administrators to dynamically assign roles based on attributes of the resource. For example, assigning the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See [What is Azure attribute-based access control (Azure ABAC)?](/azure/role-based-access-control/conditions-overview) for more information.
-
-- The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown in the diagram.
+The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown in the diagram.
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
+
+- Microsoft Entra ID roles can be assigned to groups with the isAssignableToRole property set to true (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept)
+
+- Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/azure/active-directory/roles/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group, subscription, and resource group scopes. For more information, see [Azure custom roles - Azure RBAC](/azure/role-based-access-control/custom-roles)
 
@@ -55,9 +51,11 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
   - 30 Microsoft Entra custom roles in a Microsoft Entra organization.
 
+- Some Azure RBAC roles support Attribute-Based Access Control (ABAC), or role assignment conditions. Conditions allow administrators to dynamically assign roles based on attributes of the resource. For example, assigning the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See [What is Azure attribute-based access control (Azure ABAC)?](/azure/role-based-access-control/conditions-overview) for more information.
+
 ## Design recommendations
 
-### RBAC recommendations
+### General recommendations
 
 - Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multi-factor authentication enforcement. Multi-factor authentication greatly lowers the risk of credential theft and unauthorized access.
 
@@ -71,6 +69,8 @@ Consider whether users require permissions on a narrow scope, such as an adminis
 
 - Create [emergency access or “break glass” accounts](/azure/active-directory/roles/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and are not assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
 
+### Microsoft Entra ID recommendations
+
 - Use Entra Identity Governance and create Access Packages to control group membership, with an approval process and regular access reviews for privileged group members. See [What is entitlement management? - Microsoft Entra](/azure/active-directory/governance/entitlement-management-overview) for more information.
 
 - To make role assignments more manageable, avoid assigning roles directly to users. Instead, assign roles to groups. Assigning roles to groups instead of users also helps minimize the number of role assignments, which has a [limit of role assignments per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
@@ -83,6 +83,10 @@ Consider whether users require permissions on a narrow scope, such as an adminis
    | Hybrid Identity Administrator | Can manage Active Directory to Microsoft Entra cloud provisioning, Microsoft Entra Connect, Pass-through Authentication (PTA), Password hash synchronization (PHS), Seamless Single sign-on (Seamless SSO), and federation settings. | |
    | Security Administrator | Can read security information and reports, and manage configuration in Microsoft Entra ID and Office 365. | |
    | Application Administrator | Can create and manage all aspects of app registrations and enterprise apps. | Cannot grant tenant-wide admin consent|
+
+- When delegating administrative responsibility to others, consider whether they require the full set of privileges, or only a subset. For example, the User Access Administrator role may be delegated to a user who needs to manage access to Azure resources, but not manage the resources themselves. To restrict their objects and security principals that they can apply permissions to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
+
+### Azure RBAC recommendations
 
 - Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles) to provide predefined role assignments to Azure resources. General platform roles, as well as specific Resource roles exist.
 
