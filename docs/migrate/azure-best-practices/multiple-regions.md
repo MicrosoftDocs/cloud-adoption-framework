@@ -1,10 +1,10 @@
 ---
 title: Select Azure regions for a migration
 description: Learn about selecting an Azure cloud region when you are migrating into Azure.
-author: doodlemania2
-ms.author: dermar
+author: johndowns
+ms.author: jodowns
 ms.reviewer: tozimmergren
-ms.date: 08/29/2023
+ms.date: 09/28/2023
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23
 ---
@@ -13,7 +13,7 @@ ms.custom: internal, engagement-fy23
 
 When you migrate an existing environment into Azure, you need to select an Azure region or set of regions to host the migrated components. Consider the following elements:
 
-- **Review the core Azure region selection guidance** to understand how to select Azure regions that meet your requirements.
+- **Review the [core Azure region selection guidance](../../ready/azure-setup-guide/regions.md)** to understand how to select Azure regions that meet your requirements.
 - **Inventory and document the current state** of your environment.
 - **Implement a general approach** to your migration, including whether to run in a single region, to use multiple availability zones, or to use multiple regions.
 - **Assess process changes** that might be required.
@@ -35,7 +35,7 @@ Determine whether documentation and process alignment is required. The following
 - Document the user base. Will employees, partners, or customers in the identified country/region be affected by the cloud migration?
 - Document datacenters and assets. Are there assets in the identified country/region that might be included in the migration effort?
 - Document regional SKU availability and failover requirements.
-- Document your resiliency requirements to determine if availability zones are required.
+- Document your resiliency requirements to determine if availability zones are required. Typically, resiliency requirements are considered for the whole scenario, not for individual regions.
 
 Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
 

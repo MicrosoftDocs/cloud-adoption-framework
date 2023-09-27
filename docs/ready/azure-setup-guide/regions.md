@@ -3,7 +3,7 @@ title: Select Azure regions
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: johndowns
 ms.author: jodowns
-ms.date: 09/22/2023
+ms.date: 09/28/2023
 ms.topic: conceptual
 ---
 
@@ -11,12 +11,11 @@ ms.topic: conceptual
 
 When you design your strategy to use Microsoft Azure, you can choose from many Azure regions around the world. Region selection is a key part of your overall cloud adoption strategy. Each [Azure region](https://azure.microsoft.com/global-infrastructure/geographies/) has specific characteristics, so it's essential to choose the best regions for your Azure resources.
 
-> [!NOTE]
-> If you're migrating existing workloads from an on-premises datacenter into Azure, there are some additional considerations when you select a region. For more information, see [Select Azure regions for a migration](../../migrate/azure-best-practices/multiple-regions.md).
+## Understand Azure region architectures and resilience
 
-## Understand Azure region types
+Different Azure regions have different characteristics. Two common ways that Azure regions vary are around their use of availability zones, and whether they have a paired region. Also, some regions are operated by sovereign entities in particular countries. The *region architecture* refers to how a specific region is designed and the overall regional capabilities it provides.
 
-Different Azure regions have different characteristics. Two common ways that Azure regions vary are around their use of availability zones, and whether they have a paired region. Also, some regions are operated by sovereign entities in particular countries. To learn more about how Azure regions work, see [What are Azure regions and availability zones?](/azure/reliability/availability-zones-overview).
+To learn more about how Azure regions work, see [What are Azure regions and availability zones?](/azure/reliability/availability-zones-overview).
 
 ### Availability zones
 
@@ -24,22 +23,20 @@ Many Azure regions include availability zones, which are physically separate loc
 
 ### Paired regions
 
-Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies), typically located in the same geopolitical area. Region pairing provides resiliency if a catastrophic region failure occurs. Region pairing is mostly used for [geo-redundant storage](#use-geo-redundant-storage-in-paired-regions) and by other Azure services that depend on Azure Storage for replication.
+Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-paired-regions), typically located in the same geopolitical area. Region pairing provides resiliency if a catastrophic region failure occurs. Region pairing is mostly used for [geo-redundant storage](#use-geo-redundant-storage-in-paired-regions) and by other Azure services that depend on Azure Storage for replication.
 
-Newer regions aren't paired and instead use availability zones for high availability and resiliency.
-
-For more information, see [Azure paired regions](/azure/best-practices-availability-paired-regions).
+Newer regions aren't paired and instead use availability zones for high availability and resiliency. Later in this article, you'll learn more about how to use these region types.
 
 > [!TIP]
 > To learn how to design a workload that uses regions and availability zones, see [Recommendations for using availability zones and regions](/azure/well-architected/resiliency/regions-availability-zones).
 
 ### Sovereign regions
 
-Some regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all) and [Azure Government - US](/azure/azure-government/documentation-government-welcome).
+Some regions are dedicated to specific sovereign entities. Although all regions are Azure regions, these sovereign regions are isolated from the rest of Azure. They aren't necessarily managed by Microsoft, and they might be restricted to certain types of customers. These sovereign regions are [Azure China 21Vianet](https://azure.microsoft.com/global-infrastructure/services/?regions=china-east-2%2cchina-non-regional&products=all) and [Azure Government - US](/azure/azure-government/documentation-government-welcome). Sovereign regions are built to the same standards of resiliency as other Azure regions.
 
 ## Consider region service availability and capacity
 
-Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and categories](/azure/reliability/availability-service-by-category). Additionally, some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
+Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and service categories](/azure/reliability/availability-service-by-category). Additionally, some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
 
 The Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
@@ -103,11 +100,9 @@ Azure regions are highly available. Azure service-level agreements are applied t
 > [!WARNING]
 > When you design mission-critical workloads, always plan for regional failure, and avoid deploying within a single region. You should also practice recovery and mitigation steps. For more information, see [Mission-critical workloads](/azure/well-architected/mission-critical/mission-critical-overview).
 
-### Understand Azure service deployments
+### Understand Azure service resiliency features
 
-Many PaaS services rely on their own regional resiliency solutions. For example, when you deploy Azure SQL Database and Azure Cosmos DB, you can easily replicate your data to more regions.
-
-Some Azure services, like Azure DNS and Azure Front Door, are deployed globally and don't have regional dependencies.
+Many platform as a service (PaaS) services rely on their own regional resiliency solutions. For example, when you deploy Azure SQL Database and Azure Cosmos DB, you can easily replicate your data to more regions. Other services are deployed to a single region, and you might need to manually deploy them to other regions. Also, some Azure services, like Azure DNS and Azure Front Door, are deployed globally and don't have regional dependencies.
 
 As you consider which services you'll use in your cloud adoption process, make sure that you clearly understand the failover capabilities and recovery steps that might be required for each Azure service you use.
 
@@ -142,3 +137,7 @@ In the rare event that an entire Azure region is unavailable, you need to plan f
 Consider your data resiliency needs. Regardless of where your data is located, you can move, copy, or access your data from any location globally.
 
 Some Azure services enable you to store or replicate your data in multiple regions even without the regions being paired. For example, [Azure Cosmos DB provides global data distribution](/azure/cosmos-db/distribute-data-globally), [Azure SQL Database provides active geo-replication to another Azure region](/azure/azure-sql/database/active-geo-replication-overview), [Azure Site Recovery supports recovery to any region](/azure/site-recovery/azure-to-azure-quickstart), and [Azure NetApp Files provides cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction#supported-region-pairs).
+
+## Next steps
+
+If you're migrating existing workloads from an on-premises datacenter into Azure, there are some additional considerations when you select a region. For more information, see [Select Azure regions for a migration](../../migrate/azure-best-practices/multiple-regions.md).
