@@ -498,6 +498,8 @@ items:
           href: ready/landing-zone/deploy-landing-zones-with-terraform.md
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
+        - name: Sovereignty considerations and the Sovereign Landing Zone (Preview)
+          href: ready/landing-zone/sovereign-landing-zone.md
         - name: Get landing zone help
           href: ready/landing-zone/partner-landing-zone.md
 
