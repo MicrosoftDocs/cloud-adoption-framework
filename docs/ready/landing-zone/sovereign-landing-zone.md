@@ -35,7 +35,7 @@ The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [
 
 ## Sovereign landing zone design area's
 
-The Azure Landing Zone architecture consists of 8 design area's. Each design area describes what to consider before deploying a landing zone. The following sections will specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview)
+The Azure Landing Zone architecture consists of 8 design area's. Each design area describes what to consider before deploying a landing zone. The following sections will specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview) on top of what Azure Landing Zones already advises.
 
 ### Resource organization
 
@@ -91,7 +91,7 @@ For more information enabling guest attestation, review the documentation [What 
 
 Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors do not require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It is used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
 
-Consider enabling Customer Lockbox for Microsoft Azure. Note that enabling this option requires the Global Admin role. Further information on how to correctly setup RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure \| Microsoft Learn](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview).
+Consider enabling Customer Lockbox for Microsoft Azure. Note that enabling this option requires the Global Admin role as this is a tenant wide setting. Further information on how to correctly setup RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure \| Microsoft Learn](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview).
 
 ### Platform Automation and DevOps
 
