@@ -48,7 +48,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
   - **DDoS protection** protects Azure VMware Solution workloads from attacks that cause financial loss or poor user experience. Apply DDoS protection on the Azure virtual network that hosts the ExpressRoute termination gateway for the Azure VMware Solution connection. Consider using Azure Policy for automatic enforcement of DDoS protection.
 
-- **VSAN Encryption with Customer Managed Keys(CMK)** allows Azure VMware Solution VSAN datastores to be encrypted with a customer provided encryption key stored in Azure Key Vault.  Use this feature to fulfill custom VSAN encryption requirements such as custom key rotation policies or to manage key lifecycle events. For detailed implementation guidance and limits, see [Configure customer-managed key encryption at rest in Azure VMware Solution](/azure/azure-vmware/configure-customer-managed-keys)
+- **VSAN Encryption with Customer Managed Keys(CMK)** allows Azure VMware Solution VSAN datastores to be encrypted with a customer provided encryption key stored in Azure Key Vault. You can use this feature to meet compliance requirements, such as adhering to key rotation policies or managing key lifecycle events. For detailed implementation guidance and limits, see [Configure customer-managed key encryption at rest in Azure VMware Solution](/azure/azure-vmware/configure-customer-managed-keys)
 
 - **Controlled vCenter Server access:** Uncontrolled access to the Azure VMware Solution vCenter Server can increase attack surface area. Use a dedicated privileged access workstation (PAW) to securely access Azure VMware Solution vCenter Server and NSX-T Manager. Create a user group and add individual user account to this user group.
 
