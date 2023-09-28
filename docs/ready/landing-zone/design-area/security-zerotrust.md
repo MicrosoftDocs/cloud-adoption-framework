@@ -10,7 +10,7 @@ ms.custom:
 
 # Zero Trust Planning for Landing Zones
 
-[Zero Trust](../../../../../security/zero-trust/) is a security strategy that leverages many products and services in order to adhere to the following security principles:
+[Zero Trust](../../../../security/zero-trust/zero-trust-overview.md) is a security strategy that leverages many products and services in order to adhere to the following security principles:
 
 - **Verify explicitly**, where you always authenticate and authorize based on all available data points.
 - **Use least privilege access**, where you limit user access to just enough access, and use tools to provide just in time access with considerations to adaptive risk-based policies.
