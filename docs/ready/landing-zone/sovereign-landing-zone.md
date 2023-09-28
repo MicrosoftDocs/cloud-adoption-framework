@@ -28,7 +28,7 @@ Public sector customers with sovereignty needs that want to start using Azure ca
 
 ## Sovereign Landing Zone
 
-The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [Azure Landing Zone architecture](./index.md/#azure-landing-zone-architecture) and is intended for organizations that need advanced sovereignty controls. A Sovereign Landing Zone (Preview) aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
+The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [Azure Landing Zone architecture](../landing-zone/#azure-landing-zone-architecture) and is intended for organizations that need advanced sovereignty controls. A Sovereign Landing Zone (Preview) aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
 
 > [!NOTE]
 > Microsoft Cloud for Sovereignty is oriented towards government organizations with sovereignty needs. Customers should carefully consider whether they need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the Sovereign Landing Zone (Preview) architecture.
@@ -43,7 +43,7 @@ The Azure Landing Zone architecture consists of 8 design area's. Each design are
 
 The Sovereign Landing Zone is a tailored version of the Azure Landing Zone conceptual architecture, and aligns to the guidance as outlined in [Tailor the Azure landing zone architecture - Cloud Adoption Framework \| Microsoft Learn](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
-Building on the Azure Landing Zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group, and a set of specific policy initiatives, ie [Microsoft Cloud for Sovereignty Policy Baseline](./sovereign-landing-zone.md/#microsoft-cloud-for-sovereignty-policy-baseline), are applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
+Building on the Azure Landing Zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group, and a set of specific policy initiatives, ie [Microsoft Cloud for Sovereignty Policy Baseline](/industry/sovereignty/policy-portfolio-baseline/#microsoft-cloud-for-sovereignty-policy-baseline), are applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
 
 ![Diagram that shows additional management groups of SLZ.](./media/sovereign-landing-zone/sub-organization-slz.png)
 
