@@ -11,7 +11,11 @@
   "Downcase": true,
   "FixMetadata": true,
   "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
-  "Exclude": [ "_bread", "_images", "context" ],
+  "Exclude": [
+    "docs/_images/",
+    "docs/context/",
+    "azure-pipelines.yml"
+  ],
   "TermFiles": [
     "Bundle-Standard.txt",
     "Bundle-Cloud.txt",
