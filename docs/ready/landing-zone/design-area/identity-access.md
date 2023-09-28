@@ -11,11 +11,9 @@ ms.date: 09/19/2023
 
 This critical design area establishes a foundation for the management of identity and access based on best practices.
 
-Identity is the security perimeter in a public cloud so  Identity and access management must be treated as the foundation of any secure and fully compliant public cloud architecture.
+The technological landscape in the enterprise is becoming complex and heterogenous. Identity is the primary security perimeter in a public cloud, so Identity and access management must be treated as the foundation of any secure and fully compliant public cloud architecture.
 
-The technological landscape in the enterprise is becoming complex and heterogenous. To manage compliance and security for this environment, identity and access management lets the right individuals access the right resources at the right time for the right reasons.
-
-Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer resources. It also provides reliable audit logging and nonrepudiation of user action.
+Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications. It ensures that the right individual access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user action.
 
 Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure, operationally efficient environments.
 
@@ -25,6 +23,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 - [Cloud platform](../../../organize/cloud-platform.md)
 - [Cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
+- [Cloud security team](azure/cloud-adoption-framework/organize/cloud-security-team.md)
 
 **Scope:** The goal of this design area is to evaluate options for your identity and access foundation. It includes:
 
@@ -49,15 +48,11 @@ Identity and access management is boundary security in the public cloud. It must
 
 These articles examine design considerations and recommendations related to identity and access management in a cloud environment:
 
-<!-- 
-Fix the link below to the new file name
--->
-
 - [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
-- [Platform access](identity-access-platform-access.md)
+- [Application access](identity-access-application-access.md)
 - [Prerequisites for a landing zone](identity-access-landing-zones.md)
 
->[!TIP]
+> [!TIP]
 > If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
 
 ## Next steps

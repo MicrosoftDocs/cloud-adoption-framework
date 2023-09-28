@@ -19,7 +19,7 @@ Refer the [Identity decision guide](/azure/cloud-adoption-framework/decision-gui
 
 User objects that are wholly created in Microsoft Entra ID are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
 
-However, many organizations are already using Active Directory Domain Services (AD DS) directories that they have been operating for a long time, and which may be integrated with other systems such as HR or ERP using LDAP. These domains may have many domain-joined computers and applications that use Kerberos or the older NTLMv2 protocols for authentication. In these environments, user objects can be synchronized to Microsoft Entra ID so that users can sign in to both on-premises systems and cloud resources with a single identity. Uniting on-premises and cloud directory services is known as ‘hybrid identity.’  On-premises domains can be extended into Azure Landing Zones:
+However, many organizations are already using Active Directory Domain Services (AD DS) directories that they have been operating for a long time, and which may be integrated with other systems such as line-of-business or Enterprise Resource Planning (ERP) using LDAP. These domains may have many domain-joined computers and applications that use Kerberos or the older NTLMv2 protocols for authentication. In these environments, user objects can be synchronized to Microsoft Entra ID so that users can sign in to both on-premises systems and cloud resources with a single identity. Uniting on-premises and cloud directory services is known as ‘hybrid identity.’  On-premises domains can be extended into Azure Landing Zones:
 
 - Active Directory Domain Services (AD DS) domain users can be synchronized with Entra ID using Microsoft Entra Connect or Microsoft Entra Connect Cloud Sync, to maintain a single user object in both cloud and on-premises environments. Review the [supported topologies](/azure/active-directory/hybrid/connect/plan-connect-topologies) to determine the recommended configuration for your environment.
 
@@ -35,11 +35,11 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 
 - Determine the right synchronization tool for your cloud identity. For more information, see [Tools for synchronization](/azure/active-directory/hybrid/sync-tools#selecting-the-right-tool).
 
-- If you are using Active Directory Federation Services(AD FS), move to the cloud to centralize identity and reduce operational effort. If AD FS is still part of your identity solution, install and use Microsoft Entra Connect.
+- If you are using Active Directory Federation Services (AD FS), move to the cloud to centralize identity and reduce operational effort. If AD FS is still part of your identity solution, install and use Microsoft Entra Connect.
 
 > [!IMPORTANT]
 >
->Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. For more information, see [**Resources for decommissioning AD FS**](/windows-server/identity/ad-fs/ad-fs-decommission)
+> Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. For more information, see [**Resources for decommissioning AD FS**](/windows-server/identity/ad-fs/ad-fs-decommission).
 >
 
 - Identify applications using legacy authentication protocols and migrate them to modern identity services.
@@ -48,9 +48,9 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 
 Administrators should familiarize themselves with the different options available for implementing Microsoft Directory Services:
 
-- Active Directory Domain Services(AD DS) domain controllers can be deployed into Azure as Windows virtual machines (IaaS) that administrators have full control of. They can be joined to an existing Active Directory domain, or create a new one with a trust relationship with existing on-premises domains. See [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain).
+- Active Directory Domain Services (AD DS) domain controllers can be deployed into Azure as Windows virtual machines (IaaS) that administrators have full control of. They can be joined to an existing Active Directory domain, or create a new one with a trust relationship with existing on-premises domains. See [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain).
 
-- Microsoft Entra Domain Services is an Azure managed service that creates a new managed AD DS domain hosted in Azure. The domain can be part of a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators do not have direct access to the domain controllers and are not responsible for patching and other maintenance operations. For more information, see [Overview of Microsoft Entra Domain Services | Microsoft Learn](/azure/active-directory-domain-services/overview).
+- Microsoft Entra Domain Services is an Azure managed service that creates a new managed AD DS domain hosted in Azure. The domain can be part of a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators do not have direct access to the domain controllers and are not responsible for patching and other maintenance operations. For more information, see [Overview of Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview).
 
 Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file shares can be domain-joined in the same way as on-premises computers. For more information on the different options, see [Compare Microsoft Directory-based services](/azure/active-directory-domain-services/compare-identity-solutions).
 
@@ -62,7 +62,9 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 - Deploy domain controllers into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads. Resources using the domain controllers for authentication must have a network route to the domain controller subnet.
 
-- When you deploy Microsoft Entra DS or integrate on-premises environments into Azure, use locations with Availability Zones for increased availability.
+- For self-hosted Active Directory Domain Services, create domain controller virtual machines in Availability Sets or Availability Zones to maintain high availability.
+
+- When you deploy Microsoft Entra DS or integrate on-premises environments into Azure, use regions with Availability Zones where available.
 
 - Deploy Microsoft Entra DS within the primary region, because you can only project this service into one subscription. You can expand Microsoft Entra DS to further regions with [replica sets](/azure/active-directory-domain-services/tutorial-create-replica-set).
 
@@ -70,6 +72,6 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 ## Next Steps
 >
->[!div class="nextstepaction"]
-> [Access management in Landing Zone](identity-access-landing-zones.md)
+> [!div class="nextstepaction"]
+> [Access management in Landing Zones](identity-access-landing-zones.md)
 >
