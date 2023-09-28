@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management design area
+title: Azure identity and access management for applications
 description: Understand how to provide access to Azure Resources.
 author: soderholmd
 ms.author: dsoderholm 

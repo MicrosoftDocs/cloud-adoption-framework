@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management design area
+title: Azure landing zone identity and access management
 description: See considerations and recommendations for implementing identity and access control within an Azure landing zone.
 author: soderholmd
 ms.author: dsoderholm 
@@ -86,7 +86,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - When delegating administrative responsibility to others, consider whether they require the full set of privileges, or only a subset. For example, the User Access Administrator role may be delegated to a user who needs to manage access to Azure resources, but not manage the resources themselves. To restrict their objects and security principals that they can apply permissions to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
 
-- Do not use a higher-privileged role to carry out an activity that could be done with a lower-privileged role. For example, use the User Administrator role to manage users, not the Global Administrator role. For details of roles and their permissions, refer to the [Microsoft Entra build-in roles permissions](azure/active-directory/roles/permissions-reference). Additionally, the Azure Portal will indicate which roles and role permissions are privileged. See [Privileged roles and permissions in Microsoft Entra ID](/azure/active-directory/roles/privileged-roles-permissions) for more information.
+- Do not use a higher-privileged role to carry out an activity that could be done with a lower-privileged role. For example, use the User Administrator role to manage users, not the Global Administrator role. For details of roles and their permissions, refer to the [Microsoft Entra build-in roles permissions](/azure/active-directory/roles/permissions-reference). Additionally, the Azure Portal will indicate which roles and role permissions are privileged. See [Privileged roles and permissions in Microsoft Entra ID](/azure/active-directory/roles/privileged-roles-permissions) for more information.
 
 - Use [Administrative Units](/azure/active-directory/roles/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/azure/active-directory/roles/admin-units-restricted-management) feature to further protect specific objects from modification.
 

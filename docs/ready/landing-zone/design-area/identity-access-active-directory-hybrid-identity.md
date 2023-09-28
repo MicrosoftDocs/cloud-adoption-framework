@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management design area
+title: Azure identity and access management for Active Directory and hybrid identity
 description: Understand Microsoft Entra ID and hybrid identity considerations and recommendations.
 author: soderholmd
 ms.author: dsoderholm 
