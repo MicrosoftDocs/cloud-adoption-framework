@@ -28,7 +28,7 @@ Public sector customers with sovereignty needs that want to start using Azure ca
 
 ## Sovereign Landing Zone
 
-The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [Azure Landing Zone architecture](../landing-zone/#azure-landing-zone-architecture) and is intended for organizations that need advanced sovereignty controls. A Sovereign Landing Zone (Preview) aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
+The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [Azure Landing Zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-architecture) and is intended for organizations that need advanced sovereignty controls. A Sovereign Landing Zone (Preview) aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
 
 > [!NOTE]
 > Microsoft Cloud for Sovereignty is oriented towards government organizations with sovereignty needs. Customers should carefully consider whether they need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the Sovereign Landing Zone (Preview) architecture.
