@@ -22,7 +22,7 @@
       "name": "Default",
       "command": "Fix",
       "configType": "full",
-      "stopAt": 25
+      "stopAt": 5
     },
     {
       "name": "FlagBrokenLinks",
