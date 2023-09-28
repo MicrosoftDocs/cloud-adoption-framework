@@ -54,7 +54,7 @@ The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives fo
 
 The landing zone subscription model creates access and network isolation for data resources, and proper logging provides a foundation.  There are policies inside of the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) for the logging and management of data resources.
 
-However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/) deployment can provide a solution to implement at scale.
+However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
 ### Infrastructure Pillar
 
@@ -88,8 +88,8 @@ Once signals are flowing, then the work of continual threat hunting and improvin
 
 ## Next Steps
 
-- Review [Security in the Microsoft Cloud Adoption Framework for Azure](../../../../azure/cloud-adoption-framework/secure/) for other guidance on adopting your security framework.
+- Review [Security in the Microsoft Cloud Adoption Framework for Azure](../../../../azure/cloud-adoption-framework/secure/index.md) for other guidance on adopting your security framework.
 
 - Review the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview) for technical guidance on applying Zero Trust principles to services.
 
-- Take the [Evaluate your Zero Trust security posture](https://www.microsoft.comsecurity/business/zero-trust/maturity-model-assessment-tool) to assess your position in adopting Zero Trust.
+- Take the [Evaluate your Zero Trust security posture](https://www.microsoft.com/security/business/zero-trust/maturity-model-assessment-tool) to assess your position in adopting Zero Trust.
