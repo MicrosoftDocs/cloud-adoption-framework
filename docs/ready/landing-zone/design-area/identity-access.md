@@ -23,7 +23,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 - [Cloud platform](../../../organize/cloud-platform.md)
 - [Cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
-- [Cloud security team](/azure/cloud-adoption-framework/organize/cloud-security-team.md)
+- [Cloud security team](/azure/cloud-adoption-framework/organize/cloud-security.md)
 
 **Scope:** The goal of this design area is to evaluate options for your identity and access foundation. It includes:
 
