@@ -36,11 +36,17 @@ The [Azure Landing Zone reference implementations](../../enterprise-scale/implem
 
 ### Endpoints Pillar
 
-The [Endpoints Pillar](../../../../zero-trust/deploy/endpoints) has deployment objectives focused on ...
+The [Endpoints Pillar](../../../../zero-trust/deploy/endpoints) has deployment objectives focused on registering endpoints with cloud identity providers, giving acces solely through cloud-managed compliant endpoints and apps, enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
+
+These controls are generally applied to the end user compute devices - laptops, desktops, mobile devices - regardless of if they are corporate managed or a "bring your own device."  As a result, these controls are not found in the Azure configuration, but instead are configuring through the Intune portal and other device management tools.
+
+For endpoints located in Azure, Azure Policies and other controls can be applied if needed.  Azure Virtual Desktop, for example, provides enrollment in to Intune to centrally manage client endpoints.
 
 ### Applications Pillar
 
-The [Applications Pillar](../../../../zero-trust/deploy/applications) has deployment objectives focused on ...
+The [Applications Pillar](../../../../zero-trust/deploy/applications) has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
+
+Some of this work is focused on providing consolidated management for both third party and first party applications in your organization.  Using [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) can make the role of third party applications in your environment visible, and allow for you to plan from there.  There are also standardized policies that you can control to enforce your practices around cloud apps.
 
 ### Data Pillar
 
@@ -74,7 +80,11 @@ You can review the [Zero-trust network for web applications](../../../../azure/a
 
 ### Visibility, Automation, and Orchestration Pillar
 
-The [Visibility, Automation, and Orchestration Pillar Pillar](../../../../zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on ...
+The [Visibility, Automation, and Orchestration Pillar Pillar](../../../../zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
+
+Because the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation#reference-implementation) contains deployments of [Mircrosoft Sentinel](../../../../azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in M365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
+
+Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
 
 ## Next Steps
 
