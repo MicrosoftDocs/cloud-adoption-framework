@@ -9,7 +9,7 @@ ms.date: 09/19/2023
 
 # Identity and resource access management
 
-Once you have identified your Identity architecture, the next step is about authorization. Consider what resources each authenticated principal has or needs access to, and how to mitigate risks of unauthorized access to your resources. Refer to this document to understand more about [Enterprise access strategy in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model), and the different control planes that need to be secured.
+Once you have identified your Identity architecture, the next step is about authorization. Consider which resources each authenticated principal has or needs access to, and how to mitigate risks of unauthorized access to your resources. This design area helps you implement [Enterprise access strategy in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model), and the different control planes that need to be secured.
 
 Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. The design principle of subscription democratization allows application administrators to manage their own workloads within the policy guardrails set by the platform owner.
 
@@ -35,15 +35,15 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
 
-- Microsoft Entra ID roles can be assigned to groups with the isAssignableToRole property set to true (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept)
+- Microsoft Entra roles can be assigned to groups with the `isAssignableToRole` property set to `true` (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept).
 
 - Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/azure/active-directory/roles/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
 
-- If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group, subscription, and resource group scopes. For more information, see [Azure custom roles - Azure RBAC](/azure/role-based-access-control/custom-roles)
+- If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group, subscription, and resource group scopes. For more information, see [Azure custom roles - Azure RBAC](/azure/role-based-access-control/custom-roles).
 
-- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see  Create custom roles in [Microsoft Entra role-based access control](/azure/active-directory/roles/custom-create#prerequisites)
+- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create#prerequisites).
 
-- When you lay down a framework for identity and access management (IAM) and governance, consider the following maximum service limits for roles, role assignments, and custom roles. For more information, see  [Troubleshoot Azure RBAC limits - Azure RBAC](/azure/role-based-access-control/troubleshoot-limits).
+- When you lay down a framework for identity and access management (IAM) and governance, consider the following maximum service limits for roles, role assignments, and custom roles. For more information, see  [Troubleshoot Azure RBAC limits](/azure/role-based-access-control/troubleshoot-limits).
 
   - 4,000 role assignments per subscription.
 
@@ -51,7 +51,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
   - 30 Microsoft Entra custom roles in a Microsoft Entra organization.
 
-- Some Azure RBAC roles support Attribute-Based Access Control (ABAC), or role assignment conditions. Conditions allow administrators to dynamically assign roles based on attributes of the resource. For example, assigning the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See [What is Azure attribute-based access control (Azure ABAC)?](/azure/role-based-access-control/conditions-overview) for more information.
+- Some Azure RBAC roles support Attribute-Based Access Control (ABAC), or role assignment conditions. Conditions allow administrators to dynamically assign roles based on attributes of the resource. For example, you can assign the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See [What is Azure attribute-based access control (Azure ABAC)?](/azure/role-based-access-control/conditions-overview) for more information.
 
 ## Design recommendations
 
@@ -63,7 +63,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to  compromise user credentials. Defender for Identity identifies suspicious user activities and provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
 
-- Use Azure Sentinel to provide additional threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information, see [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel | Microsoft Learn](/azure/sentinel/identify-threats-with-entity-behavior-analytics)
+- Use Azure Sentinel to provide additional threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information, see [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
 - Use separate, cloud-only accounts for administrative activity. Do not use the same account for web browsing and e-mail access as you do for Azure administration. For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/azure/active-directory/roles/security-planning).
 
@@ -85,6 +85,10 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
    | Application Administrator | Can create and manage all aspects of app registrations and enterprise apps. | Cannot grant tenant-wide admin consent|
 
 - When delegating administrative responsibility to others, consider whether they require the full set of privileges, or only a subset. For example, the User Access Administrator role may be delegated to a user who needs to manage access to Azure resources, but not manage the resources themselves. To restrict their objects and security principals that they can apply permissions to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
+
+- Do not use a higher-privileged role to carry out an activity that could be done with a lower-privileged role. For example, use the User Administrator role to manage users, not the Global Administrator role. For details of roles and their permissions, refer to the [Microsoft Entra build-in roles permissions](azure/active-directory/roles/permissions-reference). Additionally, the Azure Portal will indicate which roles and role permissions are privileged. See [Privileged roles and permissions in Microsoft Entra ID](/azure/active-directory/roles/privileged-roles-permissions) for more information.
+
+- Use [Administrative Units](/azure/active-directory/roles/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/azure/active-directory/roles/admin-units-restricted-management) feature to further protect specific objects from modification.
 
 ### Azure RBAC recommendations
 
@@ -110,8 +114,6 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator on a subscription or management group, using [Privileged Identity Management (PIM) for Groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Microsoft Entra ID roles.
 
-- Use [Administrative Units](/azure/active-directory/roles/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/azure/active-directory/roles/admin-units-restricted-management) feature to further protect specific objects from modification.
-
 - Use Protected actions with PIM (Privileged Identity Management) to add additional layer of protection. Protected actions in Microsoft Entra ID are permissions that have been assigned [Conditional Access policies](/azure/active-directory/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [Phishing-resistant MFA policy](/azure/active-directory/authentication/concept-authentication-strengths#built-in-authentication-strengths). See [What are protected actions in Microsoft Entra](/azure/active-directory/roles/protected-actions-overview) for more information.
 
 For more information on PIM, see [Privileged Identity Management (PIM) - Microsoft Entra](/azure/active-directory/privileged-identity-management/pim-configure).
@@ -126,7 +128,6 @@ The implementation also includes options to:
 - Create a virtual network, and connect to the hub via virtual network peering.
 
 ## Next Steps
->
->[!div class="nextstepaction"]
+
+> [!div class="nextstepaction"]
 > [Application access management](identity-access-application-access.md)
->
