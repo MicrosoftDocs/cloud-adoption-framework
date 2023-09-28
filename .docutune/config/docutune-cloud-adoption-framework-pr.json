@@ -1,0 +1,20 @@
+{
+  "BaseConfiguration": "docutune-default.json",
+  "Docsets": [
+    {
+      "DocsetName": "cloud-adoption-framework",
+      "BasePath": "/azure/cloud-adoption-framework"
+    }
+  ],
+
+  "Command": "Fix",
+  "Downcase": true,
+  "FixMetadata": true,
+  "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
+  "Exclude": [ "_bread", "_images", "context" ],
+  "TermFiles": [
+    "Bundle-Standard.txt",
+    "Bundle-Cloud.txt",
+    "Dictionary-CAF.ps1"
+  ]
+}
