@@ -12,24 +12,6 @@
   "FixMetadata": true,
   "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
   "Exclude": [ "_bread", "_images", "context" ],
-
-    // "decision-guides",
-    // "digital-estate",
-    // "get-started",
-    // "govern",
-    // "infrastructure",
-    // "innovate",
-    // "manage",
-    // "migrate",
-    // "operating-model",
-    // "organize",
-    // "plan",
-    // "ready",
-    // "reference",
-    // "scenarios",
-    // "strategy",
-    // ""
-
   "TermFiles": [
     "Bundle-Standard.txt",
     "Bundle-Cloud.txt",
