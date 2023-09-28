@@ -43,7 +43,7 @@ The Azure Landing Zone architecture consists of 8 design area's. Each design are
 
 The Sovereign Landing Zone is a tailored version of the Azure Landing Zone conceptual architecture, and aligns to the guidance as outlined in [Tailor the Azure landing zone architecture - Cloud Adoption Framework \| Microsoft Learn](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
-Building on the Azure Landing Zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group, and a set of specific policy initiatives, ie [Microsoft Cloud for Sovereignty Policy Baseline](/industry/sovereignty/policy-portfolio-baseline/#microsoft-cloud-for-sovereignty-policy-baseline), are applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
+Building on the Azure Landing Zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group, and a set of specific policy initiatives, ie [Microsoft Cloud for Sovereignty Policy Baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
 
 ![Diagram that shows additional management groups of SLZ.](./media/sovereign-landing-zone/sub-organization-slz.png)
 
