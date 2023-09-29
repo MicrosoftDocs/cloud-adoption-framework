@@ -70,4 +70,4 @@ The following articles provide guidance that you might find helpful during vario
 - [Security](./security.md)
 - [Storage](./storage.md)
 - [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-- [Spot Virtual Machines](/azure/architecture/guide/spot/spot-eviction.md)
+- [Spot Virtual Machines](/azure/architecture/guide/spot/spot-eviction)
