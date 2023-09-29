@@ -44,7 +44,7 @@ When designing your HPC infrastructure, several tools and services are available
 
 The following architecture is an example that shows the use of VMs in HPC in Manufacturing.
 
-![Azure Batch Architecture Diagram](media/hpc-manufacturing-architecture-example.jpg "Azure Batch Architecture Diagram")
+:::image type="content" alt-text="Azure Batch Architecture Diagram" source="media/hpc-manufacturing-architecture-example.svg" lightbox="media/hpc-manufacturing-architecture-example.svg":::
 
 This architecture diagram shows an arrangement that utilizes Azure File Shares and Storage accounts connected to a private link subnet.
 
