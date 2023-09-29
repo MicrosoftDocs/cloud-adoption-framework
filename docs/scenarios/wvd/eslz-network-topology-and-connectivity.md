@@ -81,7 +81,7 @@ You can implement this scenario with:
 - Azure Files service on storage accounts.
 - Azure key vault.
 
-[![Diagram of the hub and spoke with hybrid connectivity scenario](./media/network-topology-scenario-1.png)](./media/network-topology-scenario-1.png#lightbox)
+:::image type="content" source="./media/network-topology-scenario-1.png" alt-text="Diagram of the hub and spoke with hybrid connectivity scenario" lightbox="./media/network-topology-scenario-1.png" border="false":::
 
 ### Considerations
 
@@ -126,7 +126,7 @@ You can implement this scenario with:
 - Azure private endpoints.
 - Azure private DNS zone.
 
-![RDP Shortpath for private networks diagram](media/eslz-network-topology-and-connectivity/rdp-shortpath-private.png)
+:::image type="content" source="./media/eslz-network-topology-and-connectivity/rdp-shortpath-private.png" alt-text="RDP Shortpath for private networks diagram" lightbox="./media/eslz-network-topology-and-connectivity/rdp-shortpath-private.png" border="false":::
 
 ### Considerations
 
@@ -175,7 +175,7 @@ You can implement this scenario with:
 - Azure private endpoints.
 - Azure private DNS zone.
 
-![RDP Shortpath for public networks diagram](media/eslz-network-topology-and-connectivity/rdp-shortpath-public.png)
+:::image type="content" source="./media/eslz-network-topology-and-connectivity/rdp-shortpath-public.png" alt-text="RDP Shortpath for public networks diagram" lightbox="./media/eslz-network-topology-and-connectivity/rdp-shortpath-public.png" border="false":::
 
 ### Considerations
 
