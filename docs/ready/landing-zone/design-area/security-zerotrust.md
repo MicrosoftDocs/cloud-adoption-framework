@@ -88,7 +88,7 @@ Once signals are flowing, then the work of continual threat hunting and improvin
 
 ## Next Steps
 
-- Review [Security in the Microsoft Cloud Adoption Framework for Azure](../../../../cloud-adoption-framework/secure/index) for other guidance on adopting your security framework.
+- Review [Security in the Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/secure/) for other guidance on adopting your security framework.
 
 - Review the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview) for technical guidance on applying Zero Trust principles to services.
 
