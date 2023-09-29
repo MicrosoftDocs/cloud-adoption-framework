@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/19/2023
 ---
 
-# Identity Solution and Authentication options
+# Active Directory and hybrid identity
 
 Microsoft Entra ID provides a base level of access control and identity management for Azure resources. If your organization has an on-premises Active Directory infrastructure (Active Directory Domain Services), your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of managed Microsoft Entra Domain Services in the cloud.
 
@@ -15,7 +15,7 @@ Cloud-based identity management is an iterative process. You could start with a 
 
 Refer the [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity/) for help with your identity strategy.
 
-## Azure and on-premises (Hybrid Identity)
+## Azure and on-premises (hybrid identity)
 
 User objects that are wholly created in Microsoft Entra ID are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
 
@@ -41,8 +41,6 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 >
 > Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. For more information, see [**Resources for decommissioning AD FS**](/windows-server/identity/ad-fs/ad-fs-decommission).
 >
-
-- Identify applications using legacy authentication protocols and migrate them to modern identity services.
 
 ## Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services
 
@@ -73,5 +71,5 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 ## Next Steps
 >
 > [!div class="nextstepaction"]
-> [Access management in Landing Zones](identity-access-landing-zones.md)
+> [Landing zone identity and access management](identity-access-landing-zones.md)
 >
