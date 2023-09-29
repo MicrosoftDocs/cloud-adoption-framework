@@ -81,7 +81,7 @@ You can implement this scenario with:
 - Azure Files service on storage accounts.
 - Azure key vault.
 
-:::image type="content" source="./media/network-topology-scenario-1.png" alt-text="Diagram of the hub and spoke with hybrid connectivity scenario" lightbox="./media/network-topology-scenario-1.png" border="false":::
+:::image type="content" source="./media/network-topology-scenario-1.svg" alt-text="Diagram of the hub and spoke with hybrid connectivity scenario" lightbox="./media/network-topology-scenario-1.svg" border="false":::
 
 ### Considerations
 
