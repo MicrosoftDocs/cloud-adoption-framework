@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/19/2023
 ---
 
-# Application access management
+# Application identity and access management
 
 Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to others, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
 

@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/19/2023
 ---
 
-# Identity and resource access management
+# Landing zone identity and access management
 
 Once you have identified your Identity architecture, the next step is about authorization. Consider which resources each authenticated principal has or needs access to, and how to mitigate risks of unauthorized access to your resources. This design area helps you implement [Enterprise access strategy in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model), and the different control planes that need to be secured.
 
@@ -130,4 +130,4 @@ The implementation also includes options to:
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Application access management](identity-access-application-access.md)
+> [Application identity and access management](identity-access-application-access.md)

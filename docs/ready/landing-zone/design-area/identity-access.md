@@ -13,7 +13,7 @@ This critical design area establishes a foundation for the management of identit
 
 The technological landscape in the enterprise is becoming complex and heterogenous. Identity is the primary security perimeter in a public cloud, so Identity and access management must be treated as the foundation of any secure and fully compliant public cloud architecture.
 
-Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications. It ensures that the right individual access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user action.
+Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications. It ensures that the right individual can access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user action.
 
 Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure, operationally efficient environments.
 
