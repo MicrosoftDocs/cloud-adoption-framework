@@ -9,9 +9,9 @@ ms.date: 09/19/2023
 
 # Application identity and access management
 
-Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to others, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
+Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to other resources and services, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
 
-## Design Considerations
+### Design Considerations
 
 - Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML(Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
 
@@ -23,11 +23,11 @@ Individual application workloads have authentication and authorization requireme
   
   See [Microsoft identity platform overview](/azure/active-directory/develop/v2-overview) for more information.
 
-- Managed identities provide an automatically managed identity principal in Microsoft Entra ID for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/azure/active-directory/managed-identities-azure-resources/overview-for-developers?tabs=portal%2Cdotnet) for an for more information.
+- Managed identities provide an automatically managed identity principal in for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/azure/active-directory/managed-identities-azure-resources/overview-for-developers?tabs=portal%2Cdotnet) for more information.
 
   - Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
-  - It's easy to confuse how service principals and managed identities access Azure resources. For an explanation, see [Demystifying Service Principals - Managed Identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/).  
+  - It's easy to confuse how service principals and managed identities access Azure resources. To understand the difference between the two, see [Demystifying Service Principals - Managed Identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities/).  
 
   - Consider whether to use system-assigned or user-assigned managed identities. See [Choosing system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities) for guidance.
 
@@ -54,3 +54,9 @@ Individual application workloads have authentication and authorization requireme
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
 - Use attribute-based access control (ABAC) where supported, to further restrict permissions on data in blob storage and prevent unauthorized access to data. For more information, see [Allow read access to blobs based on tags and custom security attributes](/azure/role-based-access-control/conditions-custom-security-attributes).
+
+### Next Steps
+>
+> [!div class="nextstepaction"]
+> [Landing zone identity and access management](identity-access-landing-zones.md)
+>
