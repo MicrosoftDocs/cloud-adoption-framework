@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Business user access
 
-Risks related to governing business users are largely related to the complexity of your organization's identity infrastructure. If all your users and groups are managed using a single directory or cloud-native identity provider using minimal integration with other services, your risk level will likely be small. As a result, following the [Azure Active Directory configuration baseline](azure-ad-configuration.md) will address many of your core user risks.
+Risks related to governing business users are largely related to the complexity of your organization's identity infrastructure. If all your users and groups are managed using a single directory or cloud-native identity provider using minimal integration with other services, your risk level will likely be small. As a result, following the [Microsoft Entra configuration baseline](azure-ad-configuration.md) will address many of your core user risks.
 
 The following sections provide additional guidance, and auditing that can be used to manage business user accounts.
 
@@ -18,10 +18,10 @@ The following sections provide additional guidance, and auditing that can be use
 
 Implement the following to improve the management of your user accounts:
 
-- Use Azure Active Directory security groups to assign access to users. Don't assign access directly to users.
-- Assign an owner to every Azure AD security group. This owner is responsible for the access granted to the group. Follow [these instructions for adding owners to a group](/azure/active-directory/fundamentals/how-to-manage-groups).
+- Use Microsoft Entra security groups to assign access to users. Don't assign access directly to users.
+- Assign an owner to every Microsoft Entra security group. This owner is responsible for the access granted to the group. Follow [these instructions for adding owners to a group](/azure/active-directory/fundamentals/how-to-manage-groups).
 - Use [self-service group management](/azure/active-directory/enterprise-users/groups-self-service-management) to allow owners to control access to the groups.
-- Perform a periodic review of membership of every security group, and remove unneeded access. Use an [Azure Active Directory access review](/azure/active-directory/governance/create-access-review) to manage the process.
+- Perform a periodic review of membership of every security group, and remove unneeded access. Use an [Microsoft Entra access review](/azure/active-directory/governance/create-access-review) to manage the process.
 - Don't use mail-enabled security groups, because they're read-only from the Graph API.
 - Periodically perform a review of inactive accounts, and take steps to review.
 

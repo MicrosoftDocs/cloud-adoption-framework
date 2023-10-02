@@ -42,7 +42,7 @@ The Contoso cloud team has the following goals for its migration to Azure DevOps
 - Team Foundation Server will be migrated to Azure DevOps Services.
 - Currently, Contoso has one Team Foundation Server collection, named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
 - The projects, work items, bugs, and iterations from the last year will be migrated to Azure DevOps Services.
-- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](../azure-migration-guide/ready-alz.md) at the beginning of the migration planning.
+- Contoso will use its Microsoft Entra instance, which it set up when it [deployed its Azure infrastructure](../azure-migration-guide/ready-alz.md) at the beginning of the migration planning.
 
 :::image type="content" source="./media/contoso-migration-tfs-vsts/architecture.png" alt-text="Diagram of the proposed architecture.":::
 
@@ -145,7 +145,7 @@ The following is an example of the steps the Contoso admins took to upgrade a se
 
 4. After you review and accept the Server Configuration Wizard settings, it completes the upgrade.
 
-     :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade4.png" alt-text="Screenshot of the Team Foundation Server configuration wizard upgrade progress pane.":::
+     :::image type="content" source="./media/contoso-migration-tfs-vsts/upgrade4.png" alt-text="Screenshot of the Team Foundation Server Configuration Wizard upgrade progress pane.":::
 
 5. Verify the Team Foundation Server installation by reviewing the projects, work items, and code.
 
@@ -188,7 +188,7 @@ Contoso admins run the Team Foundation Server migration tool against the `contos
 
 1. Run the validation command again, including parameters for the project collection and tenant domain name: `TfsMigrator validate /collection:http://contosotfs:8080/tfs/ContosoDev /tenantDomainName:contosomigration.onmicrosoft.com`.
 
-1. In the Azure AD sign-in window that appears, enter the credentials of a Contoso admin user.
+1. In the Microsoft Entra sign-in window that appears, enter the credentials of a Contoso admin user.
 
    If the validation passes, the migration tool confirms it.
 
@@ -204,10 +204,10 @@ Now that the validation is complete, Contoso admins use the Team Foundation Serv
 
     The `prepare` command does the following tasks:
     - Scans the collection to find a list of all users and then populates the identify map log (`IdentityMapLog.csv`).
-    - Prepares the connection to Azure AD to find a match for each identity.
-    - Finds the matching identities and marks them as **Active**. The `prepare` command does so because the Contoso admins have already deployed Azure AD and synchronized it by using Azure AD Connect.
+    - Prepares the connection to Microsoft Entra ID to find a match for each identity.
+    - Finds the matching identities and marks them as **Active**. The `prepare` command does so because the Contoso admins have already deployed Microsoft Entra ID and synchronized it by using Microsoft Entra Connect.
 
-1. In the Azure AD sign-in window that appears, enter the credentials of a Contoso admin user.
+1. In the Microsoft Entra sign-in window that appears, enter the credentials of a Contoso admin user.
 
     After the preparation completes, the migration tool reports that the import files have been generated successfully.
 
@@ -280,19 +280,19 @@ Before Contoso admins detach the collection, they do a local SQL Server instance
 
 1. In the **Detach Team Project Collection** wizard, on the **Servicing Message** page, provide a message for users who might try to connect to projects in the collection.
 
-    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate3.png" alt-text="Screenshot of the **Servicing Message** pane in the Detach Team Project Collection wizard.":::
+    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate3.png" alt-text="Screenshot of the **Servicing Message** pane in the Detach Team Project Collection Wizard.":::
 
 1. On the **Detach Progress** page, monitor the progress. When the process finishes, select **Next**.
 
-    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate5.png" alt-text="Screenshot of the **Detach Progress** pane in the Detach Team Project Collection wizard.":::
+    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate5.png" alt-text="Screenshot of the **Detach Progress** pane in the Detach Team Project Collection Wizard.":::
 
 1. On the **Readiness Checks** page, when the checks finish, select **Detach**.
 
-    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate4.png" alt-text="Screenshot of the **Readiness Checks** page in the Detach Team Project Collection wizard.":::
+    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate4.png" alt-text="Screenshot of the **Readiness Checks** page in the Detach Team Project Collection Wizard.":::
 
 1. After the collection has been successfully detached, select **Close**.
 
-    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate6.png" alt-text="Screenshot of the **Complete** page in the Detach Team Project Collection wizard.":::
+    :::image type="content" source="./media/contoso-migration-tfs-vsts/migrate6.png" alt-text="Screenshot of the **Complete** page in the Detach Team Project Collection Wizard.":::
 
     The collection is no longer referenced in the Team Foundation Server Administration Console.
 
@@ -397,7 +397,7 @@ Contoso admins perform a dry-run migration to make sure that everything's workin
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/test4.png" alt-text="Screenshot of the message asking Contoso to confirm that they want to continue with the migration.":::
 
-1. In the Azure AD sign-in window that appears, enter the credentials of a Contoso admin.
+1. In the Microsoft Entra sign-in window that appears, enter the credentials of a Contoso admin.
 
     A message displays confirming that the import has been started successfully.
 
@@ -437,7 +437,7 @@ Now that the dry run is complete, the Contoso admins can start the production mi
 
     :::image type="content" source="./media/contoso-migration-tfs-vsts/full2.png" alt-text="Screenshot of an Azure DevOps Services message warning that the migrated data could be held for up to seven days.":::
 
-1. In the Azure AD sign-in window that appears, enter the credentials of a Contoso admin.
+1. In the Microsoft Entra sign-in window that appears, enter the credentials of a Contoso admin.
 
     A message displays stating that the import has started successfully.
 

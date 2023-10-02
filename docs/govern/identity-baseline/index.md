@@ -16,11 +16,11 @@ Identity services provide the core mechanisms supporting access control and orga
 
 ## Manage identity baseline
 
-In this discipline, you'll learn about the benefits of using Azure Active Directory as the centralized identity and authentication system for your organization. You will relearn about the identity management tools that are available to you for user management and access control that reduce the risks of user access to your applications. For each area, you'll receive prescriptive guidance on what to govern, and how to audit compliance with standards.
+In this discipline, you'll learn about the benefits of using Microsoft Entra ID as the centralized identity and authentication system for your organization. You will relearn about the identity management tools that are available to you for user management and access control that reduce the risks of user access to your applications. For each area, you'll receive prescriptive guidance on what to govern, and how to audit compliance with standards.
 
 Consider the identity baseline guidance for the following areas.
 
-- [Azure Active Directory configuration](azure-ad-configuration.md)
+- [Microsoft Entra configuration](azure-ad-configuration.md)
 - [Administrative access](administrative-access.md)
 - [Business user access](business-user-access.md)
 - [Application access](application-access.md)
