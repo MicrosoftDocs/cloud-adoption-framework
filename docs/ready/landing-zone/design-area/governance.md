@@ -28,7 +28,7 @@ Azure governance establishes the tooling needed to support cloud governance, com
 - Review our guidance for establishing a [management baseline](./management.md) for your hybrid or multicloud environment
 - Implement [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
 - Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state
-- Consider [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
+- Consider [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
 The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains many Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice governance guidance integrated within them.
@@ -110,10 +110,10 @@ Change advisory review boards might hinder an organizations innovation and busin
 
 - Who might have access to audit logs for identity and access management?
 - Who might be notified when suspicious sign-in events occur?
-- Consider using [Azure Active Directory reports](/azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity.
-- Consider the logs from Azure AD, which might be sent to the central Log Analytics workspace for the platform.
-- Explore the capabilities of [Azure AD access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
-- Explore the capabilities of [Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
+- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity.
+- Consider the logs from Microsoft Entra ID, which might be sent to the central Log Analytics workspace for the platform.
+- Explore the capabilities of [Microsoft Entra access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
+- Explore the capabilities of [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
 
 ## Azure governance recommendations
 

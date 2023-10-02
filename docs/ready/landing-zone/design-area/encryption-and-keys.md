@@ -55,7 +55,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
-- Follow a least-privilege model by limiting the authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory (Azure AD) roles.
+- Follow a least-privilege model by limiting the authorization to permanently delete keys, secrets, and certificates to specialized custom Microsoft Entra roles.
 
 - Automate the certificate management and renewal process with public certificate authorities to ease administration.
 

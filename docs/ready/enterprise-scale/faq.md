@@ -197,7 +197,7 @@ You first need to clean up the old subscription for reuse. You need to perform t
 You can reassign the subscription after you clean up the subscription. Here are some common activities that you might want to perform as part of the reassignment process:
 
 - Add new tags and set values for them on the subscription.
-- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Azure Active Directory Groups instead of individuals.
+- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Microsoft Entra groups instead of individuals.
 - Place the subscription into the desired Management Group based on its governance requirements.
 - Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met.
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
