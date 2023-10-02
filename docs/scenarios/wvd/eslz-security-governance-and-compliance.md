@@ -79,6 +79,9 @@ Review the following sections to find recommended security controls and governan
 
 - Enable [Trusted launch](/azure/virtual-machines/trusted-launch) for Gen2 Azure virtual machines to enable features such as Secure Boot, vTPM and Virtualization-based security (VBS). Microsoft Defender for Cloud can monitor session hosts configured with trusted launch.
 
+- Randomize local administrator passwords using [Windows LAPS](/windows-server/identity/laps/laps-overview) to protect against pass-the-hash and lateral traversal attacks.
+
+
 - Verify that your session hosts are monitored by [Azure Monitor](/azure/virtual-machines/monitor-vm) or a partner monitoring solution [via Event Hubs](/azure/azure-monitor/agents/diagnostics-extension-stream-event-hubs).
 
 - Establish a patch management strategy for your session hosts. [Microsoft Endpoint Configuration Manager](/azure/virtual-desktop/configure-automatic-updates) enables Azure Virtual Desktop session hosts to receive updates automatically. You should patch base images at minimum at least once every 30 days. Consider using [Azure Image Builder (AIB)](/azure/virtual-machines/image-builder-overview) to establish your own [imaging pipeline for Azure Virtual Desktop base image](/azure/virtual-machines/windows/image-builder-virtual-desktop).

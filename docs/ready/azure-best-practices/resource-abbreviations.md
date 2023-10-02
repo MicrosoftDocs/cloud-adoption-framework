@@ -225,6 +225,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual network peering | `Microsoft.Network/virtualNetworks/virtualNetworkPeerings` | `peer`|
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
+| Virtual WAN Hub | `Microsoft.Network/virtualHubs` | `vhub`|
+
 
 ## Security
 
