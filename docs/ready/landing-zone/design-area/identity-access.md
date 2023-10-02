@@ -19,7 +19,7 @@ This critical design area establishes a foundation for the management of identit
 - [Cloud platform](../../../organize/cloud-platform.md)
 - [Cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
 
-**Scope:** The goal of this design area is to evaluate options for your identity and access foundation. At minimum, make decisions about your approach for synchronizing identities with Azure Active Directory:
+**Scope:** The goal of this design area is to evaluate options for your identity and access foundation. At minimum, make decisions about your approach for synchronizing identities with Microsoft Entra ID:
 
 - Authenticating users
 - Assigning access to resources
@@ -43,12 +43,12 @@ Identity and access management is boundary security in the public cloud. It must
 
 These articles examine design considerations and recommendations related to identity and access management in a cloud environment:
 
-- [Azure Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+- [Microsoft Entra ID and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
 - [Platform access](identity-access-platform-access.md)
 - [Prerequisites for a landing zone](identity-access-landing-zones.md)
 
 >[!TIP]
-> If you have multiple Azure Active Directory tenants, review [Azure landing zones and multiple Azure Active Directory tenants](multi-tenant/overview.md) and its associated content.
+> If you have multiple Microsoft Entra tenants, review [Azure landing zones and multiple Microsoft Entra tenants](multi-tenant/overview.md) and its associated content.
 
 ## Next steps
 

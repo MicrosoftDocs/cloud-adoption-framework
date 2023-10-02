@@ -78,7 +78,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 - **Azure Site Recovery:** Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
 
-- **AzCopy:** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Azure Active Directory or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
+- **AzCopy:** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Microsoft Entra ID or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 
 - **Pipelines and activities in Azure Data Factory or Synapse Analytics:** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory pipelines can move data lakes and warehouses. Synapse Analytics copy activity can also move data. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
 
