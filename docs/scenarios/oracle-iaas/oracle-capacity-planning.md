@@ -14,7 +14,7 @@ Capacity planning for Oracle workloads on Azure IaaS is a process that requires 
 
 ### Overall performance considerations
 
-- Your existing environment should not be considered an appropriate sizing measure for requirements on Azure necessarily. Instead you should use Oracle Automatic Workload Repository (AWR) reports to understand the performance characteristics of the workload or workloads to be migrated. AWRs contain performance statistics for you Oracle database workloads. 
+-It's important to note that your existing environment may not serve as an accurate sizing measure for requirements on Azure. Instead, you should use Oracle Automatic Workload Repository (AWR) reports to understand the performance characteristics of the workload or workloads to be migrated. AWRs contain performance statistics for you Oracle database workloads. 
 > Note that to be able to collect AWRs you need to have purchased the Oracle Diagnostic Pack license for your database workload. If you do not have this license you can still collect AWRs but the data will be limited to the last hour of database activity. As an alternative to AWRs you can use Statspack reports. Statspack is a subset of AWRs and does not require the Diagnostic Pack license. 
 
 - When collecting AWRs for your database workload observe the following guidelines:
