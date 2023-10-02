@@ -108,7 +108,7 @@ Users can submit feedback with an IT service management solution or directly wit
 
 While the data science products team creates data products, it's distinct because their functions lead to data products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
 
-The data science products team starts by searching and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or an Azure AD access package, the team uses the services in the data landing zone to explore and analyze the data.
+The data science products team starts by searching and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or a Microsoft Entra ID access package, the team uses the services in the data landing zone to explore and analyze the data.
 
 Before processing all data, the team uses local or remote compute to process and analyze sample data products. They can optimize remote compute targets with larger data products to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
@@ -129,7 +129,7 @@ Analysts consult data marketplaces/catalogs to discover relevant data products.
 
 - If the data asset can't be found or doesn't exist, then analysts open a support ticket with data application team. The data application team assist with finding the dataset or add the request to their backlog to assess it in another development cycle.
 
-- If the dataset exists, analytics can identify Azure AD group membership for assets listed in catalog and use the Azure access package portal to request access to the Azure AD group.
+- If the dataset exists, analytics can identify Microsoft Entra group membership for assets listed in catalog and use the Azure access package portal to request access to the Microsoft Entra group.
 
 ### Build new reports
 

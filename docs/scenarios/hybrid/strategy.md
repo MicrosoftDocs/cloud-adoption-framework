@@ -146,7 +146,7 @@ Create a shared application and infrastructure lifecycle within teams traditiona
 
 ### Integrated DevOps and management capabilities
 
-Select another Azure Arc enabled service, Azure development, and operational tools that are developer tooling-agnostic. Access a unified enterprise dashboard that grants you a consistent view across environments via GitHub, Azure Monitor, Defender for Cloud, Azure update integration, and more. Deploy common templates to automate configurations, and deploy IaC to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Azure Active Directory, enterprise identity service, and Azure Resource Manager.
+Select another Azure Arc enabled service, Azure development, and operational tools that are developer tooling-agnostic. Access a unified enterprise dashboard that grants you a consistent view across environments via GitHub, Azure Monitor, Defender for Cloud, Azure update integration, and more. Deploy common templates to automate configurations, and deploy IaC to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Microsoft Entra ID, enterprise identity service, and Azure Resource Manager.
 
 ## Next steps
 

@@ -29,7 +29,7 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 ### Identity and access management
 
 - **Agent security permissions:** Secure access to the Azure connected machine agent by reviewing users with local administrator privileges on the server.
-- **Managed identity:** Use [managed identities with Azure Arc-enabled servers](/azure/azure-arc/servers/managed-identity-authentication). Define a strategy for identifying which applications running on Azure Arc-enabled servers can use an Azure Active Directory (Azure AD) token.
+- **Managed identity:** Use [managed identities with Azure Arc-enabled servers](/azure/azure-arc/servers/managed-identity-authentication). Define a strategy for identifying which applications running on Azure Arc-enabled servers can use a Microsoft Entra token.
 - **Azure role-based access control (RBAC):** Define administrative, operations, and engineering roles within the organization. This will help allocate day-to-day operations in the hybrid environment. Mapping each team to actions and responsibilities will determine Azure RBAC roles and configuration. Consider using a [RACI](../../../organize/raci-alignment.md) matrix, to support this effort and build controls into the management scope hierarchy you define, while following the resource consistency and inventory management guidance. For more information, review [identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md).
 
 ### Resource organization
@@ -76,7 +76,7 @@ Control who has access to the Azure connected machine agent on Azure Arc-enabled
 
 ### Managed identity
 
-The Azure AD system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). It's still possible to allow an application on your server to use the system-assigned identity, to access Azure resources (for example, to request secrets from a key vault). You should:
+The Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). It's still possible to allow an application on your server to use the system-assigned identity, to access Azure resources (for example, to request secrets from a key vault). You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
 - Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or hybrid agent extensions applications group on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
