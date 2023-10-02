@@ -15,7 +15,7 @@ The following exercises help guide you through the process of creating a landing
 
 | Legend | Design area | Objective |
 |--|--|--|
-| ![The letter A](./media/diagram-legends/a.png) | [Design Guides]() | Proper foundational creation of the network topology are important early steps. |
+| ![The letter A](./media/diagram-legends/a.png) | [Design Guides](./network-design-guide-intro.md) | Proper foundational creation of the network topology are important early steps. |
 | ![The letter B](./media/diagram-legends/b.png) | [Hub & Spoke ](./network-hub-spoke.md) | Azure landing zone conceptual Hub and Spoke that integrate Azure VMware solution with Azure native resources |
 | ![The letter C](./media/diagram-legends/c.png) | [Dual Region](./eslz-dual-region-network-topology.md) |Design  disaster resilient network connectivity  across multiple private clouds. |
 | ![The letter D](./media/diagram-legends/d.png) | [Example Architectures](./example-architectures.md) | Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture. |
