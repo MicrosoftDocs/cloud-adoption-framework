@@ -30,7 +30,7 @@ Because Azure VMware Solution run hybrid workloads across on-premises vSphere an
 
 ## Unified security and compliance
 
-On Azure, you can run, manage, and secure applications across VMware vSphere environments with a common operating framework. Use your existing VMware solution tools, like VMware vCenter Server, vSAN, and NSX-T Manager, combined with the scale, performance, and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Azure Active Directory. Read more about [access and identity concepts](/azure/azure-vmware/concepts-identity).
+On Azure, you can run, manage, and secure applications across VMware vSphere environments with a common operating framework. Use your existing VMware solution tools, like VMware vCenter Server, vSAN, and NSX-T Manager, combined with the scale, performance, and innovation of Azure. In terms of access and security, Azure VMware Solution private clouds use vSphere role-based access control for enhanced security. You can integrate vSphere SSO LDAP capabilities with Microsoft Entra ID. Read more about [access and identity concepts](/azure/azure-vmware/concepts-identity).
 
 Using a unified operations approach that uses familiar Azure tools to manage and govern your VMware hybrid workloads across on-premises vSphere and private cloud. Monitor, manage, and protect virtual machines in a hybrid environment (Azure, Azure VMware Solution, and on-premises vSphere). Read more about how you can [start small with basic VM management](/azure/architecture/hybrid/azure-arc-hybrid-config?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json).
 
@@ -40,7 +40,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 **Unified VM management:** Single pane of glass to manage vSphere-based and Azure native VMs, with uniform identities, access control, and monitoring.
 
- **Native Azure integration:** Connect to Azure services endpoints. For example, deploy Azure Active Directory as VMware vCenter Server SSO identity source.
+ **Native Azure integration:** Connect to Azure services endpoints. For example, deploy Microsoft Entra ID as VMware vCenter Server SSO identity source.
 
 **Single point of support:** Azure VMware Solution is Microsoft-developed, operated, and supported. Microsoft is the first and only contact and coordinates support with VMware as required.
 
@@ -86,8 +86,8 @@ These are the main focus areas of governance in an initial Azure VMware Solution
 - [An introduction to Azure Automation](/azure/automation/automation-intro)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [Perform actions using Azure Backup Center](/azure/backup/backup-center-overview)
-- [Understand roles in Azure Active Directory](/azure/active-directory/roles/concept-understand-roles)
-- [What is Azure AD Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
+- [Understand roles in Microsoft Entra ID](/azure/active-directory/roles/concept-understand-roles)
+- [What is Microsoft Entra Privileged Identity Management?](/azure/active-directory/privileged-identity-management/pim-configure)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 - [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace)
 - [Extended security updates](/lifecycle/faq/extended-security-updates)
@@ -104,7 +104,7 @@ For more information on how to expand your hybrid governance, see:
 
 - [Save costs with Azure VMware Solution](/azure/azure-vmware/reserved-instance)
 - [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Using Azure AD as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
+- [Using Microsoft Entra ID as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)
 - [Overview of the Azure Security Benchmark Foundation blueprint sample](/azure/governance/blueprints/samples/azure-security-benchmark-foundation/)
 

@@ -43,7 +43,7 @@ The **Microsoft Purview readiness checklist** provides high-level guidance that 
     |Role  |Description  |
     |---------|---------|
     |Azure subscription administrators     |Manage Azure resources, policies, role-based access control (RBAC), and resource providers         |
-    |Azure AD administrators     |Manage identity and application registration.        |
+    |Microsoft Entra administrators     |Manage identity and application registration.        |
     |NetOps administrators     |Prepare the network to support Microsoft Purview connectivity requirements        |
     |SecOps administrators     |Manage Azure key vaults and secrets         |
     |Microsoft 365 administrators     |Microsoft Purview Information Protection in Microsoft 365 if Microsoft 365 sensitivity labels will be used         |
