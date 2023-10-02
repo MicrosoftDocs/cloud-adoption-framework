@@ -34,7 +34,7 @@ Once the basic performance requirements for the database workload has been deter
 
 ### Storage considerations
 
-Storage is a key component of Oracle database workloads. The following are some of the key considerations for storage planning:
+The performance and reliability of Oracle database workloads heavily rely on the design and configuration of the underlying storage infrastructure. The following are some of the key considerations for storage planning:
 
 - If using managed disks use premium, premium v2 or ultra disk storage for Oracle workloads. Standard SSD or standard HDD are not recommended for production Oracle workloads. 
 - If using managed disks host disk caching should be configured to ReadOnly for data disks and None for redo log disks. In that respect it should be noted that host disk caching is not supported for disks larger than 4TB. You should therefore create volumes (ASM, LVM or otherwise) built from multiple disks to achieve required capacity.
