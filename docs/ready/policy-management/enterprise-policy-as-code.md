@@ -14,7 +14,7 @@ Policy driven governance is one the design principles for Azure Landing Zones to
 
 ## What is Enterprise Policy As Code (EPAC)
 
-Enterprise Policy as Code (EPAC) is an open source project designed to manage Azure Policy using infrastructure as code. It contains a set of features designed to enhance the policy management experience including:
+[Enterprise Policy as Code](https://aka.ms/epac) (EPAC) is an open source project designed to manage Azure Policy using infrastructure as code. It contains a set of features designed to enhance the policy management experience including:
 - A stateful policy deployment experience. The objects defined in the code become the source of truth for policy objects deployed in Azure.
 - Enables complex policy management scenarios such as multi-tenant and sovereign cloud deployments.
 - Incorporate existing time spent developing custom policies prior to Azure Landing Zone deployment by exporting and integrating policies. 
@@ -24,8 +24,17 @@ Enterprise Policy as Code (EPAC) is an open source project designed to manage Az
 
 ## Why and when should you use EPAC to manage Azure Landing Zone deployed policies?
 
-EPAC can be used to both deploy and manage Azure Landing Zone deployed policies.
+EPAC can be used to both deploy and manage Azure Landing Zone deployed policies. Some reasons you may want to consider using EPAC to manage policy are:
+- You have existing unmanaged policies in a brownfield environment that you want to deploy in the new ALZ environment. [Export the existing policies](https://azure.github.io/enterprise-azure-policy-as-code/extract-existing-policy-resources/) and manage them with EPAC alongside the ALZ policy objects.
+- You have ALZ deployed in a non standard way e.g. multiple management group structures for testing, non-conventional management group structure. The default assignment structure provided by other ALZ deployment methods may not fit your strategy.
+- A team that is not responsible for infrastructure deployment e.g. a security team may want to deploy and manage policies.
+- You require features from policy not available in the ALZ deployments e.g. policy exemptions, documentation, assignment customization.
+- Non-compliance reporting and remediation task management.
 
 ## Getting Started
 
-## Learn more
+
+
+## References
+
+- [Enterprise Policy As Code](https://aka.ms/epac)
