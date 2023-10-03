@@ -42,7 +42,7 @@ The Azure Landing Zones conceptual architecture recommends one of two networking
 
 As the business requirements change over time (e.g., migration of on-prem applications to Azure that requires hybrid connectivity), AVNM allows you to expand and implement networking changes, in many cases without disruption to what is already deployed in Azure.  
 
-Azure Virtual Network Manager allows you to create three types of topologies across subscriptions, for both existing and new virtual networks:
+Azure Virtual Network Manager allows you to create three types of [topologies](/azure/virtual-network-manager/concept-connectivity-configuration) across subscriptions, for both existing and new virtual networks:
 - Hub and spoke topology
 - Hub and spoke topology with direct connectivity
 - Mesh topology (Preview)
