@@ -26,7 +26,7 @@ items:
     - name: Security guidelines
       href: oracle-security-guideline-landing-zone.md
   - name: Capacity planning
-      href: oracle-capacity-planning.md
+    href: oracle-capacity-planning.md
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
