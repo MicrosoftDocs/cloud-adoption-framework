@@ -52,7 +52,7 @@ Azure Virtual Network Manager allows you to create three types of [topologies](/
 >[!NOTE]
 > Azure Virtual Network Manager does not support Azure Virtual WAN hubs as part of a network group or as the hub in a topology at this time. See the [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq) for more information.
 
-When you create a Hub and spoke topology with direct connectivity in Azure Virtual Network Manager where the spokes are connected to each other directly, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) are automatically created bi-directionally via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
+When you create a Hub and spoke topology with direct connectivity in Azure Virtual Network Manager where the spokes are connected to each other directly, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) is automatically enabled, bi-directionally, via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
 
 Azure Virtual Network Manager, allows you to statically or dynamically add virtual networks to become members of a specific [network groups](/azure/virtual-network-manager/concept-network-groups), which defines and creates the desired topology based on you connectivity configuration within Azure Virtual Network Manager.
 
