@@ -60,7 +60,7 @@ You can create multiple network groups to isolate groups of different virtual ne
 
 From a security perspective, Azure Virtual Network Manager provides an efficient way of applying [security admin rules](/azure/virtual-network-manager/concept-security-admins) to centrally deny/allow traffic flows; outside of what are defined in NSGs. This provides network security administrators the ability to both enforce access controls and empower application owners to manage their own lower level rules within NSGs.
 
-AVNM allows grouping of Virtual Networks to apply configurations to these groups rather than on the individual Vnet.
+AVNM allows grouping of Virtual Networks to apply configurations to these groups rather than on an individual vNet.
 This allows more efficient management of connectivity, configuration and topology, security rules and deployment to one or more regions at the same time, all while maintaining fine-grained control.
 
 Networks can be segmented to suit your need, whether that’s by environment, teams, location, line of business or some other function. Network groups can be defined statically or dynamic by defining a set of conditions that govern group membership.
