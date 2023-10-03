@@ -38,7 +38,7 @@ Network topology is a critical element of the landing zone architecture because 
 
 ## Azure Virtual Network Manager in Azure Landing Zones
 
-Azure Landing Zones conceptual architecture recommends one of two networking topologies: an Azure Virtual WAN-based network topology, or a network topology based on a traditional hub and spoke architecture.  
+The Azure Landing Zones conceptual architecture recommends one of two networking topologies: an Azure Virtual WAN-based network topology, or a network topology based on a traditional hub and spoke architecture.  
 
 As the business requirements change over time (e.g., migration of on-prem applications to Azure that requires hybrid connectivity), AVNM allows you to expand and implement networking changes, in many cases without disruption to what is already deployed in Azure.  
 
