@@ -125,4 +125,4 @@ Application log monitoring is essential for detecting security threats at the ap
 
 ## Next steps
 
-[Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](oracle-network-topology.md)
+To understand how to plan for capacity requirements for Oracle workloads on Azure, see [Capacity planning for Oracle on Azure ](oracle-capacity-planning.md).
