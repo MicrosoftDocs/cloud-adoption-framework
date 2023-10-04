@@ -71,5 +71,5 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 ### Next Steps
 >
 > [!div class="nextstepaction"]
-> [Application access](identity-access-application-access.md)
+> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
 >

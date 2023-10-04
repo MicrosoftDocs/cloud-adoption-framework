@@ -126,3 +126,9 @@ The implementation also includes options to:
 
 - Assign recommended policies to govern identity and domain controllers.
 - Create a virtual network, and connect to the hub via virtual network peering.
+
+### Next Steps
+>
+> [!div class="nextstepaction"]
+> [Application access](identity-access-application-access.md)
+>

@@ -310,12 +310,12 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/identity-access.md
+          - name: Landing zones
+            href: ready/landing-zone/design-area/identity-access-landing-zones.md
           - name: Active Directory and Hybrid Identity
             href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
           - name: Application access
             href: ready/landing-zone/design-area/identity-access-application-access.md
-          - name: Landing zones
-            href: ready/landing-zone/design-area/identity-access-landing-zones.md
             
         - name: Resource organization
           items:
