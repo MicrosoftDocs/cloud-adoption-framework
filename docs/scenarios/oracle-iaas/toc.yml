@@ -1,30 +1,26 @@
 items:
   - name: Oracle Migration - Microsoft Cloud Adoption
     href: introduction-oracle-landing-zone.md 
-  - name: Get started
+  - name: Strategic impact
+    href: oracle-landing-zone-strategy.md
+  - name: Technical planning
+    href: oracle-landing-zone-plan.md
+  - name: Prepare your environment
     items:
-    - name: Strategic impact
-      href: oracle-landing-zone-strategy.md
-    - name: Technical planning
-      href: oracle-landing-zone-plan.md
-  - name: Design areas
-    items:
-    - name: Enterprise enrollment
-      href: enterprise-enrollment-oracle.md
-    - name: Identity and access management
-      href: manage-identity-access-azure-landing-zone.md
-    - name: Network topology and connectivity
-      href: oracle-network-topology.md
-    - name: Resource organization
-      href: manage-resources-oracle-landing-zone.md
-    - name: Governance and compliance
-      href: governance-complaince-oracle-landing-zone.md
-    - name: Business continuity and disaster recovery
-      href: oracle-disaster-recovery-oracle-landing-zone.md
-    - name: Manage and monitor Oracle workloads
-      href: oracle-manage-monitor-workload.md
-    - name: Security guidelines
-      href: oracle-security-guideline-landing-zone.md
+    - name: Design areas
+      items:
+      - name: Network topology and connectivity
+        href: oracle-network-topology.md
+      - name: Security
+        items:
+          - name: Security overview
+            href: oracle-security-guideline-landing-zone.md
+          - name: Business continuity and disaster recovery
+            href: oracle-disaster-recovery-oracle-landing-zone.md
+      - name: Management
+        href: oracle-manage-monitor-workload.md
+      - name: Governance discipline
+        href: governance-compliance-oracle-landing-zone.md
   - name: Capacity planning
     href: oracle-capacity-planning.md
   - name: Reference
