@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: martinekuan
 ms.author: martinek
-ms.date: 09/20/2022
+ms.date: 10/04/2023
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -13,6 +13,54 @@ ms.custom: internal, UpdateFrequency.5
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## September 2023
+
+### Guidance for documenting and deploying alerts
+
+To support the imminent general availability of Azure Monitor baseline alerts for the Azure landing zone, we have created some Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
+
+-   [Monitor Azure platform landing zone components](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor)
+
+-   [Inventory and visibility considerations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform)
+
+### Azure VMware Solution network design guides
+
+-   [Azure VMware Solution network design guide](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-intro)
+
+-   [Azure VMware Solution network design guide: Inbound internet connectivity](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity)
+
+-   [Azure VMware Solution network design guide: Networking basics](/azure/cloud-adoption-framework/scenarios/azure-vmware/azure-vmware-solution-network-basics)
+
+-   [Azure VMware Solution network design guide: Outbound internet connectivity](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity)
+
+-   [Azure VMware Solution network design guide: Connectivity with on-premises sites](/azure/cloud-adoption-framework/scenarios/azure-vmware/on-premises-connectivity)
+
+-   [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](/azure/cloud-adoption-framework/scenarios/azure-vmware/virtual-network-connectivity)
+
+## July 2023
+
+### New best practices for SAP LZA security on Azure 
+
+-   [SAP data integration example architecture](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-example-architecture)
+
+-   [Data integration security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-integration-security)
+
+-   [SQL Server database security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-database-security)
+
+-   [Security operations for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-security-operations)
+
+-   [Microsoft Sentinel for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-sentinel-for-sap)
+
+## June 2023
+
+### Updated machine learning inference during deployment
+
+-   [Machine learning inference during deployment](/azure/cloud-adoption-framework/innovate/best-practices/ml-deployment-inference)
+
+### New landing zone sandbox environments
+
+-   [Landing zone sandbox environments](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments)
 
 ## April 2023
 
