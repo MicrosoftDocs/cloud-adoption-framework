@@ -17,7 +17,7 @@ Robust identity and access management forms the basis of modern security. Author
 
 Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments.Refer to [Azure Architecture Center](/azure/architecture/) for guidance for architecting solutions on Azure using established patterns and practices.
 
-### Design area review
+## Design area review
 
 **Involved roles or functions:** Identity and access management require support from one or both of the following functions. These roles can help make decisions and implement those decisions:
 
@@ -40,7 +40,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 These topics are addressed in the compliance design areas related to [security](./security.md) and [governance](./governance.md). Additionally, the [Azure Identity Management and access control security best practices](/azure/security/fundamentals/identity-management-best-practices) guide provides a comprehensive set of recommendations for identity and access management.
 
-### Design area overview
+## Design area overview
 
 Identity provides the basis for a wide variety of security assurance. It grants access based on identity authentication and authorization controls in cloud services. Access control protects data and resources and helps decide which requests should be permitted.
 
@@ -56,6 +56,7 @@ These articles examine design considerations and recommendations related to iden
 > If you have multiple Azure Active Directory tenants, review [**Azure landing zones and multiple Azure Active Directory tenants**](multi-tenant/overview.md) and its associated content.
 
 ### Next steps
-
+>
 > [!div class="nextstepaction"]
 > [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+>

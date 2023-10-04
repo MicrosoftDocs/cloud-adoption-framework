@@ -15,7 +15,7 @@ Cloud-based identity management is an iterative process. You could start with a 
 
 Refer the [Identity decision guide](/azure/cloud-adoption-framework/decision-guides/identity/) for help with your identity strategy.
 
-### Azure and on-premises (hybrid identity)
+## Azure and on-premises (hybrid identity)
 
 User objects that are wholly created in Microsoft Entra ID are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
 
@@ -27,7 +27,7 @@ However, many organizations are already using Active Directory Domain Services (
 
 With hybrid identity, authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the authentication methods Microsoft Entra ID offers. For more information, see [Authentication for Microsoft Entra hybrid identity solutions](/azure/active-directory/hybrid/connect/choose-ad-authn).
 
-#### Hybrid identity recommendations
+### Hybrid identity recommendations
 
 - For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see [Integrate on-premises AD with Azure](/azure/architecture/reference-architectures/identity/).
 
@@ -42,7 +42,7 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 > Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. For more information, see [**Resources for decommissioning AD FS**](/windows-server/identity/ad-fs/ad-fs-decommission).
 >
 
-### Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services
+## Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services
 
 Administrators should familiarize themselves with the different options available for implementing Microsoft Directory Services:
 
@@ -52,7 +52,7 @@ Administrators should familiarize themselves with the different options availabl
 
 Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file shares can be domain-joined in the same way as on-premises computers. For more information on the different options, see [Compare Microsoft Directory-based services](/azure/active-directory-domain-services/compare-identity-solutions).
 
-#### Microsoft Entra ID and Active Directory Domain Services recommendations
+### Microsoft Entra ID and Active Directory Domain Services recommendations
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy).
 
