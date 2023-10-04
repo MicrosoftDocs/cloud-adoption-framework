@@ -316,7 +316,7 @@ items:
             href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
           - name: Application access
             href: ready/landing-zone/design-area/identity-access-application-access.md
-            
+
         - name: Resource organization
           items:
           - name: Overview
