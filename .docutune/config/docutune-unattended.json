@@ -14,7 +14,9 @@
     "draft": false,
     "requestReview": true,
     "signOff": false,
-    "properties": {},
+    "properties": {
+      "pointOfContact": "@Zimmergren"
+    },
     "sleepInterval": 15
   },
   "types": [
