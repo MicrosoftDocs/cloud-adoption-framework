@@ -61,7 +61,7 @@ It is recommended to deploy multiple regional private endpoints associated to th
 
 This scenario requires manual maintenance/updates of the Private Link DNS record set in every region as there is currently no automated lifecycle management for these.
 
-For other use cases, a single global Private endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions. 
+For other use cases, a single global Private Endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions to the single Private Endpoint in a single region. 
 This scenario requires manual maintenance of the PrivateLink DNS recordSet in every region as there is currently no automated lifecycle management for these.
 
 To enable connectivity from on premise networks to the Privatelink, the DNS forwarding ruleset needs to be provisioned in the DNS forwarder.
