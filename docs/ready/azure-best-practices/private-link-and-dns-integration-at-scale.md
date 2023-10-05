@@ -70,7 +70,7 @@ There are two conditions that must be true for application teams to create any r
 
 - Central networking and/or central platform team must ensure that application teams can only deploy and access Azure PaaS services by way of private endpoints.
 - Central networking and/or central platform teams must ensure that when they create private endpoints, they set up how to handle the corresponding records. Set up the corresponding records such that they're automatically created in the centralized private DNS zone that matches the service being created.
-- DNS record must follow the lifecycle of the private endpoint, in that, it's automatically removed when the private endpoint is deleted.
+- DNS records must follow the lifecycle of the private endpoint, in that, it's automatically removed when the private endpoint is deleted.
 
 > [!NOTE]
 > if [FQDNs in network rules based on DNS resolution is needed to be used in Azure Firewall and Firewall policy](/azure/firewall/fqdn-filtering-network-rules) (This capability allows you to filter outbound traffic with any TCP/UDP protocol -including NTP, SSH, RDP, and more-). You must enable Azure Firewall DNS Proxy to use FQDNs in your network rules, then those spoke VNets are forced to change their DNS setting from custom DNS server to Azure Firewall DNS Proxy. Changing the DNS settings of a spoke VNet requires reboot of all VMs inside that VNet.
