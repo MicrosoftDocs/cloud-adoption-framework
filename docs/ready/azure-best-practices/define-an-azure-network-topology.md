@@ -85,6 +85,8 @@ For example, all the systems used by a Business unit like HR or Finance would be
 **Design recommendations:**
 
 - Define the [scope of AVNM](/azure/virtual-network-manager/concept-network-manager-scope), apply Security Admin rules that enforce organizational level rules at the Root Management Group (tenant) which hierarchically applies automatically to existing and new resources and to all associated Management Groups
+- Create a AVNM instance in the connectivity subscription with the [scope](/azure/virtual-network-manager/concept-network-manager-scope) of the intermediate root management group (e.g. "contoso") with the Security Admin feature enabled.
+    - This will allow an organization to define security admin rules that will be applied across all vNets and subnets within their ALZ hierarchy and assist them in democratizing NSGs to application landing zone owners and teams
 - Networks can be segmented by grouping VNets either statically (manual) or dynamically (policy based)
 - Enable direct connectivity between spokes when selected spokes need to communicate frequently, with low-latency and high throughput requirements, with each other, in addition to access common services or NVAs in the hub.
 - Enable Global Mesh when all the virtual networks, across regions, need to communicate with each other.  
