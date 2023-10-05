@@ -64,7 +64,7 @@ This scenario requires manual maintenance/updates of the Private Link DNS record
 For other use cases, a single global Private Endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions to the single Private Endpoint in a single region. 
 This scenario requires manual maintenance of the PrivateLink DNS recordSet in every region as there is currently no automated lifecycle management for these.
 
-To enable connectivity from on premise networks to the Privatelink, the DNS forwarding ruleset needs to be provisioned in the DNS forwarder.
+To enable resolution, and therefore connectivity, from on premise networks to the `privatelink` private DNS zone and private endpoints, the appropriate DNS configuration (conditional forwarders etc.) need to be provisioned in the DNS infrastructure.
 
 There are two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
 
