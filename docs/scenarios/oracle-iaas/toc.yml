@@ -21,8 +21,10 @@ items:
         href: oracle-manage-monitor-workload.md
       - name: Governance discipline
         href: governance-compliance-oracle-landing-zone.md
-  - name: Capacity planning
-    href: oracle-capacity-planning.md
+  - name: Migrate your Oracle workloads
+    items: 
+    - name: Capacity planning
+      href: oracle-capacity-planning.md
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
