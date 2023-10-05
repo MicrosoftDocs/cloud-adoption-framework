@@ -57,7 +57,9 @@ While the previous diagram depicts a single hub and spoke architecture, customer
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution deployed in the hub (one per region) where name resolution for Private Link resources is done via Azure Private DNS.
 
-It is recommended to deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist, enable per-region Privatelink and Private DNS Zones. When working with PaaS services with built-in DR capabilities (geo-redundant storage accounts, SQL DB failover groups), multiple region Private endpoints are mandatory.
+It is recommended to deploy multiple regional private endpoints associated to the PaaS instance, one in each region where clients exist, enable per-region Private Link and Private DNS Zones. When working with PaaS services with built-in DR capabilities (geo-redundant storage accounts, SQL DB failover groups, etc.), multiple region Private Endpoints are mandatory.
+
+This scenario requires manual maintenance/updates of the Private Link DNS record set in every region as there is currently no automated lifecycle management for these.
 
 For other use cases, a single global Private endpoint can be deployed, making accessible to all clients by adding routing from the relevant regions. 
 This scenario requires manual maintenance of the PrivateLink DNS recordSet in every region as there is currently no automated lifecycle management for these.
