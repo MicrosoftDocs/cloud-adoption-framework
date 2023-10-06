@@ -21,7 +21,7 @@ In previous articles, we've described how to onboard data applications that crea
 Within the Azure platform, there are two ways to give access to data products:
 
 - Using Azure Purview (data policies)
-- Using a custom data marketplace, which grants access through Microsoft Entra Entitlement Management
+- Using a custom data marketplace, which grants access through Microsoft Entra entitlement management
 
 The Azure Purview method is explained in [dataset provisioning by data owners for Azure Storage](/azure/purview/how-to-policies-data-owner-storage). Note that data owners can also define polices for [resource groups and subscriptions](/azure/purview/how-to-policies-data-owner-resource-group).
 
