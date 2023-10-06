@@ -22,7 +22,7 @@ Azure Virtual Desktop provides custom Azure roles that are designed for each fun
 
 ## Azure Virtual Desktop design considerations
 
-- Azure Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Microsoft Entra ID, or an instance of Microsoft Entra Domain Services (Microsoft Entra Domain Services) synchronized from Microsoft Entra ID.
+- Azure Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Microsoft Entra ID, or an instance of Microsoft Entra Domain Services synchronized from Microsoft Entra ID.
   > [!NOTE]
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
