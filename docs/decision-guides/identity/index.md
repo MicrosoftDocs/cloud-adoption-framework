@@ -19,7 +19,7 @@ Jump to: [Determine identity integration requirements](#determine-identity-integ
 
 Several options are available for managing identity in a cloud environment. These options vary in cost and complexity. A key factor in structuring your cloud-based identity services is the level of integration required with your existing on-premises identity infrastructure.
 
-Azure Active Directory (Azure AD) provides a base level of access control and identity management for Azure resources. If your organization's on-premises Active Directory infrastructure has a complex forest structure or customized organizational units (OUs), your cloud-based workloads might require directory synchronization with Azure AD for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of Active Directory Domain Services (AD DS) in the cloud.
+Microsoft Entra ID provides a base level of access control and identity management for Azure resources. If your organization's on-premises Active Directory infrastructure has a complex forest structure or customized organizational units (OUs), your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of Active Directory Domain Services (AD DS) in the cloud.
 
 Cloud-based identity management is an iterative process. You could start with a cloud-native solution with a small set of users and corresponding roles for an initial deployment. As your migration matures, you might need to integrate your identity solution using directory synchronization or add domains services as part of your cloud deployments. Revisit your identity strategy in every iteration of your migration process.
 
@@ -36,34 +36,34 @@ As part of planning your migration to Azure, you will need to determine how best
 
 ### Cloud baseline
 
-Azure AD is the native identity and access management (IAM) system for granting users and groups access to management features on the Azure platform. If your organization lacks a significant on-premises identity solution, and you plan to migrate workloads to be compatible with cloud-based authentication mechanisms, you should begin developing your identity infrastructure using Azure AD as a base.
+Microsoft Entra ID is the native identity and access management (IAM) system for granting users and groups access to management features on the Azure platform. If your organization lacks a significant on-premises identity solution, and you plan to migrate workloads to be compatible with cloud-based authentication mechanisms, you should begin developing your identity infrastructure using Microsoft Entra ID as a base.
 
 **Cloud baseline assumptions:** Using a purely cloud-native identity infrastructure assumes the following:
 
 - Your cloud-based resources will not have dependencies on on-premises directory services or Active Directory servers, or workloads can be modified to remove those dependencies.
-- The application or service workloads being migrated either support authentication mechanisms compatible with Azure AD or can be modified easily to support them. Azure AD relies on internet-ready authentication mechanisms such as SAML, OAuth, and OpenID Connect. Existing workloads that depend on legacy authentication methods using protocols such as Kerberos or NTLM might need to be refactored before migrating to the cloud using the cloud baseline pattern.
+- The application or service workloads being migrated either support authentication mechanisms compatible with Microsoft Entra ID or can be modified easily to support them. Microsoft Entra ID relies on internet-ready authentication mechanisms such as SAML, OAuth, and OpenID Connect. Existing workloads that depend on legacy authentication methods using protocols such as Kerberos or NTLM might need to be refactored before migrating to the cloud using the cloud baseline pattern.
 
 > [!TIP]
-> Completely migrating your identity services to Azure AD eliminates the need to maintain your own identity infrastructure, significantly simplifying your IT management.
+> Completely migrating your identity services to Microsoft Entra ID eliminates the need to maintain your own identity infrastructure, significantly simplifying your IT management.
 >
-> But Azure AD is not a full replacement for a traditional on-premises Active Directory infrastructure. Directory features such as legacy authentication methods, computer management, or group policy might not be available without deploying additional tools or services to the cloud.
+> But Microsoft Entra ID is not a full replacement for a traditional on-premises Active Directory infrastructure. Directory features such as legacy authentication methods, computer management, or group policy might not be available without deploying additional tools or services to the cloud.
 >
 > For scenarios where you need to integrate your on-premises identities or domain services with your cloud deployments, see the directory synchronization and cloud-hosted domain services patterns discussed below.
 
 ### Directory synchronization
 
-For organizations with existing on-premises Active Directory infrastructure, directory synchronization is often the best solution for preserving existing user and access management while providing the required IAM capabilities for managing cloud resources. This process continuously replicates directory information between Azure AD and on-premises directory services, allowing common credentials for users and a consistent identity, role, and permission system across your entire organization.
+For organizations with existing on-premises Active Directory infrastructure, directory synchronization is often the best solution for preserving existing user and access management while providing the required IAM capabilities for managing cloud resources. This process continuously replicates directory information between Microsoft Entra ID and on-premises directory services, allowing common credentials for users and a consistent identity, role, and permission system across your entire organization.
 
 > [!NOTE]
-> Organizations that have adopted Microsoft 365 might have already implemented [directory synchronization](/microsoft-365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Azure Active Directory.
+> Organizations that have adopted Microsoft 365 might have already implemented [directory synchronization](/microsoft-365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Microsoft Entra ID.
 
 **Directory synchronization assumptions:** Using a synchronized identity solution assumes the following:
 
 - You need to maintain a common set of user accounts and groups across your cloud and on-premises IT infrastructure.
-- Your on-premises identity services support replication with Azure AD.
+- Your on-premises identity services support replication with Microsoft Entra ID.
 
 > [!TIP]
-> Any cloud-based workloads that depend on legacy authentication mechanisms provided by on-premises Active Directory servers and that are not supported by Azure AD will still require either connectivity to on-premises domain services or virtual servers in the cloud environment providing these services. Using on-premises identity services also introduces dependencies on connectivity between the cloud and on-premises networks.
+> Any cloud-based workloads that depend on legacy authentication mechanisms provided by on-premises Active Directory servers and that are not supported by Microsoft Entra ID will still require either connectivity to on-premises domain services or virtual servers in the cloud environment providing these services. Using on-premises identity services also introduces dependencies on connectivity between the cloud and on-premises networks.
 
 ### Cloud-hosted domain services
 
@@ -79,25 +79,25 @@ It's likely that your existing directories and domain services will continue to 
 - Your workload virtual machines need to be domain-joined for management or application of Active Directory group policy purposes.
 
 > [!TIP]
-> While a directory migration coupled with cloud-hosted domain services provides great flexibility when migrating existing workloads, hosting virtual machines within your cloud virtual network to provide these services does increase the complexity of your IT management tasks. As your cloud migration experience matures, examine the long-term maintenance requirements of hosting these servers. Consider whether refactoring existing workloads for compatibility with cloud identity providers such as Azure Active Directory can reduce the need for these cloud-hosted servers.
+> While a directory migration coupled with cloud-hosted domain services provides great flexibility when migrating existing workloads, hosting virtual machines within your cloud virtual network to provide these services does increase the complexity of your IT management tasks. As your cloud migration experience matures, examine the long-term maintenance requirements of hosting these servers. Consider whether refactoring existing workloads for compatibility with cloud identity providers such as Microsoft Entra ID can reduce the need for these cloud-hosted servers.
 
 ### Active Directory Federation Services
 
 Identity federation establishes trust relationships across multiple identity management systems to allow common authentication and authorization capabilities. You can then support single sign-on capabilities across multiple domains within your organization or identity systems managed by your customers or business partners.
 
-Azure AD supports federation of on-premises Active Directory domains using [Active Directory Federation Services (AD FS)](/azure/active-directory/hybrid/how-to-connect-fed-whatis). For more information about how this can be implemented in Azure, see [Extend AD FS to Azure](/azure/architecture/reference-architectures/identity/adfs).
+Microsoft Entra ID supports federation of on-premises Active Directory domains using [Active Directory Federation Services (AD FS)](/azure/active-directory/hybrid/how-to-connect-fed-whatis). For more information about how this can be implemented in Azure, see [Extend AD FS to Azure](/azure/architecture/reference-architectures/identity/adfs).
 
 ## Learn more
 
 For more information about identity services in Azure, see:
 
-- [Azure AD](/azure/active-directory/fundamentals/active-directory-whatis). Azure AD provides cloud-based identity services. It allows you to manage access to your Azure resources and control identity management, device registration, user provisioning, application access control, and data protection.
-- [Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity). The Azure AD Connect tool allows you to connect Azure AD instances with your existing identity management solutions, allowing synchronization of your existing directory in the cloud.
+- [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis). Microsoft Entra ID provides cloud-based identity services. It allows you to manage access to your Azure resources and control identity management, device registration, user provisioning, application access control, and data protection.
+- [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-hybrid-identity). The Microsoft Entra Connect tool allows you to connect Microsoft Entra instances with your existing identity management solutions, allowing synchronization of your existing directory in the cloud.
 - [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview). Azure RBAC efficiently and securely manages access to resources in the management plane. Jobs and responsibilities are organized into roles, and users are assigned to these roles. Azure RBAC allows you to control who has access to a resource along with which actions a user can perform on that resource.
-- [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure). PIM lowers the exposure time of resource access privileges and increases your visibility into their use through reports and alerts. It limits users to just-in-time privileges, assigning their privileges for a limited duration then revoked those privileges automatically.
-- [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad). This reference architecture provides an example of directory synchronization between on-premises Active Directory domains and Azure AD.
+- [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure). PIM lowers the exposure time of resource access privileges and increases your visibility into their use through reports and alerts. It limits users to just-in-time privileges, assigning their privileges for a limited duration then revoked those privileges automatically.
+- [Integrate on-premises Active Directory domains with Microsoft Entra ID](/azure/architecture/reference-architectures/identity/azure-ad). This reference architecture provides an example of directory synchronization between on-premises Active Directory domains and Microsoft Entra ID.
 - [Extend Active Directory Domain Services (AD DS) to Azure](/azure/architecture/reference-architectures/identity/adds-extend-domain). This reference architecture provides an example of deploying AD DS servers to extend domain services to cloud-based resources.
-- [Extend Active Directory Federation Services (AD FS) to Azure](/azure/architecture/reference-architectures/identity/adfs). This reference architecture configures Active Directory Federation Services (AD FS) to perform federated authentication and authorization with your Azure AD directory.
+- [Extend Active Directory Federation Services (AD FS) to Azure](/azure/architecture/reference-architectures/identity/adfs). This reference architecture configures Active Directory Federation Services (AD FS) to perform federated authentication and authorization with your Microsoft Entra directory.
 
 ## Next steps
 

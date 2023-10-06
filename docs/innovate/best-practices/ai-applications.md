@@ -67,7 +67,7 @@ Cognitive Services supports a wide range of cultural languages at the service le
 
 ### Secure resources
 
-Cognitive Services provides a layered security model, which includes [authentication](/azure/cognitive-services/authentication) via Azure Active Directory credentials, a valid resource key, and [Azure Virtual Network](/azure/cognitive-services/cognitive-services-virtual-networks).
+Cognitive Services provides a layered security model, which includes [authentication](/azure/cognitive-services/authentication) via Microsoft Entra credentials, a valid resource key, and [Azure Virtual Network](/azure/cognitive-services/cognitive-services-virtual-networks).
 
 ### Container support
 

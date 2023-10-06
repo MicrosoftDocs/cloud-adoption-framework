@@ -209,7 +209,7 @@ To set up the virtual network, the Contoso admins complete the following steps:
 - [Add, change, or delete a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet)
 - [Create, change, or delete a virtual network peering](/azure/virtual-network/virtual-network-manage-peering)
 - [Configure an existing virtual network for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/vnet-existing-add-subnet)
-- [Create and configure an Azure Active Directory Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance)
+- [Create and configure a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance)
 
 ### Set up routing
 
