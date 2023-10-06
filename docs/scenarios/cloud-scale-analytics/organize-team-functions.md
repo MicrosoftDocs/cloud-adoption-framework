@@ -108,7 +108,7 @@ Users can submit feedback with an IT service management solution or directly wit
 
 While the data science products team creates data products, it's distinct because their functions lead to data products. This results in published models becoming data products for others to use, and the pattern follows a Machine Learning ops model that's associated with the data landing zone.
 
-The data science products team starts by searching and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or a Microsoft Entra ID access package, the team uses the services in the data landing zone to explore and analyze the data.
+The data science products team starts by searching and finding relevant data products for their use case. Data governance solutions can reveal more details like data quality, lineage, or a similar dataset or profile. They research if a sample dataset is available and if the data is relevant to the project. Once data access is granted via a data catalog or a Microsoft Entra access package, the team uses the services in the data landing zone to explore and analyze the data.
 
 Before processing all data, the team uses local or remote compute to process and analyze sample data products. They can optimize remote compute targets with larger data products to train and develop machine learning models with runs, outputs, and models that are tracked inside Azure Machine Learning.
 
