@@ -25,7 +25,7 @@ Within the Azure platform, there are two ways to give access to data products:
 
 The Azure Purview method is explained in [dataset provisioning by data owners for Azure Storage](/azure/purview/how-to-policies-data-owner-storage). Note that data owners can also define polices for [resource groups and subscriptions](/azure/purview/how-to-policies-data-owner-resource-group).
 
-This article explains how you can use Microsoft Entra Entitlement Management with a custom data marketplace to give access to data products.
+This article explains how you can use Microsoft Entra entitlement management with a custom data marketplace to give access to data products.
 
 > [!NOTE]
 > Every business must define its data governance process in detail for each data product. For example, data with a **public** classification or **internal use only** might be secured by resources, but anything **confidential** or above gets secured using options outlined in [data privacy for cloud-scale analytics in Azure](secure-data-privacy.md). To learn more about classification types, see [requirements for governing Azure data in a modern enterprise](./govern-requirements.md#data-classification).
