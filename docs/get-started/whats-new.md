@@ -1,11 +1,11 @@
 ---
 title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
-author: martinekuan
-ms.author: martinek
-ms.date: 10/04/2023
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 10/06/2023
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency.5
+ms.custom: UpdateFrequency.5
 ---
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
@@ -15,6 +15,12 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## September 2023
+
+### Plan for IP addressing
+
+Article updated with relevant information about IPv4 exhaustion, and IPAM (IP Address Management) tools.
+
+- [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing).
 
 ### Guidance for documenting and deploying alerts
 
@@ -39,6 +45,16 @@ To support the imminent general availability of Azure Monitor baseline alerts fo
 -   [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](/azure/cloud-adoption-framework/scenarios/azure-vmware/virtual-network-connectivity)
 
 ## July 2023
+
+### Landing zone regions
+
+This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
+
+- [Landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions)
+
+### Enhanced migration guidance
+
+- [Readying your landing zone for migration](/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz)
 
 ### New best practices for SAP LZA security on Azure 
 
