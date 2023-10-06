@@ -101,7 +101,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/deployoffice/admincenter/overview-office-cloud-policy-service) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
 
-- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Microsoft Entra Domain Services (Microsoft Entra Domain Services). Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
+- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Microsoft Entra Domain Services. Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
 
 ## Cost management
 
