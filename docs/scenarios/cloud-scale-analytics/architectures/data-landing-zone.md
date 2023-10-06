@@ -3,7 +3,7 @@ title: Data landing zones
 description: Learn about cloud-scale analytics architecture data landing zones in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/11/2022
+ms.date: 10/06/2023
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -119,14 +119,13 @@ Your data application teams request these storage blobs. Their requests are then
 
 ### Shared integration runtimes
 
-Deploy a virtual machine scale set with self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
+Deploy a virtual machine with a self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
 
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
 To enable the resource group:
 
 - Create at least one Azure Data Factory in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted integration runtime, not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
 - Set up the self hosted integration runtimes in [high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 - Associate the self-hosted integration runtimes with Azure data factories in your data landing zone(s).
 - Set up Azure Automation to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
