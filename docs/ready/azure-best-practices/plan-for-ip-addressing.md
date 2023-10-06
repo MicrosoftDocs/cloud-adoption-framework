@@ -69,7 +69,7 @@ Numerous IPAM tools are available for your consideration, depending on your requ
   - Minimum features required by your organization
   - Total cost of ownership (TCO), including licensing and ongoing maintenance
   - Audit trails, logging, and role-based access controls
-  - Authentication and authorization through Azure AD (Entra ID)
+  - Authentication and authorization through Microsoft Entra ID
   - Accessible via API
   - Integrations with other network management tools and systems
   - Active community support or the level of support from the software provider
