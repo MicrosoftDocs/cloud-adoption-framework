@@ -35,7 +35,8 @@ You can define and apply security rules and policies that are based on environme
   - There are several [roles](/powershell/high-performance-computing/understanding-user-roles) that users may be added to Administrator, User, Job Administrator, and Job Operator.
 
     
-  - Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS) is a prerequisite to installing Microsoft HPC Pack because the authentication process for users and computers relies on the services provided by AD DS.
+  - Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services is a prerequisite to installing Microsoft HPC Pack because the authentication process for users and computers relies on the services provided by AD DS.
+
     
   - At installation time, the HPC cluster administrator role is automatically granted to all members of the local Administrators security group on the head node. When an identity is added as an HPC cluster administrator, it is also added to the local Administrators security group.
 
@@ -54,4 +55,3 @@ The following articles provide guidance for specific points in cloud adoption of
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-
