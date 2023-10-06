@@ -107,7 +107,7 @@ You should apply the same RBAC principle to the sensitive data that is sent to t
   >[!Note]
   >This integration works natively with Kubernetes _ClusterRoleBinding_ and _RoleBinding_ object types and effectively consolidates authorization to your Kubernetes cluster with Microsoft Entra ID as the central identity and access management service. By using Microsoft Entra ID, you get full auditing and tracing of changes made in your cluster as well as any authorization events.
 
-Integrating with Microsoft Entra ID also lets you access Microsoft Entra ID's advanced security capabilities, which you should use to configure:
+Integrating with Microsoft Entra ID also lets you access advanced security capabilities, which you should use to configure:
 
 - [Conditional Access with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). You can find more information on Conditional Access can be found in the [Conditional Access overview](/azure/active-directory/conditional-access/overview).
 - [Just-In-Time (JIT)](/azure/azure-arc/kubernetes/azure-rbac#configure-just-in-time-cluster-access-with-azure-ad) access rules for tasks that need elevated permissions. Having standing access for some users to sensitive information or critical network configuration settings in Kubernetes creates a potential pathway to compromised accounts or internal threat activities. Privileged access management can help you protect your organization from breaches and helps you meet compliance best practices by limiting standing access to sensitive data or access to critical configuration settings.
