@@ -23,7 +23,7 @@ An instance of Microsoft Entra ID is called an *Microsoft Entra tenant*. A Micro
 
 You should try to have Microsoft 365, Azure services, Power Platform, line-of-business (LOB) applications, software-as-a-service (SaaS) applications, and other cloud service providers (CSP) use a single Microsoft Entra tenant.
 
-**Microsoft Entra ID versus Active Directory.** Microsoft Entra isn’t an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Microsoft Entra ID is a hyperscale, modern, and cloud-based identity service.
+**Microsoft Entra ID versus Active Directory.** Microsoft Entra ID isn't an evolution of Active Directory Domain Services (AD DS). The tenant concept is like an Active Directory Forest, but the underlying architecture is different. Microsoft Entra ID is a hyperscale, modern, and cloud-based identity service.
 
 **Initial domain names and tenant IDs.** Each tenant has a unique initial domain name and tenant ID. For example, an organization named *Contoso* might have the initial domain name `contoso.onmicrosoft.com` for Microsoft Entra ID and `contoso.onmicrosoft.us` for Microsoft Entra Government. Tenant IDs are globally unique identifiers (GUID) like `a976dd56-c1d8-485c-8ea7-facbce6726c2`. Each tenant only has one initial domain and tenant ID. Both values are immutable and can't be changed after tenant creation.
 
