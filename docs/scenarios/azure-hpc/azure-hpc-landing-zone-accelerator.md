@@ -37,7 +37,7 @@ The approach to landing zones of the HPC landing zone accelerator provides the f
 The architectures of landing zones vary by business sector, in addition to varying by organization. This section lists articles by sector that provide guidelines for creating your landing zone:
 
 - Energy (Oil and Gas)
-  - [Azure Billing and Azure Active Directory tenants for energy HPC](./energy/azure-billing-active-directory-tenant.md)
+  - [Azure Billing and Microsoft Entra tenants for energy HPC](./energy/azure-billing-active-directory-tenant.md)
   - [Identity and access management for Azure HPC in energy](./energy/identity-access-management.md)
   - [Management for Azure HPC in energy](./energy/management.md)
   - [Network topology and connectivity for Azure HPC in energy](./energy/network-topology-connectivity.md)
