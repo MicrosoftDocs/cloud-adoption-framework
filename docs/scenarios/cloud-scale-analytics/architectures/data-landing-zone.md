@@ -119,7 +119,7 @@ Your data application teams request these storage blobs. Their requests are then
 
 ### Shared integration runtimes
 
-Deploy a virtual machine with a self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
+Deploy a virtual machines with self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
 
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
