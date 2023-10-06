@@ -10,19 +10,19 @@ ms.custom:
 
 # Zero Trust Planning for Landing Zones
 
-[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy that leverages many products and services in order to adhere to the following security principles:
+[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy that uses many products and services in order to adhere to the following security principles:
 
 - **Verify explicitly**, where you always authenticate and authorize based on all available data points.
 - **Use least privilege access**, where you limit user access to just enough access, and use tools to provide just in time access with considerations to adaptive risk-based policies.
 - **Assume breach**, where you minimize blast radius and segment access, are always proactively looking for threats, and are continually improving defenses.
 
-If your organization is adhering to the Zero Trust strategy, you should include it in your Landing Zone design.  Your Landing Zone will be the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
+If your organization is adhering to the Zero Trust strategy, you should include it in your Landing Zone design.  Your Landing Zone is the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
 
 ## Zero Trust Pillars
 
-Zero trust implementation is broken up in to several pillars, all detailed in the [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview) article in the Zero Trust implementation guidance.  There are specific practices that should be adopted for each pillar.  Note that these are not just technical configurations, but practices to adopt the above principles.
+Zero trust implementation is broken up in to several pillars, all detailed in the [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview) article in the Zero Trust implementation guidance.  There are specific practices that should be adopted for each pillar.  These aren't just technical configurations, but practices to adopt the above principles.
 
-Use the below guide for each pillar to address how you will adopt Zero Trust as part of your Landing Zone.
+Use the below guide for each pillar to address how you'll adopt Zero Trust as part of your Landing Zone.
 
 ### Identity Pillar
 
@@ -36,9 +36,9 @@ The [Azure Landing Zone reference implementations](../../enterprise-scale/implem
 
 ### Endpoints Pillar
 
-The [Endpoints Pillar](/security/zero-trust/deploy/endpoints) has deployment objectives focused on registering endpoints with cloud identity providers, giving acces solely through cloud-managed compliant endpoints and apps, enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
+The [Endpoints Pillar](/security/zero-trust/deploy/endpoints) has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
 
-These controls are generally applied to the end user compute devices - laptops, desktops, mobile devices - regardless of if they are corporate managed or a "bring your own device."  As a result, these controls are not found in the Azure configuration, but instead are configuring through the Intune portal and other device management tools.
+These controls are applied to the end user compute devices - laptops, desktops, mobile devices - regardless of if they're corporate managed or a "bring your own device."  As a result, these controls aren't found in the Azure configuration, but instead are configuring through the Intune portal and other device management tools.
 
 For endpoints located in Azure, Azure Policies and other controls can be applied if needed.  Azure Virtual Desktop, for example, provides enrollment in to Intune to centrally manage client endpoints.
 
@@ -58,11 +58,13 @@ However, a zero trust approach to data involves deeper controls.  From an implem
 
 ### Infrastructure Pillar
 
-The [Infrastructure Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on monitoring abnormal behavior in workloads, managing identities used by infrastructure, limiting human access, and using resource segmentation.
+The [Infrastructure Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
 
 The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your Landing Zone can be used to advance these deployment objectives.
 
-The [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) provides policies to block unauthorized deployments and to grant access.  However, because there are considerations for individual workloads that will be adopted in to Azure later, you will need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
+The [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) provides policies to block unauthorized deployments and to grant access.
+
+There are also considerations for individual workloads in Azure.  You'll need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
 
 ### Networks Pillar
 
@@ -76,13 +78,13 @@ Because the [Azure Landing Zone reference implementations](../../enterprise-scal
 
 Following these guides will apply Zero Trust principles to your connectivity resources.  However, there are application-based considerations to make as well, such as with web application firewalls.
 
-You can review the [Zero-trust network for web applications](/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall) reference architecture, as well as use the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview) for references for how to apply these network principles to your Azure workloads that are deployed to your landing zones.
+You can review the [Zero-trust network for web applications](/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall) reference architecture to understand how to apply Zero Trust principles to application delivery.  For more hands on guidance on configuring workloads with secure networking,use the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview).
 
 ### Visibility, Automation, and Orchestration Pillar
 
 The [Visibility, Automation, and Orchestration Pillar Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
-Because the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) contains deployments of [Mircosoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in M365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
+Because the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
 
 Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
 
