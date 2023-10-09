@@ -48,7 +48,7 @@ For example, row-level security ensures that users in a specific data applicatio
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
 > [!NOTE]
-> Azure Synapse serverless SQL pool supports [Column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) for views and not for external tables. In case of external tables one can create a logical view on top of the external table and than apply Column-level secutiry. In case of Row-level security, custom views can be used as a wrodkaround. 
+> Azure Synapse serverless SQL pool supports [Column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) for views and not for external tables. In case of external tables one can create a logical view on top of the external table and than apply Column-level security. In case of Row-level security, custom views can be used as a workaround. 
 
 For more information, see [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control).
 
