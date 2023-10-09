@@ -1,7 +1,7 @@
 ---
 title: Governance disciplines for SAP on Azure
 description: Learn more about the shared responsibility model, and learn about security, compliance, and governance design recommendations and considerations for SAP on Azure.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.date: 03/01/2021
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: Security operations for SAP on Azure
 description: Learn how to implement a security operation for SAP in Microsoft Cloud to ensure your organization's sensitive data and applications are protected.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
