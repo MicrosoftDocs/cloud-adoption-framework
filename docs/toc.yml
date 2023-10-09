@@ -287,7 +287,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
           - name: Cloud solution provider
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
-          - name: Define an Azure Active Directory tenant
+          - name: Define a Microsoft Entra tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
           - name: Handling Azure landing zones across multiple tenants
             items:
@@ -756,7 +756,7 @@ items:
             items:
               - name: WebLogic to Azure Virtual Machines
                 href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Azure AD via LDAP
+              - name: WebLogic with Microsoft Entra ID via LDAP
                 href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: WebLogic with Application Gateway
                 href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1262,7 +1262,7 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Azure Active Directory governance guidance
+        - name: Microsoft Entra ID Governance guidance
           href: govern/identity-baseline/azure-ad-configuration.md
         - name: Administrative access governance guidance
           href: govern/identity-baseline/administrative-access.md

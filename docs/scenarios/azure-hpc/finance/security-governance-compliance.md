@@ -1,6 +1,6 @@
 ---
 title: Governance for Azure HPC in the finance sector
-description: Learn about governance for HPC workloads in the finance sector. 
+description: Learn about governance for HPC workloads in the finance sector.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
