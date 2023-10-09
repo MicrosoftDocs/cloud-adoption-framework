@@ -21,7 +21,7 @@ Use these design considerations and recommendations to create an identity and ac
   - Automatically create the service principal and assign permissions when you create the cluster.
 - Decide how to authenticate cluster access:
   - Client certificates
-  - [Azure Active Directory](/azure/openshift/configure-azure-ad-ui)
+  - [Microsoft Entra ID](/azure/openshift/configure-azure-ad-ui)
 - Decide on a multitenancy cluster and how to set up role-based access control (RBAC) in your Azure Red Hat OpenShift cluster.
   - Decide on a method to use for isolation: Red Hat OpenShift projects, network policy, or cluster.
   - Decide on the OpenShift projects, project roles, cluster roles, and compute allocation per application team for isolation.
@@ -38,12 +38,12 @@ Use these design considerations and recommendations to create an identity and ac
 - **Cluster identities**
   - Create a service principal and define the custom Azure RBAC roles for your Azure Red Hat OpenShift landing zone. Roles simplify how you manage permissions for your Azure Red Hat OpenShift cluster service principal.
 - **Cluster access**
-  - Configure [Azure AD integration](/azure/openshift/configure-azure-ad-cli) to use Azure AD to authenticate users in your Azure Red Hat OpenShift cluster.
+  - Configure [Microsoft Entra integration](/azure/openshift/configure-azure-ad-cli) to use Microsoft Entra ID to authenticate users in your Azure Red Hat OpenShift cluster.
   - Define OpenShift projects to restrict RBAC privilege and isolate workloads in your cluster.
   - Define the required RBAC roles in OpenShift that are scoped to either a local project scope or a cluster scope.
-  - Use Azure Red Hat OpenShift to create role bindings that are tied to Azure AD groups for SRE, SecOps, and developer access.
-  - Use Azure Red Hat OpenShift with Azure AD to [limit user rights](/azure/aks/azure-ad-rbac) and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access.
-  - Give full access only as needed and just-in-time. Use [Privileged Identity Management in Azure AD](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
+  - Use Azure Red Hat OpenShift to create role bindings that are tied to Microsoft Entra groups for SRE, SecOps, and developer access.
+  - Use Azure Red Hat OpenShift with Microsoft Entra ID to [limit user rights](/azure/aks/azure-ad-rbac) and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access.
+  - Give full access only as needed and just-in-time. Use [Privileged Identity Management in Microsoft Entra ID](/azure/active-directory/privileged-identity-management/pim-configure) and [identity and access management in Azure landing zones](../../../ready/landing-zone/design-area/identity-access.md).
 - **Cluster workloads**
   - For applications that require access to sensitive information, use a service principal and the [Azure Key Vault Provider for Secret Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/) to mount secrets stored in Azure Key Vault to your pods.
 

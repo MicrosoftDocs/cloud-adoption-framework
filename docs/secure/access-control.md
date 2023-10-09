@@ -72,17 +72,17 @@ The key technical capabilities that enable modern access control are:
 - **Policy engine:** The component where organizations configure the technical security policy to meet the organization's productivity and security objectives.
 - **Policy enforcement points:** Points that enforce, across the organization's resources, the central policy decisions by the policy engine. The resources include data, applications, identity, network, and databases.
 
-This diagram depicts how Azure Active Directory provides a policy engine and a policy enforcement point, so that security protocols can implement a *known, trusted, allowed* approach.
+This diagram depicts how Microsoft Entra ID provides a policy engine and a policy enforcement point, so that security protocols can implement a *known, trusted, allowed* approach.
 
 :::image type="content" source="./media/known-trusted-allowed-electronic.png" alt-text="Known, trusted, allowed: Electronic" lightbox="./media/known-trusted-allowed-electronic-popout.png":::
 
-The Azure Active Directory policy engine can be extended to other policy enforcement points, including:
+The Microsoft Entra policy engine can be extended to other policy enforcement points, including:
 
 - **Modern applications:** Applications that use modern authentication protocols.
-- **Legacy applications:** Via Azure AD Application Proxy.
+- **Legacy applications:** Via Microsoft Entra application proxy.
 - **VPN and remote access solutions:** Such as Cisco AnyConnect, Palo Alto Networks, F5, Fortinet, Citrix, and Zscaler.
 - **Documents, email, and other files:** Via Microsoft Purview Information Protection.
-- **SaaS applications:** For more information, see [Tutorials for integrating SaaS applications with Azure Active Directory](/azure/active-directory/saas-apps/tutorial-list).
+- **SaaS applications:** For more information, see [Tutorials for integrating SaaS applications with Microsoft Entra ID](/azure/active-directory/saas-apps/tutorial-list).
 
 ## Data-driven access decisions
 

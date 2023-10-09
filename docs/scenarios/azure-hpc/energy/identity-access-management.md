@@ -12,7 +12,7 @@ ms.date: 11/09/2022
 
 The guidance in this article can help you examine design considerations and recommendations that relate to identity and access management for high-performance computing (HPC). This scenario is specific to the deployment of an HPC application for the energy industry. For more information about design considerations and recommendations, see the [Azure landing zone design area for identity and access management](../../../ready/landing-zone/design-area/identity-access.md).
 
-[Azure Active Directory Domain Services](/azure/active-directory-domain-services/overview) (Azure AD DS) can make use of managed domain services such as domain join, group policy, and access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Azure AD DS integrates with your existing Azure Active Directory (Azure AD) tenant, so users can sign into services and applications connected to the managed domain using their Azure AD credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
+[Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview) (Microsoft Entra Domain Services) can make use of managed domain services such as domain join, group policy, and access to legacy authentication protocols like lightweight directory access protocol (LDAP) and Kerberos/NTLM authentication. Microsoft Entra Domain Services integrates with your existing Microsoft Entra tenant, so users can sign into services and applications connected to the managed domain using their Microsoft Entra credentials. You can also use existing groups and user accounts to secure access to resources. These features provide a smoother lift-and-shift of on-premises resources to Azure, especially for a hybrid environment.
 
 For more information, see [design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
@@ -24,7 +24,7 @@ Two common deployment types in oil and gas industry workloads are *cloud only* a
 
 Both the cloud only and hybrid cloud models might have their own unique identity and access needs that affect which type of active directory solution to adopt.
 
-Workloads in the cloud only deployment model use Azure AD for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Azure AD hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Azure AD DS.
+Workloads in the cloud only deployment model use Microsoft Entra ID for Azure service fabric authentication, while the HPC hybrid cloud model uses the [Microsoft Entra hybrid identity solution](/azure/active-directory/hybrid/choose-ad-authn) for authentication. Regardless of the deployment type, Linux clients and POSIX-compliant storage solutions require legacy active directory support through Microsoft Entra Domain Services.
 
 A typical HPC setup includes a frontend for submitting jobs, a job scheduler or orchestrator, a compute cluster, and shared storage. The jobs can be submitted from on-premises and/or in the cloud. Identity and access management considerations for users and visualization devices might vary depending on the enterprise standards.
 
@@ -35,14 +35,14 @@ Review the Azure administration and management activities that you require from 
 Depending on the HPC compute resource orchestrator that you choose, different types of authentication methods are supported:
 
 - [Azure CycleCloud](/azure/cyclecloud/overview) offers three methods of authentication: a built-in database with encryption, active directory, or LDAP.
-- [Azure Batch](/azure/batch/batch-technical-overview) supports two methods of authentication: shared key and Azure AD.
+- [Azure Batch](/azure/batch/batch-technical-overview) supports two methods of authentication: shared key and Microsoft Entra ID.
 - [Microsoft HPC Pack](/powershell/high-performance-computing/overview-of-microsoft-hpc-pack): Currently all HPC Pack nodes must be joined into an active directory domain. If you deploy the HPC Pack cluster in a virtual network that has a site-to-site VPN or ExpressRoute connection with your corporate network, there's usually an existing active directory domain. If you don't have an active directory domain in your virtual network yet, you can choose to create one by promoting the head node as domain controller.
 
 ## Next steps
 
 The following articles provide guidance for specific steps in the cloud adoption journey for energy HPC environments.
 
-- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)
 - [Platform automation and DevOps for Azure HPC in energy](./platform-automation-devops.md)

@@ -24,7 +24,7 @@ In the previous phase of this narrative, the company had begun actively pushing 
 
 Since then, some things have changed that will affect governance:
 
-- Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
+- Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Microsoft Entra ID.
 - IT operations or cloud operations are largely managed by Azure Monitor and related automated processes.
 - Disaster recovery and business continuity is controlled by Azure Recovery Services vaults.
 - Microsoft Defender for Cloud is used to monitor security violations and attacks.
@@ -58,8 +58,8 @@ This section of the article will change the governance MVP design to include new
 
 1. Connect the networks. This step is executed by the networking and IT security teams, and supported by the cloud governance team. Adding a connection from the MPLS/leased-line provider to the new cloud will integrate networks. Adding routing tables and firewall configurations will control access and traffic between the environments.
 2. Consolidate identity providers. Depending on the workloads being hosted in the secondary cloud, there are a variety of options to identity provider consolidation. The following are a few examples:
-    1. For applications that authenticate using OAuth 2, users from Active Directory in the secondary cloud can simply be replicated to the existing Azure AD tenant. This ensures all users can be authenticated in the tenant.
-    2. At the other extreme, federation allows OUs to flow into Active Directory on-premises, then into the Azure AD instance.
+    1. For applications that authenticate using OAuth 2, users from Active Directory in the secondary cloud can simply be replicated to the existing Microsoft Entra tenant. This ensures all users can be authenticated in the tenant.
+    2. At the other extreme, federation allows OUs to flow into Active Directory on-premises, then into the Microsoft Entra instance.
 3. Add assets to Azure Site Recovery.
     1. Azure Site Recovery was designed from the beginning as a hybrid or multicloud tool.
     2. VMs in the secondary cloud might be able to be protected by the same Azure Site Recovery processes used to protect on-premises assets.

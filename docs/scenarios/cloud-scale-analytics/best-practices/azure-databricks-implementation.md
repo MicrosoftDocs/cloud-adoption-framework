@@ -23,11 +23,11 @@ For cloud-scale analytics, we'll focus on Azure Databricks Data Science & Engine
 For every data landing zone you deploy, you have the option to deploy two shared workspaces. One for data agnostic ingestion and another for analytics.
 
 - The Azure Databricks engineering workspace for ingestion and processing would connects to Azure Data Lake via Azure service principals. It is called by the data agnostic ingestion.
-- The Azure Databricks analytics workspace could be provisioned for all data scientists and data operations teams. This workspace would connect to Azure Data Lake by using Azure Active Directory (Azure AD) Pass-through Authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace.
+- The Azure Databricks analytics workspace could be provisioned for all data scientists and data operations teams. This workspace would connect to Azure Data Lake by using Microsoft Entra pass-through authentication. You share the Azure Databricks analytics and data science workspace across the data landing zone with all users who have access to the workspace.
 
 If you have an automated data agnostic ingestion engine, the Azure Databricks engineering workspace uses both an Azure Key Vault instance created in the Azure metadata service resource group for running data ingestion pipelines from **raw** into **enriched**.
 
-The Azure Databricks analytics workspace should have cluster policies that require you to create high concurrency clusters. This type of cluster allows data lake to be explored by using Azure AD credential pass-through. For more information, see [Access control and data lake configurations in Azure Data Lake Storage](data-lake-access.md).
+The Azure Databricks analytics workspace should have cluster policies that require you to create high concurrency clusters. This type of cluster allows data lake to be explored by using Microsoft Entra credential pass-through. For more information, see [Access control and data lake configurations in Azure Data Lake Storage](data-lake-access.md).
 
 ## Configure Azure Databricks
 
@@ -36,7 +36,7 @@ The Azure Databricks deployment is partly parameter-based via an Azure Resource 
 All Azure Databricks workspaces should use the premium plan, which provides the following required features:
 
 - Optimized autoscaling of compute
-- Azure AD credential pass-through authentication
+- Microsoft Entra credential pass-through authentication
 - Conditional authentication
 - Role-based access control for notebooks, clusters, jobs, and tables
 - Audit logs
@@ -49,7 +49,7 @@ To align to cloud-scale analytics, we recommend that all workspaces have the fol
   - Define multiple cluster policies. As part of the onboarding process, assign each target group permission to use by the data landing zone operations team. By default, cluster creation permission is given only to the operations team. Different teams or groups are given permission to use cluster policies.
   - Use cluster policies in combination with Azure Databricks pools to reduce cluster start and autoscaling times by maintaining a set of idle, ready-to-use instances. For more information, see [Pools](/azure/databricks/clusters/instance-pools/).
 - Retrieve all Azure Databricks operational secrets, such as SPN credentials and connection strings, from an Azure Key Vault instance.
-- Configure a separate enterprise application per workspace for use with SCIM (system for cross-domain identity management). Link to Azure Databricks workspace to control access and permissions to each workspace. For more information, see [Provision users and groups using SCIM](/azure/databricks/administration-guide/users-groups/scim/) and [configure SCIM provisioning for Microsoft Azure Active Directory](/azure/databricks/administration-guide/users-groups/scim/aad).
+- Configure a separate enterprise application per workspace for use with SCIM (system for cross-domain identity management). Link to Azure Databricks workspace to control access and permissions to each workspace. For more information, see [Provision users and groups using SCIM](/azure/databricks/administration-guide/users-groups/scim/) and [configure SCIM provisioning for Microsoft Entra ID](/azure/databricks/administration-guide/users-groups/scim/aad).
 
 > [!WARNING]
 > Failure to configure Azure Databricks workspace to use the Azure Databricks SCIM interface impacts how you provide security controls. It moves from an automated to a manual process and breaks all deployment CI/CD pipelines.
@@ -65,7 +65,7 @@ You might want to enable the following options for the Azure Databricks analytic
 - Notebook exporting: disabled (default: enabled)
 - Notebook table clipboard features: disabled (default: enabled)
 - Table access control: enabled (default: disabled)
-- Azure Active Directory Conditional Access
+- Microsoft Entra Conditional Access
 
 ## Deploy Azure Databricks
 
@@ -76,7 +76,7 @@ If you deploy the Azure Databricks workspaces as part of a new data landing zone
 1. The provisioning process first makes sure an Apache Hive metastore instance exists in the data landing zone. If it fails to find Apache Hive metastore, it quits and raises an error.
 2. Upon successfully finding Apache Hive metastore, a workspace is created.
 3. The process checks for a Log Analytics workspace in the data landing zone. If it fails to find the Log Analytics workspace, it quits and raises an error.
-4. For each workspace, it creates an Azure AD application and configures SCIM.
+4. For each workspace, it creates a Microsoft Entra application and configures SCIM.
 
 For the Azure Databricks ingest workspace:
 

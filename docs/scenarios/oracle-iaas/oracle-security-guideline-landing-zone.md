@@ -31,7 +31,7 @@ We suggest periodically assessing the services and technologies you employ to en
 
 Identity management is a fundamental framework that governs access to important resources. When you work with different sorts of personnel, such as part-time employees, interns who join temporarily, or full-time employees, identity management becomes critical. These individuals require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. For your Oracle workloads, there are two distinct identity management use cases to consider, and each use case requires a different identity management solution.
 
-1. **Oracle application** - Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Azure AD integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
+1. **Oracle application** - Users can access the Oracle applications without having to reenter their credentials once they have been authorized through SSO. Use Microsoft Entra integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
 
     | Oracle application | link to document |
     | --- | --- |
@@ -41,13 +41,13 @@ Identity management is a fundamental framework that governs access to important 
     |Hyperion|[Oracle Support doc #2144637.1](https://support.oracle.com/knowledge/Enterprise%20Performance%20Management%20and%20Business%20Intelligence/2144637_1.html)|
     |Siebel|[Oracle Support doc #2664515.1](https://support.oracle.com/knowledge/Siebel/2664515_1.html)|
 
-1. **Operating system level security** - Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Azure AD.  For more information, see the following resources:
+1. **Operating system level security** - Oracle workloads can run on various variants of the Linux operating system or Windows.  To enhance the security of Windows and Linux virtual machines in Azure, organizations can integrate them with Microsoft Entra ID.  For more information, see the following resources:
 
-   - [Sign in to a Linux virtual machine in Azure by using Azure AD and OpenSSH](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
+   - [Sign in to a Linux virtual machine in Azure by using Microsoft Entra ID and OpenSSH](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
 
       - As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OEL. 
       - As of July 2023, IBM has chosen to cease openly sharing RHEL source, so it's likely that OL and RHEL may diverge in future, and the above statement may become no longer true.
-    - [Sign in to a Windows virtual machine in Azure by using Azure AD](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
+    - [Sign in to a Windows virtual machine in Azure by using Microsoft Entra ID](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows)
       - For well architected on security, see the [Oracle WAF Security guide](/azure/well-architected/oracle-iaas/security).
 
 ## Operating system hardening

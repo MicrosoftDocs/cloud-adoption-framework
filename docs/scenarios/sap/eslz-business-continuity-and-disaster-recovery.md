@@ -1,7 +1,7 @@
 ---
 title: Business continuity and disaster recovery for an SAP migration
 description: Learn about business continuity and disaster recovery for SAP migrations.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.date: 02/21/2023
 ms.topic: conceptual

@@ -225,7 +225,7 @@ Containers should run with their root filesystem in read-only mode to isolate wr
 
 ## Design considerations
 
-AKS has several interfaces to other Azure services like Azure Active Directory, Azure Storage, and Azure Virtual Network. Using these services requires special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security governance and compliance mechanisms and controls as in the rest of your infrastructure landscape.
+AKS has several interfaces to other Azure services like Microsoft Entra ID, Azure Storage, and Azure Virtual Network. Using these services requires special attention during the planning phase. AKS also adds extra complexity that requires you to consider applying the same security governance and compliance mechanisms and controls as in the rest of your infrastructure landscape.
 
 Here are some other design considerations for AKS security governance and compliance:
 
