@@ -22,13 +22,13 @@ Learn more about the [security](../../../ready/landing-zone/design-area/security
 - Consider API Management [validation policies](/azure/api-management/validation-policies) to validate REST or SOAP API requests and responses against schemas defined in the API definition or uploaded to the instance. These policies are not a replacement for a Web Application Firewall but can provide additional protection against some threats.
   > [!NOTE]
   > Adding validation policies can have performance implications, so we recommend performance load tests to assess their impact on API throughput.
-- Consider which identity providers besides Azure AD need to be supported.
+- Consider which identity providers besides Microsoft Entra ID need to be supported.
 
 ## Design recommendations
 
 - Deploy a Web Application Firewall (WAF) in front of API Management to protect against common web application exploits and vulnerabilities.
 - Use Azure Key Vault to securely store and manage secrets and make them available through [named values](/azure/api-management/api-management-howto-properties) in API Management.
-- Create a [system-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) in API Management to establish trust relationships between the service and other resources protected by Azure Active Directory, including Key Vault and backend services.
+- Create a [system-assigned managed identity](/azure/api-management/api-management-howto-use-managed-service-identity) in API Management to establish trust relationships between the service and other resources protected by Microsoft Entra ID, including Key Vault and backend services.
 - APIs should only be accessible over HTTPS to protect data in-transit and ensure its integrity.
 - Use the latest TLS version when encrypting information in transit. Disable outdated and unnecessary protocols and ciphers when possible.
 

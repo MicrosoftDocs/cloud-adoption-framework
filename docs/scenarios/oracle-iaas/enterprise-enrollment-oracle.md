@@ -1,6 +1,6 @@
 ---
 title: Enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator
-description: Learn about enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator. 
+description: Learn about enterprise enrollment for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni

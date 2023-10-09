@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # SAP ingestion with cloud-scale analytics in Azure
 
-Azure can support many approaches for extracting and ingesting data from SAP data sources, including from BusinessWare and SAP ERP Central Component (ECC). SAP systems are complex because their monolithic structure cuts across several domains. The recommended pattern is for each business group to ingest their data from SAP into their data landing zone. Data is presented in the enriched layer (having passed through raw) and is accessible subject to Azure Active Directory group access controls. Central finance teams can curate and ingest the finance objects into a single data asset, conducive to their data landing zone's requirements.
+Azure can support many approaches for extracting and ingesting data from SAP data sources, including from BusinessWare and SAP ERP Central Component (ECC). SAP systems are complex because their monolithic structure cuts across several domains. The recommended pattern is for each business group to ingest their data from SAP into their data landing zone. Data is presented in the enriched layer (having passed through raw) and is accessible subject to Microsoft Entra group access controls. Central finance teams can curate and ingest the finance objects into a single data asset, conducive to their data landing zone's requirements.
 
 Depending on your organization's data volumes and latency requirements, one of three patterns can support your ingest requirements.
 
