@@ -1,6 +1,6 @@
 ---
-title: Security considerations for the Azure Container Apps landing zone accelerator
-description: Learn how to secure apps in Azure Container Apps.
+title: Networking for the Azure Container Apps - Landing Zone Accelerator
+description: Learn about network considerations Azure Container Apps.
 author: craigshoemaker
 ms.author: cshoe
 ms.date: 10/06/2023
@@ -79,9 +79,9 @@ External environments expose container apps by using a virtual IP address that i
 
 ## References
 
-* [Networking architecture in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/networking)
-* [Securing a custom VNET in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/firewall-integration)
-* [Network proxying in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/network-proxy)
-* [IP ingress restrictions in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/ip-restrictions)
-* [Support for User Defined Routes](https://learn.microsoft.com/azure/container-apps/user-defined-routes)
-* [Configure UDR with Azure Firewall](https://learn.microsoft.com/azure/container-apps/networking?tabs=azure-cli#configuring-udr-with-azure-firewall)
+* [Networking architecture in Azure Container Apps](/azure/container-apps/networking)
+* [Securing a custom VNET in Azure Container Apps](/azure/container-apps/firewall-integration)
+* [Network proxying in Azure Container Apps](/azure/container-apps/network-proxy)
+* [IP ingress restrictions in Azure Container Apps](/azure/container-apps/ip-restrictions)
+* [Support for User Defined Routes](/azure/container-apps/user-defined-routes)
+* [Configure UDR with Azure Firewall](/azure/container-apps/networking?tabs=azure-cli#configuring-udr-with-azure-firewall)

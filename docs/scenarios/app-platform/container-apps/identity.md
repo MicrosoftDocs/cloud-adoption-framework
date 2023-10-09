@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 To secure your application, you can enable authentication and authorization via an identity provider such as Azure Entra ID or [Azure Entra ID B2C](/azure/active-directory/external-identities/b2b-fundamentals).
 
-Consider using [managed identity](https://learn.microsoft.com/azure/container-apps/managed-identity) instead of a service principal to connect to other resources in your container app. Managed identity is preferable as it negates the need for managing credentials. You can also use [system-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/overview). System-managed identities share a lifecycle with an Azure resource such as a Container App, or a _user-assigned managed identity_, which is a standalone Azure resource available to multiple applications.
+Consider using [managed identity](/azure/container-apps/managed-identity) instead of a service principal to connect to other resources in your container app. Managed identity is preferable as it negates the need for managing credentials. You can also use [system-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/overview). System-managed identities share a lifecycle with an Azure resource such as a Container App, or a _user-assigned managed identity_, which is a standalone Azure resource available to multiple applications.
 
 ## Recommendations
 
