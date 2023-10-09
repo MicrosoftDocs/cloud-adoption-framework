@@ -116,6 +116,18 @@ items:
         href: spring-apps\security.md
       - name: Monitoring operations
         href: spring-apps\management.md
+    - name: Azure Container Apps
+      items:
+        - name: Azure Container Apps landing zone accelerator
+          href: container-apps/landing-zone-accelerator.md
+        - name: Identity
+          href: container-apps/identity.md
+        - name: Networking
+          href: container-apps/networking.md
+        - name: Security
+          href: container-apps/security.md
+        - name: Management and operations
+          href: container-apps/management.md
   - name: Migrate to modern application platforms
     href: migrate.md
   - name: Innovation on modern application platforms
