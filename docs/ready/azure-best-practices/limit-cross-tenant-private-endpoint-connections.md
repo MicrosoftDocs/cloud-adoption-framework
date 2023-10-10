@@ -10,14 +10,14 @@ ms.custom: think-tank
 
 # Limit cross-tenant private endpoint connections in Azure
 
-Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Azure Active Directory (Azure AD) tenants. For security and compliance, you might need to block cross Azure AD tenants connections on your private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options help you create data leakage prevention (DLP) controls inside your Azure environment.
+Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Microsoft Entra tenants. For security and compliance, you might need to block cross Microsoft Entra tenants connections on your private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options help you create data leakage prevention (DLP) controls inside your Azure environment.
 
 ## Introduction to private endpoints
 
-Use private endpoints to control the traffic within your Azure environment using an existing network perimeter. But there are scenarios where you must keep private endpoint connections within the corporate Azure AD tenant only. The following examples show connections that might create security risks.
+Use private endpoints to control the traffic within your Azure environment using an existing network perimeter. But there are scenarios where you must keep private endpoint connections within the corporate Microsoft Entra tenant only. The following examples show connections that might create security risks.
 
-- **Connection A:** A rogue administrator creates private endpoints on the customer virtual network. These endpoints link to services that are hosted outside the customer environment, like another Azure AD tenant.
-- **Connection B:** A rogue administrator creates private endpoints in other Azure AD tenants that link to services hosted in the customer's Azure AD tenant.
+- **Connection A:** A rogue administrator creates private endpoints on the customer virtual network. These endpoints link to services that are hosted outside the customer environment, like another Microsoft Entra tenant.
+- **Connection B:** A rogue administrator creates private endpoints in other Microsoft Entra tenants that link to services hosted in the customer's Microsoft Entra tenant.
 
 ![Diagram that shows cross-tenant private endpoint connection scenarios.](./media/cross-tenant-pe-provisioning.png)
 
@@ -25,26 +25,26 @@ Use private endpoints to control the traffic within your Azure environment using
 
 For both scenarios, you specify the resource ID of the service and manually approve the private endpoint connection. Users also require role-based access control (RBAC) access to run these actions.
 
-Connections C and D in Figure 1 show scenarios that customers generally want to allow. The private endpoint connections are kept within the corporate Azure AD tenant. They don't represent a security risk so these two scenarios aren't covered in this article.
+Connections C and D in Figure 1 show scenarios that customers generally want to allow. The private endpoint connections are kept within the corporate Microsoft Entra tenant. They don't represent a security risk so these two scenarios aren't covered in this article.
 
-The following information gives you options to prevent private endpoints provisioning across Azure AD tenants.
+The following information gives you options to prevent private endpoints provisioning across Microsoft Entra tenants.
 
 ## Deny private endpoints linked to services in other tenants
 
-**Scenario one**: A rogue administrator requires the following rights in a subscription in the customer's Azure AD tenant.
+**Scenario one**: A rogue administrator requires the following rights in a subscription in the customer's Microsoft Entra tenant.
 
 - **Microsoft.Network/virtualNetworks/join/action** rights on a subnet with **privateEndpointNetworkPolicies** set to **Disabled**.
 - **Microsoft.Network/privateEndpoints/write** access to a resource group in the customer environment.
 
-With these rights, a rogue administrator can create a private endpoint in the customer's Azure AD tenant. This private endpoint links to a service in a separate subscription and Azure AD tenant. Figure 1 shows this scenario as connection A.
+With these rights, a rogue administrator can create a private endpoint in the customer's Microsoft Entra tenant. This private endpoint links to a service in a separate subscription and Microsoft Entra tenant. Figure 1 shows this scenario as connection A.
 
-For this scenario, the user sets up an external Azure AD tenant and Azure subscription. Next, they create a private endpoint in the customer environment by manually specifying the resource ID of the service. Finally, the rogue administrator approves the private endpoint on the linked service that's hosted in the external Azure AD tenant to allow traffic over the connection.
+For this scenario, the user sets up an external Microsoft Entra tenant and Azure subscription. Next, they create a private endpoint in the customer environment by manually specifying the resource ID of the service. Finally, the rogue administrator approves the private endpoint on the linked service that's hosted in the external Microsoft Entra tenant to allow traffic over the connection.
 
-After the rogue administrator approves the private endpoint connection, corporate data can be copied from the corporate virtual network to an Azure service on an external Azure AD tenant. This security risk can only occur if access was granted using Azure RBAC.
+After the rogue administrator approves the private endpoint connection, corporate data can be copied from the corporate virtual network to an Azure service on an external Microsoft Entra tenant. This security risk can only occur if access was granted using Azure RBAC.
 
 ### Mitigation for scenario one
 
-Use the following [Azure Policy](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically block the ability to create a private endpoint in the corporate Azure AD tenant that's linked to an outside Azure service.
+Use the following [Azure Policy](https://github.com/Azure/data-management-zone/blob/main/infra/Policies/PolicyDefinitions/PrivateEndpoint/params.policyDefinition.Deny-PrivateEndpoint-PrivateLinkServiceConnections.json) to automatically block the ability to create a private endpoint in the corporate Microsoft Entra tenant that's linked to an outside Azure service.
 
 ```json
 "if": {
@@ -108,15 +108,15 @@ Instead, assign the policy to the top-level management group, and then use exemp
 
 ### Considerations for scenario one
 
-This policy blocks the ability to create private endpoints that are in a different subscription than the service itself. If these endpoints are required for certain use cases, use policy exemptions. Create more policies for Data Factory and Azure Synapse to make sure that managed private endpoints hosted on the managed virtual network can only connect to services hosted within your Azure AD tenant.
+This policy blocks the ability to create private endpoints that are in a different subscription than the service itself. If these endpoints are required for certain use cases, use policy exemptions. Create more policies for Data Factory and Azure Synapse to make sure that managed private endpoints hosted on the managed virtual network can only connect to services hosted within your Microsoft Entra tenant.
 
 ## Deny connections from private endpoints created in other tenants
 
 **Scenario two**: A rogue administrator requires **write** access on the service in the customer environment for which a private endpoint should be created.
 
-With this right, a rogue administrator can create a private endpoint in an external Azure AD tenant and subscription. This endpoint links to a service in the customer's Azure AD tenant. Figure 1 shows this scenario as connection B.
+With this right, a rogue administrator can create a private endpoint in an external Microsoft Entra tenant and subscription. This endpoint links to a service in the customer's Microsoft Entra tenant. Figure 1 shows this scenario as connection B.
 
-In this scenario, the rogue administrator needs to first configure an external private Azure AD tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Azure AD tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Azure AD tenants.
+In this scenario, the rogue administrator needs to first configure an external private Microsoft Entra tenant and Azure subscription. Next, they create a private endpoint in their environment by manually specifying the resource ID and group ID of the service in the corporate Microsoft Entra tenant. Finally, they approve the private endpoint on the linked service to allow traffic over the connection across Microsoft Entra tenants.
 
 After the rogue administrator or service owner approves the private endpoint, data is accessed from the external virtual network.
 
@@ -250,7 +250,7 @@ These policies are now available as built-in.
 
    Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3484ce98-c0c5-4c83-994b-c5ac24785218`
 
-- Azure Synapse managed private endpoints should only connect to resources in approved Azure Active Directory tenants.
+- Azure Synapse managed private endpoints should only connect to resources in approved Microsoft Entra tenants.
 
    Definition ID: `/providers/Microsoft.Authorization/policyDefinitions/3a003702-13d2-4679-941b-937e58c443f0`
 

@@ -31,7 +31,7 @@ The virtual network also contains a *private endpoint* for your machine learning
 *Outbound* communication from the virtual network must be able to reach the following Microsoft services:
 
 - Machine learning
-- Azure Active Directory (Azure AD)
+- Microsoft Entra ID
 - Azure Container Registry, and specific registries that Microsoft maintains
 - Azure Front Door
 - Azure Resource Manager
@@ -125,7 +125,7 @@ The disadvantage is that data access isn't compartmentalized or restricted on pe
 
 1. The data scientist can now create data stores to access data required for projects, and submit training runs that use the data.
 
-Optionally, create an Azure AD security group and grant it read access to data, then add managed identities to the security group. This approach reduces the number of direct role assignments on resources, to avoid reaching the subscription limit on role assignments.
+Optionally, create a Microsoft Entra security group and grant it read access to data, then add managed identities to the security group. This approach reduces the number of direct role assignments on resources, to avoid reaching the subscription limit on role assignments.
 
 ### Project-centric pattern
 
@@ -149,11 +149,11 @@ The disadvantage of this approach is that sharing assets across projects can be 
 
    By using Azure role-based access control (RBAC), you can restrict data scientists from creating new datastores or new compute resources with different managed identities. This practice prevents access to data not specific to the project.
 
-   Optionally, to simplify project membership management, you can create an Azure AD security group for project members and grant the group access to the workspace.
+   Optionally, to simplify project membership management, you can create a Microsoft Entra security group for project members and grant the group access to the workspace.
 
 ### Azure Data Lake Storage with credential passthrough
 
-You can use Azure AD user identity for interactive storage access from machine learning studio. Data Lake Storage with hierarchical namespace enabled allows for enhanced organization of data assets for storage and collaboration. With Data Lake Storage hierarchical namespace, you can compartmentalize data access by giving different users access control list (ACL)-based access to different folders and files. For example, you can grant only a subset of users access to confidential data.
+You can use Microsoft Entra user identity for interactive storage access from machine learning studio. Data Lake Storage with hierarchical namespace enabled allows for enhanced organization of data assets for storage and collaboration. With Data Lake Storage hierarchical namespace, you can compartmentalize data access by giving different users access control list (ACL)-based access to different folders and files. For example, you can grant only a subset of users access to confidential data.
 
 ### RBAC and custom roles
 
@@ -163,9 +163,9 @@ Access scope can differ between environments. In a production environment, you m
 
 Machine learning has several default roles: owner, contributor, reader, and data scientist. You can also create your own custom roles, for example to create permissions that reflect your organizational structure. For more information, see [Manage access to Azure Machine Learning workspace](/azure/machine-learning/how-to-assign-roles#example-custom-roles).
 
-Over time, the composition of your team might change. If you create an Azure AD group for each team role and workspace, you can assign an Azure RBAC role to the Azure AD group, and manage resource access and user groups separately.
+Over time, the composition of your team might change. If you create a Microsoft Entra group for each team role and workspace, you can assign an Azure RBAC role to the Microsoft Entra group, and manage resource access and user groups separately.
 
-User principals and service principals can be part of the same Azure AD group. For example, when you create a user-assigned managed identity that Azure Data Factory uses to trigger a machine learning pipeline, you might include the managed identity in a **ML pipelines executor** Azure AD group.
+User principals and service principals can be part of the same Microsoft Entra group. For example, when you create a user-assigned managed identity that Azure Data Factory uses to trigger a machine learning pipeline, you might include the managed identity in a **ML pipelines executor** Microsoft Entra group.
 
 ## Central Docker image management
 

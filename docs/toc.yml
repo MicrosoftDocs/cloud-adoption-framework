@@ -21,6 +21,8 @@ items:
       href: scenarios/hybrid/index.md
     - name: Modern application platform
       href: scenarios/app-platform/index.md
+    - name: Oracle
+      href: scenarios/oracle-iaas/introduction-oracle-landing-zone.md
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
@@ -285,7 +287,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
           - name: Cloud solution provider
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
-          - name: Define an Azure Active Directory tenant
+          - name: Define a Microsoft Entra tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
           - name: Handling Azure landing zones across multiple tenants
             items:
@@ -416,6 +418,8 @@ items:
             href: ready/landing-zone/design-area/management.md
           - name: Inventory and visibility
             href: ready/landing-zone/design-area/management-platform.md
+          - name: Baseline monitoring
+            href: ready/landing-zone/design-area/management-monitor.md
           - name: Protect and recover
             href: ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md
           - name: Operational compliance
@@ -752,7 +756,7 @@ items:
             items:
               - name: WebLogic to Azure Virtual Machines
                 href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Azure AD via LDAP
+              - name: WebLogic with Microsoft Entra ID via LDAP
                 href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: WebLogic with Application Gateway
                 href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -771,7 +775,7 @@ items:
             href: /azure/cloud-adoption-framework/scenarios/sap/migrate
           - name: Learning path for Migrate SAP workloads to Azure
             href: /training/paths/migrate-sap-workloads-to-azure/
-          - name: Migrate an SAP platform to Azure
+          - name: SAP on Azure migration
             href: https://azure.microsoft.com/solutions/sap/migration/
           - name: Migrate from SAP ASE to Azure SQL
             href: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
@@ -1258,7 +1262,7 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Azure Active Directory governance guidance
+        - name: Microsoft Entra ID Governance guidance
           href: govern/identity-baseline/azure-ad-configuration.md
         - name: Administrative access governance guidance
           href: govern/identity-baseline/administrative-access.md

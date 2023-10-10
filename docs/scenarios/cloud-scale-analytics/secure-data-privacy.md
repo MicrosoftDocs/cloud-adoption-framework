@@ -27,16 +27,16 @@ Before ingesting data, you must categorize the data as **confidential or below**
 
 ## Confidential or below
 
-For every onboarded data product, we create two data lake folders in the enriched and curated layers, **confidential or below** and **sensitive (personal data)**, and use access control lists to enable Microsoft Azure directory (Azure AD) Pass-through Authentication.
+For every onboarded data product, we create two data lake folders in the enriched and curated layers, **confidential or below** and **sensitive (personal data)**, and use access control lists to enable Microsoft Azure directory (Microsoft Entra ID) Pass-through Authentication.
 
-If a data application team onboards a **confidential or below** data asset, then user principal names and service principal objects can be added to two Azure AD groups (one for read/write access and the other for read-only access). These two Azure AD groups should be created during the onboarding process and sorted in the appropriate data product folder with **confidential or below** containers for raw and enriched data.
+If a data application team onboards a **confidential or below** data asset, then user principal names and service principal objects can be added to two Microsoft Entra groups (one for read/write access and the other for read-only access). These two Microsoft Entra groups should be created during the onboarding process and sorted in the appropriate data product folder with **confidential or below** containers for raw and enriched data.
 
-This pattern enables any compute product that supports Azure AD Pass-through Authentication to connect to the data lake and authenticate logged-in users. If a user is part of the data asset's Azure AD group, they can access the data via Azure AD Pass-through Authentication. It allows those users inside the group to read the entire data asset without policy filters. Access can then be audited in detail with appropriate logs and Microsoft Graph.
+This pattern enables any compute product that supports Microsoft Entra pass-through authentication to connect to the data lake and authenticate logged-in users. If a user is part of the data asset's Microsoft Entra group, they can access the data via Microsoft Entra pass-through authentication. It allows those users inside the group to read the entire data asset without policy filters. Access can then be audited in detail with appropriate logs and Microsoft Graph.
 
 For recommendations on the layout of your data lake please review [Provision three Azure Data Lake Storage Gen2 accounts for each data landing zone](../cloud-scale-analytics/best-practices/data-lake-zones.md).
 
 > [!NOTE]
-> Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Azure AD Pass-through Authentication.
+> Examples of compute products are Azure Databricks, Azure Synapse Analytics, Apache Spark, and Azure Synapse SQL on-demand pools enabled with Microsoft Entra pass-through authentication.
 
 ## Sensitive data (personal data)
 
@@ -62,21 +62,21 @@ The first two options provide a way to handle **sensitive (personal data)**, and
 
 Typically, a policy engine would integrate with a data catalog like Azure Purview. The Azure Marketplace features third-party vendor solutions, and some vendors work with Azure Synapse and Azure Databricks to encrypt and decrypt information while also providing row-level and column-level security. As at Jan 2022, Azure Purview has launched a public preview for access policies to control access to data stored in Blob and Azure Data Lake Storage (ADLS) Gen2. See [Dataset provisioning by data owner for Azure Storage (preview)](/azure/purview/tutorial-data-owner-policies-storage).
 
-The policy engine should use Azure AD groups to apply policies to data products. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
+The policy engine should use Microsoft Entra groups to apply policies to data products. The expectation for any policy solution providing data privacy is to tokenize **sensitive (personal data)** and to always check through attribute access control so that the user has can detokenize the columns they need to access.
 
 As mentioned, for a policy engine to succeed, it's important for it to integrate into the data catalog and for DevOps to use a REST API to onboard a new dataset. As data application teams create read data sources, they would be registered in the data catalog and help identify **sensitive (personal data)**. The policy engine should import the definition and deny all access to data until the teams have set up its access policies. All of this should be done via a REST API workflow from the IT service management solution.
 
 #### Option 2: Confidential or below and sensitive (personal data) versions
 
-For every data product which is classified as **sensitive (personal data)** two copies are created by it's pipeline. One which is classified as **confidential or below** which has all the **sensitive (personal data)** columns removed and is created under the **confidential or below** folder for the data product. The other copy is created in the **sensitive (personal data)** folder, for the data product, which has all the sensitive data included. Each folder would be assigned an Azure Active Directory reader security group and an Azure Active Directory writer security group. Using [Data Access Management](security-provisioning.md) a user could request access to the data product.
+For every data product which is classified as **sensitive (personal data)** two copies are created by it's pipeline. One which is classified as **confidential or below** which has all the **sensitive (personal data)** columns removed and is created under the **confidential or below** folder for the data product. The other copy is created in the **sensitive (personal data)** folder, for the data product, which has all the sensitive data included. Each folder would be assigned a Microsoft Entra reader security group and a Microsoft Entra writer security group. Using [Data Access Management](security-provisioning.md) a user could request access to the data product.
 
 Whilst this fulfills separating out **sensitive (personal data)** and **confidential or below**, a user granted access via Active Directory passthrough authentication to the **sensitive (personal data)** would be able to query all the rows. If you required row-level security then you would need to use [Option 1: Policy engine (recommended)](#option-1-policy-engine-recommended) or [Option 3: Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools](#option-3-azure-sql-database-sql-managed-instance-or-azure-synapse-analytics-sql-pools).
 
 #### Option 3: Azure SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools
 
-A data application uses SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools to load the data products into a database that supports row-level security, column-level security, and dynamic data masking. The data application teams create different Azure AD groups and assign permissions that support the data's sensitivity.
+A data application uses SQL Database, SQL Managed Instance, or Azure Synapse Analytics SQL pools to load the data products into a database that supports row-level security, column-level security, and dynamic data masking. The data application teams create different Microsoft Entra groups and assign permissions that support the data's sensitivity.
 
-For this scenario's use case, data application teams would need to create the following four Azure AD groups with read-only access:
+For this scenario's use case, data application teams would need to create the following four Microsoft Entra groups with read-only access:
 
 | Group | Permission|
 |--|--|
@@ -141,17 +141,17 @@ where region='EU'
 
 For it to work, you'd enable Azure Databricks [table access control](/azure/databricks/security/access-control/table-acls/object-privileges) in the workspace and apply the following permissions:
 
-- Grant `DA-AMERICA-HRMANAGER-R` and `DA-AMERICA-HRGENERAL-R` Azure AD groups access to the `vhr_us` view.
-- Grant `DA-EUROPE-HRMANAGER-R` and `DA-EUROPE-HRGENERAL-R` Azure AD groups access to the `vhr_eu` view.
+- Grant `DA-AMERICA-HRMANAGER-R` and `DA-AMERICA-HRGENERAL-R` Microsoft Entra groups access to the `vhr_us` view.
+- Grant `DA-EUROPE-HRMANAGER-R` and `DA-EUROPE-HRGENERAL-R` Microsoft Entra groups access to the `vhr_eu` view.
 
-Since columns are encrypted and can't be decrypted in the **confidential or below** workspace, the **confidential or below** workspaces can still use Azure AD Pass-through Authentication and allow users to explore the lake, based upon their permissions.
+Since columns are encrypted and can't be decrypted in the **confidential or below** workspace, the **confidential or below** workspaces can still use Microsoft Entra pass-through authentication and allow users to explore the lake, based upon their permissions.
 
 Where table access is used, teams that require access are added to the Azure Databricks workspace. Azure Databricks would use service principals to map to Azure Data Lake Storage, but the data would be secured with Azure Databricks table access control.
 
-As new data products are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Azure AD groups to those permissions.
+As new data products are deployed, part of the DevOps process would need to run scripts to set up the table permissions in the Azure Databricks workspace and add the correct Microsoft Entra groups to those permissions.
 
 > [!NOTE]
-> Azure Databricks table access control can't be combined Azure AD Pass-through Authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
+> Azure Databricks table access control can't be combined Microsoft Entra pass-through authentication. Therefore, you could use only one Azure Databricks workspace and use table access control instead.
 
 ## Restricted data
 
@@ -164,4 +164,3 @@ The dedicated 'restricted' data management landing zone should connect to catalo
 ## Next steps
 
 - [Data Access Management](security-provisioning.md)
-

@@ -62,7 +62,7 @@ Use the following checklist and application development resources to plan your a
   - [How Kubernetes and configuration management works (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=vRcQOZLnKUk&index=11)
   - [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10)
   - [Use Azure Key Vault with Kubernetes](https://github.com/Azure/secrets-store-csi-driver-provider-azure)
-  - [Use Azure AD workload identity to authenticate and access Azure resources](https://azure.github.io/azure-workload-identity/docs)
+  - [Use Microsoft Entra Workload ID to authenticate and access Azure resources](https://azure.github.io/azure-workload-identity/docs)
 
 ## Deploy to production and apply best practices
 
@@ -129,4 +129,4 @@ Now that the application is in production, use the application deployment checkl
 
   To learn more, see:
   - [Introduction to site reliability engineering (SRE)](/training/modules/intro-to-site-reliability-engineering/)
-  - [DevOps at Microsoft: Game streaming SRE](https://azure.microsoft.com/resources/devops-at-microsoft-game-streaming-sre/)
+  

@@ -72,7 +72,7 @@ Citrix DaaS enables secure access to Windows, Linux, and Web apps, and Windows a
 
 [Creating a business case for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel many common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for all parts that are associated with Azure Virtual Desktop.
 
-The [2021 Forrester study "The total economic impact of Microsoft Azure Virtual Desktop"](https://gearup.microsoft.com/download/b10aa03a-3e4e-4245-b97a-fbc88e3b2225) offers an analysis in which the following justifications are typically defendable:
+The 2021 Forrester study "The total economic impact of Microsoft Azure Virtual Desktop" offers an analysis in which the following justifications are typically defendable:
 
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
@@ -89,7 +89,7 @@ In the approach outlined in this article series, the existing Citrix, VMware, or
 
 ![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Azure AD Domain Services, or Azure AD), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
+When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Microsoft Entra Domain Services, or Microsoft Entra ID), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
 
 ## How to measure progress on adopting Azure Virtual Desktop
 
