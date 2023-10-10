@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 08/25/2023
 ms.topic: conceptual
-ms.custom: think-tank, seo-caf-innovate, devx-track-python
+ms.custom: seo-caf-innovate, devx-track-python
 keywords: what is machine learning, azure machine learning, machine learning tools, mlops, automated machine learning
 ---
 
@@ -77,7 +77,7 @@ To start using Azure Machine Learning, see [Next steps](/azure/machine-learning/
 
 ## Automated machine learning
 
-Data scientists spend an inordinate amount of time iterating over models during experimentation. Trying out different algorithms and hyperparameter combinations until an acceptable model is built is extremely taxing for data scientists due to the work's monotonous and non-challenging nature. While this exercise yields massive gains in model efficacy, it sometimes costs too much in terms of time and resources and thus may have a negative return on investment (ROI).
+Data scientists spend an inordinate amount of time iterating over models during experimentation. Trying out different algorithms and hyperparameter combinations until an acceptable model is built is extremely taxing for data scientists due to the work's monotonous and non-challenging nature. While this exercise yields massive gains in model efficacy, it sometimes costs too much in terms of time and resources and thus might have a negative return on investment (ROI).
 
 This is where automated machine learning (AutoML) comes in. It uses the concepts from the research paper on probabilistic matrix factorization. It implements an automated pipeline of trying out intelligently selected algorithms and hypermeter settings based on the heuristics of the data presented, considering the given problem or scenario. The result of this pipeline is a set of models best suited for the given problem and dataset.
 

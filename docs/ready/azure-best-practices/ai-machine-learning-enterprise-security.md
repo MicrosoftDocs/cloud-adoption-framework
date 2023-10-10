@@ -20,11 +20,11 @@ The managed virtual network has two modes that it can be configured for:
 
 * **Allow internet outbound** - This mode allows outbound communication with resources located on the internet, such as the public PyPi or Anaconda package repositories.
 
-    :::image type="content" source="./media/azure-ml-recommended-managed-internet-outbound.svg" alt-text="A diagram of the recommended architecture with the internet outbound mode.":::
+    :::image type="content" source="./media/azure-machine-learning-recommended-managed-internet-outbound.svg" alt-text="A diagram of the recommended architecture with the internet outbound mode.":::
 
 * **Allow only approved outbound** - This mode allows only the minimum outbound communication required for the workspace to function. This mode is recommended for workspaces that must be isolated from the internet. Or where outbound access is only allowed to specific resources via service endpoints, service tags, or fully qualified domain names.
 
-  :::image type="content" source="./media/azure-ml-recommended-managed-allowed-outbound.svg" alt-text="A diagram of the recommended architecture with the only allowed outbound mode.":::
+  :::image type="content" source="./media/azure-machine-learning-recommended-managed-allowed-outbound.svg" alt-text="A diagram of the recommended architecture with the only allowed outbound mode.":::
 
 For more information, see [Managed virtual network isolation](/azure/machine-learning/how-to-managed-network).
 
@@ -67,7 +67,7 @@ When designing an Azure Virtual Network, subnets, and private endpoints, conside
 
 - Machine learning workspace default storage needs two private endpoints, one for Azure Blob Storage and another for Azure File Storage.
 
-- If you use Azure Machine Learning Studio, the workspace and storage private endpoints should be in the same virtual network.
+- If you use Azure Machine Learning studio, the workspace and storage private endpoints should be in the same virtual network.
 
 - If you have multiple workspaces, use a virtual network for each workspace to create an explicit network boundary between workspaces.
 
