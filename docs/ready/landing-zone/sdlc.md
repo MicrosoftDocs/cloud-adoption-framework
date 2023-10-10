@@ -48,7 +48,7 @@ So, if you have 30 different workloads that each require a management group and 
 > N = number of workloads/apps = 30
 >
 > Z = number of management groups for workload and environments (1 per workload + 3 for envs) = 4
-
+>
 > N (30) x Z (4) = 120 total management groups
 
 #### Example of a suboptimal management group hierarchy
@@ -81,3 +81,13 @@ _Some management groups have been removed for illustration clarity purposes._
 
 ...
 
+## Other stuff to include
+
+Create a top-level sandbox management group so that users can immediately experiment with Azure. They can then experiment with resources that might not yet be allowed in production environments. The sandbox provides isolation from your development, test, and production environments.
+
+Don't create management groups for production, testing, and development environments. If necessary, separate these groups into different subscriptions in the same management group. To review further guidance on this topic, see:
+
+How do we handle "dev/test/production" workload landing zones in enterprise-scale architecture? - FAQ
+Testing approach for enterprise-scale
+
+Make links to [This page](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#next-steps) and alter
