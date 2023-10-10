@@ -26,7 +26,7 @@ However, any number and classification of environments can be used in practice.
 ## Environments, Subscriptions, and Management Groups
 
 > [!NOTE]
-> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](./testing-approach.md).
+> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../enterprise-scale/testing-approach.md).
 
 It is not necessary to create a high degree of Azure management isolation for different software development
 If an application or service workload requires segregation of "dev/test/production" landing zones, use a separate subscription for each landing zone in the workload. It's important to work with the application or service workload owners to determine if separate subscriptions is the best way for them to build, manage, operate, and deliver their workload. It shouldn't be mandatory for all workloads.
