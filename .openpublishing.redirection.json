@@ -825,6 +825,10 @@
          "redirect_url": "/azure/dms/dms-overview",
          "redirect_document_id": false
       },
-      
+      {
+         "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
+         "redirect_document_id": false
+      }
    ]
 }
