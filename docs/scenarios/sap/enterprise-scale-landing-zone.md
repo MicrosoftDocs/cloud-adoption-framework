@@ -1,7 +1,7 @@
 ---
 title: SAP on Azure landing zone accelerator
 description: Use the SAP on Azure landing zone accelerator to deploy SAP systems on Azure. See a reference implementation for SAP workload landing zones.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 01/10/2023
