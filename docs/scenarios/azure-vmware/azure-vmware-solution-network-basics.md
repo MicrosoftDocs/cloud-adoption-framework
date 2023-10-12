@@ -1,6 +1,6 @@
 ---
 title: 'Azure VMware Solution network design guide: Networking basics'
-description: Learn the fundamental concepts of Azure VMware Solution networking. Understanding these concepts is a prerequisite for using this guide. 
+description: Learn the fundamental concepts of Azure VMware Solution networking. Understanding these concepts is a prerequisite for using this guide.
 author: fguerri
 ms.author: fguerri
 ms.date: 09/20/2023
@@ -92,4 +92,3 @@ Learn about connectivity between Azure VMware Solution and on-premises sites.
 
 > [!div class="nextstepaction"]
 > [Connectivity with on-premises sites](./on-premises-connectivity.md)
-

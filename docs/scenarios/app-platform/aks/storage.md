@@ -121,7 +121,7 @@ Consider the amount of unstructured data that your application needs to store. A
 
 - **Performance tier**. Consider which performance tier of blob storage your application requires. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
-- **Authentication method for access**. Consider which authentication method that your application should use for access to blob storage: storage key, SAS, or Azure Active Directory (Azure AD). For more information, see [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access).
+- **Authentication method for access**. Consider which authentication method that your application should use for access to blob storage: storage key, SAS, or Microsoft Entra ID. For more information, see [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access).
 
 - **API to abstract blob storage**. Consider which API to use. Typically, applications that access blob storage use the API in the application through one of the SDKs, which abstracts the interaction with blob storage from the Kubernetes cluster. For more information about libraries for various programming languages, see [Introduction to Azure Blob storage](/azure/storage/blobs/storage-blobs-introduction).
 
@@ -198,7 +198,7 @@ For blob storage, we recommend the following design options:
 
   - **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
-  - **Use Azure AD for access**. We recommend using Azure AD for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Azure Active Directory](/azure/storage/blobs/authorize-access-azure-active-directory).
+  - **Use Microsoft Entra ID for access**. We recommend using Microsoft Entra ID for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Microsoft Entra ID](/azure/storage/blobs/authorize-access-azure-active-directory).
 
   - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 

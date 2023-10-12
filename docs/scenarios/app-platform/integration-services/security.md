@@ -29,7 +29,7 @@ Good security is the cornerstone of any Azure application. Azure Integration Ser
 
 When designing your security model, there are two different design areas: **design-time security**, and **run-time security**.
 
-- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or a management API. Within Azure, we use Azure AD and role-based access control (RBAC) to achieve this.
+- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or a management API. Within Azure, we use Microsoft Entra ID and role-based access control (RBAC) to achieve this.
 
 - **Run-Time security** involves access to endpoints and resources during the flow of an application - for example, authenticating and authorizing a user that calls a Logic App, or an API operation in API Management.
 
@@ -47,7 +47,7 @@ General security considerations include:
 
 - Using Azure services to protect ingress and egress traffic.
 
-- Using Azure AD and OAuth 2.0 to manage authentication.
+- Using Microsoft Entra ID and OAuth 2.0 to manage authentication.
 
 - Enforcing governance policies with Azure Policy.
 
@@ -99,13 +99,13 @@ General security considerations include:
 
 ### Authentication and access design recommendations
 
-- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom Azure AD role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom Microsoft Entra role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
 
 - Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
 - Use **OAuth 2.0** as the authentication mechanism between resource endpoints:
 
-  - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually Azure Active Directory, but could be any Identity provider).
+  - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually Microsoft Entra ID, but could be any Identity provider).
   
   - In API Management, use the jwt-validation policy element to require an OAuth flow for connections to endpoints.
   

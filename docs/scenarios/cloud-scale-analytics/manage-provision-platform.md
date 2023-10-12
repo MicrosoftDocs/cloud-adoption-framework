@@ -58,7 +58,7 @@ There are no Git APIs available to clone/update/commit/push in the proposed auto
 - Set up a data landing zone
 - Fork the main repository to a data platform Git repository
 - Set up the subnet configurations for the data landing zone
-- Set up Azure Active Directory
+- Set up Microsoft Entra ID
 
 The runbooks use Git functions from the [`GitAutomation`](https://github.com/webmd-health-services/GitAutomation) PowerShell module for working with Git repositories. By installing this module inside an Azure Automation account, users can do create, clone, query, push, pull, and commit operations in Git repositories. The following image shows the `GitAutomation` module installed inside an Azure Automation account:
 
