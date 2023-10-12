@@ -20,7 +20,7 @@ As you evaluate an Azure VMware Solution, consider these best practices:
 
 **Resource organization plan:** For the landing zone, include references to the subscriptions to use, guidance on resource group usage, and the tagging and naming standards to use when the team deploys resources.
 
-**Azure Active Directory and Active Directory:** Use the Active Directory Sites and Services tool to direct Azure and Azure VMware Solution Active Directory Domain Services traffic to the appropriate domain controllers.
+**Microsoft Entra ID and Active Directory:** Use the Active Directory Sites and Services tool to direct Azure and Azure VMware Solution Active Directory Domain Services traffic to the appropriate domain controllers.
 
 As part of the identity and access management enterprise-scale landing zone, an Active Directory Domain Services domain controller is deployed in the identity subscription.
 

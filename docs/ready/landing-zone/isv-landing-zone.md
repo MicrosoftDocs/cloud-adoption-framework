@@ -77,7 +77,7 @@ ISVs building customer-deployed solutions should consider the following question
 
 * Should a customer deploy our solution into its own dedicated subscription or into an existing subscription that contains related workloads?
 * How should customers establish network connectivity between existing workloads (inside and outside of Azure) and our solution?
-* Does our solution support authentication mechanisms from Azure Active Directory (Azure AD) or require other protocols like LDAP or Kerberos?
+* Does our solution support authentication mechanisms from Microsoft Entra ID or require other protocols like LDAP or Kerberos?
 * How do we reduce or eliminate Azure Policy violations, like those caused by conflicts between our solution templates and a customer's Azure policies?
 
 Customer Azure policies that can cause Azure Policy violations include examples like "All subnets must have a network security group" and "No public IP addresses can be attached to network interfaces in the Corp landing zone". Keep the potential for these conflict-causing policies in mind as you plan your deployment.
@@ -111,27 +111,29 @@ As an ISV, you might decide to implement your own landing zone environments. You
 
 If you do implement your own landing zone environments, we recommend that you use Azure landing zone guidance and sample implementations for reference, and align your approach with proven Azure landing zone designs.
 
-## Azure AD tenants
+<a name='azure-ad-tenants'></a>
 
-Each Azure landing zone and its management group hierarchy is rooted in a single Azure Active Directory (Azure AD) tenant. This means that the first decision you need to make is which Azure AD tenant to use as the source of identities for managing your Azure resources. Identities in the Azure AD include users, groups, and service principals.
+## Microsoft Entra tenants
+
+Each Azure landing zone and its management group hierarchy is rooted in a single Microsoft Entra tenant. This means that the first decision you need to make is which Microsoft Entra tenant to use as the source of identities for managing your Azure resources. Identities in the Microsoft Entra ID include users, groups, and service principals.
 
 > [!TIP]
-> The Azure AD tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Azure AD B2C regardless of which tenant you choose.
+> The Microsoft Entra tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Azure AD B2C regardless of which tenant you choose.
 
-The [guidance for Azure landing zones and Azure AD tenants](./design-area/azure-ad-define.md) strongly recommends using a single Azure AD tenant, and this is the correct approach for most situations. However, as a SaaS ISV, you might have reason to use two tenants.
+The [guidance for Azure landing zones and Microsoft Entra tenants](./design-area/azure-ad-define.md) strongly recommends using a single Microsoft Entra tenant, and this is the correct approach for most situations. However, as a SaaS ISV, you might have reason to use two tenants.
 
-For some SaaS ISVs, one team manages corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons or to comply with regulatory requirements. Perhaps your corporate IT team isn't allowed to manage any SaaS-related subscriptions and resources, so they can't be administrators of the Azure AD tenant. If this scenario applies to you, consider using two separate Azure AD tenants: one tenant for corporate IT resources like Office 365, and one tenant for Azure resources that comprise your SaaS solution.
+For some SaaS ISVs, one team manages corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons or to comply with regulatory requirements. Perhaps your corporate IT team isn't allowed to manage any SaaS-related subscriptions and resources, so they can't be administrators of the Microsoft Entra tenant. If this scenario applies to you, consider using two separate Microsoft Entra tenants: one tenant for corporate IT resources like Office 365, and one tenant for Azure resources that comprise your SaaS solution.
 
-Each Azure AD tenant must have its own domain name. If your organization uses two tenants, you might choose a name like `contoso.com` for your corporate Azure AD tenant and `contoso-saas-ops.com` for your SaaS Azure AD tenant, as shown in the following diagram.
+Each Microsoft Entra tenant must have its own domain name. If your organization uses two tenants, you might choose a name like `contoso.com` for your corporate Microsoft Entra tenant and `contoso-saas-ops.com` for your SaaS Microsoft Entra tenant, as shown in the following diagram.
 
-![Diagram that shows Azure AD tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-azure-ad-tenant.png)
+![Diagram that shows Microsoft Entra tenant options for ISVs with a single corporate tenant or separation between corporate and SaaS Ops tenants.](./media/isv-landing-zone/isv-azure-ad-tenant.png)
 
 > [!WARNING]
-> When you use multiple Azure AD tenants, your management overhead increases. If you use Azure AD Premium features like Privileged Identity Management, you have to purchase individual licenses for each Azure AD tenant. It's best to only use multiple Azure AD tenants if your situation truly requires it.
+> When you use multiple Microsoft Entra tenants, your management overhead increases. If you use Microsoft Entra ID P1 or P2 features like Privileged Identity Management, you have to purchase individual licenses for each Microsoft Entra tenant. It's best to only use multiple Microsoft Entra tenants if your situation truly requires it.
 
-Avoid using separate Azure AD tenants for pre-production and production environments. Rather than creating two tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each, you should create one Azure AD tenant. You can use management groups and Azure RBAC to govern the access to subscriptions and resources under this single tenant.
+Avoid using separate Microsoft Entra tenants for pre-production and production environments. Rather than creating two tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each, you should create one Microsoft Entra tenant. You can use management groups and Azure RBAC to govern the access to subscriptions and resources under this single tenant.
 
-For more information on the using multiple Azure AD tenants, see [Azure landing zones and multiple Azure Active Directory tenants](../landing-zone/design-area/multi-tenant/overview.md) and [securing Azure environments with Azure Active Directory whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
+For more information on the using multiple Microsoft Entra tenants, see [Azure landing zones and multiple Microsoft Entra tenants](../landing-zone/design-area/multi-tenant/overview.md) and [securing Azure environments with Microsoft Entra whitepaper](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/).
 
 ## Management groups
 
@@ -143,7 +145,7 @@ Your management group hierarchy is nested under the Azure-created **Tenant root 
 
 A standard organization that has a centralized corporate IT team managing their platform and shared services (like logging, networking, identity, and security) usually creates one top-level management group under the Azure-created **Tenant root group** and deploys the rest of their management groups below it. This top-level management group is usually named after the organization itself (such as *Contoso*).
 
-As a SaaS ISV, you might have one SaaS product or you might have a few separate SaaS products or lines of business. While you should generally use the same Azure AD tenant to manage Azure resources across all of your products (as discussed in the [Azure AD tenants](#azure-ad-tenants) section), in some scenarios you might choose to deploy multiple management group hierarchies.
+As a SaaS ISV, you might have one SaaS product or you might have a few separate SaaS products or lines of business. While you should generally use the same Microsoft Entra tenant to manage Azure resources across all of your products (as discussed in the [Microsoft Entra tenants](#azure-ad-tenants) section), in some scenarios you might choose to deploy multiple management group hierarchies.
 
 Consider how independent your products are from each other, and ask yourself:
 

@@ -82,7 +82,7 @@ items:
     - name: Configure device redirections
       href: /azure/virtual-desktop/configure-device-redirections
     - name: Scale session hosts
-      href: /azure/virtual-desktop/set-up-scaling-script
+      href: /azure/virtual-desktop/autoscale-scenarios
 
   - name: Microsoft products
     items:

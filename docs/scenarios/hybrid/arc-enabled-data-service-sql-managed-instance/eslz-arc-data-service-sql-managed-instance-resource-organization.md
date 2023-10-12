@@ -24,7 +24,7 @@ In addition, to assess the effects of Azure Arc-enabled SQL Managed Instance on 
 
 In the Directly connected mode, the Kubernetes cluster where the Azure Arc-enabled data services are deployed must be an Azure Arc-enabled Kubernetes resource. This connects your Kubernetes cluster to Azure, so that you can deploy and manage Azure Arc-enabled data services directly from the Azure portal. Because the Kubernetes cluster is a resource to Azure Resource Manager when it's Arc-enabled, you should review the best practices in [Resource organization for Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md).
 
-Mapping is the key to determining how you can interact with these resources when applying role-based access control (RBAC) and assigning [Azure Policy](/azure/governance/policy/overview) as part of your governance model. For more information, see [Best practices for Azure AD roles](/azure/active-directory/roles/best-practices).
+Mapping is the key to determining how you can interact with these resources when applying role-based access control (RBAC) and assigning [Azure Policy](/azure/governance/policy/overview) as part of your governance model. For more information, see [Best practices for Microsoft Entra roles](/azure/active-directory/roles/best-practices).
 
 When designing this structure, keep in mind the service limits of Azure Resource Manager, because they might apply to Azure Arc-enabled SQL Managed Instance. While designing your structure, it's important to be aware of the limits for resource groups and subscriptions. For more information about limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 

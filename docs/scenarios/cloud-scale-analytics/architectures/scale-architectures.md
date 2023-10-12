@@ -88,7 +88,7 @@ Many organizations want efficient scaling of their enterprise data platform. Bus
 
 Data landing zones don't create data silos within your organization. The recommended network setup for cloud-scale analytics enables secure and in-place data sharing across landing zones, which in turn enables innovation across data domains and business units. To learn more, see [Network architecture considerations](../eslz-network-considerations-single-region.md).
 
-The same is true for the identity layer. When you use a single Azure AD tenant, you can grant identities access to data assets in multiple data landing zones. To learn more about the user and identity authorization process, see [Data access management](../../data-management/security-provisioning.md).
+The same is true for the identity layer. When you use a single Microsoft Entra tenant, you can grant identities access to data assets in multiple data landing zones. To learn more about the user and identity authorization process, see [Data access management](../../data-management/security-provisioning.md).
 
 > [!NOTE]
 > If you have multiple data landing zones, each zone can connect to data that's hosted in other zones. This allows groups to collaborate across your business.

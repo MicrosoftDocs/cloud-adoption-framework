@@ -1,5 +1,5 @@
 ---
-title: Azure governance for manufacturing HPC 
+title: Azure governance for manufacturing HPC
 description: Learn about governance for HPC workloads.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -36,4 +36,3 @@ The following articles provide guidance that you might find helpful at various p
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-
