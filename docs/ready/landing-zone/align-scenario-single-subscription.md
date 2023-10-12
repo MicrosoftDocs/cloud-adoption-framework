@@ -34,7 +34,7 @@ In this scenario, the current state of the customer's Azure environment consists
 - A single virtual network.
   - No hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
   - A new subnet is created for each application.
-- Multiple self-contained applications in each of the `app-xx-rg` resource groups.
+- Multiple self-contained applications in each of the *app-xx-rg* resource groups.
   - Controlled and operated by different application or service teams.
 
 The following diagram shows the current state of this sample scenario:
@@ -51,7 +51,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
    This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
-3. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscription into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as corporate or online.
+3. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscription into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as corporate or online.
 
    For details about the effect on resources when migrating, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy). Eventually, you can cancel the existing Azure subscription and place it in the decommissioned management group.
 
@@ -64,8 +64,8 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-align-single-sub-transition-state.svg" alt-text="Diagram that shows a single subscription environment in a transition state." lightbox="./media/alz-align-single-sub-transition-state.svg":::
+:::image type="content" source="./media/align-single.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-single.svg":::
 
 ## Summary
 
-In this scenario, the customer helped themselves achieve their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
+In this scenario, the customer accomplished their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.

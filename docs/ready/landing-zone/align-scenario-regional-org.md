@@ -11,9 +11,9 @@ ms.service: caf
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Scenario: Regional organization with management group separation of Dev/Test/Prod to the Azure landing zone conceptual architecture
+# Scenario: Transition a regional organization to the Azure landing zone conceptual architecture
 
-This article describes steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. This scenario covers a regional organization with management group that are separated into development, testing, and production (dev/test/prod) environments.
+This article describes steps and considerations about how to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. This scenario covers a regional organization with management groups that are separated into development, testing, and production (dev/test/prod) environments.
 
 In this scenario, the customer has a large footprint on Azure. They have a management group hierarchy that's organized by dev/test/prod environments and then by region. Their current implementation limits their scalability and growth. They have applications deployed across the globe. A central IT team manages each region (America, EMEA, APAC).
 
@@ -46,28 +46,28 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 1. Review [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
 
-2. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
+1. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
    This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
-3. Review ["dev/test/production" workload landing zones guidance](./../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) to understand how to handle "dev/test/production" workload landing zones.
+   For information about handling "dev/test/production" workload landing zones, see ["dev/test/production" workload landing zones guidance](./../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 
-4. Review [Azure Landing zone sandbox environments guidance](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments) to understand how to use the sandbox management group hierarchy to empower developers to test and experiment without affecting other environments.
+   For information about using sandbox management group hierarchy to empower developers to test and experiment without affecting other environments, see [Azure Landing zone sandbox environments guidance](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments).
 
-5. Review the [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md) to understand how to minimize disruption to applications and services during the migration.
+   For information about minimizing disruption to applications and services during the migration, see [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md).
 
-6. (Optional) Work with application or service teams to migrate the workloads deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as *corporate* or *online*.
+1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as *corporate* or *online*.
 
    For details about the effect on resources when migrating, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy). Eventually, you can cancel the existing Azure subscription and place it in the decommissioned management group.
 
    > [!NOTE]
    > You don't necessarily have to migrate the existing applications or services into new landing zones, or Azure subscriptions.
 
-7. Create new Azure subscriptions to provide landing zones that can support new applications and workloads. Place them under the proper management group, such as *corporate* or *online*.
+1. Create new Azure subscriptions to provide landing zones that can support new applications and workloads. Place them under the proper management group, such as *corporate* or *online*.
 
-8. Review [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
+   For more information, see [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 
-The following diagram shows the state during the migration approach of this sample scenario:
+The following diagram shows the state during the migration approach of this scenario:
 
 :::image type="content" source="./media/align-regional.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-regional.svg":::
 
