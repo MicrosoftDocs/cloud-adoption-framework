@@ -65,7 +65,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-align-multiple-mgs-transition.svg" alt-text="Diagram that shows a single subscription environment in a transition state." lightbox="./media/alz-align-multiple-mgs-transition.svg":::
+:::image type="content" source="./media/alz-align-multiple-mgs-transitions.svg" alt-text="Diagram that shows a single subscription environment in a transition state." lightbox="./media/alz-align-multiple-mgs-transitions.svg":::
 
 ## Summary
 
