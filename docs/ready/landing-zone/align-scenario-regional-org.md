@@ -25,16 +25,16 @@ In this scenario, the current state of the customer's Azure environment consists
 
 - Multiple management groups.
 - A management group hierarchy based on dev/test/prod environments at the first level and then based on geography at the second level.
-- An Azure subscription for each geography and application environment, such as dev/test/prod. This is required to provide developers with a relaxed environment for testing and innovation.
-- The customer faces some governance challenges with the current hierarchy as some critical workloads need to have the same governance model across Dev, Test and Prod.
-- Non-uniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
-- Applications are deployed into the respective subscriptions as per their region and environment classification (Dev/Test/Prod).
-- Policy assignments (audit and deny effects) are assigned at management group and subscription level.
-- All applications in the same region and in the same environment type, have the same set of Azure Policies applied.
-- RBAC role assignments per subscription and resource groups.
-- A hub virtual network for hybrid connectivity (VPN/ExpressRoute).
-- A virtual network per application environment.
-- Each region has a central IT team that controls and operates the respective Management Group. The team faces some consistency, configuration and compliance challenges when it comes to policies, access control, platform resources configuration and security compliance, as some applications are deployed into multiple regions
+- An Azure subscription for each geography and application environment, such as dev/test/prod. This subscription is required to provide developers with a relaxed environment for testing and innovation.
+- Some critical workloads that need the same governance model across development, testing, and production, which can create governance challenges for the customer.
+- Nonuniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
+- Applications that are deployed into the respective subscriptions based on their region and environment classification, like dev/test/prod.
+- Policy assignments, such as audit effects and deny effects, that are assigned at the management group and subscription level.
+- The same set of Azure policies applied to all applications in the same region and in the same environment type.
+- Role-based access control role assignments for each subscription and resource group.
+- A hub virtual network, such as Azure VPN Gateway or Azure ExpressRoute, for hybrid connectivity.
+- A virtual network for each application environment.
+- A central IT team that controls and operates the respective management group for each region. The team faces some consistency, configuration, and compliance challenges when it comes to policies, access control, platform resources configuration, and security compliance because some applications are deployed into multiple regions.
 
 The following diagram shows the current state of this sample scenario:
 
@@ -42,7 +42,7 @@ The following diagram shows the current state of this sample scenario:
 
 ## Transition to the Azure landing zone conceptual architecture
 
-To transition from this scenario's current state to an Azure landing zone conceptual architecture, we suggest this approach:
+To transition from this scenario's current state to an Azure landing zone conceptual architecture, use this approach:
 
 1. Review [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
 
@@ -56,14 +56,14 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 5. Review the [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md) to understand how to minimize disruption to applications and services during the migration.
 
-6. (Optional) Work with application or service teams to migrate the workloads deployed in the original subscriptions into new Azure subscriptions, per the guidance in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). They can be placed into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group – corporate or online.
+6. (Optional) Work with application or service teams to migrate the workloads deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#moving-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as *corporate* or *online*.
 
-   Review the policy section in [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy) for details about the effect on resources when migrating. Eventually, the existing Azure subscription can be canceled and placed in the decommissioned management group.
+   For details about the effect on resources when migrating, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#policy). Eventually, you can cancel the existing Azure subscription and place it in the decommissioned management group.
 
    > [!NOTE]
    > You don't necessarily have to migrate the existing applications or services into new landing zones, or Azure subscriptions.
 
-7. Create new Azure subscriptions to provide landing zones that can support new applications/workloads. Place them under the proper management group (corporate or online).
+7. Create new Azure subscriptions to provide landing zones that can support new applications and workloads. Place them under the proper management group, such as *corporate* or *online*.
 
 8. Review [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 
@@ -73,4 +73,4 @@ The following diagram shows the state during the migration approach of this samp
 
 ## Summary
 
-In this scenario, the customer has established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
+In this scenario, the customer established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.

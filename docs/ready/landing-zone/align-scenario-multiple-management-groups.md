@@ -17,7 +17,7 @@ The following guide provides steps and considerations about migrating and transi
 
 In this scenario, it's assumed that the customer already uses Azure. They have a management group hierarchy with multiple subscriptions that host a few applications or services within the platform. But their current implementation limits their scalability and growth related to their *cloud first* strategy.
 
-As part of this expansion, they plan to migrate away from their on-premises datacenters and migrate into Azure. During the migration, they lead with modernizing and transforming their applications or services to use cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). They know that it takes considerable time and effort, so they plan to *lift and shift* to start. Initially, this plan requires hybrid connectivity, such as Azure VPN Gateway or Azure ExpressRoute.
+As part of this expansion, they plan to migrate away from their on-premises datacenters and into Azure. During the migration, they lead with modernizing and transforming their applications or services to use cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). They know that it takes considerable time and effort, so they plan to *lift and shift* to start. Initially, this plan requires hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
 
 The customer wants to move their existing environment to the Azure landing zones conceptual architecture. This architecture supports their *cloud first* strategy and has a robust platform that scales as the customer retires their on-premises datacenters.
 
@@ -31,7 +31,7 @@ In this scenario, the current state of the customer's Azure environment consists
 - Nonuniform resource distribution. Platform and workload resources for a single environment are deployed in the same Azure subscriptions.
 - Policy assignments with audit and deny effects that are assigned at the management group and subscription level.
 - Role-based access control (RBAC) role assignments for each subscription and resource group.
-- A hub virtual network for hybrid connectivity, such as VPN Gateway or ExpressRoute.
+- A hub virtual network, such as VPN Gateway or ExpressRoute, for hybrid connectivity.
 - A virtual network for each application environment.
 - Applications that are deployed into the respective subscription based on their environment classification, such as development, testing, or production.
 - Central control and operation by a central IT team.
@@ -69,4 +69,4 @@ The following diagram shows the state during the migration approach of this samp
 
 ## Summary
 
-In this scenario, the customer has helped themselves achieve their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) parallel to their existing environment.
+In this scenario, the customer helped themselves achieve their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) parallel to their existing environment.
