@@ -1,5 +1,5 @@
 ---
-title: Transition existing Azure environments to the Azure landing zone conceptual architecture
+title: Transition an existing Azure environment to the Azure landing zone conceptual architecture
 description: Learn how to onboard existing environments and move resources to the Azure landing zone conceptual architecture.
 author: JefferyMitchell
 ms.author: martinek
@@ -12,7 +12,7 @@ ms.custom: think-tank, csu
 
 # Transition an existing Azure environment to the Azure landing zone conceptual architecture
 
-Most organizations might have an existing Azure footprint, one or more subscriptions, and potentially an existing management group structure. Depending on their business requirements and scenarios, they might have Azure resources deployed, such as hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
+Many organizations have an existing Azure footprint, one or more subscriptions, and potentially an existing management group structure. Depending on their business requirements and scenarios, they might have Azure resources deployed, such as hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
 
 This article provides recommendations to help your organization navigate changes based on your existing Azure environment that's transitioning into the Azure landing zone conceptual architecture. This article also describes considerations for moving resources in Azure, for example moving a subscription from one existing management group to another management group. Consider these recommendations to help you evaluate and plan the transition of your existing Azure environment.
 
@@ -85,7 +85,7 @@ The following scenarios describe how to migrate and transition an existing envir
   - [Transition a regional organization to the Azure landing zone conceptual architecture](./../landing-zone/align-scenario-regional-org.md)
 
 - **Alignment approaches**
-  - [Migrate an environment by duplicating a landing zone management group](./../landing-zone/align-approach-duplicate-brownfield-audit-only.md)
+  - [Transition an environment by duplicating a landing zone management group](./../landing-zone/align-approach-duplicate-brownfield-audit-only.md)
 
 > [!div class="nextstepaction"]
 > [Journey toward the target architecture](./../landing-zone/landing-zone-journey.md)
