@@ -38,7 +38,7 @@ In this scenario, the current state of the customer's Azure environment consists
 
 The following diagram shows the current state of this sample scenario:
 
-![Diagram that shows a single subscription environment.](./media/alz-align-scenario-multiple-mgs.png)
+![Diagram that shows a single subscription environment.](./media/align-scenario-multiple.png)
 
 ## Transition to the Azure landing zone conceptual architecture
 
@@ -65,7 +65,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/align-multiple-management.svg" alt-text="Diagram that shows a single subscription environment in a transition state." lightbox="./media/align-multiple-management.svg":::
+:::image type="content" source="./media/align-multiple-management.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-multiple-management.svg":::
 
 ## Summary
 

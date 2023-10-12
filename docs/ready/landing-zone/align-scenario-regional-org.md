@@ -38,7 +38,7 @@ In this scenario, the current state of the customer's Azure environment consists
 
 The following diagram shows the current state of this sample scenario:
 
-![Diagram that shows the regional organization environment.](./media/alz-align-scenario-regional-org.png)
+![Diagram that shows the regional organization environment.](./media/align-scenario-regional.png)
 
 ## Transition to the Azure landing zone conceptual architecture
 
@@ -69,7 +69,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
 The following diagram shows the state during the migration approach of this sample scenario:
 
-:::image type="content" source="./media/alz-align-regional-org-transition.svg" alt-text="Diagram that shows a single subscription environment in a transition state." lightbox="./media/alz-align-regional-org-transition.svg":::
+:::image type="content" source="./media/align-regional.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-regional.svg":::
 
 ## Summary
 
