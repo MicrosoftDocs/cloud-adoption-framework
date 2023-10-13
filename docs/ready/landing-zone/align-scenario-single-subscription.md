@@ -1,5 +1,5 @@
 ---
-title: Transition a single subscription with no management groups to the Azure landing zone conceptual architecture
+title: Scenario- Transition a single subscription with no management groups to the Azure landing zone conceptual architecture
 description: Learn how to transition existing Azure environments with a single subscription with no management groups into the Azure landing zone conceptual architecture.
 author: jtracey93
 ms.author: jatracey

@@ -1,5 +1,5 @@
 ---
-title: Scenario- Regional organization with Management Group separation of Dev/Test/Prod to the Azure landing zone conceptual architecture
+title: Scenario- Transition a regional organization environment to the Azure landing zone conceptual architecture
 description: Learn how to transition existing regional Azure environments comprised of multiple management groups into the Azure landing zone conceptual architecture.
 author: sebassem
 ms.author: sebassem
