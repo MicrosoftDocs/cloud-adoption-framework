@@ -1,5 +1,5 @@
 ---
-title: 'Azure VMs to run large-scale HPC application workloads for the Finance industry'
+title: Large-scale finance HPC application workloads on Azure VMs
 description: The text describes big compute workloads and how Azure offers optimized VM instances for both CPU- and GPU-intensive workloads, including InfiniBand-enabled hardware for improved performance. It's important to select the appropriate VM size for finance workloads.
 author: bsantacruz
 ms.author: bsantacruz
@@ -10,19 +10,19 @@ ms.custom: think-tank
 ms.date: 09/27/2023
 ---
 
-# Azure VMs to run large-scale HPC application workloads for the Finance industry
+# Run large-scale HPC application workloads for the finance industry on Azure VMs
 
-These workloads, also known as big compute, require many cores and can include tasks such as financial risk modeling and engineering stress analysis.
+High-performance computing (HPC) workloads, also known as big compute applications, require many cores. These workloads can include tasks such as financial risk modeling and engineering stress analysis.
 
 Big compute applications typically have the following characteristics:
 
 - The workload can be divided into discrete tasks that can be run simultaneously across many cores.
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
-- The application doesn't need to run 24/7, but it must be able to handle node failures or crashes.
-- Tasks could be independent or tightly coupled, requiring high-speed networking technologies like InfiniBand and RDMA.
-- Compute-intensive VM sizes such as H16r, H16mr, and A9 could be used depending on the workload.
+- The application doesn't need to run constantly, but it must be able to handle node failures or crashes.
+- Tasks can be independent or tightly coupled, requiring high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
+- Compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9 can be used depending on the workload.
 
-Azure offers a range of VM instances optimized for CPU and GPU-intensive workloads that can run into Virtual Machine Scale Sets to provide resiliency and load balance. It's also the only cloud platform that offers InfiniBand-enabled hardware, providing a significant performance advantage for running tasks such as financial risk modeling and engineering stress analysis. This improved performance results in near or better performance than current on-premises infrastructures.
+Azure offers a range of VM instances that are optimized for CPU-intensive and GPU-intensive workloads. These VMs can run into Virtual Machine Scale Sets to provide resiliency and load balance. It's also the only cloud platform that offers InfiniBand-enabled hardware, providing a significant performance advantage for running tasks such as financial risk modeling and engineering stress analysis. This improved performance results in near or better performance than current on-premises infrastructures.
 
 Azure VMs offer various options, known as VM sizes, for HPC and GPU-optimized computing. It's important to select the appropriate VM size for your workload, and you can use the [Sizes for VMs in Azure selector tool](/azure/virtual-machines/sizes) to help you choose.
 Keep in mind that not all Azure products are available in all regions.
