@@ -12,20 +12,20 @@ ms.custom: think-tank, csu
 
 # Transition an existing Azure environment to the Azure landing zone conceptual architecture
 
-Many organizations have an existing Azure footprint, one or more subscriptions, and potentially an existing management group structure. Depending on their business requirements and scenarios, they might have Azure resources deployed, such as hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
+Many organizations have an existing Azure footprint, one or more subscriptions, and potentially an existing management group structure. Depending on their business requirements and scenarios, they might have Azure resources deployed, such as Azure VPN Gateway or Azure ExpressRoute for hybrid connectivity.
 
 This article provides recommendations to help your organization navigate changes based on your existing Azure environment that's transitioning into the Azure landing zone conceptual architecture. This article also describes considerations for moving resources in Azure, for example moving a subscription from one existing management group to another management group. Consider these recommendations to help you evaluate and plan the transition of your existing Azure environment.
 
 ## Move resources in Azure
 
-You can move some resources in Azure post creation. There are different approaches that are subject to a user's Azure role-based access control (RBAC) permissions at and across scopes. The following table outlines which resources you can move, at which scope, and the pros and cons associated with each resource.
+You can move some resources in Azure after creation. There are different approaches that are subject to a user's Azure role-based access control (RBAC) permissions at and across scopes. The following table outlines which resources you can move, at which scope, and the pros and cons associated with each resource.
 
 | Scope | Destination | Pro | Con |
 | ----- | ----------- | ---- | ---- |
 | Resources in resource groups. | You can move to a new resource group in the same or different subscription. | You can modify the resource composition in a resource group after deployment. | Not supported by all resourceTypes. <br><br> Some resourceTypes have specific limitations or requirements. <br><br> resourceIds are updated and it affects existing monitoring, alerts, and control plane operations. <br><br> Resource groups are locked during the move period. <br><br> Requires an assessment of policies and RBAC pre-move and post-move operation. |
 | Subscriptions in a tenant. | You can move to different management groups. | No effect on existing resources within the subscription because resourceId values don't change. | Requires an assessment of policies and RBAC pre-move and post-move operation. |
 
-To understand which move strategy you should use, consider the following examples.
+To determine which move strategy you should use, consider the following examples.
 
 ## Move subscriptions
 
@@ -39,7 +39,7 @@ If the user has an inherited owner role permission on the subscription from an e
 
 ### Policies
 
-Existing subscriptions might be subject to Azure policies that are directly assigned or assigned at the management group where they're currently located. It's important to assess current policies and the policies that might exist in the new management group or the management group hierarchy.
+Existing subscriptions might be subject to Azure policies that are assigned directly or assigned at the management group where they're currently located. It's important to assess current policies and the policies that might exist in the new management group or the management group hierarchy.
 
 You can use Azure Resource Graph to perform an inventory of existing resources and compare their configuration with the policies that exist at the destination.
 

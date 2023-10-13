@@ -1,5 +1,5 @@
 ---
-title: Scenario- Transition a single management group to the Azure landing zone conceptual architecture
+title: Scenario- Transition management groups to the Azure landing zone conceptual architecture
 description: Learn how to transition existing Azure environments comprised of single or few management groups into the Azure landing zone conceptual architecture.
 author: sebassem
 ms.author: sebassem

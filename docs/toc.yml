@@ -515,13 +515,13 @@ items:
           items:
             - name: Transition a single subscription with no management groups
               href: ready/landing-zone/align-scenario-single-subscription.md
-            - name: Transition a single management group
+            - name: Transition management groups
               href: ready/landing-zone/align-scenario-multiple-management-groups.md
-            - name: Transition a regional organization
+            - name: Transition a regional organization environment
               href: ready/landing-zone/align-scenario-regional-org.md
         - name: Alignment approaches
           items:
-            - name: Migration approach using duplicate landing zones management group with policies in “Audit Only” mode
+            - name: Transition by duplicating a landing zone management group
               href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
 
         - name: Brownfield landing zone considerations
