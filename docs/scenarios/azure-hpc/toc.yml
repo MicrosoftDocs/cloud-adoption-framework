@@ -43,6 +43,8 @@ items:
           href: finance/identity-access-management.md
         - name: Network topology and connectivity
           href: finance/network-topology-connectivity.md
+        - name: Compute
+          href: finance/compute.md
         - name: Storage
           href: finance/storage.md
         - name: Resource organization
@@ -65,6 +67,8 @@ items:
           href: manufacturing/identity-access-management.md
         - name: Network topology and connectivity
           href: manufacturing/network-topology-connectivity.md
+        - name: Compute
+          href: manufacturing/compute.md
         - name: Storage
           href: manufacturing/storage.md
         - name: Resource organization
