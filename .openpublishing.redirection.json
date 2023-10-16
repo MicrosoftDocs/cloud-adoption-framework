@@ -830,6 +830,7 @@
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
           "redirect_document_id": false
       },
+      {
          "source_path": "docs/ready/landing-zone/align-scenarios.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription",
          "redirect_document_id": false
