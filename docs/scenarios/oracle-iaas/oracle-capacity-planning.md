@@ -20,10 +20,11 @@ Capacity planning for Oracle workloads on Azure IaaS is a process that requires 
 
 ### Overall performance considerations
 
-- It's important to note that your existing environment may not serve as an accurate sizing measure for Oracle database workload requirements on Azure. Instead, you should use Oracle Automatic Workload Repository (AWR) reports to understand the performance characteristics of the workload or workloads to be migrated. AWRs contain performance statistics for your Oracle database workloads.
+- It's important to note that your existing environment might not serve as an accurate sizing measure for Oracle database workload requirements on Azure. Instead, you should use Oracle Automatic Workload Repository (AWR) reports to understand the performance characteristics of the workload or workloads to be migrated. AWRs contain performance statistics for your Oracle database workloads.
 - For application servers, as there are no AWR performance statistics available, you can use the existing environment as a sizing measure. You should of course collect performance metrics from application servers to ensure that the application servers and/or any PaaS services are sized appropriately.
 
-> Note that to be able to collect AWRs you need to have purchased the Oracle Diagnostic Pack license for your database workload. As an alternative to AWRs you can use Statspack reports. Statspack is a subset of AWRs and does not require the Diagnostic Pack license.
+> [!NOTE]
+> To be able to collect AWRs you need to have purchased the Oracle Diagnostic Pack license for your database workload. As an alternative to AWRs you can use Statspack reports. Statspack is a subset of AWRs and does not require the Diagnostic Pack license.
 
 - When collecting AWRs for your database workload observe the following guidelines:
   - AWRs should be taken when the workload is experiencing peak load. If peak load time isn't known, use the [busiest_awr script](https://github.com/Azure/Oracle-Workloads-for-Azure/blob/main/az-oracle-sizing/busiest_awr.sql) to determine the busiest AWR.
