@@ -848,5 +848,6 @@
          "source_path": "docs/ready/landing-zone/align-approaches-1.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-approach-duplicate-brownfield-audit-only",
         "redirect_document_id": false
+      }
    ]
 }
