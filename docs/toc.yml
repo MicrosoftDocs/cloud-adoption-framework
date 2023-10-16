@@ -512,7 +512,18 @@ items:
         - name: Transition to the Azure landing zone conceptual architecture
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
-          href: ready/landing-zone/align-scenarios.md
+          items:
+            - name: Transition a single subscription with no management groups
+              href: ready/landing-zone/align-scenario-single-subscription.md
+            - name: Transition management groups
+              href: ready/landing-zone/align-scenario-multiple-management-groups.md
+            - name: Transition a regional organization environment
+              href: ready/landing-zone/align-scenario-regional-org.md
+        - name: Alignment approaches
+          items:
+            - name: Transition by duplicating a landing zone management group
+              href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
+
         - name: Brownfield landing zone considerations
           href: ready/landing-zone/brownfield-considerations.md
 

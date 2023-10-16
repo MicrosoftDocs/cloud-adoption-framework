@@ -825,6 +825,30 @@
          "redirect_url": "/azure/dms/dms-overview",
          "redirect_document_id": false
       },
-      
+      {
+         "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
+          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/align-scenarios.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/align-scenarios-1.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-multiple-management-groups",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/align-scenarios-2.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-regional-org",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/align-approaches-1.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-approach-duplicate-brownfield-audit-only",
+        "redirect_document_id": false
+      }
    ]
 }
