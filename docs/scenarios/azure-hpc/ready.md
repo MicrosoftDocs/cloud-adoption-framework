@@ -26,7 +26,7 @@ Consider these architecture references as you develop a long-term vision for you
 
 The decisions that you make during strategic impact assessment and technical planning influence the landing zone configuration that you choose for your HPC deployments on Azure. We recommend that you consider the following questions:
 
-- How mature is your environment on Azure? Depending on what stage it's in, ranging from proof of concept to a mature application that serves users, you can include or omit governance, security, or resource organization.
+- How mature is your environment on Azure? Is it in the proof of concept stage? Or is it already a mature application that serves users? Depending on its stage, you can include or omit governance, security, or resource organization.
 - Is the application that you're building on Azure short-lived or a long-standing project? The answer to this question can help you choose your compute and storage options.
 - Does your organization require that people access Azure resources at various levels?
 
@@ -48,12 +48,12 @@ As you can see from these questions, the deployment model varies depending on yo
 ### AzHop
 
 - AzHop provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure.
-- It delivers a complete HPC cluster solution that's ready for users to run applications and that's easy for HPC administrators to deploy and manage.
-- AzHop uses various Azure building blocks and can be used as is or easily customized and extended to meet any uncovered requirements.
+- It delivers a complete HPC cluster solution that's ready for users to run applications on and that's easy for HPC administrators to deploy and manage.
+- AzHop uses various Azure building blocks. You can use it as is, or you can easily customize and extend it to meet any unmet requirements.
 - It includes an Open OnDemand portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
 - It uses Active Directory for user authentication and domain control.
 - It uses OpenPBS or Simple Linux Utility for Resource Management (SLURM) as a job scheduler.
-- Dynamic resource provisioning and autoscaling are done by Azure CycleCloud pre-configured job queues and integrated health checks to quickly avoid non-optimal nodes.
+- Dynamic resource provisioning and autoscaling are done by Azure CycleCloud preconfigured job queues and integrated health checks to quickly avoid nonoptimal nodes.
 - Azure NetApp Files delivers a shared file system for the home directory and applications.
 
 ### Comparison chart
@@ -65,7 +65,7 @@ As you can see from these questions, the deployment model varies depending on yo
 | Monitoring tools | Azure Monitor. | Monitor and Grafana. |
 | Customization | You can use custom image pools, third-party images, or Batch API access. | You can use the comprehensive RESTful API to customize and extend functionality, deploy your own scheduler, and support existing workload managers. |
 | Integration | Azure Synapse Analytics pipelines, Azure Data Factory, and the Azure CLI. | A built-in CLI for Windows and Linux. |
-| User type | Developers | Classic HPC administrators and users. |
+| User type | Developers. | Classic HPC administrators and users. |
 | Work type | Batches and workflows. | Tightly coupled workflows that use Message Passing Interface (MPI).|
 | Windows support | Provided. | Depends on the scheduler choice. |
 
@@ -75,7 +75,7 @@ Azure CycleCloud is an enterprise-friendly tool for orchestrating and managing H
 
 In contrast, Batch is mostly aimed at developers and teams who build a capability into their own product or service. Batch includes its own scheduler and is designed to run large-scale parallel jobs efficiently without cluster or job scheduler software. Batch is useful when you don't need to manage a workload scheduler.
 
-In summary, use Azure CycleCloud when you want to deploy an HPC environment with a specific scheduler in mind and need a complete HPC environment. Use Batch when you develop a product or service that requires large-scale parallel processing and don't want to manage a workload scheduler.
+In summary, use Azure CycleCloud when you want to deploy an HPC environment with a specific scheduler in mind and need a complete HPC environment. Use Batch when you develop a product or service that requires large-scale parallel processing and you don't want to manage a workload scheduler.
 
 ## Next steps
 
