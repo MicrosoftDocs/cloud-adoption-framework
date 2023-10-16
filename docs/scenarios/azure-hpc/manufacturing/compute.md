@@ -12,13 +12,13 @@ ms.date: 10/17/2023
 
 # Big compute in the manufacturing industry
 
-High-performance computing (HPC) is used in the manufacturing industry to run large-scale workloads, also known as big compute applications. HPC can help manufacturers at every stage of product development processes and supply chains. Specifically, you can use HPC to run advanced design simulations and also to automate processes and predict maintenance issues.
+High-performance computing (HPC) is used in the manufacturing industry to run large-scale workloads, also known as big compute applications. HPC can help manufacturers at every stage of product development processes and supply chains. For instance, you can use HPC to run advanced design simulations and also to automate processes and predict maintenance issues.
 
 Big compute workloads involve tasks that require many cores to process. These workloads can include financial risk modeling, engineering stress analysis, and other compute-intensive tasks. Big compute workloads have the following characteristics:
 
 - The workload can be divided into discrete tasks that can be run simultaneously across many cores.
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
-- The application doesn't need to run constantly, but it must be able to handle node failures or crashes.
+- The application doesn't need to run constantly, but it must be able to handle node failures and crashes.
 - Tasks can be independent or tightly coupled, requiring high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
 
 You can use compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9. Your selection depends on your workload.

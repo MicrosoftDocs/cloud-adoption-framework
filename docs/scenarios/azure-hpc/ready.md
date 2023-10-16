@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone for HPC
-description: This article describes the HPC scenario's effect on Azure landing zone design.
+description: See the effect of an HPC scenario on Azure landing zone design. Understand the differences between Azure Batch and Azure HPC OnDemand Platform (AzHop).
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 11/10/2022

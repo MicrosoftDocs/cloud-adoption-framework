@@ -18,7 +18,7 @@ Big compute applications typically have the following characteristics:
 
 - The workload can be divided into discrete tasks that can be run simultaneously across many cores.
 - Each task takes input, processes it, and produces output. The entire application runs for a finite amount of time.
-- The application doesn't need to run constantly, but it must be able to handle node failures or crashes.
+- The application doesn't need to run constantly, but it must be able to handle node failures and crashes.
 - Tasks can be independent or tightly coupled, requiring high-speed networking technologies like InfiniBand and remote direct memory access (RDMA) connectivity.
 - Compute-intensive virtual machine (VM) sizes such as H16r, H16mr, and A9 can be used. The selection depends on the workload.
 
