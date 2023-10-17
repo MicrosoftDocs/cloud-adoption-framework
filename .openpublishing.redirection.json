@@ -846,7 +846,7 @@
         "redirect_document_id": false
       },
       {
-         "source_path": "docs/ready/landing-zones/terraform-landing-zone.md",
+         "source_path": "docs/ready/landing-zone/terraform-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
          "redirect_document_id": false
       },
