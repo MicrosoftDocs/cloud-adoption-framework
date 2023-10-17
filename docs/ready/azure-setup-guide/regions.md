@@ -3,7 +3,7 @@ title: Select Azure regions
 description: Learn about cloud platform regions and the factors and characteristics that might affect your Azure region selections.
 author: johndowns
 ms.author: jodowns
-ms.date: 09/28/2023
+ms.date: 10/20/2023
 ms.topic: conceptual
 ---
 
@@ -13,19 +13,19 @@ When you design your strategy to use Microsoft Azure, you can choose from many A
 
 ## Understand Azure region architectures and resilience
 
-Different Azure regions have different characteristics. Two common ways that Azure regions vary are around their use of availability zones, and whether they have a paired region. Also, some regions are operated by sovereign entities in particular countries. The *region architecture* refers to how a specific region is designed and the overall regional capabilities it provides.
+Different Azure regions have different characteristics. Two common ways that Azure regions vary involve availability zones and paired regions. Also, some regions are operated by sovereign entities in particular countries. The *region architecture* refers to how a specific region is designed and the overall regional capabilities that it provides.
 
 To learn more about how Azure regions work, see [What are Azure regions and availability zones?](/azure/reliability/availability-zones-overview).
 
 ### Availability zones
 
-Many Azure regions include availability zones, which are physically separate locations within the region. By using availability zones, you can achieve higher availability and resilence in your deployments. For more information about availability zones, including a list of Azure regions and services that support availability zones, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support).
+Many Azure regions include availability zones, which are physically separate locations within the region. By using availability zones, you can achieve higher availability and resilence in your deployments. For more information about availability zones, see [Availability zone service and regional support](/azure/reliability/availability-zones-service-support). This linked article also includes a list of Azure regions and services that support availability zones.
 
 ### Paired regions
 
-Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-paired-regions), typically located in the same geopolitical area. Region pairing provides resiliency if a catastrophic region failure occurs. Region pairing is mostly used for [geo-redundant storage](#use-geo-redundant-storage-in-paired-regions) and by other Azure services that depend on Azure Storage for replication.
+Some regions are [paired with another region](/azure/reliability/cross-region-replication-azure#azure-paired-regions), with both regions typically located in the same geopolitical area. Region pairing provides resiliency during catastrophic region failures. Region pairing is mostly used for [geo-redundant storage](#use-geo-redundant-storage-in-paired-regions) and by other Azure services that depend on Azure Storage for replication.
 
-Newer regions aren't paired and instead use availability zones for high availability and resiliency. Later in this article, you'll learn more about how to use these region types.
+Newer regions aren't paired and instead use availability zones for high availability and resiliency. Later in this article, you learn more about how to use these region types.
 
 > [!TIP]
 > To learn how to design a workload that uses regions and availability zones, see [Recommendations for using availability zones and regions](/azure/well-architected/resiliency/regions-availability-zones).
@@ -36,27 +36,27 @@ Some regions are dedicated to specific sovereign entities. Although all regions 
 
 ## Consider region service availability and capacity
 
-Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and service categories](/azure/reliability/availability-service-by-category). Additionally, some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, [create a new support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
+Some Azure regions are recommended for many workloads. Other Azure regions are intended as alternate regions but aren't optimized for primary workloads. Sometimes, constraints are placed on the deployment of services in certain regions. For example, some regions are available only for backup or failover, or only for customers with a company presence within a defined country. For more information, see [Available services by region types and service categories](/azure/reliability/availability-service-by-category). Additionally, some regions are reserved for customers who need in-country disaster recovery. To request access to reserved access regions, create a new [support request](/troubleshoot/azure/general/region-access-request-process#reserved-access-regions).
 
-The Azure services you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
+The Azure services that you can deploy in each region differ depending on various factors. For more information, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
-Azure is a massively scalable platform, but each region has a maximum capacity. A region's maximum capacity might affect which types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, it's a good idea to speak with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale you need.
+Azure is a massively scalable platform, but each region has a maximum capacity. A region's maximum capacity can affect which types of subscriptions can deploy what types of services and under what circumstances. Regional capacity is different from a subscription quota. If you're planning a deployment or migration to Azure, it's a good idea to speak with your local Azure field team or your Azure account manager to confirm that you can deploy at the scale that you need.
 
-When you use regions for disaster recovery purposes, consider whether the destination region provides the capacity you need to support your workloads. For virtual machine-based workloads, consider using [capacity reservations](/azure/virtual-machines/capacity-reservation-overview) to guarantee the availability of capacity in the regions you use.
+When you use regions for disaster recovery purposes, consider whether the destination region provides the capacity that you need to support your workloads. For workloads that are based on virtual machines (VMs), consider using [capacity reservations](/azure/virtual-machines/capacity-reservation-overview) to guarantee the availability of capacity in the regions that you use.
 
 ## Understand data residency
 
 Around the world, government organizations have begun to establish data sovereignty and data privacy regulations. These types of compliance requirements often require localization in a specific country or region to protect the citizens in that location. In some cases, data that pertains to customers, employees, or partners must be stored on a cloud platform in the same region as the user.
 
-Ensure that you understand your own data residency requirements. Also, verify that the Azure regions you select are in geographic locations that meet your requirements. For more information, see [Enabling Data Residency and Data Protection in Microsoft Azure Regions](https://azure.microsoft.com/resources/achieving-compliant-data-residency-and-security-with-azure/).
+Ensure that you understand your own data residency requirements. Also, verify that the Azure regions that you select are in geographic locations that meet your requirements. For more information, see [Enabling Data Residency and Data Protection in Microsoft Azure Regions](https://azure.microsoft.com/resources/achieving-compliant-data-residency-and-security-with-azure/).
 
-Addressing data residency challenges has been a significant motivation for cloud migrations for organizations that operate on a global scale. To maintain data sovereignty compliance, some organizations have chosen to deploy duplicate IT assets to cloud providers in the region.
+Addressing data residency challenges is a significant motivation for organizations that operate on a global scale to migrate to the cloud. To maintain data sovereignty compliance, some organizations chose to deploy duplicate IT assets to cloud providers in their selected region.
 
 ## Consider region proximity
 
-Users, or other services, that need to access your Azure services might reside in various geographies globally. Similarly, your Azure services might need to consume services from external sources located in various geographies, or they might need to connect to your on-premises systems.
+Users or services that need to access your Azure services might reside in various geographies globally. Similarly, your Azure services might need to consume services from external sources that are located in various geographies. Or your services might need to connect to your on-premises systems.
 
-Proximity is an important factor when you select an Azure region. If you use Azure ExpressRoute to connect to your on-premises systems, then by using a region close to your on-premises systems you can optimize network connectivity and reduce latency. Subsequent connections between Azure regions use the high-speed Microsoft global network.
+Proximity is an important factor to consider when you select an Azure region. If you use Azure ExpressRoute to connect to your on-premises systems, you can optimize network connectivity and reduce latency by using a region that's close to your on-premises systems. Subsequent connections between Azure regions use the high-speed Microsoft global network.
 
 For more information about latency between Azure regions and other geographic areas, see [Azure network round-trip latency statistics](/azure/networking/azure-network-latency).
 
@@ -64,47 +64,47 @@ For more information about latency between Azure regions and other geographic ar
 
 It's common for an organization to operate in multiple geographic regions. Typical reasons to use multiple Azure regions include:
 
-- **Run different workloads in different regions**, such as to be close to a specific customer base or business partner, or to use Azure services that aren't available in a specific Azure region.
-- **Support a geographically dispersed user base.** For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
+- **Run different workloads in different regions**. This reason applies when you want to be close to a specific customer base or business partner, or when you want to use Azure services that aren't available in a specific Azure region.
+- **Support a geographically dispersed user base**. For example, if you operate in multiple countries, or if your customers use your services from multiple countries, it might make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then use [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where certain data can be stored.
-- **Achieve high resiliency**, especially for mission-critical workloads. Mission-critical workloads require the high availability provided by availability zones as well as protection from region-wide outages and disasters.
-- **Improve network connectivity and performance**. In a hybrid or multi-cloud scenario, you might improve your network performance by using multiple Azure regions. Traffic can enter and exit the high-speed Microsoft backbone network at locations that are close to your on-premises systems, or to another cloud provider's locations. To learn more about multi-cloud solutions, see [Connectivity to other cloud providers](../../ready/azure-best-practices/connectivity-to-other-providers.md)
-- **Optimize costs**. Different Azure resource types can have different prices in different regions. When you use tools like the [Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) and the [Azure service pricing information](https://azure.microsoft.com/pricing/), ensure that you select the correct region to view accurate pricing information. Sometimes, you might reduce costs by deploying your development and test environments into a a different region, as long as that region provides the same capabilities and services that you use in your production region.
-- **Scale beyond resource quotas**. Some Azure resources have [quotas and limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that restrict how many instances of a resource can be created in each region by each subscription. To scale beyond these limits, you might need to consider using additional subscriptions or multiple regions.
+- **Achieve high resiliency**, especially for business-critical workloads. Business-critical workloads require the benefits that availability zones provide, such as high availability and protection from region-wide outages and disasters.
+- **Improve network connectivity and performance**. In a hybrid or multi-cloud scenario, you might improve your network performance by using multiple Azure regions. Traffic can enter and exit the high-speed Microsoft backbone network at locations that are close to your on-premises systems, or to another cloud provider's locations. To learn more about multi-cloud solutions, see [Connectivity to other cloud providers](../../ready/azure-best-practices/connectivity-to-other-providers.md).
+- **Optimize costs**. Different Azure resource types can have different prices in different regions. When you use tools like the [Pricing calculator](https://azure.microsoft.com/pricing/calculator/) and the [Azure service pricing information](https://azure.microsoft.com/pricing/), ensure that you select the correct region to view accurate pricing information. Sometimes, you can reduce costs by deploying your development and test environments into a different region. But you need to ensure that the region provides the capabilities and services that you use in your production region.
+- **Scale beyond resource quotas**. Some Azure resources have [quotas and limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that restrict the number of instances of a resource that you can create in each region under each subscription. To scale beyond these limits, you might need to use extra subscriptions or multiple regions.
 
-When you plan to operate a cloud environment over multiple geographic regions, be aware of the following considerations:
+When you plan to operate a cloud environment that's spread over multiple geographic regions, be aware of the following considerations:
 
 - **Resource distribution and management.** When you have multiple resources in different regions, you accept a higher operational burden. You also have to pay for each resource.
 - **Data synchronization.** Understand whether you need to synchronize or replicate data between regions, and if you do, whether to do it asynchronously or synchronously. Configuring a multi-region data storage tier can be complex and can result in tradeoffs between resiliency, performance, and cost.
-- **Global networking topology.** Azure provides many different networking services, and supports the implementation of various global networking topologies to meet different requirements and provide different tradeoffs. For example, you can expand Azure networking to multiple regions by using [Azure Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or you can use a [traditional hub and spoke model](../azure-best-practices/traditional-azure-networking-topology.md) with some additional effort.
-- **User access profiles.** If a single user works with components in multiple regions, understand how you'll manage their identities and access profiles across regions.
-- **Compliance requirements.** Verify that each region satisfies your compliance requirements, including for data sovereignty.
-- **Regional resiliency.** Even when you use a multi-region architecture, you should ensure that you design your solution to be highly available within the region as well. Use availability zones where you can, and ensure that you have considered how to achieve high resiliency within the region.
-- **Failover.** When you use multiple regions for resiliency purposes, you might design your solution to use an active-passive approach, which requires you to detect a regional outage and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running simultaneously in multiple regions.
+- **Global networking topology.** Azure provides many different networking services. Azure also supports the implementation of various global networking topologies to meet different requirements and provide different tradeoffs. For example, you can expand Azure networking to multiple regions by using [Azure Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or you can use a [traditional hub-and-spoke model](../azure-best-practices/traditional-azure-networking-topology.md) with some additional effort.
+- **User access profiles.** If a single user works with components in multiple regions, understand how to manage their identities and access profiles across regions.
+- **Compliance requirements.** Verify that each region satisfies your compliance requirements, including requirements for data sovereignty.
+- **Regional resiliency.** Even though using a multi-region architecture helps to increase resiliency, you should also design your solution to be highly available within each region. Use availability zones where you can, and ensure that you consider how to achieve high resiliency within each region.
+- **Failover.** When you use multiple regions for resiliency purposes, you might design your solution to use an active-passive approach. This approach requires you to detect regional outages and fail over traffic between regions. It can take time for a failover process to detect an outage and complete traffic routing, which might result in downtime for your services. Some organizations instead choose to deploy in an active-active pattern to avoid relying on failover. The benefits of using an active-active pattern include global load balancing, increased fault tolerance, and network performance boosts. To take advantage of this pattern, your applications must support running simultaneously in multiple regions.
 
 ## Relocate across regions
 
-Occasionally, you might need to relocate resources or workloads from one Azure region to another. Changes in business requirements, company acquisitions, data residency laws, or other factors might mean you need to relocate.
+Occasionally, you might need to relocate resources or workloads from one Azure region to another. Changes in business requirements, company acquisitions, data residency laws, and other factors are reasons for needing to relocate.
 
 > [!TIP]
 > Relocating resources across regions can be complex. When possible, aim to deploy your resources into the correct region from the start.
 
-Azure provides several tools and different relocation capabilities, but the details vary for each Azure service. Some resource types can be [directly moved across regions](/azure/azure-resource-manager/management/move-support-resources), and others can be moved by using [Azure Resource Mover](/azure/resource-mover/overview). Some resource types can't be moved and must be redeployed.
+Azure provides several tools and various relocation capabilities, but the details vary for each Azure service. Some resource types can be [directly moved across regions](/azure/azure-resource-manager/management/move-support-resources), and others can be moved by using [Azure Resource Mover](/azure/resource-mover/overview). Some resource types can't be moved and must be redeployed.
 
 To learn more about relocating across regions, see [Relocate cloud workloads](../../relocate/index.md).
 
 ## High availability and disaster recovery across regions
 
-Azure regions are highly available. Azure service-level agreements are applied to the services running in specific regions. This section provides some considerations that apply if you choose to deploy across multiple regions to increase your resiliency.
+Azure regions are highly available. Azure service-level agreements are applied to the services that run in specific regions. This section provides some considerations that apply if you choose to deploy across multiple regions to increase your resiliency.
 
 > [!WARNING]
-> When you design mission-critical workloads, always plan for regional failure, and avoid deploying within a single region. You should also practice recovery and mitigation steps. For more information, see [Mission-critical workloads](/azure/well-architected/mission-critical/mission-critical-overview).
+> When you design business-critical workloads, always plan for regional failures, and avoid deploying within a single region. You should also practice recovery and mitigation steps. For more information, see [Mission-critical workloads](/azure/well-architected/mission-critical/mission-critical-overview).
 
 ### Understand Azure service resiliency features
 
-Many platform as a service (PaaS) services rely on their own regional resiliency solutions. For example, when you deploy Azure SQL Database and Azure Cosmos DB, you can easily replicate your data to more regions. Other services are deployed to a single region, and you might need to manually deploy them to other regions. Also, some Azure services, like Azure DNS and Azure Front Door, are deployed globally and don't have regional dependencies.
+Many platform as a service (PaaS) services rely on their own regional resiliency solutions. For example, when you deploy Azure SQL Database and Azure Cosmos DB, you can easily replicate your data to more regions. Other services are deployed to a single region, and you need to manually deploy them to other regions. Also, some Azure services, like Azure DNS and Azure Front Door, are deployed globally and don't have regional dependencies.
 
-As you consider which services you'll use in your cloud adoption process, make sure that you clearly understand the failover capabilities and recovery steps that might be required for each Azure service you use.
+As you consider which services to use in your cloud adoption process, make sure that you clearly understand the failover capabilities and recovery steps that are required for each Azure service that you use.
 
 ### Plan Azure resource group deployments
 
