@@ -246,6 +246,8 @@ items:
         href: ready/azure-setup-guide/index.md
       - name: Organize resources
         href: ready/azure-setup-guide/organize-resources.md
+      - name: Select regions
+        href: ready/azure-setup-guide/regions.md
       - name: Manage access
         href: ready/azure-setup-guide/manage-access.md
       - name: Manage costs and billing
