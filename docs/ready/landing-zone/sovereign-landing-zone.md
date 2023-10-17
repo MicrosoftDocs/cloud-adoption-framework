@@ -35,7 +35,7 @@ The Sovereign Landing Zone (Preview) is an opinionated tailored variant of the [
 
 ## Sovereign landing zone design area's
 
-The Azure Landing Zone architecture consists of 8 design area's. Each design area describes what to consider before deploying a landing zone. The following sections specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview) on top of what Azure Landing Zones already advises.
+The Azure Landing Zone architecture consists of eight design area's. Each design area describes what to consider before deploying a landing zone. The following sections specifically describe the additional considerations when deploying the Sovereign Landing Zone (Preview) on top of what Azure Landing Zones already advises.
 
 ### Resource organization
 
@@ -57,7 +57,7 @@ The Sovereignty Policy Baseline consists of:
 * Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed.
 * Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy.
 
-The policies and opinions that the Sovereign Landing Zone (Preview) layers on top of the Azure Landing Zone creates a platform that is biased towards increased security and confidentiality by default.
+The policies and opinions that the Sovereign Landing Zone (Preview) layers on top of the Azure Landing Zone create a platform that is biased towards increased security and confidentiality by default.
 
 For more information on the Sovereignty Policy Baseline initiative, review the documentation [Microsoft Cloud for Sovereignty policy portfolio \| Microsoft Learn](/industry/sovereignty/policy-portfolio-baseline)
 
@@ -87,11 +87,11 @@ For more information enabling guest attestation, review the documentation [What 
 
 ### Governance
 
-#### Customer lockbox for Microsoft Azure
+#### Customer Lockbox for Microsoft Azure
 
-Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors do not require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It is used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
+Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors don't require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It's used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
 
-Consider enabling Customer Lockbox for Microsoft Azure. Enabling this option requires the Global Admin role as this is a tenant wide setting. Further information on how to correctly setup RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure \| Microsoft Learn](/azure/security/fundamentals/customer-lockbox-overview).
+Consider enabling Customer Lockbox for Microsoft Azure. Enabling this option requires the Global Admin role as this is a tenant wide setting. Further information on how to correctly set up RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure \| Microsoft Learn](/azure/security/fundamentals/customer-lockbox-overview).
 
 ### Platform Automation and DevOps
 
