@@ -116,11 +116,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-landing-zone",
-         "redirect_document_id": true
-      },
-      {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-assessment.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/contoso-migration-assessment",
          "redirect_document_id": true
@@ -849,6 +844,16 @@
          "source_path": "docs/ready/landing-zone/align-approaches-1.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-approach-duplicate-brownfield-audit-only",
         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/terraform-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
+         "redirect_document_id": false
       }
    ]
 }
