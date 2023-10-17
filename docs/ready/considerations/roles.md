@@ -16,7 +16,7 @@ For an overview of recommended Azure RBAC practices as part of an identity and s
 
 ## Overview of Azure role-based access control
 
-By using [Azure role-based access control](/azure/role-based-access-control/overview), you can separate duties within your team and grant only enough access for specific Azure Active Directory (Azure AD) users, groups, service principals, or managed identities to perform their jobs. Instead of giving everybody unrestricted access to your Azure subscription or resources, you can limit permissions for each set of resources.
+By using [Azure role-based access control](/azure/role-based-access-control/overview), you can separate duties within your team and grant only enough access for specific Microsoft Entra users, groups, service principals, or managed identities to perform their jobs. Instead of giving everybody unrestricted access to your Azure subscription or resources, you can limit permissions for each set of resources.
 
 [Azure role definitions](/azure/role-based-access-control/role-definitions) list operations that are permitted or disallowed for users or groups assigned to that role. A role's [scope](/azure/role-based-access-control/overview#scope) specifies which resources these defined permissions apply to. Scopes can be specified at multiple levels: management group, subscription, resource group, or resource. Scopes are structured in a parent/child relationship.
 
@@ -29,7 +29,7 @@ When planning your access control strategy, use a least-privilege access model t
 ![Suggested pattern for using Azure RBAC](../../_images/azure-best-practices/rbac-least-privilege.png)
 
 > [!NOTE]
-> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, use [management groups](/azure/governance/management-groups/) for enterprise-wide access control and [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](/azure/active-directory/fundamentals/active-directory-manage-groups).
+> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, use [management groups](/azure/governance/management-groups/) for enterprise-wide access control and [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-manage-groups).
 
 ## Use Azure built-in roles
 

@@ -176,7 +176,7 @@ Azure Databricks is a key consumer of the Azure Data Lake Storage service. Atomi
 > [!IMPORTANT]
 > An Azure Databricks workspace called the Azure Databricks (analytics) workspace is provisioned for all data scientists and DataOps, as shown in the shared products resource group.
 >
-> You can configure this workspace to connect to your Azure Data Lake using either Azure Active Directory passthrough or table access control. Depending on your use case, you can configure conditional access as another security measure.
+> You can configure this workspace to connect to your Azure Data Lake using either Microsoft Entra passthrough or table access control. Depending on your use case, you can configure conditional access as another security measure.
 
 Follow cloud-scale analytics best practices to integrate Azure Databricks:
 

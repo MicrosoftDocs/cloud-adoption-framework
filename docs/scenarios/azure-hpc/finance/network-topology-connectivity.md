@@ -36,7 +36,7 @@ The following recommendations apply to scenarios in which a virtual machine's DN
  - Background DNS and virtual names connect many system interfaces in HPC environments. You might not be aware of all the interfaces that developers define over time. Connection challenges arise between various systems when virtual machine or DNS names change after migrations. We recommend that you retain DNS aliases to prevent these difficulties.
  - Use different DNS zones to distinguish the environments (sandbox, development, preproduction, and production) from each other. The exception is for HPC deployments that have their own virtual networks. In these deployments, private DNS zones might not be necessary.
  - DNS support is required when you use HPC Cache. DNS enables it to access storage and other resources.
- - DNS and name resolution are critical in the finance sector when you use resource location and SRV records. We recommend that you use the DNS resolution provided by the Azure Active Directory Domain Services (Azure AD DS) domain controller. For more information, see [Deploy Azure AD DS in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
+ - DNS and name resolution are critical in the finance sector when you use resource location and SRV records. We recommend that you use the DNS resolution provided by the Microsoft Entra Domain Services (Microsoft Entra Domain Services) domain controller. For more information, see [Deploy Microsoft Entra Domain Services in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 
 ## High-performance network services
 

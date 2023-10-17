@@ -15,8 +15,8 @@ Review design considerations and recommendations for network topology and connec
 ## Design considerations
 
 - Azure Red Hat OpenShift requires a primary subnet and secondary subnet.
-  - Use the primary subnet to deploy the cluster's primary nodes.
-  - Use the secondary subnet to deploy the cluster's secondary nodes.
+  - Use the primary subnet to deploy the cluster's master nodes.
+  - Use the secondary subnet to deploy the cluster's worker nodes.
   - The secondary subnet and the primary subnet should both be a minimum `/27` route.
   - You can't change the secondary subnet or the primary subnet after you deploy the cluster.
   - The primary subnet and the secondary subnet can't have a network security group associated with them. The Azure Red Hat OpenShift cluster automatically creates and manages a network security group.
