@@ -22,7 +22,7 @@ Microsoft Cloud for Sovereignty provides capabilities across different layers:
 * Regulatory compliance and transparency into the cloud operator's activities.
 * Built on top of the Azure public cloud capabilities.
 
-![Diagram that shows layers of Microsoft Cloud for Sovereignty](./media/sovereign-landing-zone/sov-capabilities.png)
+![Diagram that shows layers of Microsoft Cloud for Sovereignty](./media/sovereign-landing-zone/sovereignLandingZone-managementGroups.png)
 
 Public sector customers with sovereignty needs that want to start using Azure can accelerate the definition and deployment of a sovereign environment using Microsoft Cloud for Sovereignty tools and guidelines, such as the sovereign landing zone (preview).
 
@@ -35,7 +35,7 @@ The sovereign landing zone (preview) is an opinionated tailored variant of the [
 
 ## Sovereign landing zone design areas
 
-The Azure landing zone architecture consists of 8 [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Each design area describes what to consider before deploying a landing zone. The following sections will specifically describe the additional considerations when deploying the sovereign landing zone (preview) on top of what Azure landing zones already advises.
+The Azure landing zone architecture consists of 8 [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Each design area describes what to consider before deploying a landing zone. The following sections specifically describe the additional considerations when deploying the sovereign landing zone (preview) on top of what Azure landing zones already advises.
 
 ### Resource organization
 
@@ -43,13 +43,13 @@ The Azure landing zone architecture consists of 8 [design areas](/azure/cloud-ad
 
 The sovereign landing zone is a tailored version of the Azure landing zone conceptual architecture, and aligns to the guidance as outlined in [Tailor the Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 
-Building on the Azure landing zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group. A set of specific policy initiatives, ie [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
+Building on the Azure landing zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group. A set of specific policy initiatives, for example [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
 
 ![Diagram that shows additional management groups of a sovereign landing zone.](./media/sovereign-landing-zone/sub-organization-slz.png)
 
 ##### Microsoft Cloud for Sovereignty policy baseline
 
-The sovereign landing zone (preview) comes with the Sovereignty policy baseline initiatives deployed, and enables other policy sets to be deployed within the sovereign landing zone (preview). This enables customers to add additional policies to be layered on top of a sovereign landing zone (preview), like for example Azure landing zone policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark.
+The sovereign landing zone (preview) comes with the Sovereignty policy baseline initiatives deployed, enabling other policy sets to be deployed within the sovereign landing zone (preview). Customers can layer additional policies on top of a sovereign landing zone (preview), for example Azure landing zone policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark.
 
 The Sovereignty policy baseline consists of:
 
@@ -57,7 +57,7 @@ The Sovereignty policy baseline consists of:
 * Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed.
 * Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy.
 
-The policies and opinions that the sovereign landing zone (preview) layers on top of the Azure landing zone creates a platform that is biased towards increased security and confidentiality by default.
+The policies and opinions that the sovereign landing zone (preview) layers on top of the Azure landing zone create a platform that is biased towards increased security and confidentiality by default.
 
 For more information on the sovereignty policy baseline initiative, review the documentation [Microsoft Cloud for Sovereignty policy portfolio](/industry/sovereignty/policy-portfolio-baseline)
 
@@ -87,11 +87,11 @@ For more information enabling guest attestation, review the documentation [What 
 
 ### Governance
 
-##### Customer lockbox for Microsoft Azure
+##### Customer Lockbox for Microsoft Azure
 
-Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors do not require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It is used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
+Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors don't require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It's used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
 
-Consider enabling Customer Lockbox for Microsoft Azure. Note that enabling this option requires the Global Admin role as this is a tenant wide setting. Further information on how to correctly setup RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
+Consider enabling Customer Lockbox for Microsoft Azure. Enabling this option requires the Global Admin role as this is a tenant-wide setting. Further information on how to correctly set up RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
 
 ### Platform Automation and DevOps
 
@@ -114,4 +114,4 @@ The deployed components include:
 
 ##### Compliance dashboard
 
-As part of the sovereign landing zone (preview) deployment, a compliance dashboard will be deployed to help customers validate the sovereign landing zone (preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the sovereign landing zone (preview) as well as additional custom compliance that has been deployed. For more details, see the  [Compliance dashboard documentation](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/10-Compliance-Dashboard.md).
+As part of the sovereign landing zone (preview) deployment, a compliance dashboard is deployed to help customers validate the sovereign landing zone (preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the sovereign landing zone (preview) as well as additional custom compliance that has been deployed. For more details, see the  [Compliance dashboard documentation](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/10-Compliance-Dashboard.md).
