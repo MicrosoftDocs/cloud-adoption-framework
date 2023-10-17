@@ -203,7 +203,7 @@ You can reassign the subscription after you clean up the subscription. Here are 
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 - Configure subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 
-## What is a sovereign Azure landing zone and how is it related to the Azure landing zone architecture?
+## What is a sovereign landing zone and how is it related to the Azure landing zone architecture?
 
 The sovereign landing zone is a component of Microsoft Cloud for Sovereignty, intended for public sector customers that need advanced sovereignty controls. The sovereign landing zone is a tailored version of the Azure Landing Zone conceptual architecture, aligning Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
 
