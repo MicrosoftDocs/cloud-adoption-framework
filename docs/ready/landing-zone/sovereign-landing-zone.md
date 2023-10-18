@@ -22,7 +22,7 @@ Microsoft Cloud for Sovereignty provides capabilities across different layers:
 * Regulatory compliance and transparency into the cloud operator's activities.
 * Built on top of the Azure public cloud capabilities.
 
-![Diagram that shows layers of Microsoft Cloud for Sovereignty](./media/sovereign-landing-zone/sovereignLandingZone-managementGroups.png)
+![Diagram that shows layers of Microsoft Cloud for Sovereignty](./media/sovereign-landing-zone/sov-capabilities.png)
 
 Public sector customers with sovereignty needs that want to start using Azure can accelerate the definition and deployment of a sovereign environment using Microsoft Cloud for Sovereignty tools and guidelines, such as the sovereign landing zone (preview).
 
@@ -35,7 +35,7 @@ The sovereign landing zone (preview) is an opinionated tailored variant of the [
 
 ## Sovereign landing zone design areas
 
-The Azure landing zone architecture consists of 8 [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Each design area describes what to consider before deploying a landing zone. The following sections specifically describe the additional considerations when deploying the sovereign landing zone (preview) on top of what Azure landing zones already advises.
+The Azure landing zone architecture consists of eight [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Each design area describes what to consider before deploying a landing zone. The following sections specifically describe the additional considerations when deploying the sovereign landing zone (preview) on top of what Azure landing zones already advises.
 
 ### Resource organization
 
@@ -45,7 +45,7 @@ The sovereign landing zone is a tailored version of the Azure landing zone conce
 
 Building on the Azure landing zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group. A set of specific policy initiatives, for example [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
 
-![Diagram that shows additional management groups of a sovereign landing zone.](./media/sovereign-landing-zone/sub-organization-slz.png)
+![Diagram that shows additional management groups of a sovereign landing zone.](./media/sovereign-landing-zone/sovereignLandingZone-mangementGroups.png)
 
 ##### Microsoft Cloud for Sovereignty policy baseline
 
@@ -114,4 +114,4 @@ The deployed components include:
 
 ##### Compliance dashboard
 
-As part of the sovereign landing zone (preview) deployment, a compliance dashboard is deployed to help customers validate the sovereign landing zone (preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the sovereign landing zone (preview) as well as additional custom compliance that has been deployed. For more details, see the  [Compliance dashboard documentation](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/10-Compliance-Dashboard.md).
+As part of the sovereign landing zone (preview) deployment, a compliance dashboard is deployed to help customers validate the sovereign landing zone (preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the sovereign landing zone (preview) as well as additional custom compliance that has been deployed. For more information, see the  [Compliance dashboard documentation](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/10-Compliance-Dashboard.md).
