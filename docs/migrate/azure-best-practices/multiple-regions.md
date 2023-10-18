@@ -105,11 +105,11 @@ When your organization faces global asset and user base complexities in a migrat
 - [Multi-region n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server)
 
 > [!WARNING]
-> When you use the reference architecture for ExpressRoute or the reference architectures for applications, you might need to exclude specific data elements from replication processes to meet data sovereignty requirements. The task of excluding specific data elements adds a step in the promotion process.
+> When you use the reference architecture for ExpressRoute or the reference architectures for applications, you might need to exclude specific data elements from replication processes to meet data sovereignty requirements. The task of excluding specific data elements adds a step to the promotion process.
 
 ## Migration process changes
 
-When you migrate an application that must be deployed to multiple regions, the cloud adoption team must account for a few more considerations. The design of Azure Site Recovery vaults and configuration and process servers are two of those considerations. Two others are network bandwidth designs, and data synchronization.
+When you migrate an application that must be deployed to multiple regions, the cloud adoption team must account for a few more considerations. The design of Azure Site Recovery vaults and configuration and process servers are two of those considerations. Two others are network bandwidth designs and data synchronization.
 
 ### Suggested actions during the migration process
 
@@ -136,7 +136,7 @@ As you address global complexity during optimization and promotion, you might re
 
 **Business change plans**: For any complex migration scenario, create a business change plan. Using a business change plan helps ensure clear communication about changes to business processes and user experiences. It also helps ensure clear communication about the timing of efforts that are required to integrate changes. In a global migration effort, the plan should include considerations for users in each affected geography.
 
-**Business testing**: In addition to a business change plan, business testing might be required in each region. Business testing in each region helps ensure adequate performance and adherence to modified network routing patterns.
+**Business testing**: In addition to a business change plan, business testing might be required in each region. Business testing helps ensure adequate performance and adherence to modified network routing patterns.
 
 **Promotion flights**: Often, promotion happens as a single activity, and production traffic is immediately rerouted to the migrated workloads. In a global release effort, you should deliver promotion in *flights*, which are predefined collections of users. Using promotion flights gives the cloud strategy team and the cloud adoption team an opportunity to observe performance and improve support for users in each region. You can control promotion flights at the networking level. Specifically, you can change the routing of specific IP ranges from the source workload assets to the newly migrated assets. After a specified collection of users are migrated, the next group can be rerouted.
 
