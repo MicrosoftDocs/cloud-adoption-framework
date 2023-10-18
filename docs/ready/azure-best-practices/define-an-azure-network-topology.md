@@ -46,7 +46,7 @@ Azure Virtual Network Manager allows you to create three types of [topologies](/
 - Hub and spoke topology with direct connectivity
 - Mesh topology (Preview)
 
-![Diagram that shows Azure Virtual Network topologies](../../_images/azure-best-practices/avnm-network-topologies.png)
+![Diagram that shows Azure Virtual Network topologies.](../../_images/azure-best-practices/azure-virtual-virtual-network-manager-network-topologies.png)
 
 >[!NOTE]
 > Azure Virtual Network Manager does not support Azure Virtual WAN hubs as part of a network group or as the hub in a topology. For more information, see [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq).
@@ -64,7 +64,7 @@ This allows more efficient management of connectivity, configuration and topolog
 
 Networks can be segmented to suit your needs by environment, teams, location, line of business, or some other function. Network groups can be defined statically or dynamic by defining a set of conditions that govern group membership.
 
-AVNM allows to implement the design principles of Azure Landing Zone to accommodate all application migration, modernization, and innovation at scale.
+AVNM allows you to implement the design principles of Azure Landing Zone to accommodate all application migration, modernization, and innovation at scale.
 
 **Design considerations:**
 
