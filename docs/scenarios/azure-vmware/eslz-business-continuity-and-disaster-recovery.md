@@ -35,7 +35,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
   > [!NOTE]
   > vCenter Server and NSX-T Data Center configurations for private clouds are backed up hourly, and backups are kept for three days.
 
-- Azure VMware Solution components such as vCenter Server, NSX-T Manager, or HCX Manager are managed services for which backup is managed by Azure. To restore from a backup, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+- Azure VMware Solution components such as vCenter Server, NSX-T Manager, or HCX Manager are managed services for which Azure manages backup. To restore from a backup, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 ## Business continuity design recommendations
 
@@ -55,13 +55,13 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Use the [application performance requirements checklist](/azure/virtual-machines/premium-storage-performance#application-performance-requirements-checklist) to arrive at the right capacity and disk type, such as HDD, SSD, or Ultra. Consider the Azure IaaS VM SKU that supports the [disk type and capacity](/azure/virtual-machines/disks-performance) for backup operations.
 
-- Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number of servers, storage, and IOPS requirements for each of them. When providing "Total Size of the Workload (GB)*” value in capacity planner, use median value between "used storage" and “allocated storage” of all VMs in vCenter you want to backup.
+- Use [Azure Backup Server capacity planner](https://www.microsoft.com/download/details.aspx?id=54301) to determine number of servers, storage, and IOPS requirements for each of them. When providing "Total Size of the Workload (GB)*” value in capacity planner, use median value between "used storage" and “allocated storage” of all VMs in vCenter you want to back up.
 
 - Use [storage pools](/azure/backup/backup-mabs-add-storage) with Azure Backup Server for enhanced disk IOPS/throughput. Use [tiered storage](https://techcommunity.microsoft.com/t5/system-center-blog/achieve-faster-backups-using-tiered-storage-with-dpm-and-mabs/ba-p/1596069) on Backup Server for enhanced operations.
 
-- Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, 8 parallel backup jobs are supported. Measure the amount of time taken to backup and restore mission-critical workloads over multiple runs. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server. Ensure than AVS vSAN datastore has enough capacity to hold restored backup.
+- Identify the number of parallel backup jobs and restore operations to run on Azure Backup server. Currently, eight parallel backup jobs are supported. Measure the amount of time taken to back up and restore mission-critical workloads over multiple runs. Validate that backup and restore times meet RPO and RTO requirements for Azure Backup server. Ensure that AVS vSAN datastore has enough capacity to hold restored backup.
 
-- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server. When using DPM protection agent on any Azure VMware Solution VM for application backup(e.g. SQL, Sharepoint, etc.), disable realtime monitoring of *dpmra.exe*.
+- Add necessary Antivirus exceptions for Azure Backup Server files and folders as documented [here](/system-center/dpm/run-antivirus-server) if any Antivirus/Antimalware software runs on Azure Backup Server. When using DPM protection agent on any Azure VMware Solution VM for application backup (for example, SQL, Sharepoint, etc.), disable real-time monitoring of *dpmra.exe*.
 
 - Configure appropriate NSG (Network Security Group) rules on subnet hosting Azure Backup Server to allow network communication from DPM protection agent running on protected VM in Azure VMware Solution. DPM protection agent communicates with Azure Backup Server on any dynamic port [between 1024 and 65535](/system-center/dpm/configure-firewall-settings-for-dpm).
 
@@ -75,7 +75,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Determine which subset of Azure VMware Solution workloads requires protection if there's a disaster recovery event. Consider categorizing the workloads based on priority: P0 for business-critical workloads, and P1, P2, P3 for other workloads that are important but not as critical for the business to operate. The customer's business continuity plan defines the priority levels, which helps to control the costs associated with disaster recovery implementation.
 
-- In most cases, non-production environments such as dev, test, or UAT don't need to fail over to a secondary site. You should run the pilot light at the secondary site with reduced capacity for production and critical workloads to save on costs. For more capacity, you can scale out to add ESXi hosts to the cluster during the disaster recovery event.
+- In most cases, nonproduction environments such as dev, test, or UAT don't need to fail over to a secondary site. You should run the pilot light at the secondary site with reduced capacity for production and critical workloads to save on costs. For more capacity, you can scale out to add ESXi hosts to the cluster during the disaster recovery event.
 
 - For pilot light deployments especially, ensure that you've secured all the host quota needed in the secondary site so that you don't have to wait for the required capacity during full scale out. See [Request host quota for Azure VMware Solution](/azure/azure-vmware/request-host-quota-azure-vmware-solution).
 
@@ -124,9 +124,9 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 
 - Use [Azure Site Recovery](/azure/site-recovery/avs-tutorial-prepare-azure) or [Zerto](/azure/azure-vmware/deploy-zerto-disaster-recovery#scenario-3-azure-vmware-solution-to-iaas-vms-cloud-disaster-recovery), if Azure IaaS virtual machines are the disaster recovery target for the Azure VMware Solution private cloud.
 
-- Minimize manual input by using automated recovery plans within each of the respective disaster recovery solutions. These plans are helpful when working with either VMware Site Recovery Manager or partner solutions. A recovery plan gathers machines into recovery groups for failover. It then helps to define a systematic recovery process by creating independent units that can failover.
+- Minimize manual input by using automated recovery plans within each of the respective disaster recovery solutions. These plans are helpful when working with either VMware Site Recovery Manager or partner solutions. A recovery plan gathers machines into recovery groups for failover. It then helps to define a systematic recovery process by creating independent units that can fail over.
 
-- Set up smoke tests or disaster recovery drills at least once a year to ensure recovery plans work as expected. The level of effort running these drills is determined by the orchestration capabilities of the chosen disaster recovery tool.
+- Set up smoke tests or disaster recovery drills at least once a year to ensure recovery plans work as expected. The orchestration capabilities of the chosen disaster recovery tool determine the level of effort that's involved with running these drills.
 
 - Use [geopolitical regional pairs](/azure/availability-zones/cross-region-replication-azure) as the secondary disaster recovery environment. Some of the benefits of regional pairs are prioritized region recovery, sequential updates, physical isolation, and data residency.
 
