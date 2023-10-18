@@ -203,11 +203,11 @@ You can reassign the subscription after you clean up the subscription. Here are 
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 - Configure subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 
-## What is a Sovereign Landing Zone and how is it related to the Azure Landing Zone architecture?
+## What is a sovereign landing zone and how is it related to the Azure landing zone architecture?
 
-The Sovereign Landing Zone is a component of Microsoft Cloud for Sovereignty, intended for public sector customers that need advanced sovereignty controls. The Sovereign Landing Zone is a tailored version of the Azure Landing Zone conceptual architecture, aligning Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
+The sovereign landing zone is a component of Microsoft Cloud for Sovereignty, intended for public sector customers that need advanced sovereignty controls. The sovereign landing zone is a tailored version of the Azure Landing Zone conceptual architecture, aligning Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing to create a cloud architecture where data and workloads default to encryption and protection from threats.
 
 > [!NOTE]
-> Microsoft Cloud for Sovereignty is oriented towards government organizations with sovereignty needs. Customers should carefully consider whether they need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the Sovereign Landing Zone architecture.
+> Microsoft Cloud for Sovereignty is oriented towards government organizations with sovereignty needs. Customers should carefully consider whether they need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the sovereign landing zone architecture.
 
-For more information about the Sovereign Landing Zone, see [Sovereign Landing Zone](../landing-zone/sovereign-landing-zone.md).
+For more information about the sovereign landing zone, see [Sovereignty considerations for Azure landing zones](../landing-zone/sovereign-landing-zone.md).
