@@ -54,4 +54,4 @@ The performance and reliability of Oracle database workloads heavily rely on the
 
 ## Next steps
 
-For details on how to migrate your workload once the appropriate capacity has been determined, see [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure).
+For an overview of the considerations involved in migrating an Oracle workload to Azure please refer to [Migration planning for Oracle on Azure](./oracle-migration-planning.md).
