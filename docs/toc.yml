@@ -539,9 +539,9 @@ items:
           href: ready/considerations/sandbox-environments.md
         - name: Landing zone regions
           href: ready/considerations/regions.md
-        - name: Improve Policy Management
+        - name: Policy Management
           items:
-          - name: Improve Policy Management
+          - name: Advanced policy management
             href: ready/policy-management/enterprise-policy-as-code.md
         - name: Improve landing zone governance
           items:

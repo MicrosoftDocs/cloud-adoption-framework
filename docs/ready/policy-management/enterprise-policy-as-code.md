@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: internal
 ---
 
-# Improving Azure Policy management
+# Advanced Azure Policy management
 
 Policy driven governance is one the design principles for Azure Landing Zones to ensure applications you deploy comply with your organization's platform. The management of policy objects across an environment can take considerable effort to test and maintain to ensure this compliance is met. The Azure Landing Zone accelerators deploy a large number of custom policy definitions and assignments designed to provide a secure baseline for your platform. Your organization may have further requirements to enhance compliance through deployment of other policies. This article provides a way to manage Azure Policy at scale using infrastructure as code.   
 
