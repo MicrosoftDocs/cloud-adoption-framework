@@ -12,11 +12,11 @@ ms.custom: think-tank
 
 # Migrate Oracle workloads to Azure IaaS
 
-A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which similar to other workloads require a methodical approach to ensure a successful migration. For application services the guidance in the [The One Migrate approach to migrating the IT portfolio](../index.md) can be leveraged, but for Oracle database workloads there are some unique constraints and considerations. This article describes those constraints and considerations in more details.  modernize existing workloads.
+A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which similar to other workloads require a methodical approach to ensure a successful migration. For application services the guidance in the [The One Migrate approach to migrating the IT portfolio](../index.md) can be leveraged, but for Oracle database workloads there are some unique constraints and considerations. This article describes those constraints and considerations in more details.
 
 ## Oracle Migration process details
 
-You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of Azure Virtual Machine. Refer to Capacity Planning [Capacity planning for Oracle on Azure](./oracle-capacity-planning.md) article for more details. 
+You should continually reassess your infrastructure requirements to improve performance and reduce costs by using the relevant type of Azure Virtual Machine. Refer to Capacity Planning [Capacity planning for Oracle on Azure](./oracle-capacity-planning.md) article for more details.
 
 Review the migration resources to define your Oracle to Azure migration process and in addition:
 
