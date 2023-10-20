@@ -39,7 +39,7 @@ Determine whether documentation and process alignment is required. The following
 
 Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
 
-| Azure region  | Country/region | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
+| Region        | Country/region | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
 |---------------|----------------|-----------------|------------------------|-----------------------------|-------------------------------|
 | North America | United States  | Yes             | Partners and customers | Yes                         | No                            |
 | North America | Canada         | No              | Customers              | Yes                         | Yes                           |

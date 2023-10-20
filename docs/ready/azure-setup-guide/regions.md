@@ -13,7 +13,7 @@ When you design your strategy to use Microsoft Azure, you can choose from many A
 
 ## Understand Azure region architectures and resilience
 
-Different Azure regions have different characteristics. Two common ways that Azure regions vary involve availability zones and paired regions. Also, some regions are operated by sovereign entities in particular countries/regions. The *region architecture* refers to how a specific region is designed and the overall regional capabilities that it provides.
+Different Azure regions have different characteristics. Two common ways that Azure regions vary involve availability zones and paired regions. Also, some regions are operated by sovereign entities in particular countries. The *region architecture* refers to how a specific region is designed and the overall regional capabilities that it provides.
 
 To learn more about how Azure regions work, see [What are Azure regions and availability zones?](/azure/reliability/availability-zones-overview).
 
@@ -73,7 +73,7 @@ For more information about latency between Azure regions and other geographic ar
 It's common for an organization to operate in multiple geographic regions. The following reasons are typical ones for using multiple Azure regions:
 
 - **Run different workloads in different regions**. This reason applies when you want to be close to a specific customer base or business partner. It's also relevant when you want to use Azure services that aren't available in a specific Azure region.
-- **Support a geographically dispersed user base**. If you operate in multiple countries/regions, or if your customers use your services from multiple countries/regions, it can make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then using [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
+- **Support a geographically dispersed user base**. If you operate in multiple countries, or if your customers use your services from multiple countries, it can make sense to have Azure resources in each location. Alternatively, you can consider using a single region and then using [Azure Front Door](/azure/frontdoor/front-door-overview) to accelerate global traffic to that region.
 - **Comply with data sovereignty requirements**. Your organization might be subject to limits on the geographic areas where you can store certain data.
 - **Achieve high resiliency**, especially for business-critical workloads. Business-critical workloads require the benefits that availability zones provide, such as high availability and protection from region-wide outages and disasters.
 - **Improve network connectivity and performance**. In a hybrid or multicloud scenario, using multiple Azure regions can help improve your network performance. Traffic can enter and exit the high-speed Microsoft backbone network at locations that are close to your on-premises systems, or to another cloud provider's locations. To learn more about multicloud solutions, see [Connectivity to other cloud providers](../../ready/azure-best-practices/connectivity-to-other-providers.md).
@@ -116,10 +116,10 @@ For each Azure service that you consider for your cloud adoption process, unders
 
 ### Plan Azure resource group deployments
 
-Azure resource groups are deployed to a specific Azure region. But *resources* in a resource group often span multiple regions. If a whole region fails, all management operations that involve resources within the failed region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Keep in mind these points about resource group resiliency by region when you design your resource hierarchy.
+Azure resource groups are deployed to a specific Azure region. But *resources* in a resource group often span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Keep in mind these points about resource group resiliency by region when you design your resource hierarchy.
 
 > [!TIP]
-> Whenever possible, deploy resource groups in a region that has multiple availability zones. Availability zones help to minimize the risk of regional outages that make management operations unavailable.
+> Whenever possible, deploy resource groups in a region that has multiple availability zones. Availability zones help to minimize the risk of regional outages that reduce the availability of your resource and also make management operations unavailable.
 
 ### Use GRS in paired regions
 
