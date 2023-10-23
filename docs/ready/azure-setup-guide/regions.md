@@ -3,7 +3,7 @@ title: Select Azure regions
 description: Learn about cloud platform regions. Understand factors like availability zones, paired regions, and data residency that affect region selection in Azure.
 author: johndowns
 ms.author: jodowns
-ms.date: 10/20/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ---
 
@@ -40,6 +40,13 @@ Azure offers two types of regions:
 
 - *Recommended* regions are suitable for most workloads.
 - *Alternate* regions aren't optimized for primary workloads. Instead, alternate regions are available only for backup or failover, or only for customers with a company presence within a defined country/region.
+
+When deciding on a region, it's a good idea to select a recommended region if you can, because of the following benefits:
+- **Recommended regions typically have higher capacity**. Because of the larger capacity, recommended regions can often support your long-term growth better than alternate regions can.
+- **Lower costs**. Many recommended regions provide lower costs for a range of Azure services. By using recommended regions, you might reduce your overall Azure bill.
+- **Gain early access to the latest offerings.** For example, AI capabilities and GPU resources are typically available in recommended regions sooner than in other regions.  
+
+Microsoft regularly reassesses the regions that we recommend. To take advantage of the benefits of newly recommended regions, consider adopting a [multi-region strategy](#operate-in-multiple-geographic-regions). This strategy helps to ensure you're ready to use more regions for your own workloads.
 
 The services that you can deploy in a region depend on the region's type, among other factors. For more information, see the following resources:
 
