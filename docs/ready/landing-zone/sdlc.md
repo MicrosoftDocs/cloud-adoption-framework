@@ -12,7 +12,7 @@ ms.custom: internal
 
 Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale.  Azure landing zone design principles guide customers to adopt policy-driven governance, which provides foundational guard rails while also delegating many controls to application teams who deploy and manage their own landing zone resources.
 
-A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and possibilities.
+A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
 This guide provides guidance for how cloud platform teams can architect their landing zones to support application team innovation, and how an organization can apply their software development lifecycle (SDLC) to this framework.  For discussion, this guide makes reference to the following phased environments:
 
