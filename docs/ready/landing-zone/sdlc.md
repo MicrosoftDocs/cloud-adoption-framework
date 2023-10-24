@@ -68,7 +68,7 @@ Building management groups for for environments within the archetypes creates ad
 
 The _Landing Zone_ management group should have universal polices that enforce guardrails for both Corp and Online. Corp and Online have unique polices to enforce company guidelines around public and private facing workloads.
 
-There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners.  Deployment configuration and requirements should remain consistent throughout promotion of coe through environments.
+There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners.  Deployment configuration and requirements should remain consistent throughout promotion of code through environments.
 
 > [!NOTE]
 > The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: _N workloads x Z management groups  = total management groups_.
