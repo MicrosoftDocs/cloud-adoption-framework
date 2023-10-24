@@ -29,7 +29,7 @@ However, any number and classification of environments can be used in practice.
 ## Environments, Subscriptions, and Management Groups
 
 > [!NOTE]
-> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../enterprise-scale/testing-approach.md).
+> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../enterprise-scale/testing-approach.md) (Canary approach).
 
 It is not necessary to create a high degree of Azure management isolation for different software development phased environments.  It is possible for a single subscription to contain all of the environments, assuming two things are true:
 
