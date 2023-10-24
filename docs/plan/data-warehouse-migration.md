@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 06/24/2020
 ms.topic: conceptual
-ms.custom: think-tank, UpdateFrequency2
+ms.custom: think-tank, UpdateFrequency2, build-2023, build-2023-dataai
 ---
 
 # Plan a data warehouse migration
