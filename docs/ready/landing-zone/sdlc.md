@@ -46,7 +46,7 @@ With Azure landing zone architecture, you want to avoid complicated and volatile
 
 _Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services).
 
-Different application environments, with the exception of SBX or sandbox environments (see below), should use the same archetype for deployment. Even if the environments are split across separate subscriptions, they are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
+Different application environments, with the exception of sandbox environments (see below), should use the same archetype for deployment. Even if the environments are split across separate subscriptions, they are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
 [Sandbox subscriptions](../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload has not been selected.  This is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
