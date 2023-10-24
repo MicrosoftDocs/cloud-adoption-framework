@@ -14,12 +14,18 @@ Development teams want limited interference with the ability to iterate quickly,
 
 A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
-This guide provides guidance for how cloud platform teams can architect their landing zones to support application team innovation, and how an organization can apply their software development lifecycle (SDLC) to this framework.  For discussion, this guide makes reference to the following phased environments:
+This guide provides guidance for how cloud platform teams can architect their landing zones to support application team innovation, and how an organization can apply their software development lifecycle (SDLC) to this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
 
-- **Sandbox** environment used for rapid innovation of prototypes, but not production-bound configurations.
-- **Development** environment used to build potential release candidates.
-- **Test** environment used to perform testing.  Can include unit testing, user acceptance testing, and quality assurance testing.
-- **Production** environment used to deliver value to workload customers.
+[![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-conceptual-arch.png)](./media/eslz-dev-test-prod-conceptual-arch.png#lightbox)  
+
+For discussion, this guide makes reference to the following phased environments:
+
+Environment | Description | Management Group
+---|---|---|
+**Sandbox** |  Environment used for rapid innovation of prototypes, but not production-bound configurations. | _Sandbox_ Management Group
+**Development** |  Environment used to build potential release candidates. | Archetype management group, like _Corp_ or _Online_
+**Test** | Environment used to perform testing.  Can include unit testing, user acceptance testing, and quality assurance testing. | Archetype management group, like _Corp_ or _Online_
+**Production** | Environment used to deliver value to workload customers. | Archetype management group, like _Corp_ or _Online_
 
 However, any number and classification of environments can be used in practice.
 
@@ -36,9 +42,9 @@ It is not necessary to create a high degree of Azure management isolation for di
 - The environments have the same teams assigned to functional roles, such as network operators.
 - The environments can use the same policies.
 
-Workload owners should work with the cloud platform teams to determine if a division at the subscription level is needed.
+It is recommended that workload owners should work with the cloud platform teams to determine if a division at the subscription level is needed.
 
-If an application or service workload requires segregation of for environments, use a separate subscription for each landing zone in the workload.
+If an application or service workload requires segregation between environments beyond what can be done in a single subscription, it is then recommended to use a separate subscription for each landing zone in the workload.
 
 ### Management Group Hierarchy
 
