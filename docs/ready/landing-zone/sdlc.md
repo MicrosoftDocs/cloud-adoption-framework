@@ -24,7 +24,7 @@ This guide provides guidance for how cloud platform teams can architect their la
 However, any number and classification of environments can be used in practice.
 
 > [!TIP]
-> We discussed this topic in the YouTube video: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
+> Check out the following YouTube video where we discuss this topic: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
 
 ## Environments, Subscriptions, and Management Groups
 
