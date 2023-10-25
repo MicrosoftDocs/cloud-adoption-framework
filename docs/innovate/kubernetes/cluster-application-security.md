@@ -32,7 +32,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
   For more information, see
   - [Understand Kubernetes role-based access control (Kubernetes RBAC)  (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=G3R24JSlGjY&index=12) <br>
-  - [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
+  - [Integrate Microsoft Entra ID with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
   - [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)
 
 ## Deploy to production and apply Kubernetes security best practices
@@ -47,7 +47,7 @@ As you prepare the application for production, implement a minimum set of best p
 
 **Security checklist:**
 
-- **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac).
+- **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Microsoft Entra identities](/azure/aks/azure-ad-rbac).
 
 - **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. For more information, see [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10).
 

@@ -114,7 +114,7 @@ It's recommended to [create a custom role](/azure/role-based-access-control/cust
 
 To learn more, see:
 
-- [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference)
+- [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference)
 - [Azure resource provider operations](/azure/role-based-access-control/resource-provider-operations)
 
 ## Resources

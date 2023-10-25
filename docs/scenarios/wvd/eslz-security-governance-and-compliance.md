@@ -16,20 +16,20 @@ Review the following sections to find recommended security controls and governan
 
 ## Identity
 
-- Secure user access to Azure Virtual Desktop by establishing [Azure AD Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Azure AD Multi-factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool. Consider your users' locations, devices, and sign in behaviors, and add [extra controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) as needed based their access patterns. For more information on enabling Azure Multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- Secure user access to Azure Virtual Desktop by establishing [Microsoft Entra Conditional Access Policy](/azure/active-directory/conditional-access/overview) with [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) or a partner multifactor authentication tool. Consider your users' locations, devices, and sign in behaviors, and add [extra controls](/azure/active-directory/conditional-access/concept-conditional-access-grant) as needed based their access patterns. For more information on enabling Azure multifactor authentication for Azure Virtual Desktop, see [Enable Azure multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 
 - Assign the *least privilege* required by defining administrative, operations, and engineering roles to [**Azure RBAC roles**](/azure/role-based-access-control/overview). To limit access to high privilege roles within your Azure Virtual Desktop landing zone, consider integration with Azure Privileged Identity Management (PIM). Maintaining knowledge of which team is responsible for each particular administrative area helps you determine Azure role-based access control (RBAC) roles and configuration.
 
 - Use [**Azure Managed Identity**](/azure/active-directory/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Assign least privilege to the automation account and scope limited to Azure Virtual Desktop landing zone(s). You can use Azure Key Vault with Azure managed identities so that runtime environments (like an Azure Function) can retrieve automation credentials from the key vault.
 
-- Ensure that you collect user and administrator activity logging for Azure Active Directory and Azure Virtual Desktop landing zone(s). Monitor these logs with your Security Information and Event Management (SIEM) tool. You can collect logs from various sources, such as:
+- Ensure that you collect user and administrator activity logging for Microsoft Entra ID and Azure Virtual Desktop landing zone(s). Monitor these logs with your Security Information and Event Management (SIEM) tool. You can collect logs from various sources, such as:
   - [Azure Activity Log](/azure/azure-monitor/essentials/activity-log)
-  - [Azure Active Directory Activity Log](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-  - [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
+  - [Microsoft Entra Activity Log](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+  - [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis)
   - [Session hosts](/azure/azure-monitor/agents/agent-windows)
   - [Key Vault logs](/azure/key-vault/general/logging)
 
-- Use Azure AD groups rather than individual users when assigning access to Azure Virtual Desktop application groups. Consider using existing security groups that map to business functions within your organization, which lets you reuse existing user provisioning and de-provisioning processes.
+- Use Microsoft Entra groups rather than individual users when assigning access to Azure Virtual Desktop application groups. Consider using existing security groups that map to business functions within your organization, which lets you reuse existing user provisioning and de-provisioning processes.
 
 ## Networking
 
@@ -101,7 +101,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/deployoffice/admincenter/overview-office-cloud-policy-service) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
 
-- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS). Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
+- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Microsoft Entra Domain Services. Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
 
 ## Cost management
 
@@ -168,7 +168,7 @@ Nearly all organizations must comply with various government or industry regulat
 - Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure overall organization security posture across the following products:
 
   - Microsoft 365 (including Exchange Online)
-  - Azure Active Directory
+  - Microsoft Entra ID
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity
   - Defender for Cloud Apps

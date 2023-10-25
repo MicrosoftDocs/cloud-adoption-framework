@@ -194,7 +194,7 @@ To configure or monitor API Management services:
 
 ### Containers
 
-For modernizing your application portfolio, Azure provides various container services to migrate your existing applications to containers and build cloud-native microservices applications so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you're in your application modernization journey, accelerate your containerized application development while meeting your security requirements.
+For modernizing your application portfolio, Azure provides various container services to migrate your existing applications to containers and build cloud-native microservices applications so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Microsoft Entra ID. Wherever you're in your application modernization journey, accelerate your containerized application development while meeting your security requirements.
 
 ### Containers: Azure Container Instances
 
