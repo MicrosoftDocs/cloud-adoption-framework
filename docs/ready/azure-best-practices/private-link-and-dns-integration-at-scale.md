@@ -2,10 +2,10 @@
 title: Private Link and DNS integration at scale
 description: Private Link and DNS integration at scale
 author: JefferyMitchell
-ms.author: martinek
-ms.date: 09/30/2022
+ms.author: tozimmergren
+ms.date: 10/25/2023
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom: think-tank, UpdateFrequency2
 ---
 
 # Private Link and DNS integration at scale
@@ -53,7 +53,7 @@ From the previous diagram, it's important to highlight that:
 
 While the previous diagram depicts a single hub and spoke architecture, customers may need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints (PE’s).
 
-![A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multi region.][image-1a]
+:::image type="content" source="./media/private-link-example-central-dns-multi-regions.png" alt-text="A diagram of a high-level architecture with central DNS resolution and name resolution for Private Link resources in multi region." lightbox="./media/private-link-example-central-dns-multi-regions.png":::
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution deployed in the hub (one per region) where name resolution for Private Link resources is done via Azure Private DNS.
 
@@ -501,7 +501,6 @@ Below are helpful links to review when creating Private Endpoint with Bicep and 
 [link-15]: https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0
 [link-16]: https://github.com/Azure/azure-policy#new-built-in-policy-proposals
 [image-1]: ./media/private-link-example-central-dns.png
-[image-1a]: ./media/private-link-example-central-dns-multi-regions.png
 [image-2]: ./media/create-private-dns-zones.jpg
 [image-3]: ./media/create-storage-account-blob.jpg
 [image-4]: ./media/validation.jpg
