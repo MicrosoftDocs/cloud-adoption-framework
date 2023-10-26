@@ -28,7 +28,7 @@ EPAC can be used to both deploy and manage Azure Landing Zone deployed policies.
 - You have existing unmanaged policies in a brownfield environment that you want to deploy in the new ALZ environment. [Export the existing policies](https://azure.github.io/enterprise-azure-policy-as-code/extract-existing-policy-resources/) and manage them with EPAC alongside the ALZ policy objects.
 - You have ALZ deployed in a non standard way, for example, multiple management group structures for testing, nonconventional management group structure. The default assignment structure provided by other ALZ deployment methods may not fit your strategy.
 - A team that is not responsible for infrastructure deployment, for example, a security team may want to deploy and manage policies.
-- You require features from policy not available in the ALZ deployments, for example, policy exemptions, documentation, assignment customization.
+- You require features from policy not available in the ALZ deployments, for example, policy exemptions and documentation.
 - Noncompliance reporting and remediation task management.
 
 ## Getting Started
