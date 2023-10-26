@@ -16,7 +16,7 @@ Policy driven governance is one of the design principles for Azure Landing Zones
 
 [Enterprise Policy as Code](https://aka.ms/epac) (EPAC) is an open source project designed to manage Azure Policy using infrastructure as code, built upon a PowerShell module published to the PowerShell Gallery. It contains a set of features designed to enhance the policy management experience including:
 - A stateful policy deployment experience. The objects defined in the code become the source of truth for policy objects deployed in Azure.
-- Complex policy management scenarios such as multi-tenant and sovereign cloud deployments.
+- Complex policy management scenarios such as multitenant and sovereign cloud deployments.
 - Incorporating existing time spent developing custom policies prior to Azure Landing Zone deployment by exporting and integrating policies. 
 - Creating and managing policy exemptions and policy documentation.
 - Integration with GitHub Actions and Azure Pipelines.
@@ -26,7 +26,7 @@ Policy driven governance is one of the design principles for Azure Landing Zones
 
 EPAC can be used to both deploy and manage Azure Landing Zone policies. Some reasons you may want to consider using EPAC to manage policy are:
 - You have unmanaged policies in an existing brownfield environment that you want to deploy in the new ALZ environment. [Export the existing policies](https://azure.github.io/enterprise-azure-policy-as-code/extract-existing-policy-resources/) and manage them with EPAC alongside the ALZ policy objects.
-- You have an Azure deployment that does not fully align to ALZ, for example, multiple management group structures for testing, nonconventional management group structure. The default assignment structure provided by other ALZ deployment methods may not fit your strategy.
+- You have an Azure deployment that doesn't fully align to ALZ, for example, multiple management group structures for testing, nonconventional management group structure. The default assignment structure provided by other ALZ deployment methods may not fit your strategy.
 - A team that is not responsible for infrastructure deployment, for example, a security team may want to deploy and manage policies.
 - You require features from policy not available in the ALZ deployments, for example, policy exemptions and documentation.
 - Noncompliance reporting and remediation task management.
@@ -41,13 +41,13 @@ The EPAC repository provides detailed steps on getting started with managing Azu
 
 Follow the [quick start](https://azure.github.io/enterprise-azure-policy-as-code/quick-start/#epac-quick-start) guide to begin by exporting policy objects in your environment to gain familiarity with how EPAC manages Azure Policy.
 
-For issues with the code or documentation, please raise an [issue](https://github.com/Azure/enterprise-azure-policy-as-code/issues) in the GitHub repository. 
+For issues with the code or documentation, raise an [issue](https://github.com/Azure/enterprise-azure-policy-as-code/issues) in the GitHub repository. 
 
 ## Replacing existing policy deployment solutions
 
-EPAC replaces the policy deployment parts of the Azure Landing Zone accelerators. When using these accelerators you should not deploy Azure Policy with them due to EPAC being the source of truth for policy in the environment.
+EPAC replaces the policy deployment parts of the Azure Landing Zone accelerators. When using these accelerators, you should not deploy Azure Policy due to EPAC being the source of truth for policy in the environment.
 
-For more information see the links below for policy management using Bicep and Terraform ALZ accelerators.
+For more information, see the links below for policy management using Bicep and Terraform ALZ accelerators.
 - [How Does ALZ-Bicep Implement Azure Policies?](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive)
 - [Archetype Definitions](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Archetype-Definitions)
 
