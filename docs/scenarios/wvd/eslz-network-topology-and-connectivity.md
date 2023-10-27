@@ -16,7 +16,7 @@ The design foundations include:
 
 - **Hybrid integration** for connectivity between on-premises, multicloud, and edge environments, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
 - **Performance and reliability at scale** for a consistent, low-latency experience, and scalability for workloads.
-- **Zero-trust–based network security** to help secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
+- **Zero-trust–based network security** to help secure network perimeters and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
 - **Extensibility** for easily expanding a network footprint without design rework.
 
 ## Networking components and concepts
@@ -34,7 +34,7 @@ The design foundations include:
 
 ## Networking scenarios
 
-To establish the Azure Virtual Desktop landing zone, the design and implementation of networking capabilities is critical. Azure networking products and services support a wide variety of capabilities. The architecture that you choose and the way you structure services depend on your organization's workloads, governance, and requirements.
+To establish the Azure Virtual Desktop landing zone, the design and implementation of networking capabilities is critical. Azure networking products and services support a wide variety of capabilities. The architecture that you choose and the way that you structure services depend on your organization's workloads, governance, and requirements.
 
 The following key requirements and considerations affect your Azure Virtual Desktop deployment decisions:
 
@@ -105,9 +105,11 @@ For detailed deployment guidance, see [RDP Shortpath connectivity for managed ne
 
 This scenario is ideal if:
 
-- You want to limit the amount of over-the-internet connections to Azure Virtual Desktop session hosts.
+- You want to limit the number of over-the-internet connections to Azure Virtual Desktop session hosts.
 - You have pre-existing hybrid connectivity from an on-premises environment to Azure, either through ExpressRoute or an S2S or point-to-site (P2S) VPN.
-- You have direct line-of-sight network connectivity between RDP clients and Azure Virtual Desktop hosts. Typically, this setup consists of on-premises networks that are routed to Azure Virtual Desktop Azure networks or client VPN connections that are routed to Azure Virtual Desktop Azure virtual networks.
+- You have direct line-of-sight network connectivity between RDP clients and Azure Virtual Desktop hosts. Typically, one of the following setups is used in this scenario:
+  - On-premises networks that are routed to Azure Virtual Desktop Azure networks
+  - Client VPN connections that are routed to Azure Virtual Desktop Azure virtual networks
 - You need to limit bandwidth usage of VM hosts over private networks, such as a VPN or ExpressRoute.
 - You want to prioritize Azure Virtual Desktop traffic on your network.
 - You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
@@ -226,7 +228,7 @@ To facilitate the end-user Azure Virtual Desktop client configuration, including
 
 Azure Virtual Desktop uses RDP. To learn more about RDP, see [Remote Desktop Protocol (RDP) bandwidth requirements](/azure/virtual-desktop/rdp-bandwidth).
 
-The connection latency varies, depending on the location of the users and the VMs. Azure Virtual Desktop services continuously roll out to new geographies to improve latency. To minimize the latency that's perceived by Azure Virtual Desktop clients, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/). This tool provides round-trip time (RTT) samples from clients. You can use this information to place session hosts in the closest region with the lowest RTT to end users. For information about interpreting results from the estimator tool, see [Analyze connection quality in Azure Virtual Desktop](/azure/virtual-desktop/connection-latency).
+The connection latency varies, depending on the location of the users and the VMs. Azure Virtual Desktop services continuously roll out to new geographies to improve latency. To minimize the latency that Azure Virtual Desktop clients experience, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/). This tool provides round-trip time (RTT) samples from clients. You can use this information to place session hosts in the region that's closest to end users and has the lowest RTT. For information about interpreting results from the estimator tool, see [Analyze connection quality in Azure Virtual Desktop](/azure/virtual-desktop/connection-latency).
 
 ### QoS with RDP Shortpath
 
@@ -234,7 +236,7 @@ RDP Shortpath for managed networks provides a direct UDP-based transport between
 
 You can use RDP Shortpath in two ways:
 
-- In **managed networks**, where direct connectivity is established between the client and the session host when you use a private connection, such as an ExpressRoute connection a VPN.
+- In **managed networks**, where direct connectivity is established between the client and the session host when you use a private connection, such as an ExpressRoute connection or a VPN.
 - In **public networks**, where direct connectivity is established between the client and the session host when you use a public connection. Examples of public connections include home networks, coffee shop networks, and hotel networks. There are two possible connection types when you use a public connection:
   - **A direct UDP connection** between a client and a session host that uses the STUN protocol.
   - **An indirect UDP connection** that uses the TURN protocol with a relay between an RDP client and a session host. This option is used if the gateway or router doesn't allow direct UDP connections.
@@ -265,7 +267,7 @@ The Azure Virtual Desktop connection models use the following ports and protocol
 
 ### Business continuity and disaster recovery
 
-For business continuity and disaster recovery, a certain networking setup is required. Specifically, to deploy and recover resources to a target environment, you need either of the following configurations:
+For business continuity and disaster recovery, a certain networking setup is required. Specifically, to deploy and recover resources to a target environment, use one of the following configurations:
 
 - A networking setup with the same capabilities as the one on the source environment
 - A networking setup that has connectivity to identity and DNS services
