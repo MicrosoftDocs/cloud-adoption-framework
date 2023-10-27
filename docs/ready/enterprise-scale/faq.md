@@ -71,7 +71,7 @@ The Cloud Adoption Framework landing zones [open source project (OSS)](https://a
 
 Review the following documentation sections:
 
-- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policy)
+- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policies)
 - [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources"
  section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
 
@@ -83,7 +83,7 @@ See [Software Development Lifecycle in Azure Landing Zones](../landing-zone/sdlc
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 
-When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deploymene metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
 The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace and an automation account, if required.
 
