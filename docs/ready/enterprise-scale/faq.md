@@ -79,7 +79,7 @@ Review the following documentation sections:
 
 ## How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?
 
-See [Software Development Lifecycle in Azure Landing Zones](../landing-zone/sdlc.md) for information about managing development environments in Azure Landing Zones.
+See [Software Development Lifecycle in Azure Landing Zones](../landing-zone/design-area/sdlc.md) for information about managing development environments in Azure Landing Zones.
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 

@@ -56,7 +56,7 @@ Management group structures within a Microsoft Entra tenant support organization
 
 - Don't create management groups for production, testing, and development environments. If necessary, separate these groups into different subscriptions in the same management group. To review further guidance on this topic, see:
 
-  - [Software Development Lifecycle in Azure Landing Zones](../sdlc.md)
+  - [Software Development Lifecycle in Azure Landing Zones](./sdlc.md)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
 <a id='management-groups-alz'></a>

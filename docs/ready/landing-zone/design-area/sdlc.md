@@ -35,7 +35,7 @@ However, any number and classification of environments can be used in practice.
 ## Environments, Subscriptions, and Management Groups
 
 > [!NOTE]
-> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../enterprise-scale/testing-approach.md) (Canary approach).
+> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md) (Canary approach).
 
 It is not necessary to create a high degree of Azure management isolation for different software development phased environments.  It is possible for a single subscription to contain all of the environments, assuming two things are true:
 
@@ -48,17 +48,17 @@ If an application or service workload requires segregation between environments 
 
 ### Management Group Hierarchy
 
-With Azure landing zone architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
+With Azure landing zone architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
 
 _Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services).
 
 Different application environments, with the exception of sandbox environments (see below), should use the same archetype for deployment. Even if the environments are split across separate subscriptions, they are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
 
-[Sandbox subscriptions](../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload has not been selected.  This is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
+[Sandbox subscriptions](../../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload has not been selected.  This is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
 These sandbox environments can be tied to specific applications, or can be used for individual developers to lab and experiment.
 
-You can read more about designing [management groups](./design-area/resource-org-management-groups.md) in the [Resource organization design area](./design-area/resource-org.md) for Azure landing zones.
+You can read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones.
 
 #### Challenges with having Environment Based Management Groups
 
@@ -91,7 +91,7 @@ Sometimes, you might need some policies to apply differently, depending on the e
 > Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
 
 - Apply policies at a subscription level as required, ideally during the subscription creation process (as mentioned earlier).
-- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md).)
+- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](platform-automation-devops.md).)
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 
 ### Scenario: Application Services
@@ -104,6 +104,6 @@ We suggest working with each application or service workload team (landing zone 
 
 Continue to learn about development and testing in Azure Landing Zones, and how management groups play a part.
 
-- Review the [testing approach for enterprise-scale](../enterprise-scale/testing-approach.md)
-- Review the [Resource organization design area](./design-area/resource-org.md) to make decisions for management group and subscription creation
-- Review how you can use [Sandbox subscriptions](../considerations/sandbox-environments.md) isolated development
+- Review the [testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
+- Review the [Resource organization design area](resource-org.md) to make decisions for management group and subscription creation
+- Review how you can use [Sandbox subscriptions](../../considerations/sandbox-environments.md) isolated development
