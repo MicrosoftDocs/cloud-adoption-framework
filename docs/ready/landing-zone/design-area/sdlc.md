@@ -16,7 +16,7 @@ A key part of this approach is to provide sandbox resources for "semi-governed" 
 
 This guide provides guidance for how cloud platform teams can architect their landing zones to support application team innovation, and how an organization can apply their software development lifecycle (SDLC) to this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
 
-[![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-conceptual-arch.png)](./media/eslz-dev-test-prod-conceptual-arch.png#lightbox)  
+![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/sub-organization.png)  
 
 For discussion, this guide makes reference to the following phased environments:
 
@@ -58,19 +58,13 @@ Different application environments, with the exception of sandbox environments (
 
 These sandbox environments can be tied to specific applications, or can be used for individual developers to lab and experiment.
 
-The below diagram shows a management group topology following these practices:
-
-[![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
-
-_Some management groups have been removed for illustration clarity purposes._
-
 You can read more about designing [management groups](./design-area/resource-org-management-groups.md) in the [Resource organization design area](./design-area/resource-org.md) for Azure landing zones.
 
 #### Challenges with having Environment Based Management Groups
 
 Building management groups for for environments within the archetypes creates additional management overhead, while providing very limited value.
 
-[![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png)](./media/eslz-dev-test-prod-bad.png#lightbox)
+![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/sub-organization.png)  
 
 The _Landing Zone_ management group should have universal polices that enforce guardrails for both Corp and Online. Corp and Online have unique polices to enforce company guidelines around public and private facing workloads.
 
