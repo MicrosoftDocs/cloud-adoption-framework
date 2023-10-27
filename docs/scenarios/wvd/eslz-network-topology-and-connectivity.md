@@ -16,7 +16,7 @@ The design foundations include:
 
 - **Hybrid integration** for connectivity between on-premises, multicloud, and edge environments, and global users. For more information, see [Enterprise-scale support for hybrid and multicloud](../hybrid/enterprise-scale-landing-zone.md).
 - **Performance and reliability at scale** for a consistent, low-latency experience, and scalability for workloads.
-- **Zero-trust–based network security** to help secure network perimeters and traffic flows. For more information, see [Network security strategies on Azure](/azure/architecture/framework/security/design-network).
+- **Zero-trust–based network security** to help secure network perimeters and traffic flows. For more information, see [Network security strategies on Azure](/azure/well-architected/security/design-network).
 - **Extensibility** for easily expanding a network footprint without design rework.
 
 ## Networking components and concepts
