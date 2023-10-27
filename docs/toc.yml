@@ -329,6 +329,8 @@ items:
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
           - name: Tailoring the Azure landing zones architecture
             href: ready/landing-zone/tailoring-alz.md
+          - name: Software Development Lifecycle in Azure Landing Zones
+            href:  ready/landing-zone/design-area/sdlc.md
           - name: Adopt policy-driven guardrails
             href: ready/enterprise-scale/dine-guidance.md
           - name: Additional information
