@@ -58,7 +58,7 @@ However, a zero trust approach to data involves deeper controls.  From an implem
 
 ### Infrastructure Pillar
 
-The [Infrastructure Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
+The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
 
 The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your Landing Zone can be used to advance these deployment objectives.
 
