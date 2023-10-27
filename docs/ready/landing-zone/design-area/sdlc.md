@@ -16,7 +16,7 @@ A key part of this approach is to provide sandbox resources for "semi-governed" 
 
 This guide provides guidance for how cloud platform teams can architect their landing zones to support application team innovation, and how an organization can apply their software development lifecycle (SDLC) to this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
 
-![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/sub-organization.png)  
+![Diagram of an example of an optimal management group hierarchy.](./media/sub-organization.png)  
 
 For discussion, this guide makes reference to the following phased environments:
 
