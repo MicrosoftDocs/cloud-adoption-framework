@@ -222,3 +222,7 @@ Here's a high-level overview of the steps you do in this phase:
 - Create remediation tasks for existing resources that are noncompliant by following the guidance in [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task). New resources will automatically be remediated if they match the policy rules and existence conditions.
 
 Even though in phase 3 we recommend that you set the enforcement mode to `Default` for all DINE and Modify policies in your Azure environment, this choice is still optional. You can make this choice on a per-policy basis to suit your needs and requirements.
+
+### Advanced policy management
+
+For advanced management of Azure Policy as scale you can consider using [Enterprise Policy As Code (EPAC)](../policy-management/enterprise-policy-as-code.md) to manage policy. EPAC provides a stateful management experience using infrastructure as code, and may suit large policy management scenarios with complex requirements.
