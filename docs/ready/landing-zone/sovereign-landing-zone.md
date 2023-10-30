@@ -17,10 +17,10 @@ Adopting cloud computing while meeting digital sovereignty requirements is compl
 
 Microsoft Cloud for Sovereignty provides capabilities across different layers:
 
-* Advanced sovereign control services like Azure confidential computing and Azure Key Vault Managed Hardware Security Module (Managed HSM).
-* Sovereign guardrails through codified architecture, workload accelerators, localized Azure Policy initiatives, tooling, and guidance.
-* Regulatory compliance and transparency into the cloud operator's activities.
-* Functionality that's built on top of the Azure public cloud capabilities.
+- Advanced sovereign control services like Azure confidential computing and Azure Key Vault Managed Hardware Security Module (Managed HSM).
+- Sovereign guardrails through codified architecture, workload accelerators, localized Azure Policy initiatives, tooling, and guidance.
+- Regulatory compliance and transparency into the cloud operator's activities.
+- Functionality that's built on top of the Azure public cloud capabilities.
 
 :::image type="content" source="./media/sovereign-landing-zone/sovereign-capabilities.png" alt-text="Diagram that shows the layers of capabilities of Microsoft Cloud for Sovereignty.":::
 
@@ -45,59 +45,75 @@ Add filler sentence.
 
 The sovereign landing zone is a tailored version of the Azure landing zone conceptual architecture. The sovereign landing zone aligns to the guidance that's outlined in [Tailor the Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
 
-Building on the Azure landing zone architecture, from a management group organization perspective, "Confidential Corp" and "Confidential Online" management groups are added under the "Landing Zones" Management Group. A set of specific policy initiatives, for example [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied that offer controls such as resource deployment location, resource deployment types, encryption, etc.
+As the following diagram shows, the sovereign landing zone architecture builds on the Azure landing zone architecture:
 
-![Diagram that shows additional management groups of a sovereign landing zone.](./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg)
+- Under the *Landing zones* management group, the *Confidential corp* and *Confidential online* management groups are added.
+- A set of specific policy initiatives, for example [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied. These initiatives offer controls such as resource deployment location, resource deployment types, and encryption.
+
+:::image type="content" source="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg" alt-text="Diagram that shows the additional management groups of a sovereign landing zone.":::
 
 #### Microsoft Cloud for Sovereignty policy baseline
 
-The sovereign landing zone (preview) comes with the Sovereignty policy baseline initiatives deployed, enabling other policy sets to be deployed within the sovereign landing zone (preview). Customers can layer additional policies on top of a sovereign landing zone (preview), for example Azure landing zone policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark.
+The sovereign landing zone (preview) comes with the Cloud for Sovereignty policy baseline initiatives deployed. As a result, you can deploy other policy sets within the sovereign landing zone (preview). Customers can layer additional policies on top of a sovereign landing zone (preview). Examples include Azure landing zone policies and policy sets that address control frameworks such as NIST 800-171 rev2 and Microsoft Cloud Security Benchmark.
 
-The Sovereignty policy baseline consists of:
+The Cloud for Sovereignty policy baseline consists of:
 
-* Policies to enforce the use of confidential computing resources when workloads are deployed into the confidential management groups. These policies create a platform where workloads are protected at rest, in transit, and while in use, removing Microsoft from the trust chain.
-* Location policies are also deployed by default to provide cloud admin control over where Azure resources can be deployed.
-* Key management is controlled by a FIPS 140-2 Level 3 validated HSM and enforced by policy.
+- Policies to enforce the use of confidential computing resources when workloads are deployed into the confidential management groups. These policies create a platform where workloads are protected at rest, in transit, and while in use, which removes Microsoft from the trust chain.
+- Location policies, which are also deployed by default to provide cloud admin control over where Azure resources can be deployed.
+- Key management, which is controlled by a Federal Information Processing Standard (FIPS) 140-2 level-3 validated HSM and enforced by policy.
 
-The policies and opinions that the sovereign landing zone (preview) layers on top of the Azure landing zone create a platform that is biased towards increased security and confidentiality by default.
+The policies and opinions that the sovereign landing zone (preview) adds on top of the Azure landing zone create a platform that's biased toward increased security and confidentiality by default.
 
-For more information on the sovereignty policy baseline initiative, review the documentation [Microsoft Cloud for Sovereignty policy portfolio](/industry/sovereignty/policy-portfolio-baseline)
+For more information about the sovereignty policy baseline initiative, review the [Microsoft Cloud for Sovereignty policy portfolio](/industry/sovereignty/policy-portfolio-baseline) documentation.
 
 ### Network topology and connectivity
 
-##### Network traffic encryption
+Add filler sentence.
 
-The sovereign landing zone (preview) focuses on operational control of data at rest, in transit, and in use. Customers should consider following best practices on network encryption as described in [Define network encryption requirements](/azure/cloud-adoption-framework/ready/azure-best-practices/define-network-encryption-requirements)
+#### Network traffic encryption
 
-##### Internet inbound and outbound connectivity
+The sovereign landing zone (preview) focuses on operational control of data at rest, in transit, and in use. For best practices on network encryption, see [Define network encryption requirements](/azure/cloud-adoption-framework/ready/azure-best-practices/define-network-encryption-requirements).
 
-Similar to Azure landing zone deployments, The sovereign landing zone deployment allows for parameterized deployment of Azure Firewall premium, for enabling DDoS protection, and for deploying a central Azure bastion infrastructure.
+#### Internet inbound and outbound connectivity
 
-Customers should consult the best practices on internet inbound and outbound connectivity found [Plan for inbound and outbound internet connectivity](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity) before enabling those features.
+Similar to Azure landing zone deployments, the sovereign landing zone deployment supports:
+
+- A parameterized deployment of the premium tier of Azure Firewall, for enabling distributed denial-of-service (DDoS) protection.
+- The deployment of a central Azure Bastion infrastructure.
+
+Before you turn on these features, consult the best practices for internet inbound and outbound connectivity in [Plan for inbound and outbound internet connectivity](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity).
 
 ### Security
 
-##### Azure Key Vault Managed HSM
+Add filler sentence.
 
-The sovereign landing zone architecture leverages the use of confidential computing in the confidential landing zones. Azure Key Vault is a necessary service for deploying confidential computing resources. Customers are encouraged to consult the design considerations and recommendations found at [Encryption and key management in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys), and may have to choose Azure Key Vault Managed HSM for compliancy requirements.
+#### Azure Key Vault Managed HSM
 
-##### Azure Attestation
+The sovereign landing zone architecture makes use of confidential computing in the confidential landing zones. Key Vault is a necessary service for deploying confidential computing resources. For design considerations and recommendations, see [Encryption and key management in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys). You might need to choose Azure Key Vault Managed HSM for compliancy requirements.
 
-Customers using Azure confidential computing may want to leverage Azure Attestation by enabling guest attestation. The guest attestation feature helps to confirm that a confidential VM runs on a hardware-based trusted execution environment (TEE) with security features (isolation, integrity) enabled.
+#### Azure Attestation
 
-For more information enabling guest attestation, review the documentation [What is guest attestation for confidential VMs? \|  Microsoft Learn](/azure/confidential-computing/guest-attestation-confidential-vms)
+If you use Azure confidential computing, you can take advantage of the guest attestation feature of Azure Attestation. This feature helps to confirm that a confidential VM runs on a hardware-based trusted execution environment (TEE) with security features like isolation and integrity enabled.
+
+For more information about enabling guest attestation, see [What is guest attestation for confidential VMs?](/azure/confidential-computing/guest-attestation-confidential-vms).
 
 ### Governance
 
-##### Customer Lockbox for Microsoft Azure
+Add filler sentence.
 
-Most operations, support, and troubleshooting performed by Microsoft personnel and sub-processors don't require access to customer data. In those rare circumstances where such access is required, Customer Lockbox for Microsoft Azure provides an interface for customers to review and approve or reject customer data access requests. It's used in cases where a Microsoft engineer needs to access customer data, whether in response to a customer-initiated support ticket or a problem identified by Microsoft.
+#### Customer Lockbox for Microsoft Azure
+
+In most cases, Microsoft personnel perform operations, support, and troubleshooting. No access to customer data is required. Occasionally, a Microsoft engineer needs to access customer data. These cases can come up in response to customer-initiated support tickets or when Microsoft identifies a problem.
+
+In the rare circumstances when access is required, you can use Customer Lockbox for Microsoft Azure. This feature provides an interface that you can use to review and then approve or reject customer data access requests.
 
 Consider enabling Customer Lockbox for Microsoft Azure. Enabling this option requires the Global Admin role as this is a tenant-wide setting. Further information on how to correctly set up RBAC for Customer Lockbox can be found in [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
 
 ### Platform Automation and DevOps
 
-##### Deployment options
+Add filler sentence.
+
+#### Deployment options
 
 The sovereign landing zone (preview) is available as a GitHub repository <https://github.com/Azure/sovereign-landing-zone> and can be deployed as a whole or on a component per component basis, which allows for integration in a customer's existing deployment workflow. Deployment guidance is located in [Key components of the sovereign landing zone preview deployment](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/03-Deployment-Overview.md).
 
@@ -114,6 +130,6 @@ The deployed components include:
 
 1. Dashboard: Provides customers with a visual representation of their resource compliance.
 
-##### Compliance dashboard
+#### Compliance dashboard
 
 As part of the sovereign landing zone (preview) deployment, a compliance dashboard is deployed to help customers validate the sovereign landing zone (preview) against their requirements and local laws and regulations. Customers can get insight into resource level compliance against the baseline policies deployed with the sovereign landing zone (preview) as well as additional custom compliance that has been deployed. For more information, see the  [Compliance dashboard documentation](https://github.com/Azure/sovereign-landing-zone/blob/main/docs/10-Compliance-Dashboard.md).
