@@ -164,11 +164,11 @@ We encourage you to review these updates and incorporate them into your App Serv
 
 ## December 2022
 
-### Defense cloud adoption scenario
+### Cloud adoption scenario for defense
 
-The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country/region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
+The cloud adoption scenario for defense provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country/region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The defense scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
 
-We invite you to [explore the Defense cloud adoption scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
+We invite you to [explore the defense scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
 
 ### HPC landing zone accelerator
 
