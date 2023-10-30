@@ -225,4 +225,4 @@ Even though in phase 3 we recommend that you set the enforcement mode to `Defaul
 
 ### Advanced policy management
 
-For advanced management of Azure Policy as scale you can consider using [Enterprise Policy As Code (EPAC)](../policy-management/enterprise-policy-as-code.md) to manage policy. EPAC provides a stateful management experience using infrastructure as code, and may suit large policy management scenarios with complex requirements.
+For advanced management of Azure Policy at scale you can consider using [Enterprise Policy As Code (EPAC)](../policy-management/enterprise-policy-as-code.md) to manage policy. EPAC provides a stateful management experience using infrastructure as code, and may suit large policy management scenarios with complex requirements.
