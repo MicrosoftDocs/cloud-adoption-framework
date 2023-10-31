@@ -45,13 +45,13 @@ More data has been generated in the last 3 years compared to the 30 years before
 
 ## Azure Retail Marketplace's end-to-end solutions
 
-A [recent study](https://clouddamcdnprodep.azureedge.net/gdc/gdc9fKC0t/original) by Forrester commissioned by Microsoft revealed that 83 percent of retail and CPG (consumer packed goods) decision makers agree that delivering a connected and unified experience to customers is vital to business success and that the key to creating those experiences lies with digital commerce.
+A [recent Forrester Consulting study](https://clouddamcdnprodep.azureedge.net/gdc/gdc9fKC0t/original) commissioned by Microsoft revealed that 83 percent of retail and CPG (consumer packaged goods) decision makers agree that delivering a connected and unified experience to customers is vital to business success and that the key to creating those experiences lies with digital commerce.
 
 Breaking down these silos, unifying data, and combining with AI and ML-driven insights can help retailers unlock 2-5% to line growth by meeting customer expectations across the customer journey. Your organization can deploy Paas solutions, deploying AI and ML applications and apps that provide one view of data, making use of advanced data and AI capabilities to meet the ever-revolving expectations of the new e-commerce consumer anytime, on any device or platform.
 
-[Azure Retail Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=retail) is a solutions portal with end-to-end solutions that are Azure-certified and optimized across the Microsoft retail partner ecosystem. Azure offers robust AI and ML applications and apps that can help you meet the challenges of forecasting the preferences of the new retail consumer with a platform-specific—channel context-dependent, and more humanized approach to online shoppers—a digital audience whose preference is always evolving.
+[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?page=1&search=retail) is a solutions portal with end-to-end solutions that are Azure-certified and optimized across the Microsoft retail partner ecosystem. Azure offers robust AI and ML applications and apps that can help you meet the challenges of forecasting the preferences of the new retail consumer with a platform-specific—channel context-dependent, and more humanized approach to online shoppers—a digital audience whose preference is always evolving.
   
- The Azure Retail Marketplace enables your organization the ability to democratize data by offering partner solutions that your organization can use to quickly and reliably provision end-to-end solutions to:
+Azure Marketplace enables your organization the ability to democratize data by offering partner solutions that your organization can use to quickly and reliably provision end-to-end solutions to:
 
 - bring together dirty data
 - integrate with partners' data across your retail supply chain operations
@@ -59,10 +59,10 @@ Breaking down these silos, unifying data, and combining with AI and ML-driven in
 
 Provision end-to-end solutions from thousands of products from independent software vendors (ISVs) that help you reach successful retail business outcomes and:
 
-- access open source software (OSS) and enterprise applications
-- test pre-configured applications without an Azure subscription or use your credit card
-- use free trials to deploy and use software in your Azure subscription
-- confidently deploy—standing up an end-to-end solution reliably, in a few minutes with trusted software vendors
+- Access open source software (OSS) and enterprise applications
+- Test pre-configured applications without an Azure subscription or use your credit card
+- Use free trials to deploy and use software in your Azure subscription
+- Confidently deploy—standing up an end-to-end solution reliably, in a few minutes with trusted software vendors
 - learn architectural guidance and implementation help and lever a strong ecosystem of top system integrators and solution architects
 - use Azure, Azure Stack, and reuse your existing software licenses with Bring Your Own License (BYOL) offers to optimize cost
 
@@ -72,7 +72,7 @@ Predicting preference in future customer behaviors is always challenging. Howeve
 
 Retailers achieving successful business outcomes are embracing digital transformation extending beyond the innovations of PaaS web services development and deployment environments to deploying SaaS AI and ML services —reimagining what retail means—implementing and building a modernized platform to maximize business value while engaging the consumer on any platform with a tailored customer experience based squarely on their preferences at the moment.
 
-Advancing through the stages of cloud retail maturity will required changing to a unified data model for retail operations. Retail operations that take advantage of the latest cloud technologies (e.g., AI, IoT, and open APIs) that enable predictive analytics can progress towards maturing the Intelligent retail phase with modern SaaS AI and ML apps and services—but implementing business models of change—building in-house digital capabilities on top of these technologies for continued relevance for the consumer purchase cycle of the near future.
+Advancing through the stages of cloud retail maturity will required changing to a unified data model for retail operations. Retail operations that take advantage of the latest cloud technologies (e.g., AI, IoT, and open APIs) that enable predictive analytics can progress towards maturing the intelligent retail phase with modern SaaS AI and ML apps and services—but implementing business models of change—building in-house digital capabilities on top of these technologies for continued relevance for the consumer purchase cycle of the near future.
 
 ## Differentiation in difficult times
 
