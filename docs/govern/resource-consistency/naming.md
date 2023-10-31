@@ -17,18 +17,18 @@ Well-defined naming conventions  provide consistency, prevent naming clashes and
 - Environment
 - Azure region
 
-For example, a public IP resource for a production SharePoint workload in the West US region might be pip-sharepoint-prod-westus-001.
+For example, a public IP resource for a production SharePoint workload in the West US region might be `pip-sharepoint-prod-westus-001`.
 
 ![Diagram that shows the components of an Azure resource name.](../../_images/ready/resource-naming.png)
 
 *Diagram 1: Components of an Azure resource name from [Define your naming convention](../../ready/azure-best-practices/resource-naming.md).*
 
-Naming rules and restrictions, such as scope, name length, or valid characters, differ by resource type in Azure. The example in the table below illustrates how resources have differing constraints. 
+Naming rules and restrictions, such as scope, name length, or valid characters, differ by resource type in Azure. The example in the table below illustrates how resources have differing constraints.
 
 | Entity | Scope | Length | Valid Characters |
 | --- | --- | --- | --- |
-| Microsoft.Storage.storageAccounts | global | 3-24 | Lowercase letters and numbers. |
-| Microsoft.Network.virtualNetworks | resource group | 2-64 | Alphanumerics, underscores, periods, and hyphens. <br />Start with alphanumeric. End alphanumeric or underscore. |
+| `Microsoft.Storage/storageAccounts` | global | 3-24 | Lowercase letters and numbers. |
+| `Microsoft.Network/virtualNetworks` | resource group | 2-64 | Alphanumerics, underscores, periods, and hyphens. <br />Start with alphanumeric. End alphanumeric or underscore. |
 
 *Table 1: Example resource rules and restrictions*
 
@@ -49,7 +49,7 @@ Use the following resources to understand the components of a good naming conven
 
 Azure Policy can be used to enforce and audit compliance of your naming standards. Because there are no pre-defined standards for naming, there are no built-in policies to enforce naming. You can create custom policies to enforce the standards you determine.
 
-The following snippet from a [custom policy example in Azure Samples](https://github.com/Azure-Samples/Governance/blob/master/src/policy/naming-convention/policy.json) denies an Azure virtual machine deployment based on a naming standard.
+The following snippet from a [custom policy example in `Azure-Samples`](https://github.com/Azure-Samples/Governance/blob/master/src/policy/naming-convention/policy.json) denies an Azure virtual machine deployment based on a naming standard.
 
 ```json
 {
