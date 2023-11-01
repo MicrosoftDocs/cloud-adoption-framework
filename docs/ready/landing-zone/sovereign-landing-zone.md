@@ -46,9 +46,9 @@ The sovereign landing zone is a tailored version of the Azure landing zone conce
 As the following diagram shows, the sovereign landing zone architecture builds on the Azure landing zone architecture:
 
 - Under the *Landing zones* management group, the *Confidential corp* and *Confidential online* management groups are added.
-- A set of specific policy initiatives, for example [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied. These initiatives offer controls such as resource deployment location, resource deployment types, and encryption.
+- A set of specific policy initiatives, for example, [Microsoft Cloud for Sovereignty policy baseline](/industry/sovereignty/policy-portfolio-baseline/#sovereignty-policy-baseline-initiatives), are also applied. These initiatives offer controls such as resource deployment location, resource deployment types, and encryption.
 
-:::image type="content" source="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg" alt-text="Diagram that shows the management groups of a sovereign landing zone.":::
+:::image type="content" source="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg" alt-text="Diagram that shows the management groups of a sovereign landing zone." lightbox="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg":::
 
 *Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/sovereign-landing-zone-management-groups.vsdx) of this architecture.*
 
