@@ -16,19 +16,19 @@ These identity management systems play an important role. They help designing an
 
 ## Managed identity
 
-The Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). It's still possible to allow an application on your server to use the system-assigned identity, to access Azure resources (for example, to request secrets from a key vault). You should:
+At creation, the Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). In granting this system-assigned identity additional access to Azure resources, it becomes possible to allow an application on your server to use the system-assigned identity to access Azure resources (for example, to request secrets from a Key Vault). You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
-- Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or hybrid agent extensions applications group on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
+- Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview.md#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
 - Use Azure RBAC to control and manage the permission for Azure Arc-enabled servers managed identities and perform periodic access reviews for these identities.
 
 ## Role-based access control (RBAC)
 
-Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle)-users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, which basically has root access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
+Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle), users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, effectively delegating root or administrator access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
 
-To limit the privilege of a user and only allow them to onboard servers to Azure, the Azure Connected Machine Onboarding role is suitable. This role can only be used to onboard servers and cannot reonboard or delete the server resource. Make sure to review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more information about access controls.
+To limit the privilege of a user and only allow them to onboard servers to Azure, the Azure Connected Machine Onboarding role is suitable. This role can only be used to onboard servers and cannot re-onboard or delete the server resource. Make sure to review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more information about access controls.
 
-Also consider the sensitive data that is sent to the Azure Monitor Log Analytics workspace, the same RBAC principle should be applied to the data itself. Azure Arc-enabled servers provide RBAC access to log data collected by the Log Analytics agent, stored in the Log Analytics workspace the machine is registered to. Review how to implement granular Log Analytics workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
+Also consider the sensitive data that might be sent to the Azure Monitor Log Analytics workspace--the same RBAC principle should be applied to the data itself. Read access to Azure Arc-enabled servers can provide access to log data collected by the Log Analytics agent, stored in the associated Log Analytics workspace. Review how to implement granular Log Analytics workspace access in the [designing your Azure Monitor Logs deployment documentation](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview).
 
 ## Architecture
 
@@ -40,7 +40,7 @@ The following diagram shows a reference architecture that demonstrates the roles
 
 - Decide who from your organization should have access to onboarding servers to set up required permissions on the servers and in Azure.
 - Decide who should manage Azure Arc-enabled servers. Then, decide who can view their data from Azure services and other cloud environments.
-- Decide how many service principal accounts you need. These accounts are used to onboard servers that are owned by different business functions or units in an enterprise that is based on operational responsibility and ownership.
+- Decide how many Arc onboarding service principals you need. Multiple of these identities can be used to onboard servers that are owned by different business functions or units in an enterprise that is based on operational responsibility and ownership.
 - Review the [identity and access management design area](../../../ready/landing-zone/design-area/identity-access.md) of Azure landing zone enterprise-scale. Review the area to assess the impact of Azure Arc-enabled servers on your overall identity and access model.
 
 ## Design recommendations

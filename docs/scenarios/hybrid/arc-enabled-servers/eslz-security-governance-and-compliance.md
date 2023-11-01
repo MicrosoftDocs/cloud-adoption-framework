@@ -72,14 +72,16 @@ Azure activity log can be used to set up [resource health notifications](/azure/
 
 ### Agent security permissions
 
-Control who has access to the Azure connected machine agent on Azure Arc-enabled servers. The services that compose this agent control all communication and interaction for the Azure Arc-enabled servers to Azure. Members of the local administrator group on Windows and users with root privileges on Linux, have permissions to manage the agent.
+Control who has access to the Azure connected machine agent on Azure Arc-enabled servers. The services that compose this agent control all communication and interaction for the Azure Arc-enabled servers to Azure. Members of the local administrator or group on Windows and users with root privileges on Linux, have permissions to manage the agent.
 
-### Managed identity
+Evaluate restricting the extensions and guest configuration capabilities with [local agent security controls](/azure/azure-arc/servers/security-overview.md#local-agent-security-controls) to permit only necessary management actions, especially for locked-down or sensitive machines.
 
-The Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). It's still possible to allow an application on your server to use the system-assigned identity, to access Azure resources (for example, to request secrets from a key vault). You should:
+## Managed identity
+
+At creation, the Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). In granting this system-assigned identity additional access to Azure resources, it becomes possible to allow an application on your server to use the system-assigned identity to access Azure resources (for example, to request secrets from a Key Vault). You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
-- Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or hybrid agent extensions applications group on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
+- Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview.md#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
 - Use Azure RBAC to control and manage the permission for Azure Arc-enabled servers managed identities and perform periodic access reviews for these identities.
 
 ### Secret and certificate management
@@ -97,7 +99,7 @@ The following image displays conceptual reference architecture that demonstrates
 
 Policy-driven governance is a foundational principle of cloud-native operations and the Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at-scale. You can implement governance for consistency of deployments, compliance, control costs, and improve your security posture. With its compliance dashboard, you will get an aggregated view of the overall state, and remediation capabilities.
 
-Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the individual server machine using [guest configuration policies](/azure/governance/policy/concepts/guest-configuration).
+Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the machine operating system using [guest configuration policies](/azure/governance/policy/concepts/guest-configuration).
 
 Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md)
 

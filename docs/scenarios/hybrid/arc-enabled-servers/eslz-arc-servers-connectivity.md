@@ -26,8 +26,8 @@ The following list gives an overview of network design considerations for Azure 
 
 - **Define the agent's connectivity method:** Review your existing infrastructure, security requirements, and decide how the connected machine agent will [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud providers. This connection can go directly over the internet, through a proxy server, or you can [implement Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements).
-- **Secure your network connectivity to Azure Arc:** Configure the machine to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
-- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. To further secure the extension connectivity, you can [implement private endpoints](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
+- **Secure your network connectivity to Azure Arc:** Configure the machine operating system to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
+- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server typically need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. If your design requires private connectivity, you'll need to take additional steps beyond configuring Private Endpoints for the Arc agent to [enable Private Endpoint connectivity for each service accessed by extensions](/azure/azure-arc/servers/private-link-security#how-it-works).
 - **Review your overall connectivity architecture:** Review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) of Azure landing zone enterprise-scale to assess the impact of Azure Arc-enabled servers on your overall connectivity.
 
 ## Design recommendations
@@ -47,11 +47,11 @@ When using the direct connection method, you need to review your internet access
 
 #### Proxy server or firewall connection (optional)
 
-If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound using the HTTP protocol.
+If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound using the HTTPS protocol.
 
 If outbound connectivity is restricted by your firewall or a proxy server, make sure to allow the IP ranges as per the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements). When you only allow the required IP ranges or domain names for the agent to communicate with the service, use [service tags and URLs](/azure/azure-arc/servers/network-requirements#service-tags) to configure your firewall or proxy server.
 
-If you deploy extensions on your Azure Arc-enabled servers, every extension has its own endpoint, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
+If you deploy extensions on your Azure Arc-enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
 
 #### Private Link
 
