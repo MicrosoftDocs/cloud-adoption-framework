@@ -64,7 +64,7 @@ For this scenario, consume Azure VMware Solution like a platform as a service (P
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Overview of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-overview-scenario-1.png)](./media/eslz-overview-scenario-1.png#lightbox)
+[![Diagram of overview of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-overview-scenario-1.png)](./media/eslz-overview-scenario-1.png#lightbox)
 
 ### Architectural components
 
@@ -119,7 +119,7 @@ This scenario assumes you have ExpressRoute connectivity between on-premises dat
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Overview of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-overview-scenario-2.png)](./media/eslz-overview-scenario-2.png#lightbox)
+[![Diagram of overview of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-overview-scenario-2.png)](./media/eslz-overview-scenario-2.png#lightbox)
 
 ### Architectural components
 
@@ -160,7 +160,7 @@ All traffic from Azure VMware Solution to Azure Virtual Network, from Azure VMwa
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-overview-scenario-3.png)](./media/eslz-overview-scenario-3.png#lightbox)
+[![Diagram of overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-overview-scenario-3.png)](./media/eslz-overview-scenario-3.png#lightbox)
 
 ### Architectural components
 
@@ -199,7 +199,7 @@ This scenario is ideal if:
 
 The following diagram provides a high-level overview of the scenario.
 
-[![Overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
+[![Diagram of overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
 
 ### Architectural components
 
