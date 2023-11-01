@@ -21,7 +21,7 @@ External environments expose container apps by using a virtual IP address that i
 
 * **Subnet requirements**:
 
-  * A dedicated subnet is required for an environment on the virtual network. The CIDR of the subnet should be `/23` or larger.
+  * A dedicated subnet is required for an environment on the virtual network. The CIDR of the subnet should be `/23` or larger for consumption only environments, `/27` or larger for workload profiles environments.
 
 * **IP address management**:
 

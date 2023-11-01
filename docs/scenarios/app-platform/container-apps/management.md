@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Management and operations for the Azure Container Apps - Landing Zone Accelerator
 
-Review features and services of Container Apps available to help you design and maintain your app for long-term health and stability.
+Review features and services of Azure Container Apps available to help you design and maintain your app for long-term health and stability.
 
 - Understand the Container Apps [limits](/azure/container-apps/quotas).
 
@@ -47,7 +47,7 @@ Review features and services of Container Apps available to help you design and 
 
 - **Use health probes**: Add health probes to your container apps. Make sure revisions contain `livenessProbe`, `readinessProbe`, and `startupProbe`. For more information, see [Azure Container Apps health probes](/azure/container-apps/health-probes?tabs=arm-template).
 
-- **Configure health probes correctly**: The health probe calls an endpoint should return a success status code (HTTP `2xx`) when the status is healthy. Ideally, this endpoint also checks the health of required downstream components like databases, storage, and messaging services. Ensure that the downstream health response is cached for a short period to prevent initiating a continuous cascade of health checks.
+- **Configure health probes correctly**: The health probe is responsible for making calls to an endpoint and expects to receive a success status code, typically in the HTTP 2xx range, when the system is in a healthy state. It is recommended that this endpoint performs checks not only on the system's health but also on the health of critical downstream components, such as databases, storage, and messaging services. To prevent a continuous cascade of health checks, it's important to implement caching of the downstream health responses for a brief duration.
 
 - **Log extensively**: Create Log Analytics queries to look for warnings, errors, and critical messages.
 

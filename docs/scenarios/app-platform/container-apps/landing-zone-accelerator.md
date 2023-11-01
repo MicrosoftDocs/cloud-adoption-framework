@@ -3,7 +3,7 @@ title: Container Apps Landing Zone Accelerator
 description: Landing Zone Accelerator for Azure Container Apps
 author: craigshoemaker
 ms.author: cshoe
-ms.date: 10/09/2023
+ms.date: 11/01/2023
 ms.topic: conceptual
 ---
 
