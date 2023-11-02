@@ -109,7 +109,7 @@ In this three-part series about SAP applications, learn how to [identify SAP dat
 
 ### SAP workload storage on Azure
 
-Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types](/azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about non-Azure Storage service options.
+Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types](/azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about storage options outside of Azure.
 
 ### Automated Azure VMware Solution implementation options
 
