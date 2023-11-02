@@ -30,7 +30,7 @@ The server racks, or clusters, are chosen to run virtualized hardware instances 
 
 Each instance of the fabric controller is connected to another set of servers running cloud orchestration software, typically known as the front end. The front end hosts the web services, RESTful APIs, and internal Azure databases, which are used for all functions in the cloud.
 
-For example, the front end hosts the services that handle customer requests. The requests allocate Azure resources and services such as [virtual machines](/azure/virtual-machines/), and [Azure Cosmos DB](/azure/cosmos-db/introduction). First, the front end validates and verifies if the user is authorized to allocate the requested resources. If so, the front end checks a database to locate a server rack with sufficient capacity, which instructs the fabric controller to allocate the resource.
+For example, the front end hosts the services that handle customer requests. The requests allocate Azure resources and services such as [Azure Virtual Machines](/azure/virtual-machines/), and [Azure Cosmos DB](/azure/cosmos-db/introduction). First, the front end validates and verifies if the user is authorized to allocate the requested resources. If so, the front end checks a database to locate a server rack with sufficient capacity, which instructs the fabric controller to allocate the resource.
 
 Azure is a huge collection of servers and networking hardware, which runs a complex set of distributed applications. These applications orchestrate the configuration and operation of virtualized hardware and software on those servers. The orchestration of these servers is what makes Azure so powerful. With Azure, users don't have to maintain and upgrade their hardware as Azure does this behind the scenes.
 
