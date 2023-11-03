@@ -58,7 +58,7 @@ The following table describes some examples of this transition.
 
 | Scenario | Pre-CCoE solution | Post-CCoE solution |
 |---------|---------|---------|
-| Provision a SQL server in production | Network, IT, and data platform teams provision components over the course of days or weeks. | The team that requires the server deploys a platform as a service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure as a service (IaaS) assets to the cloud in hours. |
+| Provision a SQL Server instance in production | Network, IT, and data platform teams provision components over the course of days or weeks. | The team that requires the server deploys a platform as a service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure as a service (IaaS) assets to the cloud in hours. |
 | Provision a development environment | Network, IT, development, and DevOps teams agree on specifications and deploy an environment. | The development team defines their own specifications and deploys an environment based on allocated budget. |
 | Update security requirements to improve data protection | Networking, IT, and security teams update networking devices and virtual machines (VMs) across several environments to add protections. | Cloud governance tools are used to update policies that can be applied immediately to all assets in all cloud environments. |
 

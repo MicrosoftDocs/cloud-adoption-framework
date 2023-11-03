@@ -18,7 +18,7 @@ The Security Baseline discipline is key to your implementation and ongoing opera
 
 Use repository tooling like GitHub workflow management and PR-based code contribution to operationalize the processes, policies, and toolsets you develop. Following security best practices across all [Azure DevOps tooling](/azure/devops/) and [GitHub Actions](https://github.com/marketplace?type=actions).
 
-The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Azure Active Directory (Azure AD) configured as GitHub identity provider (with multifactor authentication enabled for extra security).
+The following diagram shows DevSecOps architecture with Shift-left strategy. Security is integrated into developer workflows from the beginning and remains integrated across the entire development lifecycle. This scenario's complex dataflow starts with Microsoft Entra ID configured as GitHub identity provider (with multifactor authentication enabled for extra security).
 
 ![Diagram of DevSecOps architecture with Shift-left strategy integrating security into developer workflows.](./media/devsecops-integrated-shift-left-security-development-workflow.png)
 

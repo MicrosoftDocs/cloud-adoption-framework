@@ -1,5 +1,5 @@
 ---
-title: Defense cloud adoption scenario
+title: Cloud adoption scenario for defense
 description: Cloud adoption guidance for defense organizations
 author: stephen-sumner
 ms.author: wayneme
@@ -7,9 +7,9 @@ ms.reviewer: ssumner
 ms.date: 12/6/2022
 ms.topic: conceptual
 ---
-# Introduction to the defense scenario
+# Introduction to the cloud adoption scenario for defense
 
-The CAF Defense scenario is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national/regional security. Data must be current, secure, and available from the tactical edge to headquarters distributed around the globe. The defense scenario addresses the challenges mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal is to help accelerate the digital transformation efforts of defense organizations. The defense scenario is divided into the command, platform, and mission domains.
+The cloud adoption scenario for defense is cloud adoption guidance tailored for defense organizations. Defense organizations coordinate and supervise armed forces in the interest of national/regional security. Data must be current, secure, and available from the tactical edge to headquarters distributed around the globe. The defense scenario addresses the challenges mission owners face in cloud adoption and offers recommendations to navigate those challenges. The goal is to help accelerate the digital transformation efforts of defense organizations. The defense scenario is divided into the command, platform, and mission domains.
 
 :::image type="content" source="./images/defense-scenario.png" alt-text="Figure that shows the domains of cloud adoption in a defense context with CAF methodologies underneath them. Strategy, plan, and organize are in the command domain. Ready and govern are in the platform domain. Adopt, secure, and manage are in the mission domain." lightbox="./images/defense-scenario.png" border="false":::
 *Figure 1: Overview of cloud adoption domains and methodologies*

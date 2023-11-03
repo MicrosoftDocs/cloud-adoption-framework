@@ -43,13 +43,15 @@ The cloud governance team has decided that enforcement of required Azure Policy 
 
 See the [Azure Blueprints documentation](/azure/governance/blueprints/overview) for more information on creating and using blueprint definitions.
 
-### Secure hybrid VNet
+<a name='secure-hybrid-vnet'></a>
+
+### Secure a hybrid virtual network
 
 Specific subscriptions often require some level of access to on-premises resources. This is common in migration scenarios or dev scenarios where dependent resources reside in the on-premises datacenter.
 
 Until trust in the cloud environment is fully established it's important to tightly control and monitor any allowed communication between the on-premises environment and cloud workloads, and that the on-premises network is secured against potential unauthorized access from cloud-based resources. To support these scenarios, the governance MVP adds the following best practices:
 
-1. Establish a cloud secure hybrid VNet.
+1. Establish a cloud secure hybrid virtual network.
     1. The [VPN reference architecture](/azure/architecture/reference-architectures/hybrid-networking/vpn) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
     2. Validate that on-premises security and traffic management mechanisms treat connected cloud networks as untrusted. Resources and services hosted in the cloud should only have access to authorized on-premises services.
     3. Validate that the local edge device in the on-premises datacenter is compatible with [Azure VPN Gateway requirements](/azure/vpn-gateway/vpn-gateway-about-vpn-devices) and is configured to access the public internet.

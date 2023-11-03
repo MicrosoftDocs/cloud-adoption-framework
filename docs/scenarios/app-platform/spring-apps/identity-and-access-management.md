@@ -23,9 +23,9 @@ As the workload owner, follow these best practices to ensure that the applicatio
 
 ## Design considerations
 
-- **Access from the application to other services**. The application should authenticate itself when it connects to backend services that are part of the workload. This authentication protects the services from unauthorized access. Consider using features of Azure Active Directory (Azure AD) to prevent the overhead of storing and managing credentials.
+- **Access from the application to other services**. The application should authenticate itself when it connects to backend services that are part of the workload. This authentication protects the services from unauthorized access. Consider using features of Microsoft Entra ID to prevent the overhead of storing and managing credentials.
 
-- **Access to the application**. Users might send requests to the application over the public internet. Or requests might come from private or on-premises networks. In either case, access must be authenticated based on client certificates or through Active Directory (Azure AD).
+- **Access to the application**. Users might send requests to the application over the public internet. Or requests might come from private or on-premises networks. In either case, access must be authenticated based on client certificates or through Microsoft Entra ID.
 
   Consider the technology options for the service discovery mechanism that invokes calls between apps. The options vary based on the Azure Spring Apps tier.
 
@@ -53,7 +53,7 @@ As the workload owner, follow these best practices to ensure that the applicatio
 
 ### Managed identities
 
-Use managed identities for the application so that it's authenticated through Azure AD. Not all services support this feature of Azure AD. For more information, see [Azure services that support Azure AD authentication](/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
+Use managed identities for the application so that it's authenticated through Microsoft Entra ID. Not all services support this feature of Microsoft Entra ID. For more information, see [Azure services that support Microsoft Entra authentication](/azure/active-directory/managed-identities-azure-resources/services-azure-active-directory-support).
 
 Decide which type of [managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) is appropriate for your use case. Consider the tradeoffs with ease of management. For example, if the application needs to access multiple resources, user-assigned managed identities are recommended. But if you want permissions tied to the application lifecycle, system-managed identities might be better suited.
 
@@ -63,7 +63,7 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 
 - Use your own managed identity for Azure Spring Apps.
 - Use system-assigned and user-assigned managed identities separately. For more information, see [Best practices when using managed identities](/azure/spring-apps/how-to-use-managed-identities?pivots=sc-standard-tier#best-practices-when-using-managed-identities).
-- Use Privileged Identity Management in Azure AD.
+- Use Privileged Identity Management in Microsoft Entra ID.
 
 ### Secure internet communication
 
@@ -81,4 +81,3 @@ Use built-in Azure RBAC roles to simplify the management of required permissions
 ## Next steps
 
 [Network topology and connectivity](./network-topology-and-connectivity.md)
-

@@ -3,7 +3,7 @@ title: Enterprise-scale example architectures connectivity to Azure VMware Solut
 description: Examine example for scenarios for implementing networking and connectivity for Azure VMware Solution deployments.
 author: sablair
 ms.author: janet
-ms.date: 12/19/2022
+ms.date: 10/27/2023
 ms.topic: conceptual
 ms.custom: think-tank, e2e-azure-vmware
 ---
@@ -60,6 +60,12 @@ This scenario is ideal if:
 
 For this scenario, consume Azure VMware Solution like a platform as a service (PaaS) offering. In this scenario, you don't own the public IP addresses. Add public-facing L4 and L7 inbound services if needed. You might or might not already have ExpressRoute connectivity between on-premises datacenters and Azure.
 
+### High level overview
+
+The following diagram provides a high-level overview of the scenario.
+
+[![Diagram of overview of scenario 1 with secured Virtual WAN hub with default route propagation.](./media/eslz-overview-scenario-1.png)](./media/eslz-overview-scenario-1.png#lightbox)
+
 ### Architectural components
 
 Implement this scenario with:
@@ -109,6 +115,12 @@ This scenario is ideal if:
 
 This scenario assumes you have ExpressRoute connectivity between on-premises datacenters and Azure.
 
+### High level overview
+
+The following diagram provides a high-level overview of the scenario.
+
+[![Diagram of overview of scenario 2 with third-party NVA in hub Azure Virtual Network inspecting all network traffic.](./media/eslz-overview-scenario-2.png)](./media/eslz-overview-scenario-2.png#lightbox)
+
 ### Architectural components
 
 Implement this scenario with:
@@ -144,6 +156,12 @@ This scenario is ideal if:
 
 All traffic from Azure VMware Solution to Azure Virtual Network, from Azure VMware Solution to the internet, and from Azure VMware Solution to on-premises data centers gets funneled through the NSX-T Data Center Tier-0/Tier-1 gateways or the NVAs.
 
+### High level overview
+
+The following diagram provides a high-level overview of the scenario.
+
+[![Diagram of overview of scenario 3 with egress from Azure VMware Solution with or without NSX-T Data Center or NVA.](./media/eslz-overview-scenario-3.png)](./media/eslz-overview-scenario-3.png#lightbox)
+
 ### Architectural components
 
 Implement this scenario with:
@@ -164,7 +182,6 @@ The NVA is BYOL. It's your responsibility to bring a license and implement high 
 See the VMware documentation for NVA placement options and for information about the VMware limitation of up to eight virtual network interface cards (NICs) on a VM. For more information, see [Firewall integration in Azure VMware Solution](https://techcommunity.microsoft.com/t5/azure-migration-and/firewall-integration-in-azure-vmware-solution/ba-p/2254961).
 
 
-
 ## Third-party firewall solutions in a hub virtual network with Azure Route Server
 
 This scenario has the following customer profile, architectural components, and considerations:
@@ -178,6 +195,12 @@ This scenario is ideal if:
 - You need multiple public IP addresses for inbound services and need a block of predefined IP addresses in Azure. In this scenario, you don't own the public IPs.
 - You need fine-grained control over firewalls outside the Azure VMware Solution private cloud.
 
+### High level overview
+
+The following diagram provides a high-level overview of the scenario.
+
+[![Diagram of overview of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-overview-scenario-4.png)](./media/eslz-overview-scenario-4.png#lightbox)
+
 ### Architectural components
 
 Implement this scenario with:
@@ -187,7 +210,7 @@ Implement this scenario with:
 - Your third-party NVAs in your Azure Virtual Network hub to provide outbound internet to Azure VMware Solution.
 - ExpressRoute for connectivity between on-premises datacenters and Azure VMware Solution.
 
-[![Diagram of scenario 5 with a third-party N V A in the hub V Net inspecting traffic between A V S and the internet and between A V S and Azure Virtual Network.](./media/eslz-net-scenario-5.png)](./media/eslz-net-scenario-5.png#lightbox)
+[![Diagram of scenario 4 with a third-party N V A in the hub V Net inspecting traffic between Azure VMware Solution and the internet and between Azure VMware Solution and Azure Virtual Network.](./media/eslz-net-scenario-4.png)](./media/eslz-net-scenario-4.png#lightbox)
 
 ### Considerations
 

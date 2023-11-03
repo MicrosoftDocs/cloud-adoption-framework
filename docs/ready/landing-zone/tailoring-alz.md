@@ -89,7 +89,7 @@ There's a simple and safe way to meet this new requirement. Create a new managem
 Now you can place new or move existing Azure subscriptions into the new **PCI** management group to make it inherit the required policies and form the new archetype.
 
 > [!TIP]
-> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#subscription-move).
+> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#move-subscriptions).
 
 ### Tailor platform landing zone archetypes
 

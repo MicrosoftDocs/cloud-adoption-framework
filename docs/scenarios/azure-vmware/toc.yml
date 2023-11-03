@@ -20,6 +20,20 @@ items:
             href: network-get-started.md
           - name: General Considerations and Recommendations
             href: eslz-network-topology-connectivity.md
+          - name: Network design guide
+            items:
+              - name: Introduction
+                href: network-design-guide-intro.md
+              - name: Basics and prerequisites
+                href: azure-vmware-solution-network-basics.md
+              - name: Design connectivity with on-premises sites
+                href: on-premises-connectivity.md
+              - name: Design connectivity with Azure virtual networks
+                href: virtual-network-connectivity.md
+              - name: Design inbound Internet connectivity
+                href: network-design-guide-internet-inbound-connectivity.md
+              - name: Design outbound Internet connectivity
+                href: network-design-guide-internet-outbound-connectivity.md
           - name: Architectures
             items:
               - name: Hub and Spoke 

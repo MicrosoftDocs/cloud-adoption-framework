@@ -1,0 +1,31 @@
+items:
+  - name: Oracle Migration - Microsoft Cloud Adoption
+    href: introduction-oracle-landing-zone.md 
+  - name: Strategic impact
+    href: oracle-landing-zone-strategy.md
+  - name: Technical planning
+    href: oracle-landing-zone-plan.md
+  - name: Prepare your environment
+    items:
+    - name: Design areas
+      items:
+      - name: Network topology and connectivity
+        href: oracle-network-topology.md
+      - name: Security
+        items:
+          - name: Security overview
+            href: oracle-security-guideline-landing-zone.md
+          - name: Business continuity and disaster recovery
+            href: oracle-disaster-recovery-oracle-landing-zone.md
+      - name: Management
+        href: oracle-manage-monitor-workload.md
+      - name: Governance discipline
+        href: governance-compliance-oracle-landing-zone.md
+  - name: Migrate your Oracle workloads
+    items: 
+    - name: Capacity planning
+      href: oracle-capacity-planning.md
+  - name: Reference
+    items:
+      - name: Oracle workloads on Azure Virtual Machines
+        href: /azure/virtual-machines/workloads/oracle/

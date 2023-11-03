@@ -74,7 +74,7 @@ Consider the following best practices for batch inference:
 
 - **Security requirements.** Use authentication and authorization to control access to the batch endpoint for enhanced security.  
   - A batch endpoint with ingress protection only accepts scoring requests from hosts inside a virtual network. It doesn't accept scoring requests from the public internet. A batch endpoint that's created in a private link-enabled workspace has ingress protection. For more information, see [Network isolation in batch endpoints](/azure/machine-learning/how-to-secure-batch-endpoint).
-  - Use Azure Active Directory (Azure AD) tokens for authentication.
+  - Use Microsoft Entra tokens for authentication.
   - Use SSL encryption on the endpoint, which is enabled by default for Machine Learning endpoint invocation.
   - Batch endpoints ensure that only authorized users can invoke batch deployments, but individuals can use other credentials to read the underlying data. For a reference of the data stores and the credentials to access them, see the [data access table](/azure/machine-learning/how-to-access-data-batch-endpoints-jobs#security-considerations-when-reading-data).
 
@@ -85,7 +85,7 @@ Consider the following best practices for batch inference:
   - Machine Learning to run the batch inference process.
   - Azure Synapse Analytics to store the subsequent predictions.
 
-  Batch endpoints support Azure AD for authorization. The request to the API requires proper authentication. Azure services, such as Data Factory, support using a service principal or a managed identity to authenticate against batch endpoints. For more information, see [Run batch endpoints from Data Factory](/azure/machine-learning/how-to-use-batch-azure-data-factory).  
+  Batch endpoints support Microsoft Entra ID for authorization. The request to the API requires proper authentication. Azure services, such as Data Factory, support using a service principal or a managed identity to authenticate against batch endpoints. For more information, see [Run batch endpoints from Data Factory](/azure/machine-learning/how-to-use-batch-azure-data-factory).  
 
   To choose the best method for batch input and output processing, it's important to understand how data moves through the stages of your data pipelines. You can access Azure data services directly through the batch endpoint scoring script by using SDKs, but using Machine Learning registered datastores is more simple, secure, and auditable. For third-party data sources, use a data processing engine, such as Data Factory, Azure Databricks, or Azure Synapse Analytics, to prepare the data for batch inference and apply post-inference processing.  
 
@@ -107,7 +107,7 @@ Consider the following best practices for real-time inference:
 
 - **Security requirements.** For enhanced security, use authentication and authorization to control access to the online endpoint.  
   - An online endpoint with ingress protection only accepts scoring requests from hosts inside a virtual network. It doesn't accept scoring requests from the public internet. An online endpoint that's created in a private link-enabled workspace has ingress protection. For more information, see [Use network isolation with managed online endpoints](/azure/machine-learning/how-to-secure-online-endpoint).
-  - Use Azure AD tokens for control plane authentication. For data plane operations, [key-based and token-based](/azure/machine-learning/how-to-authenticate-online-endpoint) approaches are supported. The token-based approach is preferred because tokens expire. Use Azure role-based access controls (RBAC) to restrict access and retrieve the key or token for an online endpoint.
+  - Use Microsoft Entra tokens for control plane authentication. For data plane operations, [key-based and token-based](/azure/machine-learning/how-to-authenticate-online-endpoint) approaches are supported. The token-based approach is preferred because tokens expire. Use Azure role-based access controls (RBAC) to restrict access and retrieve the key or token for an online endpoint.
   - Use SSL encryption on the endpoint, which is enabled by default for Machine Learning endpoint invocation.
 
 - **Real-time integration.** Integrate real-time inference with other Azure services by using SDKs for different languages and invoking the endpoint by using a REST API. You can invoke the online endpoint as part of an application's code.

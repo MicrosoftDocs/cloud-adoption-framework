@@ -22,7 +22,7 @@ Consider using the following Azure Policies if you have data residency restricti
 - The [SQL Database should avoid using GRS backup redundancy policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fb219b9cf-f672-4f96-9ab0-f5a3ac5e1c13) restricts using the default geo-redundant storage for backups for SQL databases.
 - The [Azure Cosmos DB allowed locations policy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F0473574d-2d43-4217-aefe-941fcdf7e684) enables you to restrict the locations to which your organization can deploy Cosmos DB.
 
-TODO: The allowed locations Azure Policy restricts where all resources can be created. Are there granular policies or controls for data resources themselves (Sql, Cosmos, etc.), or is the above policy what customers use?
+<!-- TODO: The allowed locations Azure Policy restricts where all resources can be created. Are there granular policies or controls for data resources themselves (SQL, cosmos, etc.), or is the above policy what customers use? -->
 
 ## Redundant data storage
 
