@@ -70,7 +70,7 @@ There are also considerations for individual workloads in Azure.  You'll need to
 
 The [Networks Pillar](/security/zero-trust/deploy/networks) has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
 
-Because the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) contains Connectivity resources for hybrid connectivity, firewalling, and network isolation, there are detailed guides for deploying out the Landing Zone to support Zero Trust networking.  You can find them at the following locations:
+Because the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains Connectivity resources for hybrid connectivity, firewalling, and network isolation, there are detailed guides for deploying out the Landing Zone to support Zero Trust networking.  You can find them at the following locations:
 
 - [Azure landing zone portal accelerator deployment with Zero Trust network principles](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/Deploying-ALZ-ZTNetwork.md)
 - [Deploy Networking with Zero Trust network principles](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/DeploymentGuideHSZT.md)
