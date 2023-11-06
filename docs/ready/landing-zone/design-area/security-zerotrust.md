@@ -62,7 +62,7 @@ The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has depl
 
 The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your Landing Zone can be used to advance these deployment objectives.
 
-The [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) provides policies to block unauthorized deployments and to grant access.
+The [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) provides and assigns [policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources.
 
 There are also considerations for individual workloads in Azure.  You'll need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
 
