@@ -20,7 +20,7 @@ It's important to understand any decisions that were previously made by the clou
 
 The following articles provide guidance for specific steps in the cloud adoption journey for energy HPC environments.
 
-- [Azure Billing and Azure Active Directory tenants for energy HPC](./azure-billing-active-directory-tenant.md)
+- [Azure Billing and Microsoft Entra tenants for energy HPC](./azure-billing-active-directory-tenant.md)
 - [Identity and access management for Azure HPC in energy](./identity-access-management.md)
 - [Management for Azure HPC in energy](./management.md)
 - [Network topology and connectivity for Azure HPC in energy](./network-topology-connectivity.md)

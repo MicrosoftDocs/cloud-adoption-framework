@@ -1,6 +1,6 @@
 ---
 title: Azure Lighthouse usage in Azure landing zones multi-tenant scenarios
-description: Learn how Azure Lighthouse is used in environments with multiple Azure Active Directory tenants with Azure landing zones.
+description: Learn how Azure Lighthouse is used in environments with multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/16/2023
@@ -24,17 +24,17 @@ The following considerations and recommendations describe common scenarios for A
 
 - See [Azure Lighthouse in enterprise scenarios](/azure/lighthouse/concepts/enterprise).
 - If you're an ISV, see [Azure Lighthouse in ISV scenarios](/azure/lighthouse/concepts/isv-scenarios).
-- Use Azure Lighthouse in both directions between Azure Active Directory tenants to simplify management activities and reduce complex authentication and authorization scenarios. This action removes the reliance on Azure Active Directory B2B (Guest) accounts for user and workload identities, and it removes the need to have separate accounts for some activities.
-- Use Azure Active Directory Privileged Identity Management (PIM) as part of your Azure Lighthouse delegations. For more information, see [Create eligible authorizations](/azure/lighthouse/how-to/create-eligible-authorizations).
-  - This feature requires Azure Active Directory Premium P2 licensing but only from the source or managing Azure Active Directory tenant.
+- Use Azure Lighthouse in both directions between Microsoft Entra tenants to simplify management activities and reduce complex authentication and authorization scenarios. This action removes the reliance on Microsoft Entra B2B (Guest) accounts for user and workload identities, and it removes the need to have separate accounts for some activities.
+- Use Microsoft Entra Privileged Identity Management (PIM) as part of your Azure Lighthouse delegations. For more information, see [Create eligible authorizations](/azure/lighthouse/how-to/create-eligible-authorizations).
+  - This feature requires Microsoft Entra ID P2 licensing but only from the source or managing Microsoft Entra tenant.
 
 ## Azure landing zones scenario - Azure Lighthouse and Private DNS at scale
 
-The following diagram is an Azure landing zone scenario where Azure Lighthouse is used across multiple Azure Active Directory tenants to assist with Private Link and DNS integration.
+The following diagram is an Azure landing zone scenario where Azure Lighthouse is used across multiple Microsoft Entra tenants to assist with Private Link and DNS integration.
 
-When you use Azure Lighthouse, Azure Policy for Private Endpoints Private DNS Zone is automatically linked in **spoke** Azure Active Directory tenants to the centralized Private DNS Zones in the **hub** Azure Active Directory tenant. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
+When you use Azure Lighthouse, Azure Policy for Private Endpoints Private DNS Zone is automatically linked in **spoke** Microsoft Entra tenants to the centralized Private DNS Zones in the **hub** Microsoft Entra tenant. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
 
-[![Diagram of multiple Azure Active Directory tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at scale scenario.](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
+[![Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at scale scenario.](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
 
 When you use this architecture, application landing zone owners have access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This access is useful if a different approach is used to manage the Private Endpoints DNS configuration, rather than Azure Policy. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
 

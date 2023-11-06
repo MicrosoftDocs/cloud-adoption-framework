@@ -20,9 +20,9 @@ It's helpful to know the following definitions as you begin your Azure cloud ado
 - **Subscription:** A logical container for your resources. Each Azure resource is associated with only one subscription. Creating a subscription is the first step in adopting Azure.
 - **Azure account:** The email address that you provide when you create an Azure subscription is the Azure account for the subscription. The party that's associated with the email account is responsible for the monthly costs incurred by the resources in the subscription. When you create an Azure account, you provide contact information and billing details, like a credit card. You can use the same Azure account for multiple subscriptions. Each subscription is associated with only one Azure account.
 - **Account administrator:** The party associated with the email address that's used to create an Azure subscription. The account administrator is responsible for paying for all costs that incur by the subscription's resources.
-- **Azure Active Directory (Azure AD):** The Microsoft cloud-based identity and access management service. Azure AD lets your employees sign in and access resources.
-- **Azure AD tenant:** A dedicated and trusted instance of Azure AD. When your organization signs up for a Microsoft cloud service subscription, it automatically creates an Azure AD tenant. For example, Microsoft Azure, Intune, or Microsoft 365. An Azure tenant represents a single organization.
-- **Azure AD directory:** Each Azure AD tenant has a single, dedicated, and trusted directory. The directory includes the tenant's users, groups, and applications. Use the directory to manage identity and access management functions for tenant resources. You can associate a directory with multiple subscriptions but each subscription is associated with only one directory.
+- **Microsoft Entra ID:** The Microsoft cloud-based identity and access management service. Microsoft Entra ID lets your employees sign in and access resources.
+- **Microsoft Entra tenant:** A dedicated and trusted instance of Microsoft Entra ID. When your organization signs up for a Microsoft cloud service subscription, it automatically creates a Microsoft Entra tenant. For example, Microsoft Azure, Intune, or Microsoft 365. An Azure tenant represents a single organization.
+- **Microsoft Entra directory:** Each Microsoft Entra tenant has a single, dedicated, and trusted directory. The directory includes the tenant's users, groups, and applications. Use the directory to manage identity and access management functions for tenant resources. You can associate a directory with multiple subscriptions but each subscription is associated with only one directory.
 - **Resource groups:** Logical containers that you use to group related resources in a subscription. Each resource can exist in only one resource group. Resource groups allow for more granular grouping within a subscription. They're commonly used  to represent a collection of assets that are required to support a workload, application, or specific function within a subscription.
 - **Management groups:** Logical containers that you use for one or more subscriptions. You can define a hierarchy of management groups, subscriptions, resource groups, and resources to efficiently manage access, policies, and compliance through inheritance.
 - **Region:** A set of Azure datacenters that deploy inside a latency-defined perimeter. The datacenters connect through a dedicated, regional, low-latency network. Most Azure resources run in a specific Azure region.
@@ -52,17 +52,17 @@ Azure defines three types of roles for administering subscriptions, identities, 
 
 - Classic subscription administrator roles
 - Azure roles
-- Azure Active Directory (Azure AD) roles
+- Microsoft Entra roles
 
 The account administrator role is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can [manage subscription administrators](/azure/cost-management-billing/manage/add-change-subscription-administrator) in the Azure portal.
 
 By default, the service administrator role for a subscription is also assigned to the email account that's used to create the Azure subscription. The service administrator has permissions to the subscription equivalent to the Azure role-based access control Owner role. The service administrator also has full access to the Azure portal. The account administrator can change the service administrator to a different email account.
 
-When you create an Azure subscription, you can associate it with an existing Azure AD tenant. Otherwise, creating a new subscription creates a new Azure AD tenant with an associated directory. Assign the global administrator role in the Azure AD directory to the email account used to create the Azure AD subscription.
+When you create an Azure subscription, you can associate it with an existing Microsoft Entra tenant. Otherwise, creating a new subscription creates a new Microsoft Entra tenant with an associated directory. Assign the global administrator role in the Microsoft Entra directory to the email account used to create the Microsoft Entra subscription.
 
 You can associate an email account with multiple Azure subscriptions. An account administrator can transfer a subscription to another account.
 
-For more information, see [Classic subscription administrator roles, Azure roles, and Azure AD roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
+For more information, see [Classic subscription administrator roles, Azure roles, and Microsoft Entra roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 ## Subscriptions and regions
 
@@ -81,9 +81,9 @@ The following resources provide detailed information about the concepts discusse
 - [Resource access management in Azure](../../get-started/how-azure-resource-manager-works.md)
 - [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview)
 - [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview)
-- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
-- [Topologies for Azure AD Connect](/azure/active-directory/hybrid/plan-connect-topologies)
+- [What is Microsoft Entra ID?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+- [Topologies for Microsoft Entra Connect](/azure/active-directory/hybrid/plan-connect-topologies)
 - [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps

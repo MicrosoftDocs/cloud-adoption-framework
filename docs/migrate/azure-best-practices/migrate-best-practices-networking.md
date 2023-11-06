@@ -1,5 +1,5 @@
 ---
-title: Best practices to set up networking for workloads migrated to Azure 
+title: Best practices to set up networking for workloads migrated to Azure
 description: Learn how to use the Cloud Adoption Framework for Azure to implement best practices that help you set up networking for your migrated workloads.
 author: martinekuan
 ms.author: martinek
@@ -68,7 +68,7 @@ Consider the following information:
 - Implementing a hub and spoke topology in Azure centralizes common services. These services might be connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services that are used by workloads hosted in spoke virtual networks.
 - A hub and spoke configuration is typically used by larger enterprises. Smaller networks might consider a simpler design to save on costs and complexity.
 - You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers with multiple subnets that are connected with Azure load balancers.
-- You can implement hub and spoke virtual networks in different resource groups and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same or different Azure Active Directory (Azure AD) tenants. This association creates decentralized management of each workload, while sharing services maintained in the hub network.
+- You can implement hub and spoke virtual networks in different resource groups and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same or different Microsoft Entra tenants. This association creates decentralized management of each workload, while sharing services maintained in the hub network.
 
 :::image type="content" source="./media/migrate-best-practices-networking/hub-spoke.png" alt-text="Diagram that shows a hub and spoke topology.":::
 *Figure 1: Hub and spoke topology.*
@@ -514,7 +514,7 @@ For more complex network topologies, you might use security products from Micros
   - Load balancing.
   - VPN.
   - Certificate management.
-  - Azure Active Directory.
+  - Microsoft Entra ID.
   - Multifactor authentication.
 - NVAs are available from vendors in [Azure Marketplace](https://azuremarketplace.microsoft.com/).
 
