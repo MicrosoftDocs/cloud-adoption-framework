@@ -32,7 +32,7 @@ From a technology stand point, many of these controls are in Entra ID, and are u
 
 Refer to the [Identity design area](identity-access.md) for more on how you should design for identity in Azure Landing Zones.
 
-The [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls enforced via Azure Policy.
+The [Azure Landing Zone reference implementations](https://aka.ms/alz/aac#platform) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls enforced via Azure Policy.
 
 ### Endpoints Pillar
 
@@ -52,7 +52,7 @@ Some of this work is focused on providing consolidated management for both third
 
 The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
 
-The landing zone subscription democratization principle and model creates access and network isolation for data resources, and proper logging provides a foundation. There are [policies](https://aka.ms/alz/policies) inside of the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) for the logging and management of data resources.
+The landing zone subscription democratization principle and model creates access and network isolation for data resources, and proper logging provides a foundation. There are [policies](https://aka.ms/alz/policies) inside of the [Azure Landing Zone reference implementations](https://aka.ms/alz/aac#platform) for the logging and management of data resources.
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
@@ -62,7 +62,7 @@ The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has depl
 
 The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your Landing Zone can be used to advance these deployment objectives.
 
-The [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) provides and assigns [policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources.
+The [Azure Landing Zone reference implementations](https://aka.ms/alz/aac#platform) provides and assigns [policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources.
 
 There are also considerations for individual workloads in Azure.  You'll need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
 
@@ -70,7 +70,7 @@ There are also considerations for individual workloads in Azure.  You'll need to
 
 The [Networks Pillar](/security/zero-trust/deploy/networks) has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
 
-Because the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains Connectivity resources for hybrid connectivity, firewalling, and network isolation, there are detailed guides for deploying out the Landing Zone to support Zero Trust networking.  You can find them at the following locations:
+Because the [Azure Landing Zone reference implementations](https://aka.ms/alz/aac#platform) contains Connectivity resources for hybrid connectivity, firewalling, and network isolation, there are detailed guides for deploying out the Landing Zone to support Zero Trust networking.  You can find them at the following locations:
 
 - [Azure landing zone portal accelerator deployment with Zero Trust network principles](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/Deploying-ALZ-ZTNetwork.md)
 - [Deploy Networking with Zero Trust network principles](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/DeploymentGuideHSZT.md)
@@ -84,7 +84,7 @@ You can review the [Zero-trust network for web applications](/azure/architecture
 
 The [Visibility, Automation, and Orchestration Pillar Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
-Because the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
+Because the [Azure Landing Zone reference implementations](https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
 
 Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
 
