@@ -119,17 +119,26 @@ Your data application teams request these storage blobs. Their requests are then
 
 ### Shared integration runtimes
 
-Deploy a virtual machine scale set with self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
+Deploy a virtual machine with self-hosted integration runtimes into your data landing zone. Host it in the shared integration resource group. This deployment lets you rapidly onboard data products to your data landing zone.
 
 :::image type="content" source="../images/data-landing-zone-shared-integration-rg.png" alt-text="Diagram of a data landing zone shared integration resource group.":::
 
 To enable the resource group:
 
 - Create at least one Azure Data Factory in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted integration runtime, not for data pipelines.
-- Create a [shared image for the Azure virtual machine scale set](/azure/virtual-machine-scale-sets/tutorial-use-custom-image-powershell) with a self-hosted integration runtime configured.
-- Set up the self hosted integration runtimes in [high availability mode](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
-- Associate the self-hosted integration runtimes with Azure data factories in your data landing zone(s).
+- [Create and configure a self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) on the virtual machine.
+- Associate the self-hosted integration runtime with Azure data factories in your data landing zone(s).
 - Set up Azure Automation to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
+
+> [!NOTE]
+> The above deployment provides a single virtual machine deployment with self hosted integration runtimes. You can associate a self-hosted integration runtime with multiple on-premises machines or virtual machines in Azure. These machines are called nodes. You can have up to four nodes associated with a self-hosted integration runtime. The benefits of having multiple nodes on on-premises machines that have a gateway installed for a logical gateway are:
+>
+> - Higher availability of the self-hosted integration runtime so that it's no longer the single point of failure in your big data solution or cloud data integration. This availability helps ensure continuity when you use up to four nodes.
+> - Improved performance and throughput during data movement between on-premises and cloud data stores. Get more information on [performance comparisons](/azure/data-factory/copy-activity-performance).
+>
+> You can associate multiple nodes by installing the self-hosted integration runtime software from [Download Center](https://www.microsoft.com/download/details.aspx?id=39717). Then, register it by using either of the authentication keys that were obtained from the **New-AzDataFactoryV2IntegrationRuntimeKey** cmdlet, as described in the [tutorial](/azure/data-factory/tutorial-hybrid-copy-powershell).
+>
+> Futher information is detailed in [Azure Datafactory High availability and scalability](/azure/data-factory/create-self-hosted-integration-runtime#high-availability-and-scalability).
 
 > [!IMPORTANT]
 > Deploy shared integration runtimes as close to the data source as possible. Their deployment does not restrict your deployment of integration runtimes in a data landing zone or into third-party clouds. Instead, it provides a fallback for cloud native, in-region data sources.
