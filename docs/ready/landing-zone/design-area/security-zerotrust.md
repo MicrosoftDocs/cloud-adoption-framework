@@ -52,7 +52,7 @@ Some of this work is focused on providing consolidated management for both third
 
 The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
 
-The landing zone subscription model creates access and network isolation for data resources, and proper logging provides a foundation.  There are policies inside of the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) for the logging and management of data resources.
+The landing zone subscription democratization principle and model creates access and network isolation for data resources, and proper logging provides a foundation. There are [policies](https://aka.ms/alz/policies) inside of the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) for the logging and management of data resources.
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
