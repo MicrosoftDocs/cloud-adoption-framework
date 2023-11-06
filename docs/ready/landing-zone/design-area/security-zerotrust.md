@@ -32,7 +32,7 @@ From a technology stand point, many of these controls are in Entra ID, and are u
 
 Refer to the [Identity design area](identity-access.md) for more on how you should design for identity in Azure Landing Zones.
 
-The [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls.
+The [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls enforced via Azure Policy.
 
 ### Endpoints Pillar
 
