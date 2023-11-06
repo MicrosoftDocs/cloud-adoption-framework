@@ -127,7 +127,7 @@ To enable the resource group:
 
 - Create at least one Azure Data Factory in your data landing zone's shared integration resource group. Use it only for linking the shared self-hosted integration runtime, not for data pipelines.
 - [Create and configure a self-hosted integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) on the virtual machine.
-- Associate the self-hosted integration runtimes with Azure data factories in your data landing zone(s).
+- Associate the self-hosted integration runtime with Azure data factories in your data landing zone(s).
 - Set up Azure Automation to [periodically update the self hosted integration runtime](/azure/data-factory/self-hosted-integration-runtime-automation-scripts).
 
 > [!NOTE]
