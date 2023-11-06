@@ -84,7 +84,7 @@ You can review the [Zero-trust network for web applications](/azure/architecture
 
 The [Visibility, Automation, and Orchestration Pillar Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
-Because the [Azure Landing Zone reference implementations](../../enterprise-scale/implementation.md#reference-implementation) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
+Because the [Azure Landing Zone reference implementations](https://https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
 
 Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
 
