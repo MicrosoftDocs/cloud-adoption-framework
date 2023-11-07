@@ -12,7 +12,7 @@ ms.subservice: scenario
 
 # Migrate Oracle workloads to Azure IaaS
 
-A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which, similar to other workloads, require a methodical approach to ensure a successful migration. For application services, use the guidance in the [The One Migrate approach to migrating the IT portfolio](../index.md). However, for Oracle database workloads, there are some unique constraints and considerations which this article addresses.
+A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which, similar to other workloads, require a methodical approach to ensure a successful migration. For more information about the migration methodology, see [Cloud migration in the Cloud Adoption Framework](../../migrate/index.md). For Oracle database workloads, specifically, there are some unique constraints and considerations which this article addresses.
 
 ## Oracle Migration process details
 
