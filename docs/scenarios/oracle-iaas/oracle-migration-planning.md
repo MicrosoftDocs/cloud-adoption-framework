@@ -33,18 +33,23 @@ Consider also getting assistance to accelerate your Oracle to Azure migration ef
 
 In the following section, different high-level steps of the migration process are described in more detail. The steps aren't necessarily sequential and can to some extent be performed in parallel.
 
-- Assess whether the on-premises Operating System versions and application and database versions are the same as what will be used on Azure.
+- **Assess the source and destination system versions**: Assess whether the on-premises operating system versions, application, and database versions are the same as what will be used on Azure.
   - If one or more versions need to be updated, do this before migration to avoid introducing additional complexity into the migration process.
   - If your on-premises database is running on a big endian OS (for example, Solaris, AIX, HP-UX), the database migration process includes an endian conversion since Azure only supports little endian operating systems. From a tooling perspective, this limits the number of options when considering what tool to use for the migration. Specifically, it will not be possible to use Oracle DataGuard, Azure Migrate, or any other file copy method. Migration methods compatible with endian conversion include Oracle DataPump Export/Import, Oracle Cross Platform Transportable Tablespaces (XTTS), or data replication utilities such as, for example, Oracle GoldenGate, Quest SharePlex, and Striim.
-  - On-premises application servers can be modernized or migrated depending on requirements/compatibility. For more details, see [The One Migrate approach to migrating the IT portfolio](../index.md).
-- Assess workload availability requirements during the migration process. If workload downtime needs to be minimized, then migration methods such as DataPump Export/Import or Azure Migrate might not be suitable. In that case, a three-step process would be required as follows:
+  - On-premises application servers can be modernized or migrated depending on requirements/compatibility. For more information, see [The One Migrate approach to migrating the IT portfolio](../index.md).
+
+- **Assess the workload availability requirements during the migration process**: If workload downtime needs to be minimized, then migration methods such as DataPump Export/Import or Azure Migrate might not be suitable. In that case, a three-step process would be required as follows:
   - Use Oracle RMAN to backup and then restore the entire database in Azure (performing endian conversion through XTTS if necessary. For more information, see [Transporting Data Across Platforms](https://docs.oracle.com/en/database/oracle/oracle-database/23/admin/transporting-data.html#GUID-FE3003B9-605A-4269-B167-005AC778C870)). This results in a database that is a point-in-time copy of the source database on-premises.
   - Use Oracle DataGuard if the migration is little endian to little endian synchronize the newly restored database in Azure with the source database. If the migration involves big-endian to little-endian conversion as mentioned previously, you can't use DataGuard. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
   - Once the target database in Azure is synchronized with the source database on-premises, a "cutover" can be scheduled conveniently. The "cutover" will mean shutting down the source database on-premises, flushing the last few transactions to the target database in Azure, and then opening the target database in Azure as the new source database. This cutover can happen in as little time as a few minutes, depending on the sync method used.
   - Depending on the migration approach determined for application services, there will be several activities required for application services before the application is fully migrated to Azure.
-- Depending on what migration tooling is required for database, be mindful that, for instance,  Oracle DataGuard requires Oracle Enterprise Edition, and Oracle GoldenGate requires Oracle GoldenGate licenses. For more information on Oracle licensing on Azure, see [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
 
-When transferring initial datasets from on-premises infrastructure to Azure, efficiency can vary based on the size of the database and available network bandwidth. In some cases, rather than transferring files via Express Route or VPN, it might be advantageous to employ a physical data transfer device like the Azure DataBox. For additional information, see [Azure DataBox](/azure/databox/data-box-overview).
+- **Assess required licenses**: Depending on what migration tooling is required for database, various licenses might be required., be mindful that, for instance, 
+  - Oracle DataGuard requires Oracle Enterprise Edition.
+  - Oracle GoldenGate requires Oracle GoldenGate licenses.
+  - For more information on Oracle licensing on Azure, see [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
+
+- **Consider the amount of data to migrate**: When transferring initial datasets from on-premises infrastructure to Azure, efficiency can vary based on the size of the database and available network bandwidth. In some cases, rather than transferring files via Express Route or VPN, it might be advantageous to employ a physical data transfer device like the Azure DataBox. For more information, see [Azure DataBox](/azure/databox/data-box-overview).
 
 ## Next steps
 
