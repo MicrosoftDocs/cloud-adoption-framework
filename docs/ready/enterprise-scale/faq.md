@@ -82,9 +82,9 @@ Review the following documentation sections:
 > [!NOTE]
 > This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](./testing-approach.md).
 
-If an application or service workload requires segregation of "dev/test/production" landing zones, use a separate subscription for each landing zone in the workload. It's important to work with the application or service workload owners to determine if separate subscriptions is the best way for them to build, manage, operate, and deliver their workload. It shouldn't be mandatory for all workloads.
+If an application or service workload requires segregation of "dev/test/production" landing zones, use a separate subscription for each landing zone in the workload. It's important to work with the application or service workload owners to determine whether using separate subscriptions is the best way for them to build, manage, operate, and deliver their workload. It shouldn't be mandatory for all workloads.
 
-A good example is a workload that uses [Azure App Service](/azure/app-service/overview). When you use Azure App Service, a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [deployment slots](/azure/app-service/deploy-staging-slots) to help you manage changes and updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single subscription. By mandating that your application or service workload owners use separate subscriptions for "dev/test/production", you might make their deployment lifecycle harder to manage. In this example, a single subscription for the application or service workload might be the best fit by using Azure role-based access control (RBAC) with [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) at the Resource Group scope for increased security.
+A good example is a workload that uses [Azure App Service](/azure/app-service/overview). When you use Azure App Service, a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [deployment slots](/azure/app-service/deploy-staging-slots) to help you manage changes and updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single subscription. By mandating that your application or service workload owners use separate subscriptions for "dev/test/production" landing zones, you might make their deployment lifecycle harder to manage. In this example, a single subscription for the application or service workload might be the best fit by using Azure role-based access control (RBAC) with [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) at the Resource Group scope for increased security.
 
 We suggest working with each application or service workload team (landing zone owners) to understand their requirements. Then you can provide subscriptions based on their requirements and plans. You might also decide to designate "product lines" for different types of workloads so that you can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
@@ -96,7 +96,7 @@ _Archetype-aligned_ means that management groups are only created for differing 
 
 The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: _N workloads x Z management groups  = total management groups_.
 
-So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
+So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production" landing zones, you're left with:
 
 > N = number of workloads/apps = 30
 >
@@ -183,7 +183,7 @@ You first need to clean up the old subscription for reuse. You need to perform t
 - Remove deployments at the subscription scope.
 - Remove tags at the subscription scope.
 - Remove any Resource Locks at the subscription scope.
-- Remove any Azure Cost Management Budgets at the subscription scope.
+- Remove any Microsoft Cost Management budgets at the subscription scope.
 - Reset Microsoft Defender for Cloud plans to Free Tiers unless organizational requirements mandate these logs are set to the paid tiers. You normally enforce these requirements via Azure Policy.
 - Remove subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations unless organizational requirements mandate forwarding these logs while a subscription is active.
 - Remove any Azure Lighthouse Delegations at the subscription scope.
@@ -199,6 +199,15 @@ You can reassign the subscription after you clean up the subscription. Here are 
 - Add new tags and set values for them on the subscription.
 - Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Microsoft Entra groups instead of individuals.
 - Place the subscription into the desired Management Group based on its governance requirements.
-- Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met.
+- Create new Microsoft Cost Management budgets and set alerts to new owners when thresholds met.
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 - Configure subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
+
+## What is a sovereign landing zone and how is it related to the Azure landing zone architecture?
+
+The sovereign landing zone is a component of Microsoft Cloud for Sovereignty that's intended for public sector customers who need advanced sovereignty controls. As a tailored version of the Azure landing zone conceptual architecture, the sovereign landing zone aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing. Through this alignment, the sovereign landing zone creates a cloud architecture where data and workloads offer encryption and protection from threats by default.
+
+> [!NOTE]
+> Microsoft Cloud for Sovereignty is oriented toward government organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the sovereign landing zone architecture.
+
+For more information about the sovereign landing zone, see [Sovereignty considerations for Azure landing zones](../landing-zone/sovereign-landing-zone.md).
