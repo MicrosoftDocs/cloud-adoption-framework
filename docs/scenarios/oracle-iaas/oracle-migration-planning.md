@@ -20,12 +20,12 @@ You should continually reassess your infrastructure requirements to improve perf
 
 Review the migration resources to define your Oracle to Azure migration process, and in addition:
 
-- Verify Azure subscription quota limits: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
-- Identify the deployment model: Automate deployment of Virtual Machines and supporting services as much as possible using Infrastructure-as-Code, CI-CD pipelines, and other DevOps practices.
-- Determine application dependencies to ensure that migration activities have a minimal disruptive impact.
-- Identify current available network connectivity capacity from on-premises to Azure.
-- Identify the amount of data to migrate and determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used.
-- Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
+- **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
+- **Identify the deployment model**: Automate deployment of Virtual Machines and supporting services as much as possible using Infrastructure-as-Code, CI-CD pipelines, and other DevOps practices.
+- **Determine application dependencies**: Ensure that migration activities have a minimal disruptive impact.
+- **Identify network capacity**: Identify the current available network connectivity capacity from on-premises to Azure.
+- **Assess the amount of data to migrate**: Determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used.
+- **Determine availability requirements**: Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
 
 Consider also getting assistance to accelerate your Oracle to Azure migration efforts.
 
