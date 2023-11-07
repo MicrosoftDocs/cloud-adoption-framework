@@ -3,7 +3,7 @@ title: Sovereignty considerations for Azure landing zones
 description: Learn about the sovereign landing zone variant of the Azure landing zone architecture. See how to adopt the cloud while meeting digital sovereignty requirements.
 author: pikestel
 ms.author: pikestel
-ms.date: 11/02/2023
+ms.date: 11/07/2023
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
