@@ -16,7 +16,7 @@ A crucial part of your cloud adoption journey is migrating your existing workloa
 
 ## Oracle Migration process details
 
-You should continually reassess your infrastructure requirements to improve performance and reduce costs using the relevant type of Azure Virtual Machine. For more information, see [Capacity planning for Oracle on Azure](./oracle-capacity-planning.md).
+You should continually reassess your infrastructure requirements to improve performance and reduce costs using the relevant type of Azure Virtual Machine. For more information, see [Capacity planning for migrating Oracle workloads to Azure landing zones](./oracle-capacity-planning.md).
 
 Review the migration resources to define your Oracle to Azure migration process, and in addition:
 

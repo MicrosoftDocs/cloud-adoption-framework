@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
-# Capacity planning for Oracle Azure Landing Zone
+# Capacity planning for migrating Oracle workloads to Azure landing zones
 
 This article extends the Azure cloud adoption framework by offering guidance on infrastructure capacity planning for Oracle workloads on Microsoft Azure. The article includes recommendations and tools to assist with this planning process.
 
