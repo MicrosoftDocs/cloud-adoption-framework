@@ -14,7 +14,7 @@ ms.subservice: scenario
 
 A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which, similar to other workloads, require a methodical approach to ensure a successful migration. For more information about the migration methodology, see [Cloud migration in the Cloud Adoption Framework](../../migrate/index.md). For Oracle database workloads, specifically, there are some unique constraints and considerations which this article addresses.
 
-## Oracle Migration process details
+## Oracle migration process details
 
 You should continually reassess your infrastructure requirements to improve performance and reduce costs using the relevant type of Azure Virtual Machine. For more information, see [Capacity planning for migrating Oracle workloads to Azure landing zones](./oracle-capacity-planning.md).
 
@@ -29,7 +29,7 @@ Review the migration resources to define your Oracle to Azure migration process,
 
 Consider also getting assistance to accelerate your Oracle to Azure migration efforts.
 
-## Oracle Migration workload specific activities
+## Oracle migration workload specific activities
 
 In the following section, different high-level steps of the migration process are described in more detail. The steps aren't necessarily sequential and can to some extent be performed in parallel.
 
