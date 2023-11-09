@@ -23,8 +23,7 @@ Review the migration resources to define your Oracle to Azure migration process,
 - **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
 - **Identify the deployment model**: Automate deployment of Virtual Machines and supporting services as much as possible using Infrastructure-as-Code, CI-CD pipelines, and other DevOps practices.
 - **Determine application dependencies**: Ensure that migration activities have a minimal disruptive impact.
-- **Identify network capacity**: Identify the current available network connectivity capacity from on-premises to Azure.
-- **Assess the amount of data to migrate**: Determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used.
+- **Identify data capacity**: Identify the amount of data to migrate and assess the current available network connectivity capacity from on-premises to Azure. Use this information to determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used for initial data load.
 - **Determine availability requirements**: Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
 
 ## Oracle migration workload specific activities
@@ -47,9 +46,7 @@ In the following section, different high-level steps of the migration process ar
   - Oracle DataGuard requires Oracle Enterprise Edition.
   - Oracle GoldenGate requires Oracle GoldenGate licenses.
   - For more information on Oracle licensing on Azure, see [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
-
-- **Consider the amount of data to migrate**: When transferring initial datasets from on-premises infrastructure to Azure, efficiency can vary based on the size of the database and available network bandwidth. In some cases, rather than transferring files via Express Route or VPN, it might be advantageous to employ a physical data transfer device like the Azure DataBox. For more information, see [Azure DataBox](/azure/databox/data-box-overview).
-
+  
 ## Next steps
 
 The following list of articles takes you to the guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
