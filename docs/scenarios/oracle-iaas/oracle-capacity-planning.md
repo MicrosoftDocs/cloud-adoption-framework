@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
-# Capacity planning for Oracle Azure Landing Zone
+# Capacity planning for migrating Oracle workloads to Azure landing zones
 
 This article extends the Azure cloud adoption framework by offering guidance on infrastructure capacity planning for Oracle workloads on Microsoft Azure. The article includes recommendations and tools to assist with this planning process.
 
@@ -54,4 +54,4 @@ The performance and reliability of Oracle database workloads heavily rely on the
 
 ## Next steps
 
-For details on how to migrate your workload once the appropriate capacity has been determined, see [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure).
+For an overview of the considerations involved in migrating an Oracle workload to Azure please refer to [Migration planning for Oracle on Azure](./oracle-migration-planning.md).
