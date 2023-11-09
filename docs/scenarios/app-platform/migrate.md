@@ -53,7 +53,7 @@ As with any migration, decide what maintenance window is agreeable and be transp
 
 All migrations, even downtime migrations, might need to modify the existing application with added flexibility to support the migration. Ensure application teams are fully involved in planning workload migrations as early as possible. For example, more DNS, connection string, and settings switching capabilities might need to be deployed in the current workload before the migration can be completed.
 
-Currently, you need to use one of several open-source tools to complete the replication of your container and workloads to Azure:
+Currently, you need to use one of several open-source tools to complete the replication of your container and workloads to Azure.
 
 If you're coming from an existing Kubernetes platform (AKS engine, ACS, or another Kubernetes implementation), consider using some open-source tooling to help with the migration. In these cases, you already have a workload that functions in Kubernetes, and rehosting in AKS is simpler. Validate all capabilities that exist in AKS before performing any migration.
 
