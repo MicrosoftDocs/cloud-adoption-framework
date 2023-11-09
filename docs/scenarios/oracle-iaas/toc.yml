@@ -25,6 +25,8 @@ items:
     items: 
     - name: Capacity planning
       href: oracle-capacity-planning.md
+    - name: Migration planning
+      href: oracle-migration-planning.md
   - name: Reference
     items:
       - name: Oracle workloads on Azure Virtual Machines
