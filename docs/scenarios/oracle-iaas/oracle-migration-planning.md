@@ -27,8 +27,6 @@ Review the migration resources to define your Oracle to Azure migration process,
 - **Assess the amount of data to migrate**: Determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used.
 - **Determine availability requirements**: Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
 
-Consider also getting assistance to accelerate your Oracle to Azure migration efforts.
-
 ## Oracle migration workload specific activities
 
 In the following section, different high-level steps of the migration process are described in more detail. The steps aren't necessarily sequential and can to some extent be performed in parallel.
@@ -44,7 +42,8 @@ In the following section, different high-level steps of the migration process ar
   - Once the target database in Azure is synchronized with the source database on-premises, a "cutover" can be scheduled conveniently. The "cutover" will mean shutting down the source database on-premises, flushing the last few transactions to the target database in Azure, and then opening the target database in Azure as the new source database. This cutover can happen in as little time as a few minutes, depending on the sync method used.
   - Depending on the migration approach determined for application services, there will be several activities required for application services before the application is fully migrated to Azure.
 
-- **Assess required licenses**: Depending on what migration tooling is required for database, various licenses might be required., be mindful that, for instance, 
+- **Assess required licenses**: Depending on what migration tooling is required for database, various licenses might be required., be mindful that, for instance:
+
   - Oracle DataGuard requires Oracle Enterprise Edition.
   - Oracle GoldenGate requires Oracle GoldenGate licenses.
   - For more information on Oracle licensing on Azure, see [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
