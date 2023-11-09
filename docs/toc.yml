@@ -504,6 +504,8 @@ items:
           href: ready/landing-zone/deploy-landing-zones-with-terraform.md
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
+        - name: Sovereignty considerations and the sovereign landing zone
+          href: ready/landing-zone/sovereign-landing-zone.md
         - name: Get landing zone help
           href: ready/landing-zone/partner-landing-zone.md
 
@@ -1607,8 +1609,6 @@ items:
           href: ready/azure-best-practices/perimeter-networks.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
-      - name: Encryption
-        href: decision-guides/encryption/index.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: AI + machine learning

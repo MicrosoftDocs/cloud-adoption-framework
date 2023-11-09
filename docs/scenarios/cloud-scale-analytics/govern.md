@@ -59,7 +59,7 @@ The data governance maturity model describes the maturity of your ability to cov
 
 | Ungoverned | Stage 1 | Stage 2 | Fully governed |
 |--|--|--|--|
-| No common business vocabulary | Common business vocabulary begun in a glossary | Common business vocabulary established | Common business vocabulary complete |
+| No common business vocabulary | Common business vocabulary begun in a glossary | Common business vocabulary established | Common business vocabulary complete and maintained |
 | No way to know data location, quality or sensitivity | Data catalog auto data discovery, profiling, and sensitive data detection on some systems | Data catalog auto data discovery, profiling, and sensitive data detection on all structured data | Data catalog auto data discovery, profiling, and sensitive data detection on structured and unstructured data in all systems, with full auto-tagging |
 | No process to govern authoring or maintenance of policies and rules | Governance of data access security, policy authoring, and maintenance on some systems | Governance of data access security, privacy, and retention policy authoring and maintenance | Governance of data access security, privacy, and retention policy authoring and maintenance |
 | No way to enforce policies and rules | Piecemeal enforcement of data access security policies and rules across systems with no catalog integration | Enforcement of data access security and privacy policies and rules across systems with catalog integration | Enforcement of data access security, privacy, and retention policies and rules across all systems |
