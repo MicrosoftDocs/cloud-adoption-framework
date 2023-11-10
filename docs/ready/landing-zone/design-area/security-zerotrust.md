@@ -40,7 +40,7 @@ These pillars can be mapped to the design areas for Azure landing zones.  If you
 
 The below table can be used to understand how to map the Zero Trust pillars to the design areas.
 
-:::image type="content" source="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text=":::
+:::image type="content" source="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
 | Legend | Landing Zone Design area(s) | Zero Trust Pillar(s) |
 |--|--|--|
