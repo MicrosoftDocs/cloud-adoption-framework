@@ -72,7 +72,7 @@ Azure activity log can be used to set up [resource health notifications](/azure/
 
 ### Agent security permissions
 
-Control who has access to the Azure connected machine agent on Azure Arc-enabled servers. The services that compose this agent control all communication and interaction for the Azure Arc-enabled servers to Azure. Members of the local administrator or group on Windows and users with root privileges on Linux, have permissions to manage the agent.
+Control who has access to the Azure connected machine agent on Azure Arc-enabled servers. The services that compose this agent control all communication and interaction for the Azure Arc-enabled servers to Azure. Members of the local administrator group on Windows and users with root privileges on Linux have permissions to manage the agent.
 
 Evaluate restricting the extensions and guest configuration capabilities with [local agent security controls](/azure/azure-arc/servers/security-overview.md#local-agent-security-controls) to permit only necessary management actions, especially for locked-down or sensitive machines.
 
