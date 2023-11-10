@@ -40,18 +40,18 @@ These pillars can be mapped to the design areas for Azure landing zones.  If you
 
 The below table can be used to understand how to map the Zero Trust pillars to the design areas.
 
-:::image type="content" source="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/ns-arch-cust-expanded.svg":::
+:::image type="content" source="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text=":::
 
 | Legend | Landing Zone Design area(s) | Zero Trust Pillar(s) |
 |--|--|--|
 | ![The letter A](../media/diagram-legends/a.png) | [Azure billing and Active Directory tenant](./azure-billing-ad-tenant.md) | [Identity Pillar](/security/zero-trust/deploy/identity) |
 | ![The letter B](../media/diagram-legends/b.png) | [Identity and access management](./identity-access.md) |[Identity Pillar](/security/zero-trust/deploy/identity), <br> [Applications Pillar](/security/zero-trust/deploy/applications),<br> [Data Pillar](/security/zero-trust/deploy/data) |
 | ![The letter C](../media/diagram-legends/c.png) | [Resource organization](./resource-org.md) | [Identity Pillar](/security/zero-trust/deploy/identity). |
-| ![The letter C](../media/diagram-legends/c.png) ![The letter D](../media/diagram-legends/d.png) | [Governance](./design-area/governance.md) | [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
-| ![The letter D](../media/diagram-legends/d.png) ![The letter G](../media/diagram-legends/g.png) ![The letter H](../media/diagram-legends/h.png) | [Management](./design-area/management.md) | [Endpoints Pillar](/security/zero-trust/deploy/endpoints), <br> [Applications Pillar](/security/zero-trust/deploy/applications),<br> [Data Pillar](/security/zero-trust/deploy/data),<br> [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) |
+| ![The letter C](../media/diagram-legends/c.png) ![The letter D](../media/diagram-legends/d.png) | [Governance](../design-area/governance.md) | [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
+| ![The letter D](../media/diagram-legends/d.png) ![The letter G](../media/diagram-legends/g.png) ![The letter H](../media/diagram-legends/h.png) | [Management](../design-area/management.md) | [Endpoints Pillar](/security/zero-trust/deploy/endpoints), <br> [Applications Pillar](/security/zero-trust/deploy/applications),<br> [Data Pillar](/security/zero-trust/deploy/data),<br> [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) |
 | ![The letter E](../media/diagram-legends/e.png) | [Network topology and connectivity](./network-topology-and-connectivity.md) | [Networks Pillar](/security/zero-trust/deploy/networks) |
-| ![The letter F](../media/diagram-legends/f.png) | [Security](./design-area/security.md) | [All Zero Trust Pillars](/security/zero-trust/deploy/overview) |
-| ![The letter I](../media/diagram-legends/i.png) | [Platform automation and DevOps](./design-area/platform-automation-devops.md) | [Visibility, Automation, and Orchestration Pillar Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
+| ![The letter F](../media/diagram-legends/f.png) | [Security](../design-area/security.md) | [All Zero Trust Pillars](/security/zero-trust/deploy/overview) |
+| ![The letter I](../media/diagram-legends/i.png) | [Platform automation and DevOps](../design-area/platform-automation-devops.md) | [Visibility, Automation, and Orchestration Pillar Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
 
 However, not all of the deployment objectives of Zero Trust are a part of the landing zone.  Many deployment objectives for Zero Trust are implemented as part of designing and releasing individual workloads to Azure.
 
