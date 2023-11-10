@@ -59,83 +59,90 @@ In the next sections, we will review each pillar, and give recommendations and c
 
 The [Identity Pillar](/security/zero-trust/deploy/identity) has deployment objectives focused on identity federation, conditional access, identity governance, and the use of real time data as part of the decisions for authentication.
 
-From a technology stand point, many of these controls are in Entra ID, and are used by the Microsoft 365 and Dynamics 365 cloud services as well as Azure.  Securing your identity is a foundational part of your security practices, so your organization should look hard at how to adopt these controls.
-
-Refer to the [Identity design area](identity-access.md) for more on how you should design for identity in Azure landing zones.
-
-The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls enforced via Azure Policy.
-
 ### Identity Considerations
 
-...
+- The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) deploy resources used to extend your existing identity platform in to Azure, and manage it with Azure best practices.
+- Many of the controls needed for Zero Trust are configured inside of your Entra ID tenant, and impact access to Microsoft 365 and other cloud services that use Entra ID.
+- As a result, you will need to plan for additional configuration beyond just what is in your Azure landing zone.
 
 ### Identity Recommendations
 
-...
+- Develop a plan for managing identities in Entra ID that go beyond just Azure resources.  This should include:
+  - Federation with on-premises identity systems.
+  - Conditional access policies.
+  - The use of user, device, location, and behavior information for authorization.
+- Deploy your Azure landing zone with separate subscriptions for identity resources like domain controllers, so you can better secure access to them.
+- Plan to use Entra ID identities where ever possible, such as Managed Identities.
 
 ## Endpoints Pillar
 
 The [Endpoints Pillar](/security/zero-trust/deploy/endpoints) has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
 
-These controls are applied to the end user compute devices - laptops, desktops, mobile devices - regardless of if they're corporate managed or a "bring your own device."  As a result, these controls aren't found in the Azure configuration, but instead are configuring through the Intune portal and other device management tools.
-
-For endpoints located in Azure, Azure Policies and other controls can be applied if needed.  Azure Virtual Desktop, for example, provides enrollment in to Intune to centrally manage client endpoints.
-
 ### Endpoints Considerations
 
-...
+- Endpoint deployment objectives include end user compute devices - laptops, desktops, and mobile devices.
+- Endpoint management can apply both to corporate managed devices, and individual owned devices enrolled in a "bring your own device" program.
+- As you plan to adopt Zero Trust for endpoints, you will need to design solutions that are broader than just what you have in Azure.
+- You will need to use tools such as Intune and other device management solutions to complete these deployment objectives.
+- If you have endpoints located in Azure, such as Azure Virtual Desktop, you can enroll the client experience in Intune while using Azure policies and controls to restrict access to the infrastructure.
 
 ### Endpoints Recommendations
 
-...
+- Develop a plan for managing endpoints with Zero Trust practices, in addition to your plans to implement an Azure landing zone.
+- For devices and servers that go beyond endpoints, see the Infrastructure Pillar for guidance.
 
 ## Applications Pillar
 
 The [Applications Pillar](/security/zero-trust/deploy/applications) has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
 
-Some of this work is focused on providing consolidated management for both third party and first party applications in your organization.  Using [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) can make the role of third party applications in your environment visible, and allow for you to plan from there.  There are also standardized policies that you can control to enforce your practices around cloud apps.
-
 ### Applications Considerations
 
-...
+- The deployment objectives for Applications focus on the management of both third party and first party applications in your organization.
+- The objectives are not focused on securing application infrastructure; instead, they are focused on securing the consumption of applications, especially cloud applications.
+- As a result, the Azure landing zone practices do not provide detailed controls for these objectives; these would be configured as part of the application configuration itself.
 
 ### Applications Recommendations
 
-...
+- Use [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) to manage access to applications.
+- Use the standardized policies included to enforce your practices.
+- Develop a plan to onboard your applications to your practices for application access; just because an application is hosted by your organization, does not mean it should be trusted more than third party applications.
 
 ## Data Pillar
 
 The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
-
-The landing zone subscription democratization principle and model creates access and network isolation for data resources, and proper logging provides a foundation. There are [policies](https://aka.ms/alz/policies) inside of the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) for the logging and management of data resources.
+ [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) for the logging and management of data resources.
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
 ### Data Considerations
 
-...
+- The landing zone subscription democratization principle and model creates access and network isolation for data resources, as well as logging practices.
+  - There are [policies](https://aka.ms/alz/policies) inside of the reference implementations for the logging and management of data resources.
+- More controls beyond securing the Azure resources are needed to complete the deployment objectives.
+  - Zero Trust data security involves classifying data, labeling it for sensitivity, and controlling data access.
+  - It also extends beyond database and file systems - you need to consider how to protect data in Teams, Microsoft 365 Groups, and SharePoint sites.
 
 ### Data Recommendations
 
-...
+- Use [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.
+- Implement Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to implement at scale.
 
 ## Infrastructure Pillar
 
 The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
 
-The landing zone subscription model creates access resolution to Azure resources that can provide a good baseline for further isolation.  In addition, the configuration of services like [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) and [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your landing zone can be used to advance these deployment objectives.
-
-The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) provides and assigns [policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources.
-
-There are also considerations for individual workloads in Azure.  You'll need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
-
 ### Infrastructure Considerations
 
-...
+- The infrastructure deployment objectives include both management for the Azure resources, as well as for the management of operating system environments, access to systems, and other workload specific controls.
+- The landing zone subscription model creates clear security boundaries to Azure resources, allowing you to assign limited permissions as needed at the Azure level.
+- Organizations still need to organize their workloads for management.
 
 ### Infrastructure Recommendations
 
-...
+- Use the standard [Azure landing zone policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources, and to enforce logging patterns.
+- Configure [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) in Entra ID to provide additional controls about highly privileged roles
+- Configure [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your landing zone, to restrict access to virtual machines.
+- Create a plan to monitor and manage individual workloads that are deployed in Azure.
 
 ## Networks Pillar
 
@@ -161,17 +168,17 @@ Following these guides will apply Zero Trust principles to your connectivity res
 
 The [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
-Because the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
-
-Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
-
 ### Visibility, Automation, and Orchestration Considerations
 
-...
+- Because the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.
+- While the reference implementations provide policies for Azure logging, you will need to integrate other services into your workspace.
+- Automation tools like Azure DevOps and GitHub should also be configured to send signals.
 
 ### Visibility, Automation, and Orchestration Recommendations
 
-...
+- Deploy Sentinel as part of your Azure landing zone.
+- Build a plan to integrate signals from Entra ID and tools in Microsoft 365 to your Sentinel workspace.
+- Build a plan to conduct threat hunting exercises and continual security iumprovement.
 
 ## Next Steps
 
