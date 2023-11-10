@@ -22,7 +22,7 @@ This article provides guidance for building Zero Trust into your landing zone, a
 
 ## Zero Trust Pillars and Landing Zone Design Areas
 
-If you are planning to implement Zero Trust practices as part of your Azure landing zone deployment, you should begin by considering Zero Trust guidance as a part of each landing zone design area.
+When planning to implement Zero Trust practices as part of your Azure landing zone deployment, you should begin by considering Zero Trust guidance as a part of each landing zone design area.
 
 The [Azure landing zone design areas](../design-areas.md) give guidance on what to consider before deploying a landing zone.  They guide you through the critical decisions for each area to understand what is needed to be successful.
 
@@ -32,7 +32,7 @@ Zero Trust has pillars organized by concepts and deployment objectives.  Each pi
 
 These pillars provide specific deployment objectives that organizations should use in order to align with Zero Trust principles.  They offer targeted objectives for each pillar.  These objectives go beyond technical configurations.
 
-For example, in the networking pillar there is a deployment objective for network segmentation.  The objective does not provide information on how to configure isolated networks in Azure, but instead offers guidance for creating the architecture pattern.
+For example, in the networking pillar there's a deployment objective for network segmentation.  The objective doesn't provide information on how to configure isolated networks in Azure, but instead offers guidance for creating the architecture pattern.
 
 As a result, there are still design decisions that need to be met in order to implement the deployment objectives.
 
@@ -55,7 +55,7 @@ The below table can be used to understand how to map the Zero Trust pillars to t
 
 However, not all of the deployment objectives of Zero Trust are a part of the landing zone.  Many deployment objectives for Zero Trust are implemented as part of designing and releasing individual workloads to Azure.
 
-In the next sections, we will review each pillar, and give recommendations and considerations for implementing the deployment objectives.
+The next sections review each pillar, and give recommendations and considerations for implementing the deployment objectives.
 
 ## Identity Pillar
 
@@ -100,14 +100,14 @@ The [Applications Pillar](/security/zero-trust/deploy/applications) has deployme
 ### Applications Considerations
 
 - The deployment objectives for Applications focus on the management of both third party and first party applications in your organization.
-- The objectives are not focused on securing application infrastructure; instead, they are focused on securing the consumption of applications, especially cloud applications.
-- As a result, the Azure landing zone practices do not provide detailed controls for these objectives; these would be configured as part of the application configuration itself.
+- The objectives aren't focused on securing application infrastructure; instead, they're focused on securing the consumption of applications, especially cloud applications.
+- As a result, the Azure landing zone practices don't provide detailed controls for these objectives; these would be configured as part of the application configuration itself.
 
 ### Applications Recommendations
 
 - Use [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) to manage access to applications.
 - Use the standardized policies included to enforce your practices.
-- Develop a plan to onboard your applications to your practices for application access; just because your organization hosts an application, does not mean it should be trusted more than third party applications.
+- Develop a plan to onboard your applications to your practices for application access; just because your organization hosts an application, doesn't mean it should be trusted more than third party applications.
 
 ## Data Pillar
 
