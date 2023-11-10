@@ -65,7 +65,13 @@ Refer to the [Identity design area](identity-access.md) for more on how you shou
 
 The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains a good foundation for Zero Trust adoption.  It plans for the extension of your existing identity platform to Azure, and contains governance to restrict access to these resources.  There are also built in logging controls enforced via Azure Policy.
 
+### Identity Considerations
 
+...
+
+### Identity Recommendations
+
+...
 
 ## Endpoints Pillar
 
@@ -75,11 +81,27 @@ These controls are applied to the end user compute devices - laptops, desktops, 
 
 For endpoints located in Azure, Azure Policies and other controls can be applied if needed.  Azure Virtual Desktop, for example, provides enrollment in to Intune to centrally manage client endpoints.
 
+### Endpoints Considerations
+
+...
+
+### Endpoints Recommendations
+
+...
+
 ## Applications Pillar
 
 The [Applications Pillar](/security/zero-trust/deploy/applications) has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
 
 Some of this work is focused on providing consolidated management for both third party and first party applications in your organization.  Using [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) can make the role of third party applications in your environment visible, and allow for you to plan from there.  There are also standardized policies that you can control to enforce your practices around cloud apps.
+
+### Applications Considerations
+
+...
+
+### Applications Recommendations
+
+...
 
 ## Data Pillar
 
@@ -88,6 +110,14 @@ The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives fo
 The landing zone subscription democratization principle and model creates access and network isolation for data resources, and proper logging provides a foundation. There are [policies](https://aka.ms/alz/policies) inside of the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) for the logging and management of data resources.
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
+
+### Data Considerations
+
+...
+
+### Data Recommendations
+
+...
 
 ## Infrastructure Pillar
 
@@ -99,19 +129,33 @@ The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platfo
 
 There are also considerations for individual workloads in Azure.  You'll need to evaluate the workloads as well to make sure that they are following your zero trust requirements.
 
+### Infrastructure Considerations
+
+...
+
+### Infrastructure Recommendations
+
+...
+
 ## Networks Pillar
 
 The [Networks Pillar](/security/zero-trust/deploy/networks) has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
 
-Because the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains Connectivity resources for hybrid connectivity, firewalling, and network isolation, there are detailed guides for deploying out the landing zone to support Zero Trust networking.  You can find them at the following locations:
-
-- [Azure landing zone portal accelerator deployment with Zero Trust network principles](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/Deploying-ALZ-ZTNetwork.md)
-- [Deploy Networking with Zero Trust network principles](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/DeploymentGuideHSZT.md)
-- [Azure landing zone Terraform deployment with Zero Trust network principles](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/docs/wiki/%5BExamples%5D-Deploy-ZT-Network.md)
-
 Following these guides will apply Zero Trust principles to your connectivity resources.  However, there are application-based considerations to make as well, such as with web application firewalls.
 
-You can review the [Zero-trust network for web applications](/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall) reference architecture to understand how to apply Zero Trust principles to application delivery.  For more hands on guidance on configuring workloads with secure networking,use the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview).
+### Networks Considerations
+
+- You will need to deploy your platform resources to support Zero Trust.  This means deploying firewalls capable of HTTPS traffic inspection, and isolating identity and management network resources from the central hub.
+- In addition to the networking resources in the Connectivity subscription, you will need to create plans for individual workloads to be micro-segmented in their spoke virtual networks.  This will mean defining traffic patterns and creating fine grained NSGs for each workload network.
+
+### Networks Recommendations
+
+- Use Zero Trust specific deployment guides for deploying your Azure landing zone.  You can find them at the following locations:
+  - [Azure landing zone portal accelerator deployment with Zero Trust network principles](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/Deploying-ALZ-ZTNetwork.md)
+  - [Deploy Networking with Zero Trust network principles](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/DeploymentGuideHSZT.md)
+  - [Azure landing zone Terraform deployment with Zero Trust network principles](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/blob/main/docs/wiki/%5BExamples%5D-Deploy-ZT-Network.md)
+- Review the [Zero-trust network for web applications](/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall) reference architecture to understand how to apply Zero Trust principles to application delivery.
+- Use the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview) to build a plan for workload networking.
 
 ## Visibility, Automation, and Orchestration Pillar
 
@@ -120,6 +164,14 @@ The [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/depl
 Because the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.  However, true zero trust visibility requires additional connections with Entra ID and other tools like those in Microsoft 365.  As a result, there is additional work needed to enable all of your signals to be aggregated together.
 
 Once signals are flowing, then the work of continual threat hunting and improving the posture based on findings can begin.
+
+### Visibility, Automation, and Orchestration Considerations
+
+...
+
+### Visibility, Automation, and Orchestration Recommendations
+
+...
 
 ## Next Steps
 
