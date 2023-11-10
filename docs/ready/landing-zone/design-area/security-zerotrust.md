@@ -64,17 +64,17 @@ The [Identity Pillar](/security/zero-trust/deploy/identity) has deployment objec
 ### Identity Considerations
 
 - The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) deploy resources used to extend your existing identity platform in to Azure, and manage it with Azure best practices.
-- Many of the controls needed for Zero Trust are configured inside of your Entra ID tenant, and impact access to Microsoft 365 and other cloud services that use Entra ID.
+- Many of the controls needed for Zero Trust are configured inside of your Microsoft Entra ID tenant, and impact access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
 - As a result, you need to plan for configuration beyond just what is in your Azure landing zone.
 
 ### Identity Recommendations
 
-- Develop a plan for managing identities in Entra ID that go beyond just Azure resources:
+- Develop a plan for managing identities in Microsoft Entra ID that go beyond just Azure resources:
   - Federation with on-premises identity systems.
   - Conditional access policies.
   - The use of user, device, location, and behavior information for authorization.
 - Deploy your Azure landing zone with separate subscriptions for identity resources like domain controllers, so you can better secure access to them.
-- Plan to use Entra ID identities where ever possible, such as Managed Identities.
+- Plan to use Microsoft Entra ID identities where ever possible, such as Managed Identities.
 
 ## Endpoints Pillar
 
@@ -146,7 +146,7 @@ The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has depl
 ### Infrastructure Recommendations
 
 - Use the standard [Azure landing zone policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources, and to enforce logging patterns.
-- Configure [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) in Entra ID to provide just in time access to highly privileged roles
+- Configure [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) in Microsoft Entra ID to provide just in time access to highly privileged roles
 - Configure [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your landing zone, to restrict access to virtual machines.
 - Create a plan to monitor and manage individual workloads that are deployed in Azure.
 
@@ -181,7 +181,7 @@ The [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/depl
 ### Visibility, Automation, and Orchestration Recommendations
 
 - Deploy Sentinel as part of your Azure landing zone.
-- Build a plan to integrate signals from Entra ID and tools in Microsoft 365 to your Sentinel workspace.
+- Build a plan to integrate signals from Microsoft Entra ID and tools in Microsoft 365 to your Sentinel workspace.
 - Build a plan to conduct threat hunting exercises and continual security iumprovement.
 
 ## Next Steps
