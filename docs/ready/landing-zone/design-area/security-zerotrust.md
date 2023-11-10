@@ -16,7 +16,9 @@ ms.custom:
 - **Use least privilege access**, where you limit user access to just enough access, and use tools to provide just in time access with considerations to adaptive risk-based policies.
 - **Assume breach**, where you minimize blast radius and segment access, are always proactively looking for threats, and are continually improving defenses.
 
-If your organization is adhering to the Zero Trust strategy, you should include it in your landing zone design.  Your landing zone is the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
+If your organization is adhering to the Zero Trust strategy, you should include Zero Trust specific deployment objectives as part of your design areas.  Your landing zone is the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
+
+This article provides guidance for building Zero Trust into your landing zone, as well as call outs for where adherence to Zero Trust principles will involve solutions outside of your landing zone.
 
 ## Zero Trust Pillars and Landing Zone Design Areas
 
