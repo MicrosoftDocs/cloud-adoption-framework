@@ -12,6 +12,8 @@ ms.custom: internal
 
 Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
 
+For more guidance about choosing Azure regions, see the following article: [Select Azure regions](../azure-setup-guide/regions.md).
+
 ## How landing zones use Azure regions
 
 Azure landing zones consist of a set of resources and configuration. Some of these items, like management groups, policies, and role assignments, are stored at either a tenant or management group level within the Azure landing zone architecture, so these resources aren't "deployed" to a particular region and instead are deployed globally. However, you still need to specify a deployment region because Azure tracks some of the resource metadata in a regional metadata store.
@@ -35,7 +37,7 @@ If you deploy a networking topology, you also need to select an Azure region to 
 
 ## Add a new region to an existing landing zone
 
-You might want to expand into or use more Azure regions once you've completed the initial deployment of Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
+You should consider a multi-region strategy, either from the start or by expanding into more Azure regions once you've completed the initial deployment of your Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
 
 | Area | Recommendation |
 | ---- | -------------- |
@@ -47,7 +49,7 @@ You might want to expand into or use more Azure regions once you've completed th
 | Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
 
 > [!NOTE]
-> You might be able to use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) instead of deploying into an additional Azure region. Review and assess whether this is possible based on your requirements and whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
+> You should also use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) for high availability within a region. Check whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
 
 ### High-level approach
 
