@@ -31,16 +31,14 @@ Workload discovery is the foundation of relocation. The primary goal is to ident
 
 Where possible, use automated tools to collect information about applications and Azure services that make up your workload. You can use these tools to perform low-level discovery and architecture design discovery for the relocation of a specific workload. You should use the following Azure tools and services.
 
-Beyond technical discovery, the discovery phase should also include other non-technical aspects of the workload. Consider the following questions:
+Beyond technical discovery, the discovery phase should also include other non-technical aspects of the workload. It is important to determine the following:
 
-- Who owns the workload?
-- Who are the stakeholders who should be involved in migration decisions or notified about migration activities?
-- What are the potential business risks involved in migrating the workload?
-- Are there change management processes required for this workload? If so, what are the timelines for reviewing the migration process?
-- Are there allowable outage windows during which a migration can be performed?
-
-> [!NOTE]
-> It’s important to understand if internal users or external customers could be impacted by any outage the relocation may cause, and how you plan to communicate with these stakeholders.
+- Identify the workload owner(s).
+- Identify the stakeholders who should be involved in migration decisions or notified about migration activities.
+- Determine the potential business risks involved in migrating the workload.
+- Determine if the workload is subject to a change management processes.
+- Identify allowable outage windows during which a migration can be performed.
+- Identify internal users or external customers could be impacted by any outage the relocation may cause and put a communicate plan inplace to notifiy them.
 
 **Try Azure Resource Mover first.** You should try to use Azure Resource Mover first. It's the easiest discovery tool to use, and you can also relocate services and data. Azure Resource Mover only supports a limited number of services, so make sure your services are supported before continuing. For more information, see [Supported resources for Azure Resource Mover](/azure/resource-mover/overview#what-resources-can-i-move-across-regions).
 
@@ -58,11 +56,7 @@ Beyond technical discovery, the discovery phase should also include other non-te
 
 - *Inventory dashboard:* Within the Azure portal you can use the built-in inventory template to create a dashboard to track your existing resources. It's a quick way of determining the resources you have and the number of instances.
 
-**Manually create documentation if needed.** If automated discovery approaches aren't enough, you can conduct a manual assessment of the workloads. Most manual assessments rely on interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in the information the tools provide.
-
-> [!TIP]
-> Resource tags can be another way of discovering information about workloads, such as their owners and which environment the resource corresponds to.
-
+**Manually create documentation if needed.** If automated discovery approaches aren't enough, you can conduct a manual assessment of the workloads. Most manual assessments rely on interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in the information the tools provide. And the app owner can pull the tags and manually identify dependencies.
 
 ## Find region supportability
 
