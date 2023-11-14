@@ -32,11 +32,6 @@ Cold relocation is for workloads that can withstand downtime. It's the most cost
 1. Deploy the cloud services to the new target region.
 1. Restore workload data.
 
-> [!NOTE]
-> You might choose to perform step 2 last if one of the following situations apply:
-> - You use Azure Resource Mover to relocate your resources; or
-> - You need to test the workloads in the new target region before you take the resources in the source region offline.  
-
 Cold relocation can take a few minutes or a few days depending on the number of services and volume of data.
 
 ### Hot relocation
