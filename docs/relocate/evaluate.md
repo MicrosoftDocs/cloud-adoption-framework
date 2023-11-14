@@ -19,14 +19,15 @@ Evaluate is the first step in the Move phase of relocation. The goal of the Eval
 
 ## Pick workload(s)
 
-You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Workload owners should be involved in the selection process. They can help with identifying risks, outage windows and communications with workload users and other stakeholders. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams, you should relocate one workload at a time. It's a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale. At first, consider picking workloads that are low risk, low in complexity, and have a development or test environment that you can migrate first.
-
-> [!TIP]
-> For high risk workloads, consider developing a rollback plan, and test the full migration and rollback processes against non-production environments.
+You should have a prioritized list of workloads, and the list should identify the order you want to relocate your workloads. Each time you visit the evaluate step, pick the workload(s) at the top of the list. For smaller teams, you should relocate one workload at a time. It's a chance to learn and improve with each workload relocation. Larger teams should consider relocating multiple workloads. Bulk relocations can help achieve economies of scale.
 
 ## Conduct discovery
 
-Workload discovery is the foundation of relocation. The primary goal is to identify all dependencies and endpoints. Dependencies are resources or services that the workload needs to run. Dependencies include Azure services, third-party apps, licenses, partner teams. You need to consider networking, firewalls, cost, testing, tagging, identities, product features, zonal support, and policies. You should also identify all the endpoints or IP addresses associated with the workload including those that are configured with private endpoints. It's worth noting that public IP addresses are region specific. You can't move them between regions. You need to export the configuration of a public IP and deploy it to the new target region. For more information, see [Move Azure Public IP configuration to another Azure region](/azure/virtual-network/move-across-regions-publicip-powershell).
+Workload discovery is the foundation of relocation. The primary goal is to identify all dependencies and endpoints. Dependencies are resources or services that the workload needs to run. Dependencies include Azure services, third-party apps, licenses, partner teams. 
+
+- *Be comprehensive.* You need to consider networking, firewalls, cost, testing, tagging, identities, product features, zonal support, and policies. 
+*Include all endpoints.* You should also identify all the endpoints or IP addresses associated with the workload including those that are configured with private endpoints. It's worth noting that public IP addresses are region specific. You can't move them between regions. You need to export the configuration of a public IP and deploy it to the new target region. For more information, see [Move Azure Public IP configuration to another Azure region](/azure/virtual-network/move-across-regions-publicip-powershell).
+- *Reconfigure global services.* Global Azure resources don't deploy to a specific region, so you don't need to recreate them. You just might need to reconfigure them. For example, you might need to update IP addresses in Azure Front Door profile to point to the new IP address of a relocated workload.
 
 Where possible, use automated tools to collect information about applications and Azure services that make up your workload. You can use these tools to perform low-level discovery and architecture design discovery for the relocation of a specific workload. You should use the following Azure tools and services.
 
@@ -55,16 +56,13 @@ Beyond technical discovery, the discovery phase should also include other non-te
 
 - *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure AD tenant. Resource Graph is accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
 
-- *Inventory dashboard:* Within the Azure portal you can use the built-in inventory template to create a dashboard to track your existing resources as a quick way of determining which resources you have and how many instances there are.
+- *Inventory dashboard:* Within the Azure portal you can use the built-in inventory template to create a dashboard to track your existing resources. It's a quick way of determining the resources you have and the number of instances.
 
 **Manually create documentation if needed.** If automated discovery approaches aren't enough, you can conduct a manual assessment of the workloads. Most manual assessments rely on interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in the information the tools provide.
 
 > [!TIP]
 > Resource tags can be another way of discovering information about workloads, such as their owners and which environment the resource corresponds to.
 
-## Identify global and regional resources
-
-Some Azure resources are deployed globally, which means they aren't deployed to a specific region. These resources don't need to be recreated, but they might need to be reconfigured. For example, an Azure Front Door profile is a global resource, so it doesn't need to be moved between the source and target regions. However, it might refer to the IP address of a resource that will be moved, and so its configuration might need to be updated when you move your other resources.
 
 ## Find region supportability
 
@@ -80,33 +78,26 @@ Relocation happens at the service and component level. Most workloads use multip
 
 **Stateful services:** Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
 
-## Evaluate potential side effects of the relocation
+## Evaluate relocation updates
 
 In any migration project, there’s a risk of something breaking during the relocation process. Outages can happen by accident, or due to the way that the service being relocated is designed. Wherever possible, it’s best to identify these issues during the discovery stage so that you can put a plan in place to mitigate the risk of an outage or misconfiguration. Here are some points to consider:
 
-- **Automation, scripts and infrastructure as code:** Your organization might have invested in automation techniques, which can be helpful with the relocation process. However, be sure to identify and change any references to Azure regions, service names, or service URLs to reflect the destination Azure region. Ideally, values that can change during the lifecycle of an application should be looked up dynamically, or configured as parameters within the code, to make the changes less onerous.
+- *Update automation.* Your organization might have implemented automation techniques, such as scripts and infrastructure as code. You must update any references to Azure regions, service names, or service URLs within the scripts or code. The references need to correspond to the new Azure region you're moving to.
 
-- **Public IP addresses:** Azure allocates public IP addresses from a range unique to each Azure region. This means that when a new public IP address is provisioned in the new target Azure region, the public IP addresses used by your resources will have changed from what it is currently. As you go live with the services in the new Azure region, plan how you update your external DNS records to reflect the new IP addresses in use. If external parties have allowlisted your organization’s public IP addresses, then they need to be supplied with the new IP addressed of the relocated services.
+You should avoid hardcoding any values in your code that are subject to change during the workload lifecycle. Instead, retrieve these values dynamically or use configurable parameters within the code. This approach will make any necessary changes less burdensome and ensure a smoother relocation process."
 
-- **Load balancing services:** Most workloads use a load balancing service. Load balancers include DNS-based load balancers like Azure Traffic Manager, reverse proxies like Azure API Management, Azure Front Door, or Azure Application Gateway, and layer 3/layer 4 load balancers like Azure Load Balancer. Consider whether you need to update your load balancer's configuration to point to a new backend IP address or host. If you do, there might be some downtime while failover occurs. The load balancer might need to detect that traffic can no longer flow to the source region, then update its configuration to send traffic to the target region. For DNS-based load balancers, the change might take some time to propagate based on DNS caches and time-to-live (TTL) record expiry.
+- *Update DNS records.* Azure assigns public IP addresses to endpoints depending on the region. When you move an endpoint to a different Azure region, it will have a different IP address. Make sure to update your DNS records with these new IP addresses. Also, you need to provide the new IP address to any system that has the former IP address on its 'allowed' list.
 
-   Consider whether you can reduce the downtime by temporarily reducing DNS records' TTL settings and by temporarily reconfiguring the load balancer to poll backend health more aggressively. However, ensure that you revert these changes after the migration is completed so that you don't incur performance and cost penalties in the future.
+- *Update load balancers.* Update load balancers to point to any new backend IP addresses or hosts. For DNS-based load balancers, the change might take some time to propagate based on DNS caches and time-to-live (TTL) record expiry. For more information, see [Azure load balancing services](/azure/architecture/guide/technology-choices/load-balancing-overview#https-vs-non-https). Consider temporarily decreasing the Time to Live (TTL) settings for your DNS records. It helps the DNS records switch to new IP address faster. Also, consider setting your load balancer to check the health of your backend systems more frequently for a short period. Remember to change these settings back to normal after the migration to avoid extra costs and reduced performance later on.
 
-- **Resource DNS names and URLs:** Many Azure resources can be configured with globally unique DNS names. For example, Azure Storage uses DNS names similar to `<unique_name>.blob.core.windows.net`, and Azure App Service uses DNS names similar to `<unique_name>.azurewebsites.net`. Similarly, if you have any public IP address resources that you attach to virtual machines or networking resources, they might be configured to use a DNS name similar to `<unique-name>.<region-name>.cloudapp.azure.com`.
+- *Resolve naming conflicts.* Check if you need to deploy new resources in the new Azure region before you turned off the old ones. If so, you could run into issues where two resources can't have the same DNS name at once. Think about using unique names for each service to avoid this problem. In some cases, you might be able to use CNAME records to provide a layer of abstraction. It makes resource name changes easier to manage.
 
-  Evaluate whether your migration plan requires you to provision new instances of services within the new target Azure region while the current service is still provisioned in the old Azure region. If you do, there might be a naming conflict: two resources can’t share the same DNS name at the same time. Consider whether you can use different names for each resource.
 
-  In some situations, your DNS records might be able to provide a layer of abstraction by using CNAME records, which makes a service name change easier to manage.
+- *Update private endpoints.* If you connect to your resources through a private endpoint, these endpoints link to private DNS zones that resolve the resource's network address within your virtual network. In a relocation, you need to update the DNS records within the private DNS zones to maintain connectivity.
 
-- **Private endpoints:** Many Azure services enable you to access your resources by using a private endpoint in your own virtual network. Often, this approach uses the resource’s URL, such as in your private DNS zones. The preceding consideration described how a resource’s URL can change during the migration process, so ensure that you plan how you configure your private endpoints and DNS zones.
+- *Update Azure Backup registration.* When you move virtual machines to a new Azure region, make sure to unregister them from the Azure Backup service in the current region and register them with the Azure Backup service in the new region. Be aware that you won't be able to access the existing backup recovery points because they cannot be transferred to the new backup vault. You need to start creating new recovery points in the new region.
 
-- **Azure Backup recovery points:** When virtual machines are relocated to the new target Azure region, they first need to be de-registered with the current Azure Backup service and then re-registered with a new instance of Azure Backup located in the new region. This process causes existing recovery points for that virtual machine to be unavailable, because recovery points can’t be relocated to a different vault.
-
-- **Log Analytics workspaces:** It’s best to deploy a separate Log Analytics workspace for each region, which means you should deploy a new workspace in your target region. It’s not possible to move a Log Analytics Workspace to another region, which means the data from your original workspace won’t be available in the target region’s workspace.
-
-  If it’s important that you keep the historical Log Analytics data, consider either of the following approaches:
-  - Keep the current workspace until you're confident you no longer require the data. Treat the workspace as read-only.
-  - Export the workspace’s data to a storage account in the new target Azure region.
+- *Create a new Log Analytics workspace.* You should have a separate Log Analytics workspace for each region. Create a new workspace in the target region. Since can't move a Log Analytics Workspace to another region, you need to create a new Log Analytics workspace in the target region.  There are two options to preserve the data in the original workspace. You can keep the keep the current workspace until you don't need the data, treating the data as read-only. You can also export the workspace data to a storage account in the new target Azure region.
 
 ## Next steps
 
