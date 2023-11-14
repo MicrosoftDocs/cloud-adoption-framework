@@ -115,12 +115,6 @@ Cutover is when you transition from the old workload to the new one. You direct 
 
 - **Gateway Routing:** If the workload uses the [Gateway Routing pattern](/azure/architecture/patterns/gateway-routing) with a service, such as Azure Front Door, Application Gateway, or Azure API Management, you can often make a region migration cutover. You use their backend targets and routing-rules features.
 
-When planning the cutover approach, be sure to consider the following questions:
-
-- How do other systems connect to the relocated workload? Will these approaches continue to work, and will any security considerations change?
-- What’s required to cut over internal users to the relocated workloads?
-- What’s required to cut over external customers to the relocated workloads?
-
 ## Next step
 
 You've selected a relocation method and the tools to relocate your workload. Move on to the Migrate step to execute the relocation using these tools.
