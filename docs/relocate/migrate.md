@@ -19,10 +19,7 @@ The Migrate step of relocation is where you move the workload to the new region.
 
 ## Prepare
 
-You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure landing zone footprint, you should use the Azure landing zone guidance and return to this article to relocate the workload. For more information, see [How to add regions to Azure landing zones](../ready/enterprise-scale/faq.md#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.  Doing so will ensure you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity. Consider the network topology, routing, and connectivity requirements of the landing zone in the new target region. Also consider whether integration is required with the landing zone in the source region. You might decide not to relocate every resources to the new target region, in which case a cross-region network topology is required indefinitely.
-
-> [!NOTE]
-> Azure Virtual WAN is a service that can help you build cross-region networking topologies. Virtual WAN also provides secure, long-term connectivity between your virtual networks.
+You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure landing zone footprint, you should use the Azure landing zone guidance and return to this article to relocate the workload. For more information, see [Add a new region to an existing Azure landing zone](/azure/cloud-adoption-framework/ready/considerations/regions#add-a-new-region-to-an-existing-landing-zone). As needed, follow these steps to prepare your workload environment before relocation.  Doing so will ensure you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity. Consider the network topology, routing, and connectivity requirements of the landing zone in the new target region. Also consider whether integration is required with the landing zone in the source region. You might decide not to relocate every resources to the new target region, in which case a cross-region network topology is required indefinitely.
 
 **Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. Try to keep the workload in its existing subscription if possible, because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
 
@@ -34,12 +31,13 @@ You might need to prepare the target region before relocating the workload. If t
 
 ## Migrate services
 
-You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation.
-
-For resources that can't be moved automatically, consider how you'll redeploy them. You can create infrastructure as code (IaC) templates, scripts, or run deployment steps manually in the Azure portal. The specific steps you need to follow depend on the Azure services you use and their configuration. For more information, see:
+You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. For more information, see:
 
 - [Azure Resource Mover tutorials](/azure/resource-mover/tutorial-move-region-virtual-machines)
 - [Azure Site Recovery tutorials](/azure/site-recovery/azure-to-azure-how-to-enable-replication)
+
+For resources you can't move automatically, you can create infrastructure as code templates, scripts, or run deployment steps manually in the Azure portal. The specific steps you need to follow depend on the Azure services you use and their configuration.
+
 - [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md)
 
 ## Migrate data
