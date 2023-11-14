@@ -73,7 +73,7 @@ There are three primary service-relocation approaches. The following paragraphs 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Redeploy by using infrastructure as code (IaC) custom automation:** IaC allows you to copy and redeploy Azure services. If you don't already have it, you can download the Azure Resource Manager template, Bicep file, or Terraform file for the services in the source region and deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
+**Infrastructure as code (IaC):** IaC allows you to copy and redeploy Azure services. You can Azure Resource Manager, Bicep, or Terraform templates for the services in the source region. You can deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
 
 Deploying a new instance of an Azure service by using IaC provides you with an opportunity to deploy multiple copies of the resource in parallel, and then use one of the suggested cutover techniques to redirect connections to the workloads in the new target region.
 
@@ -93,10 +93,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 - **Azure Storage Explorer:** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [How to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
-- **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
-
-> [!NOTE]
-> Existing backup restore points in the source region aren’t transferred to the new target region. If you need to retain backups for a specified period of time, consider keeping the vault in your source region until the backups are no longer required.
+- **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. You can't transfer existing backup restore points to the new target region. Consider keeping the vault in your source region until the backups are no longer required. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
 
 - **Manual backup and restore:** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore it manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
 
