@@ -821,10 +821,11 @@
          "redirect_document_id": false
       },
       {
-<<<<<<< HEAD
          "source_path": "docs/ready/landing-zone/design-area/identity-access-platform-access.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access",
-=======
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/scenarios/oracle-iaas/governance-complaince-oracle-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/governance-compliance-oracle-landing-zone",
           "redirect_document_id": false
@@ -857,7 +858,6 @@
       {
          "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
->>>>>>> main
          "redirect_document_id": false
       }
    ]
