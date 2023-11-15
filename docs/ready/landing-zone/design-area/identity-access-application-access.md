@@ -45,7 +45,8 @@ Individual application workloads have authentication and authorization requireme
 
 ## Design recommendations
 
-- Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that don't need to use credentials. Applications that need to authenticate against an Azure service can use managed identities. Ensure that managed identities follow the principle of least privilege when granting access.
+- Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that make up an application, service or workload to remove the requirement to store secrets of credentials. Applications that need to authenticate against an Azure service should use managed identities.
+    - Ensure that managed identities follow the principle of least privilege when granting access.
 
 - Use Azure Key Vault to manage secrets, keys, certificates used by applications. 
     - Use RBAC to allow administrative access and management for management. 
