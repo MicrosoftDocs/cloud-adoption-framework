@@ -52,7 +52,7 @@ Individual application workloads have authentication and authorization requireme
     - Use RBAC to allow administrative access and management for management. 
     - Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: [Use a managed identity to access Azure Key Vault](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
 
-- If you are using DevOps pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
+- If you are using CI/CD pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
