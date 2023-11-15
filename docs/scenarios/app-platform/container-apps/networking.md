@@ -57,7 +57,7 @@ External environments expose container apps by using a virtual IP address that i
 
   * Use network security groups (NSG) to secure your network and block unnecessary inbound and outbound traffic.
 
-  * Use Azure DDoS Protection Standard for the Azure Container Apps Environment.
+  * Use Azure DDoS Protection for the Azure Container Apps Environment.
 
   * Use Private Link for secure network connections and private IP-based connectivity to other managed Azure services.
 
