@@ -42,21 +42,23 @@ This section has guidance for considerations related to Active Directory. If you
 
 Before implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) when you planned for your Landing Zone.
 
-You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if you need any Azure AD changes.
+You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if you need any changes in Microsoft Entra ID.
 
 ### Extending Active Directory domain controllers
 
-In most migration scenarios, the workloads being migrated to Azure are already joined to an existing Active Directory domain. While Azure AD can offer solutions for modernizing identity management even for VM workloads, doing so can disrupt migration. Rearchitecting identity usage for workloads is often an effort saved for modernization or innovation initiatives.
+In most migration scenarios, the workloads being migrated to Azure are already joined to an existing Active Directory domain. While Microsoft Entra ID can offer solutions for modernizing identity management even for VM workloads, doing so can disrupt migration. Rearchitecting identity usage for workloads is often an effort saved for modernization or innovation initiatives.
 
 As a result, you need to deploy domain controllers to Azure inside the identity network area you deployed. After deploying the VMs, you must follow your normal DC promotion process to add them to the domain. This can include additional sites created to support your replication topology.
 
 For a common architecture pattern for deploying these resources, review the article on [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain) from the Azure Architecture Center. The AD DS servers could be in a subnet in the hub if you're implementing the [Enterprise-scale for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) or in their dedicated virtual network for [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
 
-### Azure AD Connect
+<a name='azure-ad-connect'></a>
 
-Most organizations already have Azure AD Connect to populate Microsoft 365 services like Exchange Online. However, if you haven't implemented this, you might need to deploy Azure AD Connect after your landing zone deployment to replicate identities.
+### Microsoft Entra Connect
 
-You can use [this guidance](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Azure AD Connect.
+Most organizations already have Microsoft Entra Connect to populate Microsoft 365 services like Exchange Online. However, if you haven't implemented this, you might need to deploy Microsoft Entra Connect after your landing zone deployment to replicate identities.
+
+You can use [this guidance](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Microsoft Entra Connect.
 
 ## Enable hybrid DNS
 

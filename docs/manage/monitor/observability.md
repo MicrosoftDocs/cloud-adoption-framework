@@ -89,7 +89,7 @@ Here are a few examples of tools that enable your platform observability:
 |[Azure Monitor activity log](/azure/azure-monitor/essentials/activity-log)|Reports subscription-level events across all the resources deployed in the subscription.|
 |[Azure Monitor Change Analysis](/azure/azure-monitor/change/change-analysis)|Reports on changes to your Azure applications and reduces mean time to repair (MTTR).|
 |[Azure resource logs](/azure/azure-monitor/essentials/resource-logs)|Previously known as _diagnostic logs_, resource logs reports on operations performed within an Azure resource, on the data plane.|
-|[Azure Active Directory reports (AzureAD) logs](/azure/azure-monitor/essentials/platform-logs-overview)|Reports on the history of sign-in activity and the audit trail of changes in Azure AD for a given tenant.|
+|[Microsoft Entra reports (AzureAD) logs](/azure/azure-monitor/essentials/platform-logs-overview)|Reports on the history of sign-in activity and the audit trail of changes in Microsoft Entra ID for a given tenant.|
 |[Azure Advisor](/azure/advisor/advisor-overview)|Use Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.|
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
@@ -206,7 +206,7 @@ In addition to the key considerations, seek to better understand how these point
 
 - **Secure your monitoring data:** Security is a crucial aspect for every organization and team today. Make sure you're educated and know the guardrails, or let experts guide you so you don't add risk to your monitoring solutions, for example, by exposing sensitive monitoring data in logs.
 
-- **Consider Microsoft 365:**  Any good plan considers your Azure tenant with Microsoft 365 as a significant component. Microsoft 365 depends on Azure AD, and Azure Monitor provides Microsoft 365 integration with endpoint management.
+- **Consider Microsoft 365:**  Any good plan considers your Azure tenant with Microsoft 365 as a significant component. Microsoft 365 depends on Microsoft Entra ID, and Azure Monitor provides Microsoft 365 integration with endpoint management.
 
 - **Observability wins:** Focus on total visibility before focusing on alerting, as alerting both is a cost, and can quickly lead to alert fatigue.
 

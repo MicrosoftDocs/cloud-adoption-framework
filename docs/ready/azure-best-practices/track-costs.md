@@ -69,7 +69,7 @@ As a general best practice, members of all teams should be assigned the role of 
 
 The following scope and role settings will create the required visibility into cost management. This best practice might require minor changes to align to asset organization decisions.
 
-- [Cloud adoption team](../../organize/cloud-adoption.md). As cloud adoption teams primarily focus on implementation of cloud technologies, cost management access to production environments is not typically required. By virtue of normally having contributor access to non-production or Sandbox subscriptions, this team would inherently have access to cost management data for those subscriptions.
+- [Cloud adoption team](../../organize/cloud-adoption.md). As cloud adoption teams primarily focus on implementation of cloud technologies, cost management access to production environments is not typically required. By virtue of normally having Contributor access to non-production or Sandbox subscriptions, this team would inherently have access to cost management data for those subscriptions.
 
 - [Cloud strategy team](../../organize/cloud-strategy.md). Responsibilities for tracking costs across multiple projects and business units require [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader) access at the root level of the management group hierarchy.
 

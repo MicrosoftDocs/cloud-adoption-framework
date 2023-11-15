@@ -1,6 +1,6 @@
 ---
-title: Microsoft customer agreement and Azure Active Directory tenants
-description: Understand mca agreements and Azure Active Directory tenants.
+title: Microsoft customer agreement and Microsoft Entra tenants
+description: Understand mca agreements and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/23/2021
@@ -26,9 +26,9 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 - The agreement provides a hierarchical organizational structure to govern how subscriptions are managed. For more information, see [Organize costs by customizing your billing account](/azure/cost-management-billing/manage/mca-section-invoice).
 
-- An agreement billing account is managed by a single Azure AD tenant. However, subscriptions across different Azure AD tenants are supported by a single agreement. For more information, see [How tenants and subscriptions relate to billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#how-tenants-and-subscriptions-relate-to-billing-account) and [Manage subscriptions under multiple tenants in a single Microsoft customer agreement](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#manage-subscriptions-under-multiple-tenants-in-a-single-microsoft-customer-agreement).
+- An agreement billing account is managed by a single Microsoft Entra tenant. However, subscriptions across different Microsoft Entra tenants are supported by a single agreement. For more information, see [How tenants and subscriptions relate to billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#how-tenants-and-subscriptions-relate-to-billing-account) and [Manage subscriptions under multiple tenants in a single Microsoft customer agreement](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#manage-subscriptions-under-multiple-tenants-in-a-single-microsoft-customer-agreement).
 
-- New Azure subscriptions provisioned with an agreement are associated with the Azure AD tenant in which the agreement billing account is located.
+- New Azure subscriptions provisioned with an agreement are associated with the Microsoft Entra tenant in which the agreement billing account is located.
 
 - Agreements use the RBAC model. Multiple users can be assigned with the required roles at the same scopes (for example, billing account, billing profile, and invoice section). These billing roles and assignments are outside of standard Azure RBAC roles and assignments. They can't be assigned at a management group or resource group scope.
 

@@ -10,9 +10,9 @@ ms.date: 11/11/2022
 
 # Manufacturing HPC Azure billing and Active Directory tenants
 
-Azure landing zones for HPC don't have specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Azure Active Directory tenant decisions.
+Azure landing zones for HPC don't have specific considerations or recommendations that affect billing offer decisions, enterprise enrollment, or Microsoft Entra tenant decisions.
 
-But it might be important to understand decisions previously made by the cloud platform team and the existing [enterprise enrollment or Azure Active Directory tenant decisions](../../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
+But it might be important to understand decisions previously made by the cloud platform team and the existing [enterprise enrollment or Microsoft Entra tenant decisions](../../../ready/landing-zone/design-area/azure-billing-ad-tenant.md).
 
 ## Review identity management and resource organization considerations
 
@@ -31,4 +31,3 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

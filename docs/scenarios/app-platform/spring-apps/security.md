@@ -34,7 +34,7 @@ For information about the platform design, see:
   - Application-specific attacks.
   - Unsolicited and potentially malicious internet traffic.
 
-- **Identity management**. Use Azure Active Directory (Azure AD) features, such as managed identities, single sign-on, strong authentications, managed identities, and conditional access to provide authentication and authorization through Azure AD.
+- **Identity management**. Use Microsoft Entra features, such as managed identities, single sign-on, strong authentications, managed identities, and conditional access to provide authentication and authorization through Microsoft Entra ID.
 
 - **Security monitoring**. The system should have monitoring tools to detect threats and measure compliance by using the organization goals and the Azure Security Benchmark controls. These tools should be integrated with central security information and event management (SIEM) systems to get a holistic view of the security posture.
 
@@ -92,33 +92,33 @@ Use Azure DNS to host DNS domains. Protect DNS zones and records from bad actors
 
 ### Identity as the perimeter
 
-Azure provides identity controls through Azure Active Directory (Azure AD). The application has many features, such as single sign-on, strong authentications, managed identities, and conditional access. For information about the design choices for the architecture, see [Identity considerations for the Azure Spring Apps landing zone accelerator](./identity-and-access-management.md).
+Azure provides identity controls through Microsoft Entra ID. The application has many features, such as single sign-on, strong authentications, managed identities, and conditional access. For information about the design choices for the architecture, see [Identity considerations for the Azure Spring Apps landing zone accelerator](./identity-and-access-management.md).
 
 The following section describes the security aspects of those choices.
 
 #### Integration with the centralized identity system
 
-Azure landing zones use Azure AD as the default identity and access management service. To govern the workload services, centralized Azure AD  is recommended. Centralized Azure AD includes access to the organization's network resources, Azure Storage, Key Vault, and other services that your application depends on.
+Azure landing zones use Microsoft Entra ID as the default identity and access management service. To govern the workload services, centralized Microsoft Entra ID  is recommended. Centralized Microsoft Entra ID includes access to the organization's network resources, Azure Storage, Key Vault, and other services that your application depends on.
 
 If you want to grant access the Azure Spring Apps data plane, use the [Azure Spring Cloud Data Reader](/azure/role-based-access-control/built-in-roles#azure-spring-cloud-data-reader) built-in role. This role gives read-only permissions.
 
-These Azure AD features are recommended:
+These Microsoft Entra features are recommended:
 
 - **Application identities**. The application might need to access other Azure services. For example, if it wants to retrieve secrets from Azure Key Vault.
 
-  Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so the application can authenticate itself to other services by using Azure AD. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files.
+  Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) with Azure Spring Apps so the application can authenticate itself to other services by using Microsoft Entra ID. Avoid using service principals for this purpose. The managed identities authentication process doesn't use credentials that are hardcoded in source code or configuration files.
 
-  If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Azure AD to create a [service principal](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level.
+  If you need to use service principals with certificate credentials and fall back to client secrets, it's recommended that you use Microsoft Entra ID to create a [service principal](/azure/active-directory/develop/howto-authenticate-service-principal-powershell) with restricted permissions at the resource level.
 
   In both cases, Key Vault can be used with Azure-managed identities. A runtime component, such as an Azure function, can be used to retrieve the secrets from Key Vault. For more information, see [Authentication in Azure Key Vault](/azure/key-vault/general/authentication).
 
-- **Azure AD single sign-on (SSO)**. [Azure AD SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
+- **Microsoft Entra single sign-on (SSO)**. [Microsoft Entra SSO](/azure/active-directory/manage-apps/what-is-single-sign-on) is recommended to authenticate access to the application from other applications or devices that run in the cloud or on-premises. SSO provides identity management to internal and external users, such as partners or vendors.
 
-- **Strong authentication controls**. Azure AD supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Azure Active Directory](/azure/active-directory/authentication/concept-authentication-passwordless).
+- **Strong authentication controls**. Microsoft Entra ID supports strong authentication controls through multi-factor authentication (MFA) and strong passwordless methods. For administrators and privileged users, use the highest level of the strong authentication method to reduce the blast radius if there's a breach. Then roll out the appropriate strong authentication policy to other users. For more information, see [Enable MFA in Azure](/azure/active-directory/authentication/howto-mfa-getstarted) and [Passwordless authentication options for Microsoft Entra ID](/azure/active-directory/authentication/concept-authentication-passwordless).
 
-- **Conditional access to resources**. Azure Spring Apps supports [Azure AD conditional access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Azure AD to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
+- **Conditional access to resources**. Azure Spring Apps supports [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) for a more granular access control that's based on user-defined conditions. You can set conditions to include user sign-ins from certain IP ranges that need to sign in by using MFA. These [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) only apply to user accounts that authenticate to Microsoft Entra ID to access and manage applications. Those policies don't apply to service principals, keys, or tokens that are used to connect to your workload resources.
 
-- **Privileged access**. Implement [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- **Privileged access**. Implement [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
 
 #### Data controls
 
@@ -148,12 +148,12 @@ For support scenarios, when Microsoft needs access to relevant customer data, us
 
 Microsoft Defender for Cloud is recommended to receive alerts about suspicious activities, such as an excessive number of failed authentication attempts or deprecated accounts in the subscription.
 
-Azure Spring Apps is integrated with Azure AD, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes that are made to any resources within Azure AD. The data is integrated with Azure Monitor and can be exported to Azure Sentinel.
+Azure Spring Apps is integrated with Microsoft Entra ID, which can track sign-in activities including risky sign-ins. You can use audit logs to detect changes that are made to any resources within Microsoft Entra ID. The data is integrated with Azure Monitor and can be exported to Azure Sentinel.
 
 For more information, see:
 
-- [Audit activity reports in Azure AD](/azure/active-directory/reports-monitoring/concept-audit-logs)
-- [View Azure AD risky sign-ins](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk)
+- [Audit activity reports in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-audit-logs)
+- [View Microsoft Entra risky sign-ins](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk)
 - [Monitor users' identity and access activity in Microsoft Defender for Cloud](/azure/security-center/security-center-identity-access)
 - [Alerts in Microsoft Defender for Cloud's threat intelligence protection module](/azure/security-center/alerts-reference)
 
@@ -187,5 +187,3 @@ For more information, see:
 ## Next steps
 
 [Monitoring operations](./management.md)
-
-

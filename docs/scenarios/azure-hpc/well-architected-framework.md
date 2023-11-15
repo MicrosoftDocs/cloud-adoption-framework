@@ -40,7 +40,7 @@ Azure Marketplace provides Linux based HPC images to use in the cluster. These i
 - Prevent deletion or modification of a resource, resource group, or subscription through management locks.
 - Use Managed Identities to access resources in Azure.
 - Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
-- Set up Azure AD Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
+- Set up Microsoft Entra Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
 - Preferably use passwordless methods or opt for modern password methods.
 - Block legacy protocols and authentication methods.
 

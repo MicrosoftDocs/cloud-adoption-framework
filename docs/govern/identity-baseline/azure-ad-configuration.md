@@ -1,6 +1,6 @@
 ---
-title: Azure Active Directory configuration governance guidance
-description: This article provides guidance on the architecture and configuration of Azure Active Directory regarding identity governance.
+title: Microsoft Entra configuration governance guidance
+description: This article provides guidance on the architecture and configuration of Microsoft Entra ID regarding identity governance.
 author: RobBagby
 ms.author: robbag
 ms.date: 10/26/2022
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Azure Active Directory configuration
+# Microsoft Entra configuration
 
-The architecture and configuration of Microsoft Azure Active Directory (Azure AD) is a key element in identity governance in the Azure cloud.  Azure AD is Azure's identity and authentication management service, and it acts as the foundation for other practices.
+The architecture and configuration of Microsoft Entra ID is a key element in identity governance in the Azure cloud.  Microsoft Entra ID is Azure's identity and authentication management service, and it acts as the foundation for other practices.
 
-This article recommends using Azure AD as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
+This article recommends using Microsoft Entra ID as the centralized identity and authentication system for your applications. The article provides suggested configurations and guidance on enforcing and auditing those configurations.
 
 | Guidance | Enforce | Audit |
 | --- | --- | ---|
@@ -25,12 +25,12 @@ This article recommends using Azure AD as the centralized identity and authentic
 
 ## Guidance - Centralized identity and authentication system
 
-Standardize on Azure AD as your organization's identity and authentication platform for Microsoft cloud resources, application, and organizational identities. In addition, you should synchronize Windows Server Active Directory identities to Azure AD to ensure centralized management.
+Standardize on Microsoft Entra ID as your organization's identity and authentication platform for Microsoft cloud resources, application, and organizational identities. In addition, you should synchronize Windows Server Active Directory identities to Microsoft Entra ID to ensure centralized management.
 
-- Standardize on Azure AD as the central identity platform.
-- Use Azure AD for authentication for new applications.
-- Build a roadmap to migrate existing applications to Azure AD for authentication.
-- Use Azure AD single sign-on for third party applications for centralized authentication.
+- Standardize on Microsoft Entra ID as the central identity platform.
+- Use Microsoft Entra ID for authentication for new applications.
+- Build a roadmap to migrate existing applications to Microsoft Entra ID for authentication.
+- Use Microsoft Entra single sign-on for third party applications for centralized authentication.
 
 ## Enforce - Centralized identity and authentication system
 
@@ -40,7 +40,7 @@ Assign the [Append a tag and its value to resources](https://portal.azure.com/#v
 
 :::image type="content" source="./media/tag-policy.png" alt-text="A picture of the portal page where you add a tag policy.":::
 
-Resources that use Azure AD as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined in the audit process.
+Resources that use Microsoft Entra ID as the centralized identity system should be tagged with AzureAD.  All others should be reviewed and defined in the audit process.
 
 ## Audit - Centralized identity and authentication system
 
@@ -64,7 +64,7 @@ resources
 You should also maintain a configuration management database (CMDB) for applications and review it quarterly. Meet with application owners of applications still in migration to review timeline and requirements. The CMDB should contain the following information about each application:
 
 - Application owner
-- Uses Azure AD or Azure AD single sign-on?
+- Uses Microsoft Entra ID or Microsoft Entra single sign-on?
 - If not:
   - Migration date
   - Migration steps
@@ -73,8 +73,8 @@ You should also maintain a configuration management database (CMDB) for applicat
 
 Restrict default user permissions to remove unneeded access granted in default settings.
 
-- Configure Azure AD to prevent users from being able to register applications.
-- Restrict access to the Azure AD administration portal.
+- Configure Microsoft Entra ID to prevent users from being able to register applications.
+- Restrict access to the Microsoft Entra administration portal.
 - Don't allow users to connect their user accounts to LinkedIn.
 - Reduce collaboration settings to ensure:
   - Only authorized users can grant guest access.
@@ -110,7 +110,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
 ### Azure portal
 
 - Set [Users can register applications](/azure/active-directory/roles/delegate-app-roles#restrict-who-can-create-applications) to No.
-- Set [default Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Azure AD administration portal** to Yes.
+- Set [default Microsoft Entra ID](/azure/active-directory/fundamentals/users-default-permissions) user permission **Restrict access to Microsoft Entra administration portal** to Yes.
 - Set [LinkedIn account connections](/azure/active-directory/enterprise-users/linkedin-integration#enable-linkedin-account-connections-in-the-azure-portal) to No.
 - [Configure external collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) to:
   - Set **Guest user access restrictions** to **Guest user access is restricted to properties of memberships of their own directory objects (most restrictive)**.
@@ -154,7 +154,7 @@ Central management of password reset causes a management burden and can lead use
 
 ## Enforce - Password management
 
-- Enable [Azure Active Directory self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
+- Enable [Microsoft Entra self-service password reset](/azure/active-directory/authentication/tutorial-enable-sspr).
 - Set passwords not to expire through the [Password Expiration Policy](/microsoft-365/admin/manage/set-password-expiration-policy?source=recommendations):
   - Navigate to: Setup - Microsoft 365 admin center
   - Select Set passwords to never expire
@@ -242,8 +242,8 @@ Follow the [guidance to configure and enable risk policies](/azure/active-direct
 
 - Configure the user risk policy to:
   - Require a secure password reset when user risk level is High
-  - Require Azure AD MFA before the user can create a new password with Self-Service Password Reset to remediate their risk.
-- Configure the sign-in risk policy to require Azure AD multifactor authentication when sign-in risk level is medium or high.
+  - Require Microsoft Entra multifactor authentication before the user can create a new password with Self-Service Password Reset to remediate their risk.
+- Configure the sign-in risk policy to require Microsoft Entra multifactor authentication when sign-in risk level is medium or high.
 
 ## Audit - Sign-in and user risk policies
 
@@ -271,6 +271,6 @@ In addition to the "Block legacy authentication" policy, above, it's recommended
 
 ## Audit - Conditional Access
 
-- To audit conditional access, use the Azure Active Directory Audit logs for policy changes.  The article [Troubleshooting Condition Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log) provides guidance for creating alerts to notify operators if a policy has been changed.
+- To audit conditional access, use the Microsoft Entra audit logs for policy changes.  The article [Troubleshooting Condition Access policy changes](/azure/active-directory/conditional-access/troubleshoot-policy-changes-audit-log) provides guidance for creating alerts to notify operators if a policy has been changed.
 - Keep conditional access audit logs for 60 days to provide for a monthly audit cycle.
 - To audit actual conditional access activities, use the method described in [Condition Access insights and reporting](/azure/active-directory/conditional-access/howto-conditional-access-insights-reporting)

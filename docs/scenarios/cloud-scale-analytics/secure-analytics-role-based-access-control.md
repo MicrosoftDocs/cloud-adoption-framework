@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of access control is giving users only the amount of access that they need to do their jobs and only allowing certain actions at a particular scope. Role-based security/role-based access control (RBAC) corresponds to access control and is used by many organizations to control access based on defined roles or job functions versus individual users. Users are then assigned one or more security roles, each of which is given authorized permissions to perform specific tasks.
 
-When using Azure Active Directory (Azure AD) as the centralized identity provider, authorization to access data services and storage can be granted per user or per application and is based on an Azure AD identity. Authorization covers RBAC to the service and access control list at the file, folder, or object level in the storage.
+When using Microsoft Entra ID as the centralized identity provider, authorization to access data services and storage can be granted per user or per application and is based on a Microsoft Entra identity. Authorization covers RBAC to the service and access control list at the file, folder, or object level in the storage.
 
 ## Data service authorization
 
@@ -36,7 +36,7 @@ The following best practices can help you to get started with RBAC:
 
 - **Use built-in RBAC roles:** First, use the built-in RBAC Azure resource roles to manage services and assign operations roles to control access. Create and use custom roles for Azure resources only when built-in roles don't meet specific needs.
 
-- **Use groups to manage access:** Assign access to Azure AD groups, and manage group memberships for ongoing access management.
+- **Use groups to manage access:** Assign access to Microsoft Entra groups, and manage group memberships for ongoing access management.
 
 - **Subscription and resource group scopes:** While it makes sense to grant access at the resource group scope to separate service management and operations access needs versus granting access to individual resources (especially in the nonproduction environment), you can instead grant access to individual resources for workload-specific tasks like data lake file system support and operations, especially in the production environment. This is because in nonproduction environments, developers and testers will need to manage resources like creating an Azure Data Factory ingestion pipeline or creating a container in Data Lake Storage Gen2. While in production, users only need to use resources like viewing the status of a scheduled Data Factory ingestion pipeline or reading data files in Data Lake Storage Gen2.
 

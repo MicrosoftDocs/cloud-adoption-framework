@@ -118,7 +118,7 @@ Microsoft Purview requires access to the *control plane* and the *data plane* to
 
 ### Register data sources
 
-When you deploy the Microsoft Purview account, a system-assigned managed identity is created automatically. It's created in the Azure Active Directory tenant and assigned to this resource. To read and list Azure resources under a subscription or resource group when registering data sources in Microsoft Purview, the Microsoft Purview managed identity requires the Azure RBAC *Reader* role on the scope.
+When you deploy the Microsoft Purview account, a system-assigned managed identity is created automatically. It's created in the Microsoft Entra tenant and assigned to this resource. To read and list Azure resources under a subscription or resource group when registering data sources in Microsoft Purview, the Microsoft Purview managed identity requires the Azure RBAC *Reader* role on the scope.
 
 Consider assigning the *Reader* role to the Microsoft Purview managed identity in each data landing zone subscription before you register any of these data sources into Microsoft Purview:
 

@@ -25,7 +25,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 - [Cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
 - [Cloud security team](../../../organize/cloud-security.md)
 
-**Scope:** The goal of this design area is to evaluate options for your identity and access foundation. It includes:
+**Scope:** The goal of this design area is to evaluate options for your identity and access foundation. At a minimum, make decisions about your approach for synchronizing identities with Microsoft Entra ID:
 
 - Authenticating users and applications
 - Assigning access to resources

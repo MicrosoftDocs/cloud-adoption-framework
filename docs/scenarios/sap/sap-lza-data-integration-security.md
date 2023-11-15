@@ -1,7 +1,7 @@
 ---
 title: Data integration security for SAP on Azure
 description: Learn about data integrations security for SAP on Azure, including an example architecture and considerations for each component.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
@@ -52,7 +52,7 @@ See the following considerations for Data Lake Storage Gen2 security.
 
 #### Authorize access to data in Azure Storage
 
-When you access data in your Storage account, your client application makes a request over HTTP/HTTPS to Storage. By default, every resource in Storage is secure, and every request to a secure resource must be authorized. Storage offers many options for authorizing access to data. We recommend using Azure Active Directory (Azure AD) credentials to authorize requests to data for optimal security and simplicity. For more information, see [Protect your access keys](/azure/storage/common/authorize-data-access#protect-your-access-keys).
+When you access data in your Storage account, your client application makes a request over HTTP/HTTPS to Storage. By default, every resource in Storage is secure, and every request to a secure resource must be authorized. Storage offers many options for authorizing access to data. We recommend using Microsoft Entra credentials to authorize requests to data for optimal security and simplicity. For more information, see [Protect your access keys](/azure/storage/common/authorize-data-access#protect-your-access-keys).
 
 #### Azure role-based access control (RBAC)
 
@@ -76,7 +76,7 @@ There are two kinds of ACLs in Data Lake Storage Gen2:
 - _Access ACLs_ control access to an object. Files and directories have access ACLs.
 - _Default ACLs_ are templates of ACLs that are associated with a directory. They determine the access ACLs for any child items that are created under that directory. Files don't have default ACLs.
 
-In an ACL entry, don't directly assign individual users or service principals. Always use Azure AD security groups as the assigned principal. This practice lets you add and remove users or service principals without reapplying ACLs to an entire directory structure. Instead, you can add or remove users and service principals from the appropriate Azure AD security group. For more information, see [Access control lists](/azure/storage/blobs/data-lake-storage-access-control).
+In an ACL entry, don't directly assign individual users or service principals. Always use Microsoft Entra security groups as the assigned principal. This practice lets you add and remove users or service principals without reapplying ACLs to an entire directory structure. Instead, you can add or remove users and service principals from the appropriate Microsoft Entra security group. For more information, see [Access control lists](/azure/storage/blobs/data-lake-storage-access-control).
 
 ### Data Factory security
 
@@ -111,7 +111,7 @@ In Data Factory, consider encrypting credentials for on-premises data stores. On
 
 #### Use a managed identity
 
-When you use a managed identity, you don't have to manage credentials. A managed identity provides an identity for the service instance when it connects to resources that support Azure AD authentication.
+When you use a managed identity, you don't have to manage credentials. A managed identity provides an identity for the service instance when it connects to resources that support Microsoft Entra authentication.
 There are two types of supported managed identities: System-assigned managed identities and user-assigned managed identities. For more information, see [Managed identity for Data Factory](/azure/data-factory/data-factory-service-identity).
 
 #### Encrypt with customer-managed keys

@@ -35,9 +35,9 @@ Where possible, use automated tools to collect information about applications an
 
 - *Application Insights:* Application Insights has an application mapping feature where you can view the logical structure of a distributed application. For more information, see [Application map in Azure Application Insights](/azure/azure-monitor/app/app-map?tabs=net).
 
-- *Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Azure Active Directory (Azure AD) tenant. It gives you visibility but doesn't indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
+- *Azure Resource Explorer:* Azure Resource Explorer lists every resource in your Microsoft Entra tenant. It gives you visibility but doesn't indicate dependencies. You must map workload components and dependencies manually. For more information, see [Azure Resource Explorer](https://resources.azure.com/).
 
-- *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in an Azure AD tenant. Resource Graph is accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
+- *Azure Resource Graph:* Azure Resource Graph allows you to run queries against the resources in a Microsoft Entra tenant. Resource Graph is accessible in the portal and from the command line. You must map workload components and dependencies manually. For more information, see [Azure Resource Graph documentation](/azure/governance/resource-graph/shared-query-azure-cli).
 
 **Manually create documentation if needed.** If automated discovery approaches aren't enough, you can conduct a manual assessment of the workloads. Most manual assessments rely on interviews with technical experts and technical documentation to get the information needed. Identify product or application owners and interview them. These interviews are optional, but necessary when the team needs to cover gaps in the information the tools provide.
 

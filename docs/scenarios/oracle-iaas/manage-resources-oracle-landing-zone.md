@@ -1,5 +1,5 @@
 ---
-title: Organize resources for Oracle on Azure Virtual Machines landing zone 
+title: Organize resources for Oracle on Azure Virtual Machines landing zone
 description: Learn about organizing resources for Oracle on Azure Virtual Machines landing zone.
 author: jjaygbay1
 ms.author: jacobjaygbay
@@ -23,4 +23,3 @@ However, it's important to understand decisions previously made by the cloud pla
 ## Next steps
 
 - [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology.md).
-

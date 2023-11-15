@@ -48,7 +48,7 @@ In a standardized container's enriched layer, there are two folders per source s
 
 Your standardized container needs a general folder for *confidential or below* data and a *sensitive* folder for personal data. Control access to these folders by using access control lists (ACLs). You can create a dataset with all personal data removed, and store it in your general folder. You can have another dataset that includes all personal data in your *sensitive* personal data folder.
 
-A combination of ACLs and Azure Active Directory (Azure AD) groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
+A combination of ACLs and Microsoft Entra groups restrict data access. These lists and groups control what other groups can and can't access. Data owners and data application teams can approve or reject access to their data assets.
 
 For more information, see [Data access management](../../data-management/security-provisioning.md) and [Restricted data](../../data-management/secure-data-privacy.md#restricted-data).
 

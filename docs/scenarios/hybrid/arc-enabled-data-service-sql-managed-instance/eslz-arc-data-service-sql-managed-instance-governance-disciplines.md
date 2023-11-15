@@ -55,8 +55,8 @@ Review the [security](../../../ready/landing-zone/design-area/security.md) and [
 - While considering your organization's separation of duties and least-privileged access requirements, define cluster administration, operations, database administration, and developer roles within your organization. Mapping each team to actions and responsibilities determines Azure role-based access control (RBAC) roles or the Kubernetes _ClusterRoleBinding_ and _RoleBinding_ depending on the connectivity mode used.
 - Consider using a [responsible, accountable, consulted, and informed (RACI) parties](../../../organize/raci-alignment.md) matrix to support this effort. Build controls into the management scope hierarchy that you define based on [resource consistency](../../../govern/resource-consistency/index.md) and [inventory management](../../../manage/considerations/inventory.md) guidance.
 - Deploying the Azure Arc Data Controller requires some permissions that can be considered high privilege, such as creating a Kubernetes namespace or creating a cluster role. Understand the [permissions](/azure/azure-arc/data/least-privilege) needed to prevent excessive privileges.
-- Decide on the authentication model to be used within your Arc-enabled SQL Managed Instance, whether it's Azure Active Directory (Azure AD) authentication or SQL authentication. Review the [identity and access management design area](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for design considerations and recommendations to choose the right authentication mode.
-- Consider the differences between *system-managed keytab* and *customer-managed keytab* to deploy Azure Arc AD connector to support Azure AD authentication in Arc-enabled SQL Managed Instance. Both methods have the benefit of simplified operations compared to full customer control of managing service accounts and keytab for Azure AD authentication support.
+- Decide on the authentication model to be used within your Arc-enabled SQL Managed Instance, whether it's Microsoft Entra authentication or SQL authentication. Review the [identity and access management design area](./eslz-arc-data-service-sql-managed-instance-identity-access-management.md) for design considerations and recommendations to choose the right authentication mode.
+- Consider the differences between *system-managed keytab* and *customer-managed keytab* to deploy Azure Arc AD connector to support Microsoft Entra authentication in Arc-enabled SQL Managed Instance. Both methods have the benefit of simplified operations compared to full customer control of managing service accounts and keytab for Microsoft Entra authentication support.
 
 ### Azure Arc-enabled SQL Managed Instance security
 
@@ -83,8 +83,8 @@ Review the [security](../../../ready/landing-zone/design-area/security.md) and [
 
 ### Identity and access management
 
-- Prefer the use of Azure AD authentication to offload user lifecycle management to the directory services, and use security groups in Azure AD to manage user permissions to access the SQL database.
-- Use system-managed keytab mode for Azure AD authentication support to offload domain account and keytab management overhead to simplify operations.
+- Prefer the use of Microsoft Entra authentication to offload user lifecycle management to the directory services, and use security groups in Microsoft Entra ID to manage user permissions to access the SQL database.
+- Use system-managed keytab mode for Microsoft Entra authentication support to offload domain account and keytab management overhead to simplify operations.
 - If SQL authentication is used, adopt strong password policies and enable auditing to monitor SQL user identities and permissions granted to access database servers and databases.
 - Dedicate a Kubernetes namespace for the Azure Arc Data Controller deployment and assign the least privilege permissions to deploy and manage.
 - Create [strong passwords for Grafana and Kibana](/azure/azure-arc/data/least-privilege#create-the-metrics-and-logs-dashboards-user-names-and-passwords) dashboards and make sure to audit and rotate regularly.

@@ -1,5 +1,5 @@
 ---
-title: Strategic impact of Oracle on Azure Virtual Machines landing zone accelerator 
+title: Strategic impact of Oracle on Azure Virtual Machines landing zone accelerator
 description: Learn about the strategic impact of Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay

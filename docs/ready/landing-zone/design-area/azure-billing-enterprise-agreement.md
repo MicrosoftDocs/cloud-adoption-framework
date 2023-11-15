@@ -1,6 +1,6 @@
 ---
 title: Azure Enterprise Agreement enrollment design area guidance
-description: Understand the Enterprise Agreement enrollments and Azure Active Directory tenants design area.
+description: Understand the Enterprise Agreement enrollments and Microsoft Entra tenants design area.
 author: jtracey93
 ms.author: jatracey
 ms.date: 05/16/2023
@@ -36,15 +36,17 @@ Enterprise Agreement enrollment represents the commercial relationship between M
   - Service Administrator
   - Notification Contact
 
-## How an Enterprise Agreement enrollment relates to Azure AD and Azure RBAC
+<a name='how-an-enterprise-agreement-enrollment-relates-to-azure-ad-and-azure-rbac'></a>
+
+## How an Enterprise Agreement enrollment relates to Microsoft Entra ID and Azure RBAC
 
 When your organization uses an Enterprise Agreement enrollment for Azure subscriptions, it's important to understand the various authentication and authorization boundaries and the relationship between these boundaries.
 
-There is an inherent trust relationship between Azure subscriptions and an Azure AD tenant, which is described further in [Associate or add an Azure subscription to your Azure AD tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An Enterprise Agreement enrollment can also use an Azure AD tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, Enterprise Agreement enrollment roles don't provide access to Azure AD or the Azure subscriptions within that enrollment.
+There is an inherent trust relationship between Azure subscriptions and a Microsoft Entra tenant, which is described further in [Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory). An Enterprise Agreement enrollment can also use a Microsoft Entra tenant as an identity provider, depending on the [authentication level](/azure/cost-management-billing/manage/ea-portal-troubleshoot#authentication-level-types) set on the enrollment and which option was selected when the enrollment account owner was created. However, apart from the account owner, Enterprise Agreement enrollment roles don't provide access to Microsoft Entra ID or the Azure subscriptions within that enrollment.
 
-For example, a finance user is granted an Enterprise Administrator role on the Enterprise Agreement enrollment. They're a standard user without elevated permissions or roles assigned to them in Azure AD or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only Enterprise Agreement role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
+For example, a finance user is granted an Enterprise Administrator role on the Enterprise Agreement enrollment. They're a standard user without elevated permissions or roles assigned to them in Microsoft Entra ID or on any Azure management group, subscription, resource group, or resource. The finance user can only perform the roles listed at [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-administrator) and can't access the Azure subscriptions on the enrollment. The only Enterprise Agreement role with access to Azure subscriptions is the account owner because this permission was granted when the subscription was created.
 
-![Diagram that shows Azure Enterprise Agreement relationship with Azure AD and RBAC.](../../enterprise-scale/media/ea-azure-relationship.png)
+![Diagram that shows Azure Enterprise Agreement relationship with Microsoft Entra ID and RBAC.](../../enterprise-scale/media/ea-azure-relationship.png)
 
 ## Design considerations
 
@@ -80,13 +82,13 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Create new departments for IT only if the corresponding business domains have independent IT capabilities.
 
-- If you use multiple Azure AD tenants, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If you use multiple Microsoft Entra tenants, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
 - For development/testing (dev/test) workloads, use the [Enterprise Dev/Test](/azure/cost-management-billing/manage/ea-portal-administration#enterprise-devtest-offer) offer, where available. Ensure you comply with the [terms of use](https://azure.microsoft.com/offers/ms-azr-0148p/).
 
 - Don't ignore notification emails sent to the notification account email address. Microsoft sends important Enterprise Agreement prompts to this account.
 
-- Don't move or rename an Enterprise Agreement account in Azure AD.
+- Don't move or rename an Enterprise Agreement account in Microsoft Entra ID.
 
 - Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
 

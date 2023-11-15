@@ -69,7 +69,7 @@ _Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.git
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
-- You can share an Azure DDoS Protection Standard plan across all VNets in a single Azure AD tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
+- You can share an Azure DDoS Protection Standard plan across all VNets in a single Microsoft Entra tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
 
   - Virtual WAN secure virtual hubs don't support Azure DDoS standard protection plans. For more information, see [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues) and [Hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
 

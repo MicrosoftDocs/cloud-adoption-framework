@@ -58,7 +58,7 @@ Many customers use [ER Studio](https://www.idera.com/products/er-studio/enterpri
 
 Master data management control resides in the data management landing zone. [Master data management in data mesh](../../cloud-scale-analytics/architectures/data-mesh-master-data-management.md) contains specific considerations you should call out for data mesh.
 
-Many master data management solutions fully integrate with Azure Active Directory. This integration allows you to secure your data and provide different views for different user groups.
+Many master data management solutions fully integrate with Microsoft Entra ID. This integration allows you to secure your data and provide different views for different user groups.
 
 For more information, see [Master data management system](../govern-master-data.md).
 
@@ -75,7 +75,7 @@ An API catalog can help standardize your documentation and offers a place for in
 *Resource group: governance-rg2*
 
 Cloud-scale analytics uses
-[Azure AD entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
+[Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) or [Microsoft Purview policies](../secure-data-privacy.md) to control access to data sharing. Even so, you might still require a sharing and contract repository. This repository is an organizational function and should reside in your data management landing zone.
 
 Your contracts should provide information on data validation, models, and security policies.
 

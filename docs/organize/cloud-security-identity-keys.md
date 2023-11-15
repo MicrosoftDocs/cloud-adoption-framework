@@ -25,7 +25,7 @@ Data identity and key management modernization is being shaped by:
   - Sprawling set of third-party directories and identity management systems.
   - Lack of clear standardization and ownership of application identity strategy.
 - Credential theft attacks remain a high impact and high likelihood threat to mitigate.
-- Service accounts and application accounts remaining a top challenge, but becoming easier to solve. Identity teams should actively embrace the cloud capabilities that are beginning to solve this like [Azure AD managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
+- Service accounts and application accounts remaining a top challenge, but becoming easier to solve. Identity teams should actively embrace the cloud capabilities that are beginning to solve this like [Microsoft Entra managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
 
 ## Team composition and key relationships
 

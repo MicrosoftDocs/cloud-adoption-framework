@@ -89,7 +89,7 @@ In the approach outlined in this article series, the existing Citrix, VMware, or
 
 ![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Azure AD Domain Services, or Azure AD), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
+When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Microsoft Entra Domain Services, or Microsoft Entra ID), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
 
 ## How to measure progress on adopting Azure Virtual Desktop
 

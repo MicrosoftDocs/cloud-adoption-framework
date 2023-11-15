@@ -82,10 +82,10 @@ The following best practices can be added to your security baseline, to account 
 
 There are many best practices you can apply to your identity baseline to ensure consistent identity and access management across your Kubernetes clusters:
 
-- [Azure AD integration](/azure/aks/managed-aad?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [RBAC and Azure AD integration](/azure/aks/azure-ad-rbac?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Microsoft Entra integration](/azure/aks/managed-aad?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [RBAC and Microsoft Entra integration](/azure/aks/azure-ad-rbac?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Managed identities in Kubernetes](/azure/aks/use-managed-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
-- [Access other Azure resources with Azure AD pod identity](/azure/aks/use-azure-ad-pod-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
+- [Access other Azure resources with Microsoft Entra pod identity](/azure/aks/use-azure-ad-pod-identity?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 
 ## Next step: Manage modern application platform solutions
 

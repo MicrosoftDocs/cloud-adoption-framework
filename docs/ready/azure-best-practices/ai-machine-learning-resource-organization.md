@@ -119,7 +119,7 @@ To adhere to the above requirements, Contoso sets up their resources in the foll
 - Azure Machine Learning workspaces and resource groups scoped per project to follow budgeting and use case segregation requirements.
 - A multiple-environment setup for Azure Machine Learning and associated resources to address cost management, RBAC, and data access requirements.
 - A single resource group and machine learning workspace that's dedicated for exploration.
-- Azure Active Directory groups that are different per user role and environment. For example, operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
+- Microsoft Entra groups that are different per user role and environment. For example, operations that a data scientist can do in a production environment are different than in the development environment, and access levels might differ per solution.
 - All resources created in a single Azure region.
 
 :::image type="content" source="./media/azure-ml-setup-contoso-reference-implementation.png" alt-text="Diagram of a sample Azure Machine Learning multiple-environment setup for the Contoso organization." lightbox="./media/azure-ml-setup-contoso-reference-implementation.png":::

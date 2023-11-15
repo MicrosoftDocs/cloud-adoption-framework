@@ -1,5 +1,5 @@
 ---
-title: Data observability 
+title: Data observability
 description: Learn about data mesh observability in Azure.
 author: sudivate
 ms.author: mboswell

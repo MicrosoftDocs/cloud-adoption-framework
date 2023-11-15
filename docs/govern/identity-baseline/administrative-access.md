@@ -21,8 +21,8 @@ Identity management tools offer capabilities and features that greatly assist us
 
 To manage Privileged Identity Management, follow these steps:
 
-1. Open Azure AD Privileged Identity Management in the Azure portal.
-1. Choose **Azure AD Roles**.
+1. Open Microsoft Entra Privileged Identity Management in the Azure portal.
+1. Choose **Microsoft Entra roles**.
 1. Select the role you wish to modify.
 1. Select **Settings** and then **Edit**. Edit the following settings:
 
@@ -37,5 +37,5 @@ To manage Privileged Identity Management, follow these steps:
 
 - Perform access test for break glass accounts monthly.
 - [Monitor sign-in and audit log activity](/azure/active-directory/roles/security-emergency-access#monitor-sign-in-and-audit-logs) from the break glass accounts and trigger notifications to other administrators.
-- Find users in roles with [Discovery and insights (preview) for Azure AD roles](/azure/active-directory/privileged-identity-management/pim-security-wizard) and set up security reviews quarterly.
-- [Plan an Azure Active Directory access review](/azure/active-directory/governance/deploy-access-reviews) quarterly.
+- Find users in roles with [Discovery and insights (preview) for Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-security-wizard) and set up security reviews quarterly.
+- [Plan a Microsoft Entra access review](/azure/active-directory/governance/deploy-access-reviews) quarterly.

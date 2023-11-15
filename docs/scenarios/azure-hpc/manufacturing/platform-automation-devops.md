@@ -14,7 +14,7 @@ Azure [landing zones for HPC](../ready.md) in the manufacturing industry don't h
 
 ## Templates 
 
-You can deploy HPC Pack 2019 clusters using pre-existing Azure Resource Manager (ARM) [templates](https://github.com/Azure/hpcpack-template/tree/master/HPCPack2019) on GitHub with the option to deploy straight from the Azure portal. Depending on whether you need an Azure Active Directory (Azure AD) integrated HPC Pack deployment or not, you can choose from a variety of templates that suit your scenario (i.e. Windows vs. Linux requirements, new vs. existing Azure AD domain, high-availability/multiple head node cluster for BC/DR vs. single head node cluster). Note there are some prerequisites prior to deploying HPC Pack 2019, such as having an Azure Key Vault Certificate. Read more in the [README](https://github.com/Azure/hpcpack-template/blob/master/HPCPack2019/README.md).
+You can deploy HPC Pack 2019 clusters using pre-existing Azure Resource Manager (ARM) [templates](https://github.com/Azure/hpcpack-template/tree/master/HPCPack2019) on GitHub with the option to deploy straight from the Azure portal. Depending on whether you need a Microsoft Entra integrated HPC Pack deployment or not, you can choose from a variety of templates that suit your scenario (i.e. Windows vs. Linux requirements, new vs. existing Microsoft Entra domain, high-availability/multiple head node cluster for BC/DR vs. single head node cluster). Note there are some prerequisites prior to deploying HPC Pack 2019, such as having an Azure Key Vault Certificate. Read more in the [README](https://github.com/Azure/hpcpack-template/blob/master/HPCPack2019/README.md).
 
 
 
@@ -35,4 +35,3 @@ The following articles provide guidance that you might find helpful at various p
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

@@ -246,6 +246,8 @@ items:
         href: ready/azure-setup-guide/index.md
       - name: Organize resources
         href: ready/azure-setup-guide/organize-resources.md
+      - name: Select regions
+        href: ready/azure-setup-guide/regions.md
       - name: Manage access
         href: ready/azure-setup-guide/manage-access.md
       - name: Manage costs and billing
@@ -287,7 +289,7 @@ items:
             href: ready/landing-zone/design-area/azure-billing-microsoft-customer-agreement.md
           - name: Cloud solution provider
             href: ready/landing-zone/design-area/azure-billing-cloud-solution-provider.md
-          - name: Define an Azure Active Directory tenant
+          - name: Define a Microsoft Entra tenant
             href: ready/landing-zone/design-area/azure-ad-define.md
           - name: Handling Azure landing zones across multiple tenants
             items:
@@ -502,6 +504,8 @@ items:
           href: ready/landing-zone/deploy-landing-zones-with-terraform.md
         - name: ISV considerations for landing zones
           href: ready/landing-zone/isv-landing-zone.md
+        - name: Sovereignty considerations and the sovereign landing zone
+          href: ready/landing-zone/sovereign-landing-zone.md
         - name: Get landing zone help
           href: ready/landing-zone/partner-landing-zone.md
 
@@ -512,7 +516,18 @@ items:
         - name: Transition to the Azure landing zone conceptual architecture
           href: ready/enterprise-scale/transition.md
         - name: Alignment scenarios
-          href: ready/landing-zone/align-scenarios.md
+          items:
+            - name: Transition a single subscription with no management groups
+              href: ready/landing-zone/align-scenario-single-subscription.md
+            - name: Transition management groups
+              href: ready/landing-zone/align-scenario-multiple-management-groups.md
+            - name: Transition a regional organization environment
+              href: ready/landing-zone/align-scenario-regional-org.md
+        - name: Alignment approaches
+          items:
+            - name: Transition by duplicating a landing zone management group
+              href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
+
         - name: Brownfield landing zone considerations
           href: ready/landing-zone/brownfield-considerations.md
 
@@ -756,7 +771,7 @@ items:
             items:
               - name: WebLogic to Azure Virtual Machines
                 href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Azure AD via LDAP
+              - name: WebLogic with Microsoft Entra ID via LDAP
                 href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
               - name: WebLogic with Application Gateway
                 href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
@@ -1262,7 +1277,7 @@ items:
         items:
         - name: Overview of the identity baseline
           href: govern/identity-baseline/index.md
-        - name: Azure Active Directory governance guidance
+        - name: Microsoft Entra ID Governance guidance
           href: govern/identity-baseline/azure-ad-configuration.md
         - name: Administrative access governance guidance
           href: govern/identity-baseline/administrative-access.md
@@ -1594,8 +1609,6 @@ items:
           href: ready/azure-best-practices/perimeter-networks.md
       - name: Resource consistency
         href: decision-guides/resource-consistency/index.md
-      - name: Encryption
-        href: decision-guides/encryption/index.md
       - name: Logging and reporting
         href: decision-guides/logging-and-reporting/index.md
       - name: AI + machine learning
@@ -1632,5 +1645,3 @@ items:
         href: resources/vdc.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
-      - name: CAF Terraform landing zones
-        href: ready/landing-zone/terraform-landing-zone.md
