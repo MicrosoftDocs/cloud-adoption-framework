@@ -27,7 +27,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 **Scope:** The goal of this design area is to evaluate options for your identity and access foundation. At a minimum, make decisions about your approach for synchronizing identities with Microsoft Entra ID:
 
-- Authenticating users and applications
+- Authenticating users and workload identities
 - Assigning access to resources
 - Core requirements for separation of duties
 - Using hybrid identities with Active Directory Domain Services domains
