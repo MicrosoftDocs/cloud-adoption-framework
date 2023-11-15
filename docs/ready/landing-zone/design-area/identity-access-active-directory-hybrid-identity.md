@@ -4,7 +4,7 @@ description: Understand Microsoft Entra ID and hybrid identity considerations an
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 09/19/2023
+ms.date: 11/15/2023
 ---
 
 # Active Directory and Hybrid Identity

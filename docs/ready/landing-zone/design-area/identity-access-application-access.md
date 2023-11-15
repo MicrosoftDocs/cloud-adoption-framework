@@ -4,7 +4,7 @@ description: Understand how to provide access to Azure Resources.
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 09/19/2023
+ms.date: 11/15/2023
 ---
 
 # Application identity and access management
