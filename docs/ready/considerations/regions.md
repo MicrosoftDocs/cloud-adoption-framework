@@ -12,7 +12,7 @@ ms.custom: internal
 
 Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
 
-For more guidance about choosing Azure regions, see the following article: [Select Azure regions](../azure-setup-guide/regions.md).
+For more guidance about choosing Azure regions, see [Select Azure regions](../azure-setup-guide/regions.md).
 
 ## How landing zones use Azure regions
 
