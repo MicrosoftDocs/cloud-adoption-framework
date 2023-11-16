@@ -25,6 +25,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
+| Azure OpenAI | `Microsoft.CognitiveServices/accounts` | `oai` |
 
 ## Analytics and IoT
 
