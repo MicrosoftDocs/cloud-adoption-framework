@@ -46,11 +46,11 @@ Individual application workloads have authentication and authorization requireme
 ## Design recommendations
 
 - Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that make up an application, service or workload to remove the requirement to store secrets of credentials. Applications that need to authenticate against an Azure service should use managed identities.
-    - Ensure that managed identities follow the principle of least privilege when granting access.
+  - Ensure that managed identities follow the principle of least privilege when granting access.
 
-- Use Azure Key Vault to manage secrets, keys, certificates used by applications. 
-    - Use RBAC to allow administrative access and management for management. 
-    - Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: [Use a managed identity to access Azure Key Vault](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
+- Use Azure Key Vault to manage secrets, keys, certificates used by applications.
+  - Use RBAC to allow administrative access and management for management.
+  - Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: [Use a managed identity to access Azure Key Vault](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
 
 - If you are using CI/CD pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
 
