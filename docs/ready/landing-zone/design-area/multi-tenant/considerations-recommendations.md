@@ -101,8 +101,9 @@ For more information, see [Resource isolation in a single tenant](/azure/active-
   - [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b)
   - [B2B direct connect](/azure/active-directory/external-identities/b2b-direct-connect-overview)
   - [Cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview)
-  - [Cross-tenant synchronization (preview)](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-overview)
-- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration (preview)](/azure/active-directory/external-identities/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
+  - [Cross-tenant synchronization](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-overview)
+  - [Multitenant Organization (Preview)](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
+- For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration (preview)](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
 - Application teams and developers should review the following resources when constructing applications and services for multi-tenancy:
   - [Multi-tenant apps in Microsoft Entra ID](/azure/active-directory/develop/application-model#multi-tenant-apps)
   - [Architect multi-tenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
