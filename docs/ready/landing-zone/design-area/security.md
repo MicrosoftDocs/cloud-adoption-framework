@@ -97,12 +97,16 @@ Modern security boundaries are more complex than boundaries in a traditional dat
 
 #### Zero trust
 
+For zero trust access with identities, you should consider:
+
 - Which teams or individuals require access to services within the landing zone? What roles are they doing?
 - Who should authorize the access requests?
 - Who should receive the notifications when privileged roles are activated?
 - Who should have access to the audit history?
 
 For more information, see [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
+
+Implementing zero trust can go beyond just identity and access management.  You should consider if your organization needs to implement zero trust practices across multiple pillars, such as infrastructure, data, and networking.  For more information on deploying multiple pillars of Zero Trust, see [Zero Trust Planning for Landing Zones](security-zerotrust.md)
 
 ### Access control design recommendations
 
