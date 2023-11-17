@@ -14,7 +14,7 @@ Development teams want limited interference with the ability to iterate quickly,
 
 A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
-This guide provides guidance for how cloud platform teams can provide guardrails to manage application environments in Azure, and how an organization can fit different application development environments into this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
+This article provides guidance for how cloud platform teams can provide guardrails to manage application environments in Azure, and how an organization can fit different application development environments into this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
 
 When application owners use [Subscription Vending](subscription-vending.md) or other subscription creation processes, it is important for there to be clarity about how to request subscriptions for multiple development environments.
 
@@ -61,7 +61,7 @@ If an application or service workload requires segregation between environments 
 
 ### Management Group Hierarchy
 
-With Azure landing zone architecture, organizations want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
+Avoid complicated and volatile management group hierarchies as they require constant amendment, don't scale efficiently, and don't add value. That's why Azure landing zone management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
 
 _Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services).
 
@@ -73,7 +73,7 @@ These sandbox environments can be tied to specific applications, or can be used 
 
 Read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones.
 
-#### Challenges with having Environment Based Management Groups
+#### Challenges with having environment based management groups
 
 Building management groups for for environments within the archetypes creates additional management overhead, while providing very limited value.
 
