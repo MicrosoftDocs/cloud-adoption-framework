@@ -69,7 +69,7 @@ Different application environments, with the exception of sandbox environments (
 
 [Sandbox subscriptions](../../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload has not been selected.  This is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
-These sandbox environments can be tied to specific applications, or can be used for individual developers to lab and experiment.
+These sandbox environments can be tied to specific applications, or can be used by the workload team for experimentation.
 
 Read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones.
 
