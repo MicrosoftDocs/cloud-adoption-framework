@@ -22,10 +22,16 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
+| Azure AI Custom Vision | `Microsoft.CognitiveServices/accounts` | `cstm` |
+| Azure AI Search | `Microsoft.Search/searchServices` | `srch` |
+| Azure AI services multi-service account | `Microsoft.Search/searchServices` | `ais` |
+| Azure AI Language | `Microsoft.Search/searchServices` | `lang` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
-| Azure OpenAI | `Microsoft.CognitiveServices/accounts` | `oai` |
+| Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` | `oai` |
+| Azure AI Computer Vision | `Microsoft.CognitiveServices/accounts` | `cv` |
+| Document Intelligence | `Microsoft.CognitiveServices/accounts` | `di` |
+| Face API | `Microsoft.CognitiveServices/accounts` | `face` |
+| Speech service | `Microsoft.CognitiveServices/accounts` | `spch` |
 
 ## Analytics and IoT
 
@@ -228,7 +234,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
 | Virtual WAN Hub | `Microsoft.Network/virtualHubs` | `vhub`|
 
-
 ## Security
 
 | Resource | Resource provider namespace | Abbreviation |
@@ -268,6 +273,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
+| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
 
 ## Next steps
 
