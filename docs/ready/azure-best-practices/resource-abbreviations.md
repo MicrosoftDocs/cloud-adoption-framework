@@ -177,6 +177,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
+| Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
@@ -202,6 +203,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
 | DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS forwarding ruleset | `Microsoft.Network/dnsForwardingRulesets` | `ruleset` |
 | DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
 | DNS private resolver inbound endpoint | `Microsoft.Network/dnsResolvers/inboundEndpoints` | `in` |
 | DNS private resolver outbound endpoint | `Microsoft.Network/dnsResolvers/outboundEndpoints` | `out` |
@@ -213,6 +215,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
 | Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
+| IP group | `Microsoft.Network/ipGroups` | `ipgr` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
@@ -248,6 +251,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Key Vault Managed HSM | `Microsoft.KeyVault/managedHSMs` | `kvmhsm` |
 | Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
+| SSH key | `Microsoft.Compute/sshPublicKeys` | `sshkey` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
