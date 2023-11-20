@@ -77,7 +77,7 @@ The below high-level steps can be used as a set of steps to follow to expand int
 You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
 
 > [!TIP]
-> [Azure Virtual Network Manager](/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology#azure-virtual-network-manager-in-azure-landing-zones) can assist and make easier expanding and managing virtual networks at scale in the new regions.
+> [Azure Virtual Network Manager](../azure-best-practices/define-an-azure-network-topology.md#azure-virtual-network-manager-in-azure-landing-zones) can make it easier to expand and manage virtual networks at scale in multiple regions.
 
 ##### Virtual WAN architecture
 
