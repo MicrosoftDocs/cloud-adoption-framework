@@ -22,16 +22,22 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure AI Custom Vision | `Microsoft.CognitiveServices/accounts` | `cstm` |
-| Azure AI Search | `Microsoft.Search/searchServices` | `srch` |
+| AI Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure AI services multi-service account | `Microsoft.Search/searchServices` | `ais` |
-| Azure AI Language | `Microsoft.Search/searchServices` | `lang` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` | `oai` |
-| Azure AI Computer Vision | `Microsoft.CognitiveServices/accounts` | `cv` |
-| Document Intelligence | `Microsoft.CognitiveServices/accounts` | `di` |
+| Bot service | `Microsoft.BotService/botServices` | `bot` |
+| Computer Vision | `Microsoft.CognitiveServices/accounts` | `cv` |
+| Content moderator | `Microsoft.CognitiveServices/accounts` | `cm` |
+| Content safety | `Microsoft.CognitiveServices/accounts` | `cs` |
+| Custom vision | `Microsoft.CognitiveServices/accounts` | `cstm` |
+| Document intelligence | `Microsoft.CognitiveServices/accounts` | `di` |
 | Face API | `Microsoft.CognitiveServices/accounts` | `face` |
+| Health Insights | `Microsoft.CognitiveServices/accounts`| `hi` |
+| Immersive reader | `Microsoft.CognitiveServices/accounts` | `ir` |
+| Language service | `Microsoft.Search/searchServices` | `lang` |
 | Speech service | `Microsoft.CognitiveServices/accounts` | `spch` |
+| Translator | `Microsoft.CognitiveServices/accounts` | `tlator` |
 
 ## Analytics and IoT
 
@@ -67,7 +73,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
 | Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi` |
 
-## Compute and Web
+## Compute and web
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
@@ -94,7 +100,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
-| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc`
+| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc` |
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
 | Web app | `Microsoft.Web/sites` | `app` |
 
