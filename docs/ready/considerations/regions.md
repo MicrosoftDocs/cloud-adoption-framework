@@ -68,7 +68,7 @@ The below high-level steps can be used as a set of steps to follow to expand int
 1. Create new Resource Group in subscription in the new target region
 1. Create new hub Virtual Network in the new target region
 1. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
-1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections. Ensure now multiple Express Route circuits and on-premises locations are connected in the right way, as recommended in [this article](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering) covering disaster recovery.
+1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft's resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
 1. Establish Virtual Network Peering between the new hub virtual network and the other hub virtual networks
 1. Create and configure any required routing: Azure Route Server, User-Defined Routes, and more.
 1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution.
