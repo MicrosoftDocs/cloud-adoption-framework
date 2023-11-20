@@ -57,7 +57,7 @@ Administrators should familiarize themselves with the different options availabl
 - Active Directory Domain Services (AD DS) domain controllers can be deployed into Azure as Windows virtual machines (IaaS) that administrators have full control of. They can be joined to an existing Active Directory domain, or create a new one with a trust relationship with existing on-premises domains. See [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain).
 
 - Microsoft Entra Domain Services is an Azure managed service that creates a new managed AD DS domain hosted in Azure. The domain can be part of a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators do not have direct access to the domain controllers and are not responsible for patching and other maintenance operations. For more information, see [Overview of Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview).
-- When you deploy Microsoft Entra Domain Services or integrate on-premises environments into Azure, use locations with [Availability Zones](/azure/availability-zones/az-overview) for increased availability.
+- When you deploy Microsoft Entra Domain Services or integrate on-premises environments into Azure, use locations with [Availability Zones](/azure/availability-zones/az-overview) for increased resiliency.
 
 - Deploy Microsoft Entra Domain Services within the primary region, because you can only project this service into one subscription. You can expand Microsoft Entra Domain Services to further regions with [replica sets](/azure/active-directory-domain-services/concepts-replica-sets).
 

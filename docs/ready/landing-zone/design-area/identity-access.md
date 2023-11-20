@@ -32,7 +32,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 - Core requirements for separation of duties
 - Using hybrid identities with Active Directory Domain Services domains
 
-**Out of scope:** Identity and access management forms a foundation for proper access control. It doesn't fully address more advanced topics like:
+**Out of scope:** Identity and access management forms a foundation for proper access control. Whilst it supports the following, it does not fully address more advanced topics like:
 
 - Zero trust
 - Operational management of elevated privileges
