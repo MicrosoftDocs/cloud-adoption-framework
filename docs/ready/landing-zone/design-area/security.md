@@ -49,6 +49,10 @@ The Microsoft cloud security benchmark documentation specifies security controls
 - [Security controls](/security/benchmark/azure/overview): The Microsoft cloud security benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
 - [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Microsoft cloud security benchmark recommendations that are tailored specifically for that service.
 
+### Microsoft Azure Attestation
+
+Microsoft Azure Attestation is a unified solution for remotely verifying the trustworthiness of a platform and integrity of the binaries running inside it. The service supports attestation of the platforms backed by Trusted Platform Modules (TPMs) alongside the ability to attest to the state of Trusted Execution Environments (TEEs) such as [Intel® Software Guard Extensions](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) (SGX) enclaves, [Virtualization-based Security](/windows-hardware/design/device-experiences/oem-vbs) (VBS) enclaves, [Trusted Platform Modules (TPMs)](/windows/security/information-protection/tpm/trusted-platform-module-overview),  [Trusted launch for Azure VMs](/Azure/virtual-machines/trusted-launch.md) and [Azure confidential VMs](/Azure/confidential-computing/confidential-vm-overview.md).
+
 ## Security design considerations
 
 An organization must have visibility into what's happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
@@ -63,8 +67,9 @@ An organization must have visibility into what's happening within their technica
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 | Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/security-operations.md). |
 | Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md). |
+| Attestation | - Will you be using Trusted Launch for your virtual machines and do you need attestation of the integrity of the entire boot chain of your VM (UEFI, OS, system, and drivers)? <br> - Do you want to leverage confidential disk encryption for your confidential VMs? <br> - Do your workloads require attestation that they are running inside a trusted environment? |
 
-## Security operations design recommendations
+### Security operations design recommendations
 
 - Use [Microsoft Entra ID reporting capabilities](/azure/active-directory/reports-monitoring/concept-audit-logs) to generate access control audit reports.
 
@@ -81,6 +86,11 @@ An organization must have visibility into what's happening within their technica
 - Connect default resource configurations to a centralized Azure Monitor Log Analytics workspace.
 
 - Use an Azure Event Grid-based solution for log-oriented, real-time alerts.
+
+- Use Azure Attestation for attestation of:
+  - the integrity of the entire boot chain of your VM, see [Boot integrity monitoring overview - Azure Virtual Machines](/azure/virtual-machines/boot-integrity-monitoring-overview)
+  - secure release of confidential disk encryption keys for a confidential VM, see [About Azure confidential VMs - Confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption)
+  - various types of workload trusted execution environments, see [Azure Attestation overview - Use cases](/azure/attestation/overview#use-cases)
 
 ### Access control design considerations
 
