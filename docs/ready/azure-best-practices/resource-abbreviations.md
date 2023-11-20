@@ -27,7 +27,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` | `oai` |
 | Bot service | `Microsoft.BotService/botServices` | `bot` |
-| Computer Vision | `Microsoft.CognitiveServices/accounts` | `cv` |
+| Computer vision | `Microsoft.CognitiveServices/accounts` | `cv` |
 | Content moderator | `Microsoft.CognitiveServices/accounts` | `cm` |
 | Content safety | `Microsoft.CognitiveServices/accounts` | `cs` |
 | Custom vision | `Microsoft.CognitiveServices/accounts` | `cstm` |
