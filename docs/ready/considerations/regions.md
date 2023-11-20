@@ -50,7 +50,7 @@ You should consider a multi-region strategy, either from the start of your cloud
 | Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
 
 > [!NOTE]
-> You should also use [Availability Zones](/azure/availability-zones/az-overview#availability-zones) for high availability within a region. Check whether [Availability Zones are supported](/azure/availability-zones/az-region) in your region and for the services you want to use.
+> You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether [availability zones are supported](/azure/reliability/availability-zones-service-support) in your chosen regions and for the services you want to use.
 
 ### High-level approach
 
