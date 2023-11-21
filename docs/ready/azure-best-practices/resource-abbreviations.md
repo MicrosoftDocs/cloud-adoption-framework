@@ -24,6 +24,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
 | Azure AI services multi-service account | `Microsoft.Search/searchServices` | `ais` |
+| Azure AI Video Indexer | | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
 | Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` | `oai` |
 | Bot service | `Microsoft.BotService/botServices` | `bot` |
@@ -50,9 +51,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
 | Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
+| Azure Synapse Analytics private link hub | `Microsoft.Synapse/privateLinkHubs` | `synplh` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
+| Azure Synapse Analytics workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
