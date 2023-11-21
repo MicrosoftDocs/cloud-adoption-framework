@@ -3,7 +3,7 @@ title: How to initiate a cloud relocation project.
 description: Learn how to initiate a cloud relocation project so you can relocate workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 08/29/2023
+ms.date: 11/22/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -37,8 +37,7 @@ The order you relocate workloads should reflect the priority of your objectives.
 
 ## Create a relocation plan
 
-
-The rest of your relocation plan should center on the relocation project and getting stakeholder approval to proceed. Most stakeholders want to know about the schedule, team, and cost. Rather than spending time trying to estimate the schedule, resources, and cost, start the relocation process and refine the estimates as you learn more. Here are recommendations for creating a minimum viable plan to get started.
+You should create a relocation plan that addresses service capacity and high-level project planning. At the service level, you want to verify the target region meets the capacity needs for each workload service. Once workloads have been prioritized, the rest of your relocation plan should center on the relocation project and getting stakeholder approval to proceed. Most stakeholders want to know about the schedule, team, and cost. Rather than spending time trying to estimate the schedule, resources, and cost, start the relocation process and refine the estimates as you learn more. Here are recommendations for creating a minimum viable plan to get started.
 
 **Build a soft schedule.** The schedule depends on the complexity of the workloads being relocated and the experience of the team involved. Instead of spending time figuring out how long it takes, start relocating the first workload. The experience allows you to better estimate a completion date, and it saves you time.
 
@@ -48,7 +47,7 @@ The rest of your relocation plan should center on the relocation project and get
 
 For some Azure services, the price varies for each region, so be sure to review the pricing before you start the relocation project. If you use Azure Reservations in your source region, consider [exchanging them to your destination region](/azure/cost-management-billing/reservations/exchange-and-refund-azure-reservations). Make sure you include [Azure network bandwidth costs](https://azure.microsoft.com/pricing/details/bandwidth) for data you move between regions during the relocation.
 
-**Understand the side effects of relocating each workload.** When you move a workload between regions, there are often side effects, including how IP addresses and DNS names are used, and how your automation processes might need to adapt. Consider which of these side effects apply to each workload, and incorporate this information in your prioritization process. For more information about potential side effects during a region move, see [Evaluate potential side effects of the relocation](evaluate.md#evaluate-potential-side-effects-of-the-relocation).
+**Understand the side effects of relocating each workload.** When you move a workload between regions, there are often side effects, including how IP addresses and DNS names are used, and how your automation processes might need to adapt. Consider which of these side effects apply to each workload, and incorporate this information in your relocation plan. For more information about potential side effects during a region move, see [Evaluate potential side effects of the relocation](evaluate.md#evaluate-relocation-updates).
 
 ## Next step
 
