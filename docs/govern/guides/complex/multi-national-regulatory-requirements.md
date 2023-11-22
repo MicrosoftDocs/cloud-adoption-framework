@@ -1,5 +1,5 @@
 ---
-title: Tailor the Azure landing zone architecture to meet regulatory requirements across multiple geographies
+title: Tailor an Azure landing zone architecture to meet regulatory requirements across multiple geographies
 description: Learn about regulatory requirements.
 author: mioteg
 ms.author: mioteg
@@ -7,7 +7,7 @@ ms.date: 11/21/2023
 ms.topic: conceptual
 ---
 
-# Tailor the Azure landing zone architecture to meet regulatory requirements across multiple geographies
+# Modify an Azure landing zone architecture to meet regulatory requirements across multiple geographies
 
 Organizations in many industries are subject to regulatory requirements that can include data residency, data security, and data sovereignty requirements. Organizations that need to comply with conflicting regulations across multiple geographic boundaries (e.g. EU, UAE, and UK) might need to tailor their Azure landing zone architecture in accordance with all the applicable regulations.
 
@@ -90,7 +90,7 @@ We recommend [using a single Microsoft Entra tenant](/cloud-adoption-framework/r
 
 - If conflicting regulations apply, and you need separate Microsoft Entra tenants for different regulatory regimes. For example, regulations might have clearance and nationality requirements that require complete isolation between [Microsoft Entra tenants or data residency requirements that require separate tenants](/azure/active-directory/fundamentals/data-residency). ISVs might need to use this method to deploy isolated instances of a SaaS solution. And multinational organizations might need to use this method to deploy isolated instances of the same solution.
 
-When you collaborate across multiple Microsoft Entra tenants, you need to carefully plan for significant challenges and needs. You should avoid creating more separate Microsoft Entra tenants than you need to meet operational or regulatory requirements. You can use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under this single tenant, as described in the next section.
+When you collaborate across multiple Microsoft Entra tenants, you need to carefully plan for significant challenges and needs. Create only the minimum number of Microsoft Entra tenants that you need to meet operational or regulatory requirements. You can use management groups and Azure role-based access control (RBAC) to govern the access to subscriptions and resources under this single tenant, as described in the next section.
 
 >[!TIP]
 >The Microsoft Entra tenant that you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers regardless of which tenant you choose. For public sector customers and customers in regulated industries, end-user identities are typically provided through integration with an approved identity provider, such as a government-owned or certified identity provider.
@@ -117,34 +117,36 @@ You can deploy a full landing zone architecture for each set of regulations that
 
 #### Share the platform management group
 
-If regulation allows, the platform management group can be shared. In that case, you can create separate management groups under the landing zones management group for each set of regulations that needs to be separated. You can assign the appropriate policies to each of the application management groups. The management groups under the platform management group are then shared for all application landing zones, although resources in them could still be separated by subscription or resource group.
+If regulation allows, the platform management group can be shared. In that case, you can create separate management groups under the landing zone management group for each set of regulations that needs to be separated. You can assign the appropriate policies to each of the application management groups. The management groups under the platform management group are shared for all application landing zones. The resources in the application management groups can also be separated by subscription or resource group.
 
-This management group hierarchy is the least complicated and least costly design to isolate applications with conflicting regulations. However, in this design the platform management groups for connectivity, identity/security, and management must share the same policy set. That is not always possible, as regulation may impose restrictions on sharing connectivity infrastructure, identity services, key management services, and the infrastructure from which the whole environment is managed.
+This management group hierarchy is a simple and cost-effective design for isolating applications with conflicting regulations. However, in this design, the platform management groups for connectivity, identity/security, and management must share the same policy set. You might need different policy sets for each platform management group if regulation imposes restrictions on sharing connectivity infrastructure, identity services, key management services, and the infrastructure from which the whole environment is managed.
 
 ![A diagram of a company  Description automatically generated](media/image3.png)
 
 ##### Isolate identity and security
 
-If regulations bar you from sharing identity and key management infrastructure, you can split the platform management group so the management groups for connectivity and management remain in the shared platform management group and have an identity and security management group associated with each set of regulations. This management group hierarch is significantly more complex than a fully shared platform management group, because you are partially replicating the platform management group. One way to deal with this complexity is to deploy the full hierarchy for each of the regulation sets and the shared environment and then ignore or delete the superfluous management groups.
+If regulations prevent you from sharing the identity and key management infrastructure, you can divide the platform management group. Keep the management groups for connectivity and management in the shared platform management group and have an identity and security management group that's associated with each set of regulations.
+
+This management group hierarchy is significantly more complex than a fully shared platform management group because you have to partially replicate the platform management group. To limit the complexity, you can deploy the full hierarchy for each of the regulation sets and the shared environment and ignore or delete the superfluous management groups.
 
 ![A diagram of a company  Description automatically generated](media/image4.png)
 
 ##### Isolate connectivity
 
-Many regulations have requirements around processing and storing data in a certain geographic location, with few requirements around how users connect to applications. For those regulations, sharing the connectivity management as in the previous architecture is acceptable. Note that while there may not be any regulatory requirements to duplicate infrastructure in different regions this could still be required for latency purposes and the assigned policies need to support this.
+Many regulations have requirements related to processing and storing data in a certain geographic location, with few requirements around how users connect to applications. For those regulations, sharing the connectivity management as in the previous architecture is acceptable. There might not be any regulations that require you to duplicate infrastructure in different regions, but you might need this structure for latency purposes. The assigned policies need to support duplicating infrastructure in different regions.
 
-When regulations do have conflicting connectivity requirements, you can create a Connectivity management group associated with each set of regulations, the same way the previous architecture associated identity and security management groups with each set of regulations.
+When regulations have conflicting connectivity requirements, you can create a connectivity management group that's associated with each set of regulations. This structure is similar to the previous architecture that associates identity and security management groups with each set of regulations.
 
-In cases where regulations are conflicting for connectivity and identity and security, you can combine this design with the previous design, as depicted below.
+If regulations conflict for connectivity and also identity and security, you can combine this design with the previous design as shown in the following diagram.
 
 ![A diagram of a company  Description automatically generated](media/image5.png)
 
 ## Next steps
 
-[Tailor the Azure landing zone architecture to meet requirements](https://aka.ms/alz/tailoring)
-[Independent software vendor (ISV) considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
-[Azure landing zones and multiple Azure Active Directory tenants](https://aka.ms/alz/multitenant)
-[Microsoft Entra ID and data residency](/azure/active-directory/fundamentals/data-residency)
-[Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework)
-[Overview of the security pillar](/industry/well-architected/security)
-[Identity and access management checklist](/azure/well-architected/security/design-identity)
+- [Azure landing zones and multiple Microsoft Entra tenants](/azure/cloud-adoption-framework/ready/landing-zone/design-area/multi-tenant/overview)
+- [Identity and access management checklist](/azure/well-architected/security/design-identity)
+- [ISV considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
+- [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework)
+- [Microsoft Entra ID and data residency](/azure/active-directory/fundamentals/data-residency)
+- [Overview of the security pillar](/industry/well-architected/security)
+- [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
