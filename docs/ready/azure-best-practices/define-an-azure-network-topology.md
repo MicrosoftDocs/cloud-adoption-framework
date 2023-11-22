@@ -16,25 +16,21 @@ Network topology is a critical element of a landing zone architecture because it
 
 - Your organization intends to deploy resources across several Azure regions and requires global connectivity between virtual networks in these Azure regions and multiple on-premises locations.
 - Your organization intends to integrate a large-scale branch network directly into Azure via a software-defined WAN (SD-WAN) deployment or requires more than 30 branch sites for native IPSec termination.
-- You require transitive routing between a virtual private network and Azure ExpressRoute, such as remote branches connected via Site-to-Site VPN or remote users connected via Point-to-Site VPN, require connectivity to an ExpressRoute connected DC, via Azure.
+- You require transitive routing between a virtual private network (VPN) and Azure ExpressRoute. For example, remote branches connected via site-to-site VPN or remote users connected via point-to-site VPN require connectivity to an ExpressRoute-connected DC via Azure.
 
-[A traditional hub-and-spoke network topology](../azure-best-practices/traditional-azure-networking-topology.md) helps you build customized secure large-scale networks in Azure with routing and security managed by the customer. A traditional topology might be most appropriate if any of the following points meet your requirements:
+[A traditional hub-and-spoke network topology](../azure-best-practices/traditional-azure-networking-topology.md) helps you build customized, enhanced-security, large-scale networks in Azure. With this topology, you manage the routing and security. A traditional topology might be most appropriate if any of the following requirements apply to your organization:
 
-- Your organization intends to deploy resources across one or several Azure regions and while some traffic across Azure regions is expected (for example, traffic between two virtual networks across two different Azure regions), a full mesh network across all Azure regions isn't required.
-- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IPSec Site-to-Site tunnels.
-- You require full control and granularity for manually configuring your Azure network routing policy.
+- Your organization intends to deploy resources across one or several Azure regions and, while some traffic across Azure regions is expected (for example, traffic between two virtual networks across two different Azure regions), a full mesh network across all Azure regions isn't required.
+- You have a low number of remote or branch locations per region. That is, you need fewer than 30 IPSec site-to-site tunnels.
+- You require full control and granularity to manually configure your Azure network routing policy.
 
 ## Virtual WAN network topology (Microsoft-managed)
 
-![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
-
-*Figure 1: Virtual WAN network topology.*
+:::image type="content" source="./media/virtual-wan-topology.png" alt-text="Diagram that illustrates a Virtual WAN network topology." lightbox="./media/virtual-wan-topology.png" border="false":::
 
 ## Traditional Azure networking topology
 
-![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
-
-*Figure 2: A traditional Azure network topology.*
+:::image type="content" source="./media/customer-managed-topology.png" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.png" border="false":::
 
 ## Azure Virtual Network Manager in Azure Landing Zones
 
