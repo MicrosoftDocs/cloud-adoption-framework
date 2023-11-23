@@ -41,7 +41,7 @@ You should consider a multi-region strategy, either from the start of your cloud
 
 | Area | Recommendation |
 | ---- | -------------- |
-| Management groups | No action necessary. Management groups aren't tied to a region. Creating a Management Group structure based on regions is not in the current list of best practices as documented in [this article](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups). |
+| Management groups | No action necessary. Management groups aren't tied to a region, and it's not a good practice to create a management group structure based on regions. |
 | Subscriptions | Subscriptions aren't tied to a region. In some scenarios creating new ones to contain new resources maybe necessary to scale beyond single subscription resource allocation limits, or to separate billing scopes. Some limits are per subscription only, other limits are based on a per-subscription and per-region combination, as documented in [this article](/azure/azure-resource-manager/management/azure-subscription-service-limits). |
 | Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
 | Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
