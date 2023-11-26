@@ -91,7 +91,7 @@ You can now connect application landing zone spokes via virtual network peering 
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
    - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the virtual hub via a virtual Network Connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
 
-You can now connect application landing zone spokes via virtual network connections to the virtual WAN's new new virtual hub in the new region, to host your workloads.
+To host your workloads, you can then connect application landing zone spokes to the virtual WAN's new virtual hub in the new region by using virtual network connections.
 
 #### Identity
 
