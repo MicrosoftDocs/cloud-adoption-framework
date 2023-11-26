@@ -67,7 +67,7 @@ When you expand an Azure landing zone into a new region, consider following the 
 1. Within the subscription, create a new resource group in the new target region.
 1. Create a new hub virtual network in the new target region.
 1. If applicable, deploy Azure Firewall or network virtual appliances (NVAs) into your new hub virtual network.
-1. If applicable, Deploy virtual network gateways for VPN and/or ExpressRoute connectivity, and establish connections.
+1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity, and establish connections.
 1. Establish virtual network peering between the new hub virtual network and the other hub virtual networks.
 1. Create and configure any required routing, such as Azure Route Server or user-defined routes.
 1. If required, enable name resolution by deploying DNS forwarders for the new target region and linking to any private DNS zones.
