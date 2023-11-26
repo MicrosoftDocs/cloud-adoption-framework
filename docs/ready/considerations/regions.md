@@ -3,7 +3,7 @@ title: Landing zone regions
 description: Overview of how Azure Landing Zones use regions, and how to add or move regions.
 author: johndowns
 ms.author: jodowns
-ms.date: 11/24/2023
+ms.date: 11/27/2023
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -27,13 +27,13 @@ Other resources are deployed regionally. Depending on your own landing zone conf
 If you deploy a networking topology, you also need to select an Azure region to deploy the networking resources to. This region can be different from the region that you use for the resources listed in the preceding list. Depending on the topology you select, the networking resources that you deploy might include:
 
 - Azure Virtual WAN (including Virtual WAN Hub)
-- Azure Virtual Network
+- Azure virtual networks
 - VPN gateway
 - ExpressRoute gateway
 - Azure Firewall
-- Azure DDoS Standard protection plan
-- Azure Private DNS zones for Azure Private Link
-- Resource groups (for these resources)
+- Azure DDoS Protection protection plans
+- Azure Private DNS zones, including for Azure Private Link
+- Resource groups, to contain the resources listed above
 
 ## Add a new region to an existing landing zone
 
@@ -45,16 +45,16 @@ You should consider a multi-region strategy, either from the start of your cloud
 | Subscriptions | Subscriptions aren't tied to a region. |
 | Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
 | Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
-| Monitoring and logging | Decide whether to use a single Log Analytics workspace for all regions, or to create multiple workspaces to cover different geographical regions. There are advantages and disadvantages of each approach, including potential cross-region networking charges. For more information, see [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design#azure-regions). |
-| Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. [Azure Virtual Network Manager](../azure-best-practices/define-an-azure-network-topology.md#azure-virtual-network-manager-in-azure-landing-zones) can make it easier to expand and manage virtual networks at scale in multiple regions. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke virtual networks in the new region for resolution. Azure DNS Zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
-| Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your Identity subscription/spoke, expand the service into the new Azure region. |
+| Logging | No action necessary. Keep sending and storing logs in the central Log Analytics Workspace in the *Management* subscription. See the recommendations in the Azure landing zone critical design area for [Management and monitoring](../landing-zone/design-area/management.md). |
+| Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing *Connectivity* subscription in the new Azure region. From a DNS perspective, you might choose to deploy forwarders into the new Azure region, if you use them. Use forwarders for spoke virtual networks in the new region for resolution. Azure DNS zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
+| Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your *Identity* subscription/spoke, expand the service into the new Azure region. |
 
 > [!NOTE]
 > You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether [availability zones are supported](/azure/reliability/availability-zones-service-support) in your chosen regions and for the services you want to use.
 
 ### High-level approach
 
-The below high-level steps can be used as a set of steps to follow to expand into a new region in the context of Azure landing zone for networking & identity. You need to first decide on new Azure region to expand into.
+When you expand an Azure landing zone into a new region, consider following the steps in these sections. Before you start, you need to decide on a new Azure region, or multiple Azure regions, to expand into.
 
 #### Networking
 
@@ -63,18 +63,17 @@ The below high-level steps can be used as a set of steps to follow to expand int
 > [!TIP]
 > Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md).
 
-1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is recommended to use for most customers across multiple regions for connectivity
-1. Create new Resource Group in subscription in the new target region
-1. Create new hub Virtual Network in the new target region
-1. (optional) Deploy Azure Firewall or Network Virtual Appliances (NVA) into your new hub Virtual Network
-1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft's resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
-1. Establish Virtual Network Peering between the new hub virtual network and the other hub virtual networks
-1. Create and configure any required routing: Azure Route Server, User-Defined Routes, and more.
-1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution.
-   - Some customers might do this on their Active Directory Domain Controllers that might be part of the Identity platform landing zone subscription.
+1. Decide on whether a new platform landing zone subscription is needed or not. We recommend that most customers use their existing *Connectivity* subscriptions, even when they use multiple regions.
+2. Within the subscription, create a new resource group in the new target region.
+3. Create a new hub virtual network in the new target region.
+4. If applicable, deploy Azure Firewall or network virtual appliances (NVAs) into your new hub virtual network.
+5. If applicable, Deploy virtual network gateways for VPN and/or ExpressRoute connectivity, and establish connections.
+6. Establish virtual network peering between the new hub virtual network and the other hub virtual networks.
+7. Create and configure any required routing, such as Azure Route Server or user-defined routes.
+8. If required, enable name resolution by deploying DNS forwarders for the new target region and linking to any private DNS zones.
+   - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
 
-You can now connect application landing zone spokes via Virtual Network Peering to the new hub Virtual Network in the new region, to host your workloads.
+You can now connect application landing zone spokes via virtual network peering to the new hub virtual network in the new region, to host your workloads.
 
 > [!TIP]
 > [Azure Virtual Network Manager](../azure-best-practices/define-an-azure-network-topology.md#azure-virtual-network-manager-in-azure-landing-zones) can make it easier to expand and manage virtual networks at scale in multiple regions.
@@ -84,31 +83,30 @@ You can now connect application landing zone spokes via Virtual Network Peering 
 > [!TIP]
 > Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md).
 
-1. Create new Virtual Hub in the existing Virtual WAN in the new target region
-1. (optional) Deploy Azure Firewall or supported Network Virtual Appliances (NVA) into your new Virtual Hub. Configure [Azure Virtual WAN Routing Intent and Routing Policies](/azure/virtual-wan/how-to-routing-policies) to route traffic through the new secured Virtual Hub.
-1. (optional) Deploy Virtual Network Gateways for VPN and/or ExpressRoute connectivity in the new Virtual Hub and establish connections
-1. (optional) Create and configure any additionally required routing: Virtual Hub Static Routes, and more.
-1. (optional) Deploy DNS Forwarders for new target region and link to any Azure Private DNS Zones to enable resolution.
-   - Some customers might do this on their Active Directory Domain Controllers, which might be part of the Identity platform landing zone subscription.
-   - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the Virtual Hub via a Virtual Network Connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
+1. Within your existing virtual WAN, create a new virtual hub in the new target region.
+1. Deploy Azure Firewall or other supported network virtual appliances (NVAs) into your new virtual hub. Configure [Azure Virtual WAN Routing Intent and Routing Policies](/azure/virtual-wan/how-to-routing-policies) to route traffic through the new secured virtual hub.
+1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity in the new virtual hub and establish connections.
+1. If applicable, create and configure any other routing that you require, such as virtual hub static routes.
+1. If applicable, deploy DNS forwarders for the new target region and link to any private DNS zones to enable resolution.
+   - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
+   - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the virtual hub via a virtual Network Connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
 
-You can now connect application landing zone spokes via Virtual Network Connections to the new Virtual Hub in Virtual WAN in the new region, to host your workloads.
+You can now connect application landing zone spokes via virtual network connections to the virtual WAN's new new virtual hub in the new region, to host your workloads.
 
 #### Identity
 
 > [!TIP]
 > Review the Azure landing zone design area for [identity and access management](../landing-zone/design-area/identity-access.md).
 
-1. Decide on whether a new platform landing zone subscription is needed or not
-   - The same existing subscription is recommended to use for most customers across multiple regions for identity
-1. Create new Resource Group in subscription in the new target region
-1. Create new Virtual Network in the new target region
-1. Establish Virtual Network Peering back to the newly created regional hub virtual network in the connectivity subscription
-1. Deploy identity workloads, like Active Directory Domain Controller Virtual Machines into new Virtual Network
-    - You might need to perform more setup and configuration of the workloads once provisioned, like:
-      - Promoting the Active Directory Domain Controller virtual machines to the existing Active Directory Domain
-      - Create new Active Directory sites and subnets
-      - Configuring DNS Server settings like Conditional Forwarders
+1. Decide whether you need a new platform landing zone subscription. We recommend that most customers use their existing *Identity* subscription, even when they use multiple regions.
+1. Create a new resource group in the new target region.
+1. Create a new virtual network in the new target region.
+1. Establish virtual network peering back to the newly created regional hub virtual network in the *Connectivity* subscription.
+1. Deploy identity workloads, like Active Directory domain controller virtual machines, into the new virtual network.
+    - You might need to perform more setup of the workloads once they're provisioned, such as the following configuration steps:
+      - Promoting the Active Directory domain controller virtual machines to the existing Active Directory domain.
+      - Create new Active Directory sites and subnets.
+      - Configuring DNS server settings like conditional forwarders.
 
 ## Move your Azure estate to a new region
 
@@ -123,7 +121,7 @@ Most of the globally deployed landing zone configuration doesn't typically need 
 
 ### Regional landing zone resources
 
-Region-specific landing zone resources often require more consideration, because some Azure resources can't be moved between regions. Consider the following approach:
+Region-specific landing zone resources often require more consideration because some Azure resources can't be moved between regions. Consider the following approach:
 
 1. **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone).
 1. **Deploy centralized components in the destination region.** For example, deploy a new Log Analytics workspace in your destination region so that workloads can begin to use the new component when they're migrated.
