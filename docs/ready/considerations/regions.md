@@ -63,7 +63,7 @@ When you expand an Azure landing zone into a new region, consider following the 
 > [!TIP]
 > Review the Azure landing zone design area for [traditional hub and spoke architecture](../azure-best-practices/traditional-azure-networking-topology.md).
 
-1. Decide on whether a new platform landing zone subscription is needed or not. We recommend that most customers use their existing *Connectivity* subscriptions, even when they use multiple regions.
+1. Decide on whether a new platform landing zone subscription is needed. We recommend that most customers use their existing *Connectivity* subscriptions, even when they use multiple regions.
 1. Within the subscription, create a new resource group in the new target region.
 1. Create a new hub virtual network in the new target region.
 1. If applicable, deploy Azure Firewall or network virtual appliances (NVAs) into your new hub virtual network.
@@ -89,7 +89,7 @@ You can now connect application landing zone spokes via virtual network peering 
 1. If applicable, create and configure any other routing that you require, such as virtual hub static routes.
 1. If applicable, deploy DNS forwarders for the new target region and link to any private DNS zones to enable resolution.
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
-   - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the virtual hub via a virtual Network Connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
+   - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the virtual hub via a virtual network connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
 
 To host your workloads, you can then connect application landing zone spokes to the virtual WAN's new virtual hub in the new region by using virtual network connections.
 
@@ -104,9 +104,9 @@ To host your workloads, you can then connect application landing zone spokes to 
 1. Establish virtual network peering back to the newly created regional hub virtual network in the *Connectivity* subscription.
 1. Deploy identity workloads, like Active Directory domain controller virtual machines, into the new virtual network.
     - You might need to perform more setup of the workloads once they're provisioned, such as the following configuration steps:
-      - Promoting the Active Directory domain controller virtual machines to the existing Active Directory domain.
+      - Promote the Active Directory domain controller virtual machines to the existing Active Directory domain.
       - Create new Active Directory sites and subnets.
-      - Configuring DNS server settings like conditional forwarders.
+      - Configure DNS server settings like conditional forwarders.
 
 ## Move your Azure estate to a new region
 
