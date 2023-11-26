@@ -67,13 +67,13 @@ When you expand an Azure landing zone into a new region, consider following the 
 1. Within the subscription, create a new resource group in the new target region.
 1. Create a new hub virtual network in the new target region.
 1. If applicable, deploy Azure Firewall or network virtual appliances (NVAs) into your new hub virtual network.
-1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity, and establish connections.
+1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity, and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft's resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
 1. Establish virtual network peering between the new hub virtual network and the other hub virtual networks.
 1. Create and configure any required routing, such as Azure Route Server or user-defined routes.
 1. If required, enable name resolution by deploying DNS forwarders for the new target region and linking to any private DNS zones.
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
 
-You can now connect application landing zone spokes via virtual network peering to the new hub virtual network in the new region, to host your workloads.
+To host your workloads, you can then connect application landing zone spokes to the new hub virtual network in the new region by using virtual network peering.
 
 > [!TIP]
 > [Azure Virtual Network Manager](../azure-best-practices/define-an-azure-network-topology.md#azure-virtual-network-manager-in-azure-landing-zones) can make it easier to expand and manage virtual networks at scale in multiple regions.
@@ -84,8 +84,8 @@ You can now connect application landing zone spokes via virtual network peering 
 > Review the Azure landing zone design area for [Virtual WAN architecture](../azure-best-practices/virtual-wan-network-topology.md).
 
 1. Within your existing virtual WAN, create a new virtual hub in the new target region.
-1. Deploy Azure Firewall or other supported network virtual appliances (NVAs) into your new virtual hub. Configure [Azure Virtual WAN Routing Intent and Routing Policies](/azure/virtual-wan/how-to-routing-policies) to route traffic through the new secured virtual hub.
-1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity in the new virtual hub and establish connections.
+1. Deploy Azure Firewall or other supported network virtual appliances (NVAs) into your new virtual hub. Configure [Azure Virtual WAN routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) to route traffic through the new secured virtual hub.
+1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity in the new virtual hub and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft's resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
 1. If applicable, create and configure any other routing that you require, such as virtual hub static routes.
 1. If applicable, deploy DNS forwarders for the new target region and link to any private DNS zones to enable resolution.
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
