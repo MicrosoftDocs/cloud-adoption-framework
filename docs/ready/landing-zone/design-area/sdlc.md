@@ -86,7 +86,7 @@ For application owners, there's little value in changing the configuration of a 
 Deployment configuration and requirements should remain consistent throughout promotion of code through environments.  Platform teams should not build consistent policy guardrails, but instead provide a consistent set for all non-Sandbox development environments.
 
 > [!NOTE]
-> The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: _N workloads x Z management groups  = total management groups_.
+> The following equation demonstrates why management groups per environment and/or per workload don't scale well: _N workloads x Z management groups  = total management groups_.
 >
 >If an organization have 30 different workloads that each require a management group and a child management group for "dev/test/production", the organization is left with:
 >
