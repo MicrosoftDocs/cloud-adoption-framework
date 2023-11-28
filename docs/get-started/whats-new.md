@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 11/22/2023
+ms.date: 11/30/2023
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,13 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+## November 2023
+
+## October 2023
+
+### Updated CAF Azure regions decision guide
+
+Learn how to [select Azure regions for your cloud footprint](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions) by considering the characteristics of each region, like availability zones, region pairs, available services, and nonfunctional requirements, like region proximity and capacity. We’ve also provided new guidance about operating across multiple Azure regions. As part of this change, we simplified the [guidance about selecting Azure regions for migrations](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions).
 
 ## September 2023
 
@@ -72,7 +79,7 @@ This article explains how landing zones use Azure regions. It also explains how 
 
 ### Updated machine learning inference during deployment
 
--   [Machine learning inference during deployment](/azure/cloud-adoption-framework/innovate/best-practices/ml-deployment-inference)
+Learn about the [best practices for deploying machine learning models in production environments](/azure/cloud-adoption-framework/innovate/best-practices/ml-deployment-inference) by using Azure Machine Learning. Explore architectural considerations and deployment methods (real time and batch inference). Learn how to ensure consistency, monitor performance, implement security measures, and create a plan for updates.
 
 ### New landing zone sandbox environments
 
