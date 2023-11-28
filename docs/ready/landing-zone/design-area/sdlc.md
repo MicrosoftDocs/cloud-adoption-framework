@@ -10,15 +10,15 @@ ms.custom: internal
 
 # Application Development Environments in Azure Landing Zones
 
-Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale.  Azure landing zone design principles guide customers to adopt policy-driven governance, which provides foundational guard rails while also delegating many controls to application teams who deploy and manage their own landing zone resources.
+Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale.  Azure landing zone design principles guide customers to adopt policy-driven governance. This governance provides foundational guard rails, while also delegating many controls to application teams.  These applications teams then deploy and manage their own landing zone resources.
 
 A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
-This article provides guidance for how cloud platform teams can provide guardrails to manage application environments in Azure, and how an organization can fit different application development environments into this framework.  A key aspect of this is placing environment subscriptions in appropriate management groups.
+This article provides guidance for how cloud platform teams can provide guardrails to manage application environments in Azure.  The article gives guidance on how an organization can fit different application development environments into this framework.  A key aspect is placing environment subscriptions in appropriate management groups.
 
 When application owners use [Subscription Vending](subscription-vending.md) or other subscription creation processes, it is important for there to be clarity about how to request subscriptions for multiple development environments.
 
-In this guide, we will talk both about the Azure landing zone - the management groups, policies, and shared platform architecture - along with the workload or application landing zone.
+In this guide, we talk both about the Azure landing zone - the management groups, policies, and shared platform architecture - and the workload or application landing zone.
 
 > [!NOTE]
 > This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md) (Canary approach).
@@ -46,7 +46,7 @@ It is not necessary to create a high degree of Azure management isolation for di
 - The environments have the same teams assigned to functional roles, such as network operators.
 - The environments can use the same policies.
 
-It is recommended that workload owners should work with the cloud platform teams to determine if a division at the subscription level is needed.
+It is recommended that workload owners should work with the cloud platform teams to determine if a division is needed.
 
 If an application or service workload requires segregation between environments beyond what can be done in a single subscription, it is then recommended to use one of the following options:
 
@@ -56,26 +56,26 @@ If an application or service workload requires segregation between environments 
 > Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
 
 - Apply policies at a subscription level as required, ideally during the subscription creation process as part of [Subscription Vending](subscription-vending.md).
-- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](platform-automation-devops.md).)
+- For policies that are implemented to help control costs, apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](platform-automation-devops.md).)
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 
 ### Management Group Hierarchy
 
-Avoid complicated and volatile management group hierarchies as they require constant amendment, don't scale efficiently, and don't add value. That's why Azure landing zone management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
+Avoid complicated and volatile management group hierarchies as they require constant amendment, don't scale efficiently, and don't add value. These issues are why Azure landing zone management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
 
 _Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services).
 
-Different application environments, with the exception of sandbox environments (see below), should use the same archetype for deployment. Even if the environments are split across separate subscriptions, they are held within the same single management group ("Corp" or "Online") depending on management group archetype and requirements.
+Different application environments, except for sandbox environments, should use the same archetype for deployment. Even if the environments are split across separate subscriptions, they are held within the same single management group ("Corp" or "Online") depending on management group archetype and requirements.
 
-[Sandbox subscriptions](../../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload has not been selected.  This is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
+[Sandbox subscriptions](../../considerations/sandbox-environments.md) can be used for unstructured development, such as personal labs or for when an archetype for the workload is not decided.  The Sandbox management group is often used when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
 
-These sandbox environments can be tied to specific applications, or can be used by the workload team for experimentation.
+These sandbox environments can be tied to specific applications, or a workload team can use them for experimentation.
 
 Read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones.
 
 #### Challenges with having environment based management groups
 
-Building management groups for for environments within the archetypes creates additional management overhead, while providing very limited value.
+Building management groups for for environments within the archetypes creates more management overhead, while providing little value.
 
 ![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture.](./media/management-groups.png)  
 
