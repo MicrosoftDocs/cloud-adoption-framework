@@ -1,5 +1,5 @@
 ---
-title: Application Development Environments in Azure Landing Zones
+title: Application development environments in Azure landing zones
 description: Learn about managing your organization's application environments in Azure landing zone.
 author: brsteph
 ms.author: brsteph
@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.custom: internal
 ---
 
-# Application Development Environments in Azure Landing Zones
+# Application development environments in Azure landing zones
 
-Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale.  Azure landing zone design principles guide customers to adopt policy-driven governance. This governance provides foundational guard rails, while also delegating many controls to application teams.  These applications teams then deploy and manage their own landing zone resources.
+Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale. Azure landing zone design principles guide customers to adopt policy-driven governance. This governance provides foundational guard rails, while also delegating many controls to application teams. These applications teams design their workload using guidance from the [Azure Well-Architected Framework](/azure/well-architected/), then deploy and manage their own landing zone resources.
 
 A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
@@ -98,7 +98,7 @@ Deployment configuration and requirements should remain consistent throughout pr
 
 Sometimes, individual application owners might need some policies to apply differently to different environments.  For example, application owners might require backup configurations for production, but do not require it for other environments.
 
-We suggest that the platform operators work with each application or service workload team (landing zone owners) to understand their requirements. Then the platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate "product lines" for different types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
+Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. Then the platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate "product lines" for different types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
 ### Scenario: Application Services
 
