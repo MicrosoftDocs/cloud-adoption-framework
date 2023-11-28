@@ -1,6 +1,6 @@
 ---
 title: Modify an Azure landing zone architecture to meet requirements across multiple locations
-description: Learn about regulatory requirements.
+description: Learn how to modify an Azure landing zone so it complies with the regulatory requirements of various geographic locations.
 author: mioteg
 ms.author: mioteg
 ms.date: 11/28/2023
@@ -44,7 +44,7 @@ When multiple regulations apply, you don't need to modify the Azure landing zone
 
 ## Considerations for ISVs
 
-The [ISV considerations for Azure landing zones article](isv-landing-zone.md) describes three [deployment models](isv-landing-zone.md#isv-deployment-models) for ISVs.
+There are three [deployment models for ISVs](isv-landing-zone.md#isv-deployment-models).
 
 - **Pure software as a service (SaaS)**: The ISV provides the solution as a service.
 
@@ -85,7 +85,7 @@ The amount of modification that's required depends on the level of isolation tha
 
 ### Microsoft Entra tenants
 
-We recommend [using a single Microsoft Entra tenant](../design-area/multi-tenant/overview.md) for most scenarios, including multinational scenarios. However, there are scenarios where you might prefer or require multiple Microsoft Entra tenants, such as:
+We recommend [using a single Microsoft Entra tenant](./design-area/multi-tenant/overview.md) for most scenarios, including multinational scenarios. However, there are scenarios where you might prefer or require multiple Microsoft Entra tenants, such as:
 
 - If you need to [separate the corporate Microsoft Entra tenant from the SaaS Microsoft Entra tenant](isv-landing-zone.md) to improve security and create clear boundaries between the product and business operations.
 
@@ -98,12 +98,12 @@ When you collaborate across multiple Microsoft Entra tenants, you need to carefu
 
 The following diagrams show options that you can use to organize Microsoft Entra tenants.
 
-![A diagram that shows three ways to organize Microsoft Entra tenants.](./media/tenant-organization.png)
+:::image type="content" source="./media/tenant-organization.png" alt-text="A diagram that shows three ways to organize Microsoft Entra tenants." lightbox="./media/tenant-organization.png":::
 
 >[!TIP]
 >If you have multiple Microsoft Entra tenants to meet regulatory requirements, name the tenants based on the geographic location rather than specific regulations, for example _contoso-ops-us.com_ in the example diagram.
 
-For more information, see [Azure landing zones and multiple Microsoft Entra tenants](../design-area/multi-tenant/overview.md) and [ISV considerations for Azure landing zones](isv-landing-zone#microsoft-entra-tenants.md).
+For more information, see [Azure landing zones and multiple Microsoft Entra tenants](./design-area/multi-tenant/overview.md) and [ISV considerations for Azure landing zones](isv-landing-zone.md#microsoft-entra-tenants).
 
 ### Management groups
 
@@ -111,7 +111,7 @@ If you don't need separate Microsoft Entra tenants in order to provide strict is
 
 You can deploy a full landing zone architecture for each set of regulations that you want to separate. This model requires the least amount of customization and enables you to take advantage of existing automation for deployment.
 
-![A diagram that shows separate landing zones for each regulation.](./media/landing-zone-model.png)
+:::image type="content" source="./media/landing-zone-model.png" alt-text="A diagram that shows separate landing zones for each regulation." lightbox="./media/landing-zone-model.png":::
 
 >[!NOTE]
 >This diagram doesn't show all management groups.
@@ -122,7 +122,7 @@ If regulation allows, the platform management group can be shared. You can creat
 
 This management group hierarchy is a simple and cost-effective design for isolating applications with conflicting regulations. However, in this design, the platform management groups for connectivity, identity/security, and management must share the same policy set. You might need different policy sets for each platform management group if regulation imposes restrictions on sharing connectivity infrastructure, identity services, key management services, or the infrastructure from which the whole environment is managed.
 
-![A diagram that shows an architecture that shares the platform management group.](./media/platform-management-group.png)
+:::image type="content" source="./media/platform-management-group.png" alt-text="A diagram that shows an architecture that shares the platform management group." lightbox="./media/platform-management-group.png":::
 
 ##### Isolate identity and security
 
@@ -130,7 +130,7 @@ If regulations prevent you from sharing the identity and key management infrastr
 
 This management group hierarchy is significantly more complex than a fully shared platform management group because you have to partially replicate the platform management group. To limit the complexity, you can deploy the full hierarchy for each of the regulation sets and the shared environment, and ignore or delete the superfluous management groups.
 
-![A diagram that shows an architecture that isolates identity and security.](./media/isolation-model.png)
+:::image type="content" source="./media/isolation-model.png" alt-text="A diagram that shows an architecture that isolates identity and security." lightbox="./media/isolation-model.png":::
 
 ##### Isolate connectivity
 
@@ -140,14 +140,14 @@ When regulations have conflicting connectivity requirements, you can create a co
 
 If regulations conflict for connectivity and also identity and security, you can use the following design.
 
-![A diagram that shows an architecture that isolates connectivity.](./media/isolate-connectivity-model.png)
+:::image type="content" source="./media/isolate-connectivity-model.png" alt-text="A diagram that shows an architecture that isolates connectivity." lightbox="./media/isolate-connectivity-model.png":::
 
 ## Next steps
 
-- [Azure landing zones and multiple Microsoft Entra tenants](../design-area/multi-tenant/overview.md)
-- [Identity and access management checklist](/azure/well-architected/security/design-identity)
+- [Azure landing zones and multiple Microsoft Entra tenants](./design-area/multi-tenant/overview.md)
 - [ISV considerations for Azure landing zones](isv-landing-zone.md)
-- [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework)
+- [Microsoft Cloud Adoption Framework for Azure](index.yml)
 - [Microsoft Entra ID and data residency](/azure/active-directory/fundamentals/data-residency)
 - [Overview of the security pillar](/industry/well-architected/security)
+- [Recommendations for identity and access management](/azure/well-architected/security/design-identity)
 - [Tailor the Azure landing zone architecture to meet requirements](tailoring-alz.md)
