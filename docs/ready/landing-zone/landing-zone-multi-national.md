@@ -124,7 +124,7 @@ This management group hierarchy is a simple and cost-effective design for isolat
 
 :::image type="content" source="./media/platform-management-group.png" alt-text="A diagram that shows an architecture that shares the platform management group." lightbox="./media/platform-management-group.png":::
 
-##### Isolate identity and security
+#### Isolate identity and security
 
 If regulations prevent you from sharing the identity and key management infrastructure, you can divide the platform management group. Keep the management groups for connectivity and management in the shared platform management group and have an identity and security management group that's associated with each set of regulations.
 
@@ -132,7 +132,7 @@ This management group hierarchy is significantly more complex than a fully share
 
 :::image type="content" source="./media/isolation-model.png" alt-text="A diagram that shows an architecture that isolates identity and security." lightbox="./media/isolation-model.png":::
 
-##### Isolate connectivity
+#### Isolate connectivity
 
 Many regulations have requirements related to processing and storing data in a certain geographic location, with few requirements around how users connect to applications. For those regulations, you can share the connectivity management as shown in the previous architecture. There might not be any regulations that require you to duplicate infrastructure in multiple regions, but you might need to for latency purposes. The assigned policies need to support duplicating infrastructure in multiple regions.
 
