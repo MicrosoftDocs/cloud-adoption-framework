@@ -146,7 +146,7 @@ If regulations conflict for connectivity and also identity and security, you can
 
 - [Azure landing zones and multiple Microsoft Entra tenants](./design-area/multi-tenant/overview.md)
 - [ISV considerations for Azure landing zones](isv-landing-zone.md)
-- [Microsoft Cloud Adoption Framework for Azure](index.yml)
+- [Microsoft Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework)
 - [Microsoft Entra ID and data residency](/azure/active-directory/fundamentals/data-residency)
 - [Overview of the security pillar](/industry/well-architected/security)
 - [Recommendations for identity and access management](/azure/well-architected/security/design-identity)
