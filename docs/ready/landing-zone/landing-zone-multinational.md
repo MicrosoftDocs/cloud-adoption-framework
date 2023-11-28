@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Modify an Azure landing zone architecture to meet requirements across multiple locations
 
-Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Organizations might need to comply with conflicting regulations across multiple geographic locations. In which case, they need to modify their Azure landing zone architecture in accordance with all the applicable regulations.
+Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In this case, they need to modify their Azure landing zone architecture in accordance with all the applicable regulations.
 
 For example, there might be two conflicting regulations, regulation A and regulation B. Regulation A might require data residency in country or region A, and regulation B might require data residency in country or region B.
 
@@ -37,7 +37,7 @@ When multiple regulations apply, you don't need to modify the Azure landing zone
 
 - The controls in multiple regulations don't overlap. When you implement multiple control sets, a single implementation covers all regulations. Azure Policy assignments are complementary.
 
-- Various regulations might have different types of implementation. From a regulatory perspective, it doesn't matter which implementation you choose. For example, there might be two regulations that each have a different authorization model, but both authorization models are acceptable. You can choose the implementation that best fits your organization.
+- Various regulations have different types of implementation. From a regulatory perspective, it doesn't matter which implementation you choose. For example, there might be two regulations that each have a different authorization model, but both authorization models are acceptable. You can choose the implementation that best fits your organization.
 
 >[!TIP]
 >You should strive to have as few policy assignments and exceptions or exemptions as possible.
@@ -48,7 +48,7 @@ There are three [deployment models for ISVs](isv-landing-zone.md#isv-deployment-
 
 - **Pure software as a service (SaaS)**: The ISV provides the solution as a service.
 
-- **Customer-deployed**: The customer deploys the solution in their own environment.
+- **Customer deployed**: The customer deploys the solution in their own environment.
 
 - **Dual-deployment SaaS**: This model combines the customer-deployed model and the pure SaaS model.
 
