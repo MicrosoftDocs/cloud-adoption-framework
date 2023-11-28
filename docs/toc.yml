@@ -327,10 +327,10 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Application environments
+            href:  ready/landing-zone/design-area/sdlc.md
           - name: Tailoring the Azure landing zones architecture
             href: ready/landing-zone/tailoring-alz.md
-          - name: Application Environments in Azure Landing Zones
-            href:  ready/landing-zone/design-area/sdlc.md
           - name: Adopt policy-driven guardrails
             href: ready/enterprise-scale/dine-guidance.md
           - name: Additional information
