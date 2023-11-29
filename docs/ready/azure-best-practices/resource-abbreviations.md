@@ -31,7 +31,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Computer vision | `Microsoft.CognitiveServices/accounts` | `cv` |
 | Content moderator | `Microsoft.CognitiveServices/accounts` | `cm` |
 | Content safety | `Microsoft.CognitiveServices/accounts` | `cs` |
-| Custom vision | `Microsoft.CognitiveServices/accounts` | `cstm` |
+| Custom vision | `Microsoft.CognitiveServices/accounts` | `cstv` |
 | Document intelligence | `Microsoft.CognitiveServices/accounts` | `di` |
 | Face API | `Microsoft.CognitiveServices/accounts` | `face` |
 | Health Insights | `Microsoft.CognitiveServices/accounts`| `hi` |
