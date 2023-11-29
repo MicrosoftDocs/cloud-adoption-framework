@@ -26,19 +26,20 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure AI services multi-service account | `Microsoft.Search/searchServices` | `ais` |
 | Azure AI Video Indexer | | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
-| Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` | `oai` |
-| Bot service | `Microsoft.BotService/botServices` | `bot` |
-| Computer vision | `Microsoft.CognitiveServices/accounts` | `cv` |
-| Content moderator | `Microsoft.CognitiveServices/accounts` | `cm` |
-| Content safety | `Microsoft.CognitiveServices/accounts` | `cs` |
-| Custom vision | `Microsoft.CognitiveServices/accounts` | `cstv` |
-| Document intelligence | `Microsoft.CognitiveServices/accounts` | `di` |
-| Face API | `Microsoft.CognitiveServices/accounts` | `face` |
-| Health Insights | `Microsoft.CognitiveServices/accounts`| `hi` |
-| Immersive reader | `Microsoft.CognitiveServices/accounts` | `ir` |
-| Language service | `Microsoft.Search/searchServices` | `lang` |
-| Speech service | `Microsoft.CognitiveServices/accounts` | `spch` |
-| Translator | `Microsoft.CognitiveServices/accounts` | `trsl` |
+| Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
+| Bot service | `Microsoft.BotService/botServices` (kind: `azurebot`) | `bot` |
+| Computer vision | `Microsoft.CognitiveServices/accounts` (kind: `ComputerVision`) | `cv` |
+| Content moderator | `Microsoft.CognitiveServices/accounts` (kind: `ContentModerator`) | `cm` |
+| Content safety | `Microsoft.CognitiveServices/accounts` (kind: `ContentSaftey`) | `cs` |
+| Custom vision (prediction) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Prediction`) | `cstv` |
+| Custom vision (training) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Training`) | `cstvt` |
+| Document intelligence | `Microsoft.CognitiveServices/accounts` (kind: `FormRecognizer`) | `di` |
+| Face API | `Microsoft.CognitiveServices/accounts` (kind: `Face`) | `face` |
+| Health Insights | `Microsoft.CognitiveServices/accounts` (kind: `HealthInsights`) | `hi` |
+| Immersive reader | `Microsoft.CognitiveServices/accounts` (kind: `ImmersiveReader`) | `ir` |
+| Language service | `Microsoft.CognitiveServices/accounts` (kind: `TextAnalytics`) | `lang` |
+| Speech service | `Microsoft.CognitiveServices/accounts` (kind: `SpeechServices`) | `spch` |
+| Translator | `Microsoft.CognitiveServices/accounts` (kind: `TextTranslation`) | `trsl` |
 
 ## Analytics and IoT
 
