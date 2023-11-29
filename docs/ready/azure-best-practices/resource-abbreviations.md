@@ -283,13 +283,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
 | Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
-## Deprecated product names
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
-
 ## Next steps
 
 Review recommendations for tagging your Azure resources and assets.
