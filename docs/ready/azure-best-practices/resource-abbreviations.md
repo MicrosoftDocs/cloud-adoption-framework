@@ -38,7 +38,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Immersive reader | `Microsoft.CognitiveServices/accounts` | `ir` |
 | Language service | `Microsoft.Search/searchServices` | `lang` |
 | Speech service | `Microsoft.CognitiveServices/accounts` | `spch` |
-| Translator | `Microsoft.CognitiveServices/accounts` | `tltr` |
+| Translator | `Microsoft.CognitiveServices/accounts` | `trsl` |
 
 ## Analytics and IoT
 
