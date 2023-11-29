@@ -220,7 +220,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
 | Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
-| IP group | `Microsoft.Network/ipGroups` | `ipgr` |
+| IP group | `Microsoft.Network/ipGroups` | `ipg` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
