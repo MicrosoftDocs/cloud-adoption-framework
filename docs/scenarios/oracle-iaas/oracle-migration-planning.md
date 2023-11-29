@@ -6,8 +6,6 @@ ms.author: janfaurs
 ms.reviewer: tozimmergren
 ms.date: 09/11/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ---
 
 # Migrate Oracle workloads to Azure IaaS

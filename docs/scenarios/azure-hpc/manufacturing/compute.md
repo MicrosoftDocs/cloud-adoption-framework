@@ -4,8 +4,6 @@ description: See virtual machine (VM) sizes that are appropriate for big compute
 author: bsantacruz
 ms.author: bsantacruz
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 10/17/2023
 ---
