@@ -35,22 +35,21 @@ Relocation adds flexibility that can help you optimize cost and performance thro
 
 ## How to relocate
 
-Relocation has two phases. The first phase is to initiate the relocation project. The second phase is to move the workload by planning and executing the relocation. The process in this guidance is at the project level and defines the lifecycle of a relocation project. It guides you to pick the right relocation method and automation tool for each workload. The guidance doesn't tell you how to use the tool you select but directs you to tool-specific instructions. Here's an overview of the relocation process.
+Relocation has two phases. The first phase is to initiate the relocation project. The second phase is to move the workload by planning and executing the relocation. Here's an overview of each phase:
 
-**Initiate phase:** The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
+*Initiate phase*: The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
 
-**Move phase:** The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
+*Move phase*: The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
 
-> [!NOTE]
-> Some resources can’t be moved between regions and might need to be redeployed. For more information about the resource types that support region moves, see [Special conditions to consider when moving a resource](/azure/azure-resource-manager/management/move-support-resources).
-
-| Relocate step | Main goal |
+| Move phase step | Main goal |
 | --- | --- |
 |1. Initiate | Establish relocation project. |
 |2. Evaluate| Conduct workload discovery. |
 |3. Select| Pick the right relocation method. |
 |4. Migrate| Relocate the workload. |
 |5. Cutover| Direct traffic to new location. |
+
+These phases define the lifecycle of a relocation project. It's important to note that not every resources supports relocation. Some require redeployment. For more information, see [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources).
 
 ## Assumptions
 
