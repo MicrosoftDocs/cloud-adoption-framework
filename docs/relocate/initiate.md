@@ -45,8 +45,6 @@ You should create a relocation plan that addresses service capacity and high-lev
 
 The pricing for certain Azure services can differ based on the region. Therefore, it’s crucial to review the costs associated with each region before initiating a relocation project. If you’re currently utilizing Azure Reservations in your source region, consider [transferring them to your destination region](/azure/cost-management-billing/reservations/exchange-and-refund-azure-reservations). Also, don’t forget to account for the [Azure network bandwidth costs](https://azure.microsoft.com/pricing/details/bandwidth) associated with data transfers between regions during the relocation process.
 
-**Understand the effects.** A workload relocation between regions can affect existing IP addresses, DNS names, and automation processes. It’s important to identify which of these implications are relevant to each workload you’re moving. This information should then be integrated into your relocation plan to ensure a smooth transition. For more information, see [Potential side effects of the relocation](evaluate.md#evaluate-relocation-updates).
-
 ## Next step
 
 The next step is the Move phase of relocation. The Move phase has four steps: evaluate, select, migrate, and cutover. You might have one or more workloads to relocate. Regardless of number, you should work through these four steps for any workload you want to relocate.
