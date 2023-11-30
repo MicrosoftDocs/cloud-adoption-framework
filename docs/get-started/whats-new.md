@@ -39,6 +39,8 @@ To support the imminent general availability of Azure Monitor baseline alerts fo
 
 ### Azure VMware Solution network design guides
 
+These guides describe the Microsoft-recommended approach for designing network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
+
 -   [Azure VMware Solution network design guide](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-intro)
 
 -   [Azure VMware Solution network design guide: Inbound internet connectivity](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity)
