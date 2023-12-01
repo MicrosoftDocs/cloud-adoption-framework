@@ -106,7 +106,7 @@ For zero trust access with identities, you should consider:
 
 For more information, see [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
 
-Implementing zero trust can go beyond just identity and access management.  You should consider if your organization needs to implement zero trust practices across multiple pillars, such as infrastructure, data, and networking.  For more information on deploying multiple pillars of Zero Trust, see [Zero Trust Planning for Landing Zones](security-zerotrust.md)
+Implementing zero trust can go beyond just identity and access management.  You should consider if your organization needs to implement zero trust practices across multiple pillars, such as infrastructure, data, and networking.  For more information, see [Zero Trust planning for landing zones](security-zerotrust.md)
 
 ### Access control design recommendations
 

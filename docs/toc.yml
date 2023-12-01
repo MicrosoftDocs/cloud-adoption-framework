@@ -409,7 +409,7 @@ items:
             href: ready/landing-zone/design-area/service-enablement-framework.md
           - name: Security control mapping
             href: ready\control-mapping\security-control-mapping.md
-          - name: Zero Trust Planning for Landing Zones
+          - name: Zero Trust planning for landing zones
             href: ready/landing-zone/design-area/security-zerotrust.md
             
         - name: Management

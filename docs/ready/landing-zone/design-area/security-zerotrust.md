@@ -1,5 +1,5 @@
 ---
-title: Zero Trust Planning for Landing Zones
+title: Zero Trust planning for landing zones
 description: Learn about starting your Zero Trust journey with Azure Landing Zones
 author: brsteph
 ms.author: bstephenson
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: 
 ---
 
-# Zero Trust Planning for Landing Zones
+# Zero Trust planning for landing zones
 
 [Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy that uses many products and services in order to adhere to the following security principles:
 
@@ -16,15 +16,15 @@ ms.custom:
 - **Use least privilege access**, where you limit user access to just-enough access, and use tools to provide just in time access with considerations to adaptive risk-based policies.
 - **Assume breach**, where you minimize blast radius and segment access, are always proactively looking for threats, and are continually improving defenses.
 
-If your organization is adhering to the Zero Trust strategy, you should include Zero Trust specific deployment objectives as part of your design areas.  Your landing zone is the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
+If your organization is adhering to the Zero Trust strategy, you should include Zero Trust specific deployment objectives as part of your landing zone design areas.  Your landing zone is the foundation of your workloads in Azure, so have it ready to lead the way to Zero Trust adoption.
 
 This article provides guidance for building Zero Trust into your landing zone, and call outs for where adherence to Zero Trust principles uses solutions outside of your landing zone.
 
-## Zero Trust Pillars and Landing Zone Design Areas
+## Zero Trust pillars and landing zone design areas
 
 When planning to implement Zero Trust practices as part of your Azure landing zone deployment, you should begin by considering Zero Trust guidance as a part of each landing zone design area.
 
-The [Azure landing zone design areas](../design-areas.md) give guidance on what to consider before deploying a landing zone.  They guide you through the critical decisions for each area to understand what is needed to be successful.
+The [Azure landing zone design areas](../design-areas.md) give guidance on what to consider before deploying a landing zone and guide you through the critical decisions for each area to understand what is needed to be successful.
 
 Zero Trust has pillars organized by concepts and deployment objectives.  Each pillar and its deployment objectives are detailed in the articles under [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview).
 
@@ -38,7 +38,7 @@ As a result, there are still design decisions that need to be met in order to im
 
 These pillars can be mapped to the design areas for Azure landing zones.  If your organization has a goal to implement Zero Trust principles, you should include a review of each pillar below.
 
-The below table can be used to understand how to map the Zero Trust pillars to the design areas.
+The below table can be used to understand how to map the Zero Trust pillars to the design areas shown in the following architecture.
 
 :::image type="content" source="../../enterprise-scale/media/ns-arch-cust-expanded.svg" alt-text="A conceptual architecture diagram of an Azure landing zone." lightbox="../../enterprise-scale/media/ns-arch-cust-expanded.svg":::
 
@@ -57,9 +57,9 @@ However, not all of the deployment objectives of Zero Trust are a part of the la
 
 The next sections review each pillar, and give recommendations and considerations for implementing the deployment objectives.
 
-## Identity Pillar
+## Securing identity
 
-The [Identity Pillar](/security/zero-trust/deploy/identity) has deployment objectives focused on identity federation, conditional access, identity governance, and the use of real time data as part of the decisions for authentication.
+The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) guidance has deployment objectives focused on identity federation, conditional access, identity governance, and the use of real time data as part of the decisions for authentication.
 
 ### Identity Considerations
 
@@ -76,9 +76,9 @@ The [Identity Pillar](/security/zero-trust/deploy/identity) has deployment objec
 - Deploy your Azure landing zone with separate subscriptions for identity resources like domain controllers, so you can better secure access to them.
 - Plan to use Microsoft Entra ID identities where ever possible, such as Managed Identities.
 
-## Endpoints Pillar
+## Securing endpoints
 
-The [Endpoints Pillar](/security/zero-trust/deploy/endpoints) has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
+The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) guidance has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
 
 ### Endpoints Considerations
 
@@ -93,9 +93,9 @@ The [Endpoints Pillar](/security/zero-trust/deploy/endpoints) has deployment obj
 - Develop a plan for managing endpoints with Zero Trust practices, in addition to your plans to implement an Azure landing zone.
 - For devices and servers that go beyond endpoints, see the Infrastructure Pillar for guidance.
 
-## Applications Pillar
+## Securing applications
 
-The [Applications Pillar](/security/zero-trust/deploy/applications) has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
+The [Secure applications with Zero Trust](/security/zero-trust/deploy/applications) guidance has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
 
 ### Applications Considerations
 
@@ -109,10 +109,10 @@ The [Applications Pillar](/security/zero-trust/deploy/applications) has deployme
 - Use the standardized policies included to enforce your practices.
 - Develop a plan to onboard your applications to your practices for application access; just because your organization hosts an application, doesn't mean it should be trusted more than third party applications.
 
-## Data Pillar
+## Securing data
 
-The [Data Pillar](/security/zero-trust/deploy/data) has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
- [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) for the logging and management of data resources.
+The [Secure data with Zero Trust](/security/zero-trust/deploy/data) guidance has deployment objectives focused on classifying and labeling data, access control, and data loss protection.
+ [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contain guidance for the logging and management of data resources.
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
@@ -129,9 +129,9 @@ However, a zero trust approach to data involves deeper controls.  From an implem
 - Use [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.
 - Implement Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to implement at scale.
 
-## Infrastructure Pillar
+## Securing infrastructure
 
-The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
+The [Secure infrastructure with Zero Trust](/security/zero-trust/deploy/infrastructure) guidance has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
 
 ### Infrastructure Considerations
 
@@ -150,9 +150,9 @@ The [Infrastructure Pillar](/security/zero-trust/deploy/infrastructure) has depl
 - Configure [Just In Time Access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud as part of your landing zone, to restrict access to virtual machines.
 - Create a plan to monitor and manage individual workloads that are deployed in Azure.
 
-## Networks Pillar
+## Securing networks
 
-The [Networks Pillar](/security/zero-trust/deploy/networks) has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
+The [Secure networks with Zero Trust](/security/zero-trust/deploy/networks) guidance has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
 
 ### Networks Considerations
 
@@ -168,9 +168,9 @@ The [Networks Pillar](/security/zero-trust/deploy/networks) has deployment objec
 - Review the [Zero-trust network for web applications](/azure/architecture/example-scenario/gateway/application-gateway-before-azure-firewall) reference architecture to understand how to apply Zero Trust principles to application delivery.
 - Use the [Zero Trust deployment plans with Microsoft Azure](/security/zero-trust/apply-zero-trust-azure-services-overview) to build a plan for workload networking.
 
-## Visibility, Automation, and Orchestration Pillar
+## Visibility, automation, and orchestration
 
-The [Visibility, Automation, and Orchestration Pillar](/security/zero-trust/deploy/visibility-automation-orchestration) has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
+The [Visibility, automation, and orchestration with Zero Trust](/security/zero-trust/deploy/visibility-automation-orchestration) guidance has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
 ### Visibility, Automation, and Orchestration Considerations
 
