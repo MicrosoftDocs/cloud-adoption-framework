@@ -874,7 +874,11 @@
          "source_path": "docs/migrate/migration-considerations/prerequisites/planning-checklist.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/multiple-datacenters.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites/multiple-datacenters.md",
+         "redirect_document_id": true
       }
-
    ]
 }

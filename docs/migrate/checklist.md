@@ -38,3 +38,5 @@ Introduction.
 
 ## Next steps
 
+> [!div class="nextstepaction"]
+> [Migration pre-requisites](./identity-baseline-improvement.md)
