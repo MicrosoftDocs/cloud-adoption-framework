@@ -593,6 +593,20 @@ items:
       items:
       - name: Overview
         href: migrate/index.md
+      - name: checklist
+        href: migrate/checklist.md
+      - name: Pre-requisites
+        items:
+          - name: Overview
+            href: migrate/prerequisites/index.md
+          - name: Migration tools decision guide
+            href: migrate/prerequisites/migrate-tools-decision-guide.md
+          - name: Understanding multiple datacenters
+            href: migrate/prerequisites/multiple-datacenters.md.md
+      - name: Assess
+      - name: Deploy
+      - name: Release
+
       - name: Azure migration guide
         items:
         - name: Migration guide overview
@@ -907,12 +921,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Prerequisites
           items:
-          - name: Overview
-            href: migrate/migration-considerations/prerequisites/index.md
-          - name: Decisions that affect migration
-            href: migrate/migration-considerations/prerequisites/decisions.md
-          - name: Environment planning checklist
-            href: migrate/migration-considerations/prerequisites/planning-checklist.md
           - name: Align roles and responsibilities
             href: migrate/migration-considerations/prerequisites/cultural-complexity.md
           - name: Agile change management
