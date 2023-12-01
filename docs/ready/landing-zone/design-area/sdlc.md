@@ -41,6 +41,8 @@ However, any number and classification of environments can be used in practice.
 
 ## Environments, Subscriptions, and Management Groups
 
+Properly organizing your subscriptions is critical for adopting Azure landing zone practices.  See [Resource organization design area](resource-org.md) if you have not already to understand the resource organization design area.
+
 Ideally, each application environment should have its own subscription.  This provides security and policy controls to keep the environments isolated, and to prevent an issue in one environment from creating issues in others.
 
 These separate subscriptions would still have the same policies between them from the archetype level.  If needed, subscription specific policies can be used by the application owners to enforce application and environment specific behavior.
@@ -139,9 +141,11 @@ In this example, a single subscription for the application or service workload m
 
 ## Next steps
 
+Continue to explore the resource organization design area.
+
+- Review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+
 Continue to learn about development and testing in Azure Landing Zones, and how management groups play a part.
 
 - Review the [testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
-- Review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-- Review the [Resource organization design area](resource-org.md) to make decisions for management group and subscription creation
 - Review how to use [Sandbox subscriptions](../../considerations/sandbox-environments.md) isolated development
