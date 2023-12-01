@@ -18,10 +18,10 @@ Ensure business, culture, and technical readiness prior to beginning an iterativ
 
 ## Review business drivers
 
-Before beginning any cloud migration, review the [Plan methodology](../../../plan/index.md) and the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
+Before beginning any cloud migration, review the [Plan methodology](../../plan/index.md) and the [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
 
-- [Get started: Accelerate migration](../../../get-started/migrate.md)
-- [Why are we moving to the cloud?](../../../strategy/motivations.md)
+- [Get started: Accelerate migration](../../get-started/migrate.md)
+- [Why are we moving to the cloud?](../../strategy/motivations.md)
 
 ## Definition of done
 
@@ -49,11 +49,11 @@ A single member of each team should be identified as accountable for each of the
 
 In addition to the high-level accountability, there are actions that an individual or group needs to be directly responsible for. The following are a few such responsibilities that affect these activities:
 
-- **Business prioritization.** Make business decisions regarding the workloads to be migrated and general timing constraints. For more information, see [Cloud migration business motivations](../../../strategy/motivations.md).
+- **Business prioritization.** Make business decisions regarding the workloads to be migrated and general timing constraints. For more information, see [Cloud migration business motivations](../../strategy/motivations.md).
 - **Change management readiness.** Establish and communicate the plan for tracking technical change during migration.
 - **Business user alignment.** Establish a plan for readying the business user community for migration execution.
-- **Digital estate inventory and analysis.** Execution of the tools required to inventory and analyze the digital estate. See the Cloud Adoption Framework discussion of the [digital estate](../../../digital-estate/index.md) for more information.
-- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure setup guide](../../../ready/azure-setup-guide/index.md) for more information.
+- **Digital estate inventory and analysis.** Execution of the tools required to inventory and analyze the digital estate. See the Cloud Adoption Framework discussion of the [digital estate](../../digital-estate/index.md) for more information.
+- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure setup guide](../../ready/azure-setup-guide/index.md) for more information.
 
 The remaining articles in this series help with the execution of each.
 

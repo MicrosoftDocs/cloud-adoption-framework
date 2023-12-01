@@ -600,7 +600,7 @@ items:
           - name: Overview
             href: migrate/prerequisites/index.md
           - name: Migration tools decision guide
-            href: migrate/prerequisites/migrate-tools-decision-guide.md
+            href: migrate/prerequisites/migration-tools-decision-guide.md                  
           - name: Understanding multiple datacenters
             href: migrate/prerequisites/multiple-datacenters.md            
 

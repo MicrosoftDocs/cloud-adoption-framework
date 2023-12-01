@@ -16,27 +16,27 @@ Introduction.
 
 |&nbsp; | Code | Guidance |
 |---|---|---|
-| &#9744; | [MIGRATE:01](LINK) | **TITLE** DESCRIPTION. |
+| &#9744; | MIGRATE:01 | **TITLE** DESCRIPTION. |
 
 ## Checklist: Assess
 
 |&nbsp; | Code | Guidance |
 |---|---|---|
-| &#9744; | [MIGRATE:01](LINK) | **TITLE** DESCRIPTION. |
+| &#9744; | MIGRATE:01 | **TITLE** DESCRIPTION. |
 
 ## Checklist: Deploy
 
 |&nbsp; | Code | Guidance |
 |---|---|---|
-| &#9744; | [MIGRATE:01](LINK) | **TITLE** DESCRIPTION. |
+| &#9744; | MIGRATE:01 | **TITLE** DESCRIPTION. |
 
 ## Checklist: Release
 
 |&nbsp; | Code | Guidance |
 |---|---|---|
-| &#9744; | [MIGRATE:01](LINK) | **TITLE** DESCRIPTION. |
+| &#9744; | MIGRATE:01 | **TITLE** DESCRIPTION. |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migration pre-requisites](./identity-baseline-improvement.md)
+> [Migration pre-requisites](./prerequisites/index.md)
