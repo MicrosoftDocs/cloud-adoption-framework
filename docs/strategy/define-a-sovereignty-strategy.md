@@ -41,7 +41,7 @@ For compliance of cloud services, compliance teams can use several sources and m
 
 - Audit reports created by independent auditors that provide deeper insights into how cloud services meet the requirements of global, regional, and industry compliance frameworks, some of which available from the [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-- Audit performed by or on behalf of the compliance team through vendor audit offerings, such as the [Government Security Program](https://www.microsoft.com/en-us/securityengineering/gsp) (available to select customers only).
+- Audit performed by or on behalf of the compliance team through vendor audit offerings, such as the [Government Security Program](https://www.microsoft.com/securityengineering/gsp) (available to select customers only).
 
 - [Transparency logs](/industry/sovereignty/transparency-logs) that provide details of when Microsoft engineers accessed your resources.
 
@@ -57,9 +57,9 @@ For compliance of the processes and systems your organization is responsible for
 
 - (Audit) logging and monitoring.
 
-- Security tools as discussed in [Define a security strategy](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy).
+- Security tools as discussed in [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy).
 
-- Technical assurance and monitoring capabilities, such as [Azure confidential computing](https://learn.microsoft.com/en-us/azure/confidential-computing/overview)
+- Technical assurance and monitoring capabilities, such as [Azure confidential computing](/azure/confidential-computing/overview)
 
 These capabilities need to be carefully considered in the architecture of your organization's overall environment and for individual workloads. Policy enforcement is a relatively lightweight method to support compliance, although it could restrict which services you can use and how you can use them. Technical assurance by comparison is restrictive because it's only available with few services today and requires a significant knowledge investment.
 
@@ -67,15 +67,15 @@ These capabilities need to be carefully considered in the architecture of your o
 
 Adopting the cloud, means to adopt a shared responsibility model and it's key to understand which responsibilities shift to the cloud provider and which remain with you. Compliance documentation often describes that in great detail. A higher level view is available from product documentation on various topics:
 
-- Protection of the physical infrastructure is described in [Azure infrastructure security](https://learn.microsoft.com/en-us/azure/security/fundamentals/infrastructure).
+- Protection of the physical infrastructure is described in [Azure infrastructure security](/azure/security/fundamentals/infrastructure).
 
-- Protection against various threats to the platform and the technical assurance processes are described in [Azure platform integrity and security](https://learn.microsoft.com/en-us/azure/security/fundamentals/platform).
+- Protection against various threats to the platform and the technical assurance processes are described in [Azure platform integrity and security](/azure/security/fundamentals/platform).
 
-- Data residency is a shared responsibility, with the cloud provider enabling customers to select where data must be stored and processed. This is discussed further in [Data Residency in Azure](https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/). For customers in the EU, the [Microsoft EU Data Boundary](https://www.microsoft.com/en-gb/trust-center/privacy/european-data-boundary-eudb) offers extra data residency commitments.
+- Data residency is a shared responsibility, with the cloud provider enabling customers to select where data must be stored and processed. This is discussed further in [Data Residency in Azure](https://azure.microsoft.com/explore/global-infrastructure/data-residency/). For customers in the EU, the [Microsoft EU Data Boundary](https://www.microsoft.com/trust-center/privacy/european-data-boundary-eudb) offers extra data residency commitments.
 
-- Business continuity is a shared responsibility, with the cloud provider ensuring continuity of critical systems to operate the cloud and providing customers with different continuity option depending on the service. This is discussed further in [Azure reliability documentation](https://learn.microsoft.com/en-us/azure/reliability/).
+- Business continuity is a shared responsibility, with the cloud provider ensuring continuity of critical systems to operate the cloud and providing customers with different continuity option depending on the service. This is discussed further in [Azure reliability documentation](/azure/reliability/).
 
-- While the cloud provider is responsible for securing access to the cloud platform, both from internal and external threats, customers are responsible for the configuration of their systems to secure their data through identity & access management, encryption, and other security measures. This is discussed further in [Define a security strategy](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy).
+- While the cloud provider is responsible for securing access to the cloud platform, both from internal and external threats, customers are responsible for the configuration of their systems to secure their data through identity & access management, encryption, and other security measures. This is discussed further in [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy).
 
 ## Differentiating by data classification
 
