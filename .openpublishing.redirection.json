@@ -753,7 +753,7 @@
       {
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide",
-         "redirect_document_id": true   
+         "redirect_document_id": false   
       },
       {
          "source_path": "docs/ready/considerations/hybrid-consistency.md",

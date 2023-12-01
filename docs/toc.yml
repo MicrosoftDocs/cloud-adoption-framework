@@ -602,7 +602,7 @@ items:
           - name: Migration tools decision guide
             href: migrate/prerequisites/migrate-tools-decision-guide.md
           - name: Understanding multiple datacenters
-            href: migrate/prerequisites/multiple-datacenters.md
+            href: migrate/prerequisites/multiple-datacenters.md            
 
       - name: Assess
       - name: Deploy
