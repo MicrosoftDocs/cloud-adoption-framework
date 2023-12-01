@@ -78,7 +78,7 @@ The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) gu
 
 ## Securing endpoints
 
-The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) guidance has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and BYOD, and monitoring device risk for authentication through endpoint threat detection.
+The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) guidance has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and personal owned devices enrolled in "Bring Your Own Device" or BYOD programs, and monitoring device risk for authentication through endpoint threat detection.
 
 ### Endpoints Considerations
 
