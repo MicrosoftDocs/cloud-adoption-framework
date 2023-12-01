@@ -64,7 +64,7 @@ The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) gu
 ### Identity Considerations
 
 - The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) deploy resources used to extend your existing identity platform in to Azure, and manage it with Azure best practices.
-- Many of the controls needed for Zero Trust are configured inside of your Microsoft Entra ID tenant, and impact access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
+- Many of the controls needed for Zero Trust are configured inside of your Microsoft Entra tenant, and impact access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
 - As a result, you need to plan for configuration beyond just what is in your Azure landing zone.
 
 ### Identity Recommendations
