@@ -117,9 +117,21 @@ This type of shared responsibility model with the platform team auditing practic
 
 Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. Then the platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate "product lines" for different types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
+### Scenario: VM based workloads
+
+Workloads made up of Azure virtual machines are often used as early workloads in Azure landing zones.  These workloads might be deployed in Azure, or migrated from existing data centers.
+
+Instead of deploying VMs for different environments in a single subscription, you would instead:
+
+- Establish subscriptions for each application environment, placing them all in the same archetype management group.
+- Deploy a virtual network for each application environment in the appropriate subscription.  Virtual network size can be based on the size of the application environment.
+- Deploy the virtual machines to their appropriate subscription.  Virtual machines can use different skus and different availability configurations between environment, if appropriate.
+
+The different application environment resources would be protected by different access controls.  As a result, when the application developers set up deployment pipelines, each pipeline's identity can be limited to the environment.  This better protects the environments from accidental deployments.
+
 ### Scenario: Application Services
 
-A good example is a workload that uses [Azure App Service](/azure/app-service/overview). When application developers use Azure App Service, a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [deployment slots](/azure/app-service/deploy-staging-slots) to help them manage changes and updates to the web app.
+A good example is a workload that has challenges with environmental subscriptions that uses [Azure App Service](/azure/app-service/overview). When application developers use Azure App Service, a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [deployment slots](/azure/app-service/deploy-staging-slots) to help them manage changes and updates to the web app.
 
 However, this feature can only be used on the same app on an App Service Plan, which can only live within a single subscription. If the platform operators mandate that the application owners use separate subscriptions for "dev/test/production", the platform operators might make the application  deployment lifecycle harder to manage.
 
