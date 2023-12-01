@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Application development environments in Azure landing zones
 
-Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk and security at scale. Azure landing zone design principles guide customers to adopt policy-driven governance. This governance provides foundational guard rails, while also delegating many controls to application teams. These applications teams design their workload using guidance from the [Azure Well-Architected Framework](/azure/well-architected/), then deploy and manage their own landing zone resources.
+Development teams want limited interference with the ability to iterate quickly, while cloud governance and platform teams need to solve for organizational risk, compliance, and security at scale. Azure landing zone's [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) guide customers to adopt policy-driven governance and Subscription democratization as two key principles. These provide foundational guard rails, while also delegating many controls to application teams. These applications teams design their workload using guidance from the [Azure Well-Architected Framework](/azure/well-architected/), then deploy and manage their own landing zone resources; whilst being controlled by Azure policies assigned by the platform team.
 
 A key part of this approach is to provide sandbox resources for "semi-governed" resources that allow for application teams to explore technologies and capabilities.
 
@@ -37,7 +37,7 @@ Environment | Description | Management Group
 However, any number and classification of environments can be used in practice.
 
 > [!TIP]
-> Check out the following YouTube video where we discuss this topic: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
+> Check out the following YouTube videos where we discuss this topic: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA) & [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 
 ## Environments, Subscriptions, and Management Groups
 
@@ -48,8 +48,9 @@ It is not necessary to create a high degree of Azure management isolation for di
 
 It is recommended that workload owners should work with the cloud platform teams to determine if a division is needed.
 
-If an application or service workload requires segregation between environments beyond what can be done in a single subscription, it is then recommended to use one of the following options:
+If an application or service workload requires segregation between environments beyond what can be done in a single subscription, and you need to make changes to the policies that apply to each environment, it is then recommended to use one of the following options:
 
+- Consider if a new _archetype-aligned_ management group needs to be created beneath the landing zones management group - [see below section](#management-group-hierarchy)
 - Use tags in the policy definitions to help filter and apply them to the correct environment.
 
 > [!IMPORTANT]
@@ -71,7 +72,7 @@ Different application environments, except for sandbox environments, should use 
 
 These sandbox environments can be tied to specific applications, or a workload team can use them for experimentation.
 
-Read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones.
+Read more about designing [management groups](resource-org-management-groups.md) in the [Resource organization design area](resource-org.md) for Azure landing zones and also review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
 
 #### Challenges with having environment based management groups
 
@@ -113,5 +114,6 @@ In this example, a single subscription for the application or service workload m
 Continue to learn about development and testing in Azure Landing Zones, and how management groups play a part.
 
 - Review the [testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
+- Review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 - Review the [Resource organization design area](resource-org.md) to make decisions for management group and subscription creation
 - Review how to use [Sandbox subscriptions](../../considerations/sandbox-environments.md) isolated development
