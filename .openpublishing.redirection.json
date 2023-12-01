@@ -859,6 +859,21 @@
          "source_path": "docs/migrate/migration-considerations/prerequisites/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/decisions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/migration-tools-decision-guide.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites/migrate-tools-decision-guide",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/planning-checklist.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/migrate/prerequisites",
+         "redirect_document_id": true
       }
 
    ]
