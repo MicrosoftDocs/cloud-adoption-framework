@@ -61,13 +61,13 @@ The next sections review each pillar, and give recommendations and consideration
 
 The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) guidance has deployment objectives focused on identity federation, conditional access, identity governance, and the use of real time data as part of the decisions for authentication.
 
-### Identity Considerations
+### Identity considerations
 
 - The [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) deploy resources used to extend your existing identity platform in to Azure, and manage it with Azure best practices.
 - Many of the controls needed for Zero Trust are configured inside of your Microsoft Entra ID tenant, and impact access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
 - As a result, you need to plan for configuration beyond just what is in your Azure landing zone.
 
-### Identity Recommendations
+### Identity recommendations
 
 - Develop a plan for managing identities in Microsoft Entra ID that go beyond just Azure resources:
   - Federation with on-premises identity systems.
@@ -80,7 +80,7 @@ The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) gu
 
 The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) guidance has deployment objectives focused on registering endpoints with cloud identity providers, giving access solely through cloud-managed compliant endpoints and apps.  It also includes enforcing DLP and access control on both corporate devices and personal owned devices enrolled in "Bring Your Own Device" or BYOD programs, and monitoring device risk for authentication through endpoint threat detection.
 
-### Endpoints Considerations
+### Endpoints considerations
 
 - Endpoint deployment objectives include end user compute devices - laptops, desktops, and mobile devices.
 - Endpoint management can apply both to corporate managed devices, and individual owned devices enrolled in a "bring your own device" program.
@@ -88,7 +88,7 @@ The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) gu
 - You need to use tools such as Intune and other device management solutions to complete these deployment objectives.
 - If you have endpoints located in Azure, such as Azure Virtual Desktop, you can enroll the client experience in Intune while using Azure policies and controls to restrict access to the infrastructure.
 
-### Endpoints Recommendations
+### Endpoints recommendations
 
 - Develop a plan for managing endpoints with Zero Trust practices, in addition to your plans to implement an Azure landing zone.
 - For devices and servers that go beyond endpoints, see the Infrastructure Pillar for guidance.
@@ -97,13 +97,13 @@ The [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints) gu
 
 The [Secure applications with Zero Trust](/security/zero-trust/deploy/applications) guidance has deployment objectives focused on using APIs to gain visibility in to applications, using policies to protect sensitive information, using adaptive access controls, and limiting the reach of shadow IT.
 
-### Applications Considerations
+### Applications considerations
 
 - The deployment objectives for Applications focus on the management of both third party and first party applications in your organization.
 - The objectives aren't focused on securing application infrastructure; instead, they're focused on securing the consumption of applications, especially cloud applications.
 - As a result, the Azure landing zone practices don't provide detailed controls for these objectives; these would be configured as part of the application configuration itself.
 
-### Applications Recommendations
+### Applications recommendations
 
 - Use [Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps?rtc=1) to manage access to applications.
 - Use the standardized policies included to enforce your practices.
@@ -116,7 +116,7 @@ The [Secure data with Zero Trust](/security/zero-trust/deploy/data) guidance has
 
 However, a zero trust approach to data involves deeper controls.  From an implementation stand point, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.  Implementing Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment can provide a solution to implement at scale.
 
-### Data Considerations
+### Data considerations
 
 - The landing zone subscription democratization principle creates access and network isolation for data resources, and also establishes logging practices.
   - There are [policies](https://aka.ms/alz/policies) inside of the reference implementations for the logging and management of data resources.
@@ -124,7 +124,7 @@ However, a zero trust approach to data involves deeper controls.  From an implem
   - Zero Trust data security involves classifying data, labeling it for sensitivity, and controlling data access.
   - It also extends beyond database and file systems - you need to consider how to protect data in Teams, Microsoft 365 Groups, and SharePoint sites.
 
-### Data Recommendations
+### Data recommendations
 
 - Use [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.
 - Implement Purview as part of a [Cloud-scale Analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to implement at scale.
@@ -133,7 +133,7 @@ However, a zero trust approach to data involves deeper controls.  From an implem
 
 The [Secure infrastructure with Zero Trust](/security/zero-trust/deploy/infrastructure) guidance has deployment objectives focused on monitoring abnormal behavior in workloads, managing infrastructure identities, limiting human access, and segmenting resources.
 
-### Infrastructure Considerations
+### Infrastructure considerations
 
 - The infrastructure deployment objectives include:
   - Management for the Azure resources.
@@ -143,7 +143,7 @@ The [Secure infrastructure with Zero Trust](/security/zero-trust/deploy/infrastr
 - The landing zone subscription model creates clear security boundaries to Azure resources, allowing you to assign limited permissions as needed at the Azure level.
 - Organizations still need to organize their workloads for management.
 
-### Infrastructure Recommendations
+### Infrastructure recommendations
 
 - Use the standard [Azure landing zone policies](https://aka.ms/alz/policies) to block non-compliant deployments and resources, and to enforce logging patterns.
 - Configure [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) in Microsoft Entra ID to provide just in time access to highly privileged roles
@@ -154,12 +154,12 @@ The [Secure infrastructure with Zero Trust](/security/zero-trust/deploy/infrastr
 
 The [Secure networks with Zero Trust](/security/zero-trust/deploy/networks) guidance has deployment objectives focused on network segmentation, using cloud native filtering, and least access.
 
-### Networks Considerations
+### Networks considerations
 
 - Your your platform resources need to support Zero Trust.  This means deploying firewalls capable of HTTPS traffic inspection, and isolating identity and management network resources from the central hub.
 - In addition to the networking resources in the Connectivity subscription, you need to create plans for individual workloads to be micro-segmented in their spoke virtual networks.  One example of this is defining traffic patterns and creating fine grained network security groups for each workload network.
 
-### Networks Recommendations
+### Networks recommendations
 
 - Use Zero Trust specific deployment guides for deploying your Azure landing zone.  You can find them at the following locations:
   - [Azure landing zone portal accelerator deployment with Zero Trust network principles](https://github.com/Azure/Enterprise-Scale/blob/main/docs/wiki/Deploying-ALZ-ZTNetwork.md)
@@ -172,17 +172,17 @@ The [Secure networks with Zero Trust](/security/zero-trust/deploy/networks) guid
 
 The [Visibility, automation, and orchestration with Zero Trust](/security/zero-trust/deploy/visibility-automation-orchestration) guidance has deployment objectives focused on establishing visibility, enabling automation, and enabling additional controls through continual improvement.
 
-### Visibility, Automation, and Orchestration Considerations
+### Visibility, automation, and orchestration considerations
 
 - Because the [Azure landing zone reference implementations](https://aka.ms/alz/aac#platform) contains deployments of [Microsoft Sentinel](/azure/sentinel/overview), they can help you quickly establish visibility in to your Azure environment.
 - While the reference implementations provide policies for Azure logging, additional integration is needed for other services.
 - Automation tools like Azure DevOps and GitHub should also be configured to send signals.
 
-### Visibility, Automation, and Orchestration Recommendations
+### Visibility, automation, and orchestration recommendations
 
 - Deploy Sentinel as part of your Azure landing zone.
 - Build a plan to integrate signals from Microsoft Entra ID and tools in Microsoft 365 to your Sentinel workspace.
-- Build a plan to conduct threat hunting exercises and continual security iumprovement.
+- Build a plan to conduct threat hunting exercises and continual security improvement.
 
 ## Next Steps
 
