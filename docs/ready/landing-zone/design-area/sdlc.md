@@ -41,24 +41,28 @@ However, any number and classification of environments can be used in practice.
 
 ## Environments, Subscriptions, and Management Groups
 
-It is not necessary to create a high degree of Azure management isolation for different phased environments.  It is possible for a single subscription to contain all of the environments without customization, assuming two things are true:
+Ideally, each application environment should have its own subscription.  This provides security and policy controls to keep the environments isolated, and to prevent an issue in one environment from creating issues in others.
 
+These separate subscriptions would still have the same policies between them from the archetype level.  If needed, subscription specific policies can be used by the application owners to enforce application and environment specific behavior.
+
+Some applications architectures require services to be shared between environments.  If that is the case, you can use a single subscription for multiple environments.  It is recommended that workload owners should work with the cloud platform teams to determine if a single subscription for multiple environments is needed, and not assume.
+
+Using a single subscription for multiple application environments works best when the following things are true:
+
+- There is a clear reason for why the environments cannot be isolated in their own subscriptions.
 - The environments have the same teams assigned to functional roles, such as network operators.
 - The environments can use the same policies.
 
-It is recommended that workload owners should work with the cloud platform teams to determine if a division is needed.
+If an application or service workload needs to be in a single subscription,  and you need to make changes to the policies that apply to each environment, then there are a few options available.
 
-If an application or service workload requires segregation between environments beyond what can be done in a single subscription, and you need to make changes to the policies that apply to each environment, it is then recommended to use one of the following options:
-
-- Consider if a new _archetype-aligned_ management group needs to be created beneath the landing zones management group - [see below section](#management-group-hierarchy)
-- Use tags in the policy definitions to help filter and apply them to the correct environment.
-
-> [!IMPORTANT]
-> Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
-
-- Apply policies at a subscription level as required, ideally during the subscription creation process as part of [Subscription Vending](subscription-vending.md).
-- For policies that are implemented to help control costs, apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](platform-automation-devops.md).)
+- Consider if a new _archetype-aligned_ management group needs to be created beneath the landing zones management group.  You can see [Management Group Hierarchy](#management-group-hierarchy) for more information on this.
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
+- Use policies applied specifically at the subscription level instead of the management group.  These policies can use tags in their policy definitions to help filter and apply them to the correct environment.  They can also be assigned to or excluded from specific resource groups.
+  - You can assign these policies during the subscription creation process as part of [Subscription Vending](subscription-vending.md).
+  - For policies that are implemented to help control costs, apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](platform-automation-devops.md).)
+
+> [!WARNING]
+> Unlike policies and controls at the management group level, subscription based policies and tags can be changed by individuals with elevated permissions to the subscription.  This means that administrators with appropriate roles can act to bypass these controls if used, by excluding policies, modifying them, or changing the tags on resources.  As a result, of policies are security focused, they should not use tags for the definitions.  In addition, permissions to the following actions should not be assigned as always active, and should be controlled through Privileged Identity Management: `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyExemptions/*`, `Microsoft.Authorization/policySetDefinitions/*`
 
 ### Management Group Hierarchy
 
@@ -82,9 +86,17 @@ Building management groups for for environments within the archetypes creates mo
 
 The _Landing Zone_ management group should have universal polices that enforce guardrails for both Corp and Online. Corp and Online have unique polices to enforce company guidelines around public and private facing workloads.
 
-For application owners, there's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for.  If an application is built with one set of guardrail policies, but has a different one later in its promotion cycle, this can create issues.
+Many organizations think that they need to create management groups for different environments, and assign environmental policies and controls.  In practice, this creates more challenges than it solves.  Policies should not differ between environments, and so separate management groups for environments is not needed.
 
-Deployment configuration and requirements should remain consistent throughout promotion of code through environments.  Platform teams should not build consistent policy guardrails, but instead provide a consistent set for all non-Sandbox development environments.
+For application owners, there's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for developers.  If an application is built with one set of guardrail policies, but has a different one later in its promotion cycle, this can create issues.  Applications might have to be reworked due to changing controls.
+
+To prevent this rework, deployment configuration and requirements should remain consistent throughout promotion of code through environments.  Platform teams should not build consistent policy guardrails, but instead provide a consistent set for all non-Sandbox development environments.
+
+For example, it is common that organizations define a requirement that storage accounts need to be configured with specific firewall rules to prevent ingress from public networks, and instead use private endpoints inside of the Azure landing zone networks for communication.  This requirement is then enforced with a policy.
+
+If such a policy doesn't exist for the development environment, then the deployment experience will be different.  Developers might build deployments that assume public access to the storage account is possible.  These deployments will work in the development environment, and so will be iterated on.  When the solution is promoted to another environment, the deployment would fail because of the enforced policy.
+
+As a result, the application development team would need to go back and rework their deployment and architecture, after already having invested significant effort.  This is one example of how having different policies between environments can create issues.
 
 > [!NOTE]
 > The following equation demonstrates why management groups per environment and/or per workload don't scale well: _N workloads x Z management groups  = total management groups_.
@@ -98,6 +110,10 @@ Deployment configuration and requirements should remain consistent throughout pr
 > N (30) x Z (4) = 120 total management groups
 
 Sometimes, individual application owners might need some policies to apply differently to different environments.  For example, application owners might require backup configurations for production, but do not require it for other environments.
+
+Some policies can be enabled as audit policies at the management group level, with individual application teams confirming how to address.  This doesn't prevent deployments, but it does create awareness and allow for application teams to manage their unique needs.  They can then create sub level policies or incorporate these requirements into their infrastructure as code deployment modules.
+
+This type of shared responsibility model with the platform team auditing practices but the application team owning the implementation can help improve the agility of deployments.
 
 Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. Then the platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate "product lines" for different types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
