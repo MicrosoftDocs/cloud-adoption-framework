@@ -16,7 +16,7 @@ These identity management systems play an important role. They help designing an
 
 ## Managed identity
 
-At creation, the Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). In granting this system-assigned identity additional access to Azure resources, it becomes possible to allow an application on your server to use the system-assigned identity to access Azure resources (for example, to request secrets from a Key Vault). You should:
+At creation, the Microsoft Entra ID system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). By granting this identity access to Azure resources, you can enable applications on your server are able to use it to access Azure resources (for example, to request secrets from a Key Vault). You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
 - Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
