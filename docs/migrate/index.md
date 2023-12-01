@@ -1,14 +1,15 @@
 ---
 title: Cloud migration
 description: Prepare for a successful migration to Azure using an iterative process to assess, migrate, optimize, secure, and manage workloads.
-author: martinekuan
-ms.author: martinek
-ms.date: 01/10/2022
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/01/2023
 ms.topic: conceptual
-ms.custom: internal, seo-azure-migrate
 ---
 
 # Cloud migration in the Cloud Adoption Framework
+
+This section of the Cloud Adoption Framework explains the principles behind its migration model. Wherever possible, this content attempts to maintain a vendor-neutral position. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
 
 Any enterprise-scale [cloud adoption plan](../plan/index.md) includes workloads that don't deserve significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift, lift and optimize, or modernize. Each approach is considered a migration.
 
@@ -31,7 +32,6 @@ To prepare you for this phase of the cloud adoption lifecycle, we recommend the 
 | :::image type="icon" source="../_images/icons/1.png"::: | [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration. |
 | :::image type="icon" source="../_images/icons/2.png"::: | [Migration scenarios](./azure-best-practices/index.md): Use other migration tools and approaches to act on other migration scenarios. |
 | :::image type="icon" source="../_images/icons/3.png"::: | [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices. |
-| :::image type="icon" source="../_images/icons/4.png"::: | [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration. |
 
 The Migrate methodology and the steps above build on the following assumptions:
 
@@ -76,6 +76,42 @@ The following bullets provide an overview of the phases of this process (picture
 Migration iterations deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads that deliver measurable business value. Each iteration should result in a report that outlines the technical efforts completed. However, business change and strategic planning typically happen at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. Migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
 
 In the previous section, the graphic describes the processes within the [Plan methodology](../plan/index.md), the [Ready methodology](../ready/index.md), and to some extent the [Strategy methodology](../strategy/index.md) of the Cloud Adoption Framework. These methodologies provide guidance on planning and managing the migration waves. The management of those waves defines the migration effort to be delivered by the technical teams.
+
+## Understand migration motivations
+
+Cloud migration is a portfolio management effort, cleverly disguised as a technical implementation. During the migration process, you'll decide to move some assets, invest in others, and retire obsolete or unused assets. Some assets will be optimized, refactored, or replaced entirely as part of this process. Each of these decisions should align with the motivations behind your cloud migration. The most successful migrations also go a step further and align these decisions with the business outcomes you want.
+
+This model requires your organization to have already completed business readiness processes for cloud adoption. Make sure you've reviewed the [Plan methodology](../plan/index.md) and the [Ready methodology](../ready/index.md) of the Cloud Adoption Framework. These methodologies determine the business drivers or other justification for a cloud migration. They also supply required organizational planning or training needed before executing a migration process at scale.
+
+> [!NOTE]
+> While business planning is important, a growth mindset is equally important. In parallel with broader business planning efforts by the cloud strategy team, it's suggested that the cloud adoption team begin migrating a first workload as a precursor to wider scale migration efforts. This initial migration will allow the team to gain practical experience with the business and technical issues involved in a migration.
+
+## Envision an end state
+
+It's important to establish a rough vision of your end state before starting your migration efforts. The following diagram shows an on-premises starting point of infrastructure, applications, and data. These elements define your *digital estate*. During the migration process, those assets are transitioned using a migration strategy described in the [five Rs of rationalization]( ../digital-estate/5-rs-of-rationalization.md).
+
+:::image type="content" source="../_images/migrate/migration-options.png" alt-text="Diagram that shows cloud migration options.":::
+
+Migration and modernization of workloads range from *rehost* migrations, to *refactoring*, to *rearchitecting*. Rehost migrations, or *lift and shift* migrations, use infrastructure as a service (IaaS) capabilities that don't require code and application changes. Refactoring migrations only require minimal changes. Rearchitecting migrations modify and extend code and application functionality to take advantage of cloud technologies.
+
+Cloud-native strategies and platform as a service (PaaS) strategies *rebuild* on-premises workloads using Azure platform offerings and managed services. Your workloads might have equivalent fully managed software as a service (SaaS) cloud-based offerings. These workloads can often be fully *replaced* by these services as part of the migration process.
+
+> [!NOTE]
+> During the public preview of the Cloud Adoption Framework, this section of the framework emphasizes a rehost migration strategy. Although PaaS and SaaS solutions are discussed as alternatives when appropriate, the migration of virtual machine-based workloads using IaaS capabilities is the primary focus.
+>
+> Other sections and future iterations of this content will expand on other approaches. For a high-level discussion on expanding the scope of your migration to include more complicated migration strategies, see the article balancing the portfolio.
+
+## Incremental migration
+
+The Cloud Adoption Framework migration model is based on an incremental cloud transformation process. It assumes that your organization will start with an initial, limited-scope, cloud migration effort. We commonly refer to this migration effort as the first workload. This effort will expand iteratively to include more workloads as your operations teams refine and improve your migration processes.
+
+Cloud migrations tools like [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can migrate entire datacenters consisting of thousands of virtual machines (VMs). However, the business and existing IT operations often can't handle such a high pace of change. Many organizations break up a migration effort into multiple iterations. They move one workload, or one collection of workloads, per iteration.
+
+The principles behind this incremental model are based on the execution of certain processes and prerequisites. These processes are referenced in the following infographic.
+
+![An infographic that shows the Cloud Adoption Framework migration model.](../_images/migrate/methodology.png)
+
+The consistent application of these principles represents an end goal for your cloud migration processes. They shouldn't be viewed as a required starting point. As your migration efforts mature, refer to the guidance in this section to help define the best process to support your organizational needs.
 
 ## Next steps
 
