@@ -37,7 +37,7 @@ This implementation option does not take an inherent position on enterprise enro
 
 ### Identity and access management
 
-This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option assumes that the target subscription is already associated with a Microsoft Entra instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Network topology and connectivity
 

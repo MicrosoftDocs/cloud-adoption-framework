@@ -12,7 +12,6 @@ ms.custom:
   - think-tank
   - e2e-oracle
   - engagement-fy24
-
 --- 
 
 # Manage identity and access for Oracle on Azure Virtual Machines landing zone
@@ -24,4 +23,3 @@ However, it's important to understand decisions previously made by the cloud pla
 ## Next steps
 
 - [Organize resources for Oracle on Azure Virtual Machines landing zone accelerator](manage-resources-oracle-landing-zone.md).  
-

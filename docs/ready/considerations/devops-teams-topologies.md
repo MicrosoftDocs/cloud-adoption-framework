@@ -75,7 +75,7 @@ The following list provides a recommended set of functions for the platform team
 - Platform management and monitoring (holistic)
 - Cost management (holistic)
 - Platform-as-code (management of templates, scripts, and other assets)
-- Overall operations on Microsoft Azure within your Azure Active Directory tenant (management of service principals, Microsoft Graph API registration, and role definitions)
+- Overall operations on Microsoft Azure within your Microsoft Entra tenant (management of service principals, Microsoft Graph API registration, and role definitions)
 - Azure RBAC (holistic)
 - Key management for central services (simple mail-transfer protocol and domain controllers)
 - Policy management and enforcement (holistic)
@@ -120,4 +120,3 @@ The goals of interactions between your teams are to:
 | **Collaboration** | Teams work closely together. |
 | **X-as-a-Service** | Teams consume or provide something to other teams with minimum collaboration, similar to third-party vendor interactions. |
 | **Facilitating** | Teams help or are helped by another team to remove impediments. |
-

@@ -2,7 +2,7 @@
 title: Operationalize data mesh for AI/ML domain driven feature engineering
 description: Learn how data mesh decentralizes AI/ML model building to help organizations move from a centralized data lake or data warehouse to domain driven, decentralized, distributed data analytics.
 author: hifaz1012
-ms.author: hifazhassan 
+ms.author: hifazhassan
 ms.date: 02/2/2023
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank

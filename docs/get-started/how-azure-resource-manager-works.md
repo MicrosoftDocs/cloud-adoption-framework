@@ -54,15 +54,15 @@ Azure Resource Manager requires the client to specify an identifier for both the
 
 Once you understand how Azure Resource Manager works, you can learn how to associate an Azure subscription with the Azure Resource Manager controls. Before Azure Resource Manager can execute any resource management request, review the following a set of controls.
 
-The first control is that a validated user must make a request. Also, Azure Resource Manager must have a trusted relationship with [Azure Active Directory (Azure AD)](/azure/active-directory/) to provide user identity functionality.
+The first control is that a validated user must make a request. Also, Azure Resource Manager must have a trusted relationship with [Microsoft Entra ID](/azure/active-directory/) to provide user identity functionality.
 
-![Diagram of Azure Active Directory.](../_images/get-started/design/governance-1-16.png)
+![Diagram of Microsoft Entra ID.](../_images/get-started/design/governance-1-16.png)
 
-In Azure AD, you can segment users into tenants. A *tenant* is a logical construct that represents a secure, dedicated instance of Azure AD that someone typically associates with an organization. You can also associate each subscription with an Azure AD tenant.
+In Microsoft Entra ID, you can segment users into tenants. A *tenant* is a logical construct that represents a secure, dedicated instance of Microsoft Entra ID that someone typically associates with an organization. You can also associate each subscription with a Microsoft Entra tenant.
 
-![An Azure AD tenant associated with a subscription](../_images/get-started/design/governance-1-17.png)
+![A Microsoft Entra tenant associated with a subscription](../_images/get-started/design/governance-1-17.png)
 
-Each client request to manage a resource in a particular subscription requires that the user has an account in the associated Azure AD tenant.
+Each client request to manage a resource in a particular subscription requires that the user has an account in the associated Microsoft Entra tenant.
 
 The next control is a check that the user has sufficient permission to make the request. Permissions are assigned to users using [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/).
 

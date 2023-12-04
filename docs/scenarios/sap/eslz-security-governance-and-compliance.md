@@ -1,7 +1,7 @@
 ---
 title: Governance disciplines for SAP on Azure
 description: Learn more about the shared responsibility model, and learn about security, compliance, and governance design recommendations and considerations for SAP on Azure.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.date: 03/01/2021
 ms.topic: conceptual
@@ -68,7 +68,7 @@ Single sign-on (SSO) is the foundation for integrating SAP and Microsoft product
 
 You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-Azure Active Directory (Azure AD) with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
+Microsoft Entra ID with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform.
 
 ### Harden operating systems
 

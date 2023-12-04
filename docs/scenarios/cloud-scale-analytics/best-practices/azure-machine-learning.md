@@ -64,7 +64,7 @@ For each default resource configuration in an data landing zone, an Azure Machin
 - Azure Key Vault
 - Application Insights
 - Azure Container Registry
-- Use Azure Machine Learning to connect to an Azure Storage account and Azure Active Directory (Azure AD) identity-based authentication to help users connect to the account.
+- Use Azure Machine Learning to connect to an Azure Storage account and Microsoft Entra identity-based authentication to help users connect to the account.
 - Diagnostic logging is set up for each workspace and configured to a central Log Analytics resource in enterprise-scale; this can help Azure Machine Learning job health and resource statuses to be analyzed centrally within and across landing zones.
 - See [What is an Azure Machine Learning workspace?](/azure/machine-learning/concept-workspace) to learn more about Azure Machine Learning resources and dependencies.
 
@@ -92,7 +92,7 @@ Consider the following recommendations for managing user identities and access w
 
 - Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md?branch=scenario-data-management), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
 
-- Use Azure AD groups to manage user permissions for storage and machine learning resources.
+- Use Microsoft Entra groups to manage user permissions for storage and machine learning resources.
 
 - Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Azure Storage, and Application Insights.
 
@@ -122,7 +122,7 @@ Self-service can be enabled and governed with [policies for Azure Machine Learni
 
 Cloud-scale analytics data landing zones outline reference implementation for repeatable deployments, which can help you to set up manageable and governable environments. Consider the following recommendations for using Azure Machine Learning to manage your environment:
 
-- Use Azure AD groups to manage access to machine learning resources.
+- Use Microsoft Entra groups to manage access to machine learning resources.
 
 - Publish a central monitoring dashboard to monitor pipeline health, compute utilization, and quota management for machine learning.
 

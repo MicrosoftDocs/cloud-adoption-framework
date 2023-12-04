@@ -16,17 +16,17 @@ Consider the following critical security areas whether you deploy environments t
 
 ## Restrict access to DevOps tooling
 
-Follow the principle of least privilege by using role-based access control (RBAC) through [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
+Follow the principle of least privilege by using role-based access control (RBAC) through [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
 
-- [Connect your organization to Azure AD](/azure/devops/organizations/accounts/connect-organization-to-azure-ad)
-- [Azure AD Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
+- [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad)
+- [Microsoft Entra Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/azure/active-directory/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
 - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
 
-After you establish Azure AD as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Azure AD group memberships](../../secure/best-practices/end-to-end-governance.md#single-identity-management-plane-with-azure-ad-groups). You can [assign Azure DevOps roles to Azure AD groups](../../secure/best-practices/end-to-end-governance.md#mirror-rbac-model-with-role-assignments), and adjust a user's Azure AD membership to change or remove their Azure DevOps access.
+After you establish Microsoft Entra ID as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Microsoft Entra group memberships](../../secure/best-practices/end-to-end-governance.md#single-identity-management-plane-with-azure-ad-groups). You can [assign Azure DevOps roles to Microsoft Entra groups](../../secure/best-practices/end-to-end-governance.md#mirror-rbac-model-with-role-assignments), and adjust a user's Microsoft Entra membership to change or remove their Azure DevOps access.
 
-- Use Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) to create access packages that allow Azure AD users time-bound access to required resources to complete their tasks.
+- Use Microsoft Entra ID [entitlement management](/azure/active-directory/governance/entitlement-management-overview) to create access packages that allow Microsoft Entra users time-bound access to required resources to complete their tasks.
 
-- You can also use Azure AD [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps Administrator roles for a period of time.
+- You can also use Microsoft Entra [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure#what-can-i-do-with-it) for just-in-time access to promote individuals to Azure DevOps Administrator roles for a period of time.
 
 Manage security in Azure DevOps by using security groups, policies, and settings at the Azure DevOps organization, project, or object level. Consider disabling permission inheritance in Azure DevOps if possible.
 

@@ -16,7 +16,7 @@ Considering how to use management groups as part of the environment design is an
 
 ## Management group design considerations
 
-Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans its Azure adoption at scale.
+Management group structures within a Microsoft Entra tenant support organizational mapping. Consider your management group structure thoroughly as your organization plans its Azure adoption at scale.
 
 - How will your organization separate out services owned or operated by specific teams?
 
@@ -26,7 +26,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - A management group tree can support up to [six levels of depth](/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
-- Any principal, whether a user or service principal, within an Azure AD tenant can create new management groups. This permission is because Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default. For more information, see [How to protect your resource hierarchy](/azure/governance/management-groups/how-to/protect-resource-hierarchy)
+- Any principal, whether a user or service principal, within a Microsoft Entra tenant can create new management groups. This permission is because Azure role-based access control (RBAC) authorization for management group operations isn't enabled by default. For more information, see [How to protect your resource hierarchy](/azure/governance/management-groups/how-to/protect-resource-hierarchy)
 
 - All new subscriptions will be placed under the tenant root management group by default.
 
@@ -76,7 +76,7 @@ The following decisions have been made and included in the implementation for th
 |**Platform**| This management group contains all the platform child management groups, like management, connectivity, and identity. |
 |**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription will host an Azure Log Analytics workspace, including associated solutions, and an Azure Automation account. |
 |**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription will host the Azure networking resources required for the platform, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones. |
-|**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Windows Server Active Directory Domain Services (AD DS) virtual machines (VMs) or Azure Active Directory Domain Services. The subscription also enables AuthN or AuthZ for workloads within the landing zones. Specific Azure policies are assigned to harden and manage the resources in the identity subscription. |
+|**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Windows Server Active Directory Domain Services (AD DS) virtual machines (VMs) or Microsoft Entra Domain Services. The subscription also enables AuthN or AuthZ for workloads within the landing zones. Specific Azure policies are assigned to harden and manage the resources in the identity subscription. |
 |**Landing Zones**| The parent management group for all the landing zone child management groups. It will have workload agnostic Azure policies assigned to ensure workloads are secure and compliant. |
 |**Online**| The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. |
 |**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |

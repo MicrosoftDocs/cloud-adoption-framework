@@ -10,14 +10,14 @@ ms.topic: conceptual
 
 # Manage multi-tenant operations for defense organizations
 
-This article defines how multi-tenant defense organizations should manage operations across Azure Active Directory (Azure AD) tenants to meet zero trust requirements. It covers application management, identity governance, and security operations. The primary and secondary Azure AD tenant administrators have distinct responsibilities in each area. Primary and secondary tenant(s) must coordinate application onboarding, entitlement management, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
+This article defines how multi-tenant defense organizations should manage operations across Microsoft Entra tenants to meet zero trust requirements. It covers application management, identity governance, and security operations. The primary and secondary Microsoft Entra tenant administrators have distinct responsibilities in each area. Primary and secondary tenant(s) must coordinate application onboarding, entitlement management, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
 
 :::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant for application management, identity governance, and security operations." lightbox="./images/management-operations.png" border="false":::
 *Figure 1. Shared responsibilities by tenant for multi-tenant defense organizations*
 
 ## Application management
 
-The primary Azure AD tenant and the secondary Azure AD tenant(s) share application management responsibilities. The primary tenant is responsible for completing Azure AD tasks like enterprise app management and app registration. The secondary tenant is responsible for Azure platform operations like performance monitoring, resource configuration, scaling, and managing DevSecOps pipelines.
+The primary Microsoft Entra tenant and the secondary Microsoft Entra tenant(s) share application management responsibilities. The primary tenant is responsible for completing Microsoft Entra tasks like enterprise app management and app registration. The secondary tenant is responsible for Azure platform operations like performance monitoring, resource configuration, scaling, and managing DevSecOps pipelines.
 
 ### Primary tenant application management
 
@@ -27,10 +27,10 @@ You should register Azure applications running in secondary tenant subscriptions
 
 The location of the application infrastructure (virtual machines, databases, web apps) has not effect on the tenant you can use for user sign-in. The team managing the primary tenant is responsible for app registrations and enterprise applications. They're also responsible for conditional access policies applied to applications hosted in the primary tenant and any secondary tenants.
 
-**App registrations.** You register web applications and APIs the organization use with the primary tenant. The app registration creates an [application object](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#application-object) in Azure AD. The application object represents the application definition. The application definition includes an application manifest, token claims configuration, app role definitions, and client secrets. Activities involved in primary tenant app registrations include:
+**App registrations.** You register web applications and APIs the organization use with the primary tenant. The app registration creates an [application object](/azure/active-directory/develop/app-objects-and-service-principals?tabs=browser#application-object) in Microsoft Entra ID. The application object represents the application definition. The application definition includes an application manifest, token claims configuration, app role definitions, and client secrets. Activities involved in primary tenant app registrations include:
 
-- [Delegating app registration permissions](/azure/active-directory/roles/delegate-app-roles) in Azure AD
-- Managing the assignment of the [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer) Azure AD role
+- [Delegating app registration permissions](/azure/active-directory/roles/delegate-app-roles) in Microsoft Entra ID
+- Managing the assignment of the [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer) Microsoft Entra role
 - Creating and assigning [custom roles](/azure/active-directory/roles/custom-create) for app registration
 - [Creating App Registrations](/azure/active-directory/develop/quickstart-register-app) for applications and APIs
 - [Exposing web APIs](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis) and adding scopes to a registered app
@@ -39,15 +39,15 @@ The location of the application infrastructure (virtual machines, databases, web
 
 **Enterprise applications.** Enterprise applications are the [service principals](/azure/active-directory/develop/app-objects-and-service-principals) for a distinct instance of an application in your directory. When you create an app registration in the Azure portal, the enterprise application creates automatically and inherits certain properties from the application object. Activities involved managing enterprise applications in the primary tenant include:
 
-- Creating enterprise applications from the [Azure AD Gallery](/azure/active-directory/manage-apps/overview-application-gallery) and deploying non-gallery SAML apps
+- Creating enterprise applications from the [Microsoft Entra Gallery](/azure/active-directory/manage-apps/overview-application-gallery) and deploying non-gallery SAML apps
 - Delegate enterprise application management by [assigning owners](/azure/active-directory/manage-apps/assign-app-owners)
 - Managing the name, logo, [visibility in My Apps](/azure/active-directory/manage-apps/myapps-overview) for an enterprise application
 - [Assigning users and groups](/azure/active-directory/manage-apps/what-is-access-management#assigning-users-and-groups-to-an-app) for accessing the enterprise application
 - [Managing signing certificates](/azure/active-directory/manage-apps/certificate-signing-options#change-certificate-signing-options-and-signing-algorithm) for SAML apps
 - Granting [consent](/azure/active-directory/manage-apps/user-admin-consent-overview) for API permissions
-- Deploying and managing [Azure AD application proxy](/azure/active-directory/app-proxy/what-is-application-proxy) for on-premises applications
+- Deploying and managing [Microsoft Entra application proxy](/azure/active-directory/app-proxy/what-is-application-proxy) for on-premises applications
 
-**Conditional access policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Azure AD. When you register applications in the primary tenant, the primary tenant administrator [controls which policies apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
+**Conditional access policies.** Conditional Access policies enforce zero trust policies for accessing resources protected by Microsoft Entra ID. When you register applications in the primary tenant, the primary tenant administrator [controls which policies apply](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) during user sign-in.
 
 ### Secondary tenant application management
 
@@ -61,24 +61,24 @@ Application owners should use [Defender for Cloud](/azure/defender-for-cloud/con
 
 [Connecting Defender for Cloud telemetry to Microsoft Sentinel](/azure/sentinel/connect-defender-for-cloud) allows your security operations center (SOC) to better protect cloud applications. The SOC can still maintain their standard security workflow and automation procedures. Connecting Defender to Sentinel provides visibility to correlate events across the enterprise. It can monitor the cloud and [on-premises](/azure/architecture/hybrid/hybrid-security-monitoring). To monitor on-premises components, you need to manage them with (1) [Azure Arc](/azure/azure-arc/overview) or (2) connect them via an API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder).
 
-**DevSecOps pipelines.** When you host applications in Azure, a [DevSecOps](/devops/devsecops/enable-devsecops-azure-github) pipeline deploys infrastructure resources and application code to Azure. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Entra Workload Identities](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps to secure service principals. Entra Workload Identities also reviews existing access and provides extra protections based on service principal risk.
+**DevSecOps pipelines.** When you host applications in Azure, a [DevSecOps](/devops/devsecops/enable-devsecops-azure-github) pipeline deploys infrastructure resources and application code to Azure. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Microsoft Entra Workload ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps to secure service principals. Microsoft Entra Workload ID also reviews existing access and provides extra protections based on service principal risk.
 
 ## Identity governance
 
-Multi-tenant defense organizations need to govern access to applications in the primary Azure AD tenant and manage external guest identities in the secondary tenant for the Azure environment.
+Multi-tenant defense organizations need to govern access to applications in the primary Microsoft Entra tenant and manage external guest identities in the secondary tenant for the Azure environment.
 
 ### Primary tenant identity governance
 
 When you register applications in the primary tenant, the primary tenant governs application access. The team managing the primary tenant configures entitlement management and conduct access reviews to audit existing access. They also manage external identities and privileged identity management in the primary tenant.
 
-**Entitlement management.** Azure AD [entitlement management](/azure/active-directory/governance/entitlement-management-overview) helps govern access to Azure AD applications, groups, SharePoint Sites, and Teams by bundling entitlement into assignable access packages. The primary tenant administrators manage the Azure AD objects used for application governance. Activities involved in entitlement management in the primary tenant include (*see figure 2*):
+**Entitlement management.** Microsoft Entra ID [entitlement management](/azure/active-directory/governance/entitlement-management-overview) helps govern access to Microsoft Entra applications, groups, SharePoint Sites, and Teams by bundling entitlement into assignable access packages. The primary tenant administrators manage the Microsoft Entra objects used for application governance. Activities involved in entitlement management in the primary tenant include (*see figure 2*):
 
-- Creating [Azure AD security groups](/azure/active-directory/fundamentals/how-to-manage-groups) for assigning application roles
+- Creating [Microsoft Entra security groups](/azure/active-directory/fundamentals/how-to-manage-groups) for assigning application roles
 - [Delegating group ownership](/azure/active-directory/enterprise-users/groups-self-service-management) for application assignment
 - Configuring entitlement management [catalogs](/azure/active-directory/governance/entitlement-management-catalog-create) and [access packages](/azure/active-directory/governance/entitlement-management-access-package-create)
 - [Delegating roles in entitlement management](/azure/active-directory/governance/entitlement-management-delegate)
 - [Automating Identity Governance tasks](/azure/active-directory/governance/identity-governance-automation)
-- Creating [access reviews](/azure/active-directory/governance/entitlement-management-access-reviews-create) for access packages and Azure AD security groups
+- Creating [access reviews](/azure/active-directory/governance/entitlement-management-access-reviews-create) for access packages and Microsoft Entra security groups
 
 :::image type="content" source="./images/access-to-primary-tenant.png" alt-text="Diagram showing the process to set up entitlement management for application access." lightbox="./images/access-to-primary-tenant.png" border="false":::
 *Figure 2. Entitlement management for application assignment, using contoso.com as an example domain name.*
@@ -92,13 +92,13 @@ You should set up application governance using an entitlement management access 
 1. The package assigns the user access to the application in the secondary tenant for the requested duration.
 1. The user signs in with their primary tenant identity to access the application hosted in a subscription linked to a secondary tenant.
 
-**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. The primary tenant administrators have several configuration responsibilities for applications registered in the primary tenant. They must configure external (B2B) collaboration and cross-tenant access policies with their partner organizations. They must also configure any lifecycle workflows for the guest users and their access. Activities involved in managing external identities in the primary tenant include:
+**External identities.** [Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview) enables secure interaction with users outside of your organization. The primary tenant administrators have several configuration responsibilities for applications registered in the primary tenant. They must configure external (B2B) collaboration and cross-tenant access policies with their partner organizations. They must also configure any lifecycle workflows for the guest users and their access. Activities involved in managing external identities in the primary tenant include:
 
 - [Governing access for users outside your organization](/azure/active-directory/governance/entitlement-management-scenarios#govern-access-for-users-outside-your-organization)
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for partner organizations
-- Configuring Entra Identity Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
+- Configuring Microsoft Entra ID Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
 
-**Privileged Identity Management.** [Azure AD Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration of [Azure AD roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [Azure AD security groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Primary tenant administrators are responsible for configuring and managing Azure AD PIM in the primary tenant.
+**Privileged Identity Management.** [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration of [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [Microsoft Entra security groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Primary tenant administrators are responsible for configuring and managing Microsoft Entra PIM in the primary tenant.
 
 ### Secondary tenant identity governance
 
@@ -122,12 +122,12 @@ You should set up external (B2B) guest access using an entitlement management ac
 
 For more information, see [Govern access for external users in entitlement management](/azure/active-directory/governance/entitlement-management-external-users).
 
-**External identities.** [Azure AD external identities](/azure/active-directory/external-identities/external-identities-overview) enables users in the primary tenant to interact with resources in the secondary tenant. The process outlined in *figure 3* uses external identities from the primary tenant to manage Azure subscriptions attached to the secondary tenant. Activities involved in managing external identities in the secondary tenant include:
+**External identities.** [Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview) enables users in the primary tenant to interact with resources in the secondary tenant. The process outlined in *figure 3* uses external identities from the primary tenant to manage Azure subscriptions attached to the secondary tenant. Activities involved in managing external identities in the secondary tenant include:
 
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for the primary tenant and other partner organizations
 - Using Identity Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
 
-**Privileged Identity Management.** [Azure AD PIM](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration for [Azure AD roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [privileged security groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner). Secondary tenant administrators are responsible for configuring and managing Azure AD PIM for administrative roles used to manage the secondary Azure AD tenant and Azure environment.
+**Privileged Identity Management.** [Microsoft Entra PIM](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration for [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [privileged security groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner). Secondary tenant administrators are responsible for configuring and managing Microsoft Entra PIM for administrative roles used to manage the secondary Microsoft Entra tenant and Azure environment.
 
 ## Security operations
 
@@ -137,7 +137,7 @@ The security operations team for a defense organization must protect, detect, an
 
 Security operators in the primary tenant need to monitor and manage alerts from Microsoft 365 in the primary tenant. This work involves managing Microsoft Sentinel and Microsoft 365 Defender services like Microsoft Defender for Endpoint (MDE).
 
-**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connectors allow the Sentinel instance to ingest security logs from various sources. These sources include Office 365, Microsoft 365 Defender, Azure AD, Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
+**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connectors allow the Sentinel instance to ingest security logs from various sources. These sources include Office 365, Microsoft 365 Defender, Microsoft Entra ID, Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
 
 - Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Microsoft 365 and other available primary tenant data sources to Microsoft Sentinel
@@ -171,7 +171,7 @@ This section describes how you should monitor and protect Azure resources in sub
 
 *Assign permissions.* When you enable a Defender for Server plan in a secondary tenant, the [MDE extension](/azure/defender-for-cloud/integration-defender-for-endpoint) automatically deploys to your VMs. This MDE extension onboards the server to the MDE service for the secondary tenant.
 
-MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal) and [permissions model](/microsoft-365/admin/add-users/about-admin-roles). So you must use external identities (B2B guests) to give security operators in the primary tenant access to MDE. Assign MDE roles to Azure AD security groups and add the guests as group members so they can [take response actions](/microsoft-365/security/defender-endpoint/respond-machine-alerts) on servers.
+MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal) and [permissions model](/microsoft-365/admin/add-users/about-admin-roles). So you must use external identities (B2B guests) to give security operators in the primary tenant access to MDE. Assign MDE roles to Microsoft Entra security groups and add the guests as group members so they can [take response actions](/microsoft-365/security/defender-endpoint/respond-machine-alerts) on servers.
 
 *Configure MDE.* You need to configure and manage [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant.
 

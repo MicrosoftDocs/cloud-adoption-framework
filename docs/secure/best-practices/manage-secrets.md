@@ -135,17 +135,17 @@ For more information, see:
 
 The other types of keys are used for various Azure services for connectivity or tokens. Examples are Azure Storage and Azure Service Bus access keys.
 
-There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements validates the best choice or practice. For example, Azure Storage has support for shared access policies, shared access signatures, Azure AD, and so on.
+There are limitations or exceptions for the keys of various Azure services. Understanding and aligning with your business requirements validates the best choice or practice. For example, Azure Storage has support for shared access policies, shared access signatures, Microsoft Entra ID, and so on.
 
 Azure Storage has many options for authorizing access to data. They're described in [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access?toc=/azure/storage/blobs/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Understand the options and evaluate them based on your business requirements,
 
 Many Azure services support managed identities for authentication.  For more information, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).
 
 > [!IMPORTANT]
-> Use Azure AD managed identities when you can. If you can't, because
+> Use Microsoft Entra managed identities when you can. If you can't, because
 it's not suitable for your use cases or not supported by an Azure service that you use,  follow a least privilege security model—use stored access policies or shared-access signatures (SAS) with explicit access and time-bound values.
 
-If an Azure service doesn't support the use of a stored access signature, maybe it has the following policy features instead: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, and [Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies and also use Azure Active Directory.
+If an Azure service doesn't support the use of a stored access signature, maybe it has the following policy features instead: manage, send, listen. For example, Azure Service Bus, Azure Event Hubs, and [Azure IoT Hub](/azure/iot-hub/iot-hub-devguide-security) have these types of security access policies and also use Microsoft Entra ID.
 
 > [!IMPORTANT]
 > Following a least privilege security model when defining and configuring a policy means that access to information and resources is given only to programs and users that have a legitimate purpose for accessing it.

@@ -52,7 +52,7 @@ An example of this scenario is an organization that wants to test the impact and
 
 Using the canary environment to test this platform change will allow the organization to implement and review the impact and result of the Azure Policy change. This process will ensure it satisfies the organization's requirements before they implement the Azure Policy to their production environment.
 
-A similar scenario might be a change to the Azure RBAC role assignments and Azure AD group memberships. It might require a form of testing before the changes are made in the production environment.
+A similar scenario might be a change to the Azure RBAC role assignments and Microsoft Entra group memberships. It might require a form of testing before the changes are made in the production environment.
 
 > [!IMPORTANT]
  > This is not a common deployment approach or pattern for most customers. It isn't mandatory for Azure landing zones deployments.
@@ -61,7 +61,7 @@ A similar scenario might be a change to the Azure RBAC role assignments and Azur
 
 *Figure 1: Canary management group hierarchy.*
 
-As the diagram shows, the entire Azure landing zones production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Azure AD tenant.
+As the diagram shows, the entire Azure landing zones production environment management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Microsoft Entra tenant.
 
 > [!NOTE]
  > The canary environment management group display names can be the same as the production environment management group display names. This might cause confusion for users. Because of this, we recommend to append the name "canary" to the display names, as well as to their IDs.
@@ -94,18 +94,20 @@ A benefit of this approach is that the sandbox subscriptions can be used for the
 
 However, this approach doesn't allow you to test with the inheritance of RBAC and Azure policies from the management group hierarchy.
 
-## Using a single Azure AD tenant
+<a name='using-a-single-azure-ad-tenant'></a>
 
-Considerations to take into account when you use a single Azure AD tenant are:
+## Using a single Microsoft Entra tenant
 
-- Follows [Enterprise-scale design recommendations](../landing-zone/design-area/azure-billing-ad-tenant.md) for Azure AD Tenants.
-- As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Azure AD tenants are best practice for most.
-  - In a single Azure AD tenant, you can use the different Azure AD groups for both production environments and canary Azure landing zones environments, with the same users, assigned to their relevant management group hierarchy within the same Azure AD tenant.
-- Increased or duplicated Azure AD licensing costs because of multiple identities across different Azure AD tenants.
-  - This point is especially relevant to customers who use Azure AD Premium features.
-- RBAC changes will be more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Azure AD tenants.
-  - Furthermore, the users and groups IDs won't be the same across Azure AD tenants because of them being globally unique.
-- Reduces complexity and management overhead caused by managing multiple Azure AD Tenants.
+Considerations to take into account when you use a single Microsoft Entra tenant are:
+
+- Follows [Enterprise-scale design recommendations](../landing-zone/design-area/azure-billing-ad-tenant.md) for Microsoft Entra tenants.
+- As per the [Cloud Adoption Framework Azure best practices, standardize on a single directory and identity](../../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity) guidance, single Microsoft Entra tenants are best practice for most.
+  - In a single Microsoft Entra tenant, you can use the different Microsoft Entra groups for both production environments and canary Azure landing zones environments, with the same users, assigned to their relevant management group hierarchy within the same Microsoft Entra tenant.
+- Increased or duplicated Microsoft Entra ID licensing costs because of multiple identities across different Microsoft Entra tenants.
+  - This point is especially relevant to customers who use Microsoft Entra ID P1 or P2 features.
+- RBAC changes will be more complex in both canary environments and production environments, as it's likely that the users and groups aren't identical across both Microsoft Entra tenants.
+  - Furthermore, the users and groups IDs won't be the same across Microsoft Entra tenants because of them being globally unique.
+- Reduces complexity and management overhead caused by managing multiple Microsoft Entra tenants.
   - Privileged users that must maintain access and sign in to separate tenants to perform testing might make changes to the production environment accidentally, instead of making changes to the canary environment and vice versa.
 - Reduces the likelihood of configuration drift and deployment failures.
 - Doesn't require extra security and break-glass or emergency access processes to be created.
@@ -120,10 +122,10 @@ Below is guidance on how to implement and use the canary management group hierar
  >
  > Consider moving to an Infrastructure-as-Code deployment approach for Azure landing zones, as listed above, if you are in this scenario. Or be aware of the potential risks of configuration drift between canary and production and proceed with care.
 
-1. Use separate Azure AD Service Principals (SPNs) or Managed Service Identities (MSIs) that are granted permissions over the relevant production environment or canary environment management group hierarchy.
+1. Use separate Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) that are granted permissions over the relevant production environment or canary environment management group hierarchy.
    - This guidance follows the principle of least privilege (PoLP)
 2. Use separate folders within a git repository, branches, or repositories to hold the Infrastructure-as-Code for the production environment and canary environment Azure landing zones deployments.
-   - Using the relevant Azure AD Service Principals (SPNs) or Managed Service Identities (MSIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed.
+   - Using the relevant Microsoft Entra service principals (SPNs) or Managed Service Identities (MSIs) as part of the CI/CD pipelines depending on which hierarchy is being deployed.
 3. Implement git branch policies or security for the canary environment as you have in place for the production environment.
    - Consider reducing the number of approvers and checks for the canary environment to fail-fast.
 4. Use the same Azure Pipelines or GitHub actions that use environment variables to change which hierarchy is being deployed. Another option is to clone the pipelines and amend the hard-coded settings to define which hierarchy is being deployed.

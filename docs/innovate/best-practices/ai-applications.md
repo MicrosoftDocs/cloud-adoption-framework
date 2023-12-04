@@ -33,7 +33,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 | [Custom Vision](/azure/cognitive-services/custom-vision-service/overview) | Custom Vision allows you to build custom image classifiers. |
 | [Face](/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
 | [Form Recognizer](/azure/applied-ai-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
-| [Video Indexer](/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
+| [Video Indexer](/azure/azure-video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
 
 ### Speech recognition APIs
 
@@ -67,7 +67,7 @@ Cognitive Services supports a wide range of cultural languages at the service le
 
 ### Secure resources
 
-Cognitive Services provides a layered security model, which includes [authentication](/azure/cognitive-services/authentication) via Azure Active Directory credentials, a valid resource key, and [Azure Virtual Network](/azure/cognitive-services/cognitive-services-virtual-networks).
+Cognitive Services provides a layered security model, which includes [authentication](/azure/cognitive-services/authentication) via Microsoft Entra credentials, a valid resource key, and [Azure Virtual Network](/azure/cognitive-services/cognitive-services-virtual-networks).
 
 ### Container support
 

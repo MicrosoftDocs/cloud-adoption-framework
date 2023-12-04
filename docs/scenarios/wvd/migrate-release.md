@@ -24,7 +24,7 @@ The release process for the migration or deployment of Azure Virtual Desktop ins
 
 After the release has been completed, it's common to add [logging and diagnostics to better operate Azure Virtual Desktop](/azure/virtual-desktop/azure-monitor). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
 
-Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Microsoft 365 or Azure Active Directory, your cloud adoption team might choose to onboard into those services upon the release of the desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
+Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Microsoft 365 or Microsoft Entra ID, your cloud adoption team might choose to onboard into those services upon the release of the desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
 
 ## Next steps
 

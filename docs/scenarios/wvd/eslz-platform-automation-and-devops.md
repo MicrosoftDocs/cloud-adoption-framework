@@ -140,7 +140,7 @@ For more information about Packer, see the [Packer website](https://www.packer.i
 The Packer method has the following prerequisites:
 
 - Azure DevOps licensing must use the full suite of Packer tools.
-- You must assign a user the Global Administrator role in Azure Active Directory (Azure AD).
+- You must assign a user the Global Administrator role in Microsoft Entra ID.
 - You must give a service principal with contributor access to the subscription.
 - You must have an Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
@@ -165,7 +165,7 @@ The Azure Compute Gallery service is the simplest way to build structure and org
   - Make sure you've deployed images in the regions that Azure Virtual Desktop session hosts (VMs) deploy to.
 - Image versioning and grouping for easier management. Versioning and grouping are helpful for rolling back Azure Virtual Desktop host pools to previous image versions.
 - Highly available images with zone-redundant storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
-- Azure Virtual Desktop image sharing across subscriptions, and even between Azure AD tenants, through role-based access control (RBAC).
+- Azure Virtual Desktop image sharing across subscriptions, and even between Microsoft Entra tenants, through role-based access control (RBAC).
 - Deployment scaling with image replicas in each region.
   - Plan on deploying [one replica for every 20 VMs](/azure/virtual-machines/shared-image-galleries) you plan to deploy concurrently.
 
@@ -217,5 +217,3 @@ Learn how to deploy Azure Virtual Desktop by using the landing zone accelerator 
 
 > [!div class="nextstepaction"]
 > [2. Azure Virtual Desktop landing zone accelerator Github repository](https://github.com/Azure/avdaccelerator)
-
-

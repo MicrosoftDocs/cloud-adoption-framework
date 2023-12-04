@@ -93,7 +93,7 @@ Traffic between the Azure Red Hat OpenShift pods and the private endpoints by de
 ## Design recommendations
 
 - If your security policy requires you to use a private IP address for the Azure Red Hat OpenShift API, [deploy a private Azure Red Hat OpenShift cluster](/azure/openshift/howto-create-private-cluster-4x).
-- Use Azure DDoS Protection Standard to protect the virtual network you use for the Azure Red Hat OpenShift cluster *unless you use Azure Firewall or Web Application Firewall in a centralized subscription*.
+- Use Azure DDoS Protection to protect the virtual network you use for the Azure Red Hat OpenShift cluster *unless you use Azure Firewall or Web Application Firewall in a centralized subscription*.
 - Use the DNS configuration that's linked to the overall network setup with Azure Virtual WAN or a hub and spoke architecture, Azure DNS zones, and your own DNS infrastructure.
 - Use Azure Private Link to secure network connections, and use private IP-based connectivity to other managed Azure services that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.
 - Use an ingress controller to provide advanced HTTP routing and security and to offer a single endpoint for applications.

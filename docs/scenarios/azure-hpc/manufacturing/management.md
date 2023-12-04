@@ -1,5 +1,5 @@
 ---
-title: Management for Azure HPC in the manufacturing industry 
+title: Management for Azure HPC in the manufacturing industry
 description: Azure landing zones for HPC in the manufacturing industry don't have any specific considerations or recommendations that affect management decisions.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -29,4 +29,3 @@ The following articles provide guidance that you might find helpful at various p
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

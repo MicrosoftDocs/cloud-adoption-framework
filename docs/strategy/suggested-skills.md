@@ -1,5 +1,5 @@
 ---
-title: Skills needed to support the strategy phase of cloud adoption 
+title: Skills needed to support the strategy phase of cloud adoption
 description: Use the Cloud Adoption Framework for Azure to learn about the skills needed during the strategy phase of cloud adoption.
 author: martinekuan
 ms.author: martinek

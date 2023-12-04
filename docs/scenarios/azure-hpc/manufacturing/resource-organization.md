@@ -14,7 +14,7 @@ To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adop
 
 ## Use single versus multiple Azure subscriptions
 
- - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It's a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
+ - In Microsoft Entra ID, a tenant is representative of an organization. It's a dedicated instance of the Microsoft Entra service that an organization receives and owns when it signs up for using Azure. Each Microsoft Entra tenant is distinct and separate from other Microsoft Entra tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Microsoft Entra ID.
  - You can choose single or multiple subscriptions based on your organization's needs.
      - Multiple subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription. For example, production versus non-production subscriptions, internal versus external, and so on.
      - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md?source=recommendations).
@@ -55,4 +55,3 @@ The following articles provide guidance on each step in the cloud adoption journ
 - [Security for HPC in manufacturing industries](./security.md)
 - [Manufacturing HPC storage](./storage.md)
 - [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
-

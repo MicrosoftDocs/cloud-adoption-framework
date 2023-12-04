@@ -70,7 +70,7 @@ The following diagram outlines the architecture that will be built to migrate RD
 
    Download [Visio file](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture.vsdx)
 
-The diagram outlines resources that are prerequisites for the migration (Identity, management, connectivity, Azure AD sync) and the resources that are created by the Azure Virtual Desktop Landing Zone Accelerator deployment under the AVD LZ and AVD Shared Services LZ subscriptions. More information on resources deployed can be found in the Azure Virtual Desktop [Landing Zone Accelerator resource organization diagram](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-resource-organization-naming.png).
+The diagram outlines resources that are prerequisites for the migration (Identity, management, connectivity, Azure AD Sync) and the resources that are created by the Azure Virtual Desktop Landing Zone Accelerator deployment under the AVD LZ and AVD Shared Services LZ subscriptions. More information on resources deployed can be found in the Azure Virtual Desktop [Landing Zone Accelerator resource organization diagram](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-resource-organization-naming.png).
 
 ## Migration process
 
@@ -98,7 +98,7 @@ Contoso will now progress through the steps required to complete the Azure Virtu
 
 1. An Azure subscription is required ([subscription requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#subscription-requirements)).
 
-1. Make sure that domain services, either Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS), are synchronized with Azure Active Directory (Azure AD). Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. Azure Virtual Desktop requires hybrid user identities for majority of your Azure Virtual Desktop deployments and desired features. The Azure Virtual Desktop service requires user principal name (UPN) or security identifier (SID) to match between on-premises AD and Azure AD.
+1. Make sure that domain services, either Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services (Microsoft Entra Domain Services), are synchronized with Microsoft Entra ID. Ensure the domain service is accessible from the Azure subscription and virtual network where you deploy Azure Virtual Desktop session hosts. Azure Virtual Desktop requires hybrid user identities for majority of your Azure Virtual Desktop deployments and desired features. The Azure Virtual Desktop service requires user principal name (UPN) or security identifier (SID) to match between on-premises AD and Microsoft Entra ID.
 
 1. Prior to the deployment of the Azure Virtual Desktop LZA, ensure the [Azure Virtual Desktop LZA Prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) are met.
 
@@ -107,9 +107,9 @@ Contoso will now progress through the steps required to complete the Azure Virtu
    >
    > - *[Azure Virtual Desktop identities and authentication](/azure/virtual-desktop/authentication)* provides a comprehensive list of requirements and supported features based on your identity strategy and configuration.
    > - Active Directory sync options:
-   >    - *[Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
-   >    - *[Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
-   > - *[Azure AD DS](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Azure AD.
+   >    - *[Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-express)*
+   >    - *[Microsoft Entra Connect Cloud Sync](/azure/active-directory/cloud-sync/concept-how-it-works)*
+   > - *[Microsoft Entra Domain Services](/azure/active-directory-domain-services/tutorial-create-instance)* and synchronizing with Microsoft Entra ID.
    > - Firewall rules **[Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines)** to allow all required URLs from hosts and clients to Azure Virtual Desktop resources.
    > - Azure Virtual Desktop *[LZA Baseline Deployment URL Requirements](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites)*.
 

@@ -1,5 +1,5 @@
 ---
-title: Resource organization for Azure HPC in the finance sector 
+title: Resource organization for Azure HPC in the finance sector
 description: This article provides recommendations to help you align HPC implementations in the finance sector with Cloud Adoption Framework methodologies.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
@@ -14,7 +14,7 @@ This article provides recommendations that can help you align HPC implementation
 
 ## Single vs. multiple Azure subscriptions
 
-In Azure Active Directory (Azure AD), a tenant represents an organization. It's a dedicated instance of Azure AD that an organization receives and owns when it signs up to use Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions, and each subscription can use the same Azure AD instance.
+In Microsoft Entra ID, a tenant represents an organization. It's a dedicated instance of Microsoft Entra ID that an organization receives and owns when it signs up to use Azure. Each Microsoft Entra tenant is distinct and separate from other Microsoft Entra tenants. An Azure tenant can have multiple subscriptions, and each subscription can use the same Microsoft Entra instance.
 
 The needs of your organization determine whether you should use a single subscription or multiple subscriptions:
 

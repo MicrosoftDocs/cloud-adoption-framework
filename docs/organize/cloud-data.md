@@ -24,7 +24,7 @@ Using Azure Synapse Analytics, database administrators can match their expanding
 
 These teams deal with the provisioning and architecture of the underlying compute resources required for large analytics systems. In many cases, they are managing transitions between datacenter-based and cloud-based systems, and current needs for interoperability across both. Disaster recovery, business continuity, and high availability are common concerns.
 
-With Azure Synapse Analytics, IT professionals can protect and manage their organization's data more efficiently. They can enable big data processing with both on-demand and provisioned compute. Through tight integration with Azure Active Directory, the service helps secure access to cloud and hybrid configurations. IT professionals can enforce privacy requirements by using data masking along with row-level and column-level security.
+With Azure Synapse Analytics, IT professionals can protect and manage their organization's data more efficiently. They can enable big data processing with both on-demand and provisioned compute. Through tight integration with Microsoft Entra ID, the service helps secure access to cloud and hybrid configurations. IT professionals can enforce privacy requirements by using data masking along with row-level and column-level security.
 
 ## Enterprise architects and data engineers
 

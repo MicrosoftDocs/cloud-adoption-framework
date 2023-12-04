@@ -36,7 +36,7 @@ A sample cloud-native policy for identity across cloud and on-premises directori
 - Authorized access to resources with Azure role-based access control (Azure RBAC), multifactor authentication, and single sign-on (SSO).
 - Quick mitigation of user identities suspected of compromise.
 - Just-in-time (JIT), just-enough access granted on a task-by-task basis to limit exposure of overprivileged admin credentials.
-- Extended user identity and access to policies across multiple environments through Azure Active Directory.
+- Extended user identity and access to policies across multiple environments through Microsoft Entra ID.
 
 While it's important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
 
