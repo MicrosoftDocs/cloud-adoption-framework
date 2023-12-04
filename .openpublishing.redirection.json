@@ -884,6 +884,27 @@
          "source_path": "docs/migrate/azure-best-practices/multiple-regions.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/multiple-regions",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "/docs/migrate/migration-considerations/prerequisites/cultural-complexity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/roles-and-responsibilities",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "/docs/migrate/migration-considerations/prerequisites/migration-backlog-review.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/migration-backlog-review",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "/docs/migrate/azure-best-practices/governance-or-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "/docs/migrate/migration-considerations/prerequisites/technical-complexity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan",
+         "redirect_document_id": false
+      }     
+      
    ]
 }

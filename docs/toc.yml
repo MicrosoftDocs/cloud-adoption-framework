@@ -595,7 +595,7 @@ items:
         href: migrate/index.md
       - name: checklist
         href: migrate/checklist.md
-      - name: Pre-requisites
+      - name: Prerequisites
         items:
           - name: Overview
             href: migrate/prerequisites/index.md
@@ -605,6 +605,10 @@ items:
             href: migrate/prerequisites/multiple-datacenters.md        
           - name: Multiple regions
             href: migrate/prerequisites/multiple-regions.md
+          - name: Align roles and responsibilities
+            href: migrate/prerequisites/roles-and-responsibilities.md
+          - name: Migration backlog review
+            href: migrate/prerequisites/migration-backlog-review.md
       - name: Assess
       - name: Deploy
       - name: Release
@@ -908,8 +912,6 @@ items:
           href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
         - name: Database restore points for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
-        - name: Governance or compliance
-          href: migrate/azure-best-practices/governance-or-compliance.md
         - name: Adopt low-code application platform
           href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
       - name: Migrate antipatterns
@@ -919,14 +921,6 @@ items:
         items:
         - name: Overview
           href: migrate/migration-considerations/index.md
-        - name: Prerequisites
-          items:
-          - name: Align roles and responsibilities
-            href: migrate/migration-considerations/prerequisites/cultural-complexity.md
-          - name: Agile change management
-            href: migrate/migration-considerations/prerequisites/technical-complexity.md
-          - name: Migration backlog review
-            href: migrate/migration-considerations/prerequisites/migration-backlog-review.md
         - name: Assess workloads
           items:
           - name: Validate assessment assumptions before migration

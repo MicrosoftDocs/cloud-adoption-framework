@@ -1,14 +1,13 @@
 ---
-title: Cultural complexity of aligning roles and responsibilities
+title: Aligning roles and responsibilities
 description: Use the Cloud Adoption Framework for Azure to prepare for cultural complexity by aligning roles and responsibilities to drive clarity during the migration process.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/04/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
-# Prepare for cultural complexity: Aligning roles and responsibilities
+# Aligning roles and responsibilities
 
 An understanding of the culture required to operate the existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially those bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time consuming to overcome.
 
@@ -55,7 +54,5 @@ Each process within the discussion of the Cloud Adoption Framework migration pri
 
 ## Next steps
 
-When the team has a general understanding of roles and responsibilities, it's time to begin preparing the technical details of the migration. Understanding [technical complexity and change management](./technical-complexity.md) can help prepare the cloud adoption team for the technical complexity of migration by aligning to an incremental change management process.
-
 > [!div class="nextstepaction"]
-> [Technical complexity and change management](./technical-complexity.md)
+> [Migration backlog review](./migration-backlog-review.md)
