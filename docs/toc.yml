@@ -602,8 +602,9 @@ items:
           - name: Migration tools decision guide
             href: migrate/prerequisites/migration-tools-decision-guide.md                  
           - name: Understanding multiple datacenters
-            href: migrate/prerequisites/multiple-datacenters.md            
-
+            href: migrate/prerequisites/multiple-datacenters.md        
+          - name: Multiple regions
+            href: migrate/prerequisites/multiple-regions.md
       - name: Assess
       - name: Deploy
       - name: Release
@@ -893,8 +894,6 @@ items:
           href: migrate/azure-best-practices/index.md
         - name: Multiple datacenters
           href: migrate/azure-best-practices/multiple-datacenters.md
-        - name: Multiple regions
-          href: migrate/azure-best-practices/multiple-regions.md
         - name: Data requirements exceed network capacity
           href: migrate/azure-best-practices/network-capacity-exceeded.md
         - name: Set up networking for migrated workloads

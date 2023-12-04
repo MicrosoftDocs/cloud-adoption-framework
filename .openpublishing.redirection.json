@@ -879,6 +879,11 @@
          "source_path": "docs/migrate/azure-best-practices/multiple-datacenters.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/multiple-datacenters",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/multiple-regions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/multiple-regions",
+         "redirect_document_id": false
       }
    ]
 }

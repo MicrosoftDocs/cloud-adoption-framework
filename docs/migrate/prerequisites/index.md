@@ -59,7 +59,7 @@ The remaining articles in this series help with the execution of each.
 
 ## Next steps
 
-With a general understanding of the prerequisites, you're ready to address the first prerequisite [early migration decisions](./decisions.md).
+Review the migration tools decision tree that provides high-level guidance for selecting the best tools based on migration decisions.
 
 > [!div class="nextstepaction"]
-> [Early migration decisions](./decisions.md)
+> [Migration tools decision guide](./migration-tools-decision-guide.md)
