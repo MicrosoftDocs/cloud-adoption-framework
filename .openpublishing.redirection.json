@@ -949,6 +949,16 @@
          "source_path": "docs/migrate/migration-considerations/assess/partnership-options.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-options",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/approve.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/release-iteration-backlog.md",
+         "redirect_url": "/azure/cloud-adoption-framework/adopt",
+         "redirect_document_id": false
       }
    ]
 }
