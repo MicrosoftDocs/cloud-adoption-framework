@@ -1,11 +1,10 @@
 ---
 title: Promotion model types
 description: Learn about three common promotion models that are used in cloud migrations. Also, learn how your choice of model affects activities within the migrate and optimize processes.
-author: martinekuan
-ms.author: martinek
-ms.date: 12/22/2021
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Promotion model types
@@ -94,7 +93,5 @@ Negative aspects of this approach include:
 
 ## Next steps
 
-After a promotion model is defined and accepted by the cloud adoption team, [remediation of assets](./remediate.md) can begin.
-
 > [!div class="nextstepaction"]
-> [Remediating assets prior to migration](./remediate.md)
+> [Remediating assets prior to migration](../deploy/remediate.md)

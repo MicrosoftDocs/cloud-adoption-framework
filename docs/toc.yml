@@ -632,6 +632,9 @@ items:
           - name: Overview
             href: migrate/deploy/index.md
       - name: Release
+        items:
+          - name: Promotion models
+            href: migrate/release/promotion-models.md
 
       - name: Azure migration guide
         items:
@@ -947,8 +950,6 @@ items:
           items:
           - name: Overview
             href: migrate/migration-considerations/migrate/index.md
-          - name: Promotion models
-            href: migrate/migration-considerations/migrate/promotion-models.md
           - name: Remediate assets
             href: migrate/migration-considerations/migrate/remediate.md
           - name: Replicate assets
