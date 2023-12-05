@@ -938,8 +938,6 @@ items:
           href: migrate/azure-best-practices/multiple-datacenters.md
         - name: Deploy a migration infrastructure
           href: migrate/azure-migration-guide/ready-alz.md
-        - name: Cost optimize migrated workloads
-          href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration and DDL commands

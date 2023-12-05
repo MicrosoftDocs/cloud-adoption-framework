@@ -1054,6 +1054,11 @@
          "source_path": "docs/migrate/migration-considerations/optimize/retrospective.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release/retrospective",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-costs.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
       }
    ]
 }
