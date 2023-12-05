@@ -1004,6 +1004,11 @@
          "source_path": "docs/migrate/azure-best-practices/network-capacity-exceeded.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/network-capacity-exceeded",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-networking.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
+         "redirect_document_id": false
       }
    ]
 }

@@ -925,8 +925,6 @@ items:
           href: migrate/azure-best-practices/index.md
         - name: Multiple datacenters
           href: migrate/azure-best-practices/multiple-datacenters.md
-        - name: Set up networking for migrated workloads
-          href: migrate/azure-best-practices/migrate-best-practices-networking.md
         - name: Deploy a migration infrastructure
           href: migrate/azure-migration-guide/ready-alz.md
         - name: Cost optimize migrated workloads
