@@ -599,6 +599,8 @@ items:
         items:
           - name: Overview
             href: migrate/prerequisites/index.md
+          - name: Readying your landing zone for migration
+            href: migrate/azure-migration-guide/ready-alz.md
           - name: Migration tools decision guide
             href: migrate/prerequisites/migration-tools-decision-guide.md                  
           - name: Understanding multiple datacenters
@@ -637,8 +639,6 @@ items:
           href: migrate/azure-migration-guide/index.md
         - name: Migration tools decision guide
           href: migrate/azure-migration-guide/migration-tools-decision-guide.md
-        - name: Readying your landing zone for migration
-          href: migrate/azure-migration-guide/ready-alz.md
         - name: Deploy workloads
           href: migrate/azure-migration-guide/deploy.md
         - name: Release workloads

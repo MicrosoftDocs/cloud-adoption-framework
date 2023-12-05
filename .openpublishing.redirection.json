@@ -969,6 +969,11 @@
          "source_path": "docs/migrate/migration-considerations/migrate/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/ready-alz.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/ready-alz",
+         "redirect_document_id": false
       }
    ]
 }
