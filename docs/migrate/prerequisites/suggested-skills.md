@@ -63,4 +63,4 @@ It can be helpful at this point to return to the [migration best practices check
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Modernize](../modernize/index.md)
+> [Assess workloads](../assess/index.md)

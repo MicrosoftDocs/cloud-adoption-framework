@@ -615,6 +615,8 @@ items:
         items:
         - name: Overview
           href: migrate/assess/index.md
+        - name: Classify workloads
+          href: migrate/assess/classify.md
       - name: Deploy
       - name: Release
 
@@ -926,8 +928,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Assess workloads
           items:
-          - name: Classify workloads
-            href: migrate/migration-considerations/assess/classify.md
           - name: Keep priorities aligned
             href: migrate/migration-considerations/assess/business-priorities.md
           - name: Evaluate workload readiness

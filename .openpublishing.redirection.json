@@ -919,6 +919,11 @@
          "source_path": "docs/migrate/azure-migration-guide/assess.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/classify.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/classify",
+         "redirect_document_id": false
       }      
    ]
 }
