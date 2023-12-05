@@ -649,8 +649,10 @@ items:
             href: migrate/release/business-test.md
           - name: Promotion models
             href: migrate/release/promotion-models.md
-
-
+          - name: Prepare for promotion
+            href: migrate/release/prepare-for-promotion.md
+          - name: Promote to production
+            href: migrate/release/promote.md
       - name: Azure migration guide
         items:
         - name: Migration guide overview
@@ -959,10 +961,6 @@ items:
           items:
           - name: Benchmark and resize assets
             href: migrate/migration-considerations/optimize/optimize.md
-          - name: Prepare for promotion
-            href: migrate/migration-considerations/optimize/ready.md
-          - name: Promote to production
-            href: migrate/migration-considerations/optimize/promote.md
           - name: Decommission retired assets
             href: migrate/migration-considerations/optimize/decommission.md
           - name: Conduct retrospectives

@@ -1,11 +1,10 @@
 ---
 title: Requirements to promote a migrated resource to production
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # What is required to promote a migrated resource to production?
@@ -24,7 +23,7 @@ Each of the following processes should be executed, documented, and validated pr
 - [Stage](../migrate/stage.md): The replicated assets have been restored in a staged instance of the cloud environment.
 - [Business testing](./business-test.md): The workload has been fully tested and validated by business users.
 - [Business change plan](./business-change-plan.md): The business has shared a plan for the changes to be made in accordance with the production promotion; this should include a user adoption plan, changes to business processes, users that require training, and timelines for various activities.
-- [Ready](./ready.md): Generally, a series of technical changes must be made before promotion.
+- [Prepare for promotion](./prepare-for-promotion.md): Generally, a series of technical changes must be made before promotion.
 
 ## Best practices to execute prior to promotion
 

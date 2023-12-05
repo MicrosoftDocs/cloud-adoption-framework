@@ -1034,6 +1034,17 @@
          "source_path": "docs/migrate/migration-considerations/optimize/optimize.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/ready.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/prepare-for-promotion",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/promote",
+         "redirect_document_id": false
       }
+
    ]
 }
