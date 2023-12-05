@@ -928,8 +928,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Assess workloads
           items:
-          - name: Keep priorities aligned
-            href: migrate/migration-considerations/assess/business-priorities.md
           - name: Evaluate workload readiness
             href: migrate/migration-considerations/assess/evaluate.md
           - name: Architect workloads
