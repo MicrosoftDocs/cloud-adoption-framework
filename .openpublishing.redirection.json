@@ -929,6 +929,11 @@
          "source_path": "docs/migrate/migration-considerations/assess/business-priorities.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/evaluate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/evaluate",
+         "redirect_document_id": false
       }
    ]
 }

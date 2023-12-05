@@ -1,20 +1,20 @@
 ---
 title: Evaluate workload readiness
 description: Understand what it takes to evaluate the readiness of a workload to migrate to the cloud. You'll learn how to validate all assets and associated dependencies.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
 ms.custom: internal
 ---
 
 # Evaluate workload readiness
 
-This activity focuses on evaluating readiness of a workload to migrate to the cloud. During this activity, the cloud adoption team validates that all assets and associated dependencies are compatible with the chosen deployment model and cloud provider. During the process, the team documents any efforts required to [remediate](../migrate/remediate.md) compatibility issues.
+This activity focuses on evaluating readiness of a workload to migrate to the cloud. During this activity, the cloud adoption team validates that all assets and associated dependencies are compatible with the chosen deployment model and cloud provider. During the process, the team documents any efforts required to [remediate](../deploy/remediate.md) compatibility issues.
 
 ## Evaluation assumptions
 
-Most of the content discussing principles in the Cloud Adoption Framework is cloud agnostic. However, the readiness evaluation process must be largely specific to each specific cloud platform. The following guidance assumes an intention to migrate to Azure. It also assumes use of Azure Migrate (also known as Azure Site Recovery) for [replication activities](../migrate/replicate.md). For alternative tools, see [Replication options](../migrate/replicate-options.md).
+Most of the content discussing principles in the Cloud Adoption Framework is cloud agnostic. However, the readiness evaluation process must be largely specific to each specific cloud platform. The following guidance assumes an intention to migrate to Azure. It also assumes use of Azure Migrate (also known as Azure Site Recovery) for [replication activities](../deploy/replicate.md).
 
 This article doesn't capture all possible evaluation activities. It is assumed that each environment and business outcome will dictate specific requirements. To help accelerate the creation of those requirements, the remainder of this article shares a few common evaluation activities related to [infrastructure](#common-infrastructure-evaluation-activities), [database](#common-database-evaluation-activities), and [network](#common-network-evaluation-activities) evaluation.
 
@@ -31,7 +31,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 - Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server high availability solutions guide](/sql/database-engine/sql-server-business-continuity-dr).
 - Evaluate PaaS compatibility. The [Azure data migration guide](/data-migration/) maps on-premises databases to compatible Azure PaaS solutions, like [Azure Cosmos DB](/azure/cosmos-db/), [Azure SQL Database](/azure/azure-sql/) [Azure Database for MySQL](/azure/mysql/), [Azure Database for PostgreSQL](/azure/postgresql/), or [Azure Database for MariaDB](/azure/mariadb/).
 - When PaaS compatibility is an option without the need for any remediation, consult the team responsible for [architecture activities](./architect.md). PaaS migrations can produce significant time savings and reductions in the total cost of ownership (TCO) of most cloud solutions.
-- When PaaS compatibility is an option but remediation is required, consult the teams responsible for [architecture activities](./architect.md) and [remediation activities](../migrate/remediate.md). In many scenarios, the advantages of PaaS migrations for database solutions can outweigh the increase in remediation time.
+- When PaaS compatibility is an option but remediation is required, consult the teams responsible for [architecture activities](./architect.md) and [remediation activities](../deploy/remediate.md). In many scenarios, the advantages of PaaS migrations for database solutions can outweigh the increase in remediation time.
 - Document the size and rate of change for each database to be migrated.
 - When possible, document any applications or other assets that make calls to each database.
 
@@ -44,7 +44,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 - Calculate the drift or change rate of storage for all VMs to be replicated during the iterations leading up to a release.
 - Calculate the bandwidth requirements needed for each iteration by summing total storage and drift.
 - Calculate unused bandwidth available on the current network to validate per iteration alignment.
-- Document bandwidth needed to reach anticipated migration velocity. If any remediation is required to provide necessary bandwidth, notify the team responsible for [remediation activities](../migrate/remediate.md).
+- Document bandwidth needed to reach anticipated migration velocity. If any remediation is required to provide necessary bandwidth, notify the team responsible for [remediation activities](../deploy/remediate.md).
 
 > [!NOTE]
 > Total storage directly affects bandwidth requirements during initial replication. However, storage drift continues from the point of replication until release. This means that drift has a cumulative effect on available bandwidth.
