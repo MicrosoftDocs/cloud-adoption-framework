@@ -609,7 +609,12 @@ items:
             href: migrate/prerequisites/roles-and-responsibilities.md
           - name: Migration backlog review
             href: migrate/prerequisites/migration-backlog-review.md
+          - name: Skills relevant to migrate
+            href: migrate/prerequisites/suggested-skills.md
       - name: Assess
+        items:
+        - name: Overview
+          href: migrate/assess/index.md
       - name: Deploy
       - name: Release
 
@@ -619,8 +624,6 @@ items:
           href: migrate/azure-migration-guide/index.md
         - name: Migration tools decision guide
           href: migrate/azure-migration-guide/migration-tools-decision-guide.md
-        - name: Assess workloads
-          href: migrate/azure-migration-guide/assess.md
         - name: Readying your landing zone for migration
           href: migrate/azure-migration-guide/ready-alz.md
         - name: Deploy workloads
@@ -923,8 +926,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Assess workloads
           items:
-          - name: Validate assessment assumptions before migration
-            href: migrate/migration-considerations/assess/index.md
           - name: Classify workloads
             href: migrate/migration-considerations/assess/classify.md
           - name: Keep priorities aligned
@@ -973,9 +974,6 @@ items:
             href: migrate/migration-considerations/optimize/decommission.md
           - name: Conduct retrospectives
             href: migrate/migration-considerations/optimize/retrospective.md
-
-      - name: Skills relevant to migrate
-        href: migrate/suggested-skills.md
     
     - name: Modernize
       items:

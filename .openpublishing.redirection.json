@@ -904,7 +904,21 @@
          "source_path": "docs/migrate/migration-considerations/prerequisites/technical-complexity.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan",
          "redirect_document_id": false
-      }     
-      
+      },
+      {
+         "source_path": "docs/migrate/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/suggested-skills",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/assess.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      }      
    ]
 }
