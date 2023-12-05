@@ -55,9 +55,7 @@ These articles examine design considerations and recommendations related to iden
 > [!TIP]
 > If you have multiple Microsoft Entra tenants, review [**Azure landing zones and multiple Microsoft Entra tenants**](multi-tenant/overview.md) and its associated content.
 
-### Next steps
-
-### Next Steps
+## Next Steps
 >
 > [!div class="nextstepaction"]
-> [Landing zone identity and access management](identity-access-landing-zones.md)
+> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)

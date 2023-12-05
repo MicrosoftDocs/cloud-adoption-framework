@@ -4,7 +4,7 @@ description: Understand how to provide access to Azure Resources.
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 11/15/2023
+ms.date: 12/05/2023
 ---
 
 # Application identity and access management
@@ -13,7 +13,7 @@ Individual application workloads have authentication and authorization requireme
 
 ## Design Considerations
 
-- Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML(Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
+- Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
 
 - Developers should consider using Microsoft Identity Platform as the Identity solution for their applications. The Microsoft Identity Platform provides an OpenID Connect standard-compliant authentication service enabling developers to authentication several identity types, including:
 
@@ -23,7 +23,7 @@ Individual application workloads have authentication and authorization requireme
   
   See [Microsoft identity platform overview](/azure/active-directory/develop/v2-overview) for more information.
 
-- Managed identities provide an automatically managed identity principal in for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/azure/active-directory/managed-identities-azure-resources/overview-for-developers?tabs=portal%2Cdotnet) for more information.
+- Managed identities provide an automatically managed identity principal for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/azure/active-directory/managed-identities-azure-resources/overview-for-developers?tabs=portal%2Cdotnet) for more information.
 
   - Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
@@ -31,9 +31,11 @@ Individual application workloads have authentication and authorization requireme
 
   - Consider whether to use system-assigned or user-assigned managed identities. See [Choosing system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities) for guidance.
 
-  - To check which Azure resources managed identities support, see Azure services that can use managed identities to access other services. For more information, see [Azure services that can use Managed Identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status).
+  - Not all services support managed identities to access other services. Please refer to [Azure services that can use Managed Identities to access other services](/azure/active-directory/managed-identities-azure-resources/managed-identities-status) for more information.
 
-  - You can't transfer Azure resources with user-assigned or system-assigned identities to another Azure subscription. Managed identities are also not preserved if you move a subscription from one directory to another. You must carry out the move and recreate the managed identities manually.
+  - There are restrictions on the ability to move resources with managed identities between subscriptions and regions. Scenarios that involve moving resources between subscriptions or regions may include mergers and acquisitions, and repatriation of resources for data sovereignty reasons.
+    - You can't transfer Azure resources with user-assigned or system-assigned identities to another Azure subscription or region. You must delete the managed identities before you move the resources. After the move, you must re-create the managed identities and assign them to the resources. For more information, see [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+    - Managed identities are not preserved if you move a subscription from one directory to another. You must carry out the resource move and re-create the managed identities manually. For more information, see [Move managed identity for Azure resources across regions](/entra/identity/managed-identities-azure-resources/how-to-managed-identity-regional-move).
 
   - Managed identities can be used with Azure VMs to authenticate to any service that supports Microsoft Entra authentication without having credentials in your code. For more information, see [How to use managed identities for Azure resources on an Azure VM to acquire an access token](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).  
 
@@ -45,14 +47,15 @@ Individual application workloads have authentication and authorization requireme
 
 ## Design recommendations
 
-- Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that make up an application, service or workload to remove the requirement to store secrets of credentials. Applications that need to authenticate against an Azure service should use managed identities.
-  - Ensure that managed identities follow the principle of least privilege when granting access.
+- Use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) for Azure resources that don't need to use credentials. Applications that need to authenticate against an Azure service can use managed identities.
+
+- Ensure that managed identities follow the principle of least privilege when granting access.
 
 - Use Azure Key Vault to manage secrets, keys, certificates used by applications.
-  - Use RBAC to allow administrative access and management for management.
+  - Use RBAC to manage access to secrets (data plane), and for administrative access (control plane).
   - Use managed identities to control application access to Key Vault. For a tutorial, see Tutorial: [Use a managed identity to access Azure Key Vault](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
 
-- If you are using CI/CD pipelines to deploy applications programmatically, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
+- If you are using CI/CD pipelines to deploy applications programmatically, configure OpenID Connect (OIDC) authentication to your Azure. OIDC uses a short-lived, credential-free token to authenticate to Azure services. See [workload identity federation](entra/workload-id/workload-identity-federation) for more information. If OIDC is not supported, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For detailed steps, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
