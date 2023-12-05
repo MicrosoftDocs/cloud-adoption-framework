@@ -635,6 +635,10 @@ items:
             href: migrate/deploy/remediate.md
           - name: Replicate assets
             href: migrate/deploy/replicate.md
+          - name: Stage workloads
+            href: migrate/deploy/stage.md
+          - name: Data requirements exceed network capacity
+            href: migrate/deploy/network-capacity-exceeded.md
       - name: Release
         items:
           - name: Promotion models
@@ -921,8 +925,6 @@ items:
           href: migrate/azure-best-practices/index.md
         - name: Multiple datacenters
           href: migrate/azure-best-practices/multiple-datacenters.md
-        - name: Data requirements exceed network capacity
-          href: migrate/azure-best-practices/network-capacity-exceeded.md
         - name: Set up networking for migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-networking.md
         - name: Deploy a migration infrastructure
@@ -950,10 +952,6 @@ items:
             href: migrate/migration-considerations/assess/release-iteration-backlog.md
           - name: Approve architecture changes
             href: migrate/migration-considerations/assess/approve.md
-        - name: Deploy workloads
-          items:
-          - name: Stage workloads
-            href: migrate/migration-considerations/migrate/stage.md
         - name: Release workloads
           items:
           - name: Overview

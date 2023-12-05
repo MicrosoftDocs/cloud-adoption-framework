@@ -994,6 +994,16 @@
          "source_path": "docs/migrate/migration-considerations/migrate/replicate.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/stage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/stage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/network-capacity-exceeded.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/network-capacity-exceeded",
+         "redirect_document_id": false
       }
    ]
 }

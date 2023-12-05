@@ -1,11 +1,10 @@
 ---
 title: Staging activities during a migration
 description: Use the Cloud Adoption Framework for Azure to understand staging activities and associated deliverables needed during a migration.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Understand staging activities during a migration
@@ -26,4 +25,4 @@ Staged assets may not be ready for use in production. There are several producti
 After staged assets are tested and documented, you can proceed to optimization activities.
 
 > [!div class="nextstepaction"]
-> [Optimize migrated workloads](../optimize/index.md)
+> [Data requirements exceed network capacity](./network-capacity-exceeded)
