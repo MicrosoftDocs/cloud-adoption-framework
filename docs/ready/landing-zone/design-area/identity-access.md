@@ -4,14 +4,14 @@ description: Understand the identity and access management design area as part o
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 11/15/2023
+ms.date: 12/05/2023
 ---
 
 # Identity and access management design area
 
 This critical design area establishes a foundation for the management of identity and access based on best practices.
 
-The technological landscape in the enterprise is becoming complex and heterogenous and Identity is the primary security perimeter in a public cloud, so Identity and access management must be treated as the foundation of any secure and fully compliant public cloud architecture.
+The technological landscape in the enterprise is becoming complex and heterogenous, and Identity is the primary security perimeter in a public cloud, so Identity and access management must be treated as the foundation of any secure and fully compliant public cloud architecture.
 
 Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications and resources. It ensures that the right individual can access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user or workload identity actions.
 
@@ -32,7 +32,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 - Core requirements for separation of duties
 - Using hybrid identities with Active Directory Domain Services domains
 
-**Out of scope:** Identity and access management forms a foundation for proper access control. Whilst it supports the following, it does not fully address more advanced topics like:
+**Out of scope:** Identity and access management forms a foundation for proper access control. It doesn't fully address more advanced topics like:
 
 - Zero trust
 - Operational management of elevated privileges
@@ -61,4 +61,3 @@ These articles examine design considerations and recommendations related to iden
 >
 > [!div class="nextstepaction"]
 > [Landing zone identity and access management](identity-access-landing-zones.md)
->
