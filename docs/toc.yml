@@ -631,6 +631,8 @@ items:
         items:
           - name: Overview
             href: migrate/deploy/index.md
+          - name: Remediate assets
+            href: migrate/deploy/remediate.md
       - name: Release
         items:
           - name: Promotion models
@@ -950,8 +952,6 @@ items:
           items:
           - name: Overview
             href: migrate/migration-considerations/migrate/index.md
-          - name: Remediate assets
-            href: migrate/migration-considerations/migrate/remediate.md
           - name: Replicate assets
             href: migrate/migration-considerations/migrate/replicate.md
           - name: Replicate options
