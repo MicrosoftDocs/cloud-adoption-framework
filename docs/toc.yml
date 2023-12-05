@@ -643,8 +643,11 @@ items:
         items:
           - name: Overview
             href: migrate/release/index.md
+          - name: Business change plan
+            href: migrate/release/business-change-plan.md
           - name: Promotion models
             href: migrate/release/promotion-models.md
+
 
       - name: Azure migration guide
         items:
@@ -952,8 +955,6 @@ items:
             href: migrate/migration-considerations/assess/approve.md
         - name: Release workloads
           items:
-          - name: Business change plan
-            href: migrate/migration-considerations/optimize/business-change-plan.md
           - name: Business testing
             href: migrate/migration-considerations/optimize/business-test.md
           - name: Benchmark and resize assets

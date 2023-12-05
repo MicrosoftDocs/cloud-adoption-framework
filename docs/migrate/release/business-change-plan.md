@@ -1,11 +1,10 @@
 ---
 title: Develop a business change plan
 description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Business change plan
@@ -18,7 +17,7 @@ User adoption plans focus on how users will adopt a new technology or change to 
 
 Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the following figure, represents the drivers behind those themes across a spectrum of adoption types.
 
-![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
+![Eason Matrix of user adoption concerns](../../_images/migrate/eason-matrix.jpg)
 *Diagram: Eason Matrix of user adoption types.*
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
@@ -29,8 +28,8 @@ A business change plan looks beyond the technical change and assumes that every 
 
 **Upstream questions.** Upstream questions look at impacts or changes that come before user adoption happens:
 
-- Has an expected [business outcome](../../../strategy/business-outcomes/index.md) been quantified?
-- Does the business impact map to defined [learning metrics](../../../strategy/learning-metrics.md)?
+- Has an expected [business outcome](../../strategy/business-outcomes/index.md) been quantified?
+- Does the business impact map to defined [learning metrics](../../strategy/learning-metrics.md)?
 - Which business processes and teams take advantage of this technical solution?
 - Who in the business can best align power users for testing and feedback?
 - Have the affected business leaders been involved in the prioritization and migration planning?

@@ -1019,6 +1019,11 @@
          "source_path": "docs/migrate/azure-migration-guide/release.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/business-change-plan.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/business-change-plan",
+         "redirect_document_id": false
       }
    ]
 }
