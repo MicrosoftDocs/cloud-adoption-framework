@@ -611,6 +611,8 @@ items:
             href: migrate/prerequisites/migration-backlog-review.md
           - name: Skills relevant to migrate
             href: migrate/prerequisites/suggested-skills.md
+          - name: Understand partnership options
+            href: migrate/prerequisites/partnership-options.md
       - name: Assess
         items:
         - name: Overview
@@ -934,8 +936,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Assess workloads
           items:
-          - name: Understand partnership options
-            href: migrate/migration-considerations/assess/partnership-options.md
           - name: Manage change
             href: migrate/migration-considerations/assess/release-iteration-backlog.md
           - name: Approve architecture changes

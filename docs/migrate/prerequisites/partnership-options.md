@@ -1,16 +1,15 @@
 ---
 title: Understand partnership and support options
 description: Use the Cloud Adoption Framework for Azure to understand partnership options and approaches to supporting migration costs.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Understand partnership and support options
 
-During migration, the cloud adoption team performs the actual migration of workloads to the cloud. Unlike the collaborative and problem-solving tasks when defining the [digital estate](../../../digital-estate/index.md) or building the core cloud infrastructure, migration tends to be a series of repetitive execution tasks. Beyond the repetitive aspects, there are likely testing and tuning efforts that require deep knowledge of the chosen cloud provider. The repetitive nature of this process can sometimes be best addressed by a partner, reducing strain on full-time staff. Additionally, partners may be able to better align deep technical expertise when the repetitive processes encounter execution anomalies.
+During migration, the cloud adoption team performs the actual migration of workloads to the cloud. Unlike the collaborative and problem-solving tasks when defining the [digital estate](../../digital-estate/index.md) or building the core cloud infrastructure, migration tends to be a series of repetitive execution tasks. Beyond the repetitive aspects, there are likely testing and tuning efforts that require deep knowledge of the chosen cloud provider. The repetitive nature of this process can sometimes be best addressed by a partner, reducing strain on full-time staff. Additionally, partners may be able to better align deep technical expertise when the repetitive processes encounter execution anomalies.
 
 Partners tend to be closely aligned with a single cloud vendor or a small number of cloud vendors. To better illustrate partnership options, the remainder of this article assumes that Microsoft Azure is the chosen cloud provider.
 
@@ -26,7 +25,7 @@ During plan, build, or migrate, a company generally has four execution partnersh
 If an organization is planning an Azure migration on its own, Microsoft is always there to assist throughout the journey. To help fast-track migration to Azure, Microsoft and its partners have developed an extensive set of architectures, guides, tools, and services to reduce risk and to speed migration of virtual machines, applications, and databases. These tools and services support a broad selection of operating systems, programming languages, frameworks, and databases.
 
 - **Assessment and migration tools.** Azure provides a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more information, refer to the "assess" section in the "migration" chapter that follows.
-- [Microsoft Cloud Adoption Framework](../../index.md). This framework presents a structured approach to cloud adoption and migration. It is based on best practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
+- [Microsoft Cloud Adoption Framework](../index.md). This framework presents a structured approach to cloud adoption and migration. It is based on best practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
 - [Cloud design patterns](/azure/architecture/patterns/). Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they're relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
 - [Cloud fundamentals](/azure/architecture/guide/). Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
 - [Reference architectures](/azure/architecture/browse/). Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes best practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
@@ -64,7 +63,7 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 ## Microsoft Services offerings aligned to Cloud Adoption Framework approaches
 
-![Microsoft Services Cloud Adoption Framework approach](../../../_images/migrate/mcs-program-approach.jpg)
+![Microsoft Services Cloud Adoption Framework approach](../../_images/migrate/mcs-program-approach.jpg)
 
 **Assess:** Microsoft Services uses a [unified data-driven and tool-driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
 
@@ -89,7 +88,5 @@ Get help from partners with ready-made or custom Azure solutions and partners wh
 
 ## Next steps
 
-After a partner and support strategy is selected, the [release and iteration backlogs](./release-iteration-backlog.md) can be updated to reflect planned efforts and assignments.
-
 > [!div class="nextstepaction"]
-> [Manage change using release and iteration backlogs](./release-iteration-backlog.md)
+> [Assess workloads](../assess/index.md)

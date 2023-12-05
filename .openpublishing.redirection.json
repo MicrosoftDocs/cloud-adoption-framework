@@ -944,6 +944,11 @@
          "source_path": "docs/migrate/migration-considerations/assess/estimate.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/estimate",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/partnership-options.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-options",
+         "redirect_document_id": false
       }
    ]
 }
