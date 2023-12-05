@@ -954,8 +954,6 @@ items:
             href: migrate/migration-considerations/migrate/index.md
           - name: Replicate assets
             href: migrate/migration-considerations/migrate/replicate.md
-          - name: Replicate options
-            href: migrate/migration-considerations/migrate/replicate-options.md
           - name: Stage workloads
             href: migrate/migration-considerations/migrate/stage.md
         - name: Release workloads

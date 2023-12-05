@@ -984,7 +984,11 @@
          "source_path": "docs/migrate/migration-considerations/migrate/remediate.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/remediate",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/replicate-options.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/migration-considerations/migrate/replicate",
+         "redirect_document_id": false
       }
-
    ]
 }
