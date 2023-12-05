@@ -593,7 +593,7 @@ items:
       items:
       - name: Overview
         href: migrate/index.md
-      - name: checklist
+      - name: Checklist
         href: migrate/checklist.md
       - name: Prerequisites
         items:
