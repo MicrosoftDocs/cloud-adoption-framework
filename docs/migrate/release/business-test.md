@@ -1,11 +1,10 @@
 ---
 title: Business testing guidance during migration
 description: Learn how business testing is used to solicit validation that solution performance is in line with expectations and doesn't impede business processes.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Guidance for business testing (UAT) during migration
