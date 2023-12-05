@@ -626,6 +626,9 @@ items:
         - name: Update and refine initial cloud estimates
           href: migrate/migration-considerations/assess/estimate.md
       - name: Deploy
+        items:
+          - name: Overview
+            href: migrate/deploy/index.md
       - name: Release
 
       - name: Azure migration guide

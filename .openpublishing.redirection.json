@@ -959,6 +959,16 @@
          "source_path": "docs/migrate/migration-considerations/assess/release-iteration-backlog.md",
          "redirect_url": "/azure/cloud-adoption-framework/adopt",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/deploy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy",
+         "redirect_document_id": false
       }
    ]
 }
