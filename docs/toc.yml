@@ -641,6 +641,8 @@ items:
             href: migrate/deploy/network-capacity-exceeded.md
       - name: Release
         items:
+          - name: Overview
+            href: migrate/release/index.md
           - name: Promotion models
             href: migrate/release/promotion-models.md
 
@@ -652,8 +654,6 @@ items:
           href: migrate/azure-migration-guide/migration-tools-decision-guide.md
         - name: Deploy workloads
           href: migrate/azure-migration-guide/deploy.md
-        - name: Release workloads
-          href: migrate/azure-migration-guide/release.md
         - name: Migration-focused cost-control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
         - name: Get assistance
@@ -952,8 +952,6 @@ items:
             href: migrate/migration-considerations/assess/approve.md
         - name: Release workloads
           items:
-          - name: Overview
-            href: migrate/migration-considerations/optimize/index.md
           - name: Business change plan
             href: migrate/migration-considerations/optimize/business-change-plan.md
           - name: Business testing

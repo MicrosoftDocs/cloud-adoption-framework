@@ -1009,6 +1009,16 @@
          "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-networking.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/release.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
       }
    ]
 }

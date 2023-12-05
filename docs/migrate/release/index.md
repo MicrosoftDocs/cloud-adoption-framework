@@ -1,14 +1,15 @@
 ---
-title: Release, promote and optimize workloads
-description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
+title: Optimize migrated workloads
+description: Use the Cloud Adoption Framework for Azure to prepare your migrated workload and assets to be promoted to production.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 07/07/2023
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
-# Release, promote and optimize workloads (test, optimize, and handoff)
+# Release workloads
+
+After a collection of workloads and their supporting assets have been deployed to the cloud, it must be prepared before it can be released. In this phase of the migration effort, the collection of workloads are load tested and validated with the business. They're then optimized and documented. Once the business and IT teams have reviewed and signed off on workload deployments, those workloads can be released or handed off to governance, security, and operations teams for ongoing operations.
 
 Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 
@@ -16,7 +17,33 @@ This phase is also an opportunity to optimize your environment and perform possi
 
 The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [optimize and promote](../migration-considerations/optimize/index.md).
 
-## Right-size assets
+## Definition of done
+
+The optimization process is complete when a workload has been properly configured, sized, and deployed to production.
+
+## Accountability during optimization
+
+The cloud adoption team is accountable for the entire optimization process. However, members of the cloud strategy team, the cloud operations team, and the cloud governance team should also be responsible for activities within this process.
+
+## Responsibilities during optimization
+
+In addition to the high-level accountability, there are actions that an individual or group needs to be directly responsible for. The following are a few activities that require assignments to responsible parties:
+
+- **Business testing.** Resolve any compatibility issues that prevent the workload from completing its migration to the cloud.
+  - Power users from within the business should participate heavily in testing of the migrated workload. Depending on the degree of optimization attempted, multiple testing cycles may be required.
+- **Business change plan.** Development of a plan for user adoption, changes to business processes, and modification to business KPIs or learning metrics as a result of the migration effort.
+- **Benchmark and optimize.** Study of the business testing and automated testing to benchmark performance. Based on usage, the cloud adoption team refines sizing of the deployed assets to balance cost and performance against expected production requirements.
+- **Ready for production.** Prepare the workload and environment for the support of the workload's ongoing production usage.
+- **Promote.** Redirect production traffic to the migrated and optimized workload. This activity represents the completion of a release cycle.
+
+In addition to core activities, there are a few parallel activities that require specific assignments and execution plans:
+
+- **Decommission.** Generally, cost savings can be realized from a migration, when the previous production assets are decommissioned and properly disposed of.
+- **Retrospective.** Every release creates an opportunity for deeper learning and adoption of a growth mindset. When each release cycle is completed, the cloud adoption team should evaluate the processes used during migration to identify improvements.
+
+## Quickstart for optimization
+
+### Right-size assets
 
 All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you're analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
 
@@ -25,7 +52,7 @@ All Azure services that provide a consumption-based cost model can be resized th
 
 The following are some common services that you can resize.
 
-### Resize a virtual machine
+#### Resize a virtual machine
 
 Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated with this tool will likely already be sized based on your pre-migration requirements.
 
@@ -51,7 +78,7 @@ Partners can use the Partner Center to review the Azure usage.
 
 ::: zone-end
 
-### Resize or reconfigure a storage account
+#### Resize or reconfigure a storage account
 
 1. Go to **Storage accounts**.
 1. Select the desired storage account.
@@ -64,25 +91,25 @@ You can also upgrade a General purpose v1 storage account to v2 or can change th
 
 ::: zone-end
 
-### Resize a SQL database
+#### Resize a SQL database
 
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.
 
-### Resize an App Service
+#### Resize an App Service
 
 1. Go to **App Services**.
 1. Select your App Service instance.
 1. Choose **Scale up (App Service plan)** in the left navigation.
 1. Select on of the pricing tiers and choose **Select**.
 
-## Cost management
+### Cost management
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
-### Azure Advisor
+#### Azure Advisor
 
 Azure Cost Management + Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
@@ -92,7 +119,7 @@ Azure Cost Management + Billing works with Azure Advisor to provide cost optimiz
 
 You can also use **Advisor** and select the **Costs** tab to identify recommendations for potential cost reductions.
 
-### Azure Migrate
+#### Azure Migrate
 
 Additionally, the [Build business case](/azure/migrate/how-to-build-a-business-case) feature of Azure Migrate can help you quickly shape and justify a use case for migration, including cost-specific angles like:
 
@@ -112,3 +139,10 @@ Additionally, the [Build business case](/azure/migrate/how-to-build-a-business-c
 - [Build a business case - Azure Migrate](/azure/migrate/how-to-build-a-business-case)
 
 ::: zone-end
+
+## Next steps
+
+With a general understanding of the optimization process, you're ready to begin the process by [establishing a business change plan for the candidate workload](./business-change-plan.md).
+
+> [!div class="nextstepaction"]
+> [Business change plan](./business-change-plan.md)
