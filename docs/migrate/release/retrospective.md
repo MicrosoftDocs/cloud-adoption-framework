@@ -1,11 +1,10 @@
 ---
 title: Build a growth mindset with retrospectives
 description: Learn how retrospectives help build a growth mindset and empower teams to create sustainable growth.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # How do retrospectives help build a growth mindset?
@@ -38,4 +37,4 @@ Highly effective teams don't just run retrospective meetings. They live retrospe
 
 That new growth is most tangibly represented in changes to the release or iteration backlog.
 
-The retrospective marks the end of a release or iteration, as teams gain experience and learn lessons, and they adjust the [adjust the release and iteration backlog](../assess/release-iteration-backlog.md) to reflect new processes and experiments to be tested. This starts the next iteration through the migration processes.
+The retrospective marks the end of a release or iteration, as teams gain experience and learn lessons, and they adjust the release and iteration backlog to reflect new processes and experiments to be tested. This starts the next iteration through the migration processes.

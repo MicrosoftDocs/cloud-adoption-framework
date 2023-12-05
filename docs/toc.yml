@@ -653,6 +653,10 @@ items:
             href: migrate/release/prepare-for-promotion.md
           - name: Promote to production
             href: migrate/release/promote.md
+          - name: Decommission retired assets
+            href: migrate/release/decommission.md
+          - name: Conduct retrospectives
+            href: migrate/release/retrospective.md
       - name: Azure migration guide
         items:
         - name: Migration guide overview
@@ -961,10 +965,6 @@ items:
           items:
           - name: Benchmark and resize assets
             href: migrate/migration-considerations/optimize/optimize.md
-          - name: Decommission retired assets
-            href: migrate/migration-considerations/optimize/decommission.md
-          - name: Conduct retrospectives
-            href: migrate/migration-considerations/optimize/retrospective.md
     
     - name: Modernize
       items:

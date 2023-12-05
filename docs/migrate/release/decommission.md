@@ -1,11 +1,10 @@
 ---
 title: Decommission retired assets
 description: Use the Cloud Adoption Framework for Azure to learn how to properly decommission retired resources with minimal business interruptions.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Decommission retired assets

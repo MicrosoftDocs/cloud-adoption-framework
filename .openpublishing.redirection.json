@@ -1044,7 +1044,16 @@
          "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release/promote",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/decommission.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/decommission",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/retrospective.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/retrospective",
+         "redirect_document_id": false
       }
-
    ]
 }
