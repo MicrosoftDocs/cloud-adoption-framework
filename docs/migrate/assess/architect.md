@@ -1,16 +1,15 @@
 ---
 title: Design workload architectures before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to define the new architecture before cloud migration begins.
-author: martinekuan
-ms.author: martinek
-ms.date: 12/18/2021
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Design workload architectures before migration
 
-This article describes the assessment process. It helps you review activities associated with defining the workload's architecture within a given iteration. As discussed in the article on [incremental rationalization](../../../digital-estate/rationalize.md), some architectural assumptions are made during any business transformation that requires a migration. This article clarifies those assumptions. It shares a few roadblocks that can be avoided and identifies opportunities to accelerate business value by challenging those assumptions. This incremental model for architecture allows teams to move faster and to obtain business outcomes sooner.
+This article describes the assessment process. It helps you review activities associated with defining the workload's architecture within a given iteration. As discussed in the article on [incremental rationalization](../../digital-estate/rationalize.md), some architectural assumptions are made during any business transformation that requires a migration. This article clarifies those assumptions. It shares a few roadblocks that can be avoided and identifies opportunities to accelerate business value by challenging those assumptions. This incremental model for architecture allows teams to move faster and to obtain business outcomes sooner.
 
 ## Architecture assumptions before migration
 
@@ -49,8 +48,6 @@ Some scenarios could require a different architecture than the assumed IaaS reho
 In each of these itemized scenarios, an alternative architecture could be the best possible solution.
 
 ## Next steps
-
-After the new architecture is defined, [calculate cost estimations](./estimate.md).
 
 > [!div class="nextstepaction"]
 > [Estimate cloud costs](./estimate.md)

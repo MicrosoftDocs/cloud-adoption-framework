@@ -619,6 +619,8 @@ items:
           href: migrate/assess/classify.md
         - name: Evaluate workload readiness
           href: migrate/assess/evaluate.md
+        - name: Architect workloads
+          href: migrate/assess/architect.md
       - name: Deploy
       - name: Release
 
@@ -930,8 +932,6 @@ items:
           href: migrate/migration-considerations/index.md
         - name: Assess workloads
           items:
-          - name: Architect workloads
-            href: migrate/migration-considerations/assess/architect.md
           - name: Update and refine initial cloud estimates
             href: migrate/migration-considerations/assess/estimate.md
           - name: Understand partnership options
