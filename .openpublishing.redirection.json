@@ -1059,6 +1059,16 @@
          "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-costs.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/manage-costs.md",
+         "redirect_url": "/azure/cost-management-billing/cost-management-billing-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/migrate-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
       }
    ]
 }

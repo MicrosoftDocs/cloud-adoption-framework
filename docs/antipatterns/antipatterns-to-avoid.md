@@ -27,10 +27,6 @@ The following table lists antipatterns and the methodologies, or cloud adoption 
 | Ready | Preview services in production | [Antipattern: Assume released services are ready for production](./ready-antipatterns.md#antipattern-assume-released-services-are-ready-for-production) |
 | Ready | Inaccurate resiliency and availability assumptions | [Antipattern: Assume increased resiliency and availability](./ready-antipatterns.md#antipattern-assume-increased-resiliency-and-availability) |
 | Ready | IT as cloud provider | [Antipattern: Become a cloud provider](./ready-antipatterns.md#antipattern-become-a-cloud-provider) |
-| Adopt | Lack of guardrails | [Antipattern: Migrate, modernize, or innovate without guardrails](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-guardrails) |
-| Adopt | Lack of assessments | [Antipattern: Migrate, modernize, or innovate without an assessment](./migrate-antipatterns.md#antipattern-migrate-modernize-or-innovate-without-an-assessment) |
-| Adopt | Forced architecture | [Antipattern: Dictate an architecture](./migrate-antipatterns.md#antipattern-dictate-an-architecture) |
-| Adopt | Single subscription | [Antipattern: Use a single subscription](./migrate-antipatterns.md#antipattern-use-a-single-subscription) |
 | Manage | Neglect of business outcomes | [Antipattern: Focus on tooling, not business outcomes](./manage-antipatterns.md#antipattern-focus-on-tooling-not-business-outcomes) |
 | Govern | Misaligned shared responsibilities | [Antipattern: Misunderstand shared responsibilities](./govern-antipatterns.md#antipattern-misunderstand-shared-responsibilities) |
 | Govern | Inaccurate out-of-the-box security assumptions | [Antipattern: Assume out-of-the-box solutions provide security](./govern-antipatterns.md#antipattern-assume-out-of-the-box-solutions-provide-security) |

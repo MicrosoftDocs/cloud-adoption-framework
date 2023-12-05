@@ -661,12 +661,6 @@ items:
         items:
         - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
-        - name: Migration tools decision guide
-          href: migrate/azure-migration-guide/migration-tools-decision-guide.md
-        - name: Deploy workloads
-          href: migrate/azure-migration-guide/deploy.md
-        - name: Migration-focused cost-control mechanisms
-          href: migrate/azure-migration-guide/manage-costs.md
         - name: Get assistance
           href: migrate/azure-migration-guide/assistance.md
 
@@ -946,8 +940,6 @@ items:
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Adopt low-code application platform
           href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Migrate antipatterns
-        href: antipatterns/migrate-antipatterns.md
 
       - name: Process improvements
         items:
