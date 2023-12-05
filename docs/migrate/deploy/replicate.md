@@ -1,11 +1,10 @@
 ---
 title: The role of replication in the migration process
 description: Learn about the role of replication in the migration process and how to plan for the prerequisites and risks of replication activities.
-author: martinekuan
-ms.author: martinek
-ms.date: 04/04/2019
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # The role of replication in the migration process
@@ -20,7 +19,7 @@ Prior to replication, the new platform and hardware is prepared to receive the b
 
 The *source binaries* are prepared for replication and synchronization. The articles on [assessment](../assess/index.md), [architecture](../assess/architect.md), and [remediation](./remediate.md) address the actions necessary to ensure that the source binary is ready for replication and synchronization.
 
-A *toolchain* that aligns with the new platform and source binaries are implemented to execute and manage the replication and synchronization processes. Learn about [various tools that could contribute to a migration to Azure](./replicate-options.md).
+A *toolchain* that aligns with the new platform and source binaries are implemented to execute and manage the replication and synchronization processes.
 
 ## Replication risks: Physics of replication
 
@@ -41,4 +40,3 @@ Each of these laws of physics drives the following risks that commonly affect mi
 ## Next steps
 
 [Understand staging activities during a migration](./stage.md)
-

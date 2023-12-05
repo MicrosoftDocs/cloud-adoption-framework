@@ -633,6 +633,8 @@ items:
             href: migrate/deploy/index.md
           - name: Remediate assets
             href: migrate/deploy/remediate.md
+          - name: Replicate assets
+            href: migrate/deploy/replicate.md
       - name: Release
         items:
           - name: Promotion models
@@ -950,10 +952,6 @@ items:
             href: migrate/migration-considerations/assess/approve.md
         - name: Deploy workloads
           items:
-          - name: Overview
-            href: migrate/migration-considerations/migrate/index.md
-          - name: Replicate assets
-            href: migrate/migration-considerations/migrate/replicate.md
           - name: Stage workloads
             href: migrate/migration-considerations/migrate/stage.md
         - name: Release workloads
