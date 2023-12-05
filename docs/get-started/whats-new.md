@@ -13,25 +13,60 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
 ## November 2023
 
+### HPC baseline computing
+
+HPC baseline computing updates and new articles describe the benefits of Azure HPC OnDemand Platform (AzHop), compare the features of Azure Batch and Azure CycleCloud, and provide a large-scale HPC architecture for the finance industry.
+
+- [Azure landing zone for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready)
+
+- [Finance HPC Azure identity and access management](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/identity-access-management)
+- [Run large-scale HPC application workloads for the finance industry on Azure virtual machines](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/compute)
+- [Big compute in the manufacturing industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/manufacturing/compute)
+
+### Sovereignty requirements
+
+This new article describes how to meet digital sovereignty requirements when you adopt cloud computing. The Azure landing zone FAQ has been updated with material that corresponds to the sovereignty considerations article.
+
+- [Sovereignty considerations for Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/sovereign-landing-zone)
+
+- [Azure landing zone FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq)
+
 ## October 2023
+
+### Brownfield alignment scenarios
+
+This series starts with an introduction that describes recommendations for transitioning an existing Azure environment into an Azure landing zone conceptual architecture. It includes considerations for moving resources and subscriptions. There are four distinct articles that describe transitioning scenarios based on the existing Azure environment. The final article provides guidance about maintaining a cloud environment over time.
+
+- [Transition an existing Azure environment to the Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/enterprise-scale/transition)
+
+- [Scenario: Transition a single subscription with no management groups to the Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription)
+- [Scenario: Transition management groups to the Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-multiple-management-groups)
+- [Scenario: Transition a regional organization environment to the Azure landing zone conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-regional-org)
+- [Scenario: Transition an environment by duplicating a landing zone management group](/azure/cloud-adoption-framework/ready/landing-zone/align-approach-duplicate-brownfield-audit-only)
+- [Journey toward the target architecture](/azure/cloud-adoption-framework/ready/landing-zone/landing-zone-journey)
 
 ### Updated CAF Azure regions decision guide
 
 Learn how to [select Azure regions for your cloud footprint](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions) by considering the characteristics of each region, like availability zones, region pairs, available services, and nonfunctional requirements, like region proximity and capacity. We’ve also provided new guidance about operating across multiple Azure regions. As part of this change, we simplified the [guidance about selecting Azure regions for migrations](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions).
 
+### Network topology and connectivity for Azure Virtual Desktop
+
+The [updates to the Network topology and connectivity for Azure Virtual Desktop article](/azure/cloud-adoption-framework/scenarios/wvd/eslz-network-topology-and-connectivity) describe two new scenarios to help you understand how to manage network topology and connectivity at scale in Azure Virtual Desktop. The first scenario describes a hub-and-spoke architecture with hybrid connectivity over managed networks. The second scenario describes a hub-and-spoke architecture with public networks. Both scenarios use Remote Desktop Protocol Shortpath (RDP Shortpath).
+
 ## September 2023
 
 ### Plan for IP addressing
 
-Article updated with relevant information about IPv4 exhaustion, and IPAM (IP Address Management) tools.
+This article was updated with relevant information about IPv4 exhaustion and IPAM (IP address management) tools.
 
 - [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing).
 
 ### Guidance for documenting and deploying alerts
 
-To support the imminent general availability of Azure Monitor baseline alerts for the Azure landing zone, we have created some Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
+To support the imminent general availability of Azure Monitor baseline alerts for an Azure landing zone, we have created Cloud Architecture Framework documentation about baseline alerts. Find out what baseline alerts are and where to go for more information about how to enhance your Azure platform by using Azure Monitor alerts.
 
 -   [Monitor Azure platform landing zone components](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor)
 
@@ -39,7 +74,7 @@ To support the imminent general availability of Azure Monitor baseline alerts fo
 
 ### Azure VMware Solution network design guides
 
-These guides describe the Microsoft-recommended approach for designing network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
+These guides describe the Microsoft-recommended approach to help you design network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
 
 -   [Azure VMware Solution network design guide](/azure/cloud-adoption-framework/scenarios/azure-vmware/network-design-guide-intro)
 
@@ -57,25 +92,29 @@ These guides describe the Microsoft-recommended approach for designing network c
 
 ### Landing zone regions
 
-This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
+This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone and considerations for migrating your Azure estate to a different region.
 
 - [Landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions)
 
 ### Enhanced migration guidance
 
+This article describes how to ensure that configurations are in place when you migrate your landing zone. It explores tasks, such as preparing your identity, enabling hybrid Domain Name System (DNS) services, and enabling subscription vending.
+
 - [Readying your landing zone for migration](/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz)
 
-### New best practices for SAP LZA security on Azure 
+### New best practices for SAP landing zone accelerator security on Azure
 
--   [SAP data integration example architecture](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-example-architecture)
+This series provides guidance for your SAP environment in Azure. You can find best practices for security operations to secure your SAP environment in Azure, security recommendations for SAP on Azure that runs on a SQL Server database, and guidance about the flow of SAP data from source SAP systems to downstream targets. Learn how to use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
 
--   [Data integration security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-integration-security)
+- [SAP data integration example architecture](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-example-architecture)
 
--   [SQL Server database security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-database-security)
+- [Data integration security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-data-integration-security)
 
--   [Security operations for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-security-operations)
+- [SQL Server database security for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-database-security)
 
--   [Microsoft Sentinel for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-sentinel-for-sap)
+- [Security operations for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-security-operations)
+
+- [Microsoft Sentinel for SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/sap-lza-sentinel-for-sap)
 
 ## June 2023
 
@@ -85,7 +124,9 @@ Learn about the [best practices for deploying machine learning models in product
 
 ### New landing zone sandbox environments
 
--   [Landing zone sandbox environments](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments)
+This article describes how to use a sandbox environment, including configuring networking, enabling audit logging, assigning a budget, and setting an expiration date.
+
+- [Landing zone sandbox environments](/azure/cloud-adoption-framework/ready/considerations/sandbox-environments)
 
 ## April 2023
 
