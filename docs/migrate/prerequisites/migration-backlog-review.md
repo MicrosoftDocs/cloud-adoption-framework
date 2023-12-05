@@ -24,7 +24,7 @@ Sometimes, prioritizing one workload over another may seem illogical to the clou
 
 ## Core assumptions
 
-The article on [digital estate rationalization](../../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when evaluating a digital estate. To fully realize those values, the cloud adoption team needs to understand the assumptions and the reasons that they were established. That knowledge better equips the cloud adoption team to challenge those assumptions.
+The article on [digital estate rationalization](../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when evaluating a digital estate. To fully realize those values, the cloud adoption team needs to understand the assumptions and the reasons that they were established. That knowledge better equips the cloud adoption team to challenge those assumptions.
 
 ## Next steps
 

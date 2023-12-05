@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Assess workloads and validate assumptions before migration
 
-Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/technical-complexity.md#migration-backlog) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
+Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/migration-backlog-review.md) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. Your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies. Use this information to ensure the migrated workload can be deployed to the cloud effectively.
 
-The *assess* process is the first of four incremental activities that occur within an iteration. As discussed in the [technical complexity and change management article](../prerequisites/technical-complexity.md), a decision should be made in advance to determine how you should run this phase. In particular, will the cloud adoption team complete assessments during the same sprint as the actual migration effort? Or, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to these questions can't be answered by every member of the team, revisit the [Prerequisites for migration](../prerequisites/index.md) article.
+The *assess* process is the first of four incremental activities that occur within an iteration. A decision should be made in advance to determine how you should run this phase. In particular, will the cloud adoption team complete assessments during the same sprint as the actual migration effort? Or, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to these questions can't be answered by every member of the team, revisit the [Prerequisites for migration](../prerequisites/index.md) article.
 
 ## Goals
 
@@ -38,14 +38,14 @@ Along with the high-level accountability, there are actions that an individual o
 - **Business priority.** The team understands the purpose for migrating this workload, including any intended effects on the business.
   - A member of the cloud strategy team should carry final responsibility for this activity, under the direction of the cloud adoption team.
 - **Stakeholder alignment.** The team aligns expectations and priorities with internal stakeholders, identifying success criteria for the migration. What does success look like post-migration?
-- **Refined rationalization.** Evaluate the initial assumptions about rationalization. Should a different [rationalization approach](../../../digital-estate/rationalize.md) be used to migrate this specific workload?
+- **Refined rationalization.** Evaluate the initial assumptions about rationalization. Should a different [rationalization approach](../../digital-estate/rationalize.md) be used to migrate this specific workload?
 - **Modernization decisions.** Whatever the rationalization decision, should the team modernize various assets in the workload to use PaaS-based solutions?
 - **Cost.** Estimate the cost of the target architecture, and adjust the overall budget.
 - **Migration support.** The team decides how they'll complete the technical work of the migration, including decisions about partner or Microsoft support.
 - **Evaluation.** The team evaluates the workload for compatibility and dependencies.
   - Assign this activity to a subject matter expert who is familiar with the architecture and operations of the candidate workload.
 - **Architect.** The team agrees on the final state architecture for the migrated workload.
-- **Migration tooling.** Depending on modernization and architecture approaches, use different kinds of migration tools to automate the migration. Based on the proposed architecture, will this migration use the best [migration tools](../../azure-migration-guide/migration-tools-decision-guide.md)?
+- **Migration tooling.** Depending on modernization and architecture approaches, use different kinds of migration tools to automate the migration. Based on the proposed architecture, will this migration use the best [migration tools](../prerequisites/migration-tools-decision-guide.md)?
 - **Backlog alignment.** The cloud adoption team reviews requirements and commits to the migration of the candidate workload. After commitment, the team updates the release backlog and iteration backlog.
 - **Work breakdown structure or work-back schedule.** The team establishes a schedule of major milestones identifying goals for when to complete planning, implementation, and review processes.
 - **Final approval.** Any necessary approvers have reviewed the plan and have signed off on the approach to migrate the asset.
@@ -83,7 +83,7 @@ It's also recommended to review the following resources prior to starting new mi
 
 - **[Share your strategy](/azure/cloud-adoption-framework/strategy/share-your-strategy)**: Consider ensuring that the strategy is understood as all decisions made during migrations ideally should align to the organizational strategy.
 
-- **[Initial organization alignment](../../plan/initial-org-alignment.md)**: Review the guidance on initial organization alignment to come better prepared as cloud adoption and migration projects scales across the business and IT culture.
+- **[Initial organization alignment]( ../../plan/initial-org-alignment.md)**: Review the guidance on initial organization alignment to come better prepared as cloud adoption and migration projects scales across the business and IT culture.
 
 ## Challenge assumptions
 
@@ -164,7 +164,7 @@ Azure Migrate provides a centralized hub to assess and migrate to Azure on-premi
 
 If you're considering a lift-and-shift approach or are in the early assessment stages of migration, this service is for you. After completing the assessment, use Azure Migrate to execute the migration.
 
-![Azure Migrate overview](./media/assess/azure-migrate-overview-1.png)
+![Azure Migrate overview](../media/assess/azure-migrate-overview-1.png)
 
 #### Create a new project
 
@@ -230,8 +230,6 @@ The Service Retirement workbook gives you a centralized resource-level view of s
 To learn more, see [Prepare migration of your workloads impacted by service retirement](/azure/advisor/advisor-how-to-plan-migration-workloads-service-retirement).
 
 ## Next steps
-
-With a general understanding of the assessment process, you're ready to begin the process by [classifying workloads](./classify.md).
 
 > [!div class="nextstepaction"]
 > [Classify workloads](./classify.md)

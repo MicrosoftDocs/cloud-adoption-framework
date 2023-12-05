@@ -16,15 +16,15 @@ There are four distinct processes that are completed iteratively in the Migrate 
 
 ## Prerequisites skilling resources
 
-Implementation of the Migrate methodology builds on the skills acquired during [planning](../strategy/suggested-skills.md) and [preparing](../organize/suggested-skills.md) a migration journey.
+Implementation of the Migrate methodology builds on the skills acquired during [planning](../../strategy/suggested-skills.md) and [preparing](../../organize/suggested-skills.md) a migration journey.
 
 ## Assess skilling resources
 
 The following tools can aid the team in execution of assess activities:
 
-- [Balance the portfolio](../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
-- [Build a business justification](../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
-- [Rationalize the digital estate](../digital-estate/rationalize.md): Rationalize assets in the digital estate.
+- [Balance the portfolio](../../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
+- [Build a business justification](../../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
+- [Rationalize the digital estate](../../digital-estate/rationalize.md): Rationalize assets in the digital estate.
 - [Application portfolio assessment](/training/modules/app-and-infra-migration-and-modernization/): Criteria for making decisions regarding migration or innovation options within the application portfolio.
 - [`Assessing and Planning Microsoft Azure Migration`](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning-update): A Pluralsight course to aid in assessing on-premises workloads.
 
