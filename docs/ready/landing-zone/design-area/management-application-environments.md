@@ -57,9 +57,9 @@ Use a single subscription for multiple application environments if:
 
 If an application or service workload needs to be in a single subscription, and you need to make changes to the policies that apply to each environment, you can:
 
-- Create a new _archetype-aligned_ management group beneath the landing zones management group. For more information, see the section in this article, [Management group hierarchy](#management-group-hierarchy).
+- Create a new _archetype-aligned_ management group beneath the landing zones management group. For more information, see [Management group hierarchy](#management-group-hierarchy) in this article.
 
-- Use sandbox subscriptions for development activities. Sandboxes have a less-restrictive policy set.
+- Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 - Use policies that are applied at the subscription level instead of the management group level. You can add tags in the policy definitions to help filter and apply policies to the correct environment. You can also assign policies to or exclude them from specific resource groups.
   
   You can assign policies during the subscription creation process as part of [subscription vending](subscription-vending.md).
@@ -129,7 +129,7 @@ Application owners might need policies to apply differently to multiple environm
 
 Some policies can be enabled as audit policies at the management group level. Application teams determine how to implement the control. This method doesn't prevent deployments, but it creates awareness and enables application teams to manage their unique needs. They can then create sublevel policies or incorporate these requirements into their infrastructure as code (IaC) deployment modules.
 
-In this shared responsibility model, the platform team audits practices, and the application team manages the implementation. This model can help improve the agility of deployments.
+In this shared responsibility model, the platform team audits practices, and the application team manages the implementation. This model can improve the agility of deployments.
 
 Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. The platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate _product lines_ for various types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
@@ -152,10 +152,10 @@ A workload with environmental subscriptions that use [App Service](/azure/app-se
 
 However, this feature can only be used with the app that's on the App Service plan, which can only live within a single subscription. If the platform operators mandate that the application owners use separate subscriptions for development, testing, and production environments, the application deployment lifecycle might be more difficult to manage.
 
-In this example, a single subscription for the application or service workload might be the best fit by using Azure role-based access control (RBAC) with [PIM](/azure/active-directory/privileged-identity-management/pim-configure) at the resource group level for increased security.
+For this example, the best option is a single subscription for the application or service workload. Application owners can use Azure role-based access control (RBAC) with [PIM](/azure/active-directory/privileged-identity-management/pim-configure) at the resource group level for increased security.
 
 ## Next steps
 
 - [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 - [Testing approach for Azure landing zones](../../enterprise-scale/testing-approach.md)
-- [Landing zone sandbox environments](../../considerations/sandbox-environments.md) isolated development
+- [Landing zone sandbox environments](../../considerations/sandbox-environments.md)
