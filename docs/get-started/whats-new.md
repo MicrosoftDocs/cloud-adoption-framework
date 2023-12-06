@@ -16,16 +16,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## November 2023
 
-### HPC baseline computing
-
-HPC baseline computing updates and new articles describe the benefits of Azure HPC OnDemand Platform (AzHop), compare the features of Azure Batch and Azure CycleCloud, and provide a large-scale HPC architecture for the finance industry.
-
-- [Azure landing zone for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready)
-
-- [Finance HPC Azure identity and access management](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/identity-access-management)
-- [Run large-scale HPC application workloads for the finance industry on Azure virtual machines](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/compute)
-- [Big compute in the manufacturing industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/manufacturing/compute)
-
 ### Sovereignty requirements
 
 This new article describes how to meet digital sovereignty requirements when you adopt cloud computing. The Azure landing zone FAQ has been updated with material that corresponds to the sovereignty considerations article.
@@ -35,6 +25,16 @@ This new article describes how to meet digital sovereignty requirements when you
 - [Azure landing zone FAQ](/azure/cloud-adoption-framework/ready/enterprise-scale/faq)
 
 ## October 2023
+
+### HPC baseline computing
+
+HPC baseline computing updates and new articles describe the benefits of Azure HPC OnDemand Platform (AzHop), compare the features of Azure Batch and Azure CycleCloud, and provide a large-scale HPC architecture for the finance industry.
+
+- [Azure landing zone for HPC](/azure/cloud-adoption-framework/scenarios/azure-hpc/ready)
+
+- [Finance HPC Azure identity and access management](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/identity-access-management)
+- [Run large-scale HPC application workloads for the finance industry on Azure virtual machines](/azure/cloud-adoption-framework/scenarios/azure-hpc/finance/compute)
+- [Big compute in the manufacturing industry](/azure/cloud-adoption-framework/scenarios/azure-hpc/manufacturing/compute)
 
 ### Brownfield alignment scenarios
 
