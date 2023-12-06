@@ -46,8 +46,6 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 - If Kerberos is required for Azure Files file shares for Windows users, consider using [Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal#enable-azure-ad-kerberos-authentication-for-hybrid-user-accounts) rather than deploying domain controllers into the cloud.
 
-- For applications that are hosted partly on-premises and partly in Azure, verify which integration makes sense based on your scenario. For more information, see [Deploy AD DS in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
-
 ## Azure and on-premises (Hybrid Identity)
 
 User objects that are wholly created in Microsoft Entra ID are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
