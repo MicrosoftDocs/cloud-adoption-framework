@@ -28,8 +28,6 @@ The [Azure landing zone design areas](../design-areas.md) give guidance on what 
 
 Zero Trust has pillars organized by concepts and deployment objectives.  Each pillar and its deployment objectives are detailed in the articles under [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview).
 
-:::image type="content" source="./media/diagram-zero-trust-security-elements.png" alt-text="Diagram of elements of visibility, automation, and orchestration in Zero Trust." border="false":::
-
 These pillars provide specific deployment objectives that organizations should use in order to align with Zero Trust principles.  They offer targeted objectives for each pillar.  These objectives go beyond technical configurations.
 
 For example, in the networking pillar there's a deployment objective for network segmentation.  The objective doesn't provide information on how to configure isolated networks in Azure, but instead offers guidance for creating the architecture pattern.
