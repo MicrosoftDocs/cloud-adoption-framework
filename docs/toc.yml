@@ -329,6 +329,8 @@ items:
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
           - name: Application environments
             href:  ready/landing-zone/design-area/management-application-environments.md
+          - name: Modify a landing zone to meet requirements across multiple locations
+            href: ready/landing-zone/landing-zone-multinational.md
           - name: Tailoring the Azure landing zones architecture
             href: ready/landing-zone/tailoring-alz.md
           - name: Adopt policy-driven guardrails
