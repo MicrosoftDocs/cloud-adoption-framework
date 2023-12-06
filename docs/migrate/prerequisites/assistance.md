@@ -3,9 +3,8 @@ title: How to obtain assistance
 description: Learn how to obtain assistance during your Azure migration process. The right assistance can help accelerate your migration efforts.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 07/07/2023
+ms.date: 12/06/2023
 ms.topic: conceptual
-ms.custom: think-tank, fasttrack-new, AQC, UpdateFrequency2
 ---
 
 # Get assistance

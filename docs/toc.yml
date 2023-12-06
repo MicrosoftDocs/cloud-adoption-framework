@@ -615,6 +615,8 @@ items:
             href: migrate/prerequisites/suggested-skills.md
           - name: Understand partnership options
             href: migrate/prerequisites/partnership-options.md
+          - name: Get assistance
+            href: migrate/prerequisites/assistance.md
       - name: Assess
         items:
         - name: Overview
@@ -657,12 +659,6 @@ items:
             href: migrate/release/decommission.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
-      - name: Azure migration guide
-        items:
-        - name: Migration guide overview
-          href: migrate/azure-migration-guide/index.md
-        - name: Get assistance
-          href: migrate/azure-migration-guide/assistance.md
 
       - name: Migration scenarios
         items:

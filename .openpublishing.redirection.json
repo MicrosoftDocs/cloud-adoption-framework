@@ -1069,6 +1069,16 @@
          "source_path": "docs/antipatterns/migrate-antipatterns.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/assistance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/assistance",
+         "redirect_document_id": false
       }
    ]
 }
