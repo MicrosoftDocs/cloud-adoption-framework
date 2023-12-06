@@ -924,33 +924,12 @@ items:
         items:
         - name: Overview
           href: migrate/azure-best-practices/index.md
-        - name: Multiple datacenters
-          href: migrate/azure-best-practices/multiple-datacenters.md
-        - name: Deploy a migration infrastructure
-          href: migrate/azure-migration-guide/ready-alz.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration and DDL commands
           href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
         - name: Database restore points for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
-        - name: Adopt low-code application platform
-          href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-      - name: Process improvements
-        items:
-        - name: Overview
-          href: migrate/migration-considerations/index.md
-        - name: Assess workloads
-          items:
-          - name: Manage change
-            href: migrate/migration-considerations/assess/release-iteration-backlog.md
-          - name: Approve architecture changes
-            href: migrate/migration-considerations/assess/approve.md
-        - name: Release workloads
-          items:
-          - name: Benchmark and resize assets
-            href: migrate/migration-considerations/optimize/optimize.md
     
     - name: Modernize
       items:
