@@ -14,7 +14,7 @@ This article describes how cloud platform teams can implement guardrails to mana
 
 ## Set the foundation
 
-Development teams require the ability to iterate quickly, and cloud governance and platform teams need to manage organizational risk, compliance, and security at scale. You can properly manage application environments by focusing on two key [Azure landing zone design principles](/../../design-principles.md): policy-driven governance and subscription democratization. These principles provide foundational guardrails and describe how to delegate controls to application teams. The application teams use [Azure Well-Architected Framework guidance](/azure/well-architected) to design their workload. They deploy and manage their own landing zone resources, and the platform team controls the resources by assigning Azure policies.
+Development teams require the ability to iterate quickly, and cloud governance and platform teams need to manage organizational risk, compliance, and security at scale. You can properly manage application environments by focusing on two key [Azure landing zone design principles](./design-principles.md): policy-driven governance and subscription democratization. These principles provide foundational guardrails and describe how to delegate controls to application teams. The application teams use [Azure Well-Architected Framework guidance](/azure/well-architected) to design their workload. They deploy and manage their own landing zone resources, and the platform team controls the resources by assigning Azure policies.
 
 It's important to provide sandbox resources for _semi-governed_ resources, so application teams can experiment with technologies and capabilities.
 
