@@ -54,11 +54,11 @@ The following table correlates the Zero Trust pillars to the design areas shown 
 
 However, not all of the deployment objectives of Zero Trust are a part of the landing zone. Many deployment objectives for Zero Trust are implemented as part of designing and releasing individual workloads to Azure.
 
-The next sections review each pillar, and give recommendations and considerations for implementing the deployment objectives.
+The following sections review each pillar and provide recommendations and considerations for implementing deployment objectives.
 
 ## Secure identity
 
-The [Securing identity with Zero Trust](/security/zero-trust/deploy/identity) guidance has deployment objectives focused on identity federation, conditional access, identity governance, and the use of real time data as part of the decisions for authentication.
+[Securing identity with Zero Trust](/security/zero-trust/deploy/identity) describes deployment objectives that focus on identity federation, conditional access, identity governance, and real-time data to help you configure authentication.
 
 ### Identity considerations
 
