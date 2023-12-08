@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 10/06/2023
 ms.topic: conceptual
-ms.custom: UpdateFrequency.5
+ms.custom: UpdateFrequency.5, historical
 ---
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
@@ -109,7 +109,7 @@ In this three-part series about SAP applications, learn how to [identify SAP dat
 
 ### SAP workload storage on Azure
 
-Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types]( /azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about non-Azure storage service options.
+Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types](/azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about storage options outside of Azure.
 
 ### Automated Azure VMware Solution implementation options
 
@@ -174,7 +174,7 @@ We invite you to [explore the defense scenario](../scenarios/defense/index.md) a
 
 High-performance computing (HPC) on Azure is the complete set of Azure resources (compute, networking, and storage) integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries such as manufacturing, energy, and finance.
 
-The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a well-architected framework for best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
+The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a framework for architectural best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
 
 Use the following links to get started with HPC on Azure:
 
