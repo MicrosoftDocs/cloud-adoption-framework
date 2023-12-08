@@ -6,8 +6,6 @@ ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: 
   - think-tank
   - e2e-oracle
