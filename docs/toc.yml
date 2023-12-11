@@ -924,8 +924,6 @@ items:
 
       - name: Best practices
         items:
-        - name: Overview
-          href: migrate/azure-best-practices/index.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration and DDL commands
