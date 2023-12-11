@@ -42,8 +42,8 @@ Answering the following questions allows you to decide based on the above tree.
 - **Does your data have complex data storage requirements?**
   Production applications usually require data storage that is highly available and offers always-on functionality and similar service uptime and continuity features. Azure PaaS-based managed database options, such as Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB, offer 99.99 percent uptime service-level agreements. Conversely, IaaS-based SQL Server on Azure VMs offers single-instance service-level agreements of 99.95 percent. If your data can't be modernized to use PaaS storage options, guaranteeing higher IaaS uptime involves more complex data storage scenarios such as running SQL Server Always On clusters and continuously syncing data between instances. This can involve significant hosting and maintenance costs, so balancing uptime requirements, modernization effort, and overall budgetary impact is essential when considering your data migration options.
 
-- **Do you require real-time protection of data whilst in-use?**
-[Confidential computing on Azure](/azure/confidential-computing/overview-azure-products) applies to various [use cases](/azure/confidential-computing/use-cases-scenarios) for protecting data in regulated industries such as government, financial services, and healthcare institutes. It provides encryption while in use - by protecting sensitive or highly regulated data sets and application workloads in a secure public cloud platform.
+- **Do you require real-time protection of data whilst in use?**
+[Confidential computing on Azure](/azure/confidential-computing/overview-azure-products) applies to various [data protection use cases](/azure/confidential-computing/use-cases-scenarios) for protecting data in regulated industries such as government, financial services, and healthcare institutes. It provides encryption while in use - by protecting sensitive or highly regulated data sets and application workloads in a secure public cloud platform.
 
 ## Innovation and migration
 
