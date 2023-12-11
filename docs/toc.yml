@@ -602,7 +602,7 @@ items:
           - name: Overview
             href: migrate/prerequisites/index.md
           - name: Readying your landing zone for migration
-            href: migrate/azure-migration-guide/ready-alz.md
+            href: migrate/prerequisites/ready-alz.md
           - name: Migration tools decision guide
             href: migrate/prerequisites/migration-tools-decision-guide.md                  
           - name: Understanding multiple datacenters
