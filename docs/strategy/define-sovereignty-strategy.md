@@ -1,14 +1,13 @@
 ﻿---
-title: Define a sovereignty strategy
+title: Define sovereignty strategy
 description: Use the Cloud Adoption Framework for Azure to learn to build a business justification for sovereignty.
 author: mboswell
 ms.author: mboswell
 ms.date: 12/01/2023
 ms.topic: conceptual
-ms.custom: think-tank, UpdateFrequency2
 ---
 
-# Define a sovereignty strategy
+# Define sovereignty strategy
 
 Many geopolitical regions have established regulations on handling specific types of data, such as privacy sensitive data and government data classifications. These regulations typically define sovereignty requirements around data residency, control over data, and sometimes around operational independence (sometimes referred to as "autarky"). How you meet these requirements changes when you adopt (hybrid) cloud services. Compliance teams are an important part of the process of determining when and how using cloud services is acceptable.
 
@@ -24,16 +23,16 @@ In your on-premises datacenter, you're responsible for most aspects typically as
 - Configuration and processes that determine who has access to which data and systems.
 - Tools and processes to secure data and systems against outsider and insider threat.
 
-When using cloud services, the responsibility around these aspects shifts to [shared responsibility](/azure/security/fundamentals/shared-responsibility) and this leads to a change in how compliance teams get determine whether sovereignty requirements have been met. This breaks down into two areas:
+When using cloud services, the responsibility around these aspects shifts to a [shared responsibility](/azure/security/fundamentals/shared-responsibility), leading to a change in how compliance teams determines whether sovereignty requirements have been met. This breaks down into two areas:
 
-- Compliance of the cloud services – How do services offered by a cloud provider meet sovereignty and compliance requirements?
-- Compliance of the systems and processes your organization is responsible for Which tools are available to help you meet your sovereignty and compliance requirements, and how do you use these tools?
+- Compliance of the cloud services. How do services offered by a cloud provider meet sovereignty and compliance requirements?
+- Compliance of the systems and processes your organization is responsible for. Which tools are available to help you meet your sovereignty and compliance requirements, and how do you use these tools?
 
 [Microsoft Cloud for Sovereignty](/industry/sovereignty/) offers capabilities that cater to both areas to help customers meet their compliance and sovereignty needs.
 
 ### Compliance of cloud services
 
-For compliance of cloud services, compliance teams can use several sources and methods:
+Compliance teams can use several sources and methods to verify cloud service compliance, including these:
 
 - Vendor documentation on how their services work and how these are operated, such as product documentation and System Security Plans as published for [FedRAMP](https://servicetrust.microsoft.com/viewpage/FedRAMP).
 
@@ -45,17 +44,17 @@ For compliance of cloud services, compliance teams can use several sources and m
 
 - [Transparency logs](/industry/sovereignty/transparency-logs) that provide details of when Microsoft engineers accessed your resources.
 
-Which (combination) of sources and methods your compliance team uses depends on the level of insight you need, the level of trust you associate with each of the available options, and the resources and budget available. Relying on a third- party auditor certification outsources the required knowledge to perform an audit and is much less costly than (partially) performing your own audit, but requires trust in the auditor and audit process.
+Which combination of sources and methods your compliance team uses depends on the level of insight you need, the level of trust you associate with each of the available options, and the resources and budget available. Relying on a third-party auditor certification outsources the required knowledge to perform an audit and is much less costly than partially performing your own audit but requires trust in the auditor and audit process.
 
 ### Compliance of your systems and processes
 
-For compliance of the processes and systems your organization is responsible for, existing compliance processes can be enhanced with capabilities provided by cloud services. These include:
+Your organization's compliance processes and systems can benefit from the added capabilities of cloud services. These enhancements include:
 
-- Technical policy enforcement and reporting – blocking deployment of services and configurations or reporting on violations that don't meet technical requirements supporting sovereignty and compliance requirements.
+- **Enforcing or reporting on technical policies**: Blocking deployment of services and configurations or reporting on violations that don't meet technical requirements supporting sovereignty and compliance requirement
 
-- Pre-built policy blueprints aligned to particular compliance frameworks.
+- Pre-built policy definitions aligned to particular compliance frameworks.
 
-- (Audit) logging and monitoring.
+- Audit logging and monitoring.
 
 - Security tools as discussed in [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy).
 

@@ -59,7 +59,7 @@ In each of the following processes, guidance for addressing this complexity is i
 
 The location of existing datacenters can affect a migration strategy. Consider the following factors:
 
-**Architecture decisions**: One of the first steps in migration strategy design is to determine the target region. The location of existing assets often influences this determination. Also, the availability of cloud services and the unit cost of those services can vary between regions. Sovereignty or data residency requirements will also influence the architecture decision. Understanding where current and future assets are located affects architecture decisions and can influence budget estimates.
+**Architecture decisions**: One of the first steps in migration strategy design is to determine the target region. The location of existing assets often influences this determination. Also, the availability of cloud services and the unit cost of those services can vary between regions. Data residency requirements, including sovereignty requirements, might also influence the architecture decision. Understanding where current and future assets are located affects architecture decisions and can influence budget estimates.
 
 **Datacenter dependencies**: The example scenarios in the table in [Document complexity](#document-your-scenario-complexity) show that you likely need to plan for dependencies between various global datacenters. The dependencies might not be documented or understood clearly in many organizations that operate on this scale. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team should also explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
 
@@ -104,7 +104,7 @@ When your organization faces global asset and user base complexities in a migrat
 - [Zone-redundant web applications](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Multi-region web applications](/azure/architecture/web-apps/app-service/architectures/multi-region)
 - [Multi-region n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server)
-- [Workload templates for Sovereign Landing Zone](/industry/sovereignty/workload-templates)
+- [Workload templates for Sovereign landing zone](/industry/sovereignty/workload-templates)
 
 > [!WARNING]
 > When you use the reference architecture for ExpressRoute or the reference architectures for applications, you might need to exclude specific data elements from replication processes to meet data sovereignty requirements. The task of excluding specific data elements adds a step to the promotion process.

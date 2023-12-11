@@ -51,7 +51,7 @@ The Microsoft cloud security benchmark documentation specifies security controls
 
 ### Microsoft Azure Attestation
 
-Microsoft Azure Attestation is a unified solution for remotely verifying the trustworthiness of a platform and integrity of the binaries running inside it. The service supports attestation of the platforms backed by Trusted Platform Modules (TPMs) alongside the ability to attest to the state of Trusted Execution Environments (TEEs) such as [Intel® Software Guard Extensions](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) (SGX) enclaves, [Virtualization-based Security](/windows-hardware/design/device-experiences/oem-vbs) (VBS) enclaves, [Trusted Platform Modules (TPMs)](/windows/security/information-protection/tpm/trusted-platform-module-overview),  [Trusted launch for Azure VMs](/azure/virtual-machines/trusted-launch) and [Azure confidential VMs](/azure/confidential-computing/confidential-vm-overview).
+[Azure Attestation](/azure/attestation/overview) is a powerful tool that can help you ensure the security and integrity of your platform and binaries running inside it. It is especially useful for businesses that require highly scalable compute resources and uncompromising trust with the remote attestation capability.
 
 ## Security design considerations
 

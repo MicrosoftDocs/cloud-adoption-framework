@@ -67,7 +67,7 @@ Ensure that you understand your own data residency requirements. Also, verify th
 
 Addressing data residency challenges is a significant motivation for organizations that operate on a global scale to migrate to the cloud. To maintain data sovereignty compliance, some organizations choose to deploy duplicate IT assets to cloud providers in their selected region.
 
-[Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty) solution enables governments to deploy workloads in Microsoft Cloud while helping meet their specific sovereignty, compliance, security, and policy requirements. Microsoft Cloud for Sovereignty creates software boundaries in the cloud to establish the extra protection that governments require, using hardware-based confidentiality and encryption controls. For more information, see [Microsoft Cloud for Sovereignty capabilities](/industry/sovereignty/sovereignty-capabilities).
+[Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty) is a solution that enables governments to deploy workloads in the Microsoft Cloud while helping meet their specific sovereignty, compliance, security, and policy requirements. Microsoft Cloud for Sovereignty creates software boundaries in the cloud to establish the extra protection that governments require, using hardware-based confidentiality and encryption controls. For more information, see [Microsoft Cloud for Sovereignty capabilities](/industry/sovereignty/sovereignty-capabilities).
 
 ## Consider region proximity
 
