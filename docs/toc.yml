@@ -921,15 +921,6 @@ items:
             href: /azure/security/fundamentals/paas-applications-using-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Security best practices for IaaS workloads in Azure
             href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-      - name: Best practices
-        items:
-        - name: Scale a migration
-          href: migrate/azure-best-practices/contoso-migration-scale.md
-        - name: Schema migration and DDL commands
-          href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
-        - name: Database restore points for Azure Synapse
-          href: migrate/azure-best-practices/analytics/azure-synapse.md
     
     - name: Modernize
       items:
