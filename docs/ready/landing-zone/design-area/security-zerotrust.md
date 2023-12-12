@@ -8,34 +8,30 @@ ms.topic: conceptual
 ms.custom: 
 ---
 
-# Zero Trust planning for landing zones
+# Incorporate Zero Trust practices in your landing zone
 
-[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy that uses many products and services in order to adhere to the following security principles:
+[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy in which you incorporate products and services in order to adhere to the following security principles:
 
-- **Verify explicitly** means that you always authenticate and authorize based on all available data points.
+- **Verify explicitly** means that you always authenticate and authorize access based on all available data points.
 
-- **Use least-privilege access** means that you limit user access to just-enough access, and use tools to provide just-in-time access with considerations to adaptive risk-based policies.
+- **Use least-privilege access** means that you limit users to just-enough access, and use tools to provide just-in-time access with considerations to adaptive risk-based policies.
 - **Assume breach** means that you minimize the blast radius and segment access, proactively look for threats, and continually improve defenses.
 
-If your organization adheres to the Zero Trust strategy, you should include Zero Trust-specific deployment objectives as part of your landing zone design areas. Your landing zone is the foundation of your workloads in Azure, so prepare your landing zone for Zero Trust adoption.
+If your organization adheres to the Zero Trust strategy, you should incorporate Zero Trust-specific deployment objectives for your landing zone design areas. Your landing zone is the foundation of your workloads in Azure, so it's important to prepare your landing zone for Zero Trust adoption.
 
-This article provides guidance for building Zero Trust into your landing zone and explains where adherence to Zero Trust principles requires solutions outside of your landing zone.
+This article provides guidance for integrating Zero Trust practices into your landing zone and explains where adherence to Zero Trust principles requires solutions outside of your landing zone.
 
 ## Zero Trust pillars and landing zone design areas
 
 When you implement Zero Trust practices in your Azure landing zone deployment, you should begin by considering the Zero Trust guidance for each landing zone design area.
 
-The [Azure landing zone design areas](../design-areas.md) present considerations for designing a landing zone and guide you through the critical decisions for each area, so you know what you need to create a successful landing zone.
+[Azure landing zone design areas](../design-areas.md) presents considerations for designing a landing zone and guides you through the critical decisions for each area, so you know what you need to create a successful landing zone.
 
-Zero Trust has pillars that are organized by concepts and deployment objectives. For more information, see [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview).
+The Zero Trust model has pillars that are organized by concepts and deployment objectives. For more information, see [Deploying Zero Trust solutions](/security/zero-trust/deploy/overview).
 
-These pillars provide specific deployment objectives that help organizations align with Zero Trust principles. These objectives go beyond technical configurations.
+These pillars provide specific deployment objectives that help organizations align with Zero Trust principles. These objectives go beyond technical configurations. For example, in the networking pillar there's a deployment objective for network segmentation. The objective doesn't provide information on how to configure isolated networks in Azure but instead offers guidance for creating the architecture pattern. So there are also other design decisions to make in order to implement the deployment objective.
 
-For example, in the networking pillar there's a deployment objective for network segmentation. The objective doesn't provide information on how to configure isolated networks in Azure but instead offers guidance for creating the architecture pattern.
-
-As a result, there are still design decisions that need to be met in order to implement the deployment objectives.
-
-These pillars can be mapped to the design areas for Azure landing zones.  If your organization has a goal to implement Zero Trust principles, you should include a review of each pillar below.
+The following diagram shows the landing zone design areas.
 
 :::image type="content" source="./media/zero-trust-architecture.svg" alt-text="Diagram that shows the architecture of an Azure landing zone." lightbox="./media/zero-trust-architecture.svg":::
 
@@ -52,7 +48,7 @@ The following table correlates the Zero Trust pillars to the design areas shown 
 | ![The letter F](../media/diagram-legends/f.png) | [Security](../design-area/security.md) | [All Zero Trust pillars](/security/zero-trust/deploy/overview) |
 | ![The letter I](../media/diagram-legends/i.png) | [Platform automation and DevOps](../design-area/platform-automation-devops.md) | [Visibility, automation, and orchestration pillar](/security/zero-trust/deploy/visibility-automation-orchestration) |
 
-However, not all of the deployment objectives of Zero Trust are a part of the landing zone. Many deployment objectives for Zero Trust are implemented as part of designing and releasing individual workloads to Azure.
+Not all of the Zero Trust deployment objectives are part of a landing zone. Many Zero Trust deployment objectives are implemented for designing and releasing individual workloads to Azure.
 
 The following sections review each pillar and provide considerations and recommendations for implementing deployment objectives.
 
@@ -64,17 +60,17 @@ For information about deployment objectives for securing identity, see [Securing
 
 - You can use [Azure landing zone reference implementations](/azure/architecture/landing-zones/landing-zone-deploy#platform) to deploy resources that extend your existing identity platform into Azure, and manage the identity platform by implementing Azure best practices.
 
-- You can configure many of the controls needed for Zero Trust in your Microsoft Entra tenant. You can also control access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
+- You can configure many of the controls for Zero Trust practices in your Microsoft Entra tenant. You can also control access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
 - You must plan configuration requirements beyond what's in your Azure landing zone.
 
 ### Identity recommendations
 
-- Develop a plan for managing identities in Microsoft Entra ID that go beyond Azure resources:
+- Develop a plan for managing identities in Microsoft Entra ID that go beyond Azure resources. For example, you can use:
   - Federation with on-premises identity systems.
   - Conditional access policies.
-  - The use of user, device, location, and behavior information for authorization.
+  - User, device, location, or behavior information for authorization.
 
-- Deploy your Azure landing zone with separate subscriptions for identity resources, like domain controllers, so you can better secure access to them.
+- Deploy your Azure landing zone with separate subscriptions for identity resources, like domain controllers, so you can better secure access to the resources.
 - Plan to use Microsoft Entra managed identities where possible.
 
 ## Secure endpoints
