@@ -16,49 +16,49 @@ These checklists covers considerations and recommendations for approaching migra
 
 | Code | Guidance |
 |---|---|
-| MIG:01 | **[Overview](./prerequisites/index.md)** - Set objectives, review business drivers, clarify your definition of done, define responsibilities and accountability, and more. |
-| MIG:02 | **[Readying your landing zone for migration](./prerequisites/ready-alz.md)** - Prepare your Azure landing zones for your migrations, including establishing hybrid connectivity, prepare identity, enable hybrid DNS, configure hub firewall, routing, monitoring, and more. |
-| MIG:03 | **[Migration tools decision guide](./prerequisites/migration-tools-decision-guide.md)** - Use this decision tree to evaluate potential tools to use for your migration projects. |
-| MIG:04 | **[Understanding multiple datacenters](./prerequisites/multiple-datacenters.md)** - This article expands on guidance where multiple datacenters are in scope for your migration. |
-| MIG:05 | **[Multiple regions](./prerequisites/multiple-regions.md)** - This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
-| MIG:06 | **[Align roles and responsibilities](./prerequisites/roles-and-responsibilities.md)** - Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
-| MIG:07 | **[Migration backlog review](./prerequisites/migration-backlog-review.md)** - Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
-| MIG:08 | **[Skills relevant to migrate](./prerequisites/suggested-skills.md)** - Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
-| MIG:09 | **[Understand partnership options](./prerequisites/partnership-options.md)** - TBD|
-| MIG:10 | **[Get assistance](./prerequisites/assistance.md)** - TBD|
+| [MIG:01](./prerequisites/index.md) | **Prerequisites overview.** Set objectives, review business drivers, clarify your definition of done, define responsibilities and accountability, and more. |
+| [MIG:02](./prerequisites/ready-alz.md) | **Readying your landing zone for migration.** Prepare your Azure landing zones for your migrations, including establishing hybrid connectivity, prepare identity, enable hybrid DNS, configure hub firewall, routing, monitoring, and more. |
+| [MIG:03](./prerequisites/migration-tools-decision-guide.md) | **Migration tools decision guide.** Use this decision tree to evaluate potential tools to use for your migration projects. |
+| [MIG:04](./prerequisites/multiple-datacenters.md) | **Understanding multiple datacenters.** This article expands on guidance where multiple datacenters are in scope for your migration. |
+| [MIG:05](./prerequisites/multiple-regions.md) | **Multiple regions.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
+| [MIG:06](./prerequisites/roles-and-responsibilities.md) | **Align roles and responsibilities.** Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
+| [MIG:07](./prerequisites/migration-backlog-review.md) | **Migration backlog review.** Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
+| [MIG:08](./prerequisites/suggested-skills.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
+| [MIG:09](./prerequisites/partnership-options.md) | **Understand partnership options.** TBD |
+| [MIG:10](./prerequisites/assistance.md) | **Get assistance.** TBD |
 
 ## Assess
 
 | Code | Guidance |
 |---|---|
-| MIG:20 | **[Overview](./assess/index.md)** - TBD|
-| MIG:21 | **[Classify workloads](./assess/classify.md)** - TBD|
-| MIG:22 | **[Evaluate workload readiness](./assess/evaluate.md)** - TBD|
-| MIG:23 | **[Architect workloads](./assess/architect.md)** - TBD|
-| MIG:24 | **[Update and refine initial cloud estimates](./migration-considerations/assess/estimate.md)** - TBD|
+| [MIG:20](./assess/index.md) | **Assess overview.** TBD |
+| [MIG:21](./assess/classify.md) | **Classify workloads.** TBD |
+| [MIG:22](./assess/evaluate.md) | **Evaluate workload readiness.** TBD |
+| [MIG:23](./assess/architect.md) | **Architect workloads.** TBD |
+| [MIG:24](./migration-considerations/assess/estimate.md) | **Update and refine initial cloud estimates.** TBD |
 
 ## Deploy
 
 | Code | Guidance |
 |---|---|
-| MIG:40 | **[Overview](./deploy/index.md)** - TBD|
-| MIG:41 | **[Remediate assets](./deploy/remediate.md)** - TBD|
-| MIG:42 | **[Replicate assets](./deploy/replicate.md)** - TBD |
-| MIG:43 | **[Stage workloads](./deploy/stage.md)** - TBD|
-| MIG:44 | **[Data requirements exceed network capacity](./deploy/network-capacity-exceeded.md)** - TBD|
+| [MIG:40](./deploy/index.md) | **Deploy overview.** TBD |
+| [MIG:41](./deploy/remediate.md) | **Remediate assets.** TBD |
+| [MIG:42](./deploy/replicate.md) | **Replicate assets.** TBD |
+| [MIG:43](./deploy/stage.md) | **Stage workloads.** TBD |
+| [MIG:44](./deploy/network-capacity-exceeded.md) | **Data requirements exceed network capacity.** TBD |
 
 ## Release
 
 | Code | Guidance |
 |---|---|
-| MIG:61 | **[Overview](./release/index.md)** - TBD|
-| MIG:62 | **[Business change plan](./release/business-change-plan.md)** - TBD|
-| MIG:63 | **[Business testing](./release/business-test.md)** - TBD|
-| MIG:64 | **[Promotion models](./release/promotion-models.md)** - TBD|
-| MIG:65 | **[Prepare for promotion](./release/prepare-for-promotion.md)** - TBD|
-| MIG:66 | **[Promote to production](./release/promote.md)** - TBD|
-| MIG:67 | **[Decommission retired assets](./release/decommission.md)** - TBD|
-| MIG:68 | **[Conduct retrospectives](./release/retrospective.md)** - TBD|
+| [MIG:60](./release/index.md) | **Release overview.** TBD |
+| [MIG:61](./release/business-change-plan.md) | **Business change plan.** TBD |
+| [MIG:62](./release/business-test.md) | **Business testing.** TBD |
+| [MIG:63](./release/promotion-models.md) | **Promotion models.** TBD |
+| [MIG:64](./release/prepare-for-promotion.md) | **Prepare for promotion.** TBD |
+| [MIG:65](./release/promote.md) | **Promote to production.** TBD |
+| [MIG:66](./release/decommission.md) | **Decommission retired assets.** TBD |
+| [MIG:67](./release/retrospective.md) | **Conduct retrospectives.** TBD |
 
 ## Next steps
 
