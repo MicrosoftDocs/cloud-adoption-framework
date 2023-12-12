@@ -34,7 +34,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ## Azure landing zone acceleration for HPC
 
- **Azure Batch** and **Azure HPC OnDemand Platform (AzHop)** are both services that Microsoft Azure provides, but they serve different purposes and features.
+**Azure Batch** and **Azure Cycle Cloud** are both Azure provided 1st party service while **Azure HPC OnDemand Platform (AzHop)** is an automation built on top of Azure Cycle Cloud which delivers an end-to-end deployment mechanism for a complete HPC cluster solution in Azure.
 
 ### Batch
 
