@@ -57,7 +57,6 @@ These articles examine design considerations and recommendations related to iden
 
 ### Next steps
 
-### Next Steps
 >
 > [!div class="nextstepaction"]
 > [Landing zone identity and access management](identity-access-landing-zones.md)

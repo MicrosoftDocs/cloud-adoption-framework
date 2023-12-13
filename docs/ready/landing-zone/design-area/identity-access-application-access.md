@@ -11,7 +11,7 @@ ms.date: 12/05/2023
 
 Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to other resources and services, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
 
-## Design Considerations
+## Design considerations
 
 - Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
 
