@@ -50,7 +50,7 @@ Which combination of sources and methods your compliance team uses depends on th
 
 Your organization's compliance processes and systems can benefit from the added capabilities of cloud services. These enhancements include:
 
-- **Enforcing or reporting on technical policies**: Blocking deployment of services and configurations or reporting on violations that don't meet technical requirements supporting sovereignty and compliance requirement
+- Enforcing or reporting on technical policies: Blocking deployment of services and configurations or reporting on violations that don't meet technical requirements supporting sovereignty and compliance requirement
 
 - Pre-built policy definitions aligned to particular compliance frameworks.
 
@@ -60,7 +60,7 @@ Your organization's compliance processes and systems can benefit from the added 
 
 - Technical assurance and monitoring capabilities, such as [Azure confidential computing](/azure/confidential-computing/overview)
 
-These capabilities need to be carefully considered in the architecture of your organization's overall environment and for individual workloads. Policy enforcement is a relatively lightweight method to support compliance, although it could restrict which services you can use and how you can use them. Technical assurance by comparison is restrictive because it's only available with few services today and requires a significant knowledge investment.
+These capabilities need to be carefully considered in the architecture of your organization's overall environment and for individual workloads, as the effort, applicability, and impact differ per capability. For example policy enforcement is a relatively lightweight method to support compliance, although it could restrict which services you can use and how you can use them. By comparison, technical assurance takes considerable effort and is more restrictive because it's only available with few services today and requires a significant knowledge investment.
 
 ## How the cloud changes operations
 
