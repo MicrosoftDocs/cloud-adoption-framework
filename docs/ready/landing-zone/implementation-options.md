@@ -10,6 +10,8 @@ ms.custom: internal
 
 # Landing zone implementation options
 
+[!INCLUDE [Azure landing zone under construction advisory](~/includes/landing-zone-under-construction.md)]
+
 An [Azure landing zone](./index.md) provides cloud adoption teams with a well-managed environment to run their workloads. Take advantage of the best practices described in [landing zone design areas](./design-areas.md) to build a strong foundation. You can then extend the foundation by implementing processes related to security, governance, and compliance.
 
 ## Environment development approaches
