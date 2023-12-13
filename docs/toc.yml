@@ -630,7 +630,7 @@ items:
         - name: Architect workloads
           href: migrate/assess/architect.md
         - name: Update and refine initial cloud estimates
-          href: migrate/migration-considerations/assess/estimate.md
+          href: migrate/assess/estimate.md
       - name: Deploy
         items:
           - name: Overview
