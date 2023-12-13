@@ -130,4 +130,4 @@ The implementation also includes options to:
 ### Next Steps
 >
 > [!div class="nextstepaction"]
-> [Application access](identity-access-application-access.md)
+> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
