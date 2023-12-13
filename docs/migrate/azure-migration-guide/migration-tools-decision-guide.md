@@ -42,6 +42,31 @@ Answering the following questions allows you to decide based on the above tree.
 - **Does your data have complex data storage requirements?**
   Production applications usually require data storage that is highly available and offers always-on functionality and similar service uptime and continuity features. Azure PaaS-based managed database options, such as Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB, offer 99.99 percent uptime service-level agreements. Conversely, IaaS-based SQL Server on Azure VMs offers single-instance service-level agreements of 99.95 percent. If your data can't be modernized to use PaaS storage options, guaranteeing higher IaaS uptime involves more complex data storage scenarios such as running SQL Server Always On clusters and continuously syncing data between instances. This can involve significant hosting and maintenance costs, so balancing uptime requirements, modernization effort, and overall budgetary impact is essential when considering your data migration options.
 
+## Application migration and modernization tools
+
+There are many tools on the market available for application migration and modernization tasks. In the following tables, we list some of the most common open-source tools and Microsoft tools, and highlight their main features.
+
+### Tools for refactoring
+
+| Tool | Description | Vendor | Link |
+| ---- | ----------- | ------ | ---- |
+| Azure Draft | For creating K8S YAMLs/Helm Charts/Dockerfiles and GitHub Actions; starting from a codebase, asks few questions and creates necessary files | Microsoft | [Link](https://github.com/Azure/draft/) |
+| Cloud Suitability Analyzer (CSA) | For analyzing source code in many languages in a massive way and getting insights on application cloud-readiness | VMWare | [Link](https://github.com/vmware-tanzu/cloud-suitability-analyzer) |
+| AppCAT | For analyzing Java source code and getting insights on what must be changed to target containers or other J2EE application servers; based on [Windup](https://windup.github.io/), but supports natively Azure targets | Microsoft | [Link](https://learn.microsoft.com/en-us/azure/developer/java/migration/appcat) |
+| move2kube | For creating Dockerfiles and YAML deployment files that accelerate migration activities; starting from a codebase, asks few questions and creates necessary files | CNCF project | [Link](https://move2kube.io) |
+| .NET upgrade assistant | For helping in migrating from .NET framework code to .NET; gives guidance and assistance | Microsoft | [Link](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview) |
+| App Service Migration Assistant (ASMA) | For .NET (and Java) migrations to AppService | Microsoft | [Link](https://azure.microsoft.com/en-us/products/app-service/migration-tools/) |
+| App Containerization Tool | For containerizing .NET/Java applications | Microsoft | [Link](https://learn.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) |
+
+Some notes:
+
+- It is important to note that the refactor strategy takes in account the target architecture: for a given technology (Java, .NET, etc.) there are multiple PaaS destinations in Azure cloud.
+- It is important to have source code readily available because the application code needs to be assessed and might need to be modified accordingly to the target architecture. When code is not present or not modifiable, the rehost strategy is usually the only option.
+
+### Tools for rehosting
+
+In this case, you can use [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) to migrate the application to Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources, and cloud resources.
+
 ## Innovation and migration
 
 In line with the Cloud Adoption Framework's emphasis on [incremental migration](../../migrate/index.md#migration-effort) efforts, an initial decision on migration strategy and tooling doesn't rule out future innovation efforts to update an application to take advantage of opportunities presented by the Azure platform. While an initial migration effort might focus primarily on rehosting using an IaaS approach, you should plan to revisit your cloud-hosted application portfolio regularly to investigate optimization opportunities.
