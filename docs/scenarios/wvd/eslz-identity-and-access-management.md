@@ -22,7 +22,7 @@ Azure Virtual Desktop provides custom Azure roles that are designed for each fun
 
 ## Azure Virtual Desktop design considerations
 
-- Azure Virtual Desktop users must be sourced from either the same instance of on-premises Active Directory Domain Services (AD DS) that is synchronized to Microsoft Entra ID, or an instance of Microsoft Entra Domain Services synchronized from Microsoft Entra ID.
+- To access desktops and applications from your session hosts, your users need to be able to authenticate. [Microsoft Entra ID](/entra/fundamentals/whatis) is Microsoft's centralized cloud identity service that enables this capability. Microsoft Entra ID is always used to authenticate users for Azure Virtual Desktop. Session hosts can be joined to the same Microsoft Entra tenant, or to an Active Directory domain using [Active Directory Domain Services](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) (AD DS) or [Microsoft Entra Domain Services](/entra/identity/domain-services/overview), providing you with a choice of flexible configuration options.
   > [!NOTE]
   > Azure Virtual Desktop does not support B2B or Microsoft accounts.
 - The account used for domain join can't have multifactor authentication or other interactive prompts, and there are other requirements. For more information, see [Virtual machine details](/azure/virtual-desktop/create-host-pools-azure-marketplace#virtual-machine-details).
@@ -39,6 +39,20 @@ Azure Virtual Desktop provides custom Azure roles that are designed for each fun
 - Using Windows Hello for Business requires the hybrid certificate trust model to be compatible with Azure Virtual Desktop. For more information, see [Microsoft Entra hybrid joined certificate trust deployment](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust).
 - When using Windows Hello for Business or smart-card authentication, the initiating client must be able to communicate with the domain controller because these authentication methods use Kerberos to sign in. For more information, see [Supported authentication methods](/azure/virtual-desktop/authentication).
 - Single sign-on can improve user experience, but it requires additional configuration and is only supported using Active Directory Federation Services. For more information, see [Configure AD FS single sign-on for Azure Virtual Desktop](/azure/virtual-desktop/configure-adfs-sso).
+
+### Supported identity scenarios
+
+The following table summarizes identity scenarios that Azure Virtual Desktop currently supports:
+
+| Identity scenario | Session hosts | User accounts |
+|--|--|--|
+| Microsoft Entra ID + AD DS | Joined to AD DS | In Microsoft Entra ID and AD DS, synchronized |
+| Microsoft Entra ID + AD DS | Joined to Microsoft Entra ID | In Microsoft Entra ID and AD DS, synchronized |
+| Microsoft Entra ID + Microsoft Entra Domain Services | Joined to Microsoft Entra Domain Services | In Microsoft Entra ID and Microsoft Entra Domain Services, synchronized |
+| Microsoft Entra ID + Microsoft Entra Domain Services + AD DS | Joined to Microsoft Entra Domain Services | In Microsoft Entra ID and AD DS, synchronized |
+| Microsoft Entra ID + Microsoft Entra Domain Services | Joined to Microsoft Entra ID | In Microsoft Entra ID and Microsoft Entra Domain Services, synchronized|
+| Microsoft Entra-only | Joined to Microsoft Entra ID | In Microsoft Entra ID |
+
 
 ## Design recommendations
 
