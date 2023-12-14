@@ -44,7 +44,5 @@ IT serves as one of the recipients of the business testing output. The feedback 
 
 ## Next steps
 
-In conjunction with business testing, [optimization of migrated assets](./optimize.md) can refine cost and workload performance.
-
 > [!div class="nextstepaction"]
-> [Benchmark and resize cloud assets](./optimize.md)
+> [Prepare for promotion](./prepare-for-promotion.md)

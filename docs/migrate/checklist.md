@@ -10,7 +10,7 @@ ms.custom: UpdateFrequency2
 
 # Cloud adoption - Migration checklist
 
-These checklists covers considerations and recommendations for approaching migration projects. The checklists are based on the [Migrate methodology](../methodology/index.md) and can be used as a guide for your migration projects.
+These checklists covers considerations and recommendations for approaching migration projects. The checklists are based on the guidance throughout the Migrate methodology and can be used as a guide for your migration projects.
 
 ## Prerequisites
 

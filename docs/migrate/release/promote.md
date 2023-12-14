@@ -19,8 +19,8 @@ Each of the following processes should be executed, documented, and validated pr
 
 - [Assess](../assess/index.md): The workload has been assessed for cloud compatibility.
 - [Architect](../assess/architect.md): The structure of the workload has been properly designed to align with the chosen cloud provider.
-- [Replicate](../migrate/replicate.md): The assets have been replicated to the cloud environment.
-- [Stage](../migrate/stage.md): The replicated assets have been restored in a staged instance of the cloud environment.
+- [Replicate](../deploy/replicate.md): The assets have been replicated to the cloud environment.
+- [Stage](../deploy/stage.md): The replicated assets have been restored in a staged instance of the cloud environment.
 - [Business testing](./business-test.md): The workload has been fully tested and validated by business users.
 - [Business change plan](./business-change-plan.md): The business has shared a plan for the changes to be made in accordance with the production promotion; this should include a user adoption plan, changes to business processes, users that require training, and timelines for various activities.
 - [Prepare for promotion](./prepare-for-promotion.md): Generally, a series of technical changes must be made before promotion.

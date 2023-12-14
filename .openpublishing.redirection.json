@@ -1088,7 +1088,12 @@
       {
          "source_path": "docs/migrate/azure-best-practices/analytics/azure-synapse.md",
          "redirect_url": "/azure/synapse-analytics/sql-data-warehouse/backup-and-restore",
-         "redirect_document_id": true
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
       }
    ]
 }
