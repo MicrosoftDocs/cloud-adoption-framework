@@ -52,11 +52,11 @@ Many opensource, Microsoft and third-party tools are available for application m
 | ---- | ----------- | ------ | ---- |
 | Azure Draft | For creating K8S YAMLs/Helm Charts/Dockerfiles and GitHub Actions; starting from a codebase, asks few questions and creates necessary files | Microsoft | [Link](https://github.com/Azure/draft/) |
 | Cloud Suitability Analyzer (CSA) | For analyzing source code in many languages in a massive way and getting insights on application cloud-readiness | VMWare | [Link](https://github.com/vmware-tanzu/cloud-suitability-analyzer) |
-| AppCAT | For analyzing Java source code and getting insights on what must be changed to target containers or other J2EE application servers; based on [Windup](https://windup.github.io/), but supports natively Azure targets | Microsoft | [Link](https://learn.microsoft.com/en-us/azure/developer/java/migration/appcat) |
-| move2kube | For creating Dockerfiles and YAML deployment files that accelerate migration activities; starting from a codebase, asks few questions and creates necessary files | CNCF project | [Link](https://move2kube.io) |
-| .NET upgrade assistant | For helping in migrating from .NET framework code to .NET; gives guidance and assistance | Microsoft | [Link](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview) |
-| App Service Migration Assistant (ASMA) | For .NET (and Java) migrations to AppService | Microsoft | [Link](https://azure.microsoft.com/en-us/products/app-service/migration-tools/) |
-| App Containerization Tool | For containerizing .NET/Java applications | Microsoft | [Link](https://learn.microsoft.com/en-us/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) |
+| AppCAT | For analyzing Java source code and getting insights on what must be changed to target containers or other J2EE application servers; based on [Windup](https://windup.github.io/), but supports natively Azure targets | Microsoft | [Link](https://learn.microsoft.com/azure/developer/java/migration/appcat) |
+| move2kube | For creating Dockerfiles and YAML deployment files that accelerate migration activities; starting from a codebase, asks few questions and creates necessary files | CNCF project | [Link](https://move2kube.konveyor.io/) |
+| .NET upgrade assistant | For helping in migrating from .NET framework code to .NET; gives guidance and assistance | Microsoft | [Link](https://learn.microsoft.com/dotnet/core/porting/upgrade-assistant-overview) |
+| App Service Migration Assistant (ASMA) | For .NET (and Java) migrations to AppService | Microsoft | [Link](https://azure.microsoft.com/products/app-service/migration-tools/) |
+| App Containerization Tool | For containerizing .NET/Java applications | Microsoft | [Link](https://learn.microsoft.com/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) |
 
 Some notes:
 
@@ -65,7 +65,7 @@ Some notes:
 
 ### Tools for rehosting
 
-In this case, you can use [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-overview) to migrate the application to Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources, and cloud resources.
+In this case, you can use [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) to migrate the application to Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources, and cloud resources.
 
 ## Innovation and migration
 
