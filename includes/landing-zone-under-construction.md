@@ -8,7 +8,7 @@ ms.subservice: caf-methodology-ready
 ---
 
 > [!IMPORTANT]
-> The Azure landing zones **Implementation options** section of the Cloud Adoption Framework TOC is undergoing a freshness update. 
+> The Azure landing zones **Implementation options** section of the Cloud Adoption Framework is undergoing a freshness update. 
 > 
 > As part of this update, we will be revising the TOC and article content, which will include a combination of refactoring, consolidation, and deprecation of several articles. An update will be posted here once the work is completed.
 >  
