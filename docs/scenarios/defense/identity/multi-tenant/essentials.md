@@ -1,15 +1,15 @@
 ---
-title: Identity essentials for multi-tenant Defense organizations
-description: An overview of identity essentials for multi-tenant defense organizations using Microsoft Entra ID and implementing zero trust
+title: Identity essentials for multitenant Defense organizations
+description: An overview of identity essentials for multitenant defense organizations using Microsoft Entra ID and implementing zero trust
 author: amasse3
 ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 07/10/2023
 ms.topic: conceptual
 ---
-# Identity essentials for multi-tenant defense organizations
+# Identity essentials for multitenant defense organizations
 
-The following guide provides zero trust identity essentials for multi-tenant defense organizations and focuses on Microsoft Entra ID. Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Microsoft Entra ID is the Microsoft cloud identity service. Microsoft Entra ID is a critical zero trust component that all Microsoft cloud customers use.
+The following guide provides zero trust identity essentials for multitenant defense organizations and focuses on Microsoft Entra ID. Zero trust is a key strategy for ensuring the integrity and confidentiality of sensitive information. Identity is a foundational pillar of zero trust. Microsoft Entra ID is the Microsoft cloud identity service. Microsoft Entra ID is a critical zero trust component that all Microsoft cloud customers use.
 
 Architects and decision makers must understand the core capabilities of Microsoft Entra ID and its role in zero trust before building the defense enterprise strategy. Defense organizations can meet many zero trust requirements by adopting Microsoft Entra ID. Many already have access to essential Microsoft Entra features through their existing Microsoft 365 licenses.
 
@@ -17,9 +17,9 @@ Architects and decision makers must understand the core capabilities of Microsof
 
 ## Microsoft Entra tenants
 
-An instance of Microsoft Entra ID is called an *Microsoft Entra tenant*. A Microsoft Entra tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
+An instance of Microsoft Entra ID is called a *Microsoft Entra tenant*. A Microsoft Entra tenant is an identity platform and boundary. It's the identity platform for your organization and a secure, identity boundary for the Microsoft cloud services you use. As such, it's ideal for protecting sensitive defense identity data.
 
-**Consolidating Microsoft Entra tenants.** Microsoft recommends one Microsoft Entra tenant per organization. A single Microsoft Entra tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Microsoft Entra tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
+**Consolidating Microsoft Entra tenants.** Microsoft recommends one tenant per organization. A single Microsoft Entra tenant provides the most seamless identity management experience for users and administrators. It provides the most comprehensive zero trust capabilities. Organizations with multiple Microsoft Entra tenants must manage different sets of users, groups, applications, and policies, increasing cost and adding administrative complexity. A single tenant also minimizes licensing cost.
 
 You should try to have Microsoft 365, Azure services, Power Platform, line-of-business (LOB) applications, software-as-a-service (SaaS) applications, and other cloud service providers (CSP) use a single Microsoft Entra tenant.
 
@@ -91,7 +91,7 @@ Microsoft Entra ID isn't just for Microsoft applications and services. Microsoft
 
 Microsoft Entra ID provides secure and seamless access to Microsoft services through device management. You can manage and join Windows devices to Microsoft Entra similar to the way you would with Active Directory Domain Services.
 
-**Registered devices.** Devices are [registered](/entra/identity/devices/concept-device-registration) with your Entra tenant when users sign in to applications using their Entra account. Entra device registration is not the same as device enrollment or Entra join. Users sign in to registered devices using a local account or Microsoft account. Registered devices often include Bring Your Own Devices (BYOD) like a user's home PC or personal phone.
+**Registered devices.** Devices are [registered](/entra/identity/devices/concept-device-registration) with your Entra tenant when users sign in to applications using their Entra account. Entra device registration isn't the same as device enrollment or Entra join. Users sign in to registered devices using a local account or Microsoft account. Registered devices often include Bring Your Own Devices (BYOD) like a user's home PC or personal phone.
 
 **Microsoft Entra joined devices.** When users sign into a Microsoft Entra joined device, a device-bound key is unlocked using a PIN or gesture. Post validation, Microsoft Entra ID issues a [primary refresh token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token) to the device. This PRT facilitates single sign-on access to Microsoft Entra ID protected services like Microsoft Teams.
 
@@ -107,7 +107,7 @@ Microsoft Entra ID is Microsoft's identity platform. It serves both Microsoft 36
 
 **Microsoft 365 identity.** Microsoft Entra ID is integral to all identity operations within Microsoft 365. It handles user sign-in, collaboration, sharing, and permissions assignment. It supports identity management for Office 365, Intune, and Microsoft Defender XDR services. Your users use Microsoft Entra every time they sign into an Office application like Word or Outlook, share a document using OneDrive, invite an external user to a SharePoint site, or create a new team in Microsoft Teams.
 
-**Azure identity.** In Azure, each resource is associated with an [Azure subscription](/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts#azure-subscription-purposes), and subscriptions are [linked](/azure/active-directory/fundamentals/how-subscriptions-associated-directory) to a single Microsoft Entra tenant. You delegate permissions for managing Azure resources by assigning [role-based access control (RBAC)](/azure/role-based-access-control/overview) roles to users, security groups, or service principals.
+**Azure identity.** In Azure, each resource is associated with an [Azure subscription](/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts#azure-subscription-purposes), and subscriptions are [linked](/azure/active-directory/fundamentals/how-subscriptions-associated-directory) to a single Microsoft Entra tenant. You delegate permissions for managing Azure resources by assigning [Azure roles](/azure/role-based-access-control/overview) to users, security groups, or service principals.
 
 Managed identities play a crucial role in enabling Azure resources to interact securely with other resources. These managed identities are security principals within the Microsoft Entra tenant. You grant permissions to them on a least-privilege basis. You can authorize a managed identity to access APIs protected by Microsoft Entra ID, such as Microsoft Graph. When an Azure resource uses a managed identity, the managed identity is a [service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object). The service principle object resides within the same Microsoft Entra tenant as the subscription associated with the resource.
 
@@ -115,7 +115,7 @@ Managed identities play a crucial role in enabling Azure resources to interact s
 
 Microsoft web portals for Microsoft Entra, Azure, and Microsoft 365 provide a graphical interface to Microsoft Entra ID. You can automate programmatic access to read and update Microsoft Entra objects and configuration policies using RESTful APIs called Microsoft Graph. Microsoft Graph supports clients in various languages. Supported languages include [PowerShell](/powershell/microsoftgraph/overview), Go, Python, Java, .NET, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
 
-## Sovereign clouds
+## Azure Government Clouds
 
 There are two separate versions of the Microsoft Entra services defense organizations might use on public (internet-connected) networks: Microsoft Entra Global and Microsoft Entra Government.
 
@@ -125,7 +125,7 @@ There are two separate versions of the Microsoft Entra services defense organiza
 
 **Service URLS.** Different Microsoft Entra services use different sign-in URLs. As a result, you need to use separate web portals. You also need to supply environment switches to connect with Microsoft Graph clients and PowerShell modules for managing Azure and Microsoft 365 (*see table 1*).
 
-*Table 1. Sovereign cloud endpoints for US Government.*
+*Table 1. Azure Government endpoints.*
 
 | Endpoint | Global | GCC High | DoD Impact Level 5 (IL5) |
 | --- | --- | --- | --- |
@@ -143,5 +143,5 @@ There are two separate versions of the Microsoft Entra services defense organiza
 
 ## Related links
 
-- [Manage multi-tenant operations](manage-operations.md)
+- [Manage multitenant operations](manage-operations.md)
 - [Centralized security operations](security-operations.md)

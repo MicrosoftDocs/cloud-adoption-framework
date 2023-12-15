@@ -1,6 +1,6 @@
 ---
-title: Zero trust configuration for multi-tenant defense organizations
-description: Guidance for configuring zero trust identity for multi-tenant defense organizations
+title: Zero trust configuration for multitenant defense organizations
+description: Guidance for configuring zero trust identity for multitenant defense organizations
 author: amasse3
 ms.author: ssumner
 ms.reviewer: ssumner
@@ -8,20 +8,20 @@ ms.date: 07/10/2023
 ms.topic: conceptual
 ---
 
-# Zero trust configuration for multi-tenant defense organizations
+# Zero trust configuration for multitenant defense organizations
 
-This article shows multi-tenant organizations how to apply configurations in Microsoft Entra ID and meet common defense zero trust requirements. Follow these recommendations to establish the right multi-tenant identity architecture and implement zero trust in your environment.
+This article shows multitenant organizations how to apply configurations in Microsoft Entra ID and meet common defense zero trust requirements. Follow these recommendations to establish the right multitenant identity architecture and implement zero trust in your environment.
 
-:::image type="content" source="./images/multi-tenant-architecture.png" alt-text="Diagram showing a sample multi-tenant architecture with zero trust configurations. It shows a primary tenant and two secondary tenants." lightbox="./images/multi-tenant-architecture.png" border="false":::
-*Figure 1: Sample multi-tenant defense architecture with zero trust configurations.*
+:::image type="content" source="./images/multi-tenant-architecture.png" alt-text="Diagram showing a sample multitenant architecture with zero trust configurations. It shows a primary tenant and two secondary tenants." lightbox="./images/multi-tenant-architecture.png" border="false":::
+*Figure 1: Sample multitenant defense architecture with zero trust configurations.*
 
 ## Determine identity architecture
 
-Microsoft Entra tenants are the foundation of your identity architecture. A tenant is an identity boundary in Microsoft Entra ID. An organization with one Microsoft Entra tenant has a single tenant architecture. Organizations using more than one Microsoft Entra tenant have a multi-tenant architecture.
+Microsoft Entra tenants are the foundation of your identity architecture. A tenant is an identity boundary in Microsoft Entra ID. An organization with one Microsoft Entra tenant has a single tenant architecture. Organizations using more than one Microsoft Entra tenant have a multitenant architecture.
 
 **Benefits of a single tenant.** A single tenant is easier to manage and lower costs through operational efficiency. It allows you to configure a zero trust environment more easily. A single tenant avoids fragmenting the user experience with multiple sign-in credentials. It also helps prevent siloed solutions that you need to integrate later. You should strive to have your data, Microsoft 365, and Azure cloud services in a single tenant. If you already have multiple Microsoft Entra tenants, you should consider consolidating your environment to use a single tenant. You can consolidate tenants by transferring Azure subscriptions from your secondary tenants to the primary tenant. For more information, see [transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription).
 
-**Multi-tenant use cases.** There are reasons for a defense organization to use a multi-tenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
+**Multi-tenant use cases.** There are reasons for a defense organization to use a multitenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
 
 *Table 1. Reasons to have or create multiple tenants.*
 
@@ -33,11 +33,11 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 | Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture. |
 | SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.
 
-If you require multiple Microsoft Entra tenants, you should use [Microsoft Entra External ID (B2B)](/azure/active-directory/external-identities/what-is-b2b) and [Azure Lighthouse](/azure/lighthouse/overview). These features help support multi-tenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
+If you require multiple Microsoft Entra tenants, you should use [Microsoft Entra External ID (B2B)](/azure/active-directory/external-identities/what-is-b2b) and [Azure Lighthouse](/azure/lighthouse/overview). These features help support multitenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
 
 ## Identify tenant types
 
-Multi-tenant defense organizations can categorize Microsoft Entra instances they use as either primary or secondary. Each organization should identify and designate one tenant as the primary tenant. All other tenants are secondary. *Figure 1* shows a defense organization with a primary tenant and *n* secondary tenants (two secondary tenants shown).
+Multitenant defense organizations can categorize Microsoft Entra instances they use as either primary or secondary. Each organization should identify and designate one tenant as the primary tenant. All other tenants are secondary. *Figure 1* shows a defense organization with a primary tenant and *n* secondary tenants (two secondary tenants shown).
 
 **Identify the primary tenant.** Most defense organizations create the primary tenant when they sign up for Microsoft 365. The primary tenant contains (1) all user identities and Microsoft 365 licenses, (2) devices, and (3) applications (*see figure 1*). Defense organizations often use [Microsoft Entra Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect) to synchronize the identities from Active Directory on-premises to the primary Microsoft Entra tenant.
 
@@ -47,9 +47,9 @@ Some defense organizations consume Microsoft 365 in a shared tenant owned and op
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity licenses you have in Microsoft Entra ID.
 
-The tenant with your Microsoft 365 licenses is your primary tenant (*see figure 2*). If your organization migrated workloads to Azure before adopting Microsoft 365, then your organization created a Microsoft Entra tenant to manage the Azure subscriptions. However, the tenant with the Microsoft 365 licenses is still the primary tenant even though you have an older Microsoft Entra tenant.
+The tenant with your Microsoft 365 licenses is your primary tenant (*see figure 2*). The primary tenant might not be the first tenant created by your organization, but it should be the main tenant with all your users and Microsoft 365 licenses.
 
-If your organization doesn’t use Microsoft 365, any Microsoft Entra tenant with [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/) licenses is your primary tenant. This tenant is where you have added and verified your organization's [domain name](/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
+If your organization doesn’t use Microsoft 365, any Microsoft Entra tenant with [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/) licenses is your primary tenant. This tenant is where you added and verified your organization's [domain name](/azure/active-directory/enterprise-users/domains-manage). The tenant often uses hybrid identity or integrates with a human resources (HR) system (*see figure 2*).
 
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if a Microsoft Entra tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. A decision tree to determine the Microsoft Entra primary tenant and secondary tenant.*
@@ -105,7 +105,7 @@ When a shared service provider or an external agency controls your primary tenan
 
 **Use a secure cloud computing architecture (SCCA).** Each defense organization should deploy an [SCCA-compliant](/azure/azure-government/compliance/secure-azure-computing-architecture) landing zone architecture. The landing zone should be in Azure subscriptions attached to the primary tenant.
 
-**Segment Azure resource management in a single tenant.** You should use Azure RBAC for resource and management isolation for subscriptions within an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
+**Segment Azure resource management in a single tenant.** You should use Azure roles for resource and management isolation for subscriptions within an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). Consider [transferring subscriptions](/azure/role-based-access-control/transfer-subscription) from secondary tenants to the primary tenant.
 
 **Use Microsoft Entra Permissions Management.** [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/overview) is Microsoft’s Cloud Infrastructure Entitlement Management (CIEM) solution. You should use Microsoft Entra Permissions Management for visibility into permissions assigned to all identities. You should also use it to track [permissions creep](/azure/active-directory/cloud-infrastructure-entitlement-management/faqs#what-is-the-permissions-creep-index) across your organization's multicloud environment.
 
@@ -115,7 +115,7 @@ When a shared service provider or an external agency controls your primary tenan
 
 **Enable Defender for Cloud for your enterprise.** Use [Defender for Cloud for your multicloud environment](/azure/defender-for-cloud/multicloud). Make sure you [turn on the enhanced security features](/azure/defender-for-cloud/enable-enhanced-security) to monitor Azure resources and remediate configuration risk. Defender for Cloud protection extends beyond Azure to help you [secure hybrid and multicloud environments](/azure/defender-for-cloud/plan-multicloud-security-get-started).
 
-**Deploy Sentinel and connect all available data sources.** Aggregate security telemetry in a SIEM like [Microsoft Sentinel](/azure/sentinel/quickstart-onboard). Deploy Sentinel and connect all security signal data sources by configuring [data connectors](/azure/sentinel/connect-data-sources).
+**Deploy Sentinel and connect all available data sources.** Aggregate security signals in a SIEM like [Microsoft Sentinel](/azure/sentinel/quickstart-onboard). Deploy Sentinel and connect all security signal data sources by configuring [data connectors](/azure/sentinel/connect-data-sources).
 
 ### Primary tenants
 
@@ -135,11 +135,11 @@ You should implement the following recommendations in the secondary tenant.
 
 **Procure licenses required for Microsoft Entra management**. You need licenses to turn on advanced security features in secondary tenants. Consider the licenses you need for users, workloads, and devices.
 
-*User identities.* You need to have [Microsoft Entra ID P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multi-tenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
+*User identities.* You need to have [Microsoft Entra ID P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multitenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
 *Workload identities.* You should use [workload identities premium](/azure/active-directory/workload-identities/workload-identities-overview) to secure workload identities with access to resources in the primary tenant, such as MS Graph API.
 
-*Device management.* You may have scenarios where you want to manage devices with Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
+*Device management.* You might need manage devices with Microsoft Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
 **Configure cross-tenant access policies (XTAP).** Microsoft Entra External ID (Microsoft Entra B2B collaboration) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Microsoft Entra tenant as an organization and update the [inbound trust settings](/graph/api/resources/crosstenantaccesspolicy-overview) to include:
 
@@ -150,7 +150,7 @@ You should implement the following recommendations in the secondary tenant.
 
 **Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Microsoft Entra roles following [least-privilege Microsoft Entra role by task](/azure/active-directory/roles/delegate-by-task) using [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user). Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview) to reduce management overhead onboarding external identities in the secondary tenant.
 
-**Use Azure Lighthouse to facilitate Sentinel access from the primary tenant.** [Azure Lighthouse](/azure/lighthouse/overview) gives you an additional way to manage Azure across tenants. Azure Lighthouse permissions are set by [Azure Resource Manager (ARM) templates](/azure/lighthouse/how-to/onboard-customer) that assign Azure roles to identities in an external tenant. This approach does not use B2B guest user objects. When an administrator signs in to the Azure Portal, they see all subscriptions and resources they have access to across all tenants, including subscriptions they are granted access to using Azure Lighthouse. Since there is no B2B guest object, the administrator does not need to switch directories. Use Azure Lighthouse to facilitate [managing Microsoft Sentinel across tenants](/azure/sentinel/multiple-tenants-service-providers).
+**Use Azure Lighthouse to facilitate Sentinel access from the primary tenant.** [Azure Lighthouse](/azure/lighthouse/overview) gives you another way to manage Azure across tenants. Azure Lighthouse uses [Azure Resource Manager (ARM) templates](/azure/lighthouse/how-to/onboard-customer) to assign Azure roles to identities in an external tenant. This approach doesn't use B2B guest user objects. When an administrator signs in to the portal to manage Azure, they see all resources across all tenants. This consolidated view includes subscriptions with permissions assigned by Azure Lighthouse. Since there's no B2B guest object, the administrator doesn't need to switch directories. Use Azure Lighthouse to facilitate [managing Microsoft Sentinel across tenants](/azure/sentinel/multiple-tenants-service-providers).
 
 ## Next step
 
