@@ -416,7 +416,7 @@ items:
           - name: Security control mapping
             href: ready\control-mapping\security-control-mapping.md
           - name: Zero Trust planning for landing zones
-            href: ready/landing-zone/design-area/security-zerotrust.md
+            href: ready/landing-zone/design-area/security-zero-trust.md
             
         - name: Management
           items:
