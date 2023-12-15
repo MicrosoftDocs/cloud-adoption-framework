@@ -115,7 +115,7 @@ Managed identities play a crucial role in enabling Azure resources to interact s
 
 Microsoft web portals for Microsoft Entra, Azure, and Microsoft 365 provide a graphical interface to Microsoft Entra ID. You can automate programmatic access to read and update Microsoft Entra objects and configuration policies using RESTful APIs called Microsoft Graph. Microsoft Graph supports clients in various languages. Supported languages include [PowerShell](/powershell/microsoftgraph/overview), Go, Python, Java, .NET, Ruby, and more. Explore the [Microsoft Graph repositories](https://github.com/orgs/microsoftgraph/repositories) on GitHub.
 
-## Azure Government Clouds
+## Azure Government clouds
 
 There are two separate versions of the Microsoft Entra services defense organizations might use on public (internet-connected) networks: Microsoft Entra Global and Microsoft Entra Government.
 
