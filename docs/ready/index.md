@@ -14,7 +14,7 @@ Before adoption can begin, you create a landing zone to host the workloads that 
 
 ## Landing zone concepts
 
-[!INCLUDE [Landing zone concepts](~/../crr-aac-repo/docs/landing-zones/includes/concepts.md)]
+[!INCLUDE [Landing zone concepts](~/../architecture-center-pr/docs/landing-zones/includes/concepts.md)]
 
 ## Landing zone journey
 
