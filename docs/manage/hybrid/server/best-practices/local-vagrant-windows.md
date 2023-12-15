@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Deploy a local Windows Server instance hosted by Vagrant and connect it to Azure Arc
 
-The following article provides guidance for deploying a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc-enabled server resource.
+The following article provides guidance for deploying a local **Windows 10** virtual machine using [Vagrant](https://www.vagrantup.com/) and connects it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -26,19 +26,19 @@ The following article provides guidance for deploying a local **Windows 10** vir
     az --version
     ```
 
-3. Vagrant relies on an underlying hypervisor. For this guide, we will be using Oracle VM VirtualBox.
+3. Vagrant relies on an underlying hypervisor. For this guide, we are using Oracle VM VirtualBox.
 
     1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-        - If you are a macOS user, run `brew cask install virtualbox`
-        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
-        - If you are a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
+        - If you're a macOS user, run `brew cask install virtualbox`
+        - If you're a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
+        - If you're a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
 
     2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
-        - If you are a macOS user, run `brew cask install vagrant`
-        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
-        - If you are a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
+        - If you're a macOS user, run `brew cask install vagrant`
+        - If you'ar a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
+        - If you're a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
 
 4. Create an Azure service principal.
 
@@ -90,7 +90,7 @@ After editing the `scripts/vars.ps1` script to match your environment, from the 
  
 ![A screenshot of running the `vagrant up` command.](./media/local-vagrant/vagrant-windows-cmd.png)
 
-Once the download is complete, the actual provisioning will start. As shown in the following screenshot, the process takes can take somewhere between 7 to 10 minutes.
+Once the download is complete, the actual provisioning starts. As shown in the following screenshot, the process takes somewhere between 7 to 10 minutes.
 
 ![A screenshot of a completed `vagrant up` command.](./media/local-vagrant/vagrant-windows-complete.png)
 
@@ -100,7 +100,7 @@ Once the download is complete, the actual provisioning will start. As shown in t
 > `config.vm.box_download_insecure = true`
 > 
 
-Upon completion, you will have a local Windows 10 VM deployed, connected as a new Azure Arc-enabled server inside a new resource group.
+Upon completion, you'll have a local Windows 10 VM deployed, connected as a new Azure Arc-enabled server inside a new resource group.
 
 ![A screenshot of an Azure Arc-enabled server in the Azure portal.](./media/local-vagrant/vagrant-windows-server.png)
 
