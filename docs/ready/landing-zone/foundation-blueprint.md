@@ -12,9 +12,9 @@ ms.custom:
 
 <!-- docutune:ignore "CAF Foundation blueprint" -->
 
-[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
-
 # Deploy a CAF Foundation blueprint in Azure
+
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
 
 The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF Migration landing zone blueprint with a single action.
 
