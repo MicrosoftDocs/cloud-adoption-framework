@@ -35,11 +35,11 @@ Relocation adds flexibility that can help you optimize cost and performance thro
 
 Relocation has two phases. The first phase is to initiate the relocation project. The second phase is to move the workload by planning and executing the relocation. Here's an overview of each phase:
 
-*Initiate phase*: The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
+- *Initiate phase*: The initiate phase has a single-step also called Initiate. The goal of the Initiate phase is to set up the relocation project, get stakeholder approval, and identify workloads for relocation.
 
-*Move phase*: The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
+- *Move phase*: The Move phase is a four-step process to plan and move a workload to a different region. The steps in the Move Phase are (1) evaluate, (2) select, (3) migrate, and (4) cutover. After you cut over the final workload, you need to officially close to the relocation project.
 
-| Move phase step | Main goal |
+| Relocate steps | Main goal |
 | --- | --- |
 |1. Initiate | Establish relocation project. |
 |2. Evaluate| Conduct workload discovery. |
