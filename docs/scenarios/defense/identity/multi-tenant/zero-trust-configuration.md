@@ -25,8 +25,8 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 
 *Table 1. Reasons to have or create multiple tenants.*
 
-| Reason         | Example                                                                |
-|:---------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| Reason  | Example  |
+|:-----|:----|
 | Privacy or Security requires a deeper separation of data | An Office of Inspector General organization must have independence.                                   |
 | Delegation and Segmentation of administration      | One organization doesn't have the ability to manage another organization.                               |
 | Data Sovereignty and/or Ownership            | One organization doesn't have the legal authority to manage data of another organization.                      |
@@ -91,7 +91,7 @@ You should implement the following recommendations in all Microsoft Entra tenant
 |Protect medium risk sign-ins|All Users|All Apps|[Medium sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>[Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): Every Time
 |Block high risk sign-ins|All Users|All Apps|[High sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
 |Secure Microsoft Entra Administration|[Microsoft Entra roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
-|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>+<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
 
 For more information, see [Zero Trust identity and device access configuration](/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
 
