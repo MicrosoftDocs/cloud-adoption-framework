@@ -19,7 +19,7 @@ Before you start migrating the workload to another region, you need to plan your
 
 ## Select a relocation method
 
-There are three main methods for relocating workloads. The relocation method you choose depends on the services in the workload and how critical the workload is to essential business functions. You could consider different relocation methods for production and non-production environments. Cold relocation is for non-essential workloads. Hot and warm relocation is for mission-critical. The method you choose relocation affects service and data relocation tools you use to relocate the workload. Use the following relocation decision tree to get a general idea of the right relocation method and validate your decision by reading the overview of the three relocation methods.
+There are three main methods for relocating workloads. The relocation method you choose depends on the services in the workload and how critical the workload is to essential business functions. You could consider different relocation methods for production and nonproduction environments. Cold relocation is for nonessential workloads. Hot and warm relocation is for mission-critical. The method you choose relocation affects service and data relocation tools you use to relocate the workload. Use the following relocation decision tree to get a general idea of the right relocation method and validate your decision by reading the overview of the three relocation methods.
 
 :::image type="content" source="../_images/relocate/relocation-methods-decision-tree.png" alt-text="Diagram showing a decision tree for selecting the right relocation method. There are two decision points. 1. Is downtime okay? If yes, then cold relocation is the correct relocation method. 2. Does the service support synchronous data replication? If yes, then hot relocation is the correct relocation method. If no, then warm relocation is the correct relocation method." lightbox="../_images/relocate/relocation-methods-decision-tree.png" border="false":::
 
@@ -36,7 +36,7 @@ Cold relocation can take a few minutes or a few days depending on the number of 
 
 ### Hot relocation
 
-The hot relocation method is for workloads that need minimal to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you'll need to use a warm relocation approach instead. Here's the hot relocation process.
+The hot relocation method is for workloads that need minimal to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you need to use a warm relocation approach instead. Here's the hot relocation process.
 
 1. Perform service replication in the new target region.
 1. Keep the workload running in the source region.
@@ -68,9 +68,9 @@ There are three primary service-relocation approaches. The following paragraphs 
 - [Applications Azure Site Recovery can move](/azure/site-recovery/site-recovery-workload#workload-summary)
 - [Replicate DNS and Active Directory](/azure/site-recovery/site-recovery-workload#replicate-active-directory-and-dns)
 
-**Infrastructure as code (IaC):** IaC allows you to copy and redeploy Azure services. You can Azure Resource Manager, Bicep, or Terraform templates for the services in the source region. You can deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
+**Infrastructure as code (IaC):** IaC allows you to copy and redeploy Azure services. You can use Azure Resource Manager, Bicep, or Terraform templates for the services in the source region. You can deploy using the template in the new target region with your preferred IaC tool. For stateful services, you need another tool to relocate workload data. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
 
-Deploying a new instance of an Azure service by using IaC provides you with an opportunity to deploy multiple copies of the resource in parallel, and then use one of the suggested cutover techniques to redirect connections to the workloads in the new target region.
+When you use IaC to deploy a new instance of an Azure service, you can deploy multiple copies of the resource in parallel. With multiple copies, you can use one of the cutover techniques to redirect connections to the workloads in the new target region.
 
 ## Select data-relocation automation
 
@@ -82,13 +82,13 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 - **Azure Site Recovery:** Azure Site Recovery can relocate services and data. It supports cold and warm relocation strategies. For more information, see [Azure Site Recovery overview](/azure/site-recovery/site-recovery-overview).
 
-- **AzCopy:** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Azure Active Directory or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
+- **AzCopy:** AzCopy is a command-line utility that automates data movements in and out of Azure Storage. You need to download the tool and then use Microsoft Entra ID or shared access signature (SAS) tokens to authorize the move. For more information, see [AzCopy overview](/azure/storage/common/storage-ref-azcopy) and [Use AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 
 - **Pipelines and activities in Azure Data Factory or Synapse Analytics:** Azure Data Factory is a fully managed cloud-based data integration service that orchestrates and automates the movement and transformation of data. Azure Data Factory pipelines can move data lakes and warehouses. Synapse Analytics copy activity can also move data. For more information, see [Supported targets and sources](/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats) and [Copy data tool](/azure/data-factory/copy-data-tool).
 
 - **Azure Storage Explorer:** Azure Storage Explorer is a standalone app that allows you to relocate Azure Storage data. For more information, see [How to use Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer).
 
-- **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for non-essential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. You can't transfer existing backup restore points to the new target region. Consider keeping the vault in your source region until the backups are no longer required. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
+- **Azure Backup:** With Azure Backup, you can back up and restore data in another region. You should try Azure Backup first for nonessential cold and warm relocations. Azure Backup provides application-consistent, file-system consistent, and crash-consistent backups for virtual machines. It also supports managed disks, files shares, and blobs. You can't transfer existing backup restore points to the new target region. Consider keeping the vault in your source region until the backups are no longer required. For more information, see [Azure Backup overview](/azure/backup/backup-overview).
 
 - **Manual backup and restore:** Backup and restore here refers to a process, not a specific tool. Many services in Azure provide redundancy options that let you back up data to a separate region and restore it manually. You need to perform a manual backup and restore for specific services like Azure Key Vault. For more information, see [Move Key Vault to another region](/azure/key-vault/general/move-region).
 
@@ -117,7 +117,7 @@ Cutover is when you transition from the old workload to the new one. You direct 
 
 ## Next step
 
-You've selected a relocation method and the tools to relocate your workload. Move on to the Migrate step to execute the relocation using these tools.
+You selected a relocation method and the tools to relocate your workload. Move on to the Migrate step to execute the relocation using these tools.
 
 > [!div class="nextstepaction"]
 > [Migrate](migrate.md)
