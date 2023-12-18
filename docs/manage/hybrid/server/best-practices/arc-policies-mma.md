@@ -53,13 +53,14 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
 
    ```console
    az login
-   az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+   az account set -s <Your Subscription ID>
+   az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
    ```
 
    For example:
 
    ```console
-   az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
+   az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
    ```
 
    The output should look like this:
@@ -67,8 +68,7 @@ Review the [Azure Monitor supported OS documentation](/azure/azure-monitor/vm/vm
    ```json
    {
      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-     "displayName": "AzureArcServers",
-     "name": "http://AzureArcServers",
+     "displayName": "http://AzureArcServers",
      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
    }

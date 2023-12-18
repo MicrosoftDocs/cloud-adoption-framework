@@ -38,22 +38,22 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     ```console
     az login
-    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+    az account set -s <Your Subscription ID>
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
     ```
 
     For example:
 
     ```console
-    az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor
+    az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
     ```
 
-    Output should look like this:
+    The output should look like this:
 
     ```json
     {
       "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcAWS",
-      "name": "http://AzureArcAWS",
+      "displayName": "http://AzureArcAWS",
       "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }

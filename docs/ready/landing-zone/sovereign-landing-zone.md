@@ -5,8 +5,6 @@ author: pikestel
 ms.author: pikestel
 ms.date: 11/07/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 # Sovereignty considerations for Azure landing zones
