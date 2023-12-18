@@ -1,6 +1,6 @@
 ---
-title: Manage multi-tenant operations for defense organizations
-description: Guidance for managing identity in a multi-tenant cloud environment with zero trust requirements
+title: Manage multitenant operations for defense organizations
+description: Guidance for managing identity in a multitenant cloud environment with zero trust requirements
 author: amasse3
 ms.author: ssumner
 ms.reviewer: ssumner
@@ -8,12 +8,12 @@ ms.date: 07/10/2023
 ms.topic: conceptual
 ---
 
-# Manage multi-tenant operations for defense organizations
+# Manage multitenant operations for defense organizations
 
-This article defines how multi-tenant defense organizations should manage operations across Microsoft Entra tenants to meet zero trust requirements. It covers application management, identity governance, and security operations. The primary and secondary Microsoft Entra tenant administrators have distinct responsibilities in each area. Primary and secondary tenant(s) must coordinate application onboarding, entitlement management, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
+This article defines how multitenant defense organizations should manage operations across Microsoft Entra tenants to meet zero trust requirements. It covers application management, identity governance, and security operations. The primary and secondary Microsoft Entra tenant administrators have distinct responsibilities in each area. Primary and secondary tenant(s) must coordinate application onboarding, entitlement management, and threat detection and response (*see figure 1*). For more information, see [identifying tenant types](zero-trust-configuration.md#identify-tenant-types).
 
 :::image type="content" source="./images/management-operations.png" alt-text="Diagram showing the management responsibilities of the primary tenant and secondary tenant for application management, identity governance, and security operations." lightbox="./images/management-operations.png" border="false":::
-*Figure 1. Shared responsibilities by tenant for multi-tenant defense organizations*
+*Figure 1. Shared responsibilities by tenant for multitenant defense organizations*
 
 ## Application management
 
@@ -59,13 +59,13 @@ Secondary tenants host the infrastructure and platform resources for workloads i
 
 Application owners should use [Defender for Cloud](/azure/defender-for-cloud/concept-cloud-security-posture-management) to manage the security posture of the environment and view alerts and recommendations for the deployed resources. They should use Azure Policy Initiatives to meet the [compliance requirements](/azure/compliance/offerings/offering-dod-il2).
 
-[Connecting Defender for Cloud telemetry to Microsoft Sentinel](/azure/sentinel/connect-defender-for-cloud) allows your security operations center (SOC) to better protect cloud applications. The SOC can still maintain their standard security workflow and automation procedures. Connecting Defender to Sentinel provides visibility to correlate events across the enterprise. It can monitor the cloud and [on-premises](/azure/architecture/hybrid/hybrid-security-monitoring). To monitor on-premises components, you need to manage them with (1) [Azure Arc](/azure/azure-arc/overview) or (2) connect them via an API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder).
+[Connecting Defender for Cloud to Microsoft Sentinel](/azure/sentinel/connect-defender-for-cloud) allows your security operations center (SOC) to better protect cloud applications. The SOC can still maintain their standard security workflow and automation procedures. Connecting Defender to Sentinel provides visibility to correlate events across the enterprise. It can monitor the cloud and [on-premises](/azure/architecture/hybrid/hybrid-security-monitoring). To monitor on-premises components, you need to manage them with (1) [Azure Arc](/azure/azure-arc/overview) or (2) connect them via an API, [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-manage), or [Syslog Forwarder](/azure/sentinel/connect-log-forwarder).
 
 **DevSecOps pipelines.** When you host applications in Azure, a [DevSecOps](/devops/devsecops/enable-devsecops-azure-github) pipeline deploys infrastructure resources and application code to Azure. Secondary tenant administrators are responsible for managing service principals automating code deployment. [Microsoft Entra Workload ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-workload-identities) premium helps to secure service principals. Microsoft Entra Workload ID also reviews existing access and provides extra protections based on service principal risk.
 
 ## Identity governance
 
-Multi-tenant defense organizations need to govern access to applications in the primary Microsoft Entra tenant and manage external guest identities in the secondary tenant for the Azure environment.
+Multitenant defense organizations need to govern access to applications in the primary Microsoft Entra tenant and manage external guest identities in the secondary tenant for the Azure environment.
 
 ### Primary tenant identity governance
 
@@ -98,7 +98,7 @@ You should set up application governance using an entitlement management access 
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for partner organizations
 - Configuring Microsoft Entra ID Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
 
-**Privileged Identity Management.** [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration of [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [Microsoft Entra security groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Primary tenant administrators are responsible for configuring and managing Microsoft Entra PIM in the primary tenant.
+**Privileged Identity Management.** [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration of [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [Microsoft Entra security groups](/azure/active-directory/privileged-identity-management/concept-pim-for-groups). Primary tenant administrators are responsible for configuring and managing Microsoft Entra PIM in the primary tenant.
 
 ### Secondary tenant identity governance
 
@@ -117,7 +117,7 @@ You should set up external (B2B) guest access using an entitlement management ac
 2. Primary tenant user requests the access package in the secondary tenant.
 3. Optionally, an approver completes the request.
 4. An external guest object is created for the user in the secondary tenant.
-5. Access package is assigned granting eligibility for an Azure RBAC role.
+5. Access package is assigned granting eligibility for an Azure role.
 6. The user manages Azure resources using their external identity.
 
 For more information, see [Govern access for external users in entitlement management](/azure/active-directory/governance/entitlement-management-external-users).
@@ -127,23 +127,23 @@ For more information, see [Govern access for external users in entitlement manag
 - Managing [B2B collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure) and [cross-tenant access policies (XTAP)](/azure/active-directory/external-identities/cross-tenant-access-overview) for the primary tenant and other partner organizations
 - Using Identity Governance to [review and remove external users](/azure/active-directory/governance/access-reviews-external-users) who no longer have resource access
 
-**Privileged Identity Management.** [Microsoft Entra PIM](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration for [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure RBAC roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [privileged security groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner). Secondary tenant administrators are responsible for configuring and managing Microsoft Entra PIM for administrative roles used to manage the secondary Microsoft Entra tenant and Azure environment.
+**Privileged Identity Management.** [Microsoft Entra PIM](/azure/active-directory/privileged-identity-management/pim-configure) enables just-in-time administration for [Microsoft Entra roles](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user), [Azure roles](/azure/active-directory/privileged-identity-management/pim-resource-roles-assign-roles), and [privileged security groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner). Secondary tenant administrators are responsible for configuring and managing Microsoft Entra PIM for administrative roles used to manage the secondary Microsoft Entra tenant and Azure environment.
 
 ## Security operations
 
-The security operations team for a defense organization must protect, detect, and respond to threats across on-premises, hybrid, and multicloud environments. They need to protect their users, control sensitive data, investigate threats on user devices and servers. They also need to remediate insecure configuration of cloud and on-premises resources. Security operators in multi-tenant defense organizations usually operate from the primary tenant but might pivot between tenants for certain actions.
+The security operations team for a defense organization must protect, detect, and respond to threats across on-premises, hybrid, and multicloud environments. They need to protect their users, control sensitive data, investigate threats on user devices and servers. They also need to remediate insecure configuration of cloud and on-premises resources. Security operators in multitenant defense organizations usually operate from the primary tenant but might pivot between tenants for certain actions.
 
 ### Primary tenant security operations
 
-Security operators in the primary tenant need to monitor and manage alerts from Microsoft 365 in the primary tenant. This work involves managing Microsoft Sentinel and Microsoft 365 Defender services like Microsoft Defender for Endpoint (MDE).
+Security operators in the primary tenant need to monitor and manage alerts from Microsoft 365 in the primary tenant. This work involves managing Microsoft Sentinel and Microsoft Defender XDR services like Microsoft Defender for Endpoint (MDE).
 
-**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connectors allow the Sentinel instance to ingest security logs from various sources. These sources include Office 365, Microsoft 365 Defender, Microsoft Entra ID, Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
+**Sentinel and Microsoft 365.** You deploy a Microsoft Sentinel instance to a subscription attached to the primary tenant. You should configure data connectors for this Sentinel instance. The data connectors allow the Sentinel instance to ingest security logs from various sources. These sources include Office 365, Microsoft Defender XDR, Microsoft Entra ID, Entra Identity Protection, and other workloads in the primary tenant. Security operators monitoring incidents and alerts for Microsoft 365 should use the primary tenant. Activities involved in managing Sentinel for Microsoft 365 in the primary tenant include:
 
 - Monitoring and remediating [risky users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) and [service principals](/azure/active-directory/fundamentals/service-accounts-principal) in the primary tenant
 - Configuring [data connectors](/azure/sentinel/connect-data-sources) for Microsoft 365 and other available primary tenant data sources to Microsoft Sentinel
 - Building [workbooks](/azure/sentinel/monitor-your-data), [notebooks](/azure/sentinel/notebooks), [analytics rules](/azure/sentinel/detect-threats-custom), and [security orchestration and response (SOAR)](/azure/sentinel/automation) within the Microsoft 365 environment
 
-**Microsoft 365 Defender.** You manage Microsoft 365 Defender in the primary tenant. The primary tenant is where you use Microsoft 365 services. Microsoft 365 Defender helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
+**Microsoft Defender XDR.** You manage Microsoft Defender XDR in the primary tenant. The primary tenant is where you use Microsoft 365 services. Microsoft Defender XDR helps you monitor alerts and remediate attacks against users, devices, and service principals. Activities include managing components of [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender). These components include Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, Defender for Office.
 
 **Microsoft Defender for Endpoint (MDE) response (workstations).** You need to join end-user workstations to the primary tenant and use Microsoft Intune to manage them. Security operators need to use MDE to respond to detected attacks. The response can be isolating workstations or collecting an investigating package. [Defender for Endpoint response](/microsoft-365/security/defender-endpoint/respond-machine-alerts) actions for user devices takes place in the primary tenant MDE service. Activities involved in managing MDE response in the primary tenant include managing [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles).
 
@@ -151,9 +151,9 @@ Security operators in the primary tenant need to monitor and manage alerts from 
 
 This section describes how you should monitor and protect Azure resources in subscriptions in secondary tenants. You need to Defender for Cloud, Microsoft Sentinel, and Microsoft Defender for Endpoint (MDE). You need to use [Azure Lighthouse](/azure/lighthouse/overview) and [external identities](/azure/active-directory/external-identities/external-identities-overview) to assign permissions to security operators in the primary tenant. This setup allows security operators to use one account and [privileged access device](/security/privileged-access-workstations/privileged-access-devices) to manage security across tenants.
 
-**Sentinel (cloud, on-premises).** You need to assign permissions and configure Sentinel to ingest security telemetry from Azure resources deployed in subscriptions linked to the secondary tenant.
+**Sentinel (cloud, on-premises).** You need to assign permissions and configure Sentinel to ingest security signals from Azure resources deployed in subscriptions linked to the secondary tenant.
 
-*Assign permissions.* For security operators in the primary tenant to use Microsoft Sentinel, you have to assign permissions using [Azure Resource Manager](/azure/azure-resource-manager/management/overview) RBAC roles. You can use [Azure Lighthouse](/azure/lighthouse/overview) to assign these roles to users and security groups in the primary tenant. This configuration lets security operators operate [across Sentinel workspaces](/azure/sentinel/extend-sentinel-across-workspaces-tenants) in different tenants. Without Lighthouse, security operators would need guest accounts or separate credentials to manage Sentinel in the secondary tenants.
+*Assign permissions.* For security operators in the primary tenant to use Microsoft Sentinel, you have to assign permissions using [Azure Resource Manager](/azure/azure-resource-manager/management/overview) roles. You can use [Azure Lighthouse](/azure/lighthouse/overview) to assign these roles to users and security groups in the primary tenant. This configuration lets security operators operate [across Sentinel workspaces](/azure/sentinel/extend-sentinel-across-workspaces-tenants) in different tenants. Without Lighthouse, security operators would need guest accounts or separate credentials to manage Sentinel in the secondary tenants.
 
 *Configure Sentinel.* You should configure Microsoft Sentinel in a secondary tenant to ingest security logs from several sources. These sources include logs from Azure resources in the secondary tenant, on-premises servers, and network appliances owned and managed in the secondary tenant. Activities involved in managing Sentinel and on-premises in the secondary tenant include:
 
@@ -163,7 +163,7 @@ This section describes how you should monitor and protect Azure resources in sub
 
 **Microsoft Defender for Cloud.** Defender for Cloud surfaces security recommendations and alerts for resources in Azure, on-premises, or other cloud providers. You need to assign permissions to configure and manage Defender for Cloud.
 
-*Assign permissions.* You need to assign permissions to security operators in the primary tenant. Like Sentinel, Defender for Cloud also uses [Azure RBAC roles](/azure/defender-for-cloud/permissions). You can assign Azure RBAC roles to primary tenant security operators using Azure Lighthouse. This configuration allows security operators in the primary tenant see recommendations and alerts from the Defender for Cloud without switching directories or signing in with a separate account in the secondary tenant.
+*Assign permissions.* You need to assign permissions to security operators in the primary tenant. Like Sentinel, Defender for Cloud also uses [Azure roles](/azure/defender-for-cloud/permissions). You can assign Azure roles to primary tenant security operators using Azure Lighthouse. This configuration allows security operators in the primary tenant see recommendations and alerts from the Defender for Cloud without switching directories or signing in with a separate account in the secondary tenant.
 
 *Configure Defender for Cloud.* You need to enable Defender for Cloud and [manage recommendations and alerts](/azure/defender-for-cloud/managing-and-responding-alerts). Turn on [enhanced workload protections](/azure/defender-for-cloud/defender-for-cloud-introduction#protect-cloud-workloads) for resources in subscriptions linked to secondary tenants.
 
@@ -171,7 +171,7 @@ This section describes how you should monitor and protect Azure resources in sub
 
 *Assign permissions.* When you enable a Defender for Server plan in a secondary tenant, the [MDE extension](/azure/defender-for-cloud/integration-defender-for-endpoint) automatically deploys to your VMs. This MDE extension onboards the server to the MDE service for the secondary tenant.
 
-MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal) and [permissions model](/microsoft-365/admin/add-users/about-admin-roles). So you must use external identities (B2B guests) to give security operators in the primary tenant access to MDE. Assign MDE roles to Microsoft Entra security groups and add the guests as group members so they can [take response actions](/microsoft-365/security/defender-endpoint/respond-machine-alerts) on servers.
+MDE uses the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal) and [permissions model](/microsoft-365/admin/add-users/about-admin-roles). You must use external identities (B2B guests) to give security operators in the primary tenant access to MDE. Assign MDE roles to Microsoft Entra security groups and add the guests as group members so they can [take response actions](/microsoft-365/security/defender-endpoint/respond-machine-alerts) on servers.
 
 *Configure MDE.* You need to configure and manage [device groups](/microsoft-365/security/defender-endpoint/machine-groups) and [roles](/microsoft-365/security/defender-endpoint/user-roles) in Microsoft Defender for Endpoint for the secondary tenant.
 
@@ -184,4 +184,4 @@ MDE uses the [Microsoft 365 Defender portal](/microsoft-365/security/defender/mi
 
 - [Identity essentials](essentials.md)
 - [Zero trust configurations](zero-trust-configuration.md)
-- [Manage multi-tenant operations](manage-operations.md)
+- [Manage multitenant operations](manage-operations.md)
