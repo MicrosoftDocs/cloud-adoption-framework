@@ -28,12 +28,19 @@ Workload discovery is the foundation of relocation. The goal of discovery is to 
 Workload organizational discovery involves finding out who is in charge of a workload, understanding the risks of moving it, and planning how to communicate about the move. This step helps identify who needs to be involved, manage risks, and ensure everyone is informed properly. This careful planning helps make the transition smoother and less disruptive for the business and its customers.
 
 - *Workload ownership*: Determine who is responsible for the workload.
+
 - *Stakeholder identification*: Identify all parties with an interest in the workload.
+
 - *Risk assessment*: Assess the potential business risks associated with moving the workload.
+
 - *Change management*: Gain a clear understanding of the processes for managing changes to the workload.
+
 - *Outage windows*: Find out the acceptable times when the system can be offline for relocation.
+
 - *Impact analysis*: Recognize which internal users or external customers the relocation might affect.
+
 - *Communication needs*: Understand the current and needed communication plan to communicate any downtime or changes.
+
 - *Policy compliance*: Ensure the relocation adheres to organizational policies and industry regulations.
 
 ### Conduct technical discovery
@@ -65,9 +72,7 @@ Dependencies are resources or services that the workload needs to run. Identifyi
 Endpoint discovery refers to the process of identifying all the endpoints or IP addresses associated with a workload. Discovering all workload endpoints ensures you account for all network connections and access points and prepare to properly configure them in the new environment. Here are recommendations for dealing with public IP addresses and private endpoints:
 
 - *Public IP addresses*: Public IP addresses are region specific. You can't move them between regions. You need to export the configuration of a public IP and deploy it to the new target region. For more information, see [Move Azure Public IP configuration to another Azure region](/azure/virtual-network/move-across-regions-publicip-powershell).
-- *Private endpoints*: When you redeploy a private endpoint, it's likely gets a new IP address from the subnet you link it to.
-
-    If you connect to your resources through a private endpoint, these endpoints link to private DNS zones that resolve the resource's network address within your virtual network. In a relocation, you need to update the DNS records within the private DNS zones to maintain connectivity.
+- *Private endpoints*: When you redeploy a private endpoint, it's likely gets a new IP address from the subnet you link it to. If you connect to your resources through a private endpoint, these endpoints link to private DNS zones that resolve the resource's network address within your virtual network. In a relocation, you need to update the DNS records within the private DNS zones to maintain connectivity.
 
 #### Use automated tools
 
@@ -103,9 +108,9 @@ Know if the target region is a paired region or not and if it supports availabil
 
 Relocation happens at the service and component level. Most workloads use multiple services. There are two primary types of services, stateful and stateless. You need to categorize each service as stateful or stateless. This knowledge helps you determine dependencies, understand service integrations, and narrows your relocation automation options.
 
-**Stateless services:** Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
+- *Stateless services:* Stateless services have configuration information only. These services don't need continuous replication of data to move. Examples include virtual networks, network adapters, load balancers, and network security groups.
 
-**Stateful services:** Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
+- *Stateful services:* Stateful services have configuration information and data that need to move. Examples include virtual machines and SQL databases.
 
 ## Next steps
 
