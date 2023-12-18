@@ -51,7 +51,9 @@ You can create infrastructure-as-code templates or scripts for resources you can
 This stage is only relevant when the workload requires data migration. Perform data migration with the chosen automation. Before the cutover to the workload in the target region, you must ensure that the related data is in sync with the source region. Data consistency is an important aspect that requires care.  Here's guidance for migrating workload data.
 
 1. *Migrate source region data.* The approach to migrating source-region data should follow the relocation method for the workload service. The hot, cold, and warm methods have different processes for managing the data in the source region.
+
 1. *Synchronize data.* The synchronization technique depends on the architecture of the workload and the demand of the application. For example, in an on-demand sync, changes are pulled when data is accessed for the first time. Pulling and merging of changes occurs only in cases where there's a difference between last and current application access.
+
 1. *Resolve synchronization conflicts.* Make sure the data in the source and target location are in sync and resolve any data conflicts. You only want users trying to access data that is available. For example, Azure Cosmos DB can serialize concurrent writes to ensure data consistency.
 
 ## Update connection strings
