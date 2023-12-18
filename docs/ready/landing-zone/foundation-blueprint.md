@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/21/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom:
   - internal
   - engagement-fy23
@@ -39,7 +37,7 @@ This implementation option does not take an inherent position on enterprise enro
 
 ### Identity and access management
 
-This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+This implementation option assumes that the target subscription is already associated with a Microsoft Entra instance in accordance with [identity management best practices](/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Network topology and connectivity
 

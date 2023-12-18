@@ -5,8 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/26/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: general
+ms.subservice: caf-general
 ms.custom: internal, UpdateFrequency5
 ---
 

@@ -1,13 +1,12 @@
 ---
 title: Microsoft Sentinel for SAP on Azure
 description: Learn recommendations to deploy agents by using the Microsoft Sentinel solution for SAP applications, SAP application servers, and SAP HANA database servers.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap
 ---
 

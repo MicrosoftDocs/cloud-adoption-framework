@@ -5,8 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/22/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 

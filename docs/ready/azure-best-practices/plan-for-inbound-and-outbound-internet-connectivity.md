@@ -6,8 +6,6 @@ ms.author: martinek
 ms.date: 06/22/2022
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, csu
 ---
 
@@ -85,6 +83,6 @@ This article lists considerations and recommendations for inbound and outbound c
   - Use [Azure Policy](/azure/virtual-network/policy-reference) to prevent VM creation with public IPs.
   - Use [Azure Bastion](/azure/bastion/bastion-overview) to access jumpbox VMs.
 
-- Use [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview) protection plans to help protect the public endpoints you host within your virtual networks.
+- Use [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) protection plans to help protect the public endpoints you host within your virtual networks.
 
 - Don't try to replicate on-premises perimeter network concepts and architectures into Azure. Although Azure has similar security capabilities, the implementation and architecture are adapted to the cloud.

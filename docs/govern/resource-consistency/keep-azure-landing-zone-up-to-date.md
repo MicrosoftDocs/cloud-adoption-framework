@@ -5,8 +5,6 @@ author: Jfaurskov
 ms.author: Janfaurs
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 

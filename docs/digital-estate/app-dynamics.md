@@ -5,8 +5,6 @@ author: wayneme75
 ms.author: martinek
 ms.date: 09/18/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: plan
 ms.custom: think-tank
 ---
 

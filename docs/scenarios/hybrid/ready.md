@@ -5,8 +5,6 @@ author: likamrat
 ms.author: likamrat
 ms.date: 04/29/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
 ---
 
@@ -111,7 +109,7 @@ Azure Arc resources can be part of any application. Examples include:
 
 Application landing zone subscriptions can also contain both Azure Arc resources and regular Azure resources.
 
-Since Azure Arc resources are located outside of Azure, you can consider them considered a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](../../ready/landing-zone/design-principles.md) design principles.
+Since Azure Arc resources are located outside of Azure, you can consider them a *metadata resource* in the way they're represented in Azure. Treat Azure Arc resources as any other Azure resource that can be part of your landing zone. It doesn't matter if it's a platform or application, and it follows the [subscription democratization and application-centric and archetype-neutral](../../ready/landing-zone/design-principles.md) design principles.
 
 [![Diagram that shows a landing zone design.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
 

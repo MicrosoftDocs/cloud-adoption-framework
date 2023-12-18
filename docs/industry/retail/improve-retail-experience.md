@@ -5,8 +5,6 @@ author: mpvenables
 ms.author: martinek
 ms.date: 09/29/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-retail
 ---
 
@@ -103,8 +101,6 @@ Tractor Supply Company, the largest rural lifestyle retailer in the United State
 Starbucks has been using reinforcement learning technology to provide a personalized experience for customers using the company's mobile app. This machine learning training method learns to make decisions in complex, unpredictable environments based upon external feedback. [Read the full Starbucks customer story](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/).
 
 ## Next steps
-
-Try the live [Synapse/AI-Retail-Recommender](https://synapsefornextgenretail.azurewebsites.net/) demo.
 
 Use the Azure DevOps template to deploy in your own environment. Follow the steps included in the [Retail Recommender Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/):
 

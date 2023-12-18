@@ -5,8 +5,6 @@ author: matt-FFFFFF
 ms.author: tozimmergren
 ms.date: 02/03/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: devx-track-terraform
 ---
 

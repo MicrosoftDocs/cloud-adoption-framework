@@ -5,8 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/13/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aks, engagement-fy23
 products: azure-monitor
 ---

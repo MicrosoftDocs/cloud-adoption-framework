@@ -5,8 +5,6 @@ author: MariusStorhaug
 ms.author: mastorha
 ms.date: 06/27/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 

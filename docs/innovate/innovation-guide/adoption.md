@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
 ms.custom: internal, fasttrack-edit, AQC, seo-caf-innovate
 keywords: Quantitative data, quantitative feedback, qualitative feedback, testing feedback, customer feedback
 ---

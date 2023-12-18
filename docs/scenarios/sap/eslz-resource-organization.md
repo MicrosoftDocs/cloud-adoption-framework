@@ -1,12 +1,10 @@
 ---
 title: Resource organization considerations for SAP in Azure
 description: Evaluate how resources will be organized when deploying SAP to Azure.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.date: 3/12/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 

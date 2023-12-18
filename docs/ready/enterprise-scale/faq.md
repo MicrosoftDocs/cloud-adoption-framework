@@ -5,8 +5,6 @@ author: jtracey93
 ms.author: tozimmergren
 ms.date: 04/14/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
 
@@ -73,7 +71,7 @@ The Cloud Adoption Framework landing zones [open source project (OSS)](https://a
 
 Review the following documentation sections:
 
-- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policy)
+- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policies)
 - [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources"
  section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
 
@@ -81,60 +79,11 @@ Review the following documentation sections:
 
 ## How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?
 
-> [!NOTE]
-> This is for workload landing zones only. For testing and environment segregation for the Azure landing zone platform itself, review the [testing approach for enterprise-scale](./testing-approach.md).
-
-If an application or service workload requires segregation of "dev/test/production" landing zones, use a separate subscription for each landing zone in the workload. It's important to work with the application or service workload owners to determine if separate subscriptions is the best way for them to build, manage, operate, and deliver their workload. It shouldn't be mandatory for all workloads.
-
-A good example is a workload that uses [Azure App Service](/azure/app-service/overview). When you use Azure App Service, a [best practice](/azure/app-service/deploy-best-practices#use-deployment-slots) is to use [deployment slots](/azure/app-service/deploy-staging-slots) to help you manage changes and updates to the web app. However, this feature can only be used on the same app on an App Service Plan, which can only live within a single subscription. By mandating that your application or service workload owners use separate subscriptions for "dev/test/production", you might make their deployment lifecycle harder to manage. In this example, a single subscription for the application or service workload might be the best fit by using Azure role-based access control (RBAC) with [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) at the Resource Group scope for increased security.
-
-We suggest working with each application or service workload team (landing zone owners) to understand their requirements. Then you can provide subscriptions based on their requirements and plans. You might also decide to designate "product lines" for different types of workloads so that you can build subscription creation processes and tooling based on common requirements from application or service workload teams.
-
-### What about our management group hierarchy?
-
-With Azure landing zone architecture, you want to avoid complicated and volatile management group hierarchies that require constant amendment, don't scale efficiently, and don't add value. That's why in Azure landing zone architecture, management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](../landing-zone/design-area/resource-org.md).
-
-_Archetype-aligned_ means that management groups are only created for differing workload archetypes. For example, in the conceptual architecture, the "landing zones" management group has "corp" and "online" child management groups. These child management groups align with distinct archetype patterns for the workloads they hold, focused around hybrid connectivity (VPN/ExpressRoute) requirements (internal only vs. public-facing applications/services). However, all environments ("dev/test/production"), whether split across separate subscriptions or in a single subscription, are held within the same single management group ("Corp" or "Online") depending on its archetype and requirements.
-
-The following equation helps to highlight why management groups per environment and/or per workload doesn't scale well: _N workloads x Z management groups  = total management groups_.
-
-So, if you have 30 different workloads that each require a management group and a child management group for "dev/test/production", you're left with:
-
-> N = number of workloads/apps = 30
->
-> Z = number of management groups for workload and environments (1 per workload + 3 for envs) = 4
-
-> N (30) x Z (4) = 120 total management groups
-
-#### Example of a suboptimal management group hierarchy
-
-[![Diagram of an example of a sub-optimal management group hierarchy for Azure landing zone architecture when handling dev/test/production landing zones.](./media/eslz-dev-test-prod-bad.png)](./media/eslz-dev-test-prod-bad.png#lightbox)
-
-Landing Zone MG should have universal polices that enforce guardrails for both Corp and Online. Corp and Online have unique polices to enforce company guidelines around public and private facing workloads. If it needs to be implemented at a higher Management Group level, then it should be talked about with Cloud Platform Team or another team. There's little value in changing the configuration of a workload as it's promoted through the different environments. Constant change results in a poor development experience for landing zone users and owners. You might also consider using [sandbox subscriptions](../considerations/sandbox-environments.md) for true development purposes where a less restricted environment is required, such as when an application or service workload team is trying out different Azure services to see what works best for their requirements. Once the services are known, a landing zone (in the correct workload archetype aligned management group in the "landing zones" management group hierarchy) can be provisioned for the team.
-
-A common challenge to this approach is that you might need some policies to apply differently, depending on the environment. You have a few options:
-
-- Use tags in your policy definitions to help filter and apply them to the correct environment.
-
-  > [!IMPORTANT]
-  > Tags can be changed by users with appropriate Azure RBAC permissions, so for security focused policies, we don't advise using tags in policies. Users might change the tags on a resource and potentially bypass or apply another policy definition to the resources.
-
-- Apply policies at a subscription level as required, ideally during the subscription creation process (as mentioned earlier).
-- For policies that are implemented to help control costs (for example, to restrict certain VM SKUs from being used), apply the policy definition at a subscription level where required or make costs the responsibility of the landing zone owners, enabling true autonomy. (See [Platform automation and DevOps](../landing-zone/design-area/platform-automation-devops.md).)
-- Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
-
-#### Example of an optimal management group hierarchy aligned to Azure landing zone architecture
-
-[![Diagram of an example of an optimal management group hierarchy for Azure landing zone architecture when handling development, test, and production landing zones.](./media/eslz-dev-test-prod-good.png)](./media/eslz-dev-test-prod-good.png#lightbox)
-
-_Some management groups have been removed for illustration clarity purposes._
-
-> [!TIP]
-> We discussed this topic in a recent YouTube video: [Azure Landing Zones - Handling Dev/Test/Prod for Application Workloads](https://youtu.be/8ECcvTxkrJA)
+For more information, see [Manage application development environments in Azure landing zones](../landing-zone/design-area/management-application-environments.md).
 
 ## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
 
-When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deploymene metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
 The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace and an automation account, if required.
 
@@ -185,7 +134,7 @@ You first need to clean up the old subscription for reuse. You need to perform t
 - Remove deployments at the subscription scope.
 - Remove tags at the subscription scope.
 - Remove any Resource Locks at the subscription scope.
-- Remove any Azure Cost Management Budgets at the subscription scope.
+- Remove any Microsoft Cost Management budgets at the subscription scope.
 - Reset Microsoft Defender for Cloud plans to Free Tiers unless organizational requirements mandate these logs are set to the paid tiers. You normally enforce these requirements via Azure Policy.
 - Remove subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations unless organizational requirements mandate forwarding these logs while a subscription is active.
 - Remove any Azure Lighthouse Delegations at the subscription scope.
@@ -199,8 +148,17 @@ You first need to clean up the old subscription for reuse. You need to perform t
 You can reassign the subscription after you clean up the subscription. Here are some common activities that you might want to perform as part of the reassignment process:
 
 - Add new tags and set values for them on the subscription.
-- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Azure Active Directory Groups instead of individuals.
+- Add new Role Assignments, or Privileged Identity Management (PIM) Role Assignments, at the subscription scope for the new owners. Typically these assignments would be to Microsoft Entra groups instead of individuals.
 - Place the subscription into the desired Management Group based on its governance requirements.
-- Create new Azure Cost Management Budgets and set alerts to new owners when thresholds met.
+- Create new Microsoft Cost Management budgets and set alerts to new owners when thresholds met.
 - Set Microsoft Defender for Cloud plans to desired Tiers. You should enforce this setting via Azure Policy once placed into the correct Management Group.
 - Configure subscription activity logs (diagnostic settings) forwarding to Log Analytics Workspaces, Event Hubs, Storage Account or other supported destinations. You should enforce this setting via Azure Policy once placed into the correct Management Group.
+
+## What is a sovereign landing zone and how is it related to the Azure landing zone architecture?
+
+The sovereign landing zone is a component of Microsoft Cloud for Sovereignty that's intended for public sector customers who need advanced sovereignty controls. As a tailored version of the Azure landing zone conceptual architecture, the sovereign landing zone aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing. Through this alignment, the sovereign landing zone creates a cloud architecture where data and workloads offer encryption and protection from threats by default.
+
+> [!NOTE]
+> Microsoft Cloud for Sovereignty is oriented toward government organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Cloud for Sovereignty capabilities, and only then consider adopting the sovereign landing zone architecture.
+
+For more information about the sovereign landing zone, see [Sovereignty considerations for Azure landing zones](../landing-zone/sovereign-landing-zone.md).

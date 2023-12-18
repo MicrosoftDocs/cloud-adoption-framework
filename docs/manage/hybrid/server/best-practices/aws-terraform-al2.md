@@ -5,8 +5,6 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, e2e-hybrid, devx-track-terraform
 ---
 
@@ -36,18 +34,24 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     ```console
     az login
-    az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor
+    az account set -s <Your Subscription ID>
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
     ```
 
-    Output should look similar to this:
+    For example:
+
+    ```console
+    az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
+    ```
+
+    The output should look like this:
 
     ```json
     {
-      "appId": "XXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcAWS",
-      "name": "http://AzureArcAWS",
-      "password": "XXXXXXXXXXXXXXXXXXXXXXXX",
-      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXX"
+      "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "displayName": "http://AzureArcAWS",
+      "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }
     ```
 

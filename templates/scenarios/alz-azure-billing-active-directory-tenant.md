@@ -1,12 +1,10 @@
 ---
 title: Azure billing and Active Directory tenant for {{Token-Name}} - {{Insert-accelerator-name}}
-description: #Describe how this {{Insert-accelerator-name}} landing zone accelerator can improve enterprise enrollment and Azure AD tenants of {{Insert-accelerator-name}}.
+description: #Describe how this {{Insert-accelerator-name}} landing zone accelerator can improve enterprise enrollment and Microsoft Entra tenants of {{Insert-accelerator-name}}.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ---
 

@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 

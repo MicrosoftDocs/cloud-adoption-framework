@@ -5,8 +5,6 @@ author: Welasco
 ms.author: vsantana
 ms.date: 08/18/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aro
 ---
 
@@ -17,8 +15,8 @@ Review design considerations and recommendations for network topology and connec
 ## Design considerations
 
 - Azure Red Hat OpenShift requires a primary subnet and secondary subnet.
-  - Use the primary subnet to deploy the cluster's primary nodes.
-  - Use the secondary subnet to deploy the cluster's secondary nodes.
+  - Use the primary subnet to deploy the cluster's master nodes.
+  - Use the secondary subnet to deploy the cluster's worker nodes.
   - The secondary subnet and the primary subnet should both be a minimum `/27` route.
   - You can't change the secondary subnet or the primary subnet after you deploy the cluster.
   - The primary subnet and the secondary subnet can't have a network security group associated with them. The Azure Red Hat OpenShift cluster automatically creates and manages a network security group.
@@ -95,7 +93,7 @@ Traffic between the Azure Red Hat OpenShift pods and the private endpoints by de
 ## Design recommendations
 
 - If your security policy requires you to use a private IP address for the Azure Red Hat OpenShift API, [deploy a private Azure Red Hat OpenShift cluster](/azure/openshift/howto-create-private-cluster-4x).
-- Use Azure DDoS Protection Standard to protect the virtual network you use for the Azure Red Hat OpenShift cluster *unless you use Azure Firewall or Web Application Firewall in a centralized subscription*.
+- Use Azure DDoS Protection to protect the virtual network you use for the Azure Red Hat OpenShift cluster *unless you use Azure Firewall or Web Application Firewall in a centralized subscription*.
 - Use the DNS configuration that's linked to the overall network setup with Azure Virtual WAN or a hub and spoke architecture, Azure DNS zones, and your own DNS infrastructure.
 - Use Azure Private Link to secure network connections, and use private IP-based connectivity to other managed Azure services that support Private Link, such as Azure Storage, Azure Container Registry, Azure SQL Database, and Azure Key Vault.
 - Use an ingress controller to provide advanced HTTP routing and security and to offer a single endpoint for applications.

@@ -3,10 +3,8 @@ title: Govern your portfolio of hybrid and multicloud workloads
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments.
 author: martinekuan
 ms.author: martinek
-ms.date: 02/01/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 

@@ -350,13 +350,13 @@ items:
         href: /azure/virtual-machines/workloads/sap/businessobjects-deployment-guide?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: SAP BusinessObjects BI platform deployment guide for Linux on Azure
         href: /azure/virtual-machines/workloads/sap/businessobjects-deployment-guide-linux?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-    - name: Integrate Azure AD with SAP applications
+    - name: Integrate Microsoft Entra ID with SAP applications
       items:
       - name: Provision users from SAP SuccessFactors to Active Directory
         href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Provision users from SAP SuccessFactors to Azure AD
+      - name: Provision users from SAP SuccessFactors to Microsoft Entra ID
         href: /azure/active-directory/saas-apps/sap-successfactors-inbound-provisioning-cloud-only-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
-      - name: Write-back users from Azure AD to SAP SuccessFactors
+      - name: Write-back users from Microsoft Entra ID to SAP SuccessFactors
         href: /azure/active-directory/saas-apps/sap-successfactors-writeback-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json
       - name: Provision users to SAP Cloud Platform Identity Authentication
         href: /azure/active-directory/saas-apps/sap-cloud-platform-identity-authentication-provisioning-tutorial?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/sap/toc.json

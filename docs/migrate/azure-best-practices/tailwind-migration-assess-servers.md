@@ -5,8 +5,6 @@ author: akasnik
 ms.author: akasnik
 ms.date: 10/12/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: azure-fast-track
 ---
 
@@ -102,7 +100,7 @@ As a best practice, Tailwind gathers data over a prolonged period of time, such 
 
 After discovery of the on-premises servers has been running for at least a day, Tailwind can start creating assessments in the Azure Migrate project through the Azure portal. Their plan is to create an assessment per environment (production and nonproduction).
 
-Tailwind can choose to run various assessments such as a [Azure VM assessment](/azure/migrate/concepts-assessment-calculation), [Azure SQL Database assessment](/azure/migrate/concepts-azure-sql-assessment-calculation), or [AVS assessment](/azure/migrate/concepts-azure-vmware-solution-assessment-calculation). The company starts with the VM assessment by following the [assessment best practices](/azure/migrate/best-practices-assessment) and runs an Azure SQL Database assessment later. As a discovery source, Tailwind chooses servers discovered through the Azure Migrate appliance.
+Tailwind can choose to run various assessments such as an [Azure VM assessment](/azure/migrate/concepts-assessment-calculation), [Azure SQL Database assessment](/azure/migrate/concepts-azure-sql-assessment-calculation), or [AVS assessment](/azure/migrate/concepts-azure-vmware-solution-assessment-calculation). The company starts with the VM assessment by following the [assessment best practices](/azure/migrate/best-practices-assessment) and runs an Azure SQL Database assessment later. As a discovery source, Tailwind chooses servers discovered through the Azure Migrate appliance.
 
 Tailwind understands that the Azure Migrate appliance continues to collect performance data of their on-premises infrastructure and sends it over to Azure Migrate. Tailwind has the opportunity to recalculate Azure Migrate assessment at any future point in time to ensure the latest data sets are being included as migration approximates.
 

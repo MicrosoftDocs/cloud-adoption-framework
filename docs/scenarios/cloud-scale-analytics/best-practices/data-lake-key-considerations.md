@@ -5,8 +5,6 @@ author: mboswell
 ms.author: mboswell
 ms.date: 04/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -20,6 +18,7 @@ Azure Storage offers different access tiers, which allows you to store blob obje
 
 - **Hot:** Optimized for storing data that's accessed frequently.
 - **Cool:** Optimized for storing data that's infrequently accessed. Data is stored for at least 30 days.
+- **Cold tier:** Optimized for storing data that is infrequently accessed or modified. Data is stored for at least 90 days. The cold tier has lower storage costs and higher access costs compared to the cool tier.
 - **Archive:** Optimized for storing data that's rarely accessed. The data is stored for at least 180 days with flexible latency requirements, on the order of hours.
 
 Consider the following information when using access tiers:

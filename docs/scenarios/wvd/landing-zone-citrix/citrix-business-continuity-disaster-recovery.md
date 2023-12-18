@@ -1,12 +1,10 @@
 ---
 title: Business continuity and disaster recovery for Citrix on Azure
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for a Citrix on Azure environment.
-author: BenMartinBaur 
+author: BenMartinBaur
 ms.author: martinek
 ms.date: 02/06/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-avd
 ---
 

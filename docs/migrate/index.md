@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/10/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal, seo-azure-migrate
 ---
 
@@ -57,13 +55,9 @@ The following bullets provide an overview of the phases of this process (picture
 
   Watch this video to get a quick overview about completing a comprehensive assessment.
 
-  <!-- markdownlint-disable MD034 -->
- 
   <br/>
 
   > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWDpel]
-
-  <!-- markdownlint-enable MD034 -->
 
 - **Deploy workloads**: After you assess workloads, the existing workload functionality is replicated or improved in the cloud. This replication could involve a *lift and shift* or *rehost* to the cloud. But, more commonly during this phase, many of the assets supporting these workloads will be modernized to capitalize on the benefits of the cloud.
 

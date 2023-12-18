@@ -5,8 +5,6 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/1/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: think-tank
 ---
 
@@ -201,7 +199,7 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 1. In the **Virtual machines** tab, select the machines that you want to replicate.
 
-    - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium or standard) recommendations from the assessment results. In the **Import migration settings from an assessment?** field, select **Yes, apply migration settings from a Azure Migrate assessment**.
+    - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium or standard) recommendations from the assessment results. In the **Import migration settings from an assessment?** field, select **Yes, apply migration settings from an Azure Migrate assessment**.
     - If you didn't run an assessment or you don't want to use the assessment settings, select **No, I'll specify the migration settings manually**.
     - If you selected to use the assessment, select the VM group and assessment name.
 

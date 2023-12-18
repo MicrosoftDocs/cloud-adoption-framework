@@ -5,8 +5,7 @@ author: mahia127
 ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: strategy
+ms.subservice: caf-methodology-strategy
 ms.custom: think-tank,UpdateFrequency5
 ---
 

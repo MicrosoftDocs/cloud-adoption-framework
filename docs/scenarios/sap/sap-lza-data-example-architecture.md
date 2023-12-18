@@ -1,13 +1,12 @@
 ---
 title: SAP data integration example architecture
 description: Learn about an example architecture for SAP data integration, including the dataflow and necessary components.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
