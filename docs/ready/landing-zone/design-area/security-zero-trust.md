@@ -3,23 +3,23 @@ title: Incorporate Zero Trust practices in your landing zone
 description: Learn how to incorporate Zero Trust-specific deployment objectives in your landing zone design areas, including specific guidance for each design area.
 author: brsteph
 ms.author: bstephenson
-ms.date: 12/15/2023
+ms.date: 12/17/2023
 ms.topic: conceptual
 ms.custom: 
 ---
 
 # Incorporate Zero Trust practices in your landing zone
 
-[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy in which you incorporate products and services in order to adhere to the following security principles:
+[Zero Trust](/security/zero-trust/zero-trust-overview) is a security strategy in which you incorporate products and services into your design and implementation to adhere to the following security principles:
 
-- **Verify explicitly** means that you always authenticate and authorize access based on all available data points.
+- **Verify explicitly**: always authenticate and authorize access based on all available data points.
 
-- **Use least-privilege access** means that you limit users to just-enough access, and use tools to provide just-in-time access with considerations to adaptive risk-based policies.
-- **Assume breach** means that you minimize the blast radius and segment access, proactively look for threats, and continually improve defenses.
+- **Use least-privilege access**: limit users to just-enough access, and use tools to provide just-in-time access with considerations to adaptive risk-based policies.
+- **Assume breach**: minimize the blast radius and segment access, proactively look for threats, and continually improve defenses.
 
-If your organization adheres to the Zero Trust strategy, you should incorporate Zero Trust-specific deployment objectives for your landing zone design areas. Your landing zone is the foundation of your workloads in Azure, so it's important to prepare your landing zone for Zero Trust adoption.
+If your organization adheres to the Zero Trust strategy, you should incorporate Zero Trust-specific deployment objectives into your landing zone design areas. Your landing zone is the foundation of your workloads in Azure, so it's important to prepare your landing zone for Zero Trust adoption.
 
-This article provides guidance for integrating Zero Trust practices into your landing zone and explains where adherence to Zero Trust principles requires solutions outside of your landing zone.
+This article provides guidance for integrating Zero Trust practices into your landing zone and explains where adherence to Zero Trust principles requires solutions outside your landing zone.
 
 ## Zero Trust pillars and landing zone design areas
 
@@ -86,7 +86,7 @@ For information about deployment objectives for securing endpoints, see [Secure 
 
 - Endpoint deployment objectives are for end-user compute devices, such as laptops, desktop computers, and mobile devices.
 
-- As you adopt Zero Trust practices for endpoints, you must implement solutions in Azure and outside of Azure.
+- As you adopt Zero Trust practices for endpoints, you must implement solutions in Azure and outside Azure.
 - You can use tools, such as Microsoft Intune and other device management solutions, to realize deployment objectives.
 - If you have endpoints in Azure, such as in Azure Virtual Desktop, you can enroll the client experience in Intune, and apply Azure policies and controls to restrict access to the infrastructure.
 
@@ -138,7 +138,7 @@ A Zero Trust approach involves extensive controls for data. From an implementati
 
   There are [policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) in the reference implementations for logging and managing data resources.
 
-- You need other controls beyond securing Azure resources to meet the deployment objectives. Zero Trust data security involves classifying data, labeling it for sensitivity, and controlling data access. It also extends beyond database and file systems. You need to consider how to protect data in Teams, Microsoft 365 Groups, and SharePoint.
+- You need other controls beyond securing Azure resources to meet the deployment objectives. Zero Trust data security involves classifying data, labeling it for sensitivity, and controlling data access. It also extends beyond database and file systems. You need to consider how to protect data in Microsoft Teams, Microsoft 365 Groups, and SharePoint.
 
 #### Data recommendations
 
@@ -217,7 +217,7 @@ For information about deployment objectives for visibility, automation, and orch
 
 - Deploy Microsoft Sentinel as part of your Azure landing zone.
 
-- Create a plan to integrate signals from Microsoft Entra ID and tools in Microsoft 365 to your Microsoft Sentinel workspace.
+- Create a plan to integrate signals from Microsoft Entra ID and tools into Microsoft 365 to your Microsoft Sentinel workspace.
 - Create a plan for conducting threat-hunting exercises and continual security improvements.
 
 ## Next steps
