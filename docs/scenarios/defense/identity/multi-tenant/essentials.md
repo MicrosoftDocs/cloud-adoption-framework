@@ -75,7 +75,7 @@ However, Microsoft Entra ID isn't susceptible to Kerberos attacks. The cloud equ
 
 To learn more about token theft, see the [Token theft playbook](/security/operations/token-theft-playbook).
 
-**Detect suspicious sign-in behavior.** [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection) uses a combination of real-time and offline detections to identify risky users and sign-in events. You can use [risk conditions](https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies) in [Entra Conditional Access](/entra/identity/conditional-access/overview) to dynamically control or block access to your applications. [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) lets client apps detect changes in a user's session to enforce access policies in near-real-time.
+**Detect suspicious sign-in behavior.** [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection) uses a combination of real-time and offline detections to identify risky users and sign-in events. You can use [risk conditions](/entra/id-protection/howto-identity-protection-configure-risk-policies) in [Entra Conditional Access](/entra/identity/conditional-access/overview) to dynamically control or block access to your applications. [Continuous Access Evaluation (CAE)](/azure/active-directory/conditional-access/concept-continuous-access-evaluation) lets client apps detect changes in a user's session to enforce access policies in near-real-time.
 
 ## Applications
 
