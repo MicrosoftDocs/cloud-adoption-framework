@@ -1092,7 +1092,7 @@ items:
               href: innovate/best-practices/conversational-ai.md
           - name: Knowledge mining
             items:
-            - name: What is Azure Cognitive Search?
+            - name: What is Azure AI Search?
               href: innovate/best-practices/cognitive-search.md
 
       - name: Process improvements
