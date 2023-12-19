@@ -75,7 +75,7 @@ Launch the [Retail Recommender Solution Accelerator](https://github.com/microsof
 
 Create your MVP in less than a day With demo data, or in 2-5 weeks with your custom data and a prep session.
 
-Here is a high-level diagram of operations through Azure Data Lake Storage Gen2 (enterprise-scale data lake), Azure Synapse, Azure Synapse Analytics, Azure Cognitive Search, Azure Machine Learning Service, Azure API Management, and Azure Machine Learning services.
+Here is a high-level diagram of operations through Azure Data Lake Storage Gen2 (enterprise-scale data lake), Azure Synapse, Azure Synapse Analytics, Azure AI Search, Azure Machine Learning Service, Azure API Management, and Azure Machine Learning services.
 
 [ ![Retail Recommender Solution Accelerator architecture](./media/retail-recommender-solution-accelerator-architecture-v2.png) ](./media/retail-recommender-solution-accelerator-architecture-v2.png#lightbox)
 
