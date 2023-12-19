@@ -65,7 +65,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
-- [Azure AI Search](#azure-cognitive-search)
+- [Azure AI Search](#azure-ai-search)
 - [Azure DNS](#azure-dns)
 - [Network security group](#network-security-group)
 - [Batch](#batch)
