@@ -39,27 +39,25 @@ As you can see from these questions, the deployment model varies depending on yo
 ### Azure Batch
 
 - Batch is designed to run large-scale parallel and HPC batch jobs efficiently in Azure.
-- Batch creates and manages a pool of computer nodes, or virtual machines (VMs). You can also use Batch to install the applications that you want to run and to schedule jobs to run on the nodes.
+- Batch creates and manages a pool of compute nodes, or virtual machines (VMs). You can also use Batch to install the applications that you want to run and to schedule jobs to run on the nodes.
 - There's no cluster or job scheduler software to install, manage, or scale.
 - Batch works well with intrinsically parallel workloads. These workloads have applications that can run independently, with each instance completing part of the work.
 - You can also use Batch to run tightly coupled workloads, where the applications that you run need to communicate with each other rather than running independently.
 - Batch tasks can run directly on VMs, or nodes, in a Batch pool. But you can also set up a Batch pool to run tasks in Docker-compatible containers on the nodes.
 
-
-
 ### Azure CycleCloud
+
 - It supports various HPC schedulers, such as SLURM, OpenPBS, PBSPro, LSF, Grid Engine, and HTCondor12.
 - It allows you to provision infrastructure for HPC systems, such as virtual machines, scale sets, network interfaces, and disks.
 - It automatically scales the infrastructure to run jobs efficiently at any scale based on job load, availability, and time requirements.
 - It provides a rich, declarative, templating format to construct complete HPC environments on Azure.
 - It integrates with Azure services such as Azure Monitor and Azure Cost Management tools.
 
-
 ### AzHop
 
 - AzHop provides an end-to-end deployment mechanism for a base HPC infrastructure on Azure utilizing CycleCloud to orchestrate jobs.
 - It delivers a complete HPC cluster solution that's ready for users to run applications on and that's easy for HPC administrators to deploy and manage.
-- AzHop uses various applications built-in that you can use “as is”, or you can easily customize and extend to meet any unmet requirements.
+- AzHop uses various applications built-in that you can use "as is," or you can easily customize and extend to meet any unmet requirements.
 - It includes an **Open OnDemand** portal for unified user access, remote shell access, remote visualization access, job submission, file access, and more.
 - It uses **Active Directory** for user authentication and domain control.
 - It uses **OpenPBS** or Simple Linux Utility for Resource Management (**SLURM**) as a job scheduler.
@@ -68,7 +66,7 @@ As you can see from these questions, the deployment model varies depending on yo
 
 ### Comparison chart
 
-|Feature | Azure Batch | CycleCloud  |
+|Feature | Azure Batch | Azure CycleCloud |
 |---------------|------------------------|------------------------|
 | Scheduler | Batch APIs and tools are available. You can also use cloud-native command-line scripts in the Azure portal. | You can use standard HPC schedulers such as **SLURM**, **OpenPBS**, **PBSPro**, **LSF**, **Grid Engine**, and **HTCondor**. Or you can extend Azure CycleCloud autoscaling plugins to work with your own scheduler.|
 | Compute resources | Software as a service (SaaS) nodes – platform as a service (PaaS). |PaaS software – PaaS. |
@@ -88,6 +86,7 @@ In contrast, Batch is mostly aimed at developers and teams who build a capabilit
 In summary, use Azure CycleCloud when you want to deploy an HPC environment with a specific scheduler in mind and need a complete HPC environment. Use Batch when you develop a product or service that requires large-scale parallel processing and you don't want to manage a workload scheduler.
 
 ## Next steps
-- Review available [High performance computing VM sizes](/azure/virtual-machines/sizes-hpc)
+
+- Review available [High performance computing VM sizes](/azure/virtual-machines/sizes-hpc).
 - After you prepare your HPC landing zone, start looking at your [migration](./migrate.md).
 - See the overall [HPC landing zone accelerator](./azure-hpc-landing-zone-accelerator.md).
