@@ -417,6 +417,8 @@ items:
             href: ready/landing-zone/design-area/service-enablement-framework.md
           - name: Security control mapping
             href: ready\control-mapping\security-control-mapping.md
+          - name: Incorporate Zero Trust practices in your landing zone
+            href: ready/landing-zone/design-area/security-zero-trust.md
             
         - name: Management
           items:
@@ -1133,16 +1135,14 @@ items:
         href: relocate/index.md
       - name: Initiate
         href: relocate/initiate.md
-      - name: Move
-        items:
-        - name: Evaluate
-          href: relocate/evaluate.md
-        - name: Select
-          href: relocate/select.md
-        - name: Migrate
-          href: relocate/migrate.md
-        - name: Cutover
-          href: relocate/cutover.md
+      - name: Evaluate
+        href: relocate/evaluate.md
+      - name: Select
+        href: relocate/select.md
+      - name: Migrate
+        href: relocate/migrate.md
+      - name: Cutover
+        href: relocate/cutover.md
                 
 
   - name: Govern

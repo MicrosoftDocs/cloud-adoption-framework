@@ -3,7 +3,7 @@ title: How to migrate a cloud workload to another region
 description: Learn how to migrate cloud workloads and applications to another region.
 author: SomilGanguly
 ms.author: ssumner
-ms.date: 02/03/2023
+ms.date: 12/18/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, seo-caf-relocate
@@ -17,9 +17,17 @@ The Migrate step of relocation is where you move the workload to the new region.
 
 ## Prepare
 
-You might need to prepare the target region before relocating the workload. If the relocation adds to your Azure landing zone footprint, you should use the Azure landing zone guidance and return to this article to relocate the workload. For more information, see [How to add regions to Azure landing zones](../ready/enterprise-scale/faq.md#how-do-we-enable-more-azure-regions-when-we-use-azure-landing-zone-architecture). As needed, follow these steps to prepare your workload environment before relocation.  Doing so will ensure you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity.
+Before starting the workload relocation, you need to prepare the target region. As needed, follow these steps to prepare your workload environment before relocation. Doing so ensures you have core regional networking in place such as a regional hub and, if necessary, cross-premises connectivity.
 
-**Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. You should approach relocations as an as-is effort because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
+**Create landing zone.** You need to consider if the move expands your Azure landing zone. If it does, refer to the Azure landing zone guidance before proceeding with the relocation. For more information, see [Add a new region to an existing Azure landing zone](/azure/cloud-adoption-framework/ready/considerations/regions#add-a-new-region-to-an-existing-landing-zone). Consider the network topology, routing, and connectivity requirements of the landing zone in the new target region. Also consider if the landing zone in the new region needs to integrate with the landing zone in the source region. You might decide not to relocate every resource to the new target region. If you don't, you need a cross-region network topology indefinitely.
+
+**Establish a landing zone.** When planning your move, assess whether it expands the scope of your Azure landing zone. If expansion is necessary, consult the Azure landing zone guidance as a foundational step. This step ensures your approach aligns with established best practices. For detailed insights, refer to Add a new region to an existing Azure landing zone. Important considerations for setting up your new landing zone include:
+
+- *Networking*: Evaluate the network structure, routing paths, and connectivity requirements for the landing zone in the new region.
+- *Integration*: Determine if there's a need to integrate the new landing zone with the one in your source region.
+- *Selective resource relocation*: Decide if all resources move to the new region. If some resources remain in the original location, plan for a sustainable cross-region network topology to manage these distributed resources effectively.
+
+**Create new subscriptions only if needed.** Only create new subscriptions if you need to restructure the services and resources involved. Try to keep the workload in its existing subscription if possible because creating a new subscription adds complexity. Subscriptions serve as boundaries for budgets, policies, and role-based access controls (RBACs). For any new subscription, you need to validate budgets, policies, and RBACs. If you don't move all the resources in a subscription, then you need to rescope the identity and security policies to match the smaller grouping of resources. To create a new subscription, you need to create, scope, and implement the required Azure policies and RBAC roles in the target subscription. The goal is to maintain the governance and security posture.
 
 **Configure a new domain name if needed.** When there's a change in the custom domain of the workload, you need to configure a new domain name. Create the new hostname, assign it to your application or service, and then validate the name resolution. You might also plan to lower and configure the time-to-live (TTL) and set it in the cutover stage for auto expiry. For more information, see [Add your custom domain](/azure/active-directory/fundamentals/add-custom-domain) and [Map DNS name to App Service plan](/azure/app-service/manage-custom-dns-buy-domain#prepare-the-app).
 
@@ -27,23 +35,26 @@ You might need to prepare the target region before relocating the workload. If t
 
 **Relocate Azure Key Vault.** You should relocate Azure Key Vault before moving your workload. You should have one key vault per application environment, and your key vault shouldn’t share secrets across regions to ensure confidentiality. You might need to create a new key vault in the new target region to align with this guidance.
 
+**Create a new Log Analytics workspace.** You should have a separate Log Analytics workspace for each region. Create a new workspace in the target region. Since can't move a Log Analytics Workspace to another region, you need to create a new Log Analytics workspace in the target region. There are two options to preserve the data in the original workspace. You can keep the current workspace until you don't need the data, treating the data as read-only. You can also export the workspace data to a storage account in the new target Azure region.
+
 ## Migrate services
 
-You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. Infrastructure-as-code automation also has guidance, though the specific steps depend on your scripts. For more information, see:
+You can begin migrating the services in your workload. For execution, follow available guidance for the relocation automation you selected. Azure Resource Mover and Azure Site Recovery have step-by-step tutorials to follow for service relocation. For more information, see:
 
 - [Azure Resource Mover tutorials](/azure/resource-mover/tutorial-move-region-virtual-machines)
 - [Azure Site Recovery tutorials](/azure/site-recovery/azure-to-azure-how-to-enable-replication)
-- [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md)
+
+You can create infrastructure-as-code templates or scripts for resources you can't move. You can also execute deployments manually in the Azure portal. The specific steps you follow depend on the Azure services you use and their configuration. For more information, see [Infrastructure as code overview](../ready/considerations/infrastructure-as-code.md).
 
 ## Migrate data
 
-This stage is only relevant when the workload requires data migration. Perform data migration with the chosen automation. Before the cutover to the workload in the target region, you must ensure that the related data is in sync with the source region. Data consistency is an important aspect that requires care.  Here's ordered guidance for migrating workload data.
+This stage is only relevant when the workload requires data migration. Perform data migration with the chosen automation. Before the cutover to the workload in the target region, you must ensure that the related data is in sync with the source region. Data consistency is an important aspect that requires care.  Here's guidance for migrating workload data.
 
-**Migrate source region data.** The approach to migrating source-region data should follow the relocation method for the workload service. The hot, cold, and warm methods have different processes for managing the data in the source region.
+1. *Migrate source region data.* The approach to migrating source-region data should follow the relocation method for the workload service. The hot, cold, and warm methods have different processes for managing the data in the source region.
 
-**Synchronize data.** The synchronization technique depends on the architecture of the workload and the demand of the application. For example, in an on-demand sync, changes are pulled when data is accessed for the first time. Pulling and merging of changes occurs only in cases where there's a difference between last and current application access.
+1. *Synchronize data.* The synchronization technique depends on the architecture of the workload and the demand of the application. For example, in an on-demand sync, changes are pulled when data is accessed for the first time. Pulling and merging of changes occurs only in cases where there's a difference between last and current application access.
 
-**Resolve synchronization conflicts.** Make sure the data in the source and target location are in sync and resolve any data conflicts. You only want users trying to access data that is available. For example, Azure Cosmos DB can serialize concurrent writes to ensure data consistency.
+1. *Resolve synchronization conflicts.* Make sure the data in the source and target location are in sync and resolve any data conflicts. You only want users trying to access data that is available. For example, Azure Cosmos DB can serialize concurrent writes to ensure data consistency.
 
 ## Update connection strings
 
@@ -51,11 +62,13 @@ The connection string configuration depends on the service the application conne
 
 ## Managed identities
 
-System-assigned managed identities have a lifecycle bound to the Azure resource. So the relocation strategy of the Azure resource determines how the system-assigned managed identity is handled. If a new instance of the resource is created in the target, then you have to grant the new system-assigned managed identity the same permissions as the system-assigned managed identity in source region. On the other hand, user-assigned managed identity have an independent lifecycle, and you can map the user-assigned managed identity to the new resource in the target region. For more information, see [Managed identity overview](/azure/active-directory/managed-identities-azure-resources/overview).
+System-assigned managed identities have a lifecycle bound to the Azure resource. So the relocation strategy of the Azure resource determines how the system-assigned managed identity is handled. If a new instance of the resource is created in the target, then you have to grant the new system-assigned managed identity the same permissions as the system-assigned managed identity in source region.
+
+On the other hand, user-assigned managed identity have an independent lifecycle, and you can map the user-assigned managed identity to the new resource in the target region. For more information, see [Managed identity overview](/azure/active-directory/managed-identities-azure-resources/overview).
 
 ## Next steps
 
-You've migrated your workload services and data. Now you need to complete the relocation with a cutover.
+You migrated your workload services and data. Now you need to complete the relocation with a cutover.
 
 > [!div class="nextstepaction"]
 > [Cutover](cutover.md)
