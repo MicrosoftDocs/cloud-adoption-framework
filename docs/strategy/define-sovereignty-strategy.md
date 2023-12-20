@@ -64,13 +64,7 @@ Your organization's compliance processes and systems can benefit from the added 
 
 These capabilities need to be carefully considered in the architecture of your organization's overall environment and for individual workloads, as the effort, applicability, and impact differ per capability. For example policy enforcement is a relatively lightweight method to support compliance, although it could restrict which services you can use and how you can use them. By comparison, technical assurance takes considerable effort and is more restrictive because it's only available with few services today and requires a significant knowledge investment.
 
-## Differentiating by data classification
-
-Different types of data and workloads can have different sovereignty requirements. This might depend on factors such as confidentiality of the data and whether it contains privacy sensitive data. It's important to understand which data classifications apply to your organization and which data and systems are subject to which classifications. Some data and applications can be subject to multiple regulations, potentially leading to combined requirements. For example, there might be a regulation around confidentiality of data and around criticality of systems, and this could result in classifications such as high confidentiality and low criticality or medium confidentiality and high criticality.
-
-Complying with sovereignty requirements could affect other considerations, such as cost, resilience, scalability, security, and service richness. Applying the right controls to a particular data classification should be at the core of your sovereignty strategy. A one-size-fits-all approach leads to an environment that favors the highest compliance requirements, which is likely the costliest, while getting the least benefits from using cloud services.
-
-## Next steps
+### Adopting shared responsibility
 
 Adopting the cloud, means adopting a shared responsibility model. Understanding which responsibilities shift to the cloud provider and which remain with you and understanding how that impacts sovereignty requirements outlined in regulations is key. The compliance documentation referenced in the [Compliance of cloud services](#compliance-of-cloud-services) section often describes that in great detail. However, getting a higher level view will help with understanding the more detailed documentation. Product documentation on various topics is a good starting point for this:
 
@@ -83,4 +77,14 @@ Adopting the cloud, means adopting a shared responsibility model. Understanding 
 - Business continuity is partially provided by the cloud provider through resilience of the platform and ensuring continuity of critical systems to operate the cloud. Customers need to build their workloads using the continuity options available from the services a workload uses or with additional services such as [Azure Backup](/azure/backup/backup-overview) or [Azure Site Recovery](/azure/site-recovery/site-recovery-overview). This is discussed further in [Azure reliability documentation](/azure/reliability/).
 
 - While the cloud provider is responsible for securing access to the cloud platform, both from internal and external threats, customers are responsible for the configuration of their systems to secure their data through identity & access management, encryption, and other security measures. This is discussed further in [Define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy).
-- [Microsoft Cloud for Sovereignty](/industry/sovereignty/) brings many of these topics together.
+
+## Differentiating by data classification
+
+Different types of data and workloads can have different sovereignty requirements. This might depend on factors such as confidentiality of the data and whether it contains privacy sensitive data. It's important to understand which data classifications apply to your organization and which data and systems are subject to which classifications. Some data and applications can be subject to multiple regulations, potentially leading to combined requirements. For example, there might be a regulation around confidentiality of data and around criticality of systems, and this could result in classifications such as high confidentiality and low criticality or medium confidentiality and high criticality.
+
+Complying with sovereignty requirements could affect other considerations, such as cost, resilience, scalability, security, and service richness. Applying the right controls to a particular data classification should be at the core of your sovereignty strategy. A one-size-fits-all approach leads to an environment that favors the highest compliance requirements, which is likely the costliest, while getting the least benefits from using cloud services.
+
+## Next Steps
+
+- [Microsoft Cloud for Sovereignty](/industry/sovereignty/) product documentation provides more insights into sovereign capabilities of the Azure platform and how to address sovereignty requirements.
+- While security and sovereignty are not the same, you can not be sovereign if you are not secure. It is therefore also key to [define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy) that integrates with your sovereignty strategy.
