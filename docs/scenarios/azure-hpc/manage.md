@@ -2,7 +2,7 @@
 title: Manage Azure high-performance computing (HPC)
 description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering management for using Azure High-performance computing (HPC) as part of my IT strategy.
 author: Rajani-Janaki-Ram
-ms.author: erd
+ms.author: padmalathas
 ms.date: 09/19/2022
 ms.topic: conceptual
 ms.custom: think-tank
@@ -45,5 +45,3 @@ Determine if some HPC workloads are critical to where the management baseline an
 
 - After outlining the management path for your HPC resources, [secure](./secure.md) your environment with a single centralized strategy.
 - Learn how [managing virtual machine compliance](/azure/architecture/example-scenario/security/virtual-machine-compliance) is practiced in Azure.
-
-
