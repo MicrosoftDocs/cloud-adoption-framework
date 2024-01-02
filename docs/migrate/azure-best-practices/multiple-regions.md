@@ -104,7 +104,7 @@ When your organization faces global asset and user base complexities in a migrat
 - [Zone-redundant web applications](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Multi-region web applications](/azure/architecture/web-apps/app-service/architectures/multi-region)
 - [Multi-region n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server)
-- [Workload templates for Sovereign landing zone](/industry/sovereignty/workload-templates)
+- [Workload templates for a sovereign landing zone](/industry/sovereignty/workload-templates)
 
 > [!WARNING]
 > When you use the reference architecture for ExpressRoute or the reference architectures for applications, you might need to exclude specific data elements from replication processes to meet data sovereignty requirements. The task of excluding specific data elements adds a step to the promotion process.

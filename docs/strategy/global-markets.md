@@ -14,11 +14,11 @@ The cloud opens new opportunities to perform on a global scale. Barriers to glob
 
 ## Data sovereignty
 
-Many geopolitical regions have established data sovereignty regulations. Those regulations restrict where data can be stored, what data can leave the country/region of origin, and what data can be collected about citizens of that region. Before operating any cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty. 
+Many geopolitical regions have data sovereignty regulations. The regulations restrict where data can be stored, what data can leave the country/region of origin, and what data can be collected that's about citizens of that country/region. Before you operate a cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty.
 
-- For more information about Azure's approach for each region, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/).
-- For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trust-center/privacy) in the Microsoft Trust Center.
-- For more information on sovereign strategy, see [Define sovereignty strategy](define-sovereignty-strategy.md).
+- For more information about Azure approaches for each country/region, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies).
+- For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trust-center/privacy).
+- For more information about sovereign strategy, see [Define a sovereignty strategy](define-sovereignty-strategy.md).
 
 The remainder of this article assumes legal counsel has reviewed and approved operations in a foreign geopolitical region.
 
