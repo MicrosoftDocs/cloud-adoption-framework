@@ -8,17 +8,21 @@
   ],
 
   "Command": "Fix",
-  "Downcase": true,
+  "Downcase": false,
   "FixMetadata": true,
+  "MarkdownListIndicator": "-",
   "PreloadTOCFiles": [ "docs/scenarios/hybrid/toc.yml" ],
   "Exclude": [
-    "docs/_images/",
-    "docs/context/",
-    "azure-pipelines.yml"
+    "SECURITY.md"
   ],
   "TermFiles": [
     "Bundle-Standard.txt",
     "Bundle-Cloud.txt",
-    "Dictionary-CAF.ps1"
+    "Dictionary-CAF.ps1",
+    "Dictionary-EntraRebrand.ps1"
+  ],
+  "RemoveTermSets": [
+    "invalid-microsoft-can-may",
+    "*azure-batch*"
   ]
 }

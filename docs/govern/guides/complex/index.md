@@ -37,9 +37,9 @@ The following diagram contains the governance MVP hierarchy for resource organiz
 
 - Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) within each level of your grouping hierarchy.
 
-- Consider content lifecycle when you deploy resource groups: things that are developed together, managed together, and retire together go together. For more information on resource group best practices, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md).
+- Consider content lifecycle when you deploy resource groups: things that are developed together, managed together, and retire together, go together. For more information on resource group best practices, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md).
 
-- Consider [region selection](../../../migrate/azure-best-practices/multiple-regions.md) so you can ensure that networking, monitoring, and auditing are in place for failover/failback and confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
+- Consider [region selection](../../../ready/azure-setup-guide/regions.md) so you can ensure that networking, monitoring, and auditing are in place for failover/failback and confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
 
 The Azure landing zone conceptual architecture patterns provide room for growth without unnecessarily complicating your hierarchy.
 

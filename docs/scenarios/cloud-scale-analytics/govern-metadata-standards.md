@@ -31,7 +31,7 @@ As you are deciding what metadata to manage centrally or federate to your [data 
 
 Using your answers to these questions, map out the content life cycle for each of your metadata streams and determine all dependencies. You then have a metadata model that can connect business domains, processes, technology, and data.
 
-Once you know what metadata you need, you must choose a place to store and process it. You can do this using Azure Preview.
+Once you know what metadata you need, you must choose a place to store and process it. You can do this using Azure Purview.
 
 ## Use Azure Purview to manage your data estate at large
 

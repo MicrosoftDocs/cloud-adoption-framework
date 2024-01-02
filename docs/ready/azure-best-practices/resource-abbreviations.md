@@ -22,9 +22,24 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure Cognitive Search | `Microsoft.Search/searchServices` | `srch` |
-| Azure Cognitive Services | `Microsoft.CognitiveServices/accounts` | `cog` |
+| AI Search | `Microsoft.Search/searchServices` | `srch` |
+| Azure AI services multi-service account | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `aisa` |
+| Azure AI Video Indexer | `Microsoft.VideoIndexer/accounts` | `avi` |
 | Azure Machine Learning workspace | `Microsoft.MachineLearningServices/workspaces` | `mlw` |
+| Azure OpenAI Service | `Microsoft.CognitiveServices/accounts` (kind: `OpenAI`) | `oai` |
+| Bot service | `Microsoft.BotService/botServices` (kind: `azurebot`) | `bot` |
+| Computer vision | `Microsoft.CognitiveServices/accounts` (kind: `ComputerVision`) | `cv` |
+| Content moderator | `Microsoft.CognitiveServices/accounts` (kind: `ContentModerator`) | `cm` |
+| Content safety | `Microsoft.CognitiveServices/accounts` (kind: `ContentSaftey`) | `cs` |
+| Custom vision (prediction) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Prediction`) | `cstv` |
+| Custom vision (training) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Training`) | `cstvt` |
+| Document intelligence | `Microsoft.CognitiveServices/accounts` (kind: `FormRecognizer`) | `di` |
+| Face API | `Microsoft.CognitiveServices/accounts` (kind: `Face`) | `face` |
+| Health Insights | `Microsoft.CognitiveServices/accounts` (kind: `HealthInsights`) | `hi` |
+| Immersive reader | `Microsoft.CognitiveServices/accounts` (kind: `ImmersiveReader`) | `ir` |
+| Language service | `Microsoft.CognitiveServices/accounts` (kind: `TextAnalytics`) | `lang` |
+| Speech service | `Microsoft.CognitiveServices/accounts` (kind: `SpeechServices`) | `spch` |
+| Translator | `Microsoft.CognitiveServices/accounts` (kind: `TextTranslation`) | `trsl` |
 
 ## Analytics and IoT
 
@@ -37,9 +52,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Data Factory | `Microsoft.DataFactory/factories` | `adf` |
 | Azure Digital Twin instance | `Microsoft.DigitalTwins/digitalTwinsInstances` | `dt` |
 | Azure Stream Analytics | `Microsoft.StreamAnalytics/cluster` | `asa` |
-| Azure Synapse Analytics Workspaces | `Microsoft.Synapse/workspaces` | `synw` |
+| Azure Synapse Analytics private link hub | `Microsoft.Synapse/privateLinkHubs` | `synplh` |
 | Azure Synapse Analytics SQL Dedicated Pool | `Microsoft.Synapse/workspaces/sqlPools` | `syndp` |
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
+| Azure Synapse Analytics workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
 | Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
@@ -60,7 +76,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Power BI Embedded | `Microsoft.PowerBIDedicated/capacities` | `pbi` |
 | Time Series Insights environment | `Microsoft.TimeSeriesInsights/environments` | `tsi` |
 
-## Compute and Web
+## Compute and web
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
@@ -83,11 +99,12 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
+| Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
 | Static web app | `Microsoft.Web/staticSites` | `stapp` |
 | Virtual machine | `Microsoft.Compute/virtualMachines` | `vm` |
 | Virtual machine scale set | `Microsoft.Compute/virtualMachineScaleSets` | `vmss` |
-| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc`
+| Virtual machine maintenance configuration | `Microsoft.Maintenance/maintenanceConfigurations` | `mc` |
 | VM storage account | `Microsoft.Storage/storageAccounts` | `stvm` |
 | Web app | `Microsoft.Web/sites` | `app` |
 
@@ -164,6 +181,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
+| Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
@@ -189,6 +207,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
 | DNS | `Microsoft.Network/dnsZones` | \<*DNS domain name*> |
+| DNS forwarding ruleset | `Microsoft.Network/dnsForwardingRulesets` | `dnsfrs` |
 | DNS private resolver | `Microsoft.Network/dnsResolvers` | `dnspr` |
 | DNS private resolver inbound endpoint | `Microsoft.Network/dnsResolvers/inboundEndpoints` | `in` |
 | DNS private resolver outbound endpoint | `Microsoft.Network/dnsResolvers/outboundEndpoints` | `out` |
@@ -196,10 +215,12 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Firewall | `Microsoft.Network/azureFirewalls` | `afw` |
 | Firewall policy | `Microsoft.Network/firewallPolicies` | `afwp` |
 | ExpressRoute circuit | `Microsoft.Network/expressRouteCircuits` | `erc` |
+| ExpressRoute gateway | `Microsoft.Network/virtualNetworkGateways` | `ergw` |
 | Front Door (Standard/Premium) profile | `Microsoft.Cdn/profiles` | `afd` |
 | Front Door (Standard/Premium) endpoint | `Microsoft.Cdn/profiles/afdEndpoints` | `fde` |
 | Front Door firewall policy | `Microsoft.Network/frontdoorWebApplicationFirewallPolicies` | `fdfp`|
 | Front Door (classic) | `Microsoft.Network/frontDoors` | `afd` |
+| IP group | `Microsoft.Network/ipGroups` | `ipg` |
 | Load balancer (internal) | `Microsoft.Network/loadBalancers` | `lbi`|
 | Load balancer (external) | `Microsoft.Network/loadBalancers` | `lbe`|
 | Load balancer rule | `Microsoft.Network/loadBalancers/inboundNatRules` | `rule`|
@@ -227,7 +248,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
 | Virtual WAN Hub | `Microsoft.Network/virtualHubs` | `vhub`|
 
-
 ## Security
 
 | Resource | Resource provider namespace | Abbreviation |
@@ -236,6 +256,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Key vault | `Microsoft.KeyVault/vaults` | `kv` |
 | Key Vault Managed HSM | `Microsoft.KeyVault/managedHSMs` | `kvmhsm` |
 | Managed identity | `Microsoft.ManagedIdentity/userAssignedIdentities` | `id` |
+| SSH key | `Microsoft.Compute/sshPublicKeys` | `sshkey` |
 | VPN Gateway| `Microsoft.Network/vpnGateways` | `vpng`|
 | VPN connection | `Microsoft.Network/vpnGateways/vpnConnections` | `vcn` |
 | VPN site | `Microsoft.Network/vpnGateways/vpnSites` | `vst` |
@@ -261,12 +282,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
 | Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
 | Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
-
-## Deprecated product names
-
-| Resource | Resource provider namespace | Abbreviation |
-|--|--|--|
-| Azure SQL Data Warehouse | `Microsoft.Sql/servers` | `sqldw` |
 
 ## Next steps
 

@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 05/22/2020
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency2
+ms.custom: internal, UpdateFrequency2, build-2023, build-2023-dataai
 ---
 
 # Support business with data innovation

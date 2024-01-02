@@ -4,8 +4,6 @@ description: See the optimized virtual machine (VM) sizes that Azure offers for 
 author: bsantacruz
 ms.author: bsantacruz
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 10/17/2023
 ---

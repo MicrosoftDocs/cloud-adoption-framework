@@ -16,7 +16,7 @@ This design area creates a foundation for security across your Azure, hybrid, an
 
 **Involved roles or functions:** This design area is led by [cloud security](../../../organize/cloud-security.md), specifically the [security architects within that team](../../../organize/cloud-security-architecture.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) are required to review networking and identity decisions. The collective roles might be required to define and implement the technical requirements coming from this exercise. More advanced security guardrails might also need support from [cloud governance](../../../organize/cloud-governance.md).
 
-**Scope:** The goal of this exercise is to understand security requirements and implement them consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on security operations tooling and access control. This scope includes zero trust and advanced network security.
+**Scope:** The goal of this exercise is to understand security requirements and implement them consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on security operations tooling and access control. This scope includes Zero Trust and advanced network security.
 
 **Out of scope:** This exercise focuses on the foundation for a modern security operations center in the cloud. To streamline the conversation, this exercise doesn't address some of the disciplines in the [CAF Secure methodology](../../../secure/index.md). Security operations, asset protection, and innovation security will build on your Azure landing zone deployment. However, they're out of scope for this design area discussion.
 
@@ -84,7 +84,7 @@ An organization must have visibility into what's happening within their technica
 
 ### Access control design considerations
 
-Modern security boundaries are more complex than boundaries in a traditional datacenter. The four walls of the datacenter no longer contain your assets. Keeping users out of the protected network is no longer sufficient to control access. In the cloud, your perimeter is composed of two parts: network security controls and zero trust access controls.
+Modern security boundaries are more complex than boundaries in a traditional datacenter. The four walls of the datacenter no longer contain your assets. Keeping users out of the protected network is no longer sufficient to control access. In the cloud, your perimeter is composed of two parts: network security controls and Zero Trust access controls.
 
 #### Advanced network security
 
@@ -95,7 +95,9 @@ Modern security boundaries are more complex than boundaries in a traditional dat
 | Define network encryption requirements | [Explores key recommendations to achieve network encryption between on-premises and Azure and across Azure regions](../../azure-best-practices/define-network-encryption-requirements.md). |
 |Plan for traffic inspection | [Explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Network](../../azure-best-practices/plan-for-traffic-inspection.md). |
 
-#### Zero trust
+#### Zero Trust
+
+For Zero Trust access with identities, you should consider:
 
 - Which teams or individuals require access to services within the landing zone? What roles are they doing?
 - Who should authorize the access requests?
@@ -103,6 +105,8 @@ Modern security boundaries are more complex than boundaries in a traditional dat
 - Who should have access to the audit history?
 
 For more information, see [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure).
+
+Implementing Zero Trust can go beyond just identity and access management. You should consider if your organization needs to implement Zero Trust practices across multiple pillars, such as infrastructure, data, and networking. For more information, see [Incorporate Zero Trust practices in your landing zone](security-zero-trust.md)
 
 ### Access control design recommendations
 

@@ -63,9 +63,7 @@ Infrastructure as code deployments are backed by a definition file, so you can u
 
 When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
 
-Use these testing methods with Bicep for general testing purposes.
-
-For information about performing tests, such as integration tests, unit tests, canary release tests, and fault injection tests, see [Testing your application and Azure environment](/azure/architecture/framework/devops/release-engineering-testing). With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
+Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
 
 ### Testing environments
 
