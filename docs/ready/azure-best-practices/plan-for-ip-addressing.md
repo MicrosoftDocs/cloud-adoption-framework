@@ -111,7 +111,7 @@ Here is a closer look on how a typical architecture could look like:
 - The NVAs accepts IPv4 and IPv6 traffic and translates it into IPv4-only traffic to access the application in the 
   Application subnet. The benefit of this approach is reduced complexity for the application team and a reduced 
   attack surface.
-- Deploy [Azure Front Door service](https://azure.microsoft.com/en-us/services/frontdoor/#features), to provide global 
+- Deploy [Azure Front Door service](https://azure.microsoft.com/en-us/services/frontdoor/#features) (AFD), to provide global 
   routing for web traffic.
 
 AFD’s capabilities include proxying IPv6 client requests and traffic to an IPv4-only backend as shown below:
