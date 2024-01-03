@@ -118,7 +118,7 @@ AFD’s capabilities include proxying IPv6 client requests and traffic to an IPv
 
 ![Diagram that shows IPv4/IPv6 Azure Front Door providing access to IPv4-only backend.](./media/azure-ipv4-ipv6-azure-front-door.png)
 
-The main difference between the NVA-based approach and the Azure Front Door (AFD) service is that the NVAs are 
+The main differences between the NVA-based approach and the Azure Front Door (AFD) service are that the NVAs are 
 customer-managed, work at Layer 4 of the OSI model, and can be deployed in the same Azure Virtual Network as the 
 application with a private and public interface, 
 while AFD is a global Azure PaaS service, operates at Layer 7 (HTTP/HTTPS), and the application backend is an 
