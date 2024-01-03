@@ -96,7 +96,7 @@ reverse proxies.
   considered significant, it may be desirable to keep relying on IPv4-only infrastructure in the backend and deploy a 
   3rd party Network Virtual Appliance (NVA) dual-stack IPv4/IPv6 gateway for service delivery.
 
-A very typical deployment today, for example using an NVA, looks like this:
+A typical deployment today using an NVA may look like this:
 
 ![Diagram that shows dual-stack IPv4/IPv6 gateway providing access to IPv4-only backend.](./media/azure-ipv4-ipv6-gateway.png)
 
