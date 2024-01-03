@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank
 ---
 
-# Enable connectively from Azure VMware Solution 
+# Enable connectivity from Azure VMware Solution 
 
 ## Introduction
 
