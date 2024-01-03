@@ -49,9 +49,9 @@ The Microsoft cloud security benchmark documentation specifies security controls
 - [Security controls](/security/benchmark/azure/overview): The Microsoft cloud security benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
 - [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Microsoft cloud security benchmark recommendations that are tailored specifically for that service.
 
-### Microsoft Azure Attestation
+### Azure Attestation
 
-[Azure Attestation](/azure/attestation/overview) is a powerful tool that can help you ensure the security and integrity of your platform and binaries running inside it. It is especially useful for businesses that require highly scalable compute resources and uncompromising trust with the remote attestation capability.
+[Azure Attestation](/azure/attestation/overview) is a tool that can help you ensure the security and integrity of your platform and binaries that run inside it. It's especially useful for businesses that require highly scalable compute resources and uncompromising trust with the remote attestation capability.
 
 ## Security design considerations
 
@@ -67,7 +67,7 @@ An organization must have visibility into what's happening within their technica
 | Vulnerability management | - Emergency patching for critical vulnerabilities. <br> - Patching for VMs that are offline for extended periods of time. <br> - Vulnerability assessment of VMs.
 | Shared responsibility | - Where are the handoffs for team responsibilities? These responsibilities need consideration when monitoring or responding to security events. <br> -  Consider the guidance in the Secure methodology for [security operations](../../../secure/security-operations.md). |
 | Encryption and keys | - Who requires access to keys in the environment? <br> - Who will be responsible for managing the keys? <br> - Explore [encryption and keys further](./encryption-and-keys.md). |
-| Attestation | - Will you be using Trusted Launch for your virtual machines and do you need attestation of the integrity of the entire boot chain of your VM (UEFI, OS, system, and drivers)? <br> - Do you want to leverage confidential disk encryption for your confidential VMs? <br> - Do your workloads require attestation that they are running inside a trusted environment? |
+| Attestation | - Will you use Trusted Launch for your VMs, and do you need attestation of the integrity of the entire boot chain of your VM (UEFI, OS, system, and drivers)? <br> - Do you want to take advantage of confidential disk encryption for your confidential VMs? <br> - Do your workloads require attestation that they're running inside a trusted environment? |
 
 ### Security operations design recommendations
 
@@ -88,9 +88,9 @@ An organization must have visibility into what's happening within their technica
 - Use an Azure Event Grid-based solution for log-oriented, real-time alerts.
 
 - Use Azure Attestation for attestation of:
-  - the integrity of the entire boot chain of your VM, see [Boot integrity monitoring overview - Azure Virtual Machines](/azure/virtual-machines/boot-integrity-monitoring-overview)
-  - secure release of confidential disk encryption keys for a confidential VM, see [About Azure confidential VMs - Confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption)
-  - various types of workload trusted execution environments, see [Azure Attestation overview - Use cases](/azure/attestation/overview#use-cases)
+  - The integrity of the entire boot chain of your VM. For more information, see [Boot integrity monitoring overview](/azure/virtual-machines/boot-integrity-monitoring-overview).
+  - Secure release of confidential disk encryption keys for a confidential VM. For more information, see [Confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption).
+  - Various types of workload trusted execution environments. For more information, see [Use cases](/azure/attestation/overview#use-cases).
 
 ### Access control design considerations
 
