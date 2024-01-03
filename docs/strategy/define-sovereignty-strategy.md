@@ -71,11 +71,11 @@ Carefully consider these capabilities for your organization's environment and in
 
 ### Adopt shared responsibility
 
-When you adopt cloud services, you adopt a shared responsibility model. Determine which responsibilities shift to the cloud provider and which remain with you. Understand how those changes affect the sovereignty requirements for regulations. For more information, see the resources in [Compliance of cloud services](#compliance-of-cloud-services). To understand a high-level view, consider the following resources:
+When you adopt cloud services, you adopt a shared responsibility model. Determine which responsibilities shift to the cloud provider and which remain with you. Understand how those changes affect the sovereignty requirements for regulations. For more information, see the resources in [Compliance of cloud services](#compliance-of-cloud-services). To get a high-level view, consider the following resources:
 
-- [Azure infrastructure security](/azure/security/fundamentals/infrastructure) describes how to protect the physical infrastructure.
+- [Azure infrastructure security](/azure/security/fundamentals/infrastructure) describes how to provide protection for the physical infrastructure.
 
-- [Azure platform integrity and security](/azure/security/fundamentals/platform) describes how to protect against threats to the platform and the technical assurance processes.
+- [Azure platform integrity and security](/azure/security/fundamentals/platform) describes how to provide protection against threats to the platform and the technical assurance processes.
 
 - [Data residency in Azure](https://azure.microsoft.com/explore/global-infrastructure/data-residency) describes data residency features. For customers in the European Union (EU), see [Microsoft EU Data Boundary](https://www.microsoft.com/trust-center/privacy/european-data-boundary-eudb).
 
@@ -85,7 +85,7 @@ The cloud provider is responsible for securing access to the cloud platform from
 
 ## Use classifications to differentiate data
 
-Different types of data and workloads can have different sovereignty requirements depending on factors such as the confidentiality of the data and whether it contains privacy-sensitive data. It's important to understand which data classifications apply to your organization and which data and systems are subject to which classifications. Some data and applications are subject to multiple regulations, which can create the need for combined requirements. For example, there might be a regulation related to the confidentiality of data and the criticality of a system. The resulting classifications might be high confidentiality and low criticality or medium confidentiality and high criticality.
+Different types of data and workloads can have different sovereignty requirements, depending on factors such as the confidentiality of the data and whether it contains privacy-sensitive data. It's important to understand which data classifications apply to your organization and which data and systems are subject to which classifications. Some data and applications are subject to multiple regulations, which can create the need for combined requirements. For example, there might be a regulation related to the confidentiality of data and the criticality of a system. The resulting classifications might be high confidentiality and low criticality or medium confidentiality and high criticality.
 
 When you comply with sovereignty requirements, it can affect other factors, such as cost, resilience, scalability, security, and service richness. For your sovereignty strategy, it's important to apply the right controls to a data classification. A one-size-fits-all approach leads to an environment that favors the highest compliance requirements, which is likely the costliest and least beneficial.
 
