@@ -10,6 +10,8 @@ ms.custom: internal
 
 # Deploy a migration landing zone in Azure
 
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
+
 A migration landing zone is an environment that's been provisioned and prepared to host certain workloads. These workloads are being migrated from an on-premises environment into Azure.
 
 ## Deploy the blueprint
