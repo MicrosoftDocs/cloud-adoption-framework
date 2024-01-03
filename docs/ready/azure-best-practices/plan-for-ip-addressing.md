@@ -82,7 +82,7 @@ diagrams, and whitepapers -- refer to the [Azure Architecture Center](/azure/arc
   providing the most information to the server and application.  
   Internet-facing Azure load balancers with the Basic Azure SKU can be configured with an IPv6 address. This enables 
   native end-to-end IPv6 connectivity between the public internet and Azure Virtual Machines via the Load Balancer. 
-  It also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet.  
+  This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet.  
   It should be noted that this also requires every device in the path to handle IPv6 traffic.
 
 The native end-to-end approach is most useful for direct server-to-server or client-to-server communication, but not 
