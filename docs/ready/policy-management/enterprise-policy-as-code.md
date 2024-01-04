@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Advanced Azure Policy management
 
-This article describes how to manage Azure Policy at scale by using infrastructure as code (IaC). Policy-driven governance is a design principle for Azure landing zones. It helps to ensure that the applications you deploy comply with your organization's platform. It can take considerable effort to manage and test policy objects across an environment to ensure that compliance is met. [Azure landing zone accelerators](/azure/architecture/landing-zones/landing-zone-deploy) help to establish a secure baseline, and your organization might have further requirements to help enhance compliance by deploying other policies.
+This article describes how to manage Azure Policy at scale by using infrastructure as code (IaC). Policy-driven governance is a design principle for Azure landing zones. It helps to ensure that the applications you deploy comply with your organization's platform. It can take considerable effort to manage and test policy objects across an environment to ensure that compliance is met. [Azure landing zone accelerators](/azure/architecture/landing-zones/landing-zone-deploy) help to establish a secure baseline, but your organization might have further compliance requirements that you must meet by deploying other policies.
 
 ## What is Enterprise Policy as Code (EPAC)?
 
@@ -36,21 +36,21 @@ You can use EPAC to deploy and manage Azure landing zone policies. You might wan
 
 ## Get started
 
-The EPAC GitHub repository provides detailed steps to start managing Azure Policy. Consider the following factors when determining if the project is a good fit for your environment:
+The EPAC GitHub repository provides detailed steps to start managing Azure Policy. Consider the following factors when determining whether the project is a good fit for your environment:
 
-- *Environment topology*: Multiple tenancies and complicated management group structures are supported. Consider how you want to structure your policy as code deployments to fit the topology, so multiple teams can manage policy and test new policy deployments.
+- *Environment topology*: Multiple tenancies and complicated management group structures are supported. Consider how you want to structure your policy as code deployments to fit the topology, so multiple teams can manage policies and test new policy deployments.
 
 - *Permissions*: Consider how you manage permissions for the deployment, especially for roles and identities. EPAC provides multiple stages to deploy both the policies and role assignments, so separate identities can be used.
 - *Existing policy deployments*: In a brownfield scenario, you might have existing policies that must remain in place while EPAC is deployed. You can use the [desired state strategy](https://azure.github.io/enterprise-azure-policy-as-code/desired-state-strategy) to ensure that EPAC manages only the defined policies and preserves existing policies.
 - *Deployment methodology*: EPAC supports Azure DevOps, GitHub Actions, and a PowerShell module to help deploy policies. You can use the [sample pipelines in the EPAC starter kit](https://github.com/Azure/enterprise-azure-policy-as-code/tree/main/StarterKit) and adapt them to your environment and requirements.
 
-Follow the [quick start guide](https://azure.github.io/enterprise-azure-policy-as-code/quick-start/#epac-quick-start) to export policy objects in your environment and get familiar with how EPAC manages Azure Policy.
+Follow the [quickstart guide](https://azure.github.io/enterprise-azure-policy-as-code/quick-start/#epac-quick-start) to export policy objects in your environment and get familiar with how EPAC manages Azure Policy.
 
 For issues with the code or documentation, [submit an issue in the GitHub repository](https://github.com/Azure/enterprise-azure-policy-as-code/issues).
 
 ## Replace existing policy deployment solutions
 
-EPAC replaces the policy deployment capabilities of the Azure landing zone accelerators. When you use these accelerators, you shouldn't deploy Azure Policy because EPAC is the source of truth for policy in the environment.
+EPAC replaces the policy deployment capabilities of the Azure landing zone accelerators. When you use these accelerators, you shouldn't use them to deploy Azure Policy because EPAC is the source of truth for policy in the environment.
 
 For more information, see the following resources for policy management with Bicep and Terraform Azure landing zone accelerators:
 
