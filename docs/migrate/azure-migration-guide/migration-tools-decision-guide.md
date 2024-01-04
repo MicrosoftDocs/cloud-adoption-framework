@@ -64,11 +64,6 @@ Refactoring is the process of modifying existing application code to optimize it
 | [App Service Migration Assistant](https://azure.microsoft.com/products/app-service/migration-tools/) | Microsoft tool for .NET (and Java) migrations to AppService. | Microsoft |
 | [App Containerization Tool](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) | A Microsoft tool for containerizing .NET and Java applications. | Microsoft |
 
-Some notes:
-
-- It is important to note that the refactor strategy takes in account the target architecture: for a given technology (Java, .NET, etc.) there are multiple PaaS destinations in Azure cloud.
-- It is important to have source code readily available because the application code needs to be assessed and might need to be modified accordingly to the target architecture. When code is not present or not modifiable, the rehost strategy is usually the only option.
-
 ### Tools for rehosting
 
 In this case, you can use [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) to migrate the application to Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources, and cloud resources.
