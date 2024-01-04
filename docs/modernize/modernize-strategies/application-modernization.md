@@ -25,15 +25,17 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 - *Low/No Code PaaS* - Low code PaaS and no-code PaaS solutions let you build apps with little to no coding required. You can rapidly build applications and focus more time on your business. Power Apps and Power Automate are low/no code PaaS solutions that maximize your productivity.
 
-## Step 1 - Use a decision tree to narrow options
+## Step 1 - Assess each application
 
-First, refer to this diagram to assess each application in your portfolio and understand whether it should be retired, rebuilt, rearchitected, replaced, rehosted or refactored.
+Assess each application in your portfolio. Determine whether you should retire, rebuild, rearchitect, replace, rehost or refactor the application.
 
 :::image type="content" source="../../_images/modernize/app-platforms/modernization-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or refactored." border="false":::
 
-After you have decided what you should do for each application, use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization service options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
+## Step 2 - Use a decision tree to narrow options
 
-## Step 2 - Find the right implementation guidance
+After you assess each application, use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
+
+## Step 3 - Find the right implementation guidance
 
 Find the right implementation guidance. You'll have a general idea of the service you want to use after working through the decision tree. You still want to make sure the solution gives you the right balance of control and productivity. Finding the right balance is a main consideration in application modernization.
 
