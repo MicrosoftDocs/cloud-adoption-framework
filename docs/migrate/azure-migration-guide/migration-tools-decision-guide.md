@@ -44,7 +44,7 @@ Answering the following questions allows you to decide based on the above tree.
 
 ## Application migration and modernization tools
 
-Many opensource, Microsoft and third-party tools are available for application migration and modernization tasks. In the following tables, we list some of the most common open-source tools and Microsoft tools, and highlight their main features.
+Many open-source, Microsoft and third-party tools are available for application migration and modernization tasks. In the following tables, we list some of the most common open-source tools and Microsoft tools, and highlight their main features.
 
 ### Tools for refactoring
 
