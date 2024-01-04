@@ -47,6 +47,7 @@ Answering the following questions allows you to decide based on the above tree.
 Many opensource, Microsoft and third-party tools are available for application migration and modernization tasks. In the following tables, we list some of the most common open-source tools and Microsoft tools, and highlight their main features.
 
 ### Tools for refactoring
+
 Refactoring is the process of modifying existing application code to optimize it for a cloud environment without changing its external behavior. Before refactoring an application, you should follow these steps:
 
 - *Identify the target architecture*: Determine the target architecture for your application. The language, framework, or platform your application uses affects its cloud architecture. For example, Java and .NET application each have different platform-as-a-service (PaaS) solutions available to them and can affect the workload architecture.
