@@ -549,9 +549,9 @@ items:
           href: ready/considerations/sandbox-environments.md
         - name: Landing zone regions
           href: ready/considerations/regions.md
-        - name: Policy Management
+        - name: Policy management
           items:
-          - name: Advanced policy management
+          - name: Advanced Azure Policy management
             href: ready/policy-management/enterprise-policy-as-code.md
         - name: Improve landing zone governance
           items:
