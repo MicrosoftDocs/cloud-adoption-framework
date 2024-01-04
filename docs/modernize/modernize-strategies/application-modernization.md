@@ -27,9 +27,9 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 ## Step 1 - Use a decision tree to narrow options
 
-First, refer to this diagram to assess each application in your application portfolio and understand whether is should be either retired, rebuilt, re-architected, replaced, re-hosted or re-factored.
+First, refer to this diagram to assess each application in your portfolio and understand whether it should be retired, rebuilt, rearchitected, replaced, rehosted or refactored.
 
-:::image type="content" source="../../_images/modernize/app-platforms/modernization-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, re-architected, replaced, re-hosted or re-factored." border="false":::
+:::image type="content" source="../../_images/modernize/app-platforms/modernization-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or refactored." border="false":::
 
 After you have decided what you should do for each application, use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization service options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
 
