@@ -50,13 +50,13 @@ Many opensource, Microsoft and third-party tools are available for application m
 
 | Tool | Description | Vendor |
 | ---- | ----------- | ------ | 
-| [Azure Draft]((https://github.com/Azure/draft/) | For creating K8S YAMLs/Helm Charts/Dockerfiles and GitHub Actions; starting from a codebase, asks few questions and creates necessary files | Microsoft |
-| [Cloud Suitability Analyzer (CSA)](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | For analyzing source code in many languages in a massive way and getting insights on application cloud-readiness | VMWare |
-| [AppCAT](/azure/developer/java/migration/appcat) | For analyzing Java source code and getting insights on what must be changed to target containers or other J2EE application servers; based on [Windup](https://windup.github.io/), but supports natively Azure targets | Microsoft | 
-| [move2kube](https://move2kube.konveyor.io/) | For creating Dockerfiles and YAML deployment files that accelerate migration activities; starting from a codebase, asks few questions and creates necessary files | CNCF project |
-| [.NET upgrade assistant](/dotnet/core/porting/upgrade-assistant-overview) | For helping in migrating from .NET framework code to .NET; gives guidance and assistance | Microsoft |
-| [App Service Migration Assistant (ASMA)](https://azure.microsoft.com/products/app-service/migration-tools/) | For .NET (and Java) migrations to AppService | Microsoft |
-| [App Containerization Tool](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) | For containerizing .NET/Java applications | Microsoft |
+| [Azure Draft]((https://github.com/Azure/draft/) | A Microsoft tool for creating Kubernetes YAMLs, Helm Charts, Docker files, and GitHub Actions from a codebase. | Microsoft |
+| [Cloud Suitability Analyzer (CSA)](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | A VMWare tool for analyzing source code in many languages and providing insights on application cloud-readiness. | VMWare |
+| [AppCAT](/azure/developer/java/migration/appcat) | A Microsoft tool for analyzing Java source code and providing insights on what must be changed to target containers or other J2EE application servers. It's based on [Windup](https://windup.github.io/) but supports Azure targets | Microsoft | 
+| [move2kube](https://move2kube.konveyor.io/) | A CNCF project tool for creating Docker files and YAML deployment files that accelerate migration activities. | CNCF project |
+| [.NET upgrade assistant](/dotnet/core/porting/upgrade-assistant-overview) | A Microsoft tool that helps in migrating from .NET framework code to .NET. | Microsoft |
+| [App Service Migration Assistant (ASMA)](https://azure.microsoft.com/products/app-service/migration-tools/) | Microsoft tool for .NET (and Java) migrations to AppService. | Microsoft |
+| [App Containerization Tool](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) | A Microsoft tool for containerizing .NET and Java applications. | Microsoft |
 
 Some notes:
 
