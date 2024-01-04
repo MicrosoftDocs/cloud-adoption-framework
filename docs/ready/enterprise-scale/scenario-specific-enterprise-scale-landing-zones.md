@@ -10,6 +10,8 @@ ms.custom: think-tank
 
 # Scenario-specific enterprise-scale landing zones in Azure
 
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
+
 Scenarios for enterprise-scale landing zones enable effective adoption and operationalization of key technologies on Azure. These specific scenarios can be used to accelerate adoption when your organization identifies business or technical requirements that require additional tier-1 technology platforms to support mission-critical workloads or business processes.
 
 Scenarios for enterprise-scale landing zones provide specific, refined deployments which can be run on top of existing enterprise-scale landing zones.
