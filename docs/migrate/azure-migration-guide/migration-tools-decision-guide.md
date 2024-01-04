@@ -66,7 +66,9 @@ Refactoring is the process of modifying existing application code to optimize it
 
 ### Tools for rehosting
 
-In this case, you can use [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) to migrate the application to Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources, and cloud resources.
+Rehosting an application when migrating to the cloud means moving the application from its existing hosting environment to a cloud-based virtual machine without any changes to the application code or configuration. Rehosting is the right approach when the source code of the application is not available or cannot be modified, or when the migration needs to be done quickly and with minimal effort. Rehosting is also known as “lift and shift”.
+
+You can use [Azure Migrate](/azure/migrate/migrate-overview) to rehost the application in Azure. Azure Migrate is a free service that you can use to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources and cloud resources.
 
 ## Innovation and migration
 
