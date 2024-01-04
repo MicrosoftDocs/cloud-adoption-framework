@@ -51,7 +51,7 @@ Many opensource, Microsoft and third-party tools are available for application m
 Refactoring is the process of modifying existing application code to optimize it for a cloud environment without changing its external behavior. Before refactoring an application, you should follow these steps:
 
 - *Identify the target architecture*: Determine the target architecture for your application. The language, framework, or platform your application uses affects its cloud architecture. For example, Java and .NET application each have different platform-as-a-service (PaaS) solutions available to them and can affect the workload architecture.
-- Assess the source code: Ensure that the source code of the application is readily available. The code needs to be evaluated and potentially modified to fit the target architecture. f the source code is not available or cannot be modified, a rehost strategy (also known as “lift and shift”) is usually the only option. This involves migrating the application without any modifications.
+- *Assess the source code*: Ensure that the source code of the application is readily available. The code needs to be evaluated and potentially modified to fit the target architecture. f the source code is not available or cannot be modified, a rehost strategy (also known as “lift and shift”) is usually the only option. This involves migrating the application without any modifications.
 - *Identify refactoring tools*: Use refactoring tools that are suitable for your technology and target architecture. These tools can help in analyzing the source code, creating necessary files, and accelerating migration activities (*see table*).
 
 | Tool | Description | Vendor |
