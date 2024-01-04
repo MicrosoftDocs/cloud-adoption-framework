@@ -46,9 +46,7 @@ Answering the following questions allows you to decide based on the above tree.
 
 Application migration and modernization tools help you move existing applications from on-premises or other cloud environments to Azure and optimize them for the cloud. These tools can save you time, effort, and cost by automating some of the migration tasks, such as code analysis, file creation, and deployment.
 
-The right tools for your migration depends on your approach (refactor vs. rehost), technology, architecture, and requirements. Choosing the right tools can help you achieve your migration goals faster and more efficiently.
-
-There are many tools are available for application migration and modernization tasks. In the following sections, we list some of the most common tools for refactoring and rehosting and highlight their main features.
+The right tools for your migration depends on your approach (refactor vs. rehost), technology, architecture, and requirements. Choosing the right tools can help you achieve your migration goals faster and more efficiently. There are many tools are available for application migration and modernization tasks. In the following sections, we list some of the most common tools for refactoring and rehosting and highlight their main features.
 
 ### Tools for refactoring
 
