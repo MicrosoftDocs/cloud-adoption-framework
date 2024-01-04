@@ -25,17 +25,11 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 - *Low/No Code PaaS* - Low code PaaS and no-code PaaS solutions let you build apps with little to no coding required. You can rapidly build applications and focus more time on your business. Power Apps and Power Automate are low/no code PaaS solutions that maximize your productivity.
 
-## Step 1 - Assess each application
+## Step 1 - Use a decision tree to narrow options
 
-Assess each application in your portfolio. Determine whether you should retire, rebuild, rearchitect, replace, rehost or refactor the application.
+Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
 
-:::image type="content" source="../../_images/modernize/app-platforms/modernization-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or refactored." border="false":::
-
-## Step 2 - Use a decision tree to narrow options
-
-After you assess each application, use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
-
-## Step 3 - Find the right implementation guidance
+## Step 2 - Find the right implementation guidance
 
 Find the right implementation guidance. You'll have a general idea of the service you want to use after working through the decision tree. You still want to make sure the solution gives you the right balance of control and productivity. Finding the right balance is a main consideration in application modernization.
 
@@ -44,7 +38,7 @@ Use the following table to find a solution that meets your needs. When you find 
 | Control vs. Productivity | Solution | Your needs | Implementation guidance |
 | --- | --- | --- | --- |
 | *Most control* | [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) <br><br> [Azure Red Hat OpenShift](/azure/openshift/intro-openshift) | <ul><li>Infrastructure control</li> <li>Less administrative burden orchestrating clusters and nodes</li> </ul> | [Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app) <br><br> [Azure Red Hat OpenShift](/azure/openshift/tutorial-create-cluster)</li></ul>
-| *Balance control & <br>productivity* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
+| *Balance* | [Azure App Service](/rest/api/appservice/) <br><br> [Azure Spring Apps](/azure/spring-apps/overview) <br><br> [Azure Functions](/azure/azure-functions/functions-overview) | <ul><li> Focus on developing customer code</li> <li>Automated infrastructure</li> </ul> | [Azure App Service](/azure/app-service/app-service-migration-assess-net) <br><br> [Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) <br><br> [Azure Functions](/azure/azure-functions/functions-reference)</ul>
 | *Most productivity* | [Power Apps](/power-apps/powerapps-overview) <br><br> [Power Automate](/power-automate/getting-started) | <ul><li>Fastest time-to-market</li> <li>Applications and automation built with little to no coding experience</li> </ul> | [Power Apps](/power-apps/powerapps-overview)<br><br> [Power Automate](/power-automate/getting-started)</li></ul> |
 
 ## Next steps
