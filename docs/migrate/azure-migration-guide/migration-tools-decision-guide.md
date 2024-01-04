@@ -50,7 +50,7 @@ Many opensource, Microsoft and third-party tools are available for application m
 
 | Tool | Description | Vendor |
 | ---- | ----------- | ------ | 
-| [Azure Draft]((https://github.com/Azure/draft/) | A Microsoft tool for creating Kubernetes YAMLs, Helm Charts, Docker files, and GitHub Actions from a codebase. | Microsoft |
+| [Azure Draft](https://github.com/Azure/draft/) | A Microsoft tool for creating Kubernetes YAMLs, Helm Charts, Docker files, and GitHub Actions from a codebase. | Microsoft |
 | [Cloud Suitability Analyzer (CSA)](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | A VMWare tool for analyzing source code in many languages and providing insights on application cloud-readiness. | VMWare |
 | [AppCAT](/azure/developer/java/migration/appcat) | A Microsoft tool for analyzing Java source code and providing insights on what must be changed to target containers or other J2EE application servers. It's based on [Windup](https://windup.github.io/) but supports Azure targets | Microsoft | 
 | [move2kube](https://move2kube.konveyor.io/) | A CNCF project tool for creating Docker files and YAML deployment files that accelerate migration activities. | CNCF project |
