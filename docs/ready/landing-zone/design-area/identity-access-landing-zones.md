@@ -65,7 +65,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Create [emergency access or “break glass” accounts](/entra/identity/role-based-access-control/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and aren't assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
 
-- For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/azure/active-directory/roles/security-planning).
+- For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/entra/identity/role-based-access-control/security-planning).
 
 ### Microsoft Entra ID recommendations
 
