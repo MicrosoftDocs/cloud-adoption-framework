@@ -106,7 +106,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ### Privileged Identity Management (PIM) recommendations
 
-- Use Microsoft Entra [Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-trust and least privilege access. Map your organization's roles to the minimum access levels needed. Microsoft Entra PIM can use Azure native tools, extend current tools and processes, or use both current and native tools as needed.
+- Use Microsoft Entra [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to establish zero-trust and least privilege access. Map your organization's roles to the minimum access levels needed. Microsoft Entra PIM can use Azure native tools, extend current tools and processes, or use both current and native tools as needed.
 
 - Use [PIM access reviews](/azure/active-directory/privileged-identity-management/pim-create-roles-and-resource-roles-review) to regularly validate resource entitlements. Access reviews are part of many compliance frameworks, so many organizations already have an access review process in place.
 
