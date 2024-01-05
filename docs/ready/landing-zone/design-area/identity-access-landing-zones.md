@@ -63,7 +63,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - To make role assignments more manageable, avoid assigning roles directly to users. Instead, assign roles to groups. Assigning roles to groups instead of users also helps minimize the number of role assignments, which has a [limit of role assignments per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits). Use [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users.
 
-- Create [emergency access or “break glass” accounts](/azure/active-directory/roles/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and aren't assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
+- Create [emergency access or “break glass” accounts](/entra/identity/role-based-access-control/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and aren't assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
 
 - For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/azure/active-directory/roles/security-planning).
 
