@@ -13,7 +13,7 @@ Individual application workloads have authentication and authorization requireme
 
 ## Design considerations
 
-- Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
+- Learn about authentication and authorization standards like OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards) for more information.
 
 - Developers should consider using Microsoft Identity Platform as the Identity solution for their applications. The Microsoft Identity Platform provides an OpenID Connect standard-compliant authentication service enabling developers to authentication several identity types, including:
 
