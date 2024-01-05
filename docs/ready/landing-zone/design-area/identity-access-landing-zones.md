@@ -55,7 +55,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use Microsoft Entra [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
-- Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to  compromise user credentials. Defender for Identity identifies suspicious user activities and provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
+- Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to compromise user credentials. Defender for Identity identifies suspicious user activities, provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
 
 - Use Microsoft Sentinel to provide more threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information, see [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
