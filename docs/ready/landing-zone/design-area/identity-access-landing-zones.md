@@ -71,7 +71,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use Entra identity governance and create access packages to control group membership, with an approval process and regular access reviews for privileged group members. See [What is entitlement management? - Microsoft Entra](/entra/id-governance/entitlement-management-overview) for more information.
 
-- Use [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference) to manage the following identity settings from a tenant level:
+- Use [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) to manage the following identity settings from a tenant level:
 
 - Use [Microsoft Entra built-in roles](/azure/role-based-access-control/built-in-roles) to manage the following identity settings:
 
