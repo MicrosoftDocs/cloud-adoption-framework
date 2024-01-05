@@ -51,7 +51,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ### General recommendations
 
-- Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
+- Enforce [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
 
 - Use Microsoft Entra [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
