@@ -66,7 +66,7 @@ With hybrid identity, authentication can occur in the cloud and on-premises, or 
 
 - Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) or [Azure AD B2C](/azure/active-directory-b2c/overview) configurations. For more information, see [Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview).
 
-- If you use [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy), consider not using intranet access, because it could add latency to the user experience. For more information about Microsoft Entra application proxy, see [Microsoft Entra application proxy planning](/azure/active-directory/app-proxy/application-proxy-deployment-plan#plan-your-implementation) and [Microsoft Entra application proxy security considerations](/azure/active-directory/app-proxy/application-proxy-security).
+- Do not use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) for intranet access, because it will add latency to the user experience. For more information about Microsoft Entra application proxy, see [Microsoft Entra application proxy planning](/azure/active-directory/app-proxy/application-proxy-deployment-plan#plan-your-implementation) and [Microsoft Entra application proxy security considerations](/azure/active-directory/app-proxy/application-proxy-security).
 
 - For options to meet organizational requirements when integrating on-premises Active Directory with Azure, see [Integrate on-premises AD with Azure](/azure/architecture/reference-architectures/identity/).
 
