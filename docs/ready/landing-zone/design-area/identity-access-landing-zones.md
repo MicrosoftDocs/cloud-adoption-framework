@@ -116,8 +116,6 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use Protected actions with PIM (Privileged Identity Management) to add extra layers of protection. Protected actions in Microsoft Entra ID are permissions that have been assigned [Conditional Access policies](/entra/identity/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [Phishing-resistant MFA policy](/entra/identity/authentication/concept-authentication-strengths#built-in-authentication-strengths). For more information, see [What are protected actions in Microsoft Entra ID](/entra/identity/role-based-access-control/protected-actions-overview).
 
-For more information on PIM, see [Privileged Identity Management (PIM) - Microsoft Entra](/azure/active-directory/privileged-identity-management/pim-configure).
-
 ## Identity and access management in the Azure landing zone accelerator
 
 Identity and access management are core features of the Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where organizations can deploy Active Directory domain controllers required for their environments.
