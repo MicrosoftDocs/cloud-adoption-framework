@@ -35,7 +35,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
 
-- Microsoft Entra roles can be assigned to groups with the `isAssignableToRole` property set to `true` (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept).
+- Microsoft Entra roles can be assigned to groups with the `isAssignableToRole` property set to `true` (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/entra/identity/role-based-access-control/groups-concept).
 
 - Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/azure/active-directory/roles/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
 
