@@ -35,13 +35,13 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
 
-- Microsoft Entra roles can be assigned to groups with the `isAssignableToRole` property set to `true` (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/azure/active-directory/roles/groups-concept).
+- Microsoft Entra roles can be assigned to groups with the `isAssignableToRole` property set to `true` (‘Role-assignable groups’). Groups with this property set are protected and their membership can only be modified by Global Administrators or Privileged Role Administrators, or the group’s owner. See [Use Microsoft Entra groups to manage role assignments](/entra/identity/role-based-access-control/groups-concept).
 
-- Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/azure/active-directory/roles/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
+- Only some roles can reset the password or MFA settings for another administrator. This behavior prevents an administrator from gaining extra permissions by resetting the credentials of a higher-privileged account. See [Microsoft Entra built-in roles - who can reset passwords](/entra/identity/role-based-access-control/permissions-reference#who-can-reset-passwords) to understand administrator password reset rights.
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at tenant, management group, subscription, and resource group scopes. For more information, see [Azure custom roles - Azure RBAC](/azure/role-based-access-control/custom-roles).
 
-- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create#prerequisites).
+- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/entra/identity/role-based-access-control/custom-create#prerequisites).
 
 - When you lay down a framework for identity and access management (IAM) and governance, be aware of the service limits for roles, role assignments, and custom roles. For more information, see [Troubleshoot Azure RBAC limits](/azure/role-based-access-control/troubleshoot-limits).
 
@@ -51,21 +51,21 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ### General recommendations
 
-- Enforce [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
+- Enforce [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) for users with rights to the Azure environments. Many compliance frameworks require multifactor authentication enforcement. Multifactor authentication greatly lowers the risk of credential theft and unauthorized access.
 
-- Use Microsoft Entra [Conditional Access](/azure/active-directory/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
+- Use Microsoft Entra [Conditional Access](/entra/identity/conditional-access/overview) policies for users with rights to Azure environments. Conditional Access provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 
-- Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to  compromise user credentials. Defender for Identity identifies suspicious user activities and provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
+- Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to compromise user credentials. Defender for Identity identifies suspicious user activities, provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
 
 - Use Microsoft Sentinel to provide more threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information, see [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
-- Use separate, cloud-only accounts for privileged roles. Don't use the same account for web browsing and e-mail access as you do for privileged administration. For more information, see [isolate privileged identities](/entra/architecture/protect-m365-from-on-premises-attacks#specific-security-recommendations). For roles with access to manage Azure resources, consider whether separate administrative accounts are required, or whether the use of [Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) can be used to control administrative access.
+- Use separate, cloud-only accounts for privileged roles. Don't use the same account for web browsing and e-mail access as you do for privileged administration. For more information, see [isolate privileged identities](/entra/architecture/protect-m365-from-on-premises-attacks#specific-security-recommendations). For roles with access to manage Azure resources, consider whether separate administrative accounts are required, or whether the use of [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) can be used to control administrative access.
 
 - To make role assignments more manageable, avoid assigning roles directly to users. Instead, assign roles to groups. Assigning roles to groups instead of users also helps minimize the number of role assignments, which has a [limit of role assignments per subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits). Use [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users.
 
-- Create [emergency access or “break glass” accounts](/azure/active-directory/roles/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and aren't assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
+- Create [emergency access or “break glass” accounts](/entra/identity/role-based-access-control/security-emergency-access) to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency access accounts are highly privileged and aren't assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure they can be used in the event of a disaster.
 
-- For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/azure/active-directory/roles/security-planning).
+- For more information on securing administrative access, see [Secure access practices for administrators in Microsoft Entra](/entra/identity/role-based-access-control/security-planning).
 
 ### Microsoft Entra ID recommendations
 
