@@ -20,8 +20,6 @@ Individual application workloads have authentication and authorization requireme
   - Work or school accounts, provisioned through Microsoft Entra ID
   - Personal Microsoft accounts (Skype, Xbox, Outlook.com)
   - Social or local accounts, by using Microsoft Entra ID
-  
-  See [Microsoft identity platform overview](/azure/active-directory/develop/v2-overview) for more information.
 
 - Managed identities provide an automatically managed identity principal for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/entra/identity/managed-identities-azure-resources/overview-for-developers) for more information.
 
