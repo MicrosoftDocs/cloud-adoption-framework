@@ -15,7 +15,7 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications and resources. It ensures that the right individual can access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user or workload identity actions.
 
-Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments. Refer to the [Azure Architecture Center](/azure/architecture/) for guidance for architecting solutions on Azure using established patterns and practices.
+Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments. Refer to the [Azure Architecture Center](/azure/architecture/identity/identity-start-here) for guidance for designing solutions on Azure using established patterns and practices.
 
 ## Design area review
 
