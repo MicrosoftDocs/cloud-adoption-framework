@@ -41,7 +41,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at tenant, management group, subscription, and resource group scopes. For more information, see [Azure custom roles - Azure RBAC](/azure/role-based-access-control/custom-roles).
 
-- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create#prerequisites).
+- For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/entra/identity/role-based-access-control/custom-create#prerequisites).
 
 - When you lay down a framework for identity and access management (IAM) and governance, be aware of the service limits for roles, role assignments, and custom roles. For more information, see [Troubleshoot Azure RBAC limits](/azure/role-based-access-control/troubleshoot-limits).
 
