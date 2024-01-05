@@ -48,7 +48,7 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 ## Azure and on-premises (Hybrid Identity)
 
-User objects that are wholly created in Microsoft Entra ID are known as ‘cloud-only’ accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
+User objects that are wholly created in Microsoft Entra ID are known as 'cloud-only' accounts. They support modern authentication and access to Azure and Microsoft 365 resources, as well as for local sign-in on devices using Windows 10 or Windows 11.
 
 However, many organizations are already using Active Directory Domain Services (AD DS) directories that they have been operating for a long time, and which may be integrated with other systems such as line-of-business or Enterprise Resource Planning (ERP) using LDAP. These domains may have many domain-joined computers and applications that use Kerberos or the older NTLMv2 protocols for authentication. In these environments, user objects can be synchronized to Microsoft Entra ID so that users can sign in to both on-premises systems and cloud resources with a single identity. Uniting on-premises and cloud directory services is known as ‘hybrid identity.’  On-premises domains can be extended into Azure Landing Zones:
 
