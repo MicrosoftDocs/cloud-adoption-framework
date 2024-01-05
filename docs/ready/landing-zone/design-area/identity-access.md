@@ -19,7 +19,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 ## Design area review
 
-**Involved roles or functions:** Identity and access management require support from one or both of the following functions. These roles can help make decisions and implement those decisions:
+**Involved roles or functions:** Identity and access management require support from one or more of the following functions. These roles can help make decisions and implement those decisions:
 
 - [Cloud platform](../../../organize/cloud-platform.md)
 - [Cloud center of excellence](../../../organize/cloud-center-of-excellence.md)
