@@ -3,7 +3,7 @@ title: Define a sovereignty strategy
 description: Learn how to define a sovereignty strategy when you use cloud services, so you can meet the sovereignty requirements of your country/region.
 author: mboswell
 ms.author: mboswell
-ms.date: 01/04/2024
+ms.date: 01/08/2024
 ms.topic: conceptual
 ---
 
@@ -20,7 +20,7 @@ For your on-premises datacenter, you're responsible for most aspects that are ty
 - Datacenters, where data is stored and processed.
 - Access to the datacenters and physical infrastructure.
 - Hardware and software, including the hardware and software supply chain.
-- Assurance processes that validate hardware and software performance.
+- Assurance processes that validate hardware and software.
 - Infrastructure and processes that ensure business continuity if there's a disaster or geopolitical event.
 - Configurations and processes that determine who has access to which data and systems.
 - Tools and processes that secure data and systems against outside and inside threats.
@@ -31,7 +31,7 @@ When you adopt cloud services, the responsibility of these aspects shifts to a [
 
 - The compliance of the systems and processes that your organization is responsible for. Which tools are available to help you meet sovereignty and compliance requirements, and how do you use these tools?
 
-The compliance team might need to work with a regulator to get permission to use alternative methods that achieve the same goals. In some cases, a regulation might need to be changed by adding more options or adjusting a directive to use a certain solution to obtain an intended result.
+The compliance team might need to work with a regulator to get permission to use alternative methods that achieve the same goals. In some cases, a regulation might need to be changed by adding more options or adjusting a directive to use a certain solution to obtain an intended result. Changing regulation can be a lengthy process. However, it might be possible to get exemptions if you can demonstrate you have achieved a regulations intent.
 
 For example, a regulation might restrict organizations from using certain cloud services because the isolation requirements can only be met with hardware isolation that's typically not available in the cloud. But the intended result can also be obtained with virtual isolation. As part of your strategy, you need to determine how to work with regulators and auditors when these potential blockers arise.
 
@@ -51,7 +51,7 @@ The compliance team uses various sources and methods to verify cloud service com
 
 - [**Transparency logs**](/industry/sovereignty/transparency-logs) that provide details about when Microsoft engineers access your resources.
 
-The combination of sources and methods that your compliance team uses depends on the level of insight that you need, the reliability of your options, and your resources and budget. A third-party auditor certification eliminates the need for your team to perform an audit and costs less but requires trust in the auditor and audit process.
+The combination of sources and methods that your compliance team uses depends on the level of insight that you need, the trust you have in the different options, and your resources and budget. A third-party auditor certification eliminates the need for your team to perform an audit and costs less but requires trust in the auditor and audit process.
 
 ### Compliance of your systems and processes
 
@@ -73,9 +73,9 @@ Carefully consider these capabilities for your organization's environment and in
 
 When you adopt cloud services, you adopt a shared responsibility model. Determine which responsibilities shift to the cloud provider and which remain with you. Understand how those changes affect the sovereignty requirements for regulations. For more information, see the resources in [Compliance of cloud services](#compliance-of-cloud-services). To get a high-level view, consider the following resources:
 
-- [Azure infrastructure security](/azure/security/fundamentals/infrastructure) describes how to provide protection for the physical infrastructure.
+- [Azure infrastructure security](/azure/security/fundamentals/infrastructure) describes how Microsoft provides protection for the physical infrastructure.
 
-- [Azure platform integrity and security](/azure/security/fundamentals/platform) describes how to provide protection against threats to the platform and the technical assurance processes.
+- [Azure platform integrity and security](/azure/security/fundamentals/platform) describes how Microsoft provides protection against threats to the platform and the technical assurance processes.
 
 - [Data residency in Azure](https://azure.microsoft.com/explore/global-infrastructure/data-residency) describes data residency features. For customers in the European Union (EU), see [Microsoft EU Data Boundary](https://www.microsoft.com/trust-center/privacy/european-data-boundary-eudb).
 
@@ -93,4 +93,4 @@ When you comply with sovereignty requirements, it can affect other factors, such
 
 - [Cloud for Sovereignty](/industry/sovereignty) provides insights into sovereign capabilities on the Azure platform and describes how to address sovereignty requirements.
 
-- Security and sovereignty aren't the same, and you can't be sovereign if you aren't secure. It's also key to [define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy) that integrates with your sovereignty strategy.
+- Security and sovereignty aren't the same, but you can't be sovereign if you aren't secure. You must therefore [define a security strategy](/azure/cloud-adoption-framework/strategy/define-security-strategy) that integrates with your sovereignty strategy.
