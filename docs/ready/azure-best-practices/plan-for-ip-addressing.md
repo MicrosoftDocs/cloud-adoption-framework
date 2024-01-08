@@ -66,10 +66,8 @@ There is no one-size-fits-all approach with IPv6; however, there are best practi
 and implement IPv6 into their existing cloud networks.
 
 [Cloud Adoption Framework](/azure/cloud-adoption-framework/) helps you understand the 
-pros and cons of the decisions you make when building systems in the cloud. The five pillars of the Framework allow you 
-to learn architectural best practices for designing and operating reliable, secure, efficient, cost-effective, and 
-sustainable systems. Refer to [Azure Landing Zone Design Principals](/azure/cloud-adoption-framework/ready/landing-zone/design-principles)
-for more guidance.  
+pros and cons of the decisions you make when building systems in the cloud. 
+Refer to the [Azure Landing Zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) to learn about architectural best practices for designing sustainable systems.
 For in-depth recommendations and best practices regarding your cloud architecture —reference architecture deployments,
 diagrams, and whitepapers -- refer to the [Azure Architecture Center](/azure/architecture/).
 
