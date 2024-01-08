@@ -31,7 +31,7 @@ When you adopt cloud services, the responsibility of these aspects shifts to a [
 
 - The compliance of the systems and processes that your organization is responsible for. Which tools are available to help you meet sovereignty and compliance requirements, and how do you use these tools?
 
-The compliance team might need to work with a regulator to get permission to use alternative methods that achieve the same goals. In some cases, a regulation might need to be changed by adding more options or adjusting a directive to use a certain solution to obtain an intended result. Changing regulation can be a lengthy process. However, it might be possible to get exemptions if you can demonstrate you have achieved a regulations intent.
+The compliance team might need to work with a regulator to get permission to use alternative methods that achieve the same goals. In some cases, a regulation might need to be changed by adding more options or adjusting a directive to use a certain solution to obtain an intended result. Changing regulation can be a lengthy process. However, it might be possible to get exemptions if you can demonstrate you have achieved the intent of a regulation.
 
 For example, a regulation might restrict organizations from using certain cloud services because the isolation requirements can only be met with hardware isolation that's typically not available in the cloud. But the intended result can also be obtained with virtual isolation. As part of your strategy, you need to determine how to work with regulators and auditors when these potential blockers arise.
 
