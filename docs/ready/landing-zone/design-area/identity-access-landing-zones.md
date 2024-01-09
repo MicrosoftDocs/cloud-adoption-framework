@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone identity and access management
-description: See considerations and recommendations for implementing identity and access control within an Azure landing zone.
+description: See considerations and recommendations for implementing identity and access control within Azure application and platform landing zones.
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
@@ -43,7 +43,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - For built-in Microsoft Entra role-based access control (RBAC) roles, you can use the free version of Microsoft Entra ID, but for custom Microsoft Entra roles, you need Microsoft Entra ID Premium. For more information, see [Create and assign a custom role in Microsoft Entra ID](/entra/identity/role-based-access-control/custom-create#prerequisites).
 
-- When you lay down a framework for identity and access management (IAM) and governance, be aware of the service limits for roles, role assignments, and custom roles. For more information, see [Troubleshoot Azure RBAC limits](/azure/role-based-access-control/troubleshoot-limits).
+- When you design your access control strategy, be aware of the service limits for roles, role assignments, and custom roles. For more information, see [Troubleshoot Azure RBAC limits](/azure/role-based-access-control/troubleshoot-limits).
 
 - Some Azure RBAC roles support Attribute-Based Access Control (ABAC), or role assignment conditions. Conditions allow administrators to dynamically assign roles based on attributes of the resource. For example, you can assign the Storage Blob Data Contributor role, but only for blobs that have a specific index tag applied rather than all the blobs in a container. See [What is Azure attribute-based access control (Azure ABAC)?](/azure/role-based-access-control/conditions-overview) for more information.
 
@@ -69,11 +69,11 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 ### Microsoft Entra ID recommendations
 
+- Integrate Microsoft Entra ID with Azure Monitor so your sign-in activity and the audit trail of changes within your tenant can be analyzed. Create a diagnostic setting to send sign-in logs and audit logs to the platform-central Log Analytics workspace. For more information, see [Integrate Microsoft Entra ID with Azure Monitor logs](/entra/identity/monitoring-health/howto-integrate-activity-logs-with-azure-monitor-logs).
+
 - Use Entra identity governance and create access packages to control group membership, with an approval process and regular access reviews for privileged group members. See [What is entitlement management? - Microsoft Entra](/entra/id-governance/entitlement-management-overview) for more information.
 
 - Use [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) to manage the following identity settings from a tenant level:
-
-- Use [Microsoft Entra built-in roles](/azure/role-based-access-control/built-in-roles) to manage the following identity settings:
 
    | Role | Usage | Note
    |---|---|---|
@@ -86,8 +86,6 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use [administrative units](/entra/identity/role-based-access-control/administrative-units) to provide restricted management of specific objects in your tenant from modification to a specific set of administrators. Administrative units allow for delegated administration of a subset of the directory, such as a service desk that serves only a single business unit within a wider organization. Use the [Restricted management administrative units](/entra/identity/role-based-access-control/admin-units-restricted-management) feature to further protect specific objects from modification.
 
-- See [Protecting Microsoft 365 from on-premises attacks](/entra/architecture/protect-m365-from-on-premises-attacks) for more information about securing Microsoft Entra ID tenants and Entra ID privileged roles.
-
 ### Azure RBAC recommendations
 
 - Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL Database.
@@ -96,7 +94,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles) to provide predefined role assignments to Azure resources. Both general platform roles and specific Resource roles exist. When several role assignments are combined, review [multiple role assignments](/azure/role-based-access-control/overview#multiple-role-assignments) to understand the effects.
 
-   | Role | Usage | Actions | NotActions |
+   | Administrative function | Usage | Actions | NotActions |
    |---|---|---|---|
    | Azure platform owner (such as the built-in Owner role) | Management group and subscription lifecycle management | `*` | |
    | Network management (NetOps) | Platform-wide global connectivity management: Virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others  | `*/read`, <br>`Microsoft.Network/*`,<br> `Microsoft.Resources/deployments/*`,<br> `Microsoft.Support/*` | |
@@ -112,7 +110,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use privileged identities for automation runbooks that require elevated access permissions, or for privileged deployment pipelines. Use the same tools and policies to govern automated workflows that access critical security boundaries as you use to govern users of equivalent privilege.
 
-- Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator on a subscription or management group, using [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups). With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Microsoft Entra ID roles.
+- Control highly privileged Azure RBAC roles, such as Owner or User Access Administrator assigned to Platform or Application landing zone team members on a subscription or management group, using [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups). With PIM for groups, Azure RBAC roles can be configured to require the same elevation process as Microsoft Entra ID roles.
 
 - Use Protected actions with PIM (Privileged Identity Management) to add extra layers of protection. Protected actions in Microsoft Entra ID are permissions that have been assigned [Conditional Access policies](/entra/identity/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [Phishing-resistant MFA policy](/entra/identity/authentication/concept-authentication-strengths#built-in-authentication-strengths). For more information, see [What are protected actions in Microsoft Entra ID](/entra/identity/role-based-access-control/protected-actions-overview).
 
@@ -126,6 +124,7 @@ The implementation also includes options to:
 - Create a virtual network, and connect to the hub via virtual network peering.
 
 ### Next Steps
+
 >
 > [!div class="nextstepaction"]
-> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+> [Application identity and access management](identity-access-application-access.md)

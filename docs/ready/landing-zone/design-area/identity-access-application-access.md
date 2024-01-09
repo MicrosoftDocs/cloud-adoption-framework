@@ -9,7 +9,7 @@ ms.date: 12/05/2023
 
 # Application identity and access management
 
-Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to other resources and services, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources.
+Individual application workloads have authentication and authorization requirements beyond those that apply to administrators. Users require access to applications, which need to be secured using modern authentication methods. In addition, some Azure resources may need to connect to other resources and services, such as a web application that uses a SQL Managed Instance, or an Azure Policy that automatically remediates noncompliant resources. This section provides guidance for application administrators on how to secure access to their applications, and between application components.
 
 ## Design considerations
 
@@ -39,7 +39,7 @@ Individual application workloads have authentication and authorization requireme
 
 - Evaluate scenarios that involve setting up external users, customers, or partners to secure access to resources. Determine whether these scenarios involve Microsoft Entra B2B or Microsoft Entra B2C configurations. For more information, see [Overview of Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview).  
 
-- Find out which services or applications within your landing zone support Microsoft Entra authentication. To check which Azure services support Microsoft Entra authentication, see [Azure services that support Microsoft Entra authentication](/azure/active-directory/managed-identities-azure-resources/services-id-authentication-support).  
+- Find out which services or applications within your application landing zone support Microsoft Entra authentication. To check which Azure services support Microsoft Entra authentication, see [Azure services that support Microsoft Entra authentication](/azure/active-directory/managed-identities-azure-resources/services-id-authentication-support).  
 
 - Consider the methods that virtual machine users use to connect interactively. Azure Bastion, Just-in-Time (JIT), and RDP or SSH have different network requirements and security implications. For more information, see [Plan for virtual machine remote access](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access).
 
@@ -58,3 +58,9 @@ Individual application workloads have authentication and authorization requireme
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including those that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
 
 - Use attribute-based access control (ABAC) where supported, to further restrict permissions on data in blob storage and prevent unauthorized access to data. For more information, see [Allow read access to blobs based on tags and custom security attributes](/azure/role-based-access-control/conditions-custom-security-attributes).
+
+### Next steps
+
+>
+> [!div class="nextstepaction"]
+> [Resource organization](resource-org.md)

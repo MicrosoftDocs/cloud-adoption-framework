@@ -15,7 +15,7 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 Robust identity and access management forms the basis of modern security. Authorization and access controls ensure that only authenticated users with verified devices can access and administer applications and resources. It ensures that the right individual can access the right resources at the right time, and for the right reason. It also provides reliable audit logging and nonrepudiation of user or workload identity actions.
 
-Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments. Refer to the [Azure Architecture Center](/azure/architecture/identity/identity-start-here) for guidance for designing solutions on Azure using established patterns and practices.
+Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments. Several options are available for managing identity in a cloud environment. These options vary in cost and complexity. A key factor in structuring your cloud-based identity services is the level of integration required with your existing on-premises identity infrastructure. See the [Identity decision guide](../../../decision-guides/identity/index.md) for more information.
 
 ## Design area review
 
@@ -49,14 +49,18 @@ Identity and access management is boundary security in the public cloud. It must
 These articles examine design considerations and recommendations related to identity and access management in a cloud environment:
 
 - [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
-- [Application identity and access management](identity-access-application-access.md)
 - [Landing zone identity and access management](identity-access-landing-zones.md)
+- [Application identity and access management](identity-access-application-access.md)
 
 > [!TIP]
 > If you have multiple Microsoft Entra ID tenants, review [**Azure landing zones and multiple Microsoft Entra tenants**](multi-tenant/overview.md) and its associated content.
+
+## Additional resources
+
+- Refer to the [Azure Architecture Center](/azure/architecture/identity/identity-start-here) for guidance for designing solutions on Azure using established patterns and practices.
 
 ### Next steps
 
 >
 > [!div class="nextstepaction"]
-> [Landing zone identity and access management](identity-access-landing-zones.md)
+> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
