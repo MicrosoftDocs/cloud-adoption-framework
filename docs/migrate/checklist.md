@@ -1,5 +1,5 @@
 ---
-title: Cloud adoption - Migration checklist
+title: Cloud migration checklist
 description: Get an overview of the Migrate methodology of cloud adoption and the decisions that you need to make for successful migration projects.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
 
-# Cloud adoption - Migration checklist
+# Cloud migration checklist
 
 These checklists covers considerations and recommendations for approaching migration projects. The checklists are based on the guidance throughout the Migrate methodology and can be used as a guide for your migration projects.
 
