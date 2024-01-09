@@ -10,6 +10,8 @@ ms.custom: think-tank
 
 # Implement Cloud Adoption Framework enterprise-scale landing zones in Azure
 
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
+
 Does your business require an initial implementation of landing zones? And do these landing zones need fully integrated governance, security, and an operations control plane from the start? With the following examples, you can use the Azure portal or infrastructure as code to set up and configure your Azure environment. It's also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready.
 
 ## Reference implementation

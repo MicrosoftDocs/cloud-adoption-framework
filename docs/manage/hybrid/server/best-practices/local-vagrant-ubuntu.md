@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-hybrid
 
 # Deploy a local Ubuntu server hosted with Vagrant and connect it to Azure Arc
 
-This article provides guidance for deploying a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connect it as an Azure Arc-enabled server resource.
+This article provides guidance for deploying a local **Ubuntu** virtual machine using [Vagrant](https://www.vagrantup.com/) and connects it as an Azure Arc-enabled server resource.
 
 ## Prerequisites
 
@@ -26,19 +26,19 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
     az --version
     ```
 
-3. Vagrant relies on an underlying hypervisor. For this guide, we will be using Oracle VM VirtualBox.
+3. Vagrant relies on an underlying hypervisor. For this guide, we are using Oracle VM VirtualBox.
 
     1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
-        - If you are a macOS user, run `brew cask install virtualbox`
-        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
-        - If you are a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
+        - If you're a macOS user, run `brew cask install virtualbox`
+        - If you're a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/virtualbox)
+        - If you're a Linux user, all package installation methods can be found in [Download VirtualBox for Linux hosts](https://www.virtualbox.org/wiki/Linux_Downloads).
 
     2. Install [Vagrant](https://www.vagrantup.com/docs/installation)
 
-        - If you are a macOS user, run `brew cask install vagrant`
-        - If you are a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
-        - If you are a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
+        - If you're a macOS user, run `brew cask install vagrant`
+        - If you're a Windows user, you can use the [Chocolatey package](https://community.chocolatey.org/packages/vagrant)
+        - If you're a Linux user, visit the [Vagrant download page](https://www.vagrantup.com/downloads).
 
 4. Create an Azure service principal.
 
@@ -46,22 +46,22 @@ This article provides guidance for deploying a local **Ubuntu** virtual machine 
 
     ```console
     az login
-    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+    az account set -s <Your Subscription ID>
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
     ```
 
     For example:
 
     ```console
-    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
+    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
     ```
 
-    Output should look like this:
+    The output should look like this:
 
     ```json
     {
       "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcServers",
-      "name": "http://AzureArcServers",
+      "displayName": "http://AzureArcServers",
       "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }

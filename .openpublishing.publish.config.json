@@ -36,7 +36,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "crr-aac-repo",
+      "path_to_root": "architecture-center-pr",
       "url": "https://github.com/MicrosoftDocs/architecture-center-pr",
       "branch": "main",
       "branch_mapping": {}

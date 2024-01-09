@@ -60,7 +60,7 @@ Consider the following modes for the range of automated action, whether that be 
 
 |Orchestration method|Description|
 |-|-|
-|**Fully Automated**|Actions are performed automatically. Full automation should be proven reliable, efficient, and durable to where its usefulness isn't short-lived and is safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
+|**Fully automated**|Actions are performed automatically. Full automation should be proven reliable, efficient, and durable to where its usefulness isn't short-lived and is safe. Full automation frees up your resources so they can focus more on your strategic initiatives.|
 |**Semi-automated**|Approval is required for any remediation action.|
 |**Manual**|An operator selects an automation example or playbook from a curated library.|
 
