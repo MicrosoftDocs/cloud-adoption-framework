@@ -13,17 +13,15 @@ Individual application workloads have authentication and authorization requireme
 
 ## Design considerations
 
-- Learn about authentication and authorization standards like  OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/azure/active-directory/fundamentals/introduction-identity-access-management?toc=%2Fazure%2Factive-directory%2Fdevelop%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fdevelop%2Fbreadcrumb%2Ftoc.json#authentication-and-authorization-standards) for more information.
+- Learn about authentication and authorization standards like OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language). See [Authentication and Authorization Standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards) for more information.
 
-- Developers should consider using Microsoft Identity Platform as the Identity solution for their applications. The Microsoft Identity Platform provides an OpenID Connect standard-compliant authentication service enabling developers to authentication several identity types, including:
+- Developers should default to use the [Microsoft identity platform](/entra/identity-platform/v2-overview) as the identity provider for their applications. The Microsoft identity platform provides an OpenID Connect standard-compliant authentication service enabling developers to authentication several identity types, including:
 
   - Work or school accounts, provisioned through Microsoft Entra ID
   - Personal Microsoft accounts (Skype, Xbox, Outlook.com)
   - Social or local accounts, by using Microsoft Entra ID
-  
-  See [Microsoft identity platform overview](/azure/active-directory/develop/v2-overview) for more information.
 
-- Managed identities provide an automatically managed identity principal for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/azure/active-directory/managed-identities-azure-resources/overview-for-developers?tabs=portal%2Cdotnet) for more information.
+- Managed identities provide an automatically managed identity principal for applications to use when connecting to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. See [Connecting from your application to resources without handling credentials](/entra/identity/managed-identities-azure-resources/overview-for-developers) for more information.
 
   - Many security breaches of public cloud resources originate with credential theft embedded in code or other text. Enforcing managed identities for programmatic access greatly reduces the risk of credential theft.
 
