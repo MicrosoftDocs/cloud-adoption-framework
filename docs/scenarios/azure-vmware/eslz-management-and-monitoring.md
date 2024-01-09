@@ -12,6 +12,9 @@ ms.custom: e2e-azure-vmware, think-tank
 
 Proper management and monitoring are critical to the success of [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/). This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
+> [!IMPORTANT]
+> Monitoring of the platform is part of the Azure VMware Service, monitoring workloads or applications, utilization of components such as hosts memory, compute or storage, vCenter, NSX-Manager NSX edge VM's and vSAN or other datastore utilization are part of customer responsilbity. While Azure VMware does provide some out of box insights and examples given below, it is highly recommended customers keep leveraging existing monitoring or logging platforms in use on premises and where possible extend to cloud versions of such products to ensure uninterrupted operation of critical workloads.
+
 As you plan your management and monitoring environment for Azure VMware Solution, it's critical to understand the [shared responsibility matrix](./manage.md). The matrix shows which components Microsoft is responsible for, and which ones that you're responsible for managing and monitoring. Microsoft takes care of the ongoing maintenance, security, and management of cloud resources, leaving your company in charge of the things that matter most, like guest OS provisioning, applications, and virtual machines.
 
 > [!IMPORTANT]
