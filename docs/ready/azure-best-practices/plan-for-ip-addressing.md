@@ -62,14 +62,13 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 An increasing number of organizations are adopting IPv6 in their environments. This adoption is driven by the public IPv4 
 space exhaustion, private IPv4 scarcity, especially within large-scale networks, and the need to provide connectivity
 to IPv6-only clients. 
-There is no one-size-fits-all approach with IPv6; however, there are best practices Azure customers can follow to plan 
-and implement IPv6 into their existing cloud networks.
+There's no univeral approach to adopting IPv6. There are, however, best practices that you can follow when you plan for IPv6 and implement it into your existing Azure networks.
 
 The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure helps you understand the 
-pros and cons of the decisions you make when building systems in the cloud. 
-Refer to the [Azure Landing Zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) to learn about architectural best practices for designing sustainable systems.
-For in-depth recommendations and best practices regarding your cloud architecture —reference architecture deployments,
-diagrams, and whitepapers -- refer to the [Azure Architecture Center](/azure/architecture/).
+considerations to take into account when you create systems in the cloud. 
+To learn about architectural best practices for designing sustainable systems, see [Azure landing zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles).
+For in-depth recommendations and best practices regarding your cloud architecture, including reference architecture deployments,
+diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
 
 **Design considerations:**
 - Phase your IPv6 adoption -- Focus on your business needs to implement IPv6 where needed and remember that IPv4 and 
