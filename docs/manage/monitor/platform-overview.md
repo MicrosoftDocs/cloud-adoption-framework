@@ -16,7 +16,7 @@ This article is part of a series in [the cloud monitoring guide](./index.md).
 Microsoft provides a range of cloud monitoring capabilities from multiple products:
 
 - [Azure Monitor](/azure/azure-monitor/overview), designed for the cloud but can also monitor on-premises infrastructure and applications.
-- [Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview), a PaaS offering of System Center Operations Manager hosted in Azure.
+- [Azure Monitor SCOM Managed Instance](/system-center/scom/operations-manager-managed-instance-overview), a PaaS offering of System Center Operations Manager hosted in Azure.
 - [System Center Operations Manager](/system-center/scom/welcome), designed for on-premises and then extended to the cloud.
 
 These offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
@@ -31,11 +31,11 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
-### Azure Monitor SCOM Managed Instance (preview)
+### Azure Monitor SCOM Managed Instance
 
-[Azure Monitor SCOM Managed Instance (preview)](/system-center/scom/operations-manager-managed-instance-overview) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance (preview) requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
+[Azure Monitor SCOM Managed Instance](/system-center/scom/operations-manager-managed-instance-overview) is a PaaS offering of System Center Operations Manager hosted in Azure. SCOM Managed Instance requires minimal infrastructure and maintenance as many of the infrastructure components such as the management servers and databases are hosted in Azure and managed by Microsoft; You no longer have to be responsible for patching your management server and databases with the latest upgrades and features. Also, scaling a management server can be done at the click of a button.
 
-![Diagram of Operations Manager Managed Instance (preview) architecture.](./media/platforms/scom-managed-instance-architecture.png).
+![Diagram of Operations Manager Managed Instance architecture.](./media/platforms/scom-managed-instance-architecture.png).
 
 ### Azure Monitor
 
@@ -47,14 +47,14 @@ Azure Monitor is a software as a service (SaaS) offering, so its supporting infr
 
 <!-- markdownlint-disable MD024 -->
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 #### Agents
 
 The operations manager only collects data from agents installed on [Windows computers](/system-center/scom/plan-planning-agent-deployment#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](/system-center/scom/plan-planning-agent-deployment#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
 
 >[!Note]
-> SCOM Managed Instance (preview) can collect data from agents on Windows computers only.
+> SCOM Managed Instance can collect data from agents on Windows computers only.
 
 ![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-operations-manager-agents-optimized.svg)
 
@@ -94,7 +94,7 @@ Because Azure Monitor separates data collection from actions against that data, 
 
 ## Health monitoring
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 Management packs in Operations Manager include a service model that describes the components of the application being monitored and their relationship. Monitors identify the current health state of each component based on data and scripts on the agent. Health states roll up so you can quickly view the summarized health state of monitored computers and applications.
 
@@ -110,7 +110,7 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 ## Analyze data
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 Operations Manager provides these basic ways to analyze data after it has been collected:
 
@@ -138,7 +138,7 @@ To learn more, see [Analyze and visualize monitoring data](/azure/azure-monitor/
 
 ## Alerting
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 Operations Manager creates alerts in response to predefined events, when a performance threshold is met, and when the health state of a monitored component changes. It includes the complete management of alerts, allowing you to set their resolution and assign them to various operators or system engineers. You can set notification rules that specify which alerts will send proactive notifications.
 
@@ -155,7 +155,7 @@ Both [stateless and stateful](/azure/azure-monitor/alerts/alerts-overview#alerts
 
 ## Workflows
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 Management packs in Operations Manager contain hundreds of individual workflows, and they determine what data to collect and what action to perform with that data. For example, a rule might sample a performance counter every few minutes, storing its results for analysis. A monitor might sample the same performance counter and compare its value to a threshold to determine the health state of a monitored object. Another rule might run a script to collect and analyze some data on an agent computer and then fire an alert if it returns a particular value.
 
@@ -167,7 +167,7 @@ Azure Monitor separates data collection from actions and analysis taken from tha
 
 ## Extend the base platform
 
-### Operations Manager and SCOM Managed Instance (preview)
+### Operations Manager and SCOM Managed Instance
 
 Operations Manager implements all monitoring logic in a management pack, which you create yourself or obtain from a partner or us. When you install a management pack, it automatically discovers components of the application or service on different agents and deploys appropriate rules and monitors. The management pack contains health definitions, alert rules, performance and event collection rules, and views, to provide complete monitoring that supports the infrastructure service or application.
 
