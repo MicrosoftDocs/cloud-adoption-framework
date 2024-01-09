@@ -80,9 +80,9 @@ diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
 - Some complex deployments and applications that use a combination of third-party services, platform as a service (PaaS) services, and back-end solutions might not support native IPv6. In these cases, you need to use NAT/NAT64 or an IPv6 proxy solution to enable communication between IPv6 and IPv4.
 - When the complexity of the application architecture or other factors like training costs are considered significant, you might want to keep using IPv4-only infrastructure on the back end and deploy a third-party network virtual appliance (NVA) dual-stack IPv4/IPv6 gateway for service delivery.
 
-  A typical deployment using an NVA might look like this:
+  A typical deployment that uses an NVA might look like this:
 
-![Diagram that shows a dual-stack IPv4/IPv6 gateway providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-gateway.png)
+  ![Diagram that shows a dual-stack IPv4/IPv6 gateway providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-gateway.png)
 
 **Design recommendations:**
 
