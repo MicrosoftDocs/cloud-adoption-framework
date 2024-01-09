@@ -327,6 +327,10 @@ items:
             href: ready/landing-zone/design-area/resource-org-management-groups.md
           - name: Subscriptions
             href: ready/landing-zone/design-area/resource-org-subscriptions.md
+          - name: Application environments
+            href:  ready/landing-zone/design-area/management-application-environments.md
+          - name: Modify a landing zone to meet requirements across multiple locations
+            href: ready/landing-zone/landing-zone-multinational.md
           - name: Tailoring the Azure landing zones architecture
             href: ready/landing-zone/tailoring-alz.md
           - name: Adopt policy-driven guardrails
@@ -413,6 +417,8 @@ items:
             href: ready/landing-zone/design-area/service-enablement-framework.md
           - name: Security control mapping
             href: ready\control-mapping\security-control-mapping.md
+          - name: Incorporate Zero Trust practices in your landing zone
+            href: ready/landing-zone/design-area/security-zero-trust.md
             
         - name: Management
           items:
@@ -543,6 +549,10 @@ items:
           href: ready/considerations/sandbox-environments.md
         - name: Landing zone regions
           href: ready/considerations/regions.md
+        - name: Policy management
+          items:
+          - name: Advanced Azure Policy management
+            href: ready/policy-management/enterprise-policy-as-code.md
         - name: Improve landing zone governance
           items:
           - name: Overview
@@ -1088,7 +1098,7 @@ items:
               href: innovate/best-practices/conversational-ai.md
           - name: Knowledge mining
             items:
-            - name: What is Azure Cognitive Search?
+            - name: What is Azure AI Search?
               href: innovate/best-practices/cognitive-search.md
 
       - name: Process improvements
@@ -1129,16 +1139,14 @@ items:
         href: relocate/index.md
       - name: Initiate
         href: relocate/initiate.md
-      - name: Move
-        items:
-        - name: Evaluate
-          href: relocate/evaluate.md
-        - name: Select
-          href: relocate/select.md
-        - name: Migrate
-          href: relocate/migrate.md
-        - name: Cutover
-          href: relocate/cutover.md
+      - name: Evaluate
+        href: relocate/evaluate.md
+      - name: Select
+        href: relocate/select.md
+      - name: Migrate
+        href: relocate/migrate.md
+      - name: Cutover
+        href: relocate/cutover.md
                 
 
   - name: Govern

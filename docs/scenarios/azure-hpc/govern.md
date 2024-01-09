@@ -2,7 +2,7 @@
 title: Govern Azure HPC
 description: As an IT professional, I want to find guidance in the Cloud Adoption Framework covering governance for using Azure High-performance computing (HPC) as part of my IT strategy.
 author: Rajani-Janaki-Ram
-ms.author: erd
+ms.author: padmalathas
 ms.date: 09/19/2022
 ms.topic: conceptual
 ms.custom: think-tank
@@ -43,4 +43,3 @@ Banking organizations will also have [data security considerations](/azure/archi
 
 - After extending your governance approach for your HPC environment, outline your [management](./manage.md) path for implementing an operations baseline.
 - Review and understand additional [governance recommendations](../../ready/landing-zone/design-area/governance.md) decisions made by your cloud platform team.
-

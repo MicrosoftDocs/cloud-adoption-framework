@@ -14,7 +14,7 @@ Before adoption can begin, you create a landing zone to host the workloads that 
 
 ## Landing zone concepts
 
-[!INCLUDE [Landing zone concepts](~/../crr-aac-repo/docs/landing-zones/includes/concepts.md)]
+[!INCLUDE [Landing zone concepts](~/../architecture-center-pr/docs/landing-zones/includes/concepts.md)]
 
 ## Landing zone journey
 
@@ -30,6 +30,7 @@ As you work your way through the Ready guide, consider your progress as a contin
 - Deploy Azure platform landing zone components
   - [Accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
   - [Bicep modules](https://github.com/Azure/ALZ-Bicep)
+  - [Bicep Accelerator](https://github.com/Azure/ALZ-Bicep/wiki/Accelerator)
   - [Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
 - Subscription landing zone vending process
   - [Vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
