@@ -60,7 +60,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 ## IPv6 considerations
 
 An increasing number of organizations are adopting IPv6 in their environments. This adoption is driven by the public IPv4 space exhaustion, private IPv4 scarcity, especially within large-scale networks, and the need to provide connectivity to IPv6-only clients. 
-There's no universal approach to adopting IPv6. There are, however, best practices that you can follow when you plan for IPv6 and implement it into your existing Azure networks.
+There's no universal approach to adopting IPv6. There are, however, best practices that you can follow when you plan for IPv6 and implement it in your existing Azure networks.
 
 The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure helps you understand the 
 considerations to take into account when you create systems in the cloud. 
@@ -71,7 +71,7 @@ diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
 **Design considerations:**
 
 - Phase your IPv6 adoption. Based on your business needs, implement IPv6 where needed. Remember that IPv4 and IPv6 can coexist as long as necessary.
-- In scenarios where applications rely on infrastructure as a service (IaaS) services with full IPv6 support, like  virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
+- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like  virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
 
    You can deploy Basic-SKU internet-facing Azure load balancers with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
 
@@ -112,7 +112,7 @@ of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product docu
 - You can associate a single IPv6 Classless Inter-Domain Routing (CIDR) block when you create a new virtual network in an existing Azure deployment in your subscription. The size of the subnet for IPv6 must be /64. Using this size ensures future compatibility if you decide to enable routing of the subnet to an on-premises network. Some routers can accept only /64 IPv6 routes.
 - If you have an existing virtual network that supports only IPv4, and resources in your subnet that are configured to use only IPv4, you can enable IPv6 support for your virtual network and resources. Your virtual network can operate in dual-stack mode, which enables your resources to communicate over IPv4, IPv6, or both. IPv4 and IPv6 communication are independent of each other.
 - You can't disable IPv4 support for your virtual network and subnets. IPv4 is the default IP addressing system for Azure virtual networks.
-- Associate an IPv6 CIDR block with your virtual network and subnet or BYOIP IPv6. Classless Inter-Domain Routing (CIDR) notation is a method of representing an IP address and its network mask. The format of these addresses is as follows:
+- Associate an IPv6 CIDR block with your virtual network and subnet or BYOIP IPv6. CIDR notation is a method of representing an IP address and its network mask. The formats of these addresses are as follows:
   - An individual IPv4 address is 32 bits, with four groups of as many as three decimal digits. For example, `10.0.1.0`.
   - An IPv4 CIDR block has four groups of as many as three decimal digits, from 0 through 255, separated by periods, and followed by a slash 
   and a number from 0 through 32. For example, `10.0.0.0/16`.
