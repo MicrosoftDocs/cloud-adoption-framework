@@ -105,7 +105,7 @@ These are main differences between the NVA approach and the Azure Front Door app
 - Azure Front Door is a global Azure PaaS service and operates at Layer 7 (HTTP/HTTPS). The application back end is an internet-facing service that can be locked down to accept only traffic from Azure Front Door.
 
 In complex environments, you can use a combination of both. NVAs are used within a regional deployment. Azure Front Door is used to route traffic to one or more regional deployments in different Azure regions or other internet-facing locations. To determine the best solution, we recommend that you review the capabilities 
-of [Azure Front Door](https://learn.microsoft.com/azure/frontdoor/front-door-overview) and the product documentation.
+of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product documentation.
 
 **IPv6 virtual network CIDR blocks:**
 
