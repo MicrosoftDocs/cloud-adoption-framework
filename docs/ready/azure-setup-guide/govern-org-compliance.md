@@ -122,6 +122,7 @@ To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
 - [Cloud Adoption Framework: Define corporate policy ](../../govern/policy-compliance/policy-definition.md)
+- [Microsoft Cloud for Sovereignty policy portfolio](/industry/sovereignty/sovereignty-capabilities)
 
 ::: zone-end
 
