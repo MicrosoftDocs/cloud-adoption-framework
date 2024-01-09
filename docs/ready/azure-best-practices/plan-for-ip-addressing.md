@@ -59,7 +59,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 ## IPv6 considerations
 
-An increasing number of organizations are adopting IPv6 in their environments, driven by the public IPv4 
+An increasing number of organizations are adopting IPv6 in their environments. This adoption is driven by the public IPv4 
 space exhaustion, private IPv4 scarcity, especially within large-scale networks, and the need to provide connectivity
 to IPv6-only clients. 
 There is no one-size-fits-all approach with IPv6; however, there are best practices Azure customers can follow to plan 
