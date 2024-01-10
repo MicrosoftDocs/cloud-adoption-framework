@@ -57,6 +57,73 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Use [nonroutable landing zone spoke virtual networks](/azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
 
+## IPv6 considerations
+
+An increasing number of organizations are adopting IPv6 in their environments. This adoption is driven by the public IPv4 space exhaustion, private IPv4 scarcity, especially within large-scale networks, and the need to provide connectivity to IPv6-only clients. 
+There's no universal approach to adopting IPv6. There are, however, best practices that you can follow when you plan for IPv6 and implement it in your existing Azure networks.
+
+The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure helps you understand the 
+considerations to take into account when you create systems in the cloud. 
+To learn about architectural best practices for designing sustainable systems, see [Azure landing zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles).
+For in-depth recommendations and best practices regarding your cloud architecture, including reference architecture deployments,
+diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
+
+**Design considerations:**
+
+- Phase your IPv6 adoption. Based on your business needs, implement IPv6 where needed. Remember that IPv4 and IPv6 can coexist as long as necessary.
+- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like  virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
+
+   You can deploy Basic-SKU internet-facing Azure load balancers with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
+
+  The native end-to-end approach is most useful for direct server-to-server or client-to-server communication. It's not useful for most web services and applications, which are typically protected by firewalls, web application firewalls, or reverse proxies.
+
+- Some complex deployments and applications that use a combination of third-party services, platform as a service (PaaS) services, and back-end solutions might not support native IPv6. In these cases, you need to use NAT/NAT64 or an IPv6 proxy solution to enable communication between IPv6 and IPv4.
+- When the complexity of the application architecture or other factors like training costs are considered significant, you might want to keep using IPv4-only infrastructure on the back end and deploy a third-party network virtual appliance (NVA) dual-stack IPv4/IPv6 gateway for service delivery.
+
+  A typical deployment that uses an NVA might look like this:
+
+  ![Diagram that shows a dual-stack IPv4/IPv6 gateway providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-gateway.png)
+
+**Design recommendations:**
+
+Here's a closer look at what a typical architecture might look like:
+
+![Diagram that shows an IPv4/IPv6 load balancer providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-load-balancer.png)
+
+- Deploy the NVA in Azure availability sets for resiliency and expose them to the internet through [Azure Load-Balancer](/azure/load-balancer/load-balancer-ipv6-overview), which has a public IP address front end.
+
+   The NVAs accept IPv4 and IPv6 traffic and translate it into IPv4-only traffic to access the application in the application subnet. The approach reduces complexity for the application team and reduces the attack surface.
+- Deploy [Azure Front Door](https://azure.microsoft.com/services/frontdoor/) to provide global routing for web traffic.
+
+  Azure Front Door capabilities include proxying IPv6 client requests and traffic to an IPv4-only back end, as shown here:
+
+   ![Diagram that shows Azure Front Door providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-azure-front-door.png)
+
+These are main differences between the NVA approach and the Azure Front Door approach:
+ 
+- NVAs are customer-managed, work at Layer 4 of the OSI model, and can be deployed in the same Azure virtual network as the application, with a private and public interface.
+- Azure Front Door is a global Azure PaaS service and operates at Layer 7 (HTTP/HTTPS). The application back end is an internet-facing service that can be locked down to accept only traffic from Azure Front Door.
+
+In complex environments, you can use a combination of both. NVAs are used within a regional deployment. Azure Front Door is used to route traffic to one or more regional deployments in different Azure regions or other internet-facing locations. To determine the best solution, we recommend that you review the capabilities 
+of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product documentation.
+
+**IPv6 virtual network CIDR blocks:**
+
+- You can associate a single IPv6 Classless Inter-Domain Routing (CIDR) block when you create a new virtual network in an existing Azure deployment in your subscription. The size of the subnet for IPv6 must be /64. Using this size ensures future compatibility if you decide to enable routing of the subnet to an on-premises network. Some routers can accept only /64 IPv6 routes.
+- If you have an existing virtual network that supports only IPv4, and resources in your subnet that are configured to use only IPv4, you can enable IPv6 support for your virtual network and resources. Your virtual network can operate in dual-stack mode, which enables your resources to communicate over IPv4, IPv6, or both. IPv4 and IPv6 communication are independent of each other.
+- You can't disable IPv4 support for your virtual network and subnets. IPv4 is the default IP addressing system for Azure virtual networks.
+- Associate an IPv6 CIDR block with your virtual network and subnet or BYOIP IPv6. CIDR notation is a method of representing an IP address and its network mask. The formats of these addresses are as follows:
+  - An individual IPv4 address is 32 bits, with four groups of as many as three decimal digits. For example, `10.0.1.0`.
+  - An IPv4 CIDR block has four groups of as many as three decimal digits, from 0 through 255, separated by periods, and followed by a slash 
+  and a number from 0 through 32. For example, `10.0.0.0/16`.
+  - An individual IPv6 address is 128 bits. It has eight groups of four hexadecimal digits. For example, 
+  `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+  - An IPv6 CIDR block has four groups of as many as four hexadecimal digits, separated by colons, followed by a double colon, and then
+  followed by a slash and a number from 1 through 128. For example, `2001:db8:1234:1a00::/64`.
+- Update your route tables to route IPv6 traffic. For public traffic, create a route that routes all IPv6 traffic from the subnet to VPN Gateway or an Azure ExpressRoute gateway.
+- Update your security group rules to include rules for IPv6 addresses. Doing so enables IPv6 traffic to flow to and from your instances. If you have network security group rules to control the flow of traffic to and from your subnet, you must include rules for IPv6 traffic.
+- If your instance type doesn't support IPv6, use dual stack or deploy an NVA, as previously described, that translates from IPv4 to IPv6.
+
 ## IP Address Management (IPAM) tools
 
 Using an IPAM tool can assist you with IP address planning in Azure as it provides centralized management and visibility, preventing overlaps and conflicts in IP address spaces. This section guides you through essential considerations and recommendations when adopting an IPAM tool.
