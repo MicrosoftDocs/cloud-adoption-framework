@@ -9,13 +9,9 @@ ms.topic: conceptual
 
 # Cloud migration in the Cloud Adoption Framework
 
-> Introduce the methodology.
->
-> - Disciplines. Horizontal themes, the "headline messages" to field and customers.
+This section of the Cloud Adoption Framework explains the disciplines and principles behind its proven migration model. It also provides guidance to help you prepare for a successful migration to a cloud provider using an iterative process to first prepare, then assess, deploy, and release workloads.
 
-This section of the Cloud Adoption Framework explains the disciplines and principles behind its proven migration model.
-
-Wherever possible, this content attempts to maintain a vendor-neutral position. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
+This content attempts to maintain a vendor-neutral position whenever possible. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
 
 ## Audience
 
