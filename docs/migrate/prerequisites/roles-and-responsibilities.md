@@ -3,7 +3,7 @@ title: Aligning roles and responsibilities
 description: Use the Cloud Adoption Framework for Azure to prepare for cultural complexity by aligning roles and responsibilities to drive clarity during the migration process.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 12/04/2023
+ms.date: 01/11/2024
 ms.topic: conceptual
 ---
 
@@ -24,8 +24,8 @@ In any migration, there are a few key functions that are best executed by the bu
 | Assess | Justification | Validate assumptions that drive changing business justifications. |
 | Assess | Risk | Help the cloud adoption team understand the impact of tangible business risks. |
 | Assess | Approve | Review and approve the business impact of proposed architecture changes. |
-| Optimize | Change plan | Define a plan for consumption of change within the business, including periods of low activities and change freezes. |
-| Optimize | Testing | Align power users capable of validating performance and functionality. |
+| Release | Change plan | Define a plan for consumption of change within the business, including periods of low activities and change freezes. |
+| Release | Testing | Align power users capable of validating performance and functionality. |
 | Secure and manage | Interruption impact | Aid the cloud adoption team in quantifying the impact of a business process interruption. |
 | Secure and manage | Service-level agreement (SLA) validation | Aid the cloud adoption team in defining service-level agreements and acceptable tolerances for business outages. |
 
@@ -40,13 +40,13 @@ Each process within the discussion of the Cloud Adoption Framework migration pri
 
 | Process | Activity | Description | Accountable party |
 |---------|---------|---------|---------|
-| Prerequisite | Digital estate | Align the existing inventory to basic assumptions, based on business outcomes. | Cloud strategy team |
-| Prerequisite | Migration backlog | Prioritize the sequence of workloads to be migrated. | Cloud strategy team |
+| Prepare | Digital estate | Align the existing inventory to basic assumptions, based on business outcomes. | Cloud strategy team |
+| Prepare | Migration backlog | Prioritize the sequence of workloads to be migrated. | Cloud strategy team |
 | Assess | Architecture | Challenge initial assumptions to define the target architecture based on usage metrics. | Cloud adoption team |
 | Assess | Approval | Approve the proposed architecture. | Cloud strategy team |
-| Migrate | Replication access | Access to existing on-premises hosts and assets to establish replication processes. | Cloud adoption team |
-| Optimize | Ready | Validate that the system meets performance and cost requirements prior to promotion. | Cloud adoption team |
-| Optimize | Promote | Permissions to promote a workload to production and redirect production traffic. | Cloud adoption team |
+| Deploy | Replication access | Access to existing on-premises hosts and assets to establish replication processes. | Cloud adoption team |
+| Release | Ready | Validate that the system meets performance and cost requirements prior to promotion. | Cloud adoption team |
+| Release | Promote | Permissions to promote a workload to production and redirect production traffic. | Cloud adoption team |
 | Secure and manage | Ops transition | Document production systems prior to production operations. | Cloud adoption team |
 
 > [!CAUTION]

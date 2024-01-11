@@ -607,7 +607,7 @@ items:
         href: migrate/index.md
       - name: Checklist
         href: migrate/checklist.md
-      - name: Prerequisites
+      - name: Prepare
         items:
           - name: Overview
             href: migrate/prerequisites/index.md

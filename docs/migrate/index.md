@@ -12,26 +12,36 @@ ms.topic: conceptual
 > Introduce the methodology.
 >
 > - Disciplines. Horizontal themes, the "headline messages" to field and customers.
-> - Addressable audience. What are their needs, make it clear who should read this, and why.
 
-This section of the Cloud Adoption Framework explains the principles behind its migration model. Wherever possible, this content attempts to maintain a vendor-neutral position. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
+This section of the Cloud Adoption Framework explains the disciplines and principles behind its proven migration model.
 
-Any enterprise-scale [cloud adoption plan](../plan/index.md) includes workloads that don't deserve significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift, lift and optimize, or modernize. Each approach is considered a migration.
+Wherever possible, this content attempts to maintain a vendor-neutral position. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
+
+## Audience
+
+> Addressable audience. What are their needs, make it clear who should read this, and why.
+
+## Migration strategies
+
+A [cloud adoption plan](../plan/index.md) might include workloads that don't deserve significant investments in the creation of new business logic. Those workloads can be moved to the cloud through any number of approaches: **lift and shift**, **lift and optimize**, or **modernize**.
+
+Each approach is considered a migration that could fall into the scope of this guidance.
 
 ## Migration disciplines
 
-> TODO: Add a diagram that shows the migration disciplines.
-> Business disciplines, and migration disciplines.
-
-## Migration phases
-
-The actions required to migrate workloads generally falls into three phases for each workload.
-
-- **Assess workloads:** Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging assumptions. You make these assumptions during discovery and assessments by looking more closely at rationalization options. This process is also when user patterns and dependencies are studied more closely to ensure workloads will achieve technical success after migration.
-- **Deploy workloads**: After you assess workloads, the existing workload functionality is replicated or improved in the cloud. This replication could involve a *lift and shift* or *rehost* to the cloud. But, more commonly during this phase, many of the assets supporting these workloads are modernized to capitalize on the benefits of the cloud.
-- **Release workloads**: Once functionality is replicated to the cloud, workloads can be tested, optimized, documented, and released for ongoing operations. The effort to review the migrated workloads and hand them off is critical during this process. The effort is critical to governance, operations management, and security teams for ongoing workload support.
+A cloud migration typically requires both good preparation and execution. The Cloud Adoption Framework migration  methodology relies on proven guidance to help you prepare and execute your migration efforts.
 
 ![Diagram that shows the Cloud Adoption Framework migration effort](../_images/migrate/methodology.png)
+
+To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
+
+- **0. Prepare:** Build on the work from the Strategy, Plan, and Ready methodologies, and prepare your environments and teams for the migration efforts ahead.
+
+When you've fulfilled the prerequisites and prepared, you can start the migration process. The migration process is an iterative process that includes the following disciplines:
+
+- **1. Assess workloads:** Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging assumptions. You make these assumptions during discovery and assessments by looking more closely at rationalization options. This process is also when user patterns and dependencies are studied more closely to ensure workloads will achieve technical success after migration.
+- **2. Deploy workloads**: After you assess workloads, the existing workload functionality is replicated or improved in the cloud. This replication could involve a *lift and shift* or *rehost* to the cloud. But, more commonly during this phase, many of the assets supporting these workloads are modernized to capitalize on the benefits of the cloud.
+- **3. Release workloads**: Once functionality is replicated to the cloud, workloads can be tested, optimized, documented, and released for ongoing operations. The effort to review the migrated workloads and hand them off is critical during this process. The effort is critical to governance, operations management, and security teams for ongoing workload support.
 
 In a standard two-week iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads might take several two-week iterations to complete all three phases of migration effort for a single workload.
 
@@ -39,13 +49,11 @@ Experience and complexity both have a significant impact on timelines and migrat
 
 ## Roles and responsibilities
 
-## Migration strategies
-
-> TODO: Describe the different migration strategies, such as rehost, refactor, rearchitect, rebuild, and replace, and how they affect the complexity and benefits of cloud migration.
+As part of the prepare discipline, you should align roles and responsibilities to drive clarity during the migration process. These are described in the [Roles and responsibilities](./prerequisites/roles-and-responsibilities.md) article.
 
 ## Next steps
 
-After familiarizing yourself with the migration methodology, you can use the following checklist to help you understand and plan your migration efforts.
+The first step to get started is to familiarize yourself with the prepare discipline.
 
 > [!div class="nextstepaction"]
-> [Cloud migration checklist](./checklist.md)
+> [Prepare](./prerequisites/index.md)
