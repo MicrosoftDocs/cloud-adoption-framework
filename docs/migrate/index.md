@@ -3,13 +3,13 @@ title: Cloud migration in the Cloud Adoption Framework
 description: Prepare for a successful migration to Azure using an iterative process to assess, deploy, and release workloads.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/09/2024
+ms.date: 01/11/2024
 ms.topic: conceptual
 ---
 
 # Cloud migration in the Cloud Adoption Framework
 
-This section of the Cloud Adoption Framework explains the disciplines and principles behind its proven migration model. It also provides guidance to help you prepare for a successful migration to a cloud provider using an iterative process to first prepare, then assess, deploy, and release workloads.
+This section of the Cloud Adoption Framework (CAF) explains the disciplines and principles behind its proven migration model. It also provides guidance to help you prepare for a successful migration to a cloud provider using an iterative process to first prepare, then assess, deploy, and release workloads.
 
 This content attempts to maintain a vendor-neutral position whenever possible. It guides you through the processes and activities that can be applied to any cloud migration, whatever your chosen cloud vendor.
 
@@ -31,7 +31,7 @@ A cloud migration typically requires both good preparation and execution. The Cl
 
 To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
 
-- **0. Prepare:** Build on the work from the Strategy, Plan, and Ready methodologies, and prepare your environments and teams for the migration efforts ahead.
+- **0. Prepare:** You need to focus on organizational alignment, defining clear owners for the migration process, and ensuring you've got the required skills in your teams. In this phase, you build on the work from the Strategy, Plan, and Ready portions of CAF. This discipline is critical to the success of your migration effort.
 
 When you've fulfilled the prerequisites and prepared, you can start the migration process. The migration process is an iterative process that includes the following disciplines:
 
