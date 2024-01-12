@@ -17,6 +17,16 @@ Robust identity and access management forms the basis of modern security. Author
 
 Azure offers a comprehensive set of services, tools, and reference architectures to help organizations make highly secure and operationally efficient environments. Several options are available for managing identity in a cloud environment. These options vary in cost and complexity. A key factor in structuring your cloud-based identity services is the level of integration required with your existing on-premises identity infrastructure. See the [Identity decision guide](../../../decision-guides/identity/index.md) for more information.
 
+## Identity and access management in Azure Landing Zones
+
+Identity and access management is a core consideration in both platform and application landing zones. Under the design principle of subscription democratization, application owners should have autonomy to manage their own applications and resources with minimal intervention from the platform team. Security is the fundamental differentiator between landing zones in the same Azure organization, and by applying a robust identity and access management design, application landing zone isolation is naturally achieved.
+
+The platform team is responsible for the identity and access management foundation, including deploying and managing centralised directory services such as Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services. These services are consumed by administrators of application landing zones, and by users accessing applications.
+
+The application team is responsible for the identity and access management of their applications. This includes securing user access to applications, and between application components, such as Azure SQL Database, Azure Cosmos DB, and Azure Storage. In a well-implemented Landing Zones architecture, the application team consumes services provided by the platform team with minimal effort.
+
+Many of the fundamental concepts of identity and access management are the same in both platform and application landing zones, such as role-based access control (RBAC), and the principle of least privilege.
+
 ## Design area review
 
 **Involved roles or functions:** Identity and access management require support from one or more of the following functions. These roles can help make decisions and implement those decisions:

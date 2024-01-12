@@ -2,18 +2,28 @@
 title: Azure identity and access management for Active Directory and hybrid identity
 description: Understand Microsoft Entra ID and hybrid identity considerations and recommendations for Azure landing zones.
 author: soderholmd
-ms.author: dsoderholm 
+ms.author: dsoderholm
 ms.topic: conceptual
 ms.date: 12/05/2023
 ---
 
 # Entra ID, Active Directory, and Hybrid Identity
 
-Microsoft Entra ID provides a base level of access control and identity management for Azure resources. If your organization has an on-premises Active Directory Domain Services (AD DS) infrastructure, your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of managed Microsoft Entra Domain Services in the cloud.
+Organizations operating in the cloud require a directory service to manage user identities and access to resources. Microsoft Entra ID is a cloud-based identity and access management service that provides a robust set of capabilities to manage users and groups. It can be used as a standalone identity solution or integrated with an on-premises Active Directory Domain Services (AD DS) infrastructure. This article provides guidance on how to design and implement Microsoft Entra ID and hybrid identity for Azure Landing Zones.
+
+Microsoft Entra ID provides modern, secure identity and access management suitable for many organizations and workloads, and is at the core of Microsoft Azure and Microsoft 365 services. If your organization has an on-premises Active Directory Domain Services (AD DS) infrastructure, your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Additionally, support for applications that depend on legacy authentication mechanisms might require the deployment of managed Microsoft Entra Domain Services in the cloud.
 
 Cloud-based identity management is an iterative process. You could start with a cloud-native solution with a small set of users and corresponding roles for an initial deployment and as your migration matures, you might need to integrate your identity solution using directory synchronization and/or add cloud hosted domains services as part of your cloud deployments. Revisit your identity solution depending on your workload authentication requirements and other needs, such as changes to your organizational identity strategy and security requirements, or integration with other directory services. When evaluating which type of Active Directory solution to adopt, understand the capabilities and differences of Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services on Windows Server.
 
 Refer the [Identity decision guide](../../../decision-guides/identity/index.md) for help with your identity strategy.
+
+## Identity and access management services in Azure Landing Zones
+
+The administration of identity and access management is a responsibility of the platform team, and identity and access management services are fundamental to organizational security. Those organizations using only Microsoft Entra ID can protect the service by controlling administrative access, and avoiding scenarios in which users outside the platform team can make changes to the configuration or to the security principals contained within.
+
+Organizations that use Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services must also protect the domain controllers from unauthorized access. They are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads. Domain controllers, and associated components such as Microsoft Entra ID Connect servers, are contained within the Identity subscription within the Platform management group, and are not delegated to application teams. By providing this isolation, application owners can consume the identity services without having to manage them, and the risk of identity and access management services being compromised is reduced. The resources in the Identity subscription are a critical point of security for your cloud and on-premises environments, and must be secured accordingly.
+
+Landing zone provisioning should allow for both Microsoft Entra ID and Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services to be used by application owners, as required by their workloads. Depending on which identity solution is used, supporting configuration such as network connectivity to the Identity VNet should be enabled or disabled. If you use a subscription vending process, this should form part of the subscription request.
 
 ## Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services
 
@@ -32,7 +42,7 @@ Once AD DS or Microsoft Entra DS is configured, Azure virtual machines and file 
 
 - Evaluate the compatibility of workloads for Microsoft Entra DS and for AD DS on Windows Server. See [Common use-cases and scenarios](/entra/identity/domain-services/scenarios).
 
-- Deploy domain controller virtual machines, or Microsoft Entra Domain Services replica sets, into the Identity subscription within the Platform management group. Domain controllers and other identity services are particularly attractive targets for attackers, and should have strict security controls and segregation from application workloads.
+- Deploy domain controller virtual machines, or Microsoft Entra Domain Services replica sets, into the Identity subscription within the Platform management group.
 
 - Secure the virtual network containing the domain controllers. Prevent direct Internet connectivity by placing the AD DS servers in a separate subnet with an NSG as a firewall. Resources using the domain controllers for authentication must have a network route to the domain controller subnet. Refer to [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain#recommendations) for recommendations when deploying AD DS domain controllers in Azure.
 
