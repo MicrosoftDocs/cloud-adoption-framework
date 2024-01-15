@@ -160,3 +160,11 @@ Each article guides you through a series of steps to onboard these solutions:
 - Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.
+
+## Operator Transparency Logs
+
+As part of [Microsoft Cloud for Sovereingty](/industry/sovereignty/) transparency logs of when Microsoft engineers accessed your resources, to assist with sovereign compliance and other regulatory requirements.
+
+### Learn more
+
+[Transparency logs](/industry/sovereignty/transparency-logs)
