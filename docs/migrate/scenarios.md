@@ -1,13 +1,13 @@
 ---
-title: Cloud migration scenarios
-description: Get an overview of example scenarios that demonstrate how you can migrate to Microsoft Azure.
+title: Product migration guidance
+description: Get an overview of product migration scenarios that demonstrate how you can migrate to Microsoft Azure for various applications and services.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 01/16/2024
 ms.topic: conceptual
 ---
 
-# Cloud migration scenarios
+# Product migration guidance
 
 This article contains examples of several common migration scenarios and demonstrates how you can migrate to [Microsoft Azure](https://azure.microsoft.com/overview/what-is-azure/).
 

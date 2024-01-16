@@ -671,7 +671,7 @@ items:
             href: migrate/release/decommission.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
-      - name: Example migration scenarios
+      - name: Product migration guidance
         href: migrate/scenarios.md
 
       - name: Migration scenarios
