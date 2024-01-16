@@ -69,9 +69,7 @@ See each section below for relevant migration guidance for specific applications
 |---|---|
 | [Migrate from Oracle to Azure SQL](/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide) | TBD |
 | [Migrate from Oracle to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide) | TBD |
-| [Migrate from Oracle to Azure SQL on Azure VM](/azure/azure-sql
-
-/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide) | TBD |
+| [Migrate from Oracle to Azure SQL on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide) | TBD |
 
 ### Access
 
