@@ -113,6 +113,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| AKS system node pool | `Microsoft.ContainerService/managedClusters/agentPools` (mode: `System`) | `npsystem` |
+| AKS user node pool | `Microsoft.ContainerService/managedClusters/agentPools` (mode: `User`) | `np` |
 | Container apps | `Microsoft.App/containerApps` | `ca` |
 | Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
