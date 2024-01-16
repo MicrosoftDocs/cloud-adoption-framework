@@ -671,11 +671,11 @@ items:
             href: migrate/release/decommission.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
+      - name: Example migration scenarios
+        href: migrate/scenarios.md
 
       - name: Migration scenarios
         items:
-        - name: Overview
-          href: scenarios/index.md
         - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
 
@@ -686,74 +686,12 @@ items:
           - name: Migration execution with Azure Migrate for servers
             href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
 
-        - name: AWS
-          items:
-          - name: Discover AWS instances
-            href: /azure/migrate/tutorial-discover-aws
-          - name: Assess AWS instances for migration to Azure
-            href: /azure/migrate/tutorial-assess-aws
-          - name: Migrate AWS instances
-            href: /azure/migrate/tutorial-migrate-aws-virtual-machines
 
-        - name: Containers
-          items:
-          - name: Migrate to Azure Kubernetes Service (AKS)
-            href: /azure/aks/aks-migration
-
-        - name: Windows and Linux servers
-          items:
-          - name: VMWare
-            items:
-            - name: Discover servers running in a VMware environment
-              href: /azure/migrate/tutorial-discover-vmware
-            - name: Assess VMware VMs for migration to Azure VMs
-              href: /azure/migrate/tutorial-assess-vmware-azure-vm
-            - name: Select a VMware migration option
-              href: /azure/migrate/server-migrate-overview
-          - name: Hyper-V
-            items:
-            - name: Discover servers running in a Hyper-V environment
-              href: /azure/migrate/tutorial-discover-hyper-v
-            - name: Assess Hyper-V VMs for migration to Azure
-              href: /azure/migrate/tutorial-assess-hyper-v
-            - name: Migrate Hyper-V VMs to Azure
-              href: /azure/migrate/tutorial-migrate-hyper-v
-        - name: Databases and data platforms
-          items:
-          - name: SQL Server workloads
-            items:
-            - name: Migrate from SQL Server to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide
-            - name: Migrate from SQL Server to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide
-            - name: Migrate from SQL Server to SQL Server on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
-          - name: DB2
-            items:
-            - name: Migrate from DB2 to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
-            - name: Migrate from DB2 to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
-            - name: Migrate from DB2 to Azure SQL on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
-          - name: Oracle
-            items:
-            - name: Migrate from Oracle to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
-            - name: Migrate from Oracle to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
-            - name: Migrate from Oracle to Azure SQL on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
-          - name: Access         
-            items:
-            - name: Migrate from Access to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
           - name: Linux and open-source databases
             items:
             - name: Migrate open-source databases to Azure
               href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
-            - name: Migrate from MySQL to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
+          
             - name: Migrate PostgreSQL to Azure
               href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
             - name: Migrate MariaDB to Azure
@@ -763,13 +701,7 @@ items:
             - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
               href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
 
-        - name: Storage migration
-          items:
-          - name: Storage migration overview
-            href: /azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tools for unstructured storage migration
-            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
+      
         - name: Open-source platforms
           items:
           - name: Moodle migration
@@ -809,60 +741,11 @@ items:
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
 
-        - name: Java applications
-          items:
-          - name: Migration overview
-            href: /azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to Azure App Service
-            href: /azure/developer/java/migration/migrate-spring-boot-to-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to AKS
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Cloud to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to Azure App Service
-            href: /azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to containers on AKS
-            href: /azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebLogic to Azure
-            items:
-              - name: WebLogic to Azure Virtual Machines
-                href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Microsoft Entra ID via LDAP
-                href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Application Gateway
-                href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WildFly to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebLogic to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebSphere to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: JBoss EAP to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: SAP
-          items:
-          - name: Migrate an SAP platform to Azure
-            href: /azure/cloud-adoption-framework/scenarios/sap/migrate
-          - name: Learning path for Migrate SAP workloads to Azure
-            href: /training/paths/migrate-sap-workloads-to-azure/
-          - name: SAP on Azure migration
-            href: https://azure.microsoft.com/solutions/sap/migration/
-          - name: Migrate from SAP ASE to Azure SQL
-            href: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
 
         - name: Specialized workloads
           items:
           - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
-          - name: Azure NetApp Files
-            href: https://azure.microsoft.com/services/netapp/
-          - name: Cray in Azure
-            href: https://azure.microsoft.com/solutions/high-performance-computing/cray/
           - name: VDI
             href: migrate/azure-best-practices/contoso-migration-rds-to-wvd.md
         
@@ -894,43 +777,10 @@ items:
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
 
-        - name: Multitenant migration
-          items:
-          - name: Azure Lighthouse for scale migration
-            href: /azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: Mainframes
-          items:
-          - name: Overview
-            href: infrastructure/mainframe-migration/index.md
-          - name: Switch from mainframes to Azure
-            href: infrastructure/mainframe-migration/migration-strategies.md
-          - name: Mainframe application migration
-            href: infrastructure/mainframe-migration/application-strategies.md
         - name: Migrate secure workloads
           items:
           - name: Secure and manage workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
-          - name: Azure database security best practices
-            href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Azure data security and encryption best practices
-            href: /azure/security/fundamentals/data-encryption-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure PaaS best practices
-            href: /azure/security/fundamentals/paas-deployments?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure Service Fabric security best practices
-            href: /azure/security/fundamentals/service-fabric-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Best practices for Azure VM security
-            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: IoT security best practices
-            href: /azure/iot-fundamentals/iot-security-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS databases in Azure
-            href: /azure/security/fundamentals/paas-applications-using-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS web and mobile applications using Azure App Service
-            href: /azure/security/fundamentals/paas-applications-using-app-services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS web and mobile applications using Azure Storage
-            href: /azure/security/fundamentals/paas-applications-using-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security best practices for IaaS workloads in Azure
-            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
     
     - name: Modernize
       items:

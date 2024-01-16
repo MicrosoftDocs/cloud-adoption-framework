@@ -1,11 +1,10 @@
 ---
 title: Prepare for cloud migration
-description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures.
+description: Understand the requirements to successfully prepare for a cloud migration.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 01/15/2024
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Prepare for cloud migration
@@ -17,12 +16,12 @@ The objective of the preparation discipline is to ensure readiness of your busin
 
 ## Definition of done
 
-The preparation discipline is typically completed when the following are true:
+The preparation phase is considered complete when:
 
-- **Business readiness:** Roles, responsibilities, and expectations are defined and agreed upon, the migration backlog review is complete, the necessary skills are in place, and the partnership options are evaluated.
-- **Technical readiness:** A landing zone is in place on the cloud hosting provider, and you have evaluated the required migration tools.
+- **Business readiness**: Roles, responsibilities, and expectations have been defined and agreed upon; the migration backlog review is complete; the necessary skills are in place; and partnership options have been evaluated.
+- **Technical readiness**: A landing zone has been established and prepared for migration on the cloud hosting provider, and the required migration tools have been evaluated.
 
-The remaining articles in this section will guide you through a successful preparation.
+The following articles in this section will guide you towards a successful preparation process.
 
 ## Next steps
 
