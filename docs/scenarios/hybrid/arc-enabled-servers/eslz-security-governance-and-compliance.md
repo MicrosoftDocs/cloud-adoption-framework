@@ -145,8 +145,6 @@ With Azure Arc-enabled servers, you can manage your enterprise estate with centr
 
 Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Azure Update Manager as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the maintenance configurations of all VMs, including your Azure Arc-enabled servers and [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) deployment to Azure Arc-enabled servers that have Windows versions that have reached end of support. For more information, see [Azure Update Manager overview](/azure/update-manager/overview).
 
-You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for patch management on your Azure Arc resources.
-
 ### Role-based access control (RBAC)
 
 Following the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle), users, groups, or applications assigned with roles like "contributor" or "owner" or "Azure Connected Machine Resource Administrator" are able to execute operations like deploying extensions, which basically has root access on Azure Arc-enabled servers. These roles should be used with caution, to limit the possible blast radius or eventually replaced by custom roles.
