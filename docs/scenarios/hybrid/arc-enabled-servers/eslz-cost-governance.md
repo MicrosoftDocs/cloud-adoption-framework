@@ -21,20 +21,17 @@ Azure Arc-enabled servers provide two types of services:
   - Searching and indexing through Azure Resource Graph.
   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
   - Environments and automation through templates and extensions.
-  - Azure Automation Update Management
 
-- **Azure services used in conjunction to Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
+- **Azure services used in conjunction with Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
   - Azure Monitor
   - Microsoft Defender for servers
   - Microsoft Sentinel
+  - Azure Update Manager
   - Azure Policy guest configuration
   - Azure Automation State Configuration, change tracking, and inventory
   - Azure Automation hybrid runbook workers
   - Azure Key Vault
   - Azure Private Link
-
-> [!NOTE]
-> Azure Automation Update Management is a free service, but the log data collected is billed with your other Azure Monitor usage. You are charged only once for any combination of Azure Policy guest configuration, Azure Automation State Configuration, change tracking, and inventory.
 
 ## Design considerations
 
@@ -47,6 +44,7 @@ Azure Arc-enabled servers provide two types of services:
    **Defender for Cloud with all enhanced security features (Paid)** - enabling [Microsoft Defender for Cloud](/azure/security-center/azure-defender) enhanced security extends the capabilities of the free mode to workloads running in private and other public clouds, providing unified security management and threat protection across your hybrid cloud workloads.
 
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Microsoft Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
+- **Azure Update Manager:** Azure Update Manager is a unified service to help manage and govern updates for all your machines. You can monitor Windows and Linux update compliance across your deployments in Azure, on-premises, and on other cloud platforms from a single dashboard. Azure Update Manager is billed per server per day.
 - **Azure Policy guest configuration:** Azure Policy guest configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy guest configuration is billed per server per month, and includes usage rights for Azure Automation State Configuration, change tracking, and inventory.
 - **Azure Automation configuration management:** Azure Automation configuration management includes software Change Tracking and Inventory for your servers, as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation configuration management is billed per server per month, and includes usage rights for Azure Policy guest configuration.
 - **Azure Key Vault:** The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys, and secrets.
@@ -113,6 +111,10 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Microsoft Sentinel integrates with other Azure services to provide enhanced capabilities. Review the [pricing details](/azure/sentinel/azure-sentinel-billing#costs-for-other-services) for these services.
 - Consider using [commitment tier](/azure/sentinel/azure-sentinel-billing#set-or-change-pricing-tier) pricing based on your data ingestion volume.
 - Consider [separating non-security](/azure/sentinel/azure-sentinel-billing#separate-non-security-data-in-a-different-workspace) operational data into a different Azure Log Analytics workspace.
+
+### Azure Update Manager
+
+- Review the [recommendations for management and monitoring](./eslz-management-and-monitoring-arc-server.md) and [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
 
 ### Azure Policy guest configuration
 

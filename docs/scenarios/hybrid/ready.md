@@ -82,7 +82,7 @@ Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any wor
 - Logging
 - Telemetry
 - Policies
-- Update management
+- Patch management
 - Change tracking
 - Inventory management
 - Threat detection
