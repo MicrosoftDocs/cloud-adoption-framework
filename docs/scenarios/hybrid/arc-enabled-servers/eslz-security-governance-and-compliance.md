@@ -74,7 +74,7 @@ Azure activity log can be used to set up [resource health notifications](/azure/
 
 Control who has access to the Azure connected machine agent on Azure Arc-enabled servers. The services that compose this agent control all communication and interaction for the Azure Arc-enabled servers to Azure. Members of the local administrator group on Windows and users with root privileges on Linux have permissions to manage the agent.
 
-Evaluate restricting the extensions and guest configuration capabilities with [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls) to permit only necessary management actions, especially for locked-down or sensitive machines.
+Evaluate restricting the extensions and machine configuration capabilities with [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls) to permit only necessary management actions, especially for locked-down or sensitive machines.
 
 ## Managed identity
 
@@ -99,15 +99,15 @@ The following image displays conceptual reference architecture that demonstrates
 
 Policy-driven governance is a foundational principle of cloud-native operations and the Cloud Adoption Framework. [Azure Policy](/azure/governance/policy/) provides the mechanism to enforce corporate standards and to assess compliance at-scale. You can implement governance for consistency of deployments, compliance, control costs, and improve your security posture. With its compliance dashboard, you will get an aggregated view of the overall state, and remediation capabilities.
 
-Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the machine operating system using [guest configuration policies](/azure/governance/policy/concepts/guest-configuration).
+Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer, and also within the machine operating system using [machine configuration policies](/azure/governance/machine-configuration/overview).
 
 Understand the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where it can be applied (management group, subscription, resource group, or individual resource level). Create a management group design in accordance with the recommended practices outlined in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md)
 
 - Determine what Azure policies are required by defining business, regulatory, and security requirements for Azure Arc-enabled servers.
 - Enforce tagging and implement [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
 - Understand and evaluate the [Azure Policy built-in definitions for Azure Arc-enabled servers](/azure/azure-arc/servers/policy-reference).
-- Understand and evaluate the built-in [Guest configuration policies](/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
-- Evaluate the need for creating [custom guest configuration policies](/azure/governance/policy/how-to/guest-configuration-create).
+- Understand and evaluate the built-in [machine configuration policies](/azure/governance/policy/samples/built-in-policies#guest-configuration) and [initiatives](/azure/governance/policy/samples/built-in-initiatives#guest-configuration).
+- Evaluate the need for creating [custom machine configuration policies](/azure/governance/policy/how-to/guest-configuration-create).
 - Define a monitoring and alerting policy that identifies [unhealthy Azure Arc-enabled servers](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 - Enable Azure Advisor alerts to identify Azure Arc-enabled servers with [outdated agents installed](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 - [Enforce organization standards and assess compliance at-scale](/azure/azure-arc/servers/security-controls-policy).
@@ -129,7 +129,7 @@ Review the best practices in [Designing your Azure Monitor Logs deployment](/azu
 Microsoft Defender for Cloud provides a unified security-management platform segmented as a [cloud security posture management (CSPM)](/cloud-app-security/tutorial-cloud-platform-security) and cloud workload protection platform (CWPP). To increase security on your hybrid landing zone, it's important to protect the data and assets hosted in Azure and elsewhere. [Microsoft Defender for servers](/azure/security-center/defender-for-servers-introduction) extend these capabilities to Azure Arc-enabled servers and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) provides [endpoint detection and response (EDR)](/mem/intune/protect/endpoint-security-edr-policy). To strengthen the security of your hybrid landing zone, consider the following:
 
 - Use Azure Arc-enabled servers to onboard hybrid resources in [Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-machines?pivots=azure-portal).
-- Implement an [Azure Policy guest configuration](/azure/azure-arc/servers/learn/tutorial-assign-policy-portal) to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
+- Implement an [Azure Policy machine configuration](/azure/azure-arc/servers/learn/tutorial-assign-policy-portal) to make sure all resources are compliant and its security data is collected into the Log Analytics workspaces.
 - Enable Microsoft Defender for all subscriptions and use Azure Policy to ensure compliance.
 - Use security information and event management integration with Microsoft Defender for Cloud and [Microsoft Sentinel](/azure/azure-arc/servers/scenario-onboard-azure-sentinel).
 - Protect your endpoints with Microsoft Defender for Cloud's integration with Microsoft Defender for Endpoint.
@@ -143,9 +143,7 @@ Centralizing logs drives reports that can be used as additional layers of securi
 
 With Azure Arc-enabled servers, you can manage your enterprise estate with centralized management and monitoring at-scale. More specifically, it provides alerts and recommendations to IT teams, with full operational visibility that includes managing the updates of your Windows and Linux VMs.
 
-Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Update Management in Azure Automation as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the Update Management configurations of all VMs, including your Azure Arc-enabled servers and [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) deployment to Azure Arc-enabled servers that have Windows versions that have reached end of support. For more information, see [Update Management overview](/azure/automation/update-management/overview).
-
-You can also use [Azure Automanage](/azure/automanage/automanage-virtual-machines), so there is no need to worry about the details of onboarding and maintaining best practices for Update Management on your Azure Arc resources.
+Assessing and updating your operating systems should be a part of your overall management strategy, to maintain security compliance with critical and security updates as they are released. Use Azure Update Manager as a long-term patching mechanism for both Azure and hybrid resources. Use Azure Policy to ensure and enforce the maintenance configurations of all VMs, including your Azure Arc-enabled servers and [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) deployment to Azure Arc-enabled servers that have Windows versions that have reached end of support. For more information, see [Azure Update Manager overview](/azure/update-manager/overview).
 
 ### Role-based access control (RBAC)
 
@@ -163,7 +161,7 @@ The Azure connected machine agent uses public key authentication to communicate 
 
 If stolen, the private key can be used on another server to communicate with the service and act as if it were the original server. This includes getting access to the system-assigned identity and any resources that identity has access to.
 
-The private key file is protected to only allow the hybrid Instance Metadata Service (himds) account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, and so on). On the operating system volume of your server. We recommend using Azure Policy guest configuration to [audit Windows or Linux machines](/azure/virtual-machines/policy-reference#microsoftcompute) that have the specified applications installed, such as the ones mentioned.
+The private key file is protected to only allow the Hybrid Instance Metadata Service (himds) account access to read it. To prevent offline attacks, we strongly recommend the use of full disk encryption (for example, BitLocker, dm-crypt, and so on). On the operating system volume of your server. We recommend using Azure Policy machine configuration to [audit Windows or Linux machines](/azure/virtual-machines/policy-reference#microsoftcompute) that have the specified applications installed, such as the ones mentioned.
 
 ## Next steps
 

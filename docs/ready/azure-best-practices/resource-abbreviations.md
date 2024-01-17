@@ -113,6 +113,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AKS cluster | `Microsoft.ContainerService/managedClusters` | `aks` |
+| AKS system node pool | `Microsoft.ContainerService/managedClusters/agentPools` (mode: `System`) | `npsystem` |
+| AKS user node pool | `Microsoft.ContainerService/managedClusters/agentPools` (mode: `User`) | `np` |
 | Container apps | `Microsoft.App/containerApps` | `ca` |
 | Container apps environment | `Microsoft.App/managedEnvironments` | `cae` |
 | Container registry | `Microsoft.ContainerRegistry/registries` | `cr` |
@@ -164,7 +166,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
-| Logic apps | `Microsoft.Logic/workflows` | `logic` |
+| Logic app | `Microsoft.Logic/workflows` | `logic` |
 | Service Bus namespace | `Microsoft.ServiceBus/namespaces` | `sbns` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt` |
