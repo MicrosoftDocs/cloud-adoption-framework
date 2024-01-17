@@ -164,7 +164,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | API management service instance | `Microsoft.ApiManagement/service` | `apim` |
 | Integration account | `Microsoft.Logic/integrationAccounts` | `ia` |
-| Logic apps | `Microsoft.Logic/workflows` | `logic` |
+| Logic app | `Microsoft.Logic/workflows` | `logic` |
 | Service Bus namespace | `Microsoft.ServiceBus/namespaces` | `sbns` |
 | Service Bus queue | `Microsoft.ServiceBus/namespaces/queues` | `sbq` |
 | Service Bus topic | `Microsoft.ServiceBus/namespaces/topics` | `sbt` |
