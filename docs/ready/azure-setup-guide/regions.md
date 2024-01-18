@@ -67,6 +67,8 @@ Ensure that you understand your own data residency requirements. Also, verify th
 
 Addressing data residency challenges is a significant motivation for organizations that operate on a global scale to migrate to the cloud. To maintain data sovereignty compliance, some organizations choose to deploy duplicate IT assets to cloud providers in their selected region.
 
+[Microsoft Cloud for Sovereignty](/industry/sovereignty/cloud-for-sovereignty) is a solution that enables governments to deploy workloads in the Microsoft Cloud while helping meet their specific sovereignty, compliance, security, and policy requirements. Microsoft Cloud for Sovereignty creates software boundaries in the cloud to establish the extra protection that governments require, using hardware-based confidentiality and encryption controls. For more information, see [Microsoft Cloud for Sovereignty capabilities](/industry/sovereignty/sovereignty-capabilities).
+
 ## Consider region proximity
 
 Users or services that need to access your Azure services might reside in various geographies globally. Similarly, your Azure services might need to consume services from external sources that are located in various geographies. Or your services might need to connect to your on-premises systems.
@@ -87,7 +89,7 @@ It's common for an organization to operate in multiple geographic regions. An or
 - **Optimize costs**. Different Azure resource types can have different prices in different regions. When you use tools like the [Pricing calculator](https://azure.microsoft.com/pricing/calculator/) and the [Azure service pricing information](https://azure.microsoft.com/pricing/), ensure that you select the correct region to view accurate pricing information. Sometimes you can reduce costs by deploying your development and test environments into a different region. But you need to ensure that the region provides the capabilities and services that you use in your production region.
 - **Scale beyond resource quotas**. Some Azure resources have [quotas and limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) that restrict the number of instances of a resource that you can create in each region under each subscription. To scale beyond these limits, you might need to use extra subscriptions or multiple regions.
 - **Avoid capacity restrictions.** Occasionally, regions have capacity restrictions applied to them. If you use multiple regions, it's probably going to be easier for you to find and use a region that supports the services you want to deploy. If you use a single region and need to expand to a second region just to avoid capacity restrictions, it might take more time for you to prepare and deploy your resources.
-- **Reduce complexity compared to multicloud deployments.** The complexity of managing multi-region deployments is typically less than multi-cloud deployments, and you can often gain similar availability and resiliency benefits. However, the choice between the two approaches depends on your organization's specific goals.
+- **Reduce complexity compared to multicloud deployments.** The complexity of managing multi-region deployments is typically less than multicloud deployments, and you can often gain similar availability and resiliency benefits. However, the choice between the two approaches depends on your organization's specific goals.
 
 When operating a cloud environment that's spread over multiple geographic regions, consider the following factors:
 
