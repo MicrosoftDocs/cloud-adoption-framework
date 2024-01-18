@@ -314,7 +314,7 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/identity-access.md
-          - name: Active Directory and Hybrid Identity
+          - name: Hybrid identity with Active Directory and Microsoft Entra ID
             href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
           - name: Landing zone identity and access
             href: ready/landing-zone/design-area/identity-access-landing-zones.md

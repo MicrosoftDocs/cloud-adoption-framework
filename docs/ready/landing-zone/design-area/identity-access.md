@@ -58,7 +58,7 @@ Identity and access management is boundary security in the public cloud. It must
 
 These articles examine design considerations and recommendations related to identity and access management in a cloud environment:
 
-- [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+- [Hybrid identity with Active Directory and Microsoft Entra ID](identity-access-active-directory-hybrid-identity.md)
 - [Landing zone identity and access management](identity-access-landing-zones.md)
 - [Application identity and access management](identity-access-application-access.md)
 
@@ -73,4 +73,4 @@ These articles examine design considerations and recommendations related to iden
 
 >
 > [!div class="nextstepaction"]
-> [Active Directory and Hybrid Identity](identity-access-active-directory-hybrid-identity.md)
+> [Hybrid identity with Active Directory and Microsoft Entra ID](identity-access-active-directory-hybrid-identity.md)
