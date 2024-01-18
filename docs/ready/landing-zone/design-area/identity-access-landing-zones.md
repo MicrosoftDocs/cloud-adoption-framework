@@ -61,7 +61,7 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Enable [Defender for Identity](/defender-for-identity/what-is) to protect user identities and make it harder to compromise user credentials. Defender for Identity identifies suspicious user activities, provides incident timelines, and can be used with Conditional Access to deny high-risk authentication attempts.
 
-- Use Microsoft Sentinel to provide more threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information, see [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
+- Use Microsoft Sentinel to provide more threat intelligence and investigative capability. Sentinel uses logs from Log Analytics, Microsoft Entra ID, Microsoft 365 and other services for proactive threat detection, investigation, and response. For more information on integrating Sentinel into your Azure environment, see [Design your Microsoft Sentinel workspace architecture](/azure/sentinel/design-your-workspace-architecture).
 
 - Use separate, cloud-only accounts for privileged roles. Don't use the same account for web browsing and e-mail access as you do for privileged administration. For more information, see [isolate privileged identities](/entra/architecture/protect-m365-from-on-premises-attacks#specific-security-recommendations). For roles with access to manage Azure resources, consider whether separate administrative accounts are required, or whether the use of [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) can be used to control administrative access.
 
@@ -110,9 +110,13 @@ The relationship between Microsoft Entra ID roles and Azure RBAC roles is shown 
 
 - Use [Azure RBAC](/azure/role-based-access-control/overview) to manage data plane access to resources, if possible. Examples of data plane endpoints are Azure Key Vault, a storage account, or an SQL Database.
 
+- Ensure that Log Analytics workspaces are configured with the appropriate permission model. When using a centralized Log Analytics workspace, use resource permissions to ensure that application teams have access to their own logs, but not to logs from other teams. For more information, see [Log Analytics workspace permissions](/azure/azure-monitor/logs/manage-access).
+
 - When delegating administrative responsibility to others, such as application teams, consider whether they require the full set of privileges, or only a subset. For example, the User Access Administrator or Role Based Access Control Administrator roles may be assigned to a user who needs to manage access to Azure resources, but not manage the resources themselves. To restrict the identities, identity types and roles to which they can delegate and assign Azure RBAC assignments to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview).
 
-- Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles) to provide predefined role assignments to Azure resources. Both general platform roles and specific Resource roles exist. When several role assignments are combined, review [multiple role assignments](/azure/role-based-access-control/overview#multiple-role-assignments) to understand the effects.
+- Consider whether builtin roles are suitable for your requirements. In many cases, assigning a combination of builtin roles to a security group provides the appropriate access for a user. In some cases, it is not possible to enforce the principle of least privilege using the built-in roles, as they may include permissions that exceed what your users require. For more granular control, consider creating a custom role that reflects the specific permissions required to carry out a job function.
+  - Many [Azure built-in roles](/azure/role-based-access-control/built-in-roles) exist to provide predefined role assignments at platform and resource level. When several role assignments are combined, review [multiple role assignments](/azure/role-based-access-control/overview#multiple-role-assignments) to understand the effects.
+  - The Azure Landing Zones Accelerator includes a number of custom roles for common administrative functions. These roles are designed to be used in conjunction with the Azure built-in roles.
 
    | Administrative function | Usage | Actions | NotActions |
    |---|---|---|---|

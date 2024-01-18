@@ -21,7 +21,7 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 Identity and access management is a core consideration in both platform and application landing zones. Under the design principle of subscription democratization, application owners should have autonomy to manage their own applications and resources with minimal intervention from the platform team. Security is the fundamental differentiator between landing zones in the same Azure organization, and by applying a robust identity and access management design, application landing zone isolation is naturally achieved.
 
-The platform team is responsible for the identity and access management foundation, including deploying and managing centralised directory services such as Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services. These services are consumed by administrators of application landing zones, and by users accessing applications.
+The platform team is responsible for the identity and access management foundation, including deploying and managing centralized directory services such as Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services. These services are consumed by administrators of application landing zones, and by users accessing applications.
 
 The application team is responsible for the identity and access management of their applications. This includes securing user access to applications, and between application components, such as Azure SQL Database, Azure Cosmos DB, and Azure Storage. In a well-implemented Landing Zones architecture, the application team consumes services provided by the platform team with minimal effort.
 
