@@ -17,17 +17,17 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Cloud adoption strategy evaluator](/assessments/?mode=pre-assessment&id=8fefc6d5-97ac-42b3-8e97-d82701e55bab) | Assess your cloud adoption strategy and get recommendations on building and advancing your cloud business case. |
-| [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions as you execute your cloud adoption strategy and plan. |
+| [Cloud adoption strategy evaluator](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) | Assess your cloud adoption strategy and get recommendations on building and advancing your cloud business case. |
+| [Cloud journey tracker](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
+| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document decisions as you execute your cloud adoption strategy and plan. |
 
 ## Plan
 
 | Resource | Description |
 |----------|-------------|
 | [Strategic Migration Assessment and Readiness Tool](/assessments/Strategic-Migration-Assessment/) | From business planning to training-to security and governance - prepare for your Microsoft Azure migration using the Strategic Migration Assessment and Readiness Tool (SMART). |
-| [Cloud journey tracker](/assessments/?id=cloud-journey-tracker&mode=pre-assessment) | Identify your cloud adoption path based on the needs of your business. |
-| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document your decisions as you execute your cloud adoption strategy and plan. |
+| [Cloud journey tracker](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
+| [Strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) | Document your decisions as you execute your cloud adoption strategy and plan. |
 | [Cloud adoption plan generator](../plan/template.md) | Standardize your processes using a template to deploy a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards). |
 | [Using the `Strategy-Plan-Ready-Govern` Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=strategyplan) | Standardize your processes - deploying a backlog to [Azure Boards](/azure/devops/boards/get-started/what-is-azure-boards) using a template. |
 
@@ -35,11 +35,10 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Readiness checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/ready/readiness-checklist.docx) | Use this checklist to prepare your environment for adoption. It includes preparations for your first migration landing zone, personalizing the blueprint, and expanding it. |
 | [Azure naming tool](https://github.com/mspnp/AzureNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
-| [Naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) | Document your decisions about naming and tagging standards to ensure consistency across resources and reduce onboarding time. |
-| [CAF Foundation blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
-| [CAF Migration landing zone blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision - and prepare to host your workloads that are migrated from on-premises environments into Azure. Read more on how to [deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md) blueprint. |
+| [Naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/ready/naming-and-tagging-conventions-tracking-template.xlsx) | Document your decisions about naming and tagging standards to ensure consistency across resources and reduce onboarding time. |
+| [CAF Foundation blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/main/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
+| [CAF Migration landing zone blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/main/ready/migration-landing-zone) | Provision - and prepare to host your workloads that are migrated from on-premises environments into Azure. Read more on how to [deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md) blueprint. |
 | [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your CAF Azure landing zone. |
 | [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Create your landing zone via Terraform - filtering the Terraform registry website to list requisite Cloud Adoption Framework modules. |
 | [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the CAF Azure landing zone. |
@@ -51,14 +50,14 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
-| [CAF Foundation blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
-| [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
-| [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. Focuses on cost management. |
-| [Deployment Acceleration discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/deployment-acceleration-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on deployment acceleration. |
-| [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/identity-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on identity requirements. |
-| [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on resource consistency. |
-| [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. Focuses on the security baseline. |
+| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
+| [CAF Foundation blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/main/ready/migration-landing-zone-governance) | Deploy your lightweight implementation of an initial governance foundation - providing practical experience with governance tools in Azure. |
+| [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
+| [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. Focuses on cost management. |
+| [Deployment Acceleration discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/deployment-acceleration-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on deployment acceleration. |
+| [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/identity-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on identity requirements. |
+| [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on resource consistency. |
+| [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. Focuses on the security baseline. |
 | [Azure Security Benchmark](/security/benchmark/azure/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
 | [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities - such as Azure Policy, Azure role-based access control (Azure RBAC), and Azure Blueprints. From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
 | [Azure Governance Visualizer accelerator](https://aka.ms/alz/azgovviz/accelerator) | The Azure Governance Visualizer accelerator speeds up the adoption and deployment of the Azure Governance Visualizer script into your environment. |
@@ -69,7 +68,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Datacenter migration discovery checklist](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/migrate/datacenter-migration-discovery-checklist.docx) | Make use of this checklist to help you to identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
+| [Datacenter migration discovery checklist](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/migrate/datacenter-migration-discovery-checklist.docx) | Make use of this checklist to help you to identify workloads, servers, and other assets in your datacenter. Use this information to help plan your migration.
 | [Migration templates](https://aka.ms/adopt/plan/generator) | The Azure DevOps generator includes several templates that you can use to help streamline your projects. Templates include [Azure Virtual Desktop](https://azuredevopsdemogenerator.azurewebsites.net/?name=wvdmigration), [server migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=servermigration), [SQL migration](https://azuredevopsdemogenerator.azurewebsites.net/?name=sqlmigration), and [AKS deployments](https://azuredevopsdemogenerator.azurewebsites.net/?name=cafaks).
 
 ## Innovate
@@ -87,15 +86,15 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 
 | Resource | Description |
 |----------|-------------|
-| [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) | This online assessment helps you to define workload-specific architectures and options across your operations. |
-| [Best practices source code](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code accelerates the adoption of best practices for Azure server management services. Use it to quickly enable operations management and establish an operations baseline. |
-| [Operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud. Facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
+| [Microsoft Azure Well-Architected Review](/assessments/azure-architecture-review/) | This online assessment helps you to define workload-specific architectures and options across your operations. |
+| [Best practices source code](https://github.com/microsoft/CloudAdoptionFramework/tree/main/manage/Automation-Best-Practices) | This deployable source code accelerates the adoption of best practices for Azure server management services. Use it to quickly enable operations management and establish an operations baseline. |
+| [Operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud. Facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
 
 ## Organize
 
 | Resource | Description |
 |----------|-------------|
-| [Cross-team responsible, accountable, consulted, and informed (RACI) diagram](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) | Download - and personalize the RACI spreadsheet template to track your decisions regarding organizational structure over time. |
+| [Cross-team responsible, accountable, consulted, and informed (RACI) diagram](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/organize/raci-template.xlsx) | Download - and personalize the RACI spreadsheet template to track your decisions regarding organizational structure over time. |
 
 ## Secure
 
