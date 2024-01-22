@@ -1,47 +1,109 @@
 ---
-title: Governance in the Microsoft Cloud Adoption Framework for Azure
-description: Use the Cloud Adoption Framework for Azure to learn to assess existing policies, build an initial governance foundation, and iteratively add governance tools.
+title: Cloud governance
+description: Learn how to establish governance in the cloud
 author: martinekuan
 ms.author: martinek
-ms.date: 09/08/2021
+ms.date: 04/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Governance in the Microsoft Cloud Adoption Framework for Azure
+# Overview
 
-Putting a business in the cloud creates new paradigms for the technologies that support that business. These new paradigms change how those technologies are adopted, managed, and governed. When you can delete and rebuild an entire virtual datacenter with a line of code that's executed by an unattended process, it's time to rethink traditional approaches. This reasoning is especially true for governance.
+Governance refers to the establishment of policies within an organization to minimize risk.
 
-Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. The level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and the nature of the digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. Use the following exercises to help you start building your initial governance foundation:
+## Why govern?
 
-1. [Establish your methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution.
+Governance acts as a system of protective barriers, ensuring risk management across all operations. Its primary function is to create a balanced framework that allows for autonomous decision-making within safe limits. It safeguards the organization against both accidental and deliberate internal or external threats.
 
-1. [Use the governance benchmark tool](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework.
+## How to govern
 
-1. [Establish an initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).
+This is a high-level process for review. For more information on each step in the process, see the content below.
 
-1. [Improve your initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state.
+![Cloud governance process](./_images/governance-process.png)
 
-## Goal of this content
+**!!!!!!!!!!!!!!!!!!!!!!!!!!!<BR>ANY COMMITS BELOW THIS GRAPHIC MIGHT NOT BE PRESERVED. <BR>!!!!!!!!!!!!!!!!!!!!!!!!!**
 
-The governance guide content serves two purposes:
+### Build a governance team
 
-- Provides examples of actionable governance guides that represent common experiences that customers often find. Each example encapsulates business risks, corporate policies for risk mitigation, and design guidance for implementing technical solutions. Although the design guidance is specific to Azure, you can apply other content in the Cloud Adoption Framework documentation in a cloud-agnostic or multicloud approach.
+Establishing a specialized team within IT to develop and manage governance policies. This team ensures that governance policies are effectively aligned with both business objectives and technological capabilities, fostering a balanced approach to risk and compliance.
 
-- Helps you create personalized governance solutions that meet various business needs. These needs include the governance of multiple public clouds through detailed guidance on the development of corporate policies, processes, and tooling.
+- **Role**: Define and continually refine governance policies.
 
-This content is intended for use by the cloud governance team. It's also relevant to cloud architects who need to develop a strong foundation in cloud governance.
+- **Composition**: Select a smaller, dedicated group from IT with strong business connections.
 
-## Intended audience
+- **Scope**: Responsibilities extend across various areas like finance, security, identity, DevOps, compliance. Utilize a RACI matrix to clearly define roles and responsibilities within the governance team.
 
-The content in the Cloud Adoption Framework documentation affects the business, technology, and culture of enterprises. Content in the governance guides interacts heavily with IT security, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects that use this guidance. Facilitation with these teams might be a one-time effort or ongoing.
+- **Functions**: Drive risk assessment, produce governance policies, publish, and train personnel. Help align cloud environment with IT strategy.
 
-The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect advance the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
+- **Authority**: Empowered to speak and act within their scope; non-compliance should have consequences.
 
-Each section of the Cloud Adoption Framework represents a different specialization of the cloud architect role. This governance section is designed for cloud architects who want to mitigate or reduce technical risks. Some cloud providers refer to these specialists as *cloud custodians*, but we prefer *cloud guardians* or, collectively, the *cloud governance team*. The actionable governance guides show how the composition and role of the cloud governance team might change over time.
+- **Relationships**: Maintain good standing with both business and workload teams, including platform and individual workload teams, to ensure a balanced governance perspective.
 
-## Use this guide
+### Quantify Risk
 
-Read the Govern methodology content from start to finish to help you develop a robust cloud governance strategy in parallel with cloud implementation. The guidance walks you through the theory and implementation of this strategy.
+Assessing and quantifying the potential risks in the cloud environment at different organizational levels. Understanding the scope and magnitude of risks is crucial for developing governance policies that adequately protect the organization without hindering its operational efficiency.
 
-For an overview on the theory and quick access to Azure implementation, see the [cloud governance guides overview](./guides/index.md). By using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts.
+- **Governance Vision**: Base it on risk tolerance and compliance requirements.
+
+- **Risk Assessment**: Conduct comprehensive risk assessments at various scopes (workload, platform, organizational).
+
+- **Responsibility**: Assign individuals or teams for governance at different levels, including cloud enrollment.
+
+- **Understanding Risks**: Evaluate the cost of risks and value of mitigations; understand the likelihood and impact of risks.
+
+- **Interviews**: Engage with different units outside IT to build a shared vision of risk.
+
+- **Goal Setting**: Define realistic targets and understand the trade-offs between agility and control.
+
+### Document Governance Policies
+
+Formally recording the governance policies, including what is permissible and what is not within the cloud environment. Clear documentation provides a definitive reference for all stakeholders, ensuring consistency and clarity in governance and compliance efforts.
+
+- **Nature of Governance**: Balance between being too restrictive and too lenient.
+
+- **Policy Documentation**:
+
+  1. Clearly document what is allowed and what is not (must, must not, should, may, may not). Use thorough and clear documentation for effective governance.
+
+  1. Governance policies can help determine which functions should be centralized. If a certain principle is applicable to most or all teams, it might be beneficial to align that principle with a centralized function.
+
+      1. For instance, when communicating with on-premises systems, the governance policy states that the use of an ExpressRoute is mandatory. This task is beyond the scope of the workload team and should be managed by a dedicated central networking team.
+
+      1. Another example, if several workloads are independently tasked with implementing a firewall, this repetitive requirement becomes a prime candidate for centralization. Recognizing such patterns, governance should evolve to advocate for unified, organization-wide solutions. In this case, updating the policy from a generic 'each workload must have a firewall' to a more centralized 'all workloads must utilize the corporate-approved firewall' not only ensures consistency in security measures but also streamlines operations and potentially reduces costs
+
+- **Key Areas**: Focus on identity, security, compliance, and cost.
+
+- **Responsibility and Enforcement**: Define responsibilities for adherence and reporting violations.
+
+- **Practical Approach**: Aim for evergreen policies that are feasible and value-focused. You need policies to be flexible enough to accommodate both automation and manual control.
+
+- **Influence on Architecture and Development**: Documented policies should shape system/workload architecture and development practices, including software hosting and library usage.
+
+- **Audit and Control**: Start with audit governance and escalate to blocking only for non-negotiable issues.
+
+### Measure and Report on Governance
+
+Immediately after documenting governance policies, you need to implement mechanisms to monitor compliance with governance policies and report on their effectiveness. This involves ensuring that you are governing what you are looking at, reporting on the progress of policy adherence, and building reports to track the delta between where you want to be and where you are.
+
+- **Focus of Reporting**: Report only on areas that are being monitored and governed.
+
+- **Implementation and Measurement**: Develop reporting mechanisms to track policy adherence and progress. Incorporate Key Performance Indicators (KPIs) that are agreed upon by both business and IT. Ensure that the right aspects are being monitored, such as cost reduction or development speed.
+
+- **Communication**: Share policies widely and ensure educational components are included for better compliance.
+
+- **Tracking Over Time**: Monitor and track governance effectiveness and progress over time.
+
+### Implement governance
+
+Apply the established governance policies in the cloud environment through practical implementation strategies. This step is where you start making progress toward where you want to be. With governance monitoring in place, you can track your progress. Effective implementation ensures that governance policies are not just theoretical but actively guide and control the organization's cloud activities, enhancing security, compliance, and operational integrity.
+
+- **Tools and Features**: Utilize platform features (e.g., Azure policies) for enforcement and scaling. Implement templates and policies for automation to ensure continuity and control in governance.
+
+- **Cost-Effective Implementation**: Find efficient ways to introduce governance.
+
+- **Negotiation and Goals**: Determine implementation areas through negotiation; aim to reduce open issues.
+
+- **Feedback Mechanism**: Establish channels for receiving feedback and maintaining dialogue with the organization..
+
+- **Incremental Rollout**: Introduce governance gradually, starting with audit measures before moving to more restrictive controls.
