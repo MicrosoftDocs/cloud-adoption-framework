@@ -8,26 +8,34 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Build a cloud governance team
+# Build a Cloud Governance Team
 
-Establish a specialized team within IT to develop and manage governance policies. This team ensures that governance policies are effectively aligned with both business objectives and technological capabilities, fostering a balanced approach to risk and compliance.
+Creating a cloud governance team is essential for effective management of cloud environments. Follow this step-by-step guide to establish your team.
 
-## Process to build a governance team
+## Select the Members of the Team
 
-Overview of the process to build a governance team.
+- **Identify Key Skills:** Look for individuals in IT with technical expertise and business acumen. Skills in cloud technologies, security, compliance, and finance are key.
+- **Seek Business Connectors:** Choose members with relationships with business decision-makers.
+- **Diverse Backgrounds:** Include members from various backgrounds like DevOps, security, compliance, and finance.
+- **Size of the Team:** Aim for a small, effective team.
 
-### Select the members of the team
+## Define the Scope of the Team
 
-Select a smaller, dedicated group from IT with strong business connections. The members need to have connections with business decision makers and workload teams (platform and application) to ensure a balanced governance perspective.
+- **Identify Key Areas:** Determine areas like finance, security, identity management, DevOps, and compliance.
+- **Use a RACI Matrix:** Develop a RACI Matrix to clarify roles and responsibilities.
+- **Set Clear Boundaries:** Define the team’s scope to avoid overlaps or gaps.
 
-### Define the scope of the team
+## Define the Authority of the Team
 
-Responsibilities extend across various areas like finance, security, identity, DevOps, compliance. Utilize a RACI matrix to clearly define roles and responsibilities within the governance team.
+- **Establish Authority Levels:** Define the team's decision-making powers and enforcement capabilities.
+- **Create Enforcement Policies:** Develop transparent policies for non-compliance.
+- **Communicate Authority:** Ensure the organization understands the team's authority.
 
-### Define the authority of the team
+## Define the Team's Functions
 
-Empowered to speak and act within their scope. Non-compliance should have consequences that this team can enforce.
-
-### Define the team's functions
-
-The purpose is to define and continually refine governance policies. Drive risk assessment, produce governance policies, publish, and train personnel. Help align cloud environment with IT strategy.
+- **Policy Development:** Task the team with creating and updating governance policies.
+- **Risk Assessment:** Conduct regular risk assessments.
+- **Training and Communication:** Develop training programs for adherence to governance policies.
+- **Alignment with IT Strategy:** Ensure policies align with the broader IT strategy.
+- **Stakeholder Engagement:** Engage with stakeholders across the organization for policy buy-in.
+- **Metrics and Reporting:** Establish and report on governance effectiveness metrics.
