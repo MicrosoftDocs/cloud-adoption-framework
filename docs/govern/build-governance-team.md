@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Build a Cloud Governance Team
+# Build a cloud governance team
 
 Creating a cloud governance team is essential for effective management of cloud environments. Follow this step-by-step guide to establish your team.
 
