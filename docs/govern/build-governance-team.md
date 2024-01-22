@@ -14,7 +14,7 @@ Establish a specialized team within IT to develop and manage governance policies
 
 - **Define the purpose**: The purpose is to define and continually refine governance policies.
 
-- **Select the member**: Select a smaller, dedicated group from IT with strong business connections. The members need to have connections with business decision makers and workload teams (platform and application) to ensure a balanced governance perspective.
+- **Select the members**: Select a smaller, dedicated group from IT with strong business connections. The members need to have connections with business decision makers and workload teams (platform and application) to ensure a balanced governance perspective.
 
 - **Define the scope**: Responsibilities extend across various areas like finance, security, identity, DevOps, compliance. Utilize a RACI matrix to clearly define roles and responsibilities within the governance team.
 
