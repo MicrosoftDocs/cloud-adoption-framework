@@ -24,6 +24,10 @@ On top of these environmental controls, the workload team should consider:
 - Redundancy of workload-specific architecture
 - Processes for monitoring and notification beyond what is provided by the cloud operations teams
 
+### Hybrid ExpressRoute Connectivity
+
+In order to support critical HPC workloads, we have the latest recommendation for the ExpressRoute High Availability (ER HA). This configuration ensures that the customer has connectivity to Azure in the event of an ER outage in a single region. Even in a single site high availability setup where the customer has redundant ExpressRoute connections, this does not protect the customer against single site downtime. We recommend for mission critical workload that the customer enable two ExpressRoute circuits in two different ER edge locations to provide maximum redundancy. This setup requires provisioning two ER circuits in the Azure Portal in two different ER edge site locations, then both ExpressRoute circuits will connect to the same hub virtual network in Azure. It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
+
 ## Security
 
 Apply security principles to your HPC environment to provide assurances against deliberate attacks and abuse of your valuable data and systems. Look into securing your user operating system images, user access, and follow Batch and CycleCloud security guidelines. For more suggestions, see [Principles of the security pillar](/azure/architecture/framework/security/security-principles).
