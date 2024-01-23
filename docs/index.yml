@@ -34,7 +34,7 @@ highlightedContent:
       url: ./resources/tools-templates.md
 
     # Card
-    - title: Find out what's new
+    - title: What's new
       itemType: whats-new
       url: ./get-started/whats-new.md
 
