@@ -1,3 +1,76 @@
 - name: Azure
   tocHref: /azure/
   topicHref: /azure/index
+  items:
+  - name: Cloud Adoption Framework
+    tocHref: /azure/cloud-adoption-framework/
+    topicHref: /azure/cloud-adoption-framework
+    items:
+    - name: Strategy
+      tocHref: /azure/cloud-adoption-framework/strategy/
+      topicHref: /azure/cloud-adoption-framework/strategy
+    - name: Plan
+      tocHref: /azure/cloud-adoption-framework/plan/
+      topicHref: /azure/cloud-adoption-framework/plan
+    - name: Ready
+      tocHref: /azure/cloud-adoption-framework/ready/
+      topicHref: /azure/cloud-adoption-framework/ready
+    - name: Adopt
+      tocHref: /azure/cloud-adoption-framework/adopt/
+      topicHref: /azure/cloud-adoption-framework/adopt
+      items:
+      - name: Migrate
+        tocHref: /azure/cloud-adoption-framework/migrate/
+        topicHref: /azure/cloud-adoption-framework/migrate
+      - name: Modernize
+        tocHref: /azure/cloud-adoption-framework/modernize/
+        topicHref: /azure/cloud-adoption-framework/modernize
+      - name: Innovate
+        tocHref: /azure/cloud-adoption-framework/innovate/
+        topicHref: /azure/cloud-adoption-framework/innovate
+    - name: Govern
+      tocHref: /azure/cloud-adoption-framework/govern/
+      topicHref: /azure/cloud-adoption-framework/govern
+    - name: Organize
+      tocHref: /azure/cloud-adoption-framework/organize/
+      topicHref: /azure/cloud-adoption-framework/organize
+    - name: Manage
+      tocHref: /azure/cloud-adoption-framework/manage/
+      topicHref: /azure/cloud-adoption-framework/manage
+    - name: Secure
+      tocHref: /azure/cloud-adoption-framework/secure/
+      topicHref: /azure/cloud-adoption-framework/secure
+    - name: Scenarios
+      tocHref: /azure/cloud-adoption-framework/scenarios/
+      topicHref: /azure/cloud-adoption-framework/scenarios/overview
+      items:
+      - name: Azure VMware Solution
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
+      - name: Cloud-scale analytics
+        tocHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/
+        topicHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics
+      - name: High-performance computing (HPC)
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-hpc/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-hpc
+      - name: Hybrid and multicloud
+        tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
+        topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
+      - name: Modern application platform
+        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
+        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
+      - name: Oracle IaaS
+        tocHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas/
+        topicHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas
+      - name: SAP
+        tocHref: /azure/cloud-adoption-framework/scenarios/sap/
+        topicHref: /azure/cloud-adoption-framework/scenarios/sap
+      - name: Azure Virtual Desktop
+        tocHref: /azure/cloud-adoption-framework/scenarios/wvd/
+        topicHref: /azure/cloud-adoption-framework/scenarios/wvd
+      - name: Retail industry
+        tocHref: /azure/cloud-adoption-framework/scenarios/industry/retail/
+        topicHref: /azure/cloud-adoption-framework/scenarios/industry/retail
+      - name: Defense
+        tocHref: /azure/cloud-adoption-framework/scenarios/defense/
+        topicHref: /azure/cloud-adoption-framework/scenarios/defense
