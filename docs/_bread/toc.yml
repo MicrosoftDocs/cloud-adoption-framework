@@ -32,4 +32,35 @@
       topicHref: /azure/cloud-adoption-framework/secure
     - name: Scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
-      topicHref: /azure/cloud-adoption-framework/scenarios
+      topicHref: /azure/cloud-adoption-framework/scenarios/overview
+      items:
+      - name: Azure VMware Solution
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
+      - name: Cloud-scale analytics
+        tocHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/
+        topicHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics
+      - name: High-performance computing (HPC)
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-hpc/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-hpc
+      - name: Hybrid and multicloud
+        tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
+        topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
+      - name: Modern application platform
+        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
+        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
+      - name: Oracle IaaS
+        tocHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas/
+        topicHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas
+      - name: SAP
+        tocHref: /azure/cloud-adoption-framework/scenarios/sap/
+        topicHref: /azure/cloud-adoption-framework/scenarios/sap
+      - name: Azure Virtual Desktop
+        tocHref: /azure/cloud-adoption-framework/scenarios/wvd/
+        topicHref: /azure/cloud-adoption-framework/scenarios/wvd
+      - name: Retail industry
+        tocHref: /azure/cloud-adoption-framework/scenarios/industry/retail/
+        topicHref: /azure/cloud-adoption-framework/scenarios/industry/retail
+      - name: Defense
+        tocHref: /azure/cloud-adoption-framework/scenarios/defense/
+        topicHref: /azure/cloud-adoption-framework/scenarios/defense
