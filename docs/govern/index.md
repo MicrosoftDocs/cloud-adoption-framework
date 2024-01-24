@@ -1,8 +1,8 @@
 ---
 title: Cloud governance
 description: Learn how to establish governance in the cloud
-author: martinekuan
-ms.author: martinek
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 04/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
