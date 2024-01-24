@@ -1,6 +1,6 @@
 ---
-title: Implement cloud governance in the cloud
-description: Learn how to implement governance in the cloud
+title: Apply governance guardrails in the cloud
+description: Learn how to apply governance guardrails in the cloud
 author: stephen-sumner
 ms.author: ssumenr
 ms.date: 04/01/2024
@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Implement governance in the cloud
+# Apply governance guardrails in the cloud
 
-Apply the established governance policies in the cloud environment through practical implementation strategies. This step is where you start making progress toward where you want to be. With governance monitoring in place, you can track your progress. Effective implementation ensures that governance policies are not just theoretical but actively guide and control the organization's cloud activities, enhancing security, compliance, and operational integrity.
+Apply guardrails to enforce the governance policies in the cloud environment through practical implementation strategies. This step is where you start making progress toward where you want to be. With governance monitoring in place, you can track your progress. Effective implementation ensures that governance policies are not just theoretical but actively guide and control the organization's cloud activities, enhancing security, compliance, and operational integrity.
 
 - **Tools and Features**: Utilize platform features (e.g., Azure policies) for enforcement and scaling. Implement templates and policies for automation to ensure continuity and control in governance.
 
