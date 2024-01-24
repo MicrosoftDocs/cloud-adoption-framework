@@ -30,7 +30,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Bot service | `Microsoft.BotService/botServices` (kind: `azurebot`) | `bot` |
 | Computer vision | `Microsoft.CognitiveServices/accounts` (kind: `ComputerVision`) | `cv` |
 | Content moderator | `Microsoft.CognitiveServices/accounts` (kind: `ContentModerator`) | `cm` |
-| Content safety | `Microsoft.CognitiveServices/accounts` (kind: `ContentSaftey`) | `cs` |
+| Content safety | `Microsoft.CognitiveServices/accounts` (kind: `ContentSafety`) | `cs` |
 | Custom vision (prediction) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Prediction`) | `cstv` |
 | Custom vision (training) | `Microsoft.CognitiveServices/accounts` (kind: `CustomVision.Training`) | `cstvt` |
 | Document intelligence | `Microsoft.CognitiveServices/accounts` (kind: `FormRecognizer`) | `di` |
