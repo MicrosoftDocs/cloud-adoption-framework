@@ -1155,6 +1155,20 @@ items:
     items:
     - name: Overview
       href: govern/index.md
+    - name: Checklist
+      href: govern/checklist.md
+    - name: Guidance
+      items:
+      - name: Build governance team
+        href: govern/build-governance-team.md
+      - name: Quantify governance risk
+        href: govern/quantify-risk.md
+      - name: Document governance policies
+        href: govern/document-governance-policies
+      - name: Implement governance
+        href: govern/implement-governance.md
+      - name: Measure governance
+        href: govern/measure-governance.md
 
     - name: Old TOC
       items: 
