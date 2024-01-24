@@ -27,19 +27,42 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 | Corporate strategy | Input | Build a governance team | ADD DESCRIPTION |
 | Governance team charter | Output | Build a governance team | ADD DESCRIPTION |
 
-
 ## Table to fill out
 
 | Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
 | --- | --- | --- | --- |
 | ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD X for input | ADD govern phase | ADD DESCRIPTION |
 | ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD X for input | ADD govern phase | ADD DESCRIPTION |
 | ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD X for input | ADD govern phase | ADD DESCRIPTION |
 | ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD X for input | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
 
 ## Prerequisites
 
