@@ -23,9 +23,9 @@ For the initial cloud adoption, a typical organization retires 35% of its applic
 
 We recommend retiring any workloads your organization doesn't need. You'll need to do some discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.
 
-## Replace (15%)
+## Replace (10%)
 
-Most organizations replace about 15% of their applications with software as a service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
+Most organizations replace about 10% of their applications with software as a service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
@@ -36,7 +36,14 @@ Most organizations replace about 15% of their applications with software as a se
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
 |Industry <br>verticals|[Third-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
 
-## Migrate (rehost or replatform) (50%)
+## Rearchitect or Rebuild (5%)
+
+For the applications that have an intrisic business-value and distinctive market value for your organization, that are not available as SaaS or low-code and rehosting or replatforming would be a sub-optimal solution, you should consider rearchitecting or rebuilding them. This is a more complex process, but it can be worth the effort for this kind of applications to reap the true benefits of the cloud.
+This approach could also bring in new capabilities powered by Generative AI solutions such as make predictions on customer's needs and automate business processes.
+
+The goal is to optimize the application for the cloud and take advantage of cloud-native scalability, reliability, and security.
+
+## Rehost or Replatform (50%)
 
 A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because they're more complex or more important, and only the last 5% require extra planning to execute.
 
