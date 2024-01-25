@@ -55,11 +55,18 @@ If you deploy extensions on your Azure Arc-enabled servers, every extension conn
 
 #### Private Link
 
-Azure Arc-enabled servers let you deploy VM extensions to centrally manage your servers from Azure. These extensions connect to other resources such as Log Analytics workspaces, automation accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access. All of the data is kept private, preventing data exfiltration. The traffic between Azure Arc-enabled servers and Azure services will go through a Site-to-Site VPN tunnel or an ExpressRoute with private peering.
+By using Azure Arc-enabled server with Arc Private Link Scope, you can ensure that all traffic from your Arc agents remains on your network. This configuration has security advantages: the traffic doesn't traverse the Internet and you do not need to open as many outbound exceptions on your datacenter firewall. However, using Private Link imposes a number of management challenges while increasing overall complexity and cost, especially for global organizations. Some of these challenges are:
+
+- The choice to use Arc Private Link Scopes encompasses all Arc clients under the same DNS scope. You can't have some Arc clients using Private Endpoints and some using public when they share a DNS server (without workarounds like [DNS Policies](/windows-server/networking/dns/deploy/dns-policies-overview))
+- Your Arc clients either all Private Endpoints in a primary region or DNS needs to be configured so that the same Private Endpoint names resolve to different IP addresses (for example, using [selectively replicated DNS partitions for Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition)). If you use the same Private Endpoints for all your Arc clients, you need to be able to route traffic from all of your networks to the Private Endpoints.
+- Additional steps are required to ensure Private Endpoints are also used for any Azure services accessed by Extensions software components deployed using Arc, such as Log Analytics workspaces, Automation Accounts, Key Vault or Azure Storage
+- Connectivity to Azure Entra ID uses public endpoint, so clients still require some internet access
+
+Because of these challenges, we recommend evaluating whether Private Link is a requirement for your Arc implementation. Consider that with public endpoints, the traffic will be encrypted and, depending on how to use Arc for Servers, can be limited to management and metadata traffic. Security concerns can be alleviated by implementing [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
+
+Review the [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) associated with Private Link support for Arc for more details.
 
 [![Diagram that shows Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.png)](./media/arc-enabled-servers-private-link-topology.png#lightbox)
-
-This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of the Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
 > [!TIP]
 > Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.
