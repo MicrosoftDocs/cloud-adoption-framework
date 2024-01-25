@@ -1,8 +1,8 @@
 ---
 title: Cloud governance
 description: Learn how to establish governance in the cloud
-author: martinekuan
-ms.author: martinek
+author: stephen-sumner
+ms.author: ssumner
 ms.date: 04/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
@@ -10,7 +10,10 @@ ms.custom: internal, UpdateFrequency2
 
 # Overview
 
-Definition of governance: Governance in an organization serves to define its objectives, shape the organization’s culture, ensure compliance with laws, regulations, and standards, hold management accountable for their actions and decisions, and provide a structure for decision-making and control. 
+ADD CONTENT TO THIS FILE WHERE APPROPRIATE
+
+Definition of governance: Governance refers to the establishment of policies within an organization to minimize risk. Governance in an organization serves to define its objectives, shape the organization’s culture, ensure compliance with laws, regulations, and standards, hold management accountable for their actions and decisions, and provide a structure for decision-making and control. 
+
 
 ## Why govern?
 
@@ -45,10 +48,54 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 Usual Outcome of a Governance model:
 - Written Governance (Collection of policies) as items availables in (e.g. Wikis, Azure DevOps) for all Stakeholder
 - Technical controls (e.g. Azure Policies)
-  
+
 ## How to govern
 
-![Cloud governance process](./_images/governance-process.png)
+![Cloud governance process](./_images/govern-process.svg)
 
+## Example table
+
+| Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
+| --- | --- | --- | --- |
+| Corporate strategy | Input | Build a governance team | ADD DESCRIPTION |
+| Governance team charter | Output | Build a governance team | ADD DESCRIPTION |
+
+## Table to fill out
+
+| Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
+| --- | --- | --- | --- |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
 
 ## Prerequisites
+
