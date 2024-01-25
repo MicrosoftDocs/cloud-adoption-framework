@@ -6,30 +6,6 @@
     tocHref: /azure/cloud-adoption-framework/
     topicHref: /azure/cloud-adoption-framework
     items:
-    - name: Strategy
-      tocHref: /azure/cloud-adoption-framework/strategy/
-      topicHref: /azure/cloud-adoption-framework/strategy
-    - name: Plan
-      tocHref: /azure/cloud-adoption-framework/plan/
-      topicHref: /azure/cloud-adoption-framework/plan
-    - name: Ready
-      tocHref: /azure/cloud-adoption-framework/ready/
-      topicHref: /azure/cloud-adoption-framework/ready
-    - name: Adopt
-      tocHref: /azure/cloud-adoption-framework/adopt/
-      topicHref: /azure/cloud-adoption-framework/adopt
-    - name: Govern
-      tocHref: /azure/cloud-adoption-framework/govern/
-      topicHref: /azure/cloud-adoption-framework/govern
-    - name: Organize
-      tocHref: /azure/cloud-adoption-framework/organize/
-      topicHref: /azure/cloud-adoption-framework/organize
-    - name: Manage
-      tocHref: /azure/cloud-adoption-framework/manage/
-      topicHref: /azure/cloud-adoption-framework/manage
-    - name: Secure
-      tocHref: /azure/cloud-adoption-framework/secure/
-      topicHref: /azure/cloud-adoption-framework/secure
     - name: Scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
       topicHref: /azure/cloud-adoption-framework/scenarios/overview
@@ -64,3 +40,30 @@
       - name: Defense
         tocHref: /azure/cloud-adoption-framework/scenarios/defense/
         topicHref: /azure/cloud-adoption-framework/scenarios/defense
+    - name: Get started
+      tocHref: /azure/cloud-adoption-framework/get-started/
+      topicHref: /azure/cloud-adoption-framework/get-started
+    - name: Strategy
+      tocHref: /azure/cloud-adoption-framework/strategy/
+      topicHref: /azure/cloud-adoption-framework/strategy
+    - name: Plan
+      tocHref: /azure/cloud-adoption-framework/plan/
+      topicHref: /azure/cloud-adoption-framework/plan
+    - name: Ready
+      tocHref: /azure/cloud-adoption-framework/ready/
+      topicHref: /azure/cloud-adoption-framework/ready
+    - name: Adopt
+      tocHref: /azure/cloud-adoption-framework/adopt/
+      topicHref: /azure/cloud-adoption-framework/adopt
+    - name: Govern
+      tocHref: /azure/cloud-adoption-framework/govern/
+      topicHref: /azure/cloud-adoption-framework/govern
+    - name: Manage
+      tocHref: /azure/cloud-adoption-framework/manage/
+      topicHref: /azure/cloud-adoption-framework/manage
+    - name: Secure
+      tocHref: /azure/cloud-adoption-framework/secure/
+      topicHref: /azure/cloud-adoption-framework/secure
+    - name: Organize
+      tocHref: /azure/cloud-adoption-framework/organize/
+      topicHref: /azure/cloud-adoption-framework/organize
