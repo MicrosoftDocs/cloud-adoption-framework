@@ -64,38 +64,43 @@ Usual Outcome of a Governance model:
 
 | Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
 | --- | --- | --- | --- |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
-| ADD NAME | ADD input/output | ADD govern phase | ADD DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+| add name | add input/output | add govern phase | add DESCRIPTION |
+
+
+
 
 ## Prerequisites
 
