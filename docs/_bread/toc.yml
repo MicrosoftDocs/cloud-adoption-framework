@@ -40,13 +40,13 @@
       - name: Cloud-scale analytics
         tocHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/
         topicHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics
-      - name: High-performance computing (HPC)
+      - name: HPC
         tocHref: /azure/cloud-adoption-framework/scenarios/azure-hpc/
         topicHref: /azure/cloud-adoption-framework/scenarios/azure-hpc
       - name: Hybrid and multicloud
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
-      - name: Modern application platform
+      - name: Modern app platform
         tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
         topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
       - name: Oracle IaaS
@@ -55,7 +55,7 @@
       - name: SAP
         tocHref: /azure/cloud-adoption-framework/scenarios/sap/
         topicHref: /azure/cloud-adoption-framework/scenarios/sap
-      - name: Azure Virtual Desktop
+      - name: AVD
         tocHref: /azure/cloud-adoption-framework/scenarios/wvd/
         topicHref: /azure/cloud-adoption-framework/scenarios/wvd
       - name: Retail industry
