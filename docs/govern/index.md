@@ -78,18 +78,6 @@ Usual Outcome of a Governance model:
 | Cloud governance compliance reports | output | Measure governance | The cloud governance team should create and evaluate compliance reports to identify adherence and potential deviations to the organization’s stated cloud policies and procedures. The results of these reports will be used to identify and quantify new risks, starting a new iteration of cloud governance processes |
 | Governance, risk and vulnerability assessments performed | output | Measure governance | Once assessments are executed they provide a comprehensive understanding of the organization's cloud environment. This enables the identification of new/evolving risks and vulnerabilities, risk mitigation strategies, improved security posture, compliance assurance and continuous improvement. |
 | Governance workbook | output | Measure governance | The governance workbook is an Azure Monitor workbook that provides a comprehensive overview of the governance posture of your Azure environment. It includes the standard metrics aligned with the Cloud Adoption Framework for all disciplines and has the capability to identify and apply recommendations to address non-compliant resources. |
-| add name | output | Measure governance | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
 
 
 
