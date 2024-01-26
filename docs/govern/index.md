@@ -53,14 +53,7 @@ Usual Outcome of a Governance model:
 
 ![Cloud governance process](./_images/govern-process.svg)
 
-## Example table
-
-| Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
-| --- | --- | --- | --- |
-| Corporate strategy | Input | Build a governance team | ADD DESCRIPTION |
-| Governance team charter | Output | Build a governance team | ADD DESCRIPTION |
-
-## Table to fill out
+## Govern inputs and outputs
 
 | Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
 | --- | --- | --- | --- |
