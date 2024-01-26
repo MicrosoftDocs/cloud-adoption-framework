@@ -46,6 +46,8 @@ Creating a cloud governance team is essential for effective management of cloud 
   - *Identity Management:* This area manages users’ identities and their access rights. It ensures that only authorized individuals have access to certain data and services.
 
   - *Enterprise Architecture:* This area aligns the organization’s IT strategy with its business goals. It helps in designing the IT infrastructure and guides the adoption of cloud services.
+ 
+  - *Business Continuity and Disaster Recovey:* This will help ensure that cloud services are avaliable, reliable and secure. Also it will help minize the impact of any potential downtime or data loss
 
 > Each of these areas plays a crucial role in the effective governance of cloud services within an organization. They work together to ensure that the organization can reap the benefits of the cloud while managing risks and costs.
   
