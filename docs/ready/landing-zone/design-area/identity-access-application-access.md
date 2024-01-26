@@ -62,7 +62,7 @@ The [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/landi
 
 - Use Azure Key Vault to manage secrets, keys, certificates used by applications.
   - Use RBAC to manage access to secrets (data plane), and for administrative access (control plane). See [use an Azure RBAC for managing access](/azure/key-vault/general/rbac-guide) for guidance.
-  - Use managed identities to control application access to Key Vault. For more information refer to [Key Vault authentication]( azure/key-vault/general/authentication).
+  - Use managed identities to control application access to Key Vault. For more information refer to [Key Vault authentication](/azure/key-vault/general/authentication).
 
 - Use separate Key Vaults for each application environment (Development, Pre-Production, Production), per region and use RBAC to manage access to secrets, keys and certificates (data plane operations) and access to Key Vault resource (control plane). Key vaults with application secrets should be deployed into the application landing zones. See [Use an Azure RBAC for managing access](/azure/key-vault/general/rbac-guide) for more information.
 
