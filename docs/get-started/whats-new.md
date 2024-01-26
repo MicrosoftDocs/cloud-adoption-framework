@@ -20,16 +20,16 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 Find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
 
-- [How to evaluate a cloud workload for relocation](/azure/cloud-adoption-framework/relocate/evaluate.md)
-- [How to migrate a cloud workload to another region](/azure/cloud-adoption-framework/relocate/migrate.md)
+- [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
+- [Migrate a cloud workload to another region](../relocate/migrate.md)
 
 ### Manage application development environments in Azure landing zones
 
-In the new article [Manage application development environments in Azure landing zones](/azure/ready/landing-zone/design-area/management-appplication-environments.md), find out how cloud platform teams can set up guardrails to manage application environments in Azure landing zones. Learn about aligning various application development environments with their framework. 
+In our new article, find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
 
 ### Modify an Azure landing zone architecture to meet requirements across multiple locations
 
-In the new article [Modify an Azure landing zone architecture to meet requirements across multiple locations](/azure/ready/landing-zone/landing-zone-multinational.md), learn how to modify an Azure landing zone so that it complies with the regulatory requirements of various geographic locations.
+Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
 
 ## November 2023
 
