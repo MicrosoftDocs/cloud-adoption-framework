@@ -17,7 +17,7 @@ The Adopt methodology shows you how to migrate, modernize, innovate, and relocat
 
 ## Migrate
 
-Migration is when you move workloads to the cloud. Different types of migration exist, and the migrate guidance shows you how to pick the migration strategy that aligns with your objectives.
+Migration is when you move workloads to the cloud or between clouds. Different types of migration exist, and the migrate guidance shows you how to pick the migration strategy that aligns with your objectives.
 
 - ***Goals:*** Meet business demands, exit on-premises environment, and align to Well-Architected Framework principles.
 

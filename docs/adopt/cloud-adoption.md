@@ -21,11 +21,11 @@ For the initial cloud adoption, a typical organization retires 35% of its applic
 
 ## Retire (35%)
 
-We recommend retiring any workloads your organization doesn't need. You'll need to do some discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.
+Retire any workloads your organization doesn't need. You need to do discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.
 
 ## Replace (10%)
 
-Most organizations replace about 10% of their applications with software as a service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
+Most organizations replace about 10% of their applications with software-as-a-service (SaaS) and low-code solutions. There's value moving to solutions that let you focus on achieving objectives more easily("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
@@ -36,12 +36,20 @@ Most organizations replace about 10% of their applications with software as a se
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
 |Industry <br>verticals|[Third-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
 
-## Rearchitect or Rebuild (5%)
+## Rearchitect or rebuild (5%)
 
-For the applications that have an intrisic business-value and distinctive market value for your organization, that are not available as SaaS or low-code and rehosting or replatforming would be a sub-optimal solution, you should consider rearchitecting or rebuilding them. This is a more complex process, but it can be worth the effort for this kind of applications to reap the true benefits of the cloud.
-This approach could also bring in new capabilities powered by Generative AI solutions such as make predictions on customer's needs and automate business processes.
+For key applications essential to your business, which cannot be effectively replaced by SaaS or low-code solutions, consider rearchitecting or rebuilding these applications. Although complex, this is vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This involves several key aspects.
 
-The goal is to optimize the application for the cloud and take advantage of cloud-native scalability, reliability, and security.
+- *Scalability*: Adapt the application to handle varying demand levels efficiently.
+- *Reliability*: Improve the application’s ability to operate consistently without failures.
+- *Security*: Integrate advanced security measures to protect data and operations in the cloud.
+
+Additionally, this stage allows for the integration of advanced technologies like Generative AI. This enhances application functionalities in significant ways.
+
+- *Predictive analytics*: Use AI to anticipate customer needs.
+- *Process automation*: Employ AI to automate business processes.
+
+By rearchitecting or rebuilding, you exploit the full range of cloud-native capabilities and AI-driven advancements.
 
 ## Rehost or Replatform (50%)
 
