@@ -42,6 +42,7 @@ Answering the following questions allows you to decide based on the above tree.
 - **Does your data have complex data storage requirements?**
   Production applications usually require data storage that is highly available and offers always-on functionality and similar service uptime and continuity features. Azure PaaS-based managed database options, such as Azure SQL Database, Azure Database for MySQL, and Azure Cosmos DB, offer 99.99 percent uptime service-level agreements. Conversely, IaaS-based SQL Server on Azure VMs offers single-instance service-level agreements of 99.95 percent. If your data can't be modernized to use PaaS storage options, guaranteeing higher IaaS uptime involves more complex data storage scenarios such as running SQL Server Always On clusters and continuously syncing data between instances. This can involve significant hosting and maintenance costs, so balancing uptime requirements, modernization effort, and overall budgetary impact is essential when considering your data migration options.
 
+
 ## Application migration and modernization tools
 
 Application migration and modernization tools help you move existing applications from on-premises or other cloud environments to Azure and optimize them for the cloud. These tools can save you time, effort, and cost by automating some of the migration tasks, such as code analysis, file creation, and deployment.

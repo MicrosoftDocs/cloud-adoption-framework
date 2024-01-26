@@ -65,7 +65,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
-- [Azure Cognitive Search](#azure-cognitive-search)
+- [Azure AI Search](#azure-ai-search)
 - [Azure DNS](#azure-dns)
 - [Network security group](#network-security-group)
 - [Batch](#batch)
@@ -329,14 +329,14 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-PostgreSql-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
 |Deploy-PostgreSql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for PostgreSQL.|
 
-## Azure Cognitive Search
+## Azure AI Search
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Cognitive Search.|
-|Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cognitive Search.|
-|Deny-Search-PublicNetworkAccess|Network Isolation|Denies public network access for Cognitive Search.|
-|Deny-Search-Sku|Resource Management|Enforces Cognitive Search SKUs.|
+|Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Azure AI Search.|
+|Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure AI Search.|
+|Deny-Search-PublicNetworkAccess|Network Isolation|Denies public network access for Azure AI Search.|
+|Deny-Search-Sku|Resource Management|Enforces Azure AI Search SKUs.|
 
 ## Azure DNS
 
