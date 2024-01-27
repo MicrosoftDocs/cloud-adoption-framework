@@ -88,7 +88,7 @@ diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
 
 Here's a closer look at what a typical architecture might look like:
 
-![Diagram that shows an IPv4/IPv6 load balancer providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-load-balancer.png)
+![Diagram that shows an IPv4/IPv6 load balancer providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-vmss-flex.png)
 
 - Deploy the NVA in Azure availability sets for resiliency and expose them to the internet through [Azure Load-Balancer](/azure/load-balancer/load-balancer-ipv6-overview), which has a public IP address front end.
 
