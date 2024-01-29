@@ -10,10 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Overview
 
-ADD CONTENT TO THIS FILE WHERE APPROPRIATE
-
-Definition of governance: Governance refers to the establishment of policies within an organization to minimize risk. Governance in an organization serves to define its objectives, shape the organization’s culture, ensure compliance with laws, regulations, and standards, hold management accountable for their actions and decisions, and provide a structure for decision-making and control. 
-
+Governance refers to the establishment of policies within an organization to minimize risk. Governance in an organization serves to define its objectives, shape the organization’s culture, ensure compliance with laws, regulations, and standards, hold management accountable for their actions and decisions, and provide a structure for decision-making and control.
 
 ## Why govern?
 
@@ -23,6 +20,7 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 • and monitoring performance and compliance against agreed-on direction and objectives
 
 ## Cloud Governance principles
+
 ... be addressed early to ensure the successful use of the cloud within the enterprise.
 
 ... be configured when possible. Human behavior is controlled when proper guardrails are applied.
@@ -39,26 +37,21 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 - An MVG allows the governance team to quickly incorporate governance into implementations throughout the adoption lifecycle.
 - By levaraging for instance Azure Devops capabilites, governance activies can be easily linked to agile working styles within in an organization  and make it actionable by directly linking governance policies to code in a repository (e.g Azure Policies)
 
-## Possible elements of a Governance Model are:
+## Possible elements of a Governance Model are
+
 - Clearly defined Roles & Bodies/Boards
 - Essential Governance Tasks & Responsibilities -> RACI Matrix
 - Detailed Process description (e.g. Swim lane diagrams)
 - Detailed Work Instructions or Operation procedures
 
 Usual Outcome of a Governance model:
+
 - Written Governance (Collection of policies) as items availables in (e.g. Wikis, Azure DevOps) for all Stakeholder
 - Technical controls (e.g. Azure Policies)
 
 ## How to govern
 
 ![Cloud governance process](./_images/govern-process.svg)
-
-## Example table
-
-| Name of input/output  | Input/output | Govern phase | Description how to make it and how to use it |
-| --- | --- | --- | --- |
-| Corporate strategy | Input | Build a governance team | ADD DESCRIPTION |
-| Governance team charter | Output | Build a governance team | ADD DESCRIPTION |
 
 ## Table to fill out
 
@@ -85,21 +78,5 @@ Usual Outcome of a Governance model:
 | Cloud governance compliance reports | output | Measure governance | The cloud governance team should create and evaluate compliance reports to identify adherence and potential deviations to the organization’s stated cloud policies and procedures. The results of these reports will be used to identify and quantify new risks, starting a new iteration of cloud governance processes |
 | Governance, risk and vulnerability assessments performed | output | Measure governance | Once assessments are executed they provide a comprehensive understanding of the organization's cloud environment. This enables the identification of new/evolving risks and vulnerabilities, risk mitigation strategies, improved security posture, compliance assurance and continuous improvement. |
 | Governance workbook | output | Measure governance | The governance workbook is an Azure Monitor workbook that provides a comprehensive overview of the governance posture of your Azure environment. It includes the standard metrics aligned with the Cloud Adoption Framework for all disciplines and has the capability to identify and apply recommendations to address non-compliant resources. |
-| add name | output | Measure governance | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-| add name | add input/output | add govern phase | add DESCRIPTION |
-
-
-
 
 ## Prerequisites
-
