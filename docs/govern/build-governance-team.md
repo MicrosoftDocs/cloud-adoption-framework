@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
-Cloud governance is fundamentally about the people who define, implement, and refine governance policies. To establish cloud governance, you first need to build a cloud governance team.
+Cloud governance is fundamentally driven by the people who define, implement, and refine governance policies. To establish cloud governance, you first need to build a cloud governance team. Here are recommendations for building a cloud governance team.
 
 ## Understand the functions of a cloud governance team
 
