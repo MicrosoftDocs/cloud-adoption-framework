@@ -25,7 +25,7 @@ Retire any workloads your organization doesn't need. You need to do discovery an
 
 ## Replace (10%)
 
-Most organizations replace about 10% of their applications with software-as-a-service (SaaS) and low-code solutions. There's value moving to solutions that let you focus on achieving objectives more easily("productivity").
+Most organizations replace about 10% of their applications with software-as-a-service (SaaS) and low-code solutions. There's value moving to solutions that let you focus on achieving objectives more easily ("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
@@ -51,7 +51,7 @@ Additionally, this stage allows for the integration of advanced technologies lik
 
 By rearchitecting or rebuilding, you exploit the full range of cloud-native capabilities and AI-driven advancements.
 
-## Rehost or Replatform (50%)
+## Rehost or replatform (50%)
 
 A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because they're more complex or more important, and only the last 5% require extra planning to execute.
 
