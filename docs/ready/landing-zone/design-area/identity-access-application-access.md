@@ -15,14 +15,14 @@ The [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/landi
 
 ## Design considerations
 
-- Learn about authentication and authorization standards like OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), SAML (Security Assertion Markup Language) to understand the possible authentication and authorization standards that can be used for the application. For more information, see [Authentication and Authorization Standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards).
+- Learn about authentication and authorization standards like OAuth 2.0, OpenID Connect (OIDC), JSON web tokens (JWTs), and SAML (Security Assertion Markup Language) to understand the possible authentication and authorization standards that can be used for the application. For more information, see [Authentication and Authorization Standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards).
 
-- When requesting an application landing zone from the platform team, consider the following so that subscriptions are created with correct access and policies:
+- When requesting an application landing zone from the platform team, consider the following questions to ensure subscriptions are created with correct access and policies:
 
-  - How would end-users authenticate and access the application?
-  - Who would need RBAC access to the resources and services used for the application?
-  - Do existing builtin roles cover the RBAC access requirements for both control plane and data plane access or would there be requirement for creation of custom roles?
-  - Has the Platform team implemented any compliance policies might cause issues with the application?
+  - How will end-users authenticate to and access the application?
+  - Who will need RBAC access to the resources and services used for the application?
+  - Do existing built-in roles cover the RBAC access requirements for both control plane and data plane access or will you need to create new custom roles?
+  - Has the Platform team implemented any compliance policies that might cause issues with the application?
   - Which application components need to communicate with each other?
   - Is there any requirement for accessing any of the shared resources deployed in the platform landing zone, such as Microsoft Entra Domain Services?
 
@@ -52,13 +52,13 @@ The [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/landi
 
 - Use the [Microsoft identity platform best practices and recommendations](/entra/identity-platform/identity-platform-integration-checklist) checklist for guidance on effectively integrating the application with Microsoft Identity Platform.
 
-- Use PIM for managing any privileged role access to application landing zones and use the principle of least privilege when granting RBAC access to resources in application landing zone.
+- Use PIM for managing any privileged role access to application landing zones and use the principle of least privilege when granting RBAC access to resources in the application landing zone.
 
 - Use managed identities to enable access between Azure resources that don't need to use credentials.
 
 - Don't share credentials or managed identities between different environments or applications. Identities used for production resources shouldn't also be used in dev/test resources, even for the same application. Create separate credentials for each instance of an application. This reduces the likelihood of a compromised test instance affecting production data, and makes it easier to revoke credentials when no longer required.
 
-- Use user-assigned managed identity per Azure per region when there's a requirement to use managed identities at scale. For example, using Azure Monitoring Agents require a managed identity on the monitored Azure Virtual Machines (VMs) can result in substantial number of identities being created (and deleted) in Microsoft Entra ID. To avoid this churn of identities, use user-assigned managed identities, which can be created once and shared across multiple VMs. Use [Azure Policy](/entra/identity/managed-identities-azure-resources/how-to-assign-managed-identity-via-azure-policy) to implement this recommendation.
+- Use a user-assigned managed identity per resource type, per region when there's a requirement to use managed identities at scale. For example, using Azure Monitoring Agents require a managed identity on the monitored Azure Virtual Machines (VMs) can result in substantial number of identities being created (and deleted) in Microsoft Entra ID. To avoid this churn of identities, use user-assigned managed identities, which can be created once and shared across multiple VMs. Use [Azure Policy](/entra/identity/managed-identities-azure-resources/how-to-assign-managed-identity-via-azure-policy) to implement this recommendation.
 
 - Use Azure Key Vault to manage secrets, keys, certificates used by applications.
   - Use RBAC to manage access to secrets (data plane), and for administrative access (control plane). See [use an Azure RBAC for managing access](/azure/key-vault/general/rbac-guide) for guidance.
@@ -66,7 +66,7 @@ The [Platform automation and DevOps](/azure/cloud-adoption-framework/ready/landi
 
 - Use separate Key Vaults for each application environment (Development, Pre-Production, Production), per region and use RBAC to manage access to secrets, keys and certificates (data plane operations) and access to Key Vault resource (control plane). Key vaults with application secrets should be deployed into the application landing zones. For more information, see [Use an Azure RBAC for managing access](/azure/key-vault/general/rbac-guide).
 
-- If application team is using CI/CD pipelines to deploy applications programmatically, configure OpenID Connect (OIDC) authentication to your Azure. OIDC uses a short-lived, credential-free token to authenticate to Azure services. For more information, see [workload identity federation](/entra/workload-id/workload-identity-federation). If OIDC isn't supported, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For detailed steps, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
+- If the application team is using CI/CD pipelines to deploy applications programmatically, configure OpenID Connect (OIDC) authentication to your Azure services. OIDC uses a short-lived, credential-free token to authenticate to Azure services. For more information, see [workload identity federation](/entra/workload-id/workload-identity-federation). If OIDC isn't supported, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For detailed steps, see [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals/).
 
 - To access applications that use on-premises authentication remotely through Microsoft Entra ID, use [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy). Application Proxy provides secure remote access to on-premises web applications, including applications that use older authentication protocols. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal.
   - Application Proxy is deployed as a single instance into a Microsoft Entra ID tenant, and configuration requires the Application Administrator or Global Administrator privileged Entra ID roles. If your organization is using subscription democratization as a role assignment model, application owners may not have the necessary permissions to configure Application Proxy. In this case, the platform team should configure Application Proxy for the application owner.
