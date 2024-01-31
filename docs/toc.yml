@@ -1651,7 +1651,5 @@ items:
         href: resources/cloud-operating-model.md
       - name: Azure enterprise scaffold
         href: resources/azure-scaffold.md
-      - name: Virtual datacenter (VDC)
-        href: resources/vdc.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
