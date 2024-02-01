@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/15/2022
 ms.topic: conceptual
-ms.custom: internal, seo-caf-modernize
+ms.custom: internal
 keywords: application platform, modern, cloud modernization, cloud adoption framework
 ---
 

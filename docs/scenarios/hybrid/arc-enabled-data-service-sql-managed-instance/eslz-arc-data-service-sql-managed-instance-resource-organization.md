@@ -5,7 +5,7 @@ author: tiagobalabuch
 ms.author: tibalabu
 ms.date: 09/07/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, ignite-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Resource organization for Azure Arc-enabled SQL Managed Instance
