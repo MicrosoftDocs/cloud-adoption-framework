@@ -12,6 +12,25 @@ ms.custom: think-tank, e2e-sap
 
 This article builds on a number of considerations and recommendations defined in the Azure landing zone article [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). Following the guidance in this article will help examine key design considerations and best practices surrounding networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Since SAP is an mission-critical platform, the guidance on the Azure landing zone design areas should also be included in your design.
 
+
+## Design Recommendations for ExpressRoute 
+  ExpressRoute is designed for high availability to provide carrier grade private network connectivity to Microsoft resources. In other words, there's no single point of failure in the ExpressRoute path within Microsoft network. To maximize the availability, the customer and the service provider segment of your ExpressRoute circuit should also be architected for high availability. Following are the recommendations to design ExpressRoute for maximizing the availability. 
+
+   - Implement two or more ExpressRoute circuits for each ExpressRoute Gateway connecting through diverse peering locations. 
+   - Ensure the two physical links of your ExpressRoute circuit are connected to two distinct edge devices in your network. 
+   - Ensure both connections of an ExpressRoute circuit are configured in active-active mode.
+   - Ensure Bidirectional Forwarding Detection is enabled and configured on customer or provider edge routing devices.
+   - Configure monitoring and alerting for ExpressRoute circuits. 
+   - Configure service health to receive ExpressRoute circuit maintenance notification. 
+   - Use a site-to-site VPN as an interim backup solution for a single ExpressRoute circuit. 
+
+  Please see the Resources for more details 
+   - [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute/)
+   - [Azure Well-Architected Framework review - Azure ExpressRoute - Design Checklist](azure/well-architected/service-guides/azure-expressroute#recommendations)
+   - [Designing for disaster recovery with ExpressRoute private peering](azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
+   - [Designing for high availability with ExpressRoute - Active-active connections](azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections)
+   
+   
 ## Plan for IP addressing
 
 It's vital to plan for IP addressing in Azure to ensure that:
