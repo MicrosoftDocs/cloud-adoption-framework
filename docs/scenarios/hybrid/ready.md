@@ -5,7 +5,7 @@ author: likamrat
 ms.author: likamrat
 ms.date: 04/29/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 <!-- docutune:casing "Harry's Harvesters" "Angie's Applications" "Mary's Markets" -->
