@@ -1,9 +1,9 @@
 ---
 title: Innovation application development tools
 description: Find out about Azure application development tools that align to the Innovate methodology of the Cloud Adoption Framework.
-author: martinekuan
-ms.author: martinek
-ms.date: 09/17/2021
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 09/07/2023
 ms.topic: conceptual
 ms.custom: internal, seo-caf-innovate
 keywords: application development services, application development tools, innovation methodologies
@@ -45,7 +45,75 @@ Depending on the path that the cloud adoption team takes, Azure provides applica
 
 ## Get started
 
-The table of contents on the left side of this page outlines many articles. These articles help you get started with each of the tools in this toolchain.
+Below you'll find articles to help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.
+> The following links will leave the Cloud Adoption Framework, as they reference supporting content that's beyond the scope of CAF.
+
+### Low-code application platform
+
+- [Power Apps overview](/powerapps/powerapps-overview)
+- [Creating applications in Power Apps](/powerapps/maker/)
+- Power Apps patterns
+  - [Patterns overview](/powerapps/guidance/patterns/overview)
+  - [Approval pattern](/powerapps/guidance/patterns/approval-pattern)
+  - [Asset management/resource booking pattern](/powerapps/guidance/patterns/asset-management-pattern)
+  - [Calculation/transformation pattern](/powerapps/guidance/patterns/calculator-pattern)
+  - [Communication/announcement pattern](/powerapps/guidance/patterns/communication-pattern)
+  - [Inspection/audit pattern](/powerapps/guidance/patterns/inspection-pattern)
+  - [Project management pattern](/powerapps/guidance/patterns/project-management-pattern)
+  - [More patterns](/powerapps/guidance/patterns/more-patterns)
+- [Plan a Power Apps project](/powerapps/guidance/planning/introduction)
+- [Real-world architecture examples](/power-platform/guidance/architecture/real-world-examples/overview)
+- [Create a workflow with Power Automate](/power-automate/getting-started)
+- [Automate tasks with robotic process automation (RPA)](/power-automate/desktop-flows/introduction)
+- [Plan a Power Automate project](/power-automate/guidance/planning/introduction)
+
+### Intelligent experiences
+
+- Modern web apps
+  - [Reference solutions for web apps](/azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app)
+  - [Create a .NET Core application with Azure SQL Database](/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)
+  - [Create a .NET application with Azure SQL Database](/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)
+  - [Create a PHP application with MySQL](/azure/app-service/tutorial-php-mysql-app)
+  - [Create a Node.js with MongoDB](/azure/app-service/tutorial-nodejs-mongodb-app)
+- Infusing intelligence
+  - [Computer vision service](/azure/cognitive-services/computer-vision/overview)
+  - [Translate text in real time](/azure/cognitive-services/translator/quickstart-translator)
+  - [Understand sentiment using LUIS](/azure/cognitive-services/LUIS/tutorial-machine-learned-entity)
+  - [Recognize speech from a microphone](/azure/cognitive-services/speech-service/get-started-speech-to-text)
+  - [Bing web search](/azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app)
+  - [Visual search from an image](/azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload)
+  - [Intelligent low-code apps](/ai-builder/overview)
+  - Chatbots
+    - [Choose the right chatbot solution](/azure/bot-service/bot-overview)
+    - [Create a bot with Composer](/composer/quickstart-create-bot)
+    - [Create and deploy a Power Virtual Agents bot](/power-virtual-agents/fundamentals-get-started)
+    - [Create a bot with Bot Framework SDK](/azure/bot-service/bot-service-quickstart-create-bot)
+
+### Cloud-native applications
+
+- Microservices architecture
+  - [Design, build, and operate microservices in Azure](/azure/architecture/guide/architecture-styles/microservices)
+  - [Reference architecture for microservices with Azure Kubernetes Service (AKS)](/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices)
+  - [Reference architecture for serverless microservices](/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
+- Containers
+  - [What is Kubernetes?](https://azure.microsoft.com/topic/what-is-kubernetes/)
+  - [Prepare an application for Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app)
+  - [Create an Azure Red Hat OpenShift cluster](/azure/openshift/tutorial-create-cluster)
+- Spring Boot microservices
+  - [Launch an Azure Spring Cloud application](/azure/spring-cloud/quickstart)
+  - [Distributed tracing with Azure Spring Cloud](/azure/spring-cloud/how-to-distributed-tracing)
+  - [Bind an Azure Cosmos DB to your Azure Spring Cloud application](/azure/spring-cloud/how-to-bind-cosmos)
+- Event-driven applications
+  - [Learning path for creating serverless applications](/training/paths/create-serverless-applications/)
+  - [Azure Functions developer guide](/azure/azure-functions/functions-reference)
+  - [Azure Serverless Computing Cookbook](https://azure.microsoft.com/resources/azure-serverless-computing-cookbook/)
+  - [Azure Functions introduction](/azure/azure-functions/functions-overview)
+
+## Next steps
+
+Learn about tools to accelerate customer adoption through digital support for your build-measure-learn cycles.
+
+> [!div class="nextstepaction"]
+> [Empower adoption](./ci-cd.md)

@@ -175,7 +175,7 @@ Contoso admins set up the virtual network as follows:
 - Read the [SQL Managed Instance overview](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview).
 - Learn how to [create a virtual network for a SQL managed instance](/azure/azure-sql/managed-instance/vnet-existing-add-subnet).
 - Learn how to [set up peering](/azure/virtual-network/virtual-network-manage-peering).
-- Learn how to [update Azure Active Directory DNS settings](/azure/active-directory-domain-services/tutorial-create-instance).
+- Learn how to [update Microsoft Entra DNS settings](/azure/active-directory-domain-services/tutorial-create-instance).
 
 ### Set up routing
 

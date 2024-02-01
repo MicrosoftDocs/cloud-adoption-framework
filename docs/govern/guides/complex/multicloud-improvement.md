@@ -22,7 +22,7 @@ In the previous phase of this narrative, the company had begun to implement cost
 
 Since then, some things have changed that will affect governance:
 
-- Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
+- Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Microsoft Entra ID.
 - IT operations or cloud operations are largely managed by Azure Monitor and related automation capabilities.
 - Business continuity and disaster recovery (BCDR) is controlled by Azure Recovery Services vaults.
 - Microsoft Defender for Cloud is used to monitor security violations and attacks.
@@ -57,7 +57,7 @@ This section of the article improves the governance MVP design to include new Az
 1. Connect the networks. Executed by networking and IT security, supported by governance.
     1. Adding a connection from the MPLS or leased-line provider to the new cloud will integrate networks. Adding routing tables and firewall configurations will control access and traffic between the environments.
 2. Consolidate identity providers. Depending on the workloads being hosted in the secondary cloud, there are a variety of options to identity provider consolidation. The following are a few examples:
-    1. For applications that authenticate using OAuth 2, users in the Active Directory in the secondary cloud could simply be replicated to the existing Azure AD tenant.
+    1. For applications that authenticate using OAuth 2, users in the Active Directory in the secondary cloud could simply be replicated to the existing Microsoft Entra tenant.
     2. On the other extreme, federation between the two on-premises identity providers, would allow users from the new Active Directory domains to be replicated to Azure.
 3. Add assets to Azure Site Recovery.
     1. Azure Site Recovery was built as a hybrid and multicloud tool from the beginning.

@@ -107,7 +107,7 @@ After a successful migration, some post-migration tasks might include:
 - Migrate data from an on-premises SQL Server instance to an Azure SQL Database instance.
 - Set up an SSL certificate.
 - Set up custom domain names.
-- Set up permissions in Azure Active Directory.
+- Set up permissions in Microsoft Entra ID.
 
 You might also decide to change the Azure App Service hosting plan and other settings like autoscaling and deployment slots.
 

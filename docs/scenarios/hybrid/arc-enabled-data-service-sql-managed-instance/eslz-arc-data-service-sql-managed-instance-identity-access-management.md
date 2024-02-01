@@ -78,7 +78,7 @@ Review the [identity and access management critical design area](../../../ready/
 
 ### Arc-enabled data services deployment
 
-- Consider the identity being used to deploy Azure Arc-enabled data services depending on the type of deployment, such as manual or automated, for Arc-enabled data services deployment. This identity could be an Azure Active Directory (Azure AD) account or Lightweight Directory Access Protocol (LDAP) account from Active Directory Domain Services (AD DS) or a third-party LDAP provider based on how underlying Azure Arc-enabled Kubernetes access controls are managed in on-premises or other cloud environments.
+- Consider the identity being used to deploy Azure Arc-enabled data services depending on the type of deployment, such as manual or automated, for Arc-enabled data services deployment. This identity could be a Microsoft Entra account or Lightweight Directory Access Protocol (LDAP) account from Active Directory Domain Services (AD DS) or a third-party LDAP provider based on how underlying Azure Arc-enabled Kubernetes access controls are managed in on-premises or other cloud environments.
 
 - Consider whether group-based access control or individual identity-based access controls are more appropriate for your Information Technology (IT) organization to manage Arc-enabled data services based on the operations overhead created by both options.
 

@@ -37,7 +37,7 @@ The Azure landing zones reference implementations use [DINE](/azure/governance/p
 - Regulatory compliance policies, standards, or law restrictions.
 - Strict change control processes that require human approval for every action within your Azure environment.
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies.
-- Organizational requirements that all workload resource configuration, including auxiliary resources, supporting resources, and settings, are defined in Infrastructure as Code (IaC) by the workload application teams.
+- Organizational requirements that all workload resource configuration, including auxiliary resources, supporting resources, and settings, are defined in infrastructure as code (IaC) by the workload application teams.
 
 If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-architecture) and adhere to its [design principles](../landing-zone/design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance).
 
@@ -57,6 +57,8 @@ If you're still certain that your organization can't use DINE or Modify policies
 > This operation isn't permanent. The policies can be reenabled at any time by a member of your platform team if you later decide to use DINE or Modify policies.
 >  
 > For more information, see phase [2](#phase-2-enable-dine-and-modify-policies-on-a-specific-policy-or-reduced-scope) and phase [3](#phase-3-enable-dine-and-modify-policies-everywhere).
+
+Support for Resource Selectors are also applicable for policy-driven governance to ensure Safe Deployment Practices (SDP) is being adhered to. Resource Selectors bring the functionality of gradual roll out of policy assignments based on factors like resource location, resource type, or whether the resource has a location. [More can be found in this document](/azure/governance/policy/concepts/assignment-structure#resource-selectors-preview).
 
 ### Approach overview
 
@@ -222,3 +224,7 @@ Here's a high-level overview of the steps you do in this phase:
 - Create remediation tasks for existing resources that are noncompliant by following the guidance in [Create a remediation task](/azure/governance/policy/how-to/remediate-resources#create-a-remediation-task). New resources will automatically be remediated if they match the policy rules and existence conditions.
 
 Even though in phase 3 we recommend that you set the enforcement mode to `Default` for all DINE and Modify policies in your Azure environment, this choice is still optional. You can make this choice on a per-policy basis to suit your needs and requirements.
+
+### Advanced policy management
+
+For advanced management of Azure Policy at scale, consider implementing [Enterprise Policy as Code (EPAC)](../policy-management/enterprise-policy-as-code.md) to manage policy. EPAC provides a stateful management experience that uses IaC. It generally suits large policy management scenarios with complex requirements.

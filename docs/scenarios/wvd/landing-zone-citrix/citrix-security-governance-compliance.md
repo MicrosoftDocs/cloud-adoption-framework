@@ -34,7 +34,7 @@ App registration is the process of creating a one-way trust relationship between
 
 You must grant the service principal access to the resource groups that contain Citrix resources. Depending on your organization's security posture, you can either provide subscription access at the **Contributor** level, or create a custom role for the service principal.
  
-When you create the service principal in Azure Active Directory (Azure AD), set the following values:
+When you create the service principal in Microsoft Entra ID, set the following values:
  
 - Add a **Redirect URI** and set it to **Web** with a value of `https://citrix.cloud.com`.
 - For **API Permissions**, add the **Azure Services Management API** from the **APIs my organization uses** tab, and select the **user_impersonation** delegated permission.
@@ -44,25 +44,25 @@ You need both the **Application (client) ID** and the client secret **Value** fr
  
 ### Enterprise Applications
 
-Depending on your Citrix Cloud and Azure AD configuration, you can add one or more **Citrix Cloud Enterprise Applications** to your Azure AD tenant. These applications allow Citrix Cloud to access data stored in the Azure AD tenant. The following table lists the Application IDs and functions of the Citrix Cloud Enterprise Applications in Azure AD.
+Depending on your Citrix Cloud and Microsoft Entra configuration, you can add one or more **Citrix Cloud Enterprise Applications** to your Microsoft Entra tenant. These applications allow Citrix Cloud to access data stored in the Microsoft Entra tenant. The following table lists the Application IDs and functions of the Citrix Cloud Enterprise Applications in Microsoft Entra ID.
 
 | Enterprise Application ID | Purpose |
 |:----|:----|
-| f9c0e999-22e7-409f-bb5e-956986abdf02 | Default connection between Azure AD and Citrix Cloud |
+| f9c0e999-22e7-409f-bb5e-956986abdf02 | Default connection between Microsoft Entra ID and Citrix Cloud |
 | 1b32f261-b20c-4399-8368-c8f0092b4470 | Administrator invitations and sign-ins |
 | e95c4605-aeab-48d9-9c36-1a262ef8048e | Workspace subscriber sign-in |
-| 5c913119-2257-4316-9994-5e8f3832265b | Default connection between Azure AD and Citrix Cloud with Citrix Endpoint Management |
-| e067934c-b52d-4e92-b1ca-70700bd1124e | Legacy connection between Azure AD and Citrix Cloud with Citrix Endpoint Management | 
+| 5c913119-2257-4316-9994-5e8f3832265b | Default connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management |
+| e067934c-b52d-4e92-b1ca-70700bd1124e | Legacy connection between Microsoft Entra ID and Citrix Cloud with Citrix Endpoint Management | 
 
-Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Azure AD API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Azure Active Directory Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html). 
+Each Enterprise Application grants Citrix Cloud specific permissions to either the Microsoft Graph API or the Microsoft Entra API. For example, the Workspace subscriber sign-in application grants **User.Read** permissions to both APIs, so that users can sign in and read their profiles. For more information about the permissions granted, see [Microsoft Entra Permissions for Citrix Cloud](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-management/identity-access-management/azure-ad-permissions.html). 
 
 ### Built-in roles
 
-The **Contributor** built-in role contains the broadest permission set, and works well to assign to service principal accounts at the subscription level. Granting contributor permissions at the subscription level requires an Azure AD global administrator account. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Azure AD.
+The **Contributor** built-in role contains the broadest permission set, and works well to assign to service principal accounts at the subscription level. Granting contributor permissions at the subscription level requires a Microsoft Entra Global Administrator account. Once granted, Azure prompts for the required permissions during the initial connection from Citrix Cloud to Microsoft Entra ID.
 
 Any accounts used for authentication during host connection creation must also be at least co-administrators on the subscription. This level of permissions allows Citrix Cloud to create necessary objects without restriction. Typically, you use this approach when the entire subscription is dedicated to Citrix resources.
  
-Some environments don't allow service principals to have **Contributor** permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, an Azure AD global administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
+Some environments don't allow service principals to have **Contributor** permissions at a subscription level. Citrix provides an alternative solution called a *narrow-scope service principal*. For a narrow-scope service principal, a Microsoft Entra Global Administrator completes an application registration manually, and then a subscription administrator manually grants the service principal account the appropriate permissions.
 
 Narrow-scoped service principals don't have **Contributor** permissions to the entire subscription, just to the resource groups, networks, and images required to create and manage machine catalogs. Narrow-scoped service principals require the following **Contributor** permissions:
 
@@ -105,7 +105,7 @@ The following JSON description of the **Citrix_Hosting_Connection** role has the
 }
 ```
 
-The **Citrix_Hosting_Connection** custom role should be assigned to the **Citrix_Infrastructure** resource groups that have Cloud Connector, master image, or virtual network resources in them. You can copy and paste this JSON role description directly into your custom Azure AD role definition.
+The **Citrix_Hosting_Connection** custom role should be assigned to the **Citrix_Infrastructure** resource groups that have Cloud Connector, master image, or virtual network resources in them. You can copy and paste this JSON role description directly into your custom Microsoft Entra role definition.
  
 #### Citrix_Machine_Catalog role
 
@@ -172,7 +172,7 @@ The following JSON description of the **Citrix_Machine_Catalog** role has the mi
 }
 ```
 
-Assign the **Citrix_Machine_Catalog** custom role to the **Citrix_MachineCatalog** resource groups that hold the Citrix Virtual Delivery Agent (VDA) virtual machines (VMs). You can copy and paste this JSON role description directly into your custom Azure AD role definition.
+Assign the **Citrix_Machine_Catalog** custom role to the **Citrix_MachineCatalog** resource groups that hold the Citrix Virtual Delivery Agent (VDA) virtual machines (VMs). You can copy and paste this JSON role description directly into your custom Microsoft Entra role definition.
 
 ## Networking
 

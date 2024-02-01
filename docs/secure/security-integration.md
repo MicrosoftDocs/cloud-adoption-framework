@@ -80,7 +80,7 @@ This example process illustrates how organizations are starting to solve this pr
 This process is followed on a regular schedule:
 
 - Enterprise IT and security teams start the process by identifying which security updates, or patches, are required and the highest impact. They make these updates available to end users or workload owners through enterprise-wide distribution channels.
-- End users have a fixed period to test the updates, apply them, and restart their devices. After that period expires, enterprise IT and security teams either apply the update or block access to corporate resources. They might use a mechanism like Azure AD Conditional Access or a third-party network access control solution.
+- End users have a fixed period to test the updates, apply them, and restart their devices. After that period expires, enterprise IT and security teams either apply the update or block access to corporate resources. They might use a mechanism like Microsoft Entra Conditional Access or a third-party network access control solution.
 - Workload owners are given a fixed period of time to test the updates, apply them to production systems, and reboot as required. After that self-service period, and any grace period expires, enterprise IT and security teams will either force the update to apply or isolate them from other corporate resources. Some organizations with stringent requirements might decommission the assets by deleting them from Azure subscriptions or AWS accounts.
 - Enterprise IT and security teams monitor the status of the update and conduct any forced remediation that's identified.
 

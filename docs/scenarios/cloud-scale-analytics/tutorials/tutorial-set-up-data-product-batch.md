@@ -178,11 +178,11 @@ To set SQL Database permissions, you connect to the Azure SQL virtual machine by
 
 In the Azure portal, connect to the virtual machine that's deployed in the `<DMLZ-prefix>-dev-bastion` resource group. If you're not sure how to connect to the virtual machine by using the Bastion host service, see [Connect to a VM](/azure/bastion/tutorial-create-host-portal#connect).
 
-To add the service principal as a user in the database, you might first need to add yourself as the Azure Active Directory admin. In steps 1 and 2, you add yourself as the Azure Active Directory admin. In steps 3 to 5, you give the service principal permissions to a database. When you're signed in to the portal from the Bastion host virtual machine, search for Azure SQL virtual machines in the Azure portal.
+To add the service principal as a user in the database, you might first need to add yourself as the Microsoft Entra admin. In steps 1 and 2, you add yourself as the Microsoft Entra admin. In steps 3 to 5, you give the service principal permissions to a database. When you're signed in to the portal from the Bastion host virtual machine, search for Azure SQL virtual machines in the Azure portal.
 
-1. Go to the `<DP-prefix>-dev-sqlserver001` Azure SQL virtual machine. In the resource menu under **Settings**, select **Azure Active Directory**.
+1. Go to the `<DP-prefix>-dev-sqlserver001` Azure SQL virtual machine. In the resource menu under **Settings**, select **Microsoft Entra ID**.
 
-   :::image type="content" source="../images/azure-sql-admin-active-directory.png" alt-text="Screenshot that shows the Azure Active Directory pane in Azure SQL Database Server.":::
+   :::image type="content" source="../images/azure-sql-admin-active-directory.png" alt-text="Screenshot that shows the Microsoft Entra pane in Azure SQL Database Server.":::
 
 1. In the command bar, select **Set admin**. Search for and select your own account. Choose **Select**.
 

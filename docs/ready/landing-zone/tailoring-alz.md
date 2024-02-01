@@ -3,7 +3,7 @@ title: Tailor the Azure landing zone architecture
 description: Understand how to tailor the Azure landing zone architecture to meet your business requirements.
 author: jtracey93
 ms.author: jatracey
-ms.date: 05/26/2023
+ms.date: 11/03/2023
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
 ---
@@ -89,7 +89,7 @@ There's a simple and safe way to meet this new requirement. Create a new managem
 Now you can place new or move existing Azure subscriptions into the new **PCI** management group to make it inherit the required policies and form the new archetype.
 
 > [!TIP]
-> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#subscription-move).
+> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#move-subscriptions).
 
 ### Tailor platform landing zone archetypes
 
@@ -122,3 +122,4 @@ Consider the following points when you think about tailoring your implementation
 - Don't create archetypes for environments like development, test, and production.
   
   For more information, see [How do we handle dev/test/production workload landing zones in the Azure landing zones conceptual architecture?](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture)
+- If coming from a brownfield environment or are looking for an approach to host subscriptions in the Landing Zones Management Group with policies in an "audit only" enforcement mode, review [Scenario: Transition an environment by duplicating a landing zone management group](/azure/cloud-adoption-framework/ready/landing-zone/align-approach-duplicate-brownfield-audit-only)

@@ -14,7 +14,7 @@ To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adop
 
 ## Use single versus multiple Azure subscriptions
 
- - In Azure Active Directory (Azure AD), a tenant is representative of an organization. It's a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for using Azure. Each Azure AD tenant is distinct and separate from other Azure AD tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Azure AD.
+ - In Microsoft Entra ID, a tenant is representative of an organization. It's a dedicated instance of the Microsoft Entra service that an organization receives and owns when it signs up for using Azure. Each Microsoft Entra tenant is distinct and separate from other Microsoft Entra tenants. An Azure tenant can have multiple subscriptions and each subscription can use the same Microsoft Entra ID.
  - You can choose single or multiple subscriptions based on your organization's needs.
      - Multiple subscriptions allow for easy view billing for each subscription and limit who can access the Microsoft Azure services associated with that subscription. For example, production versus non-production subscriptions, internal versus external, and so on.
      - Using multiple subscriptions helps in planning for subscriptions limits. For more information on the decision-making process for subscriptions, see [Subscription decision guide](../../../ready/landing-zone/design-area/resource-org-subscriptions.md?source=recommendations).
@@ -44,14 +44,14 @@ A sample use case would be to tag all Azure development VMs with the tag of Dev.
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for energy HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
 - [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
-- [Storage for manufacturing HPC](./storage.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Manufacturing HPC storage](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

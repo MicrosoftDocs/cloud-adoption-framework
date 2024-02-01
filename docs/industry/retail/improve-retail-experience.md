@@ -75,7 +75,7 @@ Launch the [Retail Recommender Solution Accelerator](https://github.com/microsof
 
 Create your MVP in less than a day With demo data, or in 2-5 weeks with your custom data and a prep session.
 
-Here is a high-level diagram of operations through Azure Data Lake Storage Gen2 (enterprise-scale data lake), Azure Synapse, Azure Synapse Analytics, Azure Cognitive Search, Azure Machine Learning Service, Azure API Management, and Azure Machine Learning services.
+Here is a high-level diagram of operations through Azure Data Lake Storage Gen2 (enterprise-scale data lake), Azure Synapse, Azure Synapse Analytics, Azure AI Search, Azure Machine Learning Service, Azure API Management, and Azure Machine Learning services.
 
 [ ![Retail Recommender Solution Accelerator architecture](./media/retail-recommender-solution-accelerator-architecture-v2.png) ](./media/retail-recommender-solution-accelerator-architecture-v2.png#lightbox)
 
@@ -101,8 +101,6 @@ Tractor Supply Company, the largest rural lifestyle retailer in the United State
 Starbucks has been using reinforcement learning technology to provide a personalized experience for customers using the company's mobile app. This machine learning training method learns to make decisions in complex, unpredictable environments based upon external feedback. [Read the full Starbucks customer story](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/).
 
 ## Next steps
-
-Try the live [Synapse/AI-Retail-Recommender](https://synapsefornextgenretail.azurewebsites.net/) demo.
 
 Use the Azure DevOps template to deploy in your own environment. Follow the steps included in the [Retail Recommender Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/):
 

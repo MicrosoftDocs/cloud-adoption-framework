@@ -1,7 +1,7 @@
 ---
 title: Security operations for SAP on Azure
 description: Learn how to implement a security operation for SAP in Microsoft Cloud to ensure your organization's sensitive data and applications are protected.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
@@ -24,11 +24,11 @@ This article describes best practices for security operations to secure your SAP
 
 SAP systems are business-critical in an enterprise landscape. To ensure that only authorized personnel can access sensitive data and perform critical tasks, use the principle of least privilege when you provide control and management access to SAP systems and applications. Here are some relevant recommendations:
 
-- Use **role-based access control (RBAC)** to manage access to SAP workload resources that deploy in Azure. Every Azure subscription has a trust relationship with an Azure Active Directory (Azure AD) tenant. Create an Azure AD group for SAP administrators, and use RBAC to grant permissions to the SAP group.
+- Use **role-based access control (RBAC)** to manage access to SAP workload resources that deploy in Azure. Every Azure subscription has a trust relationship with a Microsoft Entra tenant. Create a Microsoft Entra group for SAP administrators, and use RBAC to grant permissions to the SAP group.
 
-- **Single sign-on (SSO)** between SAP and Azure AD or Azure Directory Federation Services (AD FS) allows SAP users to access SAP applications with SAP front-end software, like SAP GUI, or a browser with HTTP or HTTPS, for example SAP Fiori.
+- **Single sign-on (SSO)** between SAP and Microsoft Entra ID or Azure Directory Federation Services (AD FS) allows SAP users to access SAP applications with SAP front-end software, like SAP GUI, or a browser with HTTP or HTTPS, for example SAP Fiori.
 
-- Use **Azure AD Privileged Identity Management (PIM)** to manage and assign roles to users and groups to allow them to perform privileged actions. These users only have access to the resources when they need to perform their job, such as stopping or starting a virtual machine (VM).
+- Use **Microsoft Entra Privileged Identity Management (PIM)** to manage and assign roles to users and groups to allow them to perform privileged actions. These users only have access to the resources when they need to perform their job, such as stopping or starting a virtual machine (VM).
 
   PIM also provides automated access request and approval, logging, and auditing capabilities to manage and control privileged access to your SAP system resources.
 

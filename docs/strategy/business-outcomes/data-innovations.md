@@ -16,7 +16,7 @@ Many companies want to migrate their existing data warehouse to the cloud. They 
 - No infrastructure to manage.
 - The ability to switch to a secure, scalable, and low-cost cloud solution.
 
-For example, Azure Synapse Analyticcs is a cloud-native, pay-as-you-go service which provides an analytical database management system for organizations. Azure technologies can help modernize your data warehouse after migration, and extend your analytical capabilities to drive new business value.
+For example, Azure Synapse Analytics is a cloud-native, pay-as-you-go service which provides an analytical database management system for organizations. Azure technologies can help modernize your data warehouse after migration, and extend your analytical capabilities to drive new business value.
 
 A data warehouse migration project involves many components. These include schema, data, extract-transform-load (ETL) pipelines, authorization privileges, users, BI tool semantic access layers, and analytic applications.
 

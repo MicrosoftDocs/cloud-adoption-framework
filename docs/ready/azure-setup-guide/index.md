@@ -13,7 +13,7 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 ::: zone target="docs"
 
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework. For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure Setup Guide**, and then follow the step-by-step instructions.
+> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework. For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select the **Projects and guides** tab, then select **Azure Setup Guide** and follow the step-by-step instructions.
 
 ::: zone-end
 

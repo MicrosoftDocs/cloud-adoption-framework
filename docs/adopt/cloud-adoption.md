@@ -21,11 +21,11 @@ For the initial cloud adoption, a typical organization retires 35% of its applic
 
 ## Retire (35%)
 
-We recommend retiring any workloads your organization doesn't need. You'll need to do some discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.
+Retire any workloads your organization doesn't need. You need to do discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.
 
-## Replace (15%)
+## Replace (10%)
 
-Most organizations replace about 15% of their applications with software as a service (SaaS) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").
+Most organizations replace about 10% of their applications with software-as-a-service (SaaS) and low-code solutions. There's value moving to solutions that let you focus on achieving objectives more easily ("productivity").
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
@@ -36,7 +36,22 @@ Most organizations replace about 15% of their applications with software as a se
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
 |Industry <br>verticals|[Third-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
 
-## Migrate (rehost or replatform) (50%)
+## Rearchitect or rebuild (5%)
+
+For key applications essential to your business, which cannot be effectively replaced by SaaS or low-code solutions, consider rearchitecting or rebuilding these applications. Although complex, this is vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This involves several key aspects.
+
+- *Scalability*: Adapt the application to handle varying demand levels efficiently.
+- *Reliability*: Improve the application’s ability to operate consistently without failures.
+- *Security*: Integrate advanced security measures to protect data and operations in the cloud.
+
+Additionally, this stage allows for the integration of advanced technologies like Generative AI. This enhances application functionalities in significant ways.
+
+- *Predictive analytics*: Use AI to anticipate customer needs.
+- *Process automation*: Employ AI to automate business processes.
+
+By rearchitecting or rebuilding, you exploit the full range of cloud-native capabilities and AI-driven advancements.
+
+## Rehost or replatform (50%)
 
 A typical business will migrate about half of its existing workloads. Within these workloads, there are normally three tiers of difficulty. About 35% are easy to move. The next 10% are more difficult because they're more complex or more important, and only the last 5% require extra planning to execute.
 

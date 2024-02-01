@@ -65,7 +65,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Database for MariaDB](#azure-database-for-mariadb)
 - [Azure Database for MySQL](#azure-database-for-mysql)
 - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
-- [Azure Cognitive Search](#azure-cognitive-search)
+- [Azure AI Search](#azure-ai-search)
 - [Azure DNS](#azure-dns)
 - [Network security group](#network-security-group)
 - [Batch](#batch)
@@ -83,7 +83,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
 | Deny-PublicIp|Network Isolation|Restrict deployment of public IPs.|
-|Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the aad tenant and subscription.|
+|Deny-PrivateEndpoint-PrivateLinkServiceConnections|Network Isolation| Deny private endpoints to resources outside of the Microsoft Entra tenant and subscription.|
 |Deploy-DNSZoneGroup-{Service}-PrivateEndpoint|Network Isolation|Deploys the configurations of a Private DNS Zone Group by a parameter for service's private endpoint. Used to enforce the configuration to a single Private DNS Zone.|
 |DiagnosticSettings-{Service}-LogAnalytics|Logging|Send diagnostic settings for Azure Cosmos DB to log analytics workspace.|
 
@@ -278,7 +278,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-SqlManagedInstance-PublicDataEndpoint|Network Isolation|Denies public data endpoint for SQL Managed Instances.|
 |Deny-SqlManagedInstance-Sku|Resource Management||
 |Deny-SqlManagedInstance-SubnetId|Network Isolation|Enforces deployments to subnets of SQL Managed Instances.|
-|Deploy-SqlManagedInstance-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL Managed Instance.|
+|Deploy-SqlManagedInstance-AzureAdOnlyAuthentications|Authentication|Enforces Microsoft Entra-only authentication for SQL Managed Instance.|
 |Deploy-SqlManagedInstance-SecurityAlertPolicies|Logging|Deploy SQL Managed Instance security alert policies.|
 |Deploy-SqlManagedInstance-VulnerabilityAssessment|Logging|Deploy SQL Managed Instance vulnerability assessments.|
 
@@ -291,7 +291,7 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-Sql-PublicNetworkAccess|Network Isolation|Denies public network access for SQL servers.|
 |Deny-Sql-StorageAccountType|Resilience|Enforces geo-redundant database backup.|
 |Deploy-Sql-AuditingSettings|Logging|Deploy SQL auditing settings.|
-|Deploy-Sql-AzureAdOnlyAuthentications|Authentication|Enforces Azure AD only authentication for SQL server.|
+|Deploy-Sql-AzureAdOnlyAuthentications|Authentication|Enforces Microsoft Entra-only authentication for SQL server.|
 |Deploy-Sql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies.|
 |Deploy-Sql-TransparentDataEncryption|Encryption|Deploy SQL transparent data encryption.|
 |Deploy-Sql-VulnerabilityAssessment|Logging|Deploy SQL vulnerability assessments.|
@@ -329,14 +329,14 @@ Additional policies that are applied in the Databricks workspace through cluster
 |Deny-PostgreSql-StorageProfile|Resilience|Enforces geo-redundant database backup with minimum retention time in days.|
 |Deploy-PostgreSql-SecurityAlertPolicies|Logging|Deploy SQL security alert policies for PostgreSQL.|
 
-## Azure Cognitive Search
+## Azure AI Search
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|
-|Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Cognitive Search.|
-|Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Cognitive Search.|
-|Deny-Search-PublicNetworkAccess|Network Isolation|Denies public network access for Cognitive Search.|
-|Deny-Search-Sku|Resource Management|Enforces Cognitive Search SKUs.|
+|Append-Search-IdentityType|Authentication|Enforces use of system assigned identity for Azure AI Search.|
+|Audit-Search-PrivateEndpointId|Network Isolation|Audit public endpoints that are created in other subscriptions for Azure AI Search.|
+|Deny-Search-PublicNetworkAccess|Network Isolation|Denies public network access for Azure AI Search.|
+|Deny-Search-Sku|Resource Management|Enforces Azure AI Search SKUs.|
 
 ## Azure DNS
 

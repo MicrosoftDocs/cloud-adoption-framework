@@ -14,7 +14,7 @@ Resource consistency is one of the Five Disciplines of Cloud Governance within t
 
 ## Governed vs. ungoverned resources
 
-[Gartner defines IT Governance](https://www.gartner.com/en/information-technology/glossary/it-governance) "... as the processes that ensure the effective and efficient use of IT in enabling an organization to achieve its goals." A resource can be considered governed if the processes are in place to ensure compliance with business standards. Resources that aren't in compliance are necessarily ungoverned resources, as there are no processes in place to remediate and make them compliant.
+[Gartner defines IT governance](https://www.gartner.com/en/information-technology/glossary/it-governance) as "the processes that ensure the effective and efficient use of IT in enabling an organization to achieve its goals." A resource can be considered governed if the processes are in place to ensure compliance with business standards. Resources that aren't in compliance are necessarily ungoverned resources, as there are no processes in place to remediate and make them compliant.
 
 Examples of ungoverned resources regarding the resource consistency discipline include:
 

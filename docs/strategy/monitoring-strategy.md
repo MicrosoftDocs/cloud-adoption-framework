@@ -153,7 +153,7 @@ Consider scale in your strategy and who will be defining and standardizing *moni
 
 ### Consider privacy and security
 
-In Azure, you'll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory sign-in and audit logs, and if integrated, the Microsoft 365 unified audit log, all contain sensitive data that may need to be protected under privacy laws.
+In Azure, you'll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Microsoft Entra sign-in and audit logs, and if integrated, the Microsoft 365 unified audit log, all contain sensitive data that may need to be protected under privacy laws.
 
 Your monitoring strategy should include these actions:
 
@@ -211,7 +211,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the Microsoft 365 and Azure management packs. |
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager or System Center Operations Manager Managed Instance (preview) and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
 | 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange Server to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. You can use System Center Operations Manager Managed Instance (preview). If you use System Center Operations Manager, gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
-| 5 | Hybrid forever | System Center Operations Manager Managed Instance (preview), Azure AD, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
+| 5 | Hybrid forever | System Center Operations Manager Managed Instance (preview), Microsoft Entra ID, Azure Monitor, Microsoft Defender for Cloud, Intune, and others; a range of tools for a mixture of digital assets. |
 | 6 | Cloud native | Azure Monitor, Azure Policy, Microsoft Defender for Cloud, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
 | 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Microsoft Sentinel. |
 | 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |
@@ -237,7 +237,7 @@ You can use Azure to gradually manage all or some aspects of your on-premises re
 | Service and resource health | Observe the health of your cloud resources, and service outages and advisories from Microsoft, to stay informed about incidents and maintenance. Include resource health in monitoring of the availability of your resources and alert on changes in availability. |
 | Capacity and performance monitoring | In support of health monitoring, your needs may require more depth and specialization. |
 | Change and compliance monitoring | Observe, measure, learn, and improve configuration management of resources, which should now include security in the formulation, influenced by good use of Azure Policy to standardize monitoring configurations and enforce security hardening. Log data to filter on key changes being made on resources. |
-| Identity and access monitoring | Observe, measure, learn, and improve both the usage and security of Active Directory, Azure Active Directory, and identity management to integrate users, applications, devices, and other resources no matter where they are. |
+| Identity and access monitoring | Observe, measure, learn, and improve both the usage and security of Active Directory, Microsoft Entra ID, and identity management to integrate users, applications, devices, and other resources no matter where they are. |
 | Information protection | Azure Information Protection, depending on the plan, includes usage analytics critical to a robust information protection strategy across Azure and Microsoft. |
 | Privacy monitoring | Organizations face expanding privacy needs, including protection of the digital estate, data classification, and data loss prevention to mitigate risks to privacy breaches and infractions. Microsoft 365 information protection includes monitoring capabilities that can also be integrated with Azure Monitor. |
 | Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated threat protection, for example, involves monitoring to accelerate an optimal state of zero trust. Microsoft Defender for Identity lets you integrate your Active Directory security-related signals to detect advanced attacks in hybrid environments. |

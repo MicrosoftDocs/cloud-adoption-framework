@@ -28,7 +28,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 - **Azure Monitor agents deployment:** Review the [deployment options](/azure/azure-arc/servers/concept-log-analytics-extension-deployment) for the Azure Monitor agents.
 - **Azure Monitor configuration:** Plan your Azure Arc-enabled servers [monitoring requirements](/azure/azure-monitor/agents/log-analytics-agent#data-collected), including metrics and log collection.
 - **Azure connected machine agent management:** The Azure connected machine agent plays a critical role in your hybrid operations. It enables you to manage your Windows and Linux machines hosted outside of Azure, and enforce governance policies. It's important to implement solutions that keep track of unresponsive agents, monitor for new versions, and automate the deployment of upgrades.
-- **Update Management for your hybrid resources:** Updates should be automated and installed in a timely manner, to make sure your Azure Arc-enabled servers have the latest operating system and security updates.
+- **Patch management for your hybrid resources:** Updates should be automated and installed in a timely manner, to make sure your Azure Arc-enabled servers have the latest operating system and security updates.
 
 ## Design recommendations
 
@@ -58,10 +58,10 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 - Understand how to upgrade [virtual machine extensions](/azure/azure-arc/servers/manage-vm-extensions), to keep other agents installed and managed by Azure Arc up to date.
 - Monitor [this article](/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues, and bug fixes of the Azure connected machine agent.
 
-### Update Management for your hybrid resources
+### Patch management for your hybrid resources
 
-- Use [Update Management](/azure/automation/update-management/overview) in Azure Automation, as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. This allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale.
-- Update Management will also allow you to automate the Azure connected machine agent upgrades, via Windows updates on Azure Arc-enabled Windows servers.
+- Use [Azure Update Manager](/azure/update-manager/overview) as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. This allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale.
+- Azure Update Manager will also allow you to automate the Azure connected machine agent upgrades, via Windows updates on Azure Arc-enabled Windows servers.
 - If you have Azure Arc-enabled Windows Servers that have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-) and cannot be migrated to Azure or upgraded, enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical and important security patches.
 
 ## Next steps

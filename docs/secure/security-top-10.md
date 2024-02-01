@@ -91,8 +91,8 @@ Microsoft provides extensive resources to help technical professionals ramp up t
   - [Regulatory compliance](/azure/security-center/security-center-compliance-dashboard)
 - Identity protocols and security
   - [Azure security documentation site](/azure/security/)
-  - Azure Active Directory (Azure AD) authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
-  - [Securing Azure environments with Azure AD](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
+  - Microsoft Entra authentication [YouTube series](https://www.youtube.com/playlist?list=PLLasX02E8BPD5vC2XHS_oHaMVmaeHHPLy)
+  - [Securing Azure environments with Microsoft Entra ID](https://azure.microsoft.com/resources/securing-azure-environments-with-azure-active-directory/)
 
 ## 3. Process: Assign accountability for cloud security decisions
 
@@ -133,9 +133,9 @@ These areas are typically where security decisions are needed. The following tab
 | Network security | Configure and maintain Azure Firewall, network virtual appliances and associated routing, Web Application Firewalls (WAFs), NSGs, ASGs, and so on. | [Infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) team focused on network security  |
 | Network management | Manage enterprise-wide virtual network and subnet allocation. | Existing network operations team in [central IT operations](../organize/central-it.md) |
 | Server endpoint security | Monitor and remediate server security, including patching, configuration, endpoint security, and so on. | [Central IT operations](../organize/central-it.md) and [infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md) teams jointly |
-| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console, including Microsoft Defender for Cloud, Azure AD identity protection, and so on. | [Security operations](../organize/cloud-security-operations-center.md) team |
+| Incident monitoring and response | Investigate and remediate security incidents in SIEM or source console, including Microsoft Defender for Cloud, Microsoft Entra ID Protection, and so on. | [Security operations](../organize/cloud-security-operations-center.md) team |
 | Policy management | Set direction for use of Azure role-based access control (Azure RBAC), Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources. | [Policy and standards](../organize/cloud-security-policy-standards.md) and [security architecture](../organize/cloud-security-architecture.md) teams jointly |
-| Identity security and standards | Set direction for Azure AD directories, PIM/pam usage, multi-factor authentication, password/synchronization configuration, application identity standards. | [Identity and key management](../organize/cloud-security-identity-keys.md), [policy and standards](../organize/cloud-security-policy-standards.md), and [security architecture](../organize/cloud-security-architecture.md) teams jointly |
+| Identity security and standards | Set direction for Microsoft Entra directories, PIM/pam usage, multifactor authentication, password/synchronization configuration, application identity standards. | [Identity and key management](../organize/cloud-security-identity-keys.md), [policy and standards](../organize/cloud-security-policy-standards.md), and [security architecture](../organize/cloud-security-architecture.md) teams jointly |
 
 > [!NOTE]
 >
@@ -263,7 +263,7 @@ Are you willing to bet the security of your enterprise that professional attacke
 
 ### What?
 
-Require all critical-impact admins to use passwordless or multi-factor authentication.
+Require all critical-impact admins to use passwordless or multifactor authentication.
 
 ### Why?
 
@@ -287,13 +287,13 @@ Implement passwordless or multifactor authentication. Train administrators on ho
 
 - [Passwordless Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 - [Passwordless authenticator app](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
-- [Azure AD multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates)
+- [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/howto-mfa-userstates)
 - Third-party multifactor authentication solution
 
 > [!NOTE]
 > Text message-based multifactor authentication is now relatively inexpensive for attackers to bypass, so focus on passwordless and stronger multifactor authentication.
 
-For more information, see the Azure Security Benchmark [strong authentication controls for all Azure AD-based access](/security/benchmark/azure/security-controls-v3-identity-management#im-6-use-strong-authentication-controls).
+For more information, see the Azure Security Benchmark [strong authentication controls for all Microsoft Entra ID-based access](/security/benchmark/azure/security-controls-v3-identity-management#im-6-use-strong-authentication-controls).
 
 ## 7. Technology: Integrate native firewall and network security
 
@@ -383,10 +383,10 @@ Nobody wants to deal with multiple identities and directories.
 
 ### What?
 
-Standardize on a single Azure AD directory. You can standardize a single identity for each application and user in Azure.
+Standardize on a single Microsoft Entra directory. You can standardize a single identity for each application and user in Azure.
 
 > [!NOTE]
-> This best practice refers specifically to enterprise resources. For partner accounts, use [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) so you don't have to create and maintain accounts in your directory. For customer or citizen accounts, use [Azure AD B2C](/azure/active-directory-b2c/) to manage them.
+> This best practice refers specifically to enterprise resources. For partner accounts, use [Microsoft Entra B2B](/azure/active-directory/external-identities/what-is-b2b) so you don't have to create and maintain accounts in your directory. For customer or citizen accounts, use [Azure AD B2C](/azure/active-directory-b2c/) to manage them.
 
 ### Why?
 
@@ -404,7 +404,7 @@ While it sometimes seems easier to quickly stand up a custom LDAP directory for 
 
 ### Who?
 
-Standardizing on a single Azure AD directory is often a cross-team effort. The effort is driven by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) teams.
+Standardizing on a single Microsoft Entra directory is often a cross-team effort. The effort is driven by [security architecture](../organize/cloud-security-architecture.md) or [identity and key management](../organize/cloud-security-identity-keys.md) teams.
 
 - **Sponsorship**: [Identity and key management](../organize/cloud-security-identity-keys.md) and [security architecture](../organize/cloud-security-architecture.md) typically sponsor this work, though some organizations might require sponsorship by CISO or CIO.
 - **Execution**: Execution is a collaborative effort involving:
@@ -417,7 +417,7 @@ Standardizing on a single Azure AD directory is often a cross-team effort. The e
 
 Adopt a pragmatic approach that starts with new greenfield capabilities. Then, clean up challenges with the brownfield of existing applications and services as a follow-up exercise:
 
-- **Greenfield**: Establish and implement a clear policy that all enterprise identity can use a single Azure AD directory with a single account for each user.
+- **Greenfield**: Establish and implement a clear policy that all enterprise identity can use a single Microsoft Entra directory with a single account for each user.
 
 - **Brownfield**: Many organizations often have multiple legacy directories and identity systems. Address these legacy items when the cost of ongoing management friction exceeds the investment to clean it up. While identity management and synchronization solutions can mitigate some of these issues, they lack deep integration of security and productivity features. These features enable a seamless experience for users, admins, and developers.
 
@@ -428,7 +428,7 @@ The ideal time to combine your use of identity is during application development
 
 While there are valid reasons for a separate directory for independent business units or regulatory requirements, avoid multiple directories in all other circumstances.
 
-For more information, see the Azure Security Benchmark [Azure AD central identity and authentication system](/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system).
+For more information, see the Azure Security Benchmark [Microsoft Entra central identity and authentication system](/security/benchmark/azure/security-controls-v3-identity-management#im-1-use-centralized-identity-and-authentication-system).
 
 > [!IMPORTANT]
 > The only exception to the single accounts rule is that privileged users, including IT administrators and security analysts, can have separate accounts for standard user tasks compared to administrative tasks.
@@ -439,7 +439,7 @@ For more information, see the Azure Security Benchmark [Azure AD central identit
 
 ### What?
 
-Use Azure AD identities instead of key-based authentication wherever possible. For example, Azure services, applications, APIs.
+Use Microsoft Entra identities instead of key-based authentication wherever possible. For example, Azure services, applications, APIs.
 
 ### Why?
 
@@ -471,9 +471,9 @@ Setting an organizational preference and habit for using identity-based authenti
 
 **The technologies** 
 
-For non-human accounts such as services or automation, use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Azure managed identities can authenticate to Azure services and resources that support Azure AD authentication. Authentication is enabled through predefined access grant rules, avoiding hard-coded credentials in source code or configuration files.
+For non-human accounts such as services or automation, use [managed identities](/azure/active-directory/managed-identities-azure-resources/overview). Azure managed identities can authenticate to Azure services and resources that support Microsoft Entra authentication. Authentication is enabled through predefined access grant rules, avoiding hard-coded credentials in source code or configuration files.
 
-For services that don't support managed identities, use Azure AD to create a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) with restricted permissions at the resource level instead. You should configure service principals with certificate credentials and fallback to client secrets. In both cases, [Azure Key Vault](/azure/key-vault/general/overview) can be used with Azure managed identities, so that the runtime environment, such as an Azure function, can retrieve the credential from the key vault.
+For services that don't support managed identities, use Microsoft Entra ID to create a [service principal](/azure/active-directory/develop/app-objects-and-service-principals) with restricted permissions at the resource level instead. You should configure service principals with certificate credentials and fallback to client secrets. In both cases, [Azure Key Vault](/azure/key-vault/general/overview) can be used with Azure managed identities, so that the runtime environment, such as an Azure function, can retrieve the credential from the key vault.
 
 For more information, see the Azure Security Benchmark [application identities](/security/benchmark/azure/security-controls-v3-identity-management#im-3-manage-application-identities-securely-and-automatically).
 

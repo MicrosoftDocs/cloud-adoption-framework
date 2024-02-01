@@ -1,6 +1,6 @@
 ---
 title: Cloud Solution Provider service
-description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Azure Active Directory (Azure AD) tenants.
+description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
 ms.date: 05/17/2022
@@ -27,7 +27,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 ## Design considerations
 
-- A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must exist between the partner and each Azure Active Directory (Azure AD) tenant in which the customer wants to provision a new Azure plan and CSP subscriptions.
+- A [CSP reseller relationship](/partner-center/request-a-relationship-with-a-customer) must exist between the partner and each Microsoft Entra tenant in which the customer wants to provision a new Azure plan and CSP subscriptions.
 
 - Only the partner can provision an Azure plan and CSP subscriptions.
 
@@ -57,7 +57,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 ## Next steps
 
-Learn how to improve your security posture by defining your Azure AD tenants.
+Learn how to improve your security posture by defining your Microsoft Entra tenants.
 
 > [!div class="nextstepaction"]
-> [Define Azure AD tenants](azure-ad-define.md)
+> [Define Microsoft Entra tenants](azure-ad-define.md)

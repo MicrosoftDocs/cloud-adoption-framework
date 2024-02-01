@@ -10,6 +10,8 @@ ms.custom: think-tank
 
 # Scenario-specific enterprise-scale landing zones in Azure
 
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
+
 Scenarios for enterprise-scale landing zones enable effective adoption and operationalization of key technologies on Azure. These specific scenarios can be used to accelerate adoption when your organization identifies business or technical requirements that require additional tier-1 technology platforms to support mission-critical workloads or business processes.
 
 Scenarios for enterprise-scale landing zones provide specific, refined deployments which can be run on top of existing enterprise-scale landing zones.
@@ -26,6 +28,7 @@ These landing zones have been developed in the broader context of common scenari
 |[SAP](../../scenarios/SAP/index.md)| Guidance for migrating or adopting SAP workloads as part of your cloud strategy. | [SAP on Azure landing zone accelerator](../../scenarios/sap/enterprise-scale-landing-zone.md) |
 |[Virtual desktop](../../scenarios/wvd/index.md)| Guidance for migrating virtual desktops, or creating new as part of a cloud-focused productivity strategy. | [Enterprise-scale for Azure Virtual Desktop](../../scenarios/wvd/enterprise-scale-landing-zone.md) |
 | [Modern application platform](../../scenarios/app-platform/index.md) | Guidance for how application services and containers can be integrated into your cloud adoption strategy. | [Enterprise-scale for AKS](../../scenarios/app-platform/aks/landing-zone-accelerator.md) |
+| [Azure VMware Solution](../../scenarios/azure-vmware/index.md) | Guidance for migrating VMware workloads to Azure as part of your cloud strategy. | [Azure VMware Solution landing zone accelerator](../../scenarios/azure-vmware/enterprise-scale-landing-zone.md) |
 
 ## Next steps
 

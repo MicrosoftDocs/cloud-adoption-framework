@@ -76,7 +76,7 @@ Inbound options for delivering content and applications include:
 
 ### ExpressRoute
 
-The Azure VMware Solution out-of-the-box private cloud deployment automatically one free 10 Gbps ExpressRoute circuit. This circuit connects Azure VMware Solution to the D-MSEE.
+The Azure VMware Solution out-of-the-box private cloud deployment automatically creates one free 10 Gbps ExpressRoute circuit. This circuit connects Azure VMware Solution to the D-MSEE.
 
 Consider deploying Azure VMware Solution in [Azure paired regions](/azure/best-practices-availability-paired-regions) near your datacenters.
 

@@ -36,7 +36,7 @@ The following recommendations apply to scenarios in which a virtual machine's DN
  - Background DNS and virtual names connect many system interfaces in HPC environments. You might not be aware of all the interfaces that developers define over time. Connection challenges arise between various systems when virtual machine or DNS names change after migrations. We recommend that you retain DNS aliases to prevent these difficulties.
  - Use different DNS zones to distinguish the environments (sandbox, development, preproduction, and production) from each other. The exception is for HPC deployments that have their own virtual networks. In these deployments, private DNS zones might not be necessary.
  - DNS support is required when you use HPC Cache. DNS enables it to access storage and other resources.
- - DNS and name resolution are critical in the finance sector when you use resource location and SRV records. We recommend that you use the DNS resolution provided by the Azure Active Directory Domain Services (Azure AD DS) domain controller. For more information, see [Deploy Azure AD DS in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
+ - DNS and name resolution are critical in the finance sector when you use resource location and SRV records. We recommend that you use the DNS resolution provided by the Microsoft Entra Domain Services (Microsoft Entra Domain Services) domain controller. For more information, see [Deploy Microsoft Entra Domain Services in an Azure virtual network](/azure/architecture/reference-architectures/identity/adds-extend-domain).
 
 ## High-performance network services
 
@@ -92,12 +92,12 @@ This section provides key recommendations for encrypting networks between on-pre
 
 The following articles provide guidance that you might find helpful during various stages of the cloud adoption process. They can help you succeed in your cloud adoption scenario for HPC environments in the finance sector.
 
-- [Azure billing offers and Active Directory tenants](./azure-billing-active-directory-tenant.md)
-- [Identity and access management](./identity-access-management.md)
-- [Management](./management.md)
-- [Platform automation and DevOps](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Governance](./security-governance-compliance.md)
-- [Security](./security.md)
-- [Storage](./storage.md)
-- [HPC landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure billing offers and Active Directory tenants for finance HPC](./azure-billing-active-directory-tenant.md)
+- [Finance HPC Azure identity and access management](./identity-access-management.md)
+- [Management for HPC in the finance sector](./management.md)
+- [Platform automation and DevOps for HPC in the finance sector](./platform-automation-devops.md)
+- [Resource organization for Azure HPC in the finance sector](./resource-organization.md)
+- [Governance for finance HPC](./security-governance-compliance.md)
+- [Security for HPC in the finance sector](./security.md)
+- [Storage for HPC in the finance sector](./storage.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

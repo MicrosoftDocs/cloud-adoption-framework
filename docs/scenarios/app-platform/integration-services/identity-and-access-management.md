@@ -27,7 +27,7 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
 - Use managed identities for integration services resources - see the [Security](./security.md) article in this series for a detailed description of this recommendation.
 
-- Use Azure AD for authentication to integration services resources.
+- Use Microsoft Entra ID for authentication to integration services resources.
 
 - Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, devops engineers and system administrators, for example.
 
@@ -53,7 +53,7 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
   - Who needs to be able to view and read keys, secrets or certificates in Key Vault?
 
-  - Will the existing built-in Azure AD roles and groups cover the requirements that you have identified?
+  - Will the existing built-in Microsoft Entra roles and groups cover the requirements that you have identified?
 
 - Create custom roles to either limit access, or to provide more granularity over permissions when built-in roles will not sufficiently lock down access. For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner”, which are too broad.
   
@@ -83,7 +83,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 ## Recommended content
 
-- [Azure Active Directory Identity and access management operations reference guide](/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
+- [Microsoft Entra identity and access management operations reference guide](/azure/active-directory/fundamentals/active-directory-ops-guide-iam)
 
 - [Azure identity and access management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
 

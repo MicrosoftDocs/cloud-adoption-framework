@@ -56,7 +56,7 @@ While having an Azure Virtual Desktop deployment in a single Azure region will b
 
 The following are the network considerations for both Azure Virtual Desktop expansion scenarios.
 
-The following list describes the key networking considerations to implement in the new Azure region when expanding a Azure Virtual Desktop deployment into a secondary Azure region for **Scenario A:**
+The following list describes the key networking considerations to implement in the new Azure region when expanding an Azure Virtual Desktop deployment into a secondary Azure region for **Scenario A:**
 
 - Deploy a new Virtual Network with non-overlapping IP address space.
 - Connect the Virtual Network in the new region to the Virtual Network in the primary region with Global VNet Peering and enabling Gateway Transit.
@@ -67,7 +67,7 @@ The following list describes the key networking considerations to implement in t
 - Deploy Azure Virtual Desktop Virtual Machines in the new Azure region
 - Ensure users are assigned to Windows Virtual Desktops in only one region, to ensure they don’t have different profiles (if users are assigned to Virtual Desktops on both regions, then they will have different profiles, as profiles will be stored in the regional storage system).
 
-The following list describes the key networking considerations to implement in the new Azure region(s) when expanding a Azure Virtual Desktop deployment into a secondary Azure region that will be connected to an on-premises datacenter in the same geo for **Scenario B:**
+The following list describes the key networking considerations to implement in the new Azure region(s) when expanding an Azure Virtual Desktop deployment into a secondary Azure region that will be connected to an on-premises datacenter in the same geo for **Scenario B:**
 
 Some customers may require deploying Azure Virtual Desktop across multiple Azure regions, as they may want to deploy the Azure Virtual Desktop Virtual Machines closer to where the users are, but also, closer to where the existing systems and applications exists in on-premises datacenters.
 

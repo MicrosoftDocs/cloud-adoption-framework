@@ -108,7 +108,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 | --- | --- |
 | [SAP migration guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/) | Get practical guidance to move your on-premises SAP workloads to the cloud. |
 | [Migrate SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/) | White paper and roadmap for your SAP journey to the cloud. |
-| [Migration methodologies for SAP on Azure](https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure/) | Overview of various migration options to move SAP applications to Azure. |
+| [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure. |
 
 ### Specialized workloads
 
