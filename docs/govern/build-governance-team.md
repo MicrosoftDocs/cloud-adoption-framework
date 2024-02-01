@@ -42,7 +42,7 @@ The cloud governance team needs the authority to enforce the governance policies
 
 - *Establish authority levels.* Define the team's decision-making powers and enforcement capabilities. For example, delineate the team’s authority to enforce compliance, manage cloud budgets, and make decisions on cloud architecture. Clear authority levels should be communicated across the organization to ensure there is no ambiguity about the team's role.
 
-- *Create enforcement policies.* Develop transparent policies for non-compliance with organization cloud governance policies. For example, outline the procedures for addressing violations of governance policies. The procedures should outline escalation paths and potential penalties. Enforcement policies should be fair, transparent, and consistently applied.
+- *Create enforcement policies.* Develop transparent policies for non-compliance with organization cloud governance policies. For example, outline the procedures for addressing violations of governance policies. The procedures should outline escalation paths and potential penalties. Enforcement policies should be fair, transparent, and consistently applied. The governance team isn’t necessarily the team to make the organization adhere to that policy. Distribute the responsibility of adherence across all the workload teams.
 
 - *Communicate authority.* Ensure the organization understands the team's authority. For example, use organization-wide announcements, include references in the employee handbook, and conduct presentations at company meetings. Effective communication strategies ensure that all employees are aware of the governance team’s authority and its impact on their work.
 
