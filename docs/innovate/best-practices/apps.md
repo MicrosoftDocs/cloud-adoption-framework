@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 09/07/2023
 ms.topic: conceptual
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: application development services, application development tools, innovation methodologies
 ---
 

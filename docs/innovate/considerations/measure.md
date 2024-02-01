@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/23/2021
 ms.topic: conceptual
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: customer impact, how to measure impact, what are metrics in business, business metrics, learning metrics
 ---
 
