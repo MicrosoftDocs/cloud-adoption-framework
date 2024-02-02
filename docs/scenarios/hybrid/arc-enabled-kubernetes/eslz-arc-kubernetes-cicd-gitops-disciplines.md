@@ -5,7 +5,7 @@ author: jpocloud
 ms.author: johnpoole
 ms.date: 01/20/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes

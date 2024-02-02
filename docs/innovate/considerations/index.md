@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 03/25/2021
 ms.topic: conceptual
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: digital economy, what is innovation, innovation process, innovation methodology
 ---
 

@@ -5,7 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/01/2021
 ms.topic: conceptual
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: innovation challenges, cloud adoption challenges, challenges to innovation, technology adoption, challenges to adopting new technology
 ---
 
