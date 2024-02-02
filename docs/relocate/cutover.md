@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 12/19/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.custom: internal, seo-caf-relocate
+ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Cut over a cloud workload
