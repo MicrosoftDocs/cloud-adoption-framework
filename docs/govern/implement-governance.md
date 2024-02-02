@@ -12,6 +12,8 @@ ms.custom: internal, UpdateFrequency2
 
 Apply guardrails to enforce the governance policies in the cloud environment through practical implementation strategies. This step is where you start making progress toward where you want to be. With governance monitoring in place, you can track your progress. Effective implementation ensures that governance policies are not just theoretical but actively guide and control the organization's cloud activities, enhancing security, compliance, and operational integrity.
 
+- *Start with audit enforcement.* Start with an audit-centric approach to allow for policy discussion and adaptation, moving to enforcement for critical or non-negotiable areas.
+
 - **Tools and Features**
 Utilize platform features (e.g., Azure policies) for enforcement and scaling. Implement templates and policies for automation to ensure continuity and control in governance.
 
@@ -22,3 +24,5 @@ Utilize platform features (e.g., Azure policies) for enforcement and scaling. Im
 - **Feedback Mechanism**: Establish channels for receiving feedback and maintaining dialogue with the organization..
 
 - **Incremental Rollout**: Introduce governance gradually, starting with audit measures before moving to more restrictive controls.
+
+## Next steps
