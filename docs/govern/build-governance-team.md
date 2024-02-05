@@ -56,5 +56,3 @@ The cloud governance team has a specific charter to create policies that mitigat
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Quantify organizational risk](quantify-organizational-risk.md)
