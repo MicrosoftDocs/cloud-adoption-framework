@@ -24,9 +24,12 @@ Azure provides four levels of management: management groups, subscriptions, reso
 
 - **Subscriptions** logically associate user accounts with the resources that they create. Each subscription has limits or quotas on the amount of resources that it can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, and projects.
 
-- **Resource groups** are logical containers where you can deploy and manage Azure resources like web apps, databases, and storage accounts.
+- **Resource groups** are logical containers where you can deploy and manage Azure resources like virtual machines, web apps, databases, and storage accounts.
 
-- **Resources** are instances of services that you can create, such as virtual machines, storage, and SQL databases.
+- **Resources** are instances of services that you can create in a resource group, such as virtual machines, storage, and SQL databases.
+
+  > [!NOTE]
+  > To reduce the impact of regional outages, we recommend that you locate resources in the same region as the resource group. For more information, see [Programmatically create Azure subscriptions](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 ### Management settings scope
 
