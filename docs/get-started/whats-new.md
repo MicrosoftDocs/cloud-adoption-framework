@@ -22,7 +22,7 @@ During the month of January, we added two articles and updated an article.
 
 In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
 - [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
-- [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/decision-guide)
+- [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide)
 - [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
 - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
 
