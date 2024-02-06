@@ -14,22 +14,40 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## January 2024
+
+During the month of January, we added two articles and updated an article. 
+
+### New articles
+
+In [Define a sovereignty strategy](strategy/define-sovereignty-strategy.md), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
+- [Select Azure regions for a migration](migrate/azure-best-practices/multiple-regions.md)
+- [Azure migration tools decision guide](migrate/azure-migration-guide/decision-guide.md)
+- [Select Azure regions](ready/azure-setup-guide/regions.md)
+- [Security design in Azure](ready/landing-zone/design-area/security.md)
+
+In [Advanced Azure Policy management](ready/policy-management/enterprise-policy-as-code.md), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
+
+### Updated article
+
+In [Plan for IP addressing](ready/azure-best-practices/plan-for-ip-addressing.md), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
+
 ## December 2023
 
-### Migrate a workload to a different Azure region
+In December, we added new articles about landing zones and updated articles related to workload migration.
 
-Find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
+### New articles
+
+- Find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
+
+- Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
+
+### Updated articles
+
+In the following articles, find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
 
 - [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
 - [Migrate a cloud workload to another region](../relocate/migrate.md)
-
-### Manage application development environments in Azure landing zones
-
-In our new article, find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
-
-### Modify an Azure landing zone architecture to meet requirements across multiple locations
-
-Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
 
 ## November 2023
 
