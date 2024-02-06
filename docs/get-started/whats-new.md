@@ -20,17 +20,17 @@ During the month of January, we added two articles and updated an article.
 
 ### New articles
 
-In [Define a sovereignty strategy](strategy/define-sovereignty-strategy.md), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
-- [Select Azure regions for a migration](migrate/azure-best-practices/multiple-regions.md)
-- [Azure migration tools decision guide](migrate/azure-migration-guide/decision-guide.md)
-- [Select Azure regions](ready/azure-setup-guide/regions.md)
-- [Security design in Azure](ready/landing-zone/design-area/security.md)
+In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
+- [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+- [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/decision-guide)
+- [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
+- [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
 
-In [Advanced Azure Policy management](ready/policy-management/enterprise-policy-as-code.md), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
+In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/policy-management/enterprise-policy-as-code), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
 
 ### Updated article
 
-In [Plan for IP addressing](ready/azure-best-practices/plan-for-ip-addressing.md), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
+In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
 
 ## December 2023
 
