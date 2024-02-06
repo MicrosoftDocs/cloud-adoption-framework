@@ -14,6 +14,23 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## December 2023
+
+### Migrate a workload to a different Azure region
+
+Find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
+
+- [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
+- [Migrate a cloud workload to another region](../relocate/migrate.md)
+
+### Manage application development environments in Azure landing zones
+
+In our new article, find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
+
+### Modify an Azure landing zone architecture to meet requirements across multiple locations
+
+Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
+
 ## November 2023
 
 ### Sovereignty requirements
@@ -211,25 +228,5 @@ We're excited to announce updates to our Azure App Service Cloud Adoption Framew
 | [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md) | Network topology and connectivity considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to multitenant App Service and App Service Environment. |
 
 We encourage you to review these updates and incorporate them into your App Service deployments. As always, we welcome your feedback and suggestions for future improvements.
-
-## December 2022
-
-### Cloud adoption scenario for defense
-
-The cloud adoption scenario for defense provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country/region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The defense scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
-
-We invite you to [explore the defense scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
-
-### HPC landing zone accelerator
-
-High-performance computing (HPC) on Azure is the complete set of Azure resources (compute, networking, and storage) integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries such as manufacturing, energy, and finance.
-
-The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a framework for architectural best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
-
-Use the following links to get started with HPC on Azure:
-
-- [Introduction to the Azure HPC scenario](../scenarios/azure-hpc/index.md)
-- [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
-- [Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
 
 <!-- docutune:ignoreNextStep -->
