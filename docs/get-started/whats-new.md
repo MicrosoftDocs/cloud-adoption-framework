@@ -16,8 +16,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## January 2024
 
-During the month of January, we added two articles and updated an article. 
-
 ### New articles
 
 In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
@@ -28,19 +26,26 @@ In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/defi
 
 In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/policy-management/enterprise-policy-as-code), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
 
-### Updated article
+### Updated articles
 
 In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
 
-## December 2023
+In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
 
-In December, we added new articles about landing zones and updated articles related to workload migration.
+We also added information about application migration tools and strategies. Find updates in these articles:
+
+- [Cloud adoption journey](/azure/cloud-adoption-framework/adopt/cloud-adoption): Learn about rearchitecting or rebuilding applications that can't be replaced by SaaS or low-code solutions.
+- [Migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide): Explore tools for application migration and modernization and tools for replatforming or rehosting.
+
+## December 2023
 
 ### New articles
 
-- Find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
+Find new guidance about Azure landing zones:
 
-- Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
+- [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md)
+- [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md)
+- [Incorporate Zero Trust practices in your landing zone](../ready/landing-zone/design-area/security-zero-trust.md)
 
 ### Updated articles
 
@@ -48,6 +53,11 @@ In the following articles, find updated guidance about workload discovery proces
 
 - [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
 - [Migrate a cloud workload to another region](../relocate/migrate.md)
+- [How to initiate a cloud relocation project](../relocate/initiate.md)
+
+In [Centralized security operations with external identities for multitenant defense organizations](/azure/cloud-adoption-framework/scenarios/defense/identity/multi-tenant/security-operations), we updated our guidance for centralized security operations. 
+
+In [Identity and access management for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
 
 ## November 2023
 
