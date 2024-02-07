@@ -30,6 +30,12 @@ In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-pra
 
 In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
 
+- New sovereignty considerations can be found in the following updated articles:
+  - [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+  - [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide)
+  - [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
+  - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
+
 We also added information about application migration tools and strategies. Find updates in these articles:
 
 - [Cloud adoption journey](/azure/cloud-adoption-framework/adopt/cloud-adoption): Learn about rearchitecting or rebuilding applications that can't be replaced by SaaS or low-code solutions.
