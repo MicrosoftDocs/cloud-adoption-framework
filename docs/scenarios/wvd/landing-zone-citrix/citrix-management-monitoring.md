@@ -18,7 +18,7 @@ Both Microsoft and Citrix provide a set of core tools and services for monitorin
 
 The Microsoft tools and services include Azure Monitor, Azure Advisor, Azure Service Health, Microsoft Sentinel, and Azure Network Watcher. The Citrix tools and services include Citrix Monitor, Citrix Analytics, and Citrix Managed Services. Most of these services are included with your subscriptions, but some cost extra.
 
-For information about Microsoft tools to use with Citrix DaaS, visit the [Citrix Tech Zone](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/monitoring.html#microsoft). For more information about Citrix tools, see [Citrix DaaS for Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/monitoring.html#citrix) and [Citrix application delivery management](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/azure-network-scalability-considerations.html#citrix-application-delivery-management-adm-service).
+For information about Microsoft tools to use with Citrix DaaS, visit the [Citrix Tech Zone](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/daas-for-azure.html#microsoft). For more information about Citrix tools, see [Citrix DaaS for Azure](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/daas-for-azure.html#microsoft) and [Citrix application delivery management](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/daas-for-azure.html#citrix-application-delivery-management-adm-service).
 
 ## Citrix design recommendations
 
@@ -88,7 +88,7 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
   - Use Task Manager or Citrix Monitor to look for applications that are causing high CPU, disk, or network usage.
   - If activity looks normal, the best approach is to increase the capacity to the delivery group.
 
-For more recommendations for using Citrix components, see: [Baseline Metrics and Alerts for Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/monitoring.html#baseline-metrics-and-alerts-for-azure).
+For more recommendations for using Citrix components, see: [Baseline Metrics and Alerts for Azure](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/daas-for-azure.html#microsoft).
 
 ## General recommendations
 
