@@ -36,7 +36,7 @@ In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/poli
   - [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
   - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
 
-We also added information about application migration tools and strategies. Find updates in these articles:
+- We also added information about application migration tools and strategies. Find updates in these articles:
 
 - [Cloud adoption journey](/azure/cloud-adoption-framework/adopt/cloud-adoption): Learn about rearchitecting or rebuilding applications that can't be replaced by SaaS or low-code solutions.
   - [Migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide): Explore tools for application migration and modernization and tools for replatforming or rehosting.
