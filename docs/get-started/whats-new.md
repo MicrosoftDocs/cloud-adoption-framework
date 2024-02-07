@@ -21,7 +21,6 @@ In January we added two new articles and updated eight articles.
 ### New articles
 
 In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
-- [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide)
 - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
 
 In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/policy-management/enterprise-policy-as-code), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
