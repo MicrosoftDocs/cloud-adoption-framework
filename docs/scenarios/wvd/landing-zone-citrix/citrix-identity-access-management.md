@@ -34,7 +34,7 @@ This article discusses the various ways of providing identity and access control
 
 ## Design recommendations
 
-Design guidance for [Citrix DaaS on Microsoft Azure is available on Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/design-guidance.html). That article highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
+Design guidance for [Citrix DaaS on Microsoft Azure is available on Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). That article highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
 
 ## Next steps
 
