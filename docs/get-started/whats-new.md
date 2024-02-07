@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 11/30/2023
+ms.date: 02/07/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -14,22 +14,54 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## January 2024
+
+In January we added two new articles and updated eight articles.
+
+### New articles
+
+- In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We also updated several articles with sovereignty considerations, which you'll find under the "Updated articles" section for this month.
+
+- In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/policy-management/enterprise-policy-as-code), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
+
+### Updated articles
+
+- In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
+
+- In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
+
+- New sovereignty considerations can be found in the following updated articles:
+  - [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+  - [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide)
+  - [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
+  - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
+
+- We also added information about application migration tools and strategies. Find updates in these articles:
+
+  - [Cloud adoption journey](/azure/cloud-adoption-framework/adopt/cloud-adoption): Learn about rearchitecting or rebuilding applications that can't be replaced by SaaS or low-code solutions.
+  - [Migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide): Explore tools for application migration and modernization and tools for replatforming or rehosting.
+
 ## December 2023
 
-### Migrate a workload to a different Azure region
+### New articles
 
-Find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
+Find new guidance about Azure landing zones:
+
+- [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md)
+- [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md)
+- [Incorporate Zero Trust practices in your landing zone](../ready/landing-zone/design-area/security-zero-trust.md)
+
+### Updated articles
+
+In the following articles, find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
 
 - [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
 - [Migrate a cloud workload to another region](../relocate/migrate.md)
+- [How to initiate a cloud relocation project](../relocate/initiate.md)
 
-### Manage application development environments in Azure landing zones
+In [Centralized security operations with external identities for multitenant defense organizations](/azure/cloud-adoption-framework/scenarios/defense/identity/multi-tenant/security-operations), we updated our guidance for centralized security operations. 
 
-In our new article, find out how cloud platform teams can set up guardrails to [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md) and align various application development environments with their framework. 
-
-### Modify an Azure landing zone architecture to meet requirements across multiple locations
-
-Organizations in many industries are subject to regulatory requirements, including data residency, data security, and data sovereignty requirements. Some organizations need to comply with conflicting regulations across multiple geographic locations. In our new article, learn how to [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md).
+In [Identity and access management for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
 
 ## November 2023
 
