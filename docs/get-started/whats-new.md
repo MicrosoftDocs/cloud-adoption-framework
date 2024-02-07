@@ -16,6 +16,8 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## January 2024
 
+In January we added two new articles and updated eight articles.
+
 ### New articles
 
 In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We added information about sovereignty requirements in the following articles:
