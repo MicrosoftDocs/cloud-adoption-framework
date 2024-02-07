@@ -28,7 +28,7 @@ In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/poli
 
 - In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
 
-In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
+- In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
 
 - New sovereignty considerations can be found in the following updated articles:
   - [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
