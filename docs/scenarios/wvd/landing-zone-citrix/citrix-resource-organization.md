@@ -16,7 +16,7 @@ This article provides considerations that you should take into account when you 
 
 The following sections provide recommendations for labeling and organizing resources when you deploy Citrix on Azure.
 
-Additional design guidance for Citrix DaaS on Azure is available on [Citrix TechZone](https://docs.citrix.com/en-us/tech-zone/toc/by-solution/daas-for-azure/design-guidance.html). The article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
+Additional design guidance for Citrix DaaS on Azure is available on [Citrix TechZone](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). The article highlights the system, workload, user, and network considerations for aligning Citrix deployments with Cloud Adoption Framework design principles. 
 
 ### Citrix Cloud naming and tagging
 
