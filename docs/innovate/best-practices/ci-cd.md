@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 09/07/2023
 ms.topic: conceptual
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: toolchain, maturity model, continuous integration, innovate methodology
 ---
 

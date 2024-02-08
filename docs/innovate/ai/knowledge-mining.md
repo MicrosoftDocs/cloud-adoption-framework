@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
-ms.custom: think-tank, seo-caf-innovate
+ms.custom: think-tank
 keywords: knowledge mining, knowledge mining solution, cognitive search, azure ai search, cloud search service
 ---
 
