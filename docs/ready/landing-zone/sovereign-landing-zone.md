@@ -48,8 +48,6 @@ As the following diagram shows, the sovereign landing zone architecture builds o
 
 :::image type="content" source="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg" alt-text="Diagram that shows the management groups of a sovereign landing zone." lightbox="./media/sovereign-landing-zone/sovereign-landing-zone-management-groups.svg":::
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/master/ready/sovereign-landing-zone-management-groups.vsdx) of this architecture.*
-
 ##### Microsoft Cloud for Sovereignty policy baseline
 
 The sovereign landing zone (preview) comes with the Microsoft Cloud for Sovereignty policy baseline initiatives deployed. As a result, you can deploy other policy sets within the sovereign landing zone (preview). You can layer extra policies on top of the sovereign landing zone (preview). Examples include Azure landing zone policies and policy sets that address control frameworks such as National Institute of Standards and Technology (NIST) 800 171 Revision 2 and Microsoft Cloud Security Benchmark.
