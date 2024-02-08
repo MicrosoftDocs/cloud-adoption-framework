@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 11/30/2023
+ms.date: 02/07/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,55 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## January 2024
+
+In January we added two new articles and updated eight articles.
+
+### New articles
+
+- In [Define a sovereignty strategy](/azure/cloud-adoption-framework/strategy/define-sovereignty-strategy), organizations that use cloud services can find guidance for meeting the sovereignty requirements for their countries/regions. We also updated several articles with sovereignty considerations, which you'll find under the "Updated articles" section for this month.
+
+- In [Advanced Azure Policy management](/azure/cloud-adoption-framework/ready/policy-management/enterprise-policy-as-code), find out how to manage Azure Policy at scale by using the Enterprise Policy as Code (EPAC) open-source project and integrating IaC into your environment.
+
+### Updated articles
+
+- In [Plan for IP addressing](/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing), we added information about IPv6 considerations. Find recommendations to help you plan for IPv6 and implement it in your existing Azure networks.
+
+- In [Network topology and connectivity for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity), find updates about how to overcome the management challenges involved in using Private Link.
+
+- New sovereignty considerations can be found in the following updated articles:
+  - [Select Azure regions for a migration](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
+  - [Azure migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide)
+  - [Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
+  - [Security design in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
+
+- We also added information about application migration tools and strategies. Find updates in these articles:
+
+  - [Cloud adoption journey](/azure/cloud-adoption-framework/adopt/cloud-adoption): Learn about rearchitecting or rebuilding applications that can't be replaced by SaaS or low-code solutions.
+  - [Migration tools decision guide](/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide): Explore tools for application migration and modernization and tools for replatforming or rehosting.
+
+## December 2023
+
+### New articles
+
+Find new guidance about Azure landing zones:
+
+- [Manage application development environments in Azure landing zones](../ready/landing-zone/design-area/management-application-environments.md)
+- [Modify an Azure landing zone architecture to meet requirements across multiple locations](../ready/landing-zone/landing-zone-multinational.md)
+- [Incorporate Zero Trust practices in your landing zone](../ready/landing-zone/design-area/security-zero-trust.md)
+
+### Updated articles
+
+In the following articles, find updated guidance about workload discovery processes that help you understand the many dimensions involved in migrating a workload. You can use that information to help you effectively migrate cloud workloads to another region.
+
+- [Evaluate a cloud workload for relocation](../relocate/evaluate.md)
+- [Migrate a cloud workload to another region](../relocate/migrate.md)
+- [How to initiate a cloud relocation project](../relocate/initiate.md)
+
+In [Centralized security operations with external identities for multitenant defense organizations](/azure/cloud-adoption-framework/scenarios/defense/identity/multi-tenant/security-operations), we updated our guidance for centralized security operations. 
+
+In [Identity and access management for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
 
 ## November 2023
 
@@ -211,25 +260,5 @@ We're excited to announce updates to our Azure App Service Cloud Adoption Framew
 | [Network topology and connectivity](../scenarios/app-platform/app-services/network-topology-and-connectivity.md) | Network topology and connectivity considerations for the App Service landing zone accelerator are updated to include new guidance on implementing security and control over network access to multitenant App Service and App Service Environment. |
 
 We encourage you to review these updates and incorporate them into your App Service deployments. As always, we welcome your feedback and suggestions for future improvements.
-
-## December 2022
-
-### Cloud adoption scenario for defense
-
-The cloud adoption scenario for defense provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country/region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The defense scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives.
-
-We invite you to [explore the defense scenario](../scenarios/defense/index.md) and return to this content regularly throughout your journey. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs.
-
-### HPC landing zone accelerator
-
-High-performance computing (HPC) on Azure is the complete set of Azure resources (compute, networking, and storage) integrated with workload orchestration services. HPC on Azure supports applications that provide advanced analytics, graphic-intensive visualizations, and scalable rendering. HPC can run complex simulations for organizations in multiple industries such as manufacturing, energy, and finance.
-
-The HPC landing zone accelerator modernizes HPC workloads on Azure by offering global regulatory compliance, next-generation machine-learning tools, and a framework for architectural best practices. The landing zone accelerator also provides industry-specific architecture references and automation solutions that help you start your HPC journey on Azure.
-
-Use the following links to get started with HPC on Azure:
-
-- [Introduction to the Azure HPC scenario](../scenarios/azure-hpc/index.md)
-- [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
-- [Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md)
 
 <!-- docutune:ignoreNextStep -->
