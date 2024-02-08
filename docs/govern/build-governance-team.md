@@ -10,6 +10,18 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
+Cloud Governance is a function, not a dedicated team:
+
+The responsibility of cloud governance is usually carried out by a "cloud governance team". This in fact is a **function** that takes on the role of understanding cloud business and operational risks and can translate those into cloud corporate policies. In this sense, the recommendation is not that there be a dedicated team for this purpose, unless the organization determines so if necessary.
+ 
+For organizations with a cloud strategy team, the cloud governance function is expected to collaborate strongly with them to achieve that business understanding (this may be the case when the governance team does not also serve as a strategy function cloud).
+ 
+On the other hand, effectively managing risks is essential for any organization, and it's important to understand how much risk the organization can handle and is willing to take. This isn't just a technical decision; it's a crucial part of organizational governance. That's why cloud risk management is closely tied to the organization's overall IT and corporate governance. To ensure the best outcomes, it's recommended that Cloud Governance representatives strongly understand both cloud services and the organization's risk appetite. However, when this is not feasible, cloud technical teams can take the cloud governance initiative and work closely with the CCoE, management board or equivalent to ensure they are actively involved in the decision-making process. By working together, cloud technical teams and management boards can make informed decisions and take responsibility for cloud risk management. 
+ 
+In this sense, when a formal cloud governance function is not yet established, it is common for the need for its formalization to be given precisely from below. This is through more technical teams that work with cloud environments and services daily and are faced with the challenge of incorporating more controls and the need to minimize risks that arise and are encountered along the cloud adoption journey.
+ 
+Thus, the CCoE, management board (or equivalent) must intervene to ensure the development of the appropriate cloud risk management framework. They have the ultimate responsibility to the organization's stakeholders for establishing and maintaining a sufficient and proper risk management framework for the cloud. Hence, the Cloud Governance team usually develops the cloud risk management framework under the CCoE/management's oversight.
+
 Cloud governance is fundamentally driven by the people who define, implement, and refine governance policies. To establish cloud governance, you first need to build a cloud governance team. Here are recommendations for building a cloud governance team.
 
 ## Understand the functions of a cloud governance team
