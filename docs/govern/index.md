@@ -34,7 +34,7 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 - MVG involves creating a ‘simplified’ version of the overarching Cloud Governance with the minimum process, capabilities and functionalities required to address a core problem or deliver value to users.
 - Incremental governance relies on a small set of corporate policies, processes, and tools to establish a foundation for adoption and governance.
 - The foundation is called a minimum viable governance (MVG).
-- An MVG allows the governance team to quickly incorporate governance into implementations throughout the adoption lifecycle.
+- An MVG (Minimum Viable Governance) allows the governance team to quickly incorporate governance into implementations throughout the adoption lifecycle.
 - By leveraging for instance Azure Devops capabilities, governance activities can be easily linked to agile working styles within in an organization  and make it actionable by directly linking governance policies to code in a repository (e.g Azure Policies)
 
 ## Possible elements of a Governance Model are
