@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
-ms.custom: think-tank, seo-caf-innovate
+ms.custom: think-tank
 keywords: cognitive search, azure cognitive services, azure ai search, what is cognitive, azure search
 ---
 
