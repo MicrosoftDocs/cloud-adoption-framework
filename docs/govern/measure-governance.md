@@ -18,3 +18,8 @@ Immediately after documenting governance policies, you need to implement mechani
 - **Communication**: Share policies widely and ensure educational components are included for better compliance.
 
 - **Tracking Over Time**: Monitor and track governance effectiveness and progress over time.
+
+## Monitor and review
+
+- **Continuous Monitoring**: Implement tools and processes to continuously monitor the risk landscape for changes that may affect the risk assessment.
+- **Regular Reviews**: Schedule periodic reviews of the risk assessment to update it based on new threats, vulnerabilities, and changes in the organization's cloud environment.
