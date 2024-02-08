@@ -127,7 +127,12 @@ For each Azure service that you consider for your cloud adoption process, unders
 
 ### Plan Azure resource group deployments
 
-Azure resource groups are deployed to a specific Azure region. But *resources* in a resource group often span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Keep in mind these points about resource group resiliency by region when you design your resource hierarchy.
+For the most reliable scenario and reduce the impact of regional outages, we recommend that you locate resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+
+
+If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
+
+To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
 
 > [!TIP]
 > Whenever possible, deploy resource groups in a region that has multiple availability zones. Availability zones help to minimize the risk of regional outages that reduce the availability of your resource and also make management operations unavailable.
