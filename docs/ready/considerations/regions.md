@@ -49,11 +49,11 @@ You should consider a multi-region strategy, either from the start of your cloud
 | Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. [Azure Virtual Network Manager](../azure-best-practices/define-an-azure-network-topology.md#azure-virtual-network-manager-in-azure-landing-zones) can make it easier to expand and manage virtual networks at scale in multiple regions. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke virtual networks in the new region for resolution. Azure DNS zones are global resources and not tied to a single Azure region, so nothing needs to be done to them. |
 | Identity | If you deployed Active Directory Domain Services or Microsoft Entra Domain Services into your *Identity* subscription/spoke, expand the service into the new Azure region. |
 
+Microsoft Cloud for Sovereignty has guidelines to restrict the services and regions that end users can use and enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
+
 > [!NOTE]
 > You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether [availability zones are supported](/azure/reliability/availability-zones-service-support) in your chosen regions and for the services you want to use.
 
-> [!TIP]
-> Microsoft Cloud for Sovereignty has guidelines to restrict the services and regions that end users can use and enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
 
 ### High-level approach
 
