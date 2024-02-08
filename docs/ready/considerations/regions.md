@@ -119,8 +119,6 @@ Occasionally, you might need to move your entire Azure estate to a different reg
 
 Most of the globally deployed landing zone configuration doesn't typically need to be modified when you move regions. However, ensure that you check for any policy assignments that restrict region deployments and update the policy to allow deployments into the new region.
 
-Microsoft Cloud for Sovereignty has guidelines to restrict the services and regions that end users can use and enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
-
 ### Regional landing zone resources
 
 Region-specific landing zone resources often require more consideration because some Azure resources can't be moved between regions. Consider the following approach:
