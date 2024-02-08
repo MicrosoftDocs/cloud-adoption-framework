@@ -24,7 +24,7 @@ The cloud governance team's first deliverable is establishing a quantified under
 
 ## Analyze risks
 
-- *Evaluate risk probability.* Evaluate the probability of each identified risk occurring. Consider factors like exposure to threats, existing controls, and historical data. The governance team coordinates this analysis but may require specialized input from security experts and department heads.
+- *Evaluate risk probability.* Evaluate the probability of each identified risk occurring. Consider factors like exposure to threats, existing controls, historical data, industry trends, and emergent threats. The governance team coordinates this analysis but may require specialized input from security experts and department heads.
 
 - *Determine risk impact.* Determine the potential impact of each risk on the organization. This includes financial loss, reputational damage, operational disruption, and legal implications. The cloud governance team, in collaboration with finance, legal, and operational leaders, assesses these impacts to understand the broader organizational consequences.
 
@@ -32,7 +32,7 @@ The cloud governance team's first deliverable is establishing a quantified under
 
 ## Prioritize risks
 
-- *Use a risk matrix.* A risk matrix helps visualize and prioritize risks based on their ratings. The cloud governance team uses this tool to focus the organization's attention and resources on the most critical risks.
+- *Use a risk matrix.* A risk matrix helps visualize and prioritize risks based on their ratings. The cloud governance team uses this tool to focus the organization's attention and resources on the most critical risks. For example, one way of doing risk analysis is to assign simple categories, such as high, medium or low to distinguish between different levels of **likelihood** and **impact**. Risk analysis will usually use a table, which is used to determine a general risk level from the levels of impact and likelihood. This risk analysis results in a risk level that is recorded in a risk register and used to determine the appropriate risk treatment.
 
 - *Assess business impact.* The strategic importance of affected assets and the organization's overall risk tolerance are considered to refine risk prioritization. The governance team, in consultation with senior management, leads this assessment to align risk priorities with business objectives.
 
@@ -41,7 +41,7 @@ The cloud governance team's first deliverable is establishing a quantified under
 - *Create a risk register.* A comprehensive risk register is created, documenting all identified risks, their assessments, and prioritization. The cloud governance team ensures that the register includes descriptions of risks, their causes, potential impacts, likelihoods, and priorities.
 
 - *Communicate with stakeholders.* The governance team is responsible for communicating the findings to key stakeholders, including senior management and affected business units. This ensures a shared understanding of risks across the organization and fosters a collaborative approach to managing cloud governance.
-
+To streamline the gap between strategy and tactic, the tactical cloud governance team should consider not only uncertainties that have a potentially negative impact (threats) but also those that have a positive impact (opportunities). All the steps described above deal with the minimum job of managing threats but, for those organizations willing to go the extra mile, it would be wise to consider also the opportunities that could arise from proper risk management (eg: reduced execution time for tasks that do not bring any business value).
 ## Next steps
 
 > [!div class="nextstepaction"]
