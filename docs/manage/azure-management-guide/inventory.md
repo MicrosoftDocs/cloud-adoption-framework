@@ -161,9 +161,9 @@ Each article guides you through a series of steps to onboard these solutions:
 
 Each of the previous steps helps establish inventory and visibility.
 
-## Operator Transparency Logs
+## Microsoft Cloud for Sovereignty transparency logs
 
-As part of [Microsoft Cloud for Sovereingty](/industry/sovereignty/) transparency logs of when Microsoft engineers accessed your resources, to assist with sovereign compliance and other regulatory requirements.
+If you're using Microsoft Cloud for Sovereignty, [transparency logs](/industry/sovereignty/transparency-logs) can be used to understand when Microsoft engineers accessed your resources, which helps with sovereign compliance and other regulatory requirements.
 
 ### Learn more
 
