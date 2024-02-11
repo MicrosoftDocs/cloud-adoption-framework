@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/07/2023
 ms.topic: conceptual
-ms.custom: internal, seo-caf-adopt
+ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 
@@ -13,7 +13,7 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases in the cloud adoption journey. Each phase has distinct goals, solutions, and benefits. This article provides an overview of each process, so you can find the right guidance.
 
-:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or replatformed." border="false":::"
+:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or replatformed." border="false":::
 
 ## Migrate
 
