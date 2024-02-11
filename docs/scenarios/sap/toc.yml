@@ -28,7 +28,6 @@ items:
         href: eslz-business-continuity-and-disaster-recovery.md
       - name: Deployment options
         href: eslz-platform-automation-and-devops.md
-<<<<<<< HEAD
       - name: Security with SAP and Azure
         items:
         - name: Database Security
@@ -38,16 +37,6 @@ items:
         - name: Security Operations
           href: sap-lza-security-operations.md
     - name: SAP and Data
-=======
-      - name: Security 
-        items: 
-        - name: SQL Server database security for SAP on Azure
-          href: sap-lza-database-security.md
-        - name: Microsoft Sentinel for SAP on Azure
-          href: sap-lza-sentinel-for-sap.md
-        - name: Security operations for SAP on Azure
-          href: sap-lza-security-operations.md  
->>>>>>> 34ba86011eb3930ed2e5f8222995fd695b72769a
     - name: Implementation options
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
@@ -66,17 +55,17 @@ items:
         href: sap-lza-choose-azure-connectors.md
       - name: Performance and troubleshooting for SAP data extraction
         href: sap-lza-data-extraction-performance-troubleshooting.md
-<<<<<<< HEAD
       - name: SAP Data Integration with Azure - Security
         href: sap-lza-data-integration-security.md
       - name: SAP Data Integration with Azure - Generic Architecture
         href: sap-lza-data-reference-architecture.md
-=======
-      - name: Data integration security
-        href: sap-lza-data-integration-security.md
-      - name: SAP data integration architecture
-        href: sap-lza-data-example-architecture.md
->>>>>>> 34ba86011eb3930ed2e5f8222995fd695b72769a
+    - name: SAP and Power Platform
+      items:
+      - name: SAP and Power Platform Fundamentals
+        href: sap-lza-sap-powerplatform-fundamental.md
+      - name: SAP and Power Platform Architecture Workflow
+        href: sap-lza-sap-powerplatform-architecture.md
+  
     href: innovate.md
   - name: Manage SAP platform and workloads
     href: manage.md
