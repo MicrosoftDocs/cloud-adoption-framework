@@ -5,7 +5,7 @@ author: sebassem
 ms.author: sebassem
 ms.date: 10/18/2021
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Cost governance for Azure Arc-enabled servers

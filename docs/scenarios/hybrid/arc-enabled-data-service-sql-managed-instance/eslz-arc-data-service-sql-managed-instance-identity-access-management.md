@@ -5,7 +5,7 @@ author: chintalavr
 ms.author: vchintala
 ms.date: 09/22/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, ignite-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Identity and access management for Azure Arc-enabled SQL Managed Instance

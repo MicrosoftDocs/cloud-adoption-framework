@@ -5,7 +5,7 @@ author: sebassem
 ms.author: sebassem
 ms.date: 09/21/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, ignite-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Governance and security for Azure Arc-enabled SQL Managed Instance
