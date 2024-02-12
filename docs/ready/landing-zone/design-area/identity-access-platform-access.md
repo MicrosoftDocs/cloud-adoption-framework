@@ -2,7 +2,7 @@
 title: Azure identity services and platform access
 description: Understand how to provide access to Azure Resources.
 author: anlucen
-ms.author: anlucena
+ms.author: martinek
 ms.date: 06/27/2022
 ms.topic: conceptual
 ms.custom: think-tank, UpdateFrequency.5
