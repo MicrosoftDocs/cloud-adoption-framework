@@ -60,6 +60,8 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:66](./release/decommission.md) | **Decommission retired assets.** Understand the importance of decommissioning retired assets. |
 | [MIG:67](./release/retrospective.md) | **Conduct retrospectives.** Learning, growing, and even failure are at the heart of a growth mindset. Understand the importance of retrospectives to reinforce the principles of a growth mindset: experimentation, testing, learning, sharing, growing, and empowering. |
 
+
+
 ## Next steps
 
 > [!div class="nextstepaction"]
