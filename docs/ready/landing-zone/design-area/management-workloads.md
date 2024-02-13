@@ -20,11 +20,11 @@ To plan for workload management and monitoring, consider the following factors:
 
   For workloads that are deployed to virtual machines (VMs), store logs relative to dedicated Log Analytics workspaces. Workload team members can access logs for their workloads or VMs according to their Azure role-based access control (RBAC) roles.
 
-- Sovereign workloads which drive the use of dedicated Azure Monitor Log Analytics workspaces.
+- Sovereign workloads that drive the use of dedicated Azure Monitor Log Analytics workspaces.
 
-  For sovereign workloads which require customer managed keys to encrypt data using keys you provide to enable a higer protection level and control. Data is encrypted twice, once at the service level using Microsoft-managed keys or Customer-managed keys, and once at the infrastructure level, using two different encryption algorithms and two different keys. See [Dedicated Clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
+  For sovereign workloads that require customer-managed keys you provide to encrypt data for a higher protection level and greater control. Data is encrypted twice: once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption algorithms and two different keys. See [Dedicated Clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
 
-- Performance and health monitoring for both infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS) resources. Data is encrypted twice, once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption keys and algorithms.
+- Performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Data is encrypted twice: once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption keys and algorithms.
 
 - Data aggregation across all workload components.
 

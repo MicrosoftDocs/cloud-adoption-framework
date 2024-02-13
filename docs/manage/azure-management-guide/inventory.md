@@ -163,5 +163,5 @@ Each of the previous steps helps establish inventory and visibility.
 
 ## Microsoft Cloud for Sovereignty transparency logs
 
-If you're using Microsoft Cloud for Sovereignty, [transparency logs](/industry/sovereignty/transparency-logs) can be used to understand when Microsoft engineers accessed your resources, which helps with sovereign compliance and other regulatory requirements.
+If you're using Microsoft Cloud for Sovereignty, you can use [transparency logs](/industry/sovereignty/transparency-logs) to understand when Microsoft engineers accessed your resources. This helps with sovereignty compliance and other regulatory requirements.
 
