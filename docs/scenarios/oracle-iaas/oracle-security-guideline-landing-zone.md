@@ -13,7 +13,7 @@ ms.custom:
 
 # Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article describes how to securely deploy Oracle workloads on Azure Virtual Machines landing zone accelerator throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
+This article explains how to safely run Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of its lifecycle. The article discusses specific design components and gives focused suggestions for Oracle workloads on Azure IaaS security.
 
 ## Overview
 
