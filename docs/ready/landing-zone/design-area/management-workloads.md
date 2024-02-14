@@ -22,9 +22,9 @@ To plan for workload management and monitoring, consider the following factors:
 
 - Sovereign workloads that drive the use of dedicated Azure Monitor Log Analytics workspaces.
 
-  For sovereign workloads that require customer-managed keys you provide to encrypt data for a higher protection level and greater control. Data is encrypted twice: once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption algorithms and two different keys. See [Dedicated Clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
+  For sovereign workloads that require customer-managed keys to encrypt data, you can provide a high level of security and control. Data is encrypted twice. Microsoft-managed or customer-managed keys encrypt data at the service level. Two encryption algorithms and two keys encrypt data at the infrastructure level. For more information, see [Dedicated Clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
 
-- Performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Data is encrypted twice: once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption keys and algorithms.
+- Performance and health monitoring for infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Data is encrypted twice: once at the service level using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level, using two different encryption keys and algorithms.
 
 - Data aggregation across all workload components.
 

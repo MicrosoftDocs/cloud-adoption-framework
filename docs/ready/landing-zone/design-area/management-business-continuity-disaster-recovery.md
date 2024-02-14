@@ -48,9 +48,9 @@ Consider the following factors when designing BCDR for application workloads:
   - Maintaining engineering DevOps capabilities.
   - Azure Key Vault DR for application keys, certificates, and secrets.
 
-- Data Residency
-  - Understand the in-country guidance for data residency that specifies whether data should be kept within country or regional borders. This guidance affects your design for cross-region replication.
-  - Azure regions that reside within the same geography as their enabled set can help with cross-region replication to meet data residency requirements such as tax and law enforcement. For more information, see [Azure cross-region replication](/azure/reliability/cross-region-replication-azure).
+- Data residency
+  - Understand the in-country/region guidance for data residency that specifies whether data should be kept within country or regional borders. This guidance affects your design for cross-region replication.
+  - Azure regions that reside within the same geography as their enabled set can help with cross-region replication to meet data residency requirements such as tax and law enforcement requirements. For more information, see [Azure cross-region replication](/azure/reliability/cross-region-replication-azure).
 
 
 ## Design recommendations

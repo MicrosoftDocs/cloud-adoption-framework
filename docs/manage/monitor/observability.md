@@ -91,7 +91,7 @@ Here are a few examples of tools that enable your platform observability:
 |[Azure resource logs](/azure/azure-monitor/essentials/resource-logs)|Previously known as _diagnostic logs_, resource logs reports on operations performed within an Azure resource, on the data plane.|
 |[Microsoft Entra reports (AzureAD) logs](/azure/azure-monitor/essentials/platform-logs-overview)|Reports on the history of sign-in activity and the audit trail of changes in Microsoft Entra ID for a given tenant.|
 |[Azure Advisor](/azure/advisor/advisor-overview)|Use Azure Advisor to receive recommended solutions based on best practices to optimize your Azure deployments.|
-| [Microsoft Cloud for Sovereignty transparency logs](/industry/sovereignty/transparency-logs) | Report logs to answer questions related to resource access and the Microsoft engineer who accessed them. Transparency logs provide details of access to customer resources. The logs also inform you when there has been no access, which is the most likely case. |
+| [Microsoft Cloud for Sovereignty transparency logs](/industry/sovereignty/transparency-logs) | Reports about when resources are accessed and which Microsoft engineer accesses the resource. Transparency logs provide details of access to customer resources. The logs also notify you when there has been no access, which is common. |
 
 Observability evolves gradually, starting with a minimally viable monitoring plan, and the effort to integrate tools and processes is underway. As you get comfortable with the data (metrics, logs, and transactions), you can understand the behavior and signs of symptoms or issues from those resources or applications. By getting familiar with the data, you build trust in working with Azure Monitor and the data.
 
