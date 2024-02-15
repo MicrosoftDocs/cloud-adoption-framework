@@ -23,11 +23,11 @@ The Azure landing zone conceptual architecture (*see figure 1*) represents an op
 
 **Design areas:** The conceptual architecture illustrates the relationships between its eight design areas. These design areas are Azure billing and Microsoft Entra tenant (A), identity and access management (B), resource organization (C), network topology and connectivity (E), security (F), management (D, G, H), governance (C, D), and platform automation and DevOps (I). For more information on the design areas, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
-**Resource organization:** The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group represent the platform landing zones. The subscriptions under the "Landing zone" management group represent the application landing zones. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
+**Resource organization:** A landing zone is mainly made up of services within subscriptions, each serving a specific purpose. The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group represent the platform landing zone, which provide foundational services. The subscriptions under the "Landing zone" management group represent the application landing zones that are ailored for specific workloads. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
 
 ### Components of an Azure Landing Zone
 
-An Azure landing zone consists of platform landing zones, application landing zones and global gouvernance and management resources. It's worth explaining their function in more detail.
+An Azure landing zone consists of platform landing zones, application landing zones and global governance and management resources. It's worth explaining their function in more detail.
 
 **Platform landing zone:** A platform landing zone acts as a specialized subscription dedicated to providing centralized or shared services, such as identity, connectivity, and management, that underpin the applications housed within the application landing zones. By centralizing these shared services, operational efficiency is significantly enhanced. Typically, these zones are overseen by one or more centralized teams. In the referenced conceptual architecture (figure 1), the platform landing zones are exemplified by the "Identity subscription", "Management subscription", and "Connectivity subscription," each showcasing a distinct aspect of the platform's fundamental services. The detailed architecture illustrates the specific resources and policies that are implemented across each of the platform landing zones, providing a clear view of the infrastructure's design and organization.
 
@@ -50,12 +50,21 @@ These global resources are not specific to any Platform or Application Landing Z
 -   **Azure Management Groups**: Organizes and groups subscriptions for better hierarchy and policy distribution.-   
 -   **Microsoft Entra**: Manages identities and access controls ensuring only authorized users and services interact with your Azure resources.
 
+In addition to these, resources implicitly associated with landing zones like CI/CD pipelines and DevOps tooling play a critical role in the deployment and operations lifecycle, even though they may not be Azure-native services. These tools are integral for automating and managing infrastructure and application deployments within the landing zones, enhancing efficiency and reliability of the cloud environment
+
 Through these global resources, Azure enforces governance and monitors compliance, thus ensuring a well-managed and secure cloud environment regardless of the landing zone structure.
 
 
-## Azure landing zone accelerators
 
-Accelerators are infrastructure-as-code implementations that help you deploy an Azure landing zone correctly. We have a platform landing zone accelerator and several application landing zone accelerators you can deploy.
+## Landing Zones Implementation
+
+When adopting Azure for your cloud infrastructure, there are two primary approaches to establish your landing zone, each serving different organizational requirements.
+
+**Azure landing zone accelerator approach**: This offers pre-built templates that enable a fast setup tailored to various scenarios. Whether you're a large enterprise, government agency, or a smaller business, there's an accelerator available to meet your needs, including solutions for specific regions like China or for government entities with data sovereignty concerns.
+
+**Customize approach**: For those who need a more hands-on approach to meet unique business requirements, customization is available. This path allows you to start with basic cloud infrastructure and progressively refine it, aligning it more closely with your specific technical and governance needs.
+
+The choice between these approaches depends on the speed of deployment you're looking for and the level of customization you need. Accelerators are great for quick and compliant setups, while the customize approach offers flexibility for those with particular specifications and in-house Azure expertise.
 
 ### Platform landing zone accelerator
 
