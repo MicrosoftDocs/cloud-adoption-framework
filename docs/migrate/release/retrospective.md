@@ -46,9 +46,9 @@ To get started with your migration retrospective, you will need a few things:
 
 Once you have secured these, gather the team and perform the following:
 
-- **Individual answers**: Have each team member answer the question "_What went well?_" and document.
-  - If using a physical board, let them place them on the board as they write them.
-  - If using a digital board, let each team member add their thoughts via the tool.
+- **Individual answers**: Have each team member answer the question "_What went well?_" and document the answers.
+  - If using a physical board, let each member place their answers on the board.
+  - If using a digital board, let each member place their answers via the tool.
 - **Organizer read-out**: Once each team member has captured their thoughts, the organizer should go through and begin reading them through for the team.
   - As similar thoughts are found, they should be grouped together so that reoccurring trends are able to be noticed.
   - Create labels or "parent" items as needed to help organize these thoughts.
