@@ -9,20 +9,20 @@ ms.topic: conceptual
 
 # Decommission retired assets
 
-Once a workload is promoted to production, the assets that used to run it isn't needed anymore and is seen as out of service. However, these assets still use electricity and consume other resources, which adds to costs. Therefore, it's a good idea to turn these off and get rid of them the right way to cut down on expenses.
+Once a workload is promoted to production, the assets that used to run it isn't needed anymore and is seen as out of service. However, these assets still use electricity and consume other resources, which add to costs. Therefore, it's a good idea to turn these off and get rid of them the right way to cut down on expenses.
 
 Turning off and getting rid of old assets and equipment might sound straightforward, but sometimes it can cause problems you didn't expect. Here are some tips on how to safely shut down and dispose of these old resources without causing any issues for your business.
 
 ## Continued monitoring
 
-After a migrated workload is promoted to production, the assets to be retired should continue to be monitored to validate that no additional production traffic is being routed to the wrong assets.
+After a migrated workload is promoted to production, the assets to be retired should continue to be monitored to validate that no more production traffic is being routed to the wrong assets.
 
 Monitor the following signals for the resources:
 
 - **Compute**: Resource compute utilization (CPU and RAM).
 - **Storage**: Resource storage utilization (disk I/O).
-- **Network**: Resource network utilization, including **inbound** and **outbound** networking from appliances.
-  - For example, firewalls and load balancers that are used by these assets should be inspected for communication.
+- **Network**: Resource network utilization including **inbound** and **outbound** networking from appliances.
+  - For example firewalls and load balancers that are used by these assets should be inspected for communication.
 - **Logs**: Windows and application logs.
 - **Other signals**: Any other signals that you used to monitor the assets when they were hosted in their previous production environment.
 
@@ -44,8 +44,9 @@ To successfully test your assets prior to termination, you need a maintenance wi
 
 #### Before the maintenance window
 
-- Run through the test cases and use monitoring to observe if there's any utilization of the resources.
-  - If there is, you should not proceed with the maintenance window. Instead, you should investigate the utilization and determine if the assets are still in use.
+- **Execute test cases**: Run through the test cases and monitor any utilization of the resources.
+  - **Utilization discovered**: You shouldn't proceed with the maintenance window. Instead, you should investigate the utilization and determine if the assets are still in use.
+  - **No utilization discovered**: You can proceed with the maintenance window.
 
 #### During the maintenance window
 
@@ -59,8 +60,8 @@ To successfully test your assets prior to termination, you need a maintenance wi
   - **Tests failed**: The assets might be in use at this time and more testing is necessary.
     - Re-enable the assets flagged for decommission, and repeat the failed test cases.
     - If they continue to fail, it might be an unrelated issue. You need to test more within the maintenance window, and you should begin escalation to make sure you have the right level of support.
-    - If they stop failing, then it appears that they're related. You should leave the assets enabled, and close out the maintenance window after completing testing.
-    - You'll then, outside of the maintenance window, need to investigate what is occurring. This involves creating another maintenance window for changes to the migrated workload, and additional maintenance windows for testing.
+    - If they stop failing, they're likely related. You should leave the assets enabled, and close out the maintenance window after completing testing.
+    - You'll then, outside of the maintenance window, need to investigate what is occurring. This involves creating another maintenance window for changes to the migrated workload, and extra maintenance windows for testing.
 
 ## Holding period and data validation
 
@@ -74,11 +75,11 @@ It's not uncommon for migrations to miss data during replication processes. This
 
 ### Consider data governance requirements
 
-Your organization's data governance team might have additional requirements beyond a 30 day holding period.
+Your organization's data governance team might have more requirements beyond a 30 day holding period.
 
 - **Understand holding obligations**: You should check with the necessary teams to understand the obligation for holding on for information, and build a validation checklist for your specific legal requirements.
   - During this time, it isn't important to have the asset operational. Instead, the data on the information should be retrievable. This can be addressed by keeping disks or backups able to be restored, to address the issues.
-  - **An example**: If you have a SQL database server still in your physical data center, backing up its data and maintaining it as a recoverable resource might allow you to decommission the VM, and set a holding time for the backup to be retired.
+  - **An example**: If you have a SQL database server still in your physical data center, backing up its data and maintaining it as a recoverable resource might allow you to decommission the Virtual Machine, and set a holding time for the backup to be retired.
 
 ## Next steps
 
