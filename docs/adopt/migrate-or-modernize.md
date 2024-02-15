@@ -4,7 +4,7 @@ title: Migrate or modernize first?
 description: Learn if you should migrate existing applications first or modernize them before migrating to the cloud.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 12/13/2022
+ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal
 keywords: approaches, strategy, cloud migration, cloud modernization, cloud adoption framework
@@ -34,9 +34,9 @@ Migrate your applications first using the rehosting approach ("lift-and-shift").
 
 ## Modernize ("Replatform")
 
-Modernize your application using replatform first. In this approach, you change parts of an application during the migration process. It takes a little more work to get to the cloud, but your applications have better cost and performance efficiency in the cloud. There are four benefits of modernizing before migration.
+Modernize your application by using the replatform strategy first. In this approach, you change parts of an application during the migration process. Although it takes a little more work to migrate to the cloud, your applications have better cost and performance efficiency in the cloud. Modernizing before migration has four benefits:
 
-- ***Faster time-to-market:*** Use PaaS technologies to speed up deployment.
+- ***Faster time to market:*** Use platform as a service (PaaS) technologies to speed up deployment.
 
 - ***Increased application innovation:*** PaaS allows developers to focus on business logic and critical data plays.
 

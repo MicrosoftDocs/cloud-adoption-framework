@@ -3,7 +3,7 @@ title: Modernize any application or framework in the cloud
 description: Adopt application platform-as-a-service (PaaS) solutions to modernize any application or framework. Find implementation guidance to get the right balance of control and productivity.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 09/15/2022
+ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal
 keywords: application platform, modern, cloud modernization, cloud adoption framework
@@ -27,7 +27,7 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 ## Step 1 - Use a decision tree to narrow options
 
-Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide the right one for you. After you've worked through the tree, return here to find relevant implementation guidance.
+Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide which option is right for you. After you've worked through the tree, return here to find relevant implementation guidance.
 
 ## Step 2 - Find the right implementation guidance
 

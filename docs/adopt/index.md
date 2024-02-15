@@ -3,7 +3,7 @@ title: How to adopt the cloud
 description: The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/07/2023
+ms.date: 02/14/2024
 ms.topic: conceptual
 ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
@@ -13,33 +13,33 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases in the cloud adoption journey. Each phase has distinct goals, solutions, and benefits. This article provides an overview of each process, so you can find the right guidance.
 
-:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices to modernize an application. Each application, in relation to some questions, can be either retired, rebuilt, rearchitected, replaced, rehosted or replatformed." border="false":::
+:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices for modernizing an application. Depending on your needs, you can either retire, rebuild, rearchitect, replace, rehost, or replatform each application." border="false":::
 
 ## Migrate
 
-Migration is when you move workloads to the cloud or between clouds. Different types of migration exist, and the migrate guidance shows you how to pick the migration strategy that aligns with your objectives.
+Migration occurs when you move workloads to the cloud or between clouds. Different types of migration exist. The migration guidance helps you choose the migration strategy that best aligns with your objectives.
 
-- ***Goals:*** Meet business demands, exit on-premises environment, and align to Well-Architected Framework principles.
+- ***Goals:*** Meet business demands, exit an on-premises environment, and align with Azure Well-Architected Framework principles.
 
-- ***Solutions:*** Adopt cloud solutions based on business need.
+- ***Solutions:*** Adopt cloud solutions based on business needs.
 
-- ***Key benefits:*** Improve security, reliability, performance, and operations with managed solutions. Easily integrate new solutions and design patterns. No need to acquire, manage, and secure hardware.
+- ***Key benefits:*** Improve security, reliability, performance, and operations with managed solutions. Easily integrate new solutions and design patterns without acquiring, managing, or securing hardware.
 
-Migrating an enterprise-scale workload to cloud should require no development effort to create new business logic. It can be performed through a lift and shift approach, also known as ***Rehosting***.
+Migrating an enterprise-scale workload to cloud should require no development effort to create new business logic. You can perform migration efficiently by using the ***Rehosting*** approach.
 
 For more information, see [Migrate](../migrate/index.md).
 
 ## Modernize
 
-Modernization enhances existing workloads to improve operations, increase efficiency, maximize developer velocity, and reduce the total cost of ownership.
+Modernization enhances existing workloads by improving operations, increasing efficiency, maximizing developer velocity, and reducing total cost of ownership.
 
 - ***Goals:*** Reduce technical debt, modernize applications, and modernize data platforms.
 
-- ***Solutions:*** Integrate other services and modify code meet business goals.
+- ***Solutions:*** Integrate other services and modify code to meet business goals.
 
 - ***Key benefits:*** Optimize cost, security, reliability, performance, and operations for increased productivity. You don't need to maintain the underlying infrastructure, so you can focus on your core business.
 
-Generally, application modernization moves toward platform as a service (PaaS) solutions to improve your business at scale. This approach is also referred to as ***Replatforming***.
+Generally, application modernization moves toward platform as a service (PaaS) solutions to improve your business at scale. This approach is also known as ***Replatforming***.
 
 For more information, see [Modernize](../modernize/index.md).
 
@@ -53,11 +53,11 @@ Innovation is when you adopt cloud-native technologies to create customer-focuse
 
 - ***Key benefits:*** Improve predictive analytics, performance, and adaptability.
 
-Application innovation can improve a company's position in the market and unlock new technical capabilities. AI-powered applications can automate existing business processes and provide new ways to engage with customers. Several strategies are available, each one supporting a distinct value and outcome:
+Application innovation can improve a company's market position and unlock new technical capabilities. AI-powered applications can automate existing business processes and provide new ways to engage with customers. Several strategies are available. Each strategy supports a distinct value and outcome:
 
-- ***Rearchitecting***: Extend and optimize the architecture for cloud capabilities and scale
-- ***Rebuilding***: Rebuild the code base from scratch by using cloud-native technologies
-- ***Replacing***: Replace the application with SaaS or low-code solutions
+- ***Rearchitecting***: Extend and optimize the architecture for cloud capabilities and scale.
+- ***Rebuilding***: Rebuild the code base by using cloud-native technologies.
+- ***Replacing***: Replace the application with SaaS or low-code solutions.
 
 For more information, see [Innovate](../innovate/index.md).
 
