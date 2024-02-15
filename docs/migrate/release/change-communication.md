@@ -45,6 +45,8 @@ Due to the number of roles involved, you might send out different change notific
 
 You can use the below template to draft your change communication:
 
+|What to communicate|Details|
+|---|---|
 |**What is changing?**|Application X is migrating to Azure!|
 |**When is this change happening?**|February 29, 2024, at 10 PM PST|
 |**Who will this change impact?**|Business users of Application X, and those who use systems that pull information from Application X.|
