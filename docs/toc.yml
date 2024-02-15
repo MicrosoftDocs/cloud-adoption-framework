@@ -657,8 +657,8 @@ items:
         items:
           - name: Overview
             href: migrate/release/index.md
-          - name: Business change plan
-            href: migrate/release/business-change-plan.md
+          - name: Change communication
+            href: migrate/release/change-communication.md
           - name: Business testing
             href: migrate/release/business-test.md
           - name: Promotion models
