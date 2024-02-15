@@ -25,13 +25,13 @@ The Azure landing zone conceptual architecture (*see figure 1*) represents an op
 
 **Resource organization:** The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group represent the platform landing zones. The subscriptions under the "Landing zone" management group represent the application landing zones. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
 
-### Platform landing zones vs. application landing zones
+### Components of an Azure Landing Zone
 
-An Azure landing zone consists of platform landing zones and application landing zones. It's worth explaining the function of both in more detail.
+An Azure landing zone consists of platform landing zones, application landing zones and global gouvernance and management resources. It's worth explaining their function in more detail.
 
-**Platform landing zone:** A platform landing zone is a subscription that provides shared services (identity, connectivity, management) to applications in application landing zones. Consolidating these shared services often improves operational efficiency. One or more central teams manage the platform landing zones. In the conceptual architecture (*see figure 1*), the "Identity subscription", "Management subscription", and "Connectivity subscription" represent three different platform landing zones. The conceptual architecture shows these three platform landing zones in detail. It depicts representative resources and policies applied to each platform landing zone.
+**Platform landing zone:** A platform landing zone acts as a specialized subscription dedicated to providing centralized or shared services, such as identity, connectivity, and management, that underpin the applications housed within the application landing zones. By centralizing these shared services, operational efficiency is significantly enhanced. Typically, these zones are overseen by one or more centralized teams. In the referenced conceptual architecture (figure 1), the platform landing zones are exemplified by the "Identity subscription", "Management subscription", and "Connectivity subscription," each showcasing a distinct aspect of the platform's fundamental services. The detailed architecture illustrates the specific resources and policies that are implemented across each of the platform landing zones, providing a clear view of the infrastructure's design and organization.
 
-**Application landing zone:** An application landing zone is a subscription for hosting an application. You pre-provision application landing zones through code and use management groups to assign policy controls to them. In the conceptual architecture (*see figure 1*), the "Landing zone A1 subscription" and "Landing zone A2 subscription" represent two different application landing zones. The conceptual architecture shows only the "Landing zone A2 subscription" in detail. It depicts representative resources and policies applied to the application landing zone.
+**Application landing zone:** An application landing zone is a tailored Azure subscription created for hosting applications or workloads. It includes all the necessary elements such as virtual networks, storage solutions, and computing resources configured to support specific application needs. These zones are pre-provisioned through infrastructure-as-code, establishing a repeatable and consistent deployment process. Management groups are utilized to assign governance policies, ensuring compliance and security. As illustrated in the conceptual architecture (figure 1), "Landing zone A1 subscription" and "Landing zone A2 subscription" are examples of application landing zones, with "Landing zone A2 subscription" highlighted to detail its architecture and policy framework.
 
 There are three main approaches to managing application landing zones. You should use a (1) central team, (2) application team, or (3) shared team management approach, depending on your needs (*see table*).
 
@@ -40,6 +40,18 @@ There are three main approaches to managing application landing zones. You shoul
 | Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to the platform and application landing zones.
 | Application team management | A platform administration team delegates the entire application landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
 | Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to manage application landing zones centrally.  
+
+
+**Global Governance and Management Resources:**
+
+These global resources are not specific to any Platform or Application Landing Zone but instead provide overarching management and governance across the entire Azure environment. Examples of these global resources include:
+
+-   **Azure Policy**: Implements and enforces rules that all landing zones must comply with for consistency and compliance.
+-   **Azure Management Groups**: Organizes and groups subscriptions for better hierarchy and policy distribution.-   
+-   **Microsoft Entra**: Manages identities and access controls ensuring only authorized users and services interact with your Azure resources.
+
+Through these global resources, Azure enforces governance and monitors compliance, thus ensuring a well-managed and secure cloud environment regardless of the landing zone structure.
+
 
 ## Azure landing zone accelerators
 
