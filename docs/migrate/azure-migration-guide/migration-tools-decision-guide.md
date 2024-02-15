@@ -60,7 +60,7 @@ The right tools for your migration depend on your approach (replatform versus re
 | Tool | Description | Vendor |
 | ---- | ----------- | ------ |
 | [Azure Draft](https://github.com/Azure/draft/) | A Microsoft tool for creating Kubernetes YAMLs, Helm charts, Docker files, and GitHub Actions from a codebase. | Microsoft |
-| [Cloud Suitability Analyzer](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | A VMWare tool that analyzes source code in many languages and provides insights on application cloud readiness. | VMWare |
+| [Cloud Suitability Analyzer](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | A VMware tool that analyzes source code in many languages and provides insights on application cloud readiness. | VMware |
 | [AppCAT](/azure/developer/java/migration/appcat) | A Microsoft tool that analyzes Java source code and provides insights into what must be changed to target containers or other J2EE application servers. AppCAT is based on [Windup](https://windup.github.io/) but supports Azure targets. | Microsoft | 
 | [move2kube](https://move2kube.konveyor.io/) | A Cloud Native Computing Foundation (CNCF) project tool for creating Docker files and YAML deployment files that accelerate migration activities. | CNCF project |
 | [.NET Upgrade Assistant](/dotnet/core/porting/upgrade-assistant-overview) | A Microsoft tool that helps in migrating from .NET Framework code to .NET. | Microsoft |
