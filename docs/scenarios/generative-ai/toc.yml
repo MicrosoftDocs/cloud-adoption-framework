@@ -1,0 +1,19 @@
+items:
+  - name: Generative AI adoption in Azure - Microsoft Cloud Adoption Framework for Azure
+    href: index.md
+  - name: Strategic
+    href: strategy.md
+  - name: Planning
+    href: plan.md
+  - name: Prepare your environments
+    items: 
+    - name: Azure Landing Zones
+      href: ready.md
+  - name: Secure AI
+    href: secure.md
+  - name: Organize AI
+    href: organize.md
+  - name: Govern
+    href: govern.md
+  - name: Manage
+    href: manage.md

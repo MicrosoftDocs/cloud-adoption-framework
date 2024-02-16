@@ -11,6 +11,8 @@ items:
     items:
     - name: Overview
       href: scenarios/overview.md
+    - name: Generative AI
+      href: scenarios/generative-ai/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
     - name: Cloud-scale analytics
