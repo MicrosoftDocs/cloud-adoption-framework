@@ -77,16 +77,8 @@ In today's competitive landscape, businesses that embrace AI can gain a signific
 
 To learn more about customer use cases, see [how Microsoft customers put Azure AI to work for them](https://www.microsoft.com/ai/azure-customer-stories-ai).
 
+## Next steps
 
-
-## Next step: Integrate AI into your cloud adoption journey
-
-The following list of articles takes you to the guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+Learn more about the strategic impact of AI in your organization:
 
 - [Strategic impact of AI](./strategy.md)
-- [Plan for AI](./plan.md)
-- [Review your environment or Azure Landing Zone(s)](./ready.md)
-- [Innovate with AI](./innovate.md)
-- [Govern AI](./govern.md)
-- [Manage AI](./manage.md)
-- [Secure AI](./secure.md)
