@@ -34,6 +34,8 @@ Ask yourself these questions to establish criteria for a monitoring configuratio
 
 - **Stakeholder involvement**: Include the monitoring service owner, manager of IT operations, and other stakeholders during the planning phase. Continue to engage them throughout your monitoring solutions' development and release cycles.
 
+- **Sensitive data**: What sensitive data should I avoid collecting for applications that I don't want to expose to my operators?
+
 How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform.
 
 ### Evaluate required monitoring signals
