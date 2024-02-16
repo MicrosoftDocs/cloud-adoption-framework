@@ -52,6 +52,8 @@ You should consider a multi-region strategy, either from the start of your cloud
 > [!NOTE]
 > You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether [availability zones are supported](/azure/reliability/availability-zones-service-support) in your chosen regions and for the services you want to use.
 
+Microsoft Cloud for Sovereignty has guidelines for restricting services and regions. You can use these guidelines to enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
+
 ### High-level approach
 
 When you expand an Azure landing zone into a new region, consider following the steps in these sections. Before you start, you need to decide on a new Azure region, or multiple Azure regions, to expand into.
