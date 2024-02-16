@@ -21,7 +21,7 @@ Implementing GitOps lets you:
 - Improve security by reducing the number of service accounts that are required to have deployment permissions to your cluster.
 - Implement a CI/CD pipeline for deploying applications to your cluster.
 
-GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://www.weave.works/oss/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
+GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://fluxcd.io/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
 
 ## Architecture
 
