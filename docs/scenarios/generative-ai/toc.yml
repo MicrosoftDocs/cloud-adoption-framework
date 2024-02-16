@@ -1,5 +1,5 @@
 items:
-  - name: Generative AI adoption in Azure - Microsoft Cloud Adoption Framework for Azure
+  - name: Generative AI adoption in Azure
     href: index.md
   - name: Strategic
     href: strategy.md
