@@ -46,6 +46,10 @@ Identity management is a fundamental framework that governs access to important 
       - As of July 2023, IBM has chosen to cease openly sharing RHEL source, so it's possible that OL and RHEL might diverge in future, invalidating the above statement.
     - [Sign in to a Windows virtual machine in Azure by using Microsoft Entra ID](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows).
 
+3. **Azure Key Vault to store credentials** – Azure Key Vault is a powerful tool that enables the secure storage of     secrets, such as passwords and database connection strings, for cloud applications and services. It can be used to store credentials for both [Windows](/azure/entra/identity/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad) and [Linux](/azure/entra/identity/managed-identities-azure-resources/tutorial-linux-vm-access-nonaad) virtual machines (VMs) in a centralized and secure manner, regardless of the type of Operating System being used.
+
+      By using Azure Key Vault, you can avoid the need to store credentials in plain text within your code or configuration files. Instead, you can retrieve the credentials from the Key Vault at runtime, adding an additional layer of security to your application and helping to prevent unauthorized access to your VMs. Azure Key Vault integrates seamlessly with other Azure services, such as Azure Virtual Machines, and access to the Key Vault can be controlled using Azure Active Directory, ensuring that only authorized users and applications can access the stored credentials.
+
 ## Operating system hardening
 
 Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
