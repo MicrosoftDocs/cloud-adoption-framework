@@ -50,6 +50,8 @@ Identity management is a fundamental framework that governs access to important 
 
       By using Azure Key Vault, you can avoid the need to store credentials in plain text within your code or configuration files. Instead, you can retrieve the credentials from the Key Vault at runtime, adding an additional layer of security to your application and helping to prevent unauthorized access to your VMs. Azure Key Vault integrates seamlessly with other Azure services, such as Azure Virtual Machines, and access to the Key Vault can be controlled using Azure Active Directory, ensuring that only authorized users and applications can access the stored credentials.
 
+4. **Use Hardened Operating System Images** - Using a CIS (Center for Internet Security) hardened image for Windows or Linux in Azure can provide several benefits. [CIS benchmarks](https://www.cisecurity.org/insights/blog/cis-hardened-images-now-in-microsoft-azure-marketplace) are globally recognized as the best practices for securing IT systems and data. These images are pre-configured to meet the security recommendations of the CIS, which can save time and effort in hardening the operating system. This can help organizations to improve their security posture and comply with security frameworks like NIST and PCI
+
 ## Operating system hardening
 
 Ensure the operating system is hardened to eliminate vulnerabilities that could be exploited to attack the Oracle database.
