@@ -13,4 +13,4 @@ ms.service: caf
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [Organizational considerations for generative AI adoption](./organize.md)
