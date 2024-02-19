@@ -12,4 +12,5 @@ ms.service: caf
 
 ## Next steps
 
-- [Planning for generative AI](./plan.md)
+> [!div class="nextstepaction"]
+> [Planning for generative AI](./plan.md)

@@ -10,6 +10,15 @@ ms.service: caf
 
 # Governing generative AI in Azure
 
+## Risk management
+
+### Regulatory risks
+
+### Reputational risks
+
+### Competency risks
+
 ## Next steps
 
-- [Managing generative AI in Azure](./manage.md)
+> [!div class="nextstepaction"]
+> [Managing generative AI in Azure](./manage.md)

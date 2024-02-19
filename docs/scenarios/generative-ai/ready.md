@@ -12,4 +12,5 @@ ms.service: caf
 
 ## Next steps
 
-- [Securing generative AI](./secure.md)
+> [!div class="nextstepaction"]
+> [Securing generative AI](./secure.md)

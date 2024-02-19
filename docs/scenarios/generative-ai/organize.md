@@ -12,4 +12,5 @@ ms.service: caf
 
 ## Next steps
 
-- [Governing generative AI](./govern.md)
+> [!div class="nextstepaction"]
+> [Governing generative AI](./govern.md)
