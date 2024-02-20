@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption journey
-description: Understand the cloud adoption journey.
+description: Learn about various types of cloud adoption journeys, including when to retire, replace, rebuild, rehost, or replatform your solution.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 02/14/2024
@@ -38,7 +38,7 @@ Most organizations replace about 10% of their applications with software as a se
 
 ## Rearchitect or rebuild (5%)
 
-If you can't effectively replace essential business applications with SaaS or low-code solutions, consider rearchitecting or rebuilding the applications. Although rearchitecting or rebuilding is complex, it's vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This involves several key aspects:
+If you can't effectively replace essential business applications with SaaS or low-code solutions, consider rearchitecting or rebuilding the applications. Although rearchitecting or rebuilding is complex, it's vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This approach involves several key aspects:
 
 - *Scalability*: Adapt the application to handle varying demand levels efficiently.
 - *Reliability*: Improve the application’s ability to operate consistently without failures.

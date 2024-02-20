@@ -27,7 +27,7 @@ PaaS gives you the flexibility to modernize any application or framework. Your a
 
 ## Step 1 - Use a decision tree to narrow options
 
-Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide which option is right for you. After you've worked through the tree, return here to find relevant implementation guidance.
+Use a [decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to narrow your modernization options. The goal is to narrow the options, not to decide which option is right for you. After you have your options, continue to step 2.
 
 ## Step 2 - Find the right implementation guidance
 

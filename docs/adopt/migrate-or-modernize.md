@@ -34,7 +34,7 @@ Migrate your applications first using the rehosting approach ("lift-and-shift").
 
 ## Modernize ("Replatform")
 
-Modernize your application by using the replatform strategy first. In this approach, you change parts of an application during the migration process. Although it takes a little more work to migrate to the cloud, your applications have better cost and performance efficiency in the cloud. Modernizing before migration has four benefits:
+Modernize your application by using the replatform strategy first. In this approach, you change parts of an application during the migration process. Although it takes a little more work to migrate to the cloud, your applications have better cost and performance efficiency. Modernizing before migration has four benefits:
 
 - ***Faster time to market:*** Use platform as a service (PaaS) technologies to speed up deployment.
 

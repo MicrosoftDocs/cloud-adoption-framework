@@ -54,17 +54,17 @@ The right tools for your migration depend on your approach (replatform versus re
 *Replatforming* is the process of modifying existing application code to optimize it for a cloud environment without changing its external behavior. Follow these steps before replatforming an application:
 
 - *Identify the target architecture*: Determine the target architecture for your application. The language, framework, or platform your application uses affects its cloud architecture. For example, Java and .NET applications each have different PaaS solutions available that can affect the workload architecture.
-- *Assess the source code*: Ensure that the application's source code is readily available. You need to evaluate and potentially modify the code to fit the target architecture. If the source code isn't available or can't be modified, a rehost strategy is usually the only option. This involves migrating the application without any modifications.
-- *Identify replatforming tools*: Use replatforming tools that suit your technology and target architecture. These tools can help in analyzing source code, creating necessary files, and accelerating migration activities (*see table*).
+- *Assess the source code*: Ensure that the application's source code is readily available. You need to evaluate and potentially modify the code to fit the target architecture. If the source code isn't available or can't be modified, a rehost strategy is usually the only option. This strategy involves migrating the application without any modifications.
+- *Identify replatforming tools*: Use replatforming tools that suit your technology and target architecture. You can use these tools to help analyze source code, create files, and accelerate migration activities. The following table describes some of these tools.
 
 | Tool | Description | Vendor |
 | ---- | ----------- | ------ |
-| [Azure Draft](https://github.com/Azure/draft/) | A Microsoft tool for creating Kubernetes YAMLs, Helm charts, Docker files, and GitHub Actions from a codebase. | Microsoft |
+| [Draft](https://github.com/Azure/draft/) | An open-source project for creating Kubernetes YAMLs, Helm charts, Docker files, and GitHub Actions workflows from a codebase. | Microsoft |
 | [Cloud Suitability Analyzer](https://github.com/vmware-tanzu/cloud-suitability-analyzer) | A VMware tool that analyzes source code in many languages and provides insights on application cloud readiness. | VMware |
 | [AppCAT](/azure/developer/java/migration/appcat) | A Microsoft tool that analyzes Java source code and provides insights into what must be changed to target containers or other J2EE application servers. AppCAT is based on [Windup](https://windup.github.io/) but supports Azure targets. | Microsoft | 
-| [move2kube](https://move2kube.konveyor.io/) | A Cloud Native Computing Foundation (CNCF) project tool for creating Docker files and YAML deployment files that accelerate migration activities. | CNCF project |
+| [Move2Kube](https://move2kube.konveyor.io/) | A Cloud Native Computing Foundation (CNCF) project tool for creating Docker files and YAML deployment files that accelerate migration activities. | CNCF project |
 | [.NET Upgrade Assistant](/dotnet/core/porting/upgrade-assistant-overview) | A Microsoft tool that helps in migrating from .NET Framework code to .NET. | Microsoft |
-| [App Service Migration Assistant](https://azure.microsoft.com/products/app-service/migration-tools/) | A Microsoft tool for .NET (and Java) migrations to Azure App Service. | Microsoft |
+| [App Service Migration Assistant](https://azure.microsoft.com/products/app-service/migration-tools/) | A Microsoft tool for .NET (and Java) migrations to App Service. | Microsoft |
 | [Azure Migrate App Containerization](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) | A Microsoft tool for containerizing .NET and Java applications. | Microsoft |
 
 ### Tools for rehosting
