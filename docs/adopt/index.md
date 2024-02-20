@@ -25,7 +25,7 @@ Migration occurs when you move workloads to the cloud or between clouds. Differe
 
 - ***Key benefits:*** Improve security, reliability, performance, and operations with managed solutions. Easily integrate new solutions and design patterns without acquiring, managing, or securing hardware.
 
-Migrating an enterprise-scale workload to cloud should require no development effort to create new business logic. You can perform migration efficiently by using the ***Rehosting*** approach.
+Migrating an enterprise-scale workload to the cloud should require no development effort to create new business logic. You can perform migration efficiently by using the ***Rehosting*** approach.
 
 For more information, see [Migrate](../migrate/index.md).
 
