@@ -29,15 +29,17 @@ Here are some examples of traditional AI:
 
 ## Generative AI
 
-- Focused on creativity.
-- New products, new services, serving new industries, etc.
-
-
 With Generative AI (GAI) we typically mean AI that understands and creates content, such as GPT. It works on relatively small chunks of data - text, images, sounds, videos - and has a "liguistic" understanding. Large Language Models (LLMs) are a type of GAI and the term is often used as a synonym, but LLMs are ones that work on text.
 
 Here are some examples of generative AI:
 
 - **OpenAI**: Ensure that artificial general intelligence (AGI) benefits all of humanity.
+
+## Decision considerations
+
+When deciding between traditional AI and generative AI, consider the following:
+
+- How How would you rate your organization's ability to develop or procure AI models?
 
 ## Next steps
 

@@ -13,4 +13,4 @@ ms.service: caf
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Generative AI vs. Classic AI](./generative-vs-classic-ai.md)
+> [Generative AI vs. Traditional AI](./generative-vs-traditional-ai.md)
