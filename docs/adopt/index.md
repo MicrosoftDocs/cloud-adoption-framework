@@ -56,7 +56,9 @@ Innovation is when you adopt cloud-native technologies to create customer-focuse
 Application innovation can improve your company's market position and unlock new technical capabilities. AI-powered applications can automate existing business processes and provide new ways to engage with customers. Several strategies are available. Each strategy supports a distinct value and outcome:
 
 - ***Rearchitecting***: Extend and optimize the architecture for cloud capabilities and scale.
+
 - ***Rebuilding***: Rebuild the code base by using cloud-native technologies.
+
 - ***Replacing***: Replace the application with SaaS or low-code solutions.
 
 For more information, see [Innovate](../innovate/index.md).
