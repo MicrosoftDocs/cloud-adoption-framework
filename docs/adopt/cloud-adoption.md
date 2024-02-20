@@ -21,7 +21,7 @@ For the initial cloud adoption, a typical organization retires 35% of its applic
 
 ## Retire (35%)
 
-Retire any workloads your organization doesn't need. You need to perform discovery and take inventory to find applications and environments that aren't worth the investment to keep. Cost and time efficiency are the goals of retirement. Your team can focus on the most important assets when you shrink your portfolio before moving to the cloud.
+Retire any workloads your organization doesn't need. You need to perform discovery and take inventory to find applications and environments that aren't worth the investment to keep. Cost and time efficiency are the goals of retirement. Your team can focus on the most important assets when you shrink your portfolio before you move it to the cloud.
 
 ## Replace (10%)
 
@@ -38,7 +38,7 @@ Most organizations replace about 10% of their applications with software as a se
 
 ## Rearchitect or rebuild (5%)
 
-If you can't effectively replace essential business applications with SaaS or low-code solutions, consider rearchitecting or rebuilding the applications. Although doing this is complex, it's vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This involves several key aspects:
+If you can't effectively replace essential business applications with SaaS or low-code solutions, consider rearchitecting or rebuilding the applications. Although rearchitecting or rebuilding is complex, it's vital for making the most of cloud technology. The main goal is to tailor these applications for the cloud. This involves several key aspects:
 
 - *Scalability*: Adapt the application to handle varying demand levels efficiently.
 - *Reliability*: Improve the application’s ability to operate consistently without failures.

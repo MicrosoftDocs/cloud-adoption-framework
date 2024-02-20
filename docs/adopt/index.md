@@ -13,17 +13,17 @@ keywords: cloud adoption, cloud framework, cloud adoption framework
 
 The Adopt methodology shows you how to migrate, modernize, innovate, and relocate workloads in Azure. These four processes align to different phases in the cloud adoption journey. Each phase has distinct goals, solutions, and benefits. This article provides an overview of each process, so you can find the right guidance.
 
-:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices for modernizing an application. Depending on your needs, you can either retire, rebuild, rearchitect, replace, rehost, or replatform each application." border="false":::
+:::image type="content" source="../_images/adopt/modernization-strategy-flowchart.png" alt-text="Diagram that shows possible choices for modernizing an application. Depending on your needs, you can retire, rebuild, rearchitect, replace, rehost, or replatform each application." border="false":::
 
 ## Migrate
 
-Migration occurs when you move workloads to the cloud or between clouds. Different types of migration exist. The migration guidance helps you choose the migration strategy that best aligns with your objectives.
+Migration entails moving workloads to the cloud or between clouds. You can choose from various types of migrations. The migration guidance helps you choose the migration strategy that best aligns with your objectives.
 
 - ***Goals:*** Meet business demands, exit an on-premises environment, and align with Azure Well-Architected Framework principles.
 
 - ***Solutions:*** Adopt cloud solutions based on business needs.
 
-- ***Key benefits:*** Improve security, reliability, performance, and operations with managed solutions. Easily integrate new solutions and design patterns without acquiring, managing, or securing hardware.
+- ***Key benefits:*** Improve security, reliability, performance, and operations by using managed solutions. Easily integrate new solutions and design patterns without acquiring, managing, or securing hardware.
 
 Migrating an enterprise-scale workload to the cloud should require no development effort to create new business logic. You can perform migration efficiently by using the ***Rehosting*** approach.
 
