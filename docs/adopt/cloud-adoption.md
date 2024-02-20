@@ -1,6 +1,6 @@
 ---
 title: Cloud adoption journey
-description: Learn about various types of cloud adoption journeys, including when to retire, replace, rebuild, rehost, or replatform your solution.
+description: Learn about various types of cloud adoption journeys, including when to retire, replace, rearchitect, rebuild, rehost, or replatform your solution.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 02/14/2024
