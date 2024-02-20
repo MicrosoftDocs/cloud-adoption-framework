@@ -49,33 +49,51 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 - Ensure you map out the budgets and resources needed to support your generative AI strategy, and anchor that in the vision and strategy.
 - Can you communicate use cases clearly to your leadership?
 
-## Generative AI use cases and value propositions
-
-## Establish the benefits of generative AI
+## Generative AI business goals
 
 To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
-### Generative AI awareness in your organization
+Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
 
-- Drive awareness. Training programs, workshops, and other initiatives can help your organization understand the potential of generative AI.
+### Define your ambition
 
-## Define your generative AI ambition
+- What do you want this technology to do? Generally speaking.
+- What do you NOT want this technology to do? Generally speaking.
 
-- What do you want this technology to do?
-- What do you NOT want this technology to do?
+### Define goals
 
-## Define success metrics
+Define why you're adopting generative AI and what you hope to achieve.
 
-### Mapping success metrics to business goals
+Here's a list of example goals:
 
-### Example: Success metrics for a generative AI strategy
+|Goal|Generative AI benefit|Use cases|
+|----|---------------------|---------|
+|Increase customer satisfaction|TBD|TBD|
+|Increase employee productivity|TBD|TBD|
+|Increase operational efficiency|TBD|TBD|
+|Increase revenue|TBD|TBD|
+|Reduce costs|TBD|TBD|
+|Improve product quality|TBD|TBD|
 
+### Define example use cases and value propositions
 
-### Lean into an AI decision framework
+### Define success metrics
+
+To measure your goals, you need to define success metrics for each goal. Ensure you can map each individual objective or goal to one or more success metrics that can be measured easily. For example, if you are working according to an OKR model, you might have a few key results for each objective.
+
+|Goal|Success metric|
+|----|--------------|
+|Increase customer satisfaction|TBD|
+|Increase employee productivity|TBD|
+|Increase operational efficiency|TBD|
+|Increase revenue|TBD|
+|Reduce costs|TBD|
+|Improve product quality|TBD|
+
+## Use generative AI decision frameworks
 
 > Link to AI adoption framework guidance.
 > Link to AI Readiness assessment.
-
 
 ## Next steps
 
@@ -83,4 +101,3 @@ The following list of articles takes you to the guidance found at specific point
 
 > [!div class="nextstepaction"]
 > [Planning for generative AI](./plan.md)
-

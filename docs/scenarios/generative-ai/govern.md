@@ -30,15 +30,16 @@ Risks are associated with all areas of business. With generative AI, there are n
 
 ## Additional risk considerations
 
-- To what extent you have a plan to manage potential risks associated with AI (e.g., data security, privacy, ethical considerations)?
-- How comprehensive is your plan to address potential risks and challenges related to AI adoption?
-- How effective is your data governance framework in managing data access, usage, privacy, and security?
-- How often do you audit your data management practices for quality and compliance?
+> TBD
 
-## Recommended policies
+- To what extent you have a **plan to manage potential risks** associated with AI (e.g., data security, privacy, ethical considerations)?
+- How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
+- How **effective is your data governance framework** in managing data access, usage, privacy, and security?
+- How often **do you audit your data management practices** for quality and compliance?
+
+## Establish policies
 
 - To what extent do your policies ensure the privacy and security of the data used in your AI systems?
-
 
 ## Next steps
 
