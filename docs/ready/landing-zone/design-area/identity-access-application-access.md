@@ -1,5 +1,5 @@
 ---
-title: Azure identity and access management for applications
+title: Application identity and access management
 description: Learn about considerations and recommendations that application owners and developers can use to design the identity and access management for cloud-native applications.
 author: soderholmd
 ms.author: dsoderholm 
@@ -55,7 +55,7 @@ Incorporate the following considerations into your design to help reduce the ris
 
 #### External users
 
-You can evaluate scenarios that involve setting up external users, customers, or partners so they can access resources. Determine whether these scenarios involve Microsoft Entra B2B or Azure Active Directory B2C (Azure AD B2C) configurations. For more information, see [Overview of Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview).
+You can evaluate scenarios that involve setting up external users, customers, or partners so they can access resources. Determine whether these scenarios involve [Microsoft Entra B2B](/entra/external-id/what-is-b2b) or [Azure Active Directory B2C (Azure AD B2C)](/azure/active-directory-b2c/overview) configurations. For more information, see [Overview of Microsoft Entra External ID](/azure/active-directory/external-identities/external-identities-overview).
 
 ## Design recommendations
 
