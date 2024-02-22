@@ -86,4 +86,4 @@ Your organization's data governance team might have more requirements beyond a 3
 After retired assets are decommissioned, the migration is completed. This creates a good opportunity to improve the migration process with a retrospective to learn and improve.
 
 > [!div class="nextstepaction"]
-> [Retrospective](./retrospective.md)
+> [Conduct retrospectives](./retrospective.md)

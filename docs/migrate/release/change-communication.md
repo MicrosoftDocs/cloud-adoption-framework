@@ -56,7 +56,7 @@ You can use the below template to draft your change communication:
 
 ## Next steps
 
-After business change is documented and planned, [business testing](./business-test.md) can begin.
+After business change is documented and planned, business testing, also known as User Acceptance Testing (UAT), can begin.
 
 > [!div class="nextstepaction"]
-> [Guidance for business testing (UAT) during migration](./business-test.md)
+> [Business testing](./business-test.md)

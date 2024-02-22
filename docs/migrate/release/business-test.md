@@ -60,4 +60,4 @@ You can use the following as a reference to build your testing plan:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare for promotion](./prepare-for-promotion.md)
+> [Promotion models](./promotion-models.md)

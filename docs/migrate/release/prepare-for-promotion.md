@@ -42,4 +42,4 @@ After the business change plan and technical readiness have been validated, the 
 After all readiness activities have been completed, its time to [promote the workload](./promote.md).
 
 > [!div class="nextstepaction"]
-> [What is required to promote a migrated resource to production?](./promote.md)
+> [Promote to production?](./promote.md)
