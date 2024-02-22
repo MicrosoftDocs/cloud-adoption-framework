@@ -4,7 +4,7 @@ description: Understand Microsoft Entra ID and hybrid identity considerations an
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/22/2024
+ms.date: 02/23/2024
 ---
 
 # Hybrid identity with Active Directory and Microsoft Entra ID
@@ -80,7 +80,7 @@ However, many organizations already have longstanding AD DS directories that mig
 
 - Don't use [Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy) for intranet access because it adds latency to the user experience. For more information, see [Microsoft Entra application proxy planning](/entra/identity/app-proxy/application-proxy-deployment-plan#plan-your-implementation) and [Microsoft Entra application proxy security considerations](/entra/identity/app-proxy/application-proxy-security).
 
-- Consider various methods that you can use to [integrate on-premises Active Directory with Azure]((/azure/architecture/reference-architectures/identity)) and meet your organizational requirements.
+- Consider various methods that you can use to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity) and meet your organizational requirements.
 
 - If you have Active Directory Federation Services (AD FS) federation with Microsoft Entra ID, you can use password hash synchronization as a backup. AD FS doesn't support Microsoft Entra seamless single sign-on (SSO).
 

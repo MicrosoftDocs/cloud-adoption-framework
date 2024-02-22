@@ -4,7 +4,7 @@ description: See considerations and recommendations for implementing identity an
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 02/22/2024
+ms.date: 02/23/2024
 ---
 
 # Landing zone identity and access management
@@ -47,7 +47,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can [create your own custom roles](/azure/role-based-access-control/custom-roles). Just like built-in roles, you can assign custom roles to users, groups, and service principals at tenant, management group, subscription, and resource group scopes. Aim to use Azure built-in roles where possible, and only create custom roles when necessary.
 
-- When you design your access control strategy, know the [service limits for roles]((/azure/role-based-access-control/troubleshoot-limits)), role assignments, and custom roles.
+- When you design your access control strategy, know the [service limits for roles](/azure/role-based-access-control/troubleshoot-limits), role assignments, and custom roles.
 
 - Some Azure RBAC roles support [attribute-based access control (ABAC)](/azure/role-based-access-control/conditions-overview), or role assignment conditions. When you use conditions, administrators can dynamically assign roles based on the attributes of the resource. For example, you can assign the storage blob data contributor role but only for blobs that have a specific index tag rather than all blobs in a container.
 
