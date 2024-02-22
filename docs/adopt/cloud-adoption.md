@@ -44,7 +44,7 @@ If you can't effectively replace essential business applications with SaaS or lo
 - *Reliability*: Improve the application’s ability to operate consistently without failures.
 - *Security*: Integrate advanced security measures to protect data and operations in the cloud.
 
-You can also integrate advanced technologies like generative AI at this stage. Integrated solutions can enhance application functionality in significant ways.
+You can also integrate advanced technologies like generative AI at this stage. Integrated solutions can enhance application functionality in significant ways. Examples of AI technology include:
 
 - *Predictive analytics*: Use AI to anticipate customer needs.
 - *Process automation*: Employ AI to automate business processes.
