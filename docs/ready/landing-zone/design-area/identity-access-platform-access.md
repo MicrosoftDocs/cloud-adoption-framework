@@ -10,7 +10,7 @@ ms.custom: think-tank, UpdateFrequency.5
 
 # Identity for Azure platform resources
 
-Azure identity services, including Microsoft Entra ID, manage access to resources in the Azure platform. This article describes design considerations for platform access and workflow access. We offer design recommendations for platform access.
+Azure identity services, including Microsoft Entra ID, manage access to resources in the Azure platform. This article describes design considerations for platform access and workload access. We offer design recommendations for platform access.
 
 ## Design consideration for platform access
 
@@ -43,7 +43,7 @@ If identity protection is used as part your identity solution, make sure you exc
 
 ## Design considerations for workload access
 
-For workflow access design, answer the following questions:
+For workload access design, answer the following questions:
 
 - Based on your cloud operating model, which teams require access to workloads within the landing zone?
 - What roles or functions do the teams with access carry out?
