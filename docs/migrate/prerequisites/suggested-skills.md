@@ -43,12 +43,6 @@ The following tutorial can prepare the team for migration activities:
 - [`Migrating physical and virtual servers to Azure`](https://www.pluralsight.com/courses/microsoft-azure-migrating-physical-virtual-servers-update): A Pluralsight course for migrating servers to Azure.
 - [`Import and export data to Azure`](https://www.pluralsight.com/courses/microsoft-azure-import-export-data): A Pluralsight course on the movement of data to and from Azure.
 
-## Secure and manage process changes
-
-The following tools can help the team find ways to secure and manage migrated assets:
-
-- [Secure and manage workloads in Azure](../azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
-
 ## Migration checklist
 
 It can be helpful at this point to return to the [migration checklist](../checklist.md) to ensure your migration method is fully aligned.

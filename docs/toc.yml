@@ -756,11 +756,6 @@ items:
             href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
-
-        - name: Migrate secure workloads
-          items:
-          - name: Secure and manage workloads after migration
-            href: migrate/azure-best-practices/migrate-best-practices-security-management.md
     
     - name: Modernize
       items:
