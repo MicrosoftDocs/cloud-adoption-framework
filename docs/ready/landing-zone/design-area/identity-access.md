@@ -40,7 +40,7 @@ Many of the fundamental concepts of identity and access management are the same 
 - Determine core requirements for the separation of duties.
 - Use hybrid identities with AD DS domains.
 
-**Out of scope:** Identity and access management forms a foundation for proper access control. You don't need to address more advanced aspects like:
+**Out of scope:** Identity and access management forms a foundation for proper access control, but it doesn't cover more advanced aspects like:
 
 - The Zero Trust model.
 - The operational management of elevated privileges.
