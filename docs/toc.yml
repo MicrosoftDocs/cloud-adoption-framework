@@ -689,11 +689,6 @@ items:
 
           - name: Linux and open-source databases
             items:
-
-            - name: Migrate PostgreSQL to Azure
-              href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
-            - name: Migrate MariaDB to Azure
-              href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
             - name: Rehost a Linux application on Azure VMs
               href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
             - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL

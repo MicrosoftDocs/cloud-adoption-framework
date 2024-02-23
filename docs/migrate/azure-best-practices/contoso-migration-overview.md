@@ -72,7 +72,6 @@ This series focuses on each migration scenario, which is driven by slightly diff
 | Article | Details |
 | --- | --- |
 | [Migrate MySQL to Azure](./contoso-migration-mysql-to-azure.md) | This article demonstrates how the fictional company Contoso planned and migrated its on-premises MySQL open-source database platform to Azure. |
-| [Migrate MariaDB to Azure](./contoso-migration-mariadb-to-azure.md) | This article demonstrates how the fictional company Contoso planned and migrated its on-premises MariaDB open-source database platform to Azure. |
 | [Rehost a Linux application on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted application to Azure VMs by using Azure Migrate. The application database is migrated to Azure Database for MySQL by using [Database Migration Service](/azure/dms/dms-overview). |
 | [Rehost a Linux application on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift-and-shift migration of a Linux-based application to Azure VMs by using Azure Migrate. |
 
