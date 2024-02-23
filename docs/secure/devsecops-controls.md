@@ -40,7 +40,7 @@ Threat modeling is a simple concept, though it can be detailed and technical if 
 
 Threat modeling effectively puts you in the mindset of an attacker. It lets you see the application through an attacker's eyes. You learn how to block attempts before attackers can do anything about it. If your team has user personas in the design, you can treat the attacker as a hostile user persona.
 
-There are published approaches for threat modeling that range from simple question and answer methods to detailed tool-based analysis. You can base your approach on methodologies like the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats), the [DREAD model](https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)), or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling).
+There are published approaches for threat modeling that range from simple question and answer methods to detailed tool-based analysis. You can base your approach on methodologies like the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats) or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling).
 
 #### Threat modeling: Start simple
 
