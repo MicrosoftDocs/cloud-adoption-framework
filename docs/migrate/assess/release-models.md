@@ -1,13 +1,13 @@
 ---
-title: Promotion model types
+title: Migration release models
 description: Learn about three common promotion models that are used in cloud migrations. Also, learn how your choice of model affects activities within the migrate and optimize processes.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/21/2024
+ms.date: 02/23/2024
 ms.topic: conceptual
 ---
 
-# Promotion model types
+# Migration release models
 
 Workload migration is often discussed as a single activity. In practice, it's a collection of smaller activities that helps the movement of a digital asset to the cloud. One of the last activities in a migration is the promotion of an asset to production.
 

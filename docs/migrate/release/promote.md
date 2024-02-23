@@ -1,5 +1,5 @@
 ---
-title: Requirements to promote a migrated resource to production
+title: Execute final migration activities
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: Zimmergren
 ms.author: tozimmergren
@@ -7,7 +7,7 @@ ms.date: 12/05/2023
 ms.topic: conceptual
 ---
 
-# What is required to promote a migrated resource to production?
+# Execute final migration activities
 
 Promotion to production marks the completion of a workload's migration to the cloud. After the asset and all of its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
 

@@ -1,13 +1,13 @@
 ---
-title: Prepare a migrated application for production promotion
+title: Prepare for final migration activities
 description: Use the Cloud Adoption Framework for Azure to understand validation that's involved in preparing a migrated application for production promotion.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 12/05/2023
+ms.date: 02/23/2024
 ms.topic: conceptual
 ---
 
-# Prepare a migrated application for production promotion
+# Prepare for final migration activities
 
 After a workload is promoted, production user traffic is routed to the migrated assets. Readiness activities provide an opportunity to prepare the workload for that traffic. The following are a few business and technology considerations to help guide readiness activities.
 

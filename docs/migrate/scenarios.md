@@ -83,7 +83,7 @@ See each section below for relevant migration guidance for specific applications
 |---|---|
 |[Migrate open-source databases to Azure](/training/paths/migrate-open-source-workloads/)|Learn how to migrate open-source workloads from PostgreSQL and MySQL databases to the equivalent services in Azure.|
 | [Migrate from MySQL to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) |Learn how to migrate your MySQL database to an Azure SQL database by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).|
-|Migrate PostgreSQL to Azure||
+|[Migrate PostgreSQL to Azure](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|You can use Azure Database Migration Service to migrate the databases from an on-premises PostgreSQL instance to Azure Database for PostgreSQL with minimal downtime to the application.|
 |[Migrate MariaDB to Azure](https://azure.microsoft.com/updates/azure-database-for-mariadb-will-be-retired-on-19-september-2025-migrate-to-azure-database-for-mysql-flexible-server/)|MariaDB on Azure will be retired - please follow these directions to migrate to Azure Database for MySQL.|
 
 

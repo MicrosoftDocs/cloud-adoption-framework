@@ -977,7 +977,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/migrate/promotion-models.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/promotion-models",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/release-models",
          "redirect_document_id": false
       },
       {

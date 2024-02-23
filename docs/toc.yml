@@ -639,6 +639,8 @@ items:
           href: migrate/assess/evaluate.md
         - name: Architect workloads
           href: migrate/assess/architect.md
+        - name: Release models
+          href: migrate/assess/release-models.md
         - name: Update and refine initial cloud estimates
           href: migrate/assess/estimate.md
       - name: Deploy
@@ -661,8 +663,6 @@ items:
             href: migrate/release/change-communication.md
           - name: Business testing
             href: migrate/release/business-test.md
-          - name: Promotion models
-            href: migrate/release/promotion-models.md
           - name: Prepare for promotion
             href: migrate/release/prepare-for-promotion.md
           - name: Promote to production
