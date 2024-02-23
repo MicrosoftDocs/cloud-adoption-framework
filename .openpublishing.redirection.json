@@ -1139,6 +1139,16 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md",
          "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md",
+         "redirect_url": "/training/paths/migrate-open-source-workloads/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md",
+         "redirect_url": "/azure/dms/tutorial-postgresql-azure-postgresql-online-portal",
+         "redirect_document_id": false
+      }      
    ]
 }

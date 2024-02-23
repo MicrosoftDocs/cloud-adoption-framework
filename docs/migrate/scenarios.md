@@ -81,7 +81,10 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Migrate from MySQL to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) | TBD |
+|[Migrate open-source databases to Azure](/training/paths/migrate-open-source-workloads/)|Learn how to migrate open-source workloads from PostgreSQL and MySQL databases to the equivalent services in Azure.|
+| [Migrate from MySQL to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) |Learn how to migrate your MySQL database to an Azure SQL database by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).|
+|Migrate PostgreSQL to Azure||
+|Migrate MariaDB to Azure||
 
 ### Storage migration
 

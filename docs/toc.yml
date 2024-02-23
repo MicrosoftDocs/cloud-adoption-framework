@@ -689,9 +689,7 @@ items:
 
           - name: Linux and open-source databases
             items:
-            - name: Migrate open-source databases to Azure
-              href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
-          
+
             - name: Migrate PostgreSQL to Azure
               href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
             - name: Migrate MariaDB to Azure
