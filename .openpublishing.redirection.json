@@ -1134,6 +1134,11 @@
          "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-security-management.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": false
-      }      
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md",
+         "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview",
+         "redirect_document_id": false
+      }
    ]
 }

@@ -54,12 +54,6 @@ This series focuses on each migration scenario, which is driven by slightly diff
 | --- | --- |
 | [Assess on-premises resources for migration to Azure](../../plan/contoso-migration-assessment.md) | This article in the Plan methodology discusses how to run an assessment of an on-premises application running on VMware. In the article, an example organization assesses application VMs by using Azure Migrate and the application SQL Server database by using Data Migration Assistant. |
 
-### Infrastructure
-
-| Article | Details |
-| --- | --- |
-| [Deploy Azure infrastructure](../azure-migration-guide/ready-alz.md) | This article shows how an organization can prepare its on-premises infrastructure and its Azure infrastructure for migration. The infrastructure example established in this article is referenced in the other samples provided in this section. |
-
 ### Windows Server workloads
 
 | Article | Details |
@@ -70,7 +64,6 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 | Article | Details |
 | --- | --- |
-| [Migrate SQL Server databases to Azure](./contoso-migration-sql-server-db-to-azure.md) | This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises SQL Server databases to Azure. |
 | [Rehost an application on an Azure VM and SQL Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift-and-shift migration to Azure for an on-premises application. This process involves migrating the application front-end VM by using Azure Migrate and the application database to SQL Managed Instance by using [Azure Database Migration Service](/azure/dms/dms-overview). |
 | [Rehost an application on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an application and data by using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the application VMs and Database Migration Service to migrate the application database to a SQL Server cluster that's protected by an Always On availability group. |
 
@@ -101,14 +94,6 @@ This series focuses on each migration scenario, which is driven by slightly diff
 | [Refactor a Linux application to multiple regions by using App Service, Azure Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based application to an Azure web app on multiple Azure regions by using Traffic Manager to integrate with GitHub for continuous delivery. The application database is migrated to an Azure Database for MySQL instance. |
 | [Rebuild an application in Azure](./contoso-migration-rebuild.md) | This article provides an example of rebuilding an on-premises application by using a range of Azure capabilities and managed services. These capabilities and services include App Service, AKS, Azure Functions, Azure Cognitive Services, and Azure Cosmos DB. |
 | [Refactor Team Foundation Server to Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure. |
-
-### SAP
-
-| Article | Details |
-| --- | --- |
-| [SAP migration guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/) | Get practical guidance to move your on-premises SAP workloads to the cloud. |
-| [Migrate SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/) | White paper and roadmap for your SAP journey to the cloud. |
-| [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure. |
 
 ### Specialized workloads
 
