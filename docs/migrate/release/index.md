@@ -37,7 +37,7 @@ Releasing workloads often come with opportunities to optimize the environment. T
   - [Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance).
   - [Resize a VM](/azure/virtual-machines/resize-vm)
   - [Azure VM sizing for maximum reservation usage](/partner-center/azure-usage)
-- **Cost management**. Implement cost management and billing to monitor and manage the costs of the environment. 
+- **Cost management**. Implement cost management and billing to monitor and manage the costs of the environment.
   - Use Azure Cost Management + Billing.
   - Use Azure Advisor to identify potential cost savings.
   - Use the [Build business case](/azure/migrate/how-to-build-a-business-case) feature of Azure Migrate can help you quickly shape and justify a use case for migration, including cost-specific angles, such as:

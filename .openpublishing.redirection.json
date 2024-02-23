@@ -1094,6 +1094,41 @@
          "source_path": "docs/migrate/migration-considerations/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/lamp/moodle/azure-infra-config.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-arch.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-post.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-pre.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-resources.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }   ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-start.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
       }      
    ]
 }
