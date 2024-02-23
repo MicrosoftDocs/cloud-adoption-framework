@@ -141,9 +141,9 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Overview](infrastructure/mainframe-migration/index.md) | TBD |
-| [Switch from mainframes to Azure](infrastructure/mainframe-migration/migration-strategies.md) | TBD |
-| [Mainframe application migration](infrastructure/mainframe-migration/application-strategies.md) | TBD |
+| [Overview](../infrastructure/mainframe-migration/index.md) | TBD |
+| [Switch from mainframes to Azure](../infrastructure/mainframe-migration/migration-strategies.md) | TBD |
+| [Mainframe application migration](../infrastructure/mainframe-migration/application-strategies.md) | TBD |
 
 ## Migrate secure workloads
 
