@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 	
-- [SAP and Power Platform fundamentals](./sap-lza-sap-powerplatform-fundamentals.md)
+- [SAP and Power Platform fundamentals](./sap-lza-sap-powerplatform-fundamental.md)
 - [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
 
 
@@ -35,13 +35,13 @@ Power BI offers versatile integration options for SAP Business Warehouse and SAP
 
 -**Direct Connection**: For real-time analytics, Power BI can directly connect to SAP HANA and SAP Business Warehouse. This direct integration allows for immediate access and analysis of operational data, supporting high-speed analytics and in-depth reporting. It's particularly useful for dynamic data visualization and timely decision-making. It also supports SSO which means all the permissions, roles that are in place on the SAP side are still considered. Please see details.
 
-  - **SAP HANA** - [Use Kerberos for single sign-on (SSO) to SAP HANA - Power BI](https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
-  - **SAP BW** - [Use Kerberos single sign-on for SSO to SAP BW using CommonCryptoLib (sapcrypto.dll) - Power BI](https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
-  - **SAP BW** - [Use Kerberos for single sign-on (SSO) to SAP BW using gx64krb5 - Power BI](https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-gx64krb)
+  - **SAP HANA** - [Use Kerberos for single sign-on (SSO) to SAP HANA - Power BI](https://learn.microsoft.com/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
+  - **SAP BW** - [Use Kerberos single sign-on for SSO to SAP BW using CommonCryptoLib (sapcrypto.dll) - Power BI](https://learn.microsoft.com/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-commoncryptolib)
+  - **SAP BW** - [Use Kerberos for single sign-on (SSO) to SAP BW using gx64krb5 - Power BI](https://learn.microsoft.com/power-bi/connect-data/service-gateway-sso-kerberos-sap-bw-gx64krb)
 
-- Connect to a SAP HANA database - [Power Query SAP HANA database connector](https://learn.microsoft.com/en-us/power-query/connectors/sap-hana/overview)
+- Connect to a SAP HANA database - [Power Query SAP HANA database connector](https://learn.microsoft.com/power-query/connectors/sap-hana/overview)
 
-- Connect to a SAP BW Application Server - [Power Query SAP Business Warehouse Application Server connector](https://learn.microsoft.com/en-us/power-query/connectors/sap-bw/application-setup-and-connect)
+- Connect to a SAP BW Application Server - [Power Query SAP Business Warehouse Application Server connector](https://learn.microsoft.com/power-query/connectors/sap-bw/application-setup-and-connect)
 
 - **Data Extraction for Sensitive Environments** : For organizations cautious about direct connections to production environments, Power BI supports an alternative approach. Data can be extracted from SAP systems and then Power BI connects to this extracted dataset. This method ensures the protection of production environments and allows for analytics on a static copy of the data. The extraction can be scheduled to keep the Power BI dataset up to date without impacting the SAP systems' performance. 
 
