@@ -92,4 +92,4 @@ By leveraging Copilot Studio, customers can significantly enhance the SAP user e
 
 ## Next steps
 
-- [•	SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
+- [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
