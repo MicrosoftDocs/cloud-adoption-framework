@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
 ---
 
-# SAP and Power Platform Fundamentals
+# SAP and Power Platform Architecture Workflow
 
 This article is part of the "SAP and Power Platform" article series.
 	
