@@ -1,6 +1,6 @@
 ---
-title: SAP and Power Platform Fundamentals
-description: Learn about the fundamentals of SAP and Power Platform.
+title: SAP and Power Platform Architecture Workflow
+description: Learn about the architecture workflow of SAP and Power Platform.
 author: shekhag, mimergel
 ms.author: shegupt, mimergel
 ms.date: 02/09/2024
@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 	
-- [SAP and Power Platform fundamentals](sap-lza-sap-powerplatform-fundamental.md)
+- [SAP and Power Platform fundamentals](./sap-lza-sap-powerplatform-fundamental.md)
 
 - [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
 

@@ -12,8 +12,8 @@ ms.custom: think-tank, e2e-sap
 
 This article is part of the "SAP and Power Platform" article series.
 	
-- SAP and Power Platform Architecture Workflow
-- SAP and Power Platform Architecture Workflow
+- [SAP and Power Platform fundamentals](./sap-lza-sap-powerplatform-fundamentals.md)
+- [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
 
 
 This article is Part 1 of the SAP and Power Platform Articles. 
