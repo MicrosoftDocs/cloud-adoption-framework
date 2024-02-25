@@ -58,7 +58,7 @@ items:
       - name: SAP Data Integration with Azure - Security
         href: sap-lza-data-integration-security.md
       - name: SAP Data Integration with Azure - Generic Architecture
-        href: sap-lza-data-reference-architecture-workflow.md
+        href: sap-lza-data-example-architecture.md
     - name: SAP and Power Platform
       items:
       - name: SAP and Power Platform Fundamentals
