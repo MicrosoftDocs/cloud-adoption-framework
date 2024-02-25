@@ -31,7 +31,7 @@ A firewall and API management are recommended for implementations in production 
 
 ## Choose the optimal connector
 
-- **SAP ERP** - The SAP ERP connector for Power Automate and Power Apps allows you to invoke SAP RFC and BAPI functions using on-premises data gateway. For details, please see [SAP ERP - Connectors](https://learn.microsoft.com/connectors/saperp/) 
+- **SAP ERP** - The SAP ERP connector for Power Automate and Power Apps allows you to invoke SAP RFC and BAPI functions using on-premises data gateway. For details, please see [SAP ERP - Connectors](/connectors/saperp/) 
 
 - **SAP ODATA** - The OData connector provides the ability to fetch, create, and update records exposed by an SAP system through OData APIs.
 Currently this connector is in private preview 
@@ -41,7 +41,7 @@ Currently this connector is in private preview
   - **SAP SOAP** - SAP offers a comprehensive suite of services and functionalities accessible via SOAP (Simple Object Access Protocol), facilitating seamless integration with the Power Platform. Utilizing the Power Platform's HTTP connector, users can establish a robust connection to SAP's SOAP services. This integration enables the execution of various operations and interactions, leveraging the robust capabilities of SAP within the versatile framework of the Power Platform.
   - **HTTP** - HTTP connectors use Representational State Transfer (REST) architecture, which allows users to interact directly with data by using web requests. Additionally, it allows flow makers to use the full potential of the web service offerings in a secure manner while still using Power Automate flows
 
-- **SAP GUI Connection through the RPA** - With the addition of Power Automate Desktop, it's quicker and easier to develop low-code SAP GUI automation. You can use Power Automate Desktop to build from simple to highly sophisticated end-to-end automation. End users can automate their repetitive tasks. Please see more information [here](https://learn.microsoft.com/power-automate/guidance/rpa-sap-playbook/action-based-sap-gui-automation-manually-overview)
+- **SAP GUI Connection through the RPA** - With the addition of Power Automate Desktop, it's quicker and easier to develop low-code SAP GUI automation. You can use Power Automate Desktop to build from simple to highly sophisticated end-to-end automation. End users can automate their repetitive tasks. Please see more information [here](/power-automate/guidance/rpa-sap-playbook/action-based-sap-gui-automation-manually-overview)
 
 Here is a summary of the connectors 
 
@@ -55,9 +55,9 @@ Here is a summary of the connectors
 When integrating SAP with the Power Platform, prioritizing security and compliance is imperative, especially given the sensitive nature of data typically managed within SAP systems and its significance to enterprise operations. This section outlines essential security and compliance considerations, focusing on key components integral to securing and streamlining the integration process. These components collectively establish a fortified security framework, ensuring the protection of sensitive data and compliance with regulatory standards, thereby enhancing the overall integrity and reliability of the integrated system.
 
 
-- **On-Premises Data Gateway** - The on-premises data gateway serves as a critical conduit, facilitating secure and efficient data transfer between Power BI, Power Apps, Power Automate, Azure Analysis Services, Azure Logic Apps, and your SAP system, irrespective of whether they are cloud-based or on-premises. To connect with SAP ERP, certain pre-requisites need to be met and installed on a Windows machine with network access to the SAP system. Please see the pre-requisties details [here](https://learn.microsoft.com/connectors/saperp/#pre-requisites)
+- **On-Premises Data Gateway** - The on-premises data gateway serves as a critical conduit, facilitating secure and efficient data transfer between Power BI, Power Apps, Power Automate, Azure Analysis Services, Azure Logic Apps, and your SAP system, irrespective of whether they are cloud-based or on-premises. To connect with SAP ERP, certain pre-requisites need to be met and installed on a Windows machine with network access to the SAP system. Please see the pre-requisties details [here](/connectors/saperp/#pre-requisites)
 
-Please see the On-premise data Gateway [Installation and Configuration](https://learn.microsoft.com/azure/analysis-services/analysis-services-gateway-install?tabs=azure-portal) guidance. 
+Please see the On-premise data Gateway [Installation and Configuration](/azure/analysis-services/analysis-services-gateway-install?tabs=azure-portal) guidance. 
 
 - **Single Sign-On(SSO)** - SSO is a user authentication process that allows a user to access multiple applications with one set of login credentials. Implementing SSO with the Microsoft Power Platform and SAP offers several significant benefits:
 
@@ -66,8 +66,8 @@ Please see the On-premise data Gateway [Installation and Configuration](https://
   - Compliance with Identity Management Policies: Aligns with organizational identity management policies and standards.
 
 Please see the following tutorials for SSO Setup
-  - [Setup SAP SSO with Microsoft Entra ID](https://learn.microsoft.com/entra/identity/saas-apps/sap-netweaver-tutorial)
-  - [SSO authentication setup in the SAP ERP Connector](https://learn.microsoft.com/connectors/saperp/#authentication)
+  - [Setup SAP SSO with Microsoft Entra ID](/entra/identity/saas-apps/sap-netweaver-tutorial)
+  - [SSO authentication setup in the SAP ERP Connector](/connectors/saperp/#authentication)
 
 
 - **API Management** - API Management is instrumental in ensuring secure, efficient, and reliable communication with the SAP backend.
