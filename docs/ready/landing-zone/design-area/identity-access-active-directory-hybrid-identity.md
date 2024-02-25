@@ -1,13 +1,13 @@
 ---
 title: Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones
-description: Understand Microsoft Entra ID and hybrid identity considerations and recommendations for Azure landing zones.
+description: Learn about considerations and recommendations for designing and implementing Microsoft Entra ID and hybrid identity for Azure landing zones.
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/23/2024
+ms.date: 02/26/2024
 ---
 
-# Hybrid identity with Active Directory and Microsoft Entra ID
+# Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones
 
 This article provides guidance on how to design and implement Microsoft Entra ID and hybrid identity for Azure landing zones.
 
@@ -58,7 +58,7 @@ After AD DS or Domain Services is configured, you can domain join Azure VMs and 
 
 - Authentication can occur in the cloud and on-premises, or on-premises only. As part of your identity planning, explore the [authentication methods that Microsoft Entra ID offers](/entra/identity/hybrid/connect/choose-ad-authn).
 
-- If Azure Files file shares for Windows users requires Kerberos, consider using [Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#enable-azure-ad-kerberos-authentication-for-hybrid-user-accounts) rather than deploying domain controllers into the cloud.
+- If Azure Files file shares for Windows users require Kerberos, consider using [Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#enable-azure-ad-kerberos-authentication-for-hybrid-user-accounts) rather than deploying domain controllers in the cloud.
 
 ## Azure and on-premises domains (hybrid identity)
 

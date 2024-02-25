@@ -1,10 +1,10 @@
 ---
 title: Application identity and access management
-description: Learn about considerations and recommendations that application owners and developers can use to design the identity and access management for cloud-native applications.
+description: Learn about recommendations that application owners and developers can use to design the identity and access management for cloud-native applications.
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 02/21/2024
+ms.date: 02/26/2024
 ---
 
 # Application identity and access management
@@ -17,7 +17,7 @@ In the [platform automation and DevOps design area](/azure/cloud-adoption-framew
 
 ## Design considerations
 
-Incorporate the following considerations into your design to help reduce the risk of unauthorized access to your application.
+To help reduce the risk of unauthorized access to your application, incorporate the following considerations into your design.
 
 #### Authentication and authorization standards
 

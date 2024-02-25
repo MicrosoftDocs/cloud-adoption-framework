@@ -1,25 +1,25 @@
 ---
 title: Landing zone identity and access management
-description: See considerations and recommendations for implementing identity and access control within Azure application and platform landing zones.
+description: Learn about considerations and recommendations for implementing identity and access control within Azure application and platform landing zones.
 author: soderholmd
 ms.author: dsoderholm 
 ms.topic: conceptual
-ms.date: 02/23/2024
+ms.date: 02/26/2024
 ---
 
 # Landing zone identity and access management
 
-After you identify your identity architecture, you need to manage the authorization and access for resources in application and platform landing zones. Consider which resources each authenticated principal has access to and needs access to, and how to mitigate risks of unauthorized access to your resources. For more information, see [Identity architecture design](/azure/architecture/identity/identity-start-here).
+After you identify your identity architecture, you need to manage the authorization and access for resources in application and platform landing zones. Consider which resources each authenticated principal has access to and needs access to, and how to mitigate the risk of unauthorized access to your resources. For more information, see [Identity architecture design](/azure/architecture/identity/identity-start-here).
 
-The identity and access management design area provides guidance to help you implement the [enterprise access model in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model) and implement and secure control planes. When you incorporate the design principle of [subscription democratization](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization), your application team can manage their own workloads within the policy guardrails that the platform teams set. This approach also follows the [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) principle.
+The identity and access management design area provides guidance to help you implement the [enterprise access model in Azure](/security/privileged-access-workstations/privileged-access-access-model#evolution-from-the-legacy-ad-tier-model) and implement and secure control planes. When you incorporate the design principle of [subscription democratization](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization), your application team can manage their own workloads within the policy guardrails that the platform team sets. This approach also follows the [policy-driven governance](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) principle.
 
 The platform team is responsible for provisioning new application landing zones or subscriptions. When they provision a landing zone for an application owner, the platform team should configure it with the appropriate access controls so the application owner can manage their own resources. The application owner should be able to create and manage users and groups within Microsoft Entra ID, and assign roles to those users and groups. The application owner can then manage access to their own resources and delegate access to other users and groups as required. The landing zone should also have optional network connectivity to Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services in the identity platform subscription, depending on the requirements of the application.
 
-Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. Consider whether users require permissions on a narrow scope, such as an administrator for a single application, or a broad scope, such as a network administrator across multiple application workloads. In either case, follow the principle of just-enough access, and ensure that the user has only the roles required for their normal activities. Use custom roles and privileged identity management where necessary to enforce just-in-time (JIT) access. Although the platform team is responsible for the identity and access management foundation, both platform and application teams are consumers of the service, and should follow the same principles.
+Use Azure role-based access control (RBAC) to manage administrative access to Azure resources. Consider whether users require permissions on a narrow scope, such as an administrator for a single application, or a broad scope, such as a network administrator across multiple application workloads. In either case, follow the principle of just-enough access, and ensure that the user has only the roles required for their normal activities. Use custom roles and privileged identity management where necessary to enforce just-in-time (JIT) access. Although the platform team is responsible for the identity and access management foundation, both platform and application teams are consumers of the service and should follow the same principles.
 
 Identity and access management is important for the successful separation of one landing zone from another and the isolation of workloads within an organization. It's a critical design area for both platform and application landing zones.
 
-If your organization uses a [subscription vending process](./subscription-vending.md), you can automate many of the identity and access configurations for application landing zones. Implement subscription vending to help standardize landing zone creation and enable application teams to manage their own resources.
+If your organization uses a [subscription vending process](./subscription-vending.md), you can automate many of the identity and access configurations for application landing zones. Implement subscription vending to help standardize landing zone creation and so application teams can manage their own resources.
 
 ## Design considerations
 
@@ -29,7 +29,7 @@ If your organization uses a [subscription vending process](./subscription-vendin
 >
 > Classic resources and classic administrators are [retiring on August 31, 2024](https://azure.microsoft.com/updates/cloud-services-retirement-announcement/). Remove unnecessary co-administrators, and use Azure RBAC for fine-grained access control.
 
-- Understand the difference between Microsoft Entra ID roles and Azure RBAC roles.
+Understand the difference between Microsoft Entra ID roles and Azure RBAC roles.
 
   - Microsoft Entra ID roles control the administrative privileges to tenant-wide services such as Microsoft Entra ID, and other Microsoft services including Microsoft Teams, Microsoft Exchange Online, and Microsoft Intune.
 
@@ -41,9 +41,9 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 ![Diagram showing the relationship between Microsoft Entra ID and Azure RBAC roles.](media/azure-rbac-roles.png)
 
-- You can create role-assignable groups, and [assign Microsoft Entra roles to the groups](/entra/identity/role-based-access-control/groups-concept) if you set the `isAssignableToRole` property to `true`. Only groups with this property set are protected. The only roles that can modify a group's membership are global administrators, privileged role administrators, or the group’s owner.
+- You can create role-assignable groups and [assign Microsoft Entra roles to the groups](/entra/identity/role-based-access-control/groups-concept) if you set the `isAssignableToRole` property to `true`. Only groups with this property set are protected. The only roles that can modify a group's membership are global administrators, privileged role administrators, or the group’s owner.
 
-- Only [some roles can reset the password](/entra/identity/role-based-access-control/privileged-roles-permissions#who-can-reset-passwords) or multifactor authentication (MFA) settings for another administrator. This restriction prevents unauthorized administrators from resetting the credentials of a higher-privelaged account to get more permissions.
+- Only [some roles can reset the password](/entra/identity/role-based-access-control/privileged-roles-permissions#who-can-reset-passwords) or multifactor authentication (MFA) settings for another administrator. This restriction prevents unauthorized administrators from resetting the credentials of a higher-privileged account to get more permissions.
 
 - If the Azure built-in roles don't meet the specific needs of your organization, you can [create your own custom roles](/azure/role-based-access-control/custom-roles). Just like built-in roles, you can assign custom roles to users, groups, and service principals at tenant, management group, subscription, and resource group scopes. Aim to use Azure built-in roles where possible, and only create custom roles when necessary.
 
