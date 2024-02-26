@@ -13,15 +13,15 @@ This article describes considerations and recommendations that application owner
 
 If your team migrates or creates cloud-native applications, you must consider the authentication and access requirements for the applications. These requirements determine how users authenticate to applications and how application resources authenticate to each other, for example when a web application accesses a SQL database. 
 
-In the [platform automation and DevOps design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops), we recommend that your application team transitions workloads to [subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). As part of the subscription vending process, your application team needs to provide identity and access requirements to the platform team so they can create the appropriate subscriptions. Application owners are responsible for the identity and access management of individual applications. They should manage configurations via the centralized services that the platform team provides.
+In the [platform automation and DevOps design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops), we recommend that your application team transitions workloads to [subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). As part of the subscription-vending process, your application team needs to provide identity and access requirements to the platform team so they can create the appropriate subscriptions. Application owners are responsible for the identity and access management of individual applications. They should manage configurations via the centralized services that the platform team provides.
 
 ## Design considerations
 
-To help reduce the risk of unauthorized access to your application, incorporate the following considerations into your design.
+To help reduce the risk of unauthorized access to your applications, incorporate the following considerations into your design.
 
 #### Authentication and authorization standards
 
-- There are several authentication and authorization standards, like OAuth 2.0, OpenID Connect, JSON web tokens (JWTs), and SAML (Security Assertion Markup Language). Determine which authentication and authorization standards to use for your application. For more information, see [Authentication and authorization standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards).
+- There are several authentication and authorization standards, like OAuth 2.0, OpenID Connect, JSON web tokens (JWTs), and SAML (Security Assertion Markup Language). Determine which [authentication and authorization standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards) to use for your application.
 
 - When you request an application landing zone from the platform team, you can help ensure that they create the appropriate subscriptions by asking them the following questions:
 
@@ -39,9 +39,9 @@ To help reduce the risk of unauthorized access to your application, incorporate 
 
 - If your application or workload requires a service to securely store credentials, you can use Key Vault to manage secrets, keys, and certificates.
 
-- [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) provide an automatically managed identity principal that applications and resources use when they connect to resources that support Microsoft Entra ID authentication. Applications can use managed identities to obtain Microsoft Entra ID tokens without having to manage any credentials. For more information, see [Connecting from your application to resources without handling credentials](/entra/identity/managed-identities-azure-resources/overview-for-developers).
+- [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) provide an automatically managed identity principal that applications and resources use when they connect to resources that support Microsoft Entra ID authentication. Applications can use managed identities to [obtain Microsoft Entra ID tokens without having to manage any credentials](/entra/identity/managed-identities-azure-resources/overview-for-developers).
 
-  - You can use system-assigned or user-assigned managed identities. For more information, see [Choosing system or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
+  - You can use [system-assigned or user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
   
   - It's easy to confuse how service principals (SPNs) and managed identities access Azure resources. To understand the difference between the two, see [Demystifying service principals—Managed identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities).
   - Where possible, use managed identities to support authentication rather than using SPNs and Microsoft Entra ID app registrations. You must have the application administrator or application developer RBAC roles to create SPNs and app registrations. These privileged roles are typically assigned to the platform team or identity team. Use managed identities to eliminate the need for the platform team to create SPNs and app registrations for your application team.
@@ -49,7 +49,7 @@ To help reduce the risk of unauthorized access to your application, incorporate 
   - There are restrictions on moving resources with managed identities between subscriptions and regions. For example, you might move resources between subscriptions or regions for a merger, acquisition, or repatriation of resources for data sovereignty reasons.
   
     If an Azure resource has user-assigned or system-assigned identities, you can't transfer the resource to another Azure subscription or region. You must delete the managed identities before you move the resource. After the move, you must re-create the managed identities and assign them to the resource. For more information, see [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
-  - If you move a subscription from one directory to another, managed identities aren't preserved. You must move the resource and then manually re-create the managed identities. For more information, see [Move managed identities for Azure resources across regions](/entra/identity/managed-identities-azure-resources/how-to-managed-identity-regional-move).
+  - If you move a subscription from one directory to another, managed identities aren't preserved. You must move the resource and then [manually re-create the managed identities](/entra/identity/managed-identities-azure-resources/how-to-managed-identity-regional-move).
   - To avoid having credentials in your code, you can use managed identities with Azure virtual machines (VMs) to authenticate to any service that [supports Microsoft Entra ID authentication](/azure/active-directory/managed-identities-azure-resources/services-id-authentication-support). For more information, see [Use managed identities for Azure resources on a VM to acquire an access token](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).  
   - Similar to user RBAC role assignments, [follow the principle of least privilege]( /entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#follow-the-principle-of-least-privilege-when-granting-access) when you grant a managed identity access to a resource.
 
@@ -73,7 +73,7 @@ To further restrict access and prevent unauthorized access to data, [use attribu
 
 #### Microsoft Entra ID identities
 
-Where possible, [use Microsoft Entra ID identities to control access to Azure virtual machines](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows). Use Microsoft Entra ID instead of local authentication to provide access, such as Microsoft Entra Conditional Access, audit logging, and Microsoft Entra multifactor authentication, to services. This configuration reduces the risk of attackers exploiting insecure local authentication services. For more information, see [Log into a Linux virtual machine in Azure by using Microsoft Entra ID and OpenSSH](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
+Where possible, [use Microsoft Entra ID identities to control access to Azure virtual machines](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows). Use Microsoft Entra ID instead of local authentication to provide access, such as Microsoft Entra Conditional Access, audit logging, and Microsoft Entra multifactor authentication (MFA), to services. This configuration reduces the risk of attackers exploiting insecure local authentication services. For more information, see [Log into a Linux virtual machine in Azure by using Microsoft Entra ID and OpenSSH](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
 
 
 #### Microsoft identity platform
