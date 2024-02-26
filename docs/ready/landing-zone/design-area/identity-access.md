@@ -17,11 +17,11 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 ## Identity and access management in Azure landing zones
 
-Identity and access management is a core consideration in both platform and application landing zones. Under the design principle of [subscription democratization](../design-principles.md#subscription-democratization), application owners should have the autonomy to manage their own applications and resources with minimal intervention from the platform team. Security is the fundamental difference between landing zones in the same Azure organization. Apply a robust identity and access management design to achieve application landing zone isolation.
+Identity and access management is a core consideration in both platform and application landing zones. Under the design principle of [subscription democratization](../design-principles.md#subscription-democratization), application owners should have the autonomy to manage their own applications and resources with minimal intervention from the platform team. Landing zones are a security boundary, and identity and access management provides a way to control the separation of one landing zone from another, along with components such as networking and Azure Policy. Apply a robust identity and access management design to help achieve application landing zone isolation.
 
 The platform team is responsible for the foundation of identity and access management, including deploying and managing centralized directory services, such as Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services (AD DS). Application landing zone administrators and users that access applications consume these services.
 
-The application team is responsible for the identity and access management of their applications, including securing user access to applications and between application components, such as Azure SQL Database, Azure Cosmos DB, and Azure Storage. In a well-implemented landing zone architecture, the application team can effortlessly consume services that the platform team provides.
+The application team is responsible for the identity and access management of their applications, including securing user access to applications and between application components, such as Azure SQL Database, virtual machines, and Azure Storage. In a well-implemented landing zone architecture, the application team can effortlessly consume services that the platform team provides.
 
 Many of the fundamental concepts of identity and access management are the same in both platform and application landing zones, such as role-based access control (RBAC) and the principle of least privilege.
 
@@ -33,12 +33,12 @@ Many of the fundamental concepts of identity and access management are the same 
 - [Cloud center of excellence functions](../../../organize/cloud-center-of-excellence.md)
 - [Cloud security team functions](../../../organize/cloud-security.md)
 
-**Scope:** The goal of this design area is to help you evaluate options for your identity and access foundation. When you synchronize identities with Microsoft Entra ID, you should perform the following tasks:
+**Scope:** The goal of this design area is to help you evaluate options for your identity and access foundation. When you design your identity strategy, you should perform the following tasks:
 
 - Authenticate users and workload identities.
 - Assign access to resources.
 - Determine core requirements for the separation of duties.
-- Use hybrid identities with AD DS domains.
+- Synchronize hybrid identities with Microsoft Entra ID.
 
 **Out of scope:** Identity and access management forms a foundation for proper access control, but it doesn't cover more advanced aspects like:
 
@@ -52,7 +52,7 @@ The compliance design areas for [security](./security.md) and [governance](./gov
 
 Identity provides the basis for a wide variety of security assurance. It grants access based on identity authentication and authorization controls in cloud services. Access control protects data and resources and helps determine which requests should be permitted.
 
-Identity and access management helps secure the boundary of a public cloud environment. It's the foundation of any secure and fully compliant public cloud architecture.
+Identity and access management helps secure the internal and external boundaries of a public cloud environment. It's the foundation of any secure and fully compliant public cloud architecture.
 
 The following articles examine design considerations and recommendations for identity and access management in a cloud environment:
 
