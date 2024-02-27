@@ -39,11 +39,11 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 
 You can then use the information provided to estimate the bandwidth considerations for your migration. Common steps for this include:
 
-- Calculate the total storage for all VMs to be replicated during the iterations leading up to a release.
-- Calculate the drift or change rate of storage for all VMs to be replicated during the iterations leading up to a release.
-- Calculate the bandwidth requirements needed for each iteration by summing total storage and drift.
-- Calculate unused bandwidth available on the current network to validate per iteration alignment.
-- Document bandwidth needed to reach anticipated migration velocity. If any remediation is required to provide necessary bandwidth, notify the team responsible for remediation activities.
+- **Total storage**: Calculate the total storage for all VMs to be replicated during the iterations leading up to a release.
+- **Drift or change rate**: Calculate the drift or change rate of storage for all VMs to be replicated during the iterations leading up to a release.
+- **Bandwidth requirements**: Calculate the bandwidth requirements needed for each iteration by summing total storage and drift.
+- **Unused bandwidth**: Calculate unused bandwidth available on the current network to validate per iteration alignment.
+- **Migration velocity bandwidth**: Document bandwidth needed to reach anticipated migration velocity. If any remediation is required to provide necessary bandwidth, notify the team responsible for [remediation activities](../deploy/remediate.md).
 
 > [!NOTE]
 > Total storage directly affects bandwidth requirements during initial replication. However, storage drift continues from the point of replication until release. This means that drift has a cumulative effect on available bandwidth.
