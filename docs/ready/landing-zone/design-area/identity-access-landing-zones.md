@@ -55,9 +55,9 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 ### Shared services
 
-Some organizations share services between multiple applications, including networking. In that scenario, consider which services are managed centrally and which are devolved to application teams.
+- Some organizations share services between multiple applications, including networking. In that scenario, consider which services are managed centrally and which are devolved to application teams.
 
-Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations take advantage of the agile nature of the cloud and prevent violation of any critical security or governance boundary.
+- Managing application resources that don't violate security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations take advantage of the agile nature of the cloud and prevent violation of any critical security or governance boundary.
 
 ## Design recommendations
 
