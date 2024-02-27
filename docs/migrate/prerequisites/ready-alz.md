@@ -4,17 +4,17 @@ description: Review items that need to be completed after an Azure landing zone 
 author: bstephenson
 ms.author: bstephenson
 ms.reviewer: tozimmergren
-ms.date: 07/07/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 ---
 
 # Readying your landing zone for migration
 
-If your organization aligns to [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you will find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+If your organization already aligns to [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you'll find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
 
-Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a migration project.
+Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a successful migration project.
 
-If you aren't using one of the ALZ reference implementations, the steps in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
+If you aren't using one of the ALZ reference implementations, the steps outlined in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
 
 This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments but will note if they aren't relevant for manually deployed and managed environments.
 
@@ -32,13 +32,16 @@ See technical guidance for specific scenarios by reviewing the following links:
 - [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
 - [Managing Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings)
 
+> [!NOTE]
+> Make sure you refer to your provider's specific documentation as well.
+
 If you're establishing your hybrid connectivity to Azure via a third-party Network Virtual Appliances (NVA) deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare identity
 
 During the ALZ deployment, organizations deploy supporting architecture for their identity platform. This involves a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines used for identity. However, the actual identity resources must be deployed after the ALZ deployment.
 
-This section has guidance for considerations related to Active Directory. If you're using another identity provider, you must follow their guidance on extending your identity to Azure.
+This section has guidance for considerations related to Active Directory. If you're using another identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
 
 Before implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) when you planned for your Landing Zone.
 
@@ -124,7 +127,7 @@ You need routes that take traffic from one spoke to another to allow routing bet
 
 If you want to allow for internet egress, you can also assign another route for your private IP space to the firewall, such as `10.0.0.0/8`. This won't overrule more specific routes but can be used as a simple route to let inter-spoke traffic route correctly.
 
-For more information on spoke-to-spoke networking, see [Patterns and topologies for inter-spoke communication](/azure/architecture/networking/spoke-to-spoke-networking#patterns-and-topologies-for-inter-spoke-communication)
+For more information on spoke-to-spoke networking, see [Patterns and topologies for inter-spoke communication.](/azure/architecture/networking/spoke-to-spoke-networking#patterns-and-topologies-for-inter-spoke-communication)
 
 ### Routing From Gateway Subnet
 
