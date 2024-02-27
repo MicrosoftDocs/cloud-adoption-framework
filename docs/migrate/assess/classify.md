@@ -9,11 +9,13 @@ ms.topic: conceptual
 
 # Workload classification before migration
 
-During each iteration of any migration process, one or more workloads are migrated and promoted to production. Before either of those migration activities, it's important to classify each workload. Classification helps clarify governance, security, operations, and cloud-scale analytics requirements.
+During each iteration of any migration process, one or more workloads are migrated. Before migration activities, it's important to classify each workload. Classification helps clarify governance, security, operations, and cloud-scale analytics requirements.
 
-The following guidance builds on the suggested tagging requirements outlined in the [Define your tagging strategy](../../ready/azure-best-practices/resource-tagging.md) article. This article builds by adding important [operations](../../manage/considerations/criticality.md#criticality-scale) and [governance](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) elements.
+You should already have planned for tagging requirements as outlined in the [Define your tagging strategy](../../ready/azure-best-practices/resource-tagging.md) article.
 
-In this article, we specifically suggest adding criticality and data sensitivity to your existing tagging standards. Each of these data points can help other teams understand which workloads might require other attention or support.
+During the migration assessment of a workload, you should validate the data sensitivity and mission criticality of each workload.  You can capture this in the tool you're using to track resources for migration, and make sure that during the migration they're tagged appropriately.
+
+These assessment data points can help other teams understand which workloads might require other attention or support.
 
 ## Data sensitivity
 
@@ -36,6 +38,18 @@ Work with your security and operations teams as early as possible to define the 
 - An understanding of the operations management and resource consistency requirements for various criticality levels.
 - Any influence criticality might have on subscription design, management group hierarchies, or landing zone requirements.
 - Any requirements for documenting criticality, which might include specific traffic or usage reports, financial analyses, or other tools.
+
+## Organization-specific considerations
+
+In addition to data and mission criticality, consider the classifications specific to your organization.  For example, many organizations with different development teams classify workloads by the project team who supports them, or by the line of business they support.
+
+As you examine dependencies between workloads, you can also classify workloads into fleets based on shared dependencies.
+
+## Guide on capturing classifications
+
+You can use the Govern guidance on [data classification](../../govern/policy-compliance/data-classification.md) to apply the data classification labels to specific workloads in your migration tracking tools. 
+
+You should also do the same with Criticality, using the guidance for [business criticality in cloud management](../../manage/considerations/criticality.md#criticality-scale). You can use the operations management workbook or other tools for planning.
 
 ## Next steps
 
