@@ -10,17 +10,17 @@ ms.custom: UpdateFrequency2
 
 # Migration tools decision guide
 
-This article gives instructions for selecting the necessary migration tools to support your migration. It assumes you are performing a migration featured on rehosting. See [Cloud modernization strategies](/azure/cloud-adoption-framework/modernize/modernize-strategies/) for information about planning Modernization programs focused on replatforming applications.
+This article gives instructions for selecting the necessary migration tools to support your migration. It assumes you're performing a migration featured on rehosting. See [Cloud modernization strategies](/azure/cloud-adoption-framework/modernize/modernize-strategies/) for information about planning Modernization programs focused on replatforming applications.
 
 ## Migration tools
 
 Migration tools are used to copy or replicate server states or data from your existing environment to Azure. The exact tools vary on the migration scenario.
 
-For example, if you are migrating to Azure Virtual Machines, you can use Azure Migrate. Azure Migrate is a free service to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources and cloud resources.
+For example, if you're migrating to Azure Virtual Machines, you can use Azure Migrate. Azure Migrate is a free service to assess and migrate applications, infrastructure, and data to Azure. Azure Migrate provides a central hub to track discovery, assessment, and migration of on-premises resources and cloud resources.
 
-However, if you are migrating to Azure VMware Services, you would use the built-in Vmotion features to migrate the VMs to their new host.
+However, if you're migrating to Azure VMware Services, you would use the built-in Vmotion features to migrate the VMs to their new host.
 
-In addition to these replication tools, you will need to have tools to track migration waves, collect data, and organize communication. Azure DevOps or another user story system can be helpful to organize and visualize this work, and assign data, owners, and tasks.
+In addition to these replication tools, you'll need to have tools to track migration waves, collect data, and organize communication. Azure DevOps or another user story system can be helpful to organize and visualize this work, and assign data, owners, and tasks.
 
 ## Selecting the right migration tool for your scenario
 
@@ -28,7 +28,7 @@ To ensure you're selecting the right migration tools, you should consider the fo
 
 ### Evaluate and assess Azure Migrate
 
-The primary tool for migrating to Azure is [Azure Migrate](/azure/migrate/migrate-services-overview). It is a free service that provides a central hub to track discovery, assessment, and migration of on-premises resources and cloud resources. Azure Migrate provides a unified experience to track and manage your migration journey.
+The primary tool for migrating to Azure is [Azure Migrate](/azure/migrate/migrate-services-overview). It's a free service that provides a central hub to track discovery, assessment, and migration of on-premises resources and cloud resources. Azure Migrate provides a unified experience to track and manage your migration journey.
 
 Build a deeper understanding of Azure Migrate with the [Migrate virtual machines and apps using Azure Migrate](/training/paths/m365-azure-migrate-virtual-machine/) Learning Path.
 
@@ -36,12 +36,12 @@ Build a deeper understanding of Azure Migrate with the [Migrate virtual machines
 
 - **Existing tools**
   - Do you already own a tool for replication that has been used as part of other projects in the past?
-  - Does it makes sense to re-use this tool?
+  - Does it make sense to reuse this tool?
 - **Specific needs**
   - Do you have specific needs that make you incapable of using Azure Migrate, such as specific host environments?
   - Do these needs require you to add an additional tool, or are they items that can be solved by a process?
 
-Proceed to evaluate additional tools. Many tools will integrate with Azure Migrate to let you add features or perform more advanced assessments from the discovered data.
+Proceed to evaluate additional tools. Many tools integrate with Azure Migrate to let you add features or perform more advanced assessments from the discovered data.
 
 You can also use the [Migration Execution Guide](https://github.com/Azure/migration/) (MEG) to determine tooling for common scenarios.
 
