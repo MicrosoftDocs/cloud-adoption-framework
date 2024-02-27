@@ -49,7 +49,7 @@ From the previous diagram, it's important to highlight that:
 - The Private DNS Resolver hosted in the hub VNet use the Azure-provided DNS (168.63.129.16) as a forwarder.
 - The hub VNet must be linked to the Private DNS zone names for Azure services (such as `privatelink.blob.core.windows.net`, as shown in the diagram).
 - All Azure VNets use Private DNS Resolver hosted in the hub VNet
-- As the Private DNS Resolver isn't authoritative for customer's corporate domains (for example, Active Directory domain names), it should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
+- As the Private DNS Resolver isn't authoritative for customer's corporate domains, as its just a forwarder, (for example, Active Directory domain names), it should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS Servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
 
 While the previous diagram depicts a single hub and spoke architecture, customers might need to extend their Azure footprint across multiple regions to address resiliency, proximity or data residency requirements, several scenarios have emerged where the same Private-Link-enabled PaaS instance must be accessed through multiple Private Endpoints (PE’s).
 
