@@ -6,7 +6,6 @@ ms.author: jodowns
 ms.reviewer: tozimmergren
 ms.date: 12/04/2023
 ms.topic: conceptual
-ms.custom: engagement-fy23
 ---
 
 # Select Azure regions for a migration

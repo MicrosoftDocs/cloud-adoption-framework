@@ -172,3 +172,8 @@ Consider these additional resources to prepare:
 - [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md)
 - [Your organizational alignment](../../plan/initial-org-alignment.md) and how you intend to [continue to manage it](../../organize/index.md)
 - [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [MIgration tools decision guide](../prerequisites/migration-tools-decision-guide.md)

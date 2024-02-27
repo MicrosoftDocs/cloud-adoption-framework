@@ -5,7 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/01/2020
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Multiple datacenters

@@ -5,7 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 12/05/2023
 ms.topic: conceptual
-ms.custom: internal
 ---
 
 # Estimate cloud costs
