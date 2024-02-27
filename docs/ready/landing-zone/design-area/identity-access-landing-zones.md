@@ -132,7 +132,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
    | Network management (NetOps) | Manages platform-wide global connectivity, such as virtual networks, UDRs, NSGs, NVAs, VPNs, Azure ExpressRoute, and others  | `*/read`, <br>`Microsoft.Network/*`,<br> `Microsoft.Resources/deployments/*`,<br> `Microsoft.Support/*` | |
    | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Key Vault purge policy | `*/read`,<br> `*/register/action`,<br> `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br>`Microsoft.PolicyInsights/*`,<br> `Microsoft.Authorization/policyAssignments/*`,<br>`Microsoft.Authorization/policyDefinitions/*`,<br>`Microsoft.Authorization/policyExemptions/*`,<br>`Microsoft.Authorization/policySetDefinitions/*`,<br>`Microsoft.Insights/alertRules/*`, <br> `Microsoft.Resources/deployments/*`, <br>`Microsoft.Security/*`, <br>`Microsoft.Support/*` | |
 
-  - Those roles might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. In organizations that need a more centralized approach, you can enrich the NetOps role with more allowed actions. That role might allow creating peering between the hub and the spokes.
+   Those roles might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. In organizations that need a more centralized approach, you can enrich the NetOps role with more allowed actions, such as creating peering between hubs and their spokes.
 
 ##### Role assignments and groups
 
