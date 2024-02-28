@@ -546,6 +546,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/resources/vdc.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/scenarios/sap/govern.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/",
          "redirect_document_id": false
