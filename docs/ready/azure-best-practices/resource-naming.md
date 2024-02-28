@@ -169,5 +169,5 @@ The following section provides some example names for common Azure resource type
 | Asset type | Scope | Format and Examples|
 |--|--|--|
 | **Service Bus namespace** | Global | *sbns-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
-| **Service Bus queue** | Service Bus | *sbq-\<query descriptor>* <br><br> <li> `sbq-messagequery` |
-| **Service Bus topic** | Service Bus | *sbt-\<query descriptor>* <br><br> <li> `sbt-messagequery` |
+| **Service Bus queue** | Service Bus | *sbq-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbq-navigator` |
+| **Service Bus topic** | Service Bus | *sbt-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbt-navigator` |
