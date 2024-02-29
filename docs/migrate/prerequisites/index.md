@@ -3,59 +3,35 @@ title: Prepare workloads for migration - Overview
 description: Understand the requirements to successfully prepare for a cloud migration.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/27/2024
+ms.date: 02/29/2024
 ms.topic: conceptual
 ---
 
 # Prepare workloads for migration - Overview
 
-Prior to beginning to plan individual workload migrations or migration waves, there are several key decisions and processes you need to execute. Many of these are covered earlier in the Cloud Adoption Framework, and some are decisions made that will impact all future migration activities.
+Prior to planning individual workload migrations, there are several key decisions and processes you need to execute to ready your organization and cloud resources to support the migration. Many of these are covered earlier in the Cloud Adoption Framework, and some are decisions made that will impact all future migration activities.
 
 The Prepare section provides you with guidance to tackle both of these action sets, so that you can begin to migrate with a secure foundation and plan.
 
+Organizations that fail to adequately prepare for migrations might see their migrations stall as they have to go back and remediate activities. Some might find that the process becomes so bogged down that the migration has to be abandoned, and resumed at a later date once activities are completed. To avoid this, make sure you have a plan for addressing all of the readiness items.
+
 To help organize your readiness, you can use the cloud migration readiness assessment.
 
-## Adoption foundation
+## Section overview
 
-Prior to beginning your migrations, you need to have a solid foundation.  Previous phases in the CAF provide these.
+The table below gives an overview of the activities documented in this phase, along with the roles responsible for execution:
 
-From the [Plan](/azure/cloud-adoption-framework/plan/) methodology, you should have:
-
-- **A digital estate plan**: See [What is a digital estate?](/azure/cloud-adoption-framework/digital-estate/)
-- **Clearly defined roles**: Ensure you have clearly defined roles for managing and governing migrated workloads. See [Initial organization alignment](/azure/cloud-adoption-framework/plan/initial-org-alignment)
-- **A skilling plan**: Build a skilling plan to ensure all team members have the skills to be successful post-migration. See [Adapt existing roles, skills, and processes for the cloud](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes).
-
-From the Ready methodology, you should have:
-
-- **An Azure landing zone**: An Azure Landing Zone implemented and ready to begin receiving workloads. See [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
-
-## Migration-specific considerations
-
-In addition, there are a few migration specific considerations to address.
-
-- Your Azure landing zone might have specific configurations missing supporting migrated workloads.
-- You need to use your digital estate plan to build your Migration backlog.
-- You need to decide on your migration tooling.
-- You need to plan for how you migrate concerning multiple regions.
-- You need to address specific skills for migration.
-- You need to understand how partnerships can help your migration, and make any partner agreements. You can also review more assistance resources.
-
-The remainder of this section guides you through implementing these activities.
-
-## Definition of done
-
-The preparation phase is considered complete when:
-
-- **Business readiness**
-  - Roles, responsibilities, and expectations have been defined and agreed upon.
-  - The migration backlog review is complete.
-  - The necessary skills are in place.
-  - Partnership options have been evaluated.
-- **Technical readiness**
-  - A landing zone has been established and prepared for migration on the cloud hosting provider.
-  - The required migration tools have been evaluated.
-
-The following articles in this section guide you towards a successful preparation process.
+|Activity|Description|Responsible roles|
+|---|---|---|
+|**[Readying your landing zone for migration](./ready-alz.md)**|Contains specific items to confirm that your landing zone supports migration activities.|Landing zone architect.|
+|**[Understanding migration tools](./migration-tools-decision-guide.md)**|Contains guidance to help you select the right migration tools for your project.|Migration architect.|
+|**[Migrating from multiple datacenters](./multiple-datacenters.md)**|Contains guidance for preparing for migrations for workloads in multiple datacenters.|Migration architect. Landing zone architect.|
+|**[Planning for resilience](./multiple-regions.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
+|**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
+|**[Preparing your migration backlog](./migration-backlog-review.md)**|Contains guidance on how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
+|**[Skills readiness for migration](./suggested-skills.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
+|**[Plan for release models](../assess/release-models.md)**|Contains guidance on the different ways you can plan to release migrated workloads, to select which is appropriate for your migration goals.|Project manager. Migration architect.|
+|**[Understand partnership and support options](./partnership-options.md)**|Contains resources and guidance on services available to support you through your migration.|Project sponsor. Licensing specialist. Migration architect.|
 
 ## Next steps
 
