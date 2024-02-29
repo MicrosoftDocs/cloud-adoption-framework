@@ -752,7 +752,7 @@
       },
       {
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/deciding-on-migration-tools",
          "redirect_document_id": false   
       },
       {
@@ -872,7 +872,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/migration-tools-decision-guide.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/migrate-tools-decision-guide",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/deciding-on-migration-tools",
          "redirect_document_id": false
       },
       {
