@@ -62,7 +62,7 @@ If the database files are stored in Azure NetApp Files (ANF) volumes, you should
 - [Monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
 - [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics)
 
-While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines IO throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
+While monitoring ANF metrics, it's also important to monitor the Virtual Machine’s network bandwidth to ensure its limit isn't exceeded. ANF volume is mounted over the network using NFS protocol, it isn't restricted by the cumulative Virtual Machines I/O throughput limits on any Virtual Machine instance type. Instead, ANF is only restricted by the network bandwidth on the database Virtual Machine series. The Virtual Machine limit specific to NFS-mounted storage is specified in the column named “Max network bandwidth (Mbps)”. For examples, see the VM series technical specification [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
 
 ### Configure the alerts for Azure virtual machine metrics
 
@@ -94,7 +94,7 @@ Oracle Enterprise Manager is an Oracle integrated enterprise management product.
 - [Download](https://www.oracle.com/enterprise-manager/downloads/cloud-control-downloads.html)
 - [Monitoring Best Practices](https://blogs.oracle.com/observability/post/monitoring-best-practices-white-paper-for-enterprise-manager-13c-now-available)
 
-Oracle Enterprise Manager can be deployed on a separate, light weight, Virtual Machine to monitor, maintain, and manage Oracle environments. Oracle Enterprise Manager text logs can be loaded to Log Analytics and used with Azure Monitor for a single pane of glass monitoring. Oracle Enterprise Manager provides the ability to monitor the workload on Database layer, however this cannot be sent to Azure Monitor.
+Oracle Enterprise Manager can be deployed on a separate, light weight, Virtual Machine to monitor, maintain, and manage Oracle environments. Oracle Enterprise Manager text logs can be loaded to Log Analytics and used with Azure Monitor for a single pane of glass monitoring. Oracle Enterprise Manager provides the ability to monitor the workload on Database layer.
 
 ## Oracle diagnostic tools
 
