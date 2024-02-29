@@ -192,4 +192,4 @@ Business continuity requires an integrated approach that includes all components
 
 Learn about design considerations for Oracle on Azure Virtual Machines landing zone accelerator security in an enterprise-scale scenario.
 
-[Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-security-guideline-landing-zone.md)
+See [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-security-guideline-landing-zone.md).
