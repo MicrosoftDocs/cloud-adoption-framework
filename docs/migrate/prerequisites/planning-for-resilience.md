@@ -1,5 +1,5 @@
 ---
-title: Select Azure regions for a migration
+title: Planning for resilience
 description: Learn about selecting a cloud region for a workload migration to Azure. See suggested actions for assessment, migration, and other processes.
 author: johndowns
 ms.author: jodowns
@@ -8,7 +8,7 @@ ms.date: 12/04/2023
 ms.topic: conceptual
 ---
 
-# Select Azure regions for a migration
+# Planning for resilience
 
 When you migrate an existing environment to Azure, you need to select an Azure region or set of regions to host the migrated components. Consider the following steps:
 
@@ -23,6 +23,8 @@ This article provides some guidance on how to choose Azure regions that meet you
 
 > [!NOTE]
 > This article covers considerations that are specific to workload migrations. You should also understand general principles for selecting Azure regions for any organization or workload. For more information, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
+
+If you haven't already, you might need to extend your [landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions) to support multi-region approaches.
 
 ## Document your scenario complexity
 
@@ -127,11 +129,11 @@ When you migrate an application that must be deployed to multiple regions, the c
 > [!NOTE]
 > The Azure-to-Azure disaster recovery approach can increase short-term migration costs through higher egress bandwidth charges.
 
-## Optimize and promote process changes
+## Release process changes
 
 As you address global complexity during optimization and promotion, you might require identical efforts in each region that you deploy to. If you use a single region, you might still need to replicate business testing and business change plans.
 
-### Suggested actions during the optimize and promote process
+### Suggested actions during the release process
 
 **Pretest optimization**: Initial automation testing can identify potential optimization opportunities, as with any migration effort. For global workloads, independently test the workload in each region. Minor configuration changes in your network or in the Azure datacenter that you choose can affect performance.
 

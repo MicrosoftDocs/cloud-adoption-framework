@@ -53,7 +53,7 @@ During optimization, additional testing might be required.
 
 ### Suggested action during the optimize and promote process
 
-Prior to promotion, provide additional levels of testing during this scope expansion. During testing, it's important to test for routing or other network conflicts. Further, it's important to isolate the deployed application, and retest to validate that all dependencies have been migrated to the cloud. In this case, isolation means separating the deployed environment from production networks. Doing so can catch overlooked assets that are still running on-premises.
+Prior to promotion, provide additional levels of testing during this scope expansion. During testing, it's important to test for routing or other network conflicts. Further, it's important to isolate the deployed application, and retest to validate that all dependencies have been migrated to the cloud. In this case, isolation means to separate the deployed environment from production networks. Doing so can catch overlooked assets that are still running on-premises.
 
 ## Secure and manage process changes
 

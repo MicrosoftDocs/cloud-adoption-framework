@@ -617,8 +617,8 @@ items:
             href: migrate/prerequisites/deciding-on-migration-tools.md                  
           - name: Migrating from multiple datacenters
             href: migrate/prerequisites/migrate-from-multiple-datacenters.md      
-          - name: Multiple regions
-            href: migrate/prerequisites/multiple-regions.md
+          - name: Planning for resilience
+            href: migrate/prerequisites/planning-for-resilience.md
           - name: Align roles and responsibilities
             href: migrate/prerequisites/roles-and-responsibilities.md
           - name: Migration backlog review
