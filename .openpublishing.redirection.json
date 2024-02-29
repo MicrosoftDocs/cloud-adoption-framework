@@ -897,7 +897,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/migration-backlog-review.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/migration-backlog-review",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/preparing-migration-backlog",
          "redirect_document_id": false
       },
       {

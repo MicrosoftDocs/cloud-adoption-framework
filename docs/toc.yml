@@ -621,8 +621,8 @@ items:
             href: migrate/prerequisites/planning-for-resilience.md
           - name: Align roles and responsibilities
             href: migrate/prerequisites/roles-and-responsibilities.md
-          - name: Migration backlog review
-            href: migrate/prerequisites/migration-backlog-review.md
+          - name: Preparing your migration backlog
+            href: migrate/prerequisites/preparing-migration-backlog.md
           - name: Skills relevant to migrate
             href: migrate/prerequisites/suggested-skills.md
           - name: Understand partnership options
