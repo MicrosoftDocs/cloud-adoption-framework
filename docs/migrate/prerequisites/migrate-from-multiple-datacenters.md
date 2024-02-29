@@ -1,19 +1,19 @@
 ---
-title: Multiple datacenters
-description: Multiple datacenters
-author: martinekuan
-ms.author: martinek
-ms.date: 07/01/2020
+title: Migrating from multiple datacenters
+description: Understand considerations when migrating to Azure from multiple existing datacenters.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/29/2024
 ms.topic: conceptual
 ---
 
-# Multiple datacenters
+# Migrating from multiple datacenters
 
 Often the scope of a migration involves the transition of multiple datacenters. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) to address multiple datacenters.
 
 ## General scope expansion
 
-Most of the effort required in this scope expansion occurs during the prerequisites, assess, and optimize processes of a migration.
+Most of the effort required in this scope expansion occurs when preparing and assessing a workload for migration, and ongoing management of a migrated workload.
 
 ## Suggested prerequisites
 
@@ -27,7 +27,7 @@ Sprints or iterations then consist of a series of tasks required to migrate the 
 
 When you're expanding the scope to address multiple datacenters, the biggest change to the assess process is related to the accurate recording and prioritization of workloads and dependencies across datacenters.
 
-### Suggested action during the assess process
+### Suggested action during the assessment process
 
 **Evaluate cross-datacenter dependencies:** The [dependency visualization tools in Azure Migrate](/azure/migrate/concepts-dependency-visualization) can help pinpoint dependencies. Using this toolset before migration is generally a best practice. But when dealing with global complexity, it becomes a necessary step in the assessment process. Through [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies), the visualization can help identify the IP addresses and ports of any assets required to support the workload.
 

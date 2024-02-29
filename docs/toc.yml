@@ -615,8 +615,8 @@ items:
             href: migrate/prerequisites/ready-alz.md
           - name: Deciding on migration tools
             href: migrate/prerequisites/deciding-on-migration-tools.md                  
-          - name: Understanding multiple datacenters
-            href: migrate/prerequisites/multiple-datacenters.md        
+          - name: Migrating from multiple datacenters
+            href: migrate/prerequisites/migrate-from-multiple-datacenters.md      
           - name: Multiple regions
             href: migrate/prerequisites/multiple-regions.md
           - name: Align roles and responsibilities
