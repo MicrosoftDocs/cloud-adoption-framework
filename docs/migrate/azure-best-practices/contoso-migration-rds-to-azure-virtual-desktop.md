@@ -76,7 +76,7 @@ The diagram outlines resources that are prerequisites for the migration (Identit
 
 Contoso will go through the following flow to migrate from on-premises RDS to Azure Virtual Desktop:
 
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-wvd/rds-to-avd-migration-flow.png":::
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-azure-virtual-desktop/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/rds-to-avd-migration-flow.png":::
    *Figure 2: The migration process. "\*" indicates an optional step.*
 
 The migration flow will be structured in the following migration steps:
@@ -188,17 +188,17 @@ The next step in the migration process for Contoso is to migrate the RDS session
 1. In the search bar, type *Azure Migrate* and select the matching service entry.
 1. In **Get started** for Azure Migrate, select **Discover, assess and migrate**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-get-started.png":::
+   :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-get-started.png" alt-text="Screenshot that shows the overview page and Get Started tab for Azure Migrate." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-get-started.png":::
    *Figure 3: Getting started.*
 
 1. Select **Create project**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-create-project.png":::
+   :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-create-project.png" alt-text="Screenshot that shows the Create Project button." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-create-project.png":::
    *Figure 4: Creating a new Azure Migrate project.*
 
 1. Set the subscription, resource group, project name, and geography for the migrate job data, and then select **Create**.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-add-job-data.png":::
+   :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-add-job-data.png" alt-text="Screenshot of adding job data to the Azure Migrate project." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-add-job-data.png":::
    *Figure 5: Adding job data to the migration.*
 
    > [!IMPORTANT]
@@ -206,18 +206,18 @@ The next step in the migration process for Contoso is to migrate the RDS session
 
 1. Contoso starts by selecting **Discover** in the Azure Migrate: Server Migration tools.
 
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png" alt-text="Screenshot of the Azure Migrate: server migration discovery option." lightbox="./media/contoso-migration-rds-to-wvd/wvd-persist-discover.png":::
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-virtual-desktop-persist-discover.png" alt-text="Screenshot of the Azure Migrate: server migration discovery option." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-virtual-desktop-persist-discover.png":::
    *Figure 6: Discovering a server migration.*
 
 1. Contoso converts an appliance in its environment that's going to manage the replication of the machines to Azure Virtual Desktop. Ensure that the target region is set to *East US 2*, where the Azure Virtual Desktop environment was created. For full Azure Migrate OS Support matrix, see [Support Matrix for Hyper-V](/azure/migrate/migrate-support-matrix-hyper-v-migration) and [Support Matrix for VMware vSphere](/azure/migrate/migrate-support-matrix-vmware-migration).
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-resources.png":::
+   :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-discover-resources.png" alt-text="Screenshot that shows creating an appliance for managing the replication." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-discover-resources.png":::
 
    *Figure 7: Converting an appliance.* 
 
 1. Contoso downloads, installs, and registers the replication provider to the Azure Migrate project to start the replication to Azure.
 
-   :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png" alt-text="Screenshot that shows downloading and configuring replication." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-discover-prepare-replication.png":::
+   :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-discover-prepare-replication.png" alt-text="Screenshot that shows downloading and configuring replication." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-discover-prepare-replication.png":::
    
    *Figure 8: Prerequisites for replicating to Azure.*
 
@@ -250,21 +250,21 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 
 1. **User access**: as the last step before the final migration, Contoso selects the **Users** item in the Azure Virtual Desktop settings to assign users and groups.
 
-      :::image type="content" source="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups." lightbox="./media/contoso-migration-rds-to-wvd/azure-virtual-desktop-users-map-servers.png":::
+      :::image type="content" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-virtual-desktop-users-map-servers.png" alt-text="Screenshot that shows assigning Azure Virtual Desktop resources to users and groups." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-virtual-desktop-users-map-servers.png":::
       *Figure 9: The last step prior to the final migration.*
 
    Additional user assignment information can be found at [Manage application groups with the Azure portal](/azure/virtual-desktop/manage-app-groups).
 
 1. **Host pool scaling**: Azure Virtual Desktop LZA deployment has the option to create an Azure Virtual Desktop scaling plan that is assigned and enabled by default on pooled host pools. The scaling plan is preconfigured with two schedules (weekdays and weekend) in the same time zone as the session hosts and default scaling rules.
 
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-scaling-plans.png":::
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-scaling-plans.png" alt-text="Azure Virtual Desktop LZA scaling plan." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-scaling-plans.png":::
    *Figure 10: Azure Virtual Desktop scaling plan schedules sample.*
 
    Scaling rules should be modified to meet the specific needs of the workloads the Azure Virtual Desktop environment is hosting. Information on configuring scaling plans can be found at [Autoscale scaling plans and example scenarios](/azure/virtual-desktop/autoscale-scenarios).
 
 1. **Monitoring**: Azure Virtual Desktop LZA deployment has the option to deploy all diagnostics settings (enabled by default) required by the Azure Virtual Desktop insights workbook, including the creation of a new log analytics workspace (option to use existing is available) to gather Azure Virtual Desktop logs, metrics and events.
 
-   :::image type="content" border="false" source="./media/contoso-migration-rds-to-wvd/azure-migrate-avd-insights.png" alt-text="Azure Virtual Desktop LZA insights." lightbox="./media/contoso-migration-rds-to-wvd/azure-migrate-avd-insights.png":::
+   :::image type="content" border="false" source="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-avd-insights.png" alt-text="Azure Virtual Desktop LZA insights." lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/azure-migrate-avd-insights.png":::
    *Figure 11: Azure Virtual Desktop monitor insights sample.*
 
    More information on Azure Virtual Desktop monitoring can be found at [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights).
@@ -294,11 +294,11 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
        Download [Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx)
     
    > [!NOTE]
-   > Learn more about BCDR options with *[Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-business-continuity-and-disaster-recovery)*.
+   > Learn more about BCDR options with *[Business continuity and disaster recovery considerations for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery)*.
 
 ## Next steps
 
 Learn more about Azure Virtual Desktop at:
 
 - *[Azure Virtual Desktops Documentation](/azure/virtual-desktop)*.
-- *[Enterprise-scale support for Microsoft Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/enterprise-scale-landing-zone)*.
+- *[Enterprise-scale support for Microsoft Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone)*.

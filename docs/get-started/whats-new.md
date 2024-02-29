@@ -61,7 +61,7 @@ In the following articles, find updated guidance about workload discovery proces
 
 In [Centralized security operations with external identities for multitenant defense organizations](/azure/cloud-adoption-framework/scenarios/defense/identity/multi-tenant/security-operations), we updated our guidance for centralized security operations. 
 
-In [Identity and access management for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/wvd/eslz-identity-and-access-management), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
+In [Identity and access management for Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-identity-and-access-management), we added updates for Azure Virtual Desktop design considerations and supported identity scenarios.
 
 ## November 2023
 
@@ -103,7 +103,7 @@ Learn how to [select Azure regions for your cloud footprint](/azure/cloud-adopti
 
 ### Network topology and connectivity for Azure Virtual Desktop
 
-The [updates to the Network topology and connectivity for Azure Virtual Desktop article](/azure/cloud-adoption-framework/scenarios/wvd/eslz-network-topology-and-connectivity) describe two new scenarios to help you understand how to manage network topology and connectivity at scale in Azure Virtual Desktop. The first scenario describes a hub-and-spoke architecture with hybrid connectivity over managed networks. The second scenario describes a hub-and-spoke architecture with public networks. Both scenarios use Remote Desktop Protocol Shortpath (RDP Shortpath).
+The [updates to the Network topology and connectivity for Azure Virtual Desktop article](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity) describe two new scenarios to help you understand how to manage network topology and connectivity at scale in Azure Virtual Desktop. The first scenario describes a hub-and-spoke architecture with hybrid connectivity over managed networks. The second scenario describes a hub-and-spoke architecture with public networks. Both scenarios use Remote Desktop Protocol Shortpath (RDP Shortpath).
 
 ## September 2023
 
@@ -226,7 +226,7 @@ Data mesh is a data management methodology that can help you move from a central
 
 ### Citrix on Azure landing zone accelerator
 
-The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone) adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads at scale. It includes key Citrix design guidance and considerations that align with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The Citrix on Azure landing zone accelerator includes guidance that's specific to the deployment of Citrix on Azure to help you provide your employees with a consistent experience and access to applications and insights, whether they work in the office, on the road, or at home.
+The [Citrix on Azure landing zone accelerator](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone) adapts the Azure Cloud Adoption Framework to provision production-ready Citrix on Azure workloads at scale. It includes key Citrix design guidance and considerations that align with the [design areas](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) of the Cloud Adoption Framework Azure landing zone architecture and best practices. Enterprise-scale design principles that are designed for modularity and scale help organizations with varied requirements start from a consistent foundation. The Citrix on Azure landing zone accelerator includes guidance that's specific to the deployment of Citrix on Azure to help you provide your employees with a consistent experience and access to applications and insights, whether they work in the office, on the road, or at home.
 
 ### Cloud Adoption Framework relocate
 
