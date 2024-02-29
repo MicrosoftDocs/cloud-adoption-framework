@@ -31,7 +31,7 @@ Your organization's cloud adoption effort should support long-term strategic goa
 - [Hybrid and multicloud](../scenarios/hybrid/scenario-overview.md)
 - [Modern application platform](../scenarios/app-platform/index.md)
 - [SAP](../scenarios/sap/index.md)
-- [Desktop virtualization](../scenarios/wvd/index.md)
+- [Desktop virtualization](../scenarios/azure-virtual-desktop/index.md)
 - [Retail industry](../industry/retail/index.md)
 - [Defense](../scenarios/defense/index.md)
 
