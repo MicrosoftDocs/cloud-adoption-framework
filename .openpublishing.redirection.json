@@ -869,6 +869,6 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-wvd.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop",
          "redirect_document_id": false
-      
+      }
    ]
 }
