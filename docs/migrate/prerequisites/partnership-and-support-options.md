@@ -77,14 +77,24 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 If you have questions or need help, [create a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). If your support request requires deep technical guidance, visit [Azure Support plans](https://azure.microsoft.com/support/plans/) to align the best plan for your needs.
 
-## Azure solutions partner
+### Online communities
+
+The following online communities provide community-based support:
+
+- [Azure Migration and Modernization - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-migration-and/bd-p/AzureMigration)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/azure)
+
+## Partners
+
+### Azure solutions partner
 
 Microsoft certified solution providers specialize in providing modern customer solutions based on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
 
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
-- [Find a cloud solutions partner](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- [Find an Azure Expert Managed Service Provider (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help businesses transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
+- [Find a Cloud Solution Provider (CSP)](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
+- [Find an Azure Expert Managed Service Provider (MSP)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all). MSPs help organizations transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
+- [FastTrack for Azure nomination](https://azure.microsoft.com/pricing/offers/azure-fasttrack/): Collaborate with Azure engineers to successfully deploy your Azure solutions.
 
 ## Next steps
 

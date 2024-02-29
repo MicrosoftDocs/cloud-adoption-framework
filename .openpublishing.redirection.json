@@ -952,7 +952,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/assess/partnership-options.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-options",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-and-support-options",
          "redirect_document_id": false
       },
       {
@@ -1082,7 +1082,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/assistance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/assistance",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-and-support-options",
          "redirect_document_id": false
       },
       {
@@ -1159,6 +1159,11 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md",
          "redirect_url": "/azure/mariadb/whats-happening-to-mariadb",
          "redirect_document_id": false
-      }      
+      },
+      {
+         "source_path": "docs/migrate/prerequisites/assistance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/partnership-and-support-options",
+         "redirect_document_id": false
+      }
    ]
 }
