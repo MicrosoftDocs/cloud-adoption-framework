@@ -294,7 +294,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
        Download [Visio file.](https://raw.githubusercontent.com/Azure/avdaccelerator/main/workload/docs/diagrams/avd-accelerator-baseline-architecture-multi-region-stage-3.vsdx)
     
    > [!NOTE]
-   > Learn more about BCDR options with *[Business continuity and disaster recovery considerations for Azure Virtual Desktop](../../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery)*.
+   > Learn more about BCDR options with *[Business continuity and disaster recovery considerations for Azure Virtual Desktop](../../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md)*.
 
 ## Next steps
 
