@@ -1,50 +1,38 @@
 ---
-title: Skills readiness for cloud migration
+title: Skills relevant to migration projects
 description: Skills readiness for cloud migration
-author: martinekuan
-ms.author: martinek
-ms.date: 02/25/2020
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/29/2024
 ms.topic: conceptual
 ---
 
-# Skills readiness for cloud migration
+# Skills relevant to migration projects
 
 During a cloud migration, it's likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
 
-There are four distinct processes that are completed iteratively in the Migrate methodology. The following sections align the necessary skills for those processes with references to two prerequisites for skilling resources.
+This article gives guidance on specific training resources you should consider to prepare for your migration. It builds on the organizational skills acquired during planning and preparing a migration journey; you might need to revisit these topics to make the most of these materials. To learn more, see [Building technical skills](/azure/cloud-adoption-framework/organize/suggested-skills) to organize your training plans.
 
-## Prerequisites skilling resources
+## Pre-migration skilling resources
 
-Implementation of the Migrate methodology builds on the skills acquired during [planning](../../strategy/suggested-skills.md) and [preparing](../../organize/suggested-skills.md) a migration journey.
+The following tools can aid the team in execution of assess activities and to plan for your overall adoption journey.
 
-## Assess skilling resources
+If you're still identifying what should be migrated or modernized, the following articles can help you understand the digital estate and the business justification for migration:
 
-The following tools can aid the team in execution of assess activities:
+|Recommended articles|Description|
+|---|---|
+|**[Balance the portfolio](/azure/cloud-adoption-framework/strategy/balance-the-portfolio)**|Ensure balance and proper investment allocations across an application portfolio.|
+|**[Build a business justification](/azure/cloud-adoption-framework/strategy/cloud-migration-business-case)**|Create and understand the business justification driving the cloud migration effort.|
+|**[Rationalize the digital estate](/azure/cloud-adoption-framework/digital-estate/rationalize)**|Rationalize assets in the digital estate.|
 
-- [Balance the portfolio](../../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
-- [Build a business justification](../../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
-- [Rationalize the digital estate](../../digital-estate/rationalize.md): Rationalize assets in the digital estate.
-- [Application portfolio assessment](/training/modules/app-and-infra-migration-and-modernization/): Criteria for making decisions regarding migration or innovation options within the application portfolio.
-- [`Assessing and Planning Microsoft Azure Migration`](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning-update): A Pluralsight course to aid in assessing on-premises workloads.
+## Migration skilling resources
 
-During assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
+The following learning resources can prepare the team for migration activities:
 
-- [`Foundations for Cloud Architecture`](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
-- [`Microsoft Azure Architecture: Getting Started`](https://www.pluralsight.com/courses/azure-architecture-getting-started): A Pluralsight course to give architects a foundational knowledge in Azure architecture.
-- [`Designing Migrations for Microsoft Azure`](https://www.pluralsight.com/courses/microsoft-azure-migrations-designing): A Pluralsight course to help architects design a migration solution.
-
-## Migrate skilling resources
-
-The following tutorial can prepare the team for migration activities:
-
-- [Migrate to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Migrate to migrate VMs to Azure.
-- [`Rehosting Workloads to Azure`](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring-update): A Pluralsight course that teaches viewers how to rehost workloads to Azure.
-- [`Migrating physical and virtual servers to Azure`](https://www.pluralsight.com/courses/microsoft-azure-migrating-physical-virtual-servers-update): A Pluralsight course for migrating servers to Azure.
-- [`Import and export data to Azure`](https://www.pluralsight.com/courses/microsoft-azure-import-export-data): A Pluralsight course on the movement of data to and from Azure.
-
-## Migration checklist
-
-It can be helpful at this point to return to the [migration checklist](../checklist.md) to ensure your migration method is fully aligned.
+|Recommended resource|Description|
+|---|---|
+|[Migrate to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure)|Learn how to migrate on-premises workloads to Azure.|
+|[The Migration Execution Guide](https://github.com/Azure/migration)|Poject resources that can guide you step by step through the decisions and execution steps of your migration.|
 
 ## Next steps
 
