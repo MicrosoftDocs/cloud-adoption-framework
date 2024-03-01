@@ -623,12 +623,8 @@ items:
             href: migrate/prerequisites/roles-and-responsibilities.md
           - name: Preparing your migration backlog
             href: migrate/prerequisites/preparing-migration-backlog.md
-          - name: Skills relevant to migrate
+          - name: Skills relevant to migration projects
             href: migrate/prerequisites/suggested-skills.md
-          - name: Understand partnership options
-            href: migrate/prerequisites/partnership-options.md
-          - name: Get assistance
-            href: migrate/prerequisites/assistance.md
       - name: Assess
         items:
         - name: Overview
