@@ -42,7 +42,6 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:40](./deploy/index.md) | **Deploy overview.** In this phase of the adoption journey, use the output of the assessment phase to begin migrating your environment. Understand migration tools, project management tools, set responsibilities and accountability, and prepare to deploy your workloads. |
 | [MIG:41](./deploy/remediate.md) | **Remediate assets.** During the migration assessment process, the team identifies any configurations that might make an asset incompatible with the chosen cloud provider. Remediate is a checkpoint in the migration process, which ensures that any incompatibilities are resolved. |
 | [MIG:42](./deploy/replicate.md) | **Replicate assets.** Understand the role of replication in the migration process, including prerequisites and replication risks. |
-| [MIG:43](./deploy/stage.md) | **Stage workloads.** Staging is the point at which assets have been migrated to the cloud. However, they're not ready to be promoted to production yet. This is often the last step in the migrate process of a migration. |
 
 ## Release
 
@@ -51,7 +50,6 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:60](./release/index.md) | **Release overview.** After a collection of workloads and their supporting assets have been deployed to the cloud, it must be prepared before it can be released. In this phase of the migration effort, the collection of workloads are load tested and validated with the business. They're then optimized and documented. Once the business and IT teams have reviewed and signed off on workload deployments, those workloads can be released or handed off to governance, security, and operations teams for ongoing operations. |
 | [MIG:61](./release/change-communication.md) | **Change communication.** Before a migrated workload is promoted to production, implementing a broader approach to user adoption is suggested. This article outlines the ways in which a business change plan adds to a standard user adoption plan. |
 | [MIG:62](./release/business-test.md) | **Business testing.** Understand business testing (User Acceptance Test) during migration, including the relevant business and IT activities. |
-| [MIG:63](./assess/release-models.md) | **Release models.** One of the last activities in a migration is the promotion of an asset to production. Understand the impact of promotion models on migrate and optimize activities, including single-step promotion, staged promotion, and flight promotion. |
 | [MIG:64](./release/prepare-for-promotion.md) | **Prepare for promotion.** To prepare for promotion, validate the business change plan, perform final technical readiness tests, and a final business validation. |
 | [MIG:65](./release/promote.md) | **Promote to production.** Understand what's required to promote a migrated resource to production, including prerequisites and best practices to execute prior to promotion. |
 | [MIG:66](./release/decommission.md) | **Decommission retired assets.** Understand the importance of decommissioning retired assets. |

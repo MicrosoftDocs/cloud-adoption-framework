@@ -7,13 +7,15 @@ ms.date: 03/01/2024
 ms.topic: conceptual
 ---
 
+# Deploy supporting services
+
 Every workload you migrate to the cloud has some several supporting services required to support it.
 
 Replicated or staged servers need to be placed into virtual networks, and many workloads require load balancers and application delivery solution. In addition, there are considerations for how to prepare to manage (link to new article) workloads.
 
-When you designed your [workload architecture](/azure/cloud-adoption-framework/migrate/assess/architect), you identified these services. Now, before you begin to migrate resources, you should deploy these services to make sure you have everything ready for your workload to operate successfully.
+When you designed your [workload architecture](../assess/architect.md), you identified these services. Now, before you begin to migrate resources, you should deploy these services to make sure you have everything ready for your workload to operate successfully.
 
-This article assumes that you have already prepared your shared platform solutions via [readying your landing zones for migrations](/azure/cloud-adoption-framework/migrate/prerequisites/ready-alz) and have completed your workload architecture.
+This article assumes that you have already prepared your shared platform solutions via [readying your landing zones for migrations](../prerequisites/ready-alz.md) and have completed your workload architecture.
 
 ## Planning for supporting service deployment
 

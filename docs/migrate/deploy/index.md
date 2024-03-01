@@ -265,8 +265,6 @@ The goal of a migration is to migrate a single workload to the cloud.
 
 The migration phase is complete when a workload is staged and ready for testing in the cloud. The migration phase includes all dependent assets required for the workload to function. During the optimize process, the workload is prepared for production usage.
 
-The *definition of done* can vary depending on your testing and release processes. The next article in this series covers [deciding on a migration release model](../assess/release-models.md) and can help you understand when it's best to promote a migrated workload to production.
-
 ## Accountability during migration
 
 The cloud adoption team is accountable for the entire migration process. However, members of the cloud strategy team also have a few responsibilities.

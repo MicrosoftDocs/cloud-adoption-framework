@@ -7,6 +7,8 @@ ms.date: 03/01/2024
 ms.topic: conceptual
 ---
 
+# Prepare for management
+
 As you begin to deploy your workloads for migration, you must make sure you're ready to complete management activities when the migration is complete. When organizations fail to plan for management, they often get replicated workloads that get delayed. Or worse, they migrate resources but don't manage them, creating outages, breaches, or performance issues.
 
 As such, you should be preparing for management from the point you begin deploying resources to Azure for your workload.

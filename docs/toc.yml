@@ -635,8 +635,6 @@ items:
           href: migrate/assess/evaluate.md
         - name: Architect workloads
           href: migrate/assess/architect.md
-        - name: Release models
-          href: migrate/assess/release-models.md
         - name: Update and refine initial cloud estimates
           href: migrate/assess/estimate.md
       - name: Deploy
