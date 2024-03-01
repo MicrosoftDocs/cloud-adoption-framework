@@ -30,7 +30,6 @@ The table below gives an overview of the activities documented in this phase, al
 |**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
 |**[Preparing your migration backlog](./migration-backlog-review.md)**|Contains guidance on how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
 |**[Skills readiness for migration](./suggested-skills.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
-|**[Plan for release models](../assess/release-models.md)**|Contains guidance on the different ways you can plan to release migrated workloads, to select which is appropriate for your migration goals.|Project manager. Migration architect.|
 |**[Understand partnership and support options](./partnership-options.md)**|Contains resources and guidance on services available to support you through your migration.|Project sponsor. Licensing specialist. Migration architect.|
 
 ## Next steps
