@@ -286,4 +286,4 @@ In addition to the high-level accountability, there are actions that an individu
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Remediate assets](./remediate.md)
+> [Deploy supporting services](./deploy-supporting-services.md)

@@ -25,4 +25,4 @@ Staged assets may not be ready for use in production. There are several producti
 After staged assets are tested and documented, you can proceed to optimization activities.
 
 > [!div class="nextstepaction"]
-> [Data requirements exceed network capacity](./network-capacity-exceeded.md)
+> [Prepare for management](./prepare-for-management.md)

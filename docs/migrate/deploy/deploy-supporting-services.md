@@ -48,3 +48,8 @@ While your workload architecture gives you a definitive list of services, you ca
   - Any workload specific alerts.
 
 In addition, you should review [prepare for management](./prepare-for-management.md) for any management specific considerations.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Remediate assets](./remediate.md)

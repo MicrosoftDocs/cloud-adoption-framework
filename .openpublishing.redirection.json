@@ -292,7 +292,7 @@
       },
       {
          "source_path": "docs/migrate/expanded-scope/network-capacity-exceeded.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/network-capacity-exceeded",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
          "redirect_document_id": true
       },
       {
@@ -987,7 +987,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/migrate/promotion-models.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/release-models",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
          "redirect_document_id": false
       },
       {
@@ -1012,7 +1012,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/network-capacity-exceeded.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/network-capacity-exceeded",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
          "redirect_document_id": false
       },
       {
@@ -1174,6 +1174,11 @@
          "source_path": "docs/migrate/deploy/stage.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/deploy-supporting-services",
          "redirect_document_id": false
-      }      
+      },
+      {
+         "source_path": "docs/migrate/deploy/network-capacity-exceeded.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
+         "redirect_document_id": false
+      }
    ]
 }

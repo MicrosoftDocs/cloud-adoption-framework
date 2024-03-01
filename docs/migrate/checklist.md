@@ -43,7 +43,6 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:41](./deploy/remediate.md) | **Remediate assets.** During the migration assessment process, the team identifies any configurations that might make an asset incompatible with the chosen cloud provider. Remediate is a checkpoint in the migration process, which ensures that any incompatibilities are resolved. |
 | [MIG:42](./deploy/replicate.md) | **Replicate assets.** Understand the role of replication in the migration process, including prerequisites and replication risks. |
 | [MIG:43](./deploy/stage.md) | **Stage workloads.** Staging is the point at which assets have been migrated to the cloud. However, they're not ready to be promoted to production yet. This is often the last step in the migrate process of a migration. |
-| [MIG:44](./deploy/network-capacity-exceeded.md) | **Data requirements exceed network capacity.** Understand best practices and options when data requirements exceed network capacity during a migration effort. |
 
 ## Release
 

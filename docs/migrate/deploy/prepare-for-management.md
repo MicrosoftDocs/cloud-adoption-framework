@@ -46,3 +46,8 @@ In addition, you should make sure of the following:
 That the teams responsible for monitoring, management, and security are aware of changes and responsibilities after the migration.
 
 That all teams understand their responsibilities during the migration itself.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Migration testing](./migration-testing.md)
