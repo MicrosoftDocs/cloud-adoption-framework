@@ -613,8 +613,8 @@ items:
             href: migrate/prerequisites/index.md
           - name: Readying your landing zone for migration
             href: migrate/prerequisites/ready-alz.md
-          - name: Deciding on migration tools
-            href: migrate/prerequisites/deciding-on-migration-tools.md                  
+          - name: Readying migration tools
+            href: migrate/prerequisites/readying-migration-tools.md
           - name: Migrating from multiple datacenters
             href: migrate/prerequisites/migrate-from-multiple-datacenters.md      
           - name: Planning for resilience
