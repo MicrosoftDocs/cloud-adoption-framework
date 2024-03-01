@@ -647,8 +647,10 @@ items:
             href: migrate/deploy/remediate.md
           - name: Replicate assets
             href: migrate/deploy/replicate.md
-          - name: Stage workloads
-            href: migrate/deploy/stage.md
+          - name: Deploy supporting services
+            href: migrate/deploy/deploy-supporting-services.md
+          - name: Prepare for management
+            href: migrate/deploy/prepare-for-management.md
           - name: Data requirements exceed network capacity
             href: migrate/deploy/network-capacity-exceeded.md
       - name: Release

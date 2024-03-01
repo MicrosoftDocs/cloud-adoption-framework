@@ -1007,7 +1007,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/migrate/stage.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/stage",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/deploy-supporting-services",
          "redirect_document_id": false
       },
       {
@@ -1169,6 +1169,11 @@
          "source_path": "docs/migrate/prerequisites/assistance.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites/suggested-skills",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/migrate/deploy/stage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/deploy-supporting-services",
+         "redirect_document_id": false
+      }      
    ]
 }
