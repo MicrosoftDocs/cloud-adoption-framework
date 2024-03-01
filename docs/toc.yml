@@ -649,8 +649,6 @@ items:
             href: migrate/deploy/remediate.md
           - name: Replicate assets
             href: migrate/deploy/replicate.md
-          - name: Understand staging activities
-            href: migrate/deploy/staging.md
           - name: Prepare for management
             href: migrate/deploy/prepare-for-management.md
           - name: Migration testing
