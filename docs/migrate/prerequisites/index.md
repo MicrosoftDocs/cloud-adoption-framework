@@ -1,6 +1,6 @@
 ---
 title: Prepare workloads for migration - Overview
-description: Understand the requirements to successfully prepare for a cloud migration.
+description: Understand the requirements to successfully prepare for a cloud migration with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/29/2024
@@ -24,13 +24,12 @@ The table below gives an overview of the activities documented in this phase, al
 |Activity|Description|Responsible roles|
 |---|---|---|
 |**[Readying your landing zone for migration](./ready-alz.md)**|Contains specific items to confirm that your landing zone supports migration activities.|Landing zone architect.|
-|**[Understanding migration tools](./migration-tools-decision-guide.md)**|Contains guidance to help you select the right migration tools for your project.|Migration architect.|
-|**[Migrating from multiple datacenters](./multiple-datacenters.md)**|Contains guidance for preparing for migrations for workloads in multiple datacenters.|Migration architect. Landing zone architect.|
-|**[Planning for resilience](./multiple-regions.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
+|**[Readying migration tools](./readying-migration-tools.md)**|Contains guidance to help you select the right migration tools for your project.|Migration architect.|
+|**[Migrating from multiple datacenters](./migrate-from-multiple-datacenters.md)**|Contains guidance for preparing for migrations for workloads in multiple datacenters.|Migration architect. Landing zone architect.|
+|**[Planning for resilience](./planning-for-resilience.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
 |**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
 |**[Preparing your migration backlog](./migration-backlog-review.md)**|Contains guidance on how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
 |**[Skills readiness for migration](./suggested-skills.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
-|**[Understand partnership and support options](./partnership-options.md)**|Contains resources and guidance on services available to support you through your migration.|Project sponsor. Licensing specialist. Migration architect.|
 
 ## Next steps
 
