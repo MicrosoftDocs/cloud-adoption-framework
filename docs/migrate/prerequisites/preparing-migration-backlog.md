@@ -1,6 +1,6 @@
 ---
 title: Preparing your migration backlog
-description: Understand the prerequisites for building a migration backlog.
+description: Understand the prerequisites for building a migration backlog with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/29/2024
@@ -33,7 +33,7 @@ The backlog needs to be captured in a location that can be shared so that differ
 
 If you're looking for prebuilt templates, the [Migration Execution Guide](https://github.com/Azure/migration) (MEG) has prebuilt spreadsheets to help you organize your backlog.
 
-It's important to associate individual servers with the workload, so that you can track the workload itself through individual server migrations. You can also use this backlog to showcase dependencies between workloads as you complete the assessment. When you get to [remediate assets](/azure/cloud-adoption-framework/migrate/deploy/remediate) and perform testing, you merge this with a remediation plan.
+It's important to associate individual servers with the workload, so that you can track the workload itself through individual server migrations. You can also use this backlog to showcase dependencies between workloads as you complete the assessment. When you get to [remediate assets](../deploy/remediate.md) and perform testing, you merge this with a remediation plan.
 
 This backlog is used throughout the migration process, so maintaining it's critical.
 

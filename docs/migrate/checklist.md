@@ -19,13 +19,11 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:01](./prerequisites/index.md) | **Prerequisites overview.** Set objectives, review business drivers, clarify your definition of done, define responsibilities and accountability, and more. |
 | [MIG:02](./prerequisites/ready-alz.md) | **Readying your landing zone for migration.** Prepare your Azure landing zones for your migrations, including establishing hybrid connectivity, prepare identity, enable hybrid DNS, configure hub firewall, routing, monitoring, and more. |
 | [MIG:03](./prerequisites/migration-tools-decision-guide.md) | **Migration tools decision guide.** Use this decision tree to evaluate potential tools to use for your migration projects. |
-| [MIG:04](./prerequisites/multiple-datacenters.md) | **Understanding multiple datacenters.** This article expands on guidance where multiple datacenters are in scope for your migration. |
-| [MIG:05](./prerequisites/multiple-regions.md) | **Multiple regions.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
+| [MIG:04](./prerequisites/migrate-from-multiple-datacenters.md) | **Migrate from multiple datacenters.** This article expands on guidance where multiple datacenters are in scope for your migration. |
+| [MIG:05](./prerequisites/planning-for-resilience.md) | **Planning for resilience.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
 | [MIG:06](./prerequisites/roles-and-responsibilities.md) | **Align roles and responsibilities.** Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
 | [MIG:07](./prerequisites/migration-backlog-review.md) | **Migration backlog review.** Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
 | [MIG:08](./prerequisites/suggested-skills.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
-| [MIG:09](./prerequisites/partnership-options.md) | **Understand partnership options.** Make sure you understand the available partnership options available to you, including guided self-service, FastTrack for Azure, and Solutions partners. |
-| [MIG:10](./prerequisites/assistance.md) | **Get assistance.** Understand where to find the right help at the right time for your migration projects, including Microsoft Support, online communities, and Microsoft partners. |
 
 ## Assess
 

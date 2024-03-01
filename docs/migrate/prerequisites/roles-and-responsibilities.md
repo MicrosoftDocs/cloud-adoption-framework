@@ -1,6 +1,6 @@
 ---
 title: Aligning roles and responsibilities
-description: Use the Cloud Adoption Framework for Azure to prepare for cultural complexity by aligning roles and responsibilities to drive clarity during the migration process.
+description: Prepare for cultural complexity by aligning roles and responsibilities to drive clarity during the migration process.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 01/11/2024
@@ -55,4 +55,4 @@ Each process within the discussion of the Cloud Adoption Framework migration pri
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migration backlog review](./migration-backlog-review.md)
+> [Preparing your migration backlog](./preparing-migration-backlog.md)

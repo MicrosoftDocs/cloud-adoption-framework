@@ -1,5 +1,5 @@
 ---
-title: Assess workloads and validate assessment assumptions before migration
+title: Assess workloads and validate assumptions before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to validate assessment assumptions before beginning migration to the cloud.
 author: Zimmergren
 ms.author: tozimmergren
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Assess workloads and validate assumptions before migration
 
-Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/migration-backlog-review.md) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
+Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/preparing-migration-backlog.md) of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. Your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies. Use this information to ensure the migrated workload can be deployed to the cloud effectively.
 
@@ -45,7 +45,7 @@ Along with the high-level accountability, there are actions that an individual o
 - **Evaluation.** The team evaluates the workload for compatibility and dependencies.
   - Assign this activity to a subject matter expert who is familiar with the architecture and operations of the candidate workload.
 - **Architect.** The team agrees on the final state architecture for the migrated workload.
-- **Migration tooling.** Depending on modernization and architecture approaches, use different kinds of migration tools to automate the migration. Based on the proposed architecture, will this migration use the best [migration tools](../prerequisites/migration-tools-decision-guide.md)?
+- **Migration tooling.** Depending on modernization and architecture approaches, use different kinds of migration tools to automate the migration. Based on the proposed architecture, will this migration use the best [migration tools](../prerequisites/readying-migration-tools.md)?
 - **Backlog alignment.** The cloud adoption team reviews requirements and commits to the migration of the candidate workload. After commitment, the team updates the release backlog and iteration backlog.
 - **Work breakdown structure or work-back schedule.** The team establishes a schedule of major milestones identifying goals for when to complete planning, implementation, and review processes.
 - **Final approval.** Any necessary approvers have reviewed the plan and have signed off on the approach to migrate the asset.

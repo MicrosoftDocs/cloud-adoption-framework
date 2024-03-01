@@ -40,4 +40,4 @@ As you execute your workload assessments and execute migrations, you might revis
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Understanding multiple datacenters](./multiple-datacenters.md)
+> [Migrating from multiple datacenters](./migrate-from-multiple-datacenters.md)

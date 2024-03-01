@@ -176,4 +176,4 @@ Consider these additional resources to prepare:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [MIgration tools decision guide](../prerequisites/migration-tools-decision-guide.md)
+> [Readying migration tools](../prerequisites/readying-migration-tools.md)
