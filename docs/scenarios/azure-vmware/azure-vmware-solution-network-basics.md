@@ -32,6 +32,9 @@ Global Reach is an ExpressRoute feature that enables you to connect two ExpressR
 
 :::image type="content" source="media/network-design-guide-figure-4.png" alt-text="Diagram that shows how ExpressRoute Global Reach enables direct Layer 3 connectivity to on-premises sites over ExpressRoute." lightbox="media/network-design-guide-figure-4.png" border="false":::
 
+> [!NOTE]
+> For maximum resiliency, two customer-managed ExpressRoute circuits in different peering locations should be used to connect on-premises datacenters to the Microsoft backbone. In this case, each customer-managed ExpressRoute circuit should have a Global Reach connection to the Azure VMware Solution private cloud (and to Azure Virtual Networks). Review [this article](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering) for guidance on resilient ExpressRoute implementations.
+
 ## Azure VMware Solution network topology
 
 An Azure VMware Solution private cloud infrastructure includes several network segments. The segments are implemented by VMware's network virtualization stack (distributed virtual switches) and connected to the underlying physical infrastructure through the ESXi hosts' physical NICs.
