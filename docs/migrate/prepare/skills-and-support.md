@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 During a cloud migration, it's likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
 
-This article gives guidance on specific training resources you should consider to prepare for your migration. It builds on the organizational skills acquired during planning and preparing a migration journey; you might need to revisit these topics to make the most of these materials. To learn more, see [Building technical skills](/azure/cloud-adoption-framework/organize/skills-and-support) to organize your training plans.
+This article gives guidance on specific training resources you should consider to prepare for your migration. It builds on the organizational skills acquired during planning and preparing a migration journey; you might need to revisit these topics to make the most of these materials. To learn more, see [Building technical skills](../../organize/suggested-skills.md) to organize your training plans.
 
 ## Self-led learning resources
 
