@@ -66,7 +66,7 @@ The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for A
 considerations to take into account when you create systems in the cloud. 
 To learn about architectural best practices for designing sustainable systems, see [Azure landing zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles).
 For in-depth recommendations and best practices regarding your cloud architecture, including reference architecture deployments,
-diagrams, and guides, see the [Azure Architecture Center](/azure/architecture/).
+diagrams, and guides, see the [Architecture Center guide for IPv6](/azure/architecture/networking/guide/ipv6-architecture).
 
 **Design considerations:**
 
