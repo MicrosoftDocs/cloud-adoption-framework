@@ -1,5 +1,5 @@
 ---
-title: Skills and resources relevant to migration projects
+title: Skills and support resources relevant to migration projects
 description: Learn about the skills needed for a successful migration to Azure with the Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
@@ -7,7 +7,7 @@ ms.date: 02/29/2024
 ms.topic: conceptual
 ---
 
-# Skills and resources relevant to migration projects
+# Skills and support resources relevant to migration projects
 
 During a cloud migration, it's likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
 
