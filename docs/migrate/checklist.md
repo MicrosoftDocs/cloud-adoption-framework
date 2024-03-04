@@ -23,7 +23,7 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:05](./prepare/planning-for-resilience.md) | **Planning for resilience.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
 | [MIG:06](./prepare/roles-and-responsibilities.md) | **Align roles and responsibilities.** Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
 | [MIG:07](./prepare/preparing-migration-backlog.md) | **Preparing your migration backlog.** Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
-| [MIG:08](./prepare/suggested-skills.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
+| [MIG:08](./prepare/skills-and-support.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
 
 ## Assess
 

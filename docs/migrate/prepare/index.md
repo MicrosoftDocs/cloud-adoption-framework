@@ -29,7 +29,7 @@ The table below gives an overview of the activities documented in this phase, al
 |**[Planning for resilience](./planning-for-resilience.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
 |**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
 |**[Preparing your migration backlog](./preparing-migration-backlog.md)**|Contains guidance on how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
-|**[Skills readiness for migration](./suggested-skills.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
+|**[Skills readiness for migration](./skills-and-support.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
 
 ## Next steps
 

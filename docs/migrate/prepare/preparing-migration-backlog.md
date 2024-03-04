@@ -40,4 +40,4 @@ This backlog is used throughout the migration process, so maintaining it's criti
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Skills relevant to migrate](./suggested-skills.md)
+> [Skills relevant to migrate](./skills-and-support.md)
