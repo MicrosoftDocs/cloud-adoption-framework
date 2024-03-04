@@ -3,49 +3,81 @@ title: Design workload architectures before migration
 description: Use the Cloud Adoption Framework for Azure to learn how to define the new architecture before cloud migration begins.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 12/05/2023
+ms.date: 03/04/2024
 ms.topic: conceptual
 ---
 
 # Design workload architectures before migration
 
-This article describes the assessment process. It helps you review activities associated with defining the workload's architecture within a given iteration. As discussed in the article on [incremental rationalization](../../digital-estate/rationalize.md), some architectural assumptions are made during any business transformation that requires a migration. This article clarifies those assumptions. It shares a few roadblocks that can be avoided and identifies opportunities to accelerate business value by challenging those assumptions. This incremental model for architecture allows teams to move faster and to obtain business outcomes sooner.
+This article describes the process of designing a workload's migrated state in the Cloud. It helps you review activities associated with defining the workload's architecture within a given iteration. As discussed in the article on [incremental rationalization](../../digital-estate/rationalize.md), some architectural assumptions are made during any business transformation that requires a migration.
 
-## Architecture assumptions before migration
+This article clarifies those assumptions. It shares a few roadblocks that can be avoided and identifies opportunities to accelerate business value by challenging those assumptions. This incremental model for architecture allows teams to move faster and to obtain business outcomes sooner.
+
+## Guidelines for planning your architecture
 
 The following assumptions are typical for any migration effort:
 
-- **IaaS.** Migrating workloads primarily involves moving virtual machines from a physical datacenter to a cloud datacenter via an IaaS migration. This process typically requires a minimum of redevelopment or reconfiguration. The approach is known as a *lift and shift* migration. (Exceptions follow.)
-- **Architecture consistency.** Changes to core architecture during a migration considerably increase complexity. Debugging a changed system on a new platform introduces many variables that can be difficult to isolate. For this reason, workloads should undergo only minor changes during migration and any changes should be thoroughly tested.
-- **Retirement test.** Migrations and the hosting of assets consume operational and potential capital expenses. Assume that any workloads you migrate have been reviewed to validate ongoing usage. The choice to retire unused assets produces immediate cost savings.
-- **Resize assets.** Assume few on-premises assets are fully using the given resources. Before migration, assets are resized to best fit actual usage requirements.
-- **Business continuity and disaster recovery (BCDR) requirements.** Assume that an agreed-on SLA for the workload has been negotiated with the business before release planning. These requirements are likely to produce minor architecture changes.
-- **Migration downtime.** Likewise, downtime to promote the workload to production can have an adverse effect on the business. Sometimes, the solutions that must transition with minimum downtime need architecture changes. Assume that a general understanding of downtime requirements has been established before release planning.
-- **User traffic patterns.** Existing solutions may depend on existing network routing patterns. These patterns could slow performance considerably. Further, introduction of new hybrid wide area network (WAN) solutions can take weeks or even months. Before migration, assume that your landing zones have already considered the relevant traffic patterns and changes to any core infrastructure services.
+- **Assume the workload will be IaaS**. Migrating workloads primarily involves moving servers from a physical datacenter to a cloud datacenter via an IaaS migration. This process typically requires a minimum of redevelopment or reconfiguration. This approach is known as a lift and shift migration. (Exceptions follow.)
+- **Keep the architecture consistent**. Changes to core architecture during a migration considerably increase complexity. Debugging a changed system on a new platform introduces many variables that can be difficult to isolate. For this reason, workloads should undergo only minor changes during migration and any changes should be thoroughly tested.
+- **Plan to resize assets**. Assume few on-premises assets are fully using the given resources. Before or during migration, assets are resized to best fit actual usage requirements. Tools like Azure Migrate will provide sizing based on actual use.
+- **Capture business continuity and disaster recovery (BCDR) requirements**. If you have an agreed-on SLA for the workload that has been negotiated with the business, continue to use it after the migration to Azure. If there isn't one, define it prior to designing the workload in the cloud to make sure you're designing appropriately.
+- **Plan for migration downtime.** Likewise, downtime to promote the workload to production can have an adverse effect on the business. Sometimes, the solutions that must transition with minimum downtime need architecture changes. Assume that a general understanding of downtime requirements has been established before release planning.
+- **Define User and application traffic patterns.** Existing solutions might depend on existing network routing patterns and solutions that exist. Identify the resources that you need to support these.
 
-## Mitigating potential roadblocks
+### Designing your architecture in a landing zone
 
-The itemized assumptions can create roadblocks that could slow progress or cause later pain points. The following are a few roadblocks to watch for, before the release:
+In the [Ready](../../ready/index.md) phase of the Cloud Adoption Framework, your organization should have deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md).
 
-- **Paying for technical debt.** Some aging workloads carry with them a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
-- **Improving reliability.** Standard operations baselines provide a degree of reliability and recovery in the cloud. But, some workload teams may require higher SLAs, which could lead to architectural changes.
-- **High-cost workloads.**  During migration, all assets should be optimized to align sizing with actual usage. But, some workloads may require architectural modifications to address specific cost concerns.
-- **Performance requirements.** When workload performance directly affects business, extra architectural consideration may be required.
-- **Secure applications.** Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. But, some workloads may have specific security requirements that could lead to architectural changes.
+In the [Readying your landing zone for migration](../prepare/ready-alz.md), you'll have prepared the landing zone to receive migrated workloads. Because of this, you can assume that the following is in place:
 
-Each of the above criteria serves as indicators of potential migration roadblocks. The above criteria is addressed after a workload is migrated. But if any of those criteria are required before you migrate a workload, remove the workload the migration wave and evaluate it individually.
+- Hybrid connectivity connecting to your Azure networks to your on-premises networks.
+- Network security appliances like Azure Firewall to handle inspection of traffic outside of your workload.
+- Azure policies to enforce governance practices, such as logging requirements, allowed regions, disallowed services, and other controls.
+- An Azure Log Analytics Workspace to use for shared logging.
+- Shared identity resources to support domain joined servers or other identity needs.
 
-The [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a rearchitecture effort in your cloud adoption plan. Given the extra time that's required to rearchitect a workload, these alternative workload adoption paths shouldn't be considered part of the migration process.
+If these aren't available, your organization should immediately revisit the ready phase to address these needs. Without them, your migration will likely suffer delays and setbacks and might not be able to be successful.
 
-## Accelerate business value
+The workload that you're designing will have a subscription assigned to it, ideally through a [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). This subscription might contain several workloads, or just one, depending on how your organization has performed its [resource organization for workloads](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions). If you're migrating a workload with many application environments, you might even have multiple subscriptions based on the [application environments guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
 
-Some scenarios could require a different architecture than the assumed IaaS rehosting strategy. The following are a few examples:
+### Designing your workload network architecture
 
-- **PaaS modernization.** You can migrate some technology assets to more modern Platform as a Service solutions, reducing risk during migration. Automated migration tools like Azure Migrate suggest and even automate modernization opportunities. A few examples of in-flight modernization include low risk changes like the use of [Azure Database Migration Service (DMS)](/azure/dms/dms-overview) to modernize databases. For a list of approaches that could benefit from a PaaS conversion, see the article on [evaluating assets](./evaluate.md).
-- **Scripted deployments/DevOps.** If a workload has an existing DevOps deployment or other forms of scripted deployment, the cost of changing those scripts could be lower than the cost of migrating the asset.
-- **Remediation efforts.** The remediation efforts required to prepare a workload for migration can be extensive. In some cases, it makes more sense to modernize the solution than it does to remediate underlying compatibility issues.
+You should plan for deploying out your application specific resources into a specific subscription, and design a dedicated virtual network for the workload. For more information, see [networking architecture design](/azure/architecture/guide/networking/networking-start-here) guidance. You should especially focus on [segmenting virtual networks](/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation).
 
-In each of these itemized scenarios, an alternative architecture could be the best possible solution.
+Your network will also likely need resources like load balancers and other application delivery resources. You can use the [N-tier architecture guide](/azure/architecture/guide/architecture-styles/n-tier) to plan this in Azure.
+
+### Designing for workload dependencies
+
+Your assessment tools should give you a way to perform dependency analysis, such as Azure Migrate's [dependency analysis](/azure/migrate/concepts-dependency-visualization). This lets you identify interdependencies between servers.
+
+In addition to planning architecture for the workload itself, you might need to consider workload to workload dependencies. For example, some workloads might need frequent communication to operate. If so, planning your migration waves and dependencies to take this under consideration will help your migrations be more successful.
+
+You can use guidance in the architecture center, such as [spoke-to-spoke](/azure/architecture/networking/spoke-to-spoke-networking) networking to build designs for how interconnected workloads will work after migration.
+
+## Knowing when to change your architecture
+
+Migrations tend to be focused on maintaining the existing architecture but transitioning to your cloud platform. However, there are times that you might need to rearchitect your workload even for migration. This list gives examples of when you might need to make architectural changes:
+
+- **Paying for technical debt**. Some aging workloads carry with them a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
+- **Improving reliability**. Standard operations baselines provide a degree of reliability and recovery in the cloud. Some workload teams might require higher SLAs, which could lead to architectural changes.
+- **High-cost workloads**. During migration, all assets should be optimized to align sizing with actual usage. Some workloads might require architectural modifications to address specific cost concerns.
+- **Performance requirements**. When workload performance directly affects business, extra architectural consideration might be required.
+- **Secure applications**. Security requirements tend to be implemented centrally and applied to all workloads in the portfolio. Some workloads might have specific security requirements that could lead to architectural changes.
+
+Each of the above criteria serves as indicators of potential migration roadblocks if not addressed. In most cases, you can address this after the workload has been migrated by right sizing servers, adding new servers, or making other changes. However, if any of those criteria are required before you migrate a workload, remove the workload from the migration wave and evaluate it individually.
+
+[The Microsoft Azure Well-Architected Framework](/azure/architecture/framework/) and [Microsoft Azure Well-Architected Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload to consider alternative options for deploying the workload. Those workloads would then be classified as a rearchitecture or modernization effort in your cloud adoption plan. Given the extra time that's required to rearchitect a workload, these alternative workload adoption paths shouldn't be considered part of the migration process.
+
+## Architecture checklist
+
+You can use the following checklist to make sure you're covering critical architectural considerations:
+
+- Confirm your SLAs for availability, disaster recovery, and data recovery are met by your architecture.
+- Confirm that you have applied network segmentation practices to your network design.
+- Confirm that you have planned for monitoring and log capturing.
+- Confirm that you have your VMs sized appropriately for the actual compute needed.
+- Confirm that you have your disks sized appropriately for the actual size and performance needed.
+- Confirm that you have planned for any load balancing services, like Azure load balancers, Application Gateways, Azure Front Door, or Azure Traffic Manager.
 
 ## Next steps
 

@@ -11,46 +11,81 @@ ms.topic: conceptual
 
 An understanding of the culture required to operate the existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially those bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time consuming to overcome.
 
-In either scenario, it's wise to invest in the documentation of roles and responsibilities required to complete a migration. This article outlines some of the roles and responsibilities seen in a datacenter migration, to serve as a template for documentation that can drive clarity throughout execution.
+The Cloud Adoption Framework details many different functions as part of [managing organizational alignment](/azure/cloud-adoption-framework/organize/). These functions aren't departments or organizations; they can be served by aligning team members in different parts of the organization to work together to complete the function.
 
-## Business functions
+To have the most successful migration possible, you need several roles from these functions available. This article provides a guide for what roles come from what functions, and what is needed.
 
-In any migration, there are a few key functions that are best executed by the business, whenever possible. Often, IT is capable of completing the following tasks. However, engaging members of the business could aid in reducing barriers later in the adoption process. It also ensures mutual investment from key stakeholders throughout the migration process.
+Later articles indicate the roles that are primarily responsible for certain steps. This article is meant to provide a high-level overview of the roles needed.
 
-| Process | Activity | Description |
-|---------|---------|---------|
-| Assess | Business goals | Define the desired business outcomes of the migration effort. |
-| Assess | Priorities | Ensure alignment with changing business priorities and market conditions. |
-| Assess | Justification | Validate assumptions that drive changing business justifications. |
-| Assess | Risk | Help the cloud adoption team understand the impact of tangible business risks. |
-| Assess | Approve | Review and approve the business impact of proposed architecture changes. |
-| Release | Change plan | Define a plan for consumption of change within the business, including periods of low activities and change freezes. |
-| Release | Testing | Align power users capable of validating performance and functionality. |
-| Secure and manage | Interruption impact | Aid the cloud adoption team in quantifying the impact of a business process interruption. |
-| Secure and manage | Service-level agreement (SLA) validation | Aid the cloud adoption team in defining service-level agreements and acceptable tolerances for business outages. |
+## Cloud strategy functions
 
-Ultimately, the cloud adoption team is accountable for each of these activities. However, establishing responsibilities and a regular cadence with the business for the completion of these activities on an established rhythm can improve stakeholder alignment and cohesiveness with the business.
+To make sure you have the proper commitment and organization for your migration project, you need the following roles from the [Cloud Strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy).
 
-## Common roles and responsibilities
+|Role|Responsibilities|
+|---|---|
+|Project Sponsor|Owns defining the scope of the migration, in terms of what moves and what value needs to be achieved by the movement. Provides decision making ownership for migration tooling purchases, over all workload architecture, and release activities.|
+|Project Manager|Drives the project plan for the over-all migration scope. Drives the testing processes. Organizes and communicates status to stakeholders.|
+|Organizational Change Manager|Helps the project team communicate changes to the organization. Works with different functions to make sure the right team members are involved, and the correct organizational changes are occurring to support the migration.|
+|Licensing Specialist|Provides licensing insight and FinOps management to ensure that the migration project is properly licensed and is using existing license resources.|
+|Workload Business Owners|Provide decision making ownership for workload assessment, architecture, and migration process. Acts as an owner for the business value of the workload operating in Azure.|
 
-Each process within the discussion of the Cloud Adoption Framework migration principles includes a process article outlining specific activities to align roles and responsibilities. For clarity during execution, a single accountable party should be assigned for each activity, along with any responsible parties required to support those activities. However, the following list contains a series of common roles and responsibilities that have a higher degree of impact on migration execution. These roles should be identified early in the migration effort.
+Some roles, like specific workload business owners, might not exist in your Cloud Strategy function currently, but the function should be able to identify the right team members to take on the role for the project.
 
-> [!NOTE]
-> In the following table, an accountable party should start the alignment of roles. That column should be customized to fit existing processes for efficient execution. Ideally, a single person should be assigned as the accountable party.
+## Cloud adoption roles
 
-| Process | Activity | Description | Accountable party |
-|---------|---------|---------|---------|
-| Prepare | Digital estate | Align the existing inventory to basic assumptions, based on business outcomes. | Cloud strategy team |
-| Prepare | Migration backlog | Prioritize the sequence of workloads to be migrated. | Cloud strategy team |
-| Assess | Architecture | Challenge initial assumptions to define the target architecture based on usage metrics. | Cloud adoption team |
-| Assess | Approval | Approve the proposed architecture. | Cloud strategy team |
-| Deploy | Replication access | Access to existing on-premises hosts and assets to establish replication processes. | Cloud adoption team |
-| Release | Ready | Validate that the system meets performance and cost requirements prior to promotion. | Cloud adoption team |
-| Release | Promote | Permissions to promote a workload to production and redirect production traffic. | Cloud adoption team |
-| Secure and manage | Ops transition | Document production systems prior to production operations. | Cloud adoption team |
+During the migration, most of your technical execution comes from the [Cloud Adoption Function](/azure/cloud-adoption-framework/organize/cloud-adoption). From this function, you should plan to have the following roles:
 
-> [!CAUTION]
-> For these activities, permissions and authorization heavily influence the accountable party, who must have direct access to production systems in the existing environment or must have means of securing access through other responsible actors. Determining this accountable party directly affects the promotion strategy during the migrate and optimize processes.
+|Role|Responsibilities|
+|---|---|
+|Migration Architect|Oversees the technical decision making for the workloads, such as migration wave planning and migration processes.|
+|Migration Engineer|Execute tasks identified as part of the project.|
+
+## Other supporting roles
+
+|Role|Responsibilities|
+|---|---|
+|[Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform).<br><li>Example: Landing zone architect|Prove support for migrating workloads into a Landing zone. Helps with the remediation of any issues with the platform services in the landing zone.|
+|[Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations).<br><li>Example: Cloud Operations Manager|Provide support for onboarding migrating workloads into the management platform, to ensure proper management is in place day 1 for the workloads.|
+|[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: Workload Architects|Provide architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill these roles.|
+|[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: User Acceptance Tester|Responsible for testing individual workloads. You might have multiple of these for each workload, to provide feedback.|
+
+## Scaling roles for large migration initiatives
+
+Depending on the size and number of workloads that you're migrating, you may need to have multiple team members from each role. A good rule of thumb is that the scale approached here can work for up to five medium size/complexity workloads per two-week sprints.
+
+However, workload sizing and complexity can be hard to judge. Early migration waves should start with a core team but scale out if needed.
+
+If you find that such scaling is needed, you should also plan for the following roles:
+
+|Role|Responsibilities|
+|---|---|
+|Program Manager|Organizing project manager activities across multiple project manager scopes.|
+|Migration Architecture Lead|Driving technical excellence across multiple migration architect scopes.|
+
+## Example responsibility matrix
+
+You can use the following responsibility matrix as a basis for your migration project. You might need to identify more roles, or shift responsibilities based on your organization's needs.
+
+In the below table, we use this matrix legend:
+
+- **D**river: A single driver of the objective.
+- **A**pprover: One or more approvers who make most decisions, and are responsible if the objective isn't met.
+- **C**ontributor: Contributors are responsible for carrying out the tasks.
+- **I**nformed:Impacted by the project and are provided status and informed of decisions.
+
+| **Role** | **Digital Estate Discovery** | **Migration Scope** | **Project Plan** | **Migration Tooling** | **Workload Discovery** | **Workload Assessment** | **Workload Architecture** | **Wave Planning** | **Workload Test Migration** | **Workload Migration UAT** | **Workload Migration** | **Workload Release UAT** | **Organizational Change Management** | **Transition to Operations** | **Workload Licensing** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Migration Architect** | D | D | A | D | A | A | D | A | A | A | A | A | I | D | I |
+| **Migration Engineer** | C | I | C | C | D | D | C | D | D | C | D | C | I | C | C |
+| **Project Manager** | I | I | D | I | I | I | I | I | I | D | I | D | I | C | I |
+| **Project Sponsor** | A | A | A | A | I | I | A | I | I | I | A | I | A | A | A |
+| **User Acceptance Tester** | I | I | I | I | I | I | I | I | I | C | I | C | I | C | I |
+| **Workload Architect** | I | I | C | C | C | C | C | C | C | C | C | C | C | C | I |
+| **Workload Business Owner** | I | I | C | I | A | A | A | A | A | A | A | A | C | C | A |
+| **Organizational Change Manager** | I | I | C | I | I | I | I | I | I | C | I | C | D | C | I |
+| **Licensing Specialist** | I | I | C | C | I | C | C | C | I | I | I | I | I | C | D |
+| **Cloud Operations Manager** | C | C | C | I | I | I | I | C | I | I | I | I | C | A | I |
+| **Landing Zone Architect** | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I | 
 
 ## Next steps
 
