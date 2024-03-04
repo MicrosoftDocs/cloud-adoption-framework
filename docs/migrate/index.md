@@ -50,11 +50,11 @@ Experience and complexity both have a significant impact on timelines and migrat
 
 ## Roles and responsibilities
 
-As part of the prepare discipline, you should align roles and responsibilities to drive clarity during the migration process. These are described in the [Roles and responsibilities](./prerequisites/roles-and-responsibilities.md) article.
+As part of the prepare discipline, you should align roles and responsibilities to drive clarity during the migration process. These are described in the [Roles and responsibilities](./prepare/roles-and-responsibilities.md) article.
 
 ## Next steps
 
 The first step to get started is to familiarize yourself with the prepare discipline.
 
 > [!div class="nextstepaction"]
-> [Prepare](./prerequisites/index.md)
+> [Prepare](./prepare/index.md)

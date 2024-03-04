@@ -15,7 +15,7 @@ Replication is the workhorse of migration efforts. It copies a point-in-time ver
 
 ## Prerequisites for replication
 
-Prior to replication, the new platform and hardware is prepared to receive the binary copies. Learn about the [minimum environment requirements](../prerequisites/index.md) to create a safe, robust, high-performance platform to receive the binary replicas.
+Prior to replication, the new platform and hardware is prepared to receive the binary copies. Learn about the [minimum environment requirements](../prepare/index.md) to create a safe, robust, high-performance platform to receive the binary replicas.
 
 The *source binaries* are prepared for replication and synchronization. The articles on [assessment](../assess/index.md), [architecture](../assess/architect.md), and [remediation](./remediate.md) address the actions necessary to ensure that the source binary is ready for replication and synchronization.
 

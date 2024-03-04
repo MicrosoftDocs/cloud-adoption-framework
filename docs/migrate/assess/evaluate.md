@@ -15,7 +15,7 @@ During this activity, the cloud adoption team validates that all assets and asso
 
 ## Evaluation assumptions
 
-Most of the content discussing principles in the Cloud Adoption Framework are cloud agnostic. However, the readiness evaluation process must be specific to each specific cloud platform and the migration tools you selected in the [Prepare](../prerequisites/index.md) phase.
+Most of the content discussing principles in the Cloud Adoption Framework are cloud agnostic. However, the readiness evaluation process must be specific to each specific cloud platform and the migration tools you selected in the [Prepare](../prepare/index.md) phase.
 
 Whatever assessment tools you have selected should provide information on any blockers for migration.
 

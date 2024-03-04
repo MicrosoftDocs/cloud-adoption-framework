@@ -277,7 +277,7 @@
       },
       {
          "source_path": "docs/migrate/expanded-scope/suggested-skills.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
          "redirect_document_id": true
       },
       {

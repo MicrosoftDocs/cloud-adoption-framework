@@ -7,16 +7,16 @@ ms.date: 03/01/2024
 ms.topic: conceptual
 ---
 
-## Migration testing in Azure
+# Migration testing in Azure
 
 Once you have your workloads replicated or staged and the supporting services available, you can begin your migration testing. This is focused primarily on two areas:
 
 - Testing that your architecture works with the replicated or staged resources.
 - Testing that your plan to manage the migrated resources are functional.
 
-Unlike [business testing](/azure/cloud-adoption-framework/migrate/release/business-test), migration testing will e focused on IT activities.
+Unlike [business testing](../release/business-test.md), migration testing will e focused on IT activities.
 
-As you identify issues, you can add them to your [remediation plan](/azure/cloud-adoption-framework/migrate/deploy/remediate). Once you addressed all issues, you're ready to proceed to release.
+As you identify issues, you can add them to your [remediation plan](../deploy/remediate.md). Once you addressed all issues, you're ready to proceed to release.
 
 ## Performing test migrations
 
@@ -32,7 +32,7 @@ To do this, you need:
 
 Your migration tool should have instructions for executing a test migration and cleaning it up after you execute your testing plan.
 
-You can also use this environment for [business testing](/azure/cloud-adoption-framework/migrate/release/business-test).
+You can also use this environment for [business testing](../release/business-test.md).
 
 ## Remediating testing issues
 

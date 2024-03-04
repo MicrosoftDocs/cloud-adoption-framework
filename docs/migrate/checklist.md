@@ -16,14 +16,14 @@ These checklists covers considerations and recommendations for approaching migra
 
 | Code | Guidance |
 |---|---|
-| [MIG:01](./prerequisites/index.md) | **Prerequisites overview.** Set objectives, review business drivers, clarify your definition of done, define responsibilities and accountability, and more. |
-| [MIG:02](./prerequisites/ready-alz.md) | **Readying your landing zone for migration.** Prepare your Azure landing zones for your migrations, including establishing hybrid connectivity, prepare identity, enable hybrid DNS, configure hub firewall, routing, monitoring, and more. |
-| [MIG:03](./prerequisites/readying-migration-tools.md) | **Readying migration tools.** Use this decision tree to evaluate potential tools to use for your migration projects. |
-| [MIG:04](./prerequisites/migrate-from-multiple-datacenters.md) | **Migrate from multiple datacenters.** This article expands on guidance where multiple datacenters are in scope for your migration. |
-| [MIG:05](./prerequisites/planning-for-resilience.md) | **Planning for resilience.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
-| [MIG:06](./prerequisites/roles-and-responsibilities.md) | **Align roles and responsibilities.** Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
-| [MIG:07](./prerequisites/preparing-migration-backlog.md) | **Preparing your migration backlog.** Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
-| [MIG:08](./prerequisites/suggested-skills.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
+| [MIG:01](./prepare/index.md) | **Prerequisites overview.** Set objectives, review business drivers, clarify your definition of done, define responsibilities and accountability, and more. |
+| [MIG:02](./prepare/ready-alz.md) | **Readying your landing zone for migration.** Prepare your Azure landing zones for your migrations, including establishing hybrid connectivity, prepare identity, enable hybrid DNS, configure hub firewall, routing, monitoring, and more. |
+| [MIG:03](./prepare/readying-migration-tools.md) | **Readying migration tools.** Use this decision tree to evaluate potential tools to use for your migration projects. |
+| [MIG:04](./prepare/migrate-from-multiple-datacenters.md) | **Migrate from multiple datacenters.** This article expands on guidance where multiple datacenters are in scope for your migration. |
+| [MIG:05](./prepare/planning-for-resilience.md) | **Planning for resilience.** This article outlines considerations and recommendations for a multi-region migration, if you're migrating workloads to more than one region. |
+| [MIG:06](./prepare/roles-and-responsibilities.md) | **Align roles and responsibilities.** Understand and define the common roles and responsibilities, including the business functions, and how they map to each phase of the migration process. |
+| [MIG:07](./prepare/preparing-migration-backlog.md) | **Preparing your migration backlog.** Use this guidance as a milestone to complete the prerequisite activities before your migrations start. |
+| [MIG:08](./prepare/suggested-skills.md) | **Skills relevant to migrate.** Investing in the right skills to get the job done is essential. Make sure you've got the required skills in your teams before your migration projects start. |
 
 ## Assess
 
@@ -60,4 +60,4 @@ These checklists covers considerations and recommendations for approaching migra
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migration pre-requisites](./prerequisites/index.md)
+> [Migration pre-requisites](./prepare/index.md)

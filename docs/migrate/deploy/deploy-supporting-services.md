@@ -15,7 +15,7 @@ Replicated or staged servers need to be placed into virtual networks, and many w
 
 When you designed your [workload architecture](../assess/architect.md), you identified these services. Now, before you begin to migrate resources, you should deploy these services to make sure you have everything ready for your workload to operate successfully.
 
-This article assumes that you have already prepared your shared platform solutions via [readying your landing zones for migrations](../prerequisites/ready-alz.md) and have completed your workload architecture.
+This article assumes that you have already prepared your shared platform solutions via [readying your landing zones for migrations](../prepare/ready-alz.md) and have completed your workload architecture.
 
 ## Planning for supporting service deployment
 

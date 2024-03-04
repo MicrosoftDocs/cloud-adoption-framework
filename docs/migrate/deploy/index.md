@@ -14,7 +14,7 @@ In this phase of the adoption journey, use the output of the assessment phase to
 
 ## Native migration tools
 
-The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [migration tools decision guide](../prerequisites/readying-migration-tools.md).
+The following sections describe the native Azure tools that perform or help with migration. To learn how to choose the right tools to support your migration efforts, see the [migration tools decision guide](../prepare/readying-migration-tools.md).
 
 ### Azure Migrate
 
@@ -276,7 +276,7 @@ In addition to the high-level accountability, there are actions that an individu
 - **Remediation.** Resolve any compatibility issues that prevent the workload from being migrated to the cloud.
   - A decision must be made in advance to determine how this activity is executed.
   - For example, is remediation completed by the cloud adoption team during the same sprint as the actual migration effort?
-  - Also, is a wave or factory model used to complete remediation in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it might be wise to revisit the section on [prerequisites](../prerequisites/index.md).
+  - Also, is a wave or factory model used to complete remediation in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it might be wise to revisit the section on [prerequisites](../prepare/index.md).
 - **Replication.** Create a copy of each asset in the cloud to synchronize VMs, data, and applications with resources in the cloud.
   - Depending on the promotion model, different tools might be required to complete this activity.
 - **Staging.** After all assets for a workload are replicated and verified, the workload can be staged for business testing and execution of a business change plan.
