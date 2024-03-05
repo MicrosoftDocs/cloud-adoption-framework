@@ -49,6 +49,19 @@ During the migration, most of your technical execution comes from the [Cloud Ado
 |[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: Workload Architects|Provide architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill these roles.|
 |[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: User Acceptance Tester|Responsible for testing individual workloads. You might have multiple of these for each workload, to provide feedback.|
 
+## Identify unclear role owners
+
+It can be difficult to identify some of these roles, such as Workload Architects and Workload Business Owners. If a workload has been in maintenance for a long period, without frequent changes, there might be limited ownership and technical expertise. Also sometimes, in digital estate planning, you might have servers that aren't mapped to a specific workload, so it can be unclear who has what ownership of them.
+
+If you're encountering challenges with identifying roles, you can try the following:
+
+- **Historical data**: Use your configuration management database or ticketing system to try to identify any historical items that can tell you who requests maintenance or who communicates about the server or workload.
+- **Sign-in logs**: Look for the users that were most recently logged into the servers that make up the workload. While this might not identify an owner, these users would be able to give context for the server and who they work under.
+- **Dependency analysis**: Use dependency analysis tools to identify who most frequently connect to the functions hosted on the servers, if any. These can help you identify business departments, which can lead you to an owner.
+- **Related application owners**: Reach out to owners of applications that service a similar business department or function, and ask them for help with identifying the roles needed.
+
+Even if no one exists who is currently an expert, these roles need to be filled during the migration process, so the business and IT should identify interim members, and build a plan for ownership for long term support of the workload after the migration.
+
 ## Scaling roles for large migration initiatives
 
 Depending on the size and number of workloads that you're migrating, you may need to have multiple team members from each role. A good rule of thumb is that the scale approached here can work for up to five medium size/complexity workloads per two-week sprints.
