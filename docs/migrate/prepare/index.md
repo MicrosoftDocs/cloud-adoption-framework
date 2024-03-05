@@ -7,7 +7,7 @@ ms.date: 02/29/2024
 ms.topic: conceptual
 ---
 
-# Prepare workloads for migration - Overview
+# Migration preparation checklist
 
 Prior to planning individual workload migrations, there are several key decisions and processes you need to execute to ready your organization and cloud resources to support the migration. Many of these are covered earlier in the Cloud Adoption Framework, and some are decisions made that will impact all future migration activities.
 
@@ -17,7 +17,7 @@ Organizations that fail to adequately prepare for migrations might see their mig
 
 To help organize your readiness, you can use the cloud migration readiness assessment.
 
-## Section overview
+## Checklist
 
 The table below gives an overview of the activities documented in this phase, along with the roles responsible for execution:
 

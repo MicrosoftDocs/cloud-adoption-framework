@@ -39,7 +39,5 @@ After the business change plan and technical readiness have been validated, the 
 
 ## Next steps
 
-After all readiness activities have been completed, its time to [promote the workload](./promote.md).
-
 > [!div class="nextstepaction"]
-> [Promote to production?](./promote.md)
+> [Migration cutover](./cutover.md)

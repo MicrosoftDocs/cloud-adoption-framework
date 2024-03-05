@@ -1052,7 +1052,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/promote",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
          "redirect_document_id": false
       },
       {
@@ -1178,6 +1178,11 @@
       {
          "source_path": "docs/migrate/deploy/network-capacity-exceeded.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/release/promote.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
          "redirect_document_id": false
       }
    ]

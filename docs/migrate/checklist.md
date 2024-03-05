@@ -51,7 +51,7 @@ These checklists covers considerations and recommendations for approaching migra
 | [MIG:61](./release/change-communication.md) | **Change communication.** Before a migrated workload is promoted to production, implementing a broader approach to user adoption is suggested. This article outlines the ways in which a business change plan adds to a standard user adoption plan. |
 | [MIG:62](./release/business-test.md) | **Business testing.** Understand business testing (User Acceptance Test) during migration, including the relevant business and IT activities. |
 | [MIG:64](./release/prepare-for-promotion.md) | **Prepare for promotion.** To prepare for promotion, validate the business change plan, perform final technical readiness tests, and a final business validation. |
-| [MIG:65](./release/promote.md) | **Promote to production.** Understand what's required to promote a migrated resource to production, including prerequisites and best practices to execute prior to promotion. |
+| [MIG:65](./release/cutover.md) | **Migration cutover.** Understand what's required to promote a migrated resource to production, including prerequisites and best practices to execute prior to promotion. |
 | [MIG:66](./release/decommission.md) | **Decommission retired assets.** Understand the importance of decommissioning retired assets. |
 | [MIG:67](./release/retrospective.md) | **Conduct retrospectives.** Learning, growing, and even failure are at the heart of a growth mindset. Understand the importance of retrospectives to reinforce the principles of a growth mindset: experimentation, testing, learning, sharing, growing, and empowering. |
 

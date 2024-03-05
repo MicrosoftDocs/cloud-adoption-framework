@@ -1,13 +1,13 @@
 ---
-title: Execute final migration activities
+title: Migration cutover in Azure
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 12/05/2023
+ms.date: 03/05/2024
 ms.topic: conceptual
 ---
 
-# Execute final migration activities
+# Migration cutover
 
 Promotion to production marks the completion of a workload's migration to the cloud. After the asset and all of its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
 
@@ -23,9 +23,8 @@ Each of the following processes should be executed, documented, and validated pr
 - [Stage](../deploy/stage.md): The replicated assets have been restored in a staged instance of the cloud environment.
 - [Business testing](./business-test.md): The workload has been fully tested and validated by business users.
 - [Change communication](./change-communication.md) plan: The business has shared a plan for the changes to be made in accordance with the production promotion; this should include a user adoption plan, changes to business processes, users that require training, and timelines for various activities.
-- [Prepare for promotion](./prepare-for-promotion.md): Generally, a series of technical changes must be made before promotion.
 
-## Best practices to execute prior to promotion
+## Best practices to execute prior to cutover
 
 The following technical changes will likely need to be completed and documented as part of the promotion process:
 
