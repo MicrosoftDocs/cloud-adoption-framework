@@ -12,18 +12,17 @@ ms.custom: think-tank, e2e-sap
 
 This article builds on the considerations and recommendations that are defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article examines key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Because SAP is a mission-critical platform, your design should also follow the guidance on Azure landing zone design areas.
 
-## Implement Azure ExpressRoute with high availability
+## Plan for IP addressing
 
-Azure ExpressRoute is designed for high availability to provide carrier-grade private network connectivity to Microsoft resources. There's no single point of failure in the ExpressRoute path within the Microsoft network. To maximize the availability, the customer and the service provider segment of your ExpressRoute circuit should also be built for high availability. Ensure that you connect the two physical links of your ExpressRoute circuit to two distinct edge devices in your network.
-  
-For recommendations to maximize your ExpressRoute circuit's availability, see the [ExpressRoute circuits resiliency recommendations](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-circuits/). 
- 
-For more information, see the following articles:
+A plan for IP addressing in Azure is vital to ensure that:
 
-- [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute)
-- [Azure Well-Architected Framework review - Azure ExpressRoute recommendations](/azure/well-architected/service-guides/azure-expressroute#recommendations)
-- [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
-- [Designing for high availability with ExpressRoute - Active-active connections](/azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections)
+- The IP address space doesn't overlap on-premises locations and Azure regions.
+- The virtual network contains the correct address space.
+- Subnet configuration plans occur in advance.
+
+The following architecture diagram shows networking considerations in SAP on an Azure landing zone accelerator:
+
+ [![A diagram of networking considerations in SAP on an Azure landing zone accelerator.](./media/ntc-architecture.png)](./media/ntc-architecture.png#lightbox)
 
 **Design considerations for SAP implementation:**
 
@@ -94,17 +93,18 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - To prevent data leakage, use Azure Private Link to securely access platform as a service (PaaS) resources like Azure Blob Storage, Azure Files, Azure Data Lake Storage Gen2, and Azure Data Factory. Private endpoints can also help secure traffic between virtual networks and services like Azure Storage and Azure Backup. Traffic between your virtual network and the private endpoint-enabled service travels across the Microsoft global network, which prevents its exposure to the public internet.
 
-## Plan for IP addressing
+## Implement Azure ExpressRoute with high availability
 
-A plan for IP addressing in Azure is vital to ensure that:
+Azure ExpressRoute is designed for high availability to provide carrier-grade private network connectivity to Microsoft resources. There's no single point of failure in the ExpressRoute path within the Microsoft network. To maximize the availability, the customer and the service provider segment of your ExpressRoute circuit should also be built for high availability. Ensure that you connect the two physical links of your ExpressRoute circuit to two distinct edge devices in your network.
+  
+For recommendations to maximize your ExpressRoute circuit's availability, see the [ExpressRoute circuits resiliency recommendations](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-circuits/). 
+ 
+For more information, see the following articles:
 
-- The IP address space doesn't overlap on-premises locations and Azure regions.
-- The virtual network contains the correct address space.
-- Subnet configuration plans occur in advance.
-
-The following architecture diagram shows networking considerations in SAP on an Azure landing zone accelerator:
-
- [![A diagram of networking considerations in SAP on an Azure landing zone accelerator.](./media/ntc-architecture.png)](./media/ntc-architecture.png#lightbox)
+- [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute)
+- [Azure Well-Architected Framework review - Azure ExpressRoute recommendations](/azure/well-architected/service-guides/azure-expressroute#recommendations)
+- [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
+- [Designing for high availability with ExpressRoute - Active-active connections](/azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections)
 
 ## Define network encryption requirements
 
