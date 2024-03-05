@@ -25,6 +25,10 @@ If your organization uses a [subscription-vending process](./subscription-vendin
 
 ## Design considerations
 
+Some organizations share services between multiple applications. For example, there might be a centralized integration service used by several independent applications. In that scenario, consider which services are managed centrally and which are devolved to application teams, and understand where security boundaries need to be enforced. Giving application teams administrative access to the shared service might be helpful for developer productivity, but might provide more access than is required.
+
+Managing application resources that don't cross security boundaries can be delegated to application teams. Consider delegating other aspects that are required to maintain security and compliance as well. Letting users provision resources within a securely managed environment lets organizations take advantage of the agile nature of the cloud and prevent violation of any critical security or governance boundary.
+
 ### RBAC
 
 > [!IMPORTANT]
@@ -53,6 +57,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Some Azure RBAC roles support [attribute-based access control (ABAC)](/azure/role-based-access-control/conditions-overview), or role assignment conditions. When you use conditions, administrators can dynamically assign roles based on the attributes of the resource. For example, you can assign the Storage Blob Data Contributor role but only for blobs that have a specific index tag rather than all blobs in a container.
 
+
 ## Design recommendations
 
 ### General recommendations
@@ -70,7 +75,9 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
   
   - For nonprivileged job function roles that can manage Azure application resources, consider whether you require separate administrative accounts or use [Microsoft Entra PIM](/entra/id-governance/privileged-identity-management/pim-configure) to control administrative access. PIM ensures that the account has the required permissions only when needed and that the permissions are removed when the task is complete (also known as *just-in-time access*).
 
-- To make role assignments more manageable, don't assign roles directly to users. Instead, assign roles to groups to help minimize the number of role assignments, which has a [limit for each subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits). Use [Microsoft Entra PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users. Consider controlling group membership with [entitlement management](/entra/id-governance/entitlement-management-overview). You can use the entitlement management feature to add approval and auditing workflows to group membership operations and help ensure that administrative group members aren't unnecessarily added or removed.
+- To make role assignments more manageable, don't assign roles directly to users. Instead, assign roles to groups to help minimize the number of role assignments, which has a [limit for each subscription](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-rbac-limits).
+  - Use [Microsoft Entra PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) to apply just-in-time administrative access controls to privileged users. Consider controlling group membership with [entitlement management](/entra/id-governance/entitlement-management-overview). You can use the entitlement management feature to add approval and auditing workflows to group membership operations and help ensure that administrative group members aren't unnecessarily added or removed.
+  - When you grant access to resources, use Microsoft Entra-only groups for Azure control-plane resources. Both Entra-only users and groups, and those synchronized from on-premises using Microsoft Entra Connect, can be added to an Entra-only group. Add on-premises groups to the Microsoft Entra-only group if a group management system is already in place. Using Entra-only groups helps protect the cloud control plane from unauthorized modification of on-premises directory services. Note that *Microsoft Entra-only* is also known as *cloud only*.
 
 - Create [emergency-access](/entra/identity/role-based-access-control/security-emergency-access) accounts, or break-glass accounts, to avoid accidentally being locked out of your Microsoft Entra ID organization. Emergency-access accounts are highly privileged and are only assigned to specific individuals. Store the credentials for the accounts securely, monitor their use, and test them regularly to ensure that you can use them if there's a disaster.
 
@@ -121,6 +128,8 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
    | Application Owner (DevOps, App operations) | Contributor role for the application or operations team at the subscription scope  | `*` | `Microsoft.Authorization/*/write`, `Microsoft.Network/publicIPAddresses/write`, <br>`Microsoft.Network/virtualNetworks/write`, <br>`Microsoft.KeyVault/locations/deletedVaults/purge/action`  |
    | Network management (NetOps) | Manages platform-wide global connectivity, such as virtual networks, UDRs, NSGs, NVAs, VPNs, Azure ExpressRoute, and others  | `*/read`, <br>`Microsoft.Network/*`,<br> `Microsoft.Resources/deployments/*`,<br> `Microsoft.Support/*` | |
    | Security operations (SecOps) | Security Administrator role with a horizontal view across the entire Azure estate and the Key Vault purge policy | `*/read`,<br> `*/register/action`,<br> `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br>`Microsoft.PolicyInsights/*`,<br> `Microsoft.Authorization/policyAssignments/*`,<br>`Microsoft.Authorization/policyDefinitions/*`,<br>`Microsoft.Authorization/policyExemptions/*`,<br>`Microsoft.Authorization/policySetDefinitions/*`,<br>`Microsoft.Insights/alertRules/*`, <br> `Microsoft.Resources/deployments/*`, <br>`Microsoft.Security/*`, <br>`Microsoft.Support/*` | |
+
+   Those roles might need extra rights depending on the responsibility model. For example, in some organizations a NetOps role might only need to manage and configure global connectivity. In organizations that need a more centralized approach, you can enrich the NetOps role with more allowed actions, such as creating peering between hubs and their spokes.
 
 ##### Role assignments and groups
 

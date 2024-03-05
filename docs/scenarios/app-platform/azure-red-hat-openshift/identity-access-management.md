@@ -1,8 +1,8 @@
 ---
 title: Identity and access management considerations for Azure Red Hat OpenShift
 description: Learn how to improve identity and access management for the Azure Red Hat OpenShift landing zone accelerator.
-author: jpocloud
-ms.author: johnpoole
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 08/18/2022
 ms.topic: conceptual
 ms.custom: think-tank, e2e-aro
