@@ -314,13 +314,13 @@ items:
           items:
           - name: Overview
             href: ready/landing-zone/design-area/identity-access.md
-          - name: Active Directory and Hybrid Identity
+          - name: Hybrid identity with Active Directory and Microsoft Entra ID
             href: ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md
-          - name: Platform access
-            href: ready/landing-zone/design-area/identity-access-platform-access.md
-          - name: Landing zones
+          - name: Landing zone identity and access
             href: ready/landing-zone/design-area/identity-access-landing-zones.md
-            
+          - name: Application identity and access
+            href: ready/landing-zone/design-area/identity-access-application-access.md
+
         - name: Resource organization
           items:
           - name: Overview
@@ -1651,7 +1651,5 @@ items:
         href: resources/cloud-operating-model.md
       - name: Azure enterprise scaffold
         href: resources/azure-scaffold.md
-      - name: Virtual datacenter (VDC)
-        href: resources/vdc.md
       - name: Virtual datacenter boundary security
         href: resources/networking-vdc.md
