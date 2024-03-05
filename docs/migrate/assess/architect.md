@@ -17,7 +17,7 @@ This article clarifies those assumptions. It shares a few roadblocks that can be
 
 The following assumptions are typical for any migration effort:
 
-- **Assume the workload will be IaaS**. Migrating workloads primarily involves moving servers from a physical datacenter to a cloud datacenter via an IaaS migration. This process typically requires a minimum of redevelopment or reconfiguration. This approach is known as a lift and shift migration. (Exceptions follow.)
+- **Assume the workload will be IaaS**. Migrating workloads primarily involves moving servers from a physical datacenter to a cloud datacenter via an IaaS migration. This process typically requires a minimum of redevelopment or reconfiguration. This approach is known as a lift and shift migration.
 - **Keep the architecture consistent**. Changes to core architecture during a migration considerably increase complexity. Debugging a changed system on a new platform introduces many variables that can be difficult to isolate. For this reason, workloads should undergo only minor changes during migration and any changes should be thoroughly tested.
 - **Plan to resize assets**. Assume few on-premises assets are fully using the given resources. Before or during migration, assets are resized to best fit actual usage requirements. Tools like Azure Migrate will provide sizing based on actual use.
 - **Capture business continuity and disaster recovery (BCDR) requirements**. If you have an agreed-on SLA for the workload that has been negotiated with the business, continue to use it after the migration to Azure. If there isn't one, define it prior to designing the workload in the cloud to make sure you're designing appropriately.
