@@ -60,4 +60,4 @@ You can use the following as a reference to build your testing plan:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare for release](./prepare-for-promotion.md)
+> [Cutover](./cutover.md)

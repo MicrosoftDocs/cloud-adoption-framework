@@ -659,8 +659,6 @@ items:
             href: migrate/release/change-communication.md
           - name: Business testing
             href: migrate/release/business-test.md
-          - name: Prepare for final migration activities
-            href: migrate/release/prepare-for-promotion.md
           - name: Migration cutover
             href: migrate/release/cutover.md
           - name: Decommission retired assets
