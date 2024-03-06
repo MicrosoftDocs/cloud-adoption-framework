@@ -952,7 +952,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/assess/estimate.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/estimate",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/architect",
          "redirect_document_id": false
       },
       {

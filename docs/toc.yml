@@ -605,8 +605,6 @@ items:
       items:
       - name: Overview
         href: migrate/index.md
-      - name: Checklist
-        href: migrate/checklist.md
       - name: Prepare
         items:
           - name: Overview
@@ -633,8 +631,6 @@ items:
           href: migrate/assess/evaluate.md
         - name: Architect workloads
           href: migrate/assess/architect.md
-        - name: Update and refine initial cloud estimates
-          href: migrate/assess/estimate.md
       - name: Deploy
         items:
           - name: Overview
