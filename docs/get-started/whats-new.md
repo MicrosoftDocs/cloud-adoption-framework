@@ -209,7 +209,7 @@ The following articles provide guidance about how to design and implement an Azu
 |---------|-------------|
 | [Automate Azure landing zones across multiple tenants](../ready/landing-zone/design-area/multi-tenant/automation.md) | Learn about the automation approaches you can use to successfully operate and maintain Azure landing zone deployments at scale across multiple tenants. |
 | [Azure landing zones canary approach with multiple tenants](../ready/landing-zone/design-area/multi-tenant/canary.md) | Learn how to handle Azure landing zones canary environments when you have multiple tenants. |
-| [Azure Lighthouse usage in Azure landing zones multitenant scenarios](../ready/landing-zone/design-area/multi-tenant/lighthouse.md) | [Azure Lighthouse](/azure/lighthouse/overview.md) enables multitenant management with scalability, increased automation, and enhanced governance across resources. You can use Azure Lighthouse in Azure landing zone scenarios in single-tenant or multitenant architectures. |
+| [Azure Lighthouse usage in Azure landing zones multitenant scenarios](../ready/landing-zone/design-area/multi-tenant/lighthouse.md) | [Azure Lighthouse](/azure/lighthouse/overview) enables multitenant management with scalability, increased automation, and enhanced governance across resources. You can use Azure Lighthouse in Azure landing zone scenarios in single-tenant or multitenant architectures. |
 | [Azure landing zones and multiple Azure Active Directory tenants](../ready/landing-zone/design-area/multi-tenant/overview.md) | Learn how multiple Azure Active Directory tenants work within the context of Azure landing zones. Learn the benefits of using a single tenant. |
 | [Scenarios for multiple Azure Active Directory tenants](../ready/landing-zone/design-area/multi-tenant/scenarios.md) | Learn about the most common scenarios for which you might need multiple Azure Active Directory tenants. |
 | [Considerations and recommendations for multitenant Azure landing zone scenarios](../ready/landing-zone/design-area/multi-tenant/considerations-recommendations.md) | Learn about the limitations of operating within a single Azure Active Directory tenant. Learn key considerations and recommendations for Azure landing zones and Azure Active Directory multitenant scenarios. |
@@ -220,11 +220,11 @@ In this three-part series about SAP applications, learn how to [identify SAP dat
 
 ### SAP workload storage on Azure
 
-Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types](../scenarios/sap/eslz-business-continuity-and-disaster-recovery#storage-for-sap-workloads.md) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about storage options outside of Azure.
+Learn about the platform-level SLAs for various high-availability deployment options. See the [storage types](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md#storage-for-sap-workloads) that are available for an HA and DR setup for SAP workloads on Azure. Learn about their configuration details and about storage options outside of Azure.
 
 ### Automated Azure VMware Solution implementation options
 
-You can implement Azure VMware Solution in multiple ways. The options can be categorized into two broad categories: deployment with connectivity to Azure, and deployment with no connection to Azure. You can automate each of these [deployment options](../scenarios/azure-vmware/eslz-platform-automation-and-devops#automated-azure-vmware-solution-implementation-options.md) by using Azure Bicep, Terraform, and PowerShell.
+You can implement Azure VMware Solution in multiple ways. The options can be categorized into two broad categories: deployment with connectivity to Azure, and deployment with no connection to Azure. You can automate each of these [deployment options](../scenarios/azure-vmware/eslz-platform-automation-and-devops.md#automated-azure-vmware-solution-implementation-options) by using Azure Bicep, Terraform, and PowerShell.
 
 ### Infrastructure as code (IaC)
 
