@@ -655,8 +655,8 @@ items:
             href: migrate/release/business-test.md
           - name: Migration cutover
             href: migrate/release/cutover.md
-          - name: Decommission retired assets
-            href: migrate/release/decommission.md
+          - name: Post-migration cost optimization
+            href: migrate/release/post-migration-cost-optimization.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
       - name: Product migration guidance

@@ -1057,7 +1057,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/optimize/decommission.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/decommission",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/post-migration-cost-optimization",
          "redirect_document_id": false
       },
       {
