@@ -95,22 +95,24 @@ This section describes recommended connectivity models for inbound and outbound 
 
 ## Implement Azure ExpressRoute with high availability
 
-Azure ExpressRoute is designed for high availability to provide carrier-grade private network connectivity to Microsoft resources. There's no single point of failure in the ExpressRoute path within the Microsoft network. To maximize the availability, the customer and the service provider segment of your ExpressRoute circuit should also be built for high availability. Ensure that you connect the two physical links of your ExpressRoute circuit to two distinct edge devices in your network.
-  
-For recommendations to maximize your ExpressRoute circuit's availability, see the [ExpressRoute circuits resiliency recommendations](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-circuits/). 
- 
-For more information, see the following articles:
+Azure ExpressRoute is designed for high availability to provide carrier-grade private network connectivity to Microsoft resources. There's no single point of failure in the ExpressRoute path within the Microsoft network. To maximize the availability, the customer and the service provider segment of your ExpressRoute circuit should also be built for high availability.
 
-- [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute)
-- [Azure Well-Architected Framework review - Azure ExpressRoute recommendations](/azure/well-architected/service-guides/azure-expressroute#recommendations)
-- [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
-- [Designing for high availability with ExpressRoute - Active-active connections](/azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections)
+**Design recommendations for SAP implementations:**
+
+- Ensure that you connect the two physical links of your ExpressRoute circuit to two distinct edge devices in your network. For recommendations to maximize your ExpressRoute circuit's availability, see the [ExpressRoute circuits resiliency recommendations](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-circuits/).
+- Ensure high availability for ExpressRoute. For more information, see [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute). 
+- Conduct a Well-Architected review of ExpressRoute. For more information, see [Azure Well-Architected Framework review - Azure ExpressRoute recommendations](/azure/well-architected/service-guides/azure-expressroute#recommendations).
+- Ensure that you have a disaster recovery plan for ExpressRoute. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
+- Ensure that both connections of an ExpressRoute circuit are configured in active-active mode. For more information, see [Designing for high availability with ExpressRoute - Active-active connections](/azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections). 
+- Configure monitoring and alerting for ExpressRoute circuits.
+- Configure service health to receive ExpressRoute circuit maintenance notifications.
+
 
 ## Define network encryption requirements
 
 This section explores key recommendations for encrypting networks between on-premises and Azure environments and across Azure regions.
 
-**Design considerations for SAP Implementations:**
+**Design considerations for SAP implementations:**
 
 - Traffic isn't encrypted by default when you use ExpressRoute to configure private peering.
 
