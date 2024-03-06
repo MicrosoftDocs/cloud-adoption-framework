@@ -16,7 +16,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## February 2024
 
-In February, we added information about preparation, adoption, and migration to the cloud.  
 
 ### New articles
 
@@ -33,7 +32,6 @@ In February, we added information about preparation, adoption, and migration to 
 
 ## January 2024
 
-In January, we added two new articles and updated eight articles.
 
 ### New articles
 
