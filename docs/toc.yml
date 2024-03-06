@@ -613,16 +613,14 @@ items:
             href: migrate/prepare/index.md
           - name: Readying your landing zone for migration
             href: migrate/prepare/ready-alz.md
-          - name: Readying migration tools
-            href: migrate/prepare/readying-migration-tools.md
+          - name: Prepare tools and backlog
+            href: migrate/prepare/tools-and-backlog.md
           - name: Migrating from multiple datacenters
             href: migrate/prepare/migrate-from-multiple-datacenters.md      
           - name: Planning for resilience
             href: migrate/prepare/planning-for-resilience.md
           - name: Align roles and responsibilities
             href: migrate/prepare/roles-and-responsibilities.md
-          - name: Preparing your migration backlog
-            href: migrate/prepare/preparing-migration-backlog.md
           - name: Skills relevant to migration projects
             href: migrate/prepare/skills-and-support.md
       - name: Assess

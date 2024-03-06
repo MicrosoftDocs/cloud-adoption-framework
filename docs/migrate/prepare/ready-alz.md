@@ -176,4 +176,4 @@ Consider these additional resources to prepare:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Readying migration tools](../prepare/readying-migration-tools.md)
+> [Prepare tools and initial migration backlog](./tools-and-backlog.md)

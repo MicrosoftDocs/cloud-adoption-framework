@@ -757,7 +757,7 @@
       },
       {
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/readying-migration-tools",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
          "redirect_document_id": false   
       },
       {
@@ -877,7 +877,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/migration-tools-decision-guide.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/readying-migration-tools",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
          "redirect_document_id": false
       },
       {
@@ -902,7 +902,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/migration-backlog-review.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/preparing-migration-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
          "redirect_document_id": false
       },
       {
@@ -967,7 +967,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/assess/release-iteration-backlog.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
          "redirect_document_id": false
       },
       {
@@ -1188,6 +1188,16 @@
       {
          "source_path": "docs/migrate/release/prepare-for-promotion.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/readying-migration-tools.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
          "redirect_document_id": false
       }
    ]
