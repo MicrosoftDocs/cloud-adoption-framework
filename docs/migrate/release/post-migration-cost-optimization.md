@@ -27,6 +27,7 @@ Now that you have migrated to Azure, you have new tools available for how you ca
 |---|---|---|
 |Right-size assets|Review the usage metrics for the services and right-size them to match the workload requirements.|[Azure Advisor cost recommendations](/azure/advisor/advisor-reference-cost-recommendations).|
 |Reserved Instances.|Reserved instances let you commit to resources in Azure that will be running frequently.  Consider reserving instances for always on workloads.|<li>[Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)<br><li>[Azure VM sizing for maximum reservation usage](/partner-center/azure-usage).|
+|Azure savings plans|Azure savings plans provides savings up to 65% off pay-as-you-go pricing when you commit to spend a fixed hourly amount on compute services for one or three years.|[Azure savings plans recommendations](/azure/cost-management-billing/savings-plan/purchase-recommendations)|
 |Cost management|Implement cost management and billing to monitor and manage the costs of the environment.|<li>[Microsoft Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview)<br><li>[Reservation recommendations in Azure Advisor](/azure/cost-management-billing/reservations/reserved-instance-purchase-recommendations#recommendations-in-azure-advisor)|
 
 ## Decommission retired assets
