@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.custom: think-tank, e2e-hybrid, devx-track-terraform
+ms.custom: think-tank, e2e-hybrid, devx-track-terraform, linux-related-content
 ---
 
 # Use a Terraform plan to deploy an Amazon Linux 2 instance on Amazon Elastic Compute Cloud and connect it to Azure Arc
