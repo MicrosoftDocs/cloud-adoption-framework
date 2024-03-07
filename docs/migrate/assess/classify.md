@@ -39,6 +39,10 @@ Work with your security and operations teams as early as possible to define the 
 - Any influence criticality might have on subscription design, management group hierarchies, or landing zone requirements.
 - Any requirements for documenting criticality, which might include specific traffic or usage reports, financial analyses, or other tools.
 
+## Data sovereignty
+
+Customers might be subject to sovereignty and regulatory compliance. Those customers also need to classify their workloads and data based on their sovereignty requirements. For examples, [evaluate sovereign requirements](/industry/sovereignty/evaluate-sovereign-requirements).
+
 ## Organization-specific considerations
 
 In addition to data and mission criticality, consider the classifications specific to your organization.  For example, many organizations with different development teams classify workloads by the project team who supports them, or by the line of business they support.
