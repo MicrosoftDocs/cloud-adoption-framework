@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare tools and initial migration backlog
 
-Prior to beginning your iterative migration activities, you should define a backlog of all workloads you intended to migrate. This backlog can be comprehensive, or it can focus on early adopters to prove the value of cloud adoption prior to making larger investments. However, this migration backlog should be completed as a first prerequisite.
+Executing on your migration requires the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
 
 ## Preparing migration tools
 
@@ -33,7 +33,9 @@ While you can use tools instead of Azure Migrate, we recommend customers use the
 
 ## Initial migration backlog
 
-This article serves as a milestone to complete prerequisite activities for building this backlog. The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog before planning individual workload activities. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
+This section serves as a milestone to complete prerequisite activities for building an initial migration backlog.
+
+The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog before planning individual workload activities. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
 
 ### Business outcomes and metrics
 
