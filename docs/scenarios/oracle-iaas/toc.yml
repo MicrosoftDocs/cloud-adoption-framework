@@ -21,6 +21,10 @@ items:
         href: oracle-manage-monitor-workload.md
       - name: Governance discipline
         href: governance-compliance-oracle-landing-zone.md
+    - name: Implementation options
+      items:
+      - name: Oracle on Azure IaaS landing zone accelerator
+        href: oracle-on-iaas-lza.md
   - name: Migrate your Oracle workloads
     items: 
     - name: Capacity planning
