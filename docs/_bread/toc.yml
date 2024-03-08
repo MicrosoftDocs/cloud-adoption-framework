@@ -32,8 +32,8 @@
         tocHref: /azure/cloud-adoption-framework/scenarios/sap/
         topicHref: /azure/cloud-adoption-framework/scenarios/sap
       - name: AVD
-        tocHref: /azure/cloud-adoption-framework/scenarios/wvd/
-        topicHref: /azure/cloud-adoption-framework/scenarios/wvd
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop
       - name: Retail industry
         tocHref: /azure/cloud-adoption-framework/industry/retail/plan/
         topicHref: /azure/cloud-adoption-framework/industry/retail/plan

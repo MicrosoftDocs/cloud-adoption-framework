@@ -502,12 +502,12 @@
       },
       {
          "source_path": "docs/scenarios/wvd/design-area-enterprise-enrollment.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/wvd/eslz-enterprise-enrollment",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-enterprise-enrollment",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/scenarios/wvd/design-area-resource-organization.md",
-         "redirect_url": "/azure/cloud-adoption-framework/scenarios/wvd/eslz-resource-organization",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-resource-organization",
          "redirect_document_id": true
       },
       {

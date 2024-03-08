@@ -96,7 +96,7 @@ Update the Authorization Policy to enforce the above settings via the Microsoft 
   "defaultUserRolePermissions": {
       "allowedToCreateApps": false,
       "allowedToCreateSecurityGroups": false,
-      "allowedToReadOtherUsers": false,
+      "allowedToReadOtherUsers": true,
       "permissionGrantPoliciesAssigned": []
   },
   "allowedToUseSSPR": true,
@@ -137,7 +137,7 @@ Then confirm the settings of specific items in the response:
     "defaultUserRolePermissions": {
         "allowedToCreateApps": false,
         "allowedToCreateSecurityGroups": true,
-        "allowedToReadOtherUsers": false,
+        "allowedToReadOtherUsers": true,
         "permissionGrantPoliciesAssigned": []
     }
 

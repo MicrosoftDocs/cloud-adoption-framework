@@ -26,7 +26,7 @@ items:
     - name: SAP
       href: scenarios/sap/index.md
     - name: Virtual desktops
-      href: scenarios/wvd/index.md
+      href: scenarios/azure-virtual-desktop/index.md
     - name: Retail industry
       href: industry/retail/index.md
     - name: Defense
@@ -690,7 +690,7 @@ items:
           - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
           - name: VDI
-            href: migrate/azure-best-practices/contoso-migration-rds-to-wvd.md
+            href: migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md
 
     - name: Modernize
       items:
