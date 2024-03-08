@@ -51,6 +51,7 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
+| [SQL Migration guides](/azure/azure-sql/migration-guides/)| Find documentation on how to migrate to the Azure SQL family of SQL Server database engine products in the cloud: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure. |
 | [Migrate from SQL Server to Azure SQL](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide) | TBD |
 | [Migrate from SQL Server to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide) | TBD |
 | [Migrate from SQL Server to SQL Server on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide) | TBD |
@@ -85,7 +86,6 @@ See each section below for relevant migration guidance for specific applications
 | [Migrate from MySQL to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) |Learn how to migrate your MySQL database to an Azure SQL database by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).|
 |[Migrate PostgreSQL to Azure](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|You can use Azure Database Migration Service to migrate the databases from an on-premises PostgreSQL instance to Azure Database for PostgreSQL with minimal downtime to the application.|
 |[Migrate MariaDB to Azure](https://azure.microsoft.com/updates/azure-database-for-mariadb-will-be-retired-on-19-september-2025-migrate-to-azure-database-for-mysql-flexible-server/)|MariaDB on Azure will be retired - please follow these directions to migrate to Azure Database for MySQL.|
-
 
 ### Storage migration
 
@@ -134,6 +134,22 @@ See each section below for relevant migration guidance for specific applications
 |---|---|
 | [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) | TBD |
 | [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray/) | TBD |
+
+## Azure Stack
+
+| Link | Description |
+|---|---|
+| [Overview of Azure Migrate based migration for Azure Stack HCI](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Provides an overview of how to migrate Hyper-V virtual machines (VMs) to your Azure Stack HCI cluster using Azure Migrate. |
+
+## Analytics solutions
+
+### Azure Synapse Analytics
+
+| Link | Description |
+|---|---|
+|Azure Synapse Analytics - [Design and performance for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration)|Guidance on how to migrate from Teradata to Azure Synapse Analytics.|
+|Azure Synapse Analytics - [Design and performance for Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration)| Guidance on how to migrate from Netezza to Azure Synapse Analytics.|
+|Azure Synapse Analytics - [Design and performance for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration)|Guidance on how to migrate from Oracle to Azure Synapse Analytics.|
 
 ## Multitenant migration
 

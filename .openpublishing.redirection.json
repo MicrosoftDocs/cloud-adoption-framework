@@ -797,12 +797,12 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-mysql-to-azure.md",
-         "redirect_url": "/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/sql-migration.md",
-         "redirect_url": "/azure/azure-sql/migration-guides",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
@@ -1147,22 +1147,22 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md",
-         "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md",
-         "redirect_url": "/training/paths/migrate-open-source-workloads/",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md",
-         "redirect_url": "/azure/dms/tutorial-postgresql-azure-postgresql-online-portal",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md",
-         "redirect_url": "/azure/mariadb/whats-happening-to-mariadb",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
@@ -1196,8 +1196,53 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/migrate/prepare/",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate/azure-best-practices/tailwind-migration-assess-servers.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-teradata.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-netezza.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-exadata.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/schema-migration-ddl.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       }
    ]

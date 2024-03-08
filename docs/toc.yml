@@ -664,24 +664,7 @@ items:
 
       - name: Migration scenarios
         items:
-        - name: Contoso overview
-          href: migrate/azure-best-practices/contoso-migration-overview.md
-
-        - name: Tailwind Traders case study
-          items:
-          - name: Assessment and migration planning with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
-          - name: Migration execution with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
-
-
-          - name: Linux and open-source databases
-            items:
-            - name: Rehost a Linux application on Azure VMs
-              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
-            - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
-              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
-
+ 
         - name: Dev/test workloads
           items:
           - name: Migrate dev/test environments to Azure IaaS
@@ -702,42 +685,13 @@ items:
           - name: Refactor TFS to Azure DevOps Services
             href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
 
-
         - name: Specialized workloads
           items:
           - name: Move on-premises VMware infrastructure to AVS
             href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
           - name: VDI
             href: migrate/azure-best-practices/contoso-migration-rds-to-wvd.md
-        
-        - name: Azure Stack
-          items:
-          - name: Overview
-            href: scenarios/azure-stack/index.md
-          - name: Planning
-            href: scenarios/azure-stack/plan.md
-          - name: Azure landing zone review
-            href: scenarios/azure-stack/ready.md
-          - name: Assess
-            href: scenarios/azure-stack/migrate-assess.md
-          - name: Migrate and deploy
-            href: scenarios/azure-stack/migrate-deploy.md
-          - name: Govern
-            href: scenarios/azure-stack/govern.md
-          - name: Manage
-            href: scenarios/azure-stack/manage.md
 
-        - name: Analytics solutions
-          items:
-          - name: Overview
-            href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
-          - name: Teradata
-            href: migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
-          - name: Netezza
-            href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
-          - name: Exadata
-            href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
-    
     - name: Modernize
       items:
       - name: Overview  
