@@ -98,9 +98,9 @@ In the below table, we use this matrix legend:
 | **Organizational Change Manager** | I | I | C | I | I | I | I | I | I | C | I | C | D | C | I |
 | **Licensing Specialist** | I | I | C | C | I | C | C | C | I | I | I | I | I | C | D |
 | **Cloud Operations Manager** | C | C | C | I | I | I | I | C | I | I | I | I | C | A | I |
-| **Landing Zone Architect** | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I | 
+| **Landing Zone Architect** | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Preparing your migration backlog](./preparing-migration-backlog.md)
+> [Skills readiness for migration](./skills-and-support.md)

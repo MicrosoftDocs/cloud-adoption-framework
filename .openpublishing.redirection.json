@@ -1346,7 +1346,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/migrate/azure-best-practices/azure-best-practices/tailwind-migration-assess-servers.md",
+         "source_path": "docs/migrate/azure-best-practices/tailwind-migration-assess-servers.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
