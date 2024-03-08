@@ -866,6 +866,141 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/wvd/enterprise-scale-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-business-continuity-and-disaster-recovery.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-enterprise-enrollment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-enterprise-enrollment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-identity-and-access-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-identity-and-access-management",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-management-and-monitoring.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-management-and-monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-network-topology-and-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-platform-automation-and-devops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-platform-automation-and-devops",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-resource-organization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-resource-organization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/eslz-security-governance-and-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/eslz-security-governance-and-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/govern.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/govern",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/innovate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/innovate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-business-continuity-disaster-recovery.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-business-continuity-disaster-recovery",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-identity-access-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-identity-access-management",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-management-monitoring.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-management-monitoring",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-network-topology-connectivity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-network-topology-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-resource-organization.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-resource-organization",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/landing-zone-citrix/citrix-security-governance-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/manage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/manage",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/migrate-assess.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/migrate-assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/migrate-deploy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/migrate-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/migrate-release.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/migrate-release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/plan.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/proof-of-concept.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/proof-of-concept",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/ready.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/wvd/strategy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/strategy",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/migrate/migration-considerations/prerequisites/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
          "redirect_document_id": false
@@ -1243,6 +1378,11 @@
       {
          "source_path": "docs/migrate/azure-best-practices/analytics/schema-migration-ddl.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-wvd.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop",
          "redirect_document_id": false
       }
    ]
