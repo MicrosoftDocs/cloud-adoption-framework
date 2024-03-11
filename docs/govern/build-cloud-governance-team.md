@@ -1,6 +1,6 @@
 ---
 title: Build a cloud governance team
-description: Learn how to build a cloud governance team
+description: Learn how to build a cloud governance team. Select the right members
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/01/2024

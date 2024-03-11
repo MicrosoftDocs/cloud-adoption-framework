@@ -1,8 +1,8 @@
 ---
 title: Conduct a risk assessment
-description: Learn how to conduct a risk assessment
+description: Learn how to conduct a risk assessment and catalog risks
 author: stephen-sumner
-ms.author: ssumenr
+ms.author: ssumner
 ms.date: 04/01/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
