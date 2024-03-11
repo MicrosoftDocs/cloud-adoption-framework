@@ -1027,7 +1027,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/multiple-regions.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/planning-for-resilience",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/plan-for-resilience",
          "redirect_document_id": false
       },
       {
@@ -1117,7 +1117,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/ready-alz.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/ready-alz",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/ready-azure-landing-zone",
          "redirect_document_id": false
       },
       {
@@ -1192,7 +1192,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/optimize/decommission.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/post-migration-cost-optimization",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/optimize-cost-after-migration",
          "redirect_document_id": false
       },
       {

@@ -610,15 +610,15 @@ items:
           - name: Overview
             href: migrate/prepare/index.md
           - name: Readying your landing zone for migration
-            href: migrate/prepare/ready-alz.md
+            href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
-            href: migrate/prepare/tools-and-backlog.md
+            href: migrate/prepare/tools-backlog.md
           - name: Planning for resilience
-            href: migrate/prepare/planning-for-resilience.md
+            href: migrate/prepare/plan-for-resilience.md
           - name: Align roles and responsibilities
             href: migrate/prepare/roles-and-responsibilities.md
           - name: Skills relevant to migration projects
-            href: migrate/prepare/skills-and-support.md
+            href: migrate/prepare/skills-support.md
       - name: Assess
         items:
         - name: Overview
@@ -654,7 +654,7 @@ items:
           - name: Migration cutover
             href: migrate/release/cutover.md
           - name: Post-migration cost optimization
-            href: migrate/release/post-migration-cost-optimization.md
+            href: migrate/release/optimize-cost-after-migration.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
       - name: Product migration guidance
