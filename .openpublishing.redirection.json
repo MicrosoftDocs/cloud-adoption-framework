@@ -277,7 +277,7 @@
       },
       {
          "source_path": "docs/migrate/expanded-scope/suggested-skills.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": true
       },
       {
@@ -757,7 +757,7 @@
       },
       {
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false   
       },
       {
@@ -817,7 +817,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-infrastructure.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/ready-azure-landing-zone",
          "redirect_document_id": false
       },
       {
@@ -1012,7 +1012,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/migration-tools-decision-guide.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
       },
       {
@@ -1037,7 +1037,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/migration-backlog-review.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
       },
       {
@@ -1052,7 +1052,7 @@
       },
       {
          "source_path": "docs/migrate/suggested-skills.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": false
       },
       {
@@ -1092,7 +1092,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/assess/partnership-options.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": false
       },
       {
@@ -1102,7 +1102,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/assess/release-iteration-backlog.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
       },
       {
@@ -1222,7 +1222,7 @@
       },
       {
          "source_path": "docs/migrate/azure-migration-guide/assistance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": false
       },
       {
@@ -1302,7 +1302,7 @@
       },
       {
          "source_path": "docs/migrate/prerequisites/assistance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-and-support",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": false
       },
       {
@@ -1327,7 +1327,7 @@
       },
       {
          "source_path": "docs/migrate/prepare/readying-migration-tools.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
       },
       {
@@ -1387,7 +1387,7 @@
       },
       {
          "source_path": "docs/migrate/prepare/migrate-from-multiple-datacenters.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
       }
 
