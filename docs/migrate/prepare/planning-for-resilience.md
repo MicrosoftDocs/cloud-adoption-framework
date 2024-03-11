@@ -28,18 +28,18 @@ If you haven't already, you might need to extend your [landing zone regions](/az
 
 ## Document your scenario complexity
 
-Determine whether documentation and process alignment is required. The following approach can help you assess potential challenges and establish a general course of action:
+Determine whether your scenario requires documentation and process alignment. The following approach can help you assess potential challenges and establish a general course of action:
 
 - Consider a more robust readiness and governance implementation.
-- Inventory the affected geographies. Compile a list of the countries/regions that are affected.
-- Document data sovereignty requirements. Do the identified countries/regions have compliance requirements that govern data sovereignty?
-- Document the user base. Will the cloud migration affect employees, partners, or customers in the identified country/region?
-- Document datacenters and assets. Are there assets in the identified country/region that might be included in the migration effort?
-- Document regional SKU availability and failover requirements.
-- Document your resiliency requirements to determine whether availability zones are required. Typically, resiliency requirements are considered for the whole scenario, not for individual regions.
-- Document your sovereignty requirements and data residency requirements. Workloads that have specific sovereignty or data residency requirements might influence your choice of Azure regions.
+- Inventory the affected geographies. Compile a list of the countries or regions that are affected.
+- Document data-sovereignty requirements. Do the identified countries or regions have compliance requirements that govern data sovereignty?
+- Document the user base. Will the cloud migration affect employees, partners, or customers in the identified country or region?
+- Document datacenters and assets. Are there assets in the identified country or region that might be included in the migration effort?
+- Document regional product-version availability and failover requirements.
+- Document your resiliency requirements to determine whether availability zones are required. Typically, you consider resiliency requirements for the whole scenario, not for individual regions.
+- Document your sovereignty requirements and data-residency requirements. Workloads that have specific sovereignty or data residency requirements might influence your choice of Azure regions.
 
-Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings:
+Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings.
 
 | Region        | Country/region | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
 |---------------|----------------|-----------------|------------------------|-----------------------------|-------------------------------|
@@ -50,19 +50,19 @@ Align changes throughout the migration process to address the initial inventory.
 
 ### Why is the location of users relevant?
 
-Organizations that support users in multiple countries/regions have developed technical solutions that address user traffic. In some cases, solutions involve localization of assets. In other scenarios, the organization might choose to implement global wide area network (WAN) solutions to address disparate user bases through network-focused solutions. In either case, the usage profiles of disparate users can affect the migration strategy.
+Organizations that support users in multiple countries or regions develop technical solutions that address user traffic. In some cases, solutions involve localization of assets. In other scenarios, the organization might choose to implement global wide area network (WAN) solutions to address disparate user bases through network-focused solutions. In either case, the usage profiles of disparate users can affect the migration strategy.
 
-If an organization supports employees, partners, and customers in Germany without currently having datacenters in Germany, the organization probably implements a leased-line solution. This type of solution routes traffic to datacenters in other countries/regions. This existing routing presents a significant risk to the perceived performance of migrated applications. Injecting more hops in an established and tuned global WAN can create the perception of underperforming applications after migration. Finding and fixing those issues can add significant delays to a project.
+For example, if an organization supports employees, partners, and customers in Germany but doesn't currently have datacenters in Germany, the organization probably implements a *leased-line* solution. This type of solution routes traffic to datacenters in other countries or regions. This existing routing presents a significant risk to the perceived performance of migrated applications. Injecting more hops in an established and tuned global WAN can create the perception of underperforming applications after migration. Finding and fixing those issues can add significant delays to a project.
 
-In each of the following processes, guidance for addressing this complexity is included across prerequisites and processes of assessing, migrating, and optimizing. Understanding user profiles in each country/region is critical for properly managing this complexity.
+In each of the following processes, guidance for addressing this complexity is included across prerequisites and processes of assessing, migrating, and optimizing. Understanding user profiles in each country or region is critical for properly managing this complexity.
 
 ### Why is the location of datacenters relevant?
 
 The location of existing datacenters can affect a migration strategy. Consider the following factors:
 
-**Architecture decisions**: One of the first steps in migration strategy design is to determine the target region. The location of existing assets often influences this determination. Also, the availability of cloud services and the unit cost of those services can vary between regions. Data residency requirements, including sovereignty requirements, might also influence the architecture decision. Understanding where current and future assets are located affects architecture decisions and can influence budget estimates.
+**Architecture decisions**: One of the first steps in migration-strategy design is to determine the target region. The location of existing assets often influences this determination. Also, the availability of cloud services and the unit cost of those services can vary between regions. Data residency requirements, including sovereignty requirements, might also influence the architecture decision. Understanding where current and future assets are located affects architecture decisions and can influence budget estimates.
 
-**Datacenter dependencies**: The example scenarios in the table in [Document complexity](#document-your-scenario-complexity) show that you likely need to plan for dependencies between various global datacenters. The dependencies might not be documented or understood clearly in many organizations that operate on this scale. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team should also explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
+**Datacenter dependencies**: The example scenarios in the table in [Document complexity](#document-your-scenario-complexity) show that you probably need to plan for dependencies between various global datacenters. The dependencies might not be documented or understood clearly in many organizations that operate on this scale. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team should also explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
 
 ## Implement a general approach
 
