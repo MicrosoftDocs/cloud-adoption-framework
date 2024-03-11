@@ -1384,6 +1384,13 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-wvd.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/migrate-from-multiple-datacenters.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-and-backlog",
+         "redirect_document_id": false
       }
+
+      
    ]
 }

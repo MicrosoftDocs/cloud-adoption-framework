@@ -23,6 +23,8 @@ The following assumptions are typical for any migration effort:
 - **Capture business continuity and disaster recovery (BCDR) requirements**. If you have an agreed-on SLA for the workload that has been negotiated with the business, continue to use it after the migration to Azure. If there isn't one, define it prior to designing the workload in the cloud to make sure you're designing appropriately.
 - **Plan for migration downtime.** Likewise, downtime to promote the workload to production can have an adverse effect on the business. Sometimes, the solutions that must transition with minimum downtime need architecture changes. Assume that a general understanding of downtime requirements has been established before release planning.
 - **Define User and application traffic patterns.** Existing solutions might depend on existing network routing patterns and solutions that exist. Identify the resources that you need to support these.
+- **Plan to avoid network conflicts**: When you're consolidating datacenters into a single cloud provider, you're likely to create network, DNS, or other conflicts. During migration, it's important to design to avoid these conflicts to avoid interruptions to production systems hosted in the cloud.
+- **Plan for routing tables**: Make sure your project have a plan for modifying routing tables when consolidating networks or datacenters. Consider cross-datacenter routing requirements.
 
 ### Architecture design in a landing zone
 

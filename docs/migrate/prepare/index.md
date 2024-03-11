@@ -25,7 +25,6 @@ The table below gives an overview of the activities documented in this phase, al
 |---|---|---|
 |**[Readying your landing zone for migration](./ready-alz.md)**|Contains specific items to confirm that your landing zone supports migration activities.|Landing zone architect.|
 |**[Prepare tools and initial migration backlog](./tools-and-backlog.md)**|Contains guidance on preparing the right tools, and how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
-|**[Migrating from multiple datacenters](./migrate-from-multiple-datacenters.md)**|Contains guidance for preparing for migrations for workloads in multiple datacenters.|Migration architect. Landing zone architect.|
 |**[Planning for resilience](./planning-for-resilience.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
 |**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
 |**[Skills readiness for migration](./skills-and-support.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|

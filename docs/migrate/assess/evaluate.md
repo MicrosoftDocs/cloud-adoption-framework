@@ -50,6 +50,20 @@ You can then use the information provided to estimate the bandwidth consideratio
 >
 > You can also see common questions for migration and modernization tooling for guidance on gauging bandwidth requirements (Common questions about the Migration and modernization tool - Azure Migrate | Microsoft Learn).
 
+## Evaluate cross-datacenter dependencies
+
+If you are migrating workloads from multiple datacenters, you must assess any dependencies between those datacenters.
+
+Here are some considerations for evaluating your cross-datacenter dependencies:
+
+- **Visualize dependencies**: Use the [dependency visualization](/azure/migrate/concepts-dependency-visualization) capability in Azure Migrate to pinpoint dependencies.
+- **Group dependencies**: Use [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies) when you are dealing with global complexity. This capability helps identifying the IP addresses and ports of any assets required to support the workload.
+
+> [!IMPORTANT]
+>
+> - A subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter.
+> - Evaluate both downstream dependencies and clients in the visualization to understand bidirectional dependencies.
+
 ## Example scenario: Common database evaluation activities
 
 As part of your migration of servers, you might also look at migrating SQL servers or other database servers.  

@@ -61,7 +61,19 @@ It's important to associate individual servers with the workload, so that you ca
 
 This backlog is used throughout the migration process, so maintaining it's critical.
 
+## Backlog planning for multiple datacenters
+
+Before starting the migration, you should create epics within the project management tool for each datacenter that's to be migrated.  Each datacenter epic allows you to group the associated work, allowing you to understand the status of each location.
+
+If you are not using epics, these can be top level goals or grouping.  The important thing is that you must be able to filter and organize each datacenter on its own, as well as review status of each location.
+
+It's important to understand the business outcomes and motivations for this migration. Use those motivations to prioritize the list of epics (or datacenters). For instance, if migration is driven by a desire to exit datacenters before leases must be renewed, then each epic would be prioritized based on lease renewal date.
+
+Within each epic, the workloads to be assessed and migrated are managed as features. Each asset within that workload is managed as a user story. The work required to assess, migrate, optimize, promote, secure, and manage each asset is represented as tasks for each asset.
+
+Sprints or iterations then consist of a series of tasks required to migrate the assets and user stories committed to by the cloud adoption team. Releases then consist of one or more workloads or features to be promoted to production.
+
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migrating from multiple datacenters](./migrate-from-multiple-datacenters.md)
+> [Planning for resilience](./planning-for-resilience.md)

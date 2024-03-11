@@ -613,8 +613,6 @@ items:
             href: migrate/prepare/ready-alz.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-and-backlog.md
-          - name: Migrating from multiple datacenters
-            href: migrate/prepare/migrate-from-multiple-datacenters.md      
           - name: Planning for resilience
             href: migrate/prepare/planning-for-resilience.md
           - name: Align roles and responsibilities

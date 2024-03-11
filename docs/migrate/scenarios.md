@@ -141,15 +141,13 @@ See each section below for relevant migration guidance for specific applications
 |---|---|
 | [Overview of Azure Migrate based migration for Azure Stack HCI](/azure-stack/hci/migrate/migration-azure-migrate-hci-overview) | Provides an overview of how to migrate Hyper-V virtual machines (VMs) to your Azure Stack HCI cluster using Azure Migrate. |
 
-## Analytics solutions
-
 ### Azure Synapse Analytics
 
 | Link | Description |
 |---|---|
-|Azure Synapse Analytics - [Design and performance for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration)|Guidance on how to migrate from Teradata to Azure Synapse Analytics.|
-|Azure Synapse Analytics - [Design and performance for Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration)| Guidance on how to migrate from Netezza to Azure Synapse Analytics.|
-|Azure Synapse Analytics - [Design and performance for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration)|Guidance on how to migrate from Oracle to Azure Synapse Analytics.|
+|[Design and performance for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration)|Guidance on how to migrate from Teradata to Azure Synapse Analytics.|
+|[Design and performance for Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration)| Guidance on how to migrate from Netezza to Azure Synapse Analytics.|
+|[Design and performance for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration)|Guidance on how to migrate from Oracle to Azure Synapse Analytics.|
 
 ## Multitenant migration
 
