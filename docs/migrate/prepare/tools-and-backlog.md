@@ -61,7 +61,7 @@ It's important to associate individual servers with the workload, so that you ca
 
 This backlog is used throughout the migration process, so maintaining it's critical.
 
-## Backlog planning for multiple datacenters
+### Backlog planning for multiple datacenters
 
 Before starting the migration, you should create epics within the project management tool for each datacenter that's to be migrated.  Each datacenter epic allows you to group the associated work, allowing you to understand the status of each location.
 

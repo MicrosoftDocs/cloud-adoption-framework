@@ -44,10 +44,10 @@ During the migration, most of your technical execution comes from the [Cloud Ado
 
 |Role|Responsibilities|
 |---|---|
-|[Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform).<br><li>Example: Landing zone architect|Prove support for migrating workloads into a Landing zone. Helps with the remediation of any issues with the platform services in the landing zone.|
-|[Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations).<br><li>Example: Cloud Operations Manager|Provide support for onboarding migrating workloads into the management platform, to ensure proper management is in place day 1 for the workloads.|
-|[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: Workload Architects|Provide architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill these roles.|
-|[Central IT functions](/azure/cloud-adoption-framework/organize/central-it).<br><li>Example: User Acceptance Tester|Responsible for testing individual workloads. You might have multiple of these for each workload, to provide feedback.|
+|Landing zone architect|Prove support for migrating workloads into a Landing zone. Helps with the remediation of any issues with the platform services in the landing zone. See more about [Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform).|
+|Cloud Operations Manager|Provide support for onboarding migrating workloads into the management platform, to ensure proper management is in place day 1 for the workloads. See more about [Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations).|
+|Workload Architects|Provide architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill these roles. See more about [Central IT functions](/azure/cloud-adoption-framework/organize/central-it).|
+|User Acceptance Tester|Responsible for testing individual workloads. You might have multiple of these for each workload, to provide feedback. See more about [Central IT functions](/azure/cloud-adoption-framework/organize/central-it)/|
 
 ## Identify unclear role owners
 
