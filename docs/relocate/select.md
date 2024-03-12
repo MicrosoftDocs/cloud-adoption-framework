@@ -6,7 +6,7 @@ ms.author: ssumner
 ms.date: 12/18/2023
 ms.reviewer: ssumner
 ms.topic: conceptual
-ms.custom: internal, seo-caf-relocate
+ms.custom: internal
 keywords: cloud adoption, cloud framework, cloud adoption framework
 ---
 # Select a relocation strategy for cloud workloads

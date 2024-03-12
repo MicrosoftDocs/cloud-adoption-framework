@@ -93,9 +93,9 @@ Subscriptions provide a management boundary for governance and isolation, which 
 
 Below is an example from the recommended structure above for the Azure Virtual Desktop resources already deployed.
 
-:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/wvd/media/avd-resource-management-1.png":::
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png" alt-text="Screenshot that shows the AVD Shared Resources subscription." lightbox="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-1.png":::
 
-:::image type="content" source="../../../docs/scenarios/wvd/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD Service Objects and compute subscription.":::
+:::image type="content" source="../../../docs/scenarios/azure-virtual-desktop/media/avd-resource-management-2.png" alt-text="Screenshot that shows the AVD Service Objects and compute subscription.":::
 
 ## Additional guidance and examples 
 

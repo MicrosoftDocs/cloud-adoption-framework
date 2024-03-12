@@ -123,7 +123,7 @@ This series focuses on each migration scenario, which is driven by slightly diff
 
 | Article | Details |
 | --- | --- |
-| [Move on-premises Remote Desktop Services to Azure Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article shows how to migrate on-premises Remote Desktop Services to Azure Virtual Desktop. |
+| [Move on-premises Remote Desktop Services to Azure Virtual Desktop](./contoso-migration-rds-to-azure-virtual-desktop.md) | This article shows how to migrate on-premises Remote Desktop Services to Azure Virtual Desktop. |
 
 ### Migration scaling
 

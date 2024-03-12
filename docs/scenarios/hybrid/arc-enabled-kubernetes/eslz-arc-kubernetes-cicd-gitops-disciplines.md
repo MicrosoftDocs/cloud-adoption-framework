@@ -1,11 +1,11 @@
 ---
 title: CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
 description: Learn design considerations and recommendations for CI/CD workflows using GitOps for Azure Arc-enabled Kubernetes.
-author: jpocloud
-ms.author: johnpoole
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/20/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
@@ -21,7 +21,7 @@ Implementing GitOps lets you:
 - Improve security by reducing the number of service accounts that are required to have deployment permissions to your cluster.
 - Implement a CI/CD pipeline for deploying applications to your cluster.
 
-GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://www.weave.works/oss/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
+GitOps on Azure Arc-enabled Kubernetes uses an extension that implements [Flux](https://fluxcd.io/flux/), a popular open-source tool set. Flux is an operator that automates GitOps configuration deployments in your cluster. Flux provides support for common file sources (Git repositories, Helm repositories, Buckets) and template types (YAML, Helm, and Kustomize). Flux also supports multi-tenancy and deployment dependency management among other features.
 
 ## Architecture
 
