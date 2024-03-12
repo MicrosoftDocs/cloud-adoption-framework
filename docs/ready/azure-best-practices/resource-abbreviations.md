@@ -280,6 +280,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
+| Azure Lab Services lab plan | `Microsoft.LabServices/labPlans` | `lp` |
 | Virtual desktop host pool | `Microsoft.DesktopVirtualization/hostPools` | `vdpool` |
 | Virtual desktop application group | `Microsoft.DesktopVirtualization/applicationGroups` | `vdag` |
 | Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |

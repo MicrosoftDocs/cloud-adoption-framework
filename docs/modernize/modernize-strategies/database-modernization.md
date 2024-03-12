@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/02/2022
 ms.topic: conceptual
-ms.custom: seo-caf-modernize
 keywords: collect data, migrate data, data migration, data modernization
 ---
 # Modernize any database in the cloud

@@ -5,7 +5,7 @@ author: lanicolas
 ms.author: lanicola
 ms.date: 04/28/2022
 ms.topic: conceptual
-ms.custom: e2e-hybrid, event-tier1-build-2022
+ms.custom: e2e-hybrid
 ---
 
 # Resource organization for Azure Arc-enabled Kubernetes
