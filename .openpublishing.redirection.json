@@ -1004,6 +1004,127 @@
          "source_path": "docs/scenarios/wvd/strategy.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/strategy",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/govern/benchmark.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cloud-service-controls.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/corporate-policy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/best-practices.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/business-risks.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/compliance-processes.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/discipline-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/metrics-tolerance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/policy-statements.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/cost-management/toolchain.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/govern/deployment-acceleration/deployment-consistency-repeatability.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+         "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/deployment-acceleration/policy-visibility-in-deployment.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/foundation-improvements.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/governance-disciplines.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/cost-management-improvement.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/identity-baseline-improvement.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/multicloud-improvement.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/multiple-layers-of-governance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/narrative.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/govern/guides/complex/prescriptive-guidance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/govern/index.md",
+      "redirect_document_id": false
+      },
+   {
    ]
 }
