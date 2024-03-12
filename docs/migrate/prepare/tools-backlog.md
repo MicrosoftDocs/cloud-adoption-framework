@@ -76,4 +76,4 @@ Sprints or iterations then consist of a series of tasks required to migrate the 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Planning for resilience](./planning-for-resilience.md)
+> [Planning for resilience](./plan-for-resilience.md)
