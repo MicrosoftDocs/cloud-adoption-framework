@@ -46,26 +46,6 @@
          "redirect_document_id": true
       },
       {
-         "source_path": "docs/governance/benchmark.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/benchmark",
-         "redirect_document_id": true
-      },
-      {
-         "source_path": "docs/governance/best-practices.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/guides/index",
-         "redirect_document_id": true
-      },
-      {
-         "source_path": "docs/governance/corporate-policy.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/corporate-policy",
-         "redirect_document_id": true
-      },
-      {
-         "source_path": "docs/governance/deployment-acceleration/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/deployment-acceleration/index",
-         "redirect_document_id": true
-      },
-      {
          "source_path": "docs/governance/getting-started.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false
@@ -79,11 +59,6 @@
          "source_path": "docs/governance/journeys/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/governance/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/index",
-         "redirect_document_id": true
       },
       {
          "source_path": "docs/governance/security-baseline/index.md",
@@ -244,11 +219,6 @@
          "source_path": "docs/migrate/azure-migration-guide/prerequisites.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/index",
          "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/govern/security-baseline/cloud-security-baseline.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/security-baseline/index",
-         "redirect_document_id": true
       },
       {
          "source_path": "docs/migrate/migration-considerations/secure-and-manage/index.md",
