@@ -5,7 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
-ms.custom: think-tank, seo-caf-innovate
+ms.custom: think-tank
 keywords: ai agent, ai agents, bot framework, conversational interface, build a bot, azure bot service
 ---
 

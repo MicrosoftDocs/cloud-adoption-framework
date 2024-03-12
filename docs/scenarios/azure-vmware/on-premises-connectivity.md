@@ -38,6 +38,9 @@ The following diagram shows a network topology that uses Global Reach for connec
  
  :::image type="content" source="media/network-design-guide-figure-7.png" alt-text="Diagram that shows how ExpressRoute Global Reach enables connectivity to on-premises sites." lightbox="media/network-design-guide-figure-7.png" border="false":::
 
+> [!NOTE]
+> For maximum resiliency, two customer-managed ExpressRoute circuits in different peering locations should be used to connect on-premises datacenters to the Microsoft backbone. In this case, each customer-managed ExpressRoute circuit should have a Global Reach connection to the Azure VMware Solution private cloud (and to Azure Virtual Networks). Review [this article](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering) for guidance on resilient ExpressRoute implementations.
+
 For instructions on how to connect an Azure VMware Solution private cloud to a customer-managed ExpressRoute circuit by using Global Reach, see [Peer on-premises environments to Azure VMware Solution](/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud).
 
 Global Reach connectivity fully addresses the three key requirements:

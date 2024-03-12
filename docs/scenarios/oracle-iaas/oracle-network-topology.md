@@ -24,7 +24,7 @@ As with most production databases, securing an Oracle workload is essential.  Th
 
 The following architecture diagram shows networking considerations for Oracle instances within an Azure landing zone.
 
-:::image type="content" source="media/network-considerations-oracle-landing-zone.png" alt-text="Diagram showing the conceptual architecture of Oracle on Azure landing zone accelerator.":::
+:::image type="content" source="media/network-considerations-oracle-landing-zone.png" alt-text="Diagram showing the conceptual architecture of Oracle on Azure landing zone accelerator." lightbox="media/network-considerations-oracle-landing-zone.png":::
 
 - All solution services should reside within a single virtual network.
 - Use Azure Firewall, Azure Application Gateway or other security mechanisms to ensure that only essential traffic is allowed to the solution.

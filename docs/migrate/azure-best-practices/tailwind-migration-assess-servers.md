@@ -2,7 +2,7 @@
 title: Assessment and migration planning with Azure Migrate for servers
 description: Learn how Tailwind Traders sets up an Azure Migrate for discovery and assessment of existing estate.
 author: akasnik
-ms.author: akasnik
+ms.author: akasnikfta
 ms.date: 10/12/2022
 ms.topic: conceptual
 ms.custom: azure-fast-track
