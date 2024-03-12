@@ -12,3 +12,5 @@ ms.custom: internal, UpdateFrequency2
 
 ## Next step
 
+> [!div class="nextstepaction"]
+> [Enforce cloud governance policies](enforce-cloud-governance-policies.md)
