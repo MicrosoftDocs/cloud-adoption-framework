@@ -1155,8 +1155,8 @@ items:
     items:
     - name: Overview
       href: govern/index.md
-    - name: Checklist
-      href: govern/checklist.md
+    - name: Govern checklist
+      href: govern/cloud-governance-checklist.md
     - name: Guidance
       items:
       - name: Build a cloud governance team
@@ -1170,7 +1170,7 @@ items:
       - name: Monitor cloud governance
         href: govern/monitor-cloud-governance.md
 
-        
+
   - name: Manage
     items:
     - name: Overview
