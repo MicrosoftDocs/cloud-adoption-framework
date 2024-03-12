@@ -1159,16 +1159,16 @@ items:
       href: govern/checklist.md
     - name: Guidance
       items:
-      - name: Build governance team
-        href: govern/build-governance-team.md
-      - name: Quantify governance risk
-        href: govern/quantify-risk.md
-      - name: Document governance policies
-        href: govern/document-governance-policies
-      - name: Implement governance
-        href: govern/implement-governance.md
-      - name: Measure governance
-        href: govern/measure-governance.md
+      - name: Build a cloud governance team
+        href: govern/build-cloud-governance-team.md
+      - name: Assess cloud risks
+        href: govern/assess-cloud-risk.md
+      - name: Document cloud governance policies
+        href: govern/document-cloud-governance-policies
+      - name: Enforce cloud governance policies
+        href: govern/enforce-cloud-governance-policies.md
+      - name: Monitor cloud governance
+        href: govern/monitor-cloud-governance.md
 
     - name: Old TOC
       items: 
