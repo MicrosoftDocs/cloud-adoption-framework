@@ -41,7 +41,7 @@ To decide which storage solution to use, you need to take into account the follo
    - Deploys in minutes and offers a wide range of tiers and flexibility.
    - Flexible capacity pool types and performance, where the QoS per volume is automatically assigned based on the tier of the pool and the volume quota.
 
-The following table provides a comparison of Blob Storage, Azure NetApp Files, and Azure Files.
+The following table provides a comparison of Blob Storage, Azure Files, Azure Managed Lustre, and Azure NetApp Files.
 
 |  | Blob Storage | Azure Files | Azure Managed Lustre | Azure NetApp Files |
 | -- | -- | -- | -- | -- |
