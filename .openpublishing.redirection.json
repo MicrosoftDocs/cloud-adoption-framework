@@ -62,7 +62,7 @@
       },
       {
          "source_path": "docs/governance/deployment-acceleration/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/deployment-acceleration/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": true
       },
       {
