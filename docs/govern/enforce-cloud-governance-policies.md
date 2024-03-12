@@ -12,4 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 
 
-## Next steps
+## Next step
+
+> [!div class="nextstepaction"]
+> [Monitor cloud governance](monitor-cloud-governance.md)

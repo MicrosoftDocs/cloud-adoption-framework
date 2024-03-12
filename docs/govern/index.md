@@ -27,4 +27,5 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 
 ## Next step
 
-
+> [!div class="nextstepaction"]
+> [Cloud governance checklist](cloud-governance-checklist.md)

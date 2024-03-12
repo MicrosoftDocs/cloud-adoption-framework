@@ -27,4 +27,7 @@ ms.custom: UpdateFrequency2
 | &#9744; | link to guidance in article | ADD IMPERATIVE : ADD REQUIREMENTS |
 | &#9744; | link to guidance in article | ADD IMPERATIVE : ADD REQUIREMENTS |
 
-## Next steps
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build a cloud governance team](build-cloud-governance-team.md)

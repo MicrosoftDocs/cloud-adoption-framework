@@ -42,7 +42,7 @@ The cloud governance team's first deliverable is establishing a quantified under
 
 - *Communicate with stakeholders.* The governance team is responsible for communicating the findings to key stakeholders, including senior management and affected business units. This ensures a shared understanding of risks across the organization and fosters a collaborative approach to managing cloud governance.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Quantify organizational risk](quantify-organizational-risk.md)
+> [Document cloud governance policies](document-cloud-governance-policies.md)

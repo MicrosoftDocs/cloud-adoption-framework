@@ -54,7 +54,7 @@ The cloud governance team has a specific charter to create policies that mitigat
 
 - *Use a RACI matrix.* Develop a Responsibility Assignment Matrix (RACI Matrix) to clarify roles and responsibilities within the cloud governance team. This matrix should detail who is Responsible, Accountable, Consulted, and Informed for each governance task. For example, RACI chart should include tasks such as defining cloud usage policies, where "Responsible" might be the cloud governance team for drafting the policies, "Accountable" could be the Chief Information Officer (CIO) for final approval, "Consulted" could include the legal and compliance departments for input, and "Informed" would be all cloud service users within the organization.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Quantify organizational risk](quantify-organizational-risk.md)
+> [Assess cloud risks](assess-cloud-risks.md)
