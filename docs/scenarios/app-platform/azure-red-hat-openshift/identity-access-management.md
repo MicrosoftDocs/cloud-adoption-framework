@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 08/18/2022
 ms.topic: conceptual
-ms.custom: think-tank, e2e-aro
+ms.custom: think-tank, e2e-aro, linux-related-content
 ---
 
 # Identity and access management considerations for Azure Red Hat OpenShift
