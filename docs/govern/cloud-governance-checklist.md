@@ -1,5 +1,5 @@
 ---
-title: Cloud adoption: Govern checklist
+title: Govern checklist
 description: Get an overview of the Govern methodology and the decisions that you need to make to establish cloud governance.
 author: stephen-sumner
 ms.author: ssumner
