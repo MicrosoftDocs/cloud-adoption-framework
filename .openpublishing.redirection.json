@@ -43,7 +43,7 @@
       {
          "source_path": "docs/governance/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-         "redirect_document_id": true
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/governance/benchmark.md",
