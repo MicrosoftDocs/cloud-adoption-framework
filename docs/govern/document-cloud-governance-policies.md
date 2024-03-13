@@ -9,6 +9,7 @@ ms.custom: internal, UpdateFrequency2
 ---
 
 # Document cloud governance policies
+![Cloud governance process](./_images/document.svg)
 
 ## Next step
 

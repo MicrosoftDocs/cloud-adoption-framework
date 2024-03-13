@@ -9,7 +9,7 @@ ms.custom: internal, UpdateFrequency2
 ---
 
 # Enforce cloud governance policies
-
+![Cloud governance process](./_images/enforce.svg)
 
 
 ## Next step

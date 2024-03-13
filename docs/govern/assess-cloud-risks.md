@@ -9,7 +9,7 @@ ms.custom: internal, UpdateFrequency2
 ---
 
 # Conduct a risk assessment
-
+![Cloud governance process](./_images/assess.svg)
 A risk assessment is foundational to effective cloud governance. By systematically identifying, analyzing, and prioritizing risks, organizations can ensure that their governance framework addresses the most critical threats to their cloud environments. This process involves identifying potential threats to your organization's information and systems in the cloud and evaluating the likelihood and impact of these threats to prioritize mitigation efforts. 
 
 The cloud governance team's first deliverable is establishing a quantified understanding of business risks. They must document the cost of risks and the value of mitigation strategies. THey must oversee risk assessment tasks across the organization. The goal is to ensure a comprehensive evaluation of threats while using specialized knowledge and insights from various departments. This collaborative approach enables the organization to craft a governance vision that reflects its specific risks and risk tolerance. Here's  guidance on how to conduct a risk assessment for cloud governance:

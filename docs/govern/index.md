@@ -23,7 +23,7 @@ Governance acts as a system of protective barriers, ensuring risk management acr
 
 ## How to govern
 
-![Cloud governance process](./_images/govern-process.svg)
+![Cloud governance process](./_images/govern.svg)
 
 ## Next step
 
