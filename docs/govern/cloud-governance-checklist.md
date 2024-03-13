@@ -123,17 +123,17 @@ Identify the risks the cloud poses to your organization so the cloud governance 
 
 |&nbsp; | Checklist item |
 |---|---|
-|&#9744; | **Build a cloud governance team.** |
+|&#9744; | [**Build a cloud governance team.**](./build-cloud-governance-team.md) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
-|&#9744; | **Assess cloud risks.** |
+|&#9744; | [**Assess cloud risks.**](./assess-cloud-risks.md) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
-|&#9744; | **Document cloud governance policies.**|
+|&#9744; | [**Document cloud governance policies.**](./document-cloud-governance-policies.md)|
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
