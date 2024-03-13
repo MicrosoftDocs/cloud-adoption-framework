@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Understanding the culture that's required to operate existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially in organizations that are bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome.
 
-The Azure Cloud Adoption Framework details many functions that are part of [managing organizational alignment](/azure/cloud-adoption-framework/organize/). The functions aren't isolated by department or team. Team members in different parts of the organization can work together to complete the function.
+The Microsoft Cloud Adoption Framework for Azure details many functions that are part of [managing organizational alignment](/azure/cloud-adoption-framework/organize/). The functions aren't represented by a department or team. Team members in different parts of the organization can work together to complete the function.
 
 To have the most successful migration, you need to identify several roles from these functions. This article describes the roles that are associated with specific functions and the role responsibilities.
 
