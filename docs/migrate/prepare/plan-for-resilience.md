@@ -19,25 +19,23 @@ When you migrate an existing environment to Azure, you need to select an Azure r
 - **Plan a migration process**.
 - **Optimize and promote process changes**.
 
-This article provides guidance on how to choose Azure regions that meet your migration needs.
+This article provides guidance on how to choose Azure regions that meet your migration needs. If you haven't already, you might need to extend your [landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions) to support multi-region approaches.
 
 > [!NOTE]
 > This article covers considerations that are specific to workload migrations. You should also understand general principles for selecting Azure regions for any organization or workload. For more information, see [Select Azure regions](../../ready/azure-setup-guide/regions.md).
-
-If you haven't already, you might need to extend your [landing zone regions](/azure/cloud-adoption-framework/ready/considerations/regions) to support multi-region approaches.
 
 ## Document your scenario complexity
 
 Determine whether your scenario requires documentation and process alignment. The following approach can help you assess potential challenges and establish a general course of action:
 
-- Consider a more robust readiness and governance implementation.
-- Inventory the affected geographies. Compile a list of the affected countries or regions.
-- Document data sovereignty requirements. Do the identified countries or regions have compliance requirements that govern data sovereignty?
-- Document the user base. Will the cloud migration affect employees, partners, or customers in the identified country or region?
-- Document datacenters and assets. Does the migration effort include any assets in the identified country or region?
-- Document regional product version availability and failover requirements.
-- Document your resiliency requirements to determine whether availability zones are required. Typically, you consider resiliency requirements for the whole scenario, not for individual regions.
-- Document your sovereignty requirements and data residency requirements. Workloads that have specific sovereignty or data residency requirements might influence your choice of Azure regions.
+- **Consider a more robust readiness and governance implementation**.
+- **Inventory the affected geographies**. Compile a list of the affected countries or regions.
+- **Document data sovereignty requirements**. Do the identified countries or regions have compliance requirements that govern data sovereignty?
+- **Document the user base**. Will the cloud migration affect employees, partners, or customers in the identified country or region?
+- **Document datacenters and assets**. Does the migration effort include any assets in the identified country or region?
+- **Document regional product version availability and failover requirements**.
+- **Document your resiliency requirements** to determine whether availability zones are required. Typically, you consider resiliency requirements for the whole scenario, not for individual regions.
+- **Document your sovereignty requirements and data residency requirements**. Workloads that have specific sovereignty or data residency requirements might influence your choice of Azure regions.
 
 Throughout the migration process, consider how to align changes across your various scenarios and inventories. The following table shows an example of how to document various scenarios.
 
@@ -69,7 +67,9 @@ The location of existing datacenters can affect a migration strategy. Consider t
 The following approach uses a data-driven model to address global migration complexities. If the migration scope includes multiple regions, the cloud adoption team should evaluate the following readiness considerations:
 
 - **Determine whether you can meet your business requirements**: Use multiple availability zones to determine requirements for high availability, resiliency, performance, and cost. If these requirements aren't met, consider whether you need a multi-region approach.
+
 - **Evaluate data sovereignty**: Data sovereignty can require localization of some assets, but many assets aren't governed by those compliance constraints. Services like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions or regions. Evaluate data sovereignty by using a shared service model for those services. For an outline of this approach, see the [reference architecture for a hub-spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+
 - **Ensure that your environment scales**: If you deploy multiple instances of similar environments, you can use an environment factory to help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 ### Data-driven prerequisites
@@ -77,10 +77,15 @@ The following approach uses a data-driven model to address global migration comp
 When your team is comfortable with the baseline approach and readiness is aligned, consider these data-driven prerequisites:
 
 - **Complete general discovery**: Complete the table in [Document complexity](#document-your-scenario-complexity) to evaluate the complexity of your cloud adoption strategy.
+
 - **Analyze user profiles for each affected country or region**: It's important to understand general user routing early in the migration process. Changing global lease lines and adding connections like Azure ExpressRoute to a cloud datacenter can result in months of networking delays. Address user routing as early in the process as possible.
+
 - **Complete an initial digital estate rationalization**: If you introduce complexity into a migration strategy, complete an initial digital estate rationalization. For more information, see [What is a digital estate?](../../digital-estate/index.md).
+
 - **Use tagging for digital estate requirements**: Establish tagging policies to identify any workload that's affected by data sovereignty requirements. Ensure that required tags begin in digital estate rationalization and carry through to migrated assets.
+
 - **Evaluate a hub-spoke model**: Distributed systems often share common dependencies. You can often address shared dependencies by implementing a hub-spoke model. Although implementing a hub-spoke model is out of scope for the migration process, flag the model for consideration during future iterations of the [ready processes](../../ready/index.md).
+
 - **Prioritize the migration backlog**: If you require network changes to support production deployment of a workload that supports multiple regions, the cloud strategy team should track and manage escalations that result from the network changes. This higher level of executive support helps accelerate the change by freeing the strategy team to reprioritize the backlog and ensure that network changes don't block global workloads. Prioritize global workloads only when network changes are finished.
 
 These prerequisites help establish processes that can address complexity during execution of the migration strategy.
