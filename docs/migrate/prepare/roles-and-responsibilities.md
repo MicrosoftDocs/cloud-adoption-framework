@@ -105,4 +105,4 @@ The following table uses this legend:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Skills readiness for migration](./skills-and-support.md)
+> [Skills readiness for migration](./skills-support.md)
