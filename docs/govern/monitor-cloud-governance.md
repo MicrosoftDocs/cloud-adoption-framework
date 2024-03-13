@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 # Monitor cloud governance
+![Cloud governance process](./_images/monitor.svg)
 
 ## Next step
 
