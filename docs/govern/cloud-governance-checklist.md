@@ -31,7 +31,7 @@ Identify the risks the cloud poses to your organization so the cloud governance 
 
 ## Version 2
 
-|&nbsp; | Checklist item | Requirement |
+|&nbsp; | Checklist item |
 |---|---|
 |&#9744; | **Build a cloud governance team**|
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
