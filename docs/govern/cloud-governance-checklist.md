@@ -31,7 +31,7 @@ Identify the risks the cloud poses to your organization so the cloud governance 
 
 
 |&nbsp; | Checklist item | Requirement |
-|---|---|
+|---|---| --- |
 |&#9744; | **Build a cloud governance team**| Build a cloud governance team that assesses risks, documents cloud governance policies, and reports on the progress of cloud governance.|
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
