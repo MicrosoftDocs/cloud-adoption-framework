@@ -15,7 +15,7 @@ ms.custom: UpdateFrequency2
 Build a cloud governance team that assesses risks, documents cloud governance policies, and reports on the progress of cloud governance. The team must understand the organization's interests and ensure cloud governance policies minimize risks.
 
 |&nbsp; | Recommendation |
-|---|---|---|
+|---|---|
 | &#9744; | [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &#9744; | [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
 
