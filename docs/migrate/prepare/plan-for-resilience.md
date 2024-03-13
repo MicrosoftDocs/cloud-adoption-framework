@@ -39,7 +39,7 @@ Determine whether your scenario requires documentation and process alignment. Th
 - Document your resiliency requirements to determine whether availability zones are required. Typically, you consider resiliency requirements for the whole scenario, not for individual regions.
 - Document your sovereignty requirements and data residency requirements. Workloads that have specific sovereignty or data residency requirements might influence your choice of Azure regions.
 
-Align changes throughout the migration process to address the initial inventory. The following table shows example scenarios that can help you document your findings.
+Throughout the migration process, consider how to align changes across your various scenarios and inventories. The following table shows an example of how to document various scenarios.
 
 | Region        | Country/region | Local employees | Local external users   | Local datacenters or assets | Data sovereignty requirements |
 |---------------|----------------|-----------------|------------------------|-----------------------------|-------------------------------|
@@ -62,7 +62,7 @@ The location of existing datacenters can affect a migration strategy. Consider t
 
 **Architecture decisions**: One of the first steps in migration strategy design is to determine the target region. The location of existing assets often influences this determination. Also, the availability of cloud services and the unit cost of those services can vary between regions. Data residency requirements, including sovereignty requirements, might also influence the architecture decision. Understanding where current and future assets are located affects architecture decisions and can influence budget estimates.
 
-**Datacenter dependencies**: The example scenarios in the table in [Document complexity](#document-your-scenario-complexity) show that you probably need to plan for dependencies between various global datacenters. Organizations that operate on this scale might not document or clearly understand these dependencies. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team should also explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
+**Datacenter dependencies**: In the table in the [Document your scenario complexity](#document-your-scenario-complexity) section, the example scenarios show that you probably need to plan for dependencies between various global datacenters. Organizations that operate on this scale might not document or clearly understand these dependencies. Your organization's approach to evaluating user profiles helps you identify some of these dependencies in your organization. Your team should also explore more assessment steps that can help mitigate the risks and complexities that arise from dependencies.
 
 ## Implement a general approach
 
@@ -91,11 +91,11 @@ If your migration scenario involves global asset and user-base complexities, add
 
 ### Suggested actions during the assess process
 
-**Evaluate cross-datacenter dependencies**: The [dependency visualization tools in Azure Migrate and Modernize](/azure/migrate/concepts-dependency-visualization) can help you pinpoint dependencies. It's best to use these tools before you begin migration. If your scenario involves global complexity, evaluating dependencies is a necessary step in the assess process. You can use [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies) to visualize dependencies and identify the IP addresses and ports of any assets that are required to support the workload.
+**Evaluate cross-datacenter dependencies**: The [dependency analysis tools in Azure Migrate](/azure/migrate/concepts-dependency-visualization) can help you pinpoint dependencies. Use these tools before you begin migration. If your scenario involves global complexity, evaluating dependencies is a necessary step in the assess process. You can use [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies) to visualize dependencies and identify the IP addresses and ports of any assets that are required to support the workload.
 
 > [!IMPORTANT]
 >
-> - You need a subject matter expert (SME) who has an understanding of asset placement and IP address schemas to identify assets that are located in a secondary datacenter.
+> - You need a subject matter expert (SME) who understands asset placement and IP address schemas to identify assets that are located in a secondary datacenter.
 > - Evaluate downstream dependencies and clients in the visualization to understand bidirectional dependencies.
 
 **Identify global user impact**: The output from the prerequisite user-profile analysis should identify any workload that's affected by global user profiles. If a migration candidate is in the list of affected workloads, the migration architect should consult networking and operations SMEs. These experts help validate network routing and performance expectations. At a minimum, the architecture should include an ExpressRoute connection between the closest network operations center and Azure. The [reference architecture for ExpressRoute connections](/azure/architecture/reference-architectures/hybrid-networking/expressroute) can help you configure the necessary network connections.
