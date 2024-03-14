@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Understanding the culture that's required to operate existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially in organizations that are bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome.
 
-The Microsoft Cloud Adoption Framework for Azure details many functions that are part of [managing organizational alignment](/azure/cloud-adoption-framework/organize/). The functions aren't represented by a department or team. Team members in different parts of the organization can work together to complete the function.
+Microsoft Cloud Adoption Framework for Azure details many functions that are part of [managing organizational alignment](/azure/cloud-adoption-framework/organize/). The functions aren't represented by a department or team. Team members in different parts of the organization can work together to complete the function.
 
 To have the most successful migration, you need to identify several roles from these functions. This article describes the roles that are associated with specific functions and the role responsibilities.
 
@@ -83,24 +83,24 @@ You can use the following responsibility matrix as a basis for your migration pr
 
 The following table uses this legend:
 
-- **Driver**: One user who is the single driver of the objective.
-- **Approver**: One or more users who make most decisions, and who are responsible if the objective isn't met.
-- **Contributor**: Users who are responsible for carrying out tasks that support the objective.
-- **Informed**: Users who are affected by the project, and who are informed of decisions and given status updates about the project.
+- **D** = **Driver**: One user who is the single driver of the objective.
+- **A** = **Approver**: One or more users who make most decisions, and who are responsible if the objective isn't met.
+- **C** = **Contributor**: Users who are responsible for carrying out tasks that support the objective.
+- **I** = **Informed**: Users who are affected by the project, and who are informed of decisions and given status updates about the project.
 
 | Role | Digital estate discovery | Migration scope | Project plan | Migration tooling | Workload discovery | Workload assessment | Workload architecture | Wave planning | Workload test migration | Workload migration UAT | Workload migration | Workload release UAT | Organizational change management | Transition to operations | Workload licensing |
 | ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
-| **Migration Architect** | Driver | Driver | Approver | Driver | Approver | Approver | Driver | Approver | Approver | Approver | Approver | Approver | Informed | Driver | Informed |
-| **Migration Engineer** | Contributor | Informed | Contributor | Contributor | Driver | Driver | Contributor | Driver | Driver | Contributor | Driver | Contributor | Informed | Contributor | Contributor |
-| **Project Manager** | Informed | Informed | Driver | Informed | Informed | Informed | Informed | Informed | Informed | Driver | Informed | Driver | Informed | Contributor | Informed |
-| **Project Sponsor** | Approver | Approver | Approver | Approver | Informed | Informed | Approver | Informed | Informed | Informed | Approver | Informed | Approver | Approver | Approver |
-| **User Acceptance Tester** | Informed | Informed | Informed | Informed | Informed | Informed | Informed | Informed | Informed | Contributor | Informed | Contributor | Informed | Contributor | Informed |
-| **Workload Architect** | Informed | Informed | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Contributor | Informed |
-| **Workload Business Owner** | Informed | Informed | Contributor | Informed | Approver | Approver | Approver | Approver | Approver | Approver | Approver | Approver | Contributor | Contributor | Approver |
-| **Organizational Change Manager** | Informed | Informed | Contributor | Informed | Informed | Informed | Informed | Informed | Informed | Contributor | Informed | Contributor | Driver | Contributor | Informed |
-| **Licensing Specialist** | Informed | Informed | Contributor | Contributor | Informed | Contributor | Contributor | Contributor | Informed | Informed | Informed | Informed | Informed | Contributor | Driver |
-| **Cloud Operations Manager** | Contributor | Contributor | Contributor | Informed | Informed | Informed | Informed | Contributor | Informed | Informed | Informed | Informed | Contributor | Approver | Informed |
-| **Landing Zone Architect** | Informed | Informed | Contributor | Contributor | Informed | Informed | Contributor | Contributor | Informed | Informed | Informed | Informed | Informed | Informed | Informed |
+| **Migration Architect** | D | D | A | D | A | A | D | A | A | A | A | A | I | D | I |
+| **Migration Engineer** | C | I | C | C | D | D | C | D | D | C | D | C | I | C | C |
+| **Project Manager** | I | I | D | I | I | I | I | I | I | D | I | D | I | C | I |
+| **Project Sponsor** | A | A | A | A | I | I | A | I | I | I | A | I | A | A | A |
+| **User Acceptance Tester** | I | I | I | I | I | I | I | I | I | C | I | C | I | C | I |
+| **Workload Architect** | I | I | C | C | C | C | C | C | C | C | C | C | C | C | I |
+| **Workload Business Owner** | I | I | C | I | A | A | A | A | A | A | A | A | C | C | A |
+| **Organizational Change Manager** | I | I | C | I | I | I | I | I | I | C | I | C | D | C | I |
+| **Licensing Specialist** | I | I | C | C | I | C | C | C | I | I | I | I | I | C | D |
+| **Cloud Operations Manager** | C | C | C | I | I | I | I | C | I | I | I | I | C | A | I |
+| **Landing Zone Architect** | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I |
 
 ## Next step
 
