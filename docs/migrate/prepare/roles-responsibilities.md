@@ -1,6 +1,6 @@
 ---
 title: Align roles and responsibilities
-description: Learn how to prepare for cultural complexity that occurs during the migration process by aligning roles and responsibilities to drive clarity and ensure coverage.
+description: Prepare for cultural complexity when your organization migrates to Azure. Align roles and responsibilities to ensure clarity and coverage of essential functions.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 03/14/2024
@@ -11,9 +11,9 @@ ms.topic: conceptual
 
 Understanding the culture of an organization and how it operates existing datacenters is important to the success of a migration to Azure. In some organizations, datacenter management is contained within centralized IT operations teams. In centralized teams, roles and responsibilities tend to be well defined and understood throughout the team. For larger enterprises, especially in organizations that have third-party compliance requirements, the culture tends to be more nuanced and not as easily defined. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome during migration.
 
-The Cloud Adoption Framework for Azure details many functions that are key to [managing organizational alignment](/azure/cloud-adoption-framework/organize/). Specific departments and teams don't fulfill functions. Instead, team members in different parts of the organization can align to complete a function.
+The Cloud Adoption Framework for Azure details many functions that are key to [managing organizational alignment](/azure/cloud-adoption-framework/organize/). A function isn't assigned to a specific department or team. Instead, team members in different parts of an organization can align to complete a function.
 
-To have the most successful migration, you need to delegate several roles to these functions. Most of the roles that are described for a migration project fulfill the [cloud strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy) and the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption). Some supporting roles that you might need to complete other functions during the migration process are also described. You also learn how to identify relevant resources to use in essential roles during migration.
+To have the most successful migration, you need to delegate several roles to essential functions. Most of the roles that are described for a migration project fulfill the [cloud strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy) and the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption). Some supporting roles that you might need to complete other functions during the migration process are described. You also learn how to identify relevant resources to use in essential roles during migration.
 
 ## Cloud strategy function roles
 
@@ -86,7 +86,7 @@ The following table uses this legend to indicate categories of responsibility pe
 
 You can use the following responsibility matrix as a basis for your migration project. You might need to identify more roles or shift responsibilities based on the needs of your organization.
 
-|  | Digital estate discovery | Migration scope | Project plan | Migration tooling | Workload discovery | Workload assessment | Workload architecture | Wave planning | Workload test migration | Workload migration UAT | Workload migration | Workload release UAT | Organizational change management | Transition to operations | Workload licensing |
+| Role | Digital estate discovery | Migration scope | Project plan | Migration tooling | Workload discovery | Workload assessment | Workload architecture | Wave planning | Workload test migration | Workload migration UAT | Workload migration | Workload release UAT | Organizational change management | Transition to operations | Workload licensing |
 | ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
 | Migration Architect | D | D | A | D | A | A | D | A | A | A | A | A | I | D | I |
 | Migration Engineer | C | I | C | C | D | D | C | D | D | C | D | C | I | C | C |
