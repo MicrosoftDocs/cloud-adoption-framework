@@ -5,7 +5,7 @@ author: billyclaymyersmsft
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.custom: think-tank, fasttrack-edit, AQC
+ms.custom: think-tank, fasttrack-edit, AQC, linux-related-content
 keywords: Azure app service, app service azure, app service, build apps, cloud-native app, cloud-native applications
 ---
 

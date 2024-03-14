@@ -1389,8 +1389,16 @@
          "source_path": "docs/migrate/prepare/migrate-from-multiple-datacenters.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md",
+         "redirect_url": "/azure/devtest-labs/devtest-lab-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-devtest-to-labs.md",
+         "redirect_url": "/azure/devtest-labs/devtest-lab-overview",
+         "redirect_document_id": false
       }
-
-      
    ]
 }

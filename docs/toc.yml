@@ -663,13 +663,6 @@ items:
       - name: Migration scenarios
         items:
  
-        - name: Dev/test workloads
-          items:
-          - name: Migrate dev/test environments to Azure IaaS
-            href: migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md
-          - name: Migrate to Azure DevTest Labs
-            href: migrate/azure-best-practices/contoso-migration-devtest-to-labs.md
-
         - name: ASP.NET and PHP web apps
           items:
           - name: Refactor a Windows application onto App Service and Azure SQL Database

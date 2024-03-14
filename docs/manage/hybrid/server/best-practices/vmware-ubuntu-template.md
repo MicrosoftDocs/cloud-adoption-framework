@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, linux-related-content
 ---
 
 # Create a VMware vSphere template for Ubuntu Server 18.04
