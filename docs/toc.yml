@@ -609,14 +609,14 @@ items:
         items:
           - name: Overview
             href: migrate/prepare/index.md
-          - name: Readying your landing zone for migration
+          - name: Ready your landing zone for migration
             href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-backlog.md
-          - name: Planning for resilience
+          - name: Plan for resilience
             href: migrate/prepare/plan-for-resilience.md
           - name: Align roles and responsibilities
-            href: migrate/prepare/roles-and-responsibilities.md
+            href: migrate/prepare/roles-responsibilities.md
           - name: Skills relevant to migration projects
             href: migrate/prepare/skills-support.md
       - name: Assess

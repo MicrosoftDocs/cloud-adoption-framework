@@ -23,15 +23,15 @@ The table below gives an overview of the activities documented in this phase, al
 
 |Activity|Description|Responsible roles|
 |---|---|---|
-|**[Readying your landing zone for migration](./ready-alz.md)**|Contains specific items to confirm that your landing zone supports migration activities.|Landing zone architect.|
-|**[Prepare tools and initial migration backlog](./tools-and-backlog.md)**|Contains guidance on preparing the right tools, and how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
-|**[Planning for resilience](./planning-for-resilience.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
-|**[Align roles and responsibilities](./roles-and-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
-|**[Skills readiness for migration](./skills-and-support.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
+|**[Readying your landing zone for migration](./ready-azure-landing-zone.md)**|Contains specific items to confirm that your landing zone supports migration activities.|Landing zone architect.|
+|**[Prepare tools and initial migration backlog](./tools-backlog.md)**|Contains guidance on preparing the right tools, and how to build a migration backlog from your digital estate planning.|Project sponsor. Migration architect. Project manager.|
+|**[Planning for resilience](./plan-for-resilience.md)**|Contains guidance for planning for resiliency, including multi-region deployments.|Migration architect. Landing zone architect. Cloud operations manager.|
+|**[Align roles and responsibilities](./roles-responsibilities.md)**|Contains guidance on the roles and functions needed for a migration project.|Project manager. Stakeholders.|
+|**[Skills readiness for migration](./skills-support.md)**|Contains resources and training to build essential migration skills.|Project manager. Organizational change manager.|
 
 ## Next steps
 
 Understand how to prepare your landing zone for migrations.
 
 > [!div class="nextstepaction"]
-> [Readying your landing zone](./ready-alz.md)
+> [Readying your landing zone](./ready-azure-landing-zone.md)
