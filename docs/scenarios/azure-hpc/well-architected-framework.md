@@ -42,6 +42,8 @@ Here's what a maximum resiliency architecture looks like:
 
 _Diagram: Shows a maximum-resilience architecture with a multi-homed ExpressRoute gateway that has primary and secondary locations._
 
+The diagram show Location A as the primary connection and Location B as the secondary connection. It is possible to have each connection be active or configure the connections in active-passive. Each location corresponds to a different ExpressRoute peering location, not an Azure region.
+
 ## Security
 
 Apply security principles to your HPC environment to provide assurances against deliberate attacks and abuse of your valuable data and systems. Look into securing your user operating system images, user access, and follow Batch and CycleCloud security guidelines. For more suggestions, see [Principles of the security pillar](/azure/architecture/framework/security/security-principles).
