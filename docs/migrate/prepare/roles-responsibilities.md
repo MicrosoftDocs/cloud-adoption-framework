@@ -40,7 +40,7 @@ During the migration, most of your technical execution comes from the [cloud ado
 | Migration Architect | Oversee the technical decision making for the workloads, such as migration wave planning and migration processes. |
 | Migration Engineer | Execute tasks that are identified as part of the project. |
 
-## Other supporting roles
+## Supporting roles from other functions
 
 The next table describes supporting roles from other functions:
 
@@ -51,7 +51,7 @@ The next table describes supporting roles from other functions:
 | Workload Architect | Provide architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill multiple instances of this role. See more about [central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
 | User Acceptance Tester | Test individual workloads. You might have multiple instances of this role per workload to provide feedback for user acceptance testing (UAT). See more about [central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
 
-## Identify unclear role owners
+## Identify experts or owners for roles
 
 It can be difficult to identify some of these roles, such as Workload Architect and Workload Business Owner. If a workload has been in maintenance for a long period and without frequent changes, there might be limited ownership and technical expertise. Also, sometimes in digital estate planning, servers might not be mapped to a specific workload, so it can be unclear who has ownership of them.
 
