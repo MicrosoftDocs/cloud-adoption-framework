@@ -26,7 +26,7 @@ On top of these environmental controls, the workload team should consider:
 
 ### Hybrid ExpressRoute Connectivity
 
-In order to support critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where the customer has a redundant ExpressRoute connection, this does not protect the customer against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
+In order to support critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, this does not protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
 
 #### Recommendations
 
