@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Align roles and responsibilities
 
-Understanding the culture of an organization and how it operates existing datacenters is important to the success of a migration to Azure. In some organizations, datacenter management is contained within centralized IT operations teams. In centralized teams, roles and responsibilities tend to be well defined and understood throughout the team. For larger enterprises, especially in organizations that have third-party compliance requirements, the culture tends to be more nuanced and not as easily defined. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome during migration.
+Understanding the culture of an organization and how it operates its datacenters is important to the success of a migration to Azure. In some organizations, datacenter management is contained within centralized IT operations teams. In centralized teams, roles and responsibilities tend to be well defined and understood throughout the team. For larger enterprises, especially in organizations that have third-party compliance requirements, the culture tends to be more nuanced and roles aren't as easily defined. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome during migration.
 
-The Cloud Adoption Framework for Azure details many functions that are key to [managing organizational alignment](/azure/cloud-adoption-framework/organize/). A function isn't assigned to a specific department or team. Instead, team members in different parts of an organization can align to complete a function.
+The Cloud Adoption Framework for Azure details many functions that are key to [managing organizational alignment](/azure/cloud-adoption-framework/organize/). Specific departments or teams don't carry out functions. Instead, team members in different parts of an organization can align to complete a function.
 
-To have the most successful migration, you need to delegate several roles to essential functions. Most of the roles that are described for a migration project fulfill the [cloud strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy) and the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption). Some supporting roles that you might need to complete other functions during the migration process are described. You also learn how to identify relevant resources to use in essential roles during migration.
+This article primarily describes roles that align with the [cloud strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy) and the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption) in a successful migration project. It also describes supporting roles that you might need for other functions during the migration process. Learn how to identify relevant resources to use for essential roles in your migration to Azure.
 
 ## Cloud strategy function roles
 
@@ -21,46 +21,44 @@ To make sure that you have the necessary commitment and organization for your mi
 
 | Role | Responsibilities |  
 | --- | --- |
-| Project Sponsor | Defines the scope of the migration to determine what resources are moved and the benefit of moving each resource. Provides decision-making ownership for migration tooling purchases, overall workload architecture, and for release activities. |
-| Project Manager | Drives a project plan for the overall migration scope. Drives testing processes. Organizes status communications to stakeholders. |
+| Project Sponsor | Defines the scope of the migration to determine what resources are moved and the benefit of moving each resource. Provides decision-making ownership for migration tooling purchases, for the overall workload architecture, and for release activities. |
+| Project Manager | Drives a project plan for the migration scope. Drives testing processes. Organizes status updates to stakeholders. |
 | Organizational Change Manager | Helps the project team communicate changes to the organization. Works with different functions to make sure that the right team members are involved and that the correct organizational changes occur to support the migration. |
-| Licensing Specialist | Provides licensing insight and financial operations management to ensure that the migration project is properly licensed and uses existing licensed resources. |
+| Licensing Specialist | Provides licensing insight and financial operations management to ensure that the project is properly licensed and uses existing licensed resources. |
 | Workload Business Owner | Provides decision-making ownership for the workload assessment, architecture, and migration processes. Acts as an owner for the business value of the workload in Azure. |
-
-As you begin to prepare for migration, you might not have some roles, like the Workload Business Owner role, for your cloud strategy function. But the function’s team can identify team members who can take on the role for the project.
 
 ## Cloud adoption function roles
 
-During the migration, the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption) performs most of the technical execution. For this function, plan to have the roles that are described in the following table:
+During your migration to Azure, the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption) performs most of the technical execution. For this function, plan to have the roles that are described in the following table:
 
 | Role | Responsibilities |
 | --- | --- |
-| Migration Architect | Oversee the technical decision making for the workloads, such as migration wave planning and migration processes. |
-| Migration Engineer | Execute tasks that are identified as part of the project. |
+| Migration Architect | Oversees the technical decision making for the workloads, such as migration wave planning and all migration processes. |
+| Migration Engineer | Executes tasks that are identified as part of the project. |
 
-## Supporting roles from other functions
+## Supporting roles for other functions
 
-The next table describes supporting roles for other functions:
+The next table describes supporting roles that you might need for other functions:
 
 | Role | Responsibilities |
 | --- | --- |
 | Landing Zone Architect | Provides support for migrating workloads to a landing zone. Helps remediate any issues with platform services in the landing zone. For more information, see [Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform). |
-| Cloud Operations Manager | Provides support for onboarding migrating workloads to the management platform to ensure that proper management is in place for the workloads when migration occurs. For more information, see [Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations). |
-| Workload Architect | Provides architectural guidance and decision making for designing the migrating workload in Azure. For each workload, you might need a specific subject matter expert to fulfill multiple instances of this role. For more information, see [Central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
+| Cloud Operations Manager | Provides support for onboarding migrating workloads to the management platform to ensure that proper management is in place for the workloads when they migrate. For more information, see [Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations). |
+| Workload Architect | Provides architectural guidance and decision making for the design of the migrating workload. For each workload, you might need a specific subject matter expert to fulfill multiple instances of this role. For more information, see [Central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
 | User Acceptance Tester | Tests individual workloads. You might have multiple instances of this role per workload to provide feedback for user acceptance testing (UAT). For more information, see [Central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
 
 ## Identify experts or owners for roles
 
-It can be difficult to identify some of these roles, such as Workload Architect and Workload Business Owner. If a workload is in maintenance for a long period and without frequent changes, there might be limited ownership and technical expertise. Also, sometimes in digital estate planning, servers might not be mapped to a specific workload, so it can be unclear who has ownership of them.
+It can be difficult to identify the correct resources for some of these roles, such as for Workload Architect and Workload Business Owner. If a workload is in maintenance for a long period and without frequent changes, you might find limited ownership information and technical expertise to support a function. For example, in digital estate planning, sometimes servers aren't mapped to a specific workload, so it can be unclear who has ownership of them.
 
 If you have difficulty identifying roles, try using the following approaches:
 
 - **Historical data**: Use your configuration management database or ticketing system to identify any historical items that indicate who requests maintenance or who communicates about the server or workload.
-- **Sign-in logs**: Look for the users who were most recently logged into the servers that make up the workload. Although this approach might not identify an owner, these users can give you context for the server and who supervises or leads their team.
+- **Sign-in logs**: Look for the users who were most recently logged in on the servers in the workload. Although this approach might not identify an owner, recent users can give you context for the server.
 - **Dependency analysis**: Use dependency analysis tools to identify who most frequently connects to the functions that are hosted on the servers. These tools can help you identify business departments, which in turn can help you identify an owner.
 - **Related application owners**: Contact owners of applications that service a similar business department or function. Ask them to help you identify the roles that you need to fill.
 
-Even if you don’t have an expert for a role in your organization, you must still fill the role during the migration process. Business teams and IT teams should identify at least interim members, and then build a plan for ownership for long-term support of the workload after migration.
+Even if you don’t have an expert for a role in your organization, you must fill the role during the migration process. Business teams and IT teams should identify at least interim members, and then build a plan for ownership for long-term support of the workload after it migrates.
 
 ## Scale roles for large migration initiatives
 
@@ -82,9 +80,9 @@ The following table uses this legend to indicate categories of responsibility pe
 - **D** = **Driver**: One individual in the organization who is the single driver of the objective.
 - **A** = **Approver**: One or more individuals in the organization who make most decisions and who are responsible if the objective isn't met.
 - **C** = **Contributor**: Individuals in the organization who are responsible for carrying out tasks that support the objective.
-- **I** = **Informed**: Individuals in the organization who the project affects and who are regularly informed of decisions and the status of the project.
+- **I** = **Informed**: Individuals in the organization who the project affects and who are regularly informed about decisions and the status of the project.
 
-You can use the following responsibility matrix as a basis for your migration project. You might need to identify more roles or shift responsibilities based on the needs of your organization.
+You can use the following responsibility matrix as a basis for your migration project. You might need to identify more roles or to shift responsibilities depending on the needs of your organization.
 
 | Role | Digital estate discovery | Migration scope | Project plan | Migration tooling | Workload discovery | Workload assessment | Workload architecture | Wave planning | Workload test migration | Workload migration UAT | Workload migration | Workload release UAT | Organizational change management | Transition to operations | Workload licensing |
 | ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
