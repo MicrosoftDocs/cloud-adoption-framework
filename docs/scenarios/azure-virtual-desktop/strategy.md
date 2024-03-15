@@ -18,7 +18,7 @@ The guidance in this article can help to expose several considerations about vir
 
 Virtual desktop migrations are motivated by a few common target outcomes:
 
-![List of motivations for virtual desktop migration.](../../_images/migrate/wvd/motivations.png)
+![List of motivations for virtual desktop migration.](../../_images/migrate/azure-virtual-desktop/motivations.png)
 
 - **Productivity**. Organizations want to extend productivity to PCs, phones, tablets, or browsers that might not be under the direct control of the IT team.
 
@@ -87,7 +87,7 @@ Understand that your initial business justification is a directional estimate th
 
 In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with Azure Virtual Desktop. In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. Usually, the client solution is enabled and largely unchanged by this migration effort.
 
-![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
+![Diagram of the virtual desktop migration scenario.](../../_images/migrate/azure-virtual-desktop/scenario-solution.png)
 
 When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team is responsible only for support of the desktop images, available applications, identity service provider (Active Directory, Microsoft Entra Domain Services, or Microsoft Entra ID), and user profiles. You get the benefits of Microsoft managed broker, gateway, diagnostics, and web access services as part of the Azure Virtual Desktop offering.
 

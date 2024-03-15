@@ -5,7 +5,7 @@ author: givenscj
 ms.author: martinek
 ms.date: 07/24/2020
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom: think-tank, linux-related-content
 ---
 
 # Rehost an on-premises Linux application to Azure VMs and Azure Database for MySQL
