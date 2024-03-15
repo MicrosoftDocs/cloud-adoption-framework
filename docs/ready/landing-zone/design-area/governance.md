@@ -115,6 +115,12 @@ Change advisory review boards might hinder an organizations innovation and busin
 - Explore the capabilities of [Microsoft Entra access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
 - Explore the capabilities of [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
 
+### 3rd party tooling 
+
+To keep up with the pace by providing overview and insights on new releases and changes/updates for Azure Governance capabilities such as Azure Policy's policy definitions, initiatives (set definitions), aliases, security & regulatory compliance controls and Azure RBAC's role definitions and resource provider operations plus Microsoft Entra role definitions, role actions and first party API permissions  consider to regularly review [AzAdvertizer](https://www.azadvertizer.net).
+
+Connect the dots and keep track of your technical governance estate with the [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer). The ALZ Policy Version Checker feature helps you to ensure that your environment is up to date with the latest ALZ Azure policy release state.
+
 ## Azure governance recommendations
 
 ### Deployment acceleration recommendations
