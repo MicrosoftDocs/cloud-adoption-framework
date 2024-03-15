@@ -165,7 +165,7 @@ Nearly all organizations must comply with various government or industry regulat
 
 - Configure [alerts](/azure/defender-for-cloud/alerts-overview) and [automated responses](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the overall compliance of Azure Virtual Desktop landing zones.
 
-- Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure overall organization security posture across the following products:
+- Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score) to measure overall organization security posture across the following products:
 
   - Microsoft 365 (including Exchange Online)
   - Microsoft Entra ID
