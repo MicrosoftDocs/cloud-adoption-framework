@@ -1,26 +1,26 @@
 ---
-title: Readying your landing zone for migration
-description: Review items that need to be completed after an Azure landing zone (ALZ) deployment to ensure the technical environment supports migrations.
+title: Prepare your landing zone for migration
+description: Review items that need to be completed after an Azure landing zone deployment to ensure the technical environment supports migrations.
 author: bstephenson
 ms.author: bstephenson
 ms.reviewer: tozimmergren
-ms.date: 02/27/2024
+ms.date: 04/15/2024
 ms.topic: conceptual
 ---
 
-# Readying your landing zone for migration
+# Prepare your landing zone for migration
 
-If your organization already aligns to [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you'll find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+If your organization already aligns to [Azure landing zones](../../ready/landing-zone/index.md), you'll find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
 
-Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a successful migration project.
+Regardless of which Azure landing zone [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a successful migration project.
 
-If you aren't using one of the ALZ reference implementations, the steps outlined in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
+If you aren't using one of the Azure landing zone reference implementations, the steps outlined in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
 
 This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments but will note if they aren't relevant for manually deployed and managed environments.
 
-## Establishing hybrid connectivity
+## Establish hybrid connectivity
 
-During ALZ deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both. After ALZ deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
+During Azure landing zone deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both. After Azure landing zone deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
 
 In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). This plan should guide you on what connections you need to perform. For example, if you're using ExpressRoute, you need to work with your provider to establish your ExpressRoute circuit.
 
@@ -39,7 +39,7 @@ If you're establishing your hybrid connectivity to Azure via a third-party Netwo
 
 ## Prepare identity
 
-During the ALZ deployment, organizations deploy supporting architecture for their identity platform. This involves a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines used for identity. However, the actual identity resources must be deployed after the ALZ deployment.
+During the Azure landing zone deployment, organizations deploy supporting architecture for their identity platform. This involves a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines used for identity. However, the actual identity resources must be deployed after the Azure landing zone deployment.
 
 This section has guidance for considerations related to Active Directory. If you're using another identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
 
@@ -47,7 +47,7 @@ Before implementing this, you should review the decisions made for [Active Direc
 
 You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if you need any changes in Microsoft Entra ID.
 
-### Extending Active Directory domain controllers
+### Extend Active Directory domain controllers
 
 In most migration scenarios, the workloads being migrated to Azure are already joined to an existing Active Directory domain. While Microsoft Entra ID can offer solutions for modernizing identity management even for VM workloads, doing so can disrupt migration. Rearchitecting identity usage for workloads is often an effort saved for modernization or innovation initiatives.
 
@@ -140,19 +140,19 @@ If you intend to inspect traffic, there are two configurations needed:
 
 You can review the article on [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) for more information about custom and Azure-defined routes.
 
-In addition, if you intend to inspect traffic to Private Endpoints, you want to ensure that the appropriate routing network policy is enabled on the subnet where the Private Endpoints are hosted. Refer to [manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy?tabs=network-policy-portal) to learn how these operate.
+In addition, if you intend to inspect traffic to Private Endpoints, you want to ensure that the appropriate routing network policy is enabled on the subnet where the Private Endpoints are hosted. Refer to [manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy) to learn how these operate.
 
 If you don't intend to inspect traffic, no changes are needed. However, if you add route tables to your spoke network subnets, you want to ensure that BGP propagation is enabled so that it can route back to your gateway.
 
-## Configure Monitoring and Management
+## Configure monitoring and management
 
 As part of deploying your landing zone, you'll have provisioned policies that enroll your resources in Log Analytics. However, you have additional steps necessary to create alerts for your landing zone resources.
 
-A quick way to implement this is to deploy the [Azure Monitor Baseline for Landing Zones](https://aka.ms/alz/monitor/repo). Using this deployment, you gain alerts based on common scenarios for landing zone management, such as connectivity resources and service health.
+A quick way to implement this is to deploy the [Azure Monitor Baseline for Landing Zones](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz). Using this deployment, you gain alerts based on common scenarios for landing zone management, such as connectivity resources and service health.
 
 You can also deploy your own custom alerting for resources if your needs deviate from what is in the baseline.
 
-## Enable Subscription Vending
+## Enable subscription vending
 
 This section applies to organizations that want to automate their subscription provisioning process. If you manually manage your landing zone and subscription creation, you should establish your own process for creating subscriptions.
 
@@ -176,4 +176,4 @@ Consider these additional resources to prepare:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare tools and initial migration backlog](./tools-backlog.md)
+> [Prepare tools and an initial migration backlog](./tools-backlog.md)
