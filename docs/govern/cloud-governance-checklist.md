@@ -126,6 +126,9 @@ Identify the risks the cloud poses to your organization so the cloud governance 
 |&#9744; | [**Build a cloud governance team**](./build-cloud-governance-team.md) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
+| &nbsp; | &#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team) |
+| &nbsp; | &#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team) |
+
 |&#9744; | [**Assess cloud risks**](./assess-cloud-risks.md) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &nbsp; | &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |

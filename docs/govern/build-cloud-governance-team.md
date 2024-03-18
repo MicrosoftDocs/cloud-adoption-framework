@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Build a cloud governance team 
+# Build a cloud governance team
 
 This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the interest of the organization and ensure cloud governance policies minimize risks.
 
-<img src="c:\GitHub\cloud-adoption-framework-pr\docs\govern/media/image2.png" style="width:6.5in;height:1.03333in" alt="A blue and white sign Description automatically generated" />
+:::image type="content" source="./_images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continously to maintain cloud governance." lightbox="./_images/build.svg" border="false":::
 
 ## Define the functions of the cloud governance team
 
