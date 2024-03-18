@@ -8,56 +8,81 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Build a cloud governance team
-![Cloud governance process](./_images/build.svg)
+# Build a cloud governance team 
 
-Cloud governance is fundamentally driven by the people who define, implement, and refine governance policies. To establish cloud governance, you first need to build a cloud governance team. Here are recommendations for building a cloud governance team.
+This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the interest of the organization and ensure cloud governance policies minimize risks.
 
+<img src="c:\GitHub\cloud-adoption-framework-pr\docs\govern/media/image2.png" style="width:6.5in;height:1.03333in" alt="A blue and white sign Description automatically generated" />
 
+## Define the functions of the cloud governance team
 
-## Understand the functions of a cloud governance team
+Describe the duties and roles that the team needs to perform to implement the organization's cloud governance in an effective way. The team must define and enforce policies that govern the organization's interaction with cloud services and ensure a consistent approach across your cloud environment. To define these team functions, follow these essential functions:
 
-A cloud governance team needs to perform certain essential functions in an organization. The list of functions can vary between organization, but the essentials don't. You need to understand the essential functions of the cloud governance team, so you can select the right people, grant the proper authority, and define their scope. Here's a list of essential cloud functions the cloud governance team must perform:
+- *Engage stakeholders.* The cloud governance team must actively engage stakeholders across the organization (IT, finance, operations, security, and compliance) to gather input on governance policies. The goal is to ensure the cloud meets the needs of the business and minimizes risk.
 
-- *Engage stakeholders.* The governance team must actively engage with stakeholders across the organization to get input on the creation and revision of governance policies. The team should have an established feedback loop with various departments, such as IT, finance, and operations, to ensure policies reflect the organization's needs.
+- *Assess cloud risks.* The cloud governance team must assess cloud risks regularly to identify risks and rank them by priority risks. They use or oversee the use of risk assessment tools to evaluate security, compliance, and operational risks, and communicate findings with stakeholders.
 
-- *Assess organizational risks.* It's essential for the governance team to organize regular assessments of organizational risk. The team is responsible for identifying risk to the organization and converting risks into governing corporate policies. Risk assessments must quantify the risks to the organization and prioritize the mitigation of the biggest risks. Utilizing risk assessment tools and methodologies, the team should evaluate security, compliance, and operational risks. They should schedule assessments at regular intervals and share the findings with relevant stakeholders.
+- *Develop and update governance policies*. The cloud governance team should regularly to review and update the cloud governance framework, as well as to discuss and resolve any issues or challenges that arise from cloud usage. Ensure policies are comprehensive, enforceable, and reflective of the latest cloud technologies and regulatory requirements.
 
-- *Develop and update governance policies.* The team must create and periodically update governance policies to align with the broader IT strategy and compliance requirements. This task requires collaboration with various departments, including legal, compliance, and IT security. The goal is to ensure policies are comprehensive, enforceable, and reflective of the latest in cloud technology and regulatory landscapes.
+- *Develop a cloud governance program*. The cloud governance team should design a cloud governance program to ensure cloud governance is successful in the organization. Create a communication plan to educate employees about their roles in upholding governance standards. Develop training materials, workshops, and documentation. Cover cloud governance adoption and change management for cloud governance policy Integrate governance training with employee onboarding.
 
-- *Develop training.* To ensure adherence to governance policies, the team must develop training programs for the organization. Training materials could include online courses, workshops, and documentation for different roles within the organization. The goal is to help employees understand their responsibilities in maintaining cloud governance standards.
-
-- *Establish and report on governance.* The governance team must establish metrics that measure the effectiveness of governance initiatives. They need to create a method to report their findings to management and stakeholders. For example, they could create a dashboard that tracks compliance rates, incident response times, and user satisfaction. It allows the team to measure the progress of governance efforts and identify areas for improvement.
+- *Monitor and review governance.* Establish metrics to measure governance effectiveness and develop reporting methods, such as dashboards, to track compliance rates, incident response times, and user satisfaction.
 
 ## Select the members of the cloud governance team
 
-With an understanding of what the functions of the cloud governance team, you can start selecting the members of your team. You need to forming a capable and effective team that can address the complex challenges of cloud governance. Here's criteria to help build your team:
+Select the individuals responsible for overseeing and managing cloud governance within an organization. Recruiting members with the necessary skills helps ensure the team can efficiently enforce policies, manage risks, and comply with regulations in cloud operations. To select members of the cloud governance team, follow these recommendations:
 
-- *Use IT personnel.* Select a dedicated group from within the IT department with direct responsibilities for governance. Cloud governance applies to technical resources and you want a team with expertise in areas, such as cloud computing, artificial intelligence, and cybersecurity, managing your cloud governance.
+- *Select a small team*. Pick a small team to encourage agility and quicker decision-making.
 
-- *Build a small team.* Start with a small team. For example, form a core team of individuals with complementary skills covering key governance areas such as compliance, security, and cloud architecture. A smaller team encourages agility and quicker decision-making.
+- *Select a diverse team.* The team should consist of individuals from different areas of the organization such as IT operations, security, finance, software development, cloud architecture, processes, and compliance.
 
-## Grant authority to the cloud governance team
+- *Define team members’ responsibilities*. Define roles and responsibilities within your cloud governance team. Tailor them to your organization's size, complexity, and cloud maturity. Key areas of responsibility include cloud governance lead, cloud architecture, cloud security, cloud compliance, and [cloud finance](https://learn.microsoft.com/en-us/azure/cost-management-billing/finops/overview-finops).
 
-The cloud governance team needs the authority to enforce the governance policies they create. There should be consequences for not adhering to governance policies that the governance team can apply. Here are recommendations for granting authority to the cloud governance team:
+## Define the authority of the cloud governance team
 
-- *Secure executive sponsorship.* Obtain commitment from an executive-level sponsor to provide the cloud governance team with necessary resources, authority, and alignment with organizational goals. For example, identify a C-level executive, such as the CIO or CTO, who can champion the governance initiative and ensure its alignment with strategic objectives. An executive sponsor helps provide the necessary resources and authority for the governance team.
+Empower the cloud governance team to implement and oversee cloud governance effectively. The goal is to ensure the cloud governance team has the legitimacy and support required to achieve the organization's cloud governance objectives efficiently. Follow these recommendations:
 
-- *Establish authority levels.* Define the team's decision-making powers and enforcement capabilities. For example, delineate the team’s authority to enforce compliance, manage cloud budgets, and make decisions on cloud architecture. Clear authority levels should be communicated across the organization to ensure there is no ambiguity about the team's role.
+- *Secure executive sponsorship.* Gain support from and report to a named executive, such as the CIO or CTO, to back the cloud governance initiative with the necessary resources. The executive sponsor serves as a point of escalation for challenges and helps align cloud governance with organizational goals.
 
-- *Create enforcement policies.* Develop transparent policies for non-compliance with organization cloud governance policies. For example, outline the procedures for addressing violations of governance policies. The procedures should outline escalation paths and potential penalties. Enforcement policies should be fair, transparent, and consistently applied. The governance team isn’t necessarily the team to make the organization adhere to that policy. Distribute the responsibility of adherence across all the workload teams.
+- *Establish authority levels.* The executive sponsor should define the team’s authority to define and enforce cloud governance throughout the organization.
 
-- *Communicate authority.* Ensure the organization understands the team's authority. For example, use organization-wide announcements, include references in the employee handbook, and conduct presentations at company meetings. Effective communication strategies ensure that all employees are aware of the governance team’s authority and its impact on their work.
+- *Communicate authority.* The executive sponsor should communicate to the entire organization the governance team’s authority and the importance of adhering to governance policies they create.
 
 ## Define the scope of the cloud governance team
 
-The cloud governance team has a specific charter to create policies that mitigate risks for the organization. You need to define the scope of the team's responsibility to they can focus on their charter and ensure their responsibilities don't overlap with the responsibilities of other teams. Here are recommendations to defining the scope of the team's responsibilities:
+Establish the boundaries of the cloud governance team’s responsibility. The goal is to clarify areas of responsibility so the cloud governance team can focus on creating, monitoring, enforcing, and updating cloud governance policies. To define the scope, follow these recommendations:
 
-- *Define responsibilities.* Outline the team's role over cloud resources, services, and policies. Establishing these boundaries helps in preventing overlap with other teams and clarifies the team’s domain of influence. For example, if the cloud governance team sets cloud security policies, you should delineate the security team's role in implementing governance to enforce those policies.
+- *Define relationship with other teams.* Clearly define the cloud governance team’s authority over cloud resources, services, and policies to avoid duplication of efforts with other teams.
 
-- *Use a RACI matrix.* Develop a Responsibility Assignment Matrix (RACI Matrix) to clarify roles and responsibilities within the cloud governance team. This matrix should detail who is Responsible, Accountable, Consulted, and Informed for each governance task. For example, RACI chart should include tasks such as defining cloud usage policies, where "Responsible" might be the cloud governance team for drafting the policies, "Accountable" could be the Chief Information Officer (CIO) for final approval, "Consulted" could include the legal and compliance departments for input, and "Informed" would be all cloud service users within the organization.
+- *Use a RACI matrix.* Use a Responsibility Assignment Matrix (RACI Matrix) to delineate roles and responsibilities within the cloud governance framework. See the [example cloud governance RACI matrix](#_Example:_Cloud_governance).
 
 ## Next step
 
+The next step is to [assess cloud risks.](https://ppc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=en-US&wopisrc=https%3A%2F%2Fmicrosoft-my.sharepoint.com%2Fpersonal%2Fssumner_microsoft_com%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F7740e4123e93454299433c7c8ed2ae4b&wdlor=c10849B9E-7989-4A04-A19A-2317C4D6D166&wdenableroaming=1&wdfr=1&mscc=1&wdodb=1&hid=824BBBF7-DC93-4220-9C2D-E538E27B48B3.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=17be43da-cf45-43e4-66cf-b27125506ab8&usid=17be43da-cf45-43e4-66cf-b27125506ab8&newsession=1&sftc=1&uihit=docaspx&muv=1&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Fmicrosoft-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Outlook-Body.Sharing.ServerTransfer&wdhostclicktime=1709846847570&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_Assess_cloud_risks) Assessing cloud risks involves identifying, analyzing, documenting, and communicating cloud risks.
+
 > [!div class="nextstepaction"]
 > [Assess cloud risks](assess-cloud-risks.md)
+
+## Example: Cloud governance RACI matrix
+
+The following is an example of a RACI matrix for cloud governance. Create a RACI matrix that aligns to your organization and meets your specific needs. Ensure the RACI matrix outlines the roles and responsibilities across different aspects of cloud governance.
+
+| **Activity/Task**                    | **Cloud governance team** | **Executive sponsor** | **Cloud platform team** | **Workload teams** |
+|--------------------------------------|---------------------------|-----------------------|-------------------------|--------------------|
+| Engage stakeholders                  | R, A                      | I                     | C                       | C                  |
+| Assess cloud risks                   | A                         | I                     | R                       | R                  |
+| Develop & update governance policies | R, A                      | I                     | C                       | C                  |
+| Report on cloud governance progress  | R, A                      | I                     | C                       | C                  |
+| Cloud architecture planning          | A                         | I                     | R                       | R                  |
+| Enforce governance policies          | A, C                      | I                     | R                       | R                  |
+| Monitoring governance                | A, C                      | I                     | R                       | R                  |
+
+- *Responsible (R):* The person or team doing the work to complete the task.
+
+- *Accountable (A):* The person or group lead accountable for the task and approves the work. This person must approve completed tasks.
+
+- *Consulted (C):* People or teams that people are subject matter experts or have specific insights into the task.
+
+- *Informed (I):* Those who you kept up to date on progress, often only upon completion of the task or at major milestones.
+
+
