@@ -1424,6 +1424,12 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
       }
+      
    ]
 }
