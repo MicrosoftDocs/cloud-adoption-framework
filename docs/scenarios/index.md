@@ -12,9 +12,13 @@ ms.custom: internal
 
 The following scenarios unify technical and non-technical considerations that can help your organization accelerate its overall cloud adoption journey.
 
-Your journey to the cloud can become more nuanced in complexity when you consider the implementation of larger, more complex cloud adoption scenarios that meet your unique business requirements. When you follow these scenarios, you'll encounter key sets of guidance that can help you focus on your requirements. These requirements might enable you to maximize your investment in the cloud. These scenarios include pointed guidance across several areas of cloud adoption best practices from the holistic and modular guidance of the Microsoft Cloud Adoption Framework. The workload-specific architectural guidance of the Azure Well-Architected Framework contains reference architectures and example scenarios with deployment templates to implement the solutions. These solutions are based on extensive customer experiences that represent an infrastructure your organization can rely on.
+Your journey to the cloud can become more nuanced in complexity when you consider the implementation of larger, more complex cloud adoption scenarios that meet your unique business requirements. When you follow these scenarios, you'll encounter key sets of guidance that can help you focus on your requirements. These requirements might enable you to maximize your investment in the cloud. These scenarios include pointed guidance across several areas of cloud adoption best practices from the holistic and modular guidance of the Microsoft Cloud Adoption Framework (CAF). The workload-specific architectural guidance of the Azure Well-Architected Framework contains reference architectures and example scenarios with deployment templates to implement the solutions. These solutions are based on extensive customer experiences that represent an infrastructure your organization can rely on.
 
 Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Read on for your answers about cloud adoption, and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
+
+> [!NOTE]
+> **Looking for migration scenarios?**
+> We moved the migration scenarios to a new location. You can find them in the [Migration scenarios](../migrate/scenarios.md) section.
 
 ## Components of a cloud adoption scenario
 
