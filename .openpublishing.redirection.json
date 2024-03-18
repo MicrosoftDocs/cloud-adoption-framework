@@ -1187,7 +1187,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {
@@ -1317,12 +1317,12 @@
       },
       {
          "source_path": "docs/migrate/release/promote.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/release/prepare-for-promotion.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {

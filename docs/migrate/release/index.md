@@ -27,7 +27,7 @@ The table below gives an overview of the activities documented in this phase, al
 |---|---|---|
 |[Change communication](./change-communication.md)|Contains guidance and examples for how to communicate the upcoming change to the business and IT.|<li>Project Manager.<br><li>Organizational Change Manager.|
 |[Business testing](./business-test.md)|Contains guidance on how to conduct business testing to ensure that the functionality and usability of the workload remains the same after migrating to the cloud.|<li>Project Manager.<br><li>Workload Business Owner.<br><li>Workload Architect.<br><li>User Acceptance Tester.|
-|[Migration cutover](./cutover.md)|Contains guidance for how to conduct your migration release window.|<li>Migration Architect.<br><li>Migration Engineer.|
+|[Complete migration](./complete-migration.md)|Contains guidance for how to conduct your migration release window.|<li>Migration Architect.<br><li>Migration Engineer.|
 |[Post-migration cost optimization](./post-migration-cost-optimization.md)|Contains resources for optimizing workload costs after the migration.|<li>Workload Architects.<br><li>Cloud Operations Manager.<br><li>Project Manager.|
 |[Conduct retrospective](./retrospective.md)|Contains guidance on how to perform retrospectives to improve the migration of future workloads.|<li>Workload Architects.<br><li>Cloud Operations Manager.|
 
