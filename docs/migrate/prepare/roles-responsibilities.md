@@ -9,11 +9,16 @@ ms.topic: conceptual
 
 # Align roles and responsibilities
 
-Understanding the culture of an organization and how it operates its datacenters is important to the success of a migration to Azure. In some organizations, datacenter management is contained within centralized IT operations teams. In centralized teams, roles and responsibilities tend to be well defined and understood throughout the team. For larger enterprises, especially in organizations that have third-party compliance requirements, the culture tends to be more nuanced and roles aren't as easily defined. Cultural complexity can lead to roadblocks that are difficult to understand and time-consuming to overcome during migration.
+Understanding an organization's culture and datacenter management is vital for Azure migration success. Centralized IT teams with clear roles ease the process, but larger or compliance-bound enterprises face nuanced challenges that can hinder progress.
 
-The Cloud Adoption Framework for Azure details many functions that are key to [managing organizational alignment](/azure/cloud-adoption-framework/organize/). Specific departments or teams don't carry out functions. Instead, team members in different parts of an organization can align to complete a function.
+The Azure Cloud Adoption Framework underscores the role of [organizational alignment](/azure/cloud-adoption-framework/organize/) in migration, advocating for cross-departmental collaboration to fulfill key functions.
 
-This article primarily describes roles that align with the [cloud strategy function](/azure/cloud-adoption-framework/organize/cloud-strategy) and the [cloud adoption function](/azure/cloud-adoption-framework/organize/cloud-adoption) in a successful migration project. It also describes supporting roles that you might need for other functions during the migration process. Learn how to identify relevant resources to use for essential roles in your migration to Azure.
+In this article, you learn about:
+
+- Migration-specific roles that align with the [cloud strategy](/azure/cloud-adoption-framework/organize/cloud-strategy) and [cloud adoption](/azure/cloud-adoption-framework/organize/cloud-adoption) functions.
+- Supporting roles that you might need for other functions during the migration process, for example Landing zone architects and workload architects.
+- How to identify relevant experts or owners for roles in your migration projects.
+- A responsibility matrix to help understand which role is responsible for what part of a migration project.
 
 ## Cloud strategy function roles
 
@@ -51,14 +56,13 @@ The next table describes supporting roles that you might need for other function
 
 It can be difficult to identify the correct resources for some of these roles, such as for Workload Architect and Workload Business Owner. If a workload is in maintenance for a long period and without frequent changes, you might find limited ownership information and technical expertise to support a function. For example, in digital estate planning, sometimes servers aren't mapped to a specific workload, so it can be unclear who has ownership of them.
 
-If you have difficulty identifying roles, try using the following approaches:
+Here are some recommendations to identify roles:
 
 - **Historical data**: Use your configuration management database or ticketing system to identify any historical items that indicate who requests maintenance or who communicates about the server or workload.
 - **Sign-in logs**: Look for the users who were most recently logged in on the servers in the workload. Although this approach might not identify an owner, recent users can give you context for the server.
 - **Dependency analysis**: Use dependency analysis tools to identify who most frequently connects to the functions that are hosted on the servers. These tools can help you identify business departments, which in turn can help you identify an owner.
 - **Related application owners**: Contact owners of applications that service a similar business department or function. Ask them to help you identify the roles that you need to fill.
-
-Even if you don’t have an expert for a role in your organization, you must fill the role during the migration process. Business teams and IT teams should identify at least interim members, and then build a plan for ownership for long-term support of the workload after it migrates.
+Even if you don't have an expert for a role in your organization, you must fill the role during the migration process. Business teams and IT teams should identify at least interim members, and then build a plan for ownership for long-term support of the workload after it migrates.
 
 ## Scale roles for large migration initiatives
 

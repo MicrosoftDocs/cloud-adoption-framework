@@ -1187,7 +1187,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {
@@ -1317,12 +1317,12 @@
       },
       {
          "source_path": "docs/migrate/release/promote.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/release/prepare-for-promotion.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/cutover",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
          "redirect_document_id": false
       },
       {
@@ -1399,6 +1399,56 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-devtest-to-labs.md",
          "redirect_url": "/azure/devtest-labs/devtest-lab-overview",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-tfs-vsts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rebuild.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md ",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios",
+         "redirect_document_id": false
+      }      
    ]
 }
