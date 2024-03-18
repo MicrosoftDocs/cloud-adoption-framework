@@ -20,11 +20,11 @@ The table below gives an overview of the activities documented in this phase, al
 
 |Activity|Summary|Responsible roles|
 |---|---|---|
-|[Deploy supporting services](./deploy-supporting-services.md)|Guidance for how to plan for and deploy non-server resources for your workload.|Migration Engineers.|
-|[Remediate assets](./remediate.md)|Guidance to help build your remediation plan based on assets.|Migration Architect. Migration Engineer. Project Manager.|
-|[Replicate assets](./replicate.md)|Guidance for replicating source servers to the cloud.|Migration Engineers.|
-|[Prepare for management](./prepare-for-management.md)|Guidance on planning for an implementing management as part of the migration.|Cloud Operations Manager. Migration Engineer. Workload Architects.|
-|[Migration testing](./migration-testing.md)|Guidance on how to perform technical migration testing prior to performing business testing.|Project Manager. Workload Architects. Migration Engineers.|
+|[Deploy supporting services](./deploy-supporting-services.md)|Guidance for how to plan for and deploy non-server resources for your workload.|<li>Migration Engineers.|
+|[Remediate assets](./remediate.md)|Guidance to help build your remediation plan based on assets.|<li>Migration Architect.<br><li>Migration Engineer.<br><li>Project Manager.|
+|[Replicate assets](./replicate.md)|Guidance for replicating source servers to the cloud.|<li>Migration Engineers.|
+|[Prepare for management](./prepare-for-management.md)|Guidance on planning for an implementing management as part of the migration.|<li>Cloud Operations Manager.<br><li>Migration Engineer.<br><li>Workload Architects.|
+|[Migration testing](./migration-testing.md)|Guidance on how to perform technical migration testing prior to performing business testing.|<li>Project Manager.<br><li>Workload Architects.<br><li>Migration Engineers.|
 
 ## Next steps
 

@@ -23,9 +23,9 @@ The table below gives an overview of the activities documented in this phase, al
 
 |Activity|Summary|Responsible roles|
 |---|---|---|
-|Classify workloads|Instructions for classifying data sensitivity and mission criticality, and for identifying your organization's specific classifications.|Migration Architects. Cloud Operations Manager.|
-|Evaluate workload readiness|Instructions for assessment, common blockers, and common evaluation activities|Migration Architect.|
-|Architect workloads|Guidance for designing the architecture of the migrated workloads, supporting services, and building and refining initial cloud estimates.|Migration Architect. Workload Architect. Landing Zone Architect. Cloud Operations Manager.|
+|[Classify workloads](./classify.md)|Instructions for classifying data sensitivity and mission criticality, and for identifying your organization's specific classifications.|<li>Migration Architects.<br><li>Cloud Operations Manager.|
+|[Evaluate workload readiness](./evaluate.md)|Instructions for assessment, common blockers, and common evaluation activities|<li>Migration Architect.|
+|[Architect workloads](./architect.md)|Guidance for designing the architecture of the migrated workloads, supporting services, and building and refining initial cloud estimates.|<li>Migration Architect.<br><li>Workload Architect.<br><li>Landing Zone Architect.<br><li>Cloud Operations Manager.|
 
 ## Next steps
 
