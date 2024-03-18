@@ -10,7 +10,7 @@ items:
   - name: Scenarios
     items:
     - name: Overview
-      href: scenarios/overview.md
+      href: scenarios/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
     - name: Cloud-scale analytics

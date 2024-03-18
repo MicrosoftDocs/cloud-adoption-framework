@@ -1444,6 +1444,11 @@
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
-      }
+      },
+      {
+         "source_path": "docs/scenarios/overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios",
+         "redirect_document_id": false
+      }      
    ]
 }
