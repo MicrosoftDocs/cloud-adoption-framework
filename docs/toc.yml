@@ -372,6 +372,8 @@ items:
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
+              - name: Azure Virtual Network Manager
+                href: ready/azure-best-practices/azure-virtual-network-manager.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
