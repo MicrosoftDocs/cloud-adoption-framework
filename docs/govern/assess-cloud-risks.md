@@ -1,6 +1,6 @@
 ---
 title: Conduct a risk assessment
-description: Learn how to conduct a risk assessment and catalog risks.
+description: Explore the process of cloud risk assessment through a detailed guide covering identification, analysis, and management of cloud-related risks. Understand the importance of establishing cloud governance policies to mitigate risks associated with regulatory compliance, security, operations, and costs. Learn about utilizing Azure tools like Azure Advisor and Microsoft Defender for Cloud for risk identification and management. Gain insights into stakeholder engagement, risk impact analysis, and the formulation of effective cloud governance strategies.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/01/2024
@@ -124,7 +124,7 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 ## Next step
 
-The next step is to document cloud governance policies. Documenting cloud governance policies uses the risk list to create one or more policies to manage each risk.
+Document cloud governance policies. Use the risk list to define and distribute cloud governance policies.
 
 > [!div class="nextstepaction"]
 > [Document cloud governance policies](document-cloud-governance-policies.md)
