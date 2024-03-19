@@ -1,6 +1,6 @@
 ---
 title: Workload classification before migration
-description: Classify your workloads during a pre-migration assessment.
+description: Classify your workloads during a pre-migration assessment using the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 12/05/2023

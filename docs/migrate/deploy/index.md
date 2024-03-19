@@ -10,6 +10,8 @@ ms.topic: conceptual
 
 # Migration deployment checklist
 
+![Diagram that shows the deploy-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-deploy.svg)
+
 In this phase of the adoption journey, you begin the technical execution of the migration. You use the workload architecture and assessment materials from the previous phase to begin deployment and remediation of issues. You begin replicating servers to Azure and preparing them for migration, and begin executing your technical tests.
 
 This phase can be the most technical demanding. It's important to make sure you complete your remediation activities and perform detailed testing. You should have a clear understanding of how the services operate together. By the end of this, you should have high confidence that your workload is ready to operate in Azure, and are ready to plan for the release.

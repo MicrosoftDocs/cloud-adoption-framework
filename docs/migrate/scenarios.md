@@ -27,23 +27,30 @@ See each section below for relevant migration guidance for specific applications
 |---|---|
 | [Migrate to Azure Kubernetes Service (AKS)](/azure/aks/aks-migration) | TBD |
 
-## Windows and Linux servers
+## Windows and Linux
 
-### VMWare
+### VMWare servers
 
 | Link | Description |
 |---|---|
 | [Discover servers running in a VMware environment](/azure/migrate/tutorial-discover-vmware) | TBD |
 | [Assess VMware VMs for migration to Azure VMs](/azure/migrate/tutorial-assess-vmware-azure-vm) | TBD |
 | [Select a VMware migration option](/azure/migrate/server-migrate-overview) | TBD |
+| [Move on-premises VMware infrastructure to AVS](./azure-best-practices/contoso-migration-vmware-to-azure.md) | In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that are designed for workload migration. Contoso can confidently use Azure VMware Solution because it's a first-party Microsoft offering that's backed by VMware. |
 
-### Hyper-V
+### Hyper-V servers
 
 | Link | Description |
 |---|---|
 | [Discover servers running in a Hyper-V environment](/azure/migrate/tutorial-discover-hyper-v) | TBD |
 | [Assess Hyper-V VMs for migration to Azure](/azure/migrate/tutorial-assess-hyper-v) | TBD |
 | [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v) | TBD |
+
+### Remote Desktop Services & Azure Virtual Desktop
+
+|Link|Description|
+|---|---|
+| [Move on-premises Remote Desktop Services to Azure Virtual Desktop scenario](./azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md) | In this article, Contoso migrates and modernizes their on-premises VDI environment based on Remote Desktop Services (RDS) in Windows Server to Azure Virtual Desktop.|
 
 ## Databases and data platforms
 

@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 Before you plan individual workload migrations, you must ready your organization and cloud resources to support the migration. Consider the decisions you need to make and the processes you need to incorporate to ready your environment. Some of these considerations are covered earlier in the Cloud Adoption Framework for Azure, and those decisions can affect future migration activities.
 
+![Diagram that shows the prepare phase of the migration guidance in the Cloud Adoption Framework.](../media/migrate-prepare.svg)
+
 The following section provides guidance about creating a secure foundation and plan for your migrations.
 
 **It's important to prepare**. If you fail to prepare for migrations, you might run into setbacks if you have to retroactively incorporate changes. If the process becomes too intensive, you might even have to abandon the migration and resume it at a later date, after tasks are completed. To avoid this scenario, make sure that you have a plan for addressing all the readiness activities.
