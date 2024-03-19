@@ -175,7 +175,7 @@ Policy ID: CM02
 - Scope: Workload teams. Platform team
 - Remediation: Mandatory optimization audits after 60 days
 
-### Example data governance policies
+### Example cloud data governance policies
 
 Policy ID: DG01
 
@@ -195,7 +195,7 @@ Policy ID: DG02
 - Scope: Workload team
 - Remediation: Implementation within 60 days, quarterly audits
 
-### Example resource management governance policies
+### Example cloud resource management governance policies
 
 Policy ID: RM01
 
