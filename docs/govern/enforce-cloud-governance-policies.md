@@ -177,17 +177,17 @@ Compliance checklists help teams understand the governance policies that apply t
 ### Cloud data governance checklist
 
 - Encryption in transit and at rest must be applied to all sensitive data ([DG01](./document-cloud-governance-policies.md#example-cloud-data-governance-policies)).
-- Data lifecycle policies must be enabled for all sensitive data [DG02](./document-cloud-governance-policies.md#example-cloud-data-governance-policies).
+- Data lifecycle policies must be enabled for all sensitive data ([DG02](./document-cloud-governance-policies.md#example-cloud-data-governance-policies)).
 
 ### Cloud resource management governance checklist
 
-- Bicep must be used to deploy resources.
-- Tags must be enforced all cloud resources using Azure Policy.
+- Bicep must be used to deploy resources ([RM01](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies)).
+- Tags must be enforced all cloud resources using Azure Policy ([RM02](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies)).
 
 ### AI governance checklist
 
-- AI bias detection and mitigation in Azure OpenAI must be used.
-- Customer-facing AI systems must be red-teamed monthly.
+- AI bias detection and mitigation in Azure OpenAI must be used ([AI01](./document-cloud-governance-policies.md#example-ai-governance-policies)).
+- Customer-facing AI systems must be red-teamed monthly ([AI02](./document-cloud-governance-policies.md#example-ai-governance-policies)).
 
 ### Summary cloud governance checklist
 
@@ -205,10 +205,10 @@ Compliance checklists help teams understand the governance policies that apply t
 | Cost management | Azure Advisor cost recommendations must be reviewed. | [CM02](./document-cloud-governance-policies.md#example-cloud-cost-management-policies) |
 | Data governance | Encryption in transit and at rest must be applied to all sensitive data. | [DG01](./document-cloud-governance-policies.md#example-cloud-data-governance-policies) |
 | Data governance | Data lifecycle policies must be enabled for all sensitive data. | [DG02](./document-cloud-governance-policies.md#example-cloud-data-governance-policies) |
-| Resource management | Bicep must be used to deploy resources. | RM01 |
-| Resource management | Tags must be enforced all cloud resources using Azure Policy. | RM02 |
-| AI governance | AI bias detection and mitigation in Azure OpenAI must be used. | AI01 |
-| AI governance | Customer-facing AI systems must be red-teamed monthly. | AI02 |
+| Resource management | Bicep must be used to deploy resources. | [RM01](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies) |
+| Resource management | Tags must be enforced all cloud resources using Azure Policy. | [RM02](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies) |
+| AI governance | AI bias detection and mitigation in Azure OpenAI must be used. | [AI01](./document-cloud-governance-policies.md#example-ai-governance-policies) |
+| AI governance | Customer-facing AI systems must be red-teamed monthly. | [AI02](./document-cloud-governance-policies.md#example-ai-governance-policies) |
 
 > [!div class="nextstepaction"]
 > [Monitor cloud governance](monitor-cloud-governance.md)
