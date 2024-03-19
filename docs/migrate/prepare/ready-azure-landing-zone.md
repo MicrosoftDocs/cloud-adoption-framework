@@ -14,66 +14,65 @@ If your organization already aligns to [Azure landing zones](../../ready/landing
 
 Regardless of which Azure landing zone [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a successful migration project.
 
-If you aren't using one of the Azure landing zone reference implementations, the steps outlined in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
+If you don't use an Azure landing zone reference implementation, you still need to perform the steps in this guide. However, you might have prerequisite tasks to perform first, or you might need to adapt specific recommendations to your design.
 
-This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments but will note if they aren't relevant for manually deployed and managed environments.
+This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments. It's noted if they aren't relevant for manually deployed and managed environments.
 
 ## Establish hybrid connectivity
 
-During Azure landing zone deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both. After Azure landing zone deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
+During Azure landing zone deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways, such as Azure VPN gateways, Azure ExpressRoute gateways, or both. After Azure landing zone deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
 
-In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). This plan should guide you on what connections you need to perform. For example, if you're using ExpressRoute, you need to work with your provider to establish your ExpressRoute circuit.
+In the ready phase, you planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). Use this plan to determine what connections you need to perform. For example, if you use ExpressRoute, you must work with your provider to establish your ExpressRoute circuit.
 
-See technical guidance for specific scenarios by reviewing the following links:
+To get technical guidance for specific scenarios, see:
 
-- [Creating a VPN connection from your Azure VPN Gateway](/azure/vpn-gateway/tutorial-site-to-site-portal)
-- [Creating an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
-  - You should refer to your provider's specific documentation as well.
-- [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
-- [Managing Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings)
+- [Create a VPN connection from your Azure VPN Gateway](/azure/vpn-gateway/tutorial-site-to-site-portal).
+- [Create an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).
+- [Create an ExpressRoute connection from your Azure ExpressRoute gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager).
+- [Manage Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings).
 
 > [!NOTE]
-> Make sure you refer to your provider's specific documentation as well.
+> Also refer to your provider's specific documentation.
 
-If you're establishing your hybrid connectivity to Azure via a third-party Network Virtual Appliances (NVA) deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
+If you're establishing your hybrid connectivity to Azure via a third-party network virtual appliances (NVA) deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare identity
 
-During the Azure landing zone deployment, organizations deploy supporting architecture for their identity platform. This involves a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines used for identity. However, the actual identity resources must be deployed after the Azure landing zone deployment.
+During the Azure landing zone deployment, you should also deploy a supporting architecture for your identity platform. You might have a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines (VMs) that you use for identity. However, you must deploy the identity resources after the Azure landing zone deployment.
 
-This section has guidance for considerations related to Active Directory. If you're using another identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
+This section has guidance for considerations related to Active Directory. If you use a different identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
 
-Before implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) when you planned for your Landing Zone.
+Before you implement this guidance, review your [Active Directory and hybrid identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) decisions when you planned for your landing zone.
 
-You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if you need any changes in Microsoft Entra ID.
+You should also review your [identity baseline](../../govern/identity-baseline/index.md) from the governance phase to determine if you need to make changes in Microsoft Entra ID.
 
 ### Extend Active Directory domain controllers
 
-In most migration scenarios, the workloads being migrated to Azure are already joined to an existing Active Directory domain. While Microsoft Entra ID can offer solutions for modernizing identity management even for VM workloads, doing so can disrupt migration. Rearchitecting identity usage for workloads is often an effort saved for modernization or innovation initiatives.
+In most migration scenarios, the workloads that you migrate to Azure are already joined to an existing Active Directory domain. Microsoft Entra ID can offer solutions for modernizing identity management, even for VM workloads, but it can disrupt migration. Rearchitecting identity usage for workloads is often performed during modernization or innovation initiatives.
 
-As a result, you need to deploy domain controllers to Azure inside the identity network area you deployed. After deploying the VMs, you must follow your normal DC promotion process to add them to the domain. This can include additional sites created to support your replication topology.
+As a result, you need to deploy domain controllers to Azure inside the identity network area that you deployed. After you deploy the VMs, you must follow your normal domain controller promotion process to add them to the domain. This process might include creating additional sites to support your replication topology.
 
-For a common architecture pattern for deploying these resources, review the article on [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain) from the Azure Architecture Center. The AD DS servers could be in a subnet in the hub if you're implementing the [Enterprise-scale for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) or in their dedicated virtual network for [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
+For a common architecture pattern to deploy these resources, see [Deploy Active Directory Domain Services (AD DS) in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain).
+
+If you implement the [enterprise-scale architecture for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md), the AD DS servers are often in a subnet in the hub. If you implement the [enterprise-scale hub-and-spoke architecture](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or the [enterprise-scale Virtual WAN architecture](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md), the servers are often in their dedicated virtual network.
 
 <a name='azure-ad-connect'></a>
 
 ### Microsoft Entra Connect
 
-Most organizations already have Microsoft Entra Connect to populate Microsoft 365 services like Exchange Online. However, if you haven't implemented this, you might need to deploy Microsoft Entra Connect after your landing zone deployment to replicate identities.
-
-You can use [this guidance](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Microsoft Entra Connect.
+Most organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
 
 ## Enable hybrid DNS
 
-Most organizations need to be able to resolve DNS requests for namespaces that are a part of the existing environments. These namespaces often require integration with Active Directory servers. In addition, resources in the existing environment must be able to resolve resources in Azure.
+Most organizations need to be able to resolve DNS requests for namespaces that are a part of the existing environments. These namespaces often require integration with Active Directory servers. And resources in the existing environment must be able to resolve resources in Azure.
 
-As a result, the configuration of DNS services is needed to support common flows. Azure Landing Zones deploy many of the resources you need, but there are additional items to review.
+As a result, you need to configure DNS services to support common flows. You can use Azure landing zones to deploy many of the resources you need, but there are additional items to review.
 
-Review [DNS resolution in Azure](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to prepare for these activities.
+To prepare for these activities, see [DNS resolution in Azure](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
 ### Custom DNS resolution
 
-If you're using Active Directory for your DNS resolver or are deploying a third-party solution, VMs need to be deployed. You can use these as your DNS servers if you already have your Domain Controllers deployed to your Identity subscription and network spoke. Otherwise, you must deploy and configure the virtual machines to house these services.
+If you're using Active Directory for your DNS resolver or are deploying a third-party solution, VMs need to be deployed. You can use these as your DNS servers if you already have your Domain Controllers deployed to your Identity subscription and network spoke. Otherwise, you must deploy and configure the VMs to house these services.
 
 Once deployed, it needs to be integrated into your existing DNS platform so that it's able to perform lookups against your existing namespaces. For Active Directory DNS servers, this is provided automatically.
 
