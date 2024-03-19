@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Migration release checklist
 
+![Diagram that shows the release-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-release.svg)
+
 This phase guides you through taking your deployed workloads, and releasing them to production use. It includes not just the technical processes of executing your final migration steps, but also the communication to the business, final change approvals, cleaning up resources, and learning from the migration.
 
 ## Executing the migration

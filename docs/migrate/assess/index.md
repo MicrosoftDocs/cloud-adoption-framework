@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Migration assessment checklist
 
-![Diagram that shows the assess-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-assess.png)
+![Diagram that shows the assess-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-assess.svg)
 
 Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](/azure/cloud-adoption-framework/digital-estate/) allows you to generate an overall migration backlog of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
 
