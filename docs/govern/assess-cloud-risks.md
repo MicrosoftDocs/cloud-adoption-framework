@@ -133,6 +133,124 @@ Document cloud governance policies. Use the risk list to define and distribute c
 
 The risk list is an example that you should tailor to fit the specific needs and context of your organization's Azure cloud environment. Regularly updating the risk list (risk register) and reviewing it with stakeholders is crucial for effective cloud governance.
 
+### Example regulatory compliance risk
+
+Risk ID: R01
+
+- Risk management status: Open
+- Risk description: Noncompliance with sensitive data requirements
+- Risk probability: 20% OR Medium
+- Risk impact: $100,000 OR High
+- Risk priority: $20,000 OR High
+- Risk level: Level 2
+- Risk management strategy: Mitigate
+- Risk management enforcement: Use Microsoft Purview for sensitive data monitoring. Compliance reporting in Microsoft Purview
+- Risk owner: Compliance lead
+- Risk closure date: 2024-04-01
+
+### Example cloud security risks
+
+Risk ID: R02
+
+- Risk management status: Open
+- Risk description: Unauthorized access to cloud services
+- Risk probability: 30% OR High
+- Risk impact: $200,000 OR Very High
+- Risk priority: $60,000 OR Very High
+- Risk level: Level 1
+- Risk management strategy: Mitigate
+- Risk management enforcement: Microsoft Entra ID multifactor authentication. Microsoft Entra ID Governance monthly access reviews
+- Risk owner: Security lead
+- Risk closure date: 2024-03-15
+
+Risk ID: R03
+
+- Risk management status: Open
+- Risk description: Insecure code management
+- Risk probability: 20% OR Medium
+- Risk impact: $150,000 OR High
+- Risk priority: $30,000 OR High
+- Risk level: Level 2
+- Risk management strategy: Mitigate
+- Risk management enforcement: Use defined code repository. Use quarantine pattern for public libraries
+
+### Example cloud cost management risk
+
+Risk ID: R04
+
+- Risk management status: Open
+- Risk description: Overspending on cloud services due to overprovisioning and lack of monitoring
+- Risk probability: 40% OR High
+- Risk impact: $50,000 OR Medium
+- Risk priority: $20,000 OR High
+- Risk level: Level 2
+- Risk management strategy: Mitigate
+- Risk management enforcement: Set budgets and alerts for workloads. Review and apply Azure Advisor cost recommendations
+- Risk owner: Cost lead
+- Risk closure date: 2024-03-01
+
+### Example cloud operations risk
+
+Risk ID: R05
+
+- Risk management status: Open
+- Risk description: Service disruption due to Azure region outage
+- Risk probability: 25% OR Medium
+- Risk impact: $150,000 OR High
+- Risk priority: $37,500 OR High
+- Risk level: Level 1
+- Risk management strategy: Mitigate
+- Risk management enforcement: All mission-critical workloads should have a cross-region active-active architecture
+- Risk owner: Operations lead
+- Risk closure date: 2024-03-20
+
+### Example cloud data risk
+
+Risk ID: R06
+
+- Risk management status: Open
+- Risk description: Loss of sensitive data due to improper encryption and data lifecycle management
+- Risk probability: 35% OR High
+- Risk impact: $250,000 OR Very High
+- Risk priority: $87,500 OR Very High
+- Risk level: Level 1
+- Risk management strategy: Mitigate
+- Risk management enforcement: Apply encryption in transit and at rest. Establish data lifecycle policies using Azure tools
+- Risk owner: Data lead
+- Risk closure date: 2024-04-10
+
+### Example cloud resource management risk
+
+Risk ID: R07
+
+- Risk management status: Open
+- Risk description: Misconfiguration of cloud resources leading to unauthorized access and data exposure
+- Risk probability: 30% OR High
+- Risk impact: $100,000 OR High
+- Risk priority: $30,000 OR High
+- Risk level: Level 2
+- Risk management strategy: Mitigate
+- Risk management enforcement: Use infrastructure as code (IaC). Enforce tagging requirements using Azure Policy
+- Risk owner: Resource lead
+- Risk closure date: 2024-03-25
+
+### Example AI risk
+
+Risk ID: R08
+
+- Risk management status: Open
+- Risk description: AI model producing biased decisions due to unrepresentative training data
+- Risk probability: 15% OR Low
+- Risk impact: $200,000 OR High
+- Risk priority: $30,000 OR Medium
+- Risk level: Level 3
+- Risk management strategy: Mitigate
+- Risk management enforcement: Use bias detection and mitigation techniques. Red teaming AI models monthly
+- Risk owner: AI lead
+- Risk closure date: 2024-05-01
+
+### Summary of cloud risks
+
 |Risk ID|Risk management status|Risk category|Risk description|Risk probability|Risk impact|Risk priority|Risk level|Risk management strategy|Risk management enforcement|Risk owner|Risk closure date|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |R01|Open|Regulatory compliance|Noncompliance with sensitive data requirements.|20% OR Medium|$100,000 OR High|$20,000 OR High|Level 2|Mitigate|Use Microsoft Purview for sensitive data monitoring. Compliance reporting in Microsoft Purview|Compliance lead|2024-04-01|
@@ -142,6 +260,7 @@ The risk list is an example that you should tailor to fit the specific needs and
 |R05|Open|Data|Loss of sensitive data due to improper encryption and data lifecycle management.|35% OR High|$250,000 OR Very High|$87,500 OR Very High|Level 1|Mitigate|Apply encryption in transit and at rest. Establish data lifecycle policies using Azure tools.|Data lead|2024-04-10|
 |R06|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure.|30% OR High|$100,000 OR High|$30,000 OR High|Level 2|Mitigate|Use infrastructure as code (IaC). Enforce tagging requirements using Azure Policy|Resource lead|2024-03-25|
 |R07|Open|AI|AI model producing biased decisions due to unrepresentative training data.|15% OR Low|$200,000 OR High|$30,000 OR Medium|Level 3|Mitigate|Use bias detection and mitigation techniques. Red teaming AI models monthly|AI lead|2024-05-01|
+|R08|Open|Security|Insecure code management.|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
 
 > [!div class="nextstepaction"]
 > [Document cloud governance policies](document-cloud-governance-policies.md)

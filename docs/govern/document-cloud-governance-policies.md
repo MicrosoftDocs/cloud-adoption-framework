@@ -82,7 +82,7 @@ The following cloud governance policies are examples for reference. These polici
 Policy ID: RC01
 
 - Policy category: Regulatory compliance
-- Risk ID: R01
+- Risk ID: [R01](./assess-cloud-risks.md#example-regulatory-compliance-risk)
 - Policy statement: Microsoft Purview must be used to monitor sensitive data
 - Purpose: Data privacy compliance
 - Scope: Workload teams. Platform team
@@ -91,7 +91,7 @@ Policy ID: RC01
 Policy ID: RC02
 
 - Policy category: Regulatory compliance
-- Risk ID: R01
+- Risk ID: [R01](./assess-cloud-risks.md#example-regulatory-compliance-risk)
 - Policy statement: Daily sensitive data compliance reports must be generated from Microsoft Purview
 - Purpose: Data privacy compliance
 - Scope: Workload teams. Platform team
@@ -102,7 +102,7 @@ Policy ID: RC02
 Policy ID: SC01
 
 - Policy category: Security
-- Risk ID: R02
+- Risk ID: [R02](./assess-cloud-risks.md#example-cloud-security-risks)
 - Policy statement: Multifactor authentication (MFA) must be enabled for all users
 - Purpose: Mitigate data breaches and unauthorized access
 - Scope: Azure users
@@ -111,7 +111,7 @@ Policy ID: SC01
 Policy ID: SC02
 
 - Policy category: Security
-- Risk ID: R02
+- Risk ID: [R02](./assess-cloud-risks.md#example-cloud-security-risks)
 - Policy statement: Access reviews must be conducted monthly in Microsoft Entra ID Governance
 - Purpose: Ensure data and service integrity
 - Scope: Azure users
@@ -120,7 +120,7 @@ Policy ID: SC02
 Policy ID: SC03
 
 - Policy category: Security
-- Risk ID: R02
+- Risk ID: [R03](./assess-cloud-risks.md#example-cloud-security-risks)
 - Policy statement: Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code
 - Purpose: Ensure secure and centralized management of code repositories
 - Scope: Development teams
@@ -129,38 +129,18 @@ Policy ID: SC03
 Policy ID: SC04
 
 - Policy category: Security
-- Risk ID: R02
+- Risk ID: [R03](./assess-cloud-risks.md#example-cloud-security-risks)
 - Policy statement: Teams utilizing libraries from public sources must adopt the quarantine pattern
 - Purpose: Ensure libraries are safe and compliant before integration into the development process
 - Scope: Development teams
 - Remediation: Removal of noncompliant libraries and review of integration practices for affected projects
-
-### Example cloud operations governance policies
-
-Policy ID: OP01
-
-- Policy category: Operations
-- Risk ID: R04
-- Policy statement: Production workloads should have an active-passive architecture across regions
-- Purpose: Ensure service continuity
-- Scope: Workload teams
-- Remediation: Architecture evaluations, biannual reviews
-
-Policy ID: OP02
-
-- Policy category: Operations
-- Risk ID: R04
-- Policy statement: All mission-critical workloads must implement a cross-region active-active architecture
-- Purpose: Ensure service continuity
-- Scope: Mission-critical workload teams
-- Remediation: Updates within 90 days, progress reviews
 
 ### Example cloud cost management policies
 
 Policy ID: CM01
 
 - Policy category: Cost management
-- Risk ID: R03
+- Risk ID: [R04](./assess-cloud-risks.md#example-cloud-cost-management-risk)
 - Policy statement: Workload teams must set budgets alerts at the resource group level
 - Purpose: Prevent overspending
 - Scope: Workload teams. Platform team
@@ -169,18 +149,38 @@ Policy ID: CM01
 Policy ID: CM02
 
 - Policy category: Cost management
-- Risk ID: R03
+- Risk ID: [R04](./assess-cloud-risks.md#example-cloud-cost-management-risk)
 - Policy statement: Azure Advisor cost recommendations must be reviewed
 - Purpose: Optimize cloud usage
 - Scope: Workload teams. Platform team
 - Remediation: Mandatory optimization audits after 60 days
+
+### Example cloud operations governance policies
+
+Policy ID: OP01
+
+- Policy category: Operations
+- Risk ID: [R05](./assess-cloud-risks.md#example-cloud-operations-risk)
+- Policy statement: Production workloads should have an active-passive architecture across regions
+- Purpose: Ensure service continuity
+- Scope: Workload teams
+- Remediation: Architecture evaluations, biannual reviews
+
+Policy ID: OP02
+
+- Policy category: Operations
+- Risk ID: [R05](./assess-cloud-risks.md#example-cloud-operations-risk)
+- Policy statement: All mission-critical workloads must implement a cross-region active-active architecture
+- Purpose: Ensure service continuity
+- Scope: Mission-critical workload teams
+- Remediation: Updates within 90 days, progress reviews
 
 ### Example cloud data governance policies
 
 Policy ID: DG01
 
 - Policy category: Data
-- Risk ID: R05
+- Risk ID: [R06](./assess-cloud-risks.md#example-cloud-data-risk)
 - Policy statement: Encryption in transit and at rest must be applied to all sensitive data
 - Purpose: Protect sensitive data
 - Scope: Workload team
@@ -189,7 +189,7 @@ Policy ID: DG01
 Policy ID: DG02
 
 - Policy category: Data
-- Risk ID: R05
+- Risk ID: [R06](./assess-cloud-risks.md#example-cloud-data-risk)
 - Policy statement: Data lifecycle policies must be enabled for all sensitive data
 - Purpose: Manage data lifecycle
 - Scope: Workload team
@@ -200,7 +200,7 @@ Policy ID: DG02
 Policy ID: RM01
 
 - Policy category: Resource management
-- Risk ID: R06
+- Risk ID: [R07](./assess-cloud-risks.md#example-cloud-resource-management-risk)
 - Policy statement: Bicep must be used to deploy resources
 - Purpose: Standardize resource provisioning
 - Scope: Workload team. Platform team
@@ -209,7 +209,7 @@ Policy ID: RM01
 Policy ID: RM02
 
 - Policy category: Resource management
-- Risk ID: R06
+- Risk ID: [R07](./assess-cloud-risks.md#example-cloud-resource-management-risk)
 - Policy statement: Tags must be enforced all cloud resources using Azure Policy
 - Purpose: Facilitate resource tracking
 - Scope: All cloud resources
@@ -220,7 +220,7 @@ Policy ID: RM02
 Policy ID: AI01
 
 - Policy category: AI
-- Risk ID: R07
+- Risk ID: [R08](./assess-cloud-risks.md#example-ai-risk)
 - Policy statement: AI bias detection and mitigation in Azure OpenAI must be used
 - Purpose: Mitigate AI bias
 - Scope: Workload teams
@@ -229,32 +229,32 @@ Policy ID: AI01
 Policy ID: AI02
 
 - Policy category: AI
-- Risk ID: R07
+- Risk ID: [R08](./assess-cloud-risks.md#example-ai-risk)
 - Policy statement: Customer-facing AI systems must be red-teamed monthly
 - Purpose: Identify AI biases
 - Scope: AI model teams
 - Remediation: Immediate review, corrective actions for misses
 
-### Cloud governance policy summary
+### Summary of cloud governance policies
 
 | Policy ID | Policy Category | Risk ID | Policy Statement | Purpose | Scope | Remediation |
 |-----------|-----------------|---------|------------------|---------|-------|-------------|
-| RC01 | Regulatory compliance | R01 | Microsoft Purview must be used to monitor sensitive data. | Regulatory compliance | Workload teams. Platform team | Immediate action by affected team. Compliance training |
-| RC02 | Regulatory compliance | R01 | Daily sensitive data compliance reports must be generated from Microsoft Purview. | Regulatory compliance | Workload teams. Platform team | Resolution within one day, confirmation audit |
-| SC01 | Security | R02 | Multifactor authentication (MFA) must be enabled for all users | Mitigate data breaches and unauthorized access | Azure users | Revoke user access |
-| SC02 | Security | R02 | Access reviews must be conducted monthly in Microsoft Entra ID Governance | Ensure data and service integrity | Azure users | Immediate access revocation for noncompliance |
-| SC03 | Security | R02 | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code | Ensure secure and centralized management of code repositories | Development teams | Transfer of unauthorized repositories to the specified GitHub organization and potential disciplinary actions for noncompliance |
-| SC04 | Security | R02 | Teams utilizing libraries from public sources must adopt the quarantine pattern | Ensure libraries are safe and compliant before integration into the development process | Development teams | Removal of noncompliant libraries and review of integration practices for affected projects |
-| OP01 | Operations | R04 | Production workloads should have an active-passive architecture across regions | Ensure service continuity | Workload teams | Architecture evaluations, biannual reviews |
-| OP02 | Operations | R04 | All mission-critical workloads must implement a cross-region active-active architecture | Ensure service continuity | Mission-critical workload teams | Updates within 90 days, progress reviews |
-| CM01 | Cost Management | R03 | Workload teams must set budgets alerts at the resource group level | Prevent overspending | Workload teams. Platform team | Immediate reviews, adjustments for alerts |
-| CM02 | Cost Management | R03 | Azure Advisor cost recommendations must be reviewed | Optimize cloud usage | Workload teams. Platform team | Mandatory optimization audits after 60 days |
-| DG01 | Data | R05 | Encryption in transit and at rest must be applied to all sensitive data | Protect sensitive data | Workload team | Immediate encryption enforcement and security training |
-| DG02 | Data | R05 | Data lifecycle policies must be enabled for all sensitive data | Manage data lifecycle | Workload team | Implementation within 60 days, quarterly audits |
-| RM01 | Resource management | R06 | Bicep must be used to deploy resources | Standardize resource provisioning | Workload team. Platform team | Immediate Bicep transition plan |
-| RM02 | Resource management | R06 | Tags must be enforced all cloud resources using Azure Policy | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days |
-| AI01 | AI | R07 | AI bias detection and mitigation in Azure OpenAI must be used. | Mitigate AI bias | Workload teams. | Immediate corrective measures |
-| AI02 | AI | R07 | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses |
+| RC01 | Regulatory compliance | [R01](./assess-cloud-risks.md#example-regulatory-compliance-risk) | Microsoft Purview must be used to monitor sensitive data. | Regulatory compliance | Workload teams. Platform team | Immediate action by affected team. Compliance training |
+| RC02 | Regulatory compliance | [R01](./assess-cloud-risks.md#example-regulatory-compliance-risk) | Daily sensitive data compliance reports must be generated from Microsoft Purview. | Regulatory compliance | Workload teams. Platform team | Resolution within one day, confirmation audit |
+| SC01 | Security | [R02](./assess-cloud-risks.md#example-cloud-security-risks) | Multifactor authentication (MFA) must be enabled for all users | Mitigate data breaches and unauthorized access | Azure users | Revoke user access |
+| SC02 | Security | [R02](./assess-cloud-risks.md#example-cloud-security-risks) | Access reviews must be conducted monthly in Microsoft Entra ID Governance | Ensure data and service integrity | Azure users | Immediate access revocation for noncompliance |
+| SC03 | Security | [R03](./assess-cloud-risks.md#example-cloud-security-risks) | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code | Ensure secure and centralized management of code repositories | Development teams | Transfer of unauthorized repositories to the specified GitHub organization and potential disciplinary actions for noncompliance |
+| SC04 | Security | [R03](./assess-cloud-risks.md#example-cloud-security-risks) | Teams utilizing libraries from public sources must adopt the quarantine pattern | Ensure libraries are safe and compliant before integration into the development process | Development teams | Removal of noncompliant libraries and review of integration practices for affected projects |
+| CM01 | Cost Management | [R04](./assess-cloud-risks.md#example-cloud-cost-management-risk) | Workload teams must set budgets alerts at the resource group level | Prevent overspending | Workload teams. Platform team | Immediate reviews, adjustments for alerts |
+| CM02 | Cost Management | [R04](./assess-cloud-risks.md#example-cloud-cost-management-risk) | Azure Advisor cost recommendations must be reviewed | Optimize cloud usage | Workload teams. Platform team | Mandatory optimization audits after 60 days |
+| OP01 | Operations | [R05](./assess-cloud-risks.md#example-cloud-operations-risk) | Production workloads should have an active-passive architecture across regions | Ensure service continuity | Workload teams | Architecture evaluations, biannual reviews |
+| OP02 | Operations | [R05](./assess-cloud-risks.md#example-cloud-operations-risk) | All mission-critical workloads must implement a cross-region active-active architecture | Ensure service continuity | Mission-critical workload teams | Updates within 90 days, progress reviews |
+| DG01 | Data | [R06](./assess-cloud-risks.md#example-cloud-data-risk) | Encryption in transit and at rest must be applied to all sensitive data | Protect sensitive data | Workload team | Immediate encryption enforcement and security training |
+| DG02 | Data | [R06](./assess-cloud-risks.md#example-cloud-data-risk) | Data lifecycle policies must be enabled for all sensitive data | Manage data lifecycle | Workload team | Implementation within 60 days, quarterly audits |
+| RM01 | Resource management | [R07](./assess-cloud-risks.md#example-cloud-resource-management-risk) | Bicep must be used to deploy resources | Standardize resource provisioning | Workload team. Platform team | Immediate Bicep transition plan |
+| RM02 | Resource management | [R07](./assess-cloud-risks.md#example-cloud-resource-management-risk) | Tags must be enforced all cloud resources using Azure Policy | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days |
+| AI01 | AI | [R08](./assess-cloud-risks.md#example-ai-risk) | AI bias detection and mitigation in Azure OpenAI must be used. | Mitigate AI bias | Workload teams. | Immediate corrective measures |
+| AI02 | AI | [R08](./assess-cloud-risks.md#example-ai-risk) | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses |
 
 > [!div class="nextstepaction"]
 > [Enforce cloud governance policies](enforce-cloud-governance-policies.md)

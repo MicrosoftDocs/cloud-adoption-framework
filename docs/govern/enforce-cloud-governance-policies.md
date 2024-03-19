@@ -10,9 +10,9 @@ ms.custom: internal, UpdateFrequency2
 
 # Enforce cloud governance policies
 
-This article shows you how to enforce cloud governance policies. Cloud governance enforcement refers to the controls and procedures that align cloud activity to the cloud governance policies. After the cloud governance team assesses cloud risks and creates cloud governance policies to manage those risks, they must ensure the enforcement of the cloud governance policies. They must delegate governance enforcement responsibilities. The goal is to empower each team or individual to enforce cloud governance policies within their area of responsibility. The cloud governance team can’t do it all. Prefer automated enforcement controls but enforce policies manually where you can’t automate.
+This article shows you how to enforce cloud governance policies. Cloud governance enforcement refers to the controls and procedures that align cloud activity to the cloud governance policies. The cloud governance team assesses cloud risks and creates cloud governance policies to manage those risks. To ensure compliance with the cloud governance policies, they must delegate governance enforcement responsibilities. The goal is to empower each team or individual to enforce cloud governance policies within their area of responsibility. The cloud governance team can’t do it all. Prefer automated enforcement controls but enforce policies manually where you can’t automate.
 
-:::image type="content" source="./_images/enforce.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continously to maintain cloud governance." lightbox="./_images/enforce.svg" border="false":::
+:::image type="content" source="./_images/enforce.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/enforce.svg" border="false":::
 
 ## Define an approach to enforcing cloud governance policies
 
@@ -24,23 +24,23 @@ Establish a systematic strategy to enforce cloud governance policies. The goal i
 
 - *Discuss enforcement specifics*. Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce governance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
 
-- *Have an audit-first stance.* Don’t block certain actions unless you know they are high risk, such as for understood security and compliance reasons. Lower-risk enforcement controls should start by monitoring compliance with cloud governance policies. Once you understand organizational needs, you should move to more restrictive enforcement policies. A monitor-first approach gives you an opportunity to discuss the need and realign the policy to that need.
+- *Have a monitor-first stance.* Don't block actions unless you understand them first. Lower-risk enforcement controls should start by monitoring compliance with cloud governance policies. Once you understand organizational needs, you should move to more restrictive enforcement policies. A monitor-first approach gives you an opportunity to discuss the need and realign the policy to that need.
 
-- *Prefer deny lists*: Use deny lists over allow lists. Deny lists prevent the deployment of specific services. It’s better to have a small list of services that you shouldn’t use than a long list of services you can use.
+- *Prefer blocklists*: Use blocklists over allowlists. Blocklists prevent the deployment of specific services. It’s better to have a small list of services that you shouldn’t use than a long list of services you can use.
 
-- *Define a tagging and naming strategy.* Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add additional tags for their unique needs.
+- *Define a tagging and naming strategy.* Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
 
 ## Enforce cloud governance policies automatically
 
 Use cloud management and governance tools to automate the enforcement of governance policies. These tools can help in setting up guardrails, monitoring configurations, and ensuring compliance. To set up automated enforcement, follow these recommendations:
 
-- *Start with a small set of automated policies.* Begin automating a minimal set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Automate additional policies when ready.
+- *Start with a small set of automated policies.* Begin automating a minimal set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Automate other policies when ready.
 
 - *Use cloud governance tools*. Use the tools available in your cloud environment to enforce governance. Azure’s primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
 
 - *Apply governance policies at the right scope.* Use an inheritance system where policies are set at a higher level, such as management group. Policies at higher level automatically apply to lower levels, such as subscriptions and resource groups. Policies apply even when there’s changes within the cloud environment, lowering management overhead.
 
-- *Use policy enforcement points.* Set up policy enforcement points within your cloud environments that automatically apply governance rules. This can include pre-deployment checks, runtime monitoring, and automated remediation actions.
+- *Use policy enforcement points.* Set up policy enforcement points within your cloud environments that automatically apply governance rules. Consider predeployment checks, runtime monitoring, and automated remediation actions.
 
 - *Use policy-as-code.* Use IaC tools to [enforce governance policies through code](/azure/governance/policy/concepts/policy-as-code)*.* Policy as code enhances the automation of governance controls and ensures consistency across different environments.
 
@@ -60,9 +60,9 @@ Achieve continuous alignment with global compliance standards through automated 
 
 Secure cloud environments automatically by enforcing best practices and compliance with security frameworks.
 
-- *Apply security policies.* Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) with standards, such as NIST 800 SP series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
+- *Apply security policies.* Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) to align with common security standards. There's built-in policies for NIST 800 SP series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
-- *Apply identity governance.* Enable [multi-factor authentication](/entra/identity/authentication/concept-mfa-howitworks) and [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks). [Eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy). Automate other aspects of [identity governance](/entra/id-governance/identity-governance-overview), such as access request workflows, access reviews, and identity lifecycle management. [Enable just-in time access](/entra/id-governance/privileged-identity-management/pim-configure) to limit access to important resources.
+- *Apply identity governance.* Enable [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks) and [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks). [Eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy). Automate other aspects of [identity governance](/entra/id-governance/identity-governance-overview), such as access request workflows, access reviews, and identity lifecycle management. [Enable just-in time access](/entra/id-governance/privileged-identity-management/pim-configure) to limit access to important resources.
 
 - *Apply access controls*. Use [Azure role-based access controls](/azure/role-based-access-control/overview) (RBAC) and [attribute-access controls](/azure/role-based-access-control/conditions-overview) (ABAC) to govern access to specific resources. Grant and deny permissions to users and groups. Apply the permission at the appropriate [scope](/azure/role-based-access-control/scope-overview) (management group, subscription, resource group, or resource) to provide only the permission needed and limit management overhead.
 
@@ -72,7 +72,7 @@ Automate cost monitoring, budgeting, and optimization processes that prevent ove
 
 - *Automate deployment restrictions.* [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent use of cost-intensive resources. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
-- *Automate cost allocation.* Enforce tagging requirements to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environment (e.g., dev, test, prod), department, or project. Use tags to identify and track resources that are part of a cost optimization effort.
+- *Automate cost allocation.* Enforce tagging requirements to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environment (development, test, production), department, or project. Use tags to identify and track resources that are part of a cost optimization effort.
 
 #### Automate cloud operations governance in Azure
 
@@ -110,7 +110,7 @@ Achieve streamlined and compliant resource provisioning and management through a
 
 - *Use a CI/CD pipeline.* A CI/CD pipeline can ensure deployments adhere to predefined governance rules and policies. [Integrate compliance scans](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan) into CI/CD pipelines to enforce governance.
 
-- *Govern hybrid and multi-cloud environments.* [Govern hybrid and multi-cloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
+- *Govern hybrid and multicloud environments.* [Govern hybrid and multicloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 
 #### Automate AI governance in Azure
 
@@ -134,11 +134,11 @@ Sometimes a tool limitation or cost makes automated enforcement unpractical. In 
 
 - *Use checklists.* Use governance checklists to make it easy for your teams to follow the cloud governance policies. For more information, see the [example compliance checklists](#example-cloud-governance-compliance-checklists).
 
-- *Provide regular training.* Conduct frequent training sessions for all relevant team members to ensure they are aware of the governance policies.
+- *Provide regular training.* Conduct frequent training sessions for all relevant team members to ensure they're aware of the governance policies.
 
 - *Schedule regular reviews.* Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions.
 
-- *Monitor manually.* Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. This includes tracking the use of resources, managing access controls, and ensuring data protection measures are in place as per the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
+- *Monitor manually.* Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place as per the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
 
 ## Review policy enforcement
 
@@ -150,19 +150,19 @@ Monitor cloud governance. Configure monitoring and alerting to track compliance 
 
 ## Example: Cloud governance compliance checklists
 
-Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies).
+Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies) and contain the cloud governance policy ID for cross-referencing.
 
 ### Cloud regulatory compliance governance checklist
 
-- Microsoft Purview must be used to enforce GDPR ([RC01](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
-- Daily GDPR compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
+- Microsoft Purview must be used to monitor sensitive data ([RC01](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
+- Daily sensitive data compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
 
 ### Cloud security governance checklist
 
-- Multi-Factor Authentication (MFA) must be enabled for all users ([SC01](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-- Access reviews must be conducted monthly in Entra ID Governance ([SCO2](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
+- Multifactor authentication (MFA) must be enabled for all users ([SC01](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
+- Access reviews must be conducted monthly in Microsoft Entra ID Governance ([SCO2](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
 - Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code ([SC03](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-- Teams utilizing third-party libraries from public sources must adopt the quarantine pattern ([SC04](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
+- Teams utilizing libraries from public sources must adopt the quarantine pattern ([SC04](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
 
 ### Cloud operations governance checklist
 
@@ -193,12 +193,12 @@ Compliance checklists help teams understand the governance policies that apply t
 
 | Category | Checklist Item | Policy ID |
 |----------|----------------|-----------|
-| Regulatory compliance | Microsoft Purview must be used to enforce GDPR. | [RC01](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies) |
-| Regulatory compliance | Daily GDPR compliance reports must be generated from Microsoft Purview. | [RC02](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies) |
-| Security compliance | Multi-Factor Authentication (MFA) must be enabled for all users. | [SC01](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
-| Security compliance | Access reviews must be conducted monthly in Entra ID Governance. | [SC02](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
+| Regulatory compliance | Microsoft Purview must be used to monitor sensitive data. | [RC01](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies) |
+| Regulatory compliance | Daily sensitive data compliance reports must be generated from Microsoft Purview | [RC02](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies) |
+| Security compliance | Multifactor authentication (MFA) must be enabled for all users. | [SC01](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
+| Security compliance | Access reviews must be conducted monthly in Microsoft Entra ID Governance. | [SC02](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
 | Security compliance | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code. | [SC03](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
-| Security compliance | Teams utilizing third-party libraries from public sources must adopt the quarantine pattern. | [SC04](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
+| Security compliance | Teams utilizing libraries from public sources must adopt the quarantine pattern. | [SC04](./document-cloud-governance-policies.md#example-cloud-security-governance-policies) |
 | Operations governance | Production workloads should have an active-passive architecture across regions. | [OP01](./document-cloud-governance-policies.md#example-cloud-operations-governance-policies) |
 | Operations governance | All mission-critical workloads must implement a cross-region active-active architecture. | [OP02](./document-cloud-governance-policies.md#example-cloud-operations-governance-policies) |
 | Cost management | Workload teams must set budgets alerts at the resource group level. | [CM01](./document-cloud-governance-policies.md#example-cloud-cost-management-policies) |
