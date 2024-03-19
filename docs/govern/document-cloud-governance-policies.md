@@ -77,7 +77,7 @@ Enforce cloud governance policies. Use automated and manual methods to enforce c
 
 The following cloud governance policies are examples for reference. These policies are based on the examples in the [example risk list](./assess-cloud-risks.md#example-risk-list).
 
-### Example regulatory compliance policies
+### Example cloud regulatory compliance governance policies
 
 Policy ID: RC01
 
@@ -97,7 +97,7 @@ Policy ID: RC02
 - Scope: Workload teams. Platform team
 - Remediation: Resolution within one day, confirmation audit
 
-### Example security policies
+### Example cloud security governance policies
 
 Policy ID: SC01
 
@@ -135,7 +135,7 @@ Policy ID: SC04
 - Scope: Development teams
 - Remediation: Removal of noncompliant libraries and review of integration practices for affected projects
 
-### Example operations governance policies
+### Example cloud operations governance policies
 
 Policy ID: OP01
 
@@ -155,11 +155,11 @@ Policy ID: OP02
 - Scope: Mission-critical workload teams
 - Remediation: Updates within 90 days, progress reviews
 
-### Example cost management policies
+### Example cloud cost management policies
 
 Policy ID: CM01
 
-- Policy category: Cost Management
+- Policy category: Cost management
 - Risk ID: R03
 - Policy statement: Workload teams must set budgets alerts at the resource group level
 - Purpose: Prevent overspending
@@ -168,7 +168,7 @@ Policy ID: CM01
 
 Policy ID: CM02
 
-- Policy category: Cost Management
+- Policy category: Cost management
 - Risk ID: R03
 - Policy statement: Azure Advisor cost recommendations must be reviewed
 - Purpose: Optimize cloud usage
@@ -195,7 +195,7 @@ Policy ID: DG02
 - Scope: Workload team
 - Remediation: Implementation within 60 days, quarterly audits
 
-### Example resource management policies
+### Example resource management governance policies
 
 Policy ID: RM01
 

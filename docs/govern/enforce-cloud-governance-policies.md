@@ -146,61 +146,60 @@ Regularly review and update policy enforcement mechanisms. The goal is to keep c
 
 ## Next step
 
-Monitor cloud governance.
+Monitor cloud governance. Configure monitoring and alerting to track compliance with cloud governance policies.
 
 ## Example: Cloud governance compliance checklists
 
 Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies).
 
-
 ### Regulatory compliance governance checklist
 
-&#9744; Microsoft Purview must be used to enforce GDPR ([RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
-&#9744; Daily GDPR compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
+- Microsoft Purview must be used to enforce GDPR ([RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
+- Daily GDPR compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
 
 ### Security governance checklist
 
-[ ] Multi-Factor Authentication (MFA) must be enabled for all users.
-[ ] Access reviews must be conducted monthly in Entra ID Governance.
-[ ] Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code.
-[ ] Teams utilizing third-party libraries from public sources must adopt the quarantine pattern.
+- Multi-Factor Authentication (MFA) must be enabled for all users ([SC01](./document-cloud-governance-policies.md#example-security-governance policies)).
+- Access reviews must be conducted monthly in Entra ID Governance ([SCO2](./document-cloud-governance-policies.md#example-security-governance policies)).
+- Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code ([SC03](./document-cloud-governance-policies.md#example-security-governance policies)).
+- Teams utilizing third-party libraries from public sources must adopt the quarantine pattern ([SC04](./document-cloud-governance-policies.md#example-security-governance policies)).
 
 ### Operations governance checklist
 
-[ ] Production workloads should have an active-passive architecture across regions.
-[ ] All mission-critical workloads must implement a cross-region active-active architecture.
+- Production workloads should have an active-passive architecture across regions ([OP01](./document-cloud-governance-policies.md#example-operations-governance-policies)).
+- All mission-critical workloads must implement a cross-region active-active architecture [OP02](./document-cloud-governance-policies.md#example-operations-governance-policies).
 
 ### Cost management governance checklist
 
-- [ ] Workload teams must set budgets alerts at the resource group level.
-- [ ] Azure Advisor cost recommendations must be reviewed.
+- Workload teams must set budgets alerts at the resource group level ([CM01](./document-cloud-governance-policies.md#example-cloud-cost-management-policies)).
+- Azure Advisor cost recommendations must be reviewed.
 
 ### Data governance checklist
 
-- [ ] Encryption in transit and at rest must be applied to all sensitive data.
-- [ ] Data lifecycle policies must be enabled for all sensitive data.
+- Encryption in transit and at rest must be applied to all sensitive data.
+- Data lifecycle policies must be enabled for all sensitive data.
 
 ### Resource management governance checklist
 
-- [ ] Bicep must be used to deploy resources.
-- [ ] Tags must be enforced all cloud resources using Azure Policy.
+- Bicep must be used to deploy resources.
+- Tags must be enforced all cloud resources using Azure Policy.
 
 ### AI governance checklist
 
-- [ ] AI bias detection and mitigation in Azure OpenAI must be used.
-- [ ] Customer-facing AI systems must be red-teamed monthly.
+- AI bias detection and mitigation in Azure OpenAI must be used.
+- Customer-facing AI systems must be red-teamed monthly.
 
 ### Summary cloud governance checklist
 
 | Category | Checklist Item | Policy ID |
 |----------|----------------|-----------|
-| Regulatory compliance | Microsoft Purview must be used to enforce GDPR. | [RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-policies) |
-| Regulatory compliance | Daily GDPR compliance reports must be generated from Microsoft Purview. | [RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-policies) |
-| Security compliance | Multi-Factor Authentication (MFA) must be enabled for all users. | [SC01](./document-cloud-governance-policies.md#example-security-policies) |
-| Security compliance | Access reviews must be conducted monthly in Entra ID Governance. | [SC02](./document-cloud-governance-policies.md#example-security-policies) |
-| Security compliance | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code. | [SC03](./document-cloud-governance-policies.md#example-security-policies) |
+| Regulatory compliance | Microsoft Purview must be used to enforce GDPR. | [RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-governance-policies) |
+| Regulatory compliance | Daily GDPR compliance reports must be generated from Microsoft Purview. | [RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-governance-policies) |
+| Security compliance | Multi-Factor Authentication (MFA) must be enabled for all users. | [SC01](./document-cloud-governance-policies.md#example-security-governance-policies) |
+| Security compliance | Access reviews must be conducted monthly in Entra ID Governance. | [SC02](./document-cloud-governance-policies.md#example-security-governance-policies) |
+| Security compliance | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code. | [SC03](./document-cloud-governance-policies.md#example-security-governance policies) |
 | Security compliance | Teams utilizing third-party libraries from public sources must adopt the quarantine pattern. | [SC04](./document-cloud-governance-policies.md#example-security-policies) |
-| Operations governance | Production workloads should have an active-passive architecture across regions. | OP01 |
+| Operations governance | Production workloads should have an active-passive architecture across regions. | [OP01](./document-cloud-governance-policies.md#example-operations-governance-policies) |
 | Operations governance | All mission-critical workloads must implement a cross-region active-active architecture. | OP02 |
 | Cost management | Workload teams must set budgets alerts at the resource group level. | CM01 |
 | Cost management | Azure Advisor cost recommendations must be reviewed. | CM02 |
