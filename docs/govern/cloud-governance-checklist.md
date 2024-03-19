@@ -21,7 +21,6 @@ ms.custom: UpdateFrequency2
 | &#9744; | [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
 | &#9744; | [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team) |
 | &#9744; | [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) |
-
 **Assess cloud risks.** Identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.
 |&nbsp; | Checklist item |
 |---|---|
