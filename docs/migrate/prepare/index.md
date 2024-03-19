@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Migration preparation checklist
 
+![Diagram that shows the prepare-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-prepare.svg)
+
 Prior to planning individual workload migrations, there are several key decisions and processes you need to execute to ready your organization and cloud resources to support the migration. Some of these are covered earlier in the Cloud Adoption Framework, and some are decisions made that will impact all future migration activities.
 
 This section provides you with guidance to prepare for your migrations with a secure foundation and plan.

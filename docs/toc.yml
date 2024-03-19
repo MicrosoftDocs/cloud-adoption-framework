@@ -660,16 +660,6 @@ items:
       - name: Product migration guidance
         href: migrate/scenarios.md
 
-      - name: Migration scenarios
-        items:
-
-        - name: Specialized workloads
-          items:
-          - name: Move on-premises VMware infrastructure to AVS
-            href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
-          - name: VDI
-            href: migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md
-
     - name: Modernize
       items:
       - name: Overview  
