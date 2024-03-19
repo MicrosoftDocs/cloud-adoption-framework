@@ -9,7 +9,7 @@ ms.custom: internal, UpdateFrequency2
 ---
 # Monitor cloud governance
 
-This article shows you how to monitor cloud governance. You need to continuously monitor your cloud environment to ensure it aligns with the cloud governance policies. The aim is to find an effective way to monitor governance and progressively reduce non-compliance issues to zero.
+This article shows you how to monitor cloud governance. After you enforce cloud governance, you need to measure the compliance of cloud environment against your cloud governance policies. Take a baseline compliance measurement to see where you need to make progress. Track compliance over time to see where cloud governance is effective and ineffective. The goals is to monitor governance and reduce non-compliance issues to zero.
 
 :::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continously to maintain cloud governance." lightbox="./_images/monitor.svg" border="false":::
 
@@ -17,7 +17,7 @@ This article shows you how to monitor cloud governance. You need to continuously
 
 Implement monitoring solutions to track compliance with your organizational cloud governance policies. To configure governance monitoring, follow these recommendations:
 
-- *Use cloud-native monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring.
+- *Use monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring.
 
 - *Manually monitor where necessary*. Review compliance manually where automated monitoring mechanisms aren’t available.
 
@@ -39,13 +39,13 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 Achieve real-time visibility and automatic enforcement of regulatory compliance across all cloud resources to prevent non-compliance issues.
 
-- *Use built-in compliance dashboards.* [Get policy compliance data](/azure/governance/policy/how-to/get-compliance-data) on the policies you assigned. Use the compliance data to [determine causes of non-compliance](/azure/governance/policy/how-to/determine-non-compliance)*.*
+- *Use compliance dashboards.* [Get policy compliance data](/azure/governance/policy/how-to/get-compliance-data) on the policies you assigned. Use the compliance data to [determine causes of non-compliance](/azure/governance/policy/how-to/determine-non-compliance)*.*
 
 #### Configure monitoring for security governance
 
 Maintain a continuously secure cloud environment by adhering to security policies.
 
-- *Use built-in security governance monitoring.* [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score.](/azure/defender-for-cloud/secure-score-security-controls) The service provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
+- *Use security governance monitoring.* [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score.](/azure/defender-for-cloud/secure-score-security-controls) The service provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
 
 - *Configure identity governance monitoring.* [Configure identity monitoring](/entra/identity/monitoring-health/overview-monitoring-health) to collect audit, sign-in, and provisioning logs. Also review your [identity secure score](/entra/identity/monitoring-health/concept-identity-secure-score). Also use [the identity governance dashboard](/entra/id-governance/governance-dashboard) to get a single view of identities across your tenant.
 
