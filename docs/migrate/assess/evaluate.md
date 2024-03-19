@@ -3,7 +3,7 @@ title: Evaluate workload readiness
 description: Understand what it takes to evaluate the readiness of a workload to migrate to the cloud. You learn how to validate all assets and associated dependencies.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/11/2024
+ms.date: 03/18/2024
 ms.topic: conceptual
 ---
 
@@ -27,11 +27,27 @@ This article doesn't capture all possible evaluation activities. It's assumed th
 
 To help accelerate the creation of those requirements, the remainder of this article shares a few common evaluation activities related infrastructure, databases, and networks.
 
-## Example scenario: Common evaluation activities for Azure Migrate
+## Evaluate cross-datacenter dependencies
+
+If you're migrating workloads from multiple datacenters, you must assess any dependencies between those datacenters.
+
+Here are some considerations for evaluating your cross-datacenter dependencies:
+
+- **Visualize dependencies**: Use the [dependency visualization](/azure/migrate/concepts-dependency-visualization) capability in Azure Migrate to pinpoint dependencies.
+- **Group dependencies**: Use [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies) when you're dealing with global complexity. This capability helps identifying the IP addresses and ports of any assets required to support the workload.
+
+> [!IMPORTANT]
+>
+> - A subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter.
+> - Evaluate both downstream dependencies and clients in the visualization to understand bidirectional dependencies.
+
+## Example scenarios
+
+### Common evaluation activities for Azure Migrate
 
 The following guidance assumes an intention to migrate to Azure. It also assumes use of Azure Migrate for [replication activities](../deploy/replicate.md).
 
-You can use your Azure Migrate project to assess workloads and calculate the cost of operating in Azure. See [Azure VM assessments in Azure Migrate](/azure/migrate/concepts-assessment-calculation). 
+You can use your Azure Migrate project to assess workloads and calculate the cost of operating in Azure. See [Azure VM assessments in Azure Migrate](/azure/migrate/concepts-assessment-calculation).
 
 This allows you to assess readiness to migration, translate server size to Azure SKUs based on actual use, and calculate costs. You can refine those costs more by [building a business case](/azure/migrate/concepts-business-case-calculation).
 
@@ -48,23 +64,9 @@ You can then use the information provided to estimate the bandwidth consideratio
 > [!NOTE]
 > Total storage directly affects bandwidth requirements during initial replication. However, storage drift continues from the point of replication until release. This means that drift has a cumulative effect on available bandwidth.
 >
-> You can also see common questions for migration and modernization tooling for guidance on gauging bandwidth requirements (Common questions about the Migration and modernization tool - Azure Migrate | Microsoft Learn).
+> For guidance on gauging bandwidth requirements, see [common questions for migration and modernization tooling](/azure/migrate/common-questions-server-migration).
 
-## Evaluate cross-datacenter dependencies
-
-If you are migrating workloads from multiple datacenters, you must assess any dependencies between those datacenters.
-
-Here are some considerations for evaluating your cross-datacenter dependencies:
-
-- **Visualize dependencies**: Use the [dependency visualization](/azure/migrate/concepts-dependency-visualization) capability in Azure Migrate to pinpoint dependencies.
-- **Group dependencies**: Use [dependency grouping](/azure/migrate/how-to-create-group-machine-dependencies) when you are dealing with global complexity. This capability helps identifying the IP addresses and ports of any assets required to support the workload.
-
-> [!IMPORTANT]
->
-> - A subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter.
-> - Evaluate both downstream dependencies and clients in the visualization to understand bidirectional dependencies.
-
-## Example scenario: Common database evaluation activities
+### Common database evaluation activities
 
 As part of your migration of servers, you might also look at migrating SQL servers or other database servers.  
 
