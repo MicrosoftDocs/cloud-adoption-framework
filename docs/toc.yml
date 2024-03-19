@@ -10,7 +10,7 @@ items:
   - name: Scenarios
     items:
     - name: Overview
-      href: scenarios/overview.md
+      href: scenarios/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
     - name: Cloud-scale analytics
@@ -651,37 +651,14 @@ items:
             href: migrate/release/change-communication.md
           - name: Business testing
             href: migrate/release/business-test.md
-          - name: Migration cutover
-            href: migrate/release/cutover.md
+          - name: Complete migration
+            href: migrate/release/complete-migration.md
           - name: Post-migration cost optimization
             href: migrate/release/optimize-cost-after-migration.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
       - name: Product migration guidance
         href: migrate/scenarios.md
-
-      - name: Migration scenarios
-        items:
- 
-        - name: ASP.NET and PHP web apps
-          items:
-          - name: Refactor a Windows application onto App Service and Azure SQL Database
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
-          - name: Refactor a Windows application onto App Service and SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-          - name: Refactor a Linux application onto App Service and MySQL
-            href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
-          - name: Rebuild an application in Azure
-            href: migrate/azure-best-practices/contoso-migration-rebuild.md
-          - name: Refactor TFS to Azure DevOps Services
-            href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-
-        - name: Specialized workloads
-          items:
-          - name: Move on-premises VMware infrastructure to AVS
-            href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
-          - name: VDI
-            href: migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md
 
     - name: Modernize
       items:

@@ -9,6 +9,8 @@ ms.topic: conceptual
 
 # Migration assessment checklist
 
+![Diagram that shows the assess-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-assess.svg)
+
 Many of your existing workloads are ideal candidates for cloud migration. Not every asset, though, is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](/azure/cloud-adoption-framework/digital-estate/) allows you to generate an overall migration backlog of potential workloads to migrate. However, this planning effort is high level. It relies on assumptions made by the cloud strategy team and doesn't dig deeply into technical considerations.
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. Your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies. Use this information to ensure the migrated workload can be deployed to the cloud effectively.
@@ -23,9 +25,9 @@ The table below gives an overview of the activities documented in this phase, al
 
 |Activity|Summary|Responsible roles|
 |---|---|---|
-|Classify workloads|Instructions for classifying data sensitivity and mission criticality, and for identifying your organization's specific classifications.|Migration Architects. Cloud Operations Manager.|
-|Evaluate workload readiness|Instructions for assessment, common blockers, and common evaluation activities|Migration Architect.|
-|Architect workloads|Guidance for designing the architecture of the migrated workloads, supporting services, and building and refining initial cloud estimates.|Migration Architect. Workload Architect. Landing Zone Architect. Cloud Operations Manager.|
+|[Classify workloads](./classify.md)|Instructions for classifying data sensitivity and mission criticality, and for identifying your organization's specific classifications.|<li>Migration Architects.<br><li>Cloud Operations Manager.|
+|[Evaluate workload readiness](./evaluate.md)|Instructions for assessment, common blockers, and common evaluation activities|<li>Migration Architect.|
+|[Architect workloads](./architect.md)|Guidance for designing the architecture of the migrated workloads, supporting services, and building and refining initial cloud estimates.|<li>Migration Architect.<br><li>Workload Architect.<br><li>Landing Zone Architect.<br><li>Cloud Operations Manager.|
 
 ## Next steps
 
