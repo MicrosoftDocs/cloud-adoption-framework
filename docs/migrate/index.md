@@ -21,7 +21,7 @@ A cloud migration typically requires both good preparation and execution. The Cl
 
 To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
 
-- **Prepare:** You need to focus on organizational alignment, defining clear owners for the migration process, and ensuring you've got the required skills in your teams. In this phase, you build on the work from the Strategy, Plan, and Ready portions of CAF. This discipline is critical to the success of your migration effort.
+- **Prepare:** You need to focus on organizational alignment, defining clear owners for the migration process, and ensuring you've got the required skills in your teams. In this phase, you build on the work from the [Strategy](../strategy/index.md), [Plan](../plan/index.md), and [Ready](../ready/index.md) portions of CAF. This discipline is critical to the success of your migration effort.
 
 When you've fulfilled the prerequisites and prepared, you can start the migration process. The migration process is an iterative process that includes the following disciplines:
 
