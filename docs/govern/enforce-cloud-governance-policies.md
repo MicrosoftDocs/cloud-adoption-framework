@@ -54,13 +54,13 @@ The following guidance is meant to help you automate cloud governance policies i
 
 Achieve continuous alignment with global compliance standards through automated enforcement controls with minimal manual oversight.
 
-- *Apply built-in regulatory compliance policies*. Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRamp, and PCI DSSv4.
+- *Apply regulatory compliance policies*. Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRamp, and PCI DSSv4. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 #### Automate cloud security governance in Azure
 
 Secure cloud environments automatically by enforcing best practices and compliance with security frameworks.
 
-- *Apply built-in security policies.* Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) with standards, such as NIST 800 SP series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services.
+- *Apply security policies.* Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) with standards, such as NIST 800 SP series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 - *Apply identity governance.* Enable [multi-factor authentication](/entra/identity/authentication/concept-mfa-howitworks) and [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks). [Eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy). Automate other aspects of [identity governance](/entra/id-governance/identity-governance-overview), such as access request workflows, access reviews, and identity lifecycle management. [Enable just-in time access](/entra/id-governance/privileged-identity-management/pim-configure) to limit access to important resources.
 
@@ -70,29 +70,19 @@ Secure cloud environments automatically by enforcing best practices and complian
 
 Automate cost monitoring, budgeting, and optimization processes that prevent overspending and ensure costs align with business goals.
 
-- *Analyze cloud costs.* Conduct a [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis) in Azure to gain full visibility into your cloud costs.
+- *Automate deployment restrictions.* [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent use of cost-intensive resources. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
-- *Create budgets.* [Create a budget](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) that aligns with your desired investment in the cloud. [Configure usage and spending alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to notify stakeholders when you’re approaching budget thresholds.
-
-- *Gather cost recommendations.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and *the Cost optimization workbook* to guide cost management efforts, such as detection of idle resources.
-
-- *Identify anomalous spending.* Create [cost anomaly detection alerts](/azure/cost-management-billing/understand/analyze-unexpected-charges#create-an-anomaly-alert) to get notified about unusual cost behaviors in your subscriptions.
-
-- *Restrict deployments.* [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent use of cost-intensive resources.
-
-- *Use tags to track spending.* Use tags to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environment (e.g., dev, test, prod), department, or project. Use tag to identify and track resources that are part of a cost optimization effort.
-
-- *Monitor commitments-based discounts*. Set [reservation utilization alerts](/azure/cost-management-billing/costs/reservation-utilization-alerts) to keep reservations and savings plans usage at or close to full usage.
+- *Automate cost allocation.* Enforce tagging requirements to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environment (e.g., dev, test, prod), department, or project. Use tags to identify and track resources that are part of a cost optimization effort.
 
 #### Automate cloud operations governance in Azure
 
 Ensure high availability, data protection, and disaster recovery through automated operational policies.
 
-- *Automate redundancy.* Use built-in policies to require a specified level of infrastructure redundancy, such as zone redundant and geo-redundant instances.
+- *Automate redundancy.* Use built-in Azure policies to require a specified level of infrastructure redundancy, such as zone redundant and geo-redundant instances.
 
 - *Automate backups.* Use [backup policies](/azure/backup/backup-center-govern-environment) to govern backup frequency, retention period, and storage location. Align backups policies with data governance and regulatory compliance requirements. Use the backup settings in individual Azure services, such as [Azure SQL Database](/azure/azure-sql/database/automated-backups-overview), to configure the settings you need.
 
-- *Meet target service level objective.* Restrict the deployment of certain services and service tiers (SKUs) that don’t meet your target service level objective. For example, use the `Not allowed resource types` policy definition.
+- *Meet target service level objective.* Restrict the deployment of certain services and service tiers (SKUs) that don’t meet your target service level objective. For example, use the `Not allowed resource types` policy definition in Azure Policy.
 
 #### Automate cloud data governance in Azure
 
@@ -102,7 +92,7 @@ Automate the management, storage, and processing of data in compliance with regu
 
 - *Automate data lifecycle management.* Implement storage policies and [lifecycle management for storage](/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal) to ensure data is stored efficiently and compliantly.
 
-- *Protect data.* Review and enforce [data protection strategies](/azure/security/fundamentals/protection-customer-data), such as data segregation, encryption, and redundancy.
+- *Automate data security.* Review and enforce [data protection strategies](/azure/security/fundamentals/protection-customer-data), such as data segregation, encryption, and redundancy.
 
 #### Automate cloud resource management governance in Azure
 
@@ -110,27 +100,27 @@ Achieve streamlined and compliant resource provisioning and management through a
 
 - *Create a resource management hierarchy.* Use [management groups](/azure/governance/management-groups/overview) to organize your subscriptions so that you can efficiently govern policies, access, and spending. Follow Azure landing zone [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) best practices.
 
-- *Enforce a tagging strategy.* Ensure all Azure resources are consistently tagged to improve manageability, cost tracking, and compliance. Use Azure Policy to [Define your tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) and [Manage tag governance.](/azure/governance/policy/tutorials/govern-tags)
+- *Enforce a tagging strategy.* Ensure all Azure resources are consistently tagged to improve manageability, cost tracking, and compliance. [Define your tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) and [Manage tag governance](/azure/governance/policy/tutorials/govern-tags).
 
 - *Restrict which resources you can deploy.* [Disallow resource types](/azure/governance/policy/tutorials/disallowed-resources) to restrict deployments of services that add unnecessary risk.
 
-- *Restrict deployments to specific regions.* Control where resources are deployed to comply with regulatory requirements, manage costs, and reduce latency. For example, use the \`Allowed locations\` policy definition in Azure Policy. Also [enforce regional restrictions](/azure/governance/policy/tutorials/policy-devops-pipelines) in your deployment pipeline.
+- *Restrict deployments to specific regions.* Control where resources are deployed to comply with regulatory requirements, manage costs, and reduce latency. For example, use the `Allowed locations` policy definition in Azure Policy. Also [enforce regional restrictions](/azure/governance/policy/tutorials/policy-devops-pipelines) in your deployment pipeline.
 
-- *Use infrastructure as code.* Automate infrastructure deployments using [Bicep, Terraform, or ARM templates.](/azure/templates/) Store your IaC configurations in a source control system (GitHub, Azure Repos) to track changes and collaborate.
+- *Use infrastructure as code.* Automate infrastructure deployments using [Bicep, Terraform, or ARM templates](/azure/templates/). Store your IaC configurations in a source control system (GitHub, Azure Repos) to track changes and collaborate.
 
 - *Use a CI/CD pipeline.* A CI/CD pipeline can ensure deployments adhere to predefined governance rules and policies. [Integrate compliance scans](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan) into CI/CD pipelines to enforce governance.
 
-- *Govern hybrid and multi-cloud environments.* [Govern hybrid and multi-cloud resources](/azure/azure-arc/overview)*.* Maintain consistency in management and policy enforcement.
+- *Govern hybrid and multi-cloud environments.* [Govern hybrid and multi-cloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 
 #### Automate AI governance in Azure
 
-The goal is to govern AI systems to ensure ethical use, content integrity, and compliance with security standards, using automation to prevent misuse and enhance trustworthiness.
+Ensure ethical use, content integrity, and compliance with security standards, using automation to prevent misuse and enhance trustworthiness.
 
-- *Use the retrieval augmented generation (RAG) pattern.* RAG adds an information retrieval system to control the grounding data an LLM uses to formulate a response. Use Azure OpenAI on [your own data](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content*.*
+- *Use the retrieval augmented generation (RAG) pattern.* RAG adds an information retrieval system to control the grounding data a large language model uses to generate a response. Use Azure OpenAI on [your own data](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
 
-- *Use AI development tools.* Use tools, like Semantic Kernel, that facilitate and standardize AI orchestration when developing AI applications.
+- *Use AI development tools.* Use AI tools, like Semantic Kernel, that facilitate and standardize AI orchestration when developing applications that use AI.
 
-- *Govern output generation.* Help [prevent abuse and harmful content generation.](/legal/cognitive-services/openai/data-privacy) Use [AI content filtering](/azure/ai-services/openai/concepts/content-filter?) and [AI abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring).
+- *Govern output generation.* Help [prevent abuse and harmful content generation](/legal/cognitive-services/openai/data-privacy). Use [AI content filtering](/azure/ai-services/openai/concepts/content-filter?) and [AI abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring).
 
 - *Configure data loss prevention.* Configure [data loss prevention for Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention?tabs=azure-cli). Configure the list of outbound URLs their Azure AI services resources are allowed to access.
 
@@ -140,13 +130,13 @@ The goal is to govern AI systems to ensure ethical use, content integrity, and c
 
 ## Enforce cloud governance policies manually
 
-In cases where you can’t automate cloud governance policies enforcement, enforce cloud governance policies manually. Sometimes a tool limitation or cost makes automated enforcement unpractical. To manually enforce cloud governance, follow these recommendations:
+Sometimes a tool limitation or cost makes automated enforcement unpractical. In cases where you can’t automate enforcement, enforce cloud governance policies manually. To manually enforce cloud governance, follow these recommendations:
 
-- *Use checklists.* Use governance checklists to make it easy for your teams to follow the cloud governance policies. See [example compliance checklists](#examples-compliance-checklists).
+- *Use checklists.* Use governance checklists to make it easy for your teams to follow the cloud governance policies. For more information, see the [example compliance checklists](#example-cloud-governance-compliance-checklists).
 
 - *Provide regular training.* Conduct frequent training sessions for all relevant team members to ensure they are aware of the governance policies.
 
-- *Schedule regular reviews.* Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions promptly.
+- *Schedule regular reviews.* Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions.
 
 - *Monitor manually.* Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. This includes tracking the use of resources, managing access controls, and ensuring data protection measures are in place as per the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
 
@@ -156,47 +146,29 @@ Regularly review and update policy enforcement mechanisms. The goal is to keep c
 
 ## Next step
 
-Monitor cloud governance to improve compliance over time.
+Monitor cloud governance.
 
-## Examples: Compliance checklists
+## Example: Cloud governance compliance checklists
 
-Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies for Azure](./document-cloud-governance-policies.md#examples-cloud-governance-policies-for-azure).
+Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies).
 
-| Category | Checklist Item | Policy ID |
-|----------|----------------|-----------|
-| Regulatory compliance | &#9744; Microsoft Purview must be used to enforce GDPR. | RC01 |
-| Regulatory compliance | &#9744; Daily GDPR compliance reports must be generated from Microsoft Purview. | RC02 |
-| Security compliance | &#9744; Multi-Factor Authentication (MFA) must be enabled for all users. | SC01 |
-| Security compliance | &#9744; Access reviews must be conducted monthly in Entra ID Governance. | SC02 |
-| Security compliance | &#9744; Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code. | SC03 |
-| Security compliance | &#9744; Teams utilizing third-party libraries from public sources must adopt the quarantine pattern. | SC04 |
-| Operations governance | &#9744; Production workloads should have an active-passive architecture across regions. | OP01 |
-| Operations governance | &#9744; All mission-critical workloads must implement a cross-region active-active architecture. | OP02 |
-| Cost management | &#9744; Workload teams must set budgets alerts at the resource group level. | CM01 |
-| Cost management | &#9744; Azure Advisor cost recommendations must be reviewed. | CM02 |
-| Data governance | &#9744; Encryption in transit and at rest must be applied to all sensitive data. | DG01 |
-| Data governance | &#9744; Data lifecycle policies must be enabled for all sensitive data. | DG02 |
-| Resource management | &#9744; Bicep must be used to deploy resources. | RM01 |
-| Resource management | &#9744; Tags must be enforced all cloud resources using Azure Policy. | RM02 |
-| AI governance | &#9744; AI bias detection and mitigation in Azure OpenAI must be used. | AI01 |
-| AI governance | &#9744; Customer-facing AI systems must be red-teamed monthly. | AI02 |
 
 ### Regulatory compliance governance checklist
 
-- [ ] Microsoft Purview must be used to enforce GDPR.
-- [ ] Daily GDPR compliance reports must be generated from Microsoft Purview.
+&#9744; Microsoft Purview must be used to enforce GDPR ([RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
+&#9744; Daily GDPR compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-policies)).
 
 ### Security governance checklist
 
-- [ ] Multi-Factor Authentication (MFA) must be enabled for all users.
-- [ ] Access reviews must be conducted monthly in Entra ID Governance.
-- [ ] Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code.
-- [ ] Teams utilizing third-party libraries from public sources must adopt the quarantine pattern.
+[ ] Multi-Factor Authentication (MFA) must be enabled for all users.
+[ ] Access reviews must be conducted monthly in Entra ID Governance.
+[ ] Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code.
+[ ] Teams utilizing third-party libraries from public sources must adopt the quarantine pattern.
 
 ### Operations governance checklist
 
-- [ ] Production workloads should have an active-passive architecture across regions.
-- [ ] All mission-critical workloads must implement a cross-region active-active architecture.
+[ ] Production workloads should have an active-passive architecture across regions.
+[ ] All mission-critical workloads must implement a cross-region active-active architecture.
 
 ### Cost management governance checklist
 
@@ -217,6 +189,27 @@ Compliance checklists help teams understand the governance policies that apply t
 
 - [ ] AI bias detection and mitigation in Azure OpenAI must be used.
 - [ ] Customer-facing AI systems must be red-teamed monthly.
+
+### Summary cloud governance checklist
+
+| Category | Checklist Item | Policy ID |
+|----------|----------------|-----------|
+| Regulatory compliance | Microsoft Purview must be used to enforce GDPR. | [RC01](./document-cloud-governance-policies.md#example-regulatory-compliance-policies) |
+| Regulatory compliance | Daily GDPR compliance reports must be generated from Microsoft Purview. | [RC02](./document-cloud-governance-policies.md#example-regulatory-compliance-policies) |
+| Security compliance | Multi-Factor Authentication (MFA) must be enabled for all users. | [SC01](./document-cloud-governance-policies.md#example-security-policies) |
+| Security compliance | Access reviews must be conducted monthly in Entra ID Governance. | [SC02](./document-cloud-governance-policies.md#example-security-policies) |
+| Security compliance | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code. | [SC03](./document-cloud-governance-policies.md#example-security-policies) |
+| Security compliance | Teams utilizing third-party libraries from public sources must adopt the quarantine pattern. | [SC04](./document-cloud-governance-policies.md#example-security-policies) |
+| Operations governance | Production workloads should have an active-passive architecture across regions. | OP01 |
+| Operations governance | All mission-critical workloads must implement a cross-region active-active architecture. | OP02 |
+| Cost management | Workload teams must set budgets alerts at the resource group level. | CM01 |
+| Cost management | Azure Advisor cost recommendations must be reviewed. | CM02 |
+| Data governance | Encryption in transit and at rest must be applied to all sensitive data. | DG01 |
+| Data governance | Data lifecycle policies must be enabled for all sensitive data. | DG02 |
+| Resource management | Bicep must be used to deploy resources. | RM01 |
+| Resource management | Tags must be enforced all cloud resources using Azure Policy. | RM02 |
+| AI governance | AI bias detection and mitigation in Azure OpenAI must be used. | AI01 |
+| AI governance | Customer-facing AI systems must be red-teamed monthly. | AI02 |
 
 > [!div class="nextstepaction"]
 > [Monitor cloud governance](monitor-cloud-governance.md)

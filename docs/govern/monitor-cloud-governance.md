@@ -53,9 +53,11 @@ Maintain a continuously secure cloud environment by adhering to security policie
 
 Track cloud spending against budgets continuously and alert when spending exceeds predefined thresholds.
 
-- *Monitor spending.* [Create and manage budgets](h/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to monitor cloud spending against preset limits. Use the *Cost optimization workbook*
+- *Analyze cloud costs.* Conduct a [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis) in Azure to gain full visibility into your cloud costs.
 
-- *Monitor underutilization*: [Create a reservation utilization alert](/azure/cost-management-billing/costs/reservation-utilization-alerts) to ensure you maximize reservation usage.
+- *Create budgets.* [Create a budget](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) that aligns with your desired investment in the cloud.
+
+- *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [Cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources.
 
 #### Configure monitoring for cloud operations governance
 
