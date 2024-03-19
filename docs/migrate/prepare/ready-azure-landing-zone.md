@@ -10,23 +10,23 @@ ms.topic: conceptual
 
 # Prepare your landing zone for migration
 
-If your organization already aligns to [Azure landing zones](../../ready/landing-zone/index.md), you can find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+This article describes how to get your [Azure landing zone](../../ready/landing-zone/index.md) ready for a migration. It also lists the major tasks you must perform to ensure that configurations are in place for your migration project.
 
-Regardless of which Azure landing zone [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are tasks you must perform to ready your landing zone for a successful migration project.
+Regardless of which [Azure landing zone reference implementation](../../ready/enterprise-scale/implementation.md) you used, you must perform some tasks to prepare your landing zone for a successful migration project.
 
-If you don't use an Azure landing zone reference implementation, you still need to perform the steps in this guide. However, you might have prerequisite tasks to perform first, or you might need to adapt specific recommendations to your design.
+If you didn't use an Azure landing zone reference implementation, you still need to perform the steps in this article. However, you might have prerequisite tasks to perform first, or you might have to adapt specific recommendations to your design.
 
-This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments. It's noted if they aren't relevant for manually deployed and managed environments.
+This guide describes the post-deployment tasks you must perform for your existing Azure landing zone. Some tasks focus on automated deployments. It's noted if a task isn't relevant for manually deployed and managed environments.
 
 ## Establish hybrid connectivity
 
-During an Azure landing zone deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways, such as Azure VPN gateways, Azure ExpressRoute gateways, or both. After Azure landing zone deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
+During an Azure landing zone deployment, you can deploy a Connectivity subscription with a hub virtual network and network gateways, such as Azure VPN gateways, Azure ExpressRoute gateways, or both. After your Azure landing zone deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing datacenter appliances or your ExpressRoute circuit.
 
-In the ready phase, you planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). Use this plan to determine what connections you need to perform. For example, if you use ExpressRoute, you must work with your provider to establish your ExpressRoute circuit.
+In the ready phase, you planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). Use this plan to determine the connections that you need to incorporate. For example, if you use ExpressRoute, you must work with your provider to establish your ExpressRoute circuit.
 
 To get technical guidance for specific scenarios, see:
 
-- [Create a VPN connection from your Azure VPN Gateway](/azure/vpn-gateway/tutorial-site-to-site-portal).
+- [Create a VPN connection from your Azure VPN gateway](/azure/vpn-gateway/tutorial-site-to-site-portal).
 - [Create an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).
 - [Create an ExpressRoute connection from your Azure ExpressRoute gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager).
 - [Manage Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings).
@@ -34,11 +34,11 @@ To get technical guidance for specific scenarios, see:
 > [!NOTE]
 > Also refer to your provider's specific documentation.
 
-If you're establishing your hybrid connectivity to Azure via a third-party network virtual appliances (NVA) deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
+If you establish your hybrid connectivity to Azure via a third-party network virtual appliance (NVA) that's deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare identity
 
-During the Azure landing zone deployment, you should also deploy a supporting architecture for your identity platform. You might have a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines (VMs) that you use for identity. However, you must deploy the identity resources after the Azure landing zone deployment.
+During your Azure landing zone deployment, you should also deploy a supporting architecture for your identity platform. You might have a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines (VMs) that you use for identity. However, you must deploy the identity resources after the Azure landing zone deployment.
 
 This section has guidance for considerations related to Active Directory. If you use a different identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
 
