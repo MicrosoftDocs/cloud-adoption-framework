@@ -68,8 +68,6 @@ Assess and update cloud governance policies to ensure they remain relevant and e
 
 ## Next step
 
-Enforce cloud governance policies. Use automated and manual methods to enforce compliance with cloud governance policies.
-
 > [!div class="nextstepaction"]
 > [Enforce cloud governance policies](enforce-cloud-governance-policies.md)
 

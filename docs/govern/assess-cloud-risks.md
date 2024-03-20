@@ -124,8 +124,6 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 ## Next step
 
-Document cloud governance policies. Use the risk list to define and distribute cloud governance policies.
-
 > [!div class="nextstepaction"]
 > [Document cloud governance policies](document-cloud-governance-policies.md)
 
