@@ -36,7 +36,5 @@ Work through these five steps to establish cloud governance. Repeat steps 1-4 to
 
 ## Next step
 
-Build a cloud governance team. This step involves defining the functions, members, authority, and scope of the cloud governance team.
-
 > [!div class="nextstepaction"]
 > [Build a cloud governance team](build-cloud-governance-team.md)
