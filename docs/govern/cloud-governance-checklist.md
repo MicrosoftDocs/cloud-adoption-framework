@@ -10,9 +10,10 @@ ms.custom: UpdateFrequency2
 
 # Govern checklist
 
-|&nbsp; | Governance step | Overview | Tasks |
-|-------|------|------|------|
-| &#9744;| [Build a cloud governance team](build-cloud-governance-team.md) | Build a cloud governance team that assesses risks, documents cloud governance policies, and reports on the progress of cloud governance.| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team)<br><br>&#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team)<br><br><br>&#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team)<br><br><br>&#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team)|
+|&nbsp; | Governance step | Tasks |
+|-------|------|------|
+| &#9744; |[Build a cloud governance team](build-cloud-governance-team.md). Create a cloud governance team that assesses risks, documents cloud governance policies, and reports on the progress of cloud governance.| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-function-of-the-cloud-governance-team)<br><br>&#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team)<br><br><br>&#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team)<br><br><br>&#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team)|
+| &#9744;|[Assess cloud risks](assess-cloud-risks.md). Identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.|&#9744; [Identify cloud risks](./assess-cloud-risks.md#identify-cloud-risks)<br><br>&#9744;[Analyze cloud risks](assess-cloud-risks.md#analyze-cloud-risks) <br><br>&#9744; [Document cloud risks](assess-cloud-risks.md#document-cloud-risks) <br><br>&#9744; [Communicate cloud risks](assess-cloud-risks.md#communicate-cloud-risks)|
 
 
 ### Build a cloud governance team
