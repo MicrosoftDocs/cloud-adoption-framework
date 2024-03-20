@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare tools and initial migration backlog
 
-To implement your migration, you need the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
+To execute your migration, you need the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
 
 ## Prepare migration tools
 
