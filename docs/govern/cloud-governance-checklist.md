@@ -34,7 +34,6 @@ ms.custom: UpdateFrequency2
 | &nbsp; | &#9744; [Review policy enforcement](./document-cloud-governance-policies.md#review-policy-enforcement) |
 |&#9744; | [**Monitor cloud governance**](monitor-cloud-governance.md) |
 | &nbsp;| &#9744; [Configure cloud governance monitoring](monitor-cloud-governance.md#configure-cloud-governance-monitoring) |
-| &nbsp; | &#9744; [Azure facilitation: Configuring cloud governance monitoring](monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) |
 | &nbsp;| &#9744; [Configure cloud governance alerts](monitor-cloud-governance.md#configure-cloud-governance-alerts) |
 | &nbsp;| &#9744; [Develop a remediation plan](monitor-cloud-governance.md#develop-a-remediation-plan) |
 | &nbsp; | &#9744; [Audit cloud governance regularly](monitor-cloud-governance.md#audit-cloud-governance-regularly) |
