@@ -16,7 +16,7 @@ The Govern methodology provides a structured approach for setting up and managin
 
 ## Why govern the cloud?
 
-Cloud governance benefits all organization using the cloud. Effective cloud governance minimizes avoidable risks. It defines and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and aligned to your broader cloud strategy. Without cloud governance, your organization might encounter risks that cloud governance could help you avoid.
+Effective cloud governance minimizes avoidable risks and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and supports to your broader cloud strategy. Without cloud governance, your organization might realize risks that cloud governance could help you avoid.
 
 ## How to govern the cloud?
 
@@ -63,6 +63,15 @@ Use the cloud governance checklist to see all cloud governance tasks and track p
 | &nbsp;| &#9744; [Configure cloud governance alerts](monitor-cloud-governance.md#configure-cloud-governance-alerts) |
 | &nbsp;| &#9744; [Develop a remediation plan](monitor-cloud-governance.md#develop-a-remediation-plan) |
 | &nbsp; | &#9744; [Audit cloud governance regularly](monitor-cloud-governance.md#audit-cloud-governance-regularly) |
+
+
+| &nbsp; | Cloud governance step | Cloud governance tasks |
+|---|---|---|
+|&#9744; | [**Build a cloud governance team**](build-cloud-governance-team.md) | &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-functions-of-the-cloud-governance-team) <br> &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) <br> &#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team) <br> &#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team) |
+|&#9744; | [**Assess cloud risks**](./assess-cloud-risks.md) | &#9744; [Identify cloud risks](assess-cloud-risks.md#identify-cloud-risks) <br> &#9744; [Analyze cloud risks](assess-cloud-risks.md#analyze-cloud-risks) <br> &#9744; [Document cloud risks](assess-cloud-risks.md#document-cloud-risks) <br> &#9744; [Communicate cloud risks](assess-cloud-risks.md#communicate-cloud-risks) |
+|&#9744; | [**Document cloud governance policies**](document-cloud-governance-policies.md) | &#9744; [Define an approach to documenting cloud governance policies](document-cloud-governance-policies.md#define-an-approach-to-documenting-cloud-governance-policies) <br> &#9744; [Define cloud governance policies](document-cloud-governance-policies.md#define-cloud-governance-policies) <br> &#9744; [Distribute cloud governance policies](document-cloud-governance-policies.md#distribute-cloud-governance-policies) <br> &#9744; [Review cloud governance policies](document-cloud-governance-policies.md#review-cloud-governance-policies) |
+|&#9744; | [**Enforce cloud governance policies**](enforce-cloud-governance-policies.md) | &#9744; [Define an approach to enforcing cloud governance policies](enforce-cloud-governance-policies.md#define-an-approach-to-enforcing-cloud-governance-policies) <br> &#9744; [Enforce cloud governance policies automatically](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-automatically) <br> &#9744; [Enforce cloud governance policies manually](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-manually) <br> &#9744; [Review policy enforcement](enforce-cloud-governance-policies.md#review-policy-enforcement) |
+|&#9744; | [**Monitor cloud governance**](monitor-cloud-governance.md) | &#9744; [Configure cloud governance monitoring](monitor-cloud-governance.md#configure-cloud-governance-monitoring) <br> &#9744; [Configure cloud governance alerts](monitor-cloud-governance.md#configure-cloud-governance-alerts) <br> &#9744; [Develop a remediation plan](monitor-cloud-governance.md#develop-a-remediation-plan) <br> &#9744; [Audit cloud governance regularly](monitor-cloud-governance.md#audit-cloud-governance-regularly) |
 
 ## Next step
 
