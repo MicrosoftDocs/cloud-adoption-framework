@@ -58,12 +58,10 @@ Establish the boundaries of the cloud governance team’s responsibility. The go
 
 ## Next step
 
-Assess cloud risks. Assessing cloud risks involves identifying, analyzing, documenting, and communicating cloud risks.
-
 > [!div class="nextstepaction"]
 > [Assess cloud risks](assess-cloud-risks.md)
 
-## Example: Cloud governance RACI matrix
+## Example cloud governance RACI matrix
 
 The following table is an example of a RACI matrix for cloud governance. Create a RACI matrix that aligns to your organization and meets your specific needs. Ensure the RACI matrix outlines the roles and responsibilities across different aspects of cloud governance.
 
@@ -84,3 +82,6 @@ The following table is an example of a RACI matrix for cloud governance. Create 
 - *Consulted (C):* People or group who are subject matter experts or have specific insights into the task.
 
 - *Informed (I):* People who you keep up to date on progress. Updates come at completion of the task or at major milestones.
+
+> [!div class="nextstepaction"]
+> [Assess cloud risks](assess-cloud-risks.md)

@@ -147,3 +147,6 @@ Cloud governance is an ongoing process that requires continuous attention. Consi
 
 > [!div class="nextstepaction"]
 > [Cloud governance overview](index.md)
+
+> [!div class="nextstepaction"]
+> [Cloud Adoption Framework overview](/azure/cloud-adoption-framework/)

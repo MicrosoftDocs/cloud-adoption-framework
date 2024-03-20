@@ -146,8 +146,6 @@ Regularly review and update policy enforcement mechanisms. The goal is to keep c
 
 ## Next step
 
-Monitor cloud governance. Configure monitoring and alerting to track compliance with cloud governance policies.
-
 > [!div class="nextstepaction"]
 > [Monitor cloud governance](./monitor-cloud-governance.md)
 
@@ -166,4 +164,4 @@ Compliance checklists help teams understand the governance policies that apply t
 | AI | &#9744; AI bias detection and mitigation in Azure OpenAI must be used [AI01](./document-cloud-governance-policies.md#example-ai-governance-policies) <br> &#9744; Customer-facing AI systems must be red-teamed monthly [AI02](./document-cloud-governance-policies.md#example-ai-governance-policies) |
 
 > [!div class="nextstepaction"]
-> [Monitor cloud governance](monitor-cloud-governance.md)
+> [Monitor cloud governance](./monitor-cloud-governance.md)
