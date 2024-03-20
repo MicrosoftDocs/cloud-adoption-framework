@@ -22,7 +22,7 @@ There are two main groups of remediation activities, and you need to plan for bo
   - These are going to come from your workload assessment in the [assess phase](../assess/index.md), and will be needed to make sure that the workload can be properly replicated and staged in the cloud.
   - This is focused primarily on the source servers being migrated.
 - **Based on the results of the testing activities**
-  - This comes from [testing migration activities](../deploy/migration-testing.md) and performing [business testing](../release/business-test.md).
+  - This comes from [testing migration activities](../deploy/migration-test.md) and performing [business testing](../release/business-test.md).
   - They're focused on the configuration of the replicated destination servers, and any assisting services like load balancers, virtual networks, and storage accounts.
   - These remediation tasks are likely be more iterative; it's common to need to test and remediate through several cycles until all test cases pass.
 
