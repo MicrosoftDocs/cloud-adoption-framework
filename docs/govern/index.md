@@ -32,11 +32,13 @@ Cloud governance is a continuous process. The Govern methodology divides cloud g
 
 5. *Monitor cloud governance*: Evaluate to ensure that cloud services are used according to the governance policies and adjusting as necessary. Use Azure tools to help [monitor cloud governance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) and [set up alerts for noncompliance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-alerts).
 
-Work through these five steps to establish cloud governance. Repeat steps 1-4 to maintain cloud governance over time. Use the [cloud governance checklist](./cloud-governance-checklist.md) to track progress.
+Work through these five steps to establish cloud governance. Repeat steps 1-4 to maintain cloud governance over time.
 
 ## Cloud governance checklist
 
-| &nbsp; | Governance task |
+Use the cloud governance checklist to see all cloud governance tasks and track progress over time.
+
+| &nbsp; | Cloud governance tasks |
 |---|---|
 |&#9744; | [**Build a cloud governance team**](build-cloud-governance-team.md) |
 | &nbsp;| &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-functions-of-the-cloud-governance-team) |
