@@ -117,14 +117,14 @@ The risk list is an example that you should tailor to fit the specific needs and
 
 |Risk ID|Risk management status|Risk category|Risk description|Risk probability|Risk impact|Risk priority|Risk level|Risk management strategy|Risk management enforcement|Risk owner|Risk closure date|
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|R01|Open|Regulatory compliance|Noncompliance with sensitive data requirements.|20% OR Medium|$100,000 OR High|$20,000 OR High|Level 2|Mitigate|Use Microsoft Purview for sensitive data monitoring. Compliance reporting in Microsoft Purview|Compliance lead|2024-04-01|
-|R02|Open|Security|Unauthorized access to cloud services.|30% OR High|$200,000 OR Very High|$60,000 OR Very High|Level 1|Mitigate|Microsoft Entra ID multifactor authentication. Microsoft Entra ID Governance monthly access reviews.|Security lead|2024-03-15|
-|R03|Open|Cost|Overspending on cloud services due to overprovisioning and lack of monitoring.|40% OR High|$50,000 OR Medium|$20,000 OR High|Level 2|Mitigate|Set budgets and alerts for workloads. Review and apply Azure Advisor cost recommendations|Cost lead|2024-03-01|
-|R04|Open|Operations|Service disruption due to Azure region outage|25% OR Medium|$150,000 OR High|$37,500 OR High|Level 1|Mitigate|All mission-critical workloads should have a cross-region active-active architecture|Operations lead|2024-03-20|
-|R05|Open|Data|Loss of sensitive data due to improper encryption and data lifecycle management.|35% OR High|$250,000 OR Very High|$87,500 OR Very High|Level 1|Mitigate|Apply encryption in transit and at rest. Establish data lifecycle policies using Azure tools.|Data lead|2024-04-10|
-|R06|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure.|30% OR High|$100,000 OR High|$30,000 OR High|Level 2|Mitigate|Use infrastructure as code (IaC). Enforce tagging requirements using Azure Policy|Resource lead|2024-03-25|
-|R07|Open|AI|AI model producing biased decisions due to unrepresentative training data.|15% OR Low|$200,000 OR High|$30,000 OR Medium|Level 3|Mitigate|Use bias detection and mitigation techniques. Red teaming AI models monthly|AI lead|2024-05-01|
-|R08|Open|Security|Insecure code management.|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
+|R01|Open|Regulatory compliance|Noncompliance with sensitive data requirements.|20% OR Medium|$100,000 OR High|$20,000 OR High|Level 2|Mitigate|Use Microsoft Purview for sensitive data monitoring. <br> Compliance reporting in Microsoft Purview|Compliance lead|2024-04-01|
+|R02|Open|Security|Unauthorized access to cloud services.|30% OR High|$200,000 OR Very High|$60,000 OR Very High|Level 1|Mitigate|Microsoft Entra ID multifactor authentication. <br> Microsoft Entra ID Governance monthly access reviews.|Security lead|2024-03-15|
+|R03|Open|Security|Insecure code management.|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. <br> Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
+|R04|Open|Cost|Overspending on cloud services due to overprovisioning and lack of monitoring.|40% OR High|$50,000 OR Medium|$20,000 OR High|Level 2|Mitigate|Set budgets and alerts for workloads. <br>Review and apply Azure Advisor cost recommendations|Cost lead|2024-03-01|
+|R05|Open|Operations|Service disruption due to Azure region outage|25% OR Medium|$150,000 OR High|$37,500 OR High|Level 1|Mitigate|Mission-critical workloads have active-active architecture. <br> Other workloads have active-passive architecture.|Operations lead|2024-03-20|
+|R06|Open|Data|Loss of sensitive data due to improper encryption and data lifecycle management.|35% OR High|$250,000 OR Very High|$87,500 OR Very High|Level 1|Mitigate|Apply encryption in transit and at rest. <br> Establish data lifecycle policies using Azure tools.|Data lead|2024-04-10|
+|R07|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure.|30% OR High|$100,000 OR High|$30,000 OR High|Level 2|Mitigate|Use infrastructure as code (IaC). <br> Enforce tagging requirements using Azure Policy|Resource lead|2024-03-25|
+|R08|Open|AI|AI model producing biased decisions due to unrepresentative training data.|15% OR Low|$200,000 OR High|$30,000 OR Medium|Level 3|Mitigate|Use bias detection and mitigation techniques. <br>Red teaming AI models monthly|AI lead|2024-05-01|
 
 ## Next step
 
