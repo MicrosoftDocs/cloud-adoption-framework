@@ -156,17 +156,10 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Migrate an SAP platform to Azure](/azure/cloud-adoption-framework/scenarios/sap/migrate) | TBD |
-| [Learning path for Migrate SAP workloads to Azure](/training/paths/migrate-sap-workloads-to-azure/) | TBD |
-| [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | TBD |
-| [Migrate from SAP ASE to Azure SQL](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database) | TBD |
-
-## Specialized workloads
-
-| Link | Description |
-|---|---|
-| [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) | TBD |
-| [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray/) | TBD |
+| [Migrate an SAP platform to Azure](/azure/cloud-adoption-framework/scenarios/sap/migrate) | SAP workloads require different tools and processes to replicate and deploy their assets than what Azure Migrate traditionally offers. Learn more in this adoption scenario. |
+| [Learning path for Migrate SAP workloads to Azure](/training/paths/migrate-sap-workloads-to-azure/) | **Training:** These modules explore migration of SAP workloads to Azure, including very large databases over 20 TB. |
+| [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure, with resources to support your journey at every step. |
+| [Migrate from SAP ASE to Azure SQL](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database) | In this guide, you learn how to migrate your SAP Adapter Server Enterprise (ASE) databases to an Azure SQL database by using SQL Server Migration Assistant for SAP Adapter Server Enterprise. |
 
 ## Azure Stack
 
@@ -186,15 +179,7 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Azure Lighthouse for scale migration](/azure/lighthouse/how-to/migration-at-scale) | TBD |
-
-## Mainframes
-
-| Link | Description |
-|---|---|
-| [Overview](../infrastructure/mainframe-migration/index.md) | TBD |
-| [Switch from mainframes to Azure](../infrastructure/mainframe-migration/migration-strategies.md) | TBD |
-| [Mainframe application migration](../infrastructure/mainframe-migration/application-strategies.md) | TBD |
+| [Manage Azure Migrate projects at scale with Azure Lighthouse](/azure/lighthouse/how-to/migration-at-scale) | This article provides an overview of how Azure Lighthouse can help you use Azure Migrate in a scalable way across multiple Microsoft Entra tenants.|
 
 ## Migrate secure workloads
 
