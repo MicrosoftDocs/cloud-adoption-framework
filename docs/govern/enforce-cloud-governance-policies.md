@@ -165,4 +165,4 @@ Compliance checklists help teams understand the governance policies that apply t
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Monitor cloud governance](./monitor-cloud-governance.md)
+> [Monitor cloud governance](monitor-cloud-governance.md)
