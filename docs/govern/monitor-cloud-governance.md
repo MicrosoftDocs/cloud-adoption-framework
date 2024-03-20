@@ -1,9 +1,9 @@
 ---
 title: Monitor cloud governance
-description: Learn how to measure compliance with governance policies and have a plan for remediation.
+description: Discover practical strategies for effective cloud governance monitoring with our step-by-step guide. Learn to measure compliance with Azure governance policies and implement a robust plan for ongoing remediation to ensure alignment with Microsoft's Govern methodology for Azure. Perfect for organizations committed to measuring and maintaining cloud governance compliance.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---

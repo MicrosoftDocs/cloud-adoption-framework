@@ -1,9 +1,9 @@
 ---
 title: Build a cloud governance team
-description: Learn how to build a cloud governance team. Select the right members.
+description: Learn to build an effective cloud governance team with this comprehensive guide. Discover key roles, responsibilities, and strategies for managing cloud risks, developing policies, and ensuring compliance within Microsoft Azure's Govern methodology. Ideal for IT professionals and organizations looking to set up and maintain cloud governance.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---

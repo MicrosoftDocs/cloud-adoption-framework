@@ -1,9 +1,9 @@
 ---
 title: Document cloud governance policies
-description: Learn how to document governance policies for the cloud. Base cloud governance policies on the risks.
+description: Explore the essentials of documenting effective cloud governance policies within Microsoft's Azure Govern methodology. This guide provides step-by-step instructions on creating a robust governance framework to mitigate risks and maintain cloud governance with best practices and examples.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---

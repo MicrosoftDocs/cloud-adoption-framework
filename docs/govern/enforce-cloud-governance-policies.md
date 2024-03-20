@@ -1,9 +1,9 @@
 ---
 title: Enforce cloud governance policies
-description: Learn how to enforce cloud governance policies using automated and manual approaches.
+description: Discover practical strategies for enforcing cloud governance policies in Azure environments. This comprehensive guide provides step-by-step insights into automated and manual approaches, using Microsoft's Govern methodology. Ensure compliance, efficient policy application, and maintenance over time.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---

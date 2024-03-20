@@ -1,9 +1,9 @@
 ---
-title: Cloud governance
-description: Learn what cloud governance is, why cloud governance is important, and how to establish governance in the cloud.
+title: Govern overview
+description: Discover Microsoft's Govern methodology, a comprehensive guide on cloud governance in Azure. Explore what cloud governance entails, its significance, and step-by-step instructions on implementation and maintenance. Optimize your cloud strategy with insights on cloud governance policies, risk assessment, enforcement, and monitoring for seamless compliance and alignment with organizational goals.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
