@@ -1027,7 +1027,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/multiple-regions.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/plan-for-resilience",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/select-regions-migration",
          "redirect_document_id": false
       },
       {

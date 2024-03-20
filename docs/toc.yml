@@ -613,8 +613,8 @@ items:
             href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-backlog.md
-          - name: Plan for resilience
-            href: migrate/prepare/plan-for-resilience.md
+          - name: Select Azure regions for a migration
+            href: migrate/prepare/select-regions-migration.md
           - name: Align roles and responsibilities
             href: migrate/prepare/roles-responsibilities.md
           - name: Skills relevant to migration projects
@@ -642,7 +642,7 @@ items:
           - name: Prepare for management
             href: migrate/deploy/prepare-for-management.md
           - name: Migration testing
-            href: migrate/deploy/migration-testing.md
+            href: migrate/deploy/migration-test.md
       - name: Release
         items:
           - name: Overview
