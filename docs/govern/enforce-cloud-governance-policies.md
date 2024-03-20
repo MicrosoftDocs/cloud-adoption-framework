@@ -151,48 +151,9 @@ Monitor cloud governance. Configure monitoring and alerting to track compliance 
 > [!div class="nextstepaction"]
 > [Monitor cloud governance](./monitor-cloud-governance.md)
 
-## Example: Cloud governance compliance checklists
+## Example cloud governance compliance checklists
 
 Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies) and contain the cloud governance policy ID for cross-referencing.
-
-Cloud regulatory compliance governance checklist
-
-- Microsoft Purview must be used to monitor sensitive data ([RC01](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
-- Daily sensitive data compliance reports must be generated from Microsoft Purview ([RC02](./document-cloud-governance-policies.md#example-cloud-regulatory-compliance-governance-policies)).
-
-Cloud security governance checklist
-
-- Multifactor authentication (MFA) must be enabled for all users ([SC01](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-- Access reviews must be conducted monthly in Microsoft Entra ID Governance ([SCO2](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-- Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code ([SC03](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-- Teams utilizing libraries from public sources must adopt the quarantine pattern ([SC04](./document-cloud-governance-policies.md#example-cloud-security-governance-policies)).
-
-Cloud operations governance checklist
-
-- Production workloads should have an active-passive architecture across regions ([OP01](./document-cloud-governance-policies.md#example-cloud-operations-governance-policies)).
-- All mission-critical workloads must implement a cross-region active-active architecture ([OP02](./document-cloud-governance-policies.md#example-cloud-operations-governance-policies)).
-
-Cloud cost management governance checklist
-
-- Workload teams must set budgets alerts at the resource group level ([CM01](./document-cloud-governance-policies.md#example-cloud-cost-management-policies)).
-- Azure Advisor cost recommendations must be reviewed ([CM02](./document-cloud-governance-policies.md#example-cloud-cost-management-policies)).
-
-Cloud data governance checklist
-
-- Encryption in transit and at rest must be applied to all sensitive data ([DG01](./document-cloud-governance-policies.md#example-cloud-data-governance-policies)).
-- Data lifecycle policies must be enabled for all sensitive data ([DG02](./document-cloud-governance-policies.md#example-cloud-data-governance-policies)).
-
-Cloud resource management governance checklist
-
-- Bicep must be used to deploy resources ([RM01](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies)).
-- Tags must be enforced all cloud resources using Azure Policy ([RM02](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies)).
-
-AI governance checklist
-
-- AI bias detection and mitigation in Azure OpenAI must be used ([AI01](./document-cloud-governance-policies.md#example-ai-governance-policies)).
-- Customer-facing AI systems must be red-teamed monthly ([AI02](./document-cloud-governance-policies.md#example-ai-governance-policies)).
-
-### Summary cloud governance checklist
 
 | Category | Checklist Item |
 |----------|----------------|
