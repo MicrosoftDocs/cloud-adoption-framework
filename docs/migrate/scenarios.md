@@ -105,26 +105,52 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Migration overview](/azure/developer/java/migration/migration-overview) | TBD |
-| [Spring Boot to Azure App Service](/azure/developer/java/migration/migrate-spring-boot-to-app-service) | TBD |
-| [Spring Boot to AKS](/azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service) | TBD |
-| [Spring Boot to Azure Spring Cloud](/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud) | TBD |
-| [Spring Cloud to Azure Spring Cloud](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud) | TBD |
-| [Tomcat to Azure App Service](/azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service) | TBD |
-| [Tomcat to containers on AKS](/azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service) | TBD |
-| [Tomcat to Azure Spring Cloud](/azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud) | TBD |
-| [WildFly to WildFly on AKS](/azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service) | TBD |
-| [WebLogic to WildFly on AKS](/azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service) | TBD |
-| [WebSphere to WildFly on AKS](/azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service) | TBD |
-| [JBoss EAP to WildFly on AKS](/azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service) | TBD |
+| [Migration overview](/azure/developer/java/migration/migration-overview) | This migration guidance is designed to cover mainstream Java on Azure scenarios, and to provide high-level planning suggestions and considerations. |
+| [Migrate Spring Boot applications to Azure Spring Apps](/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-apps) | This guide describes what you should be aware of when you want to migrate an existing Spring Boot application to run on Azure Spring Apps. |
+| [Migrate Spring Cloud applications to Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-apps) | This guide describes what you should be aware of when you want to migrate an existing Spring Cloud application to run on Azure Spring Apps. |
+| [Migrate WildFly applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service) | This guide describes what you should be aware of when you want to migrate an existing WildFly application to run on WildFly in an Azure Kubernetes Service container. |
 
-### WebLogic to Azure
+### Tomcat to Azure
 
 | Link | Description |
 |---|---|
-| [WebLogic to Azure Virtual Machines](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines) | TBD |
-| [WebLogic with Microsoft Entra ID via LDAP](/azure/developer/java/migration/migrate-weblogic-with-aad-ldap) | TBD |
-| [WebLogic with Application Gateway](/azure/developer/java/migration/migrate-weblogic-with-app-gateway) | TBD |
+| [Migrate Tomcat applications to Tomcat on Azure App Service](/azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service) | This guide describes what you should be aware of when you want to migrate an existing Tomcat application to run on Azure App Service using Tomcat 9.0. |
+|[Migrate Tomcat applications to Azure Container Apps](/azure/developer/java/migration/migrate-tomcat-to-azure-container-apps)|This guide describes what you should be aware of when you want to migrate an existing Tomcat application to run on Azure Container Apps (ACA).|
+|[Migrate Tomcat applications to containers on Azure Kubernetes Service](/azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service)|This guide describes what you should be aware of when you want to migrate an existing Tomcat application to run on Azure Kubernetes Service (AKS).|
+|[Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes)|In this article, you'll learn how to containerize Java web applications (running on Apache Tomcat) and migrate them to Azure Kubernetes Service (AKS) using the Azure Migrate: App Containerization tool.|
+
+### WebLogic Server to Azure
+
+| Link | Description |
+|---|---|
+|[Migrate WebLogic Server applications to Azure Kubernetes Service](/azure/developer/java/migration/migrate-weblogic-to-azure-kubernetes-service)|This guide describes what you should be aware of when you want to migrate an existing WebLogic Server (WLS) application to run on Azure Kubernetes Service (AKS).|
+|[Migrate WebLogic Server applications to Azure Virtual Machines](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines)|This guide describes what you should be aware of when you want to migrate an existing WebLogic application to run on Azure Virtual Machines.|
+|[Migrate WebLogic Server applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service)||
+|[Tutorial: Manually install Oracle WebLogic Server on Azure Virtual Machines](/azure/developer/java/migration/migrate-weblogic-to-azure-vm-manually)||
+|[Tutorial: Migrate Oracle WebLogic Server to Azure Kubernetes Service within a custom virtual network](/azure/developer/java/migration/migrate-weblogic-to-aks-within-an-existing-vnet)This tutorial shows you how to deploy the Oracle WebLogic Server (WLS) on Azure Kubernetes Service (AKS) offer that integrates with a custom virtual network in the consumer's subscription.||
+|[Tutorial: Migrate a WebLogic Server cluster to Azure with Azure Application Gateway as a load balancer](/azure/developer/java/migration/migrate-weblogic-with-app-gateway)|This tutorial walks you through the process of deploying WebLogic Server (WLS) with Azure Application Gateway.|
+|[Tutorial: Migrate Oracle WebLogic Server to Azure Virtual Machines with high availability and disaster recovery](/azure/developer/java/migration/migrate-weblogic-to-vms-with-ha-dr)|This tutorial shows you a simple and effective way to implement high availability and disaster recovery (HA/DR) for Java using Oracle WebLogic Server (WLS) on Azure Virtual Machines (VMs).|
+|[Migrate WebLogic Server applications to JBoss EAP on Azure App Service](/azure/developer/java/migration/migrate-weblogic-to-jboss-eap-on-azure-app-service)|This guide describes what you should be aware of when you want to migrate an existing WebLogic Server application to run on Azure App Service using JBoss EAP.|
+
+### WebSphere to Azure
+
+| Link | Description |
+|---|---|
+|[Migrate WebSphere applications to Azure Kubernetes Service](/azure/developer/java/migration/migrate-websphere-to-azure-kubernetes-service)|This guide describes what you should be aware of when you want to migrate an existing WebSphere Application Server (WAS) workload to IBM WebSphere Liberty or Open Liberty on Azure Kubernetes Service (AKS).|
+|[Migrate WebSphere applications to Azure Red Hat OpenShift](/azure/developer/java/migration/migrate-websphere-to-azure-redhat-openshift)|This guide describes what you should be aware of when you want to migrate an existing WebSphere Application Server (WAS) workload to IBM WebSphere Liberty or Open Liberty that runs on Azure Red Hat OpenShift.|
+|[Migrate WebSphere applications to Azure Virtual Machines](/azure/developer/java/migration/migrate-websphere-to-virtual-machines)|This guide describes what you should be aware of when you want to migrate an existing WebSphere Application Server (WAS) traditional application to run on Azure Virtual Machines.|
+|[Tutorial: Manually install IBM WebSphere Application Server Network Deployment traditional on Azure virtual machines](/azure/developer/java/migration/migrate-websphere-to-azure-vm-manually)|This tutorial shows you how to install IBM WebSphere Application Server (WAS) Network Deployment traditional and configure a WAS cluster on Azure virtual machines (VMs) on GNU/Linux.|
+|[Migrate WebSphere applications to JBoss EAP on Azure App Service](/azure/developer/java/migration/migrate-websphere-to-jboss-eap-on-azure-app-service)|This guide describes what you should be aware of when you want to migrate an existing WebSphere application to run on Azure App Service using JBoss EAP.|
+|[Migrate WebSphere applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service)|This guide describes what you should be aware of when you want to migrate an existing WebSphere application to run on WildFly in an Azure Kubernetes Service container.|
+
+### JBoss EAP to Azure
+
+| Link | Description |
+|---|---|
+|[Migrate JBoss EAP applications to JBoss EAP on Azure App Service](/azure/developer/java/migration/migrate-jboss-eap-to-jboss-eap-on-azure-app-service)|This guide describes what you should be aware of when you want to migrate an existing JBoss EAP application to run on JBoss EAP in an Azure App Service instance.|
+|[Migrate JBoss EAP applications to JBoss EAP on Azure VMs](/azure/developer/java/migration/migrate-jboss-eap-to-jboss-eap-on-azure-vms)|This guide describes what you should be aware of when you want to migrate an existing JBoss EAP application to run on JBoss EAP in Azure VMs.|
+|[Migrate JBoss EAP applications to Azure Red Hat OpenShift](/azure/developer/java/migration/migrate-jboss-eap-to-azure-redhat-openshift)|This guide describes what you should be aware of when you want to migrate an existing JBoss EAP application to run on Azure Red Hat OpenShift.|
+|[Migrate JBoss EAP applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service)|This guide describes what you should be aware of when you want to migrate an existing JBoss EAP application to run on WildFly in an Azure Kubernetes Service container.|
 
 ## SAP
 
