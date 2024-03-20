@@ -58,7 +58,7 @@ Establish the boundaries of the cloud governance team’s responsibility. The go
 
 ## Example cloud governance RACI matrix
 
-The following table is an example of a RACI matrix for cloud governance. Create a RACI matrix that aligns to your organization and meets your specific needs. Ensure the RACI matrix outlines the roles and responsibilities across different aspects of cloud governance.
+The following table is an example of a RACI matrix for cloud governance. The matrix indicates who is responsible (R), accountable (A), consulted (C), and informed (I) across various cloud governance tasks. Create a RACI matrix that aligns to your organization and meets your specific needs.
 
 | Task                                 | Cloud governance team     |   Executive sponsor   | Cloud platform team     | Workload teams     |
 |--------------------------------------|---------------------------|-----------------------|-------------------------|--------------------|
@@ -69,14 +69,6 @@ The following table is an example of a RACI matrix for cloud governance. Create 
 | Cloud architecture planning          | A                         | I                     | R                       | R                  |
 | Enforce governance policies          | A, C                      | I                     | R                       | R                  |
 | Monitoring governance                | A, C                      | I                     | R                       | R                  |
-
-- *Responsible (R):* Person or group doing the work to complete the task.
-
-- *Accountable (A):* Person or group accountable for the task and approves the work. This person must approve completed tasks.
-
-- *Consulted (C):* People or group who are subject matter experts or have specific insights into the task.
-
-- *Informed (I):* People who you keep up to date on progress. Updates come at completion of the task or at major milestones.
 
 ## Next step
 
