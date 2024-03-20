@@ -17,15 +17,15 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | TBD |
-| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | TBD |
-| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | TBD |
+| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | This tutorial shows you how to discover Amazon Web Services (AWS) instances with the Azure Migrate: Discovery and assessment tool. |
+| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | This article shows you how to assess Amazon Web Services (AWS) instances for migration to Azure, using the Azure Migrate: Discovery and assessment tool. |
+| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | This tutorial shows you how to discover, assess, and migrate Amazon Web Services (AWS) virtual machines (VMs) to Azure VMs by using Azure Migrate: Server Assessment and the Migration and modernization tool. |
 
 ## Containers
 
 | Link | Description |
 |---|---|
-| [Migrate to Azure Kubernetes Service (AKS)](/azure/aks/aks-migration) | TBD |
+| [Migrate to Azure Kubernetes Service (AKS)](/azure/aks/aks-migration) | This guide provides details for the current recommended AKS configuration to help you plan and execute a successful migration to AKS. |
 
 ## Windows and Linux
 
@@ -33,24 +33,24 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Discover servers running in a VMware environment](/azure/migrate/tutorial-discover-vmware) | TBD |
-| [Assess VMware VMs for migration to Azure VMs](/azure/migrate/tutorial-assess-vmware-azure-vm) | TBD |
-| [Select a VMware migration option](/azure/migrate/server-migrate-overview) | TBD |
-| [Move on-premises VMware infrastructure to AVS](./azure-best-practices/contoso-migration-vmware-to-azure.md) | In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that are designed for workload migration. Contoso can confidently use Azure VMware Solution because it's a first-party Microsoft offering that's backed by VMware. |
+| [Discover servers running in a VMware environment](/azure/migrate/tutorial-discover-vmware) | This tutorial shows you how to discover the servers that are running in your VMware environment by using the Azure Migrate: Discovery and assessment tool. |
+| [Assess VMware VMs for migration to Azure VMs](/azure/migrate/tutorial-assess-vmware-azure-vm) | This article shows you how to assess discovered servers from your VMware environment in preparation for migration to Azure VMs, using the Azure Migrate: Discovery and assessment tool. |
+| [Select a VMware migration option](/azure/migrate/server-migrate-overview) | Use this guide to learn how you can migrate VMware VMs to Azure using the Migration and modernization tool. |
+| [Move on-premises VMware infrastructure to AVS](./azure-best-practices/contoso-migration-vmware-to-azure.md) | **Scenario:** In this article, Contoso uses Azure VMware Solution to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that are designed for workload migration. Contoso can confidently use Azure VMware Solution because it's a first-party Microsoft offering that's backed by VMware. |
 
 ### Hyper-V servers
 
 | Link | Description |
 |---|---|
-| [Discover servers running in a Hyper-V environment](/azure/migrate/tutorial-discover-hyper-v) | TBD |
-| [Assess Hyper-V VMs for migration to Azure](/azure/migrate/tutorial-assess-hyper-v) | TBD |
-| [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v) | TBD |
+| [Discover servers running in a Hyper-V environment](/azure/migrate/tutorial-discover-hyper-v) | This tutorial shows you how to discover the servers that are running in your Hyper-V environment by using the Azure Migrate: Discovery and assessment tool. |
+| [Assess Hyper-V VMs for migration to Azure](/azure/migrate/tutorial-assess-hyper-v) | This article shows you how to assess discovered servers from your Hyper-V environment for migration to Azure, using the Azure Migrate: Discovery and assessment tool. |
+| [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v) | This article demonstrates how to assess and migrate Hyper-V machines to Azure. |
 
 ### Remote Desktop Services & Azure Virtual Desktop
 
 |Link|Description|
 |---|---|
-| [Move on-premises Remote Desktop Services to Azure Virtual Desktop scenario](./azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md) | In this article, Contoso migrates and modernizes their on-premises VDI environment based on Remote Desktop Services (RDS) in Windows Server to Azure Virtual Desktop.|
+| [Move on-premises Remote Desktop Services to Azure Virtual Desktop scenario](./azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md) | **Scenario:** In this article, Contoso migrates and modernizes their on-premises VDI environment based on Remote Desktop Services (RDS) in Windows Server to Azure Virtual Desktop.|
 
 ## Databases and data platforms
 
@@ -59,31 +59,31 @@ See each section below for relevant migration guidance for specific applications
 | Link | Description |
 |---|---|
 | [SQL Migration guides](/azure/azure-sql/migration-guides/)| Find documentation on how to migrate to the Azure SQL family of SQL Server database engine products in the cloud: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure. |
-| [Migrate from SQL Server to Azure SQL](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide) | TBD |
-| [Migrate from SQL Server to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide) | TBD |
-| [Migrate from SQL Server to SQL Server on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide) | TBD |
+| [Migrate from SQL Server to Azure SQL](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide) | In this guide, you learn how to migrate your SQL Server instance to Azure SQL Database. |
+| [Migrate from SQL Server to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide) | This guide helps you migrate your SQL Server instance to Azure SQL Managed Instance. |
+| [Migrate from SQL Server to SQL Server on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide) | In this guide, you learn how to discover, assess, and migrate your user databases from SQL Server to an instance of SQL Server on Azure Virtual Machines by tools and techniques based on your requirements. |
 
 ### DB2
 
 | Link | Description |
 |---|---|
-| [Migrate from DB2 to Azure SQL](/azure/azure-sql/migration-guides/database/db2-to-sql-database-guide) | TBD |
-| [Migrate from DB2 to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide) | TBD |
-| [Migrate from DB2 to Azure SQL on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide) | TBD |
+| [Migrate from DB2 to Azure SQL](/azure/azure-sql/migration-guides/database/db2-to-sql-database-guide) | In this guide, you learn how to migrate your IBM Db2 databases to Azure SQL Database, by using SQL Server Migration Assistant for Db2. |
+| [Migrate from DB2 to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide) | This guide teaches you to migrate your Oracle schemas to Azure SQL Managed Instance by using SQL Server Migration Assistant for Oracle. |
+| [Migrate from DB2 to Azure SQL on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide) | This guide teaches you to migrate your Oracle schemas to SQL Server on Azure Virtual Machines by using SQL Server Migration Assistant for Oracle. |
 
 ### Oracle
 
 | Link | Description |
 |---|---|
-| [Migrate from Oracle to Azure SQL](/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide) | TBD |
-| [Migrate from Oracle to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide) | TBD |
-| [Migrate from Oracle to Azure SQL on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide) | TBD |
+| [Migrate from Oracle to Azure SQL](/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide) | This guide teaches you to migrate your Oracle schemas to Azure SQL Database by using SQL Server Migration Assistant for Oracle (SSMA for Oracle). |
+| [Migrate from Oracle to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide) | This guide teaches you to migrate your Oracle schemas to Azure SQL Managed Instance by using SQL Server Migration Assistant for Oracle. |
+| [Migrate from Oracle to Azure SQL on Azure VM](/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide) | This guide teaches you to migrate your Oracle schemas to SQL Server on Azure Virtual Machines by using SQL Server Migration Assistant for Oracle. |
 
 ### Access
 
 | Link | Description |
 |---|---|
-| [Migrate from Access to Azure SQL](/azure/azure-sql/migration-guides/database/access-to-sql-database-guide) | TBD |
+| [Migrate from Access to Azure SQL](/azure/azure-sql/migration-guides/database/access-to-sql-database-guide) | In this guide, you learn how to migrate your Microsoft Access database to an Azure SQL database by using SQL Server Migration Assistant for Access (SSMA for Access). |
 
 ### Linux and open-source databases
 
@@ -98,8 +98,8 @@ See each section below for relevant migration guidance for specific applications
 
 | Link | Description |
 |---|---|
-| [Storage migration overview](/azure/storage/common/storage-migration-overview) | TBD |
-| [Tools for unstructured storage migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) | TBD |
+| [Storage migration overview](/azure/storage/common/storage-migration-overview) | This article focuses on storage migrations to Azure, including migration of unstructured data and block-based devices such as disks and storage area networks (SANs). |
+| [Tools for unstructured storage migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) | This guide offers a comparison matrix showing basic functionality of different tools that can be used for migration of unstructured data. |
 
 ## Java applications
 
