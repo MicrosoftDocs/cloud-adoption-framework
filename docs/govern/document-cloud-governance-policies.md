@@ -73,7 +73,7 @@ Enforce cloud governance policies. Use automated and manual methods to enforce c
 > [!div class="nextstepaction"]
 > [Enforce cloud governance policies](enforce-cloud-governance-policies.md)
 
-## Example: Cloud governance policies
+## Example cloud governance policies
 
 The following cloud governance policies are examples for reference. These policies are based on the examples in the [example risk list](./assess-cloud-risks.md#example-risk-list).
 

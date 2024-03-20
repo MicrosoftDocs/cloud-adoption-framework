@@ -129,11 +129,9 @@ Document cloud governance policies. Use the risk list to define and distribute c
 > [!div class="nextstepaction"]
 > [Document cloud governance policies](document-cloud-governance-policies.md)
 
-## Example: Risk list
+## Example risk list
 
 The risk list is an example that you should tailor to fit the specific needs and context of your organization's Azure cloud environment. Regularly updating the risk list (risk register) and reviewing it with stakeholders is crucial for effective cloud governance.
-
-### Summary of cloud risks
 
 |Risk ID|Risk management status|Risk category|Risk description|Risk probability|Risk impact|Risk priority|Risk level|Risk management strategy|Risk management enforcement|Risk owner|Risk closure date|
 |---|---|---|---|---|---|---|---|---|---|---|---|
