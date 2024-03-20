@@ -93,27 +93,16 @@ Designate a primary risk owner for every risk. The risk owner has the responsibi
 Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Conduct monthly reviews and updates to reflect new risks that emerge as technology and business objectives evolve. Consider including these elements:
 
 - *Risk ID:* A unique identifier for each risk.
-
 - *Risk management status:* Status of the risk (open, closed).
-
 - *Risk category:* A label such as regulatory compliance, security, cost, operations, AI, or resource management.
-
 - *Risk description:* A brief description of the risk.
-
 - *Risk probability:* The probability of the risk occurring per year. Use a percentage or qualitative label.
-
 - *Risk impact:* Provide the risk impact on the organization if the risk occurs such as a dollar amount or qualitative label.
-
 - *Risk priority:* Provide the risk probability (probability x impact). Use a dollar amount or qualitative label.
-
 - *Risk level:* Categorize risk as major threat (level 1), subrisk (level 2), or risk driver (level 3).
-
 - *Risk management strategy:* The approach to manage the risk such as mitigate, accept, avoid.
-
 - *Risk management enforcement:* The techniques to enforce the risk management strategy.
-
 - *Risk owner:* The individual on the cloud governance team managing the risk.
-
 - *Risk closure date:* A date when the risk management strategy should be applied.
 
 For more information, see [Risk list example](#example-risk-list).
@@ -121,11 +110,6 @@ For more information, see [Risk list example](#example-risk-list).
 ## Communicate cloud risks
 
 Clearly convey identified cloud risks to the executive sponsor and executive-level management. The goal is to ensure the organization prioritizes cloud risks. Provide regular updates on cloud risk management and communicate when you need extra resources to manage risks. Promote a culture where managing cloud risks management and governance is a part of daily operations.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Document cloud governance policies](document-cloud-governance-policies.md)
 
 ## Example risk list
 
@@ -141,6 +125,8 @@ The risk list is an example that you should tailor to fit the specific needs and
 |R06|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure.|30% OR High|$100,000 OR High|$30,000 OR High|Level 2|Mitigate|Use infrastructure as code (IaC). Enforce tagging requirements using Azure Policy|Resource lead|2024-03-25|
 |R07|Open|AI|AI model producing biased decisions due to unrepresentative training data.|15% OR Low|$200,000 OR High|$30,000 OR Medium|Level 3|Mitigate|Use bias detection and mitigation techniques. Red teaming AI models monthly|AI lead|2024-05-01|
 |R08|Open|Security|Insecure code management.|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Document cloud governance policies](document-cloud-governance-policies.md)
