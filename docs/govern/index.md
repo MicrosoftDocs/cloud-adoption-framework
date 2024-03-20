@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Govern overview
 
-The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. Cloud governance refers to methods enforce and monitor compliance with rules you define. These rules are known as cloud governance policies. Cloud governance policies specify what should or shouldn't take place in the cloud. You create cloud governance policies to address identified risks to your organization. The goal of cloud governance is to ensure cloud use aligns (complies) with your cloud governance policies.
+The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations (startup to enterprise) in any sector (public or private). Cloud governance refers to methods enforce and monitor compliance with rules you define. These rules are known as cloud governance policies. Cloud governance policies specify what should or shouldn't take place in the cloud. You create cloud governance policies to address identified risks to your organization. The goal of cloud governance is to ensure cloud use aligns (complies) with your cloud governance policies.
 
 :::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
