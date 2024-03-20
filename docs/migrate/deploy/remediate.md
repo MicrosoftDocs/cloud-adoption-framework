@@ -3,15 +3,13 @@ title: Remediating assets prior to migration
 description: Learn how to remediate any assets that you determine to be incompatible with your chosen cloud provider before migration begins.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/05/2024
+ms.date: 03/19/2024
 ms.topic: conceptual
 ---
 
 # Remediate assets prior to migration
 
 During the migration assessment process, the team identifies any configurations that might make an asset incompatible with the chosen cloud provider. Remediate is a checkpoint in the migration process, which ensures that any incompatibilities are resolved.
-
-> TBD: Visual.
 
 This article discusses a few common remediation tasks for reference and helps decide whether remediation is a wise investment.
 
@@ -25,7 +23,7 @@ There are two main groups of remediation activities, and you need to plan for bo
   - This is focused primarily on the source servers being migrated.
 - **Based on the results of the testing activities**
   - This comes from [testing migration activities](../deploy/migration-testing.md) and performing [business testing](../release/business-test.md).
-  - They are focused on the configuration of the replicated destination servers, and any assisting services like load balancers, virtual networks, and storage accounts.
+  - They're focused on the configuration of the replicated destination servers, and any assisting services like load balancers, virtual networks, and storage accounts.
   - These remediation tasks are likely be more iterative; it's common to need to test and remediate through several cycles until all test cases pass.
 
 ## Tracking remediation activities
@@ -47,8 +45,7 @@ In any corporate environment, technical debt exists, but it's healthy and expect
 - **SLA modifications**: Backup and recovery change significantly in a cloud platform. Assets might need to be modified to their backup processes to ensure continued function in the cloud.
 - **Application configuration changes**: Migrated applications might require changes to variables, such as network paths to dependent assets, service account changes, or updates to dependent IP addresses.
 - **Minor changes to network paths**: Routing patterns need to be modified to properly route user traffic to the new assets.
-  > [!NOTE]
-  > This isn't production routing to the new assets, but rather configuration to allow for proper routing to the assets in general.
+  - This isn't production routing to the new assets, but rather configuration to allow for proper routing to the assets in general.
 
 ## Large-scale remediation tasks
 
