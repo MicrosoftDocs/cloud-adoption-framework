@@ -3,77 +3,77 @@ title: Prepare tools and initial migration backlog
 description: Learn how to prepare an initial migration backlog and migration tools to help you migrate your workloads to Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/29/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
 # Prepare tools and initial migration backlog
 
-Executing on your migration requires the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
+To implement your migration, you need the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
 
-## Preparing migration tools
+## Prepare migration tools
 
 To execute on your migration, you need specific tools for assessment, replication, and tracking your workloads through the iteration, including remediation activities.
 
-While there's various tools available, many are either native to the Azure platform or already commonly available.
+Various migration tools are available. Many are either native to the Azure platform or already commonly available.
 
-Here's a list of common tools or offerings necessary for a successful migration project:
+Here's a list of common tools or offerings that you need for a successful migration project:
 
 |Tool type|Functionality|Tool|
 |---|---|---|
-|Discovery & Assessment|Performs automated discovery and assessments of your environment, identifying blockers for migration and identifying dependencies between servers.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
-|Replication|Replicates state data between your on-premises source and a cloud staging environment. Is used to hydrate and migrate the resources.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
-|Tracking|Used to organize project activities, such as group servers into workloads, track remediation activities, and provide status of workload migration.|[Azure DevOps](/azure/devops/user-guide/what-is-azure-devops), Microsoft Excel, and Microsoft Project.|
-|Migration Execution Guide|The Migration Execution Guide (MEG) guides you on identifying which migration feature to use for Azure Migrate. The MEG is a project resource that can guide you step by step through the decisions and execution steps of your migration.|[Migration Execution Guide](https://github.com/Azure/migration/)|
+|Discovery and assessment|Performs automated discovery and assessments of your environment. Identifies blockers for migration and dependencies between servers.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
+|Replication|Replicates state data between your on-premises source and a cloud staging environment. Used to hydrate and migrate the resources.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
+|Tracking|Used to organize project activities, such as to group servers into workloads, track remediation activities, and provide the status of a workload migration.|[Azure DevOps](/azure/devops/user-guide/what-is-azure-devops), Excel, and Microsoft Project.|
+|Migration guide|The Migration Execution Guide helps you identify which migration feature to use for Azure Migrate. The Migration Execution Guide is a project resource that can guide you step by step through the decisions and implementation of your migration.|[Migration Execution Guide](https://github.com/Azure/migration/)|
 
-While you can use tools instead of Azure Migrate, we recommend customers use the native offering unless there's an identified reason. The native offering is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
+Although you can use other tools instead of Azure Migrate, we recommend that you use the native offering unless there's an identified reason. The native offering is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
 
 > [!NOTE]
-> **If you're using an existing tool**: If a server is already being replicated to Azure by another tool, it can be disruptive and impact performance to change the tools during this process. If that is the case, you should plan to use the existing tool. You can execute the migration promotion similar to a disaster recovery failover scenario.
+> *If you already use an existing tool*: If a server is already being replicated to Azure by another tool, it can be disruptive and impact performance to change the tools during this process. If that is the case, continue to use the existing tool. You can execute the migration promotion similar to a disaster recovery failover scenario.
 
 ## Initial migration backlog
 
 This section serves as a milestone to complete prerequisite activities for building an initial migration backlog.
 
-The cloud strategy team is accountable for the care and maintenance of the digital estate. However, the realization of the resultant backlog is the responsibility of every member of the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog before planning individual workload activities. During that review, the members of both teams must gain sufficient knowledge to articulate the following key points in the migration backlog.
+The cloud strategy team is accountable for the care and maintenance of the digital estate. However, acting on the backlog that mapping a digital estate creates is the responsibility of every role in the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog before they begin to plan individual workload activities. During that review, members of both teams must gain sufficient knowledge to articulate the following key points about the migration backlog.
 
 ### Business outcomes and metrics
 
-Every member of the team should understand the desired business outcomes. Migrations take time. It's easy for team members to become distracted by urgent but less important activities during migration. Establishing and reinforcing the desired outcomes helps the team understand the priority and relative importance of the migration, enabling better decision-making over time.
+Every member of the team should understand the objective business outcomes. Migrations take time. It's easy for team members to become distracted by urgent but less strategic activities during a migration. Establishing and reinforcing the intended outcomes helps team members understand the priority and relative importance of migration activities so that they make better decisions over time.
 
-Tracking migration progress is equally important to the team's motivation and to continued stakeholder support. Progress can be tracked through migration KPIs and learning metrics. Regardless of how the effort is tracked, it's important that the team is aware of these metrics so that they can evaluate performance during subsequent iterations.
+Tracking migration progress is equally important both to the migration team's motivation and to continued stakeholder support. Track progress through migration KPIs and by tracking metrics. Regardless of how you track the effort, it's important for the team to be aware of key metrics so that the team can evaluate performance during subsequent iterations.
 
 ### Business priorities
 
-Sometimes, prioritizing one workload over another might seem illogical to the cloud adoption team. Understanding the business priorities that drove those decisions can help maintain the team's motivation. It also allows the team to make a stronger contribution to the prioritization process.
+Sometimes, prioritizing one workload over another might not seem logical or even beneficial to the cloud adoption team. Understanding the business priorities that drives prioritization decisions can help the team maintain critical motivation. It also helps the team make a stronger contribution during the prioritization decision-making process.
 
 ### Core assumptions
 
-The article on [digital estate rationalization](../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when evaluating a digital estate. To fully realize those values, the cloud adoption team needs to understand the assumptions and the reasons that they were established. That knowledge better equips the cloud adoption team to challenge those assumptions.
+[Digital estate rationalization](../../digital-estate/rationalize.md) discusses the agility and time-saving impact of working from basic assumptions when you evaluate a digital estate. To fully realize those values, the cloud adoption team needs to understand the assumptions and the reasons that they were established. That knowledge better equips the cloud adoption team to challenge assumptions for efficiency and savings.
 
-### Capturing the backlog
+### Capture the backlog
 
-The backlog needs to be captured in a location that can be shared so that different team member can align to it, and it can be updated throughout the migration process. You can use tools that your organization is comfortable with, and build upon the tools you used to perform your digital estate rationalization.
+Capture the backlog in a location that you can share with members of the migration. From a shared location, different team members can align their knowledge and work to the backlog, and you can update the backlog throughout the migration process. You can both use tools that are familiar in your organization, and build on the tools that you use to complete your digital estate rationalization.
 
-If you're looking for prebuilt templates, the [Migration Execution Guide](https://github.com/Azure/migration) (MEG) has prebuilt spreadsheets to help you organize your backlog.
+If you're looking for prebuilt templates, the [Migration Execution Guide](https://github.com/Azure/migration) has spreadsheet templates that can help you organize your backlog.
 
-It's important to associate individual servers with the workload, so that you can track the workload itself through individual server migrations. You can also use this backlog to showcase dependencies between workloads as you complete the assessment. When you get to [remediate assets](../deploy/remediate.md) and perform testing, you merge this with a remediation plan.
+It's important to associate workloads with servers, so you can track the workload itself through server migration in the backlog. You can also use the backlog to showcase dependencies between workloads as you complete the assessment. When you [remediate assets](../deploy/remediate.md) and complete testing, you merge the backlog with a remediation plan.
 
-This backlog is used throughout the migration process, so maintaining it's critical.
+The backlog is used throughout the migration process. Maintaining the backlog is critical.
 
-### Backlog planning for multiple datacenters
+### Plan the backlog for multiple datacenters
 
-Before starting the migration, you should create epics within the project management tool for each datacenter that's to be migrated.  Each datacenter epic allows you to group the associated work, allowing you to understand the status of each location.
+Before you begin your migration, you should create epics in the project management tool for each datacenter that you migrate. In a datacenter epic, you can group associated work so that you can track the status of each datacenter location.
 
-If you are not using epics, these can be top level goals or grouping.  The important thing is that you must be able to filter and organize each datacenter on its own, as well as review status of each location.
+If you don't use epics to manage your migration, you can use top-level goals or groupings for datacenters. The key is that you can filter, organize, and track each datacenter as a separate location.
 
-It's important to understand the business outcomes and motivations for this migration. Use those motivations to prioritize the list of epics (or datacenters). For instance, if migration is driven by a desire to exit datacenters before leases must be renewed, then each epic would be prioritized based on lease renewal date.
+It's important to understand the business outcomes and motivations for your migration. Use those motivations to prioritize the list of epics (or datacenters). For example, if the intention to migrate from an on-premises datacenter before the end of your current lease drives your migration, prioritize epics by using lease renewal dates.
 
-Within each epic, the workloads to be assessed and migrated are managed as features. Each asset within that workload is managed as a user story. The work required to assess, migrate, optimize, promote, secure, and manage each asset is represented as tasks for each asset.
+Within each epic, manage workloads that you assess and migrate as features. Manage each asset within that workload as a user story. Tasks represent the work to assess, migrate, optimize, promote, secure, and manage each asset.
 
-Sprints or iterations then consist of a series of tasks required to migrate the assets and user stories committed to by the cloud adoption team. Releases then consist of one or more workloads or features to be promoted to production.
+A sprint or iteration is a series of tasks that are required to migrate the assets and user stories that the cloud adoption team commits to. A sprint typically is a segment of time, like a fiscal quarter or a calendar month. A release represents one or more workloads or features that are promoted to production.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Planning for resilience](./plan-for-resilience.md)
+> [Plan for resilience](./plan-for-resilience.md)
