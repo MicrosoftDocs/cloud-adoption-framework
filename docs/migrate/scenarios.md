@@ -180,18 +180,3 @@ See each section below for relevant migration guidance for specific applications
 | Link | Description |
 |---|---|
 | [Manage Azure Migrate projects at scale with Azure Lighthouse](/azure/lighthouse/how-to/migration-at-scale) | This article provides an overview of how Azure Lighthouse can help you use Azure Migrate in a scalable way across multiple Microsoft Entra tenants.|
-
-## Migrate secure workloads
-
-| Link | Description |
-|---|---|
-| [Azure database security best practices](/azure/azure-sql/database/security-best-practice) | TBD |
-| [Azure data security and encryption best practices](/azure/security/fundamentals/data-encryption-best-practices) | TBD |
-| [Azure PaaS best practices](/azure/security/fundamentals/paas-deployments) | TBD |
-| [Azure Service Fabric security best practices](/azure/security/fundamentals/service-fabric-best-practices) | TBD |
-| [Best practices for Azure VM security](/azure/security/fundamentals/iaas) | TBD |
-| [IoT security best practices](/azure/iot-fundamentals/iot-security-best-practices) | TBD|
-| [Securing PaaS databases in Azure](/azure/security/fundamentals/paas-applications-using-sql) | TBD |
-| [Securing PaaS web and mobile applications using Azure App Service](/azure/security/fundamentals/paas-applications-using-app-services) | TBD |
-| [Securing PaaS web and mobile applications using Azure Storage](/azure/security/fundamentals/paas-applications-using-storage) | TBD |
-| [Security best practices for IaaS workloads in Azure](/azure/security/fundamentals/iaas) | TBD |
