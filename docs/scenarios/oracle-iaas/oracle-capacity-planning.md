@@ -18,6 +18,8 @@ Capacity planning is essential for achieving efficient performance and cost mana
 
 Capacity planning for Oracle workloads on Azure IaaS is a process that requires a deep understanding of the workload requirements and the available Azure resources. The following are some of the key considerations for capacity planning:
 
+> Note that the below considerations are for Oracle databases running on Azure IaaS. For Oracle Database@Azure, you are advised to reach out to your local Oracle sales team for sizing guidance.
+
 ### Overall performance considerations
 
 - It's important to note that your existing environment might not serve as an accurate sizing measure for Oracle database workload requirements on Azure. Instead, you should use Oracle Automatic Workload Repository (AWR) reports to understand the performance characteristics of the workload or workloads to be migrated. AWRs contain performance statistics for your Oracle database workloads.

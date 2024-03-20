@@ -24,6 +24,11 @@ Review the migration resources to define your Oracle to Azure migration process,
 - **Identify data capacity**: Identify the amount of data to migrate and assess the current available network connectivity capacity from on-premises to Azure. Use this information to determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used for initial data load.
 - **Determine availability requirements**: Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
 
+Specically for Oracle Database@Azure you should:
+
+- **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Oracle Database@Azure](https://www.oracle.com/cloud/azure/oracle-database-at-azure/).
+- **Consider database changes required** as moving from on-premises to Oracle Database@Azure might require some changes to the database tablespaces and/or schema. For more information, see [Migrating Oracle Databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/considerations-migrating-premises-database-dbcs.html#GUID-5F6B4B4F-5B1C-4F1C-9F1A-5F6F6F6F6F6F).
+
 ## Oracle migration workload specific activities
 
 In the following section, different high-level steps of the migration process are described in more detail. The steps aren't necessarily sequential and can to some extent be performed in parallel.
@@ -38,8 +43,9 @@ In the following section, different high-level steps of the migration process ar
   - Use Oracle DataGuard if the migration is little endian to little endian synchronize the newly restored database in Azure with the source database. If the migration involves big-endian to little-endian conversion as mentioned previously, you can't use DataGuard. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
   - Once the target database in Azure is synchronized with the source database on-premises, a "cutover" can be scheduled conveniently. The "cutover" will mean shutting down the source database on-premises, flushing the last few transactions to the target database in Azure, and then opening the target database in Azure as the new source database. This cutover can happen in as little time as a few minutes, depending on the sync method used.
   - Depending on the migration approach determined for application services, there will be several activities required for application services before the application is fully migrated to Azure.
+  - To complement the above, you may also consider leveraging Oracle Zero Downtime Migration (ZDM) for the migration process. For more information, see [Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/).
 
-- **Assess required licenses**: Depending on what migration tooling is required for database, various licenses might be required., be mindful that, for instance:
+- **Assess required licenses**: Depending on what migration tooling is required for database, various licenses might be required, be mindful that, for instance:
 
   - Oracle DataGuard requires Oracle Enterprise Edition.
   - Oracle GoldenGate requires Oracle GoldenGate licenses.
