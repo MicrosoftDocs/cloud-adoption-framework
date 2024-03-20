@@ -54,7 +54,9 @@ The following guidance is meant to help you automate cloud governance policies i
 
 Achieve continuous alignment with global compliance standards through automated enforcement controls with minimal manual oversight.
 
-- *Apply regulatory compliance policies*. Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRamp, and PCI DSSv4. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
+- *Apply regulatory compliance policies*. Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRamp, and PCI DSSv4.
+
+- *Automate custom restrictions.* [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 #### Automate cloud security governance in Azure
 
@@ -70,7 +72,9 @@ Secure cloud environments automatically by enforcing best practices and complian
 
 Automate cost monitoring, budgeting, and optimization processes that prevent overspending and ensure costs align with business goals.
 
-- *Automate deployment restrictions.* [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent use of cost-intensive resources. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
+- *Automate deployment restrictions.* [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent use of cost-intensive resources.
+
+- *Automate custom restrictions.* [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 - *Automate cost allocation.* Enforce tagging requirements to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environment (development, test, production), department, or project. Use tags to identify and track resources that are part of a cost optimization effort.
 
@@ -144,11 +148,6 @@ Sometimes a tool limitation or cost makes automated enforcement unpractical. In 
 
 Regularly review and update policy enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. Engage with stakeholders to ensure cloud governance enforcement aligns with business objectives and compliance requirements.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Monitor cloud governance](./monitor-cloud-governance.md)
-
 ## Example cloud governance compliance checklists
 
 Compliance checklists help teams understand the governance policies that apply to them. The example compliance checklists use the policy statement from the [example cloud governance policies](./document-cloud-governance-policies.md#document-cloud-governance-policies) and contain the cloud governance policy ID for cross-referencing.
@@ -162,6 +161,8 @@ Compliance checklists help teams understand the governance policies that apply t
 | Data | &#9744; Encryption in transit and at rest must be applied to all sensitive data [DG01](./document-cloud-governance-policies.md#example-cloud-data-governance-policies) <br> &#9744; Data lifecycle policies must be enabled for all sensitive data [DG02](./document-cloud-governance-policies.md#example-cloud-data-governance-policies) |
 | Resource management | &#9744; Bicep must be used to deploy resources [RM01](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies) <br> &#9744; Tags must be enforced all cloud resources using Azure Policy. | [RM02](./document-cloud-governance-policies.md#example-cloud-resource-management-governance-policies) |
 | AI | &#9744; AI bias detection and mitigation in Azure OpenAI must be used [AI01](./document-cloud-governance-policies.md#example-ai-governance-policies) <br> &#9744; Customer-facing AI systems must be red-teamed monthly [AI02](./document-cloud-governance-policies.md#example-ai-governance-policies) |
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Monitor cloud governance](./monitor-cloud-governance.md)

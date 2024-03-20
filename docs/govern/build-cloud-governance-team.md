@@ -56,11 +56,6 @@ Establish the boundaries of the cloud governance team’s responsibility. The go
 
 - *Use a RACI matrix.* Use a Responsibility Assignment Matrix (RACI Matrix) to delineate roles and responsibilities within the cloud governance framework. See the [example cloud governance RACI matrix](#example-cloud-governance-raci-matrix).
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Assess cloud risks](assess-cloud-risks.md)
-
 ## Example cloud governance RACI matrix
 
 The following table is an example of a RACI matrix for cloud governance. Create a RACI matrix that aligns to your organization and meets your specific needs. Ensure the RACI matrix outlines the roles and responsibilities across different aspects of cloud governance.
@@ -82,6 +77,8 @@ The following table is an example of a RACI matrix for cloud governance. Create 
 - *Consulted (C):* People or group who are subject matter experts or have specific insights into the task.
 
 - *Informed (I):* People who you keep up to date on progress. Updates come at completion of the task or at major milestones.
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Assess cloud risks](assess-cloud-risks.md)

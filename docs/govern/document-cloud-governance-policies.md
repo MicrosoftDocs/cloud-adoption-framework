@@ -42,7 +42,7 @@ Create cloud governance policies that outline how to use and manage the cloud to
 
 - *Include the policy remediation strategies.* Define the desired response to a violation of a cloud governance policy. Tailor responses to the severity of the risk, such as scheduling discussions for nonproduction violations and immediate remediation efforts for production violations.
 
-For more information, see [Example cloud governance policies](#example-cloud-governance-policies).
+For more information, see the [example cloud governance policies](#example-cloud-governance-policies).
 
 ## Distribute cloud governance policies
 
@@ -50,7 +50,7 @@ Grant access to everyone who needs to adhere to cloud governance policies. Look 
 
 - *Use a centralized policy repository.* Use a centralized, easily accessible repository for all governance documentation. Ensure all stakeholders, teams, and individuals have access to the latest versions of policies and related documents.
 
-- *Create compliance checklists*. Provide a quick and actionable overview of the policies. Make it easier for teams to comply without having to navigate through extensive documentation. For more information, see [Compliance checklist examples](./enforce-cloud-governance-policies.md#examples-compliance-checklists).
+- *Create compliance checklists*. Provide a quick and actionable overview of the policies. Make it easier for teams to comply without having to navigate through extensive documentation. For more information, see the [example compliance checklist](./enforce-cloud-governance-policies.md#example-cloud-governance-compliance-checklists).
 
 ## Review cloud governance policies
 
@@ -65,11 +65,6 @@ Assess and update cloud governance policies to ensure they remain relevant and e
 - *Facilitate change control.* Include a process for policy review and updates. Ensure the cloud governance policies stay aligned with organizational, regulatory, and technological changes. Make it clear how to edit, remove, or add policies.
 
 - *Fix cloud governance inefficiencies.* Review governance policies to find and fix inefficiencies in cloud architecture and operations. For example, instead of mandating that each team must use their own web application firewall, you could update the policy to require the use of a centralized firewall.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Enforce cloud governance policies](enforce-cloud-governance-policies.md)
 
 ## Example cloud governance policies
 
@@ -93,6 +88,8 @@ The following cloud governance policies are examples for reference. These polici
 | RM02 | Resource management | [R07](./assess-cloud-risks.md#example-cloud-resource-management-risk) | Tags must be enforced all cloud resources using Azure Policy | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days | Azure Policy |
 | AI01 | AI | [R08](./assess-cloud-risks.md#example-ai-risk) | AI bias detection and mitigation in Azure OpenAI must be used. | Mitigate AI bias | Workload teams. | Immediate corrective measures | Azure OpenAI |
 | AI02 | AI | [R08](./assess-cloud-risks.md#example-ai-risk) | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses | Manual audit (monthly) |
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Enforce cloud governance policies](enforce-cloud-governance-policies.md)
