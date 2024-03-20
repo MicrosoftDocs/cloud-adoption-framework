@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies are the governance framework for individuals interacting with the cloud.
 
-:::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/document.svg" border="false":::
+:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
 ## Define an approach to documenting cloud governance policies
 
@@ -73,7 +73,7 @@ The following cloud governance policies are examples for reference. These polici
 | Policy ID | Policy Category | Risk ID | Policy Statement | Purpose | Scope | Remediation | Monitoring |
 |-----------|-----------------|---------|------------------|---------|-------|-------------| ---------- |
 | RC01 | Regulatory compliance | [R01](assess-cloud-risks.md) | Microsoft Purview must be used to monitor sensitive data. | Regulatory compliance | Workload teams. Platform team | Immediate action by affected team. Compliance training | Microsoft Purview |
-| RC02 | Regulatory compliance | [R01](assess-cloud-risks) | Daily sensitive data compliance reports must be generated from Microsoft Purview. | Regulatory compliance | Workload teams. Platform team | Resolution within one day, confirmation audit | Microsoft Purview |
+| RC02 | Regulatory compliance | [R01](assess-cloud-risks.md) | Daily sensitive data compliance reports must be generated from Microsoft Purview. | Regulatory compliance | Workload teams. Platform team | Resolution within one day, confirmation audit | Microsoft Purview |
 | SC01 | Security | [R02](assess-cloud-risks.md) | Multifactor authentication (MFA) must be enabled for all users | Mitigate data breaches and unauthorized access | Azure users | Revoke user access | Microsoft Entra ID Conditional Access |
 | SC02 | Security | [R02](assess-cloud-risks.md) | Access reviews must be conducted monthly in Microsoft Entra ID Governance | Ensure data and service integrity | Azure users | Immediate access revocation for noncompliance | Microsoft Entra ID Governance |
 | SC03 | Security | [R03](assess-cloud-risks.md) | Teams must use the specified GitHub organization for secure hosting of all software and infrastructure code | Ensure secure and centralized management of code repositories | Development teams | Transfer of unauthorized repositories to the specified GitHub organization and potential disciplinary actions for noncompliance | GitHub audit log |
