@@ -11,7 +11,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to monitor cloud governance. After you enforce cloud governance, you need to measure the compliance of cloud environment against your cloud governance policies. Take a baseline compliance measurement to see where you need to make progress. Track compliance over time to see where cloud governance is effective and ineffective. The goals is to monitor governance and reduce non-compliance issues to zero.
 
-:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
+:::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/monitor.svg" border="false":::
 
 ## Configure cloud governance monitoring
 
