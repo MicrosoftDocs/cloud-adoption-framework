@@ -76,4 +76,4 @@ A sprint or iteration is a series of tasks that are required to migrate the asse
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan for resilience](./plan-for-resilience.md)
+> [Plan for resilience](./select-regions-migration.md)
