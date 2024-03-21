@@ -79,14 +79,14 @@ You should implement the following recommendations in all Microsoft Entra tenant
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set.
+**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude Emergency Access accounts from your policies.
 
 [Microsoft Entra ID Protection](https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access baseline policies with risk conditions, increasing protection controls with risk level. Build your baseline using the Conditional Access policy checklist (*see table 2*).
 
 > [!NOTE]
-> Users can self-remediate User Risk level by changing their password. You configure a [user risk policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) in Conditional Access using **Require password change** grant control.
+> Users can self-remediate user risk by changing their password. You configure a [user risk policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) in Conditional Access using **Require password change** grant control.
 >
-> Passwordless users, including users who sign-in with certificate-based authentication, are effectively blocked by this control. The policy set in *table 2* assumes users are passwordless. Instead of requiring password change, the risky user policy enforces authentication strength and sign-in frequency controls. These controls do not remediate the user's User Risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users accordingly.
+> Passwordless users, including users who sign-in with certificate-based authentication, are effectively blocked by this control. The policy set in *table 2* assumes users are passwordless. Instead of requiring password change, the risky user policy enforces authentication strength and sign-in frequency controls. These controls do not remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users accordingly.
 
 *Table 2: Conditional Access policy checklist.*
 
@@ -100,7 +100,7 @@ You should implement the following recommendations in all Microsoft Entra tenant
 |Secure Microsoft Entra administration|[Microsoft Entra roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
 |Secure cloud management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
 
-For more information, see [Zero Trust identity and device access configuration](/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
+To learn more about Conditional Access deployment, see [Plan a Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access).
 
 **Use primary tenant identities for accessing all applications.** Users should be able to access applications using their identity in the primary tenant. You need to register applications in the primary tenant. Establish a policy to [register applications](/azure/active-directory/develop/quickstart-register-app) with the primary tenant, regardless of the application infrastructure hosting location.
 
