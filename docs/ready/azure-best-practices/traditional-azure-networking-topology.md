@@ -64,8 +64,8 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - Consider a network design based on the traditional hub-and-spoke network topology for the following scenarios:
 
-  - A network architecture deployed within a single Azure region.
-
+  - A network architecture must always connect to at least two Azure regions to achieve high availability
+  
   - A network architecture that spans multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
 
   - A network architecture that spans multiple Azure regions, and global virtual network peering that can connect virtual networks across Azure regions.
@@ -76,9 +76,9 @@ Explore key design considerations and recommendations surrounding network topolo
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology. Use landing zone virtual networks that connect with virtual network peering to a central hub virtual network for the following scenarios:
+- For initial deployment, use a pair of hub-and-spoke topologies across two regions for redundancy. Use landing zone virtual networks that connect with virtual network peering to a central hub virtual network for the following scenarios:
 
-  - Cross-premises connectivity via ExpressRoute.
+  - Cross-premises connectivity via ExpressRoute enabled in two different peering locations 
 
   - VPN for branch connectivity.
 
@@ -92,7 +92,7 @@ The following diagram shows the hub-and-spoke topology. This configuration allow
 
  *Figure 2: Hub-and-spoke network topology.*
 
-- Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits when one of these conditions is true:
+- Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits connected at separate peering locations  when one of these conditions is true:
 
   - You need a high level of isolation.
 
