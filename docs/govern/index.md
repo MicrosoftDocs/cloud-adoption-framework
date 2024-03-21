@@ -10,19 +10,19 @@ ms.custom: internal, UpdateFrequency2
 
 # Govern overview
 
-The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations (startup to enterprise) in any sector (public or private). It provides example for common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resources, and AI. 
+The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations, from startup to enterprise, and applies to any sector (public or private). Th addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI. It also shows you how to establish cloud governance outside those categories.
 
-Cloud governance refers to methods enforce and monitor compliance with rules you define. These rules are known as cloud governance policies. Cloud governance policies specify what should or shouldn't take place in the cloud. You create cloud governance policies to address identified risks to your organization. The goal of cloud governance is to ensure cloud use aligns (complies) with your cloud governance policies.
+Cloud governance involves setting controls or guardrails to regulate the use of cloud services. These controls ensure that cloud usage follows predefined rules known as cloud governance policies. Organizations create cloud governance policies to prevent identified risks. Cloud governance policies define what is allowed and what isn't allowed in the cloud. The goal is to make sure that cloud use aligns with these policies.
 
 :::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
 ## Why govern the cloud?
 
-Effective cloud governance minimizes avoidable risks and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and supports to your broader cloud strategy. Without cloud governance, your organization might realize risks that cloud governance could help you avoid.
+Effective cloud governance minimizes avoidable risks and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and supports to your broader cloud strategy. Without cloud governance, organizations might realize risks that cloud governance could help avoid.
 
 ## How to govern the cloud?
 
-Cloud governance is a continuous process. Work through these five steps to establish cloud governance. Repeat steps 1-4 to maintain cloud governance over time. Schedule regular iterations and iterate in response to specific events, such as a noncompliance incident. The Govern methodology divides cloud governance into five steps:
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The Govern methodology divides cloud governance into five steps. Organizations must complete all steps to set up their cloud governance framework. To maintain effective governance, revisit and refine the last four steps. This cycle ensures the governance framework remains up-to-date and responsive to changes. To establish and maintain cloud governance, follow these steps:
 
 1. *Build a governance team*: Select a team of individuals responsible for cloud governance. The cloud governance team defines and maintains cloud governance policies while reporting on the overall progress of cloud governance.
 
@@ -36,7 +36,7 @@ Cloud governance is a continuous process. Work through these five steps to estab
 
 ## Cloud governance checklist
 
-Use the cloud governance checklist to see all cloud governance tasks and navigate to the guidance you need.
+Use the cloud governance checklist to see all cloud governance steps and tasks for each step. Quickly navigate to the guidance you need.
 
 | &nbsp; | Cloud governance step | Cloud governance tasks |
 |---|---|---|
