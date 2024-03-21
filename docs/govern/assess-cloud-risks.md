@@ -1,5 +1,5 @@
 ---
-title: Conduct a risk assessment
+title: Assess cloud risks
 description: Learn how to assess cloud risks effectively with our comprehensive guide. Dive into the essentials of cloud governance and risk management within Microsoft's Govern methodology for Azure. This article provides a step-by-step approach to identify, prioritize, and mitigate cloud risks. Discover best practices for cloud risk assessment tools, techniques, and strategies to protect your digital assets. Perfect for organizations using the cloud, seeking to set up and maintain the cloud governance approach.
 author: stephen-sumner
 ms.author: ssumner
