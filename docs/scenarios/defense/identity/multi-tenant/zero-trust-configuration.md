@@ -58,7 +58,9 @@ To establish Microsoft Entra ID as a zero trust platform, you need a tenant popu
 
 ## Configure zero trust
 
-When managing identities in Microsoft Entra ID, you should consider the following recommendations for each tenant type. There are general recommendations for all tenant types that you should adopt first. After implementing those general recommendations, find the recommendations for your specific tenant type (primary or secondary) and then apply those recommendations. For more information, see [Zero Trust Rapid Modernization Plan](/security/zero-trust/zero-trust-ramp-overview) and [Security Rapid Modernization Plan](/security/privileged-access-workstations/security-rapid-modernization-plan).
+When managing identities in Microsoft Entra ID, you should consider the following recommendations for each tenant type. There are general recommendations for all tenant types that you should adopt first. After implementing those general recommendations, find the recommendations for your specific tenant type (primary or secondary) and then apply those recommendations.
+
+To learn more about securing Microsoft Entra tenants with zero trust, see [Zero Trust Rapid Modernization Plan](/security/zero-trust/zero-trust-ramp-overview) and [Security Rapid Modernization Plan](/security/privileged-access-workstations/security-rapid-modernization-plan).
 
 ### All tenants
 
