@@ -117,7 +117,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 
 ### Third-party tooling
 
-- Use [AzAdvertizer](https://www.azadvertizer.net)to stay updated with Azure governance changes. For example, policy definitions and initiatives in Azure Policy, aliases, security and regulatory compliance controls, and Azure Role-Based Access Control (RBAC) role definitions. It also helps you with resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+- Use [AzAdvertizer](https://www.azadvertizer.net) to stay updated with Azure governance changes. For example, policy definitions and initiatives in Azure Policy, aliases, security and regulatory compliance controls, and Azure Role-Based Access Control (RBAC) role definitions. It also helps you with resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
 
 - Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. The ALZ Policy Version Checker feature helps you ensure that your environment is updated with the latest ALZ Azure policy release state.
 
