@@ -13,7 +13,7 @@ To implement your migration, you need the right tools and a comprehensive backlo
 
 ## Prepare migration tools
 
-To successfully complete your migration, you need specific tools for assessment, replication, and tracking your workloads through iterations, including remediation activities.
+To successfully complete your migration, you need specific tools for assessing, replicating, and tracking your workloads through iterations, including remediation activities.
 
 Various migration tools are available. Many are either native to the Azure platform or are already commonly available.
 
@@ -23,7 +23,7 @@ Here's a list of common tools or offerings that you need for a successful migrat
 |---|---|---|
 |Discovery and assessment|Performs automated discovery and assessments of your environment. Identifies blockers for migration and identifies dependencies between servers.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
 |Replication|Replicates data state between your on-premises source and a cloud staging environment. Used to hydrate and migrate the resources.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
-|Tracking|Used to organize project activities, such as to group servers into workloads, track remediation activities, and provide the status of a workload migration.|[Azure DevOps](/azure/devops/user-guide/what-is-azure-devops), Excel, and Microsoft Project.|
+|Tracking|Used to organize project activities, such as to group servers into workloads, track remediation activities, and provide the status of a workload migration.|[Azure DevOps](/azure/devops/user-guide/what-is-azure-devops), Excel, and Microsoft Project|
 |Migration guide|Helps you identify which migration feature to use for Azure Migrate. The Migration Execution Guide is a project resource that can guide you step by step through the decisions and the implementation of your migration.|[Migration Execution Guide](https://github.com/Azure/migration/)|
 
 Although you can use other tools instead of Azure Migrate, we recommend that you use a native offering unless there's an identified reason. The native offering Azure Migrate is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
