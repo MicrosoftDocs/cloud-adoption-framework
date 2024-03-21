@@ -26,7 +26,7 @@ On top of these environmental controls, the workload team should consider:
 
 ### Hybrid ExpressRoute Connectivity
 
-In order to support critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, this does not protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
+In order to support mission critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, this does not protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
 
 #### Recommendations
 
@@ -36,13 +36,7 @@ In order to support critical HPC workloads, use an ExpressRoute High Availabilit
   - You can work with the provider in order to configure the second ExpressRoute site.
   - It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
 
-Here's what a maximum resiliency architecture looks like:
-
-![Diagram showing ExpressRoute architecture for mission critical workloads.](./media/hpc-expressroute-ha-sku.png)
-
-_Diagram: Shows a maximum-resilience architecture with a multi-homed ExpressRoute gateway that has primary and secondary locations._
-
-The diagram show Location A as the primary connection and Location B as the secondary connection. It is possible to have each connection be active or configure the connections in active-passive. Each location corresponds to a different ExpressRoute peering location, not an Azure region.
+For details on a maximum resiliency ExpressRoute configuration, please refer to [this page](https://learn.microsoft.com/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros
 
 ## Security
 
