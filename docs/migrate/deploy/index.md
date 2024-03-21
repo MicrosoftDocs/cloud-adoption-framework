@@ -1,34 +1,34 @@
 ---
 title: Migration deployment checklist
-description: Get an overview of the articles that explain the various activities that may be involved in migrating a workload in Azure.
+description: Get an overview of the articles that explain the various activities that might be involved in the deploy phase for migrating a workload in Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/04/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 
 ---
 
 # Migration deployment checklist
 
-![Diagram that shows the deploy-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-deploy.svg)
+![Diagram that shows the deploy phase of the migration guidance in the Cloud Adoption Framework.](../media/migrate-deploy.svg)
 
-In this phase of the adoption journey, you begin the technical execution of the migration. You use the workload architecture and assessment materials from the previous phase to begin deployment and remediation of issues. You begin replicating servers to Azure and preparing them for migration, and begin executing your technical tests.
+In the deploy phase of your adoption journey, you begin the technical implementation of the migration. You can use the workload architecture and assessment materials from the assess phase to begin deployment and remediation of problems. You can also begin to replicate servers to Azure and prepare them for migration, and run your technical tests.
 
-This phase can be the most technical demanding. It's important to make sure you complete your remediation activities and perform detailed testing. You should have a clear understanding of how the services operate together. By the end of this, you should have high confidence that your workload is ready to operate in Azure, and are ready to plan for the release.
+This phase can be the most technically demanding. It's important to make sure you complete your remediation activities and perform detailed testing. You should have a clear understanding of how your services operate together. By the end of this phase, you should have high confidence that your workload is ready to operate in Azure and are ready to plan for the workload release.
 
 ## Checklist
 
-The table below gives an overview of the activities documented in this phase, along with the roles responsible for execution.
+The following table provides an overview of the activities in this phase and the roles that are responsible for each activity.
 
-|Activity|Summary|Responsible roles|
+|Activity|Description|Responsible roles|
 |---|---|---|
-|[Deploy supporting services](./deploy-supporting-services.md)|Guidance for how to plan for and deploy non-server resources for your workload.|<li>Migration Engineers.|
-|[Remediate assets](./remediate.md)|Guidance to help build your remediation plan based on assets.|<li>Migration Architect.<br><li>Migration Engineer.<br><li>Project Manager.|
-|[Replicate assets](./replicate.md)|Guidance for replicating source servers to the cloud.|<li>Migration Engineers.|
-|[Prepare for management](./prepare-for-management.md)|Guidance on planning for an implementing management as part of the migration.|<li>Cloud Operations Manager.<br><li>Migration Engineer.<br><li>Workload Architects.|
-|[Migration testing](./migration-test.md)|Guidance on how to perform technical migration testing prior to performing business testing.|<li>Project Manager.<br><li>Workload Architects.<br><li>Migration Engineers.|
+|[Deploy supporting services](./deploy-supporting-services.md)|Guidance about how to plan for and deploy non-server resources for your workload|<li>Migration Engineer|
+|[Remediate assets](./remediate.md)|Guidance to help build your remediation plan based on assets|<li>Migration Architect<br><li>Migration Engineer<br><li>Project Manager|
+|[Replicate assets](./replicate.md)|Guidance for replicating source servers to the cloud|<li>Migration Engineer|
+|[Prepare for management](./prepare-for-management.md)|Guidance on planning for management as part of the migration|<li>Cloud Operations Manager<br><li>Migration Engineer<br><li>Workload Architect|
+|[Test your migration](./migration-test.md)|Guidance on how to perform technical migration testing prior to performing business testing|<li>Project Manager<br><li>Workload Architect<br><li>Migration Engineer|
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Deploy supporting services](./deploy-supporting-services.md)
