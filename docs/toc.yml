@@ -609,7 +609,7 @@ items:
         items:
           - name: Overview
             href: migrate/prepare/index.md
-          - name: Ready your landing zone for migration
+          - name: Prepare your landing zone for migration
             href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-backlog.md
