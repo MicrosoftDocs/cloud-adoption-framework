@@ -76,7 +76,7 @@ You should implement the following recommendations in all Microsoft Entra tenant
 
 [Microsoft Entra certificate-based authentication (CBA)](/azure/active-directory/authentication/concept-certificate-based-authentication) makes it unnecessary to federate Microsoft Entra domains. Microsoft Entra authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
 
-- Security Keys (FIDO2 / Passkey)
+- Passkeys (FIDO2 security keys)
 - Certificate-Based Authentication
 - Microsoft authenticator
 - Windows Hello for Business
@@ -93,8 +93,6 @@ You should implement the following recommendations in all Microsoft Entra tenant
 > [!CAUTION] 
 > Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by the **Require password change** grant control if they can't reset their password in Microsoft Entra ID.
 
-The example policy set in *table 2* is for passwordless organizations where all users only use phishing-resistant MFA from managed devices. Privileged users only use phishing-resistant MFA and managed Privileged Access Workstations (PAW). Instead of requiring password change for high risk users, the risky user policy enforces authentication strength and sign-in frequency controls. These controls offer some protections but don't remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users.
-
 *Table 2: Example Conditional Access policy checklist.*
 
 | Policy name          | Users   | Applications   | Conditions  | Grant control         |
@@ -106,6 +104,8 @@ The example policy set in *table 2* is for passwordless organizations where all 
 |Protect high risk users|All Users|All Apps|[High user risk](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-sign-in-risk-policy-for-mfa)|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>[Require compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)<br>[Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): Every Time|
 |Secure Microsoft Entra administration|[Microsoft Entra roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
 |Secure cloud management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
+
+The example policy set in *table 2* is for passwordless organizations where all users only use phishing-resistant MFA from managed devices. Privileged users use Intune-managed Privileged Access Workstations (PAW). Instead of requiring password change for high risk users, the risky user policy enforces authentication strength and sign-in frequency controls. These controls offer some protections but don't remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users.
 
 Use [report-only mode](/entra/identity/conditional-access/concept-conditional-access-report-only) to test Conditional Access policies before deploying to production. To learn more about Conditional Access deployment, see [Plan a Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access).
 
