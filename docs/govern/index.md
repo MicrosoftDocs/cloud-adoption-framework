@@ -1,48 +1,52 @@
 ---
-title: Cloud governance
-description: Learn what cloud governance is, why cloud governance is important, and how to establish governance in the cloud.
+title: Govern overview
+description: Discover Microsoft's Govern methodology, a comprehensive guide on cloud governance in Azure. Explore what cloud governance entails, its significance, and step-by-step instructions on implementation and maintenance. Optimize your cloud strategy with insights on cloud governance policies, risk assessment, enforcement, and monitoring for seamless compliance and alignment with organizational goals.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
 # Govern overview
 
-The Govern methodology shows you how to minimize risks associated with the cloud. It outlines a process called cloud governance. Cloud governance refers to the tools and procedures you use to define, enforce, and monitor cloud governance policies. Cloud governance policies specify what should or should not take place in the cloud and manage risks in alignment with your cloud strategy. The goal of cloud governance is to progressively reduce non-compliance issues to zero.
+The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations, from startup to enterprise, and applies to any sector (public or private). It addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI. It also shows you how to establish cloud governance outside those categories.
 
-<img src="c:\GitHub\cloud-adoption-framework-pr\docs\govern/media/image1.png" style="width:6.5in;height:1.07569in" alt="A blue and white sign Description automatically generated" />
+Cloud governance involves setting controls or guardrails to regulate the use of cloud services. These controls ensure that cloud usage follows predefined rules known as cloud governance policies. Organizations create cloud governance policies to prevent identified risks. Cloud governance policies define what is allowed and what isn't allowed in the cloud. The goal is to make sure that cloud use aligns with these policies.
+
+:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
 ## Why govern the cloud?
 
-Effective cloud governance minimizes risks and streamlines cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and aligned to your broader cloud strategy. Without cloud governance, organizations may encounter increased expenses, security vulnerabilities, compliance issues, and inefficient operations.
+Effective cloud governance minimizes avoidable risks and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and supports to your broader cloud strategy. Without cloud governance, organizations might realize risks that cloud governance could help avoid.
 
 ## How to govern the cloud?
 
-This cloud governance guidance applies to organizations of all sizes, from large enterprises to startups, and across both the private and public sectors. Cloud governance is a five-step process. Work through the first step once. Iterate through the next four steps of cloud governance as a continuous process.
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The Govern methodology divides cloud governance into five steps. Organizations must complete all steps to set up their cloud governance framework. To maintain effective governance, revisit and refine the last four steps. This cycle ensures the governance framework remains up-to-date and responsive to changes. To establish and maintain cloud governance, follow these steps:
 
-1.  *Build a governance team*: This is the first step in establishing cloud governance. It involves assembling a team of individuals responsible for setting up governance policies and procedures.
+1. *Build a governance team*: Select a team of individuals responsible for cloud governance. The cloud governance team defines and maintains cloud governance policies while reporting on the overall progress of cloud governance.
 
-<!-- -->
+2. *Assess cloud risks*: Evaluate and prioritize potential risks associated with the use of cloud. The risk assessment should identify risks unique to the organization. Consider all categories of risk, such as regulatory compliance, security, operations, cost, data, resource management, and AI risks. Use Azure tools to help [assess cloud risks](./assess-cloud-risks.md#azure-facilitation-identifying-cloud-risks).
 
-2.  *Assess cloud risks*: Once the cloud governance team is in place, the next step is to evaluate potential risks associated with the use of cloud services. Consider risks unique to your business, including regulatory compliance, security, operations, cost, data, resource management, and AI. Use Azure tools to [assess cloud risks](https://ppc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=en-US&wopisrc=https%3A%2F%2Fmicrosoft-my.sharepoint.com%2Fpersonal%2Fssumner_microsoft_com%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F7740e4123e93454299433c7c8ed2ae4b&wdlor=c10849B9E-7989-4A04-A19A-2317C4D6D166&wdenableroaming=1&wdfr=1&mscc=1&wdodb=1&hid=824BBBF7-DC93-4220-9C2D-E538E27B48B3.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=17be43da-cf45-43e4-66cf-b27125506ab8&usid=17be43da-cf45-43e4-66cf-b27125506ab8&newsession=1&sftc=1&uihit=docaspx&muv=1&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Fmicrosoft-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Outlook-Body.Sharing.ServerTransfer&wdhostclicktime=1709846847570&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_Azure_facilitation:_Identifying).
+3. *Document cloud governance policies*: Document cloud governance policies that govern the use of the cloud. These policies set out the rules and guidelines for cloud usage to minimize the identified risks.
 
-<!-- -->
+4. *Enforce cloud governance policies*: Enforce adherence to the cloud governance policies using automated tools or manual procedures. The goal is to ensure that the use of cloud services is in line with the established governance policies. Use Azure tools to help [enforce cloud governance policies](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 
-3.  *Document cloud governance policies*: After assessing the risks, the governance team should document policies that will govern the use of cloud services. These policies set out the rules and guidelines for cloud usage to minimize identified risks.
+5. *Monitor cloud governance*: Evaluate to ensure that cloud services are used according to the governance policies and adjusting as necessary. Use Azure tools to help [monitor cloud governance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) and [set up alerts for noncompliance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-alerts).
 
-<!-- -->
+## Cloud governance checklist
 
-4.  *Enforce cloud governance policies*: With the policies documented, the next step is enforcement. This ensures that the use of cloud services is in line with the established governance policies. Use Azure tools to [enforce cloud governance policies.](https://ppc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=en-US&wopisrc=https%3A%2F%2Fmicrosoft-my.sharepoint.com%2Fpersonal%2Fssumner_microsoft_com%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F7740e4123e93454299433c7c8ed2ae4b&wdlor=c10849B9E-7989-4A04-A19A-2317C4D6D166&wdenableroaming=1&wdfr=1&mscc=1&wdodb=1&hid=824BBBF7-DC93-4220-9C2D-E538E27B48B3.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=17be43da-cf45-43e4-66cf-b27125506ab8&usid=17be43da-cf45-43e4-66cf-b27125506ab8&newsession=1&sftc=1&uihit=docaspx&muv=1&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Fmicrosoft-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Outlook-Body.Sharing.ServerTransfer&wdhostclicktime=1709846847570&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_Azure_facilitation:_Enforcing)
+Use the cloud governance checklist to see all cloud governance steps and tasks for each step. Quickly navigate to the guidance you need.
 
-<!-- -->
-
-5.  *Monitor cloud governance*: The last step in the process is monitoring cloud governance. This involves regularly checking to ensure that cloud services are used according to the governance policies and adjusting as necessary. Use Azure tools to [monitor cloud governance](https://ppc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=en-US&wopisrc=https%3A%2F%2Fmicrosoft-my.sharepoint.com%2Fpersonal%2Fssumner_microsoft_com%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F7740e4123e93454299433c7c8ed2ae4b&wdlor=c10849B9E-7989-4A04-A19A-2317C4D6D166&wdenableroaming=1&wdfr=1&mscc=1&wdodb=1&hid=824BBBF7-DC93-4220-9C2D-E538E27B48B3.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=17be43da-cf45-43e4-66cf-b27125506ab8&usid=17be43da-cf45-43e4-66cf-b27125506ab8&newsession=1&sftc=1&uihit=docaspx&muv=1&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Fmicrosoft-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Outlook-Body.Sharing.ServerTransfer&wdhostclicktime=1709846847570&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_Azure_facilitation:_Configuring) and [set up alerts for non-compliance](https://ppc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=en-US&wopisrc=https%3A%2F%2Fmicrosoft-my.sharepoint.com%2Fpersonal%2Fssumner_microsoft_com%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F7740e4123e93454299433c7c8ed2ae4b&wdlor=c10849B9E-7989-4A04-A19A-2317C4D6D166&wdenableroaming=1&wdfr=1&mscc=1&wdodb=1&hid=824BBBF7-DC93-4220-9C2D-E538E27B48B3.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=17be43da-cf45-43e4-66cf-b27125506ab8&usid=17be43da-cf45-43e4-66cf-b27125506ab8&newsession=1&sftc=1&uihit=docaspx&muv=1&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Fmicrosoft-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Outlook-Body.Sharing.ServerTransfer&wdhostclicktime=1709846847570&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_Azure_facilitation_of).
+| &nbsp; | Cloud governance step | Cloud governance tasks |
+|---|---|---|
+|&#9744; | [**Build a cloud governance team**](build-cloud-governance-team.md) | &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-functions-of-the-cloud-governance-team) <br> &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team) <br> &#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team) <br> &#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team) |
+|&#9744; | [**Assess cloud risks**](./assess-cloud-risks.md) | &#9744; [Identify cloud risks](assess-cloud-risks.md#identify-cloud-risks) <br> &#9744; [Analyze cloud risks](assess-cloud-risks.md#analyze-cloud-risks) <br> &#9744; [Document cloud risks](assess-cloud-risks.md#document-cloud-risks) <br> &#9744; [Communicate cloud risks](assess-cloud-risks.md#communicate-cloud-risks) |
+|&#9744; | [**Document cloud governance policies**](document-cloud-governance-policies.md) | &#9744; [Define an approach to documenting cloud governance policies](document-cloud-governance-policies.md#define-an-approach-to-documenting-cloud-governance-policies) <br> &#9744; [Define cloud governance policies](document-cloud-governance-policies.md#define-cloud-governance-policies) <br> &#9744; [Distribute cloud governance policies](document-cloud-governance-policies.md#distribute-cloud-governance-policies) <br> &#9744; [Review cloud governance policies](document-cloud-governance-policies.md#review-cloud-governance-policies) |
+|&#9744; | [**Enforce cloud governance policies**](enforce-cloud-governance-policies.md) | &#9744; [Define an approach to enforcing cloud governance policies](enforce-cloud-governance-policies.md#define-an-approach-to-enforcing-cloud-governance-policies) <br> &#9744; [Enforce cloud governance policies automatically](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-automatically) <br> &#9744; [Enforce cloud governance policies manually](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-manually) <br> &#9744; [Review policy enforcement](enforce-cloud-governance-policies.md#review-policy-enforcement) |
+|&#9744; | [**Monitor cloud governance**](monitor-cloud-governance.md) | &#9744; [Configure cloud governance monitoring](monitor-cloud-governance.md#configure-cloud-governance-monitoring) <br> &#9744; [Configure cloud governance alerts](monitor-cloud-governance.md#configure-cloud-governance-alerts) <br> &#9744; [Develop a remediation plan](monitor-cloud-governance.md#develop-a-remediation-plan) <br> &#9744; [Audit cloud governance regularly](monitor-cloud-governance.md#audit-cloud-governance-regularly) |
 
 ## Next step
 
-Build a cloud governance team to oversee the process of assessing cloud risks, defining cloud governance policies, enforcing cloud governance policies, and monitoring cloud governance.
-
 > [!div class="nextstepaction"]
-> [Cloud governance checklist](cloud-governance-checklist.md)
+> [Build a cloud governance team](build-cloud-governance-team.md)
