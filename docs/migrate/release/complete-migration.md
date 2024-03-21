@@ -33,4 +33,4 @@ You should make sure to add workload specific considerations to your specific ch
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Post-migration cost optimization](./optimize-cost-after-migration.md)
+> [Optimize cost after migration](./optimize-cost-after-migration.md)

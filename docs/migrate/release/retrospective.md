@@ -59,14 +59,14 @@ The following is an example retrospective output:
 
 |What went well?|What could have been better?|What did we learn?|
 |---|---|---|
-|Communication with the business users for Application X and Application Y (5 votes)|Involvement of developers to validate network architecture for Application X and Application Z (3 votes)|We need to review all firewall traffic from workloads before migration, even if it is believed they have no specialty rules (4 votes)|
+|Communication with the business users for Application X and Application Y (5 votes)|Involvement of developers to validate network architecture for Application X and Application Z (3 votes)|We need to review all firewall traffic from workloads before migration, even if it's believed they have no specialty rules (4 votes)|
 |Development teams for Application Y were highly involved (2 votes)|Understanding of the networking requirements for Application X (2 votes)|We need to make sure development teams know what is expected from them as part of the migration process (4 votes)|
 |Enablement of Azure Backup as part of migration process.|Understanding of the networking requirements for Application Y (1 vote)|We need to plan extra time for SQL database that are large size (3 votes)|
 | |Final SQL replication for Application Y took longer than expected (3 votes)| |
 
 ## Next steps
 
-When you've reached the end of the release phase, you should continue with the Cloud Adoption Framework's Manage methodology to ensure that you're able to maintain and optimize your workloads in Azure continuously.
+You should continue with the Cloud Adoption Framework's Manage methodology to ensure that you're able to maintain and optimize your workloads in Azure continuously.
 
 > [!div class="nextstepaction"]
 > [Cloud Adoption Framework - Manage methodology](../../manage/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Post-migration cost optimization
+title: Optimize cost after migration
 description: Use the Cloud Adoption Framework for Azure to learn how to properly decommission retired resources with minimal business interruptions.
 author: Zimmergren
 ms.author: tozimmergren
@@ -7,7 +7,7 @@ ms.date: 03/21/2024
 ms.topic: conceptual
 ---
 
-# Post-migration cost optimization
+# Optimize cost after migration
 
 After you've migrated your workloads to Azure, you should optimize your costs to ensure that you're not spending more than you need to. This article provides guidance on how to optimize your costs after migration, and how to decommission retired assets with minimal business interruptions.
 
