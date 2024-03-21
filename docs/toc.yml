@@ -372,8 +372,6 @@ items:
                 href: ready/azure-best-practices/traditional-azure-networking-topology.md
               - name: Virtual WAN network topology (Microsoft-managed)
                 href: ready/azure-best-practices/virtual-wan-network-topology.md
-              - name: Azure Virtual Network Manager
-                href: ready/azure-best-practices/azure-virtual-network-manager.md
               - name: Plan for IP addressing
                 href: ready/azure-best-practices/plan-for-ip-addressing.md
             - name: Connectivity
@@ -400,6 +398,8 @@ items:
                 href: ready/azure-best-practices/define-network-encryption-requirements.md
               - name: Plan for traffic inspection
                 href: ready/azure-best-practices/plan-for-traffic-inspection.md
+            - name:  Azure Virtual Network Manager in landing zone
+              href: ready/azure-best-practices/azure-virtual-network-manager.md
             - name: Resources
               items:
               - name: Private Link and DNS integration at scale
