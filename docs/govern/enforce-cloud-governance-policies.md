@@ -160,7 +160,7 @@ Compliance checklists help teams understand the governance policies that apply t
 | Cost | &#9744; Workload teams must set budgets alerts at the resource group level [(CM01)](document-cloud-governance-policies.md#example-cloud-governance-policies) <br> &#9744;Azure Advisor cost recommendations must be reviewed [(CM02)](document-cloud-governance-policies.md#example-cloud-governance-policies) |
 | Data | &#9744; Encryption in transit and at rest must be applied to all sensitive data [(DG01)](./document-cloud-governance-policies.md) <br> &#9744; Data lifecycle policies must be enabled for all sensitive data [(DG02)](document-cloud-governance-policies.md#example-cloud-governance-policies) |
 | Resource management | &#9744; Bicep must be used to deploy resources [(RM01)](document-cloud-governance-policies.md#example-cloud-governance-policies) <br> &#9744; Tags must be enforced all cloud resources using Azure Policy [(RM02)](document-cloud-governance-policies.md#example-cloud-governance-policies) |
-| AI | &#9744; AI bias detection and mitigation in Azure OpenAI must be used [(AI01)](document-cloud-governance-policies.md#example-cloud-governance-policies) <br> &#9744; Customer-facing AI systems must be red-teamed monthly [(AI02)](document-cloud-governance-policies.md#example-cloud-governance-policies) |
+| AI | &#9744; AI content filtering configuration must set to medium or higher [(AI01)](document-cloud-governance-policies.md#example-cloud-governance-policies) <br> &#9744; Customer-facing AI systems must be red-teamed monthly [(AI02)](document-cloud-governance-policies.md#example-cloud-governance-policies) |
 
 ## Next step
 
