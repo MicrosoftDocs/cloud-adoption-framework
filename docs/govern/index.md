@@ -1,6 +1,6 @@
 ---
 title: Govern overview
-description: Discover Microsoft's Govern methodology, a comprehensive guide on cloud governance in Azure. Explore what cloud governance entails, its significance, and step-by-step instructions on implementation and maintenance. Optimize your cloud strategy with insights on cloud governance policies, risk assessment, enforcement, and monitoring for seamless compliance and alignment with organizational goals.
+description: Learn to establish, maintain, and automate cloud governance in Azure. Mitigate risks and streamline cloud use.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -14,7 +14,7 @@ The Govern methodology provides a structured approach for setting up and managin
 
 Cloud governance involves setting controls or guardrails to regulate the use of cloud services. These controls ensure that cloud use follows predefined rules known as cloud governance policies. Cloud governance policies define what is allowed and what isn't allowed in the cloud. Organizations create cloud governance policies to prevent and mitigate identified risks. The goal is to make sure that cloud use aligns with these policies.
 
-:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
+:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/govern.svg" border="false":::
 
 ## Why govern the cloud?
 

@@ -1,6 +1,6 @@
 ---
 title: Build a cloud governance team
-description: Learn to build an effective cloud governance team with this comprehensive guide. Discover key roles, responsibilities, and strategies for managing cloud risks, developing policies, and ensuring compliance within Microsoft Azure's Govern methodology. Ideal for IT professionals and organizations looking to set up and maintain cloud governance.
+description: Learn to build an effective cloud governance team . Discover key roles, responsibilities, and strategies for managing cloud risks and developing policies.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the interest of the organization and ensure cloud governance policies minimize risks. The goal is to have people accountable for the success of cloud governance.
 
-:::image type="content" source="./_images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/build.svg" border="false":::
+:::image type="content" source="./_images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/build.svg" border="false":::
 
 ## Define the functions of the cloud governance team
 

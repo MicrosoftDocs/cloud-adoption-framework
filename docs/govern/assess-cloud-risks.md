@@ -1,6 +1,6 @@
 ---
 title: Assess cloud risks
-description: Learn how to assess cloud risks effectively with our comprehensive guide. Dive into the essentials of cloud governance and risk management within Microsoft's Govern methodology for Azure. This article provides a step-by-step approach to identify, prioritize, and mitigate cloud risks. Discover best practices for cloud risk assessment tools, techniques, and strategies to protect your digital assets. Perfect for organizations using the cloud, seeking to set up and maintain the cloud governance approach.
+description: Learn how to assess cloud risks effectively for cloud governance. Identify all risks. Assess, prioritize, and document cloud risks.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article outlines the approach to assess risks associated with the cloud. All technologies introduce certain risks to an organization. Risks are undesired outcomes that could affect your business, such as noncompliance with industry standards. When adopting the cloud, you need to identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.
 
-:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/assess.svg" border="false":::
+:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/assess.svg" border="false":::
 
 ## Identify cloud risks
 
