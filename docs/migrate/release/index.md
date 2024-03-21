@@ -3,19 +3,19 @@ title: Migration release checklist
 description: Use the Cloud Adoption Framework for Azure to prepare your migrated workload and assets to be promoted to production.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/22/2024
+ms.date: 03/21/2024
 ms.topic: conceptual
 ---
 
 # Migration release checklist
 
-![Diagram that shows the release-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-release.svg)
-
 This phase guides you through taking your deployed workloads, and releasing them to production use. It includes not just the technical processes of executing your final migration steps, but also the communication to the business, final change approvals, cleaning up resources, and learning from the migration.
+
+![Diagram that shows the release-phase of the migration guidance in the Cloud Adoption Framework](../media/migrate-release.svg)
 
 ## Executing the migration
 
-By this phase, you have your resources deployed into Azure, either as new resources with replicated data and properly configured state, or as a replicated server through a migration tool. From a technical operations, all that remains is initiating any final migration tasks and sending traffic over to the new location.
+When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data and properly configured state, or as a replicated server through a migration tool. From a technical consideration, all that remains is initiating final migration tasks and sending traffic over to the new location.
 
 However, there is more that is needed to make sure you have a successful migration. Clear communication with the business and support teams is critical, as is finalizing activities after migration, including a proper retrospective.
 
