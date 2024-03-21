@@ -18,7 +18,7 @@ Cloud governance involves setting controls or guardrails to regulate the use of 
 
 ## Why govern the cloud?
 
-Effective cloud governance minimizes avoidable risks and streamlines acceptable cloud usage across the organization. Cloud governance ensures your cloud environment is compliant with external regulations and supports to your broader cloud strategy. Without cloud governance, organizations might realize risks that cloud governance could help avoid.
+Effective cloud governance prevents and mitigates avoidable risks. It streamlines acceptable cloud use across the organization. Cloud governance ensures the cloud environment is compliant with cloud governance policies and supports the broader cloud strategy. Without cloud governance, organizations might encounter risks that cloud governance could prevent.
 
 ## How to govern the cloud?
 
