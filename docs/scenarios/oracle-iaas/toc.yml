@@ -1,6 +1,6 @@
 items:
   - name: Oracle Migration - Microsoft Cloud Adoption
-    href: introduction-oracle-landing-zone.md 
+    href: index.md 
   - name: Strategic impact
     href: oracle-landing-zone-strategy.md
   - name: Technical planning
