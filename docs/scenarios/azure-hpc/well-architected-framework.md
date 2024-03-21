@@ -36,7 +36,7 @@ In order to support mission critical HPC workloads, use an ExpressRoute High Ava
   - You can work with the provider in order to configure the second ExpressRoute site.
   - It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
 
-For details on a maximum resiliency ExpressRoute configuration, please refer to [this page](https://learn.microsoft.com/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros
+For details on a maximum resiliency ExpressRoute configuration, please refer to [this page](https://learn.microsoft.com/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros)
 
 ## Security
 
