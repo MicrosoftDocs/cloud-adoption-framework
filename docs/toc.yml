@@ -633,7 +633,7 @@ items:
         items:
           - name: Overview
             href: migrate/deploy/index.md
-          - name: Deploy supporting services
+          - name: Deploy supporting services for migration projects
             href: migrate/deploy/deploy-supporting-services.md
           - name: Remediate assets
             href: migrate/deploy/remediate.md
