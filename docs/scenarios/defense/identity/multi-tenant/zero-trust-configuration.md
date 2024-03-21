@@ -31,7 +31,7 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 | Delegation and Segmentation of administration      | One organization doesn't have the ability to manage another organization.                               |
 | Data Sovereignty and/or Ownership            | One organization doesn't have the legal authority to manage data of another organization.                      |
 | Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture. |
-| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.
+| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.|
 
 If you require multiple Microsoft Entra tenants, you should use [Microsoft Entra External ID (B2B)](/azure/active-directory/external-identities/what-is-b2b) and [Azure Lighthouse](/azure/lighthouse/overview). These features help support multitenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
 
@@ -83,12 +83,15 @@ You should implement the following recommendations in all Microsoft Entra tenant
 
 **Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude Emergency Access accounts from your policies.
 
-[Microsoft Entra ID Protection](https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access baseline policies with risk conditions, increasing protection controls with risk level. Build your baseline using the Conditional Access policy checklist (*see table 2*).
+[Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions, increasing protection controls with risk level. Start by building a baseline policy set using the Conditional Access policy checklist as a reference (*see table 2*).
 
 > [!NOTE]
-> Users can self-remediate user risk by changing their password. You configure a [user risk policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) in Conditional Access using **Require password change** grant control.
->
-> Passwordless users, including users who sign-in with certificate-based authentication, are effectively blocked by this control. The policy set in *table 2* assumes users are passwordless. Instead of requiring password change, the risky user policy enforces authentication strength and sign-in frequency controls. These controls do not remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users accordingly.
+> Users can self-remediate user risk by changing their password. To auto-remediate user risk, you configure a [user risk policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) in Conditional Access using **Require password change** grant control.
+
+
+> [!CAUTION] Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by this control if they are unable to reset their password in Microsoft Entra ID.
+
+The policy set in *table 2* is for organizations with passwordless users. Instead of requiring password change when user risk is high, the risky user policy enforces authentication strength and sign-in frequency controls. These controls offer protection for the sign-in, but don't remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users.
 
 *Table 2: Conditional Access policy checklist.*
 
