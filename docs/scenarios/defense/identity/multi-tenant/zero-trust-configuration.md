@@ -86,7 +86,7 @@ You should implement the following recommendations in all Microsoft Entra tenant
 [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions. Use separate policies for risky users and risky sign-ins. Start by building a baseline policy set using the Conditional Access policy checklist as a reference (*see table 2*).
 
 > [!NOTE]
-> Users can self-remediate *sign-in* risks with MFA grant control in a [sign-in risk-based Conditional Access policy](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy).
+> Users can self-remediate *sign-in* risks with MFA. To allow users to self-remediate sign-in risk, configure MFA or Authentication Strength grant control in a [sign-in risk-based Conditional Access policy](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy).
 >
 > Users can self-remediate *user* risks by changing their passwords. To allow users to self-remediate user risk, configure a [user risk-based Conditional Access policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) with **Require password change** grant control.
 
