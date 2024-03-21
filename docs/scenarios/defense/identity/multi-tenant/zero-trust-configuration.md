@@ -83,12 +83,12 @@ You should implement the following recommendations in all Microsoft Entra tenant
 
 **Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude Emergency Access accounts from your policies.
 
-[Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions, increasing protection controls with risk level. Start by building a baseline policy set using the Conditional Access policy checklist as a reference (*see table 2*).
+[Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions. Use separate policies for risky users and risky sign-ins. Start by building a baseline policy set using the Conditional Access policy checklist as a reference (*see table 2*).
 
 > [!NOTE]
 > Users can self-remediate *sign-in* risks with MFA grant control in a [sign-in risk-based Conditional Access policy](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy).
 >
-> Users can self-remediate *user* risks by changing their passwords. To auto-remediate user risk, configure a [user risk-based Conditional Access policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) with **Require password change** grant control.
+> Users can self-remediate *user* risks by changing their passwords. To allow users to self-remediate user risk, configure a [user risk-based Conditional Access policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) with **Require password change** grant control.
 
 > [!CAUTION] 
 > Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by the **Require password change** grant control if they can't reset their password in Microsoft Entra ID.
