@@ -88,8 +88,8 @@ You should implement the following recommendations in all Microsoft Entra tenant
 > [!NOTE]
 > Users can self-remediate user risk by changing their password. To auto-remediate user risk, you configure a [user risk policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) in Conditional Access using **Require password change** grant control.
 
-
-> [!CAUTION] Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by this control if they are unable to reset their password in Microsoft Entra ID.
+> [!CAUTION] 
+>Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by this control if they are unable to reset their password in Microsoft Entra ID.
 
 The policy set in *table 2* is for organizations with passwordless users. Instead of requiring password change when user risk is high, the risky user policy enforces authentication strength and sign-in frequency controls. These controls offer protection for the sign-in, but don't remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users.
 
