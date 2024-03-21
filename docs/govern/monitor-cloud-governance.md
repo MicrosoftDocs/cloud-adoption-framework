@@ -1,6 +1,6 @@
 ---
 title: Monitor cloud governance
-description: Discover practical strategies for effective cloud governance monitoring with our step-by-step guide. Learn to measure compliance with Azure governance policies and implement a robust plan for ongoing remediation to ensure alignment with Microsoft's Govern methodology for Azure. Perfect for organizations committed to measuring and maintaining cloud governance compliance.
+description: Learn to monitor cloud governance to measure compliance over time. Automate monitoring and alerting for rapid remediation of noncompliance.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -11,7 +11,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to monitor cloud governance. After you enforce cloud governance, you need to measure how aligned (compliant) your cloud environment is with your cloud governance policies. Start by taking an initial compliance measurement to identify areas requiring improvement for aligning your cloud setup with your governance policies. Track compliance over time to see where cloud governance is effective and ineffective. The goal is to monitor governance and reduce noncompliance issues to zero.
 
-:::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/monitor.svg" border="false":::
+:::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/monitor.svg" border="false":::
 
 ## Configure cloud governance monitoring
 
