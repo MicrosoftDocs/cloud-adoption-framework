@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare tools and initial migration backlog
 
-To execute your migration, you need the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
+To implement your migration, you need the right tools and a comprehensive backlog of workloads to migrate. This article provides guidance on how to prepare for your migration by defining the necessary tools and building an initial migration backlog.
 
 ## Prepare migration tools
 
@@ -24,18 +24,18 @@ Here's a list of common tools or offerings that you need for a successful migrat
 |Discovery and assessment|Performs automated discovery and assessments of your environment. Identifies blockers for migration and identifies dependencies between servers.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
 |Replication|Replicates data state between your on-premises source and a cloud staging environment. Used to hydrate and migrate the resources.|[Azure Migrate](/azure/migrate/migrate-services-overview)|
 |Tracking|Used to organize project activities, such as to group servers into workloads, track remediation activities, and provide the status of a workload migration.|[Azure DevOps](/azure/devops/user-guide/what-is-azure-devops), Excel, and Microsoft Project.|
-|Migration guide|The Migration Execution Guide helps you identify which migration feature to use for Azure Migrate. The Migration Execution Guide is a project resource that can guide you step by step through the decisions and the implementation of your migration.|[Migration Execution Guide](https://github.com/Azure/migration/)|
+|Migration guide|Helps you identify which migration feature to use for Azure Migrate. The Migration Execution Guide is a project resource that can guide you step by step through the decisions and the implementation of your migration.|[Migration Execution Guide](https://github.com/Azure/migration/)|
 
 Although you can use other tools instead of Azure Migrate, we recommend that you use a native offering unless there's an identified reason. The native offering Azure Migrate is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
 
 > [!NOTE]
-> *If you already use an existing tool*: If a different tool is already replicating a server to Azure, changing tools during this process can disrupt and decrease performance. If this scenario, continue to use the existing tool. Later, you can execute the migration promotion similar to a disaster recovery failover scenario.
+> *If you already use an existing tool*: If a different tool is already replicating a server to Azure, changing tools during this process can disrupt and decrease performance. In this scenario, continue to use the existing tool. Later, you can run the migration promotion like a disaster recovery failover scenario.
 
 ## Initial migration backlog
 
-This section serves as a milestone to complete prerequisite activities for building an initial migration backlog.
+The following sections describe the prerequisite activities that you should perform to build an initial migration backlog.
 
-The cloud strategy team is accountable for the care and maintenance of the digital estate. However, acting on the backlog that mapping a digital estate creates is the responsibility of every role in the migration effort. As a final prerequisite, the cloud strategy team and the cloud adoption team should review and understand the migration backlog before the teams begin to plan individual workload activities. During review, members of both teams must gain sufficient knowledge to articulate the following key points about the migration backlog.
+The cloud strategy team is accountable for the care and maintenance of the digital estate. However, acting on the backlog that mapping a digital estate creates is the responsibility of every role in the migration effort. The cloud strategy team and the cloud adoption team should review and understand the migration backlog before the teams begin to plan individual workload activities. During review, members of both teams must gain sufficient knowledge to articulate the following key points about the migration backlog.
 
 ### Business outcomes and metrics
 
@@ -57,7 +57,7 @@ Capture the backlog in a location that you can share with all members of the clo
 
 If you're looking for prebuilt templates, the [Migration Execution Guide](https://github.com/Azure/migration) has spreadsheet templates that can help you organize your backlog.
 
-It's important to associate workloads with servers, so you can track a workload itself through server migration in the backlog. You can also use the backlog to showcase dependencies between workloads as you complete the assessment. When you [remediate assets](../deploy/remediate.md) and complete testing, you merge the backlog with a remediation plan.
+It's important to associate workloads with servers, so you can track a workload itself through individual server migrations in the backlog. You can also use the backlog to showcase dependencies between workloads as you complete the assessment. When you [remediate assets](../deploy/remediate.md) and complete testing, you merge the backlog with a remediation plan.
 
 The backlog is used throughout the migration process. Maintaining the backlog is critical.
 
