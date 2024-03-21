@@ -51,4 +51,4 @@ To ensure a smooth transition to management for your migrated workloads, you sho
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Migration testing](./migration-testing.md)
+> [Migration testing](./migration-test.md)
