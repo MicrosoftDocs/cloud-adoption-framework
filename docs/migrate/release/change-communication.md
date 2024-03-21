@@ -3,29 +3,30 @@ title: Change communication
 description: Use the Cloud Adoption Framework for Azure how a change communication plan can help you communicate cloud migration outcomes.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/15/2024
+ms.date: 03/21/2024
 ms.topic: conceptual
 ---
 
 # Change communication
 
-This section provides instructions for how to communicate your change to the business, so that the activities during the migration are well understood by all who will be impacted by the transition.
+Change communication means communicating your coming changes to the business. This communication is important so that the activities during the migration are well understood by everyone impacted by the transition.
 
-While you can have a consistent change communication plan for each workload you're migrating, each workload should undergo its own change communication due to having its own users and operators.
+You can have a consistent _change communication plan_, but each workload should undergo its own _change communication_ due to having its own users and operators.
 
-This is in addition to completing any change requests that need to be captured by your change management team. You should work with them to make sure the change is properly managed from their side; that team might also be able to help with the change communication.
+The change communication is in addition to any change requests that need to be captured by your change management team. You should work with them to make sure the change is properly managed from their side; that team might also be able to help with the change communication.
 
 ## Audience for change communication
 
 Your change communication needs to target various individuals in your organization. You should plan to make sure to have a clear plan for each of the following roles:
 
-- Business users who use the workload in question to complete activities.
-- Change managers who need to plan for risk management and who must make sure that the cutover follows all necessary requirements.
-- Owners and operators of the assets moving to Azure.
-- Developers who deploy to the assets moving to Azure.
-- Migration engineers who are executing the migration itself.
+- **Business users** who use the workload in question to complete activities.
+- **Change managers** who need to plan for risk management and who must make sure that the cutover follows all necessary requirements.
+- **Owners and operators** of the assets moving to Azure.
+- **Developers** who deploy to the assets moving to Azure.
+- **Migration engineers** who are executing the migration itself.
 
-Your organization might also have other roles that are necessary to include.
+> [!NOTE]
+> Your organization might also have other roles that are necessary to include.
 
 ## Change communication content
 

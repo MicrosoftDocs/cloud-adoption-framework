@@ -1,17 +1,19 @@
 ---
-title: Migration cutover in Azure
+title: Complete migration to Azure
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/05/2024
+ms.date: 03/21/2024
 ms.topic: conceptual
 ---
 
-# Migration cutover
+# Complete migration
 
-Promotion to production marks the completion of a workload's migration to the cloud. After the asset and all its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
+Promotion or cutover to production marks the completion of a workload's migration to the cloud. After the asset and all its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
 
-The process of promotion varies according to the workload's architecture. However, there are several consistent prerequisites and a few common tasks. This article describes each and serves as a kind of promotion checklist. You should make sure to add workload specific considerations to your specific checklist.
+The process of promotion varies according to the workload's architecture. However, there are several consistent prerequisites and a few common tasks. This article describes each and serves as a migration checklist.
+
+You should make sure to add workload specific considerations to your specific checklist.
 
 ## Migration window playbook
 
@@ -31,4 +33,4 @@ The process of promotion varies according to the workload's architecture. Howeve
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Post-migration cost optimization](./post-migration-cost-optimization.md)
+> [Optimize cost after migration](./optimize-cost-after-migration.md)

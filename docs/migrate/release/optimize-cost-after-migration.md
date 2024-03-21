@@ -1,23 +1,21 @@
 ---
-title: Post-migration cost optimization
+title: Optimize cost after migration
 description: Use the Cloud Adoption Framework for Azure to learn how to properly decommission retired resources with minimal business interruptions.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/14/2024
+ms.date: 03/21/2024
 ms.topic: conceptual
 ---
 
-# Post-migration cost optimization
+# Optimize cost after migration
 
-> TBD
+After you've migrated your workloads to Azure, you should optimize your costs to ensure that you're not spending more than you need to. This article provides guidance on how to optimize your costs after migration, and how to decommission retired assets with minimal business interruptions.
 
 ## Optimize migrated workloads for cost
 
 After workloads are migrated and unneeded resources are decommissioned, you might still be able to save on your costs by optimizing your workload based on its live data.
 
-While you likely resize workloads based on their performance during the assessment, you might find while running in Azure that there are additional cost savings available.
-
-You should do this as part of implementing the [Cost management discipline](/azure/cloud-adoption-framework/govern/cost-management/). You can use FinOps practices to help you better manage your costs in the cloud. For more information, see [What is FinOps?](/azure/cost-management-billing/finops/overview-finops).
+You can resize workloads based on their performance during the assessment, but you might find while running in Azure that there are additional cost savings available.
 
 ### Tools for optimizing costs
 
@@ -25,16 +23,17 @@ Now that you have migrated to Azure, you have new tools available for how you ca
 
 |Tool|Description|Resource|
 |---|---|---|
-|Right-size assets|Review the usage metrics for the services and right-size them to match the workload requirements.|[Azure Advisor cost recommendations](/azure/advisor/advisor-reference-cost-recommendations).|
+|Right-size assets|Review the usage metrics for the services and right-size them to match the workload requirements.|<li>[Azure Advisor cost recommendations](/azure/advisor/advisor-reference-cost-recommendations).|
 |Reserved Instances.|Reserved instances let you commit to resources in Azure that will be running frequently.  Consider reserving instances for always on workloads.|<li>[Manage reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)<br><li>[Azure VM sizing for maximum reservation usage](/partner-center/azure-usage).|
-|Azure savings plans|Azure savings plans provides savings up to 65% off pay-as-you-go pricing when you commit to spend a fixed hourly amount on compute services for one or three years.|[Azure savings plans recommendations](/azure/cost-management-billing/savings-plan/purchase-recommendations)|
+|Azure savings plans|Azure savings plans provides savings up to 65% off pay-as-you-go pricing when you commit to spend a fixed hourly amount on compute services for one or three years.|<li>[Azure savings plans recommendations](/azure/cost-management-billing/savings-plan/purchase-recommendations)|
 |Cost management|Implement cost management and billing to monitor and manage the costs of the environment.|<li>[Microsoft Cost Management and Billing](/azure/cost-management-billing/cost-management-billing-overview)<br><li>[Reservation recommendations in Azure Advisor](/azure/cost-management-billing/reservations/reserved-instance-purchase-recommendations#recommendations-in-azure-advisor)|
+|FinOps documentation|FinOps is a discipline that combines financial management principles with cloud engineering and operations to provide organizations with a better understanding of their cloud spending.|[What is FinOps?](/azure/cost-management-billing/finops/overview-finops)|
 
 ## Decommission retired assets
 
 Once a workload is promoted to production, the assets that used to run it isn't needed anymore and is seen as out of service. However, these assets still use electricity and consume other resources, which add to costs. Therefore, it's a good idea to turn these off and get rid of them the right way to cut down on expenses.
 
-Turning off and getting rid of old assets and equipment might sound straightforward, but sometimes it can cause problems you didn't expect. Here are some tips on how to safely shut down and dispose of these old resources without causing any issues for your business.
+Turning off and getting rid of old assets and equipment might sound straightforward, but sometimes it can cause problems you didn't expect. Here are some tips on how to safely shutdown and dispose of these old resources without causing any issues for your business.
 
 ### Continued monitoring
 
@@ -60,7 +59,7 @@ To successfully test your assets prior to termination, you need a maintenance wi
 #### Define a testing and maintenance window
 
 - **Low-impact times**: Identify a low-impact time that you can use for your testing window. This should be a time when use of the application is at its lowest.
-- **Clear test cases**: Identify clear test cases that you can perform during the testing window, that match real activities performed by users of the application. These shouldn't be surface level, but should instead map out every process used. If you already have these tests cases from your migration, you can reuse them. If you have users or other team members who work in the application frequently, try to use them to perform the tests.
+- **Clear test cases**: Identify clear test cases that you can perform during the testing window that match real activities performed by users of the application. These shouldn't be surface level, but should instead map out every process used. If you already have these tests cases from your migration, you can reuse them. If you have users or other team members who work in the application frequently, try to use them to perform the tests.
 - **Schedule and communicate**: Schedule a maintenance window for as long as you have available; you should aim for at least 4 hours.
   - **Schedule**: Plan the window so that application users can plan ahead. Two weeks is reasonable.
   - **Communicate**: Announce the change in advance. Set the expectation that during this maintenance window, there might be an outage and the system might not be responsive. Users shouldn't expect the application to be available.

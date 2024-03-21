@@ -653,7 +653,7 @@ items:
             href: migrate/release/business-test.md
           - name: Complete migration
             href: migrate/release/complete-migration.md
-          - name: Post-migration cost optimization
+          - name: Optimize cost after migration
             href: migrate/release/optimize-cost-after-migration.md
           - name: Conduct retrospectives
             href: migrate/release/retrospective.md
