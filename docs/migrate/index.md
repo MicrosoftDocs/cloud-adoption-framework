@@ -33,6 +33,17 @@ In a standard two-week iteration, an experienced migration team can complete thi
 
 Experience and complexity both have a significant impact on timelines and migration velocity.
 
+## Cloud migration checklist
+
+| &nbsp; | Migration discipline | Activity |
+|---|---|---|
+| &#9744; | [**Prepare**](./prepare/index.md) | <li>Ready your landing zone for migration<br><li>Prepare tools and backlog<br><li>Select Azure regions for a migration<br><li>Align roles and responsibilities<br><li>Skills relevant to migration projects |
+| &#9744; | [**Assess**](./assess/index.md) | <li>Classify workloads<br><li>Evaluate workload readiness<br><li>Architect workloads|
+| &#9744; | [**Deploy**](./deploy/index.md) | <li>Deploy supporting services<br><li>Remediate assets<br><li>Replicate assets<br><li>Prepare for management<br><li>Migration testing |
+| &#9744; | [**Release**](./release/index.md) | <li>Change communication<br><li>Business testing<br><li>Complete migration<br><li>Optimize cost after migration<br><li>Conduct retrospectives |
+
+For more details, see each of the migration disciplines and activities in their respective checklist.
+
 ## Audience
 
 The Migrate methodology addresses various roles and functions. Below is an example of the types of roles that might find this guidance helpful:
