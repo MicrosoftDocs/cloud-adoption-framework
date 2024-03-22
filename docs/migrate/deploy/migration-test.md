@@ -9,10 +9,10 @@ ms.topic: conceptual
 
 # Test your migration in Azure
 
-After you replicate or stage your workloads and the supporting services are available, you can begin your migration testing. Migration testing primarily focuses on two areas:
+After you replicate or stage your workloads and ensure that supporting services are available, you can begin your migration testing. Migration testing primarily focuses on two areas:
 
 - **Architecture**: Test your architecture to ensure that it works with the replicated or staged resources.
-- **Management routines**: Testing that your plan to manage the migrated resources are functional.
+- **Management routines**: Test your management plan for the migrated resources to ensure that it's functional.
 
 Unlike [business testing](../release/business-test.md), migration testing focuses on IT activities.
 
@@ -22,22 +22,23 @@ As you identify problems, you can add them to your [remediation plan](../deploy/
 
 After you replicate resources, you can perform test migrations in isolated environments to ensure that you don't affect production workloads.
 
-Test migrations vary depending on the tooling, but generally you create a replica of your source systems that runs in parallel to the live systems. Perform tests on these secondary systems. When you're done testing, clean them up without any permanent changes to the replicating resources.
+Test migrations vary depending on the tooling, but generally you create a replica of your source systems that runs in parallel to the live systems. Perform tests on these secondary systems. When you complete testing, you can clean up the replicated resources without introducing any permanent changes.
 
 To perform tests, you need:
 
-- **An isolated network** to test failover inside, configured as close as possible to the intended migration network.
+- **An isolated network** where you test failover. Configure the network as close as possible to the intended migration network.
 
-- **Isolated network access**, like a point-to-site VPN, a jump box, or Azure Bastion.
-- **An authentication mechanism** to authenticate to the test environment. The environment is isolated, so it can't use your landing zone’s identity provider.
-  - You might use a test-migrated domain controller that's deployed to the environment with the test migration resources. This would be cleaned up with the resources.
+- **Isolated network access** from a source, like a point-to-site VPN, a jump box, or Azure Bastion.
+- **An authentication mechanism** to authenticate to the test environment. The test environment is isolated, so it can't use your landing zone’s identity provider.
   
-  - Alternatively, your isolated network might have a test domain controller in it. This network is then peered to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore state when testing is done to avoid making changes to the live identity provider.
+  You might use a test-migrated domain controller that you deploy to the test environment with the test migration resources. After testing, clean up the domain controller with the resources.
+  
+  Alternatively, your isolated network might have a test domain controller in it. Peer the network to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore the state when you complete testing to avoid making changes to the live identity provider.
 
 Your migration tool should have instructions for running a test migration and cleaning it up after you run your testing plan.
 
 > [!TIP]
-> You can use the same environment for [business testing](../release/business-test.md).
+> You can also use this testing environment for [business testing](../release/business-test.md).
 
 ## Remediate testing problems
 
@@ -52,7 +53,7 @@ After you perform testing, make sure that you:
 
 Here's a basic example of a testing plan output for a migration project:
 
-|Test|Succeeded|Notes|
+|Test|Successful/unsuccessful|Note|
 |---|---|---|
 |Virtual machines deploy|&#x2705;||
 |Administrators can sign in to virtual machines|&#x2705;||
