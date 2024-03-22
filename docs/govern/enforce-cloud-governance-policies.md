@@ -120,7 +120,7 @@ Achieve streamlined and compliant resource provisioning and management through a
 
 Ensure ethical use, content integrity, and compliance with security standards, using automation to prevent misuse and enhance trustworthiness.
 
-- *Use the retrieval augmented generation (RAG) pattern.* RAG adds an information retrieval system to control the grounding data a large language model uses to generate a response. Use Azure OpenAI on [your own data](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
+- *Use the retrieval augmented generation (RAG) pattern.* RAG adds an information retrieval system to control the grounding data a large language model uses to generate a response. Use [Azure OpenAI on your own data](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
 
 - *Use AI development tools.* Use AI tools, like Semantic Kernel, that facilitate and standardize AI orchestration when developing applications that use AI.
 
@@ -128,7 +128,7 @@ Ensure ethical use, content integrity, and compliance with security standards, u
 
 - *Configure data loss prevention.* Configure [data loss prevention for Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention?tabs=azure-cli). Configure the list of outbound URLs their Azure AI services resources are allowed to access.
 
-- *Use system messages.* Provide meta prompts to guide the behavior of an AI system. Use [system messages](/azure/ai-services/openai/concepts/system-message) to tailor the generated outputs.
+- *Use system messages.* Use [system messages](/azure/ai-services/openai/concepts/system-message) to to guide the behavior of an AI system and tailor the outputs.
 
 - *Apply the AI security baseline.* Use the [Azure AI security baseline](/security/benchmark/azure/baselines/cognitive-services-security-baseline) to govern the security of AI systems.
 
