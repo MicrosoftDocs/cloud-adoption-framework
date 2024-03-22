@@ -22,7 +22,7 @@ Effective cloud governance mitigates risks and streamlines acceptable cloud use 
 
 ## How to govern the cloud?
 
-Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The Govern methodology divides cloud governance into five steps. Organizations must complete all steps to set up their cloud governance framework. To maintain effective governance, revisit and refine the last four steps. This cycle ensures the governance framework remains up-to-date and responsive to changes. To establish and maintain cloud governance, follow these steps:
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The Govern methodology divides cloud governance into five steps. Complete all five steps to establish cloud governance and regularly iterate through steps 2-5 to maintain cloud governance over time:
 
 1. *Build a governance team*: Select a team of individuals responsible for cloud governance. The cloud governance team defines and maintains cloud governance policies while reporting on the overall progress of cloud governance.
 
