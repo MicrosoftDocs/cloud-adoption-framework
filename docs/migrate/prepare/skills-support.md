@@ -48,8 +48,8 @@ Discover resources and support options for help with your migration.
 | Support option | Description |
 | --- | --- |
 | [Azure cloud migration and modernization center](https://azure.microsoft.com/solutions/migration/) | Get cloud migration tools and expert help to move, manage, and secure all your workloads, no matter the size of your business or industry. |
-| [FastTrack for Azure](https://azure.microsoft.com/pricing/offers/azure-fasttrack/) | Provides direct assistance from Microsoft engineers, working hand in hand with partners to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions. |
-| [Cloud solution provider (CSP)](https://partner.microsoft.com/partnership/find-a-partner) | A CSP can help you take full advantage of the cloud. A CSP can assess your business goals for cloud adoption and identify the right cloud solution to meet your business needs, helping your business become more agile and efficient. |
+| [FastTrack for Azure](https://azure.microsoft.com/pricing/offers/azure-fasttrack/) | Get direct assistance from Microsoft engineers, working hand in hand with partners to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions. |
+| [Cloud solution provider (CSP)](https://partner.microsoft.com/partnership/find-a-partner) | Use a CSP to take full advantage of the cloud. A CSP can assess your business goals for cloud adoption and identify the right cloud solution to meet your business needs, helping your business become more agile and efficient. |
 | [Azure expert partner](https://azure.microsoft.com/partners/) | Get technical assistance, advice, and support for your migration project. Partners can also nominate you for [Azure Migrate and Modernize and Azure Innovate](https://partner.microsoft.com/partnership/azure-offerings) offerings. |
 
 ## Next steps
