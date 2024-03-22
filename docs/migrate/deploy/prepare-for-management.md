@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Prepare for management activities
 
-You should be prepared to carry out management activities after a workload migration is complete. Organizations that fail to plan for management can experience replicated or delayed workloads. Furthermore, when resources are migrated but not managed, problems such as outages, breaches, or performance problems can occur.
+You should prepare to carry out management activities after a workload migration is complete. Organizations that fail to plan for management can experience replicated or delayed workloads. Furthermore, when resources are migrated but not managed, problems such as outages, breaches, or performance problems can occur.
 
 > [!NOTE]
 > The guidance in this article builds on the broader Cloud Adoption Framework for Azure management guidance. These additional guides might be relevant to building your management routines:
