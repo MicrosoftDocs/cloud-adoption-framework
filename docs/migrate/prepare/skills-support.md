@@ -23,18 +23,18 @@ If you're still identifying what you need to migrate or modernize, these article
 
 | Recommended article | Description |
 | --- |--- |
-| [Balance the portfolio](../../strategy/balance-the-portfolio.md) | Describes how to help ensure balance and proper investment allocations across an application portfolio. |
-| [Create a business case](../../strategy/cloud-migration-business-case.md) | Describes how to create and understand the business case that drives a cloud migration effort. |
+| [Balance the portfolio](../../strategy/balance-the-portfolio.md) | Learn how to help ensure balance and proper investment allocations across an application portfolio. |
+| [Create a business case](../../strategy/cloud-migration-business-case.md) | Learn how to create and understand the business case that drives a cloud migration effort. |
 | [Rationalize the digital estate](../../digital-estate/rationalize.md) | Learn about cloud rationalization and the process of evaluating assets to determine the best approach for hosting assets in the cloud. |
 
 ### Migration skilling resources
 
-The following learning resources help prepare your team for migration activities:
+The following learning resources can help prepare your team for migration activities:
 
 | Recommended resource | Description |
 | --- | --- |
 | [Migrate to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure) | Learn how to migrate on-premises workloads to Azure. |
-| [The Migration Execution Guide](https://github.com/Azure/migration) | Project resources that can help guide you through the decisions and steps of your migration. |
+| [The Migration Execution Guide](https://github.com/Azure/migration) | Find project resources that can help guide you through the decisions and steps of your migration. |
 
 ### Get technical support
 
