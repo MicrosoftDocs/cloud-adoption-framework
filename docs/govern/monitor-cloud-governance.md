@@ -53,13 +53,13 @@ Maintain a continuously secure cloud environment by adhering to security policie
 
 #### Configure monitoring for cost management governance
 
-Track cloud spending against budgets continuously and alert when spending exceeds predefined thresholds.
+Track cloud spending against budgets and detect anomalous and excessive spending.
 
 - *Analyze cloud costs.* Conduct a [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis) in Azure to gain full visibility into your cloud costs.
 
 - *Create budgets.* [Create a budget](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) that aligns with your desired investment in the cloud.
 
-- *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [Cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources.
+- *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
 
 #### Configure monitoring for cloud operations governance
 
@@ -71,13 +71,13 @@ Ensure optimal performance and availability of cloud services by automatically d
 
 - *Monitor resource optimization.* [Use Azure Advisor](/azure/advisor/advisor-overview#what-is-advisor) to monitor Azure resources for reliability, security, operational excellence, performance, and cost. [Set alerts](/azure/advisor/advisor-alerts-portal) for any new Azure Advisor recommendations.
 
-- *Monitor* *resource health.* [Monitor the health of Azure services](/azure/service-health/overview) and monitor service impacting events, planned maintenance, and other changes that might affect availability.
+- *Monitor resource health.* [Monitor the health of Azure services](/azure/service-health/overview) and monitor service impacting events, planned maintenance, and other changes that might affect availability.
 
 #### Configure monitoring for data governance
 
 Guarantee the integrity, privacy, and proper usage of data by continuously monitoring data operations against governance policies.
 
-- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use dashboard to monitor compliance with any data plane policies.
+- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use dashboards to monitor compliance with any data plane policies.
 
 #### Configure monitoring for cloud resource management governance
 
@@ -121,7 +121,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - *Cloud resource management governance alerts.* Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- *Cloud AI governance alerts.* Receive notifications when there are harmful inputs and outputs in your AI systems. For example, receive an email that [notifies you of abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
+- *Cloud AI governance alerts.* Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
 
 ## Develop a remediation plan
 

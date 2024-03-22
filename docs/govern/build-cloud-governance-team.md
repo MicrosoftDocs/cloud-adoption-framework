@@ -20,13 +20,11 @@ Describe the duties and roles of the cloud governance team. Outline what the tea
 
 - *Engage stakeholders.* The cloud governance team must actively engage stakeholders across the organization (IT, finance, operations, security, and compliance) to gather input on governance policies. The goal is to ensure cloud governance policies minimize risk without hindering progress toward business goals.
 
-- *Assess cloud risks.* The cloud governance team must assess cloud risks regularly to identify risks and prioritize them. They use or oversee the use of risk assessment tools to evaluate security, compliance, and operational risks, and communicate findings to stakeholders.
+- *Assess cloud risks.* The cloud governance team must oversee the identification, analysis, and prioritization of cloud risks. They use or oversee the use of risk assessment tools to evaluate security, compliance, and operational risks, and communicate findings to stakeholders.
 
 - *Develop and update governance policies*. The cloud governance team should document cloud governance policies for the organization. They should resolve any challenges cloud governance creates and must regularly review and update cloud governance policies to align with business needs over time. The goal is to ensure the cloud governance policies are comprehensive, enforceable, and align with current technology and requirements.
 
-- *Develop a cloud governance program*. The cloud governance team should design a cloud governance program to ensure cloud governance is successful in the organization. Create a communication plan to educate employees about their roles in upholding governance standards. Develop training materials, workshops, and documentation.
-
-- *Monitor and review governance.* Establish metrics to measure the effectiveness of cloud governance. Develop reporting methods, such as dashboards, to track compliance rates, incident response times, and user satisfaction.
+- *Monitor and review governance.* Establish metrics to measure the effectiveness of cloud governance. Develop reporting methods to track compliance rates, incident response times, and user satisfaction.
 
 ## Select the members of the cloud governance team
 

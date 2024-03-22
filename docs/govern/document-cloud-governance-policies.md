@@ -28,7 +28,7 @@ Establish an approach for creating, maintaining, and updating the rules and guid
 
 Create cloud governance policies that outline how to use and manage the cloud to mitigate risks. Create a governance framework that manages risk. Minimize the need for frequent policy updates. To define cloud governance policies, follow these recommendations:
 
-- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as SC01 for the first security governance policy.
+- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as SC01 for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
 
 - *Include the policy statement.* Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
@@ -64,7 +64,7 @@ Assess and update cloud governance policies to ensure they remain relevant and e
 
 - *Facilitate change control.* Include a process for policy review and updates. Ensure the cloud governance policies stay aligned with organizational, regulatory, and technological changes. Make it clear how to edit, remove, or add policies.
 
-- *Fix cloud governance inefficiencies.* Review governance policies to find and fix inefficiencies in cloud architecture and operations. For example, instead of mandating that each team must use their own web application firewall, you could update the policy to require the use of a centralized firewall.
+- *Identify inefficiencies.* Review governance policies to find and fix inefficiencies in cloud architecture and operations. For example, instead of mandating that each workload must use its own web application firewall, update the policy to require the use of a centralized firewall. Review policies that require duplicated effort and see if there's a way to centralize the work.
 
 ## Example cloud governance policies
 
