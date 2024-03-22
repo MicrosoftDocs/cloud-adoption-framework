@@ -14,9 +14,9 @@ You should prepare to carry out management activities after a workload migration
 > [!NOTE]
 > The guidance in this article builds on the broader Cloud Adoption Framework for Azure management guidance. These additional guides might be relevant to building your management routines:
 >
-> - [Azure landing zones: Management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management).
-> - [Azure Management Guide](/azure/cloud-adoption-framework/manage/azure-management-guide/).
-> - [Cloud Adoption Framework management methodology](/azure/cloud-adoption-framework/manage/).
+> - [Azure landing zones: Management design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management)
+> - [Azure Management Guide](/azure/cloud-adoption-framework/manage/azure-management-guide/)
+> - [Cloud Adoption Framework management methodology](/azure/cloud-adoption-framework/manage/)
 
 Ensure you have a management routine in place for each workload.
 
@@ -32,9 +32,9 @@ This list covers minimum management goals you should plan and prepare for each w
 - **Backup**: Backup configurations and processes that you can use to restore state in compliance with your organization’s service-level agreements (SLAs).
 - **Business continuity and disaster recovery (BCDR)**: A BCDR configuration that allows you to failover and restore service in compliance with your organization’s SLAs.
 - **Security posture**: Enrollment in the Microsoft Defender for Cloud policies selected by your organization to perform security posture management and vulnerability detection. This might include the deployment of vulnerability detection services or the Microsoft Defender for Endpoint agent.
-- **Serial console for Azure Virtual Machines**: Enable [serial console](/troubleshoot/azure/virtual-machines/serial-console-overview) in Virtual Machines to help with troubleshooting.
+- **Serial console for Azure Virtual Machines**: Enabling a [serial console](/troubleshoot/azure/virtual-machines/serial-console-overview) in Virtual Machines to help with troubleshooting.
 - **Enable automatic shutdown**: Configuration of automatic shutdown schedules for virtual machines that meet business requirements.
-- **Tags:** Deployment of tags and remediation of incorrect tags.
+- **Tags**: Deployment of tags and remediation of incorrect tags.
 - **Update management**: The periodic update of virtual machines such as with Azure Update Manager.
 
 If you identify a missing management goal, you should add it to your remediation plan for the workload.
