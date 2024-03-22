@@ -80,7 +80,7 @@ If your design uses private DNS zones, plan accordingly. For example, if you use
 
 ### Azure Firewall DNS proxy
 
-You can configure Azure Firewall as a [DNS proxy](/azure/firewall/dns-details). Azure Firewall can receive traffic and forward it to an Azure resolver or your DNS servers. With this configuration, lookups can be performed from on-premises to Azure but can't conditionally forward back to on-premises DNS servers.
+You can configure Azure Firewall as a [DNS proxy](/azure/firewall/dns-details). Azure Firewall can receive traffic and forward it to an Azure resolver or your DNS servers. This configuration can allow lookups to be performed from on-premises to Azure, but they can't be conditionally forwarded back to on-premises DNS servers.
 
 If you need hybrid DNS resolution, you can configure the Azure Firewall DNS proxy to forward traffic to your custom DNS servers, such as your domain controllers.
 
@@ -114,7 +114,7 @@ Azure provides routing for the following scenarios with no additional configurat
 - Routing between resources in peered virtual networks
 - Routing between resources and a virtual network gateway, either in its own virtual network or in a peered virtual network that's configured to use the gateway
 
-There are two common routing scenarios that need additional configuration. Both scenarios have route tables assigned to subnets to shape routing. For more information about Azure routing and custom routes, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes).
+Two common routing scenarios need additional configuration. Both scenarios have route tables assigned to subnets to shape routing. For more information about Azure routing and custom routes, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes).
 
 ### Inter-spoke routing
 
