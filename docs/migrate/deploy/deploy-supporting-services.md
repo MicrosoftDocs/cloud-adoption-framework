@@ -19,7 +19,7 @@ This article assumes that you prepared your shared platform solutions by [readyi
 
 ## Plan for supporting service deployment
 
-It's sometimes unclear when to deploy the supporting services. Some services, like Azure Virtual Network, are based on consumption. Other services, like application gateways, are based on runtime, even if you aren't actively using them. If they're powered on, they incur cost.
+It's sometimes unclear when to deploy the supporting services. Some services, like Azure Virtual Network, are based on consumption. Other services, like Azure Application Gateway, are based on runtime, even if you aren't actively using them. If they're powered on, they incur cost.
 
 So, you should plan for the following situations:
 
@@ -34,22 +34,22 @@ So, you should plan for the following situations:
 While your workload architecture provides a definitive list of services, you can use the following options as a guide to help identify your supporting services:
 
 - **Resource organization**:
-  - A subscription to hold your workload.
-  - Various resource groups to organize your resources.
+  - A subscription to hold your workload
+  - Various resource groups to organize your resources
 - **Networking**:
-  - A virtual network with subnets that match your network design.
-  - Network security groups assigned to the subnets and restricted to required traffic only.
-  - A peering connection to your hub virtual network.
-  - Any necessary user defined routes to shape traffic, such as to send your default route traffic to a firewall appliance.
-  - Any application presentation resources for web applications, such as Azure Application Gateway or Azure FontDoor.
-  - Load balancers for workloads that have multiple nodes.
+  - A virtual network with subnets that match your network design
+  - Network security groups assigned to the subnets and restricted to required traffic only
+  - A peering connection to your hub virtual network
+  - Any necessary user-defined routes to shape traffic, such as to send your default route traffic to a firewall appliance
+  - Any application presentation resources for web applications, such as Application Gateway or Azure FrontDoor
+  - Load balancers for workloads that have multiple nodes
 - **Identity and security**:
-  - Any key vaults to hold certificates or secrets.
+  - Any key vaults to hold certificates or secrets
 - **Management**:
-  - Any workload-specific  Azure Log Analytics workspaces.
-  - Any workload-specific Azure Site Recovery and Azure Backup instances.
-  - Any workload-specific Azure Update Manager instances.
-  - Any workload-specific alerts.
+  - Any workload-specific  Azure Monitor Logs workspaces
+  - Any workload-specific Azure Site Recovery and Azure Backup instances
+  - Any workload-specific Azure Update Manager instances
+  - Any workload-specific alerts
 
 Also, review [Prepare for management](./prepare-for-management.md) to understand the management-specific considerations.
 
