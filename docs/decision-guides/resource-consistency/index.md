@@ -15,7 +15,7 @@ Azure [subscription design](../../ready/landing-zone/design-area/resource-org-su
 
 ![Plotting resource consistency options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-consistency.png)
 
-Jump to: [Basic grouping](#basic-grouping) | [Deployment consistency](#deployment-consistency) | [Policy consistency](#policy-consistency) | [Hierarchical consistency](#hierarchical-consistency) | [Automated consistency](#automated-consistency)
+Jump to: [Basic grouping](#basic-grouping-resource-groups) | [Deployment consistency](#deployment-consistency) | [Policy consistency](#policy-consistency) | [Hierarchical consistency](#hierarchical-consistency) | [Automated consistency](#automated-consistency)
 
 Decisions regarding the level of your cloud estate's resource consistency requirements are primarily driven by these factors: post-migration digital estate size, business or environmental requirements that don't fit neatly within your existing subscription design approaches, or the need to enforce governance over time after resources have been deployed.
 
@@ -43,7 +43,7 @@ If the answer is yes for any of these, consider placing those resources (deploye
 > [!NOTE]
 > If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
 
-To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
+To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
 
 
 ## Deployment consistency
