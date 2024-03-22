@@ -10,15 +10,15 @@ ms.custom: internal, UpdateFrequency2
 
 # Govern overview
 
-The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations, from startup to enterprise, and applies to the private and public sectors. It addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI.
+The Govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations in any sector. It addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI.
 
-Cloud governance involves setting controls or guardrails to regulate the use of cloud services. These controls ensure that cloud use follows predefined rules known as cloud governance policies. Cloud governance policies define what is allowed and what isn't allowed in the cloud. Organizations create cloud governance policies to prevent and mitigate identified risks. The goal is to make sure that cloud use aligns with these policies.
+Cloud governance refers to establishing guardrails to regulate the use of cloud services. Guardrails help ensure cloud use follows predefined rules known as cloud governance policies. Cloud governance policies define what is allowed and what isn't allowed in the cloud. Organizations create cloud governance policies to prevent and mitigate risks. The goal of cloud governance is to make sure that cloud use aligns with cloud governance policies.
 
 :::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/govern.svg" border="false":::
 
 ## Why govern the cloud?
 
-Effective cloud governance prevents and mitigates avoidable risks. It streamlines acceptable cloud use across the organization. Cloud governance ensures the cloud environment is compliant with cloud governance policies and supports the broader cloud strategy. Without cloud governance, organizations might encounter risks that cloud governance could prevent.
+Effective cloud governance mitigates risks and streamlines acceptable cloud use across the organization. Cloud governance aligns cloud use with defined standards and the broader cloud strategy. It helps organizations reach business goals with fewer setbacks. Without cloud governance, organizations might encounter risks that cloud governance could prevent.
 
 ## How to govern the cloud?
 
