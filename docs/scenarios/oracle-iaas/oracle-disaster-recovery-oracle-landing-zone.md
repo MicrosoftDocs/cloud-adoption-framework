@@ -186,7 +186,7 @@ Business continuity requires an integrated approach that includes all components
 | Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same VMSS Flex in the same data center.<br>  - Protects against single instance failure. <br> - Will cause downtime if entire data center is down. | RPO=0 RTO<=2 mins <br> - Using Observer for Fast Failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
 | Data Center failure | Data Guard with two nodes in separate availability zones. <br> - Protects against data center failure. <br> - Will cause downtime if whole region is down. <br> - Requires more failover configuration for app servers to manage network latency.  | RPO<=5 mins RTO<=5 mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5 mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
 |Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires more failover configuration for app servers to manage network latency.  |  RPO>=10 mins RTO>=15 mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
-|  |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be set up in the target region during failover.   | RPO>=24 hrs RTO>=4 hrs   |
+| All above scenarios |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be set up in the target region during failover.   | RPO>=24 hrs RTO>=4 hrs   |
 
 ## Next steps
 
