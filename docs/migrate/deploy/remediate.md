@@ -3,15 +3,15 @@ title: Remediating assets prior to migration
 description: Learn how to remediate any assets that you determine to be incompatible with your chosen cloud provider before migration begins.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/19/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
 # Remediate assets prior to migration
 
-During the migration assessment process, the team identifies any configurations that might make an asset incompatible with the chosen cloud provider. Remediate is a checkpoint in the migration process, which ensures that any incompatibilities are resolved.
+During the migration assessment process, the team identifies any configurations that might make an asset incompatible with the chosen cloud provider. Remediate is a checkpoint in the migration process that ensures any incompatibilities are resolved.
 
-This article discusses a few common remediation tasks for reference and helps decide whether remediation is a wise investment.
+This article describes a few common remediation tasks and helps you decide whether remediation is a wise investment.
 
 ## Remediation types
 
