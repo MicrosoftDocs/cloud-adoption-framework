@@ -1155,18 +1155,16 @@ items:
     items:
     - name: Overview
       href: govern/index.md
-    - name: Guidance
-      items:
-      - name: Build a cloud governance team
-        href: govern/build-cloud-governance-team.md
-      - name: Assess cloud risks
-        href: govern/assess-cloud-risks.md
-      - name: Document cloud governance policies
-        href: govern/document-cloud-governance-policies.md
-      - name: Enforce cloud governance policies
-        href: govern/enforce-cloud-governance-policies.md
-      - name: Monitor cloud governance
-        href: govern/monitor-cloud-governance.md
+    - name: Build a cloud governance team
+      href: govern/build-cloud-governance-team.md
+    - name: Assess cloud risks
+      href: govern/assess-cloud-risks.md
+    - name: Document cloud governance policies
+      href: govern/document-cloud-governance-policies.md
+    - name: Enforce cloud governance policies
+      href: govern/enforce-cloud-governance-policies.md
+    - name: Monitor cloud governance
+      href: govern/monitor-cloud-governance.md
 
 
   - name: Manage
