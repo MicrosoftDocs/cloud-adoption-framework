@@ -23,7 +23,7 @@ These assessment data points can help other teams understand which workloads mig
 
 Work with your security and governance teams as early as possible to define:
 
-- A clear process for sharing any workloads on the backlog that have sensitive data.
+- A clear process for sharing any workloads in the backlog that have sensitive data.
 
 - An understanding of the governance requirements and the security baseline that's required for different levels of data sensitivity.
 - Any influence that data sensitivity might have on the subscription design, management group hierarchies, or landing zone requirements.
@@ -31,11 +31,11 @@ Work with your security and governance teams as early as possible to define:
 
 ## Mission criticality
 
-[Workload criticality](../../manage/considerations/criticality.md) is based on how significantly a business is affected during an outage. This data point helps operations management and security teams evaluate risks that involve outages and breaches. During assessment, the cloud adoption team should evaluate mission criticality for each workload targeted for migration and share that classification with supporting teams. *Low* or *unsupported* workloads are likely to have little influence on the supporting teams. However, as workloads approach *mission-critical* or *unit-critical* classifications, their operational dependencies become more visible.
+[Workload criticality](../../manage/considerations/criticality.md) is based on how significantly an outage affects a business. This data point helps operations management and security teams evaluate risks that involve outages and breaches. During assessment, the cloud adoption team should evaluate mission criticality for each workload that's targeted for migration and share that classification with supporting teams. *Low* or *unsupported* workloads are likely to have little influence on the supporting teams. However, as workloads approach *mission-critical* or *unit-critical* classifications, their operational dependencies become more visible.
 
 Work with your security and operations teams as early as possible to define:
 
-- A clear process for sharing any workloads on the backlog that have support requirements.
+- A clear process for sharing any workloads in the backlog that have support requirements.
 
 - An understanding of the operations management and resource consistency requirements for different criticality levels.
 - Any influence that criticality might have on the subscription design, management group hierarchies, or landing zone requirements.
