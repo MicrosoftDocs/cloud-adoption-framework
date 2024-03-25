@@ -77,7 +77,7 @@ Ensure optimal performance and availability of cloud services by automatically d
 
 Guarantee the integrity, privacy, and proper usage of data by continuously monitoring data operations against governance policies.
 
-- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use a dashboard to monitor compliance with any data plane policies.
+- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use dashboards to monitor compliance with any data plane policies.
 
 #### Configure monitoring for cloud resource management governance
 
