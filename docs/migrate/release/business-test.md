@@ -3,7 +3,7 @@ title: Business testing guidance during migration
 description: Learn how business testing, or User Acceptance Testing (UAT) is used to validate that solution performance is in line with expectations.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/21/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 While the migration team facilitates the _migration_ of a workload to Azure, _testing_ of a workload is best executed by the business users of that workload. The migration team supports this business activity by facilitating the testing, developing testing plans, and automating tests when possible.
 
-During business testing, or User Acceptance Testing (UAT), you observe the real users attempting to use the new solution in the context of a real or replicated business process.
+During business testing, or User Acceptance Testing (UAT), you observe real users attempting to use the new solution in the context of a real or replicated business process.
 
 > [!NOTE]
 > **Automated testing isn't always available.**
@@ -19,17 +19,16 @@ During business testing, or User Acceptance Testing (UAT), you observe the real 
 >
 > This article assumes that automated tests are available at the time of migration.
 
-The goal of business testing is to solicit validation from power users to certify that the new solution performs in line with expectations and doesn't impede business processes. If that goal isn't met, the business testing serves as a feedback loop that can help define why and how the workload isn't meeting expectations.
+The goal of business testing is to solicit validation from power users to certify that the new solution performs in line with expectations and doesn't impede business processes. If that goal isn't met, the business testing serves as a feedback loop that can help define how and why the workload isn't meeting expectations.
 
 ## Business activities during business testing
 
 During business testing, the first iteration is manually driven directly with customers. This is the purest but most time-consuming form of feedback loop.
 
-- **Identify power users**: The business generally has a better understanding of the power users who are most affected by a technical change.
-  - Power users are the people that commonly execute a real-world process that requires interactions with a technology tool or set of tools, such a call center servicing customers.
-- **Align and prepare power users**: Ensure that power users understand the business objectives, desired outcomes, and expected changes to business processes. Prepare them and their management structure for the testing process.
-- **Engage in feedback loop interpretation**: Help the IT staff understand the impact of various points of feedback from power users.
-- **Clarify process change**: When transformation could trigger a change to business processes, communicate the change and any downstream impacts.
+- **Identify power users**: The business generally has a better understanding of the power users who are most affected by a technical change. Power users are the people that frequently execute a real-world process that requires interactions with a technology tool or set of tools, such as a call center that services customers.
+- **Align and prepare power users**: Ensure that power users understand the business objectives, desired outcomes, and expected changes to business processes. Prepare power users and their management structure for the testing process.
+- **Engage in feedback loop interpretation**: Help the IT staff understand the effect of various points of feedback from power users.
+- **Clarify process change**: Communicate the change and any downstream effects when transformation could trigger a change to business processes.
 - **Prioritize feedback**: Help the IT team prioritize feedback based on the business impact.
 
 ## Migration team activities during business testing
@@ -38,7 +37,7 @@ The _migration team_ serves as one of the recipients of the business testing out
 
 The typical activities the migration team performs during business testing include:
 
-- **Provide structure and logistics:** After working with power users, you can create a spreadsheet defining the tests needed to be run with places for testers to add their notes.
+- **Provide structure and logistics:** After working with power users, you can create a spreadsheet that defines the tests needing to be run with places for testers to add their notes.
 - **Facilitation:** Aid in facilitation during testing.
 - **Record feedback:** Provide a means and process for recording feedback. Using Azure DevOps or an Excel spreadsheet to capture information is an effective way to record items to address.
 - **Prioritize:** Help the business prioritize and validate feedback.
@@ -61,7 +60,7 @@ You can use the following as a reference to build your testing plan:
 |Update existing record|Update the test record you used in the previous step, and confirm that the update proceeds accurately.|&#x274C;|Update failed with error message: "Unable to access transaction database." |
 |Delete existing record|Delete the test record that you used in the previous step.|&#x274C;|Update failed with error message: "Unable to access transaction database." |
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Complete migration](./complete-migration.md)
