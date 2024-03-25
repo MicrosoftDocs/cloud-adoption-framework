@@ -4,14 +4,14 @@ description: Learn about considerations and recommendations for designing and im
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 03/25/2024
 ---
 
 # Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones
 
 This article provides guidance on how to design and implement Microsoft Entra ID and hybrid identity for Azure landing zones.
 
-Organizations that operate in the cloud require a directory service to manage user identities and access to resources. Microsoft Entra ID is a cloud-based identity and access management service that provides robust capabilities to manage users and groups. You can use it as a standalone identity solution, or integrate it with a Microsoft Entra Domain Services infrastructure or an on-premises Active Directory Domain Services (AD DS) infrastructure. 
+Organizations that operate in the cloud require a directory service to manage user identities and access to resources. Microsoft Entra ID is a cloud-based identity and access management service that provides robust capabilities to manage users and groups. You can use it as a standalone identity solution, or integrate it with a Microsoft Entra Domain Services infrastructure or an on-premises Active Directory Domain Services (AD DS) infrastructure.
 
 Microsoft Entra ID provides modern, secure identity and access management that's suitable for many organizations and workloads, and is at the core of Azure and Microsoft 365 services. If your organization has an on-premises AD DS infrastructure, your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Or if you have applications that depend on legacy authentication mechanisms, you might have to deploy managed Domain Services in the cloud.
 
