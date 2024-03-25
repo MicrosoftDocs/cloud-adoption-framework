@@ -59,7 +59,7 @@ Track cloud spending against budgets continuously and alert when spending exceed
 
 - *Create budgets.* [Create a budget](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) that aligns with your desired investment in the cloud.
 
-- *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [Cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts such as detection of idle resources.
+- *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
 
 #### Configure monitoring for cloud operations governance
 
