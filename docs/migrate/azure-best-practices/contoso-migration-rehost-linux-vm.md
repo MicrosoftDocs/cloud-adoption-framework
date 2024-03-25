@@ -5,7 +5,7 @@ author: deltadan
 ms.author: martinek
 ms.date: 07/21/2020
 ms.topic: conceptual
-ms.custom: think-tank
+ms.custom: think-tank, linux-related-content
 ---
 
 # Rehost an on-premises Linux application to Azure VMs
