@@ -30,7 +30,7 @@ There are two main types of remediation activities that you need to plan for thr
 
 Throughout the iteration, you can identify remediation tasks for your workloads through assessment or testing. You need to track these tasks as project activities to make sure that they're completed.
 
-While small migration waves can use spreadsheets to track items, larger waves with many remediation tasks generate multiple items. You can use tools like [Azure DevOps](/azure/devops/boards/backlogs/manage-bugs) to create and prioritize work items and move through specific phases to help you scale out. Even if you don't use Azure DevOps for other efforts, using it to triage remediation problems helps you organize tasks for the migration process.
+While small migration waves can use spreadsheets to track items, larger waves with many remediation tasks generate multiple items. You can use tools like [Azure DevOps](/azure/devops/boards/backlogs/manage-bugs) to create and prioritize work items and move through specific phases to help you scale out. Even if you don't use Azure DevOps for other efforts, you can use it to triage remediation problems and organize tasks for the migration process.
 
 As you create these tasks, you should make sure to connect them back to the workload that they impact. This allows you to assess which workloads might be delayed by remediation tasks. You can then prioritize the work by workload priority.
 
