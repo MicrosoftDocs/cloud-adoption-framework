@@ -1,179 +1,177 @@
 ---
-title: Readying your landing zone for migration
-description: Review items that need to be completed after an Azure landing zone (ALZ) deployment to ensure the technical environment supports migrations.
+title: Prepare your landing zone for migration
+description: Learn about the tasks that you need to complete after an Azure landing zone deployment to ensure that the technical environment supports migrations.
 author: bstephenson
 ms.author: bstephenson
 ms.reviewer: tozimmergren
-ms.date: 02/27/2024
+ms.date: 04/15/2024
 ms.topic: conceptual
 ---
 
-# Readying your landing zone for migration
+# Prepare your landing zone for migration
 
-If your organization already aligns to [Azure landing zones](../../ready/landing-zone/index.md) (ALZ), you'll find useful information in this article about getting your landing zone ready for migrations. This guide also lists the major tasks necessary to ensure configurations are in place to support a migration project.
+This article describes how to get your [Azure landing zone](../../ready/landing-zone/index.md) ready for a migration. It also lists the major tasks you must perform to ensure that configurations are in place for your migration project.
 
-Regardless of which ALZ [reference implementation](../../ready/enterprise-scale/implementation.md) you have used, there are still tasks necessary to ready your landing zone for a successful migration project.
+Regardless of which [Azure landing zone reference implementation](../../ready/enterprise-scale/implementation.md) you used, you must perform some tasks to prepare your landing zone for a successful migration project.
 
-If you aren't using one of the ALZ reference implementations, the steps outlined in this guide will still need to be performed. However, you might have prerequisite tasks that you need to do beforehand, or you might need to adapt specific recommendations to your design.
+If you didn't use an Azure landing zone reference implementation, you still need to perform the steps in this article. However, you might have prerequisite tasks to perform first, or you might have to adapt specific recommendations to your design.
 
-This guide is structured by post-deployment activities for your existing Azure landing zones. Some steps focus on automated deployments but will note if they aren't relevant for manually deployed and managed environments.
+This article describes the tasks you must perform for your existing Azure landing zone after it's deployed. Some tasks focus on automated deployments. It's noted if a task isn't relevant for manually deployed and managed environments.
 
-## Establishing hybrid connectivity
+## Establish hybrid connectivity
 
-During ALZ deployment, most organizations deploy a Connectivity subscription with a hub virtual network and network gateways – VPN, ExpressRoute, or both. After ALZ deployment, you must still configure hybrid connectivity from these gateways, connecting to your existing data center appliances or your ExpressRoute circuit.
+During an Azure landing zone deployment, you can deploy a Connectivity subscription with a hub virtual network and network gateways, such as Azure VPN gateways, Azure ExpressRoute gateways, or both. After your Azure landing zone deployment, you must still configure hybrid connectivity from these gateways to connect to your existing datacenter appliances or your ExpressRoute circuit.
 
-In the Ready phase, you would have planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). This plan should guide you on what connections you need to perform. For example, if you're using ExpressRoute, you need to work with your provider to establish your ExpressRoute circuit.
+In the ready phase, you planned for your [connectivity to Azure](../../ready/azure-best-practices/connectivity-to-azure.md). Use this plan to determine the connections that you need to incorporate. For example, if you use ExpressRoute, you must work with your provider to establish your ExpressRoute circuit.
 
-See technical guidance for specific scenarios by reviewing the following links:
+To get technical guidance for specific scenarios, see:
 
-- [Creating a VPN connection from your Azure VPN Gateway](/azure/vpn-gateway/tutorial-site-to-site-portal)
-- [Creating an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
-  - You should refer to your provider's specific documentation as well.
-- [Creating an ExpressRoute connection from your Azure ExpressRoute Gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
-- [Managing Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings)
+- [Create a VPN connection from your Azure VPN gateway](/azure/vpn-gateway/tutorial-site-to-site-portal).
+- [Create an ExpressRoute circuit](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).
+- [Create an ExpressRoute connection from your ExpressRoute gateway to your circuit](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager).
+- [Manage Azure Virtual WAN gateway settings](/azure/virtual-wan/gateway-settings).
 
 > [!NOTE]
-> Make sure you refer to your provider's specific documentation as well.
+> For additional guidance, also refer to your provider's specific documentation.
 
-If you're establishing your hybrid connectivity to Azure via a third-party Network Virtual Appliances (NVA) deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
+If you establish your hybrid connectivity to Azure via a third-party network virtual appliance (NVA) that's deployed in your virtual network, review their specific guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ## Prepare identity
 
-During the ALZ deployment, organizations deploy supporting architecture for their identity platform. This involves a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines used for identity. However, the actual identity resources must be deployed after the ALZ deployment.
+During your Azure landing zone deployment, you should also deploy a supporting architecture for your identity platform. You might have a dedicated identity subscription or resource groups and a virtual network or subnets for the virtual machines (VMs) that you use for identity. However, you must deploy the identity resources after the Azure landing zone deployment.
 
-This section has guidance for considerations related to Active Directory. If you're using another identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
+The following sections provide guidance related to Active Directory. If you use a different identity provider for authentication and authorizations, you must follow their guidance on extending your identity to Azure.
 
-Before implementing this, you should review the decisions made for [Active Directory and Hybrid Identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) when you planned for your Landing Zone.
+Before you implement this guidance, review the [Active Directory and hybrid identity](../../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md) decisions that you made when you planned for your landing zone.
 
-You should also review your [identity baseline](../../govern/identity-baseline/index.md) from Govern to determine if you need any changes in Microsoft Entra ID.
+You should also review your [identity baseline](../../govern/identity-baseline/index.md) from the governance phase to determine if you need to make changes in Microsoft Entra ID.
 
-### Extending Active Directory domain controllers
+### Extend Active Directory domain controllers
 
-In most migration scenarios, the workloads being migrated to Azure are already joined to an existing Active Directory domain. While Microsoft Entra ID can offer solutions for modernizing identity management even for VM workloads, doing so can disrupt migration. Rearchitecting identity usage for workloads is often an effort saved for modernization or innovation initiatives.
+In most migration scenarios, the workloads that you migrate to Azure are already joined to an existing Active Directory domain. Microsoft Entra ID offers solutions for modernizing identity management, even for VM workloads, but it can disrupt migration. Rearchitecting identity usage for workloads is often performed during modernization or innovation initiatives.
 
-As a result, you need to deploy domain controllers to Azure inside the identity network area you deployed. After deploying the VMs, you must follow your normal DC promotion process to add them to the domain. This can include additional sites created to support your replication topology.
+As a result, you need to deploy domain controllers to Azure inside the identity network area that you deployed. After you deploy VMs, you must follow your normal domain controller promotion process to add them to the domain. This process might include creating additional sites to support your replication topology.
 
-For a common architecture pattern for deploying these resources, review the article on [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain) from the Azure Architecture Center. The AD DS servers could be in a subnet in the hub if you're implementing the [Enterprise-scale for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) or in their dedicated virtual network for [Enterprise-scale hub and spoke](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [Enterprise-scale Virtual WAN](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
+For a common architecture pattern to deploy these resources, see [Deploy Active Directory Domain Services (AD DS) in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain).
+
+If you implement the [enterprise-scale architecture for small enterprises](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md), the AD DS servers are often in a subnet in the hub. If you implement the [enterprise-scale hub-and-spoke architecture](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or the [enterprise-scale Virtual WAN architecture](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md), the servers are often in their dedicated virtual network.
 
 <a name='azure-ad-connect'></a>
 
 ### Microsoft Entra Connect
 
-Most organizations already have Microsoft Entra Connect to populate Microsoft 365 services like Exchange Online. However, if you haven't implemented this, you might need to deploy Microsoft Entra Connect after your landing zone deployment to replicate identities.
-
-You can use [this guidance](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) for installing Microsoft Entra Connect.
+Many organizations already have Microsoft Entra Connect to populate Microsoft 365 services, like Exchange Online. If your organization doesn't have Microsoft Entra Connect, you might need to [install it](/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap) and deploy it after your landing zone deployment so you can replicate identities.
 
 ## Enable hybrid DNS
 
-Most organizations need to be able to resolve DNS requests for namespaces that are a part of the existing environments. These namespaces often require integration with Active Directory servers. In addition, resources in the existing environment must be able to resolve resources in Azure.
+Most organizations need to be able to resolve Domain Name System (DNS) requests for namespaces that are a part of existing environments. These namespaces often require integration with Active Directory servers. And resources in the existing environment must be able to resolve resources in Azure.
 
-As a result, the configuration of DNS services is needed to support common flows. Azure Landing Zones deploy many of the resources you need, but there are additional items to review.
-
-Review [DNS resolution in Azure](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to prepare for these activities.
+To enable these functions, you need to configure DNS services to support common flows. You can use Azure landing zones to deploy many of the resources you need. For additional tasks to review and prepare for, see [DNS resolution in Azure](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
 ### Custom DNS resolution
 
-If you're using Active Directory for your DNS resolver or are deploying a third-party solution, VMs need to be deployed. You can use these as your DNS servers if you already have your Domain Controllers deployed to your Identity subscription and network spoke. Otherwise, you must deploy and configure the virtual machines to house these services.
+If you use Active Directory for your DNS resolver or if you deploy a third-party solution, you must deploy VMs. You can use these VMs as your DNS servers if your domain controllers are deployed to your Identity subscription and network spoke. Otherwise, you must deploy and configure the VMs to house these services.
 
-Once deployed, it needs to be integrated into your existing DNS platform so that it's able to perform lookups against your existing namespaces. For Active Directory DNS servers, this is provided automatically.
+After you deploy the VMs, you must integrate them into your existing DNS platform so they can perform lookups against your existing namespaces. For Active Directory DNS servers, this integration is automatic.
 
-You can also use [Azure Private Resolver](/azure/dns/dns-private-resolver-overview), but this resource isn't deployed as part of your Azure Landing Zone deployment.
+You can also use [Azure DNS Private Resolver](/azure/dns/dns-private-resolver-overview), but this service isn't deployed as part of your Azure landing zone deployment.
 
-If your design uses Private DNS Zones, plan actions accordingly, such as those commonly used with Private Endpoints, review [Azure Private Endpoint DNS configuration](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#specify-dns-servers). The Private DNS zones are deployed as part of your Landing Zone. Still, when you're performing modernization efforts using Private Endpoints, you have an additional configuration for them.
+If your design uses private DNS zones, plan accordingly. For example, if you use private DNS zones with private endpoints, see [Specify DNS servers](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers). Private DNS zones are deployed as part of your landing zone. If you also use private endpoints to perform modernization efforts, you should have an additional configuration for them.
 
-### Azure Firewall DNS Proxy
+### Azure Firewall DNS proxy
 
-The Azure Firewall can act as a [DNS proxy](/azure/firewall/dns-details), receiving traffic and forwarding it to the Azure resolver or your DNS servers. This can be used to allow for lookups from on-premises to Azure but can't conditionally forward back to on-premises DNS servers.
+You can configure Azure Firewall as a [DNS proxy](/azure/firewall/dns-details). Azure Firewall can receive traffic and forward it to an Azure resolver or your DNS servers. This configuration can allow lookups to be performed from on-premises to Azure, but they can't be conditionally forwarded back to on-premises DNS servers.
 
-As a result, if hybrid DNS resolution is needed, the Azure Firewall DNS Proxy can be set to forward to your custom DNS servers (such as your domain controllers).
+If you need hybrid DNS resolution, you can configure the Azure Firewall DNS proxy to forward traffic to your custom DNS servers, such as your domain controllers.
 
-This is an optional step, but using this has several benefits. It reduces configuration changes later if you change DNS services and enables FQDN rules in the Azure firewall.
+This step is optional, but it has several benefits. It reduces configuration changes later if you change DNS services and enables fully qualified domain name (FQDN) rules in Azure Firewall.
 
-### Setting custom virtual network DNS servers
+### Configure custom virtual network DNS servers
 
-Once you've completed the previous activities, you can set the DNS servers for your Azure virtual networks to the custom servers you use.
+After you complete the preceding activities, you can configure the DNS servers for your Azure virtual networks to the custom servers that you use.
 
-To learn more, see [Azure Firewall DNS settings](/azure/firewall/dns-settings).
+For more information, see [Azure Firewall DNS settings](/azure/firewall/dns-settings).
 
 ## Configure hub firewall
 
-If you have deployed a firewall in your hub network, there are a few considerations that you should address to be ready to migrate workloads. Organizations can run into routing and network access issues by not addressing these earlier in their deployments.
+If you deployed a firewall in your hub network, there are a few considerations that you should address so you're ready to migrate workloads. If you don't address these considerations early in your deployment, you might run into routing and network access problems.
 
-As part of performing these activities, review the [networking design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially for [Network Security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
+As part of performing these activities, review the [networking design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity), especially the [network security guidance](../../ready/azure-best-practices/plan-for-inbound-and-outbound-internet-connectivity.md).
 
-If you deploy a third-party NVA as your firewall, use the vendor's guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha) to guide your deployment.
+If you deploy a third-party NVA as your firewall, review the vendor's guidance and our [general guidance for highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 
 ### Deploy standard rule sets
 
-If you use an Azure Firewall, all firewall traffic is blocked until explicit allow rules are added. Many other NVA firewalls work similarly, where traffic is denied until rules for what traffic is permitted are defined.
+If you use an Azure firewall, all firewall traffic is blocked until you add explicit allow rules. Many other NVA firewalls work similarly. Traffic is denied until you define rules that specify the traffic that's permitted.
 
-While you should add individual rules and rule collections based on workload needs, you should plan to have your standard rules that apply to all workloads enabled, such as access to Active Directory or other identity and management solutions.
+You should add individual rules and rule collections based on workload needs. But you should also plan to have standard rules, such as access to Active Directory or other identity and management solutions, that apply to all enabled workloads.
 
 ## Routing
 
-Azure itself provides routing for the following scenarios with no additional configuration:
+Azure provides routing for the following scenarios with no additional configuration:
 
-- Routing between resources in the same virtual network.
-- Routing between resources in peered virtual networks.
-- Routing between resources and a virtual network gateway, either in its own virtual network or a peered one set to use the gateway.
+- Routing between resources in the same virtual network
+- Routing between resources in peered virtual networks
+- Routing between resources and a virtual network gateway, either in its own virtual network or in a peered virtual network that's configured to use the gateway
 
-Two common routing scenarios need additional actions, both involving route tables assigned to subnets to shape routing. [This article](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) provides more information about Azure routing and custom routes.
+Two common routing scenarios need additional configuration. Both scenarios have route tables assigned to subnets to shape routing. For more information about Azure routing and custom routes, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes).
 
 ### Inter-spoke routing
 
-As part of the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology.md), many organizations opt to use a [hub-spoke network topology](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli).
+For the [network design area](../../ready/azure-best-practices/traditional-azure-networking-topology.md), many organizations use a [hub-spoke network topology](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
-You need routes that take traffic from one spoke to another to allow routing between spokes. A default route (`0.0.0.0/0`) to your firewall will be sufficient and works best to simplify routing. With this route in place, traffic to any unknown location heads to the firewall, enabling inspection and applying your firewall rules.
+You need routes that transfer traffic from one spoke to another. For efficiency and simplicity, use the default route (`0.0.0.0/0`) to your firewall. With this route in place, traffic to any unknown location goes to the firewall, which inspects the traffic and applies your firewall rules.
 
-If you want to allow for internet egress, you can also assign another route for your private IP space to the firewall, such as `10.0.0.0/8`. This won't overrule more specific routes but can be used as a simple route to let inter-spoke traffic route correctly.
+If you want to allow for internet egress, you can also assign another route for your private IP space to the firewall, such as `10.0.0.0/8`. This configuration doesn't override more specific routes. But you can use it as a simple route so inter-spoke traffic can properly route.
 
 For more information on spoke-to-spoke networking, see [Patterns and topologies for inter-spoke communication.](/azure/architecture/networking/spoke-to-spoke-networking#patterns-and-topologies-for-inter-spoke-communication)
 
-### Routing From Gateway Subnet
+### Routing from the gateway subnet
 
-If you're using Virtual Networks for your hub, you need to plan for how your organization handles inspection of traffic coming from your gateways.
+If you use virtual networks for your hub, you need to plan how to handle the inspection of traffic that comes from your gateways.
 
-If you intend to inspect traffic, there are two configurations needed:
+If you intend to inspect traffic, you need two configurations:
 
-- In your Connectivity Subscription, you need a route table created and linked to the GatewaySubnet. It will need a route for every spoke network you intend to attach, with a next hop of your firewall's IP address.
-- In each of your Landing Zone Subscriptions, you need a route table created and linked to each subnet. It needs BGP propagation disabled on it.
+- In your Connectivity subscription, you need to create a route table and link it to the gateway subnet. The gateway subnet needs a route for every spoke network you intend to attach, with a next hop of your firewall's IP address.
 
-You can review the article on [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes) for more information about custom and Azure-defined routes.
+- In each of your landing zone subscriptions, you need to create a route table and link it to each subnet. Disable Border Gateway Protocol (BGP) propagation on the route tables.
 
-In addition, if you intend to inspect traffic to Private Endpoints, you want to ensure that the appropriate routing network policy is enabled on the subnet where the Private Endpoints are hosted. Refer to [manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy?tabs=network-policy-portal) to learn how these operate.
+For more information about custom and Azure-defined routes, see [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#custom-routes).
 
-If you don't intend to inspect traffic, no changes are needed. However, if you add route tables to your spoke network subnets, you want to ensure that BGP propagation is enabled so that it can route back to your gateway.
+If you intend to inspect traffic to private endpoints, enable the appropriate routing network policy on the subnet where the private endpoints are hosted. For more information, see [Manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy).
 
-## Configure Monitoring and Management
+If you don't intend to inspect traffic, no changes are needed. However, if you add route tables to your spoke network subnets, enable BGP propagation so traffic can route back to your gateway.
 
-As part of deploying your landing zone, you'll have provisioned policies that enroll your resources in Log Analytics. However, you have additional steps necessary to create alerts for your landing zone resources.
+## Configure monitoring and management
 
-A quick way to implement this is to deploy the [Azure Monitor Baseline for Landing Zones](https://aka.ms/alz/monitor/repo). Using this deployment, you gain alerts based on common scenarios for landing zone management, such as connectivity resources and service health.
+As part of deploying your landing zone, you have provisioned policies that enroll your resources in Azure Monitor Logs. But you must also create alerts for your landing zone resources.
 
-You can also deploy your own custom alerting for resources if your needs deviate from what is in the baseline.
+To implement alerts, you can deploy the [Azure Monitor baseline for landing zones](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz). Use this deployment to get alerts based on common scenarios for landing zone management, such as connectivity resources and service health.
 
-## Enable Subscription Vending
+You can also deploy your own custom alerting for resources if your needs deviate from what's in the baseline.
+
+## Enable subscription vending
 
 This section applies to organizations that want to automate their subscription provisioning process. If you manually manage your landing zone and subscription creation, you should establish your own process for creating subscriptions.
 
-Once you begin migrating, you must create subscriptions for your workloads. Enable [Subscription vending](../../ready/landing-zone/design-area/subscription-vending.md) to automate and accelerate this step. Once established, you should be able to create subscriptions quickly.
+When you begin migrating, you must create subscriptions for your workloads. Enable [subscription vending](../../ready/landing-zone/design-area/subscription-vending.md) to automate and accelerate this process. When subscription vending is established, you should be able to create subscriptions quickly.
 
-## Prepare for Defender for Cloud
+## Prepare for Microsoft Defender for Cloud
 
-When you deploy your landing zone, you also set policies to enable [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) for your Azure subscriptions. Defender for Cloud provides security posture recommendations through [Secure Score](/azure/defender-for-cloud/secure-score-security-controls), which evaluates deployed resources against Microsoft's security baseline.
+When you deploy your landing zone, you also set policies to enable [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) for your Azure subscriptions. Defender for Cloud provides security posture recommendations in its [secure score](/azure/defender-for-cloud/secure-score-security-controls), which evaluates deployed resources against the Microsoft security baseline.
 
-While no additional technical configuration is needed, you should review the recommendations and design a plan to [improve your security posture](/azure/defender-for-cloud/review-security-recommendations) as you migrate resources. Once you begin migrating resources into Azure, you should be ready to [implement security improvements](/azure/defender-for-cloud/implement-security-recommendations) as part of your migration optimization.
+You don't need to implement additional technical configurations, but you should review the recommendations and design a plan to [improve your security posture](/azure/defender-for-cloud/review-security-recommendations) as you migrate resources. When you begin migrating resources into Azure, you should be ready to [implement security improvements](/azure/defender-for-cloud/implement-security-recommendations) as part of your migration optimization.
 
-## Learn more
+## Related resources
 
-Consider these additional resources to prepare:
+Consider these additional resources to prepare for migration:
 
-- [Ensure that you have your initial corporate policy defined and well understood](../../govern/guides/standard/initial-corporate-policy.md)
-- [Ensure that you have adequate planning for Azure Billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md)
-- [Your organizational alignment](../../plan/initial-org-alignment.md) and how you intend to [continue to manage it](../../organize/index.md)
-- [Ensuring consistency with your naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
+- [Prepare an initial corporate policy that's defined and well understood](../../govern/guides/standard/initial-corporate-policy.md)
+- [Create an adequate plan for Azure billing](../../ready/landing-zone/design-area/azure-billing-ad-tenant.md)
+- [Ensure that you have proper organizational alignment](../../plan/initial-org-alignment.md) and [a plan to manage it](../../organize/index.md)
+- [Develop naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md)
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Prepare tools and initial migration backlog](./tools-backlog.md)
+> [Prepare tools and an initial migration backlog](./tools-backlog.md)
