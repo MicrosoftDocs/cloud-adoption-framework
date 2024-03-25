@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article focuses on how to evaluate the readiness of a workload to migrate to the cloud.
 
-When you want to migrate a workload, the cloud adoption team ensures that all assets and associated dependencies are compatible with your deployment model and cloud provider. The team documents any required efforts to [remediate](../deploy/remediate.md) compatibility issues.
+When you want to migrate a workload, the cloud adoption team ensures that all assets and associated dependencies are compatible with your deployment model and cloud provider. The team documents any required efforts to [remediate](../deploy/remediate.md) compatibility problems.
 
 ## Evaluation assumptions
 
@@ -19,7 +19,7 @@ Most of the content that discusses principles in the Cloud Adoption Framework fo
 
 The assessment tools that you selected should provide information about any blockers for migration. Common blockers include operating system support, server size, and data change rates that might affect replication.
 
-Some organizations also face issues with configurations of virtual machines (VMs) that take advantage of the source hypervisor platform. These configurations include virtualization-based security, dynamic disks, non-Microsoft applications licenses, data source configurations, and certificates.
+Some organizations also face problems with configurations of virtual machines (VMs) that take advantage of the source hypervisor platform. These configurations include virtualization-based security, dynamic disks, non-Microsoft applications licenses, data source configurations, and certificates.
 
 This article doesn't capture all possible evaluation activities because each environment and business outcome dictates specific requirements. To help you determine what those requirements are, here are a few common evaluation activities that are related to infrastructure, databases, and networks.
 
@@ -59,7 +59,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 > [!NOTE]
 > Total storage directly affects bandwidth requirements during the initial replication. However, storage drift continues from the point of replication until release. This means that drift has a cumulative effect on available bandwidth.
 >
-> For guidance on gauging bandwidth requirements, see [common questions for migration and modernization tooling](/azure/migrate/common-questions-server-migration).
+> For guidance on gauging bandwidth requirements, see [Common questions for migration and modernization tooling](/azure/migrate/common-questions-server-migration).
 
 ### Common database evaluation activities
 
@@ -78,9 +78,9 @@ As part of your server migration, you might also look at migrating a SQL Server 
 >
 > Consider replicating the data structure with controlled updates before user acceptance testing (UAT) and release. In these scenarios, alternatives to Azure Site Recovery might be more appropriate. For more information, see [Azure Database Migration Service guides](/data-migration/).
 
-## Next steps
+## Next step
 
-After you evaluate a system, the outputs feed the development of a new [cloud architecture](./architect.md).
+After you evaluate a system, the outputs feed the development of a new cloud architecture.
 
 > [!div class="nextstepaction"]
 > [Architect workloads prior to migration](./architect.md)
