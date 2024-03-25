@@ -69,9 +69,9 @@ For more information about how to move resources across resource groups and subs
 
 > [!TIP]
 > To reduce the impact of regional outages, we now recommend that you locate resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
-
-> If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
-
+> 
+> If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+> 
 > To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
 
 ### Before you move resources
