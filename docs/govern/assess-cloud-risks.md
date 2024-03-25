@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article outlines the approach to assess risks associated with the cloud. All technologies introduce certain risks to an organization. Risks are undesired outcomes that could affect your business, such as noncompliance with industry standards. When adopting the cloud, you need to identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.
 
-:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/assess.svg" border="false":::
+:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/assess.svg" border="false":::
 
 ## Identify cloud risks
 
@@ -40,7 +40,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - *Identify cloud resource management risks.* Identify risks stemming from the provisioning, deployment, configuration, and management of cloud resources. Identify risks to [operational excellence](/azure/advisor/advisor-overview).
 
-- *Identify AI risks.* Regularly [red team large language models](/azure/ai-services/openai/concepts/red-teaming)*.* Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
+- *Identify AI risks.* Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming)*.* Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
 
 ## Analyze cloud risks
 
@@ -48,9 +48,9 @@ Assign a qualitative or quantitative ranking to each risk so you can prioritize 
 
 ### Evaluate risk probability
 
-Estimate the quantitative or qualitative probability of each risk occurring per year. A percentage range is a common way to represent quantitative risk probability (0%-100%). Low, medium, and high are common labels for qualitative risk probability. To evaluate risk probability, follow these recommendations:
+Estimate the quantitative or qualitative probability of each risk occurring per year. A percentage range (0%-100%) is a common way to represent quantitative risk probability. Low, medium, and high are common labels for qualitative risk probability. To evaluate risk probability, follow these recommendations:
 
-- *Use public benchmarks.* Use data from reports, studies, or service level agreements that document common risks and their occurrence rates.
+- *Use public benchmarks.* Use data from reports, studies, or service-level agreements (SLAs) that document common risks and their occurrence rates.
 
 - *Analyze historical data.* Look at internal incident reports, audit logs, and other records to identify how often similar risks occurred in the past.
 
@@ -60,7 +60,7 @@ Estimate the quantitative or qualitative probability of each risk occurring per 
 
 Estimate the quantitative or qualitative impact of the risk occurring on the organization. A dollar amount is a common way to represent quantitative risk impact. Low, medium, and high are common labels for qualitative risk impact. To determine risk impact, follow these recommendations:
 
-- *Conduct financial analysis.* Calculate potential financial loss by looking at factors such as cost of downtime, legal fees, fines, and the cost of remediation efforts.
+- *Conduct financial analysis.* Calculate potential financial loss by looking at factors such as the cost of downtime, legal fees, fines, and the cost of remediation efforts.
 
 - *Conduct reputational impact assessment.* Use surveys, market research, or historical data on similar incidents to estimate the potential impact on the organization's reputation.
 
@@ -88,7 +88,7 @@ Categorize each risk into one of three levels: major risks (level 1), subrisks (
 
 ### Determine risk management strategy
 
-For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it's too expensive, you should document that reasoning for reference.
+For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it is too expensive, you should document that reasoning for reference.
 
 ### Assign risk owners
 
@@ -106,7 +106,7 @@ Document each risk and the details of the risk analysis. Create a list of risks 
 - *Risk impact:* Provide the risk impact on the organization if the risk occurs such as a dollar amount or qualitative label.
 - *Risk priority:* Provide the risk probability (probability x impact). Use a dollar amount or qualitative label.
 - *Risk level:* Categorize risk as major threat (level 1), subrisk (level 2), or risk driver (level 3).
-- *Risk management strategy:* The approach to manage the risk such as mitigate, accept, avoid.
+- *Risk management strategy:* The approach to manage the risk such as mitigate, accept, or avoid.
 - *Risk management enforcement:* The techniques to enforce the risk management strategy.
 - *Risk owner:* The individual on the cloud governance team managing the risk.
 - *Risk closure date:* A date when the risk management strategy should be applied.
@@ -119,13 +119,13 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 ## Review cloud risks
 
-Review cloud risks to ensure the risks are valid and accurate. Reviews should be regular and in response to specific events. Maintain, update, or removed risks as needed. To review cloud risks, follow these recommendations:
+Review cloud risks to ensure the risks are valid and accurate. Reviews should be regular and in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
 
 - *Schedule regular assessments.* Set a recurring schedule, such as monthly or quarterly, to review and assess cloud risks. The frequency should reflect the rate of change in the cloud environment and the organization's risk appetite.
 
-- *Conduct event-based reviews.* Review risks in response to specific events. Consider new technology adoption, technology updates, regulatory compliance changes, new business process, new security threat, changes in risk appetite, and a risk event.
+- *Conduct event-based reviews.* Review risks in response to specific events. Consider new technology adoption, technology updates, regulatory compliance changes, new business processes, new security threats, changes in risk appetite, and risk events.
 
-- *Review cloud governance policies.* Keep, update, or remove cloud governance policies to address new risks, changes in existing risks, or removal of outdated risks. Review the policy statement and enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it. Consult with stakeholders to remove the cloud governance policies or update to associate with a new risk.
+- *Review cloud governance policies.* Keep, update, or remove cloud governance policies to address new risks, changes in existing risks, or removal of outdated risks. Review the policy statement and enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it. Consult with stakeholders to remove the cloud governance policies or update the policies to associate them with a new risk.
 
 ## Example risk list
 
@@ -133,14 +133,14 @@ The risk list is an example that you should tailor to fit the specific needs and
 
 |Risk ID|Risk management status|Risk category|Risk description|Risk probability|Risk impact|Risk priority|Risk level|Risk management strategy|Risk management enforcement|Risk owner|Risk closure date|
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|R01|Open|Regulatory compliance|Noncompliance with sensitive data requirements.|20% OR Medium|$100,000 OR High|$20,000 OR High|Level 2|Mitigate|Use Microsoft Purview for sensitive data monitoring. <br> Compliance reporting in Microsoft Purview|Compliance lead|2024-04-01|
-|R02|Open|Security|Unauthorized access to cloud services.|30% OR High|$200,000 OR High|$60,000 OR Very high|Level 1|Mitigate|Microsoft Entra ID multifactor authentication. <br> Microsoft Entra ID Governance monthly access reviews.|Security lead|2024-03-15|
-|R03|Open|Security|Insecure code management.|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. <br> Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
-|R04|Open|Cost|Overspending on cloud services due to overprovisioning and lack of monitoring.|40% OR High|$50,000 OR Medium|$20,000 OR High|Level 2|Mitigate|Set budgets and alerts for workloads. <br>Review and apply Azure Advisor cost recommendations|Cost lead|2024-03-01|
+|R01|Open|Regulatory compliance|Noncompliance with sensitive data requirements|20% OR Medium|$100,000 OR High|$20,000 OR High|Level 2|Mitigate|Use Microsoft Purview for sensitive data monitoring. <br> Compliance reporting in Microsoft Purview.|Compliance lead|2024-04-01|
+|R02|Open|Security|Unauthorized access to cloud services|30% OR High|$200,000 OR High|$60,000 OR Very high|Level 1|Mitigate|Microsoft Entra ID multifactor authentication (MFA). <br> Microsoft Entra ID Governance monthly access reviews.|Security lead|2024-03-15|
+|R03|Open|Security|Insecure code management|20% OR Medium|$150,000 OR High|$30,000 OR High|Level 2|Mitigate| Use defined code repository. <br> Use quarantine pattern for public libraries. |Developer lead|2024-03-30|
+|R04|Open|Cost|Overspending on cloud services due to overprovisioning and lack of monitoring|40% OR High|$50,000 OR Medium|$20,000 OR High|Level 2|Mitigate|Set budgets and alerts for workloads. <br>Review and apply Advisor cost recommendations.|Cost lead|2024-03-01|
 |R05|Open|Operations|Service disruption due to Azure region outage|25% OR Medium|$150,000 OR High|$37,500 OR High|Level 1|Mitigate|Mission-critical workloads have active-active architecture. <br> Other workloads have active-passive architecture.|Operations lead|2024-03-20|
-|R06|Open|Data|Loss of sensitive data due to improper encryption and data lifecycle management.|35% OR High|$250,000 OR High|$87,500 OR Very high|Level 1|Mitigate|Apply encryption in transit and at rest. <br> Establish data lifecycle policies using Azure tools.|Data lead|2024-04-10|
-|R07|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure.|30% OR High|$100,000 OR High|$30,000 OR Very high|Level 2|Mitigate|Use infrastructure as code (IaC). <br> Enforce tagging requirements using Azure Policy|Resource lead|2024-03-25|
-|R08|Open|AI|AI model producing biased decisions due to unrepresentative training data.|15% OR Low|$200,000 OR High|$30,000 OR Moderately high|Level 3|Mitigate|Use content filtering mitigation techniques. <br>Red teaming AI models monthly|AI lead|2024-05-01|
+|R06|Open|Data|Loss of sensitive data due to improper encryption and data lifecycle management|35% OR High|$250,000 OR High|$87,500 OR Very high|Level 1|Mitigate|Apply encryption in transit and at rest. <br> Establish data lifecycle policies using Azure tools.|Data lead|2024-04-10|
+|R07|Open|Resource management|Misconfiguration of cloud resources leading to unauthorized access and data exposure|30% OR High|$100,000 OR High|$30,000 OR Very high|Level 2|Mitigate|Use infrastructure as code (IaC). <br> Enforce tagging requirements using Azure Policy.|Resource lead|2024-03-25|
+|R08|Open|AI|AI model producing biased decisions due to unrepresentative training data|15% OR Low|$200,000 OR High|$30,000 OR Moderately high|Level 3|Mitigate|Use content filtering mitigation techniques. <br>Red team AI models monthly.|AI lead|2024-05-01|
 
 ## Next step
 
