@@ -27,23 +27,23 @@ In Azure, [resource groups](/azure/azure-resource-manager/management/overview#re
 
 Resource groups are used as containers for resources with a common lifecycle and shared management constraints, such as policy or Azure role-based access control requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. 
 
-In any case, the most reliable suggestion for avoiding regional outages is to place resources in the SAME region as a resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
-
-> [!NOTE]
-> To supplement this reliable approach, you can [audit](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html) your resources through Azure Policy. By [assigning](/azure/governance/policy/tutorials/create-and-manage) a new built-in Azure Policy definition at the [Intermediate Root Management Group](/azure/governance/management-groups/overview#root-management-group-for-each-directory), you can consistently check if every resource location in your tenant hierarchy matches its resource group location.
-
-Some other factors you can consider while designing or updating your regional resource organization are:
+Some factors to consider while designing or updating your regional resource organization are:
 
 - Is there a logical group of resources that will be developed together?
 - Is there a logical group of resources that will be managed, updated, and monitored together and done so by the same people or teams?
+- Is there a logical group of resources that will be used by the same team(s) within a single geography/region?
 - Is there a logical group of resources that will be retired together?
 
 If the answer is yes for any of these, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
 
 > [!NOTE]
-> If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
+> If you have a scenario where resources are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
 
-To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
+
+The most reliable suggestion for avoiding regional outages is to place resources in the SAME region as a resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a new resource group or subscription. To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
+
+> [!TIP]
+> [Audit](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html) your resource group alignment with Azure Policy. By [assigning](/azure/governance/policy/tutorials/create-and-manage) a built-in Azure Policy definition at the [Intermediate Root Management Group](/azure/governance/management-groups/overview#root-management-group-for-each-directory), you can verify whether the locations of the resources in your tenant hierarchy match the location of their respective resource groups.
 
 
 ## Deployment consistency
