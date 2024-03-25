@@ -136,7 +136,7 @@ To determine if your resource supports moving to another resource group, invento
 > [!TIP]
 > Whenever possible, deploy resource groups in a region that has multiple availability zones. Availability zones help to minimize the risk of regional outages that reduce the availability of your resource and also make management operations unavailable.
 
-In some cases, resources in a resource group may span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Thus, in some scenarios, to ensure resources remain available at all costs, a multiple region per resource group approach could be considered an acceptable limiltation to maintain availability during a temporary outage.
+In some cases, resources in a resource group may span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Thus, in some scenarios, to ensure resources remain available at all costs, a multiple region per resource group approach could be considered an acceptable limitation to maintain availability during a temporary outage.
 
 ### Use GRS in paired regions
 
