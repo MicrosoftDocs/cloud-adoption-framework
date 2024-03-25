@@ -63,7 +63,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 
 ### Common database evaluation activities
 
-As part of your server migration, you might also look at migrating a SQL Server or other database servers.  
+As part of your server migration, you might also look at migrating SQL Server instances or other database servers.  
 
 - **Document RPOs and RTOs**: Document the recovery point objectives (RPOs) and the recovery time objectives (RTOs) of the current database deployment. Use this information to help you make decisions during [architecture activities](./architect.md).
 - **Document high-availability requirements**: Document high-availability configuration requirements. For more information about SQL Server requirements, see the [SQL Server high availability solutions guide](/sql/database-engine/sql-server-business-continuity-dr).
