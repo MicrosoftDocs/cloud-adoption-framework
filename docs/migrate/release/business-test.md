@@ -1,6 +1,6 @@
 ---
-title: Business testing guidance during migration
-description: Learn how business testing, or User Acceptance Testing (UAT) is used to validate that solution performance is in line with expectations.
+title: Guidance for business testing during migration
+description: Learn how business testing, or User Acceptance Testing (UAT), is used to validate that solution performance is in line with expectations.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
@@ -9,41 +9,42 @@ ms.topic: conceptual
 
 # Guidance for business testing during migration
 
-While the migration team facilitates the _migration_ of a workload to Azure, _testing_ of a workload is best executed by the business users of that workload. The migration team supports this business activity by facilitating the testing, developing testing plans, and automating tests when possible.
+While the migration team facilitates the _migration_ of a workload to Azure, _testing_ of a workload is best performed by the business users of that workload. The migration team supports this business activity by facilitating the testing, developing testing plans, and automating tests when possible.
 
 During business testing, or User Acceptance Testing (UAT), you observe real users attempting to use the new solution in the context of a real or replicated business process.
 
 > [!NOTE]
-> **Automated testing isn't always available.**
+> **Automated testing isn't always available**.
+>
 > Automated testing is an efficient way to test any system. However, cloud migrations often focus on legacy systems or stable production systems. These systems are seldom managed by thorough and well-maintained automated tests.
 >
 > This article assumes that automated tests are available at the time of migration.
 
-The goal of business testing is to solicit validation from power users to certify that the new solution performs in line with expectations and doesn't impede business processes. If that goal isn't met, the business testing serves as a feedback loop that can help define how and why the workload isn't meeting expectations.
+The goal of business testing is to obtain validation from power users to certify that the new solution performs in line with expectations and doesn't impede business processes. If that goal isn't met, the business testing serves as a feedback loop that can help you define how and why the workload isn't meeting expectations.
 
 ## Business activities during business testing
 
-During business testing, the first iteration is manually driven directly with customers. This is the purest but most time-consuming form of feedback loop.
+During business testing, the first iteration is manually driven directly with customers. This is the purest and most time-consuming form of feedback loop.
 
-- **Identify power users**: The business generally has a better understanding of the power users who are most affected by a technical change. Power users are the people that frequently execute a real-world process that requires interactions with a technology tool or set of tools, such as a call center that services customers.
+- **Identify power users**: The business generally has a better understanding of the power users who are most affected by a technical change. Power users are the people who frequently perform a real-world process that requires interactions with a technology tool or set of tools, such as a call center that services customers.
 - **Align and prepare power users**: Ensure that power users understand the business objectives, desired outcomes, and expected changes to business processes. Prepare power users and their management structure for the testing process.
 - **Engage in feedback loop interpretation**: Help the IT staff understand the effect of various points of feedback from power users.
-- **Clarify process change**: Communicate the change and any downstream effects when transformation could trigger a change to business processes.
+- **Clarify process change**: Communicate the process change and any downstream effects when transformation could trigger a change to business processes.
 - **Prioritize feedback**: Help the IT team prioritize feedback based on the business impact.
 
 ## Migration team activities during business testing
 
-The _migration team_ serves as one of the recipients of the business testing output. The feedback loops exposed during business testing eventually become work items that define technical change or process change. As a recipient, the migration team is expected to aid in facilitation, collection of feedback, and management of resultant technical actions.
+The _migration team_ serves as one of the recipients of the business testing output. The feedback loops exposed during business testing eventually become work items that define technical change or process change. As a recipient of the business testing output, the migration team is expected to aid in facilitation, collection of feedback, and management of resultant technical actions.
 
 The typical activities the migration team performs during business testing include:
 
-- **Provide structure and logistics:** After working with power users, you can create a spreadsheet that defines the tests needing to be run with places for testers to add their notes.
-- **Facilitation:** Aid in facilitation during testing.
-- **Record feedback:** Provide a means and process for recording feedback. Using Azure DevOps or an Excel spreadsheet to capture information is an effective way to record items to address.
-- **Prioritize:** Help the business prioritize and validate feedback.
-- **Plan for changes:** Develop plans for acting on technical changes.
-- **Identify automated tests:** Identify existing automated tests that could streamline the testing by power users.
-- **Process improvement:** For changes that could require repeated deployment or testing, study testing processes, define benchmarks, and create automation to further streamline power user testing.
+- **Provide structure and logistics**: After working with power users, you can create a spreadsheet that defines the tests needing to be run with places for testers to add their notes.
+- **Facilitation**: Aid in facilitation during testing.
+- **Record feedback**: Provide a means and process for recording feedback. Using Azure DevOps or an Excel spreadsheet to capture information is an effective way to record items to address.
+- **Prioritize**: Help the business prioritize and validate feedback.
+- **Plan for changes**: Develop plans for acting on technical changes.
+- **Identify automated tests**: Identify existing automated tests that might streamline the testing by power users.
+- **Process improvement**: For changes that might require repeated deployment or testing, study testing processes, define benchmarks, and create automation to further streamline power user testing.
 
 ### Example testing plan
 
@@ -52,12 +53,12 @@ You can use the following as a reference to build your testing plan:
 |Test|Steps|Succeeded?|Tester notes|
 |---|---|---|---|
 |Sign in|Sign in using your normal credentials. Confirm that you see the same information as the production system.|&#x2705;|No remarks|
-|Create new record|Create a new record in the system, and confirm that all workflow jobs run appropriately.|&#x2705;|No remarks|
-|Read created record|Reopen the record you created, and confirm that all materials are filled in.|&#x2705;|No remarks|
-|Update created record|Make changes to the record you created, and confirm that the update proceeds accurately.|&#x2705;|No remarks|
-|Delete created record|Delete the record you created, and confirm that the record is removed from the system.|&#x2705;|No remarks|
-|Read existing record|Open one of the existing test records, that start with "Test-Record-Azure-Test" and confirm you can read all materials.|&#x2705;|No remarks|
-|Update existing record|Update the test record you used in the previous step, and confirm that the update proceeds accurately.|&#x274C;|Update failed with error message: "Unable to access transaction database." |
+|Create new record|Create a new record in the system and confirm that all workflow jobs run appropriately.|&#x2705;|No remarks|
+|Read created record|Reopen the record you created and confirm that all materials are filled in.|&#x2705;|No remarks|
+|Update created record|Make changes to the record you created and confirm that the update proceeds accurately.|&#x2705;|No remarks|
+|Delete created record|Delete the record you created and confirm that the record is removed from the system.|&#x2705;|No remarks|
+|Read existing record|Open one of the existing test records that start with "Test-Record-Azure-Test" and confirm you can read all materials.|&#x2705;|No remarks|
+|Update existing record|Update the test record you used in the previous step and confirm that the update proceeds accurately.|&#x274C;|Update failed with error message: "Unable to access transaction database." |
 |Delete existing record|Delete the test record that you used in the previous step.|&#x274C;|Update failed with error message: "Unable to access transaction database." |
 
 ## Next step
