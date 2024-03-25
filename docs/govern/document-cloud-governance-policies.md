@@ -12,35 +12,35 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to create and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies are the governance framework for individuals interacting with the cloud.
 
-:::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/document.svg" border="false":::
+:::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/document.svg" border="false":::
 
-## Define an approach to documenting cloud governance policies
+## Define an approach for documenting cloud governance policies
 
 Establish an approach for creating, maintaining, and updating the rules and guidelines that govern the use of cloud services. The goal is to produce cloud governance policies that don’t require frequent updates and consider the effects of cloud governance policies across the cloud environment. To define a policy documentation approach, follow these recommendations:
 
-- *Define standard governance language.* Develop a standard structure and format for documenting cloud governance policies. The policies must be a clear and authoritative reference for stakeholders.
+- *Define standard governance language*. Develop a standard structure and format for documenting cloud governance policies. The policies must be a clear and authoritative reference for stakeholders.
 
-- *Recognize the different scopes of governance.* Define and assign specific governance responsibilities tailored to the unique roles within your organization. For example, a developer governs application code. A workload team is responsible for a single workload, and the platform team is responsible for governance that workloads inherit.
+- *Recognize the different scopes of governance*. Define and assign specific governance responsibilities tailored to the unique roles within your organization. For example, a developer governs application code. A workload team is responsible for a single workload, and the platform team is responsible for governance that workloads inherit.
 
-- *Evaluate the broad effects of cloud governance.* Cloud governance creates friction. Find a balance between friction and freedom. Consider the effects of governance on workload architecture, software development practices, and other areas as you develop cloud governance policies. For example, what you allow or disallow determines workload architecture and affects software development practices.
+- *Evaluate the broad effects of cloud governance*. Cloud governance creates friction. Find a balance between friction and freedom. Consider the effects of governance on workload architecture, software development practices, and other areas as you develop cloud governance policies. For example, what you allow or disallow determines workload architecture and affects software development practices.
 
 ## Define cloud governance policies
 
 Create cloud governance policies that outline how to use and manage the cloud to mitigate risks. Create a governance framework that manages risk. Minimize the need for frequent policy updates. To define cloud governance policies, follow these recommendations:
 
-- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as SC01 for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
+- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
 
-- *Include the policy statement.* Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
+- *Include the policy statement*. Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
-- *Include risk ID.* List the risk in the policy. Associate every governance policy to a risk.
+- *Include a risk ID*. List the risk in the policy. Associate every governance policy to a risk.
 
-- *Include the policy category.* Include governance categories, such as security, compliance, cost management, into the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
+- *Include the policy category*. Include governance categories, such as security, compliance, or cost management, into the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
 
-- *Include policy purpose*. State the purpose of each policy. Use the risk or the regulatory compliance requirement the policy satisfies as a starting point.
+- *Include the policy purpose*. State the purpose of each policy. Use the risk or the regulatory compliance requirement the policy satisfies as a starting point.
 
 - *Define the policy scope*. Clearly define what and who this policy applies to, such as all cloud services, regions, environments, and workloads. Specify any exceptions to ensure there's no ambiguity. Use standardized language so it's easy to sort, filter, and find policies.
 
-- *Include the policy remediation strategies.* Define the desired response to a violation of a cloud governance policy. Tailor responses to the severity of the risk, such as scheduling discussions for nonproduction violations and immediate remediation efforts for production violations.
+- *Include the policy remediation strategies*. Define the desired response to a violation of a cloud governance policy. Tailor responses to the severity of the risk, such as scheduling discussions for nonproduction violations and immediate remediation efforts for production violations.
 
 For more information, see the [example cloud governance policies](#example-cloud-governance-policies).
 
@@ -48,29 +48,29 @@ For more information, see the [example cloud governance policies](#example-cloud
 
 Grant access to everyone who needs to adhere to cloud governance policies. Look for ways to make adherence to the cloud governance policies easier for people in your organization. To distribute cloud governance policies, follow these recommendations:
 
-- *Use a centralized policy repository.* Use a centralized, easily accessible repository for all governance documentation. Ensure all stakeholders, teams, and individuals have access to the latest versions of policies and related documents.
+- *Use a centralized policy repository*. Use a centralized, easily accessible repository for all governance documentation. Ensure all stakeholders, teams, and individuals have access to the latest versions of policies and related documents.
 
 - *Create compliance checklists*. Provide a quick and actionable overview of the policies. Make it easier for teams to comply without having to navigate through extensive documentation. For more information, see the [example compliance checklist](./enforce-cloud-governance-policies.md#example-cloud-governance-compliance-checklists).
 
 ## Review cloud governance policies
 
-Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular review helps ensure cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
+Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular review helps ensure that cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
 
-- *Implement feedback mechanisms.* Establish ways to receive feedback on the effectiveness of cloud governance policies. Gather input from the individuals affected by the policies to ensure they can still do their job efficiently. Update governance policies to reflect practical challenges and needs.
+- *Implement feedback mechanisms*. Establish ways to receive feedback on the effectiveness of cloud governance policies. Gather input from the individuals affected by the policies to ensure they can still do their job efficiently. Update governance policies to reflect practical challenges and needs.
 
-- *Establish event-based reviews*. Review and update cloud governance policies in responses to events, such as a failed governance policy, technology change, or regulatory compliance change.
+- *Establish event-based reviews*. Review and update cloud governance policies in response to events, such as a failed governance policy, technology change, or regulatory compliance change.
 
-- *Schedule regular reviews.* Regularly review governance policies to ensure they align with evolving organizational needs, risks, and cloud advancements. For example, include governance reviews in the regular cloud governance meetings with stakeholders.
+- *Schedule regular reviews*. Regularly review governance policies to ensure they align with evolving organizational needs, risks, and cloud advancements. For example, include governance reviews in the regular cloud governance meetings with stakeholders.
 
-- *Facilitate change control.* Include a process for policy review and updates. Ensure the cloud governance policies stay aligned with organizational, regulatory, and technological changes. Make it clear how to edit, remove, or add policies.
+- *Facilitate change control*. Include a process for policy review and updates. Ensure the cloud governance policies stay aligned with organizational, regulatory, and technological changes. Make it clear how to edit, remove, or add policies.
 
-- *Identify inefficiencies.* Review governance policies to find and fix inefficiencies in cloud architecture and operations. For example, instead of mandating that each workload must use its own web application firewall, update the policy to require the use of a centralized firewall. Review policies that require duplicated effort and see if there's a way to centralize the work.
+- *Identify inefficiencies*. Review governance policies to find and fix inefficiencies in cloud architecture and operations. For example, instead of mandating that each workload must use its own web application firewall, update the policy to require the use of a centralized firewall. Review policies that require duplicated effort and see if there's a way to centralize the work.
 
 ## Example cloud governance policies
 
 The following cloud governance policies are examples for reference. These policies are based on the examples in the [example risk list](./assess-cloud-risks.md#example-risk-list).
 
-| Policy ID | Policy Category | Risk ID | Policy Statement | Purpose | Scope | Remediation | Monitoring |
+| Policy ID | Policy category | Risk ID | Policy statement | Purpose | Scope | Remediation | Monitoring |
 |-----------|-----------------|---------|------------------|---------|-------|-------------| ---------- |
 | RC01 | Regulatory compliance | [R01](assess-cloud-risks.md#example-risk-list) | Microsoft Purview must be used to monitor sensitive data. | Regulatory compliance | Workload teams. Platform team | Immediate action by affected team. Compliance training | Microsoft Purview |
 | RC02 | Regulatory compliance | [R01](assess-cloud-risks.md#example-risk-list) | Daily sensitive data compliance reports must be generated from Microsoft Purview. | Regulatory compliance | Workload teams. Platform team | Resolution within one day, confirmation audit | Microsoft Purview |
