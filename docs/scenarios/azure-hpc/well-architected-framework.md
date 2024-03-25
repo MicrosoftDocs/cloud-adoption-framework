@@ -32,7 +32,7 @@ In order to support mission critical HPC workloads, use an ExpressRoute High Ava
 
 - Enable two ExpressRoute circuits in two different ER edge site locations for maximum redundancy.
   - This setup requires provisioning two ER circuits in the Azure Portal for the two different ER edge site locations, then connecting both ExpressRoute circuits to the same hub virtual network in Azure.
-  - The two different edge site locations would be in the same region, as several [metros](/azure/expressroute/expressroute-locations-providers#global-commercial-azure) have multiple ExpressRoute sites.
+  - The two different edge site locations would be in the same Azure region. This is what will provide the redundancy in case one of the peering locations experiences a failure. Both ExpressRoute connections would terminate into the same hub virtual network in Azure. Please view the list of [ExpressRoute locations and connectivity partners](https://learn.microsoft.com/azure/expressroute/expressroute-locations-providers#global-commercial-azure) in planning the ExpressRoute peering locations.
   - You can work with the provider in order to configure the second ExpressRoute site.
   - It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
 
