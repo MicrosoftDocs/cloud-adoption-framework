@@ -19,7 +19,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 - *Use monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring.
 
-- *Manually monitor where necessary*. Review compliance manually where automated monitoring mechanisms aren’t available.
+- *Manually monitor where necessary.* Review compliance manually where automated monitoring mechanisms aren’t available.
 
 - *Document monitoring solution.* Track how you're monitoring each cloud governance policy so you know where to gather compliance data. In the cloud governance policy, list the monitoring tool, such as Azure Policy or Microsoft Purview. If there's a manual approach, list the audit frequency.
 
@@ -33,7 +33,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
-The following guidance is meant to help you configure cloud governance monitoring in Azure. It provides a sample starting point for major categories of cloud governance. Consider aggregating these signals in the [Azure governance workbook](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/governance-workbook)*.
+The following guidance is meant to help you configure cloud governance monitoring in Azure. It provides a sample starting point for major categories of cloud governance. Consider aggregating these signals in the [Azure governance workbook](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/governance-workbook).
 
 #### Configure monitoring for regulatory compliance governance
 
@@ -103,7 +103,7 @@ Configure alerts based on specific compliance metrics or events that indicate a 
 
 - *Route alerts appropriately.* Send alerts to the appropriate team or individual responsible for enforcing compliance with cloud governance policies.
 
-- *Include noncompliance information in alerts:* Configure alerts to include detailed information about the noncompliance event. Ideally include the policy violated, affected resources, and suggested remediation.
+- *Include noncompliance information in alerts.* Configure alerts to include detailed information about the noncompliance event. Ideally include the policy violated, affected resources, and suggested remediation.
 
 ### Azure facilitation: Configuring cloud governance alerts
 
