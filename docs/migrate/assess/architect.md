@@ -1,5 +1,5 @@
 ---
-title: Design a workload's architecture before migration
+title: Design workload architecture before migration
 description: Learn how to use the Azure Cloud Adoption Framework to define the intended cloud architecture of a workload before you begin migration.
 author: Zimmergren
 ms.author: tozimmergren
@@ -7,13 +7,13 @@ ms.date: 04/15/2024
 ms.topic: conceptual
 ---
 
-# Design a workload's architecture before migration
+# Design workload architecture before migration
 
 This article describes the process and considerations for designing the intended migrated state of a workload in the cloud. The article reviews activities that are part of defining a workload's architecture within an iteration.
 
 The article about [incremental rationalization](../../digital-estate/rationalize.md) indicates that some architectural assumptions are part of any business transformation that includes a migration. This article clarifies typical assumptions. It also points to a few roadblocks that you can avoid, and it identifies opportunities to accelerate business value by challenging architectural assumptions. This incremental model for designing architecture helps teams move faster and obtain business outcomes sooner.
 
-## Build on assumptions when you plan your architecture
+## Base architecture design on common assumptions
 
 The following assumptions are typical for any migration effort:
 
@@ -26,7 +26,7 @@ The following assumptions are typical for any migration effort:
 - **Plan to avoid network conflicts**. When you consolidate datacenters into a single cloud provider, you're likely to create conflicts in Domain Name System (DNS) or other networking structures. During migration, it's important to design to avoid these conflicts to avoid interruptions to production systems that are hosted in the cloud.
 - **Plan for routing tables**. Make sure that your project includes a plan for modifying routing tables if you consolidate networks or datacenters. Consider cross-datacenter routing requirements.
 
-### Design architecture in a landing zone
+### Design architecture for a landing zone
 
 In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../prepare/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
 
