@@ -24,9 +24,9 @@ After you replicate resources, you can perform test migrations in isolated envir
 
 Test migrations vary depending on the tooling, but generally you create a replica of your source systems that runs in parallel to the live systems. Perform tests on these secondary systems. When you complete testing, you can clean up the replicated resources without introducing any permanent changes.
 
-To perform tests, you need:
+To do tests, you need:
 
-- **An isolated network** where you test failover. Configure the network as close as possible to the intended migration network.
+- **An isolated network** where you test failover. Match the network configuration to the intended migration network configuration as much as possible.
 
 - **Isolated network access** from a source, like a point-to-site VPN, a jump box, or Azure Bastion.
 - **An authentication mechanism** to authenticate to the test environment. The test environment is isolated, so it can't use your landing zone’s identity provider.
@@ -42,7 +42,7 @@ Your migration tool should have instructions for running a test migration and cl
 
 ## Remediate testing problems
 
-After you perform testing, make sure that you:
+After you do testing, make sure that you:
 
 - **Record any discovered problems** in the remediation plan.
 - **Triage problems** based on their severity, and identify any workarounds as part of the triaging.
@@ -58,14 +58,14 @@ Here's a basic example of a testing plan output for a migration project:
 |Virtual machines deploy|&#x2705;||
 |Administrators can sign in to virtual machines|&#x2705;||
 |Internet Information Services (IIS) web services start|&#x2705;||
-|"Service 1" starts|&#x2705;||
-|"Service 2" starts|&#x274C;|Service had to be manually started|
-|Website is accessible|&#x2705;||
+|*Service 1* starts|&#x2705;||
+|*Service 2* starts|&#x274C;|Service had to be manually started|
+|Website access|&#x2705;||
 |SQL services start|&#x2705;||
-|Database is accessible|&#x2705;||
+|Database access|&#x2705;||
 |Load balancing between websites works|&#x2705;||
 |Ingress from Azure Application Gateway works|&#x274C;|Application Gateway has a certificate problem|
-|Total time for the test transaction was below 5 ms|&#x2705;||
+|Total time for the test transaction was less than 5 ms|&#x2705;||
 
 ## Next step
 
