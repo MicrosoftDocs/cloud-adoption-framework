@@ -3,7 +3,7 @@ title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: martinekuan
 ms.author: martinek
-ms.date: 01/13/2022
+ms.date: 03/26/2024
 ms.topic: article
 ms.subservice: caf-general
 ms.custom: internal, UpdateFrequency5
@@ -63,7 +63,7 @@ The Cloud Adoption Framework has tools, templates, and assessments that can help
 | [Azure Governance Visualizer accelerator](https://aka.ms/alz/azgovviz/accelerator) | The Azure Governance Visualizer accelerator speeds up the adoption and deployment of the Azure Governance Visualizer script into your environment. |
 | [Microsoft Product Placemat for CMMC L3](https://aka.ms/cmmc/productplacemat) | The Microsoft Product Placemat for CMMC Level 3 (Preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for cybersecurity maturity model certification practices. |
 | [PSRule for Azure](https://aka.ms/ps-rule-azure) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. These tests allow you to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
-| [AzAdvertizer](https://www.azadvertizer.net) | Use AzAdvertizer to stay updated with Azure governance changes. For example, policy definitions and initiatives in Azure Policy, aliases, security and regulatory compliance controls, and Azure Role-Based Access Control (RBAC) role definitions. It also helps you with resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+| [AzAdvertizer](https://www.azadvertizer.net) | Use AzAdvertizer to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure role-based access control (RBAC) role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
 
 ## Migrate
 
