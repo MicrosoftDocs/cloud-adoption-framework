@@ -1,6 +1,6 @@
 ---
 title: Design workload architecture before migration
-description: Learn how to use the Azure Cloud Adoption Framework to define the intended cloud architecture of a workload before you begin migration.
+description: Learn how to use the Cloud Adoption Framework for Azure to define the intended cloud architecture of a workload before you begin migration.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/15/2024
@@ -33,14 +33,14 @@ In the [Ready phase](../../ready/index.md) of the Cloud Adoption Framework, your
 Based on this planning, you can assume that the following migration components are in place:
 
 - Hybrid connectivity connects your Azure networks to your on-premises networks.
-- Network security appliances like Azure Firewall handle inspection of traffic outside your workload.
+- Network security appliances like Azure Firewall handle the inspection of traffic outside your workload.
 - Azure policies to enforce governance practices like logging requirements, allowed regions, disallowed services, and other controls are active.
-- A Log Analytics workspace for shared logging is set up in Azure Monitor.
+- An Azure Monitor Logs workspace for shared logging is set up in Azure Monitor.
 - Shared identity resources to support domain-joined servers or other identity needs are established.
 
 If these migration essentials aren't established, your organization should immediately revisit the Ready phase to address these needs. Without these components, your migration likely will have delays and setbacks and be less successful.
 
-The workload that you're designing has a subscription assigned to it, ideally through a [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). The subscription might contain several workloads or just one workload depending on how your organization completed its [resource organization for workloads](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions). If you migrate a workload that has many application environments, you might even have multiple subscriptions based on guidance for [application environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
+The workload that you're designing has a subscription assigned to it, ideally through a [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). The subscription might contain several workloads or just one workload depending on how your organization completed its [resource organization for workloads](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions). If you migrate a workload that has many application environments, you might even have multiple subscriptions based on the guidance for [application environments](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments).
 
 ### Design workload network architecture
 
@@ -70,9 +70,9 @@ Also, after your workload is migrated, you should continue to work to optimize w
 
 ## Know when to change your architecture
 
-Migrations tend to be focused on maintaining an existing architecture and transitioning it to your cloud platform. However, there are times when you might need to rearchitect your workload, even for migration. This list gives examples of when you might need to make architectural changes before you migrate:
+Migrations tend to focus on maintaining an existing architecture and transitioning it to your cloud platform. However, there are times when you might need to rearchitect your workload, even for migration. This list gives examples of when you might need to make architectural changes before you migrate:
 
-- **Paying for technical debt**. Some aging workloads carry a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
+- **Paying for technical debt**. Some aging workloads carry a high amount of technical debt. Technical debt can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, you should evaluate alternative architectures.
 - **Improving reliability**. Standard operation baselines provide a degree of reliability and recovery in the cloud. Some workload teams might require higher SLAs, which could lead to architectural changes.
 - **High-cost workloads**. During migration, you should optimize all assets to align sizing with actual usage. Some workloads might require architectural modifications to address specific cost concerns.
 - **Performance requirements**. When workload performance directly affects business, extra architectural consideration might be required.
@@ -91,7 +91,7 @@ You can use the following checklist to make sure that you cover critical archite
 - Confirm that your architecture meets SLAs for availability, disaster recovery, and data recovery.
 - Confirm that you applied network segmentation practices to your network design.
 - Confirm that you planned for monitoring and log capturing.
-- Confirm that your virtual machines are sized appropriately for the actual compute that you need.
+- Confirm that your virtual machines are sized appropriately for the actual computing time that you need.
 - Confirm that your disks are sized appropriately for the actual size and performance that you need.
 - Confirm that you planned for load balancing services if they're needed. The services might include instances of Azure Load Balancer, Azure Application Gateway, Azure Front Door, or Azure Traffic Manager.
 
