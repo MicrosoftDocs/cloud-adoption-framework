@@ -20,7 +20,7 @@ Management group structures within a Microsoft Entra tenant support organization
 
 - How will your organization separate out services owned or operated by specific teams?
 
-- Are there specific functions that need to be kept separate for business or operational compliance reasons?
+- Are there specific functions that need to be kept separate for business, operational, regulatory requirements, data residency, data security, data sovereignty compliance reasons?
 
 - You can use management groups to aggregate policy and initiative assignments via Azure Policy.
 
@@ -58,6 +58,8 @@ Management group structures within a Microsoft Entra tenant support organization
 
   - [Manage application development environments in Azure landing zones](./management-application-environments.md)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
+
+- Don’t create management groups only to model different Azure regions. Regions and multi-region usage is not by default a criterion to alter or expand your management group structure. In presence of region/location-based regulatory requirements (data residency, data security, and data sovereignty), then taking into consideration regions and locations can be a valid approach that can be implemented at different levels, as described in [this article](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/landing-zone-multinational).
 
 <a id='management-groups-alz'></a>
 

@@ -16,6 +16,7 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 - ownership and governance model
 - organizational structure
 - application portfolios
+- regions
 
 > [!TIP]
 > We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
@@ -49,6 +50,14 @@ The following sections contain considerations to help you plan and create subscr
   - For support, submit an [Azure Support ticket](https://azure.microsoft.com/support/create-ticket/).
 
 - See the [Azure subscription and reservation transfer hub](/azure/cost-management-billing/manage/subscription-transfer) for subscription transfers between Azure billing offers.
+
+### Multiple regions considerations
+
+- Customers can adopt a multi-region approach at single workload level, for scaling and/or geo disaster recovery, or globally (different workloads in different regions).
+- A single subscription can contains resources from different regions, depending on the requirements and architecture.
+- In a geo-disaster recovery context, the same subscription can be used to contain resources from primary and secondary regions since logically part of the same workload.
+- Different environments for the same workload can be deployed in different regions to optimize costs and resource availability.
+- In a subscription containing resources from multiple regions, resource groups can be still used to partition and group together resources that share common life-cycle management.
 
 ### Quota and capacity design considerations
 
@@ -145,6 +154,15 @@ The following sections contain recommendations to help you plan and create subsc
 - Avoid a rigid subscription model. Instead, use a set of flexible criteria to group subscriptions across your organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions, and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 
   - For more information, see [How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
+
+### Multiple regions recommendations
+
+- Subscription design should consider Azure regions usage and placement strategy and model it based on requirements and goals.
+- When used to scale across different regions, different subscriptions, where each one contains resources from only one region, is a clear and simple approach to allocate distinct workload scale units.
+- Don’t create resources from different regions in the same subscription if the environment is subject to regulatory requirements, including data residency, data security, and data sovereignty requirements.
+- If scaling is not a concern for a geo disaster recovery environment spanning multiple regions, use the same subscription for the primary and secondary regions resources. Some Azure services, depending on the BCDR strategy and tools adopted, can require usage of the same subscription. In an active-active scenario, where deployments are independently managed or have different life-cycles, using different subscriptions can be recommended.
+- If different environments of the same workload are deployed in different regions, it is recommended to use separate subscriptions.
+- The region where a resource group is created, and the regions of the contained resources, should match to improve resilience and reliability.
 
 ### Quota and capacity recommendations
 

@@ -27,6 +27,9 @@ The following tags guide implementation and processes in Cloud Adoption Framewor
 | **Operations commitment** | Level of operations support provided for this workload or resource. | *OpsCommitment* <br><br> <li> `Baseline only` <li> `Enhanced baseline` <li> `Platform operations` <li> `Workload operations` |
 | **Operations team** | Team accountable for day-to-day operations. | *OpsTeam* <br><br> <li> `Central IT` <li> `Cloud operations` <li> `ControlCharts team` <li> `MSP-{Managed Service Provider name}` |
 
+> [!NOTE]
+> In a multi-region environment, including region detail into the tagging strategy can be considered if the naming convention does not already covers the operational and management requirements. If advanced reporting or resource filtering are required, based on the Azure region where resources are deployed, and this possibility cannot be obtained through subscription organization, then tagging can be an effective way to aggregate and compare across regions and subscriptions.
+
 ## Other common tagging examples
 
 Use the following tags to increase visibility into the usage of Azure resources.
