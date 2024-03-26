@@ -1,8 +1,8 @@
 ---
 title: Azure governance design area guidance
 description: Design area guidance for governing your Azure environment
-author: timwarner-msft
-ms.author: timwarner
+author: paulgrimley
+ms.author: paulgr
 ms.reviewer: ssumner
 ms.date: 06/21/2022
 ms.topic: conceptual
@@ -114,6 +114,11 @@ Change advisory review boards might hinder an organizations innovation and busin
 - Consider the logs from Microsoft Entra ID, which might be sent to the central Log Analytics workspace for the platform.
 - Explore the capabilities of [Microsoft Entra access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
 - Explore the capabilities of [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
+
+### Third-party tooling
+
+- Use [AzAdvertizer](https://www.azadvertizer.net) to stay updated with Azure governance changes. For example, policy definitions and initiatives in Azure Policy, aliases, security and regulatory compliance controls, and Azure Role-Based Access Control (RBAC) role definitions. It also helps you with resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+- Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. The ALZ Policy Version Checker feature helps you ensure that your environment is updated with the latest ALZ Azure policy release state.
 
 ## Azure governance recommendations
 
