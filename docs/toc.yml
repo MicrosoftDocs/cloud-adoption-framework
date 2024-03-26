@@ -609,7 +609,7 @@ items:
         items:
           - name: Overview
             href: migrate/prepare/index.md
-          - name: Ready your landing zone for migration
+          - name: Prepare your landing zone for migration
             href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-backlog.md
@@ -617,7 +617,7 @@ items:
             href: migrate/prepare/select-regions-migration.md
           - name: Align roles and responsibilities
             href: migrate/prepare/roles-responsibilities.md
-          - name: Skills relevant to migration projects
+          - name: Get support resources and improve skills
             href: migrate/prepare/skills-support.md
       - name: Assess
         items:
@@ -633,7 +633,7 @@ items:
         items:
           - name: Overview
             href: migrate/deploy/index.md
-          - name: Deploy supporting services
+          - name: Deploy supporting services for migration projects
             href: migrate/deploy/deploy-supporting-services.md
           - name: Remediate assets
             href: migrate/deploy/remediate.md
