@@ -40,7 +40,7 @@ To do this, answer the following in your change communication:
 - **Post-change steps**: What work should be completed by each role after the change to confirm functionality?
 - **Get support or learn more**: Who should individuals reach out to if they have questions or challenges?
 
-Due to the number of roles involved, you might need to send out different change notifications to different audiences. There might be a broad communication that targets a general audience that explains the time frame and expected outages a more specific communication for IT resources to plan for operational actions.
+Due to the number of roles involved, you might need to send out different change notifications to different audiences. There might be a broad communication for a general audience that explains the time frame and expected outages, and then a more specific communication for IT resources to plan for operational actions.
 
 ## Example change communication content
 
