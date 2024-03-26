@@ -21,7 +21,7 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 
 **Benefits of a single tenant.** A single tenant is easier to manage and lower costs through operational efficiency. It allows you to configure a zero trust environment more easily. A single tenant avoids fragmenting the user experience with multiple sign-in credentials. It also helps prevent siloed solutions that you need to integrate later. You should strive to have your data, Microsoft 365, and Azure cloud services in a single tenant. If you already have multiple Microsoft Entra tenants, you should consider consolidating your environment to use a single tenant. You can consolidate tenants by transferring Azure subscriptions from your secondary tenants to the primary tenant. For more information, see [transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription).
 
-**Multi-tenant use cases.** There are reasons for a defense organization to use a multitenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
+**Multitenant use cases.** There are reasons for a defense organization to use a multitenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
 
 *Table 1. Reasons to have or create multiple tenants.*
 
@@ -43,7 +43,7 @@ Multitenant defense organizations can categorize Microsoft Entra instances they 
 
 Some defense organizations consume Microsoft 365 in a shared tenant owned and operated by an outside agency. This agency acts as a shared service provider for Microsoft 365. Your organization might not manage or control the shared tenant, but it contains the licensed Microsoft Entra identities your users likely use for Office 365 and other applications. In this scenario, the shared service provider tenant is your primary tenant.
 
-**Identify all secondary tenants (if multi-tenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if you migrated applications to the cloud before standing up an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). You typically use secondary tenants to manage (4) Azure workloads with external users (B2B guests) or (5) cloud only accounts (*see figure 1*).
+**Identify all secondary tenants (if multitenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if you migrated applications to the cloud before standing up an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). You typically use secondary tenants to manage (4) Azure workloads with external users (B2B guests) or (5) cloud only accounts (*see figure 1*).
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity licenses you have in Microsoft Entra ID.
 
@@ -54,7 +54,7 @@ If your organization doesn’t use Microsoft 365, any Microsoft Entra tenant wit
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if a Microsoft Entra tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. A decision tree to determine the Microsoft Entra primary tenant and secondary tenant.*
 
-To establish Microsoft Entra ID as a zero trust platform, you need a tenant populated with your user identities and licensed for user and device-based access policies.  Microsoft 365 licensing bundles these zero trust capabilities with Office 365. If you don't use Microsoft 365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
+To establish Microsoft Entra ID as a zero trust platform, you need a tenant populated with your user identities and licensed for user and device-based access policies. Microsoft 365 licensing bundles these zero trust capabilities with Office 365. If you don't use Microsoft 365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
 
 ## Configure zero trust
 
@@ -151,18 +151,18 @@ You should implement the following recommendations in the secondary tenant.
 
 **Procure licenses required for Microsoft Entra management**. You need licenses to turn on advanced security features in secondary tenants. Consider the licenses you need for users, workloads, and devices.
 
-*User identities.* You need to have [Microsoft Entra ID P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multitenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
+*User identities.* You need to have [Microsoft Entra ID Premium P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID Premium P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multitenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
 *Workload identities.* You should use [workload identities premium](/azure/active-directory/workload-identities/workload-identities-overview) to secure workload identities with access to resources in the primary tenant, such as MS Graph API.
 
-*Device management.* You might need manage devices with Microsoft Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
+*Device management.* You might need to manage devices with Microsoft Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
 **Configure cross-tenant access policies (XTAP).** Microsoft Entra External ID (Microsoft Entra B2B collaboration) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Microsoft Entra tenant as an organization and update the [inbound trust settings](/graph/api/resources/crosstenantaccesspolicy-overview) to include:
 
 - Trust multifactor authentication (MFA) from Microsoft Entra tenants
 - Trust compliant devices
 - Trust Microsoft Entra hybrid joined devices
-- Optional: Automatically redeem invitations with the tenant.
+- Optional: Automatically redeem invitations with the tenant
 
 **Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Microsoft Entra roles following [least-privilege Microsoft Entra role by task](/azure/active-directory/roles/delegate-by-task) using [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user). Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview) to reduce management overhead onboarding external identities in the secondary tenant.
 
@@ -171,7 +171,7 @@ You should implement the following recommendations in the secondary tenant.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage multi-tenant operations](manage-operations.md)
+> [Manage multitenant operations](manage-operations.md)
 
 ## Related links
 
