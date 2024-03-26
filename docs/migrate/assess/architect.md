@@ -28,7 +28,7 @@ The following assumptions are typical for any migration effort:
 
 ### Architecture design in a landing zone
 
-In the [Ready](../../ready/index.md) phase of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Readying your landing zone for migration](../prepare/ready-alz.md), you prepared the landing zone to receive migrated workloads.
+In the [Ready](../../ready/index.md) phase of the Cloud Adoption Framework, your organization deployed shared platform services as part of adopting [Azure landing zones](../../ready/landing-zone/index.md). In [Ready your landing zone for migration](../prepare/ready-azure-landing-zone.md), you prepared the landing zone to receive migrated workloads.
 
 Because you finished this planning, you can assume that the following migration components are in place:
 
