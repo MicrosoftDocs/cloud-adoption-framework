@@ -649,7 +649,7 @@ items:
             href: migrate/release/index.md
           - name: Change communication
             href: migrate/release/change-communication.md
-          - name: Business testing
+          - name: Perform business testing
             href: migrate/release/business-test.md
           - name: Complete migration
             href: migrate/release/complete-migration.md

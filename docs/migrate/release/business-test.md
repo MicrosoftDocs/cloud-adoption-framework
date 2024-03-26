@@ -1,17 +1,17 @@
 ---
-title: Guidance for business testing during migration
-description: Learn how business testing, or User Acceptance Testing (UAT), is used to validate that solution performance is in line with expectations.
+title: Perform business testing during a migration
+description: Learn how business testing, or user acceptance testing (UAT), is used to validate that solution performance is in line with expectations.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
-# Guidance for business testing during migration
+# Perform business testing during a migration
 
 While the migration team facilitates the migration of a workload to Azure, testing of a workload is best performed by the business users of that workload. The migration team supports this business activity by facilitating workload testing, developing testing plans, and automating tests when possible.
 
-During business testing, or User Acceptance Testing (UAT), you observe real users attempting to use the new solution in the context of a real or replicated business process.
+During business testing, or user acceptance testing (UAT), you observe real users attempting to use the new solution in the context of a real or replicated business process.
 
 > [!NOTE]
 > **Automated testing isn't always available**.
@@ -50,7 +50,7 @@ Typical activities that the migration team performs during business testing incl
 
 You can use the following as a reference to build your testing plan:
 
-|Test|Steps|Succeeded?|Tester notes|
+|Test|Steps|Successful/unsuccessful|Tester notes|
 |---|---|---|---|
 |Sign in|Sign in using your normal credentials. Confirm that you see the same information as the production system.|&#x2705;|No remarks|
 |Create new record|Create a new record in the system and confirm that all workflow jobs run appropriately.|&#x2705;|No remarks|
