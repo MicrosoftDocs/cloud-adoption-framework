@@ -11,39 +11,40 @@ ms.custom: internal, UpdateFrequency.5
 
 # Design area: Azure governance
 
-Azure governance establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
+Use Azure governance to establish the tooling that you need to support cloud governance, compliance auditing, and automated guardrails.
 
 ## Design area review
 
-**Involved roles or functions:** Azure governance is led by [cloud governance](../../../organize/cloud-governance.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) might be required to define and implement some technical requirements. Governance focuses on the enforcement of operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md) or [cloud operations](../../../organize/cloud-operations.md).
+**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply some technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
 
-**Scope:** Review decisions made during reviews of [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design areas. The team might compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions might help determine what can be audited or enforced. Review decisions might evaluate what policies can be automatically deployed.
+**Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team might compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions might help you determine what to audit or enforce and what policies to automatically deploy.
 
-**Out of scope:** Azure governance establishes the foundation for networking. However, it doesn't address compliance-related articles such as advanced network security or automated guardrails to enforce networking decisions. These networking decisions might be addressed when reviewing compliance design areas related to [security](./security.md) and [governance](./governance.md). Delaying the discussions might allow the cloud platform team to address initial networking requirements before addressing more complex articles.
+**Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related articles such as advanced network security or automated guardrails to enforce networking decisions. You might address these networking decisions when reviewing compliance design areas related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex articles.
 
-**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your new Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+**New (greenfield) cloud environment:** To start your cloud journey, [create a small set of subscriptions](../../azure-best-practices/initial-subscriptions.md). You can use Bicep deployment templates to create your new Azure landing zones. For more information, see [Azure landing zones Bicep - Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
-**Existing (brownfield) cloud environment:** Consider the following if you're interested in applying proven-practice Azure governance principles to existing Azure environments:
+**Existing (brownfield) cloud environment:** If you want to apply proven-practice Azure governance principles to existing Azure environments, consider the following guidance:
 
-- Review our guidance for establishing a [management baseline](./management.md) for your hybrid or multicloud environment
-- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
-- Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state
-- Consider [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
+- Establish a [management baseline](./management.md) for your hybrid or multicloud environment.
+
+- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features, like billing scopes, budgets, and alerts to ensure that you don't exceed your expense limit.
+- Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state.
+- Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration.
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
-The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains many Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice governance guidance integrated within them.
+The [Azure landing zones Bicep - Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
 
-For instance, consider using the [ALZ Default Policy Assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
+Consider using the [Azure landing zone default policy assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
 
-For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
+For more information, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ## Design area overview
 
-An organizations cloud adoption journey starts with strong controls to government environments.
+Your organizations cloud adoption journey starts with strong controls for government environments.
 
 Governance provides mechanisms and processes for maintaining control over platforms, applications, and resources in Azure.
 
-![Landing zone image](../../enterprise-scale/media/lz-design.png)
+![Diagram that shows the landing zone governance design.](../../enterprise-scale/media/lz-design.png)
 
 The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
 
