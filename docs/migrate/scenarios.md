@@ -3,15 +3,13 @@ title: Product migration guidance
 description: Get an overview of product migration scenarios that demonstrate how you can migrate to Microsoft Azure for various applications and services.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 01/16/2024
+ms.date: 03/25/2024
 ms.topic: conceptual
 ---
 
 # Product migration guidance
 
-This article contains examples of several common migration scenarios and demonstrates how you can migrate to [Microsoft Azure](https://azure.microsoft.com/overview/what-is-azure/).
-
-See each section below for relevant migration guidance for specific applications or products.
+Specific migration scenarios require different approaches and tools. In this article, you'll find a collection of links to migration guidance for specific products and services.
 
 ## AWS
 
