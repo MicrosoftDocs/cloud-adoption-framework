@@ -15,7 +15,7 @@ This phase guides you through releasing your deployed workloads to production us
 
 ## Carry out the migration
 
-When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data in a properly configured state, or as a replicated server through a migration tool. From a technical perspective, all that remains to do is to start the final migration tasks and send traffic over to the new location.
+When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data in a properly configured state or as a replicated server through a migration tool. From a technical perspective, all that remains to do is to start the final migration tasks and send traffic over to the new location.
 
 However, you need to do more to make sure the migration is successful. Clear communication with the business and support teams is critical, as is finalizing activities, including a proper retrospective, after the migration.
 
@@ -30,8 +30,8 @@ The following table gives an overview of the activities that are documented in t
 |[Plan change communication](./change-communication.md)|Contains guidance and examples for how to communicate the upcoming change to the business and IT teams.|<li>Project Manager<br><li>Organizational Change Manager|
 |[Conduct business testing](./business-test.md)|Contains guidance on how to conduct business testing to ensure that the functionality and usability of the workload remains the same after you migrate it to the cloud.|<li>Project Manager<br><li>Workload Business Owner<br><li>Workload Architect<br><li>User Acceptance Tester|
 |[Complete the migration](./complete-migration.md)|Contains guidance for how to conduct your migration release window.|<li>Migration Architect<br><li>Migration Engineer|
-|[Optimize costs after the migration](./optimize-cost-after-migration.md)|Contains resources for optimizing workload costs after the migration.|<li>Workload Architects<br><li>Cloud Operations Manager<br><li>Project Manager|
-|[Conduct a retrospective](./retrospective.md)|Contains guidance on how to do retrospectives to improve the migration of future workloads.|<li>Workload Architects<br><li>Cloud Operations Manager|
+|[Optimize costs after the migration](./optimize-cost-after-migration.md)|Contains resources for optimizing workload costs after the migration.|<li>Workload Architect<br><li>Cloud Operations Manager<br><li>Project Manager|
+|[Conduct a retrospective](./retrospective.md)|Contains guidance on how to do retrospectives to improve the migration of future workloads.|<li>Workload Architect<br><li>Cloud Operations Manager|
 
 ## Next step
 
