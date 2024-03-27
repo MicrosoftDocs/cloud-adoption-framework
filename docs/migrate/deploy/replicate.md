@@ -20,13 +20,13 @@ The replication process consists of the following steps:
 
 ## Prerequisites for replication
 
-Prior to replication, you should complete the activities in the [prepare](../prepare/index.md) and [assessment](../assess/index.md) phases. To begin replicating, you need to have:
+Before replication, you should complete the activities in the [prepare](../prepare/index.md) and [assessment](../assess/index.md) phases. To begin replicating, you need to have:
 
 - A subscription for your migrated resources.
 
 - A migration tool to move the binary copies over.
 - The source binaries, prepared for replication and synchronization. Their exact configuration depends on your migration tool. Preparation includes remediating any replication problems that you found in the assessment phase. For an example of how to initiate replication, see [Migrate from VMware via agentless migration](/azure/migrate/tutorial-migrate-vmware).
-- Any dependencies for your workload that you identified during the [workload architecture design](../assess/architect.md) step. These dependencies can include resource groups, virtual networks, and subnets that you intend to deploy the replicated virtual machines inside of. For more information, see [Deploy supporting services](../deploy/deploy-supporting-services.md).
+- Any dependencies for your workload that you identified during the [workload architecture design](../assess/architect.md) step. These dependencies can include resource groups, virtual networks, and subnets in which you intend to deploy the replicated virtual machines. For more information, see [Deploy supporting services](../deploy/deploy-supporting-services.md).
 
 ## Replication risks: Physics of replication
 
@@ -38,7 +38,7 @@ When you plan and perform binary source replication to a new destination, consid
 
 - **Speed of WAN expansion**: If budget allows, you can add more bandwidth to your company's WAN solution. But it can take weeks or months to procure, prepare, and integrate more fiber connections.
 
-- **Speed of disks**: Even with infinite data speed and an infinite bandwidth limit between the source binary and the target destination, physics still limits replication. Data replication occurs only as quickly as it can be read from source disks. It takes time to read every one or zero from every spinning disk in a datacenter.
+- **Speed of disks**: Even with infinite data speed and an infinite bandwidth limit between the source binary and the target destination, physics still limits replication. Data replication occurs only as quickly as source disks can read the data. It takes time to read every one or zero from every spinning disk in a datacenter.
 
 - **Speed of human calculations**: Disks and light move faster than human decision processes. When a group of people collaborate and make decisions together, the results come slowly. Replication can't overcome delays related to human calculations.
 
@@ -52,7 +52,7 @@ Each of these laws of physics drives the following risks that commonly affect mi
 
 - **Cumulative effect of disk drift**: From the point of replication to the promotion of an asset to production, the source and destination binaries must remain synchronized.
 
-  *Drift* in binaries consumes extra bandwidth because changes to the binary must be replicated on a recurring basis. During synchronization, the calculation for total migration storage includes all binary drift. The longer it takes to promote an asset to production, the more cumulative drift occurs. The more synchronized assets, the more consumed bandwidth. For each asset in a synchronization state, you have less total available migration bandwidth available.
+  *Drift* in binaries consumes extra bandwidth because you must replicate changes to the binary on a recurring basis. During synchronization, the calculation for total migration storage includes all binary drift. The longer it takes to promote an asset to production, the more cumulative drift occurs. The more synchronized assets that you have, the more bandwidth you consume. For each asset in a synchronization state, you have less total available migration bandwidth available.
 
 - **Time-to-business change**: Synchronization time has a cumulative negative effect on migration speed. Prioritization of the migration backlog and advanced preparation for the [change communication](../release/change-communication.md) plan are crucial to the speed of migration.
 
@@ -64,7 +64,7 @@ In a cloud migration, you replicate and synchronize assets over a network betwee
 
 If your assessment, initial replication, or testing identifies a capacity problem, consider using [Azure Data Box](/azure/databox/data-box-overview) to transfer independent data stores. Use this approach to ship large volumes of data to the cloud before the workload migration.
 
-Some third-party partner solutions also use Data Box for migrations. With these solutions, you can move a large volume of data via an offline transfer, but you synchronize it later at a lower scale over the network.
+Some non-Microsoft partner solutions also use Data Box for migrations. With these solutions, you can move a large volume of data via an offline transfer, but you synchronize it later at a lower scale over the network.
 
 ## Next step
 
