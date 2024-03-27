@@ -197,7 +197,7 @@ Sandboxes often follow the networking configuration approach of the online produ
 #### Use the sandbox product line when
 
 - To provide a safe, secure, governed Azure subscription to anyone across the organization when they are looking to experiment, PoC, MVP in Azure.
-  - These must be lightly governed and allow access to all services so that it does not force them to consider “shadow IT” practices.
+  - These must be lightly governed and allow access to all services so that it does not force them to consider "shadow IT" practices.
 
 ### Other important notes about the sandbox product line
 
