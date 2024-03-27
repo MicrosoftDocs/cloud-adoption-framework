@@ -15,9 +15,9 @@ This phase guides you through releasing your deployed workloads to production us
 
 ## Carry out the migration
 
-When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data in a properly configured state, or as a replicated server through a migration tool. From a technical consideration, all that remains to do is to start the final migration tasks and send traffic over to the new location.
+When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data in a properly configured state, or as a replicated server through a migration tool. From a technical perspective, all that remains to do is to start the final migration tasks and send traffic over to the new location.
 
-However, you need to do more to make sure you have a successful migration. Clear communication with the business and support teams is critical, as is finalizing activities, including a proper retrospective, after migration.
+However, you need to do more to make sure the migration is successful. Clear communication with the business and support teams is critical, as is finalizing activities, including a proper retrospective, after the migration.
 
 Failure to communicate, test, or successfully migrate resources can create outages and business disruptions. A failure to decommission retired assets or optimize workloads can lead to a failure to achieve the business outcomes of the migration. To avoid these problems, you need to finish the migration strong.
 
