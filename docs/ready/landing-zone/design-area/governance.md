@@ -1,10 +1,10 @@
 ---
-title: Azure governance design area guidance
-description: Design area guidance for governing your Azure environment
+title: Azure governance design area
+description: Explore the design area for governing your Azure environment to establish tooling to support cloud governance, compliance auditing, and automated guardrails.
 author: paulgrimley
 ms.author: paulgr
 ms.reviewer: ssumner
-ms.date: 03/26/2024
+ms.date: 03/27/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -46,9 +46,9 @@ Governance provides mechanisms and processes for maintaining control over platfo
 
 ![Diagram that shows the landing zone governance design.](../../enterprise-scale/media/lz-design.png)
 
-The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
+Explore the following considerations and recommendations to make informed decisions as you plan your landing zone.
 
-The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) of the Cloud Adoption Framework gives guidance for governance processes and tools.
+The governance design area focuses on the design decisions in the landing zone. For information about governance processes and tools, see [Governance in the Cloud Adoption Framework for Azure](../../../govern/index.md).
 
 The Govern methodology consists of five disciplines:
 
@@ -89,39 +89,35 @@ Change advisory review boards can hinder your organization's innovation and busi
 - Use Azure policies to allow specific regions, resource types, and resource SKUs.
 - Use the rule-based policy of Azure Storage lifecycle management to move blob data to the appropriate access tiers or to expire data at the end of the data lifecycle.
 - Use Azure dev/test subscriptions to get access to select Azure services for nonproduction workloads at a discount.
-- Use automatic scaling to dynamically allocate and de-allocate resources to match your performance needs, which saves money.
+- Use automatic scaling to dynamically allocate and deallocate resources to match your performance needs, which saves money.
 - Use Azure Spot Virtual Machines to take advantage of unused compute capacity at a low cost. Spot Virtual Machines is great for workloads that can handle interruptions, for example batch-processing jobs, dev/test environments, and large compute workloads.
 - Select the right Azure services to help reduce costs. Some Azure services are free for 12 months and some are always free.
 - Select the right compute service for your application to help with cost efficiency. Azure offers many ways to host your code.
 
 ### Resource consistency considerations
 
-- What are the groups of resources in your environment? These groups can share configuration characteristics that might be required to help stay consistent.
+- Determine if the groups of resources in your environment can share required configurations, a common lifecycle, or common access constraints (such as RBAC) to help provide consistency.
 
-- Is the application or workload subscription design the most appropriate for your operation needs?
-- Are there groups of resources that should share a common lifecycle?
-- Are there groups of resources that should share common access constraints (such as Role-based access control)?
-- Are there standard resource configurations within your organization that might be used to ensure a consistent baseline configuration?
+- Choose an application or workload subscription design that's appropriate for your operation needs.
+- Use standard resource configurations within your organization to ensure a consistent baseline configuration.
 
 ### Security baseline considerations
 
-- What tools and guardrails need to be enforced across the environment as part of a security baseline?
+- Enforce tools and guardrails across the environment as part of a security baseline.
 
-- Who might be notified when deviations are found?
-- Consider using Azure Policy to enforce tools (such as Microsoft Defender for Cloud, Microsoft Defender for Cloud).
-- Consider using Azure Policy to enforce guardrails (such as the Microsoft cloud security benchmark).
+- Notify the appropriate people when you find deviations.
+- Consider using Azure Policy to enforce tools, such as Microsoft Defender for Cloud, or guardrails, such as the Microsoft cloud security benchmark.
 
 ### Identity management considerations
 
-- Who might have access to audit logs for identity and access management?
+- Determine who has access to audit logs for identity and access management.
 
-- Who might be notified when suspicious sign-in events occur?
-- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity.
-- Consider the logs from Microsoft Entra ID, which might be sent to the central Log Analytics workspace for the platform.
-- Explore the capabilities of [Microsoft Entra access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
-- Explore the capabilities of [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
+- Notify the appropriate people when suspicious sign-in events occur.
+- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports) to govern activity.
+- Consider sending Microsoft Entra ID logs to the central Azure Monitor Logs workspace for the platform.
+- Explore Microsoft Entra ID Governance features, like [access reviews](/azure/active-directory/governance/access-reviews-overview) and [entitlement management](/azure/active-directory/governance/entitlement-management-overview).
 
-### Third-party tooling
+### Non-Microsoft tooling
 
 - Use [AzAdvertizer](https://www.azadvertizer.net) to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
 
@@ -131,29 +127,29 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 ### Deployment acceleration recommendations
 
-- Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
+- Identify required Azure tags and use the append policy mode to enforce usage. For more information, see [Define your tagging strategy](../../azure-best-practices/resource-tagging.md).
 
 - Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
-- Establish Azure Policy definitions at the top-level root management group as they might be assigned at inherited scopes.
+- Establish Azure Policy definitions at the top-level root management group because they might be assigned at inherited scopes.
 - Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
 - Use Azure Policy to control resource provider registrations at the subscription or management group levels.
 - Use built-in policies to minimize operational overhead.
-- Assign the built-in Resource Policy Contributor role at a particular scope to enable application-level governance.
-- Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
+- Assign the built-in Resource Policy Contributor role at a specific scope to enable application-level governance.
+- Limit the number of Azure Policy assignments at the root management group scope to avoid managing exclusions at inherited scopes.
 
 ### Cost management recommendations
 
 - Use Cost Management to implement financial oversight on resources in your environment.
 
-- Use tags in Azure to append metadata to resources, which might enable granular analysis of spend (such as cost center or project name).
+- Use tags, such as the cost center or project name, to append the metadata to resources. This approach helps enable granular analysis of expenses.
 
 ## Azure governance in the Azure landing zone accelerator
 
-The Azure landing zone accelerator implementation includes capabilities to help organizations efficiently get mature governance controls.
+The Azure landing zone accelerator provides organizations with mature governance controls.
 
-For example:
+For example, you can implement:
 
-- A management group hierarchy that groups resources by function or workload type might encourage best practices for resource consistency.
+- A management group hierarchy that groups resources by function or workload type. This approach encourages resource consistency.
 
-- A rich set of Azure policies might enable governance controls at management group level to ensure all resources are in scope.
+- A rich set of Azure policies that enables governance controls at the management group level. This approach helps ensure that all resources are in scope.
 
