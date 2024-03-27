@@ -93,7 +93,7 @@ This is a popular product line for subscription vending as it aligns closely wit
 
 #### Use the corp connected product line when
 
-- Rehost & refactor migrations and application builds; based on [the five Rs of rationalization](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization)
+- Rehost & refactor migrations and application builds; based on [the five Rs of rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization)
 - You are starting your journey in Azure and are familiar with a similar on-premises architecture
 - You are looking to "lift and shift" applications into Azure
 - There is a desire to also enhance the security between workloads by isolating applications into their own landing zone subscriptions and moving towards micro-segmentation principles from zero-trust without re-architecting the application to be fully cloud native, yet.
