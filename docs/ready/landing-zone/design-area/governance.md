@@ -54,47 +54,50 @@ The Govern methodology consists of five disciplines:
 
 |Discipline|Context|
 |-|-|
-| Cost management| Explore guidance to cost reporting control techniques|
-| Security baseline| Explore further in the [security design area](./security.md)|
-| Resource consistency| Explore guidance for naming and tagging resources in the environment governance |
-| Identity baseline| Covered in depth in the [identity and access management](./identity-access.md) design area|
-| Deployment acceleration| Explore further in the [platform automation and DevOps](./platform-automation-devops.md) design area|
+| Cost management| See guidance for cost reporting control techniques.|
+| Security baseline| Explore the [security design area](./security.md).|
+| Resource consistency| See guidance for naming and tagging resources in the environment governance. |
+| Identity baseline| Explore the [identity and access management](./identity-access.md) design area.|
+| Deployment acceleration| Explore the [platform automation and DevOps](./platform-automation-devops.md) design area.|
 
 ## Azure governance considerations
 
-Azure policy ensures security and compliance for enterprise technical estates. Azure policy might enforce vital management and security conventions across Azure platform services. Azure policy supplements Azure role-based access control, which controls authorized users actions. Also, Cost Management might help support your ongoing governance cost and spending in Azure, or other multicloud environments.
+Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls authorized users actions. Also, Cost Management can help support your ongoing governance cost and spending in Azure or other multicloud environments.
 
 ### Deployment acceleration considerations
 
-Change advisory review boards might hinder an organizations innovation and business agility. Azure Policy increases workload efficiency by replacing such reviews with automated guardrails and adherence audits.
+Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
-- Determine what Azure policies are needed based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a stating point.
+- Determine what Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
+
 - Use the [standards-based blueprint samples](/azure/governance/blueprints/samples) to consider other policies that might align to your business requirements.
-- Enforce networking, identity, management, and security conventions are often automated.
-- Manage and create policy assignments by using policy definitions, which might be reused at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
+- Enforce automated networking, identity, management, and security conventions.
+- Use policy definitions to manage and create policy assignments, and reuse them at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
 - Ensure continuous compliance with compliance reporting and auditing.
-- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+- Understand that [Azure Policy has limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), such as the restriction of definitions at any particular scope.
 - Understand regulatory compliance policies. The policies might include HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
 
 ### Cost management considerations
 
-- How is the organizations cost and recharging model structured? What are the key data points required to accurately see cloud services spend?
-- Finding the structure of tags that fits your cost and recharging model might help track your cloud spend.
-- Azure pricing calculator can be used to estimate the expected monthly costs for using any combination of Azure products.
-- Azure Hybrid Benefit might help reduce the costs of running your workloads in the cloud. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. It also applies to Red Hat and SUSE Linux subscriptions.
-- Azure Reservations helps you save money by committing to one-year or three-year plans for multiple products. Committing let's you get resource discounts, which might significantly reduce your resource costs by up to 72% from pay-as-you-go prices.
-- Azure savings plan for compute is our most flexible savings plan and generates savings up to 65 percent on pay-as-you-go prices. Pick a one-year or three-year commitment that will apply to compute services regardless of region, instance size, or operating system. Eligible compute services include virtual machines, dedicated hosts, container instances, Azure premium functions, and Azure app services. You can combine an Azure savings plan with Azure Reservations to optimize compute cost and flexibility. For more information, see [Azure savings plan](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview).
-- Azure policies can be used to allow specific regions, resource types, and resource SKUs.
-- Azure Storage lifecycle management offers a rule-based policy. The policy might be used to move blob data to the appropriate access tiers, or to expire data at the end of the data lifecycle.
-- Azure dev/test subscriptions give you access to select Azure services for nonproduction workloads at discounted pricing.
-- Use autoscaling to save costs by dynamically allocating and de-allocating resources to match your performance needs.
-- Using Azure spot virtual machines allows you to take advantage of our unused capacity at a significant cost savings. Azure spot virtual machines are great for workloads that can handle interruptions. For example, batch processing jobs, dev/test environments, large compute workloads, and more.
-- Some Azure services are free for 12 months while some other services are always free. Selecting the right Azure services helps you reduce costs.
-- Selecting the right compute service for your application can help with cost efficiency. Azure offers many ways to host your code.
+- Consider the structure of your organization's cost and recharging model. Determine the key data points that accurately convey your cloud services spend.
+
+- Choose the structure of tags that fits your cost and recharging model to help track your cloud spend.
+- Use the Azure pricing calculator to estimate the expected monthly costs for using Azure products.
+- Get Azure Hybrid Benefit to help reduce the cost of running your workloads in the cloud. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. You can also use Red Hat and SUSE Linux subscriptions.
+- Get Azure reservations and commit to one-year or three-year plans for multiple products. Reservation plans provide resource discounts, which can significantly reduce your resource costs by up to 72% compared to pay-as-you-go prices.
+- Get the [Azure savings plan for compute](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) to save up to 65% compared to pay-as-you-go prices. Pick a one-year or three-year commitment that applies to compute services, regardless of your region, instance size, or operating system. Pick a plan for compute services, like virtual machines, dedicated hosts, container instances, Azure premium functions, and Azure app services. Combine an Azure savings plan with Azure reservations to optimize compute cost and flexibility.
+- Use Azure policies to allow specific regions, resource types, and resource SKUs.
+- Use the rule-based policy of Azure Storage lifecycle management to move blob data to the appropriate access tiers or to expire data at the end of the data lifecycle.
+- Use Azure dev/test subscriptions to get access to select Azure services for nonproduction workloads at a discount.
+- Use automatic scaling to dynamically allocate and de-allocate resources to match your performance needs, which saves money.
+- Use Azure Spot Virtual Machines to take advantage of unused compute capacity at a low cost. Spot Virtual Machines is great for workloads that can handle interruptions, for example batch-processing jobs, dev/test environments, and large compute workloads.
+- Select the right Azure services to help reduce costs. Some Azure services are free for 12 months and some are always free.
+- Select the right compute service for your application to help with cost efficiency. Azure offers many ways to host your code.
 
 ### Resource consistency considerations
 
 - What are the groups of resources in your environment? These groups can share configuration characteristics that might be required to help stay consistent.
+
 - Is the application or workload subscription design the most appropriate for your operation needs?
 - Are there groups of resources that should share a common lifecycle?
 - Are there groups of resources that should share common access constraints (such as Role-based access control)?
@@ -103,6 +106,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 ### Security baseline considerations
 
 - What tools and guardrails need to be enforced across the environment as part of a security baseline?
+
 - Who might be notified when deviations are found?
 - Consider using Azure Policy to enforce tools (such as Microsoft Defender for Cloud, Microsoft Defender for Cloud).
 - Consider using Azure Policy to enforce guardrails (such as the Microsoft cloud security benchmark).
@@ -110,6 +114,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 ### Identity management considerations
 
 - Who might have access to audit logs for identity and access management?
+
 - Who might be notified when suspicious sign-in events occur?
 - Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity.
 - Consider the logs from Microsoft Entra ID, which might be sent to the central Log Analytics workspace for the platform.
@@ -118,7 +123,8 @@ Change advisory review boards might hinder an organizations innovation and busin
 
 ### Third-party tooling
 
-- Use [AzAdvertizer](https://www.azadvertizer.net) to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure role-based access control (RBAC) role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+- Use [AzAdvertizer](https://www.azadvertizer.net) to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+
 - Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. The Azure landing zone policy version checker feature helps ensure that your environment has the latest Azure landing zone policy release state.
 
 ## Azure governance recommendations
@@ -126,6 +132,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 ### Deployment acceleration recommendations
 
 - Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
+
 - Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
 - Establish Azure Policy definitions at the top-level root management group as they might be assigned at inherited scopes.
 - Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
@@ -137,6 +144,7 @@ Change advisory review boards might hinder an organizations innovation and busin
 ### Cost management recommendations
 
 - Use Cost Management to implement financial oversight on resources in your environment.
+
 - Use tags in Azure to append metadata to resources, which might enable granular analysis of spend (such as cost center or project name).
 
 ## Azure governance in the Azure landing zone accelerator
@@ -146,5 +154,6 @@ The Azure landing zone accelerator implementation includes capabilities to help 
 For example:
 
 - A management group hierarchy that groups resources by function or workload type might encourage best practices for resource consistency.
+
 - A rich set of Azure policies might enable governance controls at management group level to ensure all resources are in scope.
 
