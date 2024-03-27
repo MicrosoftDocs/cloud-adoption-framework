@@ -74,11 +74,11 @@ By providing these common subscription vending product lines for platform teams 
 
 The following common product lines for subscription vending that will be detailed are:
 
-- Corp Connected
-- Online
-- Tech Platform
-- Shared Application Portfolio
-- Sandbox
+- [Corp Connected](#corp-connected)
+- [Online](#online)
+- [Tech Platform](#tech-platform)
+- [Shared Application Portfolio](#shared-application-portfolio)
+- [Sandbox](#sandbox)
 
 ### Corp Connected
 
