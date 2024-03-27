@@ -1,70 +1,73 @@
 ---
-title: Migration testing in Azure
+title: Test your migration in Azure
 description: Learn how to perform migration testing in Azure to ensure that your architecture works with the replicated or staged resources.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/20/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
-# Migration testing in Azure
+# Test your migration in Azure
 
-Once you have your workloads replicated or staged and the supporting services available, you can begin your migration testing. This is focused primarily on two areas:
+After you replicate or stage your workloads and ensure that supporting services are available, you can begin your migration testing. Migration testing primarily focuses on two areas:
 
-- **Architecture:** Testing that your architecture works with the replicated or staged resources.
-- **Management routines:** Testing that your plan to manage the migrated resources are functional.
+- **Architecture**: Test your architecture to ensure that it works with the replicated or staged resources.
+- **Management routines**: Test your management plan for the migrated resources to ensure that it's functional.
 
-Unlike [business testing](../release/business-test.md), migration testing is focused on IT activities.
+Unlike [business testing](../release/business-test.md), migration testing focuses on IT activities.
 
-As you identify issues, you can add them to your [remediation plan](../deploy/remediate.md). Once you addressed all issues, you're ready to proceed to release.
+As you identify problems, you can add them to your [remediation plan](../deploy/remediate.md). After you address all the problems, you can proceed to the workload release.
 
-## Performing test migrations
+## Perform test migrations
 
-Once you have replicated resources, you can perform test migrations in isolated environments to do testing without impacting production workloads.
+After you replicate resources, you can perform test migrations in isolated environments to ensure that you don't affect production workloads.
 
-Test migrations vary by tooling but generally create a replica of your source systems that can run in parallel to the live systems. Perform tests on these secondary systems, and when testing is complete, clean them up without any permanent changes to the replicating resources.
+Test migrations vary depending on the tooling, but generally you create a replica of your source systems that runs in parallel to the live systems. Perform tests on these secondary systems. When you complete testing, you can clean up the replicated resources without introducing any permanent changes.
 
-To do this, you need:
+To do tests, you need:
 
-- **An isolated network:** An isolated virtual network to test failover inside, configured as close as possible to the intended migration network.
-- **Isolated network access:** A way to access the isolated network, like a point-to-site VPN, a jump box, or Azure Bastion.
-- **Authentication mechanism:** A way to authenticate to the test environment. Because the environment is isolated, it isn't able to use your landing zone’s identity provider.
-  - You might use a test-migrated domain controller that is deployed to the environment with the test migration resources. This would be cleaned up with the resources.
-  - Alternatively, your isolated network might have a test domain controller in it. This network is then peered to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore state when testing is done to avoid making changes to the live identity provider.
+- **An isolated network** where you test failover. Match the network configuration to the intended migration network configuration as much as possible.
 
-Your migration tool should have instructions for executing a test migration and cleaning it up after you execute your testing plan.
+- **Isolated network access** from a source, like a point-to-site VPN, a jump box, or Azure Bastion.
+- **An authentication mechanism** to authenticate to the test environment. The test environment is isolated, so it can't use your landing zone’s identity provider.
+  
+  You might use a test-migrated domain controller that you deploy to the test environment with the test migration resources. After testing, clean up the domain controller with the resources.
+  
+  Alternatively, your isolated network might have a test domain controller in it. Peer the network to allow for replication of Active Directory traffic. You can take a snapshot of the domain controller in Azure, and then delete the peer for testing purposes to isolate the network. You can seize any necessary roles, and then restore the state when you complete testing to avoid making changes to the live identity provider.
+
+Your migration tool should have instructions for running a test migration and cleaning it up after you run your testing plan.
 
 > [!TIP]
-> You can use the same environment for [business testing](../release/business-test.md).
+> You can also use this testing environment for [business testing](../release/business-test.md).
 
-## Remediating testing issues
+## Remediate testing problems
 
-After testing, ensure you check these things:
+After you do testing, make sure that you:
 
-- **Discovered issues:** Any discovered issues should be recorded into the remediation plan.
-- **Remediation plan triaging:** Issues should be triaged based on severity, and any workarounds should be identified as part of triaging.
-- **Document workarounds:** If the workaround can be used as part of the migration, you might not need to remediate the issue.
-- **Start with non-workaround items:** Consider remediating items without workarounds first.
+- **Record any discovered problems** in the remediation plan.
+- **Triage problems** based on their severity, and identify any workarounds as part of the triaging.
+- **Document workarounds**. If you can incorporate the workaround as part of the migration, you might not need to remediate the problem.
+- **Start with non-workaround items**. Consider remediating items without workarounds first.
 
 ## Example testing plan
 
 Here's a basic example of a testing plan output for a migration project:
 
-|Test|Succeeded|Notes|
+|Test|Successful/unsuccessful|Note|
 |---|---|---|
-|Virtual Machines Deploy|&#x2705;||
+|Virtual machines deploy|&#x2705;||
 |Administrators can sign in to virtual machines|&#x2705;||
-|Internet Information Services (IIS) Web Services starts|&#x2705;||
-|"Service 1" starts|&#x2705;||
-|"Service 2" start|&#x274C;|Service had to be manually started|
-|Web site is accessible|&#x2705;||
+|Internet Information Services (IIS) web services start|&#x2705;||
+|*Service 1* starts|&#x2705;||
+|*Service 2* starts|&#x274C;|Service had to be manually started|
+|Website access|&#x2705;||
 |SQL services start|&#x2705;||
-|Database accessible|&#x2705;||
-|Load balancing between web sites works|&#x2705;||
-|Ingress from Application Gateway Works|&#x274C;|Application gateway have a certificate issue|
-|Total time for test transaction was below 5 ms.|&#x2705;||
+|Database access|&#x2705;||
+|Load balancing between websites works|&#x2705;||
+|Ingress from Azure Application Gateway works|&#x274C;|Application Gateway has a certificate problem|
+|Total time for the test transaction was less than 5 ms|&#x2705;||
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Release migrated workloads](../release/index.md)
