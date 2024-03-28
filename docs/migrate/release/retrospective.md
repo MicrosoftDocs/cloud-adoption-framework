@@ -21,35 +21,35 @@ During retrospective meetings for the migration project, each member of the team
 
 ## Lessons learned
 
-The retrospective marks the end of a release or iteration, and as the team gains experience and learns lessons, they adjust the release and iteration backlog to reflect new processes and experiments to be tested. This starts the next iteration through the migration processes.
+The retrospective marks the end of a release or iteration. As the team gains experience and learns lessons, they adjust the release and iteration backlog to reflect new processes and experiments to be tested. This begins the next iteration through the migration processes.
 
-Teams that manage the next migration wave should apply the lessons learned to continually improve the migration.
+Teams that manage the next migration wave should apply the lessons they've learned to continually improve the migration.
 
 ## How to conduct a retrospective
 
-You'll need a few things to get started with your migration retrospective:
+You need a few things to get started with your migration retrospective:
 
-- **An organizer**: A team member to act as an organizer or coach throughout the process. This team member will focus on guiding the team through the retrospective process and ensure that all ideas are heard and captured.
+- **An organizer**: A team member to act as an organizer or coach throughout the process. This team member focuses on guiding the team through the retrospective process and ensures that all ideas are heard and captured.
 - **A method to track and organize**: A method to track and organize ideas in a visual way. This can be a physical whiteboard with sticky notes, a virtual whiteboard, or a DevOps tool.
-- **Scoped questions**: You'll want to organize your tracking mechanism with three questions:
+- **Scoped questions**: You want to organize your tracking system with three questions:
   - What went well?
   - What could have been better?
   - What did we learn?
 
-Once you have secured these, gather the team and perform the following:
+Once you have secured these, gather the team and do the following:
 
 - **Individual answers**: Have each team member answer the question "_What went well?_" and document their answers.
   - If using a physical board, let each team member fill in their answers on the board.
   - If using a digital board, let each member fill in their answers via the tool.
 - **Organizer read-out**: After each team member has documented their thoughts, the organizer should review the feedback and then read it aloud to the team.
-  - You should group together similar ideas as they are discovered so that reoccurring trends are recognized.
+  - You should group together similar ideas as they're discovered so that reoccurring trends are recognized.
   - Create labels or "parent" items as needed to help organize these thoughts.
   - If you find misplaced items that belong in another area, move them over at this time.
 
 - Repeat this process for "_What could have been better?_"
   - During this process, encourage people to discuss their specific challenges with people, process, and technology. This should be an open space.
   - Try to target things that created delays with migrations, things that affected release, or anything that lead to workloads being pushed out of this sprint.
-  - Think about how these problems could have been prevented as you discussed, as part of the "What did we learn?" topic.
+  - Think about how these problems could have been prevented as you discussed during the "What did we learn?" topic.
 
 After you have ideas captured and grouped for all of these topics, have the team brainstorm targeting ideas for improvement in the "_What did we learn?_" container that can be applied to the next sprint.
 
