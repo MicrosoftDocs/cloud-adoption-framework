@@ -36,7 +36,7 @@ When you design or update your regional resource organization, consider the foll
 
 If the answer is yes for any of these questions, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
 
-To avoid regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+To minimize the affect of regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 > [!NOTE]
 > If you have resources that are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
