@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Build a growth mindset with retrospectives
 
-Retrospectives reinforce the principles of a growth mindset: experimentation, testing, learning, sharing, growing, and empowering. They provide a safe place for team members to share the challenges they faced in the current project and empower the team to create sustainable growth.
+Retrospectives reinforce the principles of a growth mindset: experimentation, testing, learning, sharing, growing, and empowering. They also provide a safe place for team members to share the challenges they faced in the current project and empower the team to create sustainable growth.
 
 ## Retrospective structure
 
