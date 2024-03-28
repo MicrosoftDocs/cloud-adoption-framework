@@ -4,7 +4,7 @@ description: Explore the design area for governing your Azure environment to est
 author: paulgrimley
 ms.author: paulgr
 ms.reviewer: ssumner
-ms.date: 03/27/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -21,7 +21,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 **Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
 
-**New (greenfield) cloud environment:** To start your cloud journey, [create a small set of subscriptions](../../azure-best-practices/initial-subscriptions.md). You can use Bicep deployment templates to create your new Azure landing zones. For more information, see [Azure landing zones Bicep - Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+**New (greenfield) cloud environment:** To start your cloud journey, [create a small set of subscriptions](../../azure-best-practices/initial-subscriptions.md). You can use Bicep deployment templates to create your new Azure landing zones. For more information, see [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
 **Existing (brownfield) cloud environment:** If you want to apply proven-practice Azure governance principles to existing Azure environments, consider the following guidance:
 
@@ -32,7 +32,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 - Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration.
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
-The [Azure landing zones Bicep - Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
+The [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
 
 Consider using the [Azure landing zone default policy assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
 
