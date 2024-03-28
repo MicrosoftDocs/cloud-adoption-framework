@@ -21,29 +21,30 @@ Decisions regarding the level of your cloud estate's resource consistency requir
 
 As these factors gain importance, the benefits of ensuring consistent deployment, grouping, and management of cloud-based resources becomes even more vital. Gaining more advanced levels of resource consistency to meet increasing requirements takes greater effort across automation, tooling, and consistency enforcement. That effort results in more time spent on change management and tracking.
 
-## Basic grouping: Resource Groups
+## Basic grouping: Resource groups
 
 In Azure, [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-Resource groups are used as containers for resources with a common lifecycle and shared management constraints, such as policy or Azure role-based access control requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. 
+You can use resource groups as containers for resources that have a common lifecycle and shared management constraints, such as policy or Azure role-based access control (RBAC) requirements. You can't nest resource groups, and resources can only belong to one resource group. All control plane actions affect all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. 
 
-Some factors to consider while designing or updating your regional resource organization are:
+When you design or update your regional resource organization, consider the following factors. Is there a logical group of resources:
 
-- Is there a logical group of resources that will be developed together?
-- Is there a logical group of resources that will be managed, updated, and monitored together and done so by the same people or teams?
-- Is there a logical group of resources that will be used by the same team(s) within a single geography/region?
-- Is there a logical group of resources that will be retired together?
+- That you can develop together?
+- That you can manage, update, and monitor together? Can the same people or team carry out those tasks?
+- That one team uses within a single geography/region?
+- That you can retire together?
 
-If the answer is yes for any of these, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
+If the answer is yes for any of these questions, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
+
+To avoid regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 > [!NOTE]
-> If you have a scenario where resources are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
+> If you have resources that are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
 
-
-The most reliable suggestion for avoiding regional outages is to place resources in the SAME region as a resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment). If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a new resource group or subscription. To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
+To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
 > [!TIP]
-> [Audit](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html) your resource group alignment with Azure Policy. By [assigning](/azure/governance/policy/tutorials/create-and-manage) a built-in Azure Policy definition at the [Intermediate Root Management Group](/azure/governance/management-groups/overview#root-management-group-for-each-directory), you can verify whether the locations of the resources in your tenant hierarchy match the location of their respective resource groups.
+> [Audit](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html) your resource group alignment with Azure Policy. [Assign a built-in Azure Policy definition](/azure/governance/policy/tutorials/create-and-manage) at the [intermediate root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) level to verify whether the locations of the resources in your tenant hierarchy match the location of their respective resource groups.
 
 
 ## Deployment consistency

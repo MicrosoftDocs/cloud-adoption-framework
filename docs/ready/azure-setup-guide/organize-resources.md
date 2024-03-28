@@ -29,7 +29,7 @@ Azure provides four levels of management: management groups, subscriptions, reso
 - **Resources** are instances of services that you can create in a resource group, such as virtual machines, storage, and SQL databases.
 
   > [!NOTE]
-  > To reduce the impact of regional outages, we recommend that you locate resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+  > To minimize the affect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 ### Management settings scope
 

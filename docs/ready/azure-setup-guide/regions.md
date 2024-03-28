@@ -127,16 +127,16 @@ For each Azure service that you consider for your cloud adoption process, unders
 
 ### Plan Azure resource group deployments
 
-For the most reliable scenario and reduce the impact of regional outages, we recommend that you locate resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+For the most reliable scenario and to minimize the affect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
-If you have a scenario where resources are in different regions within the same resource group, you can consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
+If you have resources in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
 
-To determine if your resource supports moving to another resource group, inventory your resources by cross referencing them it with this [site](/azure/azure-resource-manager/management/move-support-resources). Ensure the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources) are met.
+To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
 > [!TIP]
 > Whenever possible, deploy resource groups in a region that has multiple availability zones. Availability zones help to minimize the risk of regional outages that reduce the availability of your resource and also make management operations unavailable.
 
-In some cases, resources in a resource group may span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in another region might continue to be available even though they can't be managed. Thus, in some scenarios, to ensure resources remain available at all costs, a multiple region per resource group approach could be considered an acceptable limitation to maintain availability during a temporary outage.
+In some cases, resources in a resource group span multiple regions. If a whole region is unavailable, all management operations that involve resources within the unavailable region's resource groups can fail. But resources that are deployed in a different region might stay available even though they can't be managed. In some scenarios, to ensure that resources always remain available, you might place a resource group in multiple regions. This approach has limitations but maintains resource availability during a temporary outage.
 
 ### Use GRS in paired regions
 
