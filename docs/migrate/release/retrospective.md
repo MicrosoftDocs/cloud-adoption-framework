@@ -21,11 +21,11 @@ During retrospective meetings for the migration project, each member of the team
 
 ## Lessons learned
 
-The retrospective marks the end of a release or iteration. As the team gains experience and learns lessons, they adjust the release and iteration backlog to reflect new processes and experiments to be tested. This begins the next iteration through the migration processes.
+The retrospective marks the end of a release or iteration. As the team gains experience and learns lessons, they adjust the release and iteration backlog to reflect new processes and experiments to test. This begins the next iteration through the migration processes.
 
 Teams that manage the next migration wave should apply the lessons they've learned to continually improve the migration.
 
-## How to conduct a retrospective
+## Conduct a retrospective
 
 You need a few things to get started with your migration retrospective:
 
@@ -36,37 +36,37 @@ You need a few things to get started with your migration retrospective:
   - What could have been better?
   - What did we learn?
 
-Once you have secured these, gather the team and do the following:
+After you complete the preceding steps, do the following steps with your team:
 
 - **Individual answers**: Have each team member answer the question "_What went well?_" and document their answers.
   - If using a physical board, let each team member fill in their answers on the board.
   - If using a digital board, let each member fill in their answers via the tool.
-- **Organizer read-out**: After each team member has documented their thoughts, the organizer should review the feedback and then read it aloud to the team.
-  - You should group together similar ideas as they're discovered so that reoccurring trends are recognized.
-  - Create labels or "parent" items as needed to help organize these thoughts.
+- **Organizer read-out**: After each team member documents their thoughts, the organizer should review the feedback and then read it aloud to the team.
+  - You should group together similar ideas as you discover them so that you recognize reoccurring trends.
+  - Create labels or _parent_ items as needed to help organize these thoughts.
   - If you find misplaced items that belong in another area, move them over at this time.
 
 - Repeat this process for "_What could have been better?_"
   - During this process, encourage people to discuss their specific challenges with people, process, and technology. This should be an open space.
-  - Try to target things that created delays with migrations, things that affected release, or anything that lead to workloads being pushed out of this sprint.
-  - Think about how these problems could have been prevented as you discussed during the "What did we learn?" topic.
+  - Try to determine what created delays with migrations, affected the release, or lead to workloads being pushed out of this sprint.
+  - Think about how you can prevent these problems as you discuss the question "What did we learn?".
 
-After you have ideas captured and grouped for all of these topics, have the team brainstorm targeting ideas for improvement in the "_What did we learn?_" container that can be applied to the next sprint.
+After you capture and group ideas from all these questions, have the team answer "_What did we learn?_", and brainstorm ideas for improvement that you can apply to the next sprint.
 
 ### Example retrospective output
 
-The following is an example retrospective output:
+Consider the following example retrospective output:
 
 |What went well?|What could have been better?|What did we learn?|
 |---|---|---|
-|Communication with the business users for Application X and Application Y (5 votes)|Involvement of developers to validate network architecture for Application X and Application Z (3 votes)|We need to review all firewall traffic from workloads before migration, even if it's believed that they have no specialty rules (4 votes)|
-|Development teams for Application Y were highly involved (2 votes)|Understanding of the networking requirements for Application X (2 votes)|We need to make sure development teams know what is expected from them as part of the migration process (4 votes)|
-|Enablement of Azure Backup as part of migration process.|Understanding of the networking requirements for Application Y (1 vote)|We need to plan extra time for SQL databases that are large in size (3 votes)|
-| |Final SQL replication for Application Y took longer than expected (3 votes)| |
+|Communication with the business users for Application X and Application. Y (5 votes)|Involvement of developers to validate the network architecture for Application X and Application Z. (3 votes)|We need to review all firewall traffic from workloads before migration, even if we believe that they have no specialty rules. (4 votes)|
+|Development teams for Application Y were highly involved. (2 votes)|Understanding the networking requirements for Application X. (2 votes)|We need to make sure development teams know what's expected from them as part of the migration process. (4 votes)|
+|Enablement of Azure Backup as part of migration process.|Understanding the networking requirements for Application Y. (1 vote)|We need to plan extra time for large SQL databases. (3 votes)|
+| |Final SQL replication for Application Y took longer than expected. (3 votes)| |
 
 ## Next step
 
-You should continue with the Cloud Adoption Framework's Manage methodology to ensure that you're able to continuously maintain and optimize your workloads in Azure.
+You should continue to implement the Cloud Adoption Framework for Azure's Manage methodology to ensure that you can continuously maintain and optimize your workloads in Azure.
 
 > [!div class="nextstepaction"]
 > [Cloud Adoption Framework - Manage methodology](../../manage/index.md)
