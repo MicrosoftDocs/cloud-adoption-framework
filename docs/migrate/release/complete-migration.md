@@ -1,36 +1,36 @@
 ---
-title: Complete migration to Azure
+title: Complete the migration to Azure
 description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/21/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
-# Complete migration
+# Complete the migration
 
-Promotion or cutover to production marks the completion of a workload's migration to the cloud. After the asset and all its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
+Promotion or cutover to production marks the completion of a workload's migration to the cloud. After you promote the asset and all of its dependencies, production traffic is rerouted. After the traffic is rerouted, the on-premises assets become obsolete, so you can decommission them.
 
-The process of promotion varies according to the workload's architecture. However, there are several consistent prerequisites and a few common tasks. This article describes each and serves as a migration checklist.
+The promotion process varies according to the workload's architecture. However, you can expect several consistent prerequisites and a few common tasks. This article describes each prerequisite and task and serves as a migration checklist.
 
-You should make sure to add workload specific considerations to your specific checklist.
+Make sure you add workload-specific considerations to your checklist.
 
 ## Migration window playbook
 
-- **Send pre-promotion communications**. While you have already communicated about the change window, make sure to send out a notification to necessary parties that they're aware that the promotion has begun.
-- **Validate resources**. Validate all staged resources are in a functioning state. This includes items like storage accounts, network security groups, and others.
-- **Pause monitoring**. While you migrate, you'll likely create a temporary outage. Monitoring should be paused to avoid creating monitoring noise.
-- **Final replication**. Depending on your promotion method, you might have final replication steps that need to handle any recent data. If you're using a tool like Azure Migrate to replicate server state, this is included in that process. Otherwise, you might have to do manual steps based on how you staged the application.
-- **Hydrate additional resources**. If you're using server state replication like with Azure Migrate, Azure VMs will need to be deployed as part of hydrating after the replication. There might be other items, like load balancing rules or other items you weren't able to stage previously.
-- **Power down source servers**. If you still have source servers available after hydrating your resources, power them down so that they aren't interfering with your migration.
-- **Isolated testing**. Perform any testing that you're able to without transitioning users over to the migrated workload. This will mostly be IT testing.
-- **Transition to the migrated workload**. Update your DNS, connection strings, load balancing, and other items so that when users or systems try to access the application, they do so to the new location.
-- **Promotion testing**. Execute your business testing plan again to validate that everything is operating as expected.
-- **Final approval**. Perform a final Go/No Go decision for the workload with stakeholders.
-- **Resume monitoring**. Enable any disabled monitoring and validate that the environment is within an acceptable state.
-- **Communicate successful promotion**. Communicate that the promotion is completed and there are no additional changes forthcoming.
+- **Send pre-promotion communications**. Although you already communicated about the change window, make sure to send a notification to all necessary parties so that they know the promotion has begun.
+- **Validate the resources**. Confirm that all staged resources are in a functioning state. These resources include storage accounts and network security groups.
+- **Pause monitoring**. While you migrate the workload, you'll likely create a temporary outage. You should pause monitoring to prevent noise.
+- **Take final replication steps**. Depending on your promotion method, you might need to take final replication steps to handle any recent data. That process includes these steps if you use a tool like Azure Migrate and Modernize to replicate the server state. Otherwise, you might have to take manual steps, depending on how you staged the application.
+- **Hydrate additional resources**. If you're using server state replication like with Azure Migrate and Modernize, you need to deploy Azure Virtual Machine instances as part of hydrating after the replication. There might be other items like load balancing rules that you weren't able to stage previously.
+- **Power down source servers**. If you still have source servers available after hydrating your resources, power them down so that they don't interfere with your migration.
+- **Do isolated testing**. Do any testing that you can without transitioning users over to the migrated workload. This testing is mostly IT testing.
+- **Transition to the migrated workload**. Update your Domain Name System, connection strings, load balancing, and other items so that when users or systems try to access the application, they access its new location.
+- **Do promotion testing**. Run your business testing plan again to confirm that everything works as expected.
+- **Seek final approval**. Seek a final go/no-go decision for the workload with stakeholders.
+- **Resume monitoring**. Enable any disabled monitoring and confirm that the environment is in an acceptable state.
+- **Communicate that the promotion was successful**. Tell all necessary parties that the promotion is finished and that there are no forthcoming changes.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Optimize cost after migration](./optimize-cost-after-migration.md)
