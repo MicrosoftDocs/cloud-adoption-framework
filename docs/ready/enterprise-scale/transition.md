@@ -72,7 +72,7 @@ For more information about how to move resources across resource groups and subs
 > 
 > If you have resources in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 > 
-> To [determine if your resource supports moving to another resource group]((/azure/azure-resource-manager/management/move-support-resources)), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
+> To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
 ### Before you move resources
 
