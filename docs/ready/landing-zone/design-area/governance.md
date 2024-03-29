@@ -15,7 +15,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 ## Design area review
 
-**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply some technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
+**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
 
 **Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 
@@ -27,9 +27,9 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 - Establish a [management baseline](./management.md) for your hybrid or multicloud environment.
 
-- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features, like billing scopes, budgets, and alerts to ensure that you don't exceed your expense limit.
+- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features, like billing scopes, budgets, and alerts, to ensure that you don't exceed your expense limit.
 - Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments and trigger remediation tasks to bring existing Azure resources into a compliant state.
-- Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration.
+- Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure access request workflows, access assignments, reviews, and expiration.
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
 The [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
@@ -62,13 +62,13 @@ The Govern methodology consists of five disciplines:
 
 ## Azure governance considerations
 
-Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls authorized users actions. Cost Management can also help support your ongoing governance cost and spending in Azure or other multicloud environments.
+Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls actions for authorized users. Cost Management can also help support your ongoing governance cost and spending in Azure or other multicloud environments.
 
 ### Deployment acceleration considerations
 
 Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
-- Determine what Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
+- Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
 
 - Use the [standards-based blueprint samples](/azure/governance/blueprints/samples) to consider other policies that might align to your business requirements.
 - Enforce automated networking, identity, management, and security conventions.
@@ -92,7 +92,7 @@ Change advisory review boards can hinder your organization's innovation and busi
 - Use automatic scaling to dynamically allocate and deallocate resources to match your performance needs, which saves money.
 - Use Azure Spot Virtual Machines to take advantage of unused compute capacity at a low cost. Spot Virtual Machines is great for workloads that can handle interruptions, for example batch-processing jobs, dev/test environments, and large-compute workloads.
 - Select the right Azure services to help reduce costs. Some Azure services are free for 12 months and some are always free.
-- Select the right compute service for your application to help with cost efficiency. Azure offers many ways to host your code.
+- Select the right compute service for your application to help improve cost efficiency. Azure offers many ways to host your code.
 
 ### Resource consistency considerations
 
@@ -121,7 +121,7 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 - Use [AzAdvertizer](https://www.azadvertizer.net) to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
 
-- Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. The policy version checker feature for Azure landing zones helps ensure that your environment has the latest Azure landing zone policy release state.
+- Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. You can use the policy version checker feature for Azure landing zones to keep your environment up to date with the latest Azure landing zone policy release state.
 
 ## Azure governance recommendations
 
@@ -141,7 +141,7 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 - Use Cost Management to implement financial oversight on resources in your environment.
 
-- Use tags, such as the cost center or project name, to append the metadata to resources. This approach helps enable granular analysis of expenses.
+- Use tags, such as the cost center or project name, to append the resource metadata. This approach helps enable granular analysis of expenses.
 
 ## Azure governance in the Azure landing zone accelerator
 
@@ -151,5 +151,5 @@ For example, you can implement:
 
 - A management group hierarchy that groups resources by function or workload type. This approach encourages resource consistency.
 
-- A rich set of Azure policies that enables governance controls at the management group level. This approach helps ensure that all resources are in scope.
+- A rich set of Azure policies that enables governance controls at the management group level. This approach helps verify that all resources are in scope.
 
