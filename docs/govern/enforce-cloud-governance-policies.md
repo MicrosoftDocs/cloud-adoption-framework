@@ -84,7 +84,7 @@ Ensure high availability, data protection, and disaster recovery through automat
 
 - *Automate redundancy*. Use built-in Azure policies to require a specified level of infrastructure redundancy, such as zone-redundant and geo-redundant instances.
 
-- *Apply backups policies*. Use [backup policies](/azure/backup/backup-center-govern-environment) to govern the backup frequency, retention period, and storage location. Align backups policies with data governance, regulatory compliance requirements, recovery time objective (RTO), and recovery point objective (RPO). Use the backup settings in individual Azure services, such as [Azure SQL Database](/azure/azure-sql/database/automated-backups-overview), to configure the settings you need.
+- *Apply backup policies*. Use [backup policies](/azure/backup/backup-center-govern-environment) to govern the backup frequency, retention period, and storage location. Align backups policies with data governance, regulatory compliance requirements, recovery time objective (RTO), and recovery point objective (RPO). Use the backup settings in individual Azure services, such as [Azure SQL Database](/azure/azure-sql/database/automated-backups-overview), to configure the settings you need.
 
 - *Meet the target service-level objective*. Restrict the deployment of certain services and service tiers (SKUs) that don't meet your target service-level objective. For example, use the `Not allowed resource types` policy definition in Azure Policy.
 
