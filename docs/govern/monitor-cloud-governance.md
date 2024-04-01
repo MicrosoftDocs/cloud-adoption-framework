@@ -61,13 +61,13 @@ Track cloud spending against budgets and detect anomalous and excessive spending
 
 - *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
 
-#### Configure monitoring for cloud operations governance
+#### Configure monitoring for operations governance
 
 Ensure optimal performance and availability of cloud services by automatically detecting noncompliance.
 
 - *Monitor policies on cloud operations.* Use Azure Policy to track compliance with governance policies that apply to operations.
 
-- *Monitor logs and metrics.* Analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/essentials/analyze-metrics) across cloud environments to track [availability](/azure/azure-monitor/app/availability-overview) and [performance](/azure/azure-monitor/app/failures-and-performance-views?tabs=failures-view).
+- *Monitor logs and metrics.* Analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/essentials/analyze-metrics) across cloud environments to track [availability](/azure/azure-monitor/app/availability-overview) and [performance](/azure/azure-monitor/app/failures-and-performance-views).
 
 - *Monitor resource optimization.* [Use Azure Advisor](/azure/advisor/advisor-overview#what-is-advisor) to monitor Azure resources for reliability, security, operational excellence, performance, and cost. [Set alerts](/azure/advisor/advisor-alerts-portal) for any new Advisor recommendations.
 
@@ -79,7 +79,7 @@ Guarantee the integrity, privacy, and proper usage of data by continuously monit
 
 - *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use dashboards to monitor compliance with any data plane policies.
 
-#### Configure monitoring for cloud resource management governance
+#### Configure monitoring for resource management governance
 
 Ensure all cloud resources are consistently deployed and managed in alignment with organizational governance policies.
 
@@ -109,29 +109,29 @@ Configure alerts based on specific compliance metrics or events that indicate a 
 
 The following guidance helps you start configuring cloud governance alerts in Azure. It provides a sample starting point for major categories of cloud governance.
 
-- *Cloud regulatory compliance governance alerts.* Use Azure activity logs to [generate alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs) for noncompliance across Azure.
+- *Regulatory compliance governance alerts.* Use Azure activity logs to [generate alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs) for noncompliance across Azure.
 
-- *Cloud security governance alerts.* Configure [security alerts](/azure/defender-for-cloud/managing-and-responding-alerts) and noncompliance [alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs).
+- *Security governance alerts.* Configure [security alerts](/azure/defender-for-cloud/managing-and-responding-alerts) and noncompliance [alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs).
 
-- *Cloud costs governance alerts.* Set up alerts to notify teams of potential cost overruns and spending anomalies. Configure [cost alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) and [cost anomaly alerts](/azure/cost-management-billing/understand/analyze-unexpected-charges#create-an-anomaly-alert). Set [reservation utilization alerts](/azure/cost-management-billing/costs/reservation-utilization-alerts) to keep reservations and savings plans usage at or close to full usage.
+- *Cost governance alerts.* Set up alerts to notify teams of potential cost overruns and spending anomalies. Configure [cost alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) and [cost anomaly alerts](/azure/cost-management-billing/understand/analyze-unexpected-charges#create-an-anomaly-alert). Set [reservation utilization alerts](/azure/cost-management-billing/costs/reservation-utilization-alerts) to keep reservations and savings plans usage at or close to full usage.
 
-- *Cloud operations governance alerts.* [Configure alerts](/azure/azure-monitor/alerts/alerts-overview) on specific logs and metrics. [Set alerts](/azure/advisor/advisor-alerts-portal) for new recommendations aligned to reliability and performance. Configure service health alerts to get notified of current and upcoming service health problems. Configure [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) to get notified of the current and historical health status of your Azure resources.
+- *Operations governance alerts.* [Configure alerts](/azure/azure-monitor/alerts/alerts-overview) on specific logs and metrics. [Set alerts](/azure/advisor/advisor-alerts-portal) for new recommendations aligned to reliability and performance. Configure service health alerts to get notified of current and upcoming service health problems. Configure [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) to get notified of the current and historical health status of your Azure resources.
 
-- *Cloud data governance alerts.* [Configure data governance alerts](/purview/alert-policies) to report data governance violations.
+- *Data governance alerts.* [Configure data governance alerts](/purview/alert-policies) to report data governance violations.
 
-- *Cloud resource management governance alerts.* Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
+- *Resource management governance alerts.* Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- *Cloud AI governance alerts.* Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
+- *AI governance alerts.* Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
 
 ## Develop a remediation plan
 
-Develop a targeted action plan to address any noncompliance events. When noncompliance is detected, perform the remediation plan to correct the deviations and minimize the risk and impact on the cloud environment. Add the remediation details to the cloud governance policy for easy access. Follow these recommendations:
+Develop a targeted action plan to address any noncompliance events. When you detect noncompliance, perform the remediation plan to correct the deviations and minimize the risk and impact. Add the remediation details to the cloud governance policy for easy access. Follow these recommendations:
 
-- *Remediate high-risk violations immediately.* For noncompliance alerts that are high risk, have a plan to escalate and fix those noncompliance problems such as an exposed data endpoint. Update the policy enforcement mechanism to avoid a repeat of this high-risk violation. Use Azure to [react to compliance-state changes](/azure/governance/policy/concepts/event-overview?tabs=event-grid-event-schema), [remediate resources noncompliant with policies](/azure/governance/policy/how-to/remediate-resources), and [remediate security recommendations](/azure/defender-for-cloud/implement-security-recommendations).
+- *Remediate high-risk violations immediately.* For noncompliance alerts that are high risk, such as an exposed data endpoint, have a plan to escalate and fix those noncompliance problems. Update the policy enforcement mechanism to avoid a repeat of this high-risk violation. Use Azure to [react to compliance-state changes](/azure/governance/policy/concepts/event-overview), [remediate resources noncompliant with policies](/azure/governance/policy/how-to/remediate-resources), and [remediate security recommendations](/azure/defender-for-cloud/implement-security-recommendations).
 
 - *Follow up on low-risk violations.* Have an audit-first stance on low-risk policies so that you can have a discussion with the team that violated the cloud governance policy, such as deploying a service on a blocklist. Maybe there’s a new feature available, better service tier (SKU), or a better price in a specific region. The cloud governance team should discuss the needs of the team and adjust policies and enforcement mechanisms in accordance with the conversation.
 
-- *Automate remediation where possible.* Set up automated workflows that not only notify the relevant teams but also initiate predefined remediation processes where appropriate. This solution is primarily for known high-risk solutions that you can’t prevent with automation and must enforce manually.
+- *Automate remediation where possible.* Set up automated workflows that not only notify the relevant teams but also initiate predefined remediation processes where appropriate. This solution is primarily for known high-risk solutions that you can’t prevent with automation.
 
 - *Update governance policies and enforcement mechanisms.* Based on the insights gained from the noncompliance event, update your governance policies and enforcement mechanisms. Updates might involve tightening policy definitions, enhancing monitoring capabilities, or refining alert thresholds to improve detection and response times.
 

@@ -18,13 +18,13 @@ This article shows you how to enforce cloud governance policies. Cloud governanc
 
 Establish a systematic strategy to enforce cloud governance policies. The goal is to use automated tools and manual oversight to enforce policies efficiently. To define an enforcement approach, follow these recommendations:
 
-- *Delegate governance responsibilities*. Empower individuals and teams to enforce governance within their scope of responsibility. For example, platform teams should apply policies that workloads inherit. Workload teams should enforce governance for their workload. The cloud governance team shouldn't be responsible for applying enforcement controls.
+- *Delegate governance responsibilities*. Empower individuals and teams to enforce governance within their scope of responsibility. For example, platform teams should apply policies that the workloads inherit and workload teams should enforce governance for their workload. The cloud governance team shouldn't be responsible for applying enforcement controls.
 
 - *Adopt an inheritance model*. Apply a hierarchical governance model where specific workloads inherit governance policies from the platform team. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services.
 
 - *Discuss enforcement specifics*. Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce governance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
 
-- *Have a monitor-first stance*. Don't block actions unless you understand them first. Lower-risk enforcement controls should start by monitoring compliance with cloud governance policies. After you understand organizational needs, you should move to more restrictive enforcement policies. A monitor-first approach gives you an opportunity to discuss the need and realign the policy to that need.
+- *Have a monitor-first stance*. Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement policies. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy to those needs.
 
 - *Prefer blocklists*. Use blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use.
 
@@ -34,7 +34,7 @@ Establish a systematic strategy to enforce cloud governance policies. The goal i
 
 Use cloud management and governance tools to automate the enforcement of governance policies. These tools can help in setting up guardrails, monitoring configurations, and ensuring compliance. To set up automated enforcement, follow these recommendations:
 
-- *Start with a small set of automated policies*. Begin automating a minimal set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Automate other policies when ready.
+- *Start with a small set of automated policies*. Begin automating a minimal set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement when ready.
 
 - *Use cloud governance tools*. Use the tools available in your cloud environment to enforce governance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
 
@@ -48,9 +48,9 @@ Use cloud management and governance tools to automate the enforcement of governa
 
 ### Azure facilitation: Enforcing cloud governance policies automatically
 
-The following guidance is meant to help you automate cloud governance policies in Azure. It provides a sample starting point for major categories of cloud governance.
+The following guidance is meant to help you automate the enforcement of cloud governance policies in Azure. It provides a sample starting point for major categories of cloud governance.
 
-#### Automate regulatory compliance governance in Azure
+#### Automate regulatory compliance governance
 
 Achieve continuous alignment with global compliance standards through automated enforcement controls with minimal manual oversight.
 
@@ -58,7 +58,7 @@ Achieve continuous alignment with global compliance standards through automated 
 
 - *Automate custom restrictions*. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
-#### Automate cloud security governance in Azure
+#### Automate security governance
 
 Secure cloud environments automatically by enforcing best practices and compliance with security frameworks.
 
@@ -68,17 +68,17 @@ Secure cloud environments automatically by enforcing best practices and complian
 
 - *Apply access controls*. Use [Azure role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to govern access to specific resources. Grant and deny permissions to users and groups. Apply the permission at the appropriate [scope](/azure/role-based-access-control/scope-overview) (management group, subscription, resource group, or resource) to provide only the permission needed and limit management overhead.
 
-#### Automate cloud cost governance in Azure
+#### Automate cost governance
 
-Automate cost monitoring, budgeting, and optimization processes that prevent overspending and ensure that costs align with business goals.
+Automate cost monitoring, budgeting, and optimization processes that prevents surplus and anomalous spending.
 
-- *Automate deployment restrictions*. [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) from deploying to prevent the use of cost-intensive resources.
+- *Automate deployment restrictions*. [Disallow certain cloud resources](/azure/governance/policy/tutorials/disallowed-resources) to prevent the use of cost-intensive resources.
 
 - *Automate custom restrictions*. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 - *Automate cost allocation*. Enforce tagging requirements to [group and allocate costs](/azure/cost-management-billing/costs/enable-tag-inheritance) across environments (development, test, production), departments, or projects. Use tags to identify and track resources that are part of a cost optimization effort.
 
-#### Automate cloud operations governance in Azure
+#### Automate operations governance
 
 Ensure high availability, data protection, and disaster recovery through automated operational policies.
 
@@ -88,7 +88,7 @@ Ensure high availability, data protection, and disaster recovery through automat
 
 - *Meet the target service-level objective*. Restrict the deployment of certain services and service tiers (SKUs) that don't meet your target service-level objective. For example, use the `Not allowed resource types` policy definition in Azure Policy.
 
-#### Automate cloud data governance in Azure
+#### Automate data governance
 
 Automate the management, storage, and processing of data in compliance with regulations. Ensure data privacy, security, and lifecycle management without manual intervention.
 
@@ -98,7 +98,7 @@ Automate the management, storage, and processing of data in compliance with regu
 
 - *Automate data security*. Review and enforce [data protection strategies](/azure/security/fundamentals/protection-customer-data), such as data segregation, encryption, and redundancy.
 
-#### Automate cloud resource management governance in Azure
+#### Automate resource management governance
 
 Achieve streamlined and compliant resource provisioning and management through automated tagging, deployment restrictions, and IaC practices. Ensure consistency and operational efficiency across environments.
 
@@ -116,7 +116,7 @@ Achieve streamlined and compliant resource provisioning and management through a
 
 - *Govern hybrid and multicloud environments*. [Govern hybrid and multicloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 
-#### Automate AI governance in Azure
+#### Automate AI governance
 
 Ensure ethical use, content integrity, and compliance with security standards, using automation to prevent misuse and enhance trustworthiness.
 

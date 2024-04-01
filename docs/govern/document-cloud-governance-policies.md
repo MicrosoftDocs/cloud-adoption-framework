@@ -10,13 +10,13 @@ ms.custom: internal, UpdateFrequency2
 
 # Document cloud governance policies
 
-This article shows you how to create and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies are the governance framework for individuals interacting with the cloud.
+This article shows you how to create and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies define the guardrails for interacting with and in the cloud.
 
 :::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/document.svg" border="false":::
 
 ## Define an approach for documenting cloud governance policies
 
-Establish an approach for creating, maintaining, and updating the rules and guidelines that govern the use of cloud services. The goal is to produce cloud governance policies that don’t require frequent updates and consider the effects of cloud governance policies across the cloud environment. To define a policy documentation approach, follow these recommendations:
+Establish an approach for creating, maintaining, and updating the rules and guidelines that govern the use of cloud services. The goal is to produce cloud governance policies that don’t require frequent updates and that consider the effects of cloud governance policies across the cloud environment. To define a policy documentation approach, follow these recommendations:
 
 - *Define standard governance language*. Develop a standard structure and format for documenting cloud governance policies. The policies must be a clear and authoritative reference for stakeholders.
 
@@ -26,13 +26,13 @@ Establish an approach for creating, maintaining, and updating the rules and guid
 
 ## Define cloud governance policies
 
-Create cloud governance policies that outline how to use and manage the cloud to mitigate risks. Create a governance framework that manages risk. Minimize the need for frequent policy updates. To define cloud governance policies, follow these recommendations:
+Create cloud governance policies that outline how to use and manage the cloud to mitigate risks. Minimize the need for frequent policy updates. To define cloud governance policies, follow these recommendations:
 
 - *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
 
 - *Include the policy statement*. Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
-- *Include a risk ID*. List the risk in the policy. Associate every governance policy to a risk.
+- *Include a risk ID*. List the risk in the policy. Associate every cloud governance policy to a risk.
 
 - *Include the policy category*. Include governance categories, such as security, compliance, or cost management, into the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
 
