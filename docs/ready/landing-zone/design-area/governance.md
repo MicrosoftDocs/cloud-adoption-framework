@@ -50,16 +50,6 @@ Explore the following considerations and recommendations to make informed decisi
 
 The governance design area focuses on design decisions for your landing zone. For information about governance processes and tools, see [Governance in the Cloud Adoption Framework for Azure](../../../govern/index.md).
 
-The Govern methodology consists of five disciplines:
-
-|Discipline|Context|
-|-|-|
-| Cost management| See guidance for cost reporting control techniques.|
-| Security baseline| Explore the [security design area](./security.md).|
-| Resource consistency| See guidance for naming and tagging resources in the environment governance. |
-| Identity baseline| Explore the [identity and access management](./identity-access.md) design area.|
-| Deployment acceleration| Explore the [platform automation and DevOps](./platform-automation-devops.md) design area.|
-
 ## Azure governance considerations
 
 Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls actions for authorized users. Cost Management can also help support your ongoing governance cost and spending in Azure or other multicloud environments.
