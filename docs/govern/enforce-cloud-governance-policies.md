@@ -26,7 +26,7 @@ Establish a systematic strategy to enforce cloud governance policies. The goal i
 
 - *Have a monitor-first stance*. Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement policies. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy to those needs.
 
-- *Prefer blocklists*. Use blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use.
+- *Prefer blocklists*. Prefer blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use. To avoid lengthy blocklists, don't add new services to the blocklist by default.
 
 - *Define a tagging and naming strategy*. Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
 
@@ -48,7 +48,7 @@ Use cloud management and governance tools to automate the enforcement of governa
 
 ### Azure facilitation: Enforcing cloud governance policies automatically
 
-The following guidance is meant to help you automate the enforcement of cloud governance policies in Azure. It provides a sample starting point for major categories of cloud governance.
+The following guidance can help you find the right tools to automate the enforcement of cloud governance policies in Azure. It provides a sample starting point for major categories of cloud governance.
 
 #### Automate regulatory compliance governance
 
@@ -84,7 +84,7 @@ Ensure high availability, data protection, and disaster recovery through automat
 
 - *Automate redundancy*. Use built-in Azure policies to require a specified level of infrastructure redundancy, such as zone-redundant and geo-redundant instances.
 
-- *Automate backups*. Use [backup policies](/azure/backup/backup-center-govern-environment) to govern the backup frequency, retention period, and storage location. Align backups policies with data governance and regulatory compliance requirements. Use the backup settings in individual Azure services, such as [Azure SQL Database](/azure/azure-sql/database/automated-backups-overview), to configure the settings you need.
+- *Automate backups*. Use [backup policies](/azure/backup/backup-center-govern-environment) to govern the backup frequency, retention period, and storage location. Align backups policies with data governance, regulatory compliance requirements, recovery time objective (RTO), and recovery point objective (RPO). Use the backup settings in individual Azure services, such as [Azure SQL Database](/azure/azure-sql/database/automated-backups-overview), to configure the settings you need.
 
 - *Meet the target service-level objective*. Restrict the deployment of certain services and service tiers (SKUs) that don't meet your target service-level objective. For example, use the `Not allowed resource types` policy definition in Azure Policy.
 
@@ -112,15 +112,13 @@ Achieve streamlined and compliant resource provisioning and management through a
 
 - *Use IaC*. Automate infrastructure deployments using [Bicep, Terraform, or Azure Resource Manager templates (ARM templates)](/azure/templates/). Store your IaC configurations in a source control system (GitHub or Azure Repos) to track changes and collaborate.
 
-- *Use a CI/CD pipeline*. A continuous integration and continuous delivery (CI/CD) pipeline can ensure deployments adhere to predefined governance rules and policies. [Integrate compliance scans](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan) into CI/CD pipelines to enforce governance.
-
 - *Govern hybrid and multicloud environments*. [Govern hybrid and multicloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 
 #### Automate AI governance
 
 Ensure ethical use, content integrity, and compliance with security standards, using automation to prevent misuse and enhance trustworthiness.
 
-- *Use the retrieval augmented generation (RAG) pattern*. RAG adds an information retrieval system to control the grounding data that a language model uses to generate a response. Use [the Azure OpenAI Service on your own data feature](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
+- *Use the retrieval augmented generation (RAG) pattern*. RAG adds an information retrieval system to control the grounding data that a language model uses to generate a response. For example, you can use [the Azure OpenAI Service on your own data feature](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
 
 - *Use AI development tools*. Use AI tools, like Semantic Kernel, that facilitate and standardize AI orchestration when developing applications that use AI.
 

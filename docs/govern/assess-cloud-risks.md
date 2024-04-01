@@ -20,9 +20,11 @@ Catalog a comprehensive list of cloud risks. Knowing your risks allows you to cr
 
 - *Catalog all cloud assets.* List all your cloud assets so you can comprehensively identify risks. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
 
-- *Discover cloud risks.* Start with high-priority risks and develop the list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
+- *Discover cloud risks.* Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop the list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
 
 - *Involve key stakeholders.* Gather input from diverse organizational roles—IT, security, legal, finance, and business units—to consider all potential risks. This collaborative approach guarantees a holistic view of risks related to the cloud.
+
+- *Validate risk list.* Engage external experts who possess a deep understanding of cloud risk identification to review and validate your risk list, such as Microsoft account teams or specialized Microsoft partners. Their expertise helps confirm the identification of all potential risks and enhances the accuracy of your risk list.
 
 ### Azure facilitation: Identifying cloud risks
 
@@ -60,7 +62,7 @@ Estimate the quantitative or qualitative probability of each risk occurring per 
 
 Estimate the quantitative or qualitative impact of the risk occurring on the organization. A dollar amount is a common way to represent quantitative risk impact. Low, medium, and high are common labels for qualitative risk impact. To determine risk impact, follow these recommendations:
 
-- *Conduct financial analysis.* Calculate potential financial loss of a risk by looking at factors such as the cost of downtime, legal fees, fines, and the cost of remediation efforts.
+- *Conduct financial analysis.* Estimate the potential financial loss of a risk by looking at factors such as the cost of downtime, legal fees, fines, and the cost of remediation efforts.
 
 - *Conduct reputational impact assessment.* Use surveys, market research, or historical data on similar incidents to estimate the potential impact on the organization's reputation.
 
@@ -96,7 +98,7 @@ Designate a primary risk owner for every risk. The risk owner has the responsibi
 
 ## Document cloud risks
 
-Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Conduct monthly reviews and updates to reflect new risks that emerge as technology and business objectives evolve. Consider including these elements:
+Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Consider including these elements:
 
 - *Risk ID:* A unique identifier for each risk. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
 - *Risk management status:* Status of the risk (open, closed).
@@ -121,7 +123,7 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 Review cloud risks to ensure the risks are valid and accurate. Reviews should be regular and also in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
 
-- *Schedule regular assessments.* Set a recurring schedule, such as monthly or quarterly, to review and assess cloud risks. The frequency should reflect the rate of change in the cloud environment and the organization's risk appetite.
+- *Schedule regular assessments.* Set a recurring schedule to review and assess cloud risks, such as quarterly, biannually, or yearly. Find the assessment review frequency that best accommodates personnel availability, the rate of cloud environment changes, and risk appetite.
 
 - *Conduct event-based reviews.* Review risks in response to specific events. Consider new technology adoption, technology updates, regulatory compliance changes, new business processes, new security threats, changes in risk appetite, and risk events.
 

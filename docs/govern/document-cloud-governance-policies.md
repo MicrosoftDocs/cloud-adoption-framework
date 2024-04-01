@@ -16,7 +16,7 @@ This article shows you how to create and document cloud governance policies. Clo
 
 ## Define an approach for documenting cloud governance policies
 
-Establish an approach for creating, maintaining, and updating the rules and guidelines that govern the use of cloud services. The goal is to produce cloud governance policies that don’t require frequent updates and that consider the effects of cloud governance policies across the cloud environment. To define a policy documentation approach, follow these recommendations:
+Establish an approach for creating, maintaining, and updating the rules and guidelines that govern the use of cloud services. Cloud governance policies shouldn't be unique to a specific workload. The goal is to produce cloud governance policies that don’t require frequent updates and that consider the effects of cloud governance policies across the cloud environment. To define a policy documentation approach, follow these recommendations:
 
 - *Define standard governance language*. Develop a standard structure and format for documenting cloud governance policies. The policies must be a clear and authoritative reference for stakeholders.
 

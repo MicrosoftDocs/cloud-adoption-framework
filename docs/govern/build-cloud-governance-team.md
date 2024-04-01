@@ -50,7 +50,7 @@ Empower the cloud governance team to implement and oversee cloud governance. The
 
 Establish the boundaries of the cloud governance team's responsibility. The goal is to clarify areas of responsibility so the cloud governance team can focus on their defined functions. To define the scope, follow these recommendations:
 
-- *Define their relationship with other teams*. Clearly define the cloud governance team's authority over cloud resources, services, and policies. Avoid conflict and overlapping responsibility with other teams.
+- *Define relationship with other teams*. Clearly define the cloud governance team's authority over cloud resources, services, and policies. Avoid conflict and overlapping responsibility with other teams. For hybrid environments, specify the cloud governance team's responsibilities in contrast to those of on-premises teams.
 
 - *Use a RACI matrix*. Use a responsibility assignment matrix, often called a RACI matrix, to delineate roles and responsibilities within the cloud governance framework.
 
