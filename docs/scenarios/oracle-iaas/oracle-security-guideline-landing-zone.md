@@ -13,7 +13,7 @@ ms.custom:
 
 # Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article describes how to securely deploy Oracle workloads on Azure Virtual Machines landing zone accelerator throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Oracle workloads on Azure IaaS security.
+This article explains how to safely run Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of its lifecycle. The article discusses specific design components and gives focused suggestions for Oracle workloads on Azure IaaS security.
 
 ## Overview
 
@@ -45,6 +45,12 @@ Identity management is a fundamental framework that governs access to important 
       - As of writing this document (July 2023) Oracle Linux (OL) and Red Hat Enterprise Linux (RHEL) are 100% binary compatible, so any instructions related to RHEL also apply to OL.
       - As of July 2023, IBM has chosen to cease openly sharing RHEL source, so it's possible that OL and RHEL might diverge in future, invalidating the above statement.
     - [Sign in to a Windows virtual machine in Azure by using Microsoft Entra ID](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows).
+
+3. **Azure Key Vault to store credentials** – Azure Key Vault is a powerful tool that enables the secure storage of     secrets, such as passwords and database connection strings, for cloud applications and services. It can be used to store credentials for both [Windows](/azure/entra/identity/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad) and [Linux](/azure/entra/identity/managed-identities-azure-resources/tutorial-linux-vm-access-nonaad) virtual machines (VMs) in a centralized and secure manner, regardless of the type of Operating System being used.
+
+      By using Azure Key Vault, you can avoid the need to store credentials in plain text within your code or configuration files. Instead, you can retrieve the credentials from the Key Vault at runtime, adding an additional layer of security to your application and helping to prevent unauthorized access to your VMs. Azure Key Vault integrates seamlessly with other Azure services, such as Azure Virtual Machines, and access to the Key Vault can be controlled using Azure Active Directory, ensuring that only authorized users and applications can access the stored credentials.
+
+4. **Use Hardened Operating System Images** - Using a CIS (Center for Internet Security) hardened image for Windows or Linux in Azure can provide several benefits. [CIS benchmarks](https://www.cisecurity.org/insights/blog/cis-hardened-images-now-in-microsoft-azure-marketplace) are globally recognized as the best practices for securing IT systems and data. These images are pre-configured to meet the security recommendations of the CIS, which can save time and effort in hardening the operating system. This can help organizations to improve their security posture and comply with security frameworks like NIST and PCI
 
 ## Operating system hardening
 
