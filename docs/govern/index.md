@@ -36,7 +36,7 @@ Cloud governance is a continuous process. It requires ongoing monitoring, evalua
 
 ## Cloud governance checklist
 
-Use the cloud governance checklist to see all cloud governance steps and tasks for each step. Quickly navigate to the guidance you need.
+Use the cloud governance checklist to see all the tasks for each cloud governance step. Use the links to quickly navigate to the guidance you need.
 
 | &nbsp; | Cloud governance step | Cloud governance tasks |
 |---|---|---|
