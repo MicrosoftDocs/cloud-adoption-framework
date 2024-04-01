@@ -24,6 +24,20 @@ On top of these environmental controls, the workload team should consider:
 - Redundancy of workload-specific architecture
 - Processes for monitoring and notification beyond what is provided by the cloud operations teams
 
+### Hybrid ExpressRoute Connectivity
+
+In order to support mission critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, this does not protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
+
+#### Recommendations
+
+- Enable two ExpressRoute circuits in two different ER edge site locations for maximum redundancy.
+  - This setup requires provisioning two ER circuits in the Azure Portal for the two different ER edge site locations, then connecting both ExpressRoute circuits to the same hub virtual network in Azure.
+  - The two different edge site locations would be in the same Azure region. This is what will provide the redundancy in case one of the peering locations experiences a failure. Both ExpressRoute connections would terminate into the same hub virtual network in Azure. Please view the list of [ExpressRoute locations and connectivity partners](/azure/expressroute/expressroute-locations-providers#global-commercial-azure) in planning the ExpressRoute peering locations.
+  - You can work with the provider in order to configure the second ExpressRoute site.
+  - It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
+
+For details on a maximum resiliency ExpressRoute configuration, please refer to [this page](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros)
+
 ## Security
 
 Apply security principles to your HPC environment to provide assurances against deliberate attacks and abuse of your valuable data and systems. Look into securing your user operating system images, user access, and follow Batch and CycleCloud security guidelines. For more suggestions, see [Principles of the security pillar](/azure/architecture/framework/security/security-principles).
