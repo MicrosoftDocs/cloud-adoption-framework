@@ -1,6 +1,6 @@
 ---
 title: The Azure Well-Architected Framework for HPC
-description: Use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your HPC scenario.
+description: Learn how to use the Azure Well-Architected Framework architecture principles to design and optimize workloads running in your high-performance computing (HPC) scenario.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 10/11/2022
@@ -14,7 +14,7 @@ The [Plan methodology of this scenario](./plan.md) outlines a process for you to
 
 ## Reliability
 
-Everything has the potential to break and data pipelines are no exception. Because of this, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations.
+Everything has the potential to break. Data pipelines are no exception. So, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations.
 
 Your data environment should consider resilient architectures, cross region redundancies, service level, service-level agreements (SLAs), and critical support. The existing environment should also include auditing, monitoring, and alerting by using integrated monitoring and a notification framework.
 
@@ -26,17 +26,17 @@ On top of these environmental controls, the workload team should consider:
 
 ### Hybrid ExpressRoute Connectivity
 
-In order to support mission critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, this does not protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue in the event of a disaster at the primary location. Using ER HA, you can ensure connectivity to Azure in the event of an ER outage in a single region.
+In order to support mission critical HPC workloads, use an ExpressRoute High Availability (ER HA) configuration. Even in a single site high availability setup where you might have a redundant ExpressRoute connection, it doesn't protect you against single edge site downtime. Enabling two connections at two facilities allows for a redundancy in connection that can enable business to continue if there's a disaster at the primary location. By using ER HA, you can help ensure connectivity to Azure if an ER outage occurs in a single region.
 
 #### Recommendations
 
 - Enable two ExpressRoute circuits in two different ER edge site locations for maximum redundancy.
-  - This setup requires provisioning two ER circuits in the Azure Portal for the two different ER edge site locations, then connecting both ExpressRoute circuits to the same hub virtual network in Azure.
-  - The two different edge site locations would be in the same Azure region. This is what will provide the redundancy in case one of the peering locations experiences a failure. Both ExpressRoute connections would terminate into the same hub virtual network in Azure. Please view the list of [ExpressRoute locations and connectivity partners](/azure/expressroute/expressroute-locations-providers#global-commercial-azure) in planning the ExpressRoute peering locations.
+  - This setup requires provisioning two ER circuits in the Azure portal for the two different ER edge site locations, then connecting both ExpressRoute circuits to the same hub virtual network in Azure.
+  - The two different edge site locations would be in the same Azure region. It's what provides the redundancy in case one of the peering locations fails. Both ExpressRoute connections would terminate into the same hub virtual network in Azure. View the list of [ExpressRoute locations and connectivity partners](/azure/expressroute/expressroute-locations-providers#global-commercial-azure) in planning the ExpressRoute peering locations.
   - You can work with the provider in order to configure the second ExpressRoute site.
-  - It is critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
+  - It's critical to ensure that the second connection is working by failing traffic over to the second location and performing regular drills to ensure connectivity.
 
-For details on a maximum resiliency ExpressRoute configuration, please refer to [this page](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros)
+For details on a maximum resiliency ExpressRoute configuration, see [Designing for disaster recovery with ExpressRoute](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering#redundancy-with-expressroute-circuits-in-different-metros).
 
 ## Security
 
@@ -44,13 +44,22 @@ Apply security principles to your HPC environment to provide assurances against 
 
 ### Operating system images
 
-Azure Marketplace provides Linux based HPC images to use in the cluster. These images come packed with popular InfiniBand-based MPI libraries, Mellanox OFED, Preconfigured IP over InfiniBand, Communication Runtimes, Intel/AMD Optimized libraries, Azure HPC diagnostic tools, etc. Users can start with these images and then apply their organization's security hardening policies to strengthen software images against vulnerabilities and cyber threats. Upon hardening, the new image can be saved in Azure's Image Gallery to be utilized to create the Virtual Machines within Azure's HPC Cluster orchestrator service, Azure CycleCloud and Azure HPC Service, Azure Batch.
+Azure Marketplace provides Linux-based HPC images to use in the cluster. These images contain many popular libraries, software packages, and diagnostic tools such as:
+
+- InfiniBand-based, message passing interface (MPI) libraries
+- Mellanox OFED
+- Preconfigured IP over InfiniBand
+- Communication runtimes
+- Intel/AMD- optimized libraries
+- Azure HPC diagnostic tools, and so on
+
+You can start with the images and then apply your organization's security policies to strengthen software images against vulnerabilities and cyber threats. After validation, you can save the new image in Azure Compute Gallery. You can then use the image to create virtual machines in Azure CycleCloud, Azure HPC, and Azure Batch.
 
 ### User access
 
 - Define clear lines of responsibility and separation of duties for each function.
 - Restrict access based on a need-to-know basis and least privilege security principles.
-- Assign permissions to users, groups, and applications at a certain scope through Azure RBAC. Use built-in roles when possible.
+- Assign permissions to users, groups, and applications at a certain scope through Azure role-based access control (Azure RBAC). Use built-in roles when possible.
 - Prevent deletion or modification of a resource, resource group, or subscription through management locks.
 - Use Managed Identities to access resources in Azure.
 - Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
@@ -60,34 +69,31 @@ Azure Marketplace provides Linux based HPC images to use in the cluster. These i
 
 ### Azure batch security
 
-Follow the best practices to enable security for [Azure batch](/azure/batch/security-best-practices)
+Follow the best practices to enable security for [Azure batch.](/azure/batch/security-best-practices)
 
 ### Azure CycleCloud security
 
-Follow the best practices to enable security for [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices)
+Follow the best practices to enable security for [Azure CycleCloud.](/azure/cyclecloud/concepts/security-best-practices)
 
 ## Cost optimization
 
-To make the most out of running your environment in Azure, you must first prioritize cost management and upfront planning exercises. These are the most pivotal for a successful cloud migration and journey for almost any organization. [Azure Cost Management](/azure/cost-management-billing) gives you the tools to plan for, analyze and reduce your spending to maximize your cloud investment. An extensive list of ways you can optimize and plan your cloud spent can be found [here](/azure/cost-management-billing/costs/cost-mgt-best-practices) But, for the purposes of discussion, let’s call out a few important ones
-here:
-
-The following measures would be helpful in cost optimization of the HPC workloads
+To make the most out of running your environment in Azure, you must first prioritize cost management and upfront planning exercises. Cost management and planning are typically the most important considerations for an organization's successful cloud migration journey. [Microsoft Cost Management](/azure/cost-management-billing) gives you the tools to plan for, analyze, and reduce spending to maximize your cloud investment. For more information on the ways you can plan and optimize your cloud costs, see [Cost management billing best practices](/azure/cost-management-billing/costs/cost-mgt-best-practices). The following considerations are some of the most important for cost optimization.
 
 ### Choice of operating system
 
-Linux has been the dominant operating system for HPC workloads. Linux is open-source, tuned for performance to leverage the HPC infrastructure, thus the MPI libraries and Infiniband drivers work well on Linux vs. Windows. Thereby using Linux VMs over Windows for setting up an HPC cluster would definitely save costs. However, it's understandable that some users may have a strong preference for a Windows environment especially while doing the pre/post processing tasks in workload such as Computational Fluid Dynamics. In such a case, the recommendation is to have a Windows Front End submitting jobs to a Linux host (Head Node) which can use the compute nodes for simulations.
+Linux is the dominant operating system for HPC workloads. Linux is open-source and tuned for performance to use the HPC infrastructure. So the MPI libraries and Infiniband drivers work well on Linux versus Windows. By using Linux virtual machines (VMs) over Windows for setting up an HPC cluster, it would definitely save costs. But it's understandable that some users might have a strong preference for a Windows environment especially while doing the pre/post processing tasks in workload such as Computational Fluid Dynamics. In such a case, the recommendation is to have a Windows Front End submitting jobs to a Linux host (Head Node) which can use the compute nodes for simulations.
 
 ### Autoscaling
 
-Autoscaling is a capability to provision and utilize the VMs only when the job is submitted/active. Once the job is complete the nodes turn off automatically. Using Autoscaling allows you to adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has built in autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes and can be customized. This ensures that the users pay only for what they use. Azure batch, on the other hand, provides the user a mechanism to integrate an autoscaling formula with the choice of parameters.   For more details, see [here](/azure/azure-monitor/autoscale/autoscale-get-started).
+Autoscaling is a capability to provision and utilize the VMs only when the job is submitted or active. Once the job completes, the nodes turn off automatically. Using Autoscaling lets you adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes. You can customize the time limit. The time limit helps ensure that users pay only for what they use. Azure Batch provides a mechanism to integrate an autoscaling formula with the choice of parameters. For more information, see [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started).
 
 ### PAYG vs Reserved vs Spot Instance
 
-Azure provides various pricing options namely, Pay As You Go (PAYG), Reserved Instance with 1 or 3 year options, Spot Instances subject to the capacity available in the Data center. PAYG instances are cost effective to cater sporadic demand for capacity and Reserved Instances could prove cost effective if either there's a continuous demand for HPC or there are many applications to run on Azure HPC. Both are good fit for production ready workloads. Spot instances, on the other hand are good for brief testing and experimentation or if your application suits checkpointing, e.g, Genomics. Spot instances are subject to the capacity available in the data center and the pricing changes and based on these factors the spot instances can be evicted with minimum notice.
+Azure provides various pricing options namely, Pay As You Go (PAYG), Reserved Instance with one or three-year options, Spot Instances subject to the capacity available in the Data center. PAYG instances are cost effective to cater sporadic demand for capacity and Reserved Instances could prove cost effective if either there's a continuous demand for HPC or there are many applications to run on Azure HPC. Both are good fit for production ready workloads. Spot instances, on the other hand are good for brief testing and experimentation or if your application suits checkpointing, e.g, Genomics. Spot instances are subject to the capacity available in the data center and the pricing changes and based on these factors the spot instances can be evicted with minimum notice.
 
 ### Data classification
 
-HPC workloads benefit from high throughput storage, for example, Azure Managed Lustre, Azure Net App Files, BeeGFS Parallel File System, etc. These storage services deliver performance and may come at a cost. It's important to have data classified before hand such that only application-specific data reside in these systems. All other data can reside in low cost storage solutions such as Azure Data Lake or Blob. Further, it might be useful to provision HPC storage systems on demand making sure the data is synced to low cost storage service like Azure Blob Storage. This will ensure data is retained in Azure Blob when the high performance storage system is turned off. Azure Managed Lustre and Azure Net App Files do offer a sync service.
+HPC workloads benefit from high throughput storage, for example, Azure Managed Lustre, Azure Net App Files, BeeGFS Parallel File System, etc. These storage services deliver performance and might come at a cost. It's important to have data classified before hand such that only application-specific data reside in these systems. All other data can reside in low cost storage solutions such as Azure Data Lake or Blob. Further, it might be useful to provision HPC storage systems on demand making sure the data is synced to a low-cost storage service like Azure Blob Storage. On-demand storage helps ensure data retains in Azure Blob when the high-performance storage system is turned off. Azure Managed Lustre and Azure Net App Files do offer a sync service.
 
 ### Set budgets
 
@@ -95,13 +101,13 @@ Azure CycleCloud allows you to set budgets per cluster and can send notification
 
 ## Operational excellence
 
-When keeping your HPC applications running in production, deployments must be reliable and predictable. Reliable and predictable deployments consist of automating HPC workloads with Infrastructure as a Code (IaC) solutions. You must also perform node health checks for analyzing and monitoring your HPC workloads.
+When you keep your HPC applications running in production, deployments must be reliable and predictable. Reliable and predictable deployments consist of automating HPC workloads with Infrastructure as a Code (IaC) solutions. You must also perform node health checks for analyzing and monitoring your HPC workloads.
 
  For more deployment suggestions, see [repeatable infrastructure](/azure/architecture/framework/devops/automation-infrastructure). For more monitoring suggestions, see the recommended [checklist](/azure/architecture/framework/devops/checklist).
 
 ### Infrastructure as Code
 
-HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Storage, Visualization Nodes, License Servers, etc. To automate the deployment, it's recommended to use industry standard tools like Terraform, Ansible and Packer to simplify the process.
+HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Storage, Visualization Nodes, License Servers, etc. To automate the deployment, we recommend that you use industry-standard tools like Terraform, Ansible, and Packer to simplify the process.
 
 ### Node health check
 
@@ -111,11 +117,11 @@ HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Stora
 
 Ensure that your HPC environment is able to scale in order to meet the demands placed on it by users in an efficient manner. Choose the right platform for your HPC applications based on application vendor recommendations, invest in capacity planning if extra infrastructure is needed to meet demand, and monitor the HPC infrastructure performance as users use your system.
 
-For more information, see [performance efficiency topics](/azure/architecture/framework/scalability/overview#topics).
+For more information, see [performance efficiency articles](/azure/architecture/framework/scalability/overview#topics).
 
 ### Choosing the right platform for the HPC application
 
-Azure offers a range of platforms for Virtual Machines based on Intel, AMD CPU and/or NVIDIA, AMD GPU. While most of the applications are compatible with what is available, there are some which only benefit from a particular type of CPU and/or GPU. Before deploying the infrastructure on cloud it's important to have a recommendation from the application vendor (ISV) to understand
+Azure offers a range of platforms for Virtual Machines based on Intel, AMD CPU and/or NVIDIA, AMD GPU. While most of the applications are compatible with what is available, there are some which only benefit from a particular type of CPU and/or GPU. Before deploying the infrastructure on cloud, it's important to have a recommendation from the application vendor (ISV) to understand
 
 - Whether the application is memory bound, CPU bound or GPU bound.
 - Whether they have any recommendation on any type of CPU/GPU architecture for performance
