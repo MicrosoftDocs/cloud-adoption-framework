@@ -11,11 +11,11 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to monitor cloud governance. After you enforce cloud governance, you need to measure how aligned (compliant) your cloud environment is with your cloud governance policies. Start by taking an initial compliance measurement to identify areas that require improvement in order to align your cloud setup with your governance policies. Track compliance over time to see where cloud governance is effective and ineffective. The goal is to monitor governance and reduce noncompliance problems to zero.
 
-:::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./_images/monitor.svg" border="false":::
+:::image type="content" source="./_images/monitor.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance" lightbox="./_images/monitor.svg" border="false":::
 
 ## Configure cloud governance monitoring
 
-Implement monitoring solutions to track compliance with your cloud governance policies. The goal is the have visibility on the teams responsible for compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
+Implement monitoring solutions to track compliance with your cloud governance policies. The goal is to have visibility on the teams responsible for enforcing compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
 
 - *Use monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring.
 
@@ -37,7 +37,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for regulatory compliance governance
 
-Achieve real-time visibility and automatic enforcement of regulatory compliance across all cloud resources to prevent noncompliance problems.
+Achieve real-time visibility and automatic enforcement of regulatory compliance across all cloud resources.
 
 - *Use compliance dashboards.* [Get policy compliance data](/azure/governance/policy/how-to/get-compliance-data) on the policies you assigned.
 
@@ -67,7 +67,7 @@ Ensure optimal performance and availability of cloud services by automatically d
 
 - *Monitor policies on cloud operations.* Use Azure Policy to track compliance with governance policies that apply to operations.
 
-- *Monitor logs and metrics.* Analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/essentials/analyze-metrics) across cloud environments to track [availability](/azure/azure-monitor/app/availability-overview) and [performance](/azure/azure-monitor/app/failures-and-performance-views).
+- *Monitor logs and metrics.* To track [availability](/azure/azure-monitor/app/availability-overview) and [performance](/azure/azure-monitor/app/failures-and-performance-views), analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/essentials/analyze-metrics) across cloud environments.
 
 - *Monitor resource optimization.* [Use Azure Advisor](/azure/advisor/advisor-overview#what-is-advisor) to monitor Azure resources for reliability, security, operational excellence, performance, and cost. [Set alerts](/azure/advisor/advisor-alerts-portal) for any new Advisor recommendations.
 

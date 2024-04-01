@@ -12,23 +12,23 @@ ms.custom: internal, UpdateFrequency2
 
 This article outlines the approach to assess risks associated with the cloud. All technologies introduce certain risks to an organization. Risks are undesired outcomes that could affect your business, such as noncompliance with industry standards. When adopting the cloud, you need to identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.
 
-:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/assess.svg" border="false":::
+:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/assess.svg" border="false":::
 
 ## Identify cloud risks
 
 Catalog a comprehensive list of cloud risks. Knowing your risks allows you to create governance policies that effectively mitigate cloud risks. To identify cloud risks, follow these recommendations:
 
-- *Catalog all cloud assets.* List all your cloud assets so you can comprehensively identify risks. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
+- *List all cloud assets.* List all your cloud assets so you can comprehensively identify risks. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
 
 - *Discover cloud risks.* Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop the list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
 
 - *Involve key stakeholders.* Gather input from diverse organizational roles—IT, security, legal, finance, and business units—to consider all potential risks. This collaborative approach guarantees a holistic view of risks related to the cloud.
 
-- *Validate risk list.* Engage external experts who possess a deep understanding of cloud risk identification to review and validate your risk list, such as Microsoft account teams or specialized Microsoft partners. Their expertise helps confirm the identification of all potential risks and enhances the accuracy of your risk list.
+- *Verify risk list.* Engage external experts who possess a deep understanding of cloud risk identification to review and validate your risk list, such as Microsoft account teams or specialized Microsoft partners. Their expertise helps confirm the identification of all potential risks and enhances the accuracy of your risk list.
 
 ### Azure facilitation: Identifying cloud risks
 
-The following guidance is meant to help you identify cloud risks in Azure. It provides a sample starting point for major categories of cloud governance. Azure can help automate part of the process of finding risks. Use tools such as Azure Advisor, Microsoft Defender for Cloud, Azure Policy, Azure Service Health, and Microsoft Purview to identity cloud risks.
+The following guidance is meant to help you identify cloud risks in Azure. It provides a sample starting point for major categories of cloud governance. Azure can help automate part of the process of finding risks. Use Azure tools such as Azure Advisor, Microsoft Defender for Cloud, Azure Policy, Azure Service Health, and Microsoft Purview.
 
 - *Identify regulatory compliance risks.* Identify risks of noncompliance with legal and regulatory frameworks affecting cloud data and operations. Know the regulatory requirements of your industry. Use the [Azure compliance documentation](/azure/compliance/) to start.
 
@@ -56,7 +56,7 @@ Estimate the quantitative or qualitative probability of each risk occurring per 
 
 - *Analyze historical data.* Look at internal incident reports, audit logs, and other records to identify how often similar risks occurred in the past.
 
-- *Test control effectiveness.* Assess the effectiveness of current risk-mitigation controls to minimize risks. Consider reviewing control testing results, audit findings, and performance metrics.
+- *Test control effectiveness.* To minimize risks, assess the effectiveness of current risk-mitigation controls. Consider reviewing control testing results, audit findings, and performance metrics.
 
 ### Determine risk impact
 
@@ -90,7 +90,7 @@ Categorize each risk into one of three levels: major risks (level 1), subrisks (
 
 ### Determine risk management strategy
 
-For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it is too expensive, you should document that reasoning for future reference.
+For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it's too expensive, you should document that reasoning for future reference.
 
 ### Assign risk owners
 
@@ -121,11 +121,11 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 ## Review cloud risks
 
-Review cloud risks to ensure the risks are valid and accurate. Reviews should be regular and also in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
+Review the current cloud risk list to ensure it's valid and accurate. Reviews should be regular and also in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
 
 - *Schedule regular assessments.* Set a recurring schedule to review and assess cloud risks, such as quarterly, biannually, or yearly. Find the assessment review frequency that best accommodates personnel availability, the rate of cloud environment changes, and risk appetite.
 
-- *Conduct event-based reviews.* Review risks in response to specific events. Consider new technology adoption, technology updates, regulatory compliance changes, new business processes, new security threats, changes in risk appetite, and risk events.
+- *Conduct event-based reviews.* Review risks in response to specific events, such as the failed prevention of a risk. Consider new technology adoption, business processes, and security threats events worth reviewing risks. Consider reviewing when technology, regulatory compliance, and organizational risk appetite changes.
 
 - *Review cloud governance policies.* Keep, update, or remove cloud governance policies to address new risks, change existing risks, or remove outdated risks. Review the cloud governance policy statement and cloud governance enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it are still relevant. Consult with stakeholders to remove the cloud governance policies or update the policies to associate them with a new risk.
 
