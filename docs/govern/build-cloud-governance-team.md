@@ -1,6 +1,6 @@
 ---
 title: Build a cloud governance team
-description: Learn to build an effective cloud governance team . Discover key roles, responsibilities, and strategies for managing cloud risks and developing policies.
+description: Learn to build an effective cloud governance team . Discover responsibilities and strategies for managing cloud risks and developing cloud governance policies.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -28,7 +28,7 @@ Describe the duties and roles of the cloud governance team. Outline what the tea
 
 ## Select the members of the cloud governance team
 
-Select the individuals responsible for overseeing and managing cloud governance within an organization. Recruit members with the skills to efficiently enforce policies, manage risks, and comply with regulations. To select members of the cloud governance team, follow these recommendations:
+Select the individuals responsible for overseeing and managing cloud governance within the organization. Recruit members with the skills to efficiently enforce policies, manage risks, and comply with regulations. To select members of the cloud governance team, follow these recommendations:
 
 - *Select a small team*. Pick a small team to encourage agility and quicker decision-making.
 
