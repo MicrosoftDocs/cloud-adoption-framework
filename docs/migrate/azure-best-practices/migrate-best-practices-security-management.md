@@ -194,7 +194,6 @@ Azure provides other security features that provide advanced security options. S
 The following sections recommend some best practices for Azure management, including:
 
 - Best practices for Azure resource groups and resources, including smart naming, preventing accidental deletion, managing resource permissions, and effective resource tagging.
-- An overview of using blueprints for building and managing your deployment environments.
 - Review sample Azure architectures as you build your post-migration deployments.
 - If you have multiple subscriptions, you can gather them into management groups, and apply governance settings to those groups.
 - Apply compliance policies to your Azure resources.
@@ -261,18 +260,6 @@ Often, using only a resource group name related to resources won't provide enoug
 - Learn about [tagging and tag limitations](/azure/azure-resource-manager/management/tag-resources).
 - Review [PowerShell and CLI examples to set up tagging, and to apply tags from a resource group to its resources](/azure/azure-resource-manager/management/tag-resources#powershell).
 - Read about [Azure tagging best practices](https://www.azurefieldnotes.com/2016/07/18/azure-resource-tagging-best-practices).
-
-### Best practice: Implement blueprints
-
-Just as a blueprint allows engineers and architects to sketch a project's design parameters, the Azure Blueprints service lets cloud architects and central IT groups define a repeatable set of Azure resources. Blueprints help them to implement and adhere to an organization's standards, patterns, and requirements. Development teams can rapidly build and create new environments that meet organizational compliance requirements. These new environments have a set of built-in components, such as networking, to speed up development and delivery.
-
-- Use blueprints to orchestrate the deployment of resource groups, Azure Resource Manager templates, and policy and role assignments.
-- Store blueprints in a globally distributed service, Azure Cosmos DB. Blueprint objects are replicated to multiple Azure regions. Replication provides low latency, high availability, and consistent access to a blueprint, regardless of the region to which a blueprint deploys resources.
-
-**Learn more:**
-
-- Read [about blueprints](/azure/governance/blueprints/overview).
-- Review an [example blueprint for accelerating AI in healthcare](https://azure.microsoft.com/blog/customizing-azure-blueprints-to-accelerate-ai-in-healthcare/).
 
 ### Best practice: Review Azure reference architectures
 

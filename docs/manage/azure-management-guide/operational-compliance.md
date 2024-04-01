@@ -22,7 +22,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 |---|---|---|
 | Patch management | Azure Automation Update Management | Management and scheduling of updates |
 | Policy enforcement | Azure Policy | Policy enforcement to ensure environment and guest compliance |
-| Environment configuration | Azure Blueprints | Automated compliance for core services |
+| Environment configuration | Infrastructure as Code | Automated compliance for core services |
 | Resource configuration | Desired State Configuration | Automated configuration on guest OS and some aspects of the environment |
 
 ::: zone target="docs"
@@ -115,90 +115,3 @@ To learn more, see:
 - [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Define corporate policy](../../govern/policy-compliance/policy-definition.md)
 
-## Azure Blueprints
-
-::: zone-end
-::: zone target="chromeless"
-
-## [Azure Blueprints](#tab/AzureBlueprints)
-
-::: zone-end
-
-With Azure Blueprints, cloud architects and central information-technology groups can define a repeatable set of Azure resources. These resources implement and adhere to an organization's standards, patterns, and requirements.
-
-With Azure Blueprints, development teams can rapidly build and stand up new environments. Teams can also trust they're building within organizational compliance. They do so by using a set of built-in components like networking to speed up development and delivery.
-
-Blueprints are a declarative way to orchestrate the deployment of different resource templates and other artifacts like:
-
-- Role assignments.
-- Policy assignments.
-- Azure Resource Manager templates.
-- Resource groups.
-
-Applying a blueprint can enforce operational compliance in an environment if this enforcement isn't done by the cloud governance team.
-
-### Create a blueprint
-
-To create a blueprint:
-
-::: zone target="chromeless"
-
-1. Go to **Blueprints: Getting started**.
-1. On the **Create a Blueprint** pane, select **Create**.
-1. Filter the list of blueprints to select the appropriate blueprint.
-1. In the **Blueprint name** box, enter the blueprint name.
-1. Select **Definition location**, and choose the appropriate location.
-1. Select **Next : Artifacts**, and review the artifacts included in the blueprint.
-1. Select **Save draft**.
-
-
-::: zone-end
-
-::: zone target="docs"
-
-1. Go to [Blueprints: Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
-1. On the **Create a Blueprint** pane, select **Create**.
-1. Filter the list of blueprints to select the appropriate blueprint.
-1. In the **Blueprint name** box, enter the blueprint name.
-1. Select **Definition location**, and choose the appropriate location.
-1. Select **Next : Artifacts**, and review the artifacts included in the blueprint.
-1. Select **Save draft**.
-
-::: zone-end
-
-### Publish a blueprint
-
-To publish blueprint artifacts to your subscription:
-
-::: zone target="chromeless"
-
-1. Go to **Blueprints** > **Blueprint definitions**.
-1. Select the blueprint you created in the previous steps.
-1. Review the blueprint definition, then select **Publish blueprint**.
-1. In the **Version** box, enter a version like "1.0".
-1. In the **Change notes** box, enter your notes.
-1. Select **Publish**.
-
-
-::: zone-end
-
-::: zone target="docs"
-
-1. In the Azure portal, go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
-1. Select the blueprint you created in the previous steps.
-1. Review the blueprint definition, then select **Publish blueprint**.
-1. In the **Version** box, enter a version like "1.0".
-1. In the **Change notes** box, enter your notes.
-1. Select **Publish**.
-
-<!-- markdownlint-disable MD024 -->
-
-### Learn more
-
-To learn more, see:
-
-- [Azure Blueprints](/azure/governance/blueprints/)
-- [Cloud Adoption Framework resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](/azure/governance/blueprints/samples/#standards-based-blueprint-samples)
-
-::: zone-end
