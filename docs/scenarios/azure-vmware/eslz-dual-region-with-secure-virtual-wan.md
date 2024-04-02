@@ -3,7 +3,7 @@ title: Network considerations for Azure VMware Solution dual-region deployments 
 description: Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions with Secure Virtual WAN.
 author: jasonmedina
 ms.author: jasonmedina
-ms.date: 08/09/2023
+ms.date: 04/02/2024
 ms.topic: conceptual
 ms.service: caf
 ms.subservice: caf-scenario-vmware
