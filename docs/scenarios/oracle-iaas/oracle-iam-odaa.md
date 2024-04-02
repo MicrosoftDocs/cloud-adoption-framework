@@ -1,6 +1,6 @@
 ---
-title: Identity and Access Management for the Oracle@Azure landing zone accelerator
-description: Identity and Access Management for the Oracle@Azure landing zone accelerator.
+title: Identity and Access Management for Oracle Database@Azure
+description: Identity and Access Management for Oracle Database@Azure
 ---
 #
 # **Identity and Access Management for the Oracle@Azure landing zone accelerator**
