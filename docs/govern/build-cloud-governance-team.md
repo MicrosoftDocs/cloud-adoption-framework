@@ -1,6 +1,6 @@
 ---
 title: Build a cloud governance team
-description: Learn to build an effective cloud governance team . Discover responsibilities and strategies for managing cloud risks and developing cloud governance policies.
+description: Learn to build an effective cloud governance team. Discover responsibilities and strategies for managing cloud risks and developing cloud governance policies.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/05/2024
@@ -10,19 +10,19 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
-This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the interest of the organization and ensure cloud governance policies minimize risks. The goal is to have people accountable for the success of cloud governance.
+This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the needs of teams across the business and ensure cloud governance policies minimize risks. The goal is to have people accountable for the success of cloud governance. To build a cloud governance team, follow these recommendations.
 
-:::image type="content" source="./_images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/build.svg" border="false":::
+:::image type="content" source="./_images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/build.svg" border="false":::
 
 ## Define the functions of the cloud governance team
 
-Describe the duties and roles of the cloud governance team. Outline what the team needs to implement the organization's cloud governance effectively. The cloud governance team should fulfill the following essential functions:
+Define the duties and roles of the cloud governance team. Outline the required functions and what they need to do to implement cloud governance effectively. At a minimum, the cloud governance team should fulfill the following functions:
 
-- *Engage stakeholders*. The cloud governance team must actively engage stakeholders across the organization (IT, finance, operations, security, and compliance) to gather input on governance policies. The goal is to ensure cloud governance policies minimize risk without hindering progress toward business goals.
+- *Engage stakeholders*. The cloud governance team must actively engage stakeholders across the organization (IT, finance, operations, security, and compliance) to gather input on defining cloud governance policies. The goal is to ensure cloud governance policies minimize risk without preventing teams from achieving business goals.
 
-- *Assess cloud risks*. The cloud governance team must oversee the identification, analysis, and prioritization of cloud risks. They use or oversee the use of risk assessment tools to evaluate security, compliance, and operational risks, and communicate findings to stakeholders.
+- *Assess cloud risks*. The cloud governance team must oversee the identification, analysis, and prioritization of cloud risks. They oversee risk assessments and communicate findings to stakeholders. They provide access to tools to evaluate security, compliance, and operational cloud risks.
 
-- *Develop and update governance policies*. The cloud governance team should document cloud governance policies for the organization. They should resolve any challenges that cloud governance creates and must regularly review and update cloud governance policies to align with business needs over time. The goal is to ensure the cloud governance policies are comprehensive, enforceable, and align with current technology and requirements.
+- *Develop and update governance policies*. The cloud governance team should document cloud governance policies for the organization. They should resolve any challenges that cloud governance creates for teams and should regularly review and update cloud governance policies as needed. The goal is to ensure the cloud governance policies are comprehensive, enforceable, and align with current technology and requirements.
 
 - *Monitor and review governance*. Establish metrics to measure the effectiveness of cloud governance. Develop reporting methods to track compliance rates, incident response times, and user satisfaction.
 
@@ -32,23 +32,23 @@ Select the individuals responsible for overseeing and managing cloud governance 
 
 - *Select a small team*. Pick a small team to encourage agility and quicker decision-making.
 
-- *Select a diverse team*. The team should consist of individuals from different areas of the organization. Consider including IT operations, security, finance, software development, cloud architecture, processes, and compliance.
+- *Select a diverse team*. The team should consist of individuals from different areas of the organization. Consider including IT operations, security, finance, software development, cloud architecture, and compliance.
 
-- *Define team members' responsibilities*. Define roles and responsibilities within your cloud governance team. Tailor them to your organization's size, complexity, and cloud maturity. Key areas of responsibility include the cloud governance lead, cloud architecture, cloud security, cloud compliance, and cloud finance.
+- *Define team members' responsibilities*. Define the roles and responsibilities within your cloud governance team. Tailor them to your organization's size, complexity, and cloud maturity. Key areas of responsibility include the cloud governance success, cloud architecture, cloud security, cloud compliance, and cloud finance.
 
 ## Define the authority of the cloud governance team
 
-Empower the cloud governance team to implement and oversee cloud governance. The goal is to ensure the cloud governance team has the legitimacy and support required to achieve the organization's cloud governance objectives. To define the authority of the team, follow these recommendations:
+Empower the cloud governance team to implement and oversee cloud governance. The goal is to ensure the cloud governance team has the legitimacy and support required to achieve the organization's cloud governance objectives. To define the authority of the cloud governance team, follow these recommendations:
 
 - *Secure executive sponsorship*. Gain support from and report to a named executive, such as the CIO or CTO, to support the cloud governance initiative. The executive sponsor serves as a point of escalation for challenges and helps align cloud governance with business goals.
 
 - *Establish authority levels*. The executive sponsor should grant the team the authority to define cloud governance policies and take corrective measures for noncompliance.
 
-- *Communicate authority*. The executive sponsor should communicate to the entire organization the governance team's authority and the importance of adhering to governance policies they create.
+- *Communicate authority*. The executive sponsor should communicate to the entire organization the cloud governance team's authority and the importance of adhering to the cloud governance policies they create.
 
 ## Define the scope of the cloud governance team
 
-Establish the boundaries of the cloud governance team's responsibility. The goal is to clarify areas of responsibility so the cloud governance team can focus on their defined functions. To define the scope, follow these recommendations:
+Establish the boundaries of the cloud governance team's responsibilities. The goal is to clarify areas of responsibility so the cloud governance team can focus on their defined functions. To define the scope, follow these recommendations:
 
 - *Define relationship with other teams*. Clearly define the cloud governance team's authority over cloud resources, services, and policies. Avoid conflict and overlapping responsibility with other teams. For hybrid environments, specify the cloud governance team's responsibilities in contrast to those of on-premises teams.
 
