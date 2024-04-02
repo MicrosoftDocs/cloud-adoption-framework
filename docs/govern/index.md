@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 The govern methodology provides a structured approach for setting up and managing cloud governance in Azure. This guidance is applicable to all organizations in any sector. It addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI.
 
-Cloud governance refers to establishing guardrails to regulate the use of cloud services. Guardrails help ensure that cloud use follows predefined rules known as cloud governance policies. Cloud governance policies define what's allowed and what isn't allowed in the cloud. Organizations create cloud governance policies to prevent and mitigate risks. The goal of cloud governance is to make sure that cloud use aligns with cloud governance policies.
+Cloud governance establishes guardrails to regulate the use of cloud services. Guardrails help ensure that cloud use follows predefined rules known as cloud governance policies. Cloud governance policies define what's allowed and what isn't allowed in the cloud. Organizations create cloud governance policies to prevent and mitigate risks. The goal of cloud governance is to make sure that cloud use aligns with cloud governance policies.
 
 :::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
