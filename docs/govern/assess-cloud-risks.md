@@ -10,21 +10,21 @@ ms.custom: internal, UpdateFrequency2
 
 # Assess cloud risks
 
-This article outlines the approach to assess risks associated with the cloud. All technologies introduce certain risks to an organization. Risks are undesired outcomes that could affect your business, such as noncompliance with industry standards. When adopting the cloud, you need to identify the risks the cloud poses to your organization so the cloud governance team can create cloud governance policies to manage those risks.
+This article outlines how to assess risks associated with the cloud. All technologies introduce certain risks to an organization. Risks are undesired outcomes that could affect your business, such as noncompliance with industry standards. When adopting the cloud, you need to identify the risks the cloud poses to your organization. The cloud governance team creates cloud governance policies to prevent and mitigate those risks. To assess cloud risks, complete these tasks.
 
-:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/assess.svg" border="false":::
+:::image type="content" source="./_images/assess.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/assess.svg" border="false":::
 
 ## Identify cloud risks
 
-Catalog a comprehensive list of cloud risks. Knowing your risks allows you to create governance policies that effectively mitigate cloud risks. To identify cloud risks, follow these recommendations:
+Catalog a comprehensive list of cloud risks. Knowing your risks allows you to create cloud governance policies that can prevent and mitigate those risks. To identify cloud risks, follow these recommendations:
 
-- *List all cloud assets.* List all your cloud assets so you can comprehensively identify risks. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
+- *List all cloud assets.* List all your cloud assets so you can comprehensively identify the risks associated with them. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
 
-- *Discover cloud risks.* Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop the list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
+- *Discover cloud risks.* Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop a more comprehensive list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
 
-- *Involve key stakeholders.* Gather input from diverse organizational roles—IT, security, legal, finance, and business units—to consider all potential risks. This collaborative approach guarantees a holistic view of risks related to the cloud.
+- *Involve key stakeholders.* Gather input from diverse organizational roles (IT, security, legal, finance, and business units) to consider all potential risks. This collaborative approach ensures a holistic view of risks related to the cloud.
 
-- *Verify risk list.* Engage external experts who possess a deep understanding of cloud risk identification to review and validate your risk list, such as Microsoft account teams or specialized Microsoft partners. Their expertise helps confirm the identification of all potential risks and enhances the accuracy of your risk list.
+- *Verify risks.* Engage external experts who possess a deep understanding of cloud risk identification to review and validate your risk list. These experts could be Microsoft account teams or specialized Microsoft partners. Their expertise helps confirm the identification of all potential risks and enhances the accuracy of your risk assessment.
 
 ### Azure facilitation: Identifying cloud risks
 
@@ -36,7 +36,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - *Identify cost risks.* Identify risks related to the costs of cloud resources. Cost-related risks include overprovisioning, underprovisioning, underutilization, and unexpected costs from data transfer fees or service scaling. Use a [cost assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to identify cost risk. Use Azure to estimate costs with the [Azure pricing calculator](/azure/cost-management-billing/costs/pricing-calculator). [Analyze and forecast](/azure/cost-management-billing/costs/quick-acm-cost-analysis) costs on current resources. Identify [unexpected changes](/azure/cost-management-billing/understand/analyze-unexpected-charges) in cloud costs.
 
-- *Identify operations risks.* Identify risks that threaten the continuity of cloud operations, such as downtime and data loss. Use Azure to identify risks to [reliability and performance](/azure/advisor/advisor-overview).
+- *Identify operations risks.* Identify risks that threaten the continuity of cloud operations, such as downtime and data loss. Use Azure tools to identify risks to [reliability and performance](/azure/advisor/advisor-overview).
 
 - *Identify data risks.* Identify risks related to data management within the cloud. Consider improper handling of data and flaws in data lifecycle management. Use Azure tools to help [identify data risks](/purview/purview-compliance) and [explore risks to sensitive data](/azure/defender-for-cloud/data-security-review-risks).
 
@@ -50,7 +50,7 @@ Assign a qualitative or quantitative ranking to each risk so you can prioritize 
 
 ### Evaluate risk probability
 
-Estimate the quantitative or qualitative probability of each risk occurring per year. A percentage range (0%-100%) is a common way to represent quantitative risk probability. Low, medium, and high are common labels for qualitative risk probability. To evaluate risk probability, follow these recommendations:
+Estimate the quantitative or qualitative probability of each risk occurring per year. Use a percentage range (0%-100%) to represent annual, quantitative risk probability. Low, medium, and high are common labels for qualitative risk probability. To evaluate risk probability, follow these recommendations:
 
 - *Use public benchmarks.* Use data from reports, studies, or service-level agreements (SLAs) that document common risks and their occurrence rates.
 
@@ -60,7 +60,7 @@ Estimate the quantitative or qualitative probability of each risk occurring per 
 
 ### Determine risk impact
 
-Estimate the quantitative or qualitative impact of the risk occurring on the organization. A dollar amount is a common way to represent quantitative risk impact. Low, medium, and high are common labels for qualitative risk impact. To determine risk impact, follow these recommendations:
+Estimate the quantitative or qualitative impact of the risk occurring on the organization. A monetary amount is a common way to represent quantitative risk impact. Low, medium, and high are common labels for qualitative risk impact. To determine risk impact, follow these recommendations:
 
 - *Conduct financial analysis.* Estimate the potential financial loss of a risk by looking at factors such as the cost of downtime, legal fees, fines, and the cost of remediation efforts.
 
@@ -101,16 +101,16 @@ Designate a primary risk owner for every risk. The risk owner has the responsibi
 Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Consider including these elements:
 
 - *Risk ID:* A unique identifier for each risk. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
-- *Risk management status:* Status of the risk (open, closed).
+- *Risk management status:* Tge status of the risk (open, closed).
 - *Risk category:* A label such as regulatory compliance, security, cost, operations, AI, or resource management.
 - *Risk description:* A brief description of the risk.
 - *Risk probability:* The probability of the risk occurring per year. Use a percentage or qualitative label.
-- *Risk impact:* Provide the risk impact on the organization if the risk occurs such as a dollar amount or qualitative label.
-- *Risk priority:* Provide the risk probability (probability x impact). Use a dollar amount or qualitative label.
-- *Risk level:* Categorize risk as major threat (level 1), subrisk (level 2), or risk driver (level 3).
+- *Risk impact:* The impact on the organization if the risk occurs. Use a monetary amount or qualitative label.
+- *Risk priority:* The severity of the risk (probability x impact). Use a dollar amount or qualitative label.
+- *Risk level:* The type of risk. Use major threat (level 1), subrisk (level 2), or risk driver (level 3).
 - *Risk management strategy:* The approach to manage the risk such as mitigate, accept, or avoid.
 - *Risk management enforcement:* The techniques to enforce the risk management strategy.
-- *Risk owner:* The individual on the cloud governance team managing the risk.
+- *Risk owner:* The individual managing the risk.
 - *Risk closure date:* A date when the risk management strategy should be applied.
 
 For more information, see [Risk list example](#example-risk-list).
@@ -123,11 +123,11 @@ Clearly convey identified cloud risks to the executive sponsor and executive-lev
 
 Review the current cloud risk list to ensure it's valid and accurate. Reviews should be regular and also in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
 
-- *Schedule regular assessments.* Set a recurring schedule to review and assess cloud risks, such as quarterly, biannually, or yearly. Find the assessment review frequency that best accommodates personnel availability, the rate of cloud environment changes, and risk appetite.
+- *Schedule regular assessments.* Set a recurring schedule to review and assess cloud risks, such as quarterly, biannually, or yearly. Find a review frequency that best accommodates personnel availability, the rate of cloud environment changes, and organizational risk tolerance.
 
-- *Conduct event-based reviews.* Review risks in response to specific events, such as the failed prevention of a risk. Consider new technology adoption, business processes, and security threats events worth reviewing risks. Consider reviewing when technology, regulatory compliance, and organizational risk appetite changes.
+- *Conduct event-based reviews.* Review risks in response to specific events, such as the failed prevention of a risk. Consider reviewing risks when you adopt new technologies, change business processes, and discover new security threats events. Also consider reviewing when technology, regulatory compliance, and organizational risk tolerance changes.
 
-- *Review cloud governance policies.* Keep, update, or remove cloud governance policies to address new risks, change existing risks, or remove outdated risks. Review the cloud governance policy statement and cloud governance enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it are still relevant. Consult with stakeholders to remove the cloud governance policies or update the policies to associate them with a new risk.
+- *Review cloud governance policies.* Keep, update, or remove cloud governance policies to address new risks, existing risks, or outdated risks. Review the cloud governance policy statement and cloud governance enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it are still relevant. Consult with stakeholders to remove the cloud governance policies or update the policies to associate them with a new risk.
 
 ## Example risk list
 
