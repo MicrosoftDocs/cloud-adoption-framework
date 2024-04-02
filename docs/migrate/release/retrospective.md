@@ -62,7 +62,6 @@ Consider the following example retrospective output:
 |Communication with the business users for Application X and Application Y. (5 votes)|Involvement of developers to validate the network architecture for Application X and Application Z. (3 votes)|We need to review all firewall traffic from workloads before migration, even if we believe that they have no specialty rules. (4 votes)|
 |Development teams for Application Y were highly involved. (2 votes)|Understanding the networking requirements for Application X. (2 votes)|We need to make sure development teams know what's expected from them as part of the migration process. (4 votes)|
 |Enablement of Azure Backup as part of migration process.|Understanding the networking requirements for Application Y. (1 vote)|We need to plan extra time for large SQL databases. (3 votes)|
-| |Final SQL replication for Application Y took longer than expected. (3 votes)| |
 
 ## Next step
 
