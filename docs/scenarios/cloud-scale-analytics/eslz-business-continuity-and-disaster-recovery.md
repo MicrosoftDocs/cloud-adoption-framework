@@ -1,12 +1,10 @@
 ---
 title: Business continuity and disaster recovery for cloud-scale analytics
 description: Learn how this scenario can improve business continuity and disaster recovery for cloud-scale analytics in Azure.
-author: christophermschmidt
-ms.author: chrschm
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 11/25/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

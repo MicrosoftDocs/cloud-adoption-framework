@@ -5,9 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/15/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, linux-related-content
 ---
 
 # Connect Azure Arc-enabled servers to Microsoft Defender for Cloud
@@ -55,22 +53,22 @@ In the following procedures, you enable and configure Microsoft Defender for Clo
 
     ```console
     az login
-    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+    az account set -s <Your Subscription ID>
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
     ```
 
     For example:
 
     ```console
-    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
+    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
     ```
 
-    Output should look like this:
+    The output should look like this:
 
     ```json
     {
       "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcServers",
-      "name": "http://AzureArcServers",
+      "displayName": "http://AzureArcServers",
       "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }

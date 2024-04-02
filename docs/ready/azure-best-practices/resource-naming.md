@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: ssumner
 ms.date: 09/28/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
@@ -93,7 +91,7 @@ The following section provides example names for common Azure resource types in 
 > Choose an approach that's suitable for your organization. The padding shown here illustrates the importance of using a consistent approach to inventory numbering, rather than showing which approach is superior. Before choosing a numbering scheme, with or without padding, evaluate what will affect long-term operations more: CMDB and asset management solutions or code-based inventory management. Then, consistently follow the padding option that best fits your operational needs.
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment. For more examples, see the 
-[Azure Naming Tool](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
+[Azure Naming Tool](https://github.com/mspnp/AzureNamingTool) and the [Naming and tagging tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx).
 
 > [!NOTE]
 > The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
@@ -116,13 +114,12 @@ The following section provides some example names for common Azure resource type
 | **Subnet** | Virtual network | *snet-\<subscription&nbsp;purpose>-\<region>-\<###>* <br><br> <li> `snet-shared-eastus2-001` <li> `snet-prod-westus-001` <li> `snet-client-eastus2-001` |
 | **Network interface (NIC)** | Resource group | *nic-<##>-\<vm&nbsp;name>-\<subscription&nbsp;purpose>-\<###>* <br><br> <li> `nic-01-dc1-shared-001` <li> `nic-02-vmhadoop1-prod-001` <li> `nic-02-vmtest1-client-001` |
 | **Public IP address** | Resource group | *pip-\<vm&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<environment>-\<region>-\<###>* <br><br> <li> `pip-dc1-shared-eastus2-001` <li> `pip-hadoop-prod-westus-001` |
-| **Load balancer** | Resource group | *lb-\<app&nbsp;name&nbsp;or&nbsp;role>-\<environment>-\<###>* <br><br> <li> `lb-navigator-prod-001` <li> `lb-sharepoint-dev-001` |
+| **Load balancer (external)** | Resource group | *lbe-\<app&nbsp;name&nbsp;or&nbsp;role>-\<environment>-\<###>* <br><br> <li> `lbe-navigator-prod-001` <li> `lbe-sharepoint-dev-001` |
 | **Network security group (NSG)** | Subnet or NIC | *nsg-\<policy&nbsp;name&nbsp;or&nbsp;app&nbsp;name>-\<###>* <br><br> <li> `nsg-weballow-001` <li> `nsg-rdpallow-001` <li> `nsg-sqlallow-001` <li> `nsg-dnsblocked-001` |
 | **Local network gateway** | Virtual gateway | *lgw-\<subscription&nbsp;purpose>-\<region>-\<###>* <br><br> <li> `lgw-shared-eastus2-001` <li> `lgw-prod-westus-001` <li> `lgw-client-eastus2-001` |
 | **Virtual network gateway** | Virtual network | *vgw-\<subscription&nbsp;purpose>-\<region>-\<###>* <br><br> <li> `vgw-shared-eastus2-001` <li> `vgw-prod-westus-001` <li> `vgw-client-eastus2-001` |
-| **Site-to-Site connection** | Resource group | *cn-\<local&nbsp;gateway&nbsp;name>-to-\<virtual&nbsp;gateway&nbsp;name>* <br><br> <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-eastus2-001` <li> `cn-lgw-shared-eastus2-001-to-vgw-shared-westus-001` |
-| **VPN connection** | Resource group | *cn-\<subscription1&nbsp;purpose>>-\<region1>-to-\<subscription2&nbsp;purpose>>-\<region2>-* <br><br> <li> `cn-shared-eastus2-to-shared-westus` <li> `cn-prod-eastus2-to-prod-westus` |
-| **Route table** | Resource group | *route-\<route&nbsp;table&nbsp;name>* <br><br> <li> `route-navigator` <li> `route-sharepoint` |
+| **VPN connection** | Resource group | *vcn-\<subscription1&nbsp;purpose>>-\<region1>-to-\<subscription2&nbsp;purpose>>-\<region2>-* <br><br> <li> `vcn-shared-eastus2-to-shared-westus` <li> `vcn-prod-eastus2-to-prod-westus` |
+| **Route table** | Resource group | *rt-\<route&nbsp;table&nbsp;name>* <br><br> <li> `rt-navigator` <li> `rt-sharepoint` |
 | **DNS label** | Global | *\<DNS&nbsp;A&nbsp;record&nbsp;for&nbsp;VM>.\<region>.cloudapp.azure.com* <br><br> <li> `dc1.westus.cloudapp.azure.com` <li> `web1.eastus2.cloudapp.azure.com` |
 
 ### Example names: Compute and Web
@@ -153,8 +150,8 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure Cognitive Search** | Global | *srch-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `srch-navigator-prod` <li> `srch-emissions-dev` |
-| **Azure Cognitive Services** | Resource group | *cog-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `cog-navigator-prod` <li> `cog-emissions-dev` |
+| **Azure AI Search** | Global | *srch-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `srch-navigator-prod` <li> `srch-emissions-dev` |
+| **Azure OpenAI Service** | Resource group | *oai-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `oai-navigator-prod` <li> `oai-emissions-dev` |
 | **Azure Machine Learning workspace** | Resource group | *mlw-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `mlw-navigator-prod` <li> `mlw-emissions-dev` |
 
 ### Example names: Analytics and IoT
@@ -163,7 +160,7 @@ The following section provides some example names for common Azure resource type
 |--|--|--|
 | **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
 | **Azure Data Factory** | Global | *adf-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
-| **Azure Stream Analytics** | Resource group | *asa-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `asa-navigator-prod` <li> `asa-emissions-dev` |
+| **Azure Synapse Analytics workspaces** | Resource group | *synw-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `synw-navigator-prod` <li> `synw-emissions-dev` |
 | **Data Lake Storage account** | Global | *dls\<project,&nbsp;app&nbsp;or&nbsp;service>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
 | **IoT hub** | Global | *iot-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>* <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
 
@@ -171,6 +168,6 @@ The following section provides some example names for common Azure resource type
 
 | Asset type | Scope | Format and Examples|
 |--|--|--|
-| **Service Bus** | Global | *sb-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>.servicebus.windows.net* <br><br> <li> `sb-navigator-prod.servicebus.windows.net` <li> `sb-emissions-dev.servicebus.windows.net` |
-| **Service Bus queue** | Service Bus | *sbq-\<query descriptor>* <br><br> <li> `sbq-messagequery` |
-| **Service Bus topic** | Service Bus | *sbt-\<query descriptor>* <br><br> <li> `sbt-messagequery` |
+| **Service Bus namespace** | Global | *sbns-\<project,&nbsp;app&nbsp;or&nbsp;service>-\<environment>.servicebus.windows.net* <br><br> <li> `sbns-navigator-prod.servicebus.windows.net` <li> `sbns-emissions-dev.servicebus.windows.net` |
+| **Service Bus queue** | Service Bus | *sbq-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbq-navigator` |
+| **Service Bus topic** | Service Bus | *sbt-\<project,&nbsp;app&nbsp;or&nbsp;service>* <br><br> <li> `sbt-navigator` |

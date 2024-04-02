@@ -5,12 +5,12 @@ author: mosabami
 ms.author: aayodeji
 ms.date: 07/13/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
 # Scenario-specific enterprise-scale landing zones in Azure
+
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
 
 Scenarios for enterprise-scale landing zones enable effective adoption and operationalization of key technologies on Azure. These specific scenarios can be used to accelerate adoption when your organization identifies business or technical requirements that require additional tier-1 technology platforms to support mission-critical workloads or business processes.
 
@@ -26,8 +26,9 @@ These landing zones have been developed in the broader context of common scenari
 |---|---|---|
 |[Hybrid and multicloud](../../scenarios/hybrid/index.md)| Guidance on shaping an organizations approach to implementing a hybrid cloud strategy. | [Enterprise-scale for hybrid with Azure Arc](../../scenarios/hybrid/enterprise-scale-landing-zone.md)
 |[SAP](../../scenarios/SAP/index.md)| Guidance for migrating or adopting SAP workloads as part of your cloud strategy. | [SAP on Azure landing zone accelerator](../../scenarios/sap/enterprise-scale-landing-zone.md) |
-|[Virtual desktop](../../scenarios/wvd/index.md)| Guidance for migrating virtual desktops, or creating new as part of a cloud-focused productivity strategy. | [Enterprise-scale for Azure Virtual Desktop](../../scenarios/wvd/enterprise-scale-landing-zone.md) |
+|[Virtual desktop](../../scenarios/azure-virtual-desktop/index.md)| Guidance for migrating virtual desktops, or creating new as part of a cloud-focused productivity strategy. | [Enterprise-scale for Azure Virtual Desktop](../../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md) |
 | [Modern application platform](../../scenarios/app-platform/index.md) | Guidance for how application services and containers can be integrated into your cloud adoption strategy. | [Enterprise-scale for AKS](../../scenarios/app-platform/aks/landing-zone-accelerator.md) |
+| [Azure VMware Solution](../../scenarios/azure-vmware/index.md) | Guidance for migrating VMware workloads to Azure as part of your cloud strategy. | [Azure VMware Solution landing zone accelerator](../../scenarios/azure-vmware/enterprise-scale-landing-zone.md) |
 
 ## Next steps
 

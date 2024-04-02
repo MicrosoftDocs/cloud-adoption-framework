@@ -5,9 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/27/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.custom: internal, fasttrack-new, AQC, seo-caf-innovate
+ms.custom: internal, fasttrack-new, AQC
 keywords: Democratize, democratize data, democratizing data, data democratization, democratized
 ---
 

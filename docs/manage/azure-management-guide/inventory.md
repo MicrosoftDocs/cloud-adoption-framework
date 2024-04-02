@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 10/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: internal, fasttrack-edit, AQC
 ---
 
@@ -162,3 +160,8 @@ Each article guides you through a series of steps to onboard these solutions:
 - Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.
+
+## Microsoft Cloud for Sovereignty transparency logs
+
+If you're using Microsoft Cloud for Sovereignty, you can use [transparency logs](/industry/sovereignty/transparency-logs) to understand when Microsoft engineers access your resources. These logs help with sovereignty compliance and other regulatory requirements.
+

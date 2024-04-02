@@ -5,9 +5,7 @@ author: sabbour
 ms.author: martinek
 ms.date: 04/06/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.custom: think-tank, seo-caf-innovate
+ms.custom: think-tank
 keywords: application security, security essentials, Kubernetes security
 ---
 
@@ -26,7 +24,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
 **Security checklist:**
 
-- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://aka.ms/securingk8s-whitepaper).
+- **Familiarize yourself with the security essentials white paper.** The primary goals of a secure Kubernetes environment are ensuring that the applications it runs are protected, that security issues can be identified and addressed quickly, and that future similar issues will be prevented. For more information, see [`The Definitive Guide to Securing Kubernetes` (white paper)](https://cdn2.hubspot.net/hubfs/1665891/Assets/The%20Definitive%20Guide%20to%20Securing%20Kubernetes.pdf).
 
 - **Review the security hardening setup for the cluster nodes.** A security hardened host OS reduces the surface area of attack and allows deploying containers securely. To learn more, see [Security hardening in AKS virtual machine hosts](/azure/aks/security-hardened-vm-host-image).
 
@@ -34,7 +32,7 @@ As you get started, the security essentials checklist and Kubernetes security re
 
   For more information, see
   - [Understand Kubernetes role-based access control (Kubernetes RBAC)  (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=G3R24JSlGjY&index=12) <br>
-  - [Integrate Azure AD with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
+  - [Integrate Microsoft Entra ID with Azure Kubernetes Service](/azure/aks/azure-ad-integration-cli) <br>
   - [Limit access to cluster configuration file](/azure/aks/control-kubeconfig-access)
 
 ## Deploy to production and apply Kubernetes security best practices
@@ -49,7 +47,7 @@ As you prepare the application for production, implement a minimum set of best p
 
 **Security checklist:**
 
-- **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Azure AD identities](/azure/aks/azure-ad-rbac).
+- **Control access to clusters using group membership.** Configure Kubernetes role-based access control (Kubernetes RBAC) to limit access to cluster resources based on user identity or group membership. For more information, see [Control access to cluster resources using Kubernetes RBAC and Microsoft Entra identities](/azure/aks/azure-ad-rbac).
 
 - **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. For more information, see [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&v=KmhM33j5WYk&index=10).
 

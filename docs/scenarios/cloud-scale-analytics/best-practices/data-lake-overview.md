@@ -5,8 +5,6 @@ author: mboswell
 ms.author: mboswell
 ms.date: 04/12/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -26,7 +24,7 @@ A [data application](../architectures/data-landing-zone-data-products.md) can co
 Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protect data at the file and folder levels. Access control lists can help your organization implement tight security measures for authentication and authorization for data products to:
 
 - Store data securely through encryption at rest.
-- Access controls for Azure Active Directory (Azure AD) users and security groups through Azure AD integration.
+- Access controls for Microsoft Entra users and security groups through Microsoft Entra integration.
 
 ## Data lake planning
 

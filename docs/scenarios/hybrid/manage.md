@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/01/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-hybrid, think-tank
 ---
 
@@ -30,7 +28,7 @@ To get started, [inventory and tag your hybrid and multicloud resources](../../m
 
 <!-- docutune:casing "update management guide" -->
 
-After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. For more information, see [Update Management overview](/azure/automation/update-management/overview).
+After you finish the exercise, you can begin to operate your hybrid and multicloud environment. Typically, the first step you take when you extend operations across clouds is to *establish a consistent plan for patch and update management*. For more information, see [Azure Update Manager overview](/azure/update-manager/overview).
 
 ## Enhanced baseline
 

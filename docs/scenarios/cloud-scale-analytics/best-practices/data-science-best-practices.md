@@ -5,8 +5,6 @@ author: abdale
 ms.author: hamoodaleem
 ms.date: 03/19/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 

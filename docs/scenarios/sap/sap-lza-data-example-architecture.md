@@ -1,13 +1,12 @@
 ---
 title: SAP data integration example architecture
 description: Learn about an example architecture for SAP data integration, including the dataflow and necessary components.
-author: pankajmeshramCSA
+author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
+ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
 
@@ -56,7 +55,7 @@ Data Factory and Synapse pipelines extract data by using the following SAP conne
 
 - [SAP Business Warehouse via Open Hub](/azure/data-factory/connector-sap-business-warehouse-open-hub)
 - [SAP Business Warehouse via Multidimensional Expressions (MDX)](/azure/data-factory/connector-sap-business-warehouse)
-- [SAP Customer Data Cloud (CDC)](/azure/data-factory/connector-sap-change-data-capture)
+- [SAP Change Data Capture (CDC) connector](/azure/data-factory/connector-sap-change-data-capture)
 - [SAP Cloud for Customer](/azure/data-factory/connector-sap-cloud-for-customer)
 - [SAP ERP Central Component (ECC)](/azure/data-factory/connector-sap-ecc)
 - [SAP HANA](/azure/data-factory/connector-sap-hana)

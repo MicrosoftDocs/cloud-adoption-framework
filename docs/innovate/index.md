@@ -5,9 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/25/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: cloud innovation, cloud adoption, cloud framework, cloud adoption framework
 ---
 

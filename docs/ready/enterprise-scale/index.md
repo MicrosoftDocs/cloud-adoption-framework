@@ -5,12 +5,12 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 11/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
 # Start with Cloud Adoption Framework enterprise-scale landing zones
+
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
 
 The enterprise-scale architecture represents the strategic design path and target technical state, for your Azure environment. It will continue to evolve alongside the Azure platform and is defined by the various design decisions that your organization must make, to map your Azure journey.
 

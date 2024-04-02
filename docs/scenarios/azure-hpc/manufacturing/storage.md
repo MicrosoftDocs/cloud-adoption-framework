@@ -1,11 +1,9 @@
 ---
-title: 'Manufacturing HPC storage in Azure' 
+title: 'Manufacturing HPC storage in Azure'
 description: Learn about storage access, various storage solution capabilities, and how to streamline your storage decision process as a part of planning for HPC workload performance.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank
 ms.date: 11/16/2022
 ---
@@ -57,16 +55,6 @@ Here are some things to consider:
 - Expected protocol features (ACLs, encryption)
 - Parallel file system solution
 
-For Hybrid HPC Pack installations where the client needs to upload input datasets to Azure to be used during a HPC Pack job, or download the results after a jobs is completed, you need to determine the right application to use for the file transfer. Will the upload and download be part of a script or a manual process?  
-
-Here are some examples:
-•	For manual transfers [Azcopy](/azure/storage/common/storage-ref-azcopy) or Azure Storage Explorer would be suitable to transfer files to Azure Files or Azure Blob. Neither work with Azure NetApp Files directly.
-•	When Azure Blob storage is used, AzCopy is an option to transfer files within a script. AzCopy offers [options](/azure/storage/common/storage-use-azcopy-v10#authorize-azcopy) to use a service principle for authentication or SAS tokens. 
-
-•	When Azure Files is used, AzCopy is an option to transfer files within a script using SAS tokens.  Other options for Azure Files could be to mount the remote Azure File Share to the client machine as a drive letter to let the clients copy files directly to Azure files using a `copy` command. Azure File share mounts require SMB port 445 to be open which some organizations block with their firewall. 
-
-
-
 ## Total capacity requirement
 
 Storage capacity in Azure is the next consideration. It helps to inform the overall cost of the solution. If you plan to store a large amount of data for a long time, you might want to consider tiering as part of the storage solution. Tiering provides lower-cost storage options combined with higher-cost but higher-performance storage in a hot tier. So, evaluate the capacity requirements as follows:
@@ -86,17 +74,15 @@ Here are some things to consider:
 - Directory (LDAP, Active Directory)
 - UID/GID mapping to Active Directory users?
 
-HPC Pack authentication and authorization are either used by using certificates for job submission or REST API with the client’s username and password credentials. Both of these options are then validated against user groups within HPC Pack to ensure that the users have authorization to submit HPC jobs. 
-
 ## Common Azure storage solutions comparison
 
-| Category | Azure Blob Storage | Azure Files | Azure NetApp Files |
-|--|--|--|--|
-| Use cases | Azure Blob Storage is best suited for large-scale, read-heavy sequential access workloads where data is ingested once with few or no further modifications. <br><br> Blob Storage offers the lowest total cost of ownership, if there's little or no maintenance. <br><br> Some example scenarios are: Large scale analytical data, throughput sensitive high-performance computing, backup and archive, autonomous driving, media rendering, or genomic sequencing. | Azure Files is a highly available service best suited for random access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. You can easily use it from container platforms like Azure Container Instance (ACI) and Azure Kubernetes Service (AKS) with the built-in CSI driver, and VM-based platforms. <br><br> Some example scenarios are: Shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications requiring scale-out file storage. | Fully managed file service in the cloud, powered by NetApp, with advanced management capabilities. <br><br> NetApp Files is suited for workloads that require random access and provides broad protocol support and data protection capabilities. <br><br> Some example scenarios are: On-premises enterprise NAS migration that requires rich management capabilities, latency sensitive workloads like SAP HANA, latency-sensitive or IOPS intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
-| Available protocols | NFS 3.0 <br><br> REST <br><br> Data Lake Storage Gen2 | SMB <br><br> NFS 4.1 <br><br> (No interoperability between either protocol) | NFS 3.0 and 4.1 <br><br> SMB |
-| Key features | Integrated with HPC cache for low-latency workloads. <br><br> Integrated management, including lifecycle, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | Extremely low latency (as low as sub-ms). <br><br> Rich NetApp ONTAP management capability such as SnapMirror in cloud. <br><br> Consistent hybrid cloud experience. |
-| Performance (Per volume) | Up to 20,000 IOPS, up to 100 GiB/s throughput. | Up to 100,000 IOPS, up to 80 GiB/s throughput. | Up to 460,000 IOPS, up to 36 GiB/s throughput. |
-| Pricing | [Azure Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs/) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files/) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp/) |
+| Category | Azure Blob Storage | Azure Files| Azure Managed Lustre | Azure NetApp Files |
+|--|--|--|--|--|
+| Use cases | Azure Blob Storage is best suited for large-scale, read-heavy sequential access workloads where data is ingested once with few or no further modifications. <br><br> Blob Storage offers the lowest total cost of ownership, if there's little or no maintenance. <br><br> Some example scenarios are: Large scale analytical data, throughput sensitive high-performance computing, backup and archive, autonomous driving, media rendering, or genomic sequencing. | Azure Files is a highly available service best suited for random access workloads. <br><br> For NFS shares, Azure Files provides full POSIX file system support. You can easily use it from container platforms like Azure Container Instance (ACI) and Azure Kubernetes Service (AKS) with the built-in CSI driver, and VM-based platforms. <br><br> Some example scenarios are: Shared files, databases, home directories, traditional applications, ERP, CMS, NAS migrations that don't require advanced management, and custom applications requiring scale-out file storage. | Azure Managed Lustre is a fully managed parallel file system best suited to medium to large HPC workloads. <br><br> Enables HPC applications in the cloud without breaking application compatibility by providing familiar Lustre parallel file system functionality, behaviors, and performance, securing long-term application investments. | Fully managed file service in the cloud, powered by NetApp, with advanced management capabilities. <br><br> NetApp Files is suited for workloads that require random access and provides broad protocol support and data protection capabilities. <br><br> Some example scenarios are: On-premises enterprise NAS migration that requires rich management capabilities, latency sensitive workloads like SAP HANA, latency-sensitive or IOPS intensive high-performance compute, or workloads that require simultaneous multi-protocol access. |
+| Available protocols | NFS 3.0 <br><br> REST <br><br> Data Lake Storage Gen2 | SMB <br><br> NFS 4.1 <br><br> (No interoperability between either protocol) | Lustre | NFS 3.0 and 4.1 <br><br> SMB |
+| Key features | Integrated with HPC cache for low-latency workloads. <br><br> Integrated management, including lifecycle, immutable blobs, data failover, and metadata index. | Zonally redundant for high availability. <br><br> Consistent single-digit millisecond latency. <br><br> Predictable performance and cost that scales with capacity. | High storage capacity up to 2.5PB. <br><br> Low (~2ms) latency. <br><br> Spin up new clusters in minutes. <br><br> Supports containerized workloads with AKS. | Extremely low latency (as low as sub-ms). <br><br> Rich NetApp ONTAP management capability such as SnapMirror in cloud. <br><br> Consistent hybrid cloud experience. |
+| Performance (Per volume) | Up to 20,000 IOPS, up to 100 GiB/s throughput. | Up to 100,000 IOPS, up to 80 GiB/s throughput. | Up to 100,000 IOPS, up to 500 Gib/s throughput. | Up to 460,000 IOPS, up to 36 GiB/s throughput. |
+| Pricing | [Azure Blob Storage pricing](https://azure.microsoft.com/pricing/details/storage/blobs/) | [Azure Files pricing](https://azure.microsoft.com/pricing/details/storage/files/) | [Azure Managed Lustre pricing](https://azure.microsoft.com/pricing/details/managed-lustre) | [Azure NetApp Files pricing](https://azure.microsoft.com/pricing/details/netapp/) |
 
 ## Roll-your-own parallel file system
 
@@ -108,14 +94,14 @@ One of the biggest challenges with larger workloads is replicating the pure “b
 
 ## Next steps
 
-The following articles provide guidance on each step in the cloud adoption journey for energy HPC environments.
+The following articles provide guidance on each step in the cloud adoption journey for manufacturing HPC environments.
 
-- [Azure billing active directory tenant](./azure-billing-active-directory-tenant.md)
-- [Azure identity and access management for manufacturing HPC](./identity-access-management.md)
-- [Management for energy HPC](./management.md)
-- [Network topology and connectivity for manufacturing HPC](./network-topology-connectivity.md)
-- [Platform automation and DevOps for manufacturing HPC](./platform-automation-devops.md)
-- [Resource organization](./resource-organization.md)
-- [Security governance compliance](./security-governance-compliance.md)
+- [Manufacturing HPC Azure billing and Active Directory tenants](./azure-billing-active-directory-tenant.md)
+- [Azure identity and access management for HPC in manufacturing](./identity-access-management.md)
+- [Management for HPC in the manufacturing industry](./management.md)
+- [Manufacturing HPC network topology and connectivity](./network-topology-connectivity.md)
+- [Platform automation and DevOps for Azure HPC in the manufacturing industry](./platform-automation-devops.md)
+- [Manufacturing HPC resource organization](./resource-organization.md)
+- [Azure governance for manufacturing HPC](./security-governance-compliance.md)
 - [Security for HPC in manufacturing industries](./security.md)
-- [Landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)
+- [Azure high-performance computing (HPC) landing zone accelerator](../azure-hpc-landing-zone-accelerator.md)

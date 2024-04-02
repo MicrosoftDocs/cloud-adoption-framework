@@ -5,9 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid, devx-track-terraform, devx-track-ansible
+ms.custom: think-tank, e2e-hybrid, devx-track-terraform, devx-track-ansible, linux-related-content
 ---
 
 # Use Ansible to scale onboarding Amazon Web Services Amazon Elastic Compute Cloud instances to Azure Arc
@@ -47,22 +45,22 @@ This guide can be used even if you do not already have an existing Ansible test 
 
       ```console
       az login
-      az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+      az account set -s <Your Subscription ID>
+      az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
       ```
 
       For example:
 
       ```console
-      az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor
+      az ad sp create-for-rbac -n "http://AzureArcAWS" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
       ```
 
-      Output should look like this:
+      The utput should look like this:
 
       ```json
       {
         "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        "displayName": "AzureArcAWS",
-        "name": "http://AzureArcAWS",
+        "displayName": "http://AzureArcAWS",
         "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       }

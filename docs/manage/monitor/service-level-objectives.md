@@ -5,8 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: UpdateFrequency3
 ---
 
@@ -177,13 +175,13 @@ Combine support SLOs for IT service management processes such as incident and pr
 
 ## Considerations
 
-- **Ensure Access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
+- **Ensure access.** Ensure managers and other personas in the organization are granted access to the visualizations available in [Azure Monitor](/azure/azure-monitor/overview#visualizing-monitoring-data) or from other Azure services, especially Azure SaaS and PaaS, to avoid duplicating them.
 
 - **Ensure monitoring coverage or _total asset visibility_.** Ensure agents, emitted logs, tables, and queries for all assets that need to be managed and secured, and identify "blind spots" or gaps in coverage to ensure realism in SLOs.
 
 - **Get the correct data in front of the right consumers.** Ensure consumers of SLOs and SLIs can interpret the underlying data to build trust and guide decisions using the information gained from data.
 
-- **Make Reasonable Promises.** When setting SLOs as _targets_ especially when cost management is essential, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
+- **Make reasonable promises.** When setting SLOs as _targets_ especially when cost management is essential, ensure actual system performance is not overly performing nor under-delivering, or adjust the target to manage customer expectations.
 
 - **Account for unforeseen external events.** Develop continuity plans and risk assessments to account for events not under your control, such as weather, power outages, or disasters.
 

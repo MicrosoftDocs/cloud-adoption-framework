@@ -5,9 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/05/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: innovate
-ms.custom: internal, seo-caf-innovate
+ms.custom: internal
 keywords: how to build empathy, customer empathy, cloud innovation
 ---
 

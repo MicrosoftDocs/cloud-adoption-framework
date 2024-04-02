@@ -5,8 +5,6 @@ author: alejandra8481
 ms.author: martinek
 ms.date: 04/09/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: azure-fast-track, think-tank
 ---
 

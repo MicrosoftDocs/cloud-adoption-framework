@@ -5,8 +5,6 @@ author: tvuylsteke
 ms.author: martinek
 ms.date: 01/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 
@@ -124,6 +122,7 @@ To learn more, see:
 
 - [Azure Policy](/azure/governance/policy/)
 - [Cloud Adoption Framework: Define corporate policy ](../../govern/policy-compliance/policy-definition.md)
+- [Microsoft Cloud for Sovereignty policy portfolio](/industry/sovereignty/sovereignty-capabilities)
 
 ::: zone-end
 

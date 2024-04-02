@@ -5,8 +5,6 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 08/11/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -16,9 +14,9 @@ ms.custom: think-tank
 
 Explore key design considerations and recommendations for virtual wide area networks (Virtual WAN) in Microsoft Azure.
 
-![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png)
+[ ![Diagram that illustrates a Virtual WAN network topology.](./media/virtual-wan-topology.png) ](./media/virtual-wan-topology.png#lightbox)
 
-*Figure 1: Virtual WAN network topology.*
+_Figure 1: Virtual WAN network topology. Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.vsdx) of this architecture._
 
 ## Virtual WAN network design considerations
 
@@ -71,15 +69,15 @@ Explore key design considerations and recommendations for virtual wide area netw
 
 - The Virtual WAN portal experience requires that all Virtual WAN resources deploy together into the same resource group.
 
-- You can share an Azure DDoS Protection Standard plan across all VNets in a single Azure AD tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview).
+- You can share an Azure DDoS Protection plan across all VNets in a single Microsoft Entra tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview).
 
   - Virtual WAN secure virtual hubs don't support Azure DDoS standard protection plans. For more information, see [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues) and [Hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
 
-  - Azure DDoS Protection Standard plans only cover resources with public IP addresses.
+  - Azure DDoS Protection plans only cover resources with public IP addresses.
 
-    - An Azure DDoS Protection Standard plan includes 100 public IP addresses. These public IP addresses span all protected VNets associated with the DDoS protection plan. Any other public IP addresses, beyond the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection Standard protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
+    - An Azure DDoS Protection plan includes 100 public IP addresses. These public IP addresses span all protected VNets associated with the DDoS protection plan. Any other public IP addresses, beyond the 100 included with the plan, are charged separately. For more information on Azure DDoS Protection pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/ddos-protection/) or the [FAQ](/azure/ddos-protection/ddos-faq#how-does-pricing-work).
 
-  - Review the [supported resources of Azure DDoS Protection Standard plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types).
+  - Review the [supported resources of Azure DDoS Protection plans](/azure/ddos-protection/ddos-faq#what-are-the-supported-protected-resource-types).
 
 ## Virtual WAN network design recommendations
 

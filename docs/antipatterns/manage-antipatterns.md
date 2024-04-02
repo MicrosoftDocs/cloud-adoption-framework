@@ -5,8 +5,7 @@ author: lpassig
 ms.author: martinek
 ms.date: 02/19/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
+ms.subservice: caf-methodology-manage
 ms.custom: think-tank,UpdateFrequency5
 ---
 

@@ -5,14 +5,12 @@ author: DCMattyG
 ms.author: magarret
 ms.date: 10/07/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
-ms.custom: e2e-hybrid, think-tank, event-tier1-build-2022
+ms.custom: e2e-hybrid, think-tank
 ---
 
 # Automation disciplines for Azure Arc-enabled servers
 
-Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document is written to help plan for the automation of onboarding, Update Management, and expansion of the capabilities of Azure Arc-enabled servers through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
+Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document is written to help plan for the automation of onboarding, patch management, and expansion of the capabilities of Azure Arc-enabled servers through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
 
 ## Architecture
 
@@ -67,7 +65,6 @@ One of your first tasks will be to onboard your fleet of servers and virtual mac
 
 - Review and customize the [predefined installation script](/azure/azure-arc/servers/onboard-service-principal) for at-scale deployment of the connected machine agent to support your automated deployment requirements.
 - Generate a [PowerShell script](/azure/azure-arc/servers/onboard-service-principal) using a service principal, and deploy via your organizations existing automation platform
-  - Connect machines using [automation Update Management](/azure/azure-arc/servers/onboard-update-management-machines)
   - Connect machines using [PowerShell remoting](/azure/azure-arc/servers/onboard-powershell#install-and-connect-by-using-powershell-remoting) or [PowerShell DSC](/azure/azure-arc/servers/onboard-dsc)
   - Connect machines from [Windows Admin Center](/azure/azure-arc/servers/onboard-windows-admin-center)
 
@@ -87,9 +84,7 @@ Overview of steps:
 
 ### Lifecycle automation
 
-After your servers are onboarded to Azure, we recommend that you [enable patch and Update Management](/azure/automation/update-management/overview) to simplify OS lifecycle management on your Azure Arc-enabled servers. Update Management in Azure Automation allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Update Management for Azure Automation can be found in [Update Management overview](/azure/automation/update-management/overview).
-
-We recommend enabling OS lifecycle management automation by configuring the [Update Management](/azure/automation/update-management/enable-from-automation-account) solution in Azure Automation, to manage operating system updates for your Windows and Linux virtual machines registered with Azure Arc-enabled servers.
+After your servers are onboarded to Azure, we recommend that you enable patch management to simplify OS lifecycle management on your Azure Arc-enabled servers. Azure Update Manager allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Azure Update Manager can be found in [Azure Update Manager overview](/azure/update-manager/overview).
 
 You can use the [User Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers.
 

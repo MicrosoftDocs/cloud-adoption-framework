@@ -5,8 +5,6 @@ author: JefferyMitchell
 ms.author: martinek
 ms.date: 07/01/2010
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-sap
 ---
 

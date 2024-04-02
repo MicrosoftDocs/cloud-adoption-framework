@@ -5,9 +5,7 @@ author: Welasco
 ms.author: vsantana
 ms.date: 10/08/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: think-tank, e2e-hybrid, event-tier1-build-2022
+ms.custom: think-tank, e2e-hybrid
 ---
 
 # Network topology and connectivity for Azure Arc-enabled servers
@@ -28,8 +26,8 @@ The following list gives an overview of network design considerations for Azure 
 
 - **Define the agent's connectivity method:** Review your existing infrastructure, security requirements, and decide how the connected machine agent will [communicate with Azure](/azure/azure-arc/servers/network-requirements) from your on-premises network or other cloud providers. This connection can go directly over the internet, through a proxy server, or you can [implement Private Link](/azure/azure-arc/servers/private-link-security) for a private connection.
 - **Manage access to Azure service tags:** Create an automated process to keep the firewall and proxy network rules updated according to the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements).
-- **Secure your network connectivity to Azure Arc:** Configure the machine to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
-- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server also need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. To further secure the extension connectivity, you can [implement private endpoints](/azure/azure-arc/servers/private-link-security#how-it-works) for each extension.
+- **Secure your network connectivity to Azure Arc:** Configure the machine operating system to use Transport Layer Security (TLS) version 1.2. Older versions aren't recommended due to known vulnerabilities.
+- **Define extensions connectivity method:** Azure extensions deployed on an Azure Arc-enabled server typically need to communicate with other Azure services. This connectivity can go directly using public networks, through a firewall, or through a proxy server. If your design requires private connectivity, you'll need to take [additional steps](/azure/azure-arc/servers/private-link-security#how-it-works) beyond configuring Private Endpoints for the Arc agent to enable Private Endpoint connectivity for each service accessed by extensions.
 - **Review your overall connectivity architecture:** Review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) of Azure landing zone enterprise-scale to assess the impact of Azure Arc-enabled servers on your overall connectivity.
 
 ## Design recommendations
@@ -49,19 +47,26 @@ When using the direct connection method, you need to review your internet access
 
 #### Proxy server or firewall connection (optional)
 
-If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound using the HTTP protocol.
+If the machine uses a firewall or a proxy server to communicate over the internet, the agent connects outbound using the HTTPS protocol.
 
 If outbound connectivity is restricted by your firewall or a proxy server, make sure to allow the IP ranges as per the [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements). When you only allow the required IP ranges or domain names for the agent to communicate with the service, use [service tags and URLs](/azure/azure-arc/servers/network-requirements#service-tags) to configure your firewall or proxy server.
 
-If you deploy extensions on your Azure Arc-enabled servers, every extension has its own endpoint, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
+If you deploy extensions on your Azure Arc-enabled servers, every extension connects to its own endpoint or endpoints, and you must also allow all corresponding URLs in the firewall or proxy. Adding these endpoints will ensure granular secured network traffic to meet principle of least privilege (PoLP).
 
 #### Private Link
 
-Azure Arc-enabled servers let you deploy VM extensions to centrally manage your servers from Azure. These extensions connect to other resources such as Log Analytics workspaces, automation accounts, Key Vault or Azure Storage. You can use Azure Private Link to make this connection private without opening any public network access. All of the data is kept private, preventing data exfiltration. The traffic between Azure Arc-enabled servers and Azure services will go through a Site-to-Site VPN tunnel or an ExpressRoute with private peering.
+By using Azure Arc-enabled server with Arc Private Link Scope, you can ensure that all traffic from your Arc agents remains on your network. This configuration has security advantages: the traffic doesn't traverse the Internet and you do not need to open as many outbound exceptions on your datacenter firewall. However, using Private Link imposes a number of management challenges while increasing overall complexity and cost, especially for global organizations. Some of these challenges are:
+
+- The choice to use Arc Private Link Scopes encompasses all Arc clients under the same DNS scope. You can't have some Arc clients using Private Endpoints and some using public when they share a DNS server (without workarounds like [DNS Policies](/windows-server/networking/dns/deploy/dns-policies-overview))
+- Your Arc clients either all Private Endpoints in a primary region or DNS needs to be configured so that the same Private Endpoint names resolve to different IP addresses (for example, using [selectively replicated DNS partitions for Active Directory-integrated DNS](/troubleshoot/windows-server/networking/create-apply-custom-application-directory-partition)). If you use the same Private Endpoints for all your Arc clients, you need to be able to route traffic from all of your networks to the Private Endpoints.
+- Additional steps are required to ensure Private Endpoints are also used for any Azure services accessed by Extensions software components deployed using Arc, such as Log Analytics workspaces, Automation Accounts, Key Vault or Azure Storage
+- Connectivity to Azure Entra ID uses public endpoint, so clients still require some internet access
+
+Because of these challenges, we recommend evaluating whether Private Link is a requirement for your Arc implementation. Consider that with public endpoints, the traffic will be encrypted and, depending on how to use Arc for Servers, can be limited to management and metadata traffic. Security concerns can be alleviated by implementing [local agent security controls](/azure/azure-arc/servers/security-overview#local-agent-security-controls).
+
+Review the [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) associated with Private Link support for Arc for more details.
 
 [![Diagram that shows Azure Arc-enabled servers Private Link topology.](./media/arc-enabled-servers-private-link-topology.png)](./media/arc-enabled-servers-private-link-topology.png#lightbox)
-
-This connection method has specific [restrictions and limitations](/azure/azure-arc/servers/private-link-security#restrictions-and-limitations) you should be familiar with. When you enable any of the Azure Arc-enabled servers extensions, those extensions connect to specific Azure services that have their own requirements for configuring Private Link support.
 
 > [!TIP]
 > Review [Azure Private Link security](/azure/azure-arc/servers/private-link-security#how-it-works) for more information.

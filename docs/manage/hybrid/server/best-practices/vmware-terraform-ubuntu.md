@@ -5,9 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
-ms.custom: think-tank, e2e-hybrid, devx-track-terraform
+ms.custom: think-tank, e2e-hybrid, devx-track-terraform, linux-related-content
 ---
 
 # Use a Terraform plan to deploy a VMware Ubuntu virtual machine and connect it to Azure Arc
@@ -36,24 +34,24 @@ This article provides guidance for using the provided [Terraform](https://www.te
 
     To connect the VMware vSphere virtual machine to Azure Arc, an Azure service principal assigned with the Contributor role is required. To create it, sign in to your Azure account and run the following command. You can also run this command in [Azure Cloud Shell](https://shell.azure.com/).
 
-    ```bash
+    ```console
     az login
-    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor
+    az account set -s <Your Subscription ID>
+    az ad sp create-for-rbac -n "<Unique SP Name>" --role contributor --scopes "/subscriptions/<Your Subscription ID>"
     ```
 
     For example:
 
     ```console
-    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor
+    az ad sp create-for-rbac -n "http://AzureArcServers" --role contributor --scopes "/subscriptions/00000000-0000-0000-0000-000000000000"
     ```
 
-    Output should look like this:
+    The output should look like this:
 
     ```json
     {
       "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-      "displayName": "AzureArcServers",
-      "name": "http://AzureArcServers",
+      "displayName": "http://AzureArcServers",
       "password": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
       "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     }

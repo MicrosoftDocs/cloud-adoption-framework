@@ -5,12 +5,9 @@ author: Tshah2808
 ms.author: tanshah
 ms.date: 09/06/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ---
 
 # Security control mapping with Azure landing zones
-
 
 Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to Microsoft cloud security benchmark (MCSB) and identify the custom set of the controls that are not covered by MCSB.
 
@@ -57,7 +54,7 @@ _Single control mapping example: Your organization's control objectives_
 _The table above shows one of the unique control objectives with key words highlighted._
 
 In this example, we can look at the existing categorization of a given control ‘Application Security' to identify it as an application-related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the Microsoft cloud security benchmark controls and guidance for a proper match, we can see that there are many controls that might apply and map appropriately.
- 
+
 To quickly search a given version of the Microsoft cloud security benchmark, we provide [Excel download files](/security/benchmark/azure/overview#download) for each release that can be quickly searched by control ID or part of the description verbiage. In this step, the process identifies and maps controls that are covered under Microsoft cloud security benchmark.
 
 ### 3. Identify the controls not mapped with Microsoft cloud security benchmark and respective policies

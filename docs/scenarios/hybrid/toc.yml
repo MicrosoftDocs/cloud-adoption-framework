@@ -184,7 +184,7 @@ items:
       items:
       - name: Hybrid Active Directory options
         href: /azure/architecture/reference-architectures/identity/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-      - name: Integrate Active Directory and Azure AD
+      - name: Integrate Active Directory and Microsoft Entra ID
         href: /azure/architecture/reference-architectures/identity/azure-ad?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
       - name: Extend Active Directory with AD FS
         href: /azure/architecture/reference-architectures/identity/adfs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json

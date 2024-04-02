@@ -5,8 +5,6 @@ author: elbatane
 ms.author: elbatane
 ms.date: 06/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
@@ -52,7 +50,7 @@ To learn how to manage environments for Workloads refer to [Enterprise-scale FAQ
 
 ## Azure Landing Zones
 
-Adopting multiple environments for an Azure Landing Zone deployment is common when a customer wants to test the effects and results of new Azure Policy Assignments, Azure RBAC role assignments, Azure AD group memberships, Azure resources' creation, and more.
+Adopting multiple environments for an Azure Landing Zone deployment is common when a customer wants to test the effects and results of new Azure Policy Assignments, Azure RBAC role assignments, Microsoft Entra group memberships, Azure resources' creation, and more.
 
 [Testing approach for enterprise-scale](../enterprise-scale/testing-approach.md) describes two different adoption approaches:
 

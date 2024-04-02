@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 07/21/2020
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: migrate
 ms.custom: internal
 ---
 
@@ -22,7 +20,7 @@ The following diagram and table outline a number of scenarios that follow the sa
 
 | <span title="Scenario">&nbsp;</span> | <span title="Column 2">&nbsp;</span> | <span title="Column 3">&nbsp;</span> | <span title="Column 4">&nbsp;</span> |
 |--|---------|---------|---------|
-| Virtual machines | [Virtual machines](../migrate/azure-best-practices/contoso-migration-rehost-vm.md) | [Linux servers](../migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md) | [Virtual desktops](./wvd/index.md) |
+| Virtual machines | [Virtual machines](../migrate/azure-best-practices/contoso-migration-rehost-vm.md) | [Linux servers](../migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md) | [Virtual desktops](./azure-virtual-desktop/index.md) |
 | Applications | [ASP.NET](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md) | [Java](/azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | [PHP](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md) |
 | Data | [SQL Server](../migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md) | [Open-source databases](../migrate/azure-best-practices/sql-migration.md) | [Analytics](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) |
 | Hybrid | [Azure Stack](./azure-stack/index.md) | [VMware](./azure-vmware/index.md) | |

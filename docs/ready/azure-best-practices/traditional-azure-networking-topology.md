@@ -5,8 +5,6 @@ author: sitarant
 ms.author: sitarant
 ms.date: 02/17/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: think-tank
 ---
 
@@ -28,11 +26,11 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - Virtual networks can't traverse subscription boundaries. However, you can achieve connectivity between virtual networks across different subscriptions by using virtual network peering, an ExpressRoute circuit, or VPN gateways.
 
-- Virtual network peering is the preferred method to connect virtual networks in Azure. You can use virtual network peering to connect virtual networks in the same region, across different Azure regions, and across different Azure Active Directory (Azure AD) tenants.
+- Virtual network peering is the preferred method to connect virtual networks in Azure. You can use virtual network peering to connect virtual networks in the same region, across different Azure regions, and across different Microsoft Entra tenants.
 
 - Virtual network peering and global virtual network peering aren't transitive. To enable a transit network, you need user-defined routes (UDRs) and network virtual appliances (NVAs). For more information, see [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
-- You can share an Azure DDoS Protection plan across all virtual networks in a single Azure AD tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview).
+- You can share an Azure DDoS Protection plan across all virtual networks in a single Microsoft Entra tenant to protect resources with public IP addresses. For more information, see [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview).
 
   - Azure DDoS Protection plans cover only resources with public IP addresses.
 
@@ -146,7 +144,7 @@ The following figure shows both options:
 
 *Figure 4: Options for hub-to-hub connectivity.*
 
-- When two Azure regions need to connect, evaluate, and use global virtual network peering or the same ExpressRoute circuits to connect both hub virtual networks.
+- When two Azure regions need to connect, use global virtual network peering to connect both hub virtual networks.
 
 - When more than two Azure regions need to connect, then we recommend that the hub virtual networks in each region connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-spoke networks in three regions:
 

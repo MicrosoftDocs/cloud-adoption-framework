@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/04/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, UpdateFrequency.5
 ---
 
@@ -18,11 +16,15 @@ This guidance uses a federated model to explain how workload teams can operation
 
 To plan for workload management and monitoring, consider the following factors:
 
-- Workload monitoring in dedicated Azure Monitor Log Analytics workspaces.
+- Workload monitoring in dedicated Azure Monitor Logs workspaces.
 
-  For workloads that are deployed to virtual machines (VMs), store logs relative to dedicated Log Analytics workspaces. Workload team members can access logs for their workloads or VMs according to their Azure role-based access control (RBAC) roles.
+  For workloads that are deployed to virtual machines (VMs), store logs relative to dedicated Azure Monitor Logs workspaces. Workload team members can access logs for their workloads or VMs according to their Azure role-based access control (RBAC) roles.
 
-- Performance and health monitoring for both infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS) resources.
+- Sovereign workloads that drive the use of dedicated Azure Monitor Logs workspaces.
+
+  For sovereign workloads that require customer-managed keys to encrypt data, you can provide a high level of security and control. Data is encrypted twice. Microsoft-managed or customer-managed keys encrypt data at the service level. Two encryption algorithms and two keys encrypt data at the infrastructure level. For more information, see [Dedicated clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
+
+- Performance and health monitoring for infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Data is encrypted twice: once at the service level by using Microsoft-managed keys or customer-managed keys, and once at the infrastructure level by using two different encryption keys and algorithms.
 
 - Data aggregation across all workload components.
 
@@ -38,7 +40,7 @@ For more information, see [Cloud monitoring guide: Monitoring strategy for cloud
 
 You can use centralized Azure Monitor components to manage and monitor workloads:
 
-- Use a centralized Log Analytics workspace to collect logs and metrics from IaaS and PaaS workload resources.
+- Use a centralized Azure Monitor Logs workspace to collect logs and metrics from IaaS and PaaS workload resources.
 
 - Control workspace and log access with Azure RBAC. For more information, see [Azure Monitor access control overview](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 

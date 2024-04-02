@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 01/20/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: think-tank, e2e-aks
 ---
 
@@ -18,7 +16,7 @@ This section shows how to use [Kubecost](https://www.kubecost.com/) to govern Az
 
 ## Install Kubecost
 
-There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install).
+There are several Kubecost installation options. For more information, see [Installing Kubecost](https://docs.kubecost.com/install-and-configure/install).
 
 The recommended installation method is the Helm 3 chart. To install a basic configuration of Kubecost by using Helm 3, use the following commands:
 

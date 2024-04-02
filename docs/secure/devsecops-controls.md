@@ -5,8 +5,6 @@ author: texnokot
 ms.author: martinek
 ms.date: 08/01/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -42,7 +40,7 @@ Threat modeling is a simple concept, though it can be detailed and technical if 
 
 Threat modeling effectively puts you in the mindset of an attacker. It lets you see the application through an attacker's eyes. You learn how to block attempts before attackers can do anything about it. If your team has user personas in the design, you can treat the attacker as a hostile user persona.
 
-There are published approaches for threat modeling that range from simple question and answer methods to detailed tool-based analysis. You can base your approach on methodologies like the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats), the [DREAD model](https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)), or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling).
+There are published approaches for threat modeling that range from simple question and answer methods to detailed tool-based analysis. You can base your approach on methodologies like the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats) or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling).
 
 #### Threat modeling: Start simple
 
@@ -111,9 +109,9 @@ Using release pipelines also lets teams promote code from development environmen
 
 ### Dynamic application security testing
 
-In a classical waterfall development model, security was typically introduced at the last step, right before going to production. One of the most popular security approaches is penetration testing or pen testing. Penetration testing lets a team look at the application from a black-box security perspective, as in, closest to an attacker mindset. 
+In a classical waterfall development model, security was typically introduced at the last step, right before going to production. One of the most popular security approaches is penetration testing or pen testing. Penetration testing lets a team look at the application from a black-box security perspective, as in, closest to an attacker mindset.
 
-A penetration test consists of several action points, one of which is dynamic application security testing (DAST). DAST is a web application security test that finds security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One example is an open-source tool, [OWASP Zed Attack Proxy (ZAP)](https://owasp.org/www-project-zap/). It finds vulnerabilities in the running web application. There are different ways OWASP ZAP scans: a passive baseline scan or a full scan, depending on the configuration.
+A penetration test consists of several action points, one of which is dynamic application security testing (DAST). DAST is a web application security test that finds security issues in the running application by seeing how the application responds to specially crafted requests. DAST tools are also known as web application vulnerability scanners. One example is an open-source tool, [OWASP Zed Attack Proxy (ZAP)](https://www.zaproxy.org/). It finds vulnerabilities in the running web application. There are different ways OWASP ZAP scans: a passive baseline scan or a full scan, depending on the configuration.
 
 The disadvantage of pen testing is that it takes time. A thorough pen test might take up to several weeks, and with the speed of DevOps development, that time frame might be unsustainable. But it's still worth adding a *lighter* version of pen testing during the development process to uncover issues missed by SAST and other steps. DAST tools like OWASP ZAP can help.
 

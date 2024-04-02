@@ -6,8 +6,6 @@ ms.author: tozimmergren
 ms.reviewer: tozimmergren
 ms.date: 06/20/2023
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: manage
 ms.custom: think-tank, engagement-fy23, UpdateFrequency2
 products: azure-monitor
 ---
@@ -35,6 +33,8 @@ Ask yourself these questions to establish criteria for a monitoring configuratio
 - **Log search**: How will the service owner, support teams, and other personnel search the logs?
 
 - **Stakeholder involvement**: Include the monitoring service owner, manager of IT operations, and other stakeholders during the planning phase. Continue to engage them throughout your monitoring solutions' development and release cycles.
+
+- **Sensitive data**: What sensitive data should I avoid collecting for applications that I don't want to expose to my operators?
 
 How you answer those questions, and the criteria for alerting, determines how you'll use the monitoring platform.
 

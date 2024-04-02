@@ -5,8 +5,6 @@ author: mboswell
 ms.author: mboswell
 ms.date: 12/15/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: scenario
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -97,7 +95,7 @@ For more information, see [Organize Operations](organize.md).
 
 To get started with the data management and data management landing zones you need to make sure that you have the underpinning architectural components to enable a successful deployment:
 
-- [Enterprise enrollment and Azure Active Directory tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
+- [Enterprise enrollment and Microsoft Entra tenants for cloud-scale analytics](eslz-enterprise-enrollment-and-azure-ad-tenants.md)
 
 - [Resource organization for cloud-scale analytics](eslz-resource-organization.md)
 

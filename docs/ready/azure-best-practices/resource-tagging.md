@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 12/28/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal, readiness, fasttrack-edit
 ---
 

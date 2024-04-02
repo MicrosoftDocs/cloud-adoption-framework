@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 04/04/2021
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: secure
 ms.custom: internal
 ---
 
@@ -14,7 +12,7 @@ ms.custom: internal
 
 Commonly used tools in Azure security:
 
-- [Azure Active Directory](/azure/active-directory/)
+- [Microsoft Entra ID](/azure/active-directory/)
 - [Azure role-based access control (RBAC)](/azure/role-based-access-control/)
 - [Microsoft Defender for Cloud](/azure/security-center/azure-defender)
 - [Azure DDoS protection](/azure/ddos-protection/)

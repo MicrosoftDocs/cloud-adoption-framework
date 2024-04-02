@@ -5,8 +5,6 @@ author: martinekuan
 ms.author: martinek
 ms.date: 09/17/2019
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: govern
 ms.custom: internal, UpdateFrequency2
 ---
 
@@ -58,7 +56,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public-facing web site backed by IaaS should be exposed to the internet without DDoS.
 
-**Potential design option:** Use [Azure DDoS Protection Standard](/azure/ddos-protection/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
+**Potential design option:** Use [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
 
 ## Secure on-premises connectivity
 

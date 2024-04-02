@@ -5,12 +5,12 @@ author: martinekuan
 ms.author: martinek
 ms.date: 02/17/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
 # Choose the landing zone for your organization
+
+[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
 
 There are different approaches to implementing landing zones in the Cloud Adoption Framework. Starting with an implementation that doesn't meet your needs can waste your time and effort. The right approach for your organization has the necessary services to support your business applications without extra overhead to manage.
 

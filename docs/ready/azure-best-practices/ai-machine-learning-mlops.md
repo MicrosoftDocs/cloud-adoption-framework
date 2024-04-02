@@ -5,8 +5,6 @@ author: manu-kanwarpal
 ms.author: deeikele
 ms.date: 08/08/2022
 ms.topic: conceptual
-ms.service: cloud-adoption-framework
-ms.subservice: ready
 ms.custom: internal
 ---
 
@@ -101,7 +99,7 @@ As you plan to adopt machine learning operations in your organization, consider 
 
 - **Test code, validate data integrity, and ensure model quality.** [Test](/azure/architecture/framework/scalability/test-checklist) your experimentation code base for correct data preparation and feature extraction functions, data integrity, and model performance.
 
-- **Machine learning continuous integration and delivery.** Use [continuous integration (CI)](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your [release](/azure/architecture/framework/devops/release-engineering-cd) to ensure that only a qualitative model is used in production.
+- **Machine learning continuous integration and delivery.** Use [continuous integration (CI)](/azure/architecture/framework/devops/release-engineering-ci) to automate testing for your team. Include model training as part of continuous training pipelines. Include A/B testing as part of your release to ensure that only a qualitative model is used in production.
 
 - **Monitor services, models, and data.** When you serve models in a machine learning operations environment, it's critical to monitor the services for their infrastructure uptime, compliance, and model quality. [Set up monitoring](/training/modules/monitor-data-drift-with-azure-machine-learning/) to identify data and model drift and to understand whether retraining is required. Consider setting up triggers for automatic retraining.
 
