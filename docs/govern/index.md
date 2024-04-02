@@ -14,7 +14,7 @@ The CAF Govern methodology provides a structured approach for establishing and o
 
 Cloud governance establishes guardrails to regulate the use of cloud services. Guardrails help ensure that cloud use follows predefined rules. These rules are called cloud governance policies. Cloud governance policies define what's allowed and what isn't allowed in the cloud. Organizations create their own cloud governance policies to prevent and mitigate risks unique to their business. The goal of cloud governance is to ensure cloud use aligns with established cloud governance policies.
 
-:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
+:::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/govern.svg" border="false":::
 
 ## Why govern the cloud?
 
