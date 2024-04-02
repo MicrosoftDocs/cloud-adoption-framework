@@ -26,7 +26,7 @@ For further understanding of the factors that influence HPC storage selected in 
 
 Decision tree for specific HPC storage system choice.
 
-:::image type="content" alt-text="HPC storage system." source="../media/hpc-storage.png" lightbox="../media/hpc-storage.png":::
+:::image type="content" alt-text="Diagram showing a decision tree of considerations when choosing a storage solution." source="../media/storage-selection-flow.png" lightbox="../media/storage-selection-flow.png":::
 
 ## HPC Design considerations
 
