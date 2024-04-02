@@ -1,6 +1,6 @@
 ---
-title: Network topology and connectivity for Oracle on Azure Virtual Machines  landing zone accelerator
-description: Learn about network topology and connectivity for Oracle Virtual Machines landing zone accelerator.
+title: Network topology and connectivity for Oracle on Azure Virtual Machines
+description: Learn about network topology and connectivity for Oracle on Azure Virtual Machines.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
