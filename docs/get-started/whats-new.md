@@ -18,14 +18,14 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### Updated articles
 
-- [Azure governance design area](../ready/landing-zone/design-area/governance.md): We added a section for third-party tooling, including guidance for AzAdvertizer and Azure Governance Visualizer. 
-- [Tools and templates](../resources/tools-templates.md): We added information about governance for AzAdvertizer.
-- [Resource consistency decision guide](./decision-guides/resource-consistency/index.md): We expanded information about basic grouping for resource groups.
+- [Azure governance design area](../ready/landing-zone/design-area/governance.md): Explore a new section for third-party tooling, including guidance for AzAdvertizer and Azure Governance Visualizer. 
+- [Tools and templates](../resources/tools-templates.md): Find information about governance for AzAdvertizer.
+- [Resource consistency decision guide](../decision-guides/resource-consistency/index.md): Check out our expanded information about basic grouping for resource groups.
 - [Select Azure regions](../ready/azure-setup-guide/regions.md): We added guidance about how to plan Azure resource group deployments.  
-- [Transition an existing Azure environment to the Azure landing zone conceptual architecture](../ready/enterprise-scale/transition.md): We inserted a tip to help you reduce the impact of regional outages.
-- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md): We provided new use cases for centralized identity management. These use cases include using Azure Key Vault to store credentials and using hardened operating system images.
-- [Storage for Azure HPC in the finance sector](../scenarios/azure-hpc/finance/storage.md): We added data to help you compare Azure Managed Lustre with Blob Storage, Azure Files, and Azure NetApp Files.
-- [Network topology and connectivity for an SAP migration](../scenarios/sap/eslz-network-topology-and-connectivity.md): We added design recommendations for Azure ExpressRoute.
+- [Transition an existing Azure environment to the Azure landing zone conceptual architecture](../ready/enterprise-scale/transition.md): Find tip to help you reduce the impact of regional outages.
+- [Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator](../scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md): Review new use cases for centralized identity management. These use cases include using Azure Key Vault to store credentials and using hardened operating system images.
+- [Storage for Azure HPC in the finance sector](../scenarios/azure-hpc/finance/storage.md): Find new data to help you compare Azure Managed Lustre with Blob Storage, Azure Files, and Azure NetApp Files.
+- [Network topology and connectivity for an SAP migration](../scenarios/sap/eslz-network-topology-and-connectivity.md): Explore design recommendations for Azure ExpressRoute.
 
 ## February 2024
 
