@@ -1,25 +1,32 @@
 ---
 title: Identity and Access Management for Oracle Database@Azure
 description: Identity and Access Management for Oracle Database@Azure
+author: sihbher
+ms.author: gereyeso
+ms.reviewer: janfaurs
+ms.date: 
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: scenario
+ms.custom: 
 ---
-#
-# **Identity and Access Management for the Oracle@Azure landing zone accelerator**
-## **In this article**
-1. [Design Considerations](#design-considerations)
-2. [Design Recommendations](#design-recommendations)
-This article builds on some of the considerations and recommendations that are defined in the [Azure landing zone design](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/). The design Area Identity and Access Management (IAM) is part of a collection describing Oracle Database@Azure landing zone accelerator.
-The goal of this document is to define the customer experience for interacting with IAM resources when deploying Oracle Database@Azure.
-Following the guidance, the article provides you with the design guidelines, architecture, and recommendations to deploy Oracle Database@Azure.
-## **Design Considerations**
-- Before deploying Oracle Database@Azure you have to configure federation between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI)
-- Oracle Database@Azure will be available as a private offer in Azure Portal, so you will need to agree and buy it as part of the get the private offer. This process needs specific permissions based on the agreement type. To see the specific permissions needed for this procurement process look at this [guide](https://learn.microsoft.com/en-us/marketplace/private-offers-in-azure-marketplace)
-- When you deploy Oracle Database@Azure, you must be a Contributor for some of the resources that this service relies on.
-- Deployment process of Oracle Database@Azure will create some groups within Microsoft Entra ID, you do not require specific permissions on Microsoft Entra ID.
+# Identity and Access Management for Oracle Database@Azure
 
-## **Design Recommendations**
-- Microsoft Entra ID is a central tool for managing identities and access to the resources created by the Oracle Database@Azure. After finishing the onboarding steps, you should have 
-  1. Federated access between Azure and OCI. 
-  2. Preconfigured groups with permissions for different operations.
-- An Admin user is created in OCI when a new account and tenancy is provisioned, avoid using this identity for day-to-day operations and instead manage the infrastructure administrator group to provide the relevant individuals elevated access. This account will be the administrator, serving as the account owner for a new account being created.
-- During deployment process some EntraID groups are created and synchronized with OCI. Users in these groups, with federation enabled, can log in to OCI using EntraID credentials and gain necessary permissions for CDB/PDB creation and management.
-- For the limited group of individuals that will require OCI access – to create Pluggable Databases (PDB) for instance – make sure they are added to the proper group in OCI identity, with the proper permissions to access only certain resources. ![image](https://github.com/sihbher/cloud-adoption-framework-pr/assets/59939147/63f59ddb-e159-489b-b635-4f7bbd56e941)
+This article builds on some of the considerations and recommendations that are defined in the [Azure landing zone design](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/). It offers key design considerations and recommendation for Oracle Database@Azure identity and access management.
+
+## Design Considerations
+
+- Once the private offer has been accepted and enabled for your subscription, (please see details on how to do this in [Onboard with Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/onboard-oracle-database)), you will need contributor access to the subscription to deploy the Oracle Database@Azure service.
+- Oracle Database@Azure does not natively support Microsoft Entra ID for identity and access management. However, you can configure federation between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials.
+- The process of deploying the initial Oracle Database@Azure will create some groups within Microsoft Entra ID, as well as in the corresponding OCI tenant. For more details on the specific groups and roles created please refer to [Groups and roles for Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-groups-roles). The groups created in the OCI tenant specifically has the necessary permissions to create and manage Container Databases (CDB) and Pluggable Databases (PDB) on all the Oracle Database@Azure instances in that OCI tenant.
+
+## Design Recommendations
+
+- Configure federated access between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials. While it is possible to have users log in with OCI credentials only, this is not recommended as it will require additional management of user identities. How to do this is described in onboarding documentation.
+- An Admin user is created in OCI when a new account and tenancy is provisioned, avoid using this identity for day-to-day operations and instead leverage the Microsoft Entra Id administrator groups instead to provide the relevant individuals elevated access.
+- For granularity in access permissions reach out to the OCI administrator to create additional groups and roles in the OCI tenant. This will allow for more granular control over who can create and manage CDBs and PDBs on the Oracle Database@Azure instances.
+
+## See also
+
+[Security guidelines for Oracle Database@Azure](oracle-security-odaa.md)
+[Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)

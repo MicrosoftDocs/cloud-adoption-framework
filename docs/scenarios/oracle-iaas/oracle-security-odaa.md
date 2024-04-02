@@ -11,7 +11,7 @@ ms.subservice: scenario
 ms.custom: 
 ---
 
-# Security guidelines for Oracle Database @Azure landing zone accelerator
+# Security guidelines for Oracle Database@Azure
 
 This article builds on several considerations and recommendations defined in [Security design in Azure](../../ready/landing-zone/design-area/security.md). It offers key design considerations and recommendation for Oracle Database@Azure security measures.
 
