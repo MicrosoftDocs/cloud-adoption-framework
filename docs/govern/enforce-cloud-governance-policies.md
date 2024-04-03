@@ -20,7 +20,7 @@ Establish a systematic strategy to enforce compliance with cloud governance poli
 
 - *Delegate governance responsibilities*. Empower individuals and teams to enforce governance within their scope of responsibility. For example, platform teams should apply policies that the workloads inherit and workload teams should enforce governance for their workload. The cloud governance team shouldn't be responsible for applying enforcement controls.
 
-- *Adopt an inheritance model*. Apply a hierarchical governance model where specific workloads inherit governance policies from the platform. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services.
+- *Adopt an inheritance model*. Apply a hierarchical governance model where specific workloads inherit governance policies from the platform. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services. Follow the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) of Azure landing zones and its [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) design area to establish a proper inheritance model.
 
 - *Discuss enforcement specifics*. Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce compliance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
 
@@ -34,7 +34,7 @@ Establish a systematic strategy to enforce compliance with cloud governance poli
 
 Use cloud management and governance tools to automate compliance with governance policies. These tools can help in setting up guardrails, monitoring configurations, and ensuring compliance. To set up automated enforcement, follow these recommendations:
 
-- *Start with a small set of automated policies*. Begin automating compliance on a minimal set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement when ready.
+- *Start with a small set of automated policies*. Automate compliance on a small set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement controls when ready.
 
 - *Use cloud governance tools*. Use the tools available in your cloud environment to enforce compliance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
 

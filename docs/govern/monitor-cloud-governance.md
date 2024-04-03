@@ -17,7 +17,7 @@ This article shows you how to monitor cloud governance. After you enforce cloud 
 
 Implement monitoring solutions to track compliance with your cloud governance policies. The goal is to have visibility on the teams responsible for enforcing compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
 
-- *Use monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring.
+- *Use monitoring tools.* Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring. Review the [visibility](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform) and [monitoring](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor) recommendations in the Azure landing zone management design area.
 
 - *Manually monitor where necessary.* Review compliance manually where automated monitoring mechanisms aren’t available.
 
@@ -133,7 +133,7 @@ Even with automated monitoring, conduct periodic manual reviews and audits to va
 
 ## Next steps
 
-Cloud governance is an ongoing process that requires continuous attention. Consistently repeat the governance process of assessing risks, documenting governance policies, enforcing those policies, and monitoring the effectiveness of the enforcement. The cloud governance team should also work through the cloud governance process whenever they identify new cloud risks. 
+Cloud governance is an ongoing process that requires continuous attention. Consistently repeat the governance process of assessing risks, documenting governance policies, enforcing those policies, and monitoring the effectiveness of the enforcement. The cloud governance team should also work through the cloud governance process whenever they identify new cloud risks.
 
 > [!div class="nextstepaction"]
 > [Cloud governance overview](index.md)
