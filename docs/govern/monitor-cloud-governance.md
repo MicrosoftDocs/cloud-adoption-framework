@@ -133,7 +133,7 @@ Even with automated monitoring, conduct periodic manual reviews and audits to va
 
 ## Next steps
 
-Cloud governance is an ongoing process that requires continuous attention. Consistently repeat the governance process of assessing risks, documenting governance policies, enforcing those policies, and monitoring the effectiveness of the enforcement. The cloud governance team should also work through the cloud governance process whenever they identify new cloud risks.
+Cloud governance is an ongoing process that requires continuous attention. Consistently repeat the governance process of assessing risks, documenting governance policies, enforcing those policies, and monitoring the effectiveness of the enforcement. The cloud governance team should also work through the cloud governance process whenever they identify new cloud risks. 
 
 > [!div class="nextstepaction"]
 > [Cloud governance overview](index.md)
