@@ -37,23 +37,17 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for regulatory compliance governance
 
-Achieve real-time visibility and automatic enforcement of regulatory compliance across all cloud resources.
-
 - *Use compliance dashboards.* [Get policy compliance data](/azure/governance/policy/how-to/get-compliance-data) on the policies you assigned.
 
 - *Determine compliance.* Use the compliance data to [determine causes of noncompliance](/azure/governance/policy/how-to/determine-non-compliance).
 
 #### Configure monitoring for security governance
 
-Maintain a continuously secure cloud environment by adhering to security policies.
-
 - *Use security governance monitoring.* [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score.](/azure/defender-for-cloud/secure-score-security-controls) The feature provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
 
 - *Configure identity governance monitoring.* [Configure identity monitoring](/entra/identity/monitoring-health/overview-monitoring-health) to collect audit, sign-in, and provisioning logs. Also review your [identity secure score](/entra/identity/monitoring-health/concept-identity-secure-score), and use [the identity governance dashboard](/entra/id-governance/governance-dashboard) to get a single view of identities across your tenant.
 
 #### Configure monitoring for cost management governance
-
-Track cloud spending against budgets and detect anomalous and excessive spending.
 
 - *Analyze cloud costs.* Conduct a [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis) in Azure to gain full visibility into your cloud costs.
 
@@ -62,8 +56,6 @@ Track cloud spending against budgets and detect anomalous and excessive spending
 - *Gather cost data.* Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
 
 #### Configure monitoring for operations governance
-
-Ensure optimal performance and availability of cloud services by automatically detecting noncompliance.
 
 - *Monitor policies on cloud operations.* Use Azure Policy to track compliance with governance policies that apply to operations.
 
@@ -75,27 +67,21 @@ Ensure optimal performance and availability of cloud services by automatically d
 
 #### Configure monitoring for data governance
 
-Guarantee the integrity, privacy, and proper usage of data by continuously monitoring data operations against governance policies.
+- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights).
 
-- *Monitor data governance.* [Monitor data compliance, management, and usage](/purview/concept-insights). Use dashboards to monitor compliance with any data plane policies.
+- *Use dashboards.* Use dashboards to monitor compliance with any data plane policies.
 
 #### Configure monitoring for resource management governance
-
-Ensure all cloud resources are consistently deployed and managed in alignment with organizational governance policies.
 
 - *Monitor policies on resource management.* Monitor compliance with cloud governance policies that apply to resource deployments, such as tag enforcement policies.
 
 #### Configure monitoring for AI governance
-
-Maintain ethical AI operations and compliance with AI governance standards through continuous monitoring of AI outputs.
 
 - *Monitor AI system outputs.* Use Azure for [abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring) and [content filtering](/azure/ai-services/openai/concepts/content-filter) of AI systems.
 
 - *Red team AI systems.* Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## Configure cloud governance alerts
-
-Configure alerts based on specific compliance metrics or events that indicate a deviation from your governance policies. To configure cloud governance alerts, follow these recommendations:
 
 - *Use cloud-native alerting mechanisms.* Prefer cloud-native tools that provide real-time monitoring and alerts for compliance problems.
 

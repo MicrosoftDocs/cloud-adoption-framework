@@ -101,7 +101,7 @@ Designate a primary risk owner for every risk. The risk owner has the responsibi
 Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Consider including these elements:
 
 - *Risk ID:* A unique identifier for each risk. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
-- *Risk management status:* Tge status of the risk (open, closed).
+- *Risk management status:* The status of the risk (open, closed).
 - *Risk category:* A label such as regulatory compliance, security, cost, operations, AI, or resource management.
 - *Risk description:* A brief description of the risk.
 - *Risk probability:* The probability of the risk occurring per year. Use a percentage or qualitative label.

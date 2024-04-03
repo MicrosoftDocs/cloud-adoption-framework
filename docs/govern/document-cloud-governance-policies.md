@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Document cloud governance policies
 
-This article shows you how to create and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies define the guardrails for interacting with and in the cloud.
+This article shows you how to define and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies define the guardrails for interacting with and in the cloud.
 
 :::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/document.svg" border="false":::
 
@@ -28,7 +28,7 @@ Establish an approach for creating, maintaining, and updating the rules and guid
 
 Create cloud governance policies that outline how to use and manage the cloud to mitigate risks. Minimize the need for frequent policy updates. To define cloud governance policies, follow these recommendations:
 
-- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or fill the gaps in the sequence.
+- *Use a policy ID*. Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or use the lowest available number.
 
 - *Include the policy statement*. Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
@@ -38,7 +38,7 @@ Create cloud governance policies that outline how to use and manage the cloud to
 
 - *Include the policy purpose*. State the purpose of each policy. Use the risk or the regulatory compliance requirement the policy satisfies as a starting point.
 
-- *Define the policy scope*. Clearly define what and who this policy applies to, such as all cloud services, regions, environments, and workloads. Specify any exceptions to ensure there's no ambiguity. Use standardized language so it's easy to sort, filter, and find policies.
+- *Define the policy scope*. Define what and who this policy applies to, such as all cloud services, regions, environments, and workloads. Specify any exceptions to ensure there's no ambiguity. Use standardized language so it's easy to sort, filter, and find policies.
 
 - *Include the policy remediation strategies*. Define the desired response to a violation of a cloud governance policy. Tailor responses to the severity of the risk, such as scheduling discussions for nonproduction violations and immediate remediation efforts for production violations.
 
@@ -54,7 +54,7 @@ Grant access to everyone who needs to adhere to cloud governance policies. Look 
 
 ## Review cloud governance policies
 
-Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular review helps ensure that cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
+Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular reviews helps ensure that cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
 
 - *Implement feedback mechanisms*. Establish ways to receive feedback on the effectiveness of cloud governance policies. Gather input from the individuals affected by the policies to ensure they can still do their job efficiently. Update governance policies to reflect practical challenges and needs.
 
@@ -82,9 +82,9 @@ The following cloud governance policies are examples for reference. These polici
 | CM02 | Cost management | [R04](assess-cloud-risks.md#example-risk-list) | Azure Advisor cost recommendations must be reviewed. | Optimize cloud usage | Workload teams, platform team | Mandatory optimization audits after 60 days | Advisor |
 | OP01 | Operations | [R05](assess-cloud-risks.md#example-risk-list) | Production workloads should have an active-passive architecture across regions. | Ensure service continuity | Workload teams | Architecture evaluations, biannual reviews | Manual audit (per production release) |
 | OP02 | Operations | [R05](assess-cloud-risks.md#example-risk-list) | All mission-critical workloads must implement a cross-region active-active architecture. | Ensure service continuity | Mission-critical workload teams | Updates within 90 days, progress reviews | Manual audit (per production release) |
-| DG01 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Encryption in transit and at rest must be applied to all sensitive data. | Protect sensitive data | Workload team | Immediate encryption enforcement and security training | Azure Policy |
-| DG02 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Data lifecycle policies must be enabled in Microsoft Purview for all sensitive data. | Manage the data lifecycle | Workload team | Implementation within 60 days, quarterly audits | Microsoft Purview |
-| RM01 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Bicep must be used to deploy resources. | Standardize resource provisioning | Workload team, platform team | Immediate Bicep transition plan | Continuous integration and continuous delivery (CI/CD) pipeline |
+| DG01 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Encryption in transit and at rest must be applied to all sensitive data. | Protect sensitive data | Workload teams | Immediate encryption enforcement and security training | Azure Policy |
+| DG02 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Data lifecycle policies must be enabled in Microsoft Purview for all sensitive data. | Manage the data lifecycle | Workload teams | Implementation within 60 days, quarterly audits | Microsoft Purview |
+| RM01 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Bicep must be used to deploy resources. | Standardize resource provisioning | Workload teams, platform team | Immediate Bicep transition plan | Continuous integration and continuous delivery (CI/CD) pipeline |
 | RM02 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Tags must be enforced on all cloud resources using Azure Policy. | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days | Azure Policy |
 | AI01 | AI | [R08](assess-cloud-risks.md#example-risk-list) | AI content filtering configuration must be set to medium or higher. | Mitigate AI harmful outputs | Workload teams | Immediate corrective measures | Azure OpenAI Service |
 | AI02 | AI | [R08](assess-cloud-risks.md#example-risk-list) | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses | Manual audit (monthly) |
