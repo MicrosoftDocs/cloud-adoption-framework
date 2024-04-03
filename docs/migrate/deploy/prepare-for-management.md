@@ -3,7 +3,7 @@ title: Prepare for management activities
 description: Learn how to prepare for management activities when migrating workloads to Azure with the Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/10/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ---
 

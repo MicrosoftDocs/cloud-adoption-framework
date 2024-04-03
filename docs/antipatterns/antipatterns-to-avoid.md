@@ -15,8 +15,6 @@ Customers often experience cloud adoption [antipatterns](../organize/fiefdoms-si
 
 The following table lists antipatterns and the methodologies, or cloud adoption phases, that these patterns occur in. The linked articles provide examples of each antipattern and solutions.
 
-<br>
-
 | Methodology | Antipattern | Reference |
 | ------------- |-------------| -----|
 | Strategy | Inadequate motivation | [Antipattern: Adopt the cloud without establishing goals](./strategy-antipatterns.md#antipattern-adopt-the-cloud-without-establishing-goals) |
