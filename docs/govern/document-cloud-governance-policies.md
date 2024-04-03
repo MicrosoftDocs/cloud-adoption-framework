@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 This article shows you how to create and document cloud governance policies. Cloud governance policies specify what should or shouldn't happen in the cloud. The cloud governance team should create one or more cloud governance policies for each risk identified in the risk assessment. Cloud governance policies define the guardrails for interacting with and in the cloud.
 
-:::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/document.svg" border="false":::
+:::image type="content" source="./_images/document.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance" lightbox="./_images/document.svg" border="false":::
 
 ## Define an approach for documenting cloud governance policies
 
