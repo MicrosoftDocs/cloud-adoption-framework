@@ -69,7 +69,7 @@ The diagram below illustrates traffic flows from the perspective of the Azure VM
 
 This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "E").
 
-On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)".
+On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)". See traffic flow section for more information.  
 
 The diagram below illustrates traffic flows from an on-premises perspective.
 
@@ -87,15 +87,20 @@ The diagram below illustrates traffic flows from an on-premises perspective.
 
 This section focuses only on connectivity from an Azure Virtual Network perspective. As depicted in the diagram, both Virtual Network1 and Virtual Network2 have a Virtual Network peering directly to their local regional hub.
 
-The diagram illustrates how all Azure native resources in Virtual Network1 and Virtual Network2 learn routes under their "Effective Routes". A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any other prefixes that have been added as "Private Traffic Prefixes" - see [Routing Intent Private Address Prefixes](/azure/virtual-wan/how-to-routing-policies#azurefirewall). In our scenario, with Routing Intent enabled, all resources in Virtual Network1 and Virtual Network2 currently possess the default RFC 1918 address and use their local regional hub firewall as the next hop. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. For more information, see the traffic flow section for more detailed information.
+A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any other prefixes that have been added as "Private Traffic Prefixes" - see [Routing Intent Private Address Prefixes](/azure/virtual-wan/how-to-routing-policies#azurefirewall). In our scenario, with Routing Intent enabled, all resources in Virtual Network 1 and Virtual Network 2 currently possess the default RFC 1918 addresses and use their local regional hub firewall as the next hop. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. See traffic flow section for more information.  
 
 ![Diagram of Dual-Region Azure VMware Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)
-**Traffic Flow**
+**Traffic Flow Chart**
 
-| From |   To |  on-premises | Azure VMware Solution Region 1 | Azure VMware Solution Region 2| Cross-Region Virtual Network|  
-| -------------- | -------- | ---------- | ---| ---| ---|
-| Virtual Network1    | &#8594;| Hub1Fw>on-premises|  Hub1Fw>Azure VMware Solution Cloud Region 1  | Hub1Fw>Azure VMware Solution Cloud Region 2 | Hub1Fw>Hub2Fw>Virtual Network2 |
-| Virtual Network2    | &#8594;| Hub2Fw>on-premises|  Hub2Fw>Azure VMware Solution Cloud Region 1  | Hub2Fw>Azure VMware Solution Cloud Region 2 | Hub2Fw>Hub1Fw>Virtual Network1 |
+| Traffic Flow Number | Location 1 |   Direction | Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| - | -------------- | -------- | ---------- | ---------- |
+| 1 | Virtual Network 1 | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 1| Yes, traffic is inspected at Hub 1 firewall|
+| 3 | Virtual Network 2 | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 1| Yes, traffic is inspected at Hub 2 firewall|
+| 5 | Virtual Network 1 | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 2| Yes, traffic is inspected at Hub 1 firewall
+| 6 | Virtual Network 2 | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 2| Yes, traffic is inspected at Hub 2 firewall|
+| 8 | Virtual Network 1 | &#8594;<br>&#8592;| on-premises | Yes, traffic is inspected at Hub 1 firewall|
+| 9 | Virtual Network 2 | &#8594;<br>&#8592;| on-premises | Yes, traffic is inspected at Hub 2 firewall|
+| 10 | Virtual Network 1 | &#8594;<br>&#8592;| Virtual Network 2 | Yes, traffic is inspected at Hub 1 and Hub 2 firewalls and flows across the inter-hub connection|
 
 ### Internet connectivity
 
