@@ -20,4 +20,4 @@ However, it's important to understand decisions previously made by the cloud pla
 
 ## Next steps
 
-- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology.md).
+- [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology-iaas.md).

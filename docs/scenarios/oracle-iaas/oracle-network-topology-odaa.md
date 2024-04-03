@@ -22,7 +22,7 @@ Consider the following when designing your network topology for Oracle Database@
 - Regardless of the Oracle Database@Azure SKU deployed, you can deploy up to 8 VM clusters. Each VM cluster can be connected to a VNet which needs to exist prior to creating the VM Cluster. VM clusters can be connected to the same or different VNets.
 - The Oracle Database@Azure service is deployed in private subnets in Azure only. The service is not immediately accessible from the Internet.
 - Minimum size of Oracle Database@Azure subnet depends on the SKU. See [Network Setup for Exadata Cloud Infrastructure Instances](https://docs.oracle.com/en-us/iaas/exadatacloud/exacs/ecs-network-setup.html#ECSCM-GUID-D5C577A1-BC11-470F-8A91-77609BBEF1EA) for details.
-- Any subnets delegated to the Oracle Database@Azure solution have constraints compared to regular subnets. See [Network planning for Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-network-plan#constraints) for more details.
+- Any subnets delegated to the Oracle Database@Azure solution have constraints compared to regular subnets. See [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints) for more details.
 - As the Oracle Database@Azure is deployed in private subnets only, there is no default name registration or resolution for database nodes.
 
 ## Design recommendations

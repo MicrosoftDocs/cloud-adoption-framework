@@ -3,13 +3,14 @@ title: Introduction to the Oracle on Azure adoption scenario
 description: Oracle on Azure landing zone accelerator.
 author: jfaurskov
 ms.author: janfaurs
-ms.date: 21/03/2024
+ms.date: 04/03/2024
 ms.topic: conceptual
 ms.custom: 
   - think-tank
   - e2e-oracle
   - engagement-fy24
 ---
+# Introduction to the Oracle on Azure adoption scenario
 
 Use the guidance in this article to set up and operate Oracle workloads inside your Azure landing zone implementation. The article provides specific architectural approaches and reference implementations for your Oracle database systems on Azure.
 
@@ -31,7 +32,7 @@ As customers from different industries have specific needs that leverage Oracle 
 
 Oracle on Azure also offers competitive pricing and performance compared to on-premises options, robust global regulatory compliance, and cloud-native management tooling for your enterprise management requirements.
 
-When customers choose the relevant Oracle on Azure solution for their specific computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview) to prepare decision makers and central IT for successful cloud adoption.
+When customers choose the relevant Oracle on Azure solution for their specific computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) to prepare decision makers and central IT for successful cloud adoption.
 
 ### High-level Oracle landing zone architecture for Oracle on Azure Virtual Machines
 

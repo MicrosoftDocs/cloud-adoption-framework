@@ -12,13 +12,13 @@ ms.custom:
 ---
 # Identity and Access Management for Oracle Database@Azure
 
-This article builds on some of the considerations and recommendations that are defined in the [Azure landing zone design](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/). It offers key design considerations and recommendation for Oracle Database@Azure identity and access management.
+This article builds on some of the considerations and recommendations that are defined in the [Azure landing zone design](/azure/cloud-adoption-framework/ready/landing-zone/). It offers key design considerations and recommendation for Oracle Database@Azure identity and access management.
 
 ## Design Considerations
 
-- Once the private offer has been accepted and enabled for your subscription, (please see details on how to do this in [Onboard with Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/onboard-oracle-database)), you will need contributor access to the subscription to deploy the Oracle Database@Azure service.
+- Once the private offer has been accepted and enabled for your subscription, (please see details on how to do this in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database)), you will need contributor access to the subscription to deploy the Oracle Database@Azure service.
 - Oracle Database@Azure does not natively support Microsoft Entra ID for identity and access management. However, you can configure federation between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials.
-- The process of deploying the initial Oracle Database@Azure will create some groups within Microsoft Entra ID, as well as in the corresponding OCI tenant. For more details on the specific groups and roles created please refer to [Groups and roles for Oracle Database@Azure](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-groups-roles). The groups created in the OCI tenant specifically has the necessary permissions to create and manage Container Databases (CDB) and Pluggable Databases (PDB) on all the Oracle Database@Azure instances in that OCI tenant.
+- The process of deploying the initial Oracle Database@Azure will create some groups within Microsoft Entra ID, as well as in the corresponding OCI tenant. For more details on the specific groups and roles created please refer to [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles). The groups created in the OCI tenant specifically has the necessary permissions to create and manage Container Databases (CDB) and Pluggable Databases (PDB) on all the Oracle Database@Azure instances in that OCI tenant.
 
 ## Design Recommendations
 
