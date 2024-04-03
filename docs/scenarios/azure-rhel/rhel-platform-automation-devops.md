@@ -1,0 +1,48 @@
+title: Red Hat Linux Platform Automation
+description: Learn about the tools, features, and services that are available to automate various tasks as well as manage Red Hat Enterprise Linux lifecycle within your Azure environment.
+authors: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
+contributor: Anthony de Lagarde
+ms.date: 04/03/2024
+ms.topic: Azure automation and management
+
+# Platform automation for Red Hat Enterprise Linux systems on Azure
+
+This article describes how you can manage automation for Red Hat Linux systems on Azure by reviewing design considerations, design recommendations, options for various tools to achieve a consistent and stable 
+environment.
+
+## Overview
+
+The goal of the automation of Red Hat Enterprise Linux (RHEL) Platform for Azure Landing Zones is to align Azure Landing Zone lifecycle management via the Red Hat Infrastructure Standard (RH-IS) and associated Adoption Model (RH-ISAM). The standardization of systems is the base of the solution: the RH-IS defines the Standard Operating Environment (SOE) that comprises the default set of software components and configurations applied to systems via the RH-ISAM, a set of DevOps/GitOps principles. When put into practice, this includes provisioning, systems management, platform evolution, infrastructure operations and application and workload lifecycles; all through automation and Infrastructure/Configuration as Code. Defined and tested configurations reduce errors and increase reliability. Automated provisioning speeds up mass migration. Automated configuration reduces configuration drifts, ensuring systems function correctly.  
+
+## Design Considerations
+
+Red Hat Identity Management delivers on a centralized and unified means to manage identity stores, authentication, policies, and authorization policies for RHEL systems. In hybrid scenariio you can extend your existing Red Hat Identity Management infrastructure across a Virtual Private Network or ExpressRoute connecting on-premises with the RHEL Landing Zone within Azure. Extending your on-premises environment into Azure also affords the capability for integrating your workloads with Azure Entra to support cloud scenarios. You can read more about Azure Entra formerly known as Azure Active Directory in the following arctle [Microsoft Entra authentication documentation]( https://learn.microsoft.com/en-us/entra/identity/authentication/).   
+
+Red Hat Satellite is implemented as the single source of content delivered to managed RHEL systems. This includes Red Hat packages and patches, as well as third party packages and custom packages developed by application development teams. It also acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations, to recognize security or performance risks. Please note on Azure there is also available the Red Hat Update Infrastructure (RHUI) for RHEL Pay-As-You-Go (PAYG) images that already come preconfigured to access Azure RHUI. Learn more about RHUI in the following online documentation [Red Hat Update Infrastructure for on-demand Red Hat Enterprise Linux VMs in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7).
+
+### Red Hat Ansible Automation Platform Design Considerations
+
+Red Hat Ansible Automation Platform helps to standardize technical workflows and recurring tasks. It is used for orchestrating provisioning processes for new systems, and recurring operational tasks. Using one common automation platform and language reduces complexity. At the same time, fully automated workflows accelerate application innovation and ease mass workload migrations across on-premises and cloud footprints. 
+
+Some of the core benefits of a RHEL as a Platform automation strategy: 
+
+- Fully automated provisioning of new systems at scale, fostering the speed of mass migrations. 
+- Increased homogeneity of tested systems’ configuration and application installations, across on-premises and the cloud, across physical and virtual systems. 
+- Patch management is available from the outset, providing continuous updates. 
+- A standardized and simplified platform for delivering new applications and workloads, freeing up staff time to deliver increased innovation. 
+
+Implementation of Red Hat Ansible Automation Platform can be accomplished via several methods: 
+
+- self-managed Ansible Automation Platform, either via on-premises infrastructure, cloud infrastructure, or both 
+  - via Red Hat Enterprise Linux deployment
+  - via Red Hat OpenShift Container Platform deployment
+- a self-managed Ansible Automation Platform instance in a public cloud
+- a managed Ansible Automation Platform instance in a public cloud 
+
+### Red Hat Ansible Automation Platform, self-managed, on-premises/cloud
+
+[Red Hat Ansible Automation Platform on Microsoft Azure ](https://www.redhat.com/en/technologies/management/ansible/azure) when deployed in self-managed mode in an on-premises and/or cloud infrastructure, provides the following benefits: 
+
+- Architecture and scale - determine what is the most ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on fleet size and 
+  requirements, choose the number, as well as instance sizing, of controllers, execution nodes, and private automation hub instances. For more on architecture, design, configuration and scale, please visit the 
+  Ansible Platform [Red Hat Ansible Automation Platform Planning Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
