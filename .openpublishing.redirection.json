@@ -836,6 +836,11 @@
           "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/oracle-iaas/introduction-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+          "redirect_document_id": false
+      },
+      {
          "source_path": "docs/ready/landing-zone/align-scenarios.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription",
          "redirect_document_id": false
