@@ -57,7 +57,7 @@ The following sections contain considerations to help you plan and create subscr
 - A single subscription can contains resources from different regions, depending on the requirements and architecture.
 - In a geo-disaster recovery context, the same subscription can be used to contain resources from primary and secondary regions since logically part of the same workload.
 - Different environments for the same workload can be deployed in different regions to optimize costs and resource availability.
-- In a subscription containing resources from multiple regions, resource groups can be still used to partition and group together resources that share common life-cycle management.
+- In a subscription containing resources from multiple regions, resource groups can be used to partition and group together resources that share common life-cycle management.
 
 ### Quota and capacity design considerations
 
@@ -158,7 +158,7 @@ The following sections contain recommendations to help you plan and create subsc
 ### Multiple regions recommendations
 
 - Subscription design should consider Azure regions usage and placement strategy and model it based on requirements and goals.
-- When used to scale across different regions, different subscriptions, where each one contains resources from only one region, is a clear and simple approach to allocate distinct workload scale units.
+- When used to scale across different regions, using multiple and different subscriptions, where each one contains resources from only one region, is a clear and simple approach to allocate distinct workload scale units.
 - Don’t create resources from different regions in the same subscription if the environment is subject to regulatory requirements, including data residency, data security, and data sovereignty requirements.
 - If scaling is not a concern for a geo disaster recovery environment spanning multiple regions, use the same subscription for the primary and secondary regions resources. Some Azure services, depending on the BCDR strategy and tools adopted, can require usage of the same subscription. In an active-active scenario, where deployments are independently managed or have different life-cycles, using different subscriptions can be recommended.
 - If different environments of the same workload are deployed in different regions, it is recommended to use separate subscriptions.
