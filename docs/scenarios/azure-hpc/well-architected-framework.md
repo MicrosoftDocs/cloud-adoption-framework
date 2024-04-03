@@ -20,9 +20,9 @@ Your data environment should consider resilient architectures, cross region redu
 
 On top of these environmental controls, the workload team should consider:
 
-- Doing more architecture modification to improve service level SLAs
-- Setting up redundant workload-specific architecture
-- Establishing processes for monitoring and notification beyond what the cloud operations teams provide
+- Doing more architecture modification to improve service level SLAs.
+- Setting up redundant workload-specific architecture.
+- Establishing processes for monitoring and notification beyond what the cloud operations teams provide.
 
 ### Hybrid ExpressRoute connectivity
 
@@ -46,12 +46,12 @@ Apply security principles to your HPC environment to provide safeguards against 
 
 Azure Marketplace provides Linux-based HPC images to use in the cluster. These images contain many popular libraries, software packages, and diagnostic tools such as:
 
-- InfiniBand-based, message passing interface (MPI) libraries
-- Mellanox OFED
-- Preconfigured IP over InfiniBand
-- Communication runtimes
-- Intel/AMD-optimized libraries
-- Azure HPC diagnostic tools, and so on
+- InfiniBand-based, message passing interface (MPI) libraries.
+- Mellanox OFED.
+- Preconfigured IP over InfiniBand.
+- Communication runtimes.
+- Intel/AMD-optimized libraries.
+- Azure HPC diagnostic tools.
 
 You can start with the images and then apply your organization's security policies to strengthen software images against vulnerabilities and cyber threats. After validation, you can save the new image in Azure Compute Gallery. You can then use the image to create virtual machines in Azure CycleCloud, Azure HPC, and Batch.
 
@@ -64,7 +64,7 @@ You can start with the images and then apply your organization's security polici
 - Use managed identities to access resources in Azure.
 - Support a single enterprise directory. Keep the cloud and on-premises directories synchronized, except for critical-impact accounts.
 - Set up Microsoft Entra Conditional Access. Enforce and measure key security attributes when authenticating all users, especially for critical-impact accounts.
-- Use passwordless methods, preferably or opt for modern password methods.
+- Use passwordless methods or opt for modern password methods.
 - Block legacy protocols and authentication methods.
 
 ### Azure Batch security
@@ -119,7 +119,7 @@ HPC on Azure deploys several resources like Azure CycleCloud, HPC Cluster, Stora
 
 Ensure that your HPC environment is able to scale efficiently so it can meet the demands placed on it by users. Choose the right platform for your HPC applications based on application vendor recommendations. Invest in capacity planning if you need extra infrastructure to meet demand. Monitor the HPC infrastructure performance as users use your system.
 
-For more information, see [performance efficiency articles](/azure/architecture/framework/scalability/overview#topics).
+For more information, see the [performance efficiency articles](/azure/architecture/framework/scalability/overview#topics).
 
 ### Choose the right platform for the HPC application
 
@@ -139,7 +139,7 @@ Based on the type of the application and its license conditions, review whether 
 
 - It's important to be able to track the way in which users use your system, trace resource use, and generally monitor the health and performance of your system. You can use this information as a diagnostic aid to detect and correct issues, and to help spot potential problems and prevent them from occurring. For an overview of the Azure components and services available to monitor your resources, see [Azure Monitor overview](/azure/monitoring-and-diagnostics/monitoring-overview).
 - Monitor is a great tool to identify if there are any bottlenecks in the VM instances and storage.
-- Storage throttling can cause applications to slow down substantially and affect performance. Throttling can happen when input and output operations within storage exceed the throughput limits you set. Azure Storage services offer the read and write operations graphs to monitor if there are any issues from throttling.
+- Storage throttling can cause applications to slow down substantially and affect performance. Throttling happens when input and output operations within storage exceed the throughput limits you set. Azure Storage services offer read and write operations graphs to monitor if there are any issues from throttling.
 - Azure CycleCloud integrates with Azure services such as Monitor and Microsoft Cost Management tools. It also supports monitoring external services through its pluggable architecture. For more information, see [Monitoring](/azure/cyclecloud/concepts/monitoring).
 - Further, if you're using Batch, [Batch Explorer](https://github.com/Azure/BatchExplorer) is a free, rich-featured, stand-alone client tool to help create, debug, and monitor Batch applications.
 
