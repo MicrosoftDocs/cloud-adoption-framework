@@ -49,7 +49,7 @@ This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure 
 
 Each Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown as "Global Reach (A)". The Azure VMware Solution Cloud Region 2 Global Reach connection is shown as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
 
-The diagram depicts how each Azure VMware Solution Cloud learns routes from their local and cross-regional hubs.
+The diagram below illustrates traffic flows from the perspective of the Azure VMware Solution Private Clouds. 
 
 ![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)
 **Traffic Flow Chart**
@@ -67,18 +67,21 @@ The diagram depicts how each Azure VMware Solution Cloud learns routes from thei
 
 ### on-premises connectivity & traffic flow
 
-This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "F").
+This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "E").
 
 On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)".
 
-The diagram illustrates how on-premises learns routes from both regional hubs and both Azure VMware Solution Private clouds.
+The diagram below illustrates traffic flows from an on-premises perspective.
 
 ![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)
-**Traffic Flow**
+**Traffic Flow Chart**
 
-| From |   To |  Hub 1 Virtual Networks | Hub 2 Virtual Networks | Azure VMware Solution Region 1| Azure VMware Solution Region 2|
-| -------------- | -------- | ---------- | ---| ---| ---|
-| on-premises    | &#8594;| Hub1Fw>Virtual Network1|  Hub2Fw>Virtual Network2  | Global Reach(A)>Azure VMware Solution Cloud Region 1 | Global Reach(B)>Azure VMware Solution Cloud Region 2| 
+| Traffic Flow Number | Location 1 |   Direction | Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| - | -------------- | -------- | ---------- | ---------- |
+| 2 | on-premises | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 1 | No, traffic bypasses firewall and transits Global Reach (A)|
+| 7 | on-premises | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 2 | No, traffic bypasses firewall and transits Global Reach (B)|
+| 8 | on-premises | &#8594;<br>&#8592;| Virtual Network 1 | Yes, traffic is inspected at Hub 1 firewall|
+| 9 | on-premises | &#8594;<br>&#8592;| Virtual Network 2 | Yes, traffic is inspected at Hub 2 firewall|
 
 ### Azure Virtual Network connectivity & traffic flow
 
