@@ -128,14 +128,21 @@ In short, Azure VMware Solution Private Clouds prioritize internet access via re
 Another important point is that with Routing Intent, you can choose to not advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premises ExpressRoute connections. 
 
 ![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)
-**Traffic Flow**
+**Traffic Flow Chart**
 
-| From |   To |  Primary Internet Route | Backup Internet Route |
-| -------------- | -------- | ---------- | ---------- |
-| Virtual Network1    | &#8594;| Hub1Fw>Internet| None|
-| Virtual Network2    | &#8594;| Hub2Fw>Internet| None|
-| Azure VMware Solution Cloud Region 1    | &#8594;| Hub1Fw>Internet| Hub2Fw>Internet|
-| Azure VMware Solution Cloud Region 2    | &#8594;| Hub2Fw>Internet| Hub1Fw>Internet|
+| Traffic Flow Number | Location 1 |   Direction | Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? | Internet Breakout |
+| - | -------------- | -------- | ---------- | ---------- | ---------- |
+| 11 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| Internet| Yes, traffic is inspected at Hub 1 firewall| Via Hub 1 firewall
+| 12 | Azure VMware Solution Cloud Region 2 | &#8594;<br>&#8592;| Internet | Yes, traffic is inspected at Hub 2 firewall| Via Hub 2 firewall
+| 15 | Virtual Network 1 | &#8594;<br>&#8592;| Internet | Yes, traffic is inspected at Hub 1 firewall| Via Hub 1 firewall|
+| 16 | Virtual Network 2 | &#8594;<br>&#8592;| Internet | Yes, traffic is inspected at Hub 2 firewall| Via Hub 2 firewall|
+
+**The traffic flow described below is only valid if there is an outage affecting a hub. For instance, if the local regional hub of Azure VMware Solution experiences an outage, internet traffic will be rerouted to the cross-regional hub for connectivity.**
+
+| Traffic Flow Number | Location 1 |   Direction | Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? | Internet Breakout |
+| - | -------------- | -------- | ---------- | ---------- | ---------- |
+| 13 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| Internet | Yes, traffic will transit Global Reach (C) and inspected at Hub 2 firewall| Via Hub 2 firewall|
+| 14 | Azure VMware Solution Cloud Region 2 | &#8594;<br>&#8592;| Internet | Yes, traffic will transit Global Reach (C) and inspected at Hub 1 firewall| Via Hub 1 firewall|
 
 
 ## Next steps
