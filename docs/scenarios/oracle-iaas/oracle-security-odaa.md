@@ -1,7 +1,7 @@
 ---
 title: Security guidelines for Oracle Database@Azure
 description: Learn about security guidelines for Oracle Database@Azure
-author: bamajeed and mihdavid
+author: basimolimajeed
 ms.author: bamajeed
 ms.reviewer: janfaurs
 ms.date: 
