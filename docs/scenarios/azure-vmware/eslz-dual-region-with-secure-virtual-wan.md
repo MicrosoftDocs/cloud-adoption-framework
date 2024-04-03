@@ -52,12 +52,18 @@ Each Azure VMware Solution Cloud Region connects back to an on-premises via Expr
 The diagram depicts how each Azure VMware Solution Cloud learns routes from their local and cross-regional hubs.
 
 ![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)
-**Traffic Flow**
+**Traffic Flow Chart**
 
-| From |   To |  Hub 1 Virtual Networks | on-premises | Hub 2 Virtual Networks | Cross-Regional Azure VMware Solution Private Cloud|
-| -------------- | -------- | ---------- | ---| ---| ---|
-| Azure VMware Solution Cloud Region 1    | &#8594;| Hub1Fw>Virtual Network1|  GlobalReach(A)>on-premises   | Hub2Fw>Virtual Network2 | Global Reach(C)>Azure VMware Solution Cloud Region 2|
-| Azure VMware Solution Cloud Region 2   | &#8594;|  Hub1Fw>Virtual Network1 |  GlobalReach(B)>on-premises   | Hub2Fw>Virtual Network2 | Global Reach(C)>Azure VMware Solution Cloud Region 1|
+| Traffic Flow Number | Location 1 |   Direction | Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| - | -------------- | -------- | ---------- | ---------- |
+| 1 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| Virtual Network 1| Yes, traffic is inspected at Hub 1 firewall|
+| 2 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| on-premises | No, traffic bypasses firewall and transits Global Reach (A)|
+| 3 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| Virtual Network 2| Yes, traffic is inspected at Hub 2 firewall|
+| 4 | Azure VMware Solution Cloud Region 1 | &#8594;<br>&#8592;| Azure VMware Solution Cloud Region 2| No, traffic bypasses firewall and transits Global Reach (C)|
+| 5 | Azure VMware Solution Cloud Region 2 | &#8594;<br>&#8592;| Virtual Network 1| Yes, traffic is inspected at Hub 1 firewall
+| 6 | Azure VMware Solution Cloud Region 2 | &#8594;<br>&#8592;| Virtual Network 2| Yes, traffic is inspected at Hub 2 firewall|
+| 7 | Azure VMware Solution Cloud Region 2 | &#8594;<br>&#8592;| on-premises | No, traffic bypasses firewall and transits Global Reach (B)|
+
 
 ### on-premises connectivity & traffic flow
 
