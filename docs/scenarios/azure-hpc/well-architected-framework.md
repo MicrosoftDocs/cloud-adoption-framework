@@ -14,7 +14,7 @@ The [plan for Azure high-performance computing (HPC)](./plan.md) outlines a proc
 
 ## Reliability
 
-Everything has the potential to break. Data pipelines are no exception. So, great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change, and how quickly you can resume operations.
+Everything has the potential to break. Data pipelines are no exception. Great architectures are designed with availability and resiliency in mind. The key considerations are how quickly you can detect change and how quickly you can resume operations.
 
 Your data environment should consider resilient architectures, cross region redundancies, service level, service-level agreements (SLAs), and critical support. The existing environment should also include auditing, monitoring, and alerting by using integrated monitoring and a notification framework.
 
@@ -81,11 +81,11 @@ To make the most out of running your environment in Azure, prioritize cost manag
 
 ### Choice of operating system
 
-Linux is the dominant operating system for HPC workloads. Linux is open-source and tuned for performance to use the HPC infrastructure. So the MPI libraries and Infiniband drivers work well on Linux versus Windows. By using Linux virtual machines (VMs) versus Windows for setting up an HPC cluster, it can definitely save costs. But some users might have a strong preference for a Windows environment especially while doing the pre- and post-processing tasks in workloads such as computational fluid dynamics. In this case, we recommend having a Windows front end submit jobs to a Linux host, a head node, which uses the compute nodes for simulations.
+Linux is the dominant operating system for HPC workloads. Linux is open-source and tuned for performance to use the HPC infrastructure. So the MPI libraries and Infiniband drivers work well on Linux versus Windows. By using Linux virtual machines (VMs) versus Windows for setting up an HPC cluster, it can definitely save costs. But some users might have a strong preference for a Windows environment especially while doing the pre-processing and post-processing tasks in workloads such as computational fluid dynamics. In this case, we recommend having a Windows front end submit jobs to a Linux host, a head node, which uses the compute nodes for simulations.
 
 ### Autoscaling
 
-Autoscaling lets you set up and use VMs only when you submit a job or when a job is active. Once the job completes, the nodes turn off automatically. By using autoscaling, you adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes. You can customize the time limit. The time limit helps ensure that users pay only for what they use. Batch provides a mechanism to integrate an autoscaling formula with a choice of parameters. For more information, see [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started).
+Autoscaling lets you set up and use VMs only when you submit a job or when a job is active. When the job finishes, the nodes turn off automatically. By using autoscaling, you adjust compute resources used by your application, potentially saving you time and money. Azure CycleCloud has autoscaling turned on in its schedulers by default. The default time limit to switch off the nodes is 15 minutes. You can customize the time limit. The time limit helps ensure that users pay only for what they use. Batch provides a mechanism to integrate an autoscaling formula with a choice of parameters. For more information, see [Get started with autoscale in Azure](/azure/azure-monitor/autoscale/autoscale-get-started).
 
 ### Pay-as-you-go versus reserved instances and spot instances
 
@@ -93,7 +93,7 @@ Azure provides various pricing options, pay-as-you-go, reserved instance with on
 
 ### Data classification
 
-HPC workloads benefit from high throughput storage. For example, use Azure Managed Lustre, Azure Net App Files, BeeGFS Parallel File System, and so on. These storage services deliver performance but might come at a cost. It's important to classify your data beforehand so that only application-specific data resides in these systems. All other data can reside in low-cost storage solutions such as Azure Data Lake Storage or Azure Blob Storage.
+HPC workloads benefit from high throughput storage. For example, use Azure Managed Lustre, Azure Net App Files, or BeeGFS Parallel File System. These storage services deliver performance but might come at a cost. It's important to classify your data beforehand so that only application-specific data resides in these systems. All other data can reside in low-cost storage solutions such as Azure Data Lake Storage or Azure Blob Storage.
 
 Further, it might be useful to set up HPC storage systems on demand to help ensure the data synchronizes to a low-cost storage service like Blob Storage. On-demand storage helps ensure data retains in Blob Storage when the high-performance storage system is turned off. Managed Lustre and Net App Files offer a synchronization service.
 
@@ -123,7 +123,7 @@ For more information, see the [performance efficiency articles](/azure/architect
 
 ### Choose the right platform for the HPC application
 
-Azure offers a range of platforms for VMs based on Intel, AMD CPU and NVIDIA, and AMD GPU. While most of the applications are compatible with what's available, there are some that only benefit from a particular type of CPU or GPU. Before you deploy your infrastructure to the cloud, it's important to have a recommendation from the application vendor (ISV) to understand the following needs.
+Azure offers a range of platforms for VMs based on Intel, AMD CPU and NVIDIA, and AMD GPU. Although most of the applications are compatible with what's available, some benefit from only a particular type of CPU or GPU. Before you deploy your infrastructure to the cloud, it's important to have a recommendation from the application vendor (ISV) to understand the following needs.
 
 - If the application is memory bound, CPU bound, or GPU bound
 - If they have any recommendation on any type of CPU or GPU architecture for performance
