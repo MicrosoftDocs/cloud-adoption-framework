@@ -71,7 +71,7 @@ On rare occasions, when latency is your first priority, you can put VMs in a [pr
 
 ### Disaster recovery for Oracle on Azure workloads
 
-Disaster recovery architecture provides resilience against failures that affect Azure datacenter or region or that hinder application functionality across entire region. In such case, you would want to move your entire workload to another datacenter or region.
+Disaster recovery architecture provides resiliency against failures that affect Azure datacenters or regions or that hinder application functionality across an entire region. In such a scenario, you would want to move your entire workload to another datacenter or region.
 
 As stated earlier, disaster recovery architecture should be based on your solution requirements as indicated by RTO and RPO. Since disaster recovery architecture is built for exceptional failure cases, failover process is manual as opposed to high availability design. Generally you should have more relaxed requirements for RTO and RPO, which can enable more cost-effective designs.
 
