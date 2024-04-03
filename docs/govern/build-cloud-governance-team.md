@@ -44,13 +44,13 @@ Empower the cloud governance team to implement and oversee cloud governance. The
 
 - *Establish authority levels*. The executive sponsor should grant the team the authority to define cloud governance policies and take corrective measures for noncompliance.
 
-- *Communicate authority*. The executive sponsor should communicate to the entire organization the cloud governance team's authority and the importance of adhering to the cloud governance policies they create.
+- *Communicate authority*. The executive sponsor should communicate the authority of the cloud governance team to the entire organization. Include the importance of adhering to the cloud governance policies they create.
 
 ## Define the scope of the cloud governance team
 
 Establish the boundaries of the cloud governance team's responsibilities. The goal is to clarify areas of responsibility so the cloud governance team can focus on their defined functions. To define the scope, follow these recommendations:
 
-- *Define relationship with other teams*. Clearly define the cloud governance team's authority over cloud resources, services, and policies. Avoid conflict and overlapping responsibility with other teams. For hybrid environments, specify the cloud governance team's responsibilities in contrast to those of on-premises teams.
+- *Define relationship with other teams*. Clearly define the cloud governance team's authority over cloud resources, services, and policies. Avoid conflict and overlapping responsibility with other teams. For hybrid environments, specify the cloud governance team's responsibilities in contrast to on-premises teams.
 
 - *Use a RACI matrix*. Use a responsibility assignment matrix, often called a RACI matrix, to delineate roles and responsibilities within the cloud governance framework.
 

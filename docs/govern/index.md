@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 The CAF Govern methodology provides a structured approach for establishing and optimizing cloud governance in Azure. This guidance is applicable to all organizations in any sector. It addresses common categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and AI.
 
-Cloud governance uses guardrails to regulate all cloud usage. Guardrails help ensure that cloud use follows predefined rules. These rules are called cloud governance policies. Cloud governance policies define what's allowed and what isn't allowed in the cloud. Organizations create their own cloud governance policies to prevent and mitigate risks unique to their business. The goal of cloud governance is to ensure cloud use aligns with established cloud governance policies. Successful cloud governance eliminates all instances of ungoverned cloud usage, such as shadow IT.
+Cloud governance uses guardrails to regulate all cloud usage. Guardrails help ensure that cloud use follows predefined rules. These rules are called cloud governance policies. Cloud governance policies define what is allowed and what isn't allowed in the cloud. Organizations create their own cloud governance policies to prevent and mitigate risks unique to their business. The goal of cloud governance is to ensure cloud use aligns with established cloud governance policies. Successful cloud governance eliminates all instances of ungoverned cloud usage, such as shadow IT.
 
 :::image type="content" source="./_images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./_images/govern.svg" border="false":::
 
@@ -22,7 +22,7 @@ Cloud governance is foundational to defining and sustaining the productive use o
 
 ## How to govern the cloud?
 
-Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The CAF Govern methodology divides cloud governance into five steps. Complete all five steps to establish cloud governance and regularly iterate through steps 2-5 to maintain cloud governance over time:
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The CAF Govern methodology divides cloud governance into five steps. Complete all five steps to establish cloud governance and regularly iterate on steps 2-5 to maintain cloud governance over time:
 
 1. *Build a governance team*: Select a team of individuals to be responsible for cloud governance. The cloud governance team defines and maintains cloud governance policies while reporting on the overall progress of cloud governance.
 
@@ -32,7 +32,7 @@ Cloud governance is a continuous process. It requires ongoing monitoring, evalua
 
 4. *Enforce cloud governance policies*: Enforce compliance with the cloud governance policies using automated tools or manual procedures. The goal is to ensure that the use of cloud services is in line with the established cloud governance policies. Use Azure tools to help [enforce cloud governance policies](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 
-5. *Monitor cloud governance*: Monitor cloud use and teams responsible for governance to ensure they are compliant with the cloud governance policies. Use Azure tools to help [monitor cloud governance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) and [set up alerts for noncompliance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-alerts).
+5. *Monitor cloud governance*: Monitor cloud use and teams responsible for governance to ensure they're compliant with the cloud governance policies. Use Azure tools to help [monitor cloud governance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) and [set up alerts for noncompliance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-alerts).
 
 ## Cloud governance checklist
 

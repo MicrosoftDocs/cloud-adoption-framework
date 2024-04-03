@@ -54,7 +54,7 @@ Grant access to everyone who needs to adhere to cloud governance policies. Look 
 
 ## Review cloud governance policies
 
-Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular reviews helps ensure that cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
+Assess and update cloud governance policies to ensure they remain relevant and effective in governing cloud environments. Regular reviews help ensure that cloud governance policies align with changing regulatory requirements, new technologies, and evolving business objectives. When you review policies, consider the following recommendations:
 
 - *Implement feedback mechanisms*. Establish ways to receive feedback on the effectiveness of cloud governance policies. Gather input from the individuals affected by the policies to ensure they can still do their job efficiently. Update governance policies to reflect practical challenges and needs.
 
