@@ -88,7 +88,7 @@ Use the following flowchart to decide the best disaster recovery option for your
 Data Guard can be used to replicate data to your disaster recovery site. That site could be another availability zone in the same region or could be a different region depending on your requirements for data protection. It's also dependent on the availability zone structure provided on your production site. Using Oracle Data Guard in a disaster recovery scenario is similar to the high availability scenario discussed earlier with a few important differences.
 
 - When you failover to secondary replica in high availability scenario, you configure Azure Load Balancer to redirect requests to the new primary database instance.
-- When you failover to disaster recovery site, you failover the **entire** solution to the new site.
+- When you failover to disaster recovery site, you failover the **entire** solution to the new site. Note that this will typically also mean that you need to configure failover for application services as well to avoid latency challenges. 
 
 If the disaster recovery site is in another region, you need to design it for the failover depending on your requirements.
 
