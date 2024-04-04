@@ -33,7 +33,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
-The following guidance is meant to help you configure cloud governance monitoring in Azure. It provides a sample starting point for major categories of cloud governance. Consider aggregating these signals in the [Azure governance workbook](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/governance-workbook). To cloud governance monitoring, you need to configure a monitoring identity that has the required permissions to gather compliance data across all your subscriptions.
+The following guidance is meant to help you configure cloud governance monitoring in Azure. It provides a sample starting point for major categories of cloud governance. Consider aggregating these signals in the [Azure governance workbook](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/governance-workbook). To configure cloud governance monitoring, you need an Azure identity that has permissions to gather monitoring data from your subscriptions.
 
 #### Configure monitoring for regulatory compliance governance
 
@@ -82,6 +82,8 @@ The following guidance is meant to help you configure cloud governance monitorin
 - *Red team AI systems.* Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## Configure cloud governance alerts
+
+Configure alerts based on specific compliance metrics or events that indicate a deviation from your governance policies. To configure cloud governance alerts, follow these recommendations:
 
 - *Use cloud-native alerting mechanisms.* Prefer cloud-native tools that provide real-time monitoring and alerts for compliance problems.
 
