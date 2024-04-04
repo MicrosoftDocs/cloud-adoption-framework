@@ -54,6 +54,7 @@ Sudden spikes or even consistent moderate usage of infrastructure signals, along
 Even with the best planning, production workloads might still contain dependencies on assets that are presumed retired. In such cases, turning off a retired asset could cause unexpected system failure. As such, treat the termination of any assets with the same care as system maintenance activity.
 
 Establish proper testing and outage windows to facilitate the termination of the resource. You need a maintenance window to successfully test your assets before termination. Choose a period of time when you can test the assets without causing any business interruptions.
+
 #### Define a testing and maintenance window
 
 - **Low-impact times**: Identify a low-impact time for your testing window. Choose a time when application use is at its lowest.

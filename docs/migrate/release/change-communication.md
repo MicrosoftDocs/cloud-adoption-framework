@@ -19,11 +19,11 @@ The change communication is in addition to any change requests captured by your 
 
 Your change communication needs to target various groups in your organization. You should have a clear plan for each of the following roles:
 
-- **Business users** who use the workload in question to complete activities.
-- **Change managers** who need to plan for risk management and must ensure that the cutover follows all necessary requirements.
-- **Owners and operators** of the assets moving to Azure.
-- **Developers** who deploy to the assets moving to Azure.
-- **Migration engineers** who perform the migration.
+- **Business users** who use the workload in question to complete activities
+- **Change managers** who need to plan for risk management and must ensure that the cutover follows all necessary requirements
+- **Owners and operators** of the assets moving to Azure
+- **Developers** who deploy to the assets moving to Azure
+- **Migration engineers** who perform the migration
 
 > [!NOTE]
 > Your organization might also have other necessary roles to include.

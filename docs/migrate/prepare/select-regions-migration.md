@@ -4,7 +4,7 @@ description: Learn how to select a cloud region for a workload migration to Azur
 author: johndowns
 ms.author: jodowns
 ms.reviewer: tozimmergren
-ms.date: 03/12/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 

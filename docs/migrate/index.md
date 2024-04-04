@@ -3,7 +3,7 @@ title: Cloud migration in the Cloud Adoption Framework
 description: Prepare for a successful migration to Azure using an iterative process to assess, deploy, and release workloads.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/25/2024
+ms.date: 04/04/2024
 ms.topic: conceptual
 ---
 

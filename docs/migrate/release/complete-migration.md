@@ -19,7 +19,7 @@ Make sure you add workload-specific considerations to your checklist.
 
 - **Send pre-promotion communications**. Although you already communicated about the change window, make sure to send a notification to all necessary parties so that they know the promotion has begun.
 - **Validate the resources**. Confirm that all staged resources are in a functioning state. These resources include storage accounts and network security groups.
-- **Pause monitoring**. While you migrate the workload, you'll likely create a temporary outage. You should pause monitoring to prevent noise.
+- **Pause monitoring**. While you migrate the workload, you'll likely create a temporary outage. Pause monitoring to prevent noise.
 - **Take final replication steps**. Depending on your promotion method, you might need to take final replication steps to handle any recent data. That process includes these steps if you use a tool like Azure Migrate and Modernize to replicate the server state. Otherwise, you might have to take manual steps, depending on how you staged the application.
 - **Hydrate additional resources**. If you're using server state replication like with Azure Migrate and Modernize, you need to deploy Azure Virtual Machine instances as part of hydrating after the replication. There might be other items like load balancing rules that you weren't able to stage previously.
 - **Power down source servers**. If you still have source servers available after hydrating your resources, power them down so that they don't interfere with your migration.

@@ -34,7 +34,7 @@ During business testing, the first iteration is manually driven directly with cu
 
 ## Migration team activities during business testing
 
-The migration team serves as one of the recipients of the business testing output. The feedback loops exposed during business testing eventually become work items that define technical change or process change. As a recipient of the business testing output, the migration team is expected to aid in facilitation, feedback collection, and management of resultant technical actions.
+The migration team is one of the recipients of the business testing output. The feedback loops exposed during business testing eventually become work items that define technical change or process change. As a recipient of the business testing output, the migration team is expected to aid in facilitation, feedback collection, and management of resultant technical actions.
 
 Typical activities that the migration team performs during business testing include:
 
