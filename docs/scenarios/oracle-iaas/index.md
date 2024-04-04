@@ -46,7 +46,7 @@ As shown in  the reference architectural diagram, the Oracle databases are deplo
 
 ### High-level Oracle landing zone architecture for Oracle Database@Azure
 
-The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
+The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle Database@Azure landing zone implementation.
 
 :::image type="content" source="media/reference-architecture-oracle-odaa-landing-zone.png" alt-text="Diagram showing a reference architecture of Oracle Database@Azure.":::
 
