@@ -49,7 +49,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 
 - Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines.
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. and right-sizing your Oracle estate to optimize licensing costs and gain desired performance by choosing the correct target architecture on Azure, whether that be fully virtual machine based, fully Oracle Database@Azure based or everything in between.
+- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database, and right-sizing your Oracle estate to optimize licensing costs and gain the desired performance by choosing the correct target architecture on Azure, whether that be fully virtual machine based, fully Oracle Database@Azure based or something in between.
 
 - Choose the right deployment architecture - based on architecture guidelines.
 
