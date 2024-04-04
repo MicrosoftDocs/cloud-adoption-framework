@@ -13,7 +13,7 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure
 
-Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a LoB application or as a combined suite for enterprise resource planning, HR, SCM or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
+Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a Line of Business (LoB) application or as a combined suite for enterprise resource planning (ERP), Human Resources (HR), Supply Chain Management (SCM) or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
 
 This article uses the [Plan for Oracle on Azure Virtual Machines landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
 
