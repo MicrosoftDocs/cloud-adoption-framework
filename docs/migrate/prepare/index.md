@@ -23,11 +23,11 @@ The following table provides an overview of the articles that describe the activ
 
 |Activity|Description|Responsible roles|
 |---|---|---|
-|[Prepare your landing zone for migration](./ready-azure-landing-zone.md)|Describes the components that your landing zone needs to support migration activities|<li>Landing zone architect|
-|[Prepare tools and an initial migration backlog](./tools-backlog.md)|Describes how to prepare the right tools and build a migration backlog from your digital estate planning|<li>Project sponsor<br><li> Migration architect<br><li>Project manager|
-|[Plan for resilience](./plan-for-resilience.md)|Describes how to plan for resiliency in your deployments, including multiregion deployments|<li>Migration architect<br><li>Landing zone architect<br><li>Cloud operations manager|
-|[Align roles and responsibilities](./roles-responsibilities.md)|Describes the roles and functions that you need for a migration project|<li>Project manager<br><li>Stakeholder|
-|[Incorporate skills readiness for migration](./skills-support.md)|Describes the resources and training that your team needs to build essential migration skills|<li>Project manager<br><li>Organizational change manager|
+|[Prepare your landing zone for migration](./ready-azure-landing-zone.md)|Learn the components that your landing zone needs to support migration activities.|<li>Landing zone architect|
+|[Prepare tools and an initial migration backlog](./tools-backlog.md)|Learn how to prepare the right tools and build a migration backlog from your digital estate planning.|<li>Project sponsor<br><li> Migration architect<br><li>Project manager|
+|[Select Azure regions for a migration](./select-regions-migration.md)|Learn how to plan for and select the Azure cloud regions for your workload migration to Azure. Find suggested actions for assessment, migration, and other processes.|<li>Migration architect<br><li>Landing zone architect<br><li>Cloud operations manager|
+|[Align roles and responsibilities](./roles-responsibilities.md)|Learn about the roles and functions that you need for a migration project.|<li>Project manager<br><li>Stakeholder|
+|[Incorporate skills readiness for migration](./skills-support.md)|Find out about the resources and training that your team needs to build essential migration skills.|<li>Project manager<br><li>Organizational change manager|
 
 ## Next steps
 

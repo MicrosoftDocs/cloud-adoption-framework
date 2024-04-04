@@ -1,6 +1,6 @@
 ---
-title: Plan for resilience
-description: Learn how to select a cloud region for a workload migration to Azure. See suggested actions for assessment, migration, and other processes.
+title: Select Azure regions for a migration
+description: Learn how to select a cloud region for a workload migration to Azure. Find suggested actions for assessment, migration, and other processes.
 author: johndowns
 ms.author: jodowns
 ms.reviewer: tozimmergren
@@ -8,7 +8,7 @@ ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 
-# Plan for resilience
+# Select Azure regions for a migration
 
 When you migrate an existing environment to Azure, you need to select an Azure region or set of regions to host the migrated components. Region selection involves the following high-level steps:
 
