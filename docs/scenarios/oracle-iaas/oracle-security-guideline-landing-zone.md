@@ -3,7 +3,7 @@ title: Security guidelines for Oracle on Azure Virtual Machines landing zone acc
 description: Learn about security guidelines for Oracle on Azure Virtual Machines landing zone accelerator.
 author: gkayali
 ms.author: guherk
-ms.date: 01/10/2023
+ms.date: 04/04/2024
 ms.topic: conceptual
 ms.custom: 
   - think-tank
@@ -13,11 +13,11 @@ ms.custom:
 
 # Security guidelines for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article explains how to safely run Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of its lifecycle. The article discusses specific design components and gives focused suggestions for Oracle workloads on Azure IaaS security.
+This article describes how to safely run Oracle workloads on Virtual Machines landing zone accelerator at every stage of its lifecycle. The article discusses specific design components and gives focused suggestions for Oracle workloads on Azure Infrastructure as a Service (IaaS) security.
 
 ## Overview
 
-Ensuring security is crucial when it comes to any architecture, and Azure offers a comprehensive range of tools to effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure Virtual Machines. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
+Ensuring security is crucial when it comes to any architecture. Azure offers a comprehensive range of tools to help you effectively secure your Oracle workload. The objective of this article is to provide security recommendations for the Azure control plane related to Oracle application workloads that are deployed on Azure Virtual Machines. For detailed information and implementation guidelines regarding security measures within the Oracle Database product, see [Oracle Database security guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/introduction-to-oracle-database-security.html#GUID-41040F53-D7A6-48FA-A92A-0C23118BC8A0).
 
 Most databases store sensitive data. To have a secure architecture in which to land these workloads, implementing security only at the database level isn't sufficient.  Defense in depth is a comprehensive approach to security that involves implementing multiple layers of defense mechanisms to protect data. Instead of relying on a single security measure at a specific level, for example focusing on network security mechanisms, the defense in depth strategy employs a combination of different layer security measures to create a robust security posture. Defense-in-depth approach can be architected for Oracle workloads through strong authentication and authorization framework, hardened network security and encryption of data at rest and in-transit.
 
