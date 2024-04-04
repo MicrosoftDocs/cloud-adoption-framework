@@ -48,13 +48,13 @@ Governance provides mechanisms and processes for maintaining control over platfo
 
 Explore the following considerations and recommendations to make informed decisions as you plan your landing zone.
 
-The governance design area focuses on design decisions for your landing zone. For information about governance processes and tools, see [Governance in the Cloud Adoption Framework for Azure](../../../govern/index.md).
+The governance design area focuses on design decisions for your landing zone. For information about governance processes and tools, see [Govern in the Cloud Adoption Framework for Azure](../../../govern/index.md).
 
 ## Azure governance considerations
 
 Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls actions for authorized users. Cost Management can also help support your ongoing governance cost and spending in Azure or other multicloud environments.
 
-### Deployment acceleration considerations
+### Deployment considerations
 
 Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
@@ -84,14 +84,14 @@ Change advisory review boards can hinder your organization's innovation and busi
 - Select the right Azure services to help reduce costs. Some Azure services are free for 12 months and some are always free.
 - Select the right compute service for your application to help improve cost efficiency. Azure offers many ways to host your code.
 
-### Resource consistency considerations
+### Resource management considerations
 
 - Determine if the groups of resources in your environment can share required configurations, a common lifecycle, or common access constraints (such as RBAC) to help provide consistency.
 
 - Choose an application or workload subscription design that's appropriate for your operation needs.
 - Use standard resource configurations within your organization to ensure a consistent baseline configuration.
 
-### Security baseline considerations
+### Security considerations
 
 - Enforce tools and guardrails across the environment as part of a security baseline.
 
