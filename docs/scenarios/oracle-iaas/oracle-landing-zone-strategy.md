@@ -17,7 +17,7 @@ Oracle is a mission-critical workload for many organizations. Whether as a datab
 
 This article uses the [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
 
-## Why move an Oracle workload to Azure Virtual Machines for landing zone accelerator?
+## Why move an Oracle workload to Oracle on Azure landing zone accelerator?
 
 Oracle is an common application suite, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
