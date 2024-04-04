@@ -20,7 +20,7 @@ You can migrate to AKS to accelerate containers in the cloud as a part of the [C
 
 ## Assess workloads
 
-As a first step to assessing a group of workloads, you need to reference your [cloud adoption plan](../../plan/template.md) and [initial portfolio assessment](../../plan/contoso-migration-assessment.md). When evaluating workloads for containerization during migration, you need to review the plan for key information about the operating system and programming language for the application to determine the most appropriate containerization path.
+As a first step to assessing a group of workloads, you need to reference your [cloud adoption plan](../../plan/template.md) and [initial portfolio assessment](../../migrate/assess/index.md). When evaluating workloads for containerization during migration, you need to review the plan for key information about the operating system and programming language for the application to determine the most appropriate containerization path.
 
 ### Streamlined migration candidates
 

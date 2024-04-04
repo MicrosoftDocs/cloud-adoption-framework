@@ -224,8 +224,6 @@ items:
         href: plan/timelines.md
     - name: Best practices
       items:
-      - name: Digital estate assessment in Azure
-        href: plan/contoso-migration-assessment.md
       - name: Plan a data warehouse migration
         href: plan/data-warehouse-migration.md
 
