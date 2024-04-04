@@ -35,7 +35,7 @@ When you migrate workloads in a hybrid and multicloud environment, the real effe
 
 ## Assess workloads for hybrid and multicloud migration
 
-Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../migrate/assess/index.md) still apply.
+Azure products used in a standard migration are still applicable to a hybrid and multicloud migration. Specifically, Azure Migrate and Service Map can be used to understand your digital estate and outline your dependencies. For more information on both tools, see the [Getting started guide for assessing workloads](../../migrate/azure-migration-guide/assess.md). When you build out your plan or assess waves of hybrid and multicloud workloads, the [best practices for digital estate assessment in Azure](../../digital-estate/index.md) still apply.
 
 Hybrid and multicloud migrations that come across assessment challenges indicate a lack of maturity within their migration team's assessment processes. Factor the following considerations into your assessment plans:
 
