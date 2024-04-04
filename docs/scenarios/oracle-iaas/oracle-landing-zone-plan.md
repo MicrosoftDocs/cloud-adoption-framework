@@ -43,7 +43,7 @@ Once these considerations are integrated into your digital estate evaluation, yo
 
 ## Oracle on Azure cloud adoption plan
 
-The Cloud Adoption Framework includes tooling and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. Learn more about this in [Tools and templates]( https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/resources/tools-templates#plan).
+The Cloud Adoption Framework includes tooling and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. Learn more about this in [Tools and templates](/azure/cloud-adoption-framework/resources/tools-templates#plan).
 
 Whether you use templates or your own project planning tools, factor in the following Oracle-specific actions:
 

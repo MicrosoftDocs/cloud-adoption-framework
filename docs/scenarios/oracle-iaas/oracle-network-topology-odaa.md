@@ -46,4 +46,4 @@ See below for potential network topologies for Oracle Database@Azure.
 ## See also
 
 - [Identity and Access Management for Oracle Database@Azure](oracle-iam-odaa.md)
-- [Security guidelines for Oracle Database@Azure](oracle-security-odaa.md)
+- [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)

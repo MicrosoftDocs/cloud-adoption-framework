@@ -28,5 +28,5 @@ This article builds on some of the considerations and recommendations that are d
 
 ## See also
 
-- [Security guidelines for Oracle Database@Azure](oracle-security-odaa.md)
+- [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
