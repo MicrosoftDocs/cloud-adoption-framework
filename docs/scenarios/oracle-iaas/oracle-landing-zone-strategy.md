@@ -31,7 +31,7 @@ Oracle is an common application suite, and organizations have several motivation
 
 To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in [Cloud motivations](../../strategy/motivations.md). This input helps the cloud adoption team to make informed decisions throughout the implementation process.
 
-Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives, and not necessarily limited to the specific workload. Further to the above following scenario can also trigger a move to cloud:
+Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives, and not necessarily limited to the specific workload. Further to the above, the following scenarios can also trigger a move to cloud:
 
 1. Cycles to refresh Oracle on-premises infrastructure require significant capital expenditures. If your Oracle infrastructure is due for a refresh, the benefits of cloud adoption can unlock timely strategies to reduce costs.
 2. Oracle licenses are a one-time purchase negotiated for a specific number of years. If you want to migrate your Oracle workloads to Azure, review the following official document to understand the license implications on Azure: [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/assets/cloud-licensing-070579.pdf).
