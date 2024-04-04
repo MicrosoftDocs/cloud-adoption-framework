@@ -112,20 +112,15 @@ Option 3: Azure Public IPv4 address to NSX-T Data Center Edge
 
 Although you can use all three options with Dual Region Secure Virtual WAN with Routing Intent,  "Option 1: Internet Service hosted in Azure" is the best option when using Secure Virtual WAN with Routing Intent and is the option that is used to provide internet connectivity in the scenario.  
 
-As mentioned earlier, when you enable Routing Intent on the Secure Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. The preferred default route is advertised via connection "D", and the backup default route is advertised via Global Reach (C).
+As mentioned earlier, when you enable Routing Intent on the Secure Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. 
 
- Each Virtual Network will egress to the internet using its local regional hub firewall. The default route is never advertised across regional hubs over the "inter-hub" link. Therefore, Virtual Networks can only use their local regional hub for internet access. 
+From an Azure VMware Solution Private Cloud perspective, it can use its local regional hub for primary internet access and its cross-regional hub as an internet backup in the event the local regional hub is down. This gives you internet access redundancy for outbound traffic only. For inbound internet traffic to Azure VMware Solution workloads, you should consider using Azure Front Door or Traffic Manager in the event of a regional outage.
 
-From an Azure VMware Solution Private Cloud perspective, when advertising the default route across regional connections (connections labeled as "D"), you need to configure route maps with BGP prepending on the Secure Virtual WAN hubs. When you do not use BGP prepending, Azure VMware Solution Cloud regions load balance internet traffic between their local and regional hubs. This load balance would introduce asymmetric traffic and impact internet performance. 
+The preferred default route is received via connection “D” from its local regional hub, and the backup default route is received from the cross-regional hub via Global Reach A, B, and C connections. Since Global Reach (C) is only one hop away, it becomes the preferred route over the two hops required for Global Reach (A) and Global Reach (B). In the event that Global Reach (C) is not configured or is down, internet traffic will transit through Global Reach (A) and Global Reach (B).
 
-Before we continue, let's go over what BGP prepending is. BGP prepending is a technique in inter-domain routing where an AS artificially extends the AS Path by adding its own AS number multiple times to influence inbound traffic. By making the path appear longer, the AS aims to divert traffic away from the prepended route and towards other potentially more favorable paths. You can use any BGP Private AS when using BGP prepending. 
+ Each Virtual Network will egress to the internet using its local regional hub firewall. The default route is never advertised across regional hubs over the "inter-hub" link. Therefore, Virtual Networks can only use their local regional hub for internet access and will have no backup internet connectivity to the cross-regional hub. 
 
-The goal here is to use BGP prepending for only the default routes across cross regional ExpressRoute links (connections labeled as "D") down to Azure VMware Solution Private clouds. We are not prepending the default route across local ExpressRoute links (connections labeled as "E") to the Azure VMware Solution Private Clouds. Use the Route Maps function of Virtual WAN to achieve redundant internet egress connectivity for your AVS Private Clouds.
-
-
-In short, Azure VMware Solution Private Clouds prioritize internet access via regional local hubs, using the cross-regional hub as backup during local hub outages. See traffic flow section more information.
-
-Another important point is that with Routing Intent, you can choose to not advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premises ExpressRoute connections. 
+In summary, Azure VMware Solution Private Clouds prioritize internet access via regional local hubs, using the cross-regional hub as a backup during local hub outages. Virtual Networks, on the other hand, only use their regional hub for internet access and do not rely on the cross-regional hub for internet backup. For further details, refer to the traffic flow section. Another important point is that with Routing Intent, you can choose not to advertise the default route over specific ExpressRoute connections. If you do not want to learn the default route from Azure, we recommend not advertising the default route to your on-premises ExpressRoute connections, ensuring that on-premises internet connectivity is not impacted.
 
 ![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)
 **Traffic Flow Chart**
