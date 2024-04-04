@@ -51,7 +51,7 @@ After you complete the preceding steps, do the following steps with your team:
   - Try to determine what created delays with migrations, affected the release, or lead to workloads being pushed out of this sprint.
   - Think about how you can prevent these problems as you discuss the question "What did we learn?".
 
-After you capture and group ideas from all these questions, have the team answer "_What did we learn?_", and brainstorm ideas for improvement that you can apply to the next sprint.
+After you capture and group ideas from these questions, ask the team, "_What did we learn?_". Then brainstorm ideas for improvement that you can apply to the next sprint.
 
 ### Example retrospective output
 
