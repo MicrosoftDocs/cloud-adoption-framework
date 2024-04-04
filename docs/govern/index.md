@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Govern overview
 
-The CAF Govern methodology provides a structured approach for establishing and optimizing cloud governance in Azure. The guidance is relevant for organizations across any industry. It covers essential categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and artificial intelligence (AI)
+The CAF Govern methodology provides a structured approach for establishing and optimizing cloud governance in Azure. The guidance is relevant for organizations across any industry. It covers essential categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and artificial intelligence (AI).
 
 Cloud governance is the framework organizations use to regulate all cloud use. It uses specific procedures and tools to align cloud use to internal standards, known as cloud governance policies. Cloud governance policies define acceptable and unacceptable use of cloud services. Organizations create cloud governance policies to prevent and mitigate unique business risks. Cloud governance aligns all cloud operations with these established cloud governance policies. Successful cloud governance prevents all unauthorized or unmanaged cloud usage.
 
