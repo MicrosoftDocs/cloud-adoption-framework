@@ -613,7 +613,7 @@ items:
             href: migrate/prepare/ready-azure-landing-zone.md
           - name: Prepare tools and backlog
             href: migrate/prepare/tools-backlog.md
-          - name: Select Azure regions for a migration
+          - name: Select migration regions
             href: migrate/prepare/select-regions-migration.md
           - name: Align roles and responsibilities
             href: migrate/prepare/roles-responsibilities.md
