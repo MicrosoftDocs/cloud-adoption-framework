@@ -29,7 +29,7 @@ Like most complex platforms, your Oracle digital estate includes three asset cat
 
 Consider the following items when planning for migrating Oracle workloads to Azure:
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database information performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically if you are considering moving to Oracle Database@Azure you are advised to reach out to your local Oracle sales team for sizing guidance.
+**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically if you are considering moving to Oracle Database@Azure you are advised to reach out to your local Oracle sales team for sizing guidance.
 
 **Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or third party applications and any custom developed applications. Thereby, it's also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the CPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS.
 
