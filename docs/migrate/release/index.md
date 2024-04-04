@@ -13,7 +13,7 @@ This phase guides you through releasing your deployed workloads to production us
 
 ![A diagram that shows the release phase of the migration guidance in the Cloud Adoption Framework.](../media/migrate-release.svg)
 
-## Carry out the migration
+## Conduct the migration
 
 When you reach this phase, you have your resources deployed into Azure, either as new resources with replicated data in a properly configured state or as a replicated server through a migration tool. From a technical perspective, all that remains to do is to start the final migration tasks and send traffic over to the new location.
 

@@ -3,7 +3,7 @@ title: Align roles and responsibilities
 description: Prepare for cultural complexity when your organization migrates to Azure. Align roles and responsibilities to ensure clarity and coverage of essential functions.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 03/14/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ---
 

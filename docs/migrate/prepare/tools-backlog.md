@@ -29,7 +29,7 @@ Here's a list of common tools or offerings that you need for a successful migrat
 Although you can use other tools instead of Azure Migrate, we recommend that you use a native offering unless there's an identified reason. The native offering Azure Migrate is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
 
 > [!NOTE]
-> *If you already use an existing tool*: If a different tool is already replicating a server to Azure, changing tools during this process can disrupt and decrease performance. In this scenario, continue to use the existing tool. Later, you can run the migration promotion like a disaster recovery failover scenario.
+> If you use an existing tool to replicate a server to Azure, changing tools during this process can disrupt and decrease performance. In this scenario, continue to use the existing tool. Later, you can run the migration promotion like a disaster recovery failover scenario.
 
 ## Initial migration backlog
 
