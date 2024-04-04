@@ -21,7 +21,7 @@ The strategy and plan template and other resources in the Cloud Adoption Fra
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is true regardless off whether your on-premises implementations is vanilla Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
+**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is true whether your on-premises implementations is vanilla Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
 
 **Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. Thes assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment, and should therefore be inventoried and rationalized.
 
