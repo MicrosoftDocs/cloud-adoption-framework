@@ -53,7 +53,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 Your resource consistency decisions determine the tools, processes, and efforts required to configure, deploy, and manage Azure resources consistently within a subscription. In this narrative, [deployment consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency) is the primary resource consistency pattern.
 
-- Create resource groups for applications using the lifecycle approach. Everything you create, maintain, and retire together should reside in a single resource group. For more information, see the [resource consistency decision guide](../../../decision-guides/resource-consistency/index.md#basic-grouping).
+- Create resource groups for applications by using the lifecycle approach. Everything you create, maintain, and retire together should reside in a single resource group. For more information, see [Resource consistency decision guide](../../../decision-guides/resource-consistency/index.md#basic-grouping-resource-groups).
 - Apply Azure Policy to all subscriptions from the associated management group.
 - As part of the deployment process, store the Azure resource consistency templates for the resource group in source control.
 - Associate each resource group with a specific workload or application based on the lifecycle approach described previously.
