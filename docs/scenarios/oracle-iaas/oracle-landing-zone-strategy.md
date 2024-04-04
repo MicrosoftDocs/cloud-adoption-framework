@@ -42,7 +42,7 @@ Motivations to migrate an Oracle implementation to the cloud are often based on 
 Typical outcomes for migrating an Oracle workload to Azure include, but are not necessarily limited to:
 
 - **Cost reduction**: The cloud can reduce the total cost of ownership for Oracle workloads, including infrastructure, licensing, and operational costs. This can be through correct sizing of the workloads, automated scaling, lessened operational overhead, and more.
-- **Innovation**: The cloud can unlock new opportunities for Oracle workloads, including AI, data modernization, and more. It is also easier and faster to provide new business capabilities on cloud leveraging migrated Oracle workloads.
+- **Innovation**: The cloud can unlock new opportunities for Oracle workloads, including AI, data modernization, and more. It is also easier and faster to provide new business capabilities on the cloud by leveraging migrated Oracle workloads.
 - **Agility**: The cloud can provide agility for Oracle workloads, including the ability to scale up and down, and to innovate faster. This also extends to reaching new geographies and markets which would previously have required significant investment.
 - **Operational efficiency**: The cloud can provide operational efficiency for Oracle workloads, including the ability to automate operations, and to reduce operational overhead.
 
