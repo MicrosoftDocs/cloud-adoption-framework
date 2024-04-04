@@ -13,10 +13,14 @@ items:
         href: oracle-network-topology-iaas.md
       - name: Network topology and connectivity for Oracle Database@Azure
         href: oracle-network-topology-odaa.md
+      - name: Identity and access management for Oracle Database@Azure
+        href: oracle-iam-odaa.md
       - name: Security
         items:
-          - name: Security overview
-            href: oracle-security-guideline-landing-zone.md
+          - name: Security overview for Oracle on Azure virtual machines
+            href: oracle-security-overview-iaas.md
+          - name: Security overview for Oracle Database@Azure
+            href: oracle-security-overview-odaa.md
           - name: Business continuity and disaster recovery
             href: oracle-disaster-recovery-oracle-landing-zone.md
       - name: Management
