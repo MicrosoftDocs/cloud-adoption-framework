@@ -36,7 +36,7 @@ When customers choose the relevant Oracle on Azure solution for their specific c
 
 ### High-level Oracle landing zone architecture for Oracle on Azure Virtual Machines
 
-The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure landing zone implementation.
+The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure IaaS landing zone implementation.
 
 :::image type="content" source="media/reference-architecture-oracle-iaas-landing-zone.png" alt-text="Diagram showing a reference architecture of Oracle on Azure Virtual Machines.":::
 
