@@ -34,7 +34,7 @@ To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata
 
 - Depending on your administrative model for the Oracle Database@Azure solution consider splitting up access to the infrastructure versus access to data services. This is particularly true if you are running multiple databases on the same infrastructure, with different teams accessing the databases for different purposes.
 - Secure the data-plane and vNet access by limiting the source IP range, on the indidividual Oracle Database@Azure host firewall software ([SELinux](https://docs.oracle.com/en/learn/ol-selinux/#introduction) for database servers and [cellwall](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-9858E126-0D9F-4F99-BE68-391E77916EC6) for storage servers), allowing only ports needed for secure communication, preventing access from/to the internet (use NAT in case it is required), and always require data in transit to be encrypted (SSL).
-- Use OCI Vault to store and manage encryption keys. If yoy decide to bring your own keys then set up a strict process for key rotation.
+- Use OCI Vault to store and manage encryption keys. If you decide to bring your own keys then set up a strict process for key rotation.
 - Use the Vulnerability Scanning capabilities provided by Oracle to detect security issues such as ports that are unintentionally left open, OS packages that require updates and patches to address vulnerabilities and OS configurations that hackers might exploit and other vulnerabilities.
 
 ## See also
