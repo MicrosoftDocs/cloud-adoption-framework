@@ -15,9 +15,9 @@ ms.custom:
 
 Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a Line of Business (LoB) application or as a combined suite for enterprise resource planning (ERP), Human Resources (HR), Supply Chain Management (SCM) or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
 
-This article uses the [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md) and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
+This article uses the [Plan for Oracle on Azure](oracle-landing-zone-plan.md) article and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
 
-## Why move an Oracle workload to Oracle on Azure landing zone accelerator?
+## Why move an Oracle workload to Azure?
 
 Oracle is an common application suite, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 

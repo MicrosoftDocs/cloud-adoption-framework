@@ -24,7 +24,7 @@ Review the migration resources to define your Oracle to Azure migration process,
 - **Identify data capacity**: Identify the amount of data to migrate and assess the current available network connectivity capacity from on-premises to Azure. Use this information to determine if the data can be copied directly from on-premises to Azure or if a physical data transfer appliance such as [Azure DataBox](/azure/databox/data-box-overview) should be used for initial data load.
 - **Determine availability requirements**: Determine what the workload availability requirements are, as those affect the palette of migration tools that could be used.
 
-Specically for Oracle Database@Azure you should:
+Specifically for Oracle Database@Azure you should:
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Oracle Database@Azure](https://www.oracle.com/cloud/azure/oracle-database-at-azure/).
 - **Consider database changes required** as moving from on-premises to Oracle Database@Azure might require some changes to the database tablespaces and/or schema. For more information, see [Migrating Oracle Databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/considerations-migrating-premises-database-dbcs.html#GUID-5F6B4B4F-5B1C-4F1C-9F1A-5F6F6F6F6F6F).

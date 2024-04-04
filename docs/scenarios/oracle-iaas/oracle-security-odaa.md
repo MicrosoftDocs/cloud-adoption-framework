@@ -39,5 +39,5 @@ To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata
 
 ## See also
 
-[Identity and Access Management for Oracle Database@Azure](oracle-iam-odaa.md)
-[Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
+- [Identity and Access Management for Oracle Database@Azure](oracle-iam-odaa.md)
+- [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
