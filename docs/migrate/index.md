@@ -15,7 +15,7 @@ This part of the Cloud Adoption Framework (CAF) outlines the recommended migrati
 
 A cloud migration typically requires both good preparation and execution. The Cloud Adoption Framework migration  methodology relies on proven guidance to help you prepare and execute your migration efforts.
 
-![Diagram that shows the Cloud Adoption Framework migration disciplines](./media/migrate-overview.svg)
+![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
 To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
 

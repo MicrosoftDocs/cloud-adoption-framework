@@ -3,7 +3,7 @@ title: Evaluate workload readiness
 description: Understand how to evaluate the readiness of a workload to migrate to the cloud. Learn how to validate all assets and associated dependencies.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/15/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ---
 

@@ -645,7 +645,7 @@ items:
             href: migrate/deploy/migration-test.md
       - name: Release
         items:
-          - name: Overview
+          - name: Overview 
             href: migrate/release/index.md
           - name: Change communication
             href: migrate/release/change-communication.md
