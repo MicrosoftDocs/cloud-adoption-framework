@@ -126,6 +126,6 @@ However, you can utilize Oracle Key Vault as a key management solution on Azure.
 
 Application log monitoring is essential for detecting security threats at the application level. We recommend using the Microsoft Sentinel Solution for Oracle Database workloads. The Oracle Database Audit connector retrieves and ingests all Oracle database audit records into Azure Log Analytics by using an industry-standard SYSLOG interface. This permits those records to be reviewed along with Azure infrastructure audit records and guest OS (that is, Linux or Windows) audit records.  It’s a cloud-native security information and event management (SIEM) solution built for your Oracle workload that runs on a Linux or Windows Virtual Machine. For more information, see [Oracle Database Audit connector for Microsoft Sentinel](/azure/sentinel/data-connectors/oracle-database-audit).
 
-## Next steps
+## Next step
 
 To understand how to plan for capacity requirements for Oracle workloads on Azure, see [Capacity planning for migrating Oracle workloads to Azure landing zones](oracle-capacity-planning.md).
