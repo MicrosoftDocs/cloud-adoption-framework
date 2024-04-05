@@ -9,7 +9,7 @@ Topic: Azure automation and management for Red Hat Enterprise Linux
 
 # Platform automation for Red Hat Enterprise Linux systems on Azure
 
-This article describes how you can manage automation for Red Hat Linux systems on Azure by reviewing design considerations, design recommendations, options for various tooling within the Azure ecosystem to achieve a consistent and stable environment. The inent of this article is to provide guidance that aligns with varying customer scenarios, business requirements, operational practices, and technial maturity.     
+This article describes how you can manage automation for Red Hat Linux systems on Azure by reviewing design considerations, design recommendations, options for various tooling within the Azure ecosystem to achieve a consistent and stable environment. The inent of this article is to provide guidance that aligns with varying customer scenarios, business requirements, operational practices, and technical maturity.     
 
 ## Overview
 
