@@ -57,7 +57,7 @@ Red Hat has developed a centralized and unified way to manage identity stores, a
 
 Design recommendations for identity and access management regarding Azure Landing Zones for Red Hat Enterprise Linux using Red Hat Identity Management (IdM) and Red Hat Single Sign-On (SSO) follow the Microsoft Azure Cloud Adoption Framework and Red Hat Infrastructure Standard Adoption Model. The recommendations extend the principles you would use to implement a hybrid-cloud deployment.
 
-![IAM Diagram](/images/IAM-Diagram.png)
+![IAM Diagram](images/IAM-Diagram.png)
 
 The identity and access management components for your Red Hat deployment in Azure use the subscription scaling model described in the Azure Cloud Adoption Framework documentation to provide additional control and isolation to the management tooling. The Identity Management primary and replica systems and Red Hat Single Sign-On instances will reside in a Red Hat Management Subscription with other tools. The subscription will provide resource groups throughout the implementation to provide localized services and high availability.
 
