@@ -3,7 +3,7 @@ title: Introduction to Azure hybrid and multicloud products
 description: Introduce the Azure products that help enable hybrid and multicloud solutions.
 author: martinekuan
 ms.author: martinek
-ms.date: 01/11/2021
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
@@ -36,6 +36,8 @@ This article series helps to integrate these tools into relevant processes that 
   - [Logic Apps](/azure/app-service/overview-arc-integration?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Event Grid](/azure/event-grid/kubernetes/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Azure API Management gateway](/azure/api-management/how-to-deploy-self-hosted-gateway-azure-arc?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an Azure Arc service that helps you simplify management of hybrid IT estate distributed across VMware vSphere and Azure. It does so by extending the Azure control plane to VMware vSphere infrastructure and enabling the use of Azure security, governance, and management capabilities consistently across VMware vSphere and Azure.
+- [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) empowers System Center customers to connect their VMM environment to Azure and perform VM self-service operations from Azure portal. It extends the Azure control plane to SCVMM managed infrastructure, enabling the use of Azure security, governance, and management capabilities consistently across System Center managed estate and Azure.
 
 ## Deploy hybrid and multicloud solutions
 
