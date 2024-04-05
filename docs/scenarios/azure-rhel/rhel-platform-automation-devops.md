@@ -226,7 +226,7 @@ Supported Runbook types are detailed in the table below:
 
 Azure Arc represents a significant advancement in cloud computing, offering a unified management platform that extends Azure's capabilities to on-premises, multi-cloud, and edge environments. Azure Arc-enabled enables integration with the Azure Automation service using the VM extension framework to deploy the Hybrid Runbook Worker role and simplify onboarding to Update Management and Change Tracking and Inventory.
 
-![](https://github.com/hannah-leland/cloud-adoption-framework-pr/tree/main/docs/scenarios/azure-rhel/images/arcecosystem.png)
+![](https://github.com/hannah-leland/cloud-adoption-framework-pr/blob/main/docs/scenarios/azure-rhel/images/arcecosystem.png)
 
 You can find the prerequisites and steps to onboard a Linux machine in this article:[Connect an existing Linux server to Azure Arc](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
