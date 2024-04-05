@@ -51,7 +51,10 @@ The following sections cover traffic flows and connectivity for Azure VMware Sol
 
 This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure VMware Solution Cloud Region 2. Each Azure VMware Solution private cloud has an ExpressRoute connection to its local regional hub (connections labeled as "D").
 
-Each Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown as "Global Reach (A)". The Azure VMware Solution Cloud Region 2 Global Reach connection is shown as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information.  
+Each Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown as "Global Reach (A)". The Azure VMware Solution Cloud Region 2 Global Reach connection is shown as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. 
+
+Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.
+
 
 The diagram below illustrates traffic flows from the perspective of the Azure VMware Solution Private Clouds. 
 
@@ -73,7 +76,9 @@ The diagram below illustrates traffic flows from the perspective of the Azure VM
 
 This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "E").
 
-On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)". See traffic flow section for more information.  
+On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)". 
+
+As mentioned earlier, ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.  
 
 The diagram below illustrates traffic flows from an on-premises perspective.
 
