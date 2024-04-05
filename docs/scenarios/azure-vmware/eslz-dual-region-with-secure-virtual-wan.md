@@ -16,6 +16,10 @@ This article describes the best practices for connectivity, traffic flows, and h
 
 The document assumes readers have a basic understanding of Virtual WAN and Secure Virtual WAN with Routing Intent.
 
+>[!NOTE]
+>  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](/azure/virtual-wan/about-virtual-hub-routing-preference)
+> 
+
 **Virtual WAN**  
 [What is Virtual WAN?](/azure/virtual-wan/virtual-wan-about)
 
@@ -82,6 +86,10 @@ The diagram below illustrates traffic flows from an on-premises perspective.
 | 7 | on-premises | &#8594;| Azure VMware Solution Cloud Region 2 | No, traffic bypasses firewall and transits Global Reach (B)|
 | 8 | on-premises | &#8594;| Virtual Network 1 | Yes, traffic is inspected at Hub 1 firewall|
 | 9 | on-premises | &#8594;| Virtual Network 2 | Yes, traffic is inspected at Hub 2 firewall|
+
+> [!NOTE]
+> When utilizing Global Reach, traffic between these locations bypasses the Secure Virtual WAN and the Hub Firewall. To ensure optimal security, we recommend inspecting traffic within the Azure VMware Solution environment's NSX-T or using an on-premises firewall between these locations.
+>
 
 ### Azure Virtual Network connectivity & traffic flow
 
