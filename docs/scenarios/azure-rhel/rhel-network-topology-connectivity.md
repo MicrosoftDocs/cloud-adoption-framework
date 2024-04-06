@@ -1,18 +1,35 @@
 ---
-title: Hybrid networking with Citrix on Azure
-description: Use the Cloud Adoption Framework to identify networking capabilities your Azure landing zone needs to support multiple Citrix workloads on Azure.
-author: BenMartinBaur
-ms.author: martinek
-ms.date: 02/08/2023
+title: Network topology and connectivity considerations for Red Hat Enterprise Linux
+description: Redhat Enterprise Linux Azure Landing Zone Accelerator - Guidance and considerations on Network Topology & Connectivity
+author: humblejay
+ms.author: kupole
+ms.date: 04/05/2024
 ms.topic: conceptual
-ms.custom: think-tank, e2e-avd
+ms.custom: e2e-alz
 ---
 
-# Hybrid networking with Citrix Cloud and Azure
+# In this article
 
-This article describes a reference architecture that demonstrates major design areas and design best practices for an Azure and Citrix Cloud environment with multiple subscriptions.
+- Overview
+- Design considerations
+- Design recommendations
+- Next steps
+
+## Overview
+
+The Red Hat Enterprise Linux (RHEL) specific network topology builds on number of considerations and recommendations defined in Azure landing zone article [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+
+
 
 ## Architecture
+
+The RHEL reference architecture is a starting point and further adapted to specific business and technical requirements for the landing zone implementation. The various RHEL platform components and roles can be deployed on virtual machines with specific sizing and redundancy as needed.The network layout in these examples are simplified to demonstrate architectural principles and are not intended to describe an entire enterprise network.
+
+[Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/azure-landing-zone-rhel-full-view.vsdx)
+![Diagram of RHEL reference architecture](images/RHEL%20Landing%20Zone%20Architecture.png)]
+
+
+
 
 The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
 
