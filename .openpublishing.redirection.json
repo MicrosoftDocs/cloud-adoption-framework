@@ -277,12 +277,12 @@
       },
       {
          "source_path": "docs/migrate/expanded-scope/suggested-skills.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/suggested-skills",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
          "redirect_document_id": true
       },
       {
          "source_path": "docs/migrate/expanded-scope/multiple-datacenters.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-datacenters",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/migrate-from-multiple-datacenters",
          "redirect_document_id": true
       },
       {
@@ -292,7 +292,7 @@
       },
       {
          "source_path": "docs/migrate/expanded-scope/network-capacity-exceeded.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/network-capacity-exceeded",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
          "redirect_document_id": true
       },
       {
@@ -757,8 +757,8 @@
       },
       {
          "source_path": "docs/decision-guides/migrate-decision-guide/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/migration-tools-decision-guide",
-         "redirect_document_id": true   
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false   
       },
       {
          "source_path": "docs/ready/considerations/hybrid-consistency.md",
@@ -797,12 +797,12 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-mysql-to-azure.md",
-         "redirect_url": "/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/azure-best-practices/sql-migration.md",
-         "redirect_url": "/azure/azure-sql/migration-guides",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
          "redirect_document_id": false
       },
       {
@@ -817,7 +817,7 @@
       },
       {
          "source_path": "docs/migrate/azure-best-practices/contoso-migration-infrastructure.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/ready-alz",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/ready-azure-landing-zone",
          "redirect_document_id": false
       },
       {
@@ -863,11 +863,6 @@
       {
          "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform",
-         "redirect_document_id": false
-      },
-      {
-         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-wvd.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop",
          "redirect_document_id": false
       },
       {
@@ -1006,6 +1001,461 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/decisions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/migration-tools-decision-guide.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/planning-checklist.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/multiple-datacenters.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/migrate-from-multiple-datacenters",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/multiple-regions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/select-regions-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/cultural-complexity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/roles-and-responsibilities",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/migration-backlog-review.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/governance-or-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/prerequisites/technical-complexity.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/plan/contoso-migration-assessment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/assess.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/classify.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/classify",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/business-priorities.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/evaluate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/evaluate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/architect.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/architect",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/estimate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess/architect",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/partnership-options.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/approve.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/assess/release-iteration-backlog.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/deploy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/ready-alz.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/ready-azure-landing-zone",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/promotion-models.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/assess",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/remediate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/remediate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/replicate-options.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/migration-considerations/migrate/replicate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/replicate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/migrate/stage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/deploy-supporting-services",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/network-capacity-exceeded.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-networking.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/release.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/business-change-plan.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/change-communication",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/business-test.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/business-test",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/optimize.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/ready.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/prepare-for-promotion",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/promote.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/decommission.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/optimize-cost-after-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/optimize/retrospective.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/retrospective",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-costs.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/manage-costs.md",
+         "redirect_url": "/azure/cost-management-billing/cost-management-billing-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/migrate-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/assistance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/azure-synapse.md",
+         "redirect_url": "/azure/synapse-analytics/sql-data-warehouse/backup-and-restore",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/lamp/moodle/azure-infra-config.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-arch.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-post.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-pre.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }     ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-resources.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      }   ,
+      {
+         "source_path": "docs/scenarios/lamp/moodle/migration-start.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/migrate-best-practices-security-management.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prerequisites/assistance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/skills-support",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/deploy/stage.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/deploy-supporting-services",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/deploy/network-capacity-exceeded.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/deploy/replicate",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/release/promote.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/release/prepare-for-promotion.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/release/complete-migration",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/readying-migration-tools.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/tailwind-migration-assess-servers.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-teradata.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-netezza.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/analytics-solutions-exadata.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/analytics/schema-migration-ddl.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rds-to-wvd.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/prepare/migrate-from-multiple-datacenters.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/tools-backlog",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md",
+         "redirect_url": "/azure/devtest-labs/devtest-lab-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-devtest-to-labs.md",
+         "redirect_url": "/azure/devtest-labs/devtest-lab-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-tfs-vsts.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rebuild.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md ",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/scenarios",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios",
+         "redirect_document_id": false
+      },
+      {      
          "source_path": "docs/govern/benchmark.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false
@@ -1071,59 +1521,59 @@
          "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/deployment-acceleration/policy-visibility-in-deployment.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/deployment-acceleration/policy-visibility-in-deployment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/foundation-improvements.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/foundation-improvements.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/governance-disciplines.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/governance-disciplines.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/cost-management-improvement.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/cost-management-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/identity-baseline-improvement.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/identity-baseline-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/index.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/multicloud-improvement.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/multicloud-improvement.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/multiple-layers-of-governance.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/multiple-layers-of-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/narrative.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/narrative.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
-      "source_path": "docs/govern/guides/complex/prescriptive-guidance.md",
-      "redirect_url": "/azure/cloud-adoption-framework/govern/index",
-      "redirect_document_id": false
+         "source_path": "docs/govern/guides/complex/prescriptive-guidance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/guides/complex/resource-consistency-improvement.md",
