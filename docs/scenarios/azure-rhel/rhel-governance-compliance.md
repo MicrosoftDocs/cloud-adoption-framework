@@ -10,18 +10,21 @@ ms.custom:
 
 # Overview
 
-Efficient and effective governance and compliance in a cloud environment is an enormous task. In this section the focus will be on considerations and recommendations with respect to Red Hat Enterprise Linux operating system images and instances. When discussing compliance with respect to Red Hat Enterprise Linux deployments in Azure, we are referring to the methods for defining, measuring and reporting on how systems conform to a rule, such as a specification, policy, or standard required by a system’s use within the organization. When discussing governance, we are referring to those structures and processes used to define which specifications are to be met, how they are enforced and remediated. 
+Efficient and effective governance and compliance in a cloud environment is an enormous task. In this section the focus will be on considerations and recommendations with respect to Red Hat Enterprise Linux operating system images and instances. When discussing compliance with respect to Red Hat Enterprise Linux deployments in Azure, we are referring to the methods for defining, measuring and reporting on how systems conform to a rule, such as a specification, policy, or standard required by a system’s use within the organization. When discussing governance, we are referring to those structures and processes used to define which specifications are to be met, how they are enforced and remediated.
+
 Organizations, especially those in regulated industries, must often attain an Authority to Operate (ATO) to install and use software in their environments. Part of this process is to evaluate the software against a Security Requirements Guide (SRG), which is a set of technical controls such as those found in the National Institute of Standards and Technology (NIST) Special Publication [800-53 v5.1.1 (2023)](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) as an example. The evaluation is done to determine whether or not the software meets, does not meet, or can be configured to meet each control, or whether or not the control applies to the particular software. An organization’s governance framework will determine which regulations are applicable, and to which systems, within the Azure deployment. Compliance is measured by adherence to the security requirements. Red Hat works with many standards bodies to ensure that the configuration points, the measurements, and remediations are known, verified, and referenceable, for our software. This enables those standards bodies to create benchmarks (checklists) of those evaluations that describe the SRG for their industry. Examples of these benchmarks include:
 
 - PCI-DSS for the payment card industry
 - HIPPA for healthcare industry
 - DISA-STIG for government and related industries
 
-NIST defines the Security Content and Automation Protocol (SCAP) standard as a means for encapsulating these checklists. SCAP is a suite of specifications for exchanging security automation content (i.e. definitions of checks and automation methods) used to assess configuration compliance and to detect the presence of vulnerable versions of software. Red Hat works with NIST and MITRE to write and publish content used by scanning tools to evaluate and report on a wide variety of compliance standards for the Red Hat Enterprise Linux operating system and other Red Hat software. 
+NIST defines the Security Content and Automation Protocol (SCAP) standard as a means for encapsulating these checklists. SCAP is a suite of specifications for exchanging security automation content (i.e. definitions of checks and automation methods) used to assess configuration compliance and to detect the presence of vulnerable versions of software. Red Hat works with NIST and MITRE to write and publish content used by scanning tools to evaluate and report on a wide variety of compliance standards for the Red Hat Enterprise Linux operating system and other Red Hat software.
 
-Red Hat also contributes to the open-source projects that develop the standard languages and tools to implement the checklists. The Open Security Content and Automation Protocol (OpenSCAP) open-project is the integration point for these efforts with Red Hat software.  The OpenSCAP project pulls together standardized components to implement the tools to create, maintain, scan, report and analyze results of compliance definitions written in eXensible Configuration Checklist Description Format (XCCDF) and Open Vulnerability and Assessment Language (OVAL). Both are represented in XML. Think of OVAL as a means to define and measure a logical assertion about the state of an endpoint system, and XCCDF to express, organize, and manage those assertions into security policies. The scanner developed by OpenSCAP is capable of consuming both of these document types.  
+Red Hat also contributes to the open-source projects that develop the standard languages and tools to implement the checklists. The Open Security Content and Automation Protocol (OpenSCAP) open-project is the integration point for these efforts with Red Hat software. The OpenSCAP project pulls together standardized components to implement the tools to create, maintain, scan, report and analyze results of compliance definitions written in eXensible Configuration Checklist Description Format (XCCDF) and Open Vulnerability and Assessment Language (OVAL). Both are represented in XML. Think of OVAL as a means to define and measure a logical assertion about the state of an endpoint system, and XCCDF to express, organize, and manage those assertions into security policies. The scanner developed by OpenSCAP is capable of consuming both of these document types.  
 
 Red Hat founded and contributes to the [Compliance as Code open-source project](https://www.redhat.com/en/blog/compliance-code-extending-compliance-automation-process-improvement) to deliver content in SCAP, Ansible and other formats. SCAP is typically used for measurement and reporting while Ansible is used for remediation.
+
+Microsoft Azure has a wide array of compliance offerings to help ensure that your workloads keep withing regulatory guidelines. Here is the starting point for learning how to implement specific [compliance](https://learn.microsoft.com/azure/compliance/) standards.
 
 ## Design Considerations
 
@@ -31,11 +34,13 @@ Image and Instance Management - Compliance standards contain factorable lists of
 
 - define OS, application and security configuration content together in a composable pipeline
 - continually measure, maintain and deliver images that meet requirements from deployment time
-- continually measure, maintain and remediate persistent instances 
+- continually measure, maintain and remediate persistent instances.
 Content lifecycle and image build pipelines are ideal points of enforcement.
 - Analysis and Reporting - Cloud platforms provide comprehensive services to enable aggregation of metadata and relevant log content from deployed systems to deliver required content to meet regulatory reporting requirements and relevant auditability
 - Automation First - Modern automation systems provide the necessary capabilities to ease regulatory compliance and reporting burden while increasing accuracy and visibility. Implement compliance management via Infrastructure-as-Code automation as part of your deployment process. Consider linking scanning with maintenance activity workflows to ensure timely reporting and a “fail fast” methodology to keep compliance backlog to a minimum. Unify implementation automation and remediation code to ensure consistency.
 - Compliance Maintenance - Compliance standards are updated regularly and have well known delivery mechanisms and content types. Ensure the use of open standards within your compliance management implementation. Design your compliance content streaming and review into your lifecycle for application and image development.
+
+Governance in Azure spans beyond regulatory compliance and extends to cost, resource management, and resource scaling. Consider the below recommendations from RedHat and Microsoft to implement governance comprehensively.
 
 ## Design Recommendations
 
@@ -64,7 +69,7 @@ Red Hat Satellite and Image Builder includes integrated SCAP features that allow
 - scan scheduling for managed systems
 - testing content pipelines and delivering versioned content to meet standards
 
-Azure provides tooling for implementing regulatory standards. Use [Azure Policy Initiatives](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives) to enforce a wide variety of initiatives automatically. Consider [Linux security baseline](https://learn.microsoft.com/azure/governance/policy/samples/guest-configuration-baseline-linux) to implement secure settings for Linux OS guests.
+Azure provides tooling for implementing a breadth of regulatory standards. Use [Azure Policy Initiatives](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives) to enforce a wide variety of initiatives automatically. Consider [Linux security baseline](https://learn.microsoft.com/azure/governance/policy/samples/guest-configuration-baseline-linux) to implement secure settings for Linux OS guests.
 
 ### Cost
 
