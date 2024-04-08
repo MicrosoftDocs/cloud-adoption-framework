@@ -1002,12 +1002,12 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/decisions.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare",
          "redirect_document_id": false
       },
       {
@@ -1017,7 +1017,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/planning-checklist.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prerequisites",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare",
          "redirect_document_id": false
       },
       {
@@ -1032,7 +1032,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/prerequisites/cultural-complexity.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/roles-and-responsibilities",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/prepare/roles-responsibilities",
          "redirect_document_id": false
       },
       {
