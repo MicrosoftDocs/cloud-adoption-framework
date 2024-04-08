@@ -30,7 +30,6 @@ You should periodically assess the services and technologies that you use to ens
 Identity management is a fundamental framework that governs access to important resources. Identity management becomes critical when you work with different types of personnel, such as temporary interns, part-time employees, or full-time employees. These personnel require different levels of access that need to be monitored, maintained, and promptly revoked as necessary. There are four distinct identity management use cases to consider for your Oracle workloads, and each use case requires a different identity management solution.
 
 1. **Oracle applications**: Users can access Oracle applications without having to reenter their credentials once they have been authorized through single sign-on (SSO). Use Microsoft Entra ID integration to access Oracle applications. The supported SSO strategy for each Oracle solution is listed in the following table.
-
     | Oracle application | Link to document |
     | --- | --- |
     |E-Business Suite (EBS)|[Enable SSO for EBS R12.2](https://docs.oracle.com/cd/E26401_01/doc.122/e22952/T156458T580814.htm)|
@@ -50,7 +49,7 @@ Identity management is a fundamental framework that governs access to important 
 
       You can avoid the need to store credentials in plain text within your code or configuration files by using Key Vault. You can retrieve the credentials from the Key Vault at runtime, which adds an additional layer of security to your application and helps to prevent unauthorized access to your VMs. Key Vault integrates seamlessly with other Azure services, such as Virtual Machines, and you can control access to the Key Vault by using Azure Active Directory (Azure AD). This process ensures that only authorized users and applications can access the stored credentials.
 
-4. **Use hardened OS images**:A CIS (Center for Internet Security) hardened image for Windows or Linux in Azure has multiple benefits. [CIS benchmarks](https://www.cisecurity.org/insights/blog/cis-hardened-images-now-in-microsoft-azure-marketplace) are globally recognized as the best practices for securing IT systems and data. These images are preconfigured to meet the security recommendations of the CIS, which can save time and effort in hardening the OS. This can help organizations improve their security posture and comply with security frameworks like the National Institute of Standards and Technology (NIST) and Peripheral Component Interconnect (PCI).
+4. **Use hardened OS images**: A CIS (Center for Internet Security) hardened image for Windows or Linux in Azure has multiple benefits. [CIS benchmarks](https://www.cisecurity.org/insights/blog/cis-hardened-images-now-in-microsoft-azure-marketplace) are globally recognized as the best practices for securing IT systems and data. These images are preconfigured to meet the security recommendations of the CIS, which can save time and effort in hardening the OS. This can help organizations improve their security posture and comply with security frameworks like the National Institute of Standards and Technology (NIST) and Peripheral Component Interconnect (PCI).
 
 ## OS hardening
 
