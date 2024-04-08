@@ -29,7 +29,7 @@ Azure CNI is a network model designed for advanced networking. It provides full 
 
 Azure CNI Overlay is designed to address IP address shortages and simplify network configuration. It's suitable for scenarios where scaling up to 1000 nodes and 250 pods per node is sufficient, and an additional hop for pod connectivity is acceptable. AKS egress requirements can also be met with Azure CNI Overlay.
 
-You can find a table that summarizes the recommended use cases for each network model in this linked [AKS documentation page](/azure/aks/concepts-network#compare-network-models).
+For a summary of recommended use cases per network model, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).
 
 In addition, when designing your AKS cluster, it's important to carefully plan the IP addressing and size of the virtual network subnet to support scaling. Virtual nodes can be used for quick cluster scaling, but there are some known limitations.
 
