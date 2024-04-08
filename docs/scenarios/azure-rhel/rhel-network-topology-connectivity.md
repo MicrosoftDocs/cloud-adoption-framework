@@ -1,85 +1,116 @@
 ---
-title: Hybrid networking with Citrix on Azure
-description: Use the Cloud Adoption Framework to identify networking capabilities your Azure landing zone needs to support multiple Citrix workloads on Azure.
-author: BenMartinBaur
-ms.author: martinek
-ms.date: 02/08/2023
+title: Network topology and connectivity considerations for Red Hat Enterprise Linux
+description: Redhat Enterprise Linux Azure Landing Zone Accelerator - Guidance and considerations on Network Topology & Connectivity
+author: humblejay
+ms.author: kupole
+ms.date: 04/05/2024
 ms.topic: conceptual
-ms.custom: think-tank, e2e-avd
+ms.custom: e2e-alz
 ---
 
-# Hybrid networking with Citrix Cloud and Azure
+# In this article
 
-This article describes a reference architecture that demonstrates major design areas and design best practices for an Azure and Citrix Cloud environment with multiple subscriptions.
+- Overview
+- Architecture
+- Design considerations
+- Next steps
+
+## Overview
+
+The Red Hat Enterprise Linux (RHEL) specific network topology builds on number of considerations and recommendations defined in Azure landing zone article [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
+
+
 
 ## Architecture
 
-The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
+The RHEL reference architecture is a starting point and should be further adapted to specific business and technical requirements for the landing zone implementation. The various RHEL platform components and roles can be deployed on virtual machines with specific sizing and redundancy as needed.The network layout in these examples are simplified to demonstrate architectural principles and are not intended to describe an entire enterprise network.
 
-[![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-multiple.png#lightbox)
+![Diagram of RHEL reference architecture](images/rhel-landing-zone-architecture.png)
+[Download the Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/azure-landing-zone-rhel-full-view.vsdx)
 
-[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
+## Design considerations for RHEL Platform landing zones networking
 
-## Components
+During the design phase decisions will be made to adapt the architecture as per requirements and any constraints. The following questions can assist in the design process.
 
-You can implement this architecture with the following components:
+- What type of workload deployment is planned? Greenfield? Migration?
+- Is the deployment for POC, Development or Testing with shorter timeline?
+- Are there any business continuity requirements to consider during the migration?
+- Are mature processes for operations, security and governance in place for this environment?
 
-- Active Directory Domain Services (AD DS) servers and custom domain name system (DNS) servers
-- Network security groups
-- Azure Network Watcher
-- Outbound internet via a default Azure Virtual Network path
-- Azure ExpressRoute or Azure VPN Gateway for hybrid connectivity to on-premises
-- Azure private endpoints
-- Azure Files storage accounts or Azure NetApp Files [Compare profile storage options](/azure/storage/files/storage-files-netapp-comparison)
-- Azure Key Vault
+Following are some key considerations in the design.
 
-This scenario also includes the following Citrix components within the Azure landing zone:
+- Hub & Spoke Network is recommended topology, multi-region deployment can take advantage of [Azure VWAN Hub](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) or use the traditional Virtual Network as Hub per region. Refer [Azure Landing Zone Networking](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) for more details.
 
-- [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html#system-requirements) establishes a connection between Citrix Cloud and your resource locations.
-- [Citrix Virtual Delivery Agent (VDA)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-vdas.html) installs on a master image or target device that hosts your apps or desktops. This agent enables connectivity, provisioning, and orchestration of these resources as persistent or non-persistent machines. The VDA is compatible with physical or virtual devices and Windows Server, Windows Client, or Linux OS.
-- [Citrix Workspace](https://docs.citrix.com/en-us/tech-zone/learn/tech-briefs/citrix-workspace.html) is a cloud service that delivers secure access to the information, apps, and other content relevant to end user roles. Citrix Workspace integrates Azure and on-premises assets, enabling unified access to all your users' resources in one location from anywhere, on any device.
+- For Virtual WAN topologies, route traffic across landing zones via Azure Firewall if your organization requires filtering and logging capabilities for traffic flowing across landing zones.
 
-### Optional Citrix components
+- Hybrid connectivity to the Hub will be using Azure VPN Gateway or Express route circuit with bi-directional traffic control & monitoring using Azure Firewall or 3rd party Network appliances in the Hub. 
+	
+- RHEL Landing Zone, RHEL Management & Identity Services are separate Virtual Network for segmentation and in their own dedicated subscriptions. 
 
-The following Citrix components within the Azure landing zone are optional. Consider these components if you need advanced functionality.
+  >![Hybrid Azure Region RHEL Landing Zone Architecture](images/hybrid-regional-rhel-platform-landing-zone-network.png)
 
-- [Citrix Federated Authentication Service](https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/secure/federated-authentication-service.html) dynamically issues certificates for users, allowing them to log on to an Active Directory environment as if they had a smartcard. This service enables single sign-on when using Security Assertion Markup Language (SAML)-based authentication. You can use a broad range of authentication options and third-party identity providers, such as Okta and Ping.
-- [Citrix StoreFront](https://www.citrix.com/products/citrix-daas/citrix-storefront.html) is an alternative internal user access point for Citrix Workspace. StoreFront is self-managed and seamlessly aggregates resources across multiple on-premises and Azure environments. Lift and shift scenarios often use StoreFront to maintain user access to existing Citrix deployments while moving workloads to Azure.
-- [Citrix ADC (NetScaler)](https://www.citrix.com/products/citrix-adc/) is an alternative external user access point for Citrix Workspace and Gateway Service. Citrix ADC is a self-managed virtual appliance within your Azure tenant that provides secure proxy for external connectivity and authentication. You can integrate Citrix ADC with StoreFront or Workspace. Lift and shift scenarios often use Citrix ADC to maintain user access to existing Citrix deployments while moving workloads to Azure.
-- [Citrix Provisioning](https://docs.citrix.com/en-us/provisioning/current-release/architecture.html) is a network-based image management solution that you can deploy within your Azure tenant to enable scalable deployment of up to thousands of non-persistent machines. Citrix Provisioning supports rapid updates and reduced storage requirements by streaming centralized images over an Azure virtual network.
-- [Citrix App Layering appliance](https://docs.citrix.com/en-us/citrix-app-layering/4/install-appliance/ms-azure.html) is the central component for the App Layering technology that hosts the management console and allows the creation and management of layers, layer assignments, and image templates. App Layering helps manage single OS and app instances and compose images from layers, greatly reducing effort in environments with many golden images.
 
-## Citrix design considerations
+|                                     |                                                                 |   
+|:--------------------------------------------------:|:-----------------------------------------------------------------------|
+| 
+| Element A | Components in the Azure Region 1 Hub VNet contained via the Hub Region 1 subscription.|
+| Element B | Components in the Red Hat Management VNet contained via the Red Hat Management subscription.|
+| Element C | Components in the Identity Management VNet contained via the Red Hat Identity Management subscription.|  
+  
 
-Design guidance for Citrix DaaS on Microsoft Azure is available on [Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). That guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
+- IP address and Virtual Network size for RHEL Landing Zone should consider dedicated subnets for application, database and storage. 
 
-The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. All network appliances, such as Citrix ADC and firewalls, must be sized appropriately to handle load increases during disaster recovery scenarios. For more information, see [Design Decision: Azure Specific Considerations](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/azure-system-considerations.html).
+- Zero-trust-based network for perimeter and traffic security. For more information see [Network security strategies on Azure](https://learn.microsoft.com/en-us/azure/well-architected/security/networking)
 
-### Network segmentation
+  >![Management and Workload in Zone Resilient Configuration](images/simplified-rhel-networking.png)
 
-Citrix also provides guidance for Azure network segmentation and logically segmented subnets. When you review the guidance on network segmentation for Citrix workloads, use the following guidelines to help with initial planning:
+|               |                                 |   
+|:-------------:|:--------------------------------|
+| Element A | Components in the Red Hat Management VNet contained via the Red Hat Management subscription. |
+| Element B | Components in the RHEL Workloads VNet contained via the RHEL Production Workloads subscription. |
 
-#### Segment by workload types
+- Use NSGs to help protect traffic across subnets, as well as east/west traffic across the platform (traffic between landing zones). The platform team can utilize Azure Policy to ensure this is implemented by default on all subnets.
 
-Create separate single-session and multisession virtual networks or subnets to enable growth of each network type without impacting the scalability of the other type.
+- Use NSGs and application security groups to micro-segment traffic within the landing zone and avoid using a central Network Virtualization Appliance (NVA) to filter traffic flows.
 
-For example, if you fill a shared multisession and single-session subnet with virtual desktop infrastructure (VDI), you might need to create a new hosting unit to support applications. A new hosting unit requires either creating multiple machine catalogs to support scaling applications, or migrating the existing app catalogs to a new subnet.
+- Enable NSG flow logs and feed them into [Traffic Analytics](https://learn.microsoft.com/en-us/azure/network-watcher/traffic-analytics) to gain insights into internal and external traffic flows. Flow logs should be enabled on all critical VNets/subnets in your subscription as an audit-ability and security best practice.
 
-If you use [workload subscriptions](https://www.citrix.com/blogs/2020/10/14/citrix-tips-citrix-on-azure-enterprise-scale-landing-zones-part-1/) as part of a multisubscription architecture, understand Citrix Machine Creation Service (MCS) [limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#machine-creation-services-mcs-limits) on the number of virtual machines (VMs) per Azure subscription. Consider these limits in your virtual network design and when you [plan for IP addressing](../../../ready/azure-best-practices/plan-for-ip-addressing.md).
+  >![Use of NSG for traffic security](images/nsg-segmentation.png)
 
-#### Segment by tenant, business unit, or security zone
+- Use NSGs to selectively allow connectivity between landing zones.
 
-If you're running a multitenant deployment, such as a [Citrix Service Provider architecture](https://docs.citrix.com/en-us/tech-zone/design/reference-architectures/csp-cvads.html), it's best to isolate tenants between networks or subnets is recommended. If your existing security standards need specific isolation requirements at a network level, consider isolating separate business units or security zones within your organization.
+- The application team should use application security groups at the subnet-level NSGs to help protect multi-tier VMs within the landing zone.
 
-Weigh business unit segmentation beyond workload-specific networks against the effect of increased complexity on the overall environment. This methodology should be the exception rather than the rule, and be applied with the right justification and projected scale. For example, you could create a network for 1,000 contractors supporting finance to accommodate security needs beyond the standard single-session VDI network.
 
-You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application backends on a shared virtual network. For example, you could limit customer relations management (CRM) backend access to the CRM machine catalog VMs that Marketing uses in the multisession VDA network.
+- If your organization decides to implement forced tunneling (advertise default route) to on-premises, we recommend incorporating outbound NSG rules to deny egress traffic from VNets directly to the internet should the BGP session drop. See [Plan for landing zone network segmentation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-landing-zone-network-segmentation) for more information.
 
-## Next steps
+- Implement automation and Configuration as Code for deployment, configuration, and day-2 operation of all landing zone network-related components.
 
-To learn more about Azure networking best practices and how to plan for virtual networks based on isolation, connectivity, and location requirements, see [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm).
 
-Review the critical design considerations and recommendations for management and monitoring specific to the deployment of Citrix on Azure.
+## Outbound options for enabling internet and filtering and inspecting traffic
 
-- [Management and monitoring](citrix-management-monitoring.md)
+- Outbound access to Red Hat Cloud via Hub
+- On-premises default route should use on-premises internet access
+- Virtual WAN or traditional Virtual Network Hub secured with Azure Firewall or 3rd party Network Virtual Appliance (NVA)
+
+## Inbound options for delivering content and applications
+
+-Azure Application Gateway with L7, Secure Sockets Layer (SSL) termination, and Web Application Firewall.
+- DNAT and load balancer from on-premises.
+- Azure Virtual Network  with Azure Firewall or 3rd party NVA, and Azure Route Server in various scenarios.
+- Virtual WAN secured hub with Azure Firewall, with L4 and DNAT.
+- Virtual WAN secured hub with NVA in various scenarios.
+
+## Domain Name Resolution for On-Premises and Azure Resources
+
+Redhat Enterprise environment will utilize both On-Premises & Azure Resources which makes name resolution an important area.  The following considerations will help in this design area.
+
+- Azure provides internal name resolution within a virtual network, no configuration is required to use this.  Do note, the DNS suffix cannot be modified and manual registration is not possible.  Refer  [Name resolution that Azure Provides](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/azure-dns?tabs=ubuntu#name-resolution-that-azure-provides) for more details. 
+
+- Name resolution across virtual networks, common with RHEL deployment will be use of DNS in  enabled on Redhat Identity Management Server (IDm) or [Azure DNS](https://learn.microsoft.com/en-us/azure/dns/dns-overview).  Combination of [Azure Private DNS Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure can utilize rule base forwarding if needed. 
+
+
+## Next Steps
+
+Learn about deployment, management, and patching considerations for Red Hat Enterprise Linux systems
 
