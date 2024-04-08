@@ -68,17 +68,17 @@ Point-In-Time restore can be used for point-in-time restores, allowing you to re
 #### *Monitoring and Reporting*
 [Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
-![A screenshot of a computer Description automatically generated](rhelmanmon001.png "A screenshot of a computer Description automatically generated")
+![A screenshot of a computer Description automatically generated](images/rhelmanmon001.png "A screenshot of a computer Description automatically generated")
 
 Azure monitoring has the capabilities to incorporate customer sources as indicated in the diagram below:
 
-![A screenshot of a computer Description automatically generated](rhelmanmon002.png "A screenshot of a computer Description automatically generated")
+![A screenshot of a computer Description automatically generated](images/rhelmanmon002.png "A screenshot of a computer Description automatically generated")
 #### *Change Management*
 Azure Automation Update Management and Azure Update Manger are a comprehensive set of tools that helps to track and implement change management within your Azure environment. Azure Automation Update Management will retire on 31 August 2024. It is recommended to use Azure Update Manager going forward.
 
 Azure Update Manger has been redesigned and doesn't depend on Azure Automation or Azure Monitor Logs, as required by the Azure Automation Update Management feature. Update Manager offers many new features and provides enhanced functionality over the original version available with Azure Automation. Some of those benefits can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/overview?tabs=azure-vms#key-benefits).
 
-![A screenshot of a computer Description automatically generated](rhelmanmon003.png "A screenshot of a computer Description automatically generated")
+![A screenshot of a computer Description automatically generated](images/rhelmanmon003.png "A screenshot of a computer Description automatically generated")
 
 **Steps to enabling and using Update Manager**
 
@@ -172,7 +172,7 @@ A Linux VM has a dedicated host in Azure that it interacts with. Metrics are aut
 1. In the Azure portal, select **Resource Groups**, choose **myResourceGroupMonitor**, and then select **myVM** in the resource list.
 1. To see how the host VM is performing, select **Metrics** on the VM window, then choose any of the *[Host]* metrics under **Available metrics**.
 
-![View host metrics](rhelmanmon004.png "View host metrics")
+![View host metrics](images/rhelmanmon004.png "View host metrics")
 
 **Enable advanced monitoring**
 
@@ -182,7 +182,7 @@ To enable monitoring of your Azure VM with Azure Monitor for VMs:
 1. On the VM page, in the **Monitoring** section, select **Insights (preview)**.
 1. On the **Insights (preview)** page, select **Try now**.
 
-![Enable Azure Monitor for VMs for a VM](rhelmanmon005.png "Enable Azure Monitor for VMs for a VM")
+![Enable Azure Monitor for VMs for a VM](images/rhelmanmon005.png "Enable Azure Monitor for VMs for a VM")
 
 1. On the **Azure Monitor Insights Onboarding** page, if you have an existing Log Analytics workspace in the same subscription, select it in the drop-down list.
 
@@ -194,7 +194,7 @@ To create a new Log Analytics workspace to store the monitoring data from the VM
 
 After you've enabled monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
-![Enable Azure Monitor for VMs monitoring deployment processing](rhelmanmon006.png "Enable Azure Monitor for VMs monitoring deployment processing")
+![Enable Azure Monitor for VMs monitoring deployment processing](images/rhelmanmon006.png "Enable Azure Monitor for VMs monitoring deployment processing")
 
 **View VM performance metrics**
 
