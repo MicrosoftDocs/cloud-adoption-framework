@@ -6,7 +6,7 @@ ms.author: martinek
 ms.date: 10/22/2021
 ms.topic: conceptual
 ms.custom: think-tank, csu
----
+--- 
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
@@ -66,6 +66,13 @@ Typically, you move resources when you want to consolidate resources into the sa
 When you move resources, the source resource group and the target resource group are locked during the move operation. You can't add, update, or delete resources in the resource groups. A resource move operation doesn't change the location of the resources.
 
 For more information about how to move resources across resource groups and subscriptions in the same tenant, see [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+
+> [!TIP]
+> To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+> 
+> If you have resources in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+> 
+> To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
 ### Before you move resources
 
