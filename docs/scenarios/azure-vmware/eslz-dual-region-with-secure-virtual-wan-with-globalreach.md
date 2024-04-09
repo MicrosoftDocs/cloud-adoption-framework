@@ -117,7 +117,7 @@ A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addre
 | 6 | Virtual Network 2 | &#8594;| Azure VMware Solution Cloud Region 2| Yes, traffic is inspected at Hub 2 firewall|
 | 8 | Virtual Network 1 | &#8594;| on-premises | Yes, traffic is inspected at Hub 1 firewall|
 | 9 | Virtual Network 2 | &#8594;| on-premises | Yes, traffic is inspected at Hub 2 firewall|
-| 10 | Virtual Network 1 | &#8594;| Virtual Network 2 | Yes, traffic is inspected at Hub 1 and Hub 2 firewalls and flows across the inter-hub connection|
+| 10 | Virtual Network 1 | &#8594;| Virtual Network 2 | Yes, traffic is inspected at the Hub 1 firewall, then flows over the inter-hub connection to be inspected by Hub 2 firewall|
 
 ### Internet connectivity
 
