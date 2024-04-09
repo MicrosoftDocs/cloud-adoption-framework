@@ -30,7 +30,6 @@ Determine whether your scenario requires documentation and process alignment. Th
 
 - **Consider a more robust readiness and governance implementation**.
 - **Inventory the affected geographies**. Compile a list of the affected countries or regions.
-- **Document data sovereignty requirements**. Do the identified countries or regions have compliance requirements that govern data sovereignty?
 - **Document the user base**. Will the cloud migration affect employees, partners, or customers in the identified country or region?
 - **Document datacenters and assets**. Does the migration effort include any assets in the identified country or region?
 - **Document regional product version availability and failover requirements**.
@@ -70,7 +69,7 @@ The following approach uses a data-driven model to address global migration comp
 
 - **Evaluate data sovereignty**: Data sovereignty can require localization of some assets, but many assets aren't governed by those compliance constraints. Services like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions or regions. Evaluate data sovereignty by using a shared service model for those services. For an outline of this approach, see the [reference architecture for a hub-spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
-- **Ensure that your environment scales**: If you deploy multiple instances of similar environments, you can use an environment factory to help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
+- **Ensure that your environment scales**: If you deploy multiple instances of similar environments, you can establish a dedicated team for the environment's migrations to help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 ### Data-driven prerequisites
 
@@ -129,11 +128,11 @@ If you migrate an application that must be deployed to multiple regions, the clo
 
 In some scenarios, bandwidth is limited. In others, a workload involves substantial configuration or data drift. In these cases, replicating data to a second region can interfere with the time that it takes to complete the migration. More importantly, these constraints can affect the experience of users or applications that still depend on the bandwidth that was available in the source datacenter.
 
-**Data synchronization**: The largest bandwidth drain often comes from synchronizing the data platform. If you deploy across multiple availability zones, you might be able to use zone-redundant data services that automatically synchronize your data across multiple availability zones. Deployment across multiple regions often requires data synchronization to keep applications aligned. This approach is defined in the reference architectures for [multi-region web applications](/azure/architecture/reference-architectures/app-service-web-app/multi-region) and [multi-region n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server). 
+**Data synchronization**: The largest bandwidth drain often comes from synchronizing the data platform. If you deploy across multiple availability zones, you might be able to use zone-redundant data services that automatically synchronize your data across multiple availability zones. Deployment across multiple regions often requires data synchronization to keep applications aligned. This approach is defined in the reference architectures for [multi-region web applications](/azure/architecture/reference-architectures/app-service-web-app/multi-region) and [multi-region n-tier applications](/azure/architecture/reference-architectures/n-tier/multi-region-sql-server).
 
 If keeping applications synchronized is the operational state you want for your applications, you might want to synchronize the source data platform with each cloud platform. Perform this sync before you migrate the application and middle-tier assets.
 
-**Azure-to-Azure disaster recovery**: An alternative option might further reduce complexity. If you use a two-step deployment to meet timeline and data-synchronization needs, [Azure-to-Azure disaster recovery](/azure/site-recovery/azure-to-azure-architecture) might be an acceptable solution. In this scenario, you migrate the workload to the first Azure datacenter by using a single Site Recovery vault and configuration or process server design. After you test the workload, you can recover the workload to a second Azure datacenter from the migrated assets. 
+**Azure-to-Azure disaster recovery**: An alternative option might further reduce complexity. If you use a two-step deployment to meet timeline and data-synchronization needs, [Azure-to-Azure disaster recovery](/azure/site-recovery/azure-to-azure-architecture) might be an acceptable solution. In this scenario, you migrate the workload to the first Azure datacenter by using a single Site Recovery vault and configuration and process server design. After you test the workload, you can recover the workload to a second Azure datacenter from the migrated assets.
 
 This approach reduces the effect on resources in the source datacenter. Azure-to-Azure disaster recovery also takes advantage of fast transfer speeds and high bandwidth limits between Azure datacenters.
 

@@ -42,7 +42,7 @@ Technical debt is a healthy and expected part of the corporate environment. Arch
 
 - **Minor host upgrades**: Occasionally an outdated host needs to be upgraded prior to replication.
 - **Minor guest operating system upgrades**: You probably need to patch or upgrade your operating system before replication.
-- **Service-level agreement (SLA) modifications**: Backup and recovery processes change significantly in a cloud platform. Assets might need to be modified to their backup processes to ensure continued function in the cloud.
+- **Service-level agreement (SLA) modifications**: Backup and recovery processes change significantly in a cloud platform. The backup processes for migrated assets might need to be modified to ensure that they continue to achieve their necessary SLAs in the cloud.
 - **Application configuration changes**: Migrated applications might require adjustments to variables such as network paths to dependent assets, service account changes, or updates to dependent IP addresses.
 - **Minor changes to network paths**: Routing patterns need to be modified to properly route user traffic to the new assets. This isn't production routing to the new assets, but configuration to allow for proper routing to the assets in general.
 
@@ -61,7 +61,7 @@ You can use the following questions to help guide decisions:
 
 - Have all workloads affected by the remediation been identified and notated in the migration backlog?
 - For workloads that aren't affected, does a migration produce a similar return on investment (ROI)?
-- Can the affected assets be remediated in alignment with the original migration timeline? What affect do timeline changes have on the ROI?
+- Can the affected assets be remediated in alignment with the original migration timeline? What effect do timeline changes have on the ROI?
 - Is it economically feasible to remediate the assets in parallel with migration efforts?
 
 If the previous questions aren't answered, consider these modernization approaches:

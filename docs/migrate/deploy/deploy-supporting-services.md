@@ -41,7 +41,7 @@ While your workload architecture provides a definitive list of services, you can
   - Network security groups assigned to the subnets and restricted to required traffic only
   - A peering connection to your hub virtual network
   - Any necessary user-defined routes to shape traffic, such as to send your default route traffic to a firewall appliance
-  - Any application presentation resources for web applications, such as Application Gateway or Azure FrontDoor
+  - Any application presentation resources for web applications, such as Application Gateway or Azure Front Door
   - Load balancers for workloads that have multiple nodes
 - **Identity and security**:
   - Any key vaults to hold certificates or secrets

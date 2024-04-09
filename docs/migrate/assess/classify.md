@@ -49,8 +49,6 @@ If your organization is subject to sovereignty and regulatory compliance, you ne
 
 In addition to data and mission criticality, consider classifications that are specific to your organization. For example, many organizations with several development teams classify workloads by the project team who supports them, or by the line of business that they support.
 
-As you examine dependencies between workloads, you can also classify workloads into fleets based on shared dependencies.
-
 ## Capture classifications
 
 To apply the data classification labels to specific workloads in your migration tracking tools, see [What is data classification](../../govern/policy-compliance/data-classification.md). 

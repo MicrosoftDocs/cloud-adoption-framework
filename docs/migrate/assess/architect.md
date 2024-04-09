@@ -3,7 +3,7 @@ title: Design workload architecture before migration
 description: Learn how to use the Cloud Adoption Framework for Azure to define the intended cloud architecture of a workload before you begin migration.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/05/2024
+ms.date: 04/09/2024
 ms.topic: conceptual
 ---
 
@@ -56,6 +56,12 @@ In addition to planning architecture for the workload itself, you might need to 
 
 You can use guidance in Azure Architecture Center, such as for [spoke-to-spoke](/azure/architecture/networking/spoke-to-spoke-networking) networking, to design how interconnected workloads work after migration.
 
+### Prepare for adopting confidential computing
+
+A subset of your workloads with sovereignty requirements might lead to using confidential computing. As part of a sovereign landing zone deployment, management groups for confidential computing are created.
+
+Within a sovereignty context, using confidential computing requires Azure Key Vault and customer managed keys as a supporting service. For more information, see [encryption with customer-managed keys in Microsoft Cloud for Sovereignty](/industry/sovereignty/customer-managed-keys).
+
 ## Update your initial cloud estimate
 
 As you finish your architecture design, revisit your cloud estimate to make sure that you're still within the planned budget. As you add supporting services like load balancers or backups, costs can change. Although you can use tools like [business cases](/azure/migrate/concepts-business-case-calculation) in Azure Migrate and Modernize to do detailed cost management exercises, you should periodically revisit your estimates as you adjust your architecture design.
@@ -94,6 +100,7 @@ You can use the following checklist to make sure that you cover critical archite
 - Confirm that your virtual machines are sized appropriately for the actual computing time that you need.
 - Confirm that your disks are sized appropriately for the actual size and performance that you need.
 - Confirm that you planned for load balancing services if they're needed. The services might include instances of Azure Load Balancer, Azure Application Gateway, Azure Front Door, or Azure Traffic Manager.
+- Confirm that you planned for sovereignty and confidential computing requirements if they're needed.
 
 ## Next step
 

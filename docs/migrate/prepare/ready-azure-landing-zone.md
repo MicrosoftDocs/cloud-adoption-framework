@@ -150,6 +150,18 @@ To implement alerts, you can deploy the [Azure Monitor baseline for landing zone
 
 You can also deploy your own custom alerting for resources if your needs deviate from what's in the baseline.
 
+## Prepare your landing zone for sovereign workload migrations
+
+If you need to address sovereignty requirements, you can evaluate if [Microsoft Cloud for Sovereignty](https://aka.ms/MicrosoftCloudForSovereignty) fits your requirements. Microsoft Cloud for Sovereignty provides an additional layer of policy and auditing capabilities that address individual public sector and government customer needs.
+
+You can enable these capabilities by deploying the [sovereign landing zone](/industry/sovereignty/slz-overview). The architecture of the sovereign landing zone aligns with the recommended [Azure landing zone](../../ready/landing-zone/index.md) designs.
+
+### Microsoft Cloud for Sovereignty policy portfolio
+
+By using Azure policy, you can enable centralized control across Azure resources to enforce specific configurations. You can assign the [Microsoft Cloud for Sovereignty policy initiatives](/industry/sovereignty/policy-portfolio-baseline) to your landing zones to make sure you adhere to local policies and regulatory requirements in your country/region.
+
+If those policy initiatives are not yet assigned to your sovereign landing zone deployment, consider assigning the initiatives that correspond to your regulatory requirements.
+
 ## Enable subscription vending
 
 This section applies to organizations that want to automate their subscription provisioning process. If you manually manage your landing zone and subscription creation, you should establish your own process for creating subscriptions.

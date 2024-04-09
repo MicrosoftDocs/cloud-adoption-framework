@@ -3,7 +3,7 @@ title: Cloud migration in the Cloud Adoption Framework
 description: Prepare for a successful migration to Azure using an iterative process to assess, deploy, and release workloads.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/04/2024
+ms.date: 04/09/2024
 ms.topic: conceptual
 ---
 
@@ -17,7 +17,7 @@ A cloud migration typically requires both good preparation and execution. The Cl
 
 ![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
-To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
+To start a cloud migration, you first need to prepare and fulfill any prerequisites, which typically happens once before the migration process begins:
 
 - **Prepare:** You need to focus on organizational alignment, defining clear owners for the migration process, and ensuring you've got the required skills in your teams. In this phase, you build on the work from the [Strategy](../strategy/index.md), [Plan](../plan/index.md), and [Ready](../ready/index.md) portions of CAF. This discipline is critical to the success of your migration effort.
 
@@ -42,7 +42,7 @@ For more details, see each of the migration disciplines and activities in their 
 
 The Migrate methodology addresses various roles and functions. Below is an example of the types of roles that might find this guidance helpful:
 
-- **Business decision makers**: Understand the motivations for migrations. Make informed decisions that relates to your overall budget and cloud investments. Learn about relevant skills required in your organization to migrate, and how to get assistance from partners.
+- **Business decision makers**: Understand the motivations for migrations. Make informed decisions that relate to your overall budget and cloud investments. Learn about relevant skills required in your organization to migrate, and how to get assistance from partners.
 - **IT decision makers**: Understand the considerations for migrating into multiple regions, multiple datacenters, the recommended migration tools, and the skills required to migrate.
 - **Platform owners / platform architects**: Learn how to prepare your Azure landing zones for migration, and other technical preparations of your Azure estate that might be required before you initiate a migration project.
 - **Cloud engineers / cloud architects**: Assess existing workloads and solutions, deploy the required infrastructure in the cloud, and release the workloads into production.
