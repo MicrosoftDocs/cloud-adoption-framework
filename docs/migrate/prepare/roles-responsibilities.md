@@ -103,7 +103,7 @@ You can use the following responsibility matrix as a basis for your migration pr
 | Organizational Change Manager | I | I | C | I | I | I | I | I | I | C | I | C | D | C | I |
 | Licensing Specialist | I | I | C | C | I | C | C | C | I | I | I | I | I | C | D |
 | Cloud Operations Manager | C | C | C | I | I | I | I | C | I | I | I | I | C | A | I |
-| Landing zone Architect | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I |
+| Landing Zone Architect | I | I | C | C | I | I | C | C | I | I | I | I | I | I | I |
 
 ## Next step
 
