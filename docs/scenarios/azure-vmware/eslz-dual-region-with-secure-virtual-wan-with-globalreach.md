@@ -63,8 +63,9 @@ Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Glo
 
 The diagram below illustrates traffic flows from the perspective of the Azure VMware Solution Private Clouds. 
 
-![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)
-**Traffic Flow Chart**
+![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)  
+
+**Traffic Flow Chart**  
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
@@ -87,7 +88,8 @@ As mentioned earlier, ensure that you explicitly configure Global Reach (A), Glo
 
 The diagram below illustrates traffic flows from an on-premises perspective.
 
-![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)
+![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)  
+
 **Traffic Flow Chart**
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
@@ -103,7 +105,8 @@ This section focuses only on connectivity from an Azure Virtual Network perspect
 
 A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any other prefixes that have been added as "Private Traffic Prefixes" - see [Routing Intent Private Address Prefixes](/azure/virtual-wan/how-to-routing-policies#azurefirewall). In our scenario, with Routing Intent enabled, all resources in Virtual Network 1 and Virtual Network 2 currently possess the default RFC 1918 addresses and use their local regional hub firewall as the next hop. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewalls. See traffic flow section for more information.  
 
-![Diagram of Dual-Region Azure VMware Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)
+![Diagram of Dual-Region Azure VMware Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)  
+
 **Traffic Flow Chart**
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
@@ -136,7 +139,8 @@ The preferred default route is received via connection “D” from its local re
 
 In summary, Azure VMware Solution Private Clouds prioritize internet access via regional local hubs, using the cross-regional hub as a backup during local hub outages. Virtual Networks, on the other hand, only use their regional hub for internet access and do not rely on the cross-regional hub for internet backup. For further details, refer to the traffic flow section. Another important point is that with Routing Intent, you can choose not to advertise the default route over specific ExpressRoute connections. If you do not want to learn the default route from Azure, we recommend not advertising the default route to your on-premises ExpressRoute connections, ensuring that on-premises internet connectivity is not impacted.
 
-![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)
+![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)  
+
 **Traffic Flow Chart**
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? | Internet Breakout |
