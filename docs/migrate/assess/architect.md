@@ -3,7 +3,7 @@ title: Design workload architecture before migration
 description: Learn how to use the Cloud Adoption Framework for Azure to define the intended cloud architecture of a workload before you begin migration.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/05/2024
+ms.date: 04/09/2024
 ms.topic: conceptual
 ---
 
@@ -55,6 +55,12 @@ Your migration assessment tools should give you a way to do dependency analysis,
 In addition to planning architecture for the workload itself, you might need to consider workload-to-workload dependencies. For example, some workloads might need frequent communication. If so, planning your migration waves and dependencies to account for this requirement helps make your migration successful.
 
 You can use guidance in Azure Architecture Center, such as for [spoke-to-spoke](/azure/architecture/networking/spoke-to-spoke-networking) networking, to design how interconnected workloads work after migration.
+
+### Prepare for adopting confidential computing
+
+A subset of your workloads with sovereignty requirements might lead to using confidential computing. As part of a sovereign landing zone deployment, management groups for confidential computing are created.
+
+Within a sovereignty context, using confidential computing requires Azure Key Vault and customer managed keys as a supporting service. For more information, see [encryption with customer-managed keys in Microsoft Cloud for Sovereignty](/industry/sovereignty/customer-managed-keys).
 
 ## Update your initial cloud estimate
 
