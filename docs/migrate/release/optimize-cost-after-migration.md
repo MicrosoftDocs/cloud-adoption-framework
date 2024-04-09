@@ -49,7 +49,7 @@ Monitor the following signals for the resources:
 - **Logs**: Windows and application logs.
 - **Other signals**: Any other signals that you used to monitor the assets when they were hosted in their previous production environment.
 
-In some migrations, assets aren't powered off, but instead duplicated. Sudden spikes or even consistent moderate usage of infrastructure signals, along with network activity or new logs, can indicate that the asset is still in use.
+In some migrations, assets aren't turned off. Instead, they're duplicated. Sudden spikes or even consistent moderate usage of infrastructure signals, along with network activity or new logs, can indicate that the asset is still in use.
 
 ### Testing windows and dependency validation
 
