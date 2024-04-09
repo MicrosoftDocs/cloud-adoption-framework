@@ -84,7 +84,7 @@ This section focuses only on the on-premises site. As shown in the diagram, the 
 
 On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)". 
 
-As mentioned earlier, ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.  
+Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.
 
 The diagram below illustrates traffic flows from an on-premises perspective.
 
