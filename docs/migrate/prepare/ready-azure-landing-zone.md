@@ -160,7 +160,7 @@ You can enable these capabilities by deploying the [sovereign landing zone](/ind
 
 By using Azure policy, you can enable centralized control across Azure resources to enforce specific configurations. You can assign the [Microsoft Cloud for Sovereignty policy initiatives](/industry/sovereignty/policy-portfolio-baseline) to your landing zones to make sure you adhere to local policies and regulatory requirements in your country/region.
 
-If those policy initiatives are not yet assigned to your landing zones as part of a sovereign landing zone deployment, examine the policy portfolio and consider assigning the policy initiatives that correspond to your regulatory requirements to your landing zones.
+If those policy initiatives are not yet assigned to your sovereign landing zone deployment, consider assigning the initiatives that correspond to your regulatory requirements.
 
 ## Enable subscription vending
 
