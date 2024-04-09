@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 # Change communication
 
-Change communication means informing the business of your upcoming changes to ensure that everyone affected by the transition understands the cloud migration process.
+Change communication means informing the business about your upcoming changes to ensure that everyone affected by the transition understands the cloud migration process.
 
-Your communication plan can remain cosistent, but each workload should undergo its own change communication because of its individual users and operators.
+Your communication plan can remain consistent, but each workload should undergo its own change communication because of its individual users and operators.
 
 The change communication is in addition to any change requests captured by your change management team. You should work with your change management team to ensure that they properly manage the change. That team might also be able to help with the change communication.
 
@@ -30,7 +30,7 @@ Your change communication needs to target various groups in your organization. Y
 
 ## Change communication content
 
-In your change communication, you should make it clear to each role how the upcoming change specifically affects them and what they must do to prepare. Your change communication should also include groups that work with related systems or in related business areas. Even if they don't have preparation steps and will not be directly affected by the change, they should be aware in case there are any indirect impacts to their work.
+In your change communication, you should make it clear to each role how the upcoming change specifically affects them and what they must do to prepare. Your change communication should also include groups that work with related systems or in related business areas. Even if they don't have preparation steps and won't be directly affected by the change, they should be aware in case there are any indirect impacts to their work.
 
 You should answer the following questions in your change communication:
 
