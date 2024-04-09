@@ -170,11 +170,11 @@ Specific migration scenarios require different approaches and tools. This articl
 | Link | Description |
 |---|---|
 |[Design and performance for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration) | Learn how to migrate from Teradata to Azure Synapse Analytics. |
-|[Design and performance for IBM Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration) | Guidance on how to migrate from IBM Netezza to Azure Synapse Analytics. |
+|[Design and performance for IBM Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration) | Learn how to migrate from IBM Netezza to Azure Synapse Analytics. |
 |[Design and performance for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration) | Learn how to migrate from Oracle to Azure Synapse Analytics. |
 
 ## Multitenant migration
 
 | Link | Description |
 |---|---|
-| [Manage Azure Migrate projects at scale by using Azure Lighthouse](/azure/lighthouse/how-to/migration-at-scale) | This article provides an overview of how Azure Lighthouse can help you use Azure Migrate in a scalable way across multiple Microsoft Entra tenants. |
+| [Manage Azure Migrate projects at scale by using Azure Lighthouse](/azure/lighthouse/how-to/migration-at-scale) | Get an overview of how Azure Lighthouse can help you use Azure Migrate in a scalable way across multiple Microsoft Entra tenants. |
