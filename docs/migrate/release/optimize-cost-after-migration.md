@@ -39,7 +39,7 @@ Shutting down and disposing of old assets and equipment might seem straightforwa
 
 After you promote a migrated workload to production, you should continue to monitor the assets that are scheduled for retirement to ensure that production traffic is correctly routed.
 
-While assets might be powered off, they might still utilize storage, network, and other infrastructure resources. If they're powered back on, they could cause unexpected problems unless they've been removed.
+While assets might be turned off, they might still utilize storage, network, and other infrastructure resources. If they're turned back on, they could cause unexpected problems unless they've been removed.
 
 Monitor the following signals for the resources:
 
