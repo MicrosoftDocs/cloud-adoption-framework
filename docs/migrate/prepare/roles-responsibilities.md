@@ -21,7 +21,7 @@ In this article, you learn about:
 - A responsibility matrix to help understand which role is responsible for what part of a migration project.
 
 > [!TIP]
-> The roles mentioned might not match specific job titles or require dedicated team members. Often, one person can cover multiple roles, or several team members can share responsibilities. This list outlines common responsibilities rather than a staffing guide. The key is ensuring these responsibilities are met within your organization.
+> The roles mentioned might not match specific job titles or require dedicated team members. Often, one person can cover multiple roles, or several team members can share responsibilities. This list outlines common responsibilities but isn't a staffing guide. The key is ensuring that these responsibilities are met within your organization.
 
 ## Cloud strategy function roles
 
