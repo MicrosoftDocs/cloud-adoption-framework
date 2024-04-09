@@ -1,6 +1,6 @@
 ---
-title: Network considerations for Azure VMware Solution dual-region deployments with Secure Virtual WAN Hub
-description: Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions with Secure Virtual WAN.
+title: Dual-Region Azure VMware Solution design with Global Reach, using Secure Virtual WAN with Routing-Intent
+description: Learn how to configure network connectivity when Azure VMware Solution private clouds are deployed in two Azure regions with Secure Virtual WAN and Global Reach.
 author: jasonmedina
 ms.author: jasonmedina
 ms.date: 04/02/2024
