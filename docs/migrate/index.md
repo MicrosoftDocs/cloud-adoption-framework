@@ -13,7 +13,7 @@ This article describes how to use the Cloud Adoption Framework for Azure to migr
 
 ## Migration disciplines
 
-A cloud migration typically requires both good preparation and implementation. The Cloud Adoption Framework migration  methodology relies on proven guidance to help you prepare for and carry out your migration efforts.
+A cloud migration typically requires both good preparation and implementation. The Cloud Adoption Framework migration methodology relies on proven guidance to help you prepare for and carry out your migration efforts.
 
 ![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
@@ -25,8 +25,8 @@ After you fulfill and prepare the prerequisites, you can start the migration pro
 
 - **Assess workloads**: Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging assumptions. You make these assumptions during discovery and assessments by looking closely at rationalization options. During this process, you also study user patterns and dependencies closely to ensure the technical success of workloads after migration.
 
-- **Deploy workloads**: After you assess workloads, you replicate or improve the existing workload functionality in the cloud. This replication could involve a *lift and shift* or *rehost* to the cloud. But more commonly during this phase, you might modernize many of the assets that support these workloads to capitalize on the benefits of the cloud.
-- **Release workloads**: After you replicate functionality to the cloud, you can test, optimize, document, and release workloads for ongoing operations. You must review the migrated workloads and hand them off during this process. This step is critical to governance, operations management, and security teams for ongoing workload support.
+- **Deploy workloads**: After you assess workloads, you replicate or improve the existing workload functionality in the cloud. This replication could involve a *lift and shift* or *rehost* to the cloud. But more commonly, you might modernize many of the assets that support these workloads to capitalize on the benefits of the cloud.
+- **Release workloads**: After you replicate workload functionality to the cloud, you can test, optimize, document, and release workloads for ongoing operations. You must review the migrated workloads and hand them off during this process. This step is critical to governance, operations management, and security teams for ongoing workload support.
 
 ## Cloud migration checklist
 
