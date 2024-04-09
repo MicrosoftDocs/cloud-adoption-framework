@@ -25,12 +25,16 @@ The document assumes readers have a basic understanding of Virtual WAN and Secur
 ## Dual-region with Secure Virtual WAN using Global Reach scenario  
 Secure Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Secure Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution. In the scenario, we have a network topology that spans two regions. There is one Virtual WAN with two Hubs, Hub1 and Hub2. Hub1 is in Region 1, and Hub2 is in Region 2. Each Hub has its own instance of Azure Firewall deployed(Hub 1 Firewall, Hub 2 Firewall), essentially making them each Secure Virtual WAN Hubs. Having Secure Virtual WAN hubs is a technical prerequisite to Routing Intent. Secure Virtual WAN Hub1 and Hub2 have Routing Intent enabled.    
 
-Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual Network. Additionally, there is an on-premises site connecting to both regions. Furthermore, Global Reach connectivity exists within the environment. Global Reach establishes a direct logical link via the Microsoft backbone, connecting Azure VMware Solution to on-premises or regional Azure VMware Solution Private Clouds. We will review this in more detail later in this document. 
-
 >[!NOTE]
 >  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](/azure/virtual-wan/about-virtual-hub-routing-preference)
 >
+
+Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual Network. Additionally, there is an on-premises site connecting to both regions. Furthermore, Global Reach connectivity exists within the environment. Global Reach establishes a direct logical link via the Microsoft backbone, connecting Azure VMware Solution to on-premises or regional Azure VMware Solution Private Clouds. As shown in the diagram below, Global Reach connections do not transit Hub Firewall 1 and Hub Firewall 2. Consequently, Global Reach traffic between sites is not inspected. 
+
+> [!NOTE]
+> When utilizing Global Reach, consider enhancing security between Global Reach sites by inspecting traffic within the Azure VMware Solution environment’s NSX-T or an on-premises firewall.
 >
+
 ![Diagram of Dual-Region Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
 ### Understanding Topology Connectivity 
@@ -92,10 +96,6 @@ The diagram below illustrates traffic flows from an on-premises perspective.
 | 7 | on-premises | &#8594;| Azure VMware Solution Cloud Region 2 | No, traffic bypasses firewall and transits Global Reach (B)|
 | 8 | on-premises | &#8594;| Virtual Network 1 | Yes, traffic is inspected at Hub 1 firewall|
 | 9 | on-premises | &#8594;| Virtual Network 2 | Yes, traffic is inspected at Hub 2 firewall|
-
-> [!NOTE]
-> When utilizing Global Reach, traffic between these locations bypasses the Secure Virtual WAN and the Hub Firewall. To ensure optimal security, we recommend inspecting traffic within the Azure VMware Solution environment's NSX-T or using an on-premises firewall between these locations.
->
 
 ### Azure Virtual Network connectivity & traffic flow
 
