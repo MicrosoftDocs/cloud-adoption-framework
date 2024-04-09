@@ -69,7 +69,7 @@ The following approach uses a data-driven model to address global migration comp
 
 - **Evaluate data sovereignty**: Data sovereignty can require localization of some assets, but many assets aren't governed by those compliance constraints. Services like logging, reporting, network routing, identity, and other central IT services might be eligible to be hosted as shared services across multiple subscriptions or regions. Evaluate data sovereignty by using a shared service model for those services. For an outline of this approach, see the [reference architecture for a hub-spoke topology with shared services](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
-- **Ensure that your environment scales**: If you deploy multiple instances of similar environments, you can use an environment factory to help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
+- **Ensure that your environment scales**: If you deploy multiple instances of similar environments, you can establish a dedicated team for the environment's migrations to help create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 ### Data-driven prerequisites
 

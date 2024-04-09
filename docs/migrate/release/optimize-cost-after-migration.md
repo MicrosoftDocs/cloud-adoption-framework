@@ -39,6 +39,8 @@ Shutting down and disposing of old assets and equipment might seem straightforwa
 
 After you promote a migrated workload to production, you should continue to monitor the assets that are scheduled for retirement to ensure that production traffic is correctly routed.
 
+While assets might be powered off, they might still utilize storage, network, and other infrastructure resources. If they're powered back on, they could cause unexpected problems unless they've been removed.
+
 Monitor the following signals for the resources:
 
 - **Compute**: Resource compute usage, like CPU and RAM.
@@ -47,7 +49,7 @@ Monitor the following signals for the resources:
 - **Logs**: Windows and application logs.
 - **Other signals**: Any other signals that you used to monitor the assets when they were hosted in their previous production environment.
 
-Sudden spikes or even consistent moderate usage of infrastructure signals, along with network activity or new logs, can indicate that the asset is still in use.
+In some migrations, assets aren't powered off, but instead duplicated. Sudden spikes or even consistent moderate usage of infrastructure signals, along with network activity or new logs, can indicate that the asset is still in use.
 
 ### Testing windows and dependency validation
 
