@@ -46,7 +46,7 @@ Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual
 
 ## Dual-region Secure Virtual WAN Traffic Flows
 
-The following sections cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure Virtual Networks, and the Internet.
+The following sections cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure Virtual Networks, and the Internet when using Global Reach.
 
 ### Azure VMware Solution cross-region connectivity & traffic flows
 
