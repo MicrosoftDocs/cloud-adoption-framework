@@ -94,7 +94,7 @@ The adoption plan provides clarity on the timeline of activities during adoption
 **Guidance to support deliverable completion:**
 
 - [Gather inventory](../digital-estate/inventory.md). Establish a source of data for analysis of the digital estate before adoption.
-- [Best practice: Azure Migrate](../plan/contoso-migration-assessment.md). Use Azure Migrate to gather inventory.
+- [Best practice: Azure Migrate](../migrate/assess/index.md). Use Azure Migrate to gather inventory.
 - [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization). During incremental rationalization and quantitative analysis, identify cloud candidates for budgeting purposes.
 - [Align cost models and forecast models](../digital-estate/calculate.md). Use Azure Cost Management + Billing to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 - [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan). Build a plan with actionable workload, assets, and timeline details. This plan provides the basis for spending over time (or cost forecasting). *Spending over time* is the initial baseline for all actionable optimization analysis within the Cost Management governance discipline.
