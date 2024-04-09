@@ -50,7 +50,7 @@ The next table describes supporting roles that you might need for other function
 
 | Role | Responsibilities |
 | --- | --- |
-| Landing zone Architect | Provides support for migrating workloads to a landing zone. Helps remediate any issues with platform services in the landing zone. For more information, see [Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform). |
+| Landing Zone Architect | Provides support for migrating workloads to a landing zone. Helps remediate any issues with platform services in the landing zone. For more information, see [Cloud platform functions](/azure/cloud-adoption-framework/organize/cloud-platform). |
 | Cloud Operations Manager | Provides support for onboarding migrating workloads to the management platform to ensure that proper management is in place for the workloads when they migrate. For more information, see [Cloud operations functions](/azure/cloud-adoption-framework/organize/cloud-operations). |
 | Workload Architect | Provides architectural guidance and decision making for the design of the migrating workload. For each workload, you might need a specific subject matter expert to fulfill multiple instances of this role. For more information, see [Central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
 | User Acceptance Tester | Tests individual workloads. You might have multiple instances of this role per workload to provide feedback for user acceptance testing (UAT). For more information, see [Central IT functions](/azure/cloud-adoption-framework/organize/central-it). |
