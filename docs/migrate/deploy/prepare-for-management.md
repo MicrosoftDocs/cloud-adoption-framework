@@ -29,8 +29,8 @@ For each workload, these are the minimum management goals you should plan and pr
   - Diagnostic logs to collect metric and service-specific logs.
   - System logs from migrated or newly created virtual machines.
 - **Alerts deployment**: Deployment of general alerts based on organizational standards and alerts for your workload.
-- **Backup**: Backup configurations and processes that you can use to restore state in compliance with your organization’s service-level agreements (SLAs).
-- **Business continuity and disaster recovery (BCDR)**: A BCDR configuration that allows you to failover and restore service in compliance with your organization’s SLAs.
+- **Backup**: Backup configurations and processes that you can use to restore state in compliance with your organization's service-level agreements (SLAs).
+- **Business continuity and disaster recovery (BCDR)**: A BCDR configuration that allows you to fail over and restore service in compliance with your organization’s SLAs.
 - **Security posture**: Enrollment in the Microsoft Defender for Cloud policies selected by your organization to perform security posture management and vulnerability detection. This might include the deployment of vulnerability detection services or the Microsoft Defender for Endpoint agent.
 - **Serial console for Azure Virtual Machines**: Enabling a [serial console](/troubleshoot/azure/virtual-machines/serial-console-overview) in Virtual Machines to help with troubleshooting.
 - **Enable automatic shutdown**: Configuration of automatic shutdown schedules for virtual machines that meet business requirements.
