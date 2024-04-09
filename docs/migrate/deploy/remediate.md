@@ -61,7 +61,7 @@ You can use the following questions to help guide decisions:
 
 - Have all workloads affected by the remediation been identified and notated in the migration backlog?
 - For workloads that aren't affected, does a migration produce a similar return on investment (ROI)?
-- Can the affected assets be remediated in alignment with the original migration timeline? What affect do timeline changes have on the ROI?
+- Can the affected assets be remediated in alignment with the original migration timeline? What effect do timeline changes have on the ROI?
 - Is it economically feasible to remediate the assets in parallel with migration efforts?
 
 If the previous questions aren't answered, consider these modernization approaches:

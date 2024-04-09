@@ -22,7 +22,7 @@ Ensure you have a management routine in place for each workload.
 
 ## Minimum management goals
 
-This list covers minimum management goals you should plan and prepare for each workload:
+For each workload, these are the minimum management goals you should plan and prepare for:
 
 - **Logs**: Appropriate logs are being collected by your logging system, like Azure Monitor Logs. Logs should include:
   - Activity logs to observe changes and events on services.

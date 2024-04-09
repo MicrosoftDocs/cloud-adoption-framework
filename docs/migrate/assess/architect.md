@@ -100,6 +100,7 @@ You can use the following checklist to make sure that you cover critical archite
 - Confirm that your virtual machines are sized appropriately for the actual computing time that you need.
 - Confirm that your disks are sized appropriately for the actual size and performance that you need.
 - Confirm that you planned for load balancing services if they're needed. The services might include instances of Azure Load Balancer, Azure Application Gateway, Azure Front Door, or Azure Traffic Manager.
+- Confirm that you planned for sovereignty and confidential computing requirements if they're needed.
 
 ## Next step
 

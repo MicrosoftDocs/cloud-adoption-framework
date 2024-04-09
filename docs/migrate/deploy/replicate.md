@@ -38,7 +38,7 @@ When you plan and perform binary source replication to a new destination, consid
 
 - **Speed of WAN expansion**: If budget allows, you can add more bandwidth to your company's WAN solution. But it can take weeks or months to procure, prepare, and integrate more fiber connections.
 
-- **Speed of disks**: Even with infinite data speed and an infinite bandwidth limit between the source binary and the target destination, physics still limits replication. Data replication occurs only as quickly as source disks can read the data. It takes time to read every one or zero from every spinning disk in a datacenter.
+- **Speed of disks**: Even with infinite data speed and an infinite bandwidth limit between the source binary and the target destination, physics still limits replication. Data replication occurs only as quickly as source disks can read the data.
 
 - **Speed of human calculations**: Disks and light move faster than human decision processes. When a group of people collaborate and make decisions together, the results come slowly. Replication can't overcome delays related to human calculations.
 
