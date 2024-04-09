@@ -42,7 +42,7 @@ Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual
 | Connection (B) | Azure VMware Solution Region 2 Global Reach connection back to on-premises.  |
 | Connection (C) | Azure VMware Solution Global Reach connection between the two private clouds' managed circuits.  |
 | Connections (E) | on-premises connectivity via ExpressRoute to both regional hubs.  |
-| Inter-Hub Connection | When two hubs are deployed under the same Virtual WAN  |
+| Inter-Hub | Inter-Hub logical connection between two hubs that are deployed under the same Virtual WAN.  |
 
 ## Dual-region Secure Virtual WAN Traffic Flows
 
