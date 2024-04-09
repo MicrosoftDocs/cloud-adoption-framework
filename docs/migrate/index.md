@@ -17,7 +17,7 @@ A cloud migration typically requires both good preparation good and implementati
 
 ![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
-To start a cloud migration, you must first fulfill and prepare any prerequisites.
+To start a cloud migration, you first need to prepare and fulfill any prerequisites:
 
 - **Prepare**: Focus on organizational alignment. Define clear owners for the migration process and ensure that your teams have the required skills. In this phase, you build on the work from the [strategy](../strategy/index.md), [plan](../plan/index.md), and [ready](../ready/index.md) guidance of the Cloud Adoption Framework. This step is critical to the success of your migration effort.
 
@@ -44,7 +44,6 @@ For more details, see the articles for each phase.
 The Migrate methodology addresses various roles and functions, for example:
 
 - **Business decision makers**: Understand the motivations for migrations. Make informed decisions that relate to your overall budget and cloud investments. Learn about relevant skills that your organization needs to migrate workloads and how to get assistance from partners.
-
 - **IT decision makers**: Understand the considerations for migrating into multiple regions or multiple datacenters. Explore the recommended migration tools and skills required to migrate.
 - **Platform owners or platform architects**: Learn how to prepare your Azure landing zones for migration. Also explore other technical preparations for your Azure estate that you might need to implement before you initiate a migration project.
 - **Cloud engineers or cloud architects**: Assess existing workloads and solutions, deploy required infrastructure in the cloud, and release workloads into production.

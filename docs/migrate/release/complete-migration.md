@@ -22,8 +22,8 @@ Make sure you add workload-specific considerations to your checklist.
 - **Pause monitoring**. While you migrate the workload, you'll likely create a temporary outage. Pause monitoring to prevent noise.
 - **Take final replication steps**. Depending on your promotion method, you might need to take final replication steps to handle any recent data. That process includes these steps if you use a tool like Azure Migrate and Modernize to replicate the server state. Otherwise, you might have to take manual steps, depending on how you staged the application.
 - **Hydrate additional resources**. If you're using server state replication like with Azure Migrate and Modernize, you need to deploy Azure Virtual Machine instances as part of hydrating after the replication. There might be other items like load balancing rules that you weren't able to stage previously.
-- **Power down source servers**. If you still have source servers available after hydrating your resources, power them down so that they don't interfere with your migration.
-- **Do isolated testing**. Do any testing that you can without transitioning users over to the migrated workload. This testing is mostly IT testing.
+- **Turn off source servers**. If you still have source servers available after hydrating your resources, turn them off so that they don't interfere with your migration. If you need to revert back, you can turn on these servers after cleaning up the migration items.
+- **Do isolated testing**. Do any testing that you can without transitioning users over to the migrated workload. This testing uses a test plan that's similar to the plan described in [Test your migration deployment in Azure](../deploy/migration-test.md).
 - **Transition to the migrated workload**. Update your Domain Name System, connection strings, load balancing, and other items so that when users or systems try to access the application, they access its new location.
 - **Do promotion testing**. Run your business testing plan again to confirm that everything works as expected.
 - **Seek final approval**. Seek a final go/no-go decision for the workload with stakeholders.

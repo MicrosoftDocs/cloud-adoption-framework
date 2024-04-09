@@ -1,6 +1,6 @@
 ---
 title: Align roles and responsibilities
-description: Prepare for cultural complexity when your organization migrates to Azure. Align roles and responsibilities to ensure clarity and coverage of essential functions.
+description: Align roles and responsibilities to ensure clarity and coverage of essential functions when migrating to Azure.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
@@ -19,6 +19,9 @@ In this article, you learn about:
 - Supporting roles that you might need for other functions during the migration process, for example Landing zone architects and workload architects.
 - How to identify relevant experts or owners for roles in your migration projects.
 - A responsibility matrix to help understand which role is responsible for what part of a migration project.
+
+> [!TIP]
+> The roles mentioned might not match specific job titles or require dedicated team members. Often, one person can cover multiple roles, or several team members can share responsibilities. This list outlines common responsibilities but isn't a staffing guide. The key is ensuring that these responsibilities are met within your organization.
 
 ## Cloud strategy function roles
 

@@ -29,13 +29,13 @@ Here's a list of common tools or offerings that you need for a successful migrat
 Although you can use other tools instead of Azure Migrate, we recommend that you use a native offering unless there's an identified reason. The native offering Azure Migrate is built to work seamlessly with the Azure platform and is continuously updated to support the latest features and capabilities.
 
 > [!NOTE]
-> If you use an existing tool to replicate a server to Azure, changing tools during this process can disrupt and decrease performance. In this scenario, continue to use the existing tool. Later, you can run the migration promotion like a disaster recovery failover scenario.
+> If you use an existing tool to replicate a workload to Azure, changing tools during this process can disrupt and decrease performance. In this scenario, continue to use the existing tool. Later, you can run the migration promotion like a disaster recovery failover scenario.
 
 ## Initial migration backlog
 
 The following sections describe the prerequisite activities that you should perform to build an initial migration backlog.
 
-The cloud strategy team is accountable for the care and maintenance of the digital estate. However, acting on the backlog that mapping a digital estate creates is the responsibility of every role in the migration effort. The cloud strategy team and the cloud adoption team should review and understand the migration backlog before the teams begin to plan individual workload activities. During review, members of both teams must gain sufficient knowledge to articulate the following key points about the migration backlog.
+The cloud strategy team is accountable for the care and maintenance of the digital estate. However, addressing the backlog generated from mapping a digital estate falls under the shared responsibility of all roles involved in the migration process. The cloud strategy team and the cloud adoption team should review and understand the migration backlog before the teams begin to plan individual workload activities. During review, members of both teams must gain sufficient knowledge to articulate the following key points about the migration backlog.
 
 ### Business outcomes and metrics
 
@@ -53,7 +53,9 @@ Sometimes, prioritizing one workload over another might not seem logical or even
 
 ### Capture the backlog
 
-Capture the backlog in a location that you can share with all members of the cloud adoption team. From a shared location, different team members can align their knowledge and work to the backlog, and you can keep the backlog current throughout the migration process. You can both use tools that are familiar in your organization, and build on the tools that you use to complete your digital estate rationalization.
+Capture the backlog in a location that you can share with all members of the cloud adoption team. From a shared location, different team members can align their knowledge and work to the backlog, and you can keep the backlog current throughout the migration process.
+
+You can both use tools that are familiar in your organization, and build on the tools that you use to complete your digital estate rationalization.
 
 If you're looking for prebuilt templates, the [Migration Execution Guide](https://github.com/Azure/migration) has spreadsheet templates that can help you organize your backlog.
 
