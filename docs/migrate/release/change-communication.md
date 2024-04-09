@@ -30,7 +30,7 @@ Your change communication needs to target various groups in your organization. Y
 
 ## Change communication content
 
-In your change communication, you should make it clear to each role how the upcoming change specifically affects them and what they must do to prepare. Your change communication should also include groups who work with related systems or in related business areas. Even if they don't have preparation steps and will not be directly affected by the change, they should be aware in case there are any indirect impacts to their work.
+In your change communication, you should make it clear to each role how the upcoming change specifically affects them and what they must do to prepare. Your change communication should also include groups that work with related systems or in related business areas. Even if they don't have preparation steps and will not be directly affected by the change, they should be aware in case there are any indirect impacts to their work.
 
 You should answer the following questions in your change communication:
 
