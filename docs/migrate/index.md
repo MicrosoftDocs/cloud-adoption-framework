@@ -17,7 +17,7 @@ A cloud migration typically requires both good preparation and execution. The Cl
 
 ![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
-To start a cloud migration, you first need to prepare and fulfil any prerequisites, which typically happens once before the migration process begins:
+To start a cloud migration, you first need to prepare and fulfill any prerequisites, which typically happens once before the migration process begins:
 
 - **Prepare:** You need to focus on organizational alignment, defining clear owners for the migration process, and ensuring you've got the required skills in your teams. In this phase, you build on the work from the [Strategy](../strategy/index.md), [Plan](../plan/index.md), and [Ready](../ready/index.md) portions of CAF. This discipline is critical to the success of your migration effort.
 
