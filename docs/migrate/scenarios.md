@@ -15,15 +15,15 @@ Specific migration scenarios require different approaches and tools. This articl
 
 | Link | Description |
 |---|---|
-| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | Complete a tutorial to learn how to discover Amazon Web Services (AWS) instances by using the Azure Migrate: Discovery and assessment tool. |
-| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure by using the Azure Migrate: Discovery and assessment tool. |
-| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs by using the Azure Migrate: Server Assessment tool and the Migration and modernize tool. |
+| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | Complete a tutorial to learn how to discover Amazon Web Services (AWS) instances by using the Azure Migrate discovery and assessment tool. |
+| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure by using the Azure Migrate discovery and assessment tool. |
+| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs by using the Azure Migrate server assessment tool and the migration and modernization tool. |
 
 ## Containers
 
 | Link | Description |
 |---|---|
-| [Migrate to Azure Kubernetes Service](/azure/aks/aks-migration) | Get the current recommended Azure Kubernetes Service configuration to help you plan and execute a successful migration to Azure Kubernetes Service. |
+| [Migrate to Azure Kubernetes Service](/azure/aks/aks-migration) | Get the current recommended Azure Kubernetes Service configuration to help you plan and carry out a successful migration to Azure Kubernetes Service. |
 
 ## Windows and Linux
 
@@ -31,18 +31,18 @@ Specific migration scenarios require different approaches and tools. This articl
 
 | Link | Description |
 |---|---|
-| [Discover servers running in a VMware environment](/azure/migrate/tutorial-discover-vmware) | Learn how to discover the servers that are running in your VMware environment by using the Azure Migrate: Discovery and assessment tool. |
-| [Assess VMware VMs for migration to Azure VMs](/azure/migrate/tutorial-assess-vmware-azure-vm) | Use the Azure Migrate: Discovery and assessment tool to assess discovered servers in your VMware environment in preparation for migration to Azure VMs. |
-| [Select a VMware migration option](/azure/migrate/server-migrate-overview) | Use This article to learn how you can migrate VMware VMs to Azure by using the Migration and modernization tool. |
-| [Move on-premises VMware infrastructure to Azure VMware Solution](./azure-best-practices/contoso-migration-vmware-to-azure.md) | Learn how to use Azure VMware Solution, a first-party Microsoft offering that is backed by VMware, to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that are designed to support workload migration. |
+| [Discover servers running in a VMware environment](/azure/migrate/tutorial-discover-vmware) | Learn how to discover the servers that run in your VMware environment by using the Azure Migrate discovery and assessment tool. |
+| [Assess VMware VMs for migration to Azure VMs](/azure/migrate/tutorial-assess-vmware-azure-vm) | Use the Azure Migrate discovery and assessment tool to assess discovered servers in your VMware environment in preparation for migration to Azure VMs. |
+| [Select a VMware migration option](/azure/migrate/server-migrate-overview) | Learn how you can migrate VMware VMs to Azure by using the migration and modernization tool. |
+| [Move on-premises VMware infrastructure to Azure VMware Solution](./azure-best-practices/contoso-migration-vmware-to-azure.md) | Learn how to use Azure VMware Solution, a first-party Microsoft offering that's backed by VMware, to create a private cloud in Azure. The cloud has native access to VMware vCenter Server and other VMware tools that support workload migrations. |
 
 ### Hyper-V servers
 
 | Link | Description |
 |---|---|
-| [Discover servers running in a Hyper-V environment](/azure/migrate/tutorial-discover-hyper-v) | This tutorial shows you how to use the Azure Migrate: Discovery and assessment tool to discover the servers that are running in your Hyper-V environment. |
-| [Assess Hyper-V VMs for migration to Azure](/azure/migrate/tutorial-assess-hyper-v) | Learn how to use the Azure Migrate: Discovery and assessment tool to assess discovered servers in your Hyper-V environment for migration to Azure. |
-| [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v) | This article demonstrates how to assess Hyper-V machines for migration to Azure, and then demonstrates how to migrate them. |
+| [Discover servers running in a Hyper-V environment](/azure/migrate/tutorial-discover-hyper-v) | This tutorial shows you how to use the Azure Migrate discovery and assessment tool to discover servers that run in your Hyper-V environment. |
+| [Assess Hyper-V VMs for migration to Azure](/azure/migrate/tutorial-assess-hyper-v) | Learn how to use the Azure Migrate discovery and assessment tool to assess discovered servers in your Hyper-V environment for migration to Azure. |
+| [Migrate Hyper-V VMs to Azure](/azure/migrate/tutorial-migrate-hyper-v) | This article demonstrates how to assess Hyper-V machines for migration to Azure and how to migrate them. |
 
 ### Remote Desktop Services and Azure Virtual Desktop
 
@@ -52,7 +52,7 @@ Specific migration scenarios require different approaches and tools. This articl
 
 ## Databases and data platforms
 
-### SQL Server workloads
+### SQL Server
 
 | Link | Description |
 |---|---|
@@ -77,33 +77,33 @@ Specific migration scenarios require different approaches and tools. This articl
 | [Migrate from Oracle to Azure SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide) | This article teaches you how to migrate your Oracle schemas to Azure SQL Managed Instance by using SSMA for Oracle. |
 | [Migrate from Oracle to Azure SQL on Azure Virtual Machines](/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide) | Learn how to migrate your Oracle schemas to SQL Server on Azure Virtual Machines by using SSMA for Oracle. |
 
-### Access
+### Microsoft Access
 
 | Link | Description |
 |---|---|
-| [Migrate from Access to Azure SQL](/azure/azure-sql/migration-guides/database/access-to-sql-database-guide) | Learn how to migrate your Microsoft Access database to Azure SQL Database by using SSMA for Access. |
+| [Migrate from Microsoft Access to Azure SQL Database](/azure/azure-sql/migration-guides/database/access-to-sql-database-guide) | Learn how to migrate your Access database to Azure SQL Database by using SSMA for Access. |
 
 ### Linux and open-source databases
 
 | Link | Description |
 |---|---|
 | [Migrate open-source databases to Azure](/training/paths/migrate-open-source-workloads/)| Learn how to migrate open-source workloads from PostgreSQL and MySQL databases to the equivalent services in Azure. |
-| [Migrate from MySQL to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) | Learn how to migrate your MySQL database to Azure SQL Database by using SSMA for MySQL. |
-| [Migrate PostgreSQL to Azure](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|You can use Azure Database Migration Service to migrate the databases from an on-premises PostgreSQL instance to Azure Database for PostgreSQL with minimal downtime to the application. |
+| [Migrate MySQL databases to Azure SQL](/azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide) | Learn how to migrate your MySQL database to Azure SQL Database by using SSMA for MySQL. |
+| [Migrate PostgreSQL databases to Azure](/azure/dms/tutorial-postgresql-azure-postgresql-online-portal)|You can use Azure Database Migration Service to migrate databases from an on-premises PostgreSQL instance to Azure Database for PostgreSQL with minimal downtime to the application. |
 | [Migrate Azure Database for MariaDB to Azure Database for MySQL](https://azure.microsoft.com/updates/azure-database-for-mariadb-will-be-retired-on-19-september-2025-migrate-to-azure-database-for-mysql-flexible-server/)|Azure Database for MariaDB is being retired. Learn how to migrate to Azure Database for MySQL. |
 
 ### Storage migration
 
 | Link | Description |
 |---|---|
-| [Storage migration overview](/azure/storage/common/storage-migration-overview) | This article focuses on storage migrations to Azure, including migration of unstructured data and block-based devices such as disks and storage area networks (SANs). |
-| [Tools for unstructured storage migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) | This article offers a comparison matrix of basic functionality in different tools that you can use for migration of unstructured data. |
+| [Storage migration overview](/azure/storage/common/storage-migration-overview) | This article focuses on storage migrations to Azure, including the migration of unstructured data and block-based devices such as disks and storage area networks (SANs). |
+| [Tools for unstructured storage migration](/azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison) | This article offers a comparison matrix of basic functionality in different tools that you can use for the migration of unstructured data. |
 
 ## Java applications
 
 | Link | Description |
 |---|---|
-| [Migration overview](/azure/developer/java/migration/migration-overview) | This migration guidance is designed to cover mainstream Java on Azure scenarios and to provide high-level planning suggestions and considerations. |
+| [Migration overview](/azure/developer/java/migration/migration-overview) | This migration guidance covers mainstream Java on Azure scenarios and provides high-level planning suggestions and considerations. |
 | [Migrate Spring Boot applications to Azure Spring Apps](/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-apps) | This article describes what you should be aware of when you migrate an existing Spring Boot application to run on Azure Spring Apps. |
 | [Migrate Spring Cloud applications to Azure Spring Apps](/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-apps) | This article describes what you should be aware of when you migrate an existing Spring Cloud application to run on Azure Spring Apps. |
 | [Migrate WildFly applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service) | This article describes what you should be aware of when you migrate an existing WildFly application to run on WildFly in an Azure Kubernetes Service container. |
@@ -138,7 +138,7 @@ Specific migration scenarios require different approaches and tools. This articl
 | [Migrate WebSphere applications to Azure Red Hat OpenShift](/azure/developer/java/migration/migrate-websphere-to-azure-redhat-openshift) | This article describes what you should be aware of when you migrate an existing WebSphere Application Server workload to IBM WebSphere Liberty or Open Liberty that runs on Azure Red Hat OpenShift. |
 | [Migrate WebSphere applications to Azure Virtual Machines](/azure/developer/java/migration/migrate-websphere-to-virtual-machines) | This article describes what you should be aware of when you migrate an existing WebSphere Application Server traditional application to run on Azure Virtual Machines. |
 | [Tutorial: Manually install IBM WebSphere Application Server Network Deployment traditional on Azure Virtual Machines](/azure/developer/java/migration/migrate-websphere-to-azure-vm-manually) | This tutorial shows you how to install traditional IBM WebSphere Application Server Network Deployment traditional and configure a WebSphere Application Server cluster on Azure Virtual Machines on GNU/Linux. |
-| [Migrate WebSphere applications to JBoss EAP on Azure App Service](/azure/developer/java/migration/migrate-websphere-to-jboss-eap-on-azure-app-service) | Learn what you should be aware of when you migrate an existing WebSphere application to run on Azure App Service by using JBoss EAP. |
+| [Migrate WebSphere applications to JBoss EAP on Azure App Service](/azure/developer/java/migration/migrate-websphere-to-jboss-eap-on-azure-app-service) | Learn what you should be aware of when you migrate an existing WebSphere application to run on Azure App Service by using Red Hat JBoss Enterprise Application Platform (EAP). |
 | [Migrate WebSphere applications to WildFly on Azure Kubernetes Service](/azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service) | This article describes what you should be aware of when you migrate an existing WebSphere application to run on WildFly in an Azure Kubernetes Service container. |
 
 ### JBoss EAP to Azure
@@ -155,7 +155,7 @@ Specific migration scenarios require different approaches and tools. This articl
 | Link | Description |
 |---|---|
 | [Migrate an SAP platform to Azure](/azure/cloud-adoption-framework/scenarios/sap/migrate) | SAP workloads require different tools and processes to replicate and deploy their assets than what Azure Migrate traditionally offers. Learn more in this adoption scenario. |
-| [Learning path for Migrate SAP workloads to Azure](/training/paths/migrate-sap-workloads-to-azure/) | These Microsoft Learn training modules explore migrating SAP workloads to Azure, including databases that are larger than 20 terabytes (TB). |
+| [Learning path for migrating SAP workloads to Azure](/training/paths/migrate-sap-workloads-to-azure/) | These Microsoft Learn training modules explore migrating SAP workloads to Azure, including databases that are larger than 20 terabytes (TB). |
 | [SAP on Azure migration](https://azure.microsoft.com/solutions/sap/migration/) | Learn how to migrate your SAP estate to Azure, with resources to support your journey at every step. |
 | [Migrate from SAP ASE to Azure SQL](/azure/azure-sql/migration-guides/database/sap-ase-to-sql-database) | Learn how to migrate your SAP Adaptive Server Enterprise (ASE) databases to Azure SQL Database by using SSMA for SAP ASE. |
 
@@ -169,9 +169,9 @@ Specific migration scenarios require different approaches and tools. This articl
 
 | Link | Description |
 |---|---|
-| [Design and performance for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration) | Learn how to migrate from Teradata to Azure Synapse Analytics. |
-| [Design and performance for IBM Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration) | Learn how to migrate from IBM Netezza to Azure Synapse Analytics. |
-| [Design and performance for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration) | Learn how to migrate from Oracle to Azure Synapse Analytics. |
+| [Design and performance considerations for Teradata migrations](/azure/synapse-analytics/migration-guides/teradata/1-design-performance-migration) | Learn how to migrate from Teradata to Azure Synapse Analytics. |
+| [Design and performance considerations for IBM Netezza migrations](/azure/synapse-analytics/migration-guides/netezza/1-design-performance-migration) | Learn how to migrate from IBM Netezza to Azure Synapse Analytics. |
+| [Design and performance considerations for Oracle migrations](/azure/synapse-analytics/migration-guides/oracle/1-design-performance-migration) | Learn how to migrate from Oracle to Azure Synapse Analytics. |
 
 ## Multitenant migration
 
