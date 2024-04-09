@@ -158,7 +158,7 @@ For further details, refer to the traffic flow section.
 | 15 | Virtual Network 1 | &#8594;| Internet | Yes, traffic is inspected at Hub 1 firewall| Via Hub 1 firewall|
 | 16 | Virtual Network 2 | &#8594;| Internet | Yes, traffic is inspected at Hub 2 firewall| Via Hub 2 firewall|
 
-**The traffic flow described below is only valid if there is an outage affecting a hub. For instance, if the local regional hub of Azure VMware Solution experiences an outage, internet traffic will be rerouted to the cross-regional hub for connectivity.**
+**The traffic flow described below is only valid if there is an outage affecting a local regional hub. For instance, if the local regional hub of Azure VMware Solution experiences an outage, internet traffic will be rerouted to the cross-regional hub for internet connectivity.**
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? | Internet Breakout |
 | - | -------------- | -------- | ---------- | ---------- | ---------- |
