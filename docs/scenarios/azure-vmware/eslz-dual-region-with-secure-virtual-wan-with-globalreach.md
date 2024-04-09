@@ -155,6 +155,7 @@ In summary, Azure VMware Solution Private Clouds prioritize internet access via 
 
 ## Next steps
 
-- For more information on Azure VMware Solution network features, see [Azure VMware Solution networking and interconnectivity concepts](/azure/azure-VMware/concepts-networking).
-- For more information on internet connectivity for Azure VMware Solution, see [Internet connectivity design considerations](/azure/azure-VMware/concepts-design-public-internet-access).
-- For more information on Azure VMware Solution network topologies, see [Example architectures for Azure VMware Solutions](/azure/cloud-adoption-framework/scenarios/azure-VMware/example-architectures)
+- For more information on Virtual WAN hub configuration, see [About virtual hub settings](/azure/virtual-wan/hub-settings).
+- For more information on how to configure Azure Firewall in a Virtual Hub, see [Configure Azure Firewall in a Virtual WAN hub](/azure/virtual-wan/howto-firewall).
+- For more information on how to configure the Palo Alto Next Generation SAAS firewall on Virtual WAN, see [Configure Palo Alto Networks Cloud NGFW in Virtual WAN](/azure/virtual-wan/how-to-palo-alto-cloud-ngfw).
+- For more information on Virtual WAN hub routing intent configuration, see [Configure routing intent and policies through Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva).
