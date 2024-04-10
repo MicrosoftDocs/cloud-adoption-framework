@@ -1,5 +1,5 @@
 ---
-title: Use the Cloud Adoption Framework to migrate a workload to the cloud
+title: Migrate overview
 description: Prepare for a successful migration to Azure by using an iterative process to assess, deploy, and release workloads.
 author: Zimmergren
 ms.author: tozimmergren
@@ -7,7 +7,7 @@ ms.date: 04/09/2024
 ms.topic: conceptual
 ---
 
-# Use the Cloud Adoption Framework to migrate a workload to the cloud
+# Migrate overview
 
 This article describes how to use the Cloud Adoption Framework for Azure to migrate a workload to the cloud and offers guidance for a smooth transition. The migration process includes four stages: prepare, assess, deploy, and release. This approach is vendor-neutral, so you can migrate workloads to any cloud service.
 
