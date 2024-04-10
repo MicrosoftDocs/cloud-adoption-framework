@@ -26,6 +26,8 @@ The following video discusses the solution that's described in this article and 
 
 Baseline metric, activity log, and log query alerts are available for landing zone platform components and other selected landing zone components. These alerts ensure consistent alerting and monitoring for your Azure landing zone. They're based on Microsoft-recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response. Use the following guidance to achieve real-time visibility into the performance, utilization, and security of your platform landing zone implementation. Proactively address issues, optimize resource allocation, and ensure a reliable and secure environment.
 
+![amba-policy-initiative-flow-v3](media/management-monitor/amba-policy-initiative-flow-v3.png)
+
 The following subsets of Azure components have one or more alerts defined:
 
 - Azure ExpressRoute
