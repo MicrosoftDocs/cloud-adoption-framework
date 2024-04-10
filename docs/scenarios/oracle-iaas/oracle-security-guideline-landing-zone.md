@@ -77,7 +77,7 @@ Network security is the fundamental component of a layered security approach for
 
 - **Use NSGs**: You can use an Azure NSG to filter network traffic between Azure resources in an Azure virtual network. An NSG contains security rules that allow or deny inbound network traffic to Azure resources or outbound network traffic from Azure resources. NSGs can filter the traffic between on-premises networks to and from Azure by using IP address ranges and specific ports. For more information, see [Network security group](/azure/virtual-network/network-security-groups-overview).
 
-The following table lists inbound port assignments for Oracle database VMs:
+  The following table lists inbound port assignments for Oracle database VMs:
 
   | Protocol | Port number | Service name | Comment|
   | --- | --- | --- | ---|
@@ -110,7 +110,7 @@ You can also create custom policies to address your organization’s requirement
 
 - **Encrypt data in transit**: Applies to the state of data moving from one location to another and usually across a network connection. Data in transit can be encrypted in several ways, depending on the nature of the connection. By default, you must manually enable data encryption for data in transit inside Azure datacenters. For more information in the Azure documentation, see [Encryption of data in transit](/azure/security/fundamentals/encryption-overview#encryption-of-data-in-transit).
 
-We recommend that you use the Oracle native network encryption and data integrity features. For more information, see [Configuring Oracle database native network encryption and data integrity](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/configuring-network-data-encryption-and-integrity.html#GUID-7F12066A-2BA1-476C-809B-BB95A3F727CF).
+  - We recommend that you use the Oracle native network encryption and data integrity features. For more information, see [Configuring Oracle database native network encryption and data integrity](https://docs.oracle.com/en/database/oracle/oracle-database/19/dbseg/configuring-network-data-encryption-and-integrity.html#GUID-7F12066A-2BA1-476C-809B-BB95A3F727CF).
 
 - **Encrypt data at rest**: You must also protect data when it's written to storage, while it's at rest. Confidential data can be exposed or altered when storage media is removed or accessed during use. Therefore, data should be encrypted to ensure that only authorized and authenticated users can view or modify it. Azure provides three layers of encryption at rest.
   - All data is encrypted at the lowest level when it's persisted into any Azure Storage device with [Storage service-side encryption](/azure/storage/common/storage-service-encryption#about-azure-storage-service-side-encryption). Service-side encryption ensures that it isn't necessary to erase or destroy the storage media when an Azure tenant is done using storage. Data that's always encrypted at rest can be lost permanently if the platform-managed key is discarded. Service-side encryption is quicker and more secure than trying to delete all data from storage.
