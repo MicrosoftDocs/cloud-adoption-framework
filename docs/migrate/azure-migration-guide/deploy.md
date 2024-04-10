@@ -208,7 +208,7 @@ For more information, see [Carbonite](https://www.carbonite.com/data-protection/
 
 Movere, acquired by Microsoft in 2019, is a discovery solution that provides the required data and insights to plan cloud migrations and continuously optimize, monitor, and analyze IT environments with confidence.
 
-For more information, see [Movere](https://www.movere.io).
+For more information, see [What's new in Movere](/movere/whats-new).
 
 ### Azure Cosmos DB partners
 
