@@ -29,13 +29,7 @@ Azure CNI is a network model designed for advanced networking. It provides full 
 
 Azure CNI Overlay is designed to address IP address shortages and simplify network configuration. It's suitable for scenarios where scaling up to 1000 nodes and 250 pods per node is sufficient, and an additional hop for pod connectivity is acceptable. AKS egress requirements can also be met with Azure CNI Overlay.
 
-The table below summarizes the recommended use cases for each network model.
-
-| Network Model    | When to use                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Kubenet          | - IP address space conservation is a priority<br>- Simple configuration<br>- Fewer than 400 nodes per cluster<br>- Kubernetes internal or external load balancers sufficient for reaching pods from outside the cluster<br>- Manually managing and maintaining user-defined routes is acceptable |
-| Azure CNI        | - Full virtual network connectivity is required for pods<br>- Advanced AKS features (such as virtual nodes) are needed<br>- Sufficient IP address space is available<br>- Pod to pod and pod to VM connectivity needed<br>- External resources need to reach pods directly<br>- AKS network policies are required |
-| Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Simpler network configuration <br>- AKS egress requirements can be met |
+For a summary of recommended use cases per network model, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).
 
 In addition, when designing your AKS cluster, it's important to carefully plan the IP addressing and size of the virtual network subnet to support scaling. Virtual nodes can be used for quick cluster scaling, but there are some known limitations.
 
@@ -145,22 +139,4 @@ Traffic between the AKS pods and the private endpoints per default won't go thro
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer.
 - When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure     Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it's essential to understand the capabilities and characteristics of each model.
 
-The following table compares the features of the three network models in AKS: Kubenet, Azure CNI, and Azure CNI Overlay.
-
-| Capability                                                                 | Kubenet                    | Azure CNI                  | Azure CNI Overlay         |
-| -------------------------------------------------------------------------- | -------------------------- | -------------------------- | ------------------------- |
-| Deploy cluster in existing or new virtual network                          | Supported - UDRs manually applied | Supported                  | Supported                 |
-| Pod-pod connectivity                                                       | Supported                  | Supported                  | Supported                 |
-| Pod-VM connectivity; VM in the same virtual network                        | Works when initiated by pod | Works both ways            | Works when initiated by pod           |
-| Pod-VM connectivity; VM in peered virtual network                          | Works when initiated by pod | Works both ways            | Works when initiated by pod        |
-| On-premises access using VPN or Express Route                              | Works when initiated by pod | Works both ways            | Works when initiated by pod        |
-| Access to resources secured by service endpoints                           | Supported                  | Supported                  | Supported                 |
-| Expose Kubernetes services using a load balancer service, App Gateway, or ingress controller | Supported                  | Supported                  | Supported                 |
-| Default Azure DNS and Private Zones                                        | Supported                  | Supported                  | Supported                 |
-| Support for Windows node pools                                             | Not Supported              | Supported                  | Supported                 |
-| Cluster scale                                                              | 400 nodes and 250 pods/node | 1000 nodes and 250 pods/node | 1000 nodes and 250 pods/node |
-| Network configuration                                                      | Complex - requires route tables and UDRs on cluster subnet for pod networking | Simple - no additional configuration required for pod networking | Simple - no additional configuration required for pod networking |
-| Pod connectivity performance                                               | Additional hop adds minor latency | Performance on par with VMs in a VNet | Performance on par with VMs in a VNet |
-| Kubernetes Network Policies                                                | Calico                     | Azure Network Policies, Calico, Cilium | Azure Network Policies, Calico, Cilium      |
-| OS platforms supported                                                     | Linux only                 | Linux and Windows Server 2022 | Linux and Windows Server 2022 |
-| Application Gateway as an Ingress Controller (AGIC)                        | Supported                  | Supported                     | Not supported
+For a feature comparison between the three network models in AKS; Kubenet, Azure CNI, and Azure CNI Overlay, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).

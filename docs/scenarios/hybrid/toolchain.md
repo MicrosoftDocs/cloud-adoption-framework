@@ -36,6 +36,8 @@ This article series helps to integrate these tools into relevant processes that 
   - [Logic Apps](/azure/app-service/overview-arc-integration?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Event Grid](/azure/event-grid/kubernetes/?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Azure API Management gateway](/azure/api-management/how-to-deploy-self-hosted-gateway-azure-arc?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) is an Azure Arc service that simplifies hybrid IT management by integrating Azure's security, governance, and management features with VMware vSphere infrastructure.
+- [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) lets System Center users manage their VMM environment and VMs through the Azure portal, integrating Azure's security, governance, and management features across both platforms.
 
 ## Deploy hybrid and multicloud solutions
 

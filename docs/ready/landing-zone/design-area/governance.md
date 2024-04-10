@@ -1,143 +1,145 @@
 ---
-title: Azure governance design area guidance
-description: Design area guidance for governing your Azure environment
-author: timwarner-msft
-ms.author: pnp
+title: Azure governance design area
+description: Explore the design area for governing your Azure environment to establish tooling to support cloud governance, compliance auditing, and automated guardrails.
+author: paulgrimley
+ms.author: paulgr
 ms.reviewer: ssumner
-ms.date: 06/21/2022
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
 
 # Design area: Azure governance
 
-Azure governance establishes the tooling needed to support cloud governance, compliance auditing, and automated guardrails.
+Use Azure governance to establish the tooling that you need to support cloud governance, compliance auditing, and automated guardrails.
 
 ## Design area review
 
-**Involved roles or functions:** Azure governance is led by [cloud governance](../../../organize/cloud-governance.md). The [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) might be required to define and implement some technical requirements. Governance focuses on the enforcement of operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md) or [cloud operations](../../../organize/cloud-operations.md).
+**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
 
-**Scope:** Review decisions made during reviews of [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design areas. The team might compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions might help determine what can be audited or enforced. Review decisions might evaluate what policies can be automatically deployed.
+**Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 
-**Out of scope:** Azure governance establishes the foundation for networking. However, it doesn't address compliance-related articles such as advanced network security or automated guardrails to enforce networking decisions. These networking decisions might be addressed when reviewing compliance design areas related to [security](./security.md) and [governance](./governance.md). Delaying the discussions might allow the cloud platform team to address initial networking requirements before addressing more complex articles.
+**Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
 
-**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your new Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+**New (greenfield) cloud environment:** To start your cloud journey, [create a small set of subscriptions](../../azure-best-practices/initial-subscriptions.md). You can use Bicep deployment templates to create your new Azure landing zones. For more information, see [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
-**Existing (brownfield) cloud environment:** Consider the following if you're interested in applying proven-practice Azure governance principles to existing Azure environments:
+**Existing (brownfield) cloud environment:** If you want to apply proven-practice Azure governance principles to existing Azure environments, consider the following guidance:
 
-- Review our guidance for establishing a [management baseline](./management.md) for your hybrid or multicloud environment
-- Implement [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
-- Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state
-- Consider [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
+- Establish a [management baseline](./management.md) for your hybrid or multicloud environment.
+
+- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features, like billing scopes, budgets, and alerts, to ensure that you don't exceed your expense limit.
+- Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments and trigger remediation tasks to bring existing Azure resources into a compliant state.
+- Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure access request workflows, access assignments, reviews, and expiration.
 - Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
-The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains many Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice governance guidance integrated within them.
+The [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
 
-For instance, consider using the [ALZ Default Policy Assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
+Consider using the [Azure landing zone default policy assignments](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults) Bicep module to get a head start on ensuring compliance for your Azure environments.
 
-For more information on working in brownfield cloud environments, see [Brownfield environment considerations](../brownfield-considerations.md).
+For more information, see [Brownfield environment considerations](../brownfield-considerations.md).
 
 ## Design area overview
 
-An organizations cloud adoption journey starts with strong controls to government environments.
+Your organization's cloud adoption journey starts with strong controls for government environments.
 
 Governance provides mechanisms and processes for maintaining control over platforms, applications, and resources in Azure.
 
-![Landing zone image](../../enterprise-scale/media/lz-design.png)
+![Diagram that shows the landing zone governance design.](../../enterprise-scale/media/lz-design.png)
 
-The design area review explores the considerations and recommendations that help you make informed decisions as you plan your landing zone.
+Explore the following considerations and recommendations to make informed decisions as you plan your landing zone.
 
-The governance design area focuses on the design decisions in the landing zone. Also, the [Govern methodology](../../../govern/index.md) of the Cloud Adoption Framework gives guidance for governance processes and tools.
-
-The Govern methodology consists of five disciplines:
-
-|Discipline|Context|
-|-|-|
-| Cost management| Explore guidance to cost reporting control techniques|
-| Security baseline| Explore further in the [security design area](./security.md)|
-| Resource consistency| Explore guidance for naming and tagging resources in the environment governance |
-| Identity baseline| Covered in depth in the [identity and access management](./identity-access.md) design area|
-| Deployment acceleration| Explore further in the [platform automation and DevOps](./platform-automation-devops.md) design area|
+The governance design area focuses on design decisions for your landing zone. For information about governance processes and tools, see [Govern in the Cloud Adoption Framework for Azure](../../../govern/index.md).
 
 ## Azure governance considerations
 
-Azure policy ensures security and compliance for enterprise technical estates. Azure policy might enforce vital management and security conventions across Azure platform services. Azure policy supplements Azure role-based access control, which controls authorized users actions. Also, Azure Cost Management + Billing might help support your ongoing governance cost and spending in Azure, or other multicloud environments.
+Azure Policy helps ensure security and compliance for enterprise technical estates. Azure Policy can enforce vital management and security conventions across Azure platform services. Azure Policy supplements Azure role-based access control (RBAC), which controls actions for authorized users. Cost Management can also help support your ongoing governance cost and spending in Azure or other multicloud environments.
 
-### Deployment acceleration considerations
+### Deployment considerations
 
-Change advisory review boards might hinder an organizations innovation and business agility. Azure Policy increases workload efficiency by replacing such reviews with automated guardrails and adherence audits.
+Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
-- Determine what Azure policies are needed based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a stating point.
+- Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
+
 - Use the [standards-based blueprint samples](/azure/governance/blueprints/samples) to consider other policies that might align to your business requirements.
-- Enforce networking, identity, management, and security conventions are often automated.
-- Manage and create policy assignments by using policy definitions, which might be reused at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
-- Ensure continuous compliance with compliance reporting and auditing.
-- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
-- Understand regulatory compliance policies. The policies might include HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
+- Enforce automated networking, identity, management, and security conventions.
+- Use policy definitions to manage and create policy assignments, and reuse them at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
+- Incorporate compliance reporting and auditing to ensure continuous compliance.
+- Understand that [Azure Policy has limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), such as the restriction of definitions at any particular scope.
+- Understand regulatory compliance policies, such as HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
 
 ### Cost management considerations
 
-- How is the organizations cost and recharging model structured? What are the key data points required to accurately see cloud services spend?
-- Finding the structure of tags that fits your cost and recharging model might help track your cloud spend.
-- Azure pricing calculator can be used to estimate the expected monthly costs for using any combination of Azure products.
-- Azure Hybrid Benefit might help reduce the costs of running your workloads in the cloud. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. It also applies to Red Hat and SUSE Linux subscriptions.
-- Azure Reservations helps you save money by committing to one-year or three-year plans for multiple products. Committing let's you get resource discounts, which might significantly reduce your resource costs by up to 72% from pay-as-you-go prices.
-- Azure savings plan for compute is our most flexible savings plan and generates savings up to 65 percent on pay-as-you-go prices. Pick a one-year or three-year commitment that will apply to compute services regardless of region, instance size, or operating system. Eligible compute services include virtual machines, dedicated hosts, container instances, Azure premium functions, and Azure app services. You can combine an Azure savings plan with Azure Reservations to optimize compute cost and flexibility. For more information, see [Azure savings plan](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview).
-- Azure policies can be used to allow specific regions, resource types, and resource SKUs.
-- Azure Storage lifecycle management offers a rule-based policy. The policy might be used to move blob data to the appropriate access tiers, or to expire data at the end of the data lifecycle.
-- Azure dev/test subscriptions give you access to select Azure services for nonproduction workloads at discounted pricing.
-- Use autoscaling to save costs by dynamically allocating and de-allocating resources to match your performance needs.
-- Using Azure spot virtual machines allows you to take advantage of our unused capacity at a significant cost savings. Azure spot virtual machines are great for workloads that can handle interruptions. For example, batch processing jobs, dev/test environments, large compute workloads, and more.
-- Some Azure services are free for 12 months while some other services are always free. Selecting the right Azure services helps you reduce costs.
-- Selecting the right compute service for your application can help with cost efficiency. Azure offers many ways to host your code.
+- Consider the structure of your organization's cost and recharging model. Determine the key data points that accurately convey your cloud services spend.
 
-### Resource consistency considerations
+- Choose the structure of tags that fits your cost and recharging model to help track your cloud spend.
+- Use the Azure pricing calculator to estimate the expected monthly costs for using Azure products.
+- Get Azure Hybrid Benefit to help reduce the cost of running your workloads in the cloud. You can use your on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure. You can also use Red Hat and SUSE Linux subscriptions.
+- Get Azure reservations and commit to one-year or three-year plans for multiple products. Reservation plans provide resource discounts, which can significantly reduce your resource costs by up to 72% compared to pay-as-you-go prices.
+- Get the [Azure savings plan for compute](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) to save up to 65% compared to pay-as-you-go prices. Pick a one-year or three-year commitment that applies to compute services, regardless of your region, instance size, or operating system. Pick a plan for compute components, like virtual machines, dedicated hosts, container instances, Azure premium functions, and Azure app services. Combine an Azure savings plan with Azure reservations to optimize compute cost and flexibility.
+- Use Azure policies to allow specific regions, resource types, and resource SKUs.
+- Use the rule-based policy of Azure Storage lifecycle management to move blob data to the appropriate access tiers or to expire data at the end of the data lifecycle.
+- Use Azure dev/test subscriptions to get a discount on access to select Azure services for nonproduction workloads.
+- Use automatic scaling to dynamically allocate and deallocate resources to match your performance needs, which saves money.
+- Use Azure Spot Virtual Machines to take advantage of unused compute capacity at a low cost. Spot Virtual Machines is great for workloads that can handle interruptions, for example batch-processing jobs, dev/test environments, and large-compute workloads.
+- Select the right Azure services to help reduce costs. Some Azure services are free for 12 months and some are always free.
+- Select the right compute service for your application to help improve cost efficiency. Azure offers many ways to host your code.
 
-- What are the groups of resources in your environment? These groups can share configuration characteristics that might be required to help stay consistent.
-- Is the application or workload subscription design the most appropriate for your operation needs?
-- Are there groups of resources that should share a common lifecycle?
-- Are there groups of resources that should share common access constraints (such as Role-based access control)?
-- Are there standard resource configurations within your organization that might be used to ensure a consistent baseline configuration?
+### Resource management considerations
 
-### Security baseline considerations
+- Determine if the groups of resources in your environment can share required configurations, a common lifecycle, or common access constraints (such as RBAC) to help provide consistency.
 
-- What tools and guardrails need to be enforced across the environment as part of a security baseline?
-- Who might be notified when deviations are found?
-- Consider using Azure Policy to enforce tools (such as Microsoft Defender for Cloud, Microsoft Defender for Cloud).
-- Consider using Azure Policy to enforce guardrails (such as the Microsoft cloud security benchmark).
+- Choose an application or workload subscription design that's appropriate for your operation needs.
+- Use standard resource configurations within your organization to ensure a consistent baseline configuration.
+
+### Security considerations
+
+- Enforce tools and guardrails across the environment as part of a security baseline.
+
+- Notify the appropriate people when you find deviations.
+- Consider using Azure Policy to enforce tools, such as Microsoft Defender for Cloud, or guardrails, such as the Microsoft cloud security benchmark.
 
 ### Identity management considerations
 
-- Who might have access to audit logs for identity and access management?
-- Who might be notified when suspicious sign-in events occur?
-- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports#:~:text=%20There%20are%20two%20types%20of%20activity%20reports,tasks%20reported%20by%20the%20audit%20logs...%20More%20) to govern activity.
-- Consider the logs from Microsoft Entra ID, which might be sent to the central Log Analytics workspace for the platform.
-- Explore the capabilities of [Microsoft Entra access reviews](/azure/active-directory/governance/access-reviews-overview) in your landing zone governance approach.
-- Explore the capabilities of [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) in your landing zone governance approach.
+- Determine who has access to audit logs for identity and access management.
+
+- Notify the appropriate people when suspicious sign-in events occur.
+- Consider using [Microsoft Entra reports](/azure/active-directory/reports-monitoring/overview-reports) to govern activity.
+- Consider sending Microsoft Entra ID logs to the central Azure Monitor Logs workspace for the platform.
+- Explore Microsoft Entra ID Governance features, like [access reviews](/azure/active-directory/governance/access-reviews-overview) and [entitlement management](/azure/active-directory/governance/entitlement-management-overview).
+
+### Non-Microsoft tooling
+
+- Use [AzAdvertizer](https://www.azadvertizer.net) to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+
+- Use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to keep track of your technical governance estate. You can use the policy version checker feature for Azure landing zones to keep your environment up to date with the latest Azure landing zone policy release state.
 
 ## Azure governance recommendations
 
 ### Deployment acceleration recommendations
 
-- Identify required Azure tags and use the append policy mode to enforce usage. Use the [tagging strategy](../../azure-best-practices/resource-tagging.md) article as a starting point
+- Identify required Azure tags and use the append policy mode to enforce usage. For more information, see [Define your tagging strategy](../../azure-best-practices/resource-tagging.md).
+
 - Map regulatory and compliance requirements to Azure Policy definitions and Azure role assignments.
-- Establish Azure Policy definitions at the top-level root management group as they might be assigned at inherited scopes.
+- Establish Azure Policy definitions at the top-level root management group because they might be assigned at inherited scopes.
 - Manage policy assignments at the highest appropriate level with exclusions at bottom levels, if necessary.
 - Use Azure Policy to control resource provider registrations at the subscription or management group levels.
 - Use built-in policies to minimize operational overhead.
-- Assign the built-in Resource Policy Contributor role at a particular scope to enable application-level governance.
-- Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
+- Assign the built-in Resource Policy Contributor role at a specific scope to enable application-level governance.
+- Limit the number of Azure Policy assignments at the root management group scope to avoid managing exclusions at inherited scopes.
 
 ### Cost management recommendations
 
-- Use Azure Cost Management + Billing to implement financial oversight on resources in your environment.
-- Use tags in Azure to append metadata to resources, which might enable granular analysis of spend (such as cost center or project name).
+- Use Cost Management to implement financial oversight on resources in your environment.
+
+- Use tags, such as the cost center or project name, to append the resource metadata. This approach helps enable granular analysis of expenses.
 
 ## Azure governance in the Azure landing zone accelerator
 
-The Azure landing zone accelerator implementation includes capabilities to help organizations efficiently get mature governance controls.
+The Azure landing zone accelerator provides organizations with mature governance controls.
 
-For example:
+For example, you can implement:
 
-- A management group hierarchy that groups resources by function or workload type might encourage best practices for resource consistency.
-- A rich set of Azure policies might enable governance controls at management group level to ensure all resources are in scope.
+- A management group hierarchy that groups resources by function or workload type. This approach encourages resource consistency.
+
+- A rich set of Azure policies that enables governance controls at the management group level. This approach helps verify that all resources are in scope.
+
