@@ -1,47 +1,52 @@
 ---
-title: Governance in the Microsoft Cloud Adoption Framework for Azure
-description: Use the Cloud Adoption Framework for Azure to learn to assess existing policies, build an initial governance foundation, and iteratively add governance tools.
-author: martinekuan
-ms.author: martinek
-ms.date: 09/08/2021
+title: Govern overview
+description: Learn to establish, maintain, and automate cloud governance in Azure. Mitigate risks and streamline cloud use.
+author: stephen-sumner
+ms.author: ssumner
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
 
-# Governance in the Microsoft Cloud Adoption Framework for Azure
+# Govern overview
 
-Putting a business in the cloud creates new paradigms for the technologies that support that business. These new paradigms change how those technologies are adopted, managed, and governed. When you can delete and rebuild an entire virtual datacenter with a line of code that's executed by an unattended process, it's time to rethink traditional approaches. This reasoning is especially true for governance.
+The CAF Govern methodology provides a structured approach for establishing and optimizing cloud governance in Azure. The guidance is relevant for organizations across any industry. It covers essential categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and artificial intelligence (AI).
 
-Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. The level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and the nature of the digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. Use the following exercises to help you start building your initial governance foundation:
+Cloud governance is how you control cloud use across your organization. Cloud governance sets up guardrails that regulate cloud interactions. These guardrails are a framework of policies, procedures, and tools you use to establish control. Policies define acceptable and unacceptable cloud activity, and the procedures and tools you use ensure all cloud usage aligns with those policies. Successful cloud governance prevents all unauthorized or unmanaged cloud usage.
 
-1. [Establish your methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution.
+:::image type="content" source="./images/govern.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/govern.svg" border="false":::
 
-1. [Use the governance benchmark tool](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework.
+## Why govern the cloud?
 
-1. [Establish an initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).
+Cloud governance is foundational to defining and sustaining the productive use of the cloud. Effective cloud governance regulates all cloud use, mitigates risks, and streamlines cloud interactions across the organization. It aligns cloud use with the broader cloud strategy and helps you reach business goals with fewer setbacks. Without cloud governance, your organization might encounter risks that cloud governance could prevent.
 
-1. [Improve your initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state.
+## How to govern the cloud?
 
-## Goal of this content
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The CAF Govern methodology divides cloud governance into five steps. Complete all five steps to establish cloud governance and regularly iterate on steps 2-5 to maintain cloud governance over time:
 
-The governance guide content serves two purposes:
+1. *Build a governance team*: Select a team of individuals to be responsible for cloud governance. The cloud governance team defines and maintains cloud governance policies while reporting on the overall progress of cloud governance.
 
-- Provides examples of actionable governance guides that represent common experiences that customers often find. Each example encapsulates business risks, corporate policies for risk mitigation, and design guidance for implementing technical solutions. Although the design guidance is specific to Azure, you can apply other content in the Cloud Adoption Framework documentation in a cloud-agnostic or multicloud approach.
+2. *Assess cloud risks*: Evaluate and prioritize potential risks associated with the use of the cloud. The risk assessment should identify risks unique to your organization. Consider all categories of risk, such as regulatory compliance, security, operations, cost, data, resource management, and AI risks. Use Azure tools to help [assess cloud risks](./assess-cloud-risks.md#azure-facilitation-identifying-cloud-risks).
 
-- Helps you create personalized governance solutions that meet various business needs. These needs include the governance of multiple public clouds through detailed guidance on the development of corporate policies, processes, and tooling.
+3. *Document cloud governance policies*: Define the cloud governance policies that dictate the acceptable use of the cloud. These cloud governance policies set out the rules and guidelines for cloud usage to minimize the identified risks.
 
-This content is intended for use by the cloud governance team. It's also relevant to cloud architects who need to develop a strong foundation in cloud governance.
+4. *Enforce cloud governance policies*: Enforce compliance with the cloud governance policies using automated tools or manual procedures. The goal is to ensure that the use of cloud services is in line with the established cloud governance policies. Use Azure tools to help [enforce cloud governance policies](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 
-## Intended audience
+5. *Monitor cloud governance*: Monitor cloud use and teams responsible for governance to ensure they're compliant with the cloud governance policies. Use Azure tools to help [monitor cloud governance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-monitoring) and [set up alerts for noncompliance](./monitor-cloud-governance.md#azure-facilitation-configuring-cloud-governance-alerts).
 
-The content in the Cloud Adoption Framework documentation affects the business, technology, and culture of enterprises. Content in the governance guides interacts heavily with IT security, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects that use this guidance. Facilitation with these teams might be a one-time effort or ongoing.
+## Cloud governance checklist
 
-The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect advance the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
+Use the cloud governance checklist to see all the tasks for each cloud governance step. Use the links to quickly navigate to the guidance you need.
 
-Each section of the Cloud Adoption Framework represents a different specialization of the cloud architect role. This governance section is designed for cloud architects who want to mitigate or reduce technical risks. Some cloud providers refer to these specialists as *cloud custodians*, but we prefer *cloud guardians* or, collectively, the *cloud governance team*. The actionable governance guides show how the composition and role of the cloud governance team might change over time.
+| &nbsp; | Cloud governance step | Cloud governance tasks |
+|---|---|---|
+|&#9744; | [Build a cloud governance team](build-cloud-governance-team.md). | &#9744; [Define the functions of the cloud governance team](build-cloud-governance-team.md#define-the-functions-of-the-cloud-governance-team). <br> &#9744; [Select the members of the cloud governance team](build-cloud-governance-team.md#select-the-members-of-the-cloud-governance-team). <br> &#9744; [Define the authority of the cloud governance team](build-cloud-governance-team.md#define-the-authority-of-the-cloud-governance-team). <br> &#9744; [Define the scope of the cloud governance team](build-cloud-governance-team.md#define-the-scope-of-the-cloud-governance-team). |
+|&#9744; | [Assess cloud risks](./assess-cloud-risks.md). | &#9744; [Identify cloud risks](assess-cloud-risks.md#identify-cloud-risks). <br> &#9744; [Analyze cloud risks](assess-cloud-risks.md#analyze-cloud-risks). <br> &#9744; [Document cloud risks](assess-cloud-risks.md#document-cloud-risks). <br> &#9744; [Communicate cloud risks](assess-cloud-risks.md#communicate-cloud-risks). <br> &#9744; [Review cloud risks](./assess-cloud-risks.md#review-cloud-risks). |
+|&#9744; | [Document cloud governance policies](document-cloud-governance-policies.md). | &#9744; [Define an approach for documenting cloud governance policies](document-cloud-governance-policies.md#define-an-approach-for-documenting-cloud-governance-policies). <br> &#9744; [Define cloud governance policies](document-cloud-governance-policies.md#define-cloud-governance-policies). <br> &#9744; [Distribute cloud governance policies](document-cloud-governance-policies.md#distribute-cloud-governance-policies). <br> &#9744; [Review cloud governance policies](document-cloud-governance-policies.md#review-cloud-governance-policies). |
+|&#9744; | [Enforce cloud governance policies](enforce-cloud-governance-policies.md). | &#9744; [Define an approach for enforcing cloud governance policies](enforce-cloud-governance-policies.md#define-an-approach-for-enforcing-cloud-governance-policies). <br> &#9744; [Enforce cloud governance policies automatically](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-automatically). <br> &#9744; [Enforce cloud governance policies manually](enforce-cloud-governance-policies.md#enforce-cloud-governance-policies-manually). <br> &#9744; [Review policy enforcement](enforce-cloud-governance-policies.md#review-policy-enforcement). |
+|&#9744; | [Monitor cloud governance](monitor-cloud-governance.md). | &#9744; [Configure cloud governance monitoring](monitor-cloud-governance.md#configure-cloud-governance-monitoring). <br> &#9744; [Configure cloud governance alerts](monitor-cloud-governance.md#configure-cloud-governance-alerts). <br> &#9744; [Develop a remediation plan](monitor-cloud-governance.md#develop-a-remediation-plan). <br> &#9744; [Audit cloud governance regularly](monitor-cloud-governance.md#audit-cloud-governance-regularly). |
 
-## Use this guide
+## Next step
 
-Read the Govern methodology content from start to finish to help you develop a robust cloud governance strategy in parallel with cloud implementation. The guidance walks you through the theory and implementation of this strategy.
-
-For an overview on the theory and quick access to Azure implementation, see the [cloud governance guides overview](./guides/index.md). By using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts.
+> [!div class="nextstepaction"]
+> [Build a cloud governance team](build-cloud-governance-team.md)
