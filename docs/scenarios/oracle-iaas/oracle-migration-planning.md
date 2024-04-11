@@ -26,8 +26,8 @@ Review the migration resources to define your Oracle to Azure migration process,
 
 Specifically for Oracle Database@Azure you should:
 
-- **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Oracle Database@Azure](https://www.oracle.com/cloud/azure/oracle-database-at-azure/).
-- **Consider database changes required** as moving from on-premises to Oracle Database@Azure might require some changes to the database tablespaces and/or schema. For more information, see [Migrating Oracle Databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/considerations-migrating-premises-database-dbcs.html#GUID-5F6B4B4F-5B1C-4F1C-9F1A-5F6F6F6F6F6F).
+- **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Overview - Oracle Database@Azure](/azure/oracle/oracle-db/database-overview#available-regions).
+- **Consider database changes required** when moving from on-premises to Oracle Database@Azure. It may involve some changes to the database tablespaces and/or schema. For more information, see [Migrating Oracle Databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/considerations-migrating-premises-database-dbcs.html#GUID-5F6B4B4F-5B1C-4F1C-9F1A-5F6F6F6F6F6F).
 
 ## Oracle migration workload specific activities
 

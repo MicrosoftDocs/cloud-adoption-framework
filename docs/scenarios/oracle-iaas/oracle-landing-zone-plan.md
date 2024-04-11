@@ -21,9 +21,9 @@ The [strategy and plan template](https://raw.githubusercontent.com/microsoft/C
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Regardless of what your organization does with Oracle, Oracle deployment requirements on Azure are to some extent defined by those assets. This is true whether your on-premises implementations is vanilla Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
+**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Oracle deployment requirements on Azure are to some extent defined by those assets. This is true whether your on-premises implementations is vanilla Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
 
-**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. Thes assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment, and should therefore be inventoried and rationalized.
+**Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment, and should therefore be inventoried and rationalized.
 
 **Workload assets**: Your existing Oracle solution can consist of Oracle first-party, third-party, or bespoke applications. Each workload with a dependency on Oracle database services should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 

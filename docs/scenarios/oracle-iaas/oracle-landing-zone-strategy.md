@@ -19,7 +19,7 @@ This article uses the [Plan for Oracle on Azure](oracle-landing-zone-plan.md) 
 
 ## Why move an Oracle workload to Azure?
 
-Oracle is an common application suite, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
+Oracle is a common application suite, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
 - **Migration motivations**: If other assets depend on Oracle to migrate successfully, then customers tend to focus on reducing costs, complexities, or operational overhead.
 
