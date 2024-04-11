@@ -12,7 +12,7 @@ ms.custom: internal
 
 Organizing cloud-based resources is a crucial task for IT, unless all deployments are simple. For complicated or complex deployments, use naming and tagging standards to organize your resources for the following reasons:
 
-- **Resource management:** Your IT teams need to quickly locate resources that are associated with specific workloads, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
+- **Resource management:** Your IT teams need to quickly locate resources that are associated with specific workloads, regions, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
 
 - **Cost management and optimization:** Making business groups aware of the consumption of cloud resources requires IT to understand the resources and workloads that each team uses. Cost-related tags support the following types of information:
 
@@ -52,7 +52,7 @@ The following table describes the qualities and alignments that are shown in the
 | **Accounting**                    | Tags that help to track costs that are associated with asset operations.<br/>Example: department, project, region, and so on. |
 | **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions.<br/>Example: business process, business criticality, revenue impact. |
 
-A tagging scheme that aligns with IT, such as tagging based on workload, application, or environment, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
+A tagging scheme that aligns with IT, such as tagging based on workload, application,  environment or region, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
 
 Tagging schemes that align with business, like accounting, business ownership, or business criticality, might require a larger investment of time. You need to invest more time to create tagging standards that reflect business interests and maintain those standards in the future. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. Linking an asset's business value to its operational cost can change the view of IT as a cost center within your wider organization.
 
@@ -68,7 +68,7 @@ A standardized naming convention is the starting point for organizing your cloud
 
 For more sophisticated organization than a consistent naming convention alone provides, cloud platforms support the ability to tag resources.
 
-Tags are metadata elements that are attached to resources. Tags consist of pairs of key-value strings. The values that you include in these pairs are up to you. However, the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
+Tags are metadata elements that are attached to resources and are valid across all regions under your tenant. Tags consist of pairs of key-value strings. The values that you include in these pairs are up to you. However, the application of a consistent set of global tags, as part of a comprehensive naming and tagging policy, is a critical part of an overall governance policy.
 
 As part of your planning process, use the following questions to determine the kind of information that your resource tags must support:
 
@@ -84,10 +84,18 @@ The following tagging patterns are examples of how you can use tagging to organi
 
 | Tag type | Examples | Description |
 |--|--|--|
-| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorizes resources by their purposes within a workload, the environment they've been deployed to, or other functionality and operational details. |
+| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` <br> `region` = `eastus` <br> `region` = `uksouth` | Categorizes resources by their purposes within a workload, the environment and region they've been deployed to, or other functionality and operational details. |
 | Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it's used and the policies that apply to it. |
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Associates a resource with specific groups within an organization for billing purposes. |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
+
+## Resource tagging multi-region
+
+Azure tags can be used across different Azure regions. They are used for logical organization of resources and are not tied to a specific location. This means that you can use the same tagging strategy across all your resources, regardless of the region they are located in.
+In a multi-region environment, including region detail into the tagging strategy can be considered if the naming convention does not already covers the operational and management requirements. If advanced reporting or resource filtering are required, based on the Azure region where resources are deployed, and this possibility cannot be obtained through subscription alignment, then tagging can be an effective way to aggregate and compare across regions and subscriptions.
+
+- A collection of built-in Azure policies are available to enforce tagging requirements, and custom policies can be created to enforce specific tagging requirements. For more information, see [Assign policy definitions for tag compliance](/azure/azure-resource-manager/management/tag-policies).
+- When creating an assignment for a policy, it is possible to specify a resource selector to target and filter specific regions (*resourceLocation*) inside the specified scope. For more information, see [Create a policy assignment](/azure/azure-resource-manager/management/tag-policies#create-a-policy-assignment) and [Resource selectors](/azure/governance/policy/concepts/assignment-structure#resource-selectors).
 
 ## Learn more
 
