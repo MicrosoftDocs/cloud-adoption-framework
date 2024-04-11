@@ -58,7 +58,7 @@ This section focuses on only the Azure VMware Solution Cloud Region 1 and Azure 
 
 Each Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Cloud Region 1 Global Reach connection is shown as "Global Reach (A)". The Azure VMware Solution Cloud Region 2 Global Reach connection is shown as "Global Reach (B)". Both Azure VMware Solution private clouds are connected directly to each other via Global Reach shown as Global Reach (C). Keep in mind that Global Reach traffic will never transit any hub firewalls. 
 
-Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.
+Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent connectivity issues between Global Reach sites. See traffic flow section for more information.
 
 
 The diagram below illustrates traffic flows from the perspective of the Azure VMware Solution Private Clouds. 
@@ -84,7 +84,7 @@ This section focuses only on the on-premises site. As shown in the diagram, the 
 
 On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection "Global Reach (A)". On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection "Global Reach (B)". 
 
-Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. See traffic flow section for more information.
+Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent connectivity issues between Global Reach sites. See traffic flow section for more information.
 
 The diagram below illustrates traffic flows from an on-premises perspective.
 
@@ -134,16 +134,12 @@ With Routing Intent you have the option to generate a default route from the hub
 #### Azure VMware Solution Internet Connectivity
 From an Azure VMware Solution Private Cloud perspective, you have the availability to achieve internet connectivity redundancy because it will learn the default route from both its local regional hub and its cross-regional hub. However, the Azure VMware Solution private cloud will always prioritize the local regional hub for primary internet access connectivity. Its cross-regional hub will serve as an internet backup in the event the local regional hub is down. This setup provides internet access redundancy for outbound traffic only. For inbound internet traffic to Azure VMware Solution workloads, consider using Azure Front Door or Traffic Manager in case of a regional outage.
 
-Going into more detail, the Azure VMware Solution private cloud's preferred default route "∞ 0.0.0.0/0" is received via connection "D" from its local regional hub. Additionally, the Azure VMware Solution private cloud receives a backup default route "△ 0.0.0.0/0," which originates on the cross-regional hub and advertised across the Global Reach (C) connection. Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent potential suboptimal routing between Global Reach sites. 
+Going into more detail, the Azure VMware Solution private cloud's preferred default route "∞ 0.0.0.0/0" is received via connection "D" from its local regional hub. Additionally, the Azure VMware Solution private cloud receives a backup default route "△ 0.0.0.0/0," which originates on the cross-regional hub and advertised across the Global Reach (C) connection. Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It is imperative to do this to prevent connectivity issues between Global Reach sites. 
 
-When Routing Intent is enabled for internet traffic, by default, the Secure Virtual WAN Hub does not advertise the default route over ExpressRoute circuits. To ensure that the default route is propagated down to Azure VMware Solution from the Azure Virtual WAN, you need to enable default route propagation on your Azure VMware Solution ExpressRoute circuits. - see [To advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints) 
+When Routing Intent is enabled for internet traffic, the default behavior of the Secure Virtual WAN Hub is to not advertise the default route across ExpressRoute circuits. To ensure the default route is propagated to the Azure VMware Solution from the Azure Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits - see [To advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints). It is important to note that this setting should not be enabled for on-premises ExpressRoute circuits; this ensures that on-premises internet connectivity is not impacted.
 
 #### Virtual Network Internet Connectivity
 Each Virtual Network will egress to the internet using its local regional hub firewall. When Routing Intent for internet access is enabled, the default route generated from the Secure VWAN Hub is automatically advertised to the hub-peered Virtual Network connections. However, this default route is never advertised across regional hubs over the ‘inter-hub’ link. Therefore, Virtual Networks can only use their local regional hub for internet access and will have no backup internet connectivity to the cross-regional hub
-
-> [!NOTE]
-> If you do not want your on-premises network to learn the default route from Azure, we recommend filtering out the default route via BGP on your Customer Premises Equipment. This ensures that on-premises internet connectivity is not impacted.
->
 
 For further details, refer to the traffic flow section.
 
