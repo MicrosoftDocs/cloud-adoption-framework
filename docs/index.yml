@@ -111,9 +111,9 @@ productDirectory:
         - url: ./migrate/index.md
           text: Overview
         - url: ./migrate/index.md#cloud-migration-checklist
-          text: Migration checklist
+          text: Checklist
         - url: ./migrate/scenarios.md
-          text: Product migration guidance
+          text: Product migration scenarios
 
     # Card
     - title: Innovate
@@ -164,7 +164,7 @@ productDirectory:
           text: Checklist
         - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e/
           text: Assessment
-          
+
 # conceptualContent section (optional)
 
 conceptualContent:
