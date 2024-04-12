@@ -162,8 +162,6 @@ productDirectory:
           text: Overview
         - url: ./govern/index.md#cloud-governance-checklist
           text: Checklist
-        - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e/
-          text: Assessment
 
 # conceptualContent section (optional)
 
