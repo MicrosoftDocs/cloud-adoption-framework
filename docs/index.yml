@@ -11,7 +11,7 @@ metadata:
   services: cloud-adoption-framework
   author: Zimmergren
   ms.author: tozimmergren
-  ms.date: 03/31/2022
+  ms.date: 04/12/2024
   ms.topic: hub-page
   ms.subservice: caf-general
   ms.custom: UpdateFrequency3
@@ -162,7 +162,9 @@ productDirectory:
           text: Overview
         - url: ./govern/index.md#cloud-governance-checklist
           text: Checklist
-
+        - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e/
+          text: Assessment
+          
 # conceptualContent section (optional)
 
 conceptualContent:
