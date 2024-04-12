@@ -194,7 +194,7 @@ conceptualContent:
       links:
         - url: /assessments/Strategic-Migration-Assessment/
           itemType: deploy
-          text: Drive business success by unblocking migration efforts and improving processes.
+          text: Evaluate your cloud migration readiness by using the Strategic Migration and Readiness Assessment Tool (SMART).
 
     # Card
     - title: Cloud Governance
