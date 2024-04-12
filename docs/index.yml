@@ -26,7 +26,7 @@ highlightedContent:
     # Card
     - title: Explore scenarios 
       itemType: overview
-      url: ./scenarios/overview.md
+      url: ./scenarios/index.md
 
     # Card
     - title: Get tools and templates
@@ -108,14 +108,12 @@ productDirectory:
     - title: Migrate
       imageSrc: ./_images/icons/migrate.png
       links:
-        - url: ./migrate/azure-migration-guide/index.md
-          text: Azure migration guide
-        - url: ./scenarios/index.md
-          text: Migration scenarios
-        - url: ./migrate/azure-best-practices/index.md
-          text: Cloud migration best practices
-        - url: ./migrate/migration-considerations/index.md
-          text: Process improvements
+        - url: ./migrate/index.md
+          text: Overview
+        - url: ./migrate/index.md#cloud-migration-checklist
+          text: Migration checklist
+        - url: ./migrate/scenarios.md
+          text: Product migration guidance
 
     # Card
     - title: Innovate
@@ -160,14 +158,10 @@ productDirectory:
     - title: Govern
       imageSrc: ./_images/icons/govern.png
       links:
-        - url: ./govern/methodology.md
-          text: Methodology
-        - url: ./govern/benchmark.md
-          text: Benchmark assessment
-        - url: ./govern/initial-foundation.md
-          text: Governance foundation
-        - url: ./govern/foundation-improvements.md
-          text: Improve the foundation
+        - url: ./govern/index.md
+          text: Overview
+        - url: ./govern/index.md#cloud-governance-checklist
+          text: Checklist
 
 # conceptualContent section (optional)
 
