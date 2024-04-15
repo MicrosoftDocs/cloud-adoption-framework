@@ -19,7 +19,7 @@ A good business continuity and disaster recovery (BCDR) strategy keeps your crit
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
-For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr).
+For more information about BCDR considerations for your Azure resources, see [Azure Virtual Desktop disaster recovery](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop-multi-region-bcdr).
 
 ## Design considerations
 
@@ -90,11 +90,11 @@ You can reduce the time it takes to back up, restore, and replicate data after a
   > [!NOTE]
   > The FSLogix Cloud Cache feature is *write back* by design. This design uses asynchronous replication, which increases performance characteristics to high-latency targets.
 
-You can use multiple replication mechanisms and strategies for user data in [FSLogix](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix) containers.
+You can use multiple replication mechanisms and strategies for user data in [FSLogix](/fslogix/concepts-configuration-examples) containers.
 
 - **Profile pattern #1:** Use native Azure Storage replication mechanisms. For example, use [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares. You can use [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) for Azure NetApp Files, or use [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
 
-- **Profile pattern #2:** FSLogix [Cloud Cache](/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#using-cloud-cache) has a built-in automatic mechanism to replicate containers between up to four different storage accounts.
+- **Profile pattern #2:** FSLogix [Cloud Cache](/fslogix/concepts-configuration-examples#example-2-standard--high-availability-cloud-cache) has a built-in automatic mechanism to replicate containers between up to four different storage accounts.
 
 - **Profile pattern #3:** Set up geo-disaster recovery only for application data and not for user data or profile containers. Store important application data in separate storage locations, like OneDrive or another external storage option that has a built-in disaster recovery mechanism.
 
