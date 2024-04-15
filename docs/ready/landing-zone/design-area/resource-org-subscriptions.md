@@ -20,9 +20,8 @@ Subscriptions are a unit of management, billing, and scale within Azure. They pl
 
 > [!TIP]
 > We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
-
 >[!NOTE]
->  You should review the subscription limits as documented in [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts). This guidance is primarily aimed at customers using Enterprise Agreements, Microsoft Customer Agreements (Enterprise) or Microsoft Partner Agreements (CSP).
+> You should review the subscription limits as documented in [Billing accounts and scopes in the Azure portal](/azure/cost-management-billing/manage/view-all-accounts). This guidance is primarily aimed at customers using Enterprise Agreements, Microsoft Customer Agreements (Enterprise) or Microsoft Partner Agreements (CSP).
 
 ## Subscriptions considerations
 
