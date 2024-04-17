@@ -134,7 +134,7 @@ Regularly review and update compliance enforcement mechanisms. The goal is to ke
 
 - *Engage with stakeholders.* Discuss the effectiveness of enforcement mechanisms with stakeholders. Ensure cloud governance enforcement aligns with business objectives and compliance requirements.
 
-- *Monitor requirements.* Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that affect your requirements. For example, Azure landing zone recommended policies can change over time. [Update to the latest Azure landing zone custom policies](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) or [Migrate to built-in policies](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) as needed to reduce management overhead.
+- *Monitor requirements.* Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that require updates your enforcement mechanisms. For example, Azure landing zone recommended policies can change over time. [Update to the latest Azure landing zone custom policies](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) or [Migrate to built-in policies](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) as needed to reduce management overhead.
 
 ## Example cloud governance compliance checklists
 
