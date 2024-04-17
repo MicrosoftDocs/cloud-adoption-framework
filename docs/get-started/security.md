@@ -228,8 +228,8 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
 
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
-  - [Azure Blueprints](/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
   - [Azure Policy](/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager/), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
+  - [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code): This approach combines DevOps, Infrastructure as Code, and Azure Policy to deploy policies, initiatives (set definitions), assignments and policy exemptions at scale by keeping your policy definitions in source control. 
   - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <br>

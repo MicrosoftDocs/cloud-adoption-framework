@@ -41,7 +41,7 @@ Read about secure cloud workloads in the [Azure Security Benchmark](/security/be
 
 Use Microsoft Defender for Cloud to identify risks, adapt best practices, and improve your company's security posture.
 
-Implement or support company-specific, automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Blueprints](/azure/governance/blueprints/overview).
+Implement or support company-specific, automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code).
 
 ## Antipattern: Use a custom compliance or governance framework
 
@@ -55,7 +55,7 @@ Azure offers a more comprehensive security and compliance structure that differs
 
 ### Preferred outcome: Rely on existing frameworks
 
-Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure Blueprints samples page](/azure/governance/blueprints/samples/). Blueprints for common compliance frameworks are also available for Azure.
+Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure Landing Zones implementation options page](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options). 
 
 ## Next steps
 

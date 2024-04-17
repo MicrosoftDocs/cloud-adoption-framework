@@ -32,9 +32,8 @@ For adoption teams that are mature professional development teams with many cont
 
 You can expand this foundation to use other tool features as your need grows. The expanded foundation might involve tools like:
 
-- Azure Blueprints
 - Azure Policy
-- Azure Resource Manager templates
+- Infrastructure as Code templates (i.e. Azure Resource Manager (ARM), Terraform, Bicep)
 - Azure Monitor
 
 The table of contents on the left side of this page lists guidance for each tool and aligns with the previously described maturity model.

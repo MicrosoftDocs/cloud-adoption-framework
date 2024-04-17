@@ -32,7 +32,7 @@ From securing the open-source packages to the intellectual property that's writt
 
 Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
 
-While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, guidance, and blueprints for well-defined Azure architectures. These blueprints have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily modified, reused, and deployed to a specific Azure environment.
+While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, and guidance for well-defined Azure architectures. These packages have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily modified, reused, and deployed to a specific Azure environment.
 
 ### Infrastructure as code
 

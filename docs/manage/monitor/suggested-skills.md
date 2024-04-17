@@ -116,7 +116,7 @@ Customers often need help managing, maintaining, and delivering the expected bus
 
 To achieve those goals, lay the groundwork using IT Service Management (ITSM) with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning with the strategic goals and needs of the organization.
 
-Consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint for transforming IT using a process-agnostic framework.
+Consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative standard for transforming IT using a process-agnostic framework.
 
 ## Learn more
 

@@ -68,7 +68,7 @@ Azure policy ensures security and compliance for enterprise technical estates. A
 Change advisory review boards might hinder an organizations innovation and business agility. Azure Policy increases workload efficiency by replacing such reviews with automated guardrails and adherence audits.
 
 - Determine what Azure policies are needed based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a stating point.
-- Use the [standards-based blueprint samples](/azure/governance/blueprints/samples) to consider other policies that might align to your business requirements.
+- Use the [Policies included in Azure Landing Zones reference implementation ](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
 - Enforce networking, identity, management, and security conventions are often automated.
 - Manage and create policy assignments by using policy definitions, which might be reused at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
 - Ensure continuous compliance with compliance reporting and auditing.

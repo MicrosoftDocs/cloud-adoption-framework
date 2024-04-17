@@ -173,7 +173,7 @@ The following table summarizes considerations for each landing zone implementati
         Automation capabilities like infrastructure as code (IaC) and Azure DevOps
     :::column-end:::
     :::column:::
-        Use Azure Resource Manager, Azure Policy, and Azure Blueprints to create your own continuous integration and continuous development (CI/CD) pipeline.
+        Use Azure Resource Manager, Azure Policy, and IaC to create your own continuous integration and continuous development (CI/CD) pipeline.
     :::column-end:::
     :::column:::
         You can use Azure Resource Manager, Azure Policy, and GitHub/Azure DevOps. CI/CD pipeline options are included in the reference implementation guidance.
@@ -266,10 +266,10 @@ For more information about best practices, review the [Best practices for Azure 
 
 Both methodologies offer automation capabilities:
 
-- **Start small and expand:** ARM templates, Azure Policy, and Azure Blueprints are included. You can create your own CI/CD development pipeline.
+- **Start small and expand:** ARM templates and Azure Policy are included. You can create your own CI/CD development pipeline.
 - **Enterprise-scale:** ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included.
 
-The start small and expand approach uses ARM templates, Azure Policy, and Azure Blueprints:
+The start small and expand approach uses ARM templates and Azure Policy:
 
 - [CAF Foundation blueprint](./foundation-blueprint.md)
 - [CAF Migration landing zone blueprint](./migrate-landing-zone.md)
