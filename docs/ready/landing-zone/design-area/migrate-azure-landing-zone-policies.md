@@ -16,7 +16,7 @@ The guidance in this document describes the manual, high-level steps for your po
 
 The following infographic shows the update process flow.
 
-:::image type="content" source="../../_images/govern/azure-landing-zone-policy-to-built-in.png" lightbox="../../_images/govern/azure-landing-zone-policy-to-built-in-large.png" alt-text="Diagram that shows the policy update process flow going from Azure landing zone custom policies to built-in policies.":::
+:::image type="content" source="./media/azure-landing-zone-policy-to-built-in.png" lightbox="./media/azure-landing-zone-policy-to-built-in-large.png" alt-text="Diagram that shows the policy update process flow going from Azure landing zone custom policies to built-in policies.":::
 
 ## Manual update steps for Azure landing zone environments
 

@@ -12,11 +12,10 @@ ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 
 Over time, Azure landing zone custom policies and policy initiatives update to newer versions that you can incorporate into your Azure environment. This article describes how to update your Azure landing zone custom policies and policy initiatives when newer versions release.
 
-The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](../../resource-consistency/migrate-azure-landing-zone-policies.md).
+The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md).
 
 The following infographic provides a decision tree and process flow for Azure landing zone custom policy updates:
-
-:::image type="content" source="../../../_images/govern/azure-landing-zone-policy-to-newer-version.png" lightbox="../../../_images/govern/azure-landing-zone-policy-to-newer-version-large.png" alt-text="Diagram that shows a decision tree for the Azure landing zone custom policy update process.":::
+:::image type="content" source="./media/azure-landing-zone-policy-to-newer-version.png" lightbox="./media/azure-landing-zone-policy-to-newer-version-large.png" alt-text="Diagram that shows a decision tree for the Azure landing zone custom policy update process.":::
 > [!CAUTION]
 > When you delete existing policy assignments, your environment isn't protected during the time it takes to reassign policies. After you assign updated policies, review your policy compliance section for any unhealthy resources and remediate them.
 
