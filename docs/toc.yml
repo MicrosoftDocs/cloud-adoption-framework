@@ -450,6 +450,12 @@ items:
             href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Monitor usage and spending
             href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Keep Azure landing zones up to date
+            href: ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md
+          - name: Migrate Azure landing zone policies
+            href: ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md
+          - name: Update custom policies
+            href: ready/landing-zone/design-area/update-custom-policies.md
 
         - name: Platform automation and DevOps
           items:
