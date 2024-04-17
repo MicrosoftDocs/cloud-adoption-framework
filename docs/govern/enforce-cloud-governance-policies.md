@@ -130,11 +130,11 @@ Sometimes a tool limitation or cost makes automated enforcement unpractical. In 
 
 ## Review policy enforcement
 
-Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements.
+Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. To review policy enforcement, follow these recommendations:
 
 - *Engage with stakeholders.* Discuss the effectiveness of enforcement mechanisms with stakeholders. Ensure cloud governance enforcement aligns with business objectives and compliance requirements.
 
-- *Update enforcement mechanisms.* Update or remove enforcement mechanisms to align with new or updated requirements. For example, Azure landing zone recommended policies can change over time. [Update to the latest Azure landing zone custom policies](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) or [Migrate to built-in policies](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) as needed to reduce management overhead.
+- *Monitor requirements.* Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that affect your requirements. For example, Azure landing zone recommended policies can change over time. [Update to the latest Azure landing zone custom policies](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) or [Migrate to built-in policies](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) as needed to reduce management overhead.
 
 ## Example cloud governance compliance checklists
 
