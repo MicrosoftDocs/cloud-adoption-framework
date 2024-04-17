@@ -1632,7 +1632,7 @@
       },
       {
          "source_path": "docs/govern/guides/standard/update-custom-policies.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/update-custom-policies.md",
          "redirect_document_id": false
       },
       {
@@ -1737,7 +1737,7 @@
       },
       {
          "source_path": "docs/govern/resource-consistency/keep-azure-landing-zone-up-to-date.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md",
          "redirect_document_id": false
       },
       {
@@ -1747,7 +1747,7 @@
       },
       {
          "source_path": "docs/govern/resource-consistency/migrate-azure-landing-zone-policies.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md",
          "redirect_document_id": false
       },
       {
