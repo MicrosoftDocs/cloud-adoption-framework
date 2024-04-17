@@ -42,7 +42,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - *Identify resource management risks.* Identify risks stemming from the provisioning, deployment, configuration, and management of cloud resources. Identify risks to [operational excellence](/azure/advisor/advisor-overview).
 
-- *Identify AI risks.* Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming).* Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output of AI systems. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
+- *Identify AI risks.* Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming). Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output of AI systems. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
 
 ## Analyze cloud risks
 

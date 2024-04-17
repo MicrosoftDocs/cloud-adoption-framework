@@ -214,7 +214,7 @@ Virtual WAN supports [transit connectivity between VPN and ExpressRoute](/azure/
 The connectivity requirements of identity services in Azure Virtual Desktop session hosts depend on the identity model.
 
 - For Microsoft Entra Domain Services–joined VMs: Azure Virtual Desktop networks must have connectivity to the network where the identity service is hosted.
-- For [Microsoft Entra ID–joined VMs](/azure/architecture/example-scenario/wvd/azure-virtual-desktop-azure-active-directory-join): Azure Virtual Desktop session hosts create outbound connections to Microsoft Entra ID public endpoints. As a result, no private connectivity configurations are required.
+- For [Microsoft Entra ID–joined VMs](/azure/virtual-desktop/azure-ad-joined-session-hosts): Azure Virtual Desktop session hosts create outbound connections to Microsoft Entra ID public endpoints. As a result, no private connectivity configurations are required.
 
 ### DNS
 
