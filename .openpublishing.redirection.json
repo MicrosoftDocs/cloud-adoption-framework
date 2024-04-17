@@ -1472,47 +1472,47 @@
       },
       {
          "source_path": "docs/govern/cost-management/best-practices.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/business-risks.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/compliance-processes.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/discipline-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/metrics-tolerance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/policy-statements.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/template.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/toolchain.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
