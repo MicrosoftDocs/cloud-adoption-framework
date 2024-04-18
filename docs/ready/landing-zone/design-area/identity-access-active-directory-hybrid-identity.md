@@ -39,7 +39,6 @@ However, many organizations already have longstanding AD DS directories that mig
 
 - To maintain a single user object in both cloud and on-premises environments, you can sync AD DS domain users with Microsoft Entra ID via Microsoft Entra Connect or Microsoft Entra Cloud Sync. To determine the recommended configuration for your environment, see [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies) and [Topologies for Microsoft Entra Cloud Sync](/entra/identity/hybrid/cloud-sync/plan-cloud-sync-topologies).
 
-  - [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies).
     
     
 - To domain join Windows VMs and other services, you can deploy AD DS domain controllers or Domain Services in Azure. With this approach, AD DS users can sign in to Windows servers, Azure Files shares, and other resources that use Active Directory as an authentication source. You can also use other Active Directory technologies, such as group policy. For more information, see [Common deployment scenarios for Microsoft Entra Domain Services](/entra/identity/domain-services/scenarios).
