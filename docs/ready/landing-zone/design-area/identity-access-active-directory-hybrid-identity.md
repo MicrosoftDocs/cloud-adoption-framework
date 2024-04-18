@@ -63,6 +63,10 @@ However, many organizations already have longstanding AD DS directories that mig
 
 - If you have requirements for using AD FS, see [Deploy AD FS in Azure](/windows-server/identity/ad-fs/deployment/how-to-connect-fed-azure-adfs).
 
+- When utilizing [Microsoft Entra Connect](/entra/identity/hybrid/connect/whatis-azure-ad-connect-v2) as your synchronization tool, consider deploying a [staging server](/entra/identity/hybrid/connect/how-to-connect-sync-staging-server) for disaster recovery in another region from the primary Connect Server; alternatively, if you are not using multi-regions, utilize availability zones for high availability.
+
+- When utilizing [Microsoft Entra Cloud Sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) as your synchronization tool, consider installing at least [three agents](/entra/identity/hybrid/cloud-sync/how-to-prerequisites?tabs=public-cloud) across different servers in multiple regions for disaster recovery; alternatively, install the agent across servers in different availability zones for high availability.
+
 > [!IMPORTANT]
 >
 > We highly recommend migrating to Microsoft Entra ID unless there's a specific requirement for using AD FS. For more information, see [Resources for decommissioning AD FS](/windows-server/identity/ad-fs/ad-fs-decommission) and [Migrating from AD FS to Microsoft Entra ID](/entra/identity/enterprise-apps/migrate-adfs-apps-stages).
