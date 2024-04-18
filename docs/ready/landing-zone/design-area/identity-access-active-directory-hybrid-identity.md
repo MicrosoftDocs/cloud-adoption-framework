@@ -41,7 +41,6 @@ However, many organizations already have longstanding AD DS directories that mig
 
   - [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies).
     
-  - [Topologies for Microsoft Entra Cloud Sync.](/entra/identity/hybrid/cloud-sync/plan-cloud-sync-topologies)
     
 - To domain join Windows VMs and other services, you can deploy AD DS domain controllers or Domain Services in Azure. With this approach, AD DS users can sign in to Windows servers, Azure Files shares, and other resources that use Active Directory as an authentication source. You can also use other Active Directory technologies, such as group policy. For more information, see [Common deployment scenarios for Microsoft Entra Domain Services](/entra/identity/domain-services/scenarios).
 
