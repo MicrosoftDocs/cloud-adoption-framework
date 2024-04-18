@@ -39,7 +39,7 @@ However, many organizations already have longstanding AD DS directories that mig
 
 - To maintain a single user object in both cloud and on-premises environments, you can sync AD DS domain users with Microsoft Entra ID via Microsoft Entra Connect or Microsoft Entra Cloud Sync. To determine the recommended configuration for your environment. 
 
-  - [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies) Sync.
+  - [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies).
     
   - [Topologies for Microsoft Entra Cloud Sync.](/entra/identity/hybrid/cloud-sync/plan-cloud-sync-topologies)
     
