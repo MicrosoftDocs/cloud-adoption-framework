@@ -71,7 +71,7 @@ Provisioning multiple data landing zones can help you group functional domains b
 
 :::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Functional and regionally aligned data landing zones" lightbox="../media/domain-agnostic-infra-04.png":::
 
-Multiple aspects determine which functional data domains you should logically group together and make candidates for a shared data landing zone. For example, regional boundaries can result in you implementing the same blueprints. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors.
+Multiple aspects determine which functional data domains you should logically group together and make candidates for a shared data landing zone. For example, regional boundaries can result in you implementing the same templates. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors.
 
 Further guidance and best practices can be found in [data domains](./data-domains.md).
 

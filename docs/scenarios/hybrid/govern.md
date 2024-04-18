@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams can innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this newfound freedom is the infrastructure-as-code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
-In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. You can combine [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview), [Azure Blueprints](/azure/governance/blueprints/overview), and other governance tools. The combination extends many of your governance guardrails to virtually any cloud resource, private or public clouds alike. [Unified operations](./unified-operations.md) is the best concept to extend your governance controls by using native Azure tools.
+In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. You can combine [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview), and other governance tools. The combination extends many of your governance guardrails to virtually any cloud resource, private or public clouds alike. [Unified operations](./unified-operations.md) is the best concept to extend your governance controls by using native Azure tools.
 
 ## Deploy a unified operations MVP for governance
 

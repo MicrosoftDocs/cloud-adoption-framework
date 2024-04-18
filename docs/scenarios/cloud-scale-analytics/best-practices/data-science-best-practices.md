@@ -12,9 +12,9 @@ ms.custom: e2e-data-management, think-tank
 
 We recommend these best practices for using cloud-scale analytics in Microsoft Azure to operationalize data science projects.
 
-## Develop a blueprint
+## Develop a template
 
-It's essential to develop a blueprint that bundles a set of services for your data science projects to achieve consistency across different data science teams' use cases. We recommend developing a consistent blueprint in the form of a template repository that you can use for various data science projects within your enterprise to help shorten deployment times.
+It's essential to develop a template that bundles a set of services for your data science projects to achieve consistency across different data science teams' use cases. We recommend developing a consistent blueprint in the form of a template repository that you can use for various data science projects within your enterprise to help shorten deployment times.
 
 ### Guidelines for data science templates
 

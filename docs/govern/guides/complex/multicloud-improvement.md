@@ -27,7 +27,7 @@ Since then, some things have changed that will affect governance:
 - Business continuity and disaster recovery (BCDR) is controlled by Azure Recovery Services vaults.
 - Microsoft Defender for Cloud is used to monitor security violations and attacks.
 - Microsoft Defender for Cloud and Azure Monitor are both used to monitor governance of the cloud.
-- Azure Blueprints, Azure Policy, and management groups are used to automate compliance to policy.
+- Infrastructure as Code, Azure Policy, and management groups are used to automate compliance to policy.
 
 ### Incrementally improve the future state
 

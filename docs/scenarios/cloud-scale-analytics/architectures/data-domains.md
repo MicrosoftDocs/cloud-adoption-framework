@@ -92,7 +92,7 @@ Pay attention also to applications that cater to multiple business capabilities,
 
 ### Design patterns for source-aligned, redelivery and consumer-aligned domains
 
-When mapping your domains, you'll learn there are different patterns based on the creation, consumption, or redelivery of data. For your architecture, design blueprints for supporting your domains based on their particular characteristics.
+When mapping your domains, you'll learn there are different patterns based on the creation, consumption, or redelivery of data. For your architecture, design templates for supporting your domains based on their particular characteristics.
 
 #### Source system-aligned domains
 

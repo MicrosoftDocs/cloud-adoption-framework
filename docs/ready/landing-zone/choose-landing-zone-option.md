@@ -269,11 +269,6 @@ Both methodologies offer automation capabilities:
 - **Start small and expand:** ARM templates and Azure Policy are included. You can create your own CI/CD development pipeline.
 - **Enterprise-scale:** ARM templates, Azure Policy, GitHub/Azure DevOps, and CI/CD pipeline options are included.
 
-The start small and expand approach uses ARM templates and Azure Policy:
-
-- [CAF Foundation blueprint](./foundation-blueprint.md)
-- [CAF Migration landing zone blueprint](./migrate-landing-zone.md)
-
 The enterprise-scale approach uses ARM templates and Azure Policy, and offers three reference implementations and different deployments:
 
 - [Enterprise-scale foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)

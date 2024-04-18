@@ -22,7 +22,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Azure role-based access control (RBAC) for identity and access control.
 - Naming and tagging standards for consistent identification of resources.
 - Organization of resources using resource groups, subscriptions, and management groups.
-- Azure Policy and Azure Blueprints to enforce governance policies.
+- Azure Policy to enforce governance policies.
 
 ## Expanding on governance disciplines
 
