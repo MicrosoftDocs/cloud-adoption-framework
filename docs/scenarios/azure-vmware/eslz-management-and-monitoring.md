@@ -72,6 +72,7 @@ Review the following *recommendations* for platform management and monitoring of
   - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connections within, from, and to the Azure VMware Solution, including ExpressRoute Direct and ExpressRoute Global Reach connections.
 - Send your logs to Log Analytics. 
 For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics).
+- Refer to [Azure Monitor Baseline Alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to understand metrics and logs to be monitored and deployed for Azure VMware Solution SDDC.
 
 ### VMware tooling recommendations
 
