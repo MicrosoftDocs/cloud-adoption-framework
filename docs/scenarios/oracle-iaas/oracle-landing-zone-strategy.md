@@ -17,7 +17,7 @@ Oracle is a mission-critical workload for many organizations. Whether as a datab
 
 This article uses the [Plan for Oracle on Azure](oracle-landing-zone-plan.md) article and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
 
-## Why move an Oracle workload to Azure?
+## Oracle on Azure adoption motivations
 
 Oracle is a common application suite, and organizations have several motivations to migrate Oracle to the cloud. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
@@ -37,14 +37,14 @@ Motivations to migrate an Oracle implementation to the cloud are often based on 
 2. Oracle licenses are a one-time purchase negotiated for a specific number of years. If you want to migrate your Oracle workloads to Azure, review the following official document to understand the license implications on Azure: [Licensing Oracle Software in the Cloud Computing Environment](https://www.oracle.com/assets/cloud-licensing-070579.pdf).
 3. If your Oracle maintenance contracts are coming up for renewal, which typically happens on a yearly basis, your contract renewal too can be a trigger to consider moving to cloud. Also, an upcoming refresh to a newer Oracle software version triggered by Oracle upgrade cycles, application requirements, or a business driver should also be reason to consider cloud options.  
 
-## Outcomes
+## Oracle on Azure adoption outcomes
 
 Typical outcomes for migrating an Oracle workload to Azure include, but are not necessarily limited to:
 
-- **Cost reduction**: The cloud can reduce the total cost of ownership for Oracle workloads, including infrastructure, licensing, and operational costs. This can be through correct sizing of the workloads, automated scaling, lessened operational overhead, and more.
-- **Innovation**: The cloud can unlock new opportunities for Oracle workloads, including AI, data modernization, and more. It is also easier and faster to provide new business capabilities on the cloud by leveraging migrated Oracle workloads.
-- **Agility**: The cloud can provide agility for Oracle workloads, including the ability to scale up and down, and to innovate faster. This also extends to reaching new geographies and markets which would previously have required significant investment.
-- **Operational efficiency**: The cloud can provide operational efficiency for Oracle workloads, including the ability to automate operations, and to reduce operational overhead.
+-	**Reduced cost:** Migrating to Azure can decrease the total cost of ownership for Oracle workloads. You achieve this through efficient sizing, automated scaling, and reduced operational costs.
+-	**Faster innovation:** The cloud environment fosters innovation for Oracle workloads by integrating advanced technologies such as AI and data modernization. It accelerates the deployment of new business capabilities.
+-	**Increased agility:** Cloud migration enhances the agility of Oracle workloads, facilitating rapid scalability. You can easily extend into new markets and geographies with minimal investment.
+-	**Improve operational efficiency:** Oracle on Azure enhances operational efficiency by automating routine tasks and streamlining operations. It lowers operational overhead and increasing productivity.
 
 Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide migration activities.
 
@@ -56,8 +56,7 @@ Building a business justification for cloud migration can dispel several commo
 
 Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to gather inventory and develop a plan. Once your digital estate is cataloged and assessed, you can refine your justification and present clearer plans for financial returns.
 
-## Next steps
+## Next step
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-[Plan for Oracle on Azure](oracle-landing-zone-plan.md)
+> [!div class="nextstepaction"]
+> [Plan for Oracle on Azure](oracle-landing-zone-plan.md)

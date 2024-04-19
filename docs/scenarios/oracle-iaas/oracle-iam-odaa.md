@@ -16,17 +16,17 @@ This article builds on some of the considerations and recommendations that are d
 
 ## Design Considerations
 
-- Once the Oracle Database@Azure private offer on the Azure Marketplace has been accepted and enabled for your subscription, (please see details on how to do this in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database)), you will need contributor access to the subscription to deploy the Oracle Database@Azure service.
+- After you accept and enable the Oracle Database@Azure private offer on the Azure Marketplace for your subscription, you need contributor access to the subscription to deploy the Oracle Database@Azure service. For more information, see [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database).
 - Oracle Database@Azure does not natively support Microsoft Entra ID for identity and access management. However, you can configure federation between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials.
-- The process of deploying the initial Oracle Database@Azure will create specific groups within Microsoft Entra ID, as well as in the corresponding OCI tenant. For more details on the specific groups and roles created please refer to [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles). The groups created in the OCI tenant specifically have the necessary permissions to create and manage Container Databases (CDB) and Pluggable Databases (PDB) on all the Oracle Database@Azure instances in that OCI tenant.
+- The process of deploying the initial Oracle Database@Azure creates specific groups within Microsoft Entra ID, as well as in the corresponding OCI tenant. For more details on the specific groups and roles created please refer to [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles). The groups created in the OCI tenant specifically have the necessary permissions to create and manage Container Databases (CDB) and Pluggable Databases (PDB) on all the Oracle Database@Azure instances in that OCI tenant.
 
 ## Design Recommendations
 
-- Configure federated access between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials. While it is possible to have users log in with OCI credentials only, this is not recommended as it will require additional management of user identities. To enable federation follow the instructions in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#step-3-optional-create-identity-federation-using-azures-identity-service).
-- An Admin user is created in OCI when a new account and tenancy is provisioned. Avoid using this identity for day-to-day operations and instead leverage the Microsoft Entra Id administrator groups to provide the relevant individuals elevated access.
-- For granularity in access permissions reach out to the OCI administrator to create additional groups and roles in the OCI tenant. This will allow for more granular control over who can create and manage CDBs and PDBs on the Oracle Database@Azure instances.
+- Configure federated access between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials. It's possible to have users log in with OCI credentials only, but this setup is not recommended. It creates more user identities that you have to manage. To enable federation, follow the instructions in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#step-3-optional-create-identity-federation-using-azures-identity-service).
+- When you provision a new account and tenant, an Admin user is created in OCI. Avoid using this Admin identity for day-to-day operations. Instead, use the Microsoft Entra Id administrator groups to provide the relevant individuals elevated access.
+- To enhance the granularity of access permissions, contact the OCI administrator to establish additional groups and roles within the OCI tenant. It provides more control over who can create and manage Container Databases (CDBs) and Pluggable Databases (PDBs) on the Oracle Database@Azure instances.
 
-## See also
+## Additional resources
 
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)

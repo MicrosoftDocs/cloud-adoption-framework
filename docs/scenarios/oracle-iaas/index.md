@@ -14,7 +14,7 @@ ms.custom:
 
 Use the guidance in this article to set up and operate Oracle workloads inside your Azure landing zone implementation. The article provides specific architectural approaches and reference implementations for your Oracle database systems on Azure.
 
-The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options.](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
+The implementation guidance in this article presupposes that you have implemented Azure landing zone in your environment. For more information, see [What is an Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
 
 ## Defining Oracle on Azure
 
@@ -34,7 +34,7 @@ Oracle on Azure also offers competitive pricing and performance compared to on-p
 
 When customers choose the relevant Oracle on Azure solution for their specific computing tasks, there will also need to be considerations for following the [Cloud Adoption Framework](/azure/cloud-adoption-framework/overview) to prepare decision makers and central IT for successful cloud adoption.
 
-### High-level Oracle landing zone architecture for Oracle on Azure Virtual Machines
+### Landing zone architecture for Oracle on Azure Virtual Machines
 
 The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle on Azure IaaS landing zone implementation.
 
@@ -44,20 +44,15 @@ Use the reference architecture as a starting point. You can download the [Visio 
 
 As shown in  the reference architectural diagram, the Oracle databases are deployed on virtual machines. You can change the size and number of virtual machines to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
 
-### High-level Oracle landing zone architecture for Oracle Database@Azure
+### Landing zone architecture for Oracle Database@Azure
 
-The following diagram is a conceptual reference architecture that shows the critical design areas in an Oracle Database@Azure landing zone implementation.
+The following diagram shows Oracle Database@Azure deployed to an application landing zone and the critical design areas that support it. The Oracle databases run on Oracle Exadata virtual machine clusters in Azure. You can change the size and number of VM clusters to accommodate your needs.
 
-:::image type="content" source="media/reference-architecture-oracle-odaa-landing-zone.png" alt-text="Diagram showing a reference architecture of Oracle Database@Azure.":::
+:::image type="content" source="./media/reference-architecture-oracle-odaa-landing-zone.png" alt-text="Diagram showing a reference architecture of Oracle Database@Azure.":::
+*Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/oracle-iaas/media/Azure-Landing-Zone-Architecture-Oracle.vsdx) of this architecture.*
 
-Use the reference architecture as a starting point. You can download the [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/oracle-iaas/media/Azure-Landing-Zone-Architecture-Oracle.vsdx) and modify it to fit your specific business and technical requirements when you plan your landing zone implementation.
+## Next step
 
-As shown in  the reference architectural diagram, the Oracle databases are deployed on Oracle Exadata VM clusters in Azure data centers. You can change the size and number of VM clusters to accommodate your organization's needs. The network layout in this example is simplified to demonstrate architectural principles and isn't intended to describe an entire enterprise network.
+> [!div class="nextstepaction"]
+> [Strategy for Oracle on Azure](oracle-landing-zone-strategy.md)
 
-## Next step: Integrate Oracle on Azure into your cloud adoption journey
-
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
-
-- [Strategy for Oracle on Azure](oracle-landing-zone-strategy.md)
-- [Plan for Oracle on Azure](oracle-landing-zone-plan.md)
-- [Migrate to Oracle on Azure](oracle-migration-planning.md)

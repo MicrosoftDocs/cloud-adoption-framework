@@ -1,5 +1,5 @@
 ---
-title: Plan for Oracle on Azure 
+title: Plan for Oracle on Azure adoption
 description: Learn about how to plan for Oracle on Azure.
 author: jfaurskov
 ms.author: janfaurs
@@ -17,7 +17,7 @@ This article describes how to plan for Oracle on Azure. As discussed in the [Ora
 
 The [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
 
-## Oracle digital estate planning
+## Oracle on Azure estate
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
@@ -29,7 +29,7 @@ Like most complex platforms, your Oracle digital estate includes three asset cat
 
 Consider the following items when planning for migrating Oracle workloads to Azure:
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically if you are considering moving to Oracle Database@Azure you are advised to reach out to your local Oracle sales team for sizing guidance.
+**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically, if you are considering moving to Oracle Database@Azure, you should reach out to your local Oracle sales team for sizing guidance.
 
 **Describe Oracle workloads**: Describe your Oracle applications – Oracle first party or third party applications and any custom developed applications. Thereby, it's also important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading and current architecture diagrams. List the application server describing the CPU configuration, memory, storage and its utilization as well as operating system, app version, throughput and IOPS.
 
@@ -37,9 +37,9 @@ Consider the following items when planning for migrating Oracle workloads to Azu
 
 **Environment planning**: Are you moving production and nonproduction Oracle workload at the same time or separately? Customers often move their non-production workload to Azure initially, creating an environment for learning and reducing risk. Once the team is comfortable with how the Oracle solution performs and operates on Azure, the path to migrating the production environment is smoother.
 
-**Platform rationalization**: As part of the digital estate planning, you should consider platform rationalization, which is the process of identifying and eliminating redundant or obsolete assets. This process can help you to reduce costs and improve efficiency.
+**Platform rationalization**: As part of the digital estate planning, you should consider identifying and eliminating redundant or obsolete assets. This process can help you to reduce costs and improve efficiency.
 
-Once these considerations are integrated into your digital estate evaluation, you can refine your business justification. You're are now ready to build out your Oracle cloud adoption plan.
+Once these considerations are integrated into your digital estate evaluation, you can refine your business justification. You're ready to build out your Oracle cloud adoption plan.
 
 ## Oracle on Azure cloud adoption plan
 
@@ -65,7 +65,6 @@ This project's team members should be comprised of Oracle and Azure experts, but
 
 ## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Oracle on Azure strategy](oracle-landing-zone-strategy.md)
-- [Oracle on Azure migration planning](oracle-migration-planning.md)
+> [!div class="nextstepaction"]
+> [Oracle on Azure migration planning](oracle-migration-planning.md)
