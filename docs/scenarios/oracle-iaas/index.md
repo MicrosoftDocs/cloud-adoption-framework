@@ -18,13 +18,13 @@ The implementation guidance in this article presupposes that you have implemente
 
 ## Defining Oracle on Azure
 
-Oracle is widely recognized for its comprehensive suite of software and hardware systems, particularly its database management systems, which are prevalent in on-premises enterprise implementations today. As businesses increasingly seek to modernize their infrastructure and move towards cloud solutions, understanding the integration of Oracle systems with Azure services becomes highly relevant.
+Oracle on Azure provides two principles options for migrating Oracle workloads to Azure. You can lift and shift your Oracle workloads to Azure virtual machines or use the fully-managed Oracle Database@Azure:
 
-Oracle on Azure VMs and Oracle Database@Azure offer robust solutions for running Oracle workloads in the cloud. Oracle on Azure VMs provides a range of virtual machine images pre-configured with Oracle software, allowing for easy deployment and management of Oracle applications. These VMs are optimized for performance and support a variety of Oracle products, including databases and middleware. Oracle Database@Azure, on the other hand, is an Oracle supported and managed service to enable mission critical Oracle databases on purpose built Exadata infrastructure. It enables seamless integration with Azure services, providing a comprehensive cloud environment for mission-critical applications. Both offerings ensure flexibility, scalability, and cost-effectiveness, making them ideal for businesses looking to modernize their Oracle workloads in the cloud.
+- Oracle on Azure Virtual Machines: Run Oracle databases and enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic server applications, to Azure infrastructure. You can use Oracle Linux images, RHEL or other endorsed OS. There are multiple virtual machines and storage options available.
 
-The different offerings have different requirements and considerations, and the guidance in the Oracle on Azure landing zone accelerator articles is designed to help you navigate every step of adopting Oracle workloads for Azure.
+- Oracle Database@Azure: Oracle Database@Azure allows you to run Oracle Exadata infrastructure in Azure. Oracle Exadata is a high-performance database platform. Azure supports critical features, such as Oracle Zero Downtime Migration, Oracle Real Application Clusters, Oracle Data Guard, and Oracle GoldenGate. 
 
-Oracle on Azure landing zone architectures vary by organization. Technical considerations and design recommendations lead to configurations that are unique to your organization's specific scenario. The recommendations that this article describes should lead to an architecture that puts your organization on a path to sustainable scaling.
+For more information, see [Oracle on Azure overview](/azure/oracle/oracle-azure-overview)
 
 ## Oracle on Azure narrative
 
