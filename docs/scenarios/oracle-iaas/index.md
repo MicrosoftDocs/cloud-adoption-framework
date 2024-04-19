@@ -18,7 +18,7 @@ The implementation guidance in this article presupposes that you have implemente
 
 ## Defining Oracle on Azure
 
-Oracle on Azure provides two principal options for migrating Oracle workloads to Azure. You can lift and shift your Oracle workloads to Azure virtual machines or use the fully-managed Oracle Database@Azure:
+Oracle on Azure provides two principal options for migrating Oracle workloads to Azure. You can lift and shift your Oracle workloads to Azure virtual machines or use the Oracle Database@Azure:
 
 - Oracle on Azure Virtual Machines: Run Oracle databases and enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic server applications, to Azure infrastructure. You can use Oracle Linux images, RHEL or other endorsed OS. There are multiple virtual machines and storage options available.
 
