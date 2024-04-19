@@ -15,7 +15,7 @@ ms.custom:
 
 This article describes how to plan for Oracle on Azure. As discussed in the [Oracle on Azure strategy](oracle-landing-zone-strategy.md) article, the potential returns from implementing Oracle on Azure are high only if you consider the different factors affecting the decision to move to Azure.
 
-The [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure.
+The [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) and other resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for adopting Oracle on Azure. The [Plan methodology](/azure/cloud-adoption-framework/plan) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on what you are trying to do in the cloud. This article outlines how to include Oracle on Azure adoption into the overall cloud adoption plan.
 
 ## Oracle on Azure estate
 
