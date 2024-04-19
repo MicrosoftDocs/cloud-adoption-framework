@@ -21,7 +21,7 @@ The [strategy and plan template](https://raw.githubusercontent.com/microsoft/C
 
 Like most complex platforms, your Oracle digital estate includes three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-**Platform assets**: Your on-premises Oracle estate runs on different types of infrastructure. Oracle deployment requirements on Azure are to some extent defined by those assets. This is true whether your on-premises implementations is vanilla Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
+**Platform assets**:  On-premises Oracle estates can run on different types of infrastructure. The on-premises assets define the requirements Oracle deployment on Azure to some extent. This is true whether your on-premises implementations is Linux-x86 or includes more advanced features such as Oracle Real Application Clusters, Exadata configurations or big endian platforms such as HPUX, AIX or similar.
 
 **Foundational assets**: Your Oracle platform and the supporting environment are also comprised of a collection of necessary assets like networking, disaster recovery, monitoring tools, etc. These assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment, and should therefore be inventoried and rationalized.
 
@@ -49,7 +49,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 
 - Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines.
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database, and right-sizing your Oracle estate to optimize licensing costs and gain the desired performance by choosing the correct target architecture on Azure, whether that be fully virtual machine based, fully Oracle Database@Azure based or something in between.
+- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. Additionally, adjust the size of your Oracle estate to effectively manage licensing costs and achieve optimal performance. Select the most suitable Azure architecture for your needs. It could be entirely virtual machine-based, entirely based on Oracle Database@Azure, or a combination of both.
 
 - Choose the right deployment architecture - based on architecture guidelines.
 

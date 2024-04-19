@@ -13,9 +13,8 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure
 
-Oracle is a mission-critical workload for many organizations. Whether as a database back-end for a Line of Business (LoB) application or as a combined suite for enterprise resource planning (ERP), Human Resources (HR), Supply Chain Management (SCM) or other services, the dependencies on Oracle software can be seen throughout the portfolio. The cloud adoption plan for Oracle workload can directly and indirectly affect cloud adoption for all related & other workloads.  Understanding the strategy for an Oracle cloud migration and future-state innovation targets can be crucial to the success of overall cloud adoption plans.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding the Oracle on Azure adoption that may have an impact on your strategy.
 
-This article uses the [Plan for Oracle on Azure](oracle-landing-zone-plan.md) article and other resources from the Cloud Adoption Framework to describe the strategic impact of Oracle on Azure.
 
 ## Oracle on Azure adoption motivations
 
@@ -46,9 +45,7 @@ Typical outcomes for migrating an Oracle workload to Azure include, but are not 
 -	**Increased agility:** Cloud migration enhances the agility of Oracle workloads, facilitating rapid scalability. You can easily extend into new markets and geographies with minimal investment.
 -	**Improve operational efficiency:** Oracle on Azure enhances operational efficiency by automating routine tasks and streamlining operations. It lowers operational overhead and increasing productivity.
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide migration activities.
 
-Given the potential impact of an Oracle migration, you need to define several objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down the migration process into manageable efforts.
 
 ## Build a business justification for cloud migration
 
