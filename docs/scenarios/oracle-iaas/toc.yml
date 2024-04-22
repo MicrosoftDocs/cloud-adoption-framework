@@ -9,10 +9,12 @@ items:
     items:
     - name: Design areas
       items:
-      - name: Network topology and connectivity for Oracle on Azure virtual machines
-        href: oracle-network-topology-iaas.md
-      - name: Network topology and connectivity for Oracle Database@Azure
-        href: oracle-network-topology-odaa.md
+      - name: Network topology and connectivity
+        items: 
+        - name: Network topology and connectivity for Oracle on Azure virtual machines
+          href: oracle-network-topology-iaas.md
+        - name: Network topology and connectivity for Oracle Database@Azure
+          href: oracle-network-topology-odaa.md
       - name: Identity and access management
         href: oracle-iam-odaa.md
       - name: Security
