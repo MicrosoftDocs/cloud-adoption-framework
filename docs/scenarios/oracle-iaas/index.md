@@ -27,7 +27,7 @@ For more information, see [Oracle on Azure overview](/azure/oracle/oracle-azure-
 ## Oracle on Azure narrative
 
 Oracle on Azure allows you to integrate Oracle's database services with Azure's cloud capabilities. Apply data analytics and generative AI to your Oracle data. Monitor your apps and Oracle database service with a single view in Azure. Accelerate cloud adoption using the Azure Landing Zone Accelerators for Oracle on Azure virtual machines and Oracle Database@Azure.
-The following diagrams provide a conceptual reference architecture for Oracle on Azure virtual machines and Oracle Database@Azure. The diagrams show critical design areas for Azure landing zones and present a network layout that demonstrates architectural principles and doesn't detail an entire enterprise network.
+The following diagrams provide a conceptual reference architecture for Oracle on Azure virtual machines and Oracle Database@Azure. The diagrams show critical design areas for Azure landing zones. They present a network layout that demonstrates architectural principles and don't detail an entire enterprise network.
 
 Use the reference architectures as a starting point. Modify them to fit your specific business and technical requirements when you plan your landing zone implementation.
 
