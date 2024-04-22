@@ -1,6 +1,6 @@
 ---
 title: Identity and Access Management for Oracle Database@Azure
-description: Identity and Access Management for Oracle Database@Azure
+description: Design your identity and access management approach for Oracle Database@Azure.
 author: sihbher
 ms.author: gereyeso
 ms.reviewer: janfaurs

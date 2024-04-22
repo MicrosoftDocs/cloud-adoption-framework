@@ -13,7 +13,7 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article outlines technical considerations for the adoption of Oracle on Azure that might affect your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article outlines technical considerations for the adoption of Oracle on Azure that might affect your strategy.
 
 ## Oracle on Azure adoption motivations
 

@@ -18,7 +18,8 @@ Capacity planning is essential for achieving efficient performance and cost mana
 
 Capacity planning for Oracle workloads on Azure IaaS is a process that requires a deep understanding of the workload requirements and the available Azure resources. The following are some of the key considerations for capacity planning:
 
-> Note that the following considerations are for Oracle databases running on Azure virtual machines. For Oracle Database@Azure, reach out to your local Oracle sales team for sizing guidance.
+> [!NOTE]
+> The following considerations are for Oracle databases running on Azure virtual machines. For Oracle Database@Azure, reach out to your local Oracle sales team for sizing guidance.
 
 ### Overall performance considerations
 
