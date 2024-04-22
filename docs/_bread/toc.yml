@@ -26,17 +26,17 @@
         tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
         topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
       - name: Oracle IaaS
-        tocHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas/
-        topicHref: /azure/cloud-adoption-framework/scenarios/oracle-iaas
+        tocHref: /azure/cloud-adoption-framework/scenarios/overview/
+        topicHref: /azure/cloud-adoption-framework/scenarios/overview
       - name: SAP
         tocHref: /azure/cloud-adoption-framework/scenarios/sap/
         topicHref: /azure/cloud-adoption-framework/scenarios/sap
       - name: AVD
-        tocHref: /azure/cloud-adoption-framework/scenarios/wvd/
-        topicHref: /azure/cloud-adoption-framework/scenarios/wvd
+        tocHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/
+        topicHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop
       - name: Retail industry
-        tocHref: /azure/cloud-adoption-framework/scenarios/industry/retail/
-        topicHref: /azure/cloud-adoption-framework/scenarios/industry/retail
+        tocHref: /azure/cloud-adoption-framework/industry/retail/plan/
+        topicHref: /azure/cloud-adoption-framework/industry/retail/plan
       - name: Defense
         tocHref: /azure/cloud-adoption-framework/scenarios/defense/
         topicHref: /azure/cloud-adoption-framework/scenarios/defense

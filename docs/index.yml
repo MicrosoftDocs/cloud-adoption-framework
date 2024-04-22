@@ -9,9 +9,9 @@ metadata:
   title: Microsoft Cloud Adoption Framework for Azure
   description: Proven guidance and best practices that help you confidently adopt the cloud and achieve business outcomes.
   services: cloud-adoption-framework
-  author: martinekuan
-  ms.author: martinek
-  ms.date: 03/31/2022
+  author: Zimmergren
+  ms.author: tozimmergren
+  ms.date: 04/12/2024
   ms.topic: hub-page
   ms.subservice: caf-general
   ms.custom: UpdateFrequency3
@@ -26,7 +26,7 @@ highlightedContent:
     # Card
     - title: Explore scenarios 
       itemType: overview
-      url: ./scenarios/overview.md
+      url: ./scenarios/index.md
 
     # Card
     - title: Get tools and templates
@@ -108,14 +108,12 @@ productDirectory:
     - title: Migrate
       imageSrc: ./_images/icons/migrate.png
       links:
-        - url: ./migrate/azure-migration-guide/index.md
-          text: Azure migration guide
-        - url: ./scenarios/index.md
-          text: Migration scenarios
-        - url: ./migrate/azure-best-practices/index.md
-          text: Cloud migration best practices
-        - url: ./migrate/migration-considerations/index.md
-          text: Process improvements
+        - url: ./migrate/index.md
+          text: Overview
+        - url: ./migrate/index.md#cloud-migration-checklist
+          text: Checklist
+        - url: ./migrate/scenarios.md
+          text: Product migration scenarios
 
     # Card
     - title: Innovate
@@ -160,14 +158,10 @@ productDirectory:
     - title: Govern
       imageSrc: ./_images/icons/govern.png
       links:
-        - url: ./govern/methodology.md
-          text: Methodology
-        - url: ./govern/benchmark.md
-          text: Benchmark assessment
-        - url: ./govern/initial-foundation.md
-          text: Governance foundation
-        - url: ./govern/foundation-improvements.md
-          text: Improve the foundation
+        - url: ./govern/index.md
+          text: Overview
+        - url: ./govern/index.md#cloud-governance-checklist
+          text: Checklist
 
 # conceptualContent section (optional)
 
@@ -198,14 +192,14 @@ conceptualContent:
       links:
         - url: /assessments/Strategic-Migration-Assessment/
           itemType: deploy
-          text: Drive business success by unblocking migration efforts and improving processes.
+          text: Evaluate your cloud migration readiness by using the Strategic Migration and Readiness Assessment Tool (SMART).
 
     # Card
-    - title: Governance benchmark
+    - title: Cloud Governance
       links:
         - url: /assessments/b1891add-7646-4d60-a875-32a4ab26327e
           itemType: quickstart
-          text: Identify gaps between your current state and business priorities. Get the right resources to help you address the gaps.
+          text: Assess your cloud governance approach and receive tailored recommendations for improvement.
 
 # tools section (optional)
 
@@ -247,22 +241,22 @@ additionalContent:
 
         # Card
         - title: FastTrack for Azure
-          summary: Get support from Microsoft engineers
+          summary: Get support from Microsoft engineers.
           url: https://azure.microsoft.com/programs/azure-fasttrack/
 
         # Card
         - title: Azure Migrate and Modernize
-          summary: Get support migrating workloads to the cloud
+          summary: Get support migrating workloads to the cloud.
           url: https://azure.microsoft.com/migration/migration-modernization-program/
 
         # Card
         - title: Partner-led Workshops
-          summary: Obtain best practices on Cloud Adoption Framework from certified partners
+          summary: Obtain best practices on Cloud Adoption Framework from certified partners.
           url: https://www.microsoft.com/azure/partners/ammp-w/events/?utm_source=MS+Docs&utm_medium=landing+page&utm_id=Docs
 
         # Card
         - title: Find a partner
-          summary: Find a partner to help you get started
+          summary: Find a partner to help you get started.
           url: https://aka.ms/adopt/findapartner
 
   # footer (optional)
