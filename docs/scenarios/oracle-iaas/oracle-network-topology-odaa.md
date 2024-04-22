@@ -11,7 +11,7 @@ ms.subservice: scenario
 
 # Network topology and connectivity for Oracle Database@Azure
 
-This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). It offers key design considerations and recommendation for Oracle Database@Azure networking and connectivity.
+This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). It offers key design considerations and recommendations for Oracle Database@Azure networking and connectivity.
 
 ## Design considerations
 
@@ -22,7 +22,7 @@ Consider the following when designing your network topology for Oracle Database@
 - Every Oracle Database@Azure SKU can have up to eight virtual machine clusters. Before you create a VM cluster, you must have a virtual network. You can connect virtual machine cluster to either the same virtual network or to different virtual networks.
 - The Oracle Database@Azure service deploys to private subnets in Azure and isn't immediately accessible from the Internet.
 - The minimum size subnet you need for the Oracle Database@Azure service depends on the SKU you use. For more information, see [Network setup for Exadata Cloud Infrastructure Instances](https://docs.oracle.com/en-us/iaas/exadatacloud/exacs/ecs-network-setup.html#ECSCM-GUID-D5C577A1-BC11-470F-8A91-77609BBEF1EA) for details.
-- Any subnets delegated to the Oracle Database@Azure solution have constraints compared to regular subnets. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints) for more details.
+- Any subnets delegated to the Oracle Database@Azure solution have constraints compared to regular subnets. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
 - There's no default name registration or resolution for database nodes since Oracle Database@Azure only runs in private subnets.
 
 ## Design recommendations

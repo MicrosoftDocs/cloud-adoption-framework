@@ -1,6 +1,6 @@
 ---
 title: Migration planning for Oracle on Azure
-description: Learn about migration planning for Oracle workloads on Azure IaaS.
+description: Learn about migration planning for Oracle workloads on Azure.
 author: Jfaurskov
 ms.author: janfaurs
 ms.reviewer: tozimmergren
@@ -8,7 +8,7 @@ ms.date: 09/11/2023
 ms.topic: conceptual
 ---
 
-# Migrate Oracle workloads to Azure IaaS
+# Migrate Oracle workloads to Azure
 
 A crucial part of your cloud adoption journey is migrating your existing workloads to the cloud. This is no different for Oracle workloads, which, similar to other workloads, require a methodical approach to ensure a successful migration. For more information about the migration methodology, see [Cloud migration in the Cloud Adoption Framework](../../migrate/index.md). For Oracle database workloads, specifically, there are some unique constraints and considerations which this article addresses.
 
