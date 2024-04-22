@@ -13,23 +13,20 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article will help expose a number of technical considerations regarding the Oracle on Azure adoption that may have an impact on your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article outlines technical considerations for the adoption of Oracle on Azure that might affect your strategy.
 
 ## Oracle on Azure adoption motivations
 
-Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives, and not necessarily limited to the specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team (including business and IT leaders) to review and prioritize the motivations listed in Cloud motivations. This input helps the cloud adoption team to make informed decisions throughout the implementation process. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
+Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives, and not necessarily limited to the specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team that includes business and IT leaders to review and prioritize the motivations. This input helps the cloud adoption team to make informed decisions throughout the implementation process. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
 
-Cost optimization motivations:  Refreshing Oracle's on-premises infrastructure requires significant capital. Migrating to the cloud can minimize these costs by reducing investment in physical assets.
-
-Innovation motivations: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity may not be in scope for the initial migration.
-
-Scalability motivations: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
-
-**Contractual and Software motivations**: Annual renewals of Oracle maintenance contracts and updates to newer Oracle software versions can trigger a migration to the cloud to capitalize on technological upgrades.  
+- **Cost optimization motivations**:  Refreshing Oracle's on-premises infrastructure requires significant capital. Migrating to the cloud can minimize these costs by reducing investment in physical assets.
+- **Innovation motivations**: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity might not be in scope for the initial migration.
+- **Scalability motivations**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
+- **Contractual and Software motivations**: Annual renewals of Oracle maintenance contracts and updates to newer Oracle software versions can trigger a migration to the cloud to capitalize on technological upgrades.  
 
 ## Oracle on Azure adoption outcomes
 
-Typical outcomes for migrating an Oracle workload to Azure include, but are not necessarily limited to:
+Typical outcomes for migrating an Oracle workload to Azure include, but aren't necessarily limited to:
 
 - **Reduced cost:** Migrating to Azure can decrease the total cost of ownership for Oracle workloads. You achieve this through efficient sizing, automated scaling, and reduced operational costs.
 - **Faster innovation:** The cloud environment fosters innovation for Oracle workloads by integrating advanced technologies such as AI and data modernization. It accelerates the deployment of new business capabilities.
