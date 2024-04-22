@@ -4,7 +4,7 @@ description: Learn about security guidelines for Oracle Database@Azure
 author: basimolimajeed
 ms.author: bamajeed
 ms.reviewer: janfaurs
-ms.date: 
+ms.date: 04/03/2024
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: scenario

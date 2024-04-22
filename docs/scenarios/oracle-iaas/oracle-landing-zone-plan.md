@@ -11,7 +11,7 @@ ms.custom:
   - engagement-fy24
 --- 
 
-# Plan for Oracle on Azure  
+# Plan for Oracle on Azure
 
 This article describes how to plan for Oracle on Azure. As discussed in the [Oracle on Azure strategy](oracle-landing-zone-strategy.md) article, the potential returns from implementing Oracle on Azure are high only if you consider the different factors affecting the decision to move to Azure.
 
