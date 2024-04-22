@@ -843,12 +843,12 @@
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-iaas",
-          "redirect_document_id": false
+          "redirect_document_id": true
       },
       {
          "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
-          "redirect_document_id": false
+          "redirect_document_id": true
       },
       {
          "source_path": "docs/ready/landing-zone/align-scenarios.md",
