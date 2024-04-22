@@ -13,7 +13,7 @@ items:
         href: oracle-network-topology-iaas.md
       - name: Network topology and connectivity for Oracle Database@Azure
         href: oracle-network-topology-odaa.md
-      - name: Identity and access management for Oracle Database@Azure
+      - name: Identity and access management
         href: oracle-iam-odaa.md
       - name: Security
         items:
