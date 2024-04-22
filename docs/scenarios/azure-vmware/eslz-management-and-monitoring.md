@@ -22,7 +22,7 @@ As you plan your management and monitoring environment for Azure VMware Solution
 
 ## Platform management and monitoring
 
-Review the following *considerations* for platform management and monitoring of Azure VMware Solution.
+Review the following *considerations* for platform management and monitoring of Azure VMware Solution. These considerations are based on [Azure Monitor baseline alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/) guidance. Azure Monitor baseline alerts (AMBA) is a structured approach across multiple Azure resources and patterns to create alerts for timely resolution of issue across health, performance and security.
 
 ### Azure tooling considerations
 
@@ -55,14 +55,17 @@ Review the following *recommendations* for platform management and monitoring of
 
 - Configure [Azure Service Health to send alerts](/azure/service-health/resource-health-alert-monitor-guide) for service issues, planned maintenance, and other events that could impact Azure VMware Solution and other services. These notifications are sent to Action Groups, which can be used to send email, SMS, push notifications, and voice calls to addresses of your choice. Actions can also trigger Azure and third-party systems, including Azure Functions, Logic Apps, Automation Runbooks, Event Hubs, and Webhooks. 
 - Monitor baseline performance of Azure VMware Solution infrastructure through [Azure Monitor Metrics](/azure/azure-vmware/configure-alerts-for-azure-vmware-solution#supported-metrics-and-activities). These metrics can be queried and filtered from the Azure portal, queried via REST API, or directed to Log Analytics, Azure Storage, Event Hubs, or [Partner Integrations](/azure/azure-monitor/partners).
-- Configure the following [alerts in Azure Monitor](/azure/azure-monitor/alerts/alerts-overview) to provide warnings if the cluster nears dangerous values for disk, CPU, or RAM usage:
+- Refer to following [Azure Monitor baseline alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to understand metrics and logs to be monitored and deployed for Azure VMware Solution:
 
-    | Metric                                    | Alert         |
-    |-------------------------------------------|---------------|
-    | Disk - Percentage Datastore Disk Used (%) | >70% warning  |
-    | Disk - Percentage Datastore Disk Used (%) | >75% critical |
-    | CPU - Percentage CPU (%)                  | >80% warning  |
-    | Memory - Average Memory Usage (%)         | >80% warning  |
+      | Name                              | Threshold(s) (Severity) | Signal Type        | Frequency       | # Alert Rules |
+      |-----------------------------------|-------------------------|--------------------|-----------------|---------------|
+      | CPU - Percentage CPU (%)             | 80 (2)                  | EffectiveCpuAverage| Every 5 minutes | 1             |
+      | CPU - Percentage CPU (%) (Critical)  | 95 (0)                  | EffectiveCpuAverage| Every 5 minutes | 1             |
+      | Memory - Average Memory Usage (%)          | 80 (2)                  | UsageAverage       | Every 5 minutes | 1             |
+      | Memory - Average Memory Usage (%) (Critical) | 95 (0)                  | UsageAverage       | Every 5 minutes | 1             |
+      | Disk - Percentage Datastore Disk Used (%)  | 70 (2)            | DiskUsedPercentage | Every 5 minutes | 1             |
+      | Disk - Percentage Datastore Disk Used (%) (Critical) | 75 (0)            | DiskUsedPercentage | Every 5 minutes | 1             |
+      | Service Health Alerts             | N/A                     | ServiceHealth      | N/A             | 1             |
 
 - You can automate the creation of [Azure Monitor Alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Utilization-Alerts/readme.md) and [Azure Service Health alerts](https://github.com/Azure/Enterprise-Scale-for-AVS/blob/main/BrownField/Monitoring/AVS-Service-Health/readme.md).
 - For service-level agreement (SLA) purposes, Azure VMware Solution requires slack space of 25 percent available on vSAN.
@@ -72,7 +75,6 @@ Review the following *recommendations* for platform management and monitoring of
   - [Configure Connection Monitor](/azure/network-watcher/connection-monitor-create-using-portal) to view the availability and performance of the network connections within, from, and to the Azure VMware Solution, including ExpressRoute Direct and ExpressRoute Global Reach connections.
 - Send your logs to Log Analytics. 
 For more information, see [Send Logs to Log Analytics](/azure/azure-vmware/send-logs-to-log-analytics).
-- Refer to [Azure Monitor Baseline Alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/patterns/specialized/avs/) to understand metrics and logs to be monitored and deployed for Azure VMware Solution SDDC.
 
 ### VMware tooling recommendations
 
