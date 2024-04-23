@@ -32,7 +32,7 @@ To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata
 
 ## Design Recommendations
 
-- Consider separating infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various purposes.
+- Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various purposes.
 - Secure the data-plane and virtual network access by limiting the source-IP range on the individual Oracle Database@Azure host firewall software ([SELinux](https://docs.oracle.com/en/learn/ol-selinux/#introduction) for database servers and [cellwall](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-9858E126-0D9F-4F99-BE68-391E77916EC6) for storage servers). Open only the ports needed for secure communication, preventing access to and from the internet. Configure network address translation (NAT) if internet access is required. Always require data in transit to be encrypted.
 - Use OCI Vault to store and manage encryption keys. If you decide to bring your own keys, set up a strict process for key rotation.
 - Use the Oracle vulnerability scanning capabilities to detect security issues such as open ports, needed patches, and OS configurations that hackers might exploit and other vulnerabilities.
