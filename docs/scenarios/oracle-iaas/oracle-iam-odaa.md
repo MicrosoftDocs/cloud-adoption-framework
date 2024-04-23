@@ -21,7 +21,7 @@ This article builds on some of the considerations and recommendations that are d
 
 ## Design Recommendations
 
-- Configure federated access between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials. It's possible to have users log in with OCI credentials only, but this setup is not recommended. It creates more user identities that you have to manage. To enable federation, follow the instructions in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#step-3-optional-create-identity-federation-using-azures-identity-service).
+- Have the ALZ platform team configure federated access between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to log in to OCI using their Microsoft Entra ID credentials. It's possible to have users log in with OCI credentials only, but this setup is not recommended. It creates more user identities that you have to manage. To enable federation, follow the instructions in [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database#step-3-optional-create-identity-federation-using-azures-identity-service).
 - When you provision a new account and tenant, an Admin user is created in OCI. Avoid using this Admin identity for day-to-day operations. Instead, use the Microsoft Entra administrator groups to provide the relevant individuals elevated access.
 - To enhance the granularity of access permissions, contact the OCI administrator to establish additional groups and roles within the OCI tenant. It provides more control over who can create and manage Container Databases (CDBs) and Pluggable Databases (PDBs) on the Oracle Database@Azure instances.
 
