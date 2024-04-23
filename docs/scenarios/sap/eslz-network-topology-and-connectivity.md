@@ -161,11 +161,7 @@ We don't recommend that you host the database management system (DBMS) and appli
 
 When you run SAP RISE deployments in Azure, the integration of the SAP-managed environment with your own Azure ecosystem is paramount. To learn more about the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
 
-<<<<<<< HEAD
 SAP RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or virtual network peering. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might be interested in setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [Azure Landing Zone](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zone-accelerator) could be a good option. This ready-made deployment experience can easily be adopted to the specific customer requirement, with specific focus on the virtual network parameters.
-=======
-SAP RISE implementation usually has two options, site-to-site VPN or virtual network peering, for connectivity. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might be interested in setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [Cloud Adoption Framework migration landing zone](/azure/governance/blueprints/samples/caf-migrate-landing-zone) might be a good option. You can easily adapt this blueprint to the customer's requirements, with a specific focus on the virtual network parameters.
->>>>>>> df5bc14b3d186779a464c2382d26e819a1ef6a48
 
 Deploying cross-tenant virtual network peering to the SAP RISE tenant also requires more work. You need to carefully plan the virtual network architecture to ensure there are no overlapping Classless Inter-Domain Routing ranges. You must also properly [peer DNS to the SAP RISE tenant](/azure/sap/workloads/rise-integration).
 
