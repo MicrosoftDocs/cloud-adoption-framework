@@ -181,6 +181,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
+| Azure Monitor Private Link Scope | `Microsoft.Insights/privateLinkScopes` | `pls` |
 | Blueprint | `Microsoft.Blueprint/blueprints` | `bp` |
 | Blueprint assignment | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
@@ -188,6 +189,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
 | Microsoft Purview instance | `Microsoft.Purview/accounts` | `pview` |
+
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 | Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
