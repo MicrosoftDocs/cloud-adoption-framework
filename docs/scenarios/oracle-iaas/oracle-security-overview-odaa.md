@@ -27,7 +27,7 @@ To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata
 - The Oracle Database@Azure service is deployed in private subnets in Azure only. The service is not immediately accessible from the Internet.
 - Network security groups are not currently supported on the Azure subnets where Oracle Database@Azure service is deployed.
 - The Oracle Database@Azure solution uses a number of default TCP ports for various operations. For the full list of ports, see [Understanding the Network Requirements for Oracle Exadata](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
-- The Oracle Database@Azure solution uses [Oracle Cloud Infrastructure Vault (OCI Vault)](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) to store and manage keys for Transparent Data Encryption (TDE). Integration with Azure Key Vault is not possible at this time.
+- The Oracle Database@Azure solution uses [Oracle Cloud Infrastructure Vault (OCI Vault)](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) to store and manage keys for Transparent Data Encryption (TDE), that is enabled by default. Integration with Azure Key Vault is not possible at this time.
 - For vulnerability scanning on individual nodes in the Oracle Database@Azure solution, you can use the Oracle Cloud Infrastructure Vulnerability Scanning Service. For more information, see [Oracle Cloud Infrastructure Vulnerability Scanning Service](https://docs.oracle.com/en-us/iaas/scanning/using/overview.htm). Integration with Microsoft Defender is not possible at this time.
 
 ## Design Recommendations
