@@ -1,8 +1,8 @@
 ---
 title: Azure Policy guest configuration extension
 description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy guest configuration extension to audit the configuration settings in an Azure VM.
-author: martinekuan
-ms.author: timwarner
+author: Zimmergren
+ms.author: tozimmergren
 ms.date: 01/06/2023
 ms.topic: conceptual
 ms.custom: internal, devx-track-azurepowershell

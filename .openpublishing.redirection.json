@@ -82,7 +82,7 @@
       },
       {
          "source_path": "docs/governance/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/resource-consistency/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": true
       },
       {
@@ -632,37 +632,37 @@
       },
       {         
          "source_path": "docs/govern/identity-baseline/business-risks.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/compliance-processes.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/discipline-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/metrics-tolerance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/policy-statements.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/template.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },                  
       {
          "source_path": "docs/govern/identity-baseline/toolchain.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/identity-baseline",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       }, 
       {
@@ -1472,57 +1472,57 @@
       },
       {
          "source_path": "docs/govern/cost-management/best-practices.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/business-risks.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/compliance-processes.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/discipline-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/metrics-tolerance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/policy-statements.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/template.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/cost-management/toolchain.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-cost-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/deployment-acceleration/deployment-consistency-repeatability.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/deployment-acceleration/policy-visibility-in-deployment.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
@@ -1577,7 +1577,7 @@
       },
       {
          "source_path": "docs/govern/guides/complex/resource-consistency-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
@@ -1622,7 +1622,7 @@
       },
       {
          "source_path": "docs/govern/guides/standard/resource-consistency-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
@@ -1632,32 +1632,32 @@
       },
       {
          "source_path": "docs/govern/guides/standard/update-custom-policies.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/update-custom-policies",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/identity-baseline/administrative-access.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/identity-baseline/application-access.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/identity-baseline/azure-ad-configuration.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/identity-baseline/business-user-access.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/identity-baseline/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
@@ -1727,92 +1727,92 @@
       },
       {
          "source_path": "docs/govern/resource-consistency/business-constraints.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/keep-azure-landing-zone-up-to-date.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/management-group-structure.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/migrate-azure-landing-zone-policies.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/migrate-azure-landing-zone-policies",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/naming.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/resource-consistency/tagging.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/azure-security-guidance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/business-risks.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/cloud-native-policy.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/compliance-processes.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/discipline-improvement.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/metrics-tolerance.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/policy-statements.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/template.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/deployment-acceleration/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-resource-management-governance",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/govern/security-baseline/toolchain.md",
-         "redirect_url": "/azure/cloud-adoption-framework/govern/index",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
       }
    ]
