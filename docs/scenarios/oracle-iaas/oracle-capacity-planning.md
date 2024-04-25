@@ -58,4 +58,4 @@ The performance and reliability of Oracle database workloads heavily rely on the
 ## Next steps
 
 For an overview of the considerations involved in migrating an Oracle workload to Azure please refer to [Migration planning for Oracle on Azure](./oracle-migration-planning.md).
-For more details on compute and storage considerations for Oracle workloads on Azure Virtual Machines, refer to [Performance best practices for Oracle on Azure Virtual Machines](/azure/virtual-machines/workloads/oracle/oracle-storage).
+For more details on compute and storage considerations for Oracle workloads on Azure Virtual Machines, refer to [Performance best practices for Oracle on Azure VMs](/azure/virtual-machines/workloads/oracle/oracle-performance-best-practice).
