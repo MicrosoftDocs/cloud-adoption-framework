@@ -95,7 +95,6 @@ An important part of this process is maintaining and updating Azure Policy assig
 
 Assign a built-in policy to a management group, subscription, or resource group.
 
-
 ::: zone-end
 
 ::: zone target="docs"
@@ -114,4 +113,6 @@ To learn more, see:
 - [Azure Policy](/azure/governance/policy/)
 - [Azure Policy guest configuration](/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Define corporate policy](../../govern/policy-compliance/policy-definition.md)
+
+::: zone-end
 

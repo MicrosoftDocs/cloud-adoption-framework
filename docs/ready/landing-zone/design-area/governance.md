@@ -59,23 +59,12 @@ Azure Policy helps ensure security and compliance for enterprise technical estat
 Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
 - Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
-
-<<<<<<< HEAD
-- Determine what Azure policies are needed based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a stating point.
 - Use the [Policies included in Azure Landing Zones reference implementation ](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
 - Enforce networking, identity, management, and security conventions are often automated.
 - Manage and create policy assignments by using policy definitions, which might be reused at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
 - Ensure continuous compliance with compliance reporting and auditing.
 - Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - Understand regulatory compliance policies. The policies might include HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
-=======
-- Use the [standards-based blueprint samples](/azure/governance/blueprints/samples) to consider other policies that might align to your business requirements.
-- Enforce automated networking, identity, management, and security conventions.
-- Use policy definitions to manage and create policy assignments, and reuse them at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
-- Incorporate compliance reporting and auditing to ensure continuous compliance.
-- Understand that [Azure Policy has limits](/azure/azure-resource-manager/management/azure-subscription-service-limits), such as the restriction of definitions at any particular scope.
-- Understand regulatory compliance policies, such as HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
->>>>>>> df5bc14b3d186779a464c2382d26e819a1ef6a48
 
 ### Cost management considerations
 

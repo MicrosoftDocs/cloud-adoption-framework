@@ -23,7 +23,7 @@ Posture management introduces a structured approach to modernization, using the 
 - **Threat and vulnerability management (TVM)** to establish a holistic view of the organizations attack surface and risk and integrate it into operations and engineering decision making.
 - **Discover sharing risks:** To understand the data exposure of enterprise intellectual property on both sanctioned and unsanctioned cloud services.
 - **Cloud security posture management** to take advantage of cloud instrumentation to monitor and prioritize security improvements.
-- **Technical policy:** Apply guardrails to audit and enforce the organizations standards and policies to technical systems. For more information, see [Azure Policy](https://learn.microsoft.com/azure/governance/policy/overview).
+- **Technical policy:** Apply guardrails to audit and enforce the organizations standards and policies to technical systems. For more information, see [Azure Policy](/azure/governance/policy/overview).
 - **Threat modeling** systems and architectures, as well as specific applications.
 
 **Emerging discipline:** Security posture management will disrupt many norms of the security organization in a healthy way with these new capabilities and may shift responsibilities among roles or create new roles.
