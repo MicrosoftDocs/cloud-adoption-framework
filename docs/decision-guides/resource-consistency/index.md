@@ -77,9 +77,9 @@ Resource groups let you support extra levels of hierarchy inside your organizati
 
 For large cloud deployments, global governance becomes both more important and more complex. It's crucial to automatically apply and enforce governance requirements when deploying resources, and meet updated requirements for existing deployments.
 
-[Azure Blueprints](/azure/governance/blueprints/overview) enable organizations to support global governance of large cloud estates in Azure. Blueprints move beyond the capabilities provided by standard Azure Resource Manager templates. They create complete deployment orchestrations capable of deploying resources and applying policy rules. Blueprints support versioning, the ability to update all subscriptions where the blueprint was used, and the ability to lock down deployed subscriptions to avoid unauthorized creation and modification of resources.
+An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. Read more about Azure Landing Zones [here](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-These deployment packages allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Development teams can also integrate blueprints into CI/CD pipelines to apply revised governance standards to deployments as they're updated.
+These deployment packages allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Development teams can also integrate [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) using [Policy as Code](/azure/governance/policy/concepts/policy-as-code)into CI/CD pipelines to apply revised governance standards to deployments as they're updated.
 
 ## Next steps
 
