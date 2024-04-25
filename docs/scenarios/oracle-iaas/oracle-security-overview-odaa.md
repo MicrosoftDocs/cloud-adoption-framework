@@ -1,6 +1,6 @@
 ---
 title: Security guidelines for Oracle Database@Azure
-description: Learn about security guidelines for Oracle Database@Azure
+description: Learn about security guidelines for Oracle Database@Azure.
 author: basimolimajeed
 ms.author: bamajeed
 ms.reviewer: janfaurs
@@ -17,18 +17,18 @@ This article builds on several considerations and recommendations defined in [Se
 
 ## Overview
 
-Most databases contain sensitive data, requiring a secure architecture beyond just database-level protections. The defense in depth strategy provides comprehensive security by layering multiple defense mechanisms. This approach avoids relying solely on one type of security, such as network defenses. Instead, it combines various measures like strong authentication, authorization frameworks, hardened network security, and encryption of data both at rest and in transit. This multilayered strategy is essential for securing Oracle workloads effectively.
+Most databases contain sensitive data, requiring a secure architecture beyond database-level protections. The defense in depth strategy provides comprehensive security by layering multiple defense mechanisms. This approach avoids relying solely on one type of security, such as network defenses. Instead, it combines various measures. These measures include strong authentication and authorization frameworks, network security, encryption at rest, and encryption in transit. This multilayered strategy is essential for securing Oracle workloads effectively.
 
-To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata Security](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-overview.html#GUID-4D178313-47E7-451B-8AF8-1FEAC2CD38B2) and [Security Features of Oracle Exadata Database Machine](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-31C2978A-238C-4F30-82C7-17B355727810).
+For more information, see [Overview of Oracle Exadata Security](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-overview.html#GUID-4D178313-47E7-451B-8AF8-1FEAC2CD38B2) and [Security Features of Oracle Exadata Database Machine](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-31C2978A-238C-4F30-82C7-17B355727810).
 
 ## Design Considerations
 
-- Oracle Database@Azure are resources deployed in Azure VNETs and datacenters. They are managed in part from the Azure control plane and in part from the Oracle Cloud Infrastructure (OCI) control plane. The initiation of the infrastructure and network connectivity is managed in Azure. Database management and individual node management is handled via the Oracle control plane. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
-- The Oracle Database@Azure service is deployed in private subnets in Azure only. The service is not immediately accessible from the Internet.
-- Network security groups are not currently supported on the Azure subnets where Oracle Database@Azure service is deployed.
-- The Oracle Database@Azure solution uses a number of default TCP ports for various operations. For the full list of ports, see [Understanding the Network Requirements for Oracle Exadata](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
-- The Oracle Database@Azure solution uses [Oracle Cloud Infrastructure Vault (OCI Vault)](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm) to store and manage keys for Transparent Data Encryption (TDE), that is enabled by default. Integration with Azure Key Vault is not possible at this time.
-- For vulnerability scanning on individual nodes in the Oracle Database@Azure solution, you can use the Oracle Cloud Infrastructure Vulnerability Scanning Service. For more information, see [Oracle Cloud Infrastructure Vulnerability Scanning Service](https://docs.oracle.com/en-us/iaas/scanning/using/overview.htm). Integration with Microsoft Defender is not possible at this time.
+- Oracle Database@Azure are resources deployed in Azure virtual networks and datacenters. They're managed in part from the Azure control plane and in part from the Oracle Cloud Infrastructure (OCI) control plane. The initiation of the infrastructure and network connectivity is managed in Azure. Database management and individual node management are handled via the Oracle control plane. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
+- The Oracle Database@Azure service is deployed in private subnets in Azure only. The service isn't immediately accessible from the Internet.
+- Network security groups aren't currently supported on the Azure subnets where Oracle Database@Azure service is deployed.
+- The Oracle Database@Azure solution uses many default TCP ports for various operations. For the full list of ports, see [Understanding the Network Requirements for Oracle Exadata](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
+- The Oracle Database@Azure solution uses [Oracle Cloud Infrastructure Vault (OCI Vault)](https://docs.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) to store and manage keys for Transparent Data Encryption (TDE), that is enabled by default. Integration with Azure Key Vault isn't possible at this time.
+- For vulnerability scanning on individual nodes in the Oracle Database@Azure solution, you can use the Oracle Cloud Infrastructure Vulnerability Scanning Service. For more information, see [Oracle Cloud Infrastructure Vulnerability Scanning Service](https://docs.oracle.com/iaas/scanning/using/overview.htm). Integration with Microsoft Defender isn't possible at this time.
 
 ## Design Recommendations
 
@@ -38,7 +38,7 @@ To learn more about Oracle Exadata security refer to [Overview of Oracle Exadata
 - Use OCI Vault to store and manage encryption keys. If you decide to bring your own keys, set up a strict process for key rotation.
 - Use the Oracle vulnerability scanning capabilities to detect security issues such as open ports, needed patches, and OS configurations that hackers might exploit and other vulnerabilities.
 
-## Additional resources
+## More resources
 
 - [Identity and Access Management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
