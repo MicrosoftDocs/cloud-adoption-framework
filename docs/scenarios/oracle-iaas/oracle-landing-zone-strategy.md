@@ -3,7 +3,7 @@ title: Strategic impact of Oracle on Azure
 description: Learn about the strategic impact of Oracle on Azure.
 author: jfaurskov
 ms.author: janfaurs
-ms.date: 03/21/2024
+ms.date: 04/26/2024
 ms.topic: conceptual
 ms.custom: 
   - think-tank
@@ -13,15 +13,15 @@ ms.custom:
 
 # Strategic impact of Oracle on Azure
 
-Best practice encourages customers to create a single centralized cloud adoption strategy, using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article outlines technical considerations for the adoption of Oracle on Azure that might affect your strategy.
+Best practice encourages customers to create a single centralized cloud adoption strategy by using the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Cloud Adoption Framework. If you haven't already, use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy. This article describes technical considerations for the adoption of Oracle on Azure that might affect your strategy.
 
 ## Oracle on Azure adoption motivations
 
-Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives, and not necessarily limited to the specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team that includes business and IT leaders to review and prioritize the motivations. This input helps the cloud adoption team to make informed decisions throughout the implementation process. When an organization considers a cloud strategy for Oracle, the following motivations tend to shape cloud adoption plans:
+Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives and are not necessarily limited to the specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team that includes business and IT leaders to review and prioritize the motivations. This input helps the cloud adoption team make informed decisions throughout the implementation process. The following motivations tend to shape cloud adoption plans when an organization considers a cloud strategy for Oracle:
 
-- **Cost-optimization motivations**:  Refreshing Oracle's on-premises infrastructure requires significant capital. Migrating to the cloud can minimize these costs by reducing investment in physical assets.
-- **Innovation motivations**: The cloud unlocks new opportunities like AI & data modernization for the Oracle workload to be transformed and modernized, although this opportunity might not be in scope for the initial migration.
-- **Scalability motivations**: The cloud offers the ability to seamlessly scale up and down with infrastructure as part of business transformation with any service, including Oracle workloads.
+- **Cost-optimization motivations**: Refreshing an on-premises infrastructure for Oracle requires significant capital. Migration to the cloud can minimize these costs by reducing investment in physical assets.
+- **Innovation motivations**: The cloud unlocks new opportunities like AI and data modernization for the Oracle workload to be transformed and modernized. However, this opportunity might not be in scope for the initial migration.
+- **Scalability motivations**: The cloud offers the ability to seamlessly scale up and down with infrastructure, including Oracle workloads, as part of business transformation.
 - **Contractual and software motivations**: Annual renewals of Oracle maintenance contracts and updates to newer Oracle software versions can trigger a migration to the cloud to capitalize on technological upgrades.  
 
 ## Oracle on Azure adoption outcomes
