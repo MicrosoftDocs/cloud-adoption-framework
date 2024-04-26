@@ -29,8 +29,7 @@ Each region has its own Azure VMware Solution Private Cloud and an Azure Virtual
 
 ![Diagram of Dual-Region Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
-**Understanding Topology Connectivity**   
-
+**Understanding Topology Connectivity**
 | Connection | Description  |
 |:-------------------- |:--------------------  |
 | Connections (D) | Azure VMware Solution private cloud connection to its local regional hub.  |
@@ -57,8 +56,7 @@ The diagram illustrates traffic flows from the perspective of the Azure VMware S
 
 ![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-virtual-wan-2.png)  
 
-**Traffic Flow Chart**  
-
+**Traffic Flow Chart**
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
 | 1 | Azure VMware Solution Cloud Region 1 | &#8594;| Virtual Network 1| Yes, traffic is inspected at Hub 1 firewall|
@@ -82,8 +80,7 @@ The diagram illustrates traffic flows from an on-premises perspective.
 
 ![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)  
 
-**Traffic Flow Chart**  
-
+**Traffic Flow Chart**
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
 | 2 | on-premises | &#8594;| Azure VMware Solution Cloud Region 1 | No, traffic bypasses firewall and transits Global Reach (A)|
@@ -99,8 +96,7 @@ A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addre
 
 ![Diagram of Dual-Region Azure VMware Solution with Virtual Networks](./media/dual-region-virtual-wan-4.png)  
 
-**Traffic Flow Chart**  
-
+**Traffic Flow Chart**
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
 | 1 | Virtual Network 1 | &#8594;| Azure VMware Solution Cloud Region 1| Yes, traffic is inspected at Hub 1 firewall|
@@ -137,8 +133,7 @@ For more information, see the traffic flow section.
 
 ![Diagram of Dual-Region Azure VMware Solution with Internet](./media/dual-region-virtual-wan-5.png)  
 
-**Traffic Flow Chart**  
-
+**Traffic Flow Chart**
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? | Internet Breakout |
 | - | -------------- | -------- | ---------- | ---------- | ---------- |
 | 11 | Azure VMware Solution Cloud Region 1 | &#8594;| Internet| Yes, traffic is inspected at Hub 1 firewall| Via Hub 1 firewall
