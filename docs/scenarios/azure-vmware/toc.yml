@@ -40,13 +40,12 @@ items:
                 href: network-hub-spoke.md
               - name: Dual Region Network Topologies
                 href: eslz-dual-region-network-topology.md	                
-                items:
-                  - name: Dual-Region Deployments with Azure VWAN and Route Intent	                  
-                  - name: Dual-Region Hub and Spoke
-                    href: eslz-dual-region-network-topology.md
-                  - name: Dual-Region Azure VWAN and Route Intent
               - name: Example Architectures for Azure VMware Solution
                 href: example-architectures.md
+              - name: Virtual WAN Toplogies for Azure VMware Solution
+                items: 
+                  - name: Dual region Secure Virtual WAN with Global Reach               
+                    href: eslz-dual-region-with-secure-virtual-wan-with-globalreach.md
       - name: Governance discipline
         href: eslz-security-governance-and-compliance.md
       - name: Management and monitoring
