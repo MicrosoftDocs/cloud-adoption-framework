@@ -76,7 +76,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For initial deployment, use a pair of hub-and-spoke topologies across two regions for redundancy. Use landing zone virtual networks that connect with virtual network peering to a central hub virtual network for the following scenarios:
+- For regional deployments, primarily use the hub-and-spoke topology; ideally a regional hub in two or more Azure regions. Use application landing zone virtual networks that connect with virtual network peering to a regional central hub virtual network for the following scenarios:
 
   - Cross-premises connectivity via ExpressRoute enabled in two different peering locations 
 
