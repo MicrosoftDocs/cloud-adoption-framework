@@ -13,7 +13,7 @@ This article describes how to use the Cloud Adoption Framework for Azure to migr
 
 ## Migration disciplines
 
-A cloud migration typically requires both good preparation good and implementation. The Cloud Adoption Framework migration methodology relies on proven guidance to help you prepare for and carry out your migration efforts.
+A cloud migration typically requires both good preparation and good implementation. The Cloud Adoption Framework migration methodology relies on proven guidance to help you prepare for and carry out your migration efforts.
 
 ![Diagram that shows the Cloud Adoption Framework migration disciplines.](./media/migrate-overview.svg)
 
