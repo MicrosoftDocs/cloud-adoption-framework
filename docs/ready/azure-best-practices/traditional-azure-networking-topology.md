@@ -78,7 +78,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - For regional deployments, primarily use the hub-and-spoke topology; ideally a regional hub in two or more Azure regions. Use application landing zone virtual networks that connect with virtual network peering to a regional central hub virtual network for the following scenarios:
 
-  - Cross-premises connectivity via ExpressRoute enabled in two different peering locations 
+  - Cross-premises connectivity via ExpressRoute enabled in two different peering locations, see [Design and architect Azure ExpressRoute for resiliency](/azure/expressroute/design-architecture-for-resiliency)
 
   - VPN for branch connectivity.
 
