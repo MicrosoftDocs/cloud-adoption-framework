@@ -3,7 +3,7 @@ title: Abbreviation recommendations for Azure resources
 description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 4/12/2023
+ms.date: 4/26/2024
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
