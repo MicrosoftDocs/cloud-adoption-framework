@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency.5
 
 # Management groups
 
-[Management groups](/azure/governance/management-groups/overview) are essential for organizing and governing your Azure subscriptions. As the number of you subscriptions increases, management groups provide critical structure to your Azure environment and make it easier to manage your subscriptions. Use the following guidance to establish an effective management group hierarchy and organize your subscriptions according to best practices.
+[Management groups](/azure/governance/management-groups/overview) are essential for organizing and governing your Azure subscriptions. As the number of your subscriptions increases, management groups provide critical structure to your Azure environment and make it easier to manage your subscriptions. Use the following guidance to establish an effective management group hierarchy and organize your subscriptions according to best practices.
 
 ## Management group design considerations
 
