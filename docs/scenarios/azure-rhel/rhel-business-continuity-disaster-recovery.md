@@ -1,10 +1,12 @@
 ---
 title: Business continuity and disaster recovery for Red Hat Enterprise Linux (RHEL) on Azure
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for Red Hat Enterprise Linux (RHEL) on Azure environment.
-author: temandin_microsoft
+author: terrymandin
 Authors: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
 Date: 04/26/2024
 Topic: Azure Business Continuity and Disaster Recovery for Red Hat Enterprise Linux
+ms.author: temandin
+ms.topic: conceptual
 ---
 
 # Business continuity and disaster recovery considerations for Red Hat Enterprise Linux (RHEL) on Azure
@@ -33,7 +35,7 @@ High availability and disaster recovery design considerations for Red Hat Enterp
 ### RHEL Platform BCDR Considerations
 
 For specific guidance on RHEL BCDR capabilities for RHEL platform infrastructure see: 
-- [Satellite HA Architecture](TODO:PointToManagementAndMonitoringWhenItIsComplete) 
+- [Satellite HA Architecture](TODOPointToManagementAndMonitoringWhenItIsComplete) 
 - [Ansible Automation Platform HA Architecture](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
 - [Identity Management HA Architecture](./rhel-identity-access-management.md#design-recommendations)
 
