@@ -29,7 +29,7 @@ Like most complex platforms, your Oracle digital estate includes three asset cat
 
 Consider the following items when planning for migrating Oracle workloads to Azure:
 
-**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack) – providing a list of hosts and database performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically, if you're considering moving to Oracle Database@Azure, you should reach out to your local Oracle sales team for sizing guidance.
+**Describe Oracle database platform**: Describe your Oracle estate using AWR reports (or statspack). Provide a list of hosts and database performance information. AWR reports or statspack report should be taken when the system is running at peak load. Specifically, if you're considering moving to Oracle Database@Azure, you should reach out to your local Oracle sales team for sizing guidance.
 
 **Describe Oracle workloads**: Describe your Oracle applications, such as Oracle first-party or third-party applications. Also include custom developed applications. It's important to fix the region you plan to host your application in or other technical requirements like maximum acceptable downtime, SSL offloading, and current architecture diagrams. List the application server and describe the CPU configuration, memory, storage, and its utilization. Include details on the operating system, app version, throughput, and IOPS.
 
@@ -49,7 +49,7 @@ Whether you use templates or your own project planning tools, factor in the foll
 
 - Depending on requirements create an Azure landing zone to contain the relevant assets for your complete solution – based on architecture guidelines.
 
-- Evaluate your database assets [AWR/statspack report based]. This evaluation should include a performance analysis to review the current behavior of the database. Additionally, adjust the size of your Oracle estate to effectively manage licensing costs and achieve optimal performance. Select the most suitable Azure architecture for your needs. It could be entirely virtual machine-based, entirely based on Oracle Database@Azure, or a combination of both.
+- Evaluate your database assets. This evaluation should include a performance analysis to review the current behavior of the database. Additionally, adjust the size of your Oracle estate to effectively manage licensing costs and achieve optimal performance. Select the most suitable Azure architecture for your needs. It could be entirely virtual machine-based, entirely based on Oracle Database@Azure, or a combination of both.
 
 - Choose the right deployment architecture - based on architecture guidelines.
 
@@ -64,7 +64,6 @@ Once you have a general work plan, you can begin aligning team members and estim
 This project's team members should have Oracle and Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team needs to acquire if any. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework building a skills readiness plan article and strategy and plan template can help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint.
 
 ## Next steps
-
 
 > [!div class="nextstepaction"]
 > [Oracle on Azure migration planning](oracle-migration-planning.md)
