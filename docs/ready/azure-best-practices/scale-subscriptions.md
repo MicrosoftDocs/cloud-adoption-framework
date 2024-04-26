@@ -56,7 +56,7 @@ As your subscription model grows, you might decide that some resources belong in
 
 ## Next steps
 
-Create a management group hierarchy to help [organize and manage your subscriptions and resources](./organize-subscriptions.md).
+Create a management group hierarchy to help organize and manage your subscriptions and resources.
 
 > [!div class="nextstepaction"]
-> [Organize and manage your subscriptions and resources](./organize-subscriptions.md)
+> [Organize and manage your subscriptions and resources](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
