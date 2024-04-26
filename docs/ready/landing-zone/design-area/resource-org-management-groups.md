@@ -10,9 +10,7 @@ ms.custom: internal, UpdateFrequency.5
 
 # Management groups
 
-[Management groups](/azure/governance/management-groups/overview) are a tool to help you structure your cloud environments for organization and governance at scale.
-
-Considering how to use management groups as part of the environment design is an important foundational step. Use the following guidance to help make your cloud architecture decisions.
+[Management groups](/azure/governance/management-groups/overview) are essential for organizing and governing your Azure subscriptions. They are foundational to the design of your Azure environment. Use the following guidance to establish an effective management group hierarchy and organize your subscriptions according to best practices.
 
 ## Management group design considerations
 
