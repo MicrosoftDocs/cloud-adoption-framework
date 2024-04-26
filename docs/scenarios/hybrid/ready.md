@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 The Cloud Adoption Framework [Ready methodology](../../ready/index.md) guides customers as they prepare their environment for cloud adoption. The methodology includes technical accelerators like Azure landing zones, which are the building blocks of any Azure cloud adoption environment.
 
-If you need help with choosing the right landing zone to deploy for your organization, this guide can help you get started. When considering which landing zone best fits your organization's operating model, review [Choose the landing zone for your organization](../../ready/landing-zone/choose-landing-zone-option.md).
+If you need help with choosing the right landing zone to deploy for your organization, this guide can help you get started.
 
 ## Hybrid and multicloud in landing zones
 

@@ -68,8 +68,7 @@ When working with Azure VMware Solution in both primary (protected) and secondar
 Azure VMware Solution requires an understanding of Azure landing zones and makes use of infrastructure-as-code to deploy end-to-end solution templates. These solution templates are customizable and are a starter for most Azure VMware Solution scenarios. For more information, see:
 
 - [What is an Azure landing zone?](../../ready/landing-zone/index.md)
-- [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
-- [Refactoring landing zones](../../ready/landing-zone/refactor.md)
+- [Deploy Azure landing zones](/azure/architecture/landing-zones/landing-zone-deploy)
 
 ## Next steps
 

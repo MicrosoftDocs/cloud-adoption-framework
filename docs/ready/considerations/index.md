@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Expand your landing zone
 
-This section of the Ready methodology builds on the principles of [landing zone refactoring](../landing-zone/refactor.md). A refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
+A refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
 
 ## Shared architecture pillars
 
