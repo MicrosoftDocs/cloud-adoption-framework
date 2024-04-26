@@ -1,6 +1,6 @@
 ---
-title: Abbreviation examples for Azure resources
-description: Abbreviation examples for Azure resources
+title: Abbreviation recommendations for Azure resources
+description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 4/12/2023
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Abbreviation examples for Azure resources
+# Abbreviation recommendations for Azure resources
 
 This page gives you abbreviation examples for many of the resources in Azure. The following table has *abbreviations* mapped to *resource* and *resource provider namespace*.
 
