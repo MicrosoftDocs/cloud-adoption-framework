@@ -2,10 +2,9 @@
 title: Business continuity and disaster recovery for Red Hat Enterprise Linux (RHEL) on Azure
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for Red Hat Enterprise Linux (RHEL) on Azure environment.
 author: temandin_microsoft
-ms.author: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
-ms.date: 4/5/2024
-ms.topic: conceptual
-ms.custom: think-tank
+Authors: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
+Date: 04/26/2024
+Topic: Azure Business Continuity and Disaster Recovery for Red Hat Enterprise Linux
 ---
 
 # Business continuity and disaster recovery considerations for Red Hat Enterprise Linux (RHEL) on Azure
