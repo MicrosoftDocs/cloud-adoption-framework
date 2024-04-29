@@ -23,6 +23,8 @@ For more information, see [Overview of Oracle Exadata security](https://docs.ora
 
 ## Design considerations
 
+Consider the following when designing your security guidelines for Oracle Database@Azure:
+
 - Oracle Database@Azure are resources deployed in Azure virtual networks and datacenters. The Azure control plane and the Oracle Cloud Infrastructure (OCI) control plane both manage these resources. The Azure control plane manages the initiation of the infrastructure and network connectivity. The Oracle control plane manages database management and individual node management. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
 
 - The Oracle Database@Azure service is deployed in private subnets in Azure only. The service isn't immediately accessible from the internet.
@@ -36,6 +38,8 @@ For more information, see [Overview of Oracle Exadata security](https://docs.ora
 - You can use the [Oracle Cloud Infrastructure (OCI) Vulnerability Scanning Service](https://docs.oracle.com/iaas/scanning/using/overview.htm) for vulnerability scanning on individual nodes in the Oracle Database@Azure solution. Integration with Microsoft Defender isn't possible at this time.
 
 ## Design recommendations
+
+Consider the following recommendations when designing your security for Oracle Database@Azure:
 
 - Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various purposes.
 
