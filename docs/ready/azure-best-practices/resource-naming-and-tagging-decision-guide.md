@@ -93,7 +93,11 @@ The following tagging patterns are examples of how you can use tagging to organi
 
 Azure tags can be used across different Azure regions. They are used for logical organization of resources and are not tied to a specific location. This means that you can use the same tagging strategy across all your resources, regardless of the region they are located in.
 
-In a multi-region environment, including region detail into the tagging strategy can be considered if the naming convention does not already cover the operational and management requirements. If advanced reporting or resource filtering are required, based on the Azure region where resources are deployed, and this possibility cannot be obtained through subscription alignment, then tagging can be an effective way to aggregate and compare across regions and subscriptions. The region where a resource is created is already available as resource object property, then not strictly necessary to include it in the tagging strategy.
+In a multi-region environment, including region detail into the tagging strategy can be considered if the naming convention does not already cover the operational and management requirements. If advanced reporting or resource filtering are required, based on the Azure region where resources are deployed, and this possibility cannot be obtained through subscription alignment, then tagging can be an effective way to aggregate and compare across regions and subscriptions.
+
+If the region where a resource is created is already available as resource object property, then not strictly necessary to include it in the tagging strategy.
+
+If the region where a resource is created is already available as resource object property, then not strictly necessary to include it in the tagging strategy.
 
 - A collection of built-in Azure policies are available to enforce tagging requirements, and custom policies can be created to enforce specific tagging requirements. For more information, see [Assign policy definitions for tag compliance](/azure/azure-resource-manager/management/tag-policies).
 - When creating an assignment for a policy, it is possible to specify a resource selector to target and filter specific regions (*resourceLocation*) inside the specified scope. For more information, see [Create a policy assignment](/azure/azure-resource-manager/management/tag-policies#create-a-policy-assignment) and [Resource selectors](/azure/governance/policy/concepts/assignment-structure#resource-selectors).
