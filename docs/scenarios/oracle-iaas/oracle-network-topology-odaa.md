@@ -55,7 +55,7 @@ Consider the following network topologies for Oracle Database@Azure.
 
 :::image type="content" source="media/exadata-network-multiple-app.png" alt-text="Suggested network architecture for complex application portfolio served by single or multiple databases":::
 
-## See also
+## Next steps
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)

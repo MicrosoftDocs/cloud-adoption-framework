@@ -45,13 +45,13 @@ Consider the following recommendations when designing your security for Oracle D
 
 - Secure the data plane and virtual network access by limiting the source-IP range on the individual Oracle Database@Azure host firewall software [SELinux](https://docs.oracle.com/en/learn/ol-selinux/#introduction) for database servers and [cellwall](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-9858E126-0D9F-4F99-BE68-391E77916EC6) for storage servers. Open only the ports required for secure communication to prevent access to and from the internet.
 
-- Configure network address translation (NAT) if internet access is required. Always require data in transit to be encrypted.
+- Configure network address translation (NAT) if internet access is required. Always require encryption for data in transit.
 
 - Use OCI Vault to store and manage encryption keys. If you decide to bring your own keys, set up a strict process for key rotation.
 
-- Use the Oracle vulnerability scanning capabilities to detect vulnerabilities and security issues that hackers might exploit, such as open ports, needed patches, and operating system configurations.
+- Use the Oracle vulnerability scanning capabilities to detect vulnerabilities and security issues that hackers might exploit, such as open ports, necessary patches, and operating system configurations.
 
-## See also
+## Next steps
 
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)

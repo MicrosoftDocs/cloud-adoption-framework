@@ -17,7 +17,7 @@ This article builds on the considerations and recommendations that are defined i
 
 Consider the following identity and access management principles for Oracle Database@Azure:
 
-- Accept and enable the Oracle Database@Azure private offer on the Azure Marketplace for your subscription. You need contributor access to the subscription to deploy the Oracle Database@Azure service. For more information, see [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database). If you aligned your operational model with Azure landing zone principles, the individual application development team that requires Oracle Database@Azure services manages the process. If you run a more traditional model, there might be parts of the process that a centralized platform team needs to handle.
+- Accept and enable the Oracle Database@Azure private offer on the Azure Marketplace for your subscription. You need contributor access to the subscription to deploy the Oracle Database@Azure service. For more information, see [Onboard with Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database). If you aligned your operational model with Azure landing zone principles, the individual application development team that requires Oracle Database@Azure services manages the process. There might be parts of the process that a centralized platform team needs to handle if you run a more traditional model.
 
 - Oracle Database@Azure doesn't natively support Microsoft Entra ID for identity and access management. However, you can configure federation between Microsoft Entra ID and Oracle Cloud Infrastructure (OCI) to enable users to sign in to OCI using their Microsoft Entra ID credentials.
 
@@ -33,7 +33,7 @@ Consider the following identity and access management design recommendations for
 
 - Contact the OCI administrator to establish other groups and roles within the OCI tenant to enhance the granularity of access permissions. OCI provides more control over who can create and manage CDBs and PDBs on Oracle Database@Azure instances.
 
-## See also
+## Next steps
 
 - [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
