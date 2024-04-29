@@ -1,15 +1,15 @@
 ---
-title: Abbreviation examples for Azure resources
-description: Abbreviation examples for Azure resources
+title: Abbreviation recommendations for Azure resources
+description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 4/12/2023
+ms.date: 4/26/2024
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
-# Abbreviation examples for Azure resources
+# Abbreviation recommendations for Azure resources
 
 This page gives you abbreviation examples for many of the resources in Azure. The following table has *abbreviations* mapped to *resource* and *resource provider namespace*.
 
@@ -181,6 +181,10 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
+| Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
+| Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
+| Blueprint (will be deprecated) | `Microsoft.Blueprint/blueprints` | `bp` |
+| Blueprint assignment (to be deprecated) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |

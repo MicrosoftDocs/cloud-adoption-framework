@@ -354,8 +354,6 @@ items:
               href: ready/azure-best-practices/initial-subscriptions.md
             - name: Scale with multiple subscriptions
               href: ready/azure-best-practices/scale-subscriptions.md
-            - name: Organize your subscriptions
-              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Network topology and connectivity
           items:
