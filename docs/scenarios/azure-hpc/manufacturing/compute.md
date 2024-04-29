@@ -54,7 +54,7 @@ The HC-series VMs are optimized for HPC applications that are driven by intensiv
 For reference architectures and cookbooks for deploying HPC independent software vendor (ISV) applications that support manufacturing use cases, see the following resources:
 
 - [Virtual machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
-- [Azure HPC certification.github.io](https://azurehpc-certification.github.io/).
+- [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/).
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). This standalone reference architecture might not be compliant with the Azure landing zone paradigm.
 
 ## Next steps

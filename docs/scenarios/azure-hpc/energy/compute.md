@@ -95,7 +95,7 @@ A reservoir modeling workload is also an area of reservoir engineering. The work
 
 For more information on reference architecture or cookbooks for relevant HPC ISV applications that support HPC for energy use cases, see:
 
-- [Azure HPC certification.github.io](https://azurehpc-certification.github.io/)
+- [Azure HPC certification.github.io](https://github.com/AzureHPC-Certification/AzureHPC-Certification.github.io/)
 - [Microsoft Azure HPC OnDemand Platform](https://techcommunity.microsoft.com/t5/azure-global/azure-hpc-ondemand-platform-cloud-hpc-made-easy/ba-p/2537338). Standalone reference architecture might not be compliant with the ALZ paradigm.
 
 ## Next steps
