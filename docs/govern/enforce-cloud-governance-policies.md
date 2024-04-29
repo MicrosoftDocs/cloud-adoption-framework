@@ -42,7 +42,7 @@ Use cloud management and governance tools to automate compliance with governance
 
 - *Use policy enforcement points*. Set up policy enforcement points within your cloud environments that automatically apply governance rules. Consider predeployment checks, runtime monitoring, and automated remediation actions.
 
-- *Use policy as code*. Use IaC tools to [enforce governance policies through code](/azure/governance/policy/concepts/policy-as-code). Policy as code enhances the automation of governance controls and ensures consistency across different environments.
+- *Use policy as code*. Use IaC tools to [enforce governance policies through code](/azure/governance/policy/concepts/policy-as-code). Policy as code enhances the automation of governance controls and ensures consistency across different environments. Consider using [Enterprise Azure Policy as Code](https://azure.github.io/enterprise-azure-policy-as-code/) (EPAC) to manage policies aligned with recommended Azure landing zone policies.
 
 - *Develop custom solutions as needed*. For custom governance actions, consider developing custom scripts or applications. Use Azure service APIs to gather data or manage resources directly.
 
@@ -98,7 +98,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 - *Restrict deployments to specific regions*. Control where resources are deployed to comply with regulatory requirements, manage costs, and reduce latency. For example, use the `Allowed locations` policy definition in Azure Policy. Also [enforce regional restrictions](/azure/governance/policy/tutorials/policy-devops-pipelines) in your deployment pipeline.
 
-- *Use IaC*. Automate infrastructure deployments using [Bicep, Terraform, or Azure Resource Manager templates (ARM templates)](/azure/templates/). Store your IaC configurations in a source control system (GitHub or Azure Repos) to track changes and collaborate.
+- *Use infrastructure as code (IaC)*. Automate infrastructure deployments using [Bicep, Terraform, or Azure Resource Manager templates (ARM templates)](/azure/templates/). Store your IaC configurations in a source control system (GitHub or Azure Repos) to track changes and collaborate. Use [Azure landing zone accelerators](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerators) to govern the deployment of your platform and application resources and avoid configuration drift over time.
 
 - *Govern hybrid and multicloud environments*. [Govern hybrid and multicloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 
@@ -130,7 +130,11 @@ Sometimes a tool limitation or cost makes automated enforcement unpractical. In 
 
 ## Review policy enforcement
 
-Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. Engage with stakeholders to ensure cloud governance enforcement aligns with business objectives and compliance requirements.
+Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. To review policy enforcement, follow these recommendations:
+
+- *Engage with stakeholders.* Discuss the effectiveness of enforcement mechanisms with stakeholders. Ensure cloud governance enforcement aligns with business objectives and compliance requirements.
+
+- *Monitor requirements.* Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that require updates your enforcement mechanisms. For example, Azure landing zone recommended policies can change over time. You should [detect](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in#detect-updates-to-policy) those policy changes, [update](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) to the latest Azure landing zone custom policies, or [migrate](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) to built-in policies as needed.
 
 ## Example cloud governance compliance checklists
 
