@@ -27,9 +27,9 @@ Consider the following when designing your security guidelines for Oracle Databa
 
 - Oracle Database@Azure are resources deployed in Azure virtual networks and datacenters. The Azure control plane and the Oracle Cloud Infrastructure (OCI) control plane both manage these resources. The Azure control plane manages the initiation of the infrastructure and network connectivity. The Oracle control plane manages database management and individual node management. For more information, see [Groups and roles for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-groups-roles).
 
-- The Oracle Database@Azure service is deployed in private subnets in Azure only. The service isn't immediately accessible from the internet.
+- The Oracle Database@Azure service is deployed on private subnets in Azure only. The service isn't immediately accessible from the internet.
 
-- Network security groups (NSGs) aren't currently supported on the Azure subnets where Oracle Database@Azure service is deployed.
+- Network security groups (NSGs) aren't currently supported on Azure subnets where Oracle Database@Azure service is deployed.
 
 - The Oracle Database@Azure solution uses many default Transmission Control Protocol (TCP) ports for various operations. For the full list of ports, see [Understanding the network requirements for Oracle Exadata](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmin/exadata-network-requirements.html#GUID-A454DAB3-7606-4288-9139-0C02A7669BE3).
 
@@ -41,7 +41,7 @@ Consider the following when designing your security guidelines for Oracle Databa
 
 Consider the following recommendations when designing your security for Oracle Database@Azure:
 
-- Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various purposes.
+- Segment infrastructure access from data services access, especially when different teams access multiple databases on the same infrastructure for various reasons.
 
 - Secure the data plane and virtual network access by limiting the source-IP range on the individual Oracle Database@Azure host firewall software [SELinux](https://docs.oracle.com/en/learn/ol-selinux/#introduction) for database servers and [cellwall](https://docs.oracle.com/en/engineered-systems/exadata-database-machine/dbmsq/exadata-security-features.html#GUID-9858E126-0D9F-4F99-BE68-391E77916EC6) for storage servers. Open only the ports required for secure communication to prevent access to and from the internet.
 

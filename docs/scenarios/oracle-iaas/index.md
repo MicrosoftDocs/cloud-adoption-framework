@@ -20,7 +20,7 @@ You can lift and shift your Oracle workloads to Azure virtual machines or use Or
 
 - **Oracle on Azure Virtual Machines**: Run Oracle databases and enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic server applications on Azure infrastructure. You can use Oracle Linux images, RHEL, or other endorsed operating systems. There are multiple VMs and storage options available.
 
-- **Oracle Database@Azure**: Oracle Database@Azure allows you to run Oracle Exadata infrastructure in Azure. Oracle Exadata is a high-performance database platform. Oracle Database@Azure supports other critical features, such as Oracle Real Application Cluster (RAC) and Oracle Data Guard. Oracle enterprise applications such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic server applications run on Azure VMs and can connect to Oracle Database@Azure.
+- **Oracle Database@Azure**: You can use Oracle Database@Azure to run Oracle Exadata infrastructure in Azure. Oracle Exadata is a high-performance database platform. Oracle Database@Azure supports other critical features, such as Oracle Real Application Cluster (RAC) and Oracle Data Guard. Oracle enterprise applications such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic server applications run on Azure VMs and can connect to Oracle Database@Azure.
 
 For more information, see [Oracle on Azure overview](/azure/oracle/oracle-azure-overview).
 
