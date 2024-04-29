@@ -18,6 +18,6 @@ This article describes how to manage resources for Oracle on Azure Virtual Machi
 
 However, it's important to understand decisions previously made by the cloud platform team to determine resource organization requirements.
 
-## Next steps
+## Next step
 
 - [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone](oracle-network-topology-iaas.md).
