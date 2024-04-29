@@ -66,10 +66,8 @@ Red Hat developed a centralized way to manage identity stores, authentication, p
 
 The identity and access management components for your Red Hat deployment in Azure use the subscription scaling model described in the Azure Cloud Adoption Framework documentation to provide extra control and isolation to the management tooling. The Identity Management primary and replica systems and Red Hat single sign-on instances reside in a Red Hat Management Subscription with other tools. The subscription provides resource groups throughout the implementation to provide localized services and high availability.
 
-![Zone IdM HA](images/rhel-lz-idm-zoneHA.png)
+![Zone IdM HA](images/rhel-lz-idm-zoneHA.png) ![Regional IdM HA](images/rhel-lz-idm-deploy-detail.png)
 *Figures: Zone level HA and Regional level HA with Red Hat Identity Management*
-
-![Regional IdM HA](images/rhel-lz-idm-deploy-detail.png)
 *Figure N: A recommended high availability deployment of Red Hat Identity Management across regions and availability zones. IdM servers within each region replicate to one another and a hidden replica. There are at least two replication links across regions. The hidden replicas serve as the backup points as they might be taken offline for full backups without affecting availability.*
 *IdM clients can load balance and failover between IdM servers based on service record discovery or via a list of servers in sssd.conf. Don't use external load balancing or HA configurations with IdM.*
 
