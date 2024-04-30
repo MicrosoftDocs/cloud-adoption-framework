@@ -51,9 +51,9 @@ Consider the following recommendations when designing your network topology for 
 
 Consider the following network topologies for Oracle Database@Azure.
 
-:::image type="content" source="media/exadata-network-single-app.png" alt-text="Suggested network architecture for simple application portfolio served by single database":::
+:::image type="content" source="media/oracle-network-topology-odaa/exadata-network-single-app.png" alt-text="Suggested network architecture for simple application portfolio served by single database":::
 
-:::image type="content" source="media/exadata-network-multiple-app.png" alt-text="Suggested network architecture for complex application portfolio served by single or multiple databases":::
+:::image type="content" source="media/oracle-network-topology-odaa/exadata-network-multiple-app.png" alt-text="Suggested network architecture for complex application portfolio served by single or multiple databases":::
 
 ## Next steps
 
