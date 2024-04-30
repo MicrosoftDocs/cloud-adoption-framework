@@ -1814,6 +1814,11 @@
          "source_path": "docs/govern/security-baseline/toolchain.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/organize-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
+         "redirect_document_id": false
       }
    ]
 }
