@@ -97,6 +97,10 @@ You can implement this scenario with:
   - Key vaults, which use the name `privatelink.vaultcore.azure.net`
 - Network filtering isn't enforced for this scenario. But network security groups are placed on all subnets so that you can monitor traffic and derive insights. In Network Watcher, traffic analytics and the network security group flow logging feature are used for these purposes.
 
+### Multi-region resilient architecture
+:::image type="content" source="./media/avd-accelerator-baseline-architecture-multi-region-aprl-draft.jpg" alt-text="Architecture diagram of Multi-region resilient architecture that uses a hub and spoke with hybrid connectivity." lightbox="./media/avd-accelerator-baseline-architecture-multi-region-aprl-draft.jpg" border="false":::
+*Figure 1: AVD Multi-region resilient architecture. Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/docs/scenarios/azure-virtual-desktop/media/avd-accelerator-baseline-architecture-multi-region-aprl-draft.vsdx) of this architecture.*
+
 ## Scenario 2: Hub and spoke with hybrid connectivity over managed networks using RDP Shortpath
 
 For detailed deployment guidance, see [RDP Shortpath connectivity for managed networks](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks).
