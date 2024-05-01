@@ -37,7 +37,7 @@ Typical outcomes for migrating an Oracle workload to Azure include:
 
 - **Increased agility**: Cloud migration enhances the agility of Oracle workloads, facilitating rapid scalability. You can extend into new markets and geographies more easily than you can in an on-premises environment. For example, if you expand services to a new region, you can easily deploy Oracle databases and application services in that region by using Azure. Also consider datacenter expansion, network connectivity, and other infrastructure requirements that are more labor intensive and costly in on-premises environments.
 
-- **Improve operational efficiency**: Oracle on Azure enhances operational efficiency by automating routine tasks and streamlining operations. The cloud lowers operational overhead and increases productivity. You can, for example, use GitHub to automate Oracle database deployments and updates, as well as use built-in services to turn off or downsize development and test environments when they're not in use.
+- **Improve operational efficiency**: Oracle on Azure enhances operational efficiency by automating routine tasks and streamlining operations. The cloud reduces operational overhead and increases productivity. You can, for example, use GitHub to automate Oracle database deployments and updates, as well as use built-in services to turn off or downsize development and test environments when they're not in use.
 
 ## Build a business case for cloud migration
 

@@ -32,7 +32,7 @@ For Oracle Database@Azure, make sure to:
 
 - **Verify that the Oracle Database@Azure solution is available** in the region where you want to deploy the solution. For more information, see [Available regions](/azure/oracle/oracle-db/database-overview#available-regions).
 
-- **Consider required database changes** when you move from on-premises environments to Oracle Database@Azure. Migration might involve some changes to the database tablespaces and schema. For more information, see [Migrating Oracle databases to the Exadata coud service](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/considerations-migrating-premises-database-dbcs.html#GUID-5F6B4B4F-5B1C-4F1C-9F1A-5F6F6F6F6F6F).
+- **Consider required database changes** when you move from on-premises environments to Oracle Database@Azure. Migration might involve some changes to the database tablespaces and schema. For more information, see [Migrating Oracle databases to Exadata Cloud Service](https://docs.oracle.com/en/cloud/paas/exadata-cloud/csexa/mig-migrating-premises-oracle-db-cloud.html).
 
 ## Oracle migration workload-specific activities
 
