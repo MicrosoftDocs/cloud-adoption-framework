@@ -1,5 +1,5 @@
 items:
-  - name: Oracle Migration - Microsoft Cloud Adoption
+  - name: Oracle migration—Microsoft cloud adoption
     href: index.md 
   - name: Strategic impact
     href: oracle-landing-zone-strategy.md
