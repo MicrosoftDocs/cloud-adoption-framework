@@ -1,6 +1,6 @@
 ---
 title: Strategic impact of Oracle on Azure
-description: Learn about the strategic impact of Oracle on Azure.
+description: Learn about technical considerations that might affect your cloud strategy when you migrate Oracle workloads to Azure. 
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
@@ -13,7 +13,7 @@ ms.custom:
 
 # The strategic impact of Oracle on Azure
 
-This article describes technical considerations that might affect your strategy when you migrate Oracle to Azure. You can use the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Azure Cloud Adoption Framework to create a single, centralized cloud adoption strategy. And then use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
+This article describes technical considerations that might affect your strategy when you migrate Oracle workloads to Azure. You can use the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Azure Cloud Adoption Framework to create a single, centralized cloud adoption strategy. And then use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record your cloud adoption strategy.
 
 ## Oracle on Azure adoption motivations
 

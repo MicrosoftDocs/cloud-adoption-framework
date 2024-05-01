@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Oracle on Azure adoption scenario
-description: Adopt Oracle database solutions for your Azure landing zone.
+description: Learn how to set up and manage Oracle workloads within your Azure landing zone. 
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024

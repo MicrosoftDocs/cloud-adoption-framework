@@ -1,6 +1,6 @@
 ---
 title: Capacity planning for Oracle on Azure
-description: Learn about capacity planning for Oracle workloads on Azure IaaS.
+description: Learn how capacity planning can help you select the appropriate infrastructure for Oracle workloads on Azure IaaS.
 author: Jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024

@@ -1,6 +1,6 @@
 ---
 title: Migration planning for Oracle on Azure
-description: Learn about migration planning for Oracle workloads on Azure.
+description: Learn how to migrate your existing Oracle workloads to the cloud as part of the cloud adoption process.
 author: Jfaurskov
 ms.author: janfaurs
 ms.reviewer: tozimmergren

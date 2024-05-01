@@ -1,6 +1,6 @@
 ---
 title: Network topology and connectivity for Oracle Database@Azure
-description: Learn about network topology and connectivity for Oracle Database@Azure.
+description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity.
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
