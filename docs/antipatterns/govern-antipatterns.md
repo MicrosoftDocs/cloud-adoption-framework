@@ -55,7 +55,7 @@ Azure offers a more comprehensive security and compliance structure that differs
 
 ### Preferred outcome: Rely on existing frameworks
 
-Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure Landing Zones implementation options page](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options). 
+Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure landing zones implementation options page](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options). 
 
 ## Next steps
 
