@@ -183,7 +183,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
 | Blueprint (will be deprecated) | `Microsoft.Blueprint/blueprints` | `bp` |
-| Blueprint assignment (to be deprecated) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
+| Blueprint assignment (will be deprecated) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
