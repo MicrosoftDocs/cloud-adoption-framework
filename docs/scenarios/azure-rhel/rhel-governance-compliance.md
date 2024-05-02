@@ -83,6 +83,6 @@ Governance of Azure resource organization is crucial for managing and securing c
 
 Ensure that you use [Azure Policy](https://learn.microsoft.com/azure/governance/policy/overview) to enforce governance standards and implement regulatory initiatives. With its compliance dashboard, you are able to view compliance down to a per resource, per policy granularity. You can also perform remediation. Azure Policies are the guardrails for enforcing compliance across security, cost, regulatory compliance, resource consistency and management.
 
-Leverage Red Hat Satellite along with Ansible Automation Platform to develop pipelines for content and image delivery that integrate your workload compliance requirements.
+Use Red Hat Satellite along with Ansible Automation Platform to develop pipelines for content and image delivery that integrate your workload compliance requirements.
 
-Leverage Red Hat Satellite certified Ansible collections to automate data collection for integration into Azure monitoring for comprehensive compliance analysis.
+Use Red Hat Satellite certified Ansible collections to automate data collection for integration into Azure monitoring for comprehensive compliance analysis
