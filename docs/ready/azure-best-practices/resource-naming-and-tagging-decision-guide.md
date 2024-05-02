@@ -95,9 +95,7 @@ Azure tags can be used across different Azure regions. They are used for logical
 
 In a multi-region environment, including region detail into the tagging strategy can be considered if the naming convention does not already cover the operational and management requirements. If advanced reporting or resource filtering are required, based on the Azure region where resources are deployed, and this possibility cannot be obtained through subscription alignment, then tagging can be an effective way to aggregate and compare across regions and subscriptions.
 
-If the region where a resource is created is already available as resource object property, then not strictly necessary to include it in the tagging strategy.
-
-If the region where a resource is created is already available as resource object property, then not strictly necessary to include it in the tagging strategy.
+If the region where a resource is created is already available as resource object property, then is not strictly necessary to include it in the tagging strategy.
 
 - A collection of built-in Azure policies are available to enforce tagging requirements, and custom policies can be created to enforce specific tagging requirements. For more information, see [Assign policy definitions for tag compliance](/azure/azure-resource-manager/management/tag-policies).
 - When creating an assignment for a policy, it is possible to specify a resource selector to target and filter specific regions (*resourceLocation*) inside the specified scope. For more information, see [Create a policy assignment](/azure/azure-resource-manager/management/tag-policies#create-a-policy-assignment) and [Resource selectors](/azure/governance/policy/concepts/assignment-structure#resource-selectors).

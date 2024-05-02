@@ -56,10 +56,10 @@ The following sections contain considerations to help you plan and create subscr
 > Subscriptions are not tied to a specific region and can be treated as global. They are logical constructs to provide billing, governance, security and identity controls for Azure resources contained within them. Therefore, you do not need a separate subscription per region.
 
 - Customers can adopt a multi-region approach at single workload level, for scaling and/or geo disaster recovery, or globally (different workloads in different regions).
-- A single subscription can contains resources from different regions, depending on the requirements and architecture.
-- In a geo-disaster recovery context, the same subscription can be used to contain resources from primary and secondary regions since logically part of the same workload.
+- A single subscription can contain resources from different regions, depending on the requirements and architecture.
+- In a geo-disaster recovery context, the same subscription can be used to contain resources from primary and secondary regions since they are logically part of the same workload.
 - Different environments for the same workload can be deployed in different regions to optimize costs and resource availability.
-- In a subscription containing resources from multiple regions, resource groups can be used to partition and group together resources that share common life-cycle management.
+- In a subscription containing resources from multiple regions, resource groups can be used organize and contain resources by region.
 
 ### Quota and capacity design considerations
 
@@ -161,7 +161,8 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Create additional subscriptions per regions should be done only in case of region specific governance and management requirements (for example data sovereignty), and to scale beyond quota limits.
 - If scaling is not a concern for a geo disaster recovery environment spanning multiple regions, use the same subscription for the primary and secondary regions resources. Some Azure services, depending on the BCDR strategy and tools adopted, can require usage of the same subscription. In an active-active scenario, where deployments are independently managed or have different life-cycles, using different subscriptions can be recommended.
-- The region where a resource group is created, and the regions of the contained resources, should match to improve resilience and reliability.
+- The region where a resource group is created, and the regions of the contained resources, should match to avoid impacting resilience and reliability.
+- A single resource group should not contain resources from different regions. This can lead to issues with resource management and availability.
 
 ### Quota and capacity recommendations
 
