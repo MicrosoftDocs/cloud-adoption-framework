@@ -22,7 +22,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 |---|---|---|
 | Patch management | Azure Automation Update Management | Management and scheduling of updates |
 | Policy enforcement | Azure Policy | Policy enforcement to ensure environment and guest compliance |
-| Environment configuration | Infrastructure as Code | Automated compliance for core services |
+| Environment configuration | [Infrastructure as Code](https://learn.microsoft.com/training/modules/control-govern-azure-environment-deploying-infrastructure-code/) | Automated compliance for core services |
 | Resource configuration | Desired State Configuration | Automated configuration on guest OS and some aspects of the environment |
 
 ::: zone target="docs"

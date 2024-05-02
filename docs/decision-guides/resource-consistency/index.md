@@ -79,7 +79,7 @@ For large cloud deployments, global governance becomes both more important and m
 
 An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. Read more about Azure Landing Zones [here](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-Azure landing zones allows IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone including, [Policy as Code](/azure/governance/policy/concepts/policy-as-code) practices. Combine these into your CI/CD pipelines to apply revised governance standards to deployments as templates and definitions are updated.
+Azure landing zones allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone including, [Policy as Code](/azure/governance/policy/concepts/policy-as-code) practices. Combine these into your CI/CD pipelines to apply revised governance standards to deployments as templates and definitions are updated.
 
 ## Next steps
 
