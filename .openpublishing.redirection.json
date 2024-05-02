@@ -1567,7 +1567,7 @@
       },
       {
         "source_path": "docs/scenarios/oracle-iaas/manage-resources-oracle-landing-zone.md",
-        "redirect_url": "/azure/scenarios/oracle-iaas/index",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
         "redirect_document_id": false   
       },
       {
