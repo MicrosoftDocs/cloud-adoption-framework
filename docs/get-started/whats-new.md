@@ -18,7 +18,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### New articles
 
-This month, we updated our collection of articles about the Migration methodology in the Cloud Adoption Framework. Take a look to make sure you're applying the recommendations to migrate your workloads to Azure.
+This month, we updated our collection of articles about the Migration methodology in the Cloud Adoption Framework. Take a look to make sure you're applying the relevant recommendations as you migrate your workloads to Azure.
 
 - **Prepare to migrate your workload**
     - [Migration preparation checklist](../migrate/prepare/index.md): Follow the checklist to plan for migration and to ensure that you have the right resources and tools in place.
@@ -75,19 +75,19 @@ We added a few articles to the Ready methodology in the Cloud Adoption Framework
 In line with our work to update and streamline the Migration and Govern methodologies, we updated the following articles:
 
 **Articles in the Migrate methodology**
-- [Migrate overview](./migrate/index.md)
-- [Cloud adoption scenarios](./scenarios/index.md)
+- [Migrate overview](../migrate/index.md)
+- [Cloud adoption scenarios](../scenarios/index.md)
 
 **Articles in the Govern methodology**
-- [Govern overview](./govern/index.md)
-- [Improve landing zone governance](./ready/considerations/landing-zone-governance.md)
+- [Govern overview](../govern/index.md)
+- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)
 
 We also added these miscellaneous updates:
 
-- [Abbreviation recommendations for Azure resources](./ready/azure-best-practices/resource-abbreviations.md): Updates about the data-collection and alert-processing rules.
-- [Zero trust configuration for multitenant defense organizations](./scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): A new multitenant architecture diagram and information about Microsoft Entra ID Protection.
-- [The Azure Well-Architected Framework for HPC](./scenarios/azure-hpc/well-architected-framework.md): Updates related to ExpressRoute.
-- [Manufacturing HPC storage in Azure](./scenarios/azure-hpc/manufacturing/storage.md): Updates related to Azure Managed Lustre.
+- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Updates about the data-collection and alert-processing rules.
+- [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): A new multitenant architecture diagram and information about Microsoft Entra ID Protection.
+- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Updates related to ExpressRoute.
+- [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Updates related to Azure Managed Lustre.
 
 
 ## March 2024
