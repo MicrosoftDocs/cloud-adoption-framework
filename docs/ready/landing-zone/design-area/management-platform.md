@@ -54,7 +54,7 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
   - Virtual network
   - Subnets
   - Rogue networks
-- Use [resource locks](/azure/azure-resource-manager/management/lock-resources?tabs=json) to prevent accidental deletion of critical shared services.
+- Use [resource locks](/azure/azure-resource-manager/management/lock-resources) to prevent accidental deletion of critical shared services.
 - Use [deny policies](/azure/governance/policy/concepts/effects#deny) to supplement Azure role assignments. Deny policies help prevent resource deployments and configurations that don't meet defined standards by blocking requests from being sent to resource providers. Combining deny policies and Azure role assignments ensures that you have appropriate guardrails in place to control *who* can deploy and configure resources and *which* resources they can deploy and configure.
 - Include [service](/azure/service-health/service-health-overview) and [resource](/azure/service-health/resource-health-overview) health events as part of your overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 - Don't send raw log entries back to on-premises monitoring systems. Instead, adopt the principle that *data born in Azure stays in Azure*. If you require on-premises SIEM integration, send [critical alerts](/azure/security-center/continuous-export) instead of logs.
