@@ -1566,6 +1566,11 @@
          "redirect_document_id": false
       },
       {
+        "source_path": "docs/scenarios/oracle-iaas/manage-resources-oracle-landing-zone.md",
+        "redirect_url": "/azure/scenarios/oracle-iaas/index.md",
+        "redirect_document_id": false   
+      },
+      {
          "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false

@@ -36,7 +36,7 @@ Capacity planning for Oracle workloads on Azure infrastructure as a service (Iaa
 
   - When the workload experiences peak load. If you don't know the peak load time, use the [`busiest_awr` script](https://github.com/Azure/Oracle-Workloads-for-Azure/blob/main/az-oracle-sizing/busiest_awr.sql) to determine the busiest AWR.
   
-  - For a period that's representative of peak load. For example, generate the AWR report during the month-end process if the peak load is a month-end process. The time period should only include peak load times and exclude extended periods of low load. If you include periods of low load in your AWR report, the performance statistics represent an average and not the actual workload performance requirements.
+  - For a period that's representative of peak load. For example, generate the AWR report during the month-end process if the peak load is a month-end process. The time period should include only peak load times and exclude extended periods of low load. If you include periods of low load in your AWR report, the performance statistics represent an average and not the actual workload performance requirements.
   
   - For activities such as batch processes or other activities that constitute significant load on the database.
   
