@@ -180,7 +180,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Policy definition | `Microsoft.Authorization/policyDefinitions` | <*descriptive*> |
 | Application Insights | `Microsoft.Insights/components` | `appi` |
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
-| Azure Monitor data collection rules | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
 | Blueprint (will be deprecated) | `Microsoft.Blueprint/blueprints` | `bp` |
