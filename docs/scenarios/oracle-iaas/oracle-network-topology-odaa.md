@@ -27,7 +27,7 @@ Consider the following guidance when you design your network topology for Oracle
 
 - Unlike regular subnets, subnets that you delegate to the Oracle Database@Azure solution have constraints. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
 
-- Database nodes don't have a default name registration or resolution because Oracle Database@Azure only runs in private subnets.
+- Database nodes don't have a default name registration or resolution because Oracle Database@Azure runs only in private subnets.
 
 ## Design recommendations
 

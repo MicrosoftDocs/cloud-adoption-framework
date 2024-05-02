@@ -42,7 +42,7 @@ The following section describes the migration process in more detail. The steps 
 
   - If you need to update one or more resources, update them before migration to avoid complicating the migration process.
   
-  - If your on-premises database runs on a large endian operating system, for example Oracle Solaris, IBM Advanced Interactive Executive (AIX), or Hewlett Packard Unix (HP-UX), the database migration process includes an endian conversion. Azure only supports little endian operating systems. From a tooling perspective, this support limits the number of options when you consider what tool to use for the migration. Specifically, you can't use Oracle Data Guard, Azure Migrate and Modernize, or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export, Oracle Data Pump Import, Oracle Cross Platform Transportable Tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
+  - If your on-premises database runs on a large endian operating system, for example Oracle Solaris, IBM Advanced Interactive Executive (AIX), or Hewlett Packard Unix (HP-UX), the database migration process includes an endian conversion. Azure supports only little endian operating systems. From a tooling perspective, this support limits the number of options when you consider what tool to use for the migration. Specifically, you can't use Oracle Data Guard, Azure Migrate and Modernize, or any other file copy method. Migration methods that are compatible with endian conversion include Oracle Data Pump Export, Oracle Data Pump Import, Oracle Cross Platform Transportable Tablespaces (XTTS), or data replication utilities such as Oracle GoldenGate, Quest SharePlex, and Striim.
   
   - You can modernize or migrate on-premises application servers depending on requirements and compatibility. For more information, see [Cloud adoption scenarios](../index.md).
 
@@ -64,9 +64,9 @@ The following section describes the migration process in more detail. The steps 
   
   - Oracle GoldenGate requires Oracle GoldenGate licenses.
   
-  For more information on Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
+  For more information about Oracle licensing on Azure, see [Licensing Oracle software in the cloud computing environment](https://www.oracle.com/us/corporate/pricing/cloud-licensing-070579.pdf).
   
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure).
+> [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
