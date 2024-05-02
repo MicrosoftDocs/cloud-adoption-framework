@@ -54,4 +54,4 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 ## Next step
 
-[Business continuity and disaster recovery for Oracle Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
+[Business continuity and disaster recovery for the Oracle Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
