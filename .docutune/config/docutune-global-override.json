@@ -1,6 +1,5 @@
 {
   "RemoveTermSets": [
-    "casing-technical-third-party-cloudsimple",
-    "*hipaa*"
+    "casing-technical-third-party-cloudsimple"
   ]
 }
