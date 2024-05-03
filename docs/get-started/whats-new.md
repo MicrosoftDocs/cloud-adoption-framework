@@ -77,11 +77,11 @@ This month, we updated and significantly streamlined our collections of articles
 
 In line with our work to update and streamline the Migrate and Govern methodologies, we updated the following articles:
 
-**Articles in the Migrate methodology**
+**Migrate methodology**
 - [Migrate overview](../migrate/index.md)
 - [Cloud adoption scenarios](../scenarios/index.md)
 
-**Articles in the Govern methodology**
+**Govern methodology**
 - [Govern overview](../govern/index.md)
 - [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)
 
