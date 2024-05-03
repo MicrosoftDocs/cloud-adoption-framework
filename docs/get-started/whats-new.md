@@ -66,8 +66,8 @@ Explore dozens of new and updated articles to guide you through the migration pr
 
 We overhauled our collection of articles in the Govern methodology, making the concepts easier to consume and understand as you set up cloud governance in your organization.
 
-- [Govern overview](../govern/index.md)
-- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)
+- [Govern overview](../govern/index.md): Learn about the Govern methodology and follow the checklist to apply the methodology in your organization.
+- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md): Improve the governance of your landing zones by following the best practices in this article.
 - [Build a cloud governance team](../govern/build-cloud-governance-team.md): Create a team that works to ensure the success of cloud governance in your organization.
 - [Assess cloud risks](../govern/assess-cloud-risks.md): Assess, prioritize, and document cloud risks.
 - [Document cloud governance policies](../govern/document-cloud-governance-policies.md): Define and document what should or shouldn't be done in your cloud environment.
