@@ -18,11 +18,14 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### New articles
 
-This month, we updated and significantly streamlined our collections of articles about the Migrate and Govern methodologies in the Cloud Adoption Framework. We also added a few articles about Azure landing zones in the Ready methodology. Take a look to make sure you're applying the relevant recommendations.
+This month, we completely refreshed articles related to the Migrate and Govern methodologies in the Cloud Adoption Framework. We also added a few articles about Azure landing zones in the Ready methodology. Take a look to make sure you're applying the relevant recommendations.
 
-#### Migrate methodology
+#### Migrate methodology refresh
+
+Explore dozens of new and updated articles to guide you through the migration process. 
 
 - **Prepare to migrate your workload**
+    - [Migrate overview](../migrate/index.md): Learn about the Migrate methodology and how to apply it as you move your workloads to Azure.
     - [Migration preparation checklist](../migrate/prepare/index.md): Follow the checklist to plan for migration and to ensure that you have the right resources and tools in place.
     - [Prepare your landing zone for migration](../migrate/prepare/ready-azure-landing-zone.md): Make sure you understand what you need to do after an Azure landing zone deployment to ensure that the technical environment supports migrations.
     - [Prepare tools and initial migration backlog](../migrate/prepare/tools-backlog.md): Prepare the tools and initial migration backlog that you need to support a migration to Azure.
@@ -59,8 +62,12 @@ This month, we updated and significantly streamlined our collections of articles
     - [Review product migration scenarios](../migrate/scenarios.md): Review the migration scenarios that are available for your product.
 
 
-#### Govern methodology
+#### Govern methodology refresh
 
+We overhauled our collection of articles in the Govern methodology, making the concepts easier to consume and understand as you set up cloud governance in your organization.
+
+- [Govern overview](../govern/index.md)
+- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)
 - [Build a cloud governance team](../govern/build-cloud-governance-team.md): Create a team that works to ensure the success of cloud governance in your organization.
 - [Assess cloud risks](../govern/assess-cloud-risks.md): Assess, prioritize, and document cloud risks.
 - [Document cloud governance policies](../govern/document-cloud-governance-policies.md): Define and document what should or shouldn't be done in your cloud environment.
@@ -69,28 +76,19 @@ This month, we updated and significantly streamlined our collections of articles
 
 #### Ready methodology
 
+Find new articles about Azure landing zones in the Ready methodology.
+
 - [Keep your Azure landing zone up to date](../ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md): Make sure that your Azure landing zones are current to maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
 - [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Migrate your deprecated Azure landing zone custom policies to Azure built-in policies.
 - [Update Azure landing zone custom policies](../ready/landing-zone/design-area/update-custom-policies.md): Update your Azure landing zone custom policies to ensure that they're current and compliant with the latest Azure policies.
 
 ### Updated articles
 
-In line with our work to update and streamline the Migrate and Govern methodologies, we updated the following articles:
-
-**Migrate methodology**
-- [Migrate overview](../migrate/index.md)
-- [Cloud adoption scenarios](../scenarios/index.md)
-
-**Govern methodology**
-- [Govern overview](../govern/index.md)
-- [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)
-
-We also added these miscellaneous updates:
-
-- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Updates about the data-collection and alert-processing rules.
-- [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): A new multitenant architecture diagram and information about Microsoft Entra ID Protection.
-- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Updates related to ExpressRoute.
-- [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Updates related to Azure Managed Lustre.
+- [Cloud adoption scenarios](../scenarios/index.md): Extensive revisions help you find scenarios that are relevant to your organization's cloud adoption journey.
+- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): Find updates about the data-collection and alert-processing rules.
+- [Zero trust configuration for multitenant defense organizations](../scenarios/defense/identity/multi-tenant/zero-trust-configuration.md): Review a new multitenant architecture diagram and information about Microsoft Entra ID Protection.
+- [The Azure Well-Architected Framework for HPC](../scenarios/azure-hpc/well-architected-framework.md): Explore updates related to ExpressRoute.
+- [Manufacturing HPC storage in Azure](../scenarios/azure-hpc/manufacturing/storage.md): Learn about updates related to Azure Managed Lustre.
 
 
 ## March 2024
