@@ -18,7 +18,9 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### New articles
 
-This month, we updated our collection of articles about the Migration methodology in the Cloud Adoption Framework. Take a look to make sure you're applying the relevant recommendations as you migrate your workloads to Azure.
+This month, we updated and significantly streamlined our collections of articles about the Migrate and Govern methodologies in the Cloud Adoption Framework. We also added a few articles about Azure landing zones in the Ready methodology. Take a look to make sure you're applying the relevant recommendations.
+
+#### Migrate methodology
 
 - **Prepare to migrate your workload**
     - [Migration preparation checklist](../migrate/prepare/index.md): Follow the checklist to plan for migration and to ensure that you have the right resources and tools in place.
@@ -56,7 +58,8 @@ This month, we updated our collection of articles about the Migration methodolog
 - **Explore relevant migration scenarios**
     - [Review product migration scenarios](../migrate/scenarios.md): Review the migration scenarios that are available for your product.
 
-We consolidated and updated our collection of articles about the Govern methodology in the Cloud Adoption Framework. Follow this new guidance to ensure that your organization is optimizing cloud governance standards and practices in Azure. 
+
+#### Govern methodology
 
 - [Build a cloud governance team](../govern/build-cloud-governance-team.md): Create a team that works to ensure the success of cloud governance in your organization.
 - [Assess cloud risks](../govern/assess-cloud-risks.md): Assess, prioritize, and document cloud risks.
@@ -64,7 +67,7 @@ We consolidated and updated our collection of articles about the Govern methodol
 - [Enforce cloud governance policies](../govern/enforce-cloud-governance-policies.md): Apply controls and procedures to align cloud use to the cloud governance policies.
 - [Monitor cloud governance](../govern/monitor-cloud-governance.md): Measure how well your cloud environment complies with your cloud governance policies.
 
-We added a few articles to the Ready methodology in the Cloud Adoption Framework. These articles provide guidance about how to keep your Azure landing zone up to date and how to migrate your Azure landing zone custom policies to Azure built-in policies:
+#### Ready methodology
 
 - [Keep your Azure landing zone up to date](../ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md): Make sure that your Azure landing zones are current to maintain improved security, avoid platform configuration drift, and stay optimized for new feature releases.
 - [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Migrate your deprecated Azure landing zone custom policies to Azure built-in policies.
@@ -72,7 +75,7 @@ We added a few articles to the Ready methodology in the Cloud Adoption Framework
 
 ### Updated articles
 
-In line with our work to update and streamline the Migration and Govern methodologies, we updated the following articles:
+In line with our work to update and streamline the Migrate and Govern methodologies, we updated the following articles:
 
 **Articles in the Migrate methodology**
 - [Migrate overview](../migrate/index.md)
