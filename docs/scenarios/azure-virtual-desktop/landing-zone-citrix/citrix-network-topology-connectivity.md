@@ -75,6 +75,38 @@ Weigh business unit segmentation beyond workload-specific networks against the e
 
 You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application backends on a shared virtual network. For example, you could limit customer relations management (CRM) backend access to the CRM machine catalog VMs that Marketing uses in the multisession VDA network.
 
+## Large scale enterprise deployments
+#### Architecture
+The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions.
+ 
+
+[![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png)](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png#lightbox)
+
+[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
+
+#### Citrix Design recommendations
+When planning and deploying Citrix DaaS on Azure at large scale, it's important to familiarize yourself with the general resource and of [Citrix DaaS limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits) that apply to this solution. These limitations affect how you design, configure, and manage your Citrix and Azure environment, and may impact the performance, scalability, and availability of your virtual desktops and applications.
+The information in these articles is dynamic. Check back frequently for updates. If you have current requirements that the published limits do not address, contact your Microsoft and Citrix representative for assistance as early as possible.
+
+For large scale deployments it is highly recommended to create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. 
+
+* **(A)** Your hub virtual network, hosts and remains the central point of firewalls, connectivity for cross-premises networks and north-south traffic.
+* **(B)** Your hub virtual network is peered with the shared resources spoke to ensure the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) have 443 outbound connectivity.
+* **(C)** Shared resource spoke virtual networks, hosts all required and optional the Citrix components as well as shares services e.g. Profile storage accounts, Azure Compute Galleries. To minimize latency and improve performance these networks are peered directly with the VDA spokes. 
+* **(D)** VDA workload spokes, host only the VDAs. All east-west management and profile traffic is routed directly to the shared resource spoke; all north-south traffic is routed to the hub virtual network.
+* **(E)** Azure Compute Gallery Version Replicas. 
+[Azure Compute Gallery](https://learn.microsoft.com/en-us/azure/virtual-machines/azure-compute-gallery#scaling) allows you to specify the number of replicas you want to keep. In multi-VM deployment scenarios the VM deployments can be spread to different replicas reducing the chance of instance creation processing being throttled due to overloading of a single replica.
+
+## Contributors
+
+*This article is maintained by Microsoft. It was originally written by the following contributors.*
+
+Principal author:
+
+* [Ben Martin Baur](https://www.linkedin.com/in/BenMartinBaur) | Senior Cloud Endpoint Technical Specialist
+* [Jen Sheerin](https://www.linkedin.com/in/...) | Senior Customer Engineer
+* [Ravi Varma Addala](https://www.linkedin.com/in//) | Senior Cloud Solution Architect, Azure Core Infrastructure
+
 ## Next steps
 
 To learn more about Azure networking best practices and how to plan for virtual networks based on isolation, connectivity, and location requirements, see [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm).
