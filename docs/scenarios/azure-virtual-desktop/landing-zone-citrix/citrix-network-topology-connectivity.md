@@ -80,7 +80,7 @@ You can use [application security groups](/azure/virtual-network/application-sec
 The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions.
  
 
-[![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-largescale.png#lightbox)
+[![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/Citrix-accelerator-enterprise-scale-alz-architecture-largescale.png)](../media/Citrix-accelerator-enterprise-scale-alz-architecture-largescale#lightbox)
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
@@ -90,11 +90,11 @@ The information in these articles is dynamic. Check back frequently for updates.
 
 For large scale deployments it is highly recommended to create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. Other recommendations are:
 
-(A) Your hub virtual network, hosts and remains the central point of firewalls, connectivity for cross-premises networks and north-south traffic.
-(B) Your hub virtual network is peered with the shared resources spoke to ensure the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) have 443 outbound connectivity.
-(C) Shared resource spoke virtual networks, hosts all required and optional the Citrix components as well as shares services e.g. Profile storage accounts, Azure Compute Galleries. To minimize latency and improve performance these networks are peered directly with the VDA spokes.
-(D) VDA workload spokes, host only the VDAs. All east-west management and profile traffic is routed directly to the shared resource spoke; all north-south traffic is routed to the hub virtual network.
-(E) Azure Compute Gallery Version Replicas. 
+**(A)** Your hub virtual network, hosts and remains the central point of firewalls, connectivity for cross-premises networks and north-south traffic.
+**(B)** Your hub virtual network is peered with the shared resources spoke to ensure the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) have 443 outbound connectivity.
+**(C)** Shared resource spoke virtual networks, hosts all required and optional the Citrix components as well as shares services e.g. Profile storage accounts, Azure Compute Galleries. To minimize latency and improve performance these networks are peered directly with the VDA spokes. 
+**(D)** VDA workload spokes, host only the VDAs. All east-west management and profile traffic is routed directly to the shared resource spoke; all north-south traffic is routed to the hub virtual network.
+**(E)** Azure Compute Gallery Version Replicas. 
 [Azure Compute Gallery](https://learn.microsoft.com/en-us/azure/virtual-machines/azure-compute-gallery#scaling) allows you to specify the number of replicas you want to keep. In multi-VM deployment scenarios the VM deployments can be spread to different replicas reducing the chance of instance creation processing being throttled due to overloading of a single replica.
 
 ## Contributors
