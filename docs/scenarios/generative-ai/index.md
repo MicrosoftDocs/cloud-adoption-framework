@@ -1,0 +1,34 @@
+---
+title: Generative AI adoption in Azure
+description: Learn how Microsoft recommends adopting Generative AI in your organization.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 02/16/2024
+ms.topic: conceptual
+ms.service: caf
+---
+
+# Generative AI adoption in Azure
+
+In the rapidly evolving landscape of modern business, the integration of generative Artificial Intelligence (AI) has become a transformative force, revolutionizing industries and reshaping how organizations operate.
+
+In this Microsoft Cloud Adoption Framework (CAF) guidance, we'll explore how to adopt generative AI in your organization, and how to build a strategy for success.
+
+## What is generative AI?
+
+Generative AI is a type of AI that can generate content, such as text, images, sounds, and videos. Generative AI is focused on creativity, allowing innovation with new products, new services, serving new industries, and more. It is a subset of AI that focuses on understanding and creating content, as opposed to traditional AI, which focuses on detecting and classifying content, enhance the productivity, and is sometimes also known as 'Everyday AI'.
+
+See [Generative AI vs. Traditional AI](./generative-vs-traditional-ai.md) for more information.
+
+## Intended audience
+
+In this guidance we talk to **business decision makers**, **IT decision makers**, and **cloud architects** who are interested in understanding how to adopt generative AI in their organization.
+
+We also talk about the business justifications, building a strategy, and the technical aspects of adopting generative AI in Azure.
+
+## Next steps
+
+Before diving into the details about building a generative AI strategy for your business, you must understand whether to buy or build.
+
+> [!div class="nextstepaction"]
+> [Buy vs. Build generative AI](./buy-vs-build.md)

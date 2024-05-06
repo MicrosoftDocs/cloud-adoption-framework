@@ -1,0 +1,25 @@
+items:
+  - name: Generative AI adoption in Azure
+    href: index.md
+  - name: Get started
+    items:
+    - name: Buy vs. Build
+      href: buy-vs-build.md
+    - name: Generative vs. traditional AI
+      href: generative-vs-traditional-ai.md
+  - name: Strategic
+    href: strategy.md
+  - name: Planning
+    href: plan.md
+  - name: Prepare your environments
+    items: 
+    - name: Azure landing zones
+      href: ready.md
+  - name: Secure
+    href: secure.md
+  - name: Organize
+    href: organize.md
+  - name: Govern
+    href: govern.md
+  - name: Manage
+    href: manage.md
