@@ -39,7 +39,6 @@ A hub is a central network zone that controls and inspects ingress or egress tra
 
 The hub often contains the common service components that the spokes consume. Examples of common central services are:
 
-- The Windows Server Active Directory infrastructure is required to authenticate third-party users who access untrusted networks before they access workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
 - A DNS service resolves naming the workload in the spokes to access resources on-premises and on the internet if [Azure DNS](/azure/dns/dns-overview) isn't used.
 - A public key infrastructure implements single sign-on for workloads.
 - TCP and UDP traffic flow is controlled between the spoke network zones and the internet.
