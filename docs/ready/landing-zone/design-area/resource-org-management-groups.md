@@ -18,7 +18,7 @@ Management group structures within a Microsoft Entra tenant support organization
 
 - How will your organization separate out services owned or operated by specific teams?
 
-- Are there specific functions that need to be kept separate for business or operational compliance reasons?
+- Are there specific functions that need to be kept separate for business, operational, regulatory requirements, data residency, data security, data sovereignty compliance reasons?
 
 - You can use management groups to aggregate policy and initiative assignments via Azure Policy.
 
@@ -57,6 +57,8 @@ Management group structures within a Microsoft Entra tenant support organization
   - [Manage application development environments in Azure landing zones](./management-application-environments.md)
   - [Testing approach for enterprise-scale](../../enterprise-scale/testing-approach.md)
 
+- It is recommended to use the standard ALZ management group structure for multi-region deployments, don’t create management groups only to model different Azure regions. Regions and multi-region usage is not by default a criterion to alter or expand your management group structure. In presence of region/location-based regulatory requirements (data residency, data security, and data sovereignty), then taking into consideration regions and locations can be a valid approach that can be implemented at different levels, as described in [this article](../../landing-zone/landing-zone-multinational.md).
+
 <a id='management-groups-alz'></a>
 
 ## Management groups in the Azure landing zone accelerator and ALZ-Bicep repository
@@ -73,8 +75,8 @@ The following decisions have been made and included in the implementation for th
 |**Intermediate Root Management Group**| This management group is located directly under the tenant root group. Created with a prefix provided by the organization, which purposely avoids the usage of the root group so that organizations can move existing Azure subscriptions into the hierarchy. It also enables future scenarios. This management group is a parent to all the other management groups created by the Azure landing zone accelerator.|
 |**Platform**| This management group contains all the platform child management groups, like management, connectivity, and identity. |
 |**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription will host an Azure Log Analytics workspace, including associated solutions, and an Azure Automation account. |
-|**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription will host the Azure networking resources required for the platform, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones. |
-|**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Windows Server Active Directory Domain Services (AD DS) virtual machines (VMs) or Microsoft Entra Domain Services. The subscription also enables AuthN or AuthZ for workloads within the landing zones. Specific Azure policies are assigned to harden and manage the resources in the identity subscription. |
+|**Connectivity**| This management group contains a dedicated subscription for connectivity. This subscription will host the Azure networking resources required for the platform, like Azure Virtual WAN, Azure Firewall, and Azure DNS private zones. Different resource groups can be used to contain resources deployed in different regions, for example virtual networks, firewall instances and virtual network gateways in each region. Larger deployments that may run into subscription quota restrictions for connectivity resources may need to have dedicated subscriptions per region for their connectivity resources. |
+|**Identity**| This management group contains a dedicated subscription for identity. This subscription is a placeholder for Windows Server Active Directory Domain Services (AD DS) virtual machines (VMs) or Microsoft Entra Domain Services. Different resource groups will be used to contain resources deployed in different regions, for example virtual networks and VMs in each region. The subscription also enables AuthN or AuthZ for workloads within the landing zones. Specific Azure policies are assigned to harden and manage the resources in the identity subscription. Larger deployments that may run into subscription quota restrictions for identity resources may need to have dedicated subscriptions per region for their identity resources |
 |**Landing Zones**| The parent management group for all the landing zone child management groups. It will have workload agnostic Azure policies assigned to ensure workloads are secure and compliant. |
 |**Online**| The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. |
 |**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |

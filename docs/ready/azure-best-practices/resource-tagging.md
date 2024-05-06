@@ -40,6 +40,7 @@ Use the following tags to increase visibility into the usage of Azure resources.
 | **Disaster recovery** | Business criticality of the application, workload, or service. | *DR* <br><br> <li> `Mission-critical` <li> `Critical` <li> `Essential` |
 | **End date of the project** | Date when the application, workload, or service is scheduled for retirement. | *EndDate* <br><br> <li> `2023-10-15` |
 | **Environment** | Deployment environment of the application, workload, or service. | *Env* <br><br> <li> `Prod` <li> `Dev` <li> `QA` <li> `Stage` <li> `Test` |
+| **Azure Region** | The region where the resource has been created. | *AzureRegion* <br><br> <li> `West Europe` <li> `UK South` <li> `East US` <li> `Japan East` <li> `Qatar Central` |
 | **Owner name** | Owner of the application, workload, or service. | *Owner* <br><br> <li> `jane@contoso.com` |
 | **Requester name** | User who requested the creation of this application. | *Requester* <br><br> <li> `john@contoso.com` |
 | **Service class** | Service level agreement level of the application, workload, or service. | *ServiceClass* <br><br> <li> `Dev` <li> `Bronze` <li> `Silver` <li> `Gold` |
