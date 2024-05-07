@@ -3,7 +3,7 @@ title: Network topology and connectivity for an SAP migration
 description: Understand the design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and SAP deployments.
 author: PmeshramPM
 ms.author: pameshra
-ms.date: 02/28/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-sap
 ---
@@ -161,8 +161,8 @@ We don't recommend that you host the database management system (DBMS) and appli
 
 When you run SAP RISE deployments in Azure, the integration of the SAP-managed environment with your own Azure ecosystem is paramount. To learn more about the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
 
-SAP RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or virtual network peering. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might be interested in setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zone-accelerator) could be a good option. This ready-made deployment experience can easily be adapted to the specific customer requirement, with specific focus on the virtual network parameters.
+SAP RISE implementation will normally have two options when it comes to connectivity: Site-to-site VPN or virtual network peering. If you don't have any prior Azure workloads, site-to-site VPN might be the easier option. However, if you envision adopting Azure as a strategic platform, you might consider setting up a proper Azure landing zone and using virtual network peering to the SAP RISE tenant. For these scenarios, a simplified landing zone like the [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zone-accelerator) might be a good option. This ready-made deployment experience can be easily adapted to the specific customer requirement, with specific focus on the virtual network parameters.
 
 Deploying cross-tenant virtual network peering to the SAP RISE tenant also requires more work. You need to carefully plan the virtual network architecture to ensure there are no overlapping Classless Inter-Domain Routing ranges. You must also properly [peer DNS to the SAP RISE tenant](/azure/sap/workloads/rise-integration).
 
-Finally, if you decide to set up a Virtual WAN solution and you also need site-to-site VPN or ExpressRoute connections, you should consider the [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations).
+If you decide to set up a Virtual WAN solution and you also need site-to-site VPN or ExpressRoute connections, you should consider the [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations).

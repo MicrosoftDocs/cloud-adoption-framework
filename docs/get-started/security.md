@@ -22,7 +22,7 @@ Microsoft has built capabilities and resources to help accelerate your implement
 
 The following diagram shows a holistic approach for using security guidance and platform tooling to establish security visibility and control over your cloud assets in Azure. We recommend this approach.
 
-![Security diagram](../_images/security/azure-security-standards.png)
+:::image type="content" source="../_images/security/azure-security-standards.png" alt-text="Diagram that shows a holistic approach for using security guidance and platform tooling." lightbox="../_images/security/azure-security-standards.png":::
 
 Use these steps to plan and execute your strategy for securing your cloud assets and using the cloud to modernize security operations.
 
@@ -146,9 +146,9 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
     - Learn about the [Azure components and reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
-      ![Azure administration model](../_images/security/azure-administration-model.png)
+    :::image type="content" source="../_images/security/azure-administration-model.png" alt-text="Diagram that shows the Azure administration model." lightbox="../_images/security/azure-administration-model.png":::
 
-      ![Azure RBAC model](../_images/security/azure-rbac-model.png)
+    :::image type="content" source="../_images/security/azure-rbac-model.png" alt-text="Diagram that shows the Azure RBAC model." lightbox="../_images/security/azure-rbac-model.png":::
 
     - [Microsoft cybersecurity reference architecture](/security/cybersecurity-reference-architecture/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
 
@@ -232,7 +232,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   
   - [Azure Policy](/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager/), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
   
-  - [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code): This approach combines DevOps, Infrastructure as Code, and Azure Policy to deploy policies, initiatives (set definitions), assignments and policy exemptions at scale by keeping your policy definitions in source control.
+  - [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code): This approach keeps your policy definitions in source control and combines DevOps, infrastructure as code (IaC), and Azure Policy to deploy policies, initiatives (set definitions), assignments, and policy exemptions at scale.
   
   - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 

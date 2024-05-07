@@ -3,7 +3,7 @@ title: What is cloud accounting?
 description: Use the Cloud Adoption Framework for Azure to understand common cloud accounting models for IT as you begin your cloud migration journey.
 author: martinekuan
 ms.author: martinek
-ms.date: 04/04/2019
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
@@ -48,9 +48,11 @@ This model provides a balance between a true chargeback model and more tradition
 
 ## Impact of cloud accounting models
 
-The choice of accounting models is crucial in system design. The choice of accounting model can affect subscription strategies, naming standards, tagging standards, and policy designs.
+The accounting model that you choose is crucial in system design because it can affect subscription strategies, naming standards, tagging standards, and policy designs.
 
 After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you can learn more about how to [achieve more with your investment in the cloud](./achieve-more.md).
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Achieve more with your investment in the cloud](./achieve-more.md)

@@ -3,7 +3,7 @@ title: Track costs across business units, environments, or projects
 description: Learn how to create tracking mechanisms to monitor costs using the Cloud Adoption Framework for Azure.
 author: martinekuan
 ms.author: martinek
-ms.date: 08/24/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -12,7 +12,7 @@ ms.custom: internal
 
 To build a [cost-conscious organization](../../organize/cost-conscious-organization.md), you need visibility and properly defined access to cost-related data. This best-practice article outlines decisions and implementation approaches to help you create tracking mechanisms to monitor costs. You'll learn how to apply fundamental Azure concepts to provide cost visibility.
 
-![Diagram that shows the outline of the cost-conscious process.](../../_images/ready/cost-optimization-process.png)
+:::image type="content" source="../../_images/ready/cost-optimization-process.png" alt-text="Diagram that shows the outline of the cost-conscious process." lightbox="../../_images/ready/cost-optimization-process.png":::
 *Figure 1: Outline of a cost-conscious process.*
 
 ## Establish a well-managed environment
@@ -33,9 +33,9 @@ When tags are used to classify assets as part of a cost management effort, compa
 
 There are several approaches to organizing assets. Microsoft's enterprise-scale [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) design provides an architecture that can be used as the basis of any Azure cloud environment.  The landing zone [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org) documentation provides detailed guidance on organizing [management groups](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) and [subscriptions](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups). Understanding the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) used in designing the conceptual architecture will give you a foundation in best practices as you adapt the architecture to meet your specific business needs. Deviations to the design may be necessary to meet your business requirements, but understanding the impact of those deviations will prepare you for any necessary mitigations.
 
-The following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Policy to the subscriptions within this structure to quickly block future cost errors.
+The following model for management groups, subscriptions, and resource groups creates a hierarchy that provides each team with the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
-![Diagram that shows the Azure landing zone accelerator management group structure.](../landing-zone/media/sub-organization.png)
+:::image type="content" source="../landing-zone/media/sub-organization.png" alt-text="Diagram that shows the Azure landing zone accelerator management group structure." lightbox="../landing-zone/media/sub-organization.png":::
 
 *Figure 2: Resource organization for a large enterprise.*
 
@@ -82,6 +82,7 @@ The following scope and role settings will create the required visibility into c
 - [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automation processes to understand how those processes affect costs.
 
   - **Shared services.** When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has Contributor or Owner access to that subscription, making additional scope assignment for Cost Management Contributor unnecessary.
+  
   - **CCoE automation/controls.** The CCoE commonly provides controls and automated deployment scripts to cloud adoption teams. The CCoE has a responsibility to understand how these accelerators affect costs. To gain that visibility, the team needs Cost Management Contributor access to any resource groups or subscriptions running those accelerators.
 
 - **Cloud operations team.** Responsibility for managing ongoing costs of production environments requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to the Landing Zone and Platform management group nodes.

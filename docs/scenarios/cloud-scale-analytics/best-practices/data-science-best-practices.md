@@ -3,7 +3,7 @@ title: Best practices for data science projects with cloud-scale analytics in Az
 description: Learn about best practices for data science projects with cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 03/19/2023
+ms.date: 05/07/202
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -14,13 +14,13 @@ We recommend these best practices for using cloud-scale analytics in Microsoft A
 
 ## Develop a template
 
-It's essential to develop a template that bundles a set of services for your data science projects to achieve consistency across different data science teams' use cases. We recommend developing a consistent blueprint in the form of a template repository that you can use for various data science projects within your enterprise to help shorten deployment times.
+It's essential that you develop a template that bundles a set of services for your data science projects. Using a template that bundles a set of services helps provide consistency across different data science teams' use cases. We recommend that you develop a consistent blueprint in the form of a template repository. You can use this repository for various data science projects within your enterprise to help shorten deployment times.
 
 ### Guidelines for data science templates
 
 Develop a data science template for your organization with the following guidelines:
 
-- Develop a set of infrastructure as code templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
+- Develop a set of infrastructure as code (Iac) templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
 
 - Include the setup of data stores and compute targets in these templates, like compute instances, compute clusters, and Azure Databricks.
 
@@ -29,7 +29,6 @@ Develop a data science template for your organization with the following guideli
 ### Real-time
 
 - Include an Azure Data Factory or Azure Synapse deployment in templates and Azure Cognitive Services.
-
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
 ### Considerations for an initial setup
@@ -129,6 +128,6 @@ The following purposes apply to each folder in the repository:
 |`tests` | Write unit and integration tests that need to be executed to discover bugs and issues early during the project in this folder. |
 |`notebooks` | Separate Jupyter notebooks from the actual Python project with this folder. Inside the folder, each individual should have a subfolder to check in their notebooks and prevent Git merge conflicts. |
 
-## Next steps
+## Next step
 
 [Cloud-scale analytics data products in Azure](../architectures/data-landing-zone-data-products.md)

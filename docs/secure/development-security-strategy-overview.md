@@ -3,7 +3,7 @@ title: Development security strategy
 description: Learn about securing code by integrating security practices into the development process, which reduces security risks in code design and implementation.
 author: mpvenables
 ms.author: mas
-ms.date: 06/17/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -31,7 +31,7 @@ Development can take many forms, including:
   - **Operational tasks**, like using Azure Functions to run scheduled tasks by running code on predefined timed intervals.
 - Code to be deployed to firmware.
 - Mobile apps, an aggregation of application-level code with platform services, deployed as a system.
-- Full systems, including infrastructure components, operating systems, PaaS services, and code, which can be deployed using Infrastructure as Code (IaC).
+- Full systems, including infrastructure components, operating systems, PaaS services, and code, that can be deployed using infrastructure as code (IaC).
 
 In addition to the breadth of what can be considered development, advances in processes and technologies have enabled accelerated time to production, including faster Continuous Integration/Continuous Development (CI/CD) pipelines, [DevOps](/devops/what-is-devops), and [DevSecOps](/devops/operate/security-in-devops).
 
@@ -41,7 +41,7 @@ From the start, a good development strategy needs to account for your business a
 
 Another part of a successful development security strategy is to meet the developers *where they are* and try to make any changes to their work as small and frictionless as possible. Small steps and automation are best. Show the development staff how having security incorporated into development processes can accelerate and remove friction from their efforts.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Development innovation security](development-innovation-security.md)

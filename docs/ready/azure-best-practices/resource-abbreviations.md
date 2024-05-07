@@ -3,7 +3,7 @@ title: Abbreviation recommendations for Azure resources
 description: Abbreviation recommendations for Azure resources
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 4/26/2024
+ms.date: 05/07/2024
 ms.reviewer: ssumner
 ms.topic: conceptual
 ms.custom: internal, readiness, fasttrack-edit
@@ -13,7 +13,7 @@ ms.custom: internal, readiness, fasttrack-edit
 
 This page gives you abbreviation examples for many of the resources in Azure. The following table has *abbreviations* mapped to *resource* and *resource provider namespace*.
 
-**Azure Naming Tool:** You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/mspnp/AzureNamingTool).
+**Azure Naming Tool**: You can use the Azure Naming Tool to standardize and automate your naming process. For more information, see [Azure Naming Tool Overview](https://github.com/mspnp/AzureNamingTool).
 
 <!-- cSpell:ignoreRegExp `[a-z]+-?` -->
 <!-- cspell:ignoreRegExp [_\*][a-z]+[\\-] -->
@@ -182,8 +182,8 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
-| Blueprint (will be deprecated) | `Microsoft.Blueprint/blueprints` | `bp` |
-| Blueprint assignment (will be deprecated) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
+| Blueprint (planned for deprecation) | `Microsoft.Blueprint/blueprints` | `bp` |
+| Blueprint assignment (planned for deprecation) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
@@ -287,7 +287,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual desktop workspace | `Microsoft.DesktopVirtualization/workspaces` | `vdws` |
 | Virtual desktop scaling plan | `Microsoft.DesktopVirtualization/scalingPlans` | `vdscaling`|
 
-## Next steps
+## Next step
 
 Review recommendations for tagging your Azure resources and assets.
 

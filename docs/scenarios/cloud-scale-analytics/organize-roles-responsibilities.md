@@ -3,7 +3,7 @@ title: Understand the roles and responsibilities for cloud-scale analytics in Az
 description: Learn about the roles and responsibilities for cloud-scale analytics in Azure.
 author: mboswell
 ms.author: mboswell
-ms.date: 04/04/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -45,7 +45,7 @@ A cloud-scale analytics deployment involves multiple areas of responsibility. Th
 | Areas of Responsibility                                                                  | Data Owner | Data Product Owner | Data Analyst | Data Scientist | Data Governance Manager | Data Steward | Solution Architect | Platform Ops | Security Architect | Security Engineer | DataOps Engineer | Data Solution Architect | Data Modeling Architect | Data Engineer |
 |------------------------------------------------------------------------------------------|------------|--------------------|--------------|----------------|-------------------------|--------------|--------------------|--------------|--------------------|-------------------|------------------|-------------------------|-------------------------|---------------|
 | Manage the UI for requesting compute                                                     |            |                    |              |                |                         |              | A                  | R            |                    |                   |                  |                         |                         |               |
-| Specify what tools are used to bring compute to the data platform (Infrastructure as Code template) |            |                    |              |                |                         |              | A                  | R            |                    |                   |                  |                         |                         |               |
+| Specify what tools are used to bring compute to the data platform infrastructure as code (Iac) template |            |                    |              |                |                         |              | A                  | R            |                    |                   |                  |                         |                         |               |
 | Configure and monitor compute that accesses the data platform                            |            |                    |              |                |                         |              | A                  | R            |                    |                   | R                | R                       | R                       | R             |
 | Provide Producer support for compute that accesses the data platform                     |            |                    |              |                |                         |              |                    | A            |                    |                   | R                |                         |                         | R             |
 | Understand, monitor, and execute business rules & cleansing for data curation         |            | A                  |              |                |                         |              |                    |              |                    |                   | R                | R                       | R                       | R             |
@@ -172,7 +172,7 @@ A cloud-scale analytics deployment involves multiple areas of responsibility. Th
 | Approve data access requests for the Raw Zone                | R          |                    |              |                |                         |              |                    |              |                    | R                 |                  | R                       | R                       |               |
 | Monitor and audit data platform access           | R          | R                  |              |                |                         |              |                    |              | A                  | R                 |
 
-## Next steps
+## Next step
 
 Learn about group alignment within data management landing zones and data landing zones: 
 - [Understand teams and functions for cloud-scale analytics in Azure](../data-management/organize-team-functions.md).

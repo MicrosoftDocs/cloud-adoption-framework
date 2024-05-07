@@ -3,7 +3,7 @@ title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
 author: martinekuan
 ms.author: martinek
-ms.date: 06/21/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -30,7 +30,6 @@ Consider the following items related to logging data to inform what types of dat
  Azure data retention thresholds and archiving requirements|<ul> <li>The default retention period for Azure Monitor Logs is 30 days, with a maximum analytics retention of two years and archive of seven years.</li> <li>The default retention period for Microsoft Entra reports (premium) is 30 days.</li> <li>The default retention period for the Azure Activity logs and Application Insights logs is 90 days.</li> </ul>|
 Operational requirements|<ul> <li>Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling</li> <li>Use of centralized roles to control privileged activities</li> <li>Managed identities for Azure resources](/Azure/active-directory/managed-identities-Azure-resources/overview) for access to Azure services</li> <li>Resource locks to protect from editing and deleting resources</li> </ul>|
 
-
 ### Visibility considerations
 
 - Which teams need to receive alert notifications?
@@ -41,9 +40,13 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
 ## Inventory and visibility recommendations
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally, except where Azure role-based access control (Azure RBAC), data sovereignty requirements, and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams and drives reports about change management, service health, configuration, and most other aspects of IT operations. Focusing on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
+
 - Export logs to Azure Storage if your log retention requirements exceed seven years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
+
 - Use Azure Policy for access control and compliance reporting. Azure Policy lets you enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
+
 - Use Network Watcher to proactively monitor traffic flows through [Network Watcher NSG flow logs v2](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within virtual networks. It also provides critical information you need for effective management and monitoring, such as:
+
   - Most communicating hosts and application protocols
   - Most conversing host pairs
   - Allowed or blocked traffic
@@ -54,9 +57,13 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
   - Virtual network
   - Subnets
   - Rogue networks
+  
 - Use [resource locks](/azure/azure-resource-manager/management/lock-resources) to prevent accidental deletion of critical shared services.
+
 - Use [deny policies](/azure/governance/policy/concepts/effects#deny) to supplement Azure role assignments. Deny policies help prevent resource deployments and configurations that don't meet defined standards by blocking requests from being sent to resource providers. Combining deny policies and Azure role assignments ensures that you have appropriate guardrails in place to control *who* can deploy and configure resources and *which* resources they can deploy and configure.
+
 - Include [service](/azure/service-health/service-health-overview) and [resource](/azure/service-health/resource-health-overview) health events as part of your overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
+
 - Don't send raw log entries back to on-premises monitoring systems. Instead, adopt the principle that *data born in Azure stays in Azure*. If you require on-premises SIEM integration, send [critical alerts](/azure/security-center/continuous-export) instead of logs.
 
 ## Azure landing zone accelerator and management
@@ -79,6 +86,6 @@ In this model, application teams benefit from the use of existing platform infra
 
 For non-compute resources, like web apps or Azure Cosmos DB databases, your application teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
 
-## Next steps
+## Next step
 
 [Monitor your Azure platform landing zone components](management-monitor.md)

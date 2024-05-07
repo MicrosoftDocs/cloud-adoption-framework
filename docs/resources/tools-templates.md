@@ -3,7 +3,7 @@ title: Tools and templates
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption.
 author: martinekuan
 ms.author: martinek
-ms.date: 03/28/2024
+ms.date: 05/07/2024
 ms.topic: article
 ms.subservice: caf-general
 ms.custom: internal, UpdateFrequency5
@@ -37,10 +37,10 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 |----------|-------------|
 | [Azure naming tool](https://github.com/mspnp/AzureNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
 | [Naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/ready/naming-and-tagging-conventions-tracking-template.xlsx) | Document your decisions about naming and tagging standards to ensure consistency across resources and reduce onboarding time. |
-| [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your CAF Azure landing zone. |
-| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Create your landing zone via Terraform - filtering the Terraform registry website to list requisite Cloud Adoption Framework modules. |
-| [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the CAF Azure landing zone. |
-| [Data management zone](https://github.com/Azure/data-management-zone) | Deploy a single data management zone to your subscription. (We recommend deploying the data management zone before the data landing zone).|
+| [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your Cloud Adoption Framework Azure landing zone. |
+| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Use Terraform to create your landing zone. Filter the Terraform registry website to list requisite Cloud Adoption Framework modules. |
+| [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the Cloud Adoption Framework Azure landing zone. |
+| [Data management zone](https://github.com/Azure/data-management-zone) | Deploy a single data management zone to your subscription. Deploy the data management zone before the data landing zone.|
 | [Data landing zone](https://github.com/Azure/data-landing-zone) | Expand your landing zone with data. Data landing zone shared services include data storage, ingestion services, and management services. |
 | [Data management and landing zone Azure DevOps template](https://azuredevopsdemogenerator.azurewebsites.net/?name=dataanalytics) | Use this template to build your data management and landing zone. |
 
@@ -48,19 +48,19 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 
 | Resource | Description |
 |----------|-------------|
-| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities and find resources to help you address what's missing. |
+| [Governance benchmark assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e/) | Identify gaps between your current state and business priorities. Find resources to help you address what's missing. |
 | [Governance discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/governance-discipline-template.docx) | Define your basic set of governance processes used to enforce each governance discipline. |
-| [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. Focuses on cost management. |
-| [Deployment Acceleration discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/deployment-acceleration-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on deployment acceleration. |
-| [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/identity-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on identity requirements. |
-| [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. Focuses on resource consistency. |
-| [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. Focuses on the security baseline. |
+| [Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/cost-management-discipline-template.docx) | Define your policy statements and design guidance to mature the cloud governance in your organization. This template focuses on cost management. |
+| [Deployment Acceleration discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/deployment-acceleration-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on deployment acceleration. |
+| [Identity Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/identity-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on identity requirements. |
+| [Resource Consistency discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/resource-consistency-discipline-template.docx) | Define your policy statements and design guidance to increase the maturity of cloud governance in your organization. This template focuses on resource consistency. |
+| [Security Baseline discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/govern/security-baseline-discipline-template.docx) | Define your policy statements and design guidance to increase maturity of the cloud governance in your organization. This template focuses on the security baseline. |
 | [Azure Security Benchmark](/security/benchmark/azure/overview) | The Azure Security Benchmark (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure. |
-| [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities - such as Azure Policy, and Azure role-based access control (Azure RBAC). From the collected data, the visualizer shows your hierarchy map, creates a tenant summary, and builds granular scope insights about your management groups and subscriptions. |
+| [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) | The Azure Governance Visualizer is a PowerShell script that iterates through Azure tenant's management group hierarchy down to the subscription level. It captures data from the most relevant Azure governance capabilities, such as Azure Policy and Azure role-based access control (Azure RBAC). The visualizer shows your hierarchy map from the collected data to create a tenant summary and build granular scope insights about your management groups and subscriptions. |
 | [Azure Governance Visualizer accelerator](https://aka.ms/alz/azgovviz/accelerator) | The Azure Governance Visualizer accelerator speeds up the adoption and deployment of the Azure Governance Visualizer script into your environment. |
 | [Microsoft Product Placemat for CMMC L3](https://aka.ms/cmmc/productplacemat) | The Microsoft Product Placemat for CMMC Level 3 (Preview) is an interactive view representing how Microsoft cloud products and services satisfy requirements for cybersecurity maturity model certification practices. |
-| [PSRule for Azure](https://aka.ms/ps-rule-azure) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. These tests allow you to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
-| [AzAdvertizer](https://www.azadvertizer.net) | Use AzAdvertizer to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.
+| [PSRule for Azure](https://aka.ms/ps-rule-azure) | PSRule for Azure is a set of tests and documentation to help you configure Azure solutions. You can use these tests to check your infrastructure as code (IaC) before or after deployment to Azure. PSRule for Azure includes tests that check how IaC is written and how Azure resources are configured. |
+| [AzAdvertizer](https://www.azadvertizer.net) | Use AzAdvertizer to get Azure governance updates. For example, you can find insights about policy definitions, initiatives, aliases, security, and regulatory compliance controls in Azure Policy or Azure RBAC role definitions. You can also get insight into resource provider operations, Microsoft Entra role definitions and role actions, and first-party API permissions.|
 
 ## Migrate
 
@@ -99,4 +99,4 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 | Resource | Description |
 |----------|-------------|
 | [Deploy a STIG-compliant Windows virtual machine (VM)](/azure/azure-government/documentation-government-stig-windows-vm) | Use a portal to deploy a Security Technical Implementation Guides (STIG)-compliant Windows VM (preview) on Azure or Azure Government.
-| [Deploy a STIG-compliant Linux VM](/azure/azure-government/documentation-government-stig-linux-vm) | Use a portal to deploy a STIG-compliant Linux VM (preview) on Azure or Azure Government.
+| [Deploy a STIG-compliant Linux VM](/azure/azure-government/documentation-government-stig-linux-vm) | Use a portal to deploy a STIG-compliant Linux VM (preview) on Azure or Azure Government. |

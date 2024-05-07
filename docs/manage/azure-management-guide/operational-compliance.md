@@ -12,7 +12,7 @@ ms.custom: internal, fasttrack-edit, AQC
 
 *Operational compliance* is the second discipline in any cloud management baseline.
 
-![Diagram showing a cloud management baseline.](../../_images/manage/management-baseline.png)
+:::image type="content" source="../../_images/manage/management-baseline.png" alt-text="Diagram that shows a cloud management baseline." lightbox="../../_images/manage/management-baseline.png":::
 
 Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems being improperly patched.
 
@@ -22,7 +22,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 |---|---|---|
 | Patch management | Azure Automation Update Management | Management and scheduling of updates |
 | Policy enforcement | Azure Policy | Automated policy enforcement to ensure environment and guest compliance |
-| Environment configuration | [Infrastructure as Code](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) | Automated environment creation, configuration, and to avoid configuration drift |
+| Environment configuration | [Infrastructure as code (IaC)](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) | Automated environment creation, configuration, and to avoid configuration drift |
 | Resource configuration | Desired State Configuration | Automated configuration on guest OS and some aspects of the environment |
 
 ::: zone target="docs"
@@ -87,7 +87,7 @@ Azure Policy is used throughout governance processes. It's also highly valuable 
 
 Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
-An important part of this process is maintaining and updating Azure Policy assignments and updating them as your governance process requires.  Using Infrastructure as Code can help you update and maintain your policy infrastructure.  To learn more, see [Use infrastructure as code to update Azure landing zones](../infrastructure-as-code-updates.md).
+An important part of this process is maintaining and updating Azure Policy assignments and updating them as your governance process requires.  Using infrastructure as code can help you update and maintain your policy infrastructure.  To learn more, see [Use IaC to update Azure landing zones](../infrastructure-as-code-updates.md).
 
 ::: zone target="chromeless"
 

@@ -3,7 +3,7 @@ title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: martinek
-ms.date: 01/17/2023
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
@@ -11,8 +11,7 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you have options. You can use tools and services like Azure Policy and Microsoft Defender for Cloud. These tools enforce and automate your organization's governance decisions. Before you start your governance planning, use the [governance benchmark tool](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Govern methodology](../../govern/index.md).
-
+You can use tools and services like Azure Policy and Microsoft Defender for Cloud to establish corporate policy and plan your governance strategies. These tools and services enforce and automate your organization's governance decisions. Use the [governance benchmark tool](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) before you start your governance planning to identify potential gaps in your organization's cloud governance approach. For more information about how to develop governance processes, see [Govern methodology](../../govern/index.md).
 
 ## [Azure Policy](#tab/AzurePolicy)
 
@@ -83,6 +82,5 @@ For more information, see the following resources:
 ::: zone-end
 
 ::: zone target="chromeless"
-
 
 ::: zone-end

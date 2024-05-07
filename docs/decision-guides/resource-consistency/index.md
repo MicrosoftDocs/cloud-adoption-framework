@@ -13,7 +13,7 @@ ms.custom: internal
 
 Azure [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
 
-![Plotting resource consistency options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-consistency.png)
+:::image type="content" source="../../_images/decision-guides/decision-guide-resource-consistency.png" alt-text="Diagram that shows plotting resource consistency options from least to most complex, aligned with jump links below." lightbox="../../_images/decision-guides/decision-guide-resource-consistency.png:::
 
 Jump to: [Basic grouping](#basic-grouping-resource-groups) | [Deployment consistency](#deployment-consistency) | [Policy consistency](#policy-consistency) | [Hierarchical consistency](#hierarchical-consistency) | [Automated consistency](#automated-consistency)
 
@@ -25,7 +25,7 @@ As these factors gain importance, the benefits of ensuring consistent deployment
 
 In Azure, [resource groups](/azure/azure-resource-manager/management/overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-You can use resource groups as containers for resources that have a common lifecycle and shared management constraints, such as policy or Azure role-based access control (RBAC) requirements. You can't nest resource groups, and resources can only belong to one resource group. All control plane actions affect all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. 
+You can use resource groups as containers for resources that have a common lifecycle and shared management constraints, such as policy or Azure role-based access control (RBAC) requirements. You can't nest resource groups, and resources can only belong to one resource group. All control plane actions affect all resources in a resource group. For example, deleting a resource group also deletes all resources within that group.
 
 When you design or update your regional resource organization, consider the following factors. Is there a logical group of resources:
 
@@ -39,7 +39,7 @@ If the answer is _yes_ for any of these questions, consider placing those resour
 To minimize the effect of regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 > [!NOTE]
-> If you have resources that are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription). 
+> If you have resources that are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
@@ -78,7 +78,7 @@ For large cloud deployments, global governance becomes both more important and m
 
 An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. For more information about Azure landing zones, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-Azure landing zones allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [Policy as Code](/azure/governance/policy/concepts/policy-as-code) practices. Combine these practices into your CI/CD pipelines to apply revised governance standards to deployments as templates and definitions are updated.
+IT and development teams can use Azure landing zones to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [infrastructure as code (Iac) templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [policy as code](/azure/governance/policy/concepts/policy-as-code) practices. Incorporate these practices into your CI/CD pipelines to ensure new governance standards are applied as templates and definitions get updated.
 
 ## Next step
 

@@ -3,7 +3,7 @@ title: Ready methodology for hybrid and multicloud strategy
 description: Learn how to prepare your environment for a hybrid and multicloud scenario with Azure landing zones.
 author: likamrat
 ms.author: likamrat
-ms.date: 04/29/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
@@ -14,7 +14,7 @@ ms.custom: e2e-hybrid, think-tank
 
 The Cloud Adoption Framework [Ready methodology](../../ready/index.md) guides customers as they prepare their environment for cloud adoption. The methodology includes technical accelerators like Azure landing zones, which are the building blocks of any Azure cloud adoption environment.
 
-If you need help with choosing the right landing zone to deploy for your organization, this guide can help you get started.
+This guide can help you choose the right landing zone to deploy for your organization.
 
 ## Hybrid and multicloud in landing zones
 
@@ -88,15 +88,18 @@ Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any wor
 - Threat detection
 - Security vulnerability management and auditing
 
-[![Diagram that shows Azure Arc overview.](./media/arc-unified-operations.png)](./media/arc-unified-operations.png#lightbox)
+[![Diagram that shows the Azure Arc overview.](./media/arc-unified-operations.png)](./media/arc-unified-operations.png#lightbox)
 
 ## Configure your initial Azure environment
 
 For each cloud mix, you'll need an Azure environment to support, govern, and manage your cloud resources. The Ready methodology of the Cloud Adoption Framework provides a few steps to help you prepare your environment:
 
 - Review [What is an Azure landing zone?](../../ready/landing-zone/index.md)
+
 - Consider each of the [Azure landing zone design areas](../../ready/landing-zone/design-areas.md) and properly evaluate your technical requirements.
+
 - Compare your requirements to the [Azure landing zone implementation options](../../ready/landing-zone/implementation-options.md) to find and implement the most suitable template for your configuration.
+
 - Learn how to [Transition existing Azure environments to the Azure landing zone conceptual architecture](../../ready/enterprise-scale/transition.md).
 
 ## Azure Arc as a landing zone accelerator
@@ -160,7 +163,7 @@ If customers don't have or aren't planning to deploy an Azure Landing Zone at th
 
 - Customers should review the Azure Arc-enabled Servers landing zone accelerator guidance to review the design considerations and recommendations across critical design areas.
 
-[![Diagram that shows a flow chart for azure arc landing zone guidance.](./media/azure-arc-esu-landing-zone-flow-chart.png)](./media/azure-arc-esu-landing-zone-flow-chart.png#lightbox)
+[![Diagram that shows a flow chart for Azure arc landing zone guidance.](./media/azure-arc-esu-landing-zone-flow-chart.png)](./media/azure-arc-esu-landing-zone-flow-chart.png#lightbox)
 
 ## Next steps
 
