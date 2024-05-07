@@ -36,7 +36,7 @@ items:
       - name: Enterprise-scale landing zone for Azure Virtual Desktop
         href: enterprise-scale-landing-zone.md
       - name: Azure Architecture Center - Azure Virtual Desktop
-        href: /azure/architecture/example-scenario/wvd/windows-virtual-desktop
+        href: /azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop
       - name: Enterprise-scale landing zone for Citrix on Azure
         href: landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
     - name: Citrix on Azure design areas

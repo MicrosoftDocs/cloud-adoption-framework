@@ -24,11 +24,11 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
 
-For guidance on SAP digital estate planning, look through the processes outlined in the article series on [digital estate planning](../../digital-estate/inventory.md). The best practice article on [assessing on-premises workloads for migration to Azure](../../plan/contoso-migration-assessment.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
+For guidance on SAP digital estate planning, look through the processes outlined in the article series on [digital estate planning](../../digital-estate/inventory.md). The best practice article on [assessing workloads for migration to Azure](../../migrate/assess/index.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
 
 Several considerations should be included in those processes when planning for SAP adoption:
 
-- **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio. See [Step 5 of the `best practices` article](../../plan/contoso-migration-assessment.md#step-5-prepare-for-dependency-analysis) for an actionable reference guide.
+- **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio.
 
 - **Tagging, grouping, and metadata:** Carefully tag or group all assets:
 

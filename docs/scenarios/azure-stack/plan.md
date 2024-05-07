@@ -29,7 +29,7 @@ For some workloads, your answers to these questions will fuel conversations abou
 
 ## Assessment best practices
 
-By applying the best practice for [assessing a digital estate with Azure Migrate](../../plan/contoso-migration-assessment.md), you can accelerate the assessment and alignment of the workloads and assets in your digital estate. This best practice provides insight into your full IT portfolio. It also helps identify technical requirements for capacity, scale, and configuration to guide your migration.
+By applying the best practice for [assessing a digital estate with Azure Migrate](../../digital-estate/index.md), you can accelerate the assessment and alignment of the workloads and assets in your digital estate. This best practice provides insight into your full IT portfolio. It also helps identify technical requirements for capacity, scale, and configuration to guide your migration.
 
 By using proper assessment data, your cloud adoption team can make wiser choices and establish clearer priorities when they evaluate options for public or private cloud platforms in Azure.
 

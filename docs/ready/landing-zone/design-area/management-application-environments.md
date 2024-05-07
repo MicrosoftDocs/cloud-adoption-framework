@@ -30,7 +30,7 @@ This article describes the Azure landing zone, including the management groups, 
 In practice, you can use any number and type of phased environment. This article references the following phased environments.
 
 Environment | Description | Management group
----|---|---|
+---|---|---
 **Sandbox** |  The environment that's used for rapid innovation of prototypes but not production-bound configurations | Sandbox management group
 **Development** |  The environment that's used to build potential release candidates | Archetype management group, like _corp_ or _online_
 **Test** | The environment that's used to perform testing, including unit testing, user acceptance testing, and quality assurance testing | Archetype management group, like _corp_ or _online_
@@ -105,6 +105,8 @@ Management groups for environments within archetypes can add management overhead
 The _landing zones_ management group should have universal policies that enforce guardrails for both _corp_ and _online_ child management groups. _Corp_ and _online_ have unique policies that enforce company guidelines related to public and private-facing workloads.
 
 Many organizations create separate management groups for workload software development lifecycle (SDLC) environments to assign environmental policies and controls. In practice, this method creates more challenges for workload teams than it solves. SDLC environments shouldn't have different policies, so we don't recommend separate management groups.
+
+:::image type="content" source="./media/mg-environment-antipattern.svg" alt-text="Diagram that shows an example of a suboptimal management group hierarchy, with distinct management groups for different environments." lightbox="./media/mg-environment-antipattern.svg":::
 
 Application owners can change the topology or resource configuration of a workload to align to policies in multiple SDLC environments that it's promoted through. This method increases risk. Rules that are specific to each environment can result in a poor development experience for developer and quality assurance teams. Problems can also arise if an application has one set of guardrail policies that work in one environment, and the application is exposed to a different set of policies later in its promotion cycle. You might have to make adjustments to an application if controls change.
 
