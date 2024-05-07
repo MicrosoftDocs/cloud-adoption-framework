@@ -119,7 +119,7 @@ Option 1: Internet Service hosted in Azure
 Option 2: VMware Solution Managed SNAT  
 Option 3: Azure Public IPv4 address to NSX-T Data Center Edge  
 
-Although you can use all three options with Dual Region Secure Virtual WAN with Routing Intent,  "Option 1: Internet Service hosted in Azure" is the best option when using Secure Virtual WAN with Routing Intent and is the option that is used to provide internet connectivity in the scenario.  
+Although you can use all three options with Dual Region Secure Virtual WAN with Routing Intent,  "Option 1: Internet Service hosted in Azure" is the best option when using Secure Virtual WAN with Routing Intent and is the option that is used to provide internet connectivity in the scenario. The reason why "Option 1" is considered the best option with Secure Virtual WAN is due to its ease of security inspection, deployment, and manageability.
 
 With Routing Intent, you can generate a default route from the hub firewall. This default route is advertised to your Virtual Networks and Azure VMware Solution private clouds. This section is broken into two sections, one that explains internet connectivity from an Azure VMware Solution perspective and another from the Virtual Network perspective.
 
