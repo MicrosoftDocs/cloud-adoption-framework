@@ -3,7 +3,7 @@ title: Governing generative AI in Azure
 description: Learn how to govern generative AI in Azure with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/16/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.service: caf
 ---
@@ -28,6 +28,34 @@ Risks are associated with all areas of business. With generative AI, there are n
 |Competency risk|Lack of skills and knowledge to effectively manage generative AI in your organization.|
 |Financial risk|Unforeseen costs associated with generative AI adoption.|
 
+### Mitigate risks
+
+- Establish policies.
+
+### Threat modeling
+
+## Compliance
+
+### Policy enforcement
+
+### Understanding regulatory requirements
+
+### Compliance monitoring and reporting
+
+## Data management
+
+### Data quality
+
+### Data lifecycle
+
+### Data privacy
+
+### Data access control
+
+### Data security
+
+### Data segregation to different environments
+
 ## Additional risk considerations
 
 > TBD
@@ -36,10 +64,6 @@ Risks are associated with all areas of business. With generative AI, there are n
 - How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
 - How **effective is your data governance framework** in managing data access, usage, privacy, and security?
 - How often **do you audit your data management practices** for quality and compliance?
-
-## Establish policies
-
-- To what extent do your policies ensure the privacy and security of the data used in your AI systems?
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: Strategic considerations for adopting generative AI in Azure
 description: Learn how to build a generative AI strategy for your business.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/21/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.service: caf
 ---
@@ -14,6 +14,12 @@ To establish a generative AI vision and strategy, there are some key considerati
 
 ## Business justification
 
+### Qualitative justifications
+
+### Quantitative justifications
+
+## Organizational readiness for generative AI
+
 ### Leadership buy-in
 
 - Does leadership understand the value of GAI?
@@ -22,11 +28,21 @@ To establish a generative AI vision and strategy, there are some key considerati
 - Ensure you map out the budgets and resources needed to support your generative AI strategy, and anchor that in the vision and strategy.
 - Can you communicate use cases clearly to your leadership?
 
+### Leadership and organizational alignment
+
+### Human in the loop
+
+### Workforce readiness
+
+#### Reskilling initiatives
+
 ## Determine business impact
 
-### Generative AI impact on your industry
+### Re-imagining the business impacts on experience, end-users, and employees
 
-- Determine the impact on your industry and how generative AI can be used to drive innovation and transformation.
+### Workforce transformation with AI
+
+### Relocation and specialization of resources
 
 ### Adapt and learn
 
