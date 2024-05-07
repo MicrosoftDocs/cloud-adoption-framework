@@ -37,7 +37,6 @@ The traffic, which flows through the AVS NSX routers, covered in this design inc
 
 Implement this scenario with:
 
--	An NSX Distributed Firewall (DFW) – version 3.2.2 or higher for IDS/IPS (With add-on license)
 -	An NSX Advanced Load balancer
 -	Public IP for Internet breakout from Azure VMware Solution for both source and destination address translation (SNAT/DNAT)
 
@@ -53,7 +52,7 @@ This document assumes and recommends default route advertisement from either on-
 -	Enable Public IP down to the NSX Edge in Azure portal. This allows for low-latency direct connections to Azure VMware Solution, and the ability to scale the number of outbound connections.
 -	Apply the NSX firewall's rule creation.
 -	Use the NSX Advanced load balancer to evenly distribute traffic to workloads.
--	Enable Flood (Distributed and Gateway) protection.
+-	Enable [Flood Protection](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-398BCA15-DAFC-4D23-B0D3-E5C1FB0B0F08.html)(Distributed and Gateway) protection.
 
 ### Egress from AVS using NSX-T or NVA
 
