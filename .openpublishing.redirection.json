@@ -836,6 +836,21 @@
           "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/oracle-iaas/introduction-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-iaas",
+          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
+          "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/landing-zone/align-scenarios.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription",
          "redirect_document_id": false
@@ -1549,6 +1564,11 @@
          "source_path": "docs/govern/guides/complex/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/scenarios/oracle-iaas/manage-resources-oracle-landing-zone.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+        "redirect_document_id": false   
       },
       {
          "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
