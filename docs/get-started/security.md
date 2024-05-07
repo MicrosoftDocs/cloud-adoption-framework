@@ -3,7 +3,7 @@ title: 'Get started: Secure the enterprise environment'
 description: Get started integrating security at critical points during your cloud adoption efforts and operations.
 author: martinekuan
 ms.author: martinek
-ms.date: 07/05/2022
+ms.date: 05/06/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency3
 ---
@@ -77,6 +77,7 @@ We recommended capturing the strategy in a presentation to facilitate easy discu
 - **Strategy presentation:** You might have a single strategy presentation, or you might choose to also create summary versions for leadership audiences.
 
   - **Full presentation:** This should include the full set of elements for the security strategy in the main presentation or in optional reference slides.
+  
   - **Executive summaries:** Versions to use with senior executives and board members might contain only critical elements relevant to their role, such as risk appetite, top priorities, or accepted risks.
 
 - You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
@@ -228,8 +229,11 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
 
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
+  
   - [Azure Policy](/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](/azure/azure-resource-manager/), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
-  - [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code): This approach combines DevOps, Infrastructure as Code, and Azure Policy to deploy policies, initiatives (set definitions), assignments and policy exemptions at scale by keeping your policy definitions in source control. 
+  
+  - [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code): This approach combines DevOps, Infrastructure as Code, and Azure Policy to deploy policies, initiatives (set definitions), assignments and policy exemptions at scale by keeping your policy definitions in source control.
+  
   - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <br>
@@ -253,7 +257,9 @@ After you ensure that new applications and landing zones follow security best pr
 **Guidance to support deliverable completion:**
 
 - Use the same security baselines that you built in [Step 4](#step-4-secure-new-workloads) as your ideal state. You might have to adjust some policy settings to only audit instead of enforcing them.
+
 - Balance operational and security risk. Because these environments might host production systems that enable critical business processes, you might need to implement security improvements incrementally to avoid risking operational downtime.
+
 - Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads that have a high exposure to risk.
 
 For more information, see [Identify and classify business-critical applications](/azure/architecture/framework/security/design-apps-services#identify-and-classify-business-critical-applications).
@@ -278,7 +284,9 @@ Consistent application of security requirements comes from sound governance disc
 **Guidance to support deliverable completion:**
 
 - Use the same security baselines and auditing mechanisms that you built in [Step 4](#step-4-secure-new-workloads) as technical components of monitoring the baselines. Complement these baselines with people and process controls to ensure consistency.
+
 - Ensure that all workloads and resources follow proper [naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for data sensitivity.
+
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
 
 <br>
@@ -294,7 +302,11 @@ The steps in this guide have helped you implement the strategy, controls, proces
 As you continue into the operations mode of cloud security, consider these next steps:
 
 - Review [Microsoft security documentation](/security/). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
+
 - Review security information in [Built-in security controls for Azure services](/security/benchmark/azure/).
+
 - Review Azure security tools and services in [Security services and technologies available on Azure](/azure/security/fundamentals/services-technologies).
+
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
+
 - Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Microsoft Defender for Cloud](/azure/security-center/security-center-partner-integration).

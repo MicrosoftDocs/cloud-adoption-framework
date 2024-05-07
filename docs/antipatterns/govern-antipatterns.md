@@ -1,9 +1,9 @@
 ---
 title: Govern antipatterns
-description: When adopting the cloud, understand company responsibilities, cloud provider responsibilities, and cloud governance and security standards.
+description: Understand company responsibilities, cloud provider responsibilities, and cloud governance and security standards when adopting the cloud.
 author: lpassig
 ms.author: martinek
-ms.date: 02/18/2021
+ms.date: 05/06/2024
 ms.topic: conceptual
 ms.subservice: caf-methodology-govern
 ms.custom: think-tank,UpdateFrequency5
@@ -11,7 +11,7 @@ ms.custom: think-tank,UpdateFrequency5
 
 # Govern antipatterns
 
-Customers often experience antipatterns during the Govern phase of cloud adoption. Taking the time to understand shared responsibilities helps you avoid these antipatterns, as does building your security strategy on existing frameworks instead of creating your own.
+Customers often experience antipatterns during the Govern phase of cloud adoption. Taking the time to understand shared responsibilities can help you avoid these antipatterns, as does building your security strategy on existing frameworks instead of creating your own.
 
 ## Antipattern: Misunderstand shared responsibilities
 
@@ -19,7 +19,7 @@ When you adopt the cloud, it's not always clear where your responsibility ends a
 
 ### Example: Assume the cloud provider manages updates
 
-Members of a company's human resources (HR) department set up many Windows servers in the cloud using infrastructure as a service (IaaS). They assume that the cloud provider manages updates, because on-site IT usually handles update installation. The HR department doesn't configure the updates because they're not aware that Azure doesn't deploy and install operating system updates by default. As a result, the servers are noncompliant and pose a security risk.
+Members of a company's human resources (HR) department set up many Windows servers in the cloud by using infrastructure as a service (IaaS). They assume that the cloud provider manages updates, because on-site IT usually handles update installation. The HR department doesn't configure the updates because they're not aware that Azure doesn't deploy and install operating system updates by default. As a result, the servers are noncompliant and pose a security risk.
 
 ### Preferred outcome: Create a readiness plan
 
@@ -27,7 +27,7 @@ Understand [shared responsibility](/azure/security/fundamentals/shared-responsib
 
 ## Antipattern: Assume out-of-the-box solutions provide security
 
-Companies often perceive security as a given in the cloud. Although this assumption is usually correct, most environments also need to adhere to compliance framework requirements, which can differ from security requirements. Azure provides basic security, and the [Azure portal](https://portal.azure.com) can provide more advanced security via [Microsoft Defender for Cloud](/azure/security-center/). But enforcing a compliance and security standard isn't an out-of-the-box experience when you create a subscription.
+Companies often perceive security as a given in the cloud. Although this assumption is often correct, most environments also need to adhere to compliance framework requirements, which can differ from security requirements. Azure provides basic security, and the [Azure portal](https://portal.azure.com) can provide more advanced security via [Microsoft Defender for Cloud](/azure/security-center/). But enforcing a compliance and security standard isn't an out-of-the-box experience when you create a subscription.
 
 ### Example: Neglect cloud security
 
@@ -35,17 +35,17 @@ A company develops a new application in the cloud. It chooses an architecture ba
 
 ### Preferred outcome: Define a cloud security strategy
 
-Define a proper [cloud security strategy](../strategy/define-security-strategy.md). See [CISO cloud readiness guide](../govern/policy-compliance/cloud-security-readiness.md) for more information, and refer your chief information security office (CISO) to this guide. It discusses topics such as security platform resources, privacy and controls, compliance, and transparency.
+Define a proper [cloud security strategy](../strategy/define-security-strategy.md). For more information, see [CISO cloud readiness guide](../govern/policy-compliance/cloud-security-readiness.md) and refer your chief information security office (CISO) to this guide. It discusses topics such as security platform resources, privacy and controls, compliance, and transparency.
 
 Read about secure cloud workloads in the [Azure Security Benchmark](/security/benchmark/azure/introduction). Build upon the [CIS Controls v7.1](https://learn.cisecurity.org/cis-controls-download) from the Center for Internet Security, along with [NIST SP800-53](https://www.nist.gov/privacy-framework/nist-sp-800-53) from the National Institute of Standards and Technology, which address most security risks and measures.
 
 Use Microsoft Defender for Cloud to identify risks, adapt best practices, and improve your company's security posture.
 
-Implement or support company-specific, automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code).
+Implement or support company-specific automated compliance and security requirements by using [Azure Policy](/azure/governance/policy/overview) and [Azure Policy as Code](/azure/governance/policy/concepts/policy-as-code).
 
 ## Antipattern: Use a custom compliance or governance framework
 
-Introducing a custom compliance and governance framework that isn't based on industry standards can substantially increase cloud adoption time, because it can be difficult to translate the custom framework to cloud settings. This scenario can increase the effort that's needed to translate custom measures and requirements into implementable security controls. Most companies need to comply with similar sets of security and compliance requirements. As a result, most custom compliance and security frameworks differ only slightly from current compliance frameworks. Companies with additional security requirements can consider building new frameworks.
+Introducing a custom compliance and governance framework that isn't based on industry standards can substantially increase cloud adoption time, because it can be difficult to translate the custom framework to cloud settings. This scenario can increase the effort that's needed to translate custom measures and requirements into implementable security controls. Most companies need to comply with similar sets of security and compliance requirements. As a result, most custom compliance and security frameworks differ only slightly from current compliance frameworks. Companies with extra security requirements can consider building new frameworks.
 
 ### Example: Use a custom security framework
 
@@ -55,7 +55,7 @@ Azure offers a more comprehensive security and compliance structure that differs
 
 ### Preferred outcome: Rely on existing frameworks
 
-Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. Find more framework implementations on the [Azure landing zones implementation options page](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options). 
+Use or build on existing frameworks, such as CIS Controls v7.1 or NIST SP800-53, before you establish or introduce a custom company compliance framework. Existing frameworks make the transition to cloud security settings easier and more measurable. For more information about framework implementations, see [Azure landing zones implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
 
 ## Next steps
 

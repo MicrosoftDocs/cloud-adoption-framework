@@ -3,7 +3,7 @@ title: Resource consistency decision guide
 description: Understand the importance of your cloud estate's resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
 ms.author: dermar
-ms.date: 08/16/2022
+ms.date: 05/06/2024
 ms.topic: conceptual
 ms.subservice: caf-general
 ms.custom: internal
@@ -46,7 +46,6 @@ To [determine if your resource supports moving to another resource group](/azure
 > [!TIP]
 > [Audit](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html) your resource group alignment with Azure Policy. [Assign a built-in Azure Policy definition](/azure/governance/policy/tutorials/create-and-manage) at the [intermediate root management group](/azure/governance/management-groups/overview#root-management-group-for-each-directory) level to verify whether the locations of the resources in your tenant hierarchy match the location of their respective resource groups.
 
-
 ## Deployment consistency
 
 When you build on top of the base resource grouping mechanism, the Azure platform provides a system for using templates to deploy your resources to the cloud environment. You can use templates to create consistent organization and naming conventions when deploying workloads. Templates enforce those aspects of your resource deployment and management design.
@@ -77,11 +76,11 @@ Resource groups let you support extra levels of hierarchy inside your organizati
 
 For large cloud deployments, global governance becomes both more important and more complex. It's crucial to automatically apply and enforce governance requirements when deploying resources, and meet updated requirements for existing deployments.
 
-An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. Read more about Azure Landing Zones [here](/azure/cloud-adoption-framework/ready/landing-zone/).
+An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. For more information about Azure landing zones, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-Azure landing zones allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone including, [Policy as Code](/azure/governance/policy/concepts/policy-as-code) practices. Combine these into your CI/CD pipelines to apply revised governance standards to deployments as templates and definitions are updated.
+Azure landing zones allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [Infrastructure as Code templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [Policy as Code](/azure/governance/policy/concepts/policy-as-code) practices. Combine these practices into your CI/CD pipelines to apply revised governance standards to deployments as templates and definitions are updated.
 
-## Next steps
+## Next step
 
 Resource consistency is just one of the core infrastructure components that requires architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about the patterns and models for design decisions on various types of infrastructure.
 

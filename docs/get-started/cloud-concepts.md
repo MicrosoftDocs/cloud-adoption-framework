@@ -4,7 +4,7 @@ description: Understand and document initial decisions required to drive the clo
 author: martinekuan
 ms.author: martinek
 ms.reviewer: tozimmergren
-ms.date: 11/17/2022
+ms.date: 05/06/2024
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23, UpdateFrequency3
 ---
@@ -49,8 +49,11 @@ All cloud hosting and environment decisions require you to understand the portfo
 **Guidance to support deliverable completion:**
 
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand critical Azure topics before embarking on your cloud adoption journey.
+
 - The [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that transition to your cloud operations team.
+
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of workloads and assets slated for cloud adoption.
+
 - The [digital estate analysis](../digital-estate/approach.md) approach helps you document existing workloads and assets slated for cloud adoption. In Azure, the digital estate is best represented in the [Azure Migrate](/azure/migrate/migrate-support-matrix) tool.
 
 <br>
@@ -88,8 +91,11 @@ All existing workloads and assets should be suitably named and tagged following 
 **Guidance to support deliverable completion:**
 
 - Create a [naming and tagging standard](../ready/azure-best-practices/naming-and-tagging.md).
+
 - Populate the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) to track decisions.
+
 - [Review and update existing tags in Azure](/azure/azure-resource-manager/management/tag-resources).
+
 - [Enforce tagging policies in Azure](/azure/azure-resource-manager/management/tag-policies).
 
 <br>
@@ -114,8 +120,11 @@ You must create a resource organization design to ensure consistent alignment wi
 Build a subscription strategy:
 
 - [Start with two subscriptions](../ready/azure-best-practices/initial-subscriptions.md). Add basic subscription designs to account for common enterprise needs like shared services or [sandbox subscriptions.](../ready/considerations/sandbox-environments.md)
+
 - Ensure you can [manage multiple subscriptions](../ready/azure-best-practices/organize-subscriptions.md) as more subscriptions are needed to support your cloud adoption plan.
+
 - Establish [clear boundaries based on the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md#organizing-the-hierarchy-in-azure).
+
 - [Move resource groups and assets between subscriptions](/azure/azure-resource-manager/management/move-resource-group-and-subscription) when necessary to adhere to your organization strategy.
 
 <br>
@@ -135,6 +144,7 @@ Portfolio hierarchy complexity informs organizational structures and methodologi
 **Guidance to support deliverable completion:**
 
 - Use the previous steps to evaluate the [portfolio hierarchy accountability guidance](../resources/fundamental-concepts/hosting-hierarchy.md#hierarchy-accountability-and-guidance). Determine which capabilities, if any, might need to be delivered by dedicated organizations or virtual teams.
+
 - Apply the portfolio hierarchy accountability guidance to the RACI (responsible, accountable, consulted, and informed) diagram using [Get started: Align your organization](./org-alignment.md).
 
 <br>
