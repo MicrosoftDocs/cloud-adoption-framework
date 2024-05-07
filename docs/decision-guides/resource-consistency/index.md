@@ -13,7 +13,7 @@ ms.custom: internal
 
 Azure [subscription design](../../ready/landing-zone/design-area/resource-org-subscriptions.md) defines how you organize your cloud assets in relation to your organization's structure, accounting practices, and workload requirements. In addition to this level of structure, addressing your organizational governance policy requirements across your cloud estate requires the ability to consistently organize, deploy, and manage resources within a subscription.
 
-:::image type="content" source="../../_images/decision-guides/decision-guide-resource-consistency.png" alt-text="Diagram that shows plotting resource consistency options from least to most complex, aligned with jump links below." lightbox="../../_images/decision-guides/decision-guide-resource-consistency.png:::
+:::image type="content" source="../../_images/decision-guides/decision-guide-resource-consistency.png" alt-text="Diagram that shows plotting resource consistency options from least to most complex, aligned with jump links below." lightbox="../../_images/decision-guides/decision-guide-resource-consistency.png":::
 
 Jump to: [Basic grouping](#basic-grouping-resource-groups) | [Deployment consistency](#deployment-consistency) | [Policy consistency](#policy-consistency) | [Hierarchical consistency](#hierarchical-consistency) | [Automated consistency](#automated-consistency)
 

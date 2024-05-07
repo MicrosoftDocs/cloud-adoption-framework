@@ -3,7 +3,7 @@ title: Best practices for data science projects with cloud-scale analytics in Az
 description: Learn about best practices for data science projects with cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
-ms.date: 05/07/202
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
