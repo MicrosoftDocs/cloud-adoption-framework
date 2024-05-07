@@ -5,7 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 08/16/2022
 ms.topic: conceptual
-ms.custom: think-tank, e2e-aks
+ms.custom: think-tank, e2e-aks, linux-related-content
 ---
 
 # Plan platform automation and DevOps for Azure Red Hat OpenShift
