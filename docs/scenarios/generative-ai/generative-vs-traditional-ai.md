@@ -3,12 +3,14 @@ title: Generative vs. Traditional AI
 description: Learn about the differences between generative and traditional AI.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/19/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.service: caf
 ---
 
 # Generative vs. Traditional AI
+
+> TBD - Intro.
 
 ## Traditional AI
 
@@ -35,11 +37,20 @@ Here are some examples of generative AI:
 
 - **OpenAI**: Ensure that artificial general intelligence (AGI) benefits all of humanity.
 
-## Decision considerations
+## Deciding on the right blend of AI for your use cases
 
 When deciding between traditional AI and generative AI, consider the following:
 
-- How How would you rate your organization's ability to develop or procure AI models?
+> TBD - Decision considerations.
+
+- Idea/talking points: How would you rate your organization's ability to develop or procure AI models?
+- Idea/talking points: When deciding between traditional AI and generative AI, consider the following:
+
+### No-code
+
+### Low-code
+
+### Pro-code
 
 ## Next steps
 

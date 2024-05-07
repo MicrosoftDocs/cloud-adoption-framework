@@ -3,7 +3,7 @@ title: Planning for generative AI
 description: Learn how to plan for generative AI adoption in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/16/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.service: caf
 ---
@@ -18,6 +18,12 @@ ms.service: caf
 - Define a training plan for your organization.
 - Define a plan to keep your organization's skills up to date.
 - Define a plan to measure the effectiveness of your skills readiness plan.
+
+### Required skills for leaders, tech specialists, and end users
+
+- Define the skills required for leaders, tech specialists, and end users.
+
+
 
 ## Next steps
 

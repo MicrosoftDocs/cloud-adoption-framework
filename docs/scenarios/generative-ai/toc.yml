@@ -3,10 +3,14 @@ items:
     href: index.md
   - name: Get started
     items:
-    - name: Buy vs. Build
-      href: buy-vs-build.md
+    - name: Buy, Build, or Blend
+      href: buy-build-blend.md
     - name: Generative vs. traditional AI
       href: generative-vs-traditional-ai.md
+    - name: Types of Generative AI models
+      href: generative-ai-model-types.md
+    - name: Responsible AI considerations
+      href: responsible-ai.md
   - name: Strategic
     href: strategy.md
   - name: Planning

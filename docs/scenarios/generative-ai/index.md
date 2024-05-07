@@ -1,9 +1,9 @@
 ---
 title: Generative AI adoption in Azure
-description: Learn how Microsoft recommends adopting Generative AI in your organization.
+description: Learn how Microsoft recommends adopting Generative AI in your organization with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 02/16/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.service: caf
 ---
@@ -25,6 +25,8 @@ See [Generative AI vs. Traditional AI](./generative-vs-traditional-ai.md) for mo
 In this guidance we talk to **business decision makers**, **IT decision makers**, and **cloud architects** who are interested in understanding how to adopt generative AI in their organization.
 
 We also talk about the business justifications, building a strategy, and the technical aspects of adopting generative AI in Azure.
+
+## Terminology
 
 ## Next steps
 
