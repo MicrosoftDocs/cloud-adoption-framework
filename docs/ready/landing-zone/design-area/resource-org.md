@@ -10,38 +10,45 @@ ms.custom: internal, UpdateFrequency.5
 
 # Resource organization
 
-The critical resource organization design area establishes consistent patterns for organizing resources deployed to the cloud.
+Use the resource organization design area to establish consistent patterns when you organize resources that you deploy to the cloud.
 
 ## Design area review
 
-**Involved roles or functions:** This design area probably requires support from one or more [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) functions to make and implement decisions.
+**Involved roles or functions:** This design area requires support from one or more [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) functions to make and implement decisions.
 
-**Scope:** Resource organization decisions are a foundation for all compliance-related design areas. The goal of resource organization planning is to establish consistent patterns for the following areas:
+**Scope:** Resource organization decisions provide a foundation for all compliance-related design areas. When you plan your resource organization, you can establish consistent patterns for the following areas:
 
 - Naming
 - Tagging
 - Subscription design
 - Management group design
 
-The initial scope of this exercise assumes a subscription design that aligns with the Azure landing zone conceptual architecture. Workload- or application-level subscription and landing zone assignment supports separation of duties and subscription democratization requirements.
+The initial scope of this exercise assumes a subscription design that aligns with the Azure landing zone conceptual architecture. Workload-level or application-level subscription and landing zone assignment supports separation of duties and subscription democratization requirements.
 
 The following assumptions are the basis for workload subscription design pattern guidance:
 
 - Your enterprise is committed to long-term cloud operations.
-- You need cloud management, security, and governance tooling to manage Azure, hybrid, or multicloud solutions.
-- Management or platform deployments are in separate subscriptions and management groups from workload or application resources.
 
-**Multiple regions:** Azure regions play a crucial role in shaping the performance, reliability, and compliance of your cloud-based applications. Azure’s global infrastructure allows you to scale your applications as needed. Regions provide the capacity to handle varying workloads. Whether you’re launching a new product or expanding your user base, having the right resources in the right region ensures agility, scalability, and higher resiliency. Multiple regions adoption is also a key approach for critical applications and services that require geo-disaster recovery capability,  which is recommended for maximum resiliency. How to select and operate in multiple regions is explained in the [Select Azure regions](/azure/cloud-adoption-framework/ready/considerations/regions) article.
+- You need cloud management, security, and governance tooling to manage Azure, hybrid, or multicloud solutions.
+- Management or platform deployments are in subscriptions and management groups that are separate from workload or application resources.
+
+**Multiple regions:** Azure regions play a crucial role in shaping the performance, reliability, and compliance of your cloud-based applications. Use the Azure global infrastructure to scale your applications as needed. Regions provide the capacity to handle varying workloads. Whether you launch a new product or expand your user base, you must have the right resources in the right region to ensure agility, scalability, and high resiliency.
+
+Use multiple regions for critical applications and services that require geo-disaster recovery capabilities, which provides maximum resiliency. For information about how to select and operate in multiple regions, see [Select Azure regions](/azure/cloud-adoption-framework/ready/considerations/regions).
+
+Other considerations for using multiple regions include:
 
 - Customers can decide to initially deploy in a single region, and then grow to [different regions](../../considerations/regions.md) in the future.
-- To ensure consistency and manageability, it is important to consider how to organize resources when a multi-region design is adopted.  
-- Depending on the requirements and desired governance model, customers can decide to consider multi-region resource organization at the [management groups](resource-org-management-groups.md), [subscriptions and resource groups](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md) and [tagging](../../azure-best-practices/resource-tagging.md) levels (*details are included inside the referenced articles*).
+
+- To ensure consistency and manageability, consider how to organize resources when you adopt a multiregion design.  
+- Depending on the requirements and desired governance model, customers can decide to consider multiregion resource organization at the [management groups](resource-org-management-groups.md), [subscriptions and resource groups](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md) and [tagging](../../azure-best-practices/resource-tagging.md) levels (*details are included inside the referenced articles*).
 
 **New cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
 
 **Existing cloud environment:** Consider the following if you are interested in applying the principles from the resource organization design area to existing Azure environments:
 
 - If your current environment does not use management groups, consider them. Management groups are key to managing policies, access, and compliance across subscriptions at scale. [Management groups](resource-org-management-groups.md) can help guide your implementation.
+
 - If your current environment does use management groups, consider using the guidance in [management groups](resource-org-management-groups.md) when evaluating your implementation.
 - If you have existing subscriptions in your current environment, consider using the guidance in [subscriptions](resource-org-subscriptions.md) to see if you are using them effectively. Subscriptions act as policy and management boundaries and are scale units.
 - If you have existing resources in your current environment, consider using the guidance in [naming and tagging](../../azure-best-practices/naming-and-tagging.md) to influence your tagging strategy and your naming conventions going forward.
@@ -58,8 +65,6 @@ The resource organization design area explores techniques and technologies that 
 ![Diagram that shows the four scope levels for organizing Azure resources.](../../azure-setup-guide/media/organize-resources/scope-levels.png)
 
 ## Next steps
-
-Explore the guidance further in the following two sections:
 
 - [Management groups](./resource-org-management-groups.md)
 - [Subscriptions](./resource-org-subscriptions.md)

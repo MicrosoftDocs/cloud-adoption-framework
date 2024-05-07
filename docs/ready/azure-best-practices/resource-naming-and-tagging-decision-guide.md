@@ -59,7 +59,7 @@ Tagging schemes that align with business, like accounting, business ownership, o
 
 ## Baseline naming conventions
 
-Use a standardized naming convention as a starting point to organize your cloud-hosted resources. With a properly structured naming system, you can quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them, or if you should establish separate cloud-based standards.
+Use a standardized naming convention as a starting point to organize your cloud-hosted resources. When you have a properly structured naming system, you can quickly identify resources for both management and accounting purposes. You might have existing IT-aligned naming conventions in other parts of your organization. If so, consider whether your cloud naming conventions should align with them, or if you should establish separate cloud-based standards.
 
 > [!NOTE]
 > [Naming rules and restrictions](/azure/azure-resource-manager/management/resource-name-rules) vary depending on the Azure resource. Your naming conventions must comply with these rules.
