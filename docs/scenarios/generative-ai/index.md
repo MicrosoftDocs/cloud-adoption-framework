@@ -33,4 +33,4 @@ We also talk about the business justifications, building a strategy, and the tec
 Before diving into the details about building a generative AI strategy for your business, you must understand whether to buy or build.
 
 > [!div class="nextstepaction"]
-> [Buy vs. Build generative AI](./buy-vs-build.md)
+> [Buy, Build, or Blend AI](./buy-build-blend.md)

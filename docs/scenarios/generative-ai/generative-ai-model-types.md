@@ -1,6 +1,6 @@
 ---
 title: Types of generative AI models
-description: Learn about the differences between generative and traditional AI.
+description: Learn about the different types of generative AI models and how to choose the right model for your use cases.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/07/2024
