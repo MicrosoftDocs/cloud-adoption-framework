@@ -32,7 +32,7 @@ The landing zone accelerator approach to landing zones provides these assets to 
 - The landing zone architecture
 - An implementation that includes:
   - A deployable reference capable of creating the environment for your Oracle on Azure IaaS deployment
-  - A Microsoft-approved Oracle on Azure IaaS reference implementation to test the deployed environment
+  - A Microsoft-recommended Oracle on Azure IaaS reference implementation to test the deployed environment
 
 ## Design guidelines
 
@@ -49,7 +49,7 @@ These articles provide guidelines for creating your landing zone:
 
 The following conceptual reference architecture is an example that shows design areas and best practices.
 
-:::image type="content" source="media/reference-architecture-oracle-landing-zone-accelerator.png" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
+:::image type="content" source="media/index/reference-architecture-oracle-iaas-landing-zone.svg" alt-text="Diagram showing a reference architecture of Oracle on Azure landing zone accelerator.":::
 
 ## Obtain the Oracle on IaaS landing zone accelerator
 
@@ -57,4 +57,4 @@ The Oracle on IaaS landing zone accelerator is available [here](https://aka.ms/l
 
 ## Next steps
 
-- Review the Oracle on IaaS landing zone accelerator design areas to make complete considerations and recommendations for your Oracle on IaaS  landing zone accelerator architecture. See [Network topology and connectivity for Oracle on Azure Virtual Machines landing zone accelerator](./oracle-network-topology.md).
+- Review the Oracle on IaaS landing zone accelerator design areas to make complete considerations and recommendations for your Oracle on IaaS  landing zone accelerator architecture.
