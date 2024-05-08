@@ -10,11 +10,11 @@ ms.custom: internal
 
 # Resource naming and tagging decision guide
 
-Organizing cloud-based resources is a crucial task for IT, unless all deployments are simple. For complicated or complex deployments, use naming and tagging standards to organize your resources for the following reasons:
+Organize your cloud-based resources so that your IT team can easily work with them. For complicated or complex deployments, use naming and tagging standards to organize your resources for:
 
 - **Resource management**: Your IT teams need to quickly locate resources that are associated with specific workloads, regions, environments, ownership groups, or other important information. Organize resources to ensure that you properly assign organizational roles and access permissions.
 
-- **Cost management and optimization**: Ensure that IT understands the resources and workloads that each team uses so that business groups know how much cloud resources consume. Cost-related tags support the following types of information:
+- **Cost management and optimization**: Ensure that your IT team understands the resources and workloads that each team uses so that business groups know how much cloud resources consume. Cost-related tags support the following types of information:
 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
   - [Return on investment (ROI) calculations](../../strategy/cloud-migration-business-case.md)
@@ -25,19 +25,19 @@ Organizing cloud-based resources is a crucial task for IT, unless all deployment
   - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
   - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-best-practices)
 
-- **Operations management**: Visibility on business commitments and service-level agreements (SLAs) are an important aspect of ongoing operations for the operations management team. Managing operations well requires tagging for [mission criticality](../../manage/considerations/criticality.md).
+- **Operations management**: Ensure that the operations management team has visibility into business commitments and service-level agreements (SLAs) for ongoing operations. Create tags for [mission criticality](../../manage/considerations/criticality.md) to properly manage operations.
 
-- **Security**: Classification of data and determining the security impact are vital when breaches or other security issues arise. Operating securely requires tagging for [data classification](../../govern/policy-compliance/data-classification.md).
+- **Security**: Classify data and determine the security impact to prepare for breaches or other security problems. Create tags for [data classification](../../govern/policy-compliance/data-classification.md) to ensure that your operation is secure.
 
 - **Governance and regulatory compliance**: Maintain consistency across resources to help identify divergence from policies. [Prescriptive guidance for resource tagging](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the tagging patterns that are described in [Resource tagging patterns](#resource-tagging-patterns), later in this article, can help with deployment of governance practices. Similar patterns are available to evaluate regulatory compliance by using tags.
 
-- **Automation**: A proper organizational scheme enables you to take advantage of automation as part of creating resources, monitoring operations, and creating DevOps processes. Automation also makes resources easier for IT to manage.
+- **Automation**: Have a proper organizational scheme so you can use automation to create resources, monitor operations, and create DevOps processes. Automation also makes resources easier for IT to manage.
 
-- **Workload optimization**: Tagging can help with identifying patterns and resolving broad issues. Tagging can also help with identifying the assets that a single workload requires. Tagging all assets that are associated with each workload enables deeper analysis of your mission-critical workloads, which helps you to make sound architectural decisions.
+- **Workload optimization**: Use tagging to help resolve broad issues, identify patterns, and identify the assets that a single workload requires. Tag all assets that are associated with each workload so that you can deeply analyze your mission-critical workloads, which helps you to make sound architectural decisions.
 
 ## Tagging decision guide
 
-Your approach to tagging can be simple or complex. It can support IT teams who manage cloud workloads or integrate information that's related to all aspects of the business.  
+You can have a simple or complex approach to tagging. Your approach can support IT teams that manage cloud workloads, or your approach can integrate information that's related to all aspects of the business.  
 
 :::image type="content" alt-text="Diagram that shows plotting tagging options from least complex to most complex." source="../../_images/decision-guides/decision-guide-resource-tagging.png" lightbox="../../_images/decision-guides/decision-guide-resource-tagging.png":::
 
@@ -66,11 +66,11 @@ Use a standardized naming convention as a starting point to organize your cloud-
 
 ## Resource tagging patterns
 
-For more sophisticated organization than a consistent naming convention alone provides, cloud platforms support the ability to tag resources.
+In addition to consistent naming conventions, cloud platforms also support the ability to tag resources, which provides more extensive organization.
 
-Tags are metadata elements that are attached to resources and are valid across all regions under your tenant. Tags consist of pairs of key-value strings. The values that you include in these pairs are based on the requirements of your business. For more information, see [Minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md#minimum-suggested-tags). As part of your comprehensive naming and tagging policy, apply a consistent set of global tags for overall governance.
+Tags are metadata elements that are attached to resources and are valid across all regions under your tenant. Tags consist of pairs of key-value strings. The values that you include in these pairs are based on the requirements of your business. For more information, see [Minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md#minimum-suggested-tags). When you incorporate your comprehensive naming and tagging policy, apply a consistent set of global tags for overall governance.
 
-As part of your planning process, use the following questions to determine the kind of information that your resource tags must support:
+When you plan for tagging, consider the following questions to determine the kind of information that your resource tags must support:
 
 - Do your naming and tagging policies need to integrate with existing policies within your company?
 

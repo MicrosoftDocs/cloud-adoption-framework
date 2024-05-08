@@ -20,7 +20,7 @@ Use the following tags to help guide the implementation and processes of Cloud A
 
 | Tag name | Description | Key value and example values |
 |--|--|--|
-| **Workload name** | The name of the workload that the resource supports. | *WorkloadName* <br><br> <li> `ControlCharts` |
+| **Workload name** | Name of the workload that the resource supports. | *WorkloadName* <br><br> <li> `ControlCharts` |
 | **Data classification** | Sensitivity of data that the resource hosts. | *DataClassification* <br><br> <li> `Non-business` <li> `Public` <li> `General` <li> `Confidential` <li> `Highly confidential` |
 | **Business criticality** | Business impact of the resource or supported workload. | *Criticality* <br><br> <li> `Low` <li> `Medium` <li> `High` <li> `Business unit-critical` <li> `Mission-critical` |
 | **Business unit** | Top-level division of your company that owns the subscription or workload that the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | *BusinessUnit* <br><br> <li> `Finance` <li> `Marketing` <li> `Product XYZ` <li> `Corp` <li> `Shared` |
