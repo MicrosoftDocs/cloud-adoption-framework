@@ -92,7 +92,7 @@ The following diagram shows the hub-and-spoke topology. This configuration allow
 
  *Figure 2: Hub-and-spoke network topology.*
 
-- Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits connected at different peering locations (see [Design and architect Azure ExpressRoute for resiliency](/azure/expressroute/design-architecture-for-resiliency)) when one of these conditions is true:
+- Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits connected at different peering locations when one of these conditions is true. To learn more, see [Design and architect Azure ExpressRoute for resiliency](/azure/expressroute/design-architecture-for-resiliency).
 
   - You need a high level of isolation.
 
