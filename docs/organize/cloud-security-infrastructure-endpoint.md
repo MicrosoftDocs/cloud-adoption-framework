@@ -24,9 +24,9 @@ Software defined datacenters and other cloud technologies are helping solve long
 
 - Security agent consolidation and tool simplification to reduce the maintenance and performance overhead of security agents and tools.
 
-- Allow-listing of applications and internal network filtering is becoming much easier to configure and deploy for cloud hosted servers (using machine learning generated rule sets). See [Adaptive application controls](/azure/security-center/security-center-adaptive-application) and [adaptive network hardening](/azure/security-center/security-center-adaptive-network-hardening) for Azure examples.
+- Allow-listing of applications and internal network filtering is becoming easier to configure and deploy for cloud hosted servers (using machine learning generated rule sets). See [Adaptive application controls](/azure/security-center/security-center-adaptive-application) and [adaptive network hardening](/azure/security-center/security-center-adaptive-network-hardening) for Azure examples.
 
-- Automated templates for configuring infrastructure and security are much easier with software-defined datacenters in the cloud. [Infrastructure as code (IaC)](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) is an example for Azure.
+- Automated templates for configuring infrastructure and security are easier with software-defined datacenters in the cloud. [Infrastructure as code (IaC)](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) is an example for Azure.
 
 - Just in time (JIT) and just enough access (JEA) to enable practical application of least privilege principles to privileged access for servers and endpoints.
 
