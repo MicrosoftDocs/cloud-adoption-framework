@@ -33,7 +33,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 - Consider using [the Microsoft Entra entitlement management feature](/azure/active-directory/governance/entitlement-management-overview) to automate Azure access request workflows, access assignments, reviews, and expiration.
 
-- Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure that cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
+- Use [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).
 
 The [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates have integrated Microsoft proven-practice governance guidance.
 

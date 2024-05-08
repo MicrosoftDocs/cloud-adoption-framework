@@ -165,4 +165,4 @@ SAP RISE implementation will normally have two options when it comes to connecti
 
 Deploying cross-tenant virtual network peering to the SAP RISE tenant also requires more work. You need to carefully plan the virtual network architecture to ensure there are no overlapping Classless Inter-Domain Routing ranges. You must also properly [peer DNS to the SAP RISE tenant](/azure/sap/workloads/rise-integration).
 
-If you decide to set up a Virtual WAN solution and you also need site-to-site VPN or ExpressRoute connections, you should consider the [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations).
+Consider the [limits and limitations](/azure/expressroute/how-to-configure-coexisting-gateway-portal#limits-and-limitations) if you decide to set up a Virtual WAN solution and need site-to-site VPN or ExpressRoute connections.

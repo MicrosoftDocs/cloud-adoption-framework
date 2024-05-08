@@ -39,7 +39,7 @@ If the answer is _yes_ for any of these questions, consider placing those resour
 To minimize the effect of regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 > [!NOTE]
-> If you have resources that are in different regions within the same resource group, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+> If you have resources within the same resource group that are in different regions, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
@@ -78,7 +78,7 @@ For large cloud deployments, global governance becomes both more important and m
 
 An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. For more information about Azure landing zones, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-IT and development teams can use Azure landing zones to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [infrastructure as code (Iac) templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [policy as code](/azure/governance/policy/concepts/policy-as-code) practices. Incorporate these practices into your CI/CD pipelines to ensure new governance standards are applied as templates and definitions get updated.
+IT and development teams can use Azure landing zones to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [infrastructure as code (IaC) templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [policy as code](/azure/governance/policy/concepts/policy-as-code) practices. Incorporate these practices into your CI/CD pipelines to ensure new governance standards are applied as templates and definitions get updated.
 
 ## Next step
 

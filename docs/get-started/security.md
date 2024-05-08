@@ -22,7 +22,7 @@ Microsoft has built capabilities and resources to help accelerate your implement
 
 The following diagram shows a holistic approach for using security guidance and platform tooling to establish security visibility and control over your cloud assets in Azure. We recommend this approach.
 
-:::image type="content" source="../_images/security/azure-security-standards.png" alt-text="Diagram that shows a holistic approach for using security guidance and platform tooling." lightbox="../_images/security/azure-security-standards.png":::
+:::image type="content" source="../_images/security/azure-security-standards.png" alt-text="Diagram that shows a holistic approach to use security guidance and platform tooling." lightbox="../_images/security/azure-security-standards.png":::
 
 Use these steps to plan and execute your strategy for securing your cloud assets and using the cloud to modernize security operations.
 
@@ -225,7 +225,7 @@ During [landing zone](../ready/landing-zone/index.md) implementation, many decis
   - [Azure security benchmarks](/security/benchmark/azure/introduction): Specific configuration recommendations for securing Azure environments.
   - [Azure security baseline training](/training/modules/create-security-baselines/).
 
-- **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
+- **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment CI/CD of workloads.
 
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.

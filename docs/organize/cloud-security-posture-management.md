@@ -18,21 +18,21 @@ Posture management is a set of new functions that realize many previously imagin
 
 Posture management introduces a structured approach to modernization, using the following:
 
-- **Zero trust-based access control** that considers active threat level during access control decisions.
+- Zero trust-based access control that considers active threat level during access control decisions.
 
-- **Real-time risk scoring** to provide visibility into top risks.
+- Real-time risk scoring to provide visibility into top risks.
 
-- **Threat and vulnerability management (TVM)** to establish a holistic view of the organizations attack surface and risk and integrate it into operations and engineering decision making.
+- Threat and vulnerability management (TVM) to establish a holistic view of the organizations attack surface and risk and integrate it into operations and engineering decision making.
 
-- **Discover sharing risks** to understand the data exposure of enterprise intellectual property on both sanctioned and unsanctioned cloud services.
+- Sharing risks to understand the data exposure of enterprise intellectual property on both sanctioned and unsanctioned cloud services.
 
-- **Cloud security posture management** to take advantage of cloud instrumentation to monitor and prioritize security improvements.
+- Cloud security posture management to take advantage of cloud instrumentation to monitor and prioritize security improvements.
 
-- **Technical policy** to apply guardrails to audit and enforce the organization's standards and policies for technical systems. For more information, see [Azure Policy](/azure/governance/policy/overview).
+- Technical policy to apply guardrails to audit and enforce the organization's standards and policies for technical systems. For more information, see [Azure Policy](/azure/governance/policy/overview).
 
-- **Threat modeling** systems and architectures, as well as specific applications.
+- Threat modeling systems and architectures, as well as specific applications.
 
-**Emerging discipline:** Security posture management will disrupt many norms of the security organization in a healthy way with these new capabilities and may shift responsibilities among roles or create new roles.
+Security posture management disrupts many norms of the security organization in a healthy way by using these new capabilities. This process might shift responsibilities among roles or create new roles.
 
 ## Team composition and key relationships
 
