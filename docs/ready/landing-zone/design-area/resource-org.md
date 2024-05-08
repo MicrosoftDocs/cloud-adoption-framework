@@ -30,20 +30,20 @@ The following assumptions are the basis for workload subscription design pattern
 - Your enterprise is committed to long-term cloud operations.
 
 - You need cloud management, security, and governance tooling to manage Azure, hybrid, or multicloud solutions.
-- Management or platform deployments are in subscriptions and management groups that are separate from workload or application resources.
+- You have management or platform deployments in subscriptions and management groups that are separate from workload or application resources.
 
 **Multiple regions:** Azure regions play a crucial role in shaping the performance, reliability, and compliance of your cloud-based applications. Use the Azure global infrastructure to scale your applications as needed. Regions provide the capacity to handle varying workloads. Whether you launch a new product or expand your user base, you must have the right resources in the right region to ensure agility, scalability, and high resiliency.
 
 Use multiple regions for critical applications and services that require geo-disaster recovery capabilities, which provides maximum resiliency. For information about how to select and operate in multiple regions, see [Select Azure regions](/azure/cloud-adoption-framework/ready/considerations/regions).
 
-Other considerations for using multiple regions include:
+Also consider the following factors when you plan for multiple regions:
 
-- Customers can decide to initially deploy in a single region, and then grow to [different regions](../../considerations/regions.md) in the future.
+- You can initially deploy in a single region and then grow to [multiple regions](../../considerations/regions.md) in the future.
 
 - To ensure consistency and manageability, consider how to organize resources when you adopt a multiregion design.  
-- Depending on the requirements and desired governance model, customers can decide to consider multiregion resource organization at the [management groups](resource-org-management-groups.md), [subscriptions and resource groups](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md) and [tagging](../../azure-best-practices/resource-tagging.md) levels (*details are included inside the referenced articles*).
+- Depending on your requirements and desired governance model, you can consider multiregion resource organization at various levels, such as the [management group](resource-org-management-groups.md), [subscription and resource group](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md), and [tagging](../../azure-best-practices/resource-tagging.md) levels.
 
-**New cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
+**New cloud environment:** Start your cloud journey with a small set of subscriptions. For more information, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
 
 **Existing cloud environment:** Consider the following if you are interested in applying the principles from the resource organization design area to existing Azure environments:
 
@@ -52,7 +52,7 @@ Other considerations for using multiple regions include:
 - If your current environment does use management groups, consider using the guidance in [management groups](resource-org-management-groups.md) when evaluating your implementation.
 - If you have existing subscriptions in your current environment, consider using the guidance in [subscriptions](resource-org-subscriptions.md) to see if you are using them effectively. Subscriptions act as policy and management boundaries and are scale units.
 - If you have existing resources in your current environment, consider using the guidance in [naming and tagging](../../azure-best-practices/naming-and-tagging.md) to influence your tagging strategy and your naming conventions going forward.
-- [Azure Policy](/azure/azure-resource-manager/management/tag-policies) is useful in establishing and enforcing consistency with regard to taxonomic tags.
+- Use [Azure Policy](/azure/azure-resource-manager/management/tag-policies) to establish and enforce consistency in taxonomic tags.
 
 ## Design area overview
 
