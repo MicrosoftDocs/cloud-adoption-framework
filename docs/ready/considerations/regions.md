@@ -42,7 +42,7 @@ If you deploy a networking topology, you also need to select an Azure region to 
 You should consider a multi-region strategy, either from the start of your cloud journey, or by expanding into more Azure regions once you've completed the initial deployment of your Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
 
 | Area | Recommendation |
-| ---- | ------------ |
+| ---- | -------------- |
 | Management groups | No action necessary. Management groups aren't tied to a region, and it's not a good practice to create a management group structure based on regions. |
 | Subscriptions | Subscriptions aren't tied to a region. |
 | Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
