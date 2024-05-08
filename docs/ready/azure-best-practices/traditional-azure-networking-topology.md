@@ -64,7 +64,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - Consider a network design based on the traditional hub-and-spoke network topology for the following scenarios:
 
-  - A network architecture should be deployed to two or more Azure regions to achieve high availability and provide this highly available platform to applications and workloads hosted in application landing zone spokes
+  - To achieve high availability for your applications and workloads hosted in application landing zone spokes, deploy your network architecture to two or more Azure regions.
   
   - A network architecture that spans multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
 
