@@ -18,7 +18,7 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 
 > [!NOTE]
 > **Looking for migration scenarios?**
-> We moved the migration scenarios to a new location. You can find them in the [Migration scenarios](../migrate/scenarios.md) section.
+> We moved the [migration scenarios](../migrate/scenarios.md) to the Migration scenarios section.
 
 ## Components of a cloud adoption scenario
 
