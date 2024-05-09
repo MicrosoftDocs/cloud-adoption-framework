@@ -71,7 +71,7 @@ Azure regions might have a finite number of resources. As a result, you should t
 
 - Consider [limits and quotas](/azure/azure-resource-manager/management/azure-subscription-service-limits) within the Azure platform for each service that your workloads require.
 
-- Consider the availability of required SKUs within your chosen Azure regions. For example, new features might be available only in certain regions. The availability of certain SKUs for given resources like virtual machines (VMs) can be different from one region to another.
+- Consider the availability of required SKUs within your chosen Azure regions. For example, new features might be available only in certain regions. The availability of certain SKUs for given resources like virtual machines (VMs) can vary from one region to another.
 
 - Consider that subscription quotas aren't capacity guarantees and are applied on a per-region basis.
 
@@ -147,7 +147,7 @@ The following sections contain recommendations to help you plan and create subsc
 - When you identify requirements for new subscriptions, reference the following principles:
   - **Scale limits**: Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. Large specialized workloads, like high-performance computing, IoT, and SAP, should use separate subscriptions to avoid running up against these limits.
   
-  - **Management boundary**: Subscriptions provide a management boundary for governance and isolation, allowing a clear separation of concerns. Different environments, such as development, test, and production environments, are often removed from a management perspective.
+  - **Management boundary**: Subscriptions provide a management boundary for governance and isolation, which allows a clear separation of concerns. Various environments, such as development, test, and production environments, are often removed from a management perspective.
   - **Policy boundary**: Subscriptions serve as a boundary for the Azure Policy assignments. For example, secure workloads like PCI workloads typically require other policies in order to achieve compliance. The other overhead doesn't get considered if you use a separate subscription. Development environments have more relaxed policy requirements than production environments.
   - **Target network topology**: You can't share virtual networks across subscriptions, but you can connect them with different technologies like virtual network peering or ExpressRoute. When you decide if you need a new subscription, consider which workloads need to communicate with each other.
 
@@ -165,7 +165,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 ### Multiple regions recommendations
 
-- Create additional subscriptions for each region only if you have region-specific governance and management requirements, for example data sovereignty, or to scale beyond quota limits.
+- Create additional subscriptions for each region only if you have region-specific governance and management requirements, for example data sovereignty or to scale beyond quota limits.
 
 - If scaling isn't a concern for a geo-disaster recovery environment that spans multiple regions, use the same subscription for the primary and secondary region resources. Some Azure services, depending on the business continuity and disaster recovery (BCDR) strategy and tools that you adopt, might need to use the same subscription. In an active-active scenario, where deployments are independently managed or have different life cycles, we recommend that you use different subscriptions.
 - The region where you create a resource group and the region of the contained resources should match so they don't affect resilience and reliability.
@@ -177,7 +177,7 @@ The following sections contain recommendations to help you plan and create subsc
 
 - Use capacity reservations to manage capacity in some regions. Your workload can then have the required capacity for high demand resources in a specific region.
 
-- Establish a dashboard with custom views to monitor used capacity levels, and set up alerts if capacity approaches critical levels, such as 90% CPU usage.
+- Establish a dashboard that has custom views to monitor used capacity levels, and set up alerts if capacity approaches critical levels, such as 90% CPU usage.
 
 - Raise support requests for quota increases under subscription provisioning, such as for total available VM cores within a subscription. Ensure that your quota limits are set before your workloads exceed the default limits.
 

@@ -33,7 +33,7 @@ Organize your cloud-based resources so that your IT team can easily work with th
 
 - **Automation**: Have a proper organizational scheme so you can use automation to create resources, monitor operations, and create DevOps processes. Automation also makes resources easier for IT to manage.
 
-- **Workload optimization**: Use tagging to help resolve broad issues, identify patterns, and identify the assets that a single workload requires. Tag all assets that are associated with each workload so that you can deeply analyze your mission-critical workloads, which helps you to make sound architectural decisions.
+- **Workload optimization**: Use tagging to help resolve broad problems, identify patterns, and identify the assets that a single workload requires. Tag all assets that are associated with each workload so that you can deeply analyze your mission-critical workloads, which helps you make sound architectural decisions.
 
 ## Tagging decision guide
 
@@ -48,8 +48,8 @@ The following table describes the considerations in the diagram.
 | **Primary design considerations** | Baseline operations requirements, supplemented by additive business requirements. |
 | **Baseline naming conventions**   | Resource naming is required for deployment. A standardized naming schema is the minimum tag. |
 | **Functional**                    | Tags that describe the function of the virtual machine for easy identification.<br/>For example, a workload tag might describe the function in the workload, such as app or data. An environment tag might describe a function, such as development, staging, or production. |
-| **Classification**                | Tags that classify the value of an asset can aid in making decisions.<br/>For example, you can classify resources based on the data classification (public, private, or confidential), criticality, or SLA. |
-| **Accounting**                    | Tags that help to track costs that are associated with asset operations.<br/>For example, use tags based on the department, project, or region. |
+| **Classification**                | Tags that classify the value of an asset can help you make decisions.<br/>For example, you can classify resources based on the data classification (public, private, or confidential), criticality, or SLAs. |
+| **Accounting**                    | Tags that help track costs that are associated with asset operations.<br/>For example, use tags based on the department, project, or region. |
 | **Purpose**                       | Tags that align an asset to a business function can be valuable in making investment decisions.<br/>For example, use tags based on the business process, business criticality, or revenue impact. |
 
 A tagging scheme that aligns with IT, such as tagging based on the workload, application, environment, or region, reduces the complexity of monitoring assets. With less complexity, you can simplify the process of making management decisions that are based on operational requirements.
@@ -89,7 +89,7 @@ The following tagging patterns are examples of how you can use tagging to organi
 | Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Associates a resource with specific groups within an organization for billing purposes |
 | Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions |
 
-## Resource tagging multiregion
+## Multiregion resource tagging
 
 You can use Azure tags across various Azure regions to logically organize resources. Azure tags aren't tied to a specific location, so you can use the same tagging strategy across all your resources regardless of their location.
 

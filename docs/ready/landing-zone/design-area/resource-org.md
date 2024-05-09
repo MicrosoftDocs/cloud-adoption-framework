@@ -38,7 +38,7 @@ Use multiple regions for critical applications and services that require geo-dis
 
 Also consider the following factors when you deploy your workload in multiple regions:
 
-- You can initially deploy in a single region and then grow to [multiple regions](../../considerations/regions.md) in the future.
+- You can initially deploy in a single region and then expand to [multiple regions](../../considerations/regions.md) in the future.
 
 - To ensure consistency and manageability, properly organize resources when you adopt a multiregion design.  
 - Depending on your requirements and desired governance model, you can organize multiregion resources at various levels, such as the [management group](resource-org-management-groups.md), [subscription and resource group](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md), and [tagging](../../azure-best-practices/resource-tagging.md) levels.
