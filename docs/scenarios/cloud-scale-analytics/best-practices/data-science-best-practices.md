@@ -20,7 +20,7 @@ Develop a template that bundles a set of services for your data science projects
 
 Develop a data science template for your organization with the following guidelines:
 
-- Develop a set of infrastructure as code (Iac) templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, a storage account, a container registry, and Application Insights.
+- Develop a set of infrastructure as code (IaC) templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, a storage account, a container registry, and Application Insights.
 
 - Include the setup of data stores and compute targets in these templates, like compute instances, compute clusters, and Azure Databricks.
 

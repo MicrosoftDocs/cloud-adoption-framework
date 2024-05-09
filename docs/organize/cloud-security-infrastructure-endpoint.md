@@ -20,7 +20,7 @@ Software-defined datacenters and other cloud technologies are helping solve long
 
 - **Vulnerability management** evolving into a critical part of overall security posture management.
 
--**Addition of container technologies** to be managed and secured by infrastructure and network teams as the organization adopts this technology broadly. See [Container security in Defender for Cloud](/azure/security-center/container-security) for an example.
+- **Addition of container technologies** to be managed and secured by infrastructure and network teams as the organization adopts this technology broadly. See [Container security in Defender for Cloud](/azure/security-center/container-security) for an example.
 
 - **Security agent consolidation** and tool simplification to reduce the maintenance and performance overhead of security agents and tools.
 
