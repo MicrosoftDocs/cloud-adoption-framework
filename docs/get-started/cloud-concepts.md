@@ -20,7 +20,7 @@ Cloud adoption provides numerous business, technical, and organizational benefit
 
 As you work through this guide, use the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) to record each foundational decision you make. The template helps you clarify the configuration of your cloud environment and the reasons behind each decision. Having this information in one place enables you to rapidly onboard team members participating in your cloud adoption lifecycle.
 
-If you have an environment running in Azure, you can use the [Azure Governance Visualizer](https://aka.ms/alz/azgovviz) to accelerate your documentation. The visualizer provides insight into Azure role-based access control (RBAC), infrastructure as code (IaC) such as Terraform or Bicep, policies, subscriptions, and more. The visualizer also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
+If you have an environment running in Azure, you can use [Azure Governance Visualizer](https://github.com/azure/azure-governance-visualizer) to accelerate your documentation. The visualizer provides insight into Azure role-based access control (RBAC), infrastructure as code (IaC) such as Terraform or Bicep, policies, and subscriptions. The visualizer also uses collected data to provide visibility into your hierarchy map, create a tenant summary, and build granular scope insights for your management groups and subscriptions.
 
 ## Step 1: Understand how Azure works
 
@@ -115,6 +115,7 @@ You must create a resource organization design to ensure consistent alignment wi
 **Guidance to support deliverable completion:**
 
 - Understand how [Azure products support the portfolio hierarchy](../resources/fundamental-concepts/hierarchy-azure-tools.md).
+
 - Review your existing subscriptions for alignment with your chosen portfolio hierarchy.
 
 Build a subscription strategy:

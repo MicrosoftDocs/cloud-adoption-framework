@@ -37,25 +37,32 @@ Whether you're already operating in the cloud or you're planning for future adop
 **People:**
 
 1. [Educate teams about the cloud security journey](../secure/security-top-10.md#1-people-educate-teams-about-the-cloud-security-journey)
-2. [Educate teams on cloud security technology](../secure/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
+
+1. [Educate teams on cloud security technology](../secure/security-top-10.md#2-people-educate-teams-on-cloud-security-technology)
 
 **Process:**
 
 3. [Assign accountability for cloud security decisions](../secure/security-top-10.md#3-process-assign-accountability-for-cloud-security-decisions)
-4. [Update incident response processes for cloud](../secure/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
-5. [Establish security posture management](../secure/security-top-10.md#5-process-establish-security-posture-management)
+
+1. [Update incident response processes for cloud](../secure/security-top-10.md#4-process-update-incident-response-processes-for-cloud)
+
+1. [Establish security posture management](../secure/security-top-10.md#5-process-establish-security-posture-management)
 
 **Technology:**
 
 6. [Require passwordless or multifactor authentication](../secure/security-top-10.md#6-technology-require-passwordless-or-multifactor-authentication)
-7. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
-8. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
+
+1. [Integrate native firewall and network security](../secure/security-top-10.md#7-technology-integrate-native-firewall-and-network-security)
+
+1. [Integrate native threat detection](../secure/security-top-10.md#8-technology-integrate-native-threat-detection)
 
 **Foundational architecture decisions:**
 
 9. [Standardize on a single directory and identity](../secure/security-top-10.md#9-architecture-standardize-on-a-single-directory-and-identity)
-10. [Use identity-based access control (instead of keys)](../secure/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
-11. [Establish a single unified security strategy](../secure/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
+
+1. [Use identity-based access control (instead of keys)](../secure/security-top-10.md#10-architecture-use-identity-based-access-control-instead-of-keys)
+
+1. [Establish a single unified security strategy](../secure/security-top-10.md#11-architecture-establish-a-single-unified-security-strategy)
 
 <!-- markdownlint-enable MD029 -->
 
@@ -89,8 +96,11 @@ Successful programs incorporate these elements into their security strategy proc
 - **Align closely to business strategy:** Security's charter is to protect business value. It's critical to align all security efforts to that purpose and minimize internal conflict.
 
   - **Build a shared understanding** of business, IT, and security requirements.
+  
   - **Integrate security early into cloud adoption** to avoid last-minute crises from avoidable risks.
+  
   - **Use an agile approach** to immediately establish minimum security requirements and continuously improve security assurances over time.
+  
   - **Encourage security culture change** through intentional proactive leadership actions.
 
   For more information, see [Transformations, mindsets, and expectations](../strategy/define-security-strategy.md#transformations-mindsets-and-expectations).
@@ -111,7 +121,9 @@ Successful programs incorporate these elements into their security strategy proc
 - Strategy considerations for the Cloud Adoption Framework:
 
   - [Modernize your security strategy](../strategy/define-security-strategy.md#modernize-your-security-strategy)
+  
   - [Cybersecurity resilience](../strategy/define-security-strategy.md#cybersecurity-resilience)
+  
   - [How cloud is changing security relationships and responsibilities](../strategy/define-security-strategy.md#how-the-cloud-is-changing-security)
 
 <br>
@@ -173,6 +185,7 @@ Your security plan is likely to be more successful if your planning takes the ap
 - **Adopt agile security:** Establish minimum security requirements first and move all noncritical items to a prioritized list of next steps. This should not be a traditional, detailed plan of 3-5 years. The cloud and threat environment change too fast to make that type of plan useful. Your plan should focus on developing the beginning steps and end state:
 
   - **Quick wins** for the immediate future that will deliver a high impact before longer-term initiatives begin. The time frame can be 3-12 months, depending on organizational culture, standard practices, and other factors.
+  
   - **Clear vision** of the desired end state to guide each team's planning process (which might take multiple years to achieve).
 
 - **Share the plan broadly:** Increase awareness of, feedback from, and buy-in by stakeholders.
@@ -251,7 +264,9 @@ After you ensure that new applications and landing zones follow security best pr
 **Deliverables:**
 
 - Ensure that all existing cloud environments and landing zones meet the organization's compliance and security requirements.
+
 - Test operational readiness of production deployments by using policies for security baselines.
+
 - Validate adherence to design guidance and security requirements for security baselines.
 
 **Guidance to support deliverable completion:**
@@ -279,6 +294,7 @@ Consistent application of security requirements comes from sound governance disc
 **Deliverables:**
 
 - Ensure that the organization's security baselines are applied to all relevant systems. Audit anomalies by using a [secure score](/azure/security-center/secure-score-security-controls) or a similar mechanism.
+
 - Document your Security Baseline policies, processes, and design guidance in the [Security Baseline discipline template](../govern/security-baseline/template.md).
 
 **Guidance to support deliverable completion:**

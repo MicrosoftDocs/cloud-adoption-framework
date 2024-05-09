@@ -39,7 +39,7 @@ If the answer is _yes_ for any of these questions, consider placing those resour
 To minimize the effect of regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
 > [!NOTE]
-> If you have resources within the same resource group that are in different regions, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+> If you have resources that are in the same resource group, but the resources are in different regions, consider moving your resources to a [new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 To [determine if your resource supports moving to another resource group](/azure/azure-resource-manager/management/move-support-resources), inventory your resources by cross-referencing them. Ensure that you meet the appropriate [prerequisites](/azure/azure-resource-manager/management/move-resource-group-and-subscription#checklist-before-moving-resources).
 
@@ -54,7 +54,7 @@ When you build on top of the base resource grouping mechanism, the Azure platfor
 
 For example, you can use a standard template to deploy a web server workload that contains two virtual machines as web servers combined with a load balancer to distribute traffic between the servers. You can then reuse this template to create a structurally identical set of virtual machines. The VMs have a load balancer whenever this type of workload is needed, and only changing the deployment name and IP addresses involved.
 
-You can also programmatically deploy these templates and integrate them with your CI/CD systems.
+You can also programmatically deploy these templates and integrate them with your continuous integration and continuous delivery (CI/CD) systems.
 
 ## Policy consistency
 
@@ -78,7 +78,7 @@ For large cloud deployments, global governance becomes both more important and m
 
 An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. For more information about Azure landing zones, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
-IT and development teams can use Azure landing zones to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [infrastructure as code (IaC) templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) to deploy and manage the Azure landing zone, which includes [policy as code](/azure/governance/policy/concepts/policy-as-code) practices. Incorporate these practices into your CI/CD pipelines to ensure new governance standards are applied as templates and definitions get updated.
+IT and development teams can use Azure landing zones to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Platform teams can use [infrastructure as code (IaC) templates](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code), including [policy as code](/azure/governance/policy/concepts/policy-as-code) practices, to deploy and manage the Azure landing zone. Incorporate these practices into your CI/CD pipelines to ensure that you apply new governance standards as you update templates and definitions.
 
 ## Next step
 

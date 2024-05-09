@@ -13,7 +13,6 @@ ms.custom: internal
 To build a [cost-conscious organization](../../organize/cost-conscious-organization.md), you need visibility and properly defined access to cost-related data. This best-practice article outlines decisions and implementation approaches to help you create tracking mechanisms to monitor costs. You'll learn how to apply fundamental Azure concepts to provide cost visibility.
 
 :::image type="content" source="../../_images/ready/cost-optimization-process.png" alt-text="Diagram that shows the outline of the cost-conscious process." lightbox="../../_images/ready/cost-optimization-process.png":::
-*Figure 1: Outline of a cost-conscious process.*
 
 ## Establish a well-managed environment
 
@@ -27,7 +26,7 @@ Assets, which are also known as resources, include all virtual machines, data so
 
 The first step is to [develop naming and tagging standards](../azure-best-practices/naming-and-tagging.md). The second step is to ensure that the tagging standard is consistently applied by [establishing a governance MVP](../../govern/guides/complex/index.md).
 
-When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or application categorization. [Azure Cost Management + Billing](/azure/cost-management-billing/), a tool for setting budgets and gaining visibility into cloud costs for Azure or AWS, can use these tags to create different views of cost data.
+When tags are used to classify assets as part of a cost management effort, companies often need the following tags: business unit, department, billing code, geography, environment, project, and workload or application categorization. [Microsoft Cost Management](/azure/cost-management-billing/), a tool for setting budgets and gaining visibility into cloud costs for Azure or AWS, can use these tags to create different views of cost data.
 
 ### Organize assets
 
@@ -36,8 +35,6 @@ There are several approaches to organizing assets. Microsoft's enterprise-scale 
 The following model for management groups, subscriptions, and resource groups creates a hierarchy that provides each team with the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
 :::image type="content" source="../landing-zone/media/sub-organization.png" alt-text="Diagram that shows the Azure landing zone accelerator management group structure." lightbox="../landing-zone/media/sub-organization.png":::
-
-*Figure 2: Resource organization for a large enterprise.*
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. But the following articles can help you apply the approach to a resource organization that best fits your company:
 
@@ -55,7 +52,7 @@ For the proper level of visibility into cost management data, the members of the
 
 <!-- docutune:casing Owner Contributor Reader -->
 
-Azure Cost Management + Billing supports the following built-in roles for each scope:
+Cost Management supports the following built-in roles for each scope:
 
 - [Owner](/azure/role-based-access-control/built-in-roles#owner): Can view costs and manage everything, including cost configuration.
 - [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Can view costs and manage everything, including cost configuration, but excluding access control.
@@ -63,7 +60,7 @@ Azure Cost Management + Billing supports the following built-in roles for each s
 - [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor): Can view costs and manage cost configuration.
 - [Cost Management Reader](/azure/role-based-access-control/built-in-roles#cost-management-reader): Can view cost data and configuration.
 
-As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets to more effectively monitor and report on costs. But members of the [cloud strategy team](../../organize/cloud-strategy.md) should be set to Cost Management Reader only, because they're not involved in setting budgets within the Azure Cost Management + Billing tool.
+As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets to more effectively monitor and report on costs. But members of the [cloud strategy team](../../organize/cloud-strategy.md) should be set to Cost Management Reader only, because they're not involved in setting budgets within the Cost Management tool.
 
 ### Scope
 
@@ -93,7 +90,7 @@ The following scope and role settings will create the required visibility into c
 
 After you establish access to a well-managed environment hierarchy, the following articles can help you use that tool to monitor and control costs.
 
-### Use Azure Cost Management + Billing
+### Use Cost Management
 
 - [Create and manage budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
 - [Export cost data](/azure/cost-management-billing/costs/tutorial-export-acm-data)
@@ -102,7 +99,7 @@ After you establish access to a well-managed environment hierarchy, the followin
 
 <!-- docutune: "AWS Cost and Usage" -->
 
-### Use Azure Cost Management + Billing to govern AWS costs
+### Use Cost Management to govern AWS costs
 
 - [Set up AWS Cost and Usage report integration](/azure/cost-management-billing/costs/aws-integration-set-up-configure)
 - [Manage AWS costs](/azure/cost-management-billing/costs/aws-integration-manage)
@@ -114,4 +111,4 @@ After you establish access to a well-managed environment hierarchy, the followin
 
 ## Next steps
 
-To get started with Azure Cost Management + Billing, see [How to optimize your cloud investment with Azure Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).
+To get started with Cost Management, see [How to optimize your cloud investment with Cost Management + Billing](/azure/cost-management-billing/costs/cost-mgt-best-practices).

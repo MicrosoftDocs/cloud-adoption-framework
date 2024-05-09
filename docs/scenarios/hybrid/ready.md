@@ -46,12 +46,15 @@ In this diagram, each dark blue dot is a workload, and each light blue circle is
 Every cloud mix requires a different Azure environment configuration. You can see this with our three reference customers:
 
 - **Hybrid-first customer:** Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.
+
   - **Fabrikam** is a *hybrid-first* customer with a heavy investment in aging datacenters. Its highest priorities are cost and governance. Legacy IT priorities and aging technology infrastructure hinder Fabrikam's innovation, which drives some early cloud adoption.
 
 - **Azure-first customer:** Most workloads move to Azure, while a few workloads stay on-premises. Strategic decisions lead to a few workloads living on the edge or in multicloud environments.
+
   - **Contoso** is an *Azure-first* customer. Like Fabrikam, it's completed its first wave of digital transformation, acquired a few companies, and added customers in regulated industries. Its highest priority is still innovation, but with its multicloud environment, it's focused on operations management. It needs efficient, scalable operations in order to continue its acquisition strategy.
 
 - **Multicloud-first customer:** Most workloads are hosted on a different public cloud, like Google Cloud Platform (GCP) or Amazon Web Services (AWS). Strategic decisions lead to a few workloads living in Azure or on the edge. Customers frequently move from a hybrid-first mix to an Azure-first mix as their cloud strategy matures, but we also support customers who decide to make hybrid or multicloud mixes their priority. Azure plays a role in each type of mix.
+
   - **Tailwind Traders** is a *multicloud-first* customer. Like Contoso, it has moved to the cloud, but didn't use Azure to do so. It has some local datacenter assets and edge devices. Tailwind Traders is an early adopter of other clouds in an early startup phase, and its biggest priority is growth. Customer retail requirements and the need for improved operations that enable efficient scaling drive hybrid and multicloud growth.
 
 A few considerations are critical for preparing any cloud environment for hybrid and multicloud. Your hybrid and multicloud strategy for applications and data drives your answers to the following questions. Clearly identify what cloud mix you require, then consider the best configuration for your environments.
@@ -65,7 +68,9 @@ A few considerations are critical for preparing any cloud environment for hybrid
 You might want to simplify complex and distributed environments across on-premises, edge, and multicloud. [Azure Arc](https://azure.microsoft.com/services/azure-arc/) lets you deploy Azure services anywhere and extends Azure management to any infrastructure.
 
 - **Organize and govern across environments**: Get databases, Kubernetes clusters, and servers that sprawl across on-premises, edge, and multicloud environments under control through central organization and governance from a single place.
+
 - **Manage Kubernetes applications at scale**: Use DevOps techniques to deploy and manage Kubernetes applications across environments. Ensure that you consistently deploy and configure applications from source control.
+
 - **Run Azure services anywhere**: Get automated patching, upgrades, security, and scaling on-demand across on-premises, edge, and multicloud environments for your data estate.
 
 ## Azure Arc customer snapshot

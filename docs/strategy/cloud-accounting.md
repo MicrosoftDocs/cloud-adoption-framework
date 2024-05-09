@@ -48,7 +48,7 @@ This model provides a balance between a true chargeback model and more tradition
 
 ## Impact of cloud accounting models
 
-The accounting model that you choose is crucial in system design because it can affect subscription strategies, naming standards, tagging standards, and policy designs.
+Ensure that you choose the proper accounting model for your system design because it can affect subscription strategies, naming standards, tagging standards, and policy designs.
 
 After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you can learn more about how to [achieve more with your investment in the cloud](./achieve-more.md).
 

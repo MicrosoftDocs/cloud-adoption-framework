@@ -15,15 +15,15 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 ## Design area review
 
-**Roles or functions**: Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
+**Roles or functions:** Azure governance originates from [cloud governance](../../../organize/cloud-governance.md). You might need to implement the [cloud platform](../../../organize/cloud-platform.md) or a [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../organize/cloud-security.md), [central IT](../../../organize/cloud-security.md), or [cloud operations](../../../organize/cloud-operations.md).
 
-**Scope**: Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
+**Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 
-**Out of scope**: Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
+**Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
 
 **New (greenfield) cloud environment**: To start your cloud journey, [create a small set of subscriptions](../../azure-best-practices/initial-subscriptions.md). You can use Bicep deployment templates to create your new Azure landing zones. For more information, see [Azure landing zones Bicep—Deployment flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
-**Existing (brownfield) cloud environment**: If you want to apply proven-practice Azure governance principles to existing Azure environments, consider the following guidance:
+**Existing (brownfield) cloud environment:** If you want to apply proven-practice Azure governance principles to existing Azure environments, consider the following guidance:
 
 - Establish a [management baseline](./management.md) for your hybrid or multicloud environment.
 
@@ -63,15 +63,15 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 - Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
 
-- Use the [Policies included in Azure Landing Zones reference implementation ](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
+- Use the [policies included in Azure landing zones reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
 
-- Enforce networking, identity, management, and security conventions are often automated.
+- Enforce automated networking, identity, management, and security conventions.
 
-- Manage and create policy assignments by using policy definitions that might be reused at multiple inherited assignment scopes. You can have centralized baseline policy assignments at management, subscription, and resource group scopes.
+- Manage and create policy assignments by using policy definitions that you can reuse at multiple inherited assignment scopes. You can have centralized baseline policy assignments at the management, subscription, and resource group scope.
 
 - Ensure continuous compliance with compliance reporting and auditing.
 
-- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope. For more information, see [policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope. For more information, see [Policy limits](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 - Understand regulatory compliance policies. The policies might include HIPAA, PCI-DSS, or SOC 2 Trust Services Criteria.
 
@@ -108,6 +108,7 @@ Change advisory review boards can hinder your organization's innovation and busi
 - Determine if the groups of resources in your environment can share required configurations, a common lifecycle, or common access constraints (such as RBAC) to help provide consistency.
 
 - Choose an application or workload subscription design that's appropriate for your operation needs.
+
 - Use standard resource configurations within your organization to ensure a consistent baseline configuration.
 
 ### Security considerations

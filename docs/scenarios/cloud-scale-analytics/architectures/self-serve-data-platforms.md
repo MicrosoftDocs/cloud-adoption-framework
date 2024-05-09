@@ -69,9 +69,9 @@ If your organization needs to control which data is distributed and consumed by 
 
 Provisioning multiple data landing zones can help you group functional domains based on cohesion and efficiency for working and sharing data. All your data landing zones adhere to the same auditing and controls, but you can still have flexibility and design changes between different data landing zones.
 
-:::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Diagram that shows the functional and regionally-aligned data landing zones." lightbox="../media/domain-agnostic-infra-04.png":::
+:::image type="content" source="../media/domain-agnostic-infra-04.png" alt-text="Diagram that shows the functional and regionally aligned data landing zones." lightbox="../media/domain-agnostic-infra-04.png":::
 
-Multiple factors determine which functional data domains you should logically group together to make candidates for a shared data landing zone. For example, regional boundaries can cause you to implement the same templates. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors to consider.
+Determine the functional data domains that you want to logically group together for a shared data landing zone. For example, you might implement the same templates if you have regional boundaries. Ownership, security, or legal boundaries can force you to segregate domains. Flexibility, the pace of change, and separation or selling of your capabilities are also important factors to consider.
 
 Further guidance and best practices can be found in [data domains](./data-domains.md).
 

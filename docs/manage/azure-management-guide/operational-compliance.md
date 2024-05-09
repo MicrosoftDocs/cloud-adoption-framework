@@ -23,7 +23,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 | Patch management | Azure Automation Update Management | Management and scheduling of updates |
 | Policy enforcement | Azure Policy | Automated policy enforcement to ensure environment and guest compliance |
 | Environment configuration | [Infrastructure as code (IaC)](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) | Automated environment creation, configuration, and to avoid configuration drift |
-| Resource configuration | Desired State Configuration | Automated configuration on guest OS and some aspects of the environment |
+| Resource configuration | Desired State Configuration (DSC) | Automated configuration on guest OS and some aspects of the environment |
 
 ::: zone target="docs"
 
@@ -39,7 +39,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 Computers that are managed by the Update Management solution for Azure Automation use the following configurations to do assessment and update deployments:
 
 - Log Analytics agent for Windows or Linux.
-- PowerShell Desired State Configuration (DSC) for Linux.
+- PowerShell DSC for Linux.
 - Azure Automation Hybrid Runbook Worker.
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
@@ -87,7 +87,7 @@ Azure Policy is used throughout governance processes. It's also highly valuable 
 
 Azure Policy guest configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
-An important part of this process is maintaining and updating Azure Policy assignments as your governance process requires. Using IaC can help you update and maintain your policy infrastructure. To learn more, see [Use IaC to update Azure landing zones](../infrastructure-as-code-updates.md).
+An important part of this process is maintaining and updating Azure Policy assignments as your governance process requires. Using IaC can help you update and maintain your policy infrastructure. For more information, see [Use IaC to update Azure landing zones](../infrastructure-as-code-updates.md).
 
 ::: zone target="chromeless"
 

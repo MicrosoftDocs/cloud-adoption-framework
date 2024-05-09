@@ -92,7 +92,7 @@ Pay attention also to applications that cater to multiple business capabilities,
 
 ### Design patterns for source-aligned, redelivery, and consumer-aligned domains
 
-There are different patterns based on the creation, consumption, or redelivery of data when you map your domains. For your architecture, design templates that support your domains are based on their specific characteristics.
+When you map your domains, you can choose a pattern based on the creation, consumption, or redelivery of your data. For your architecture, you can design templates that support your domains based on the domain's specific characteristics.
 
 #### Source system-aligned domains
 

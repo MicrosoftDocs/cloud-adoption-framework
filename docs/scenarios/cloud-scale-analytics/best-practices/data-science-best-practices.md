@@ -14,13 +14,13 @@ We recommend these best practices for using cloud-scale analytics in Microsoft A
 
 ## Develop a template
 
-It's essential that you develop a template that bundles a set of services for your data science projects. Using a template that bundles a set of services helps provide consistency across different data science teams' use cases. We recommend that you develop a consistent blueprint in the form of a template repository. You can use this repository for various data science projects within your enterprise to help shorten deployment times.
+Develop a template that bundles a set of services for your data science projects. Use a template that bundles a set of services to help provide consistency across various data science teams' use cases. We recommend that you develop a consistent blueprint in the form of a template repository. You can use this repository for various data science projects within your enterprise to help shorten deployment times.
 
 ### Guidelines for data science templates
 
 Develop a data science template for your organization with the following guidelines:
 
-- Develop a set of infrastructure as code (Iac) templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, storage account, Azure Application Insights, and container registry.
+- Develop a set of infrastructure as code (Iac) templates to deploy an Azure Machine Learning workspace. Include resources like a key vault, a storage account, a container registry, and Application Insights.
 
 - Include the setup of data stores and compute targets in these templates, like compute instances, compute clusters, and Azure Databricks.
 

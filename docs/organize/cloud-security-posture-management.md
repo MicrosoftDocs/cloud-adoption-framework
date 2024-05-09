@@ -18,7 +18,7 @@ Posture management is a set of new functions that realize many previously imagin
 
 Posture management introduces a structured approach to modernization, using the following:
 
-- Zero trust-based access control that considers active threat level during access control decisions.
+- Zero Trust-based access control that considers the active threat level during access control decisions.
 
 - Real-time risk scoring to provide visibility into top risks.
 

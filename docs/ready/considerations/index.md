@@ -17,7 +17,6 @@ A refactoring approach to infrastructure as code (IaC) removes blockers to busin
 Landing zone expansion provides the opportunity to embed the following pillars into your landing zone and into your broader cloud environment.
 
 :::image type="content" source="../../_images/ready/shared-principles.png" alt-text="Diagram that shows the shared architecture pillars." lightbox="../../_images/ready/shared-principles.png":::
-*Figure 1: Shared architecture pillars.*
 
 These pillars are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), and the solutions in the [Azure Architecture Center](/azure/architecture/).
 

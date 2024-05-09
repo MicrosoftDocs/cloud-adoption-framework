@@ -31,7 +31,7 @@ Development can take many forms, including:
   - **Operational tasks**, like using Azure Functions to run scheduled tasks by running code on predefined timed intervals.
 - Code to be deployed to firmware.
 - Mobile apps, an aggregation of application-level code with platform services, deployed as a system.
-- Full systems, including infrastructure components, operating systems, PaaS services, and code, that can be deployed using infrastructure as code (IaC).
+- Full systems, including infrastructure components, operating systems, platform as a service (PaaS) solutions, and code, that you can deploy by using infrastructure as code (IaC).
 
 In addition to the breadth of what can be considered development, advances in processes and technologies have enabled accelerated time to production, including faster Continuous Integration/Continuous Development (CI/CD) pipelines, [DevOps](/devops/what-is-devops), and [DevSecOps](/devops/operate/security-in-devops).
 

@@ -124,7 +124,7 @@ An application for data analytics and data science might contain the services sh
 :::image type="content" source="../images/product-analytics.png" alt-text="Diagram that shows possible services that can be selected for Analytics Data Application Deployment." lightbox="../images/product-analytics.png":::
 
 > [!NOTE]
-> The data application above is available as a [template](https://github.com/Azure/data-product-analytics). This template deploys a set of services that you can use for data analytics and data science. Like all of our templates, you can use this data product application template to quickly create environments for cross-functional teams. Any services that aren't required must be explicitly disabled.
+> You can use the preceding data application as a [template](https://github.com/Azure/data-product-analytics). This template deploys a set of services that you can use for data analytics and data science. You can use this data product application template to quickly create environments for cross-functional teams. You must explicitly disable any services that you don't require.
 >
 
 The Data Product Analytics template contains all templates for deploying a data product for analytics and data science inside a cloud-scale analytics scenario data landing zone.
