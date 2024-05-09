@@ -17,7 +17,6 @@ These scenarios present key sets of guidance that you can use to focus on your r
 Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Read on for more information about cloud adoption, and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
 
 > [!NOTE]
-> **Looking for migration scenarios?**
 > We moved the [migration scenarios](../migrate/scenarios.md) to the Migration scenarios section.
 
 ## Components of a cloud adoption scenario
