@@ -17,7 +17,7 @@ These scenarios present key sets of guidance that you can use to focus on your r
 Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Read on for more information about cloud adoption, and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
 
 > [!NOTE]
-> We moved the [migration scenarios](../migrate/scenarios.md) to the Migration scenarios section.
+> Migration guidance can now be found at [Review product migration scenarios](../migrate/scenarios.md).
 
 ## Components of a cloud adoption scenario
 
@@ -26,11 +26,12 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
 | <br> :::image type="icon" source="../_images/hybrid/cloud-journey.png"::: | <br> The Microsoft Cloud Adoption Framework for Azure guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-skills.png"::: | <br> Microsoft Learn is a free online training platform. You can use guided, interactive, hands-on Learn modules to gain required skills. Modules teach you to implement, maintain, and support solutions in the cloud. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-well-architected.png"::: | <br> The Azure Well-Architected Framework provides a set of Azure architecture best practices to help you build and deliver great solutions. These best practices cover cost management, operational excellence, performance efficiency, reliability, and security. The Well-Architected Framework provides essential considerations for workload owners to review before they initiate their workload deployments. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-architectures.png"::: | <br> Reference architectures are templates of required components and the technical requirements to implement them. Each reference architecture includes recommended best practices. Reference architectures have considerations for scalability, availability, security, resilience, and other aspects of design. Many articles include a deployable solution or reference implementation. Reference architectures can help your organization accelerate deployment for many common scenarios. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices can help you build reliable, scalable, and secure applications in the cloud. Best practices provide guidelines and tips to implement efficient systems, mechanisms, and approaches. You can use these guidelines to help onboard assets by using Azure Arc, ARM templates, and various Azure products. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-product-docs.png"::: | <br> Featured Azure products provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures, follow best practices guidance for scenarios, and implement solutions for common workloads on Azure. |
-| <br> :::image type="icon" source="../_images/hybrid/hybrid-skills.png"::: | <br> Microsoft Learn is a free online training platform. You can use guided, interactive, hands-on Learn modules to gain required skills. Modules teach you to implement, maintain, and support solutions in the cloud. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators. |
+
 
 ## Scenarios to support your cloud adoption strategy
 
