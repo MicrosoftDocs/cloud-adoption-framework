@@ -14,14 +14,14 @@ The following scenarios unify technical and nontechnical considerations that you
 
 These scenarios present key sets of guidance that you can use to focus on your requirements. These requirements can help you maximize your cloud investment. The scenarios include pointed guidance across several areas of cloud adoption best practices from the holistic and modular guidance of the Microsoft Cloud Adoption Framework (CAF). The workload-specific architectural guidance of the Azure Well-Architected Framework contains reference architectures and example scenarios with deployment templates to implement solutions. These solutions are based on extensive customer experiences that represent an infrastructure your organization can rely on.
 
-Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Read on for more information about cloud adoption, and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
+Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Learn from successful migration and modernization experiences across our customer and partner communities to make the cloud yours.
 
 > [!NOTE]
 > Migration guidance can now be found at [Review product migration scenarios](../migrate/scenarios.md).
 
 ## Components of a cloud adoption scenario
 
-:::image type="content" source="./media/end-to-end-scenario-components.png" alt-text="Graphic of the end-to-end cloud adoption scenario components." lightbox="./media/end-to-end-scenario-components.png":::
+:::image type="content" source="./media/end-to-end-scenario-components.png" alt-text="Diagram of the components required for an end-to-end cloud adoption scenario." lightbox="./media/end-to-end-scenario-components.png":::
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
@@ -31,7 +31,6 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-architectures.png"::: | <br> Reference architectures are templates of required components and the technical requirements to implement them. Each reference architecture includes recommended best practices. Reference architectures have considerations for scalability, availability, security, resilience, and other aspects of design. Many articles include a deployable solution or reference implementation. Reference architectures can help your organization accelerate deployment for many common scenarios. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices can help you build reliable, scalable, and secure applications in the cloud. Best practices provide guidelines and tips to implement efficient systems, mechanisms, and approaches. You can use these guidelines to help onboard assets by using Azure Arc, ARM templates, and various Azure products. |
 | <br> :::image type="icon" source="../_images/hybrid/hybrid-product-docs.png"::: | <br> Featured Azure products provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures, follow best practices guidance for scenarios, and implement solutions for common workloads on Azure. |
-
 
 ## Scenarios to support your cloud adoption strategy
 
