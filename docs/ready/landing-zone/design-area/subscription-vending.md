@@ -38,6 +38,8 @@ Subscription vending involves three teams. The Cloud Center of Excellence (CCoE)
 
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
 
+
+
 ### Establish business logic and approval process
 
 To implement the subscription vending model, you need to establish an approval process that collects essential subscription information. The Cloud Center of Excellence (CCoE) should program the approval process and establish business rules around the information to collect.

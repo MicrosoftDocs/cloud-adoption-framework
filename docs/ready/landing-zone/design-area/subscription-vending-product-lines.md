@@ -1,15 +1,14 @@
 ---
-title: Common Subscription Vending Product Lines
-description: Common Subscription Vending Product Lines
+title: Establish common subscription vending product lines
+description: Learn about establishing common subscription vending product lines.
 author: jtracey93
 ms.author: jatracey
 ms.date: 03/27/2024
 ms.topic: conceptual
-ms.custom: internal, UpdateFrequency.5
 ---
 
 # Common Subscription Vending Product Lines
-
+# Establish common subscription vending product lines
 As outlined in the [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) guidance, most customers aspire to be able to allow application teams to be able to request and gain access to newly provisioned Azure Subscriptions to use as their application landing zones to host their workloads and services within, via a self-service process and supporting tooling and automation.
 
 Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments.
