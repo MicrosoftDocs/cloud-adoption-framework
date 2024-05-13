@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 As outlined in the [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) guidance, most customers aspire to be able to allow application teams to be able to request and gain access to newly provisioned Azure Subscriptions to use as their application landing zones to host their workloads and services within, via a self-service process and supporting tooling and automation.
 
-Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments.
+Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments. It also helps organizations align to the [platform engineering principles](/platform-engineering/about/principles) of ["Adopt a product mindset"](/platform-engineering/about/product-mindset) and ["Empower developers through self-service with guardrails"](/platform-engineering/about/self-service).
 
 > [!TIP]
 > The Azure Landing Zones team have published a YouTube video that is also useful to review when looking at this topic [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
