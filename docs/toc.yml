@@ -10,7 +10,7 @@ items:
   - name: Scenarios
     items:
     - name: Overview
-      href: scenarios/overview.md
+      href: scenarios/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
     - name: Cloud-scale analytics
@@ -222,12 +222,9 @@ items:
         href: plan/iteration-paths.md
       - name: Estimate timelines
         href: plan/timelines.md
-    - name: Best practices
-      items:
-      - name: Digital estate assessment in Azure
-        href: plan/contoso-migration-assessment.md
-      - name: Plan a data warehouse migration
-        href: plan/data-warehouse-migration.md
+
+    - name: Plan a data warehouse migration
+      href: plan/data-warehouse-migration.md
 
     - name: Strategic Migration Assessment and Readiness Tool (SMART)
       href: plan/smart-assessment.md
@@ -357,8 +354,6 @@ items:
               href: ready/azure-best-practices/initial-subscriptions.md
             - name: Scale with multiple subscriptions
               href: ready/azure-best-practices/scale-subscriptions.md
-            - name: Organize your subscriptions
-              href: ready/azure-best-practices/organize-subscriptions.md
 
         - name: Network topology and connectivity
           items:
@@ -453,6 +448,12 @@ items:
             href: /azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
           - name: Monitor usage and spending
             href: /azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
+          - name: Keep Azure landing zones up to date
+            href: ready/landing-zone/design-area/keep-azure-landing-zone-up-to-date.md
+          - name: Migrate Azure landing zone policies
+            href: ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md
+          - name: Update custom policies
+            href: ready/landing-zone/design-area/update-custom-policies.md
 
         - name: Platform automation and DevOps
           items:
@@ -608,388 +609,61 @@ items:
       items:
       - name: Overview
         href: migrate/index.md
-      - name: Azure migration guide
+      - name: Prepare
         items:
-        - name: Migration guide overview
-          href: migrate/azure-migration-guide/index.md
-        - name: Migration tools decision guide
-          href: migrate/azure-migration-guide/migration-tools-decision-guide.md
-        - name: Assess workloads
-          href: migrate/azure-migration-guide/assess.md
-        - name: Readying your landing zone for migration
-          href: migrate/azure-migration-guide/ready-alz.md
-        - name: Deploy workloads
-          href: migrate/azure-migration-guide/deploy.md
-        - name: Release workloads
-          href: migrate/azure-migration-guide/release.md
-        - name: Migration-focused cost-control mechanisms
-          href: migrate/azure-migration-guide/manage-costs.md
-        - name: Get assistance
-          href: migrate/azure-migration-guide/assistance.md
-
-      - name: Migration scenarios
-        items:
-        - name: Overview
-          href: scenarios/index.md
-        - name: Contoso overview
-          href: migrate/azure-best-practices/contoso-migration-overview.md
-
-        - name: Tailwind Traders case study
-          items:
-          - name: Assessment and migration planning with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-assess-servers.md
-          - name: Migration execution with Azure Migrate for servers
-            href: migrate/azure-best-practices/tailwind-migration-rehost-server-replication.md
-
-        - name: AWS
-          items:
-          - name: Discover AWS instances
-            href: /azure/migrate/tutorial-discover-aws
-          - name: Assess AWS instances for migration to Azure
-            href: /azure/migrate/tutorial-assess-aws
-          - name: Migrate AWS instances
-            href: /azure/migrate/tutorial-migrate-aws-virtual-machines
-
-        - name: Containers
-          items:
-          - name: Migrate to Azure Kubernetes Service (AKS)
-            href: /azure/aks/aks-migration
-
-        - name: Windows and Linux servers
-          items:
-          - name: VMWare
-            items:
-            - name: Discover servers running in a VMware environment
-              href: /azure/migrate/tutorial-discover-vmware
-            - name: Assess VMware VMs for migration to Azure VMs
-              href: /azure/migrate/tutorial-assess-vmware-azure-vm
-            - name: Select a VMware migration option
-              href: /azure/migrate/server-migrate-overview
-          - name: Hyper-V
-            items:
-            - name: Discover servers running in a Hyper-V environment
-              href: /azure/migrate/tutorial-discover-hyper-v
-            - name: Assess Hyper-V VMs for migration to Azure
-              href: /azure/migrate/tutorial-assess-hyper-v
-            - name: Migrate Hyper-V VMs to Azure
-              href: /azure/migrate/tutorial-migrate-hyper-v
-        - name: Databases and data platforms
-          items:
-          - name: SQL Server workloads
-            items:
-            - name: Migrate from SQL Server to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide
-            - name: Migrate from SQL Server to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide
-            - name: Migrate from SQL Server to SQL Server on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
-          - name: DB2
-            items:
-            - name: Migrate from DB2 to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
-            - name: Migrate from DB2 to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
-            - name: Migrate from DB2 to Azure SQL on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
-          - name: Oracle
-            items:
-            - name: Migrate from Oracle to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
-            - name: Migrate from Oracle to Azure SQL Managed Instance
-              href: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
-            - name: Migrate from Oracle to Azure SQL on Azure VM
-              href: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
-          - name: Access         
-            items:
-            - name: Migrate from Access to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
-          - name: Linux and open-source databases
-            items:
-            - name: Migrate open-source databases to Azure
-              href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
-            - name: Migrate from MySQL to Azure SQL
-              href: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
-            - name: Migrate PostgreSQL to Azure
-              href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
-            - name: Migrate MariaDB to Azure
-              href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
-            - name: Rehost a Linux application on Azure VMs
-              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
-            - name: Rehost a Linux application on Azure VMs and Azure Database for MySQL
-              href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
-
-        - name: Storage migration
-          items:
-          - name: Storage migration overview
-            href: /azure/storage/common/storage-migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tools for unstructured storage migration
-            href: /azure/storage/solution-integration/validated-partners/data-management/migration-tools-comparison?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: Open-source platforms
-          items:
-          - name: Moodle migration
-            items:
-            - name: Overview
-              href: scenarios/lamp/moodle/migration-overview.md
-            - name: Prepare for Moodle migration
-              href: scenarios/lamp/moodle/migration-pre.md
-            - name: Architecture and template
-              href: scenarios/lamp/moodle/migration-arch.md
-            - name: Moodle migration resources
-              href: scenarios/lamp/moodle/migration-resources.md
-            - name: Migration steps
-              href: scenarios/lamp/moodle/migration-start.md
-            - name: Set up Moodle worker nodes
-              href: scenarios/lamp/moodle/azure-infra-config.md
-            - name: Follow up Moodle migration
-              href: scenarios/lamp/moodle/migration-post.md
-
-        - name: Dev/test workloads
-          items:
-          - name: Migrate dev/test environments to Azure IaaS
-            href: migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md
-          - name: Migrate to Azure DevTest Labs
-            href: migrate/azure-best-practices/contoso-migration-devtest-to-labs.md
-
-        - name: ASP.NET and PHP web apps
-          items:
-          - name: Refactor a Windows application onto App Service and Azure SQL Database
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
-          - name: Refactor a Windows application onto App Service and SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-          - name: Refactor a Linux application onto App Service and MySQL
-            href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
-          - name: Rebuild an application in Azure
-            href: migrate/azure-best-practices/contoso-migration-rebuild.md
-          - name: Refactor TFS to Azure DevOps Services
-            href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-
-        - name: Java applications
-          items:
-          - name: Migration overview
-            href: /azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to Azure App Service
-            href: /azure/developer/java/migration/migrate-spring-boot-to-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to AKS
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Boot to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Spring Cloud to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to Azure App Service
-            href: /azure/developer/java/migration/migrate-tomcat-to-tomcat-app-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to containers on AKS
-            href: /azure/developer/java/migration/migrate-tomcat-to-containers-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Tomcat to Azure Spring Cloud
-            href: /azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebLogic to Azure
-            items:
-              - name: WebLogic to Azure Virtual Machines
-                href: /azure/developer/java/migration/migrate-weblogic-to-virtual-machines?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Microsoft Entra ID via LDAP
-                href: /azure/developer/java/migration/migrate-weblogic-with-aad-ldap?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-              - name: WebLogic with Application Gateway
-                href: /azure/developer/java/migration/migrate-weblogic-with-app-gateway?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WildFly to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebLogic to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: WebSphere to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-websphere-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: JBoss EAP to WildFly on AKS
-            href: /azure/developer/java/migration/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: SAP
-          items:
-          - name: Migrate an SAP platform to Azure
-            href: /azure/cloud-adoption-framework/scenarios/sap/migrate
-          - name: Learning path for Migrate SAP workloads to Azure
-            href: /training/paths/migrate-sap-workloads-to-azure/
-          - name: SAP on Azure migration
-            href: https://azure.microsoft.com/solutions/sap/migration/
-          - name: Migrate from SAP ASE to Azure SQL
-            href: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
-
-        - name: Specialized workloads
-          items:
-          - name: Move on-premises VMware infrastructure to AVS
-            href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
-          - name: Azure NetApp Files
-            href: https://azure.microsoft.com/services/netapp/
-          - name: Cray in Azure
-            href: https://azure.microsoft.com/solutions/high-performance-computing/cray/
-          - name: VDI
-            href: migrate/azure-best-practices/contoso-migration-rds-to-azure-virtual-desktop.md
-        
-        - name: Azure Stack
-          items:
           - name: Overview
-            href: scenarios/azure-stack/index.md
-          - name: Planning
-            href: scenarios/azure-stack/plan.md
-          - name: Azure landing zone review
-            href: scenarios/azure-stack/ready.md
-          - name: Assess
-            href: scenarios/azure-stack/migrate-assess.md
-          - name: Migrate and deploy
-            href: scenarios/azure-stack/migrate-deploy.md
-          - name: Govern
-            href: scenarios/azure-stack/govern.md
-          - name: Manage
-            href: scenarios/azure-stack/manage.md
-
-        - name: Analytics solutions
-          items:
-          - name: Overview
-            href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
-          - name: Teradata
-            href: migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
-          - name: Netezza
-            href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
-          - name: Exadata
-            href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
-
-        - name: Multitenant migration
-          items:
-          - name: Azure Lighthouse for scale migration
-            href: /azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-        - name: Mainframes
-          items:
-          - name: Overview
-            href: infrastructure/mainframe-migration/index.md
-          - name: Switch from mainframes to Azure
-            href: infrastructure/mainframe-migration/migration-strategies.md
-          - name: Mainframe application migration
-            href: infrastructure/mainframe-migration/application-strategies.md
-        - name: Migrate secure workloads
-          items:
-          - name: Secure and manage workloads after migration
-            href: migrate/azure-best-practices/migrate-best-practices-security-management.md
-          - name: Azure database security best practices
-            href: /azure/azure-sql/database/security-best-practice?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Azure data security and encryption best practices
-            href: /azure/security/fundamentals/data-encryption-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure PaaS best practices
-            href: /azure/security/fundamentals/paas-deployments?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Azure Service Fabric security best practices
-            href: /azure/security/fundamentals/service-fabric-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Best practices for Azure VM security
-            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: IoT security best practices
-            href: /azure/iot-fundamentals/iot-security-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS databases in Azure
-            href: /azure/security/fundamentals/paas-applications-using-sql?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS web and mobile applications using Azure App Service
-            href: /azure/security/fundamentals/paas-applications-using-app-services?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Securing PaaS web and mobile applications using Azure Storage
-            href: /azure/security/fundamentals/paas-applications-using-storage?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-          - name: Security best practices for IaaS workloads in Azure
-            href: /azure/security/fundamentals/iaas?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-
-      - name: Best practices
-        items:
-        - name: Overview
-          href: migrate/azure-best-practices/index.md
-        - name: Multiple datacenters
-          href: migrate/azure-best-practices/multiple-datacenters.md
-        - name: Multiple regions
-          href: migrate/azure-best-practices/multiple-regions.md
-        - name: Data requirements exceed network capacity
-          href: migrate/azure-best-practices/network-capacity-exceeded.md
-        - name: Set up networking for migrated workloads
-          href: migrate/azure-best-practices/migrate-best-practices-networking.md
-        - name: Deploy a migration infrastructure
-          href: migrate/azure-migration-guide/ready-alz.md
-        - name: Cost optimize migrated workloads
-          href: migrate/azure-best-practices/migrate-best-practices-costs.md
-        - name: Scale a migration
-          href: migrate/azure-best-practices/contoso-migration-scale.md
-        - name: Schema migration and DDL commands
-          href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
-        - name: Database restore points for Azure Synapse
-          href: migrate/azure-best-practices/analytics/azure-synapse.md
-        - name: Governance or compliance
-          href: migrate/azure-best-practices/governance-or-compliance.md
-        - name: Adopt low-code application platform
-          href: /power-platform/guidance/adoption/methodology?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
-      - name: Migrate antipatterns
-        href: antipatterns/migrate-antipatterns.md
-
-      - name: Process improvements
-        items:
-        - name: Overview
-          href: migrate/migration-considerations/index.md
-        - name: Prerequisites
-          items:
-          - name: Overview
-            href: migrate/migration-considerations/prerequisites/index.md
-          - name: Decisions that affect migration
-            href: migrate/migration-considerations/prerequisites/decisions.md
-          - name: Environment planning checklist
-            href: migrate/migration-considerations/prerequisites/planning-checklist.md
+            href: migrate/prepare/index.md
+          - name: Prepare your landing zone for migration
+            href: migrate/prepare/ready-azure-landing-zone.md
+          - name: Prepare tools and backlog
+            href: migrate/prepare/tools-backlog.md
+          - name: Select migration regions
+            href: migrate/prepare/select-regions-migration.md
           - name: Align roles and responsibilities
-            href: migrate/migration-considerations/prerequisites/cultural-complexity.md
-          - name: Agile change management
-            href: migrate/migration-considerations/prerequisites/technical-complexity.md
-          - name: Migration backlog review
-            href: migrate/migration-considerations/prerequisites/migration-backlog-review.md
-        - name: Assess workloads
-          items:
-          - name: Validate assessment assumptions before migration
-            href: migrate/migration-considerations/assess/index.md
-          - name: Classify workloads
-            href: migrate/migration-considerations/assess/classify.md
-          - name: Keep priorities aligned
-            href: migrate/migration-considerations/assess/business-priorities.md
-          - name: Evaluate workload readiness
-            href: migrate/migration-considerations/assess/evaluate.md
-          - name: Architect workloads
-            href: migrate/migration-considerations/assess/architect.md
-          - name: Update and refine initial cloud estimates
-            href: migrate/migration-considerations/assess/estimate.md
-          - name: Understand partnership options
-            href: migrate/migration-considerations/assess/partnership-options.md
-          - name: Manage change
-            href: migrate/migration-considerations/assess/release-iteration-backlog.md
-          - name: Approve architecture changes
-            href: migrate/migration-considerations/assess/approve.md
-        - name: Deploy workloads
-          items:
+            href: migrate/prepare/roles-responsibilities.md
+          - name: Get support resources and improve skills
+            href: migrate/prepare/skills-support.md
+      - name: Assess
+        items:
+        - name: Overview
+          href: migrate/assess/index.md
+        - name: Classify workloads
+          href: migrate/assess/classify.md
+        - name: Evaluate workload readiness
+          href: migrate/assess/evaluate.md
+        - name: Architect workloads
+          href: migrate/assess/architect.md
+      - name: Deploy
+        items:
           - name: Overview
-            href: migrate/migration-considerations/migrate/index.md
-          - name: Promotion models
-            href: migrate/migration-considerations/migrate/promotion-models.md
+            href: migrate/deploy/index.md
+          - name: Deploy supporting services for migration projects
+            href: migrate/deploy/deploy-supporting-services.md
           - name: Remediate assets
-            href: migrate/migration-considerations/migrate/remediate.md
+            href: migrate/deploy/remediate.md
           - name: Replicate assets
-            href: migrate/migration-considerations/migrate/replicate.md
-          - name: Replicate options
-            href: migrate/migration-considerations/migrate/replicate-options.md
-          - name: Stage workloads
-            href: migrate/migration-considerations/migrate/stage.md
-        - name: Release workloads
-          items:
-          - name: Overview
-            href: migrate/migration-considerations/optimize/index.md
-          - name: Business change plan
-            href: migrate/migration-considerations/optimize/business-change-plan.md
-          - name: Business testing
-            href: migrate/migration-considerations/optimize/business-test.md
-          - name: Benchmark and resize assets
-            href: migrate/migration-considerations/optimize/optimize.md
-          - name: Prepare for promotion
-            href: migrate/migration-considerations/optimize/ready.md
-          - name: Promote to production
-            href: migrate/migration-considerations/optimize/promote.md
-          - name: Decommission retired assets
-            href: migrate/migration-considerations/optimize/decommission.md
+            href: migrate/deploy/replicate.md
+          - name: Prepare for management
+            href: migrate/deploy/prepare-for-management.md
+          - name: Migration testing
+            href: migrate/deploy/migration-test.md
+      - name: Release
+        items:
+          - name: Overview 
+            href: migrate/release/index.md
+          - name: Change communication
+            href: migrate/release/change-communication.md
+          - name: Perform business testing
+            href: migrate/release/business-test.md
+          - name: Complete migration
+            href: migrate/release/complete-migration.md
+          - name: Optimize cost after migration
+            href: migrate/release/optimize-cost-after-migration.md
           - name: Conduct retrospectives
-            href: migrate/migration-considerations/optimize/retrospective.md
+            href: migrate/release/retrospective.md
+      - name: Product migration guidance
+        href: migrate/scenarios.md
 
-      - name: Skills relevant to migrate
-        href: migrate/suggested-skills.md
-    
     - name: Modernize
       items:
       - name: Overview  
@@ -1158,174 +832,17 @@ items:
     items:
     - name: Overview
       href: govern/index.md
-    - name: Methodology
-      href: govern/methodology.md
-    - name: Benchmark
-      href: govern/benchmark.md
-    - name: Initial governance foundation
-      href: govern/initial-foundation.md
-    - name: Governance foundation improvements
-      href: govern/foundation-improvements.md
-    - name: Governance guides
-      items:
-      - name: Overview
-        href: govern/guides/index.md
-      - name: Standard enterprise governance guide
-        items:
-        - name: Overview
-          href: govern/guides/standard/index.md
-        - name: Narrative
-          href: govern/guides/standard/narrative.md
-        - name: Initial corporate policy
-          href: govern/guides/standard/initial-corporate-policy.md
-        - name: Prescriptive guidance
-          href: govern/guides/standard/prescriptive-guidance.md
-        - name: Improve the Security Baseline discipline
-          href: govern/guides/standard/security-baseline-improvement.md
-        - name: Improve the Resource Consistency discipline
-          href: govern/guides/standard/resource-consistency-improvement.md
-        - name: Improve the Cost Management discipline
-          href: govern/guides/standard/cost-management-improvement.md
-        - name: Multicloud scenarios
-          href: govern/guides/standard/multicloud-improvement.md
-      - name: Governance guide for complex enterprises
-        items:
-        - name: Overview
-          href: govern/guides/complex/index.md
-        - name: Narrative
-          href: govern/guides/complex/narrative.md
-        - name: Initial corporate policy
-          href: govern/guides/complex/initial-corporate-policy.md
-        - name: Prescriptive guidance
-          href: govern/guides/complex/prescriptive-guidance.md
-        - name: Improve the Identity Baseline discipline
-          href: govern/guides/complex/identity-baseline-improvement.md
-        - name: Improve the Security Baseline discipline
-          href: govern/guides/complex/security-baseline-improvement.md
-        - name: Improve the Resource Consistency discipline
-          href: govern/guides/complex/resource-consistency-improvement.md
-        - name: Improve the Cost Management discipline
-          href: govern/guides/complex/cost-management-improvement.md
-        - name: Multicloud scenarios
-          href: govern/guides/complex/multicloud-improvement.md
-        - name: Multiple layers of governance
-          href: govern/guides/complex/multiple-layers-of-governance.md
-    - name: Governance considerations
-      items:
-      - name: Evaluate corporate policy
-        href: govern/corporate-policy.md
-      - name: Cloud-ready corporate policy and compliance
-        items:
-        - name: Make corporate policy cloud-ready
-          href: govern/policy-compliance/index.md
-        - name: Understand business risks
-          href: govern/policy-compliance/business-risk.md
-        - name: Evaluate risk tolerance
-          href: govern/policy-compliance/risk-tolerance.md
-        - name: Define corporate policy
-          href: govern/policy-compliance/policy-definition.md
-        - name: Align design with policy
-          href: govern/policy-compliance/governance-alignment.md
-        - name: Establish policy adherence processes
-          href: govern/policy-compliance/processes.md
-        - name: Implement cloud service controls
-          href: govern/cloud-service-controls.md
-        - name: Regulatory compliance
-          href: govern/policy-compliance/regulatory-compliance.md
-        - name: Cloud security readiness
-          href: govern/policy-compliance/cloud-security-readiness.md
-        - name: Cloud policy review
-          href: govern/policy-compliance/cloud-policy-review.md
-        - name: Data classification
-          href: govern/policy-compliance/data-classification.md
-        - name: Sustainability considerations
-          href: govern/policy-compliance/sustainability-considerations.md
-    - name: Disciplines of cloud governance
-      href: govern/governance-disciplines.md
-    - name: Implement disciplines of cloud governance
-      items:
-      - name: Cost management
-        items:
-        - name: Overview of cost management
-          href: govern/cost-management/index.md
-        - name: Download the template
-          href: govern/cost-management/template.md
-        - name: Understand business risks
-          href: govern/cost-management/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/cost-management/metrics-tolerance.md
-        - name: Sample Cost Management policies
-          href: govern/cost-management/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/cost-management/compliance-processes.md
-        - name: Improve cost management
-          href: govern/cost-management/discipline-improvement.md
-        - name: Best practices
-          href: govern/cost-management/best-practices.md
-        - name: Azure tools for cost management
-          href: govern/cost-management/toolchain.md
-      - name: Security baseline
-        items:
-        - name: Overview of the security baseline
-          href: govern/security-baseline/index.md
-        - name: Download the template
-          href: govern/security-baseline/template.md
-        - name: Understand business risks
-          href: govern/security-baseline/business-risks.md
-        - name: Risk tolerance metrics and indicators
-          href: govern/security-baseline/metrics-tolerance.md
-        - name: Sample Security Baseline policies
-          href: govern/security-baseline/policy-statements.md
-        - name: Policy compliance processes
-          href: govern/security-baseline/compliance-processes.md
-        - name: Improve the security baseline
-          href: govern/security-baseline/discipline-improvement.md
-        - name: Cloud-native security baseline
-          href: govern/security-baseline/cloud-native-policy.md
-        - name: Additional Azure security guidance
-          href: govern/security-baseline/azure-security-guidance.md
-        - name: Azure tools for security baseline
-          href: govern/security-baseline/toolchain.md
-      - name: Identity baseline
-        items:
-        - name: Overview of the identity baseline
-          href: govern/identity-baseline/index.md
-        - name: Microsoft Entra ID Governance guidance
-          href: govern/identity-baseline/azure-ad-configuration.md
-        - name: Administrative access governance guidance
-          href: govern/identity-baseline/administrative-access.md
-        - name: Business user access governance guidance
-          href: govern/identity-baseline/business-user-access.md
-        - name: Application access governance guidance
-          href: govern/identity-baseline/application-access.md
-      - name: Resource consistency
-        items:
-        - name: Overview of resource consistency
-          href: govern/resource-consistency/index.md
-        - name: Management groups guidance
-          href: govern/resource-consistency/management-group-structure.md
-        - name: Resource naming guidance
-          href: govern/resource-consistency/naming.md
-        - name: Resource tagging guidance
-          href: govern/resource-consistency/tagging.md
-        - name: Managing business constraints
-          href: govern/resource-consistency/business-constraints.md
-        - name: Keep your Azure landing zone up to date
-          href: govern/resource-consistency/keep-azure-landing-zone-up-to-date.md
-        - name: Migrate Azure landing zone policies to Azure built-in policies
-          href: govern/resource-consistency/migrate-azure-landing-zone-policies.md
-        - name: Update Azure landing zone custom policies
-          href: govern/guides/standard/update-custom-policies.md          
-      - name: Deployment acceleration
-        items:
-        - name: Overview of deployment acceleration
-          href: govern/deployment-acceleration/index.md
-        - name: Consistency and repeatability in deployments
-          href: govern/deployment-acceleration/deployment-consistency-repeatability.md
-        - name: Policy visibility in deployments
-          href: govern/deployment-acceleration/policy-visibility-in-deployment.md
-    - name: Govern antipatterns
-      href: antipatterns/govern-antipatterns.md
+    - name: Build a cloud governance team
+      href: govern/build-cloud-governance-team.md
+    - name: Assess cloud risks
+      href: govern/assess-cloud-risks.md
+    - name: Document cloud governance policies
+      href: govern/document-cloud-governance-policies.md
+    - name: Enforce cloud governance policies
+      href: govern/enforce-cloud-governance-policies.md
+    - name: Monitor cloud governance
+      href: govern/monitor-cloud-governance.md
+
 
   - name: Manage
     items:
