@@ -51,19 +51,15 @@ Therefore, platform teams need to provide various product lines (for example, ty
 
 ### Manage different application environments (dev/test/prod)
 
-Another common question we get from platform teams within organizations is how should they handle different application environments for application teams as part of their subscription vending processes and implementations.
+Organizations need to handle different application environments for application teams as part of their subscription vending processes and implementations. There is existing guidance covering this topic in the [Environments, subscriptions, and management groups section of Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments#environments-subscriptions-and-management-groups). However, you should provide flexibility to allow application teams to manage their differing application environments (dev/test/prod) when delivering their application in the way the desire.
 
-We have existing guidance covering this article in the [Environments, subscriptions, and management groups section of Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments#environments-subscriptions-and-management-groups).
-
-However, you should provide flexibility to allow application teams to manage their differing application environments (dev/test/prod) when delivering their application in the way the desire.
-
-Some Azure services provide native features to aid with this article within a single instance of a resource, which lives in a single Azure subscription, such as Azure App Services with its Deployment Slots feature. In this example, forcing application teams to use separate subscriptions doesn't allow the application teams to take advantage of the full feature set of the services provided by Azure. It can also increase costs to deliver their application, including operational and maintenance overhead.
+Some Azure services provide native features to aid with environment isolation within a single instance of a resource, which lives in a single Azure subscription, such as Azure App Services with its Deployment Slots feature. In this example, forcing application teams to use separate subscriptions doesn't allow the application teams to take advantage of the full feature set of the services provided by Azure. It can also increase costs to deliver their application, including operational and maintenance overhead.
 
 ## Common Product Lines for Subscription Vending
 
-Now that you understand that platform teams must provide multiple types and styles of Azure Subscriptions (product lines) to the consumers of their Azure platform. Below are several common product lines that are used across many of our customers across industries and countries/regions.
+Now that you understand that platform teams must provide multiple types and styles of Azure Subscriptions (product lines) to the consumers of their Azure platform. What follows are several common product lines that can be used across industries and countries/regions.
 
-By providing these common subscription vending product lines for platform teams as a baseline, they can provide multiple options out of the box to their consumers, meeting the "prioritize customers" platform engineering principle from day one. This provides their internal customers the freedom they require to deliver their workloads and services, while being governed by the Azure platform, via the use of Azure Landing Zones [design principles](https://aka.ms/alz/design/principles) and [design area recommendations](https://aka.ms/alz/design/areas).
+These common subscription vending product lines should be used by platform teams as a baseline. They can provide multiple options out of the box to their consumers, meeting the "prioritize customers" platform engineering principle. This provides their internal customers the freedom they require to deliver their workloads and services, while being governed by the Azure platform, via the use of Azure landing zones [design principles](https://aka.ms/alz/design/principles) and [design area recommendations](https://aka.ms/alz/design/areas).
 
 > [!NOTE]
 > These are only examples and should be used as a starting point for organizations. They can of course be customized and expanded to cater to the needs of each organization.
@@ -71,19 +67,19 @@ By providing these common subscription vending product lines for platform teams 
 > [!TIP]
 > Platform teams should review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) and implement any changes to their architecture to support any product lines they decide to implement based on their organization's needs.
 
-The following common product lines for subscription vending that will be detailed are:
+Common product lines for subscription vending are:
 
-- [Corp Connected](#corp-connected)
+- [Corp connected](#corp-connected)
 - [Online](#online)
-- [Tech Platform](#tech-platform)
-- [Shared Application Portfolio](#shared-application-portfolio)
+- [Tech platform](#tech-platform)
+- [Shared application portfolio](#shared-application-portfolio)
 - [Sandbox](#sandbox)
 
-### Corp Connected
+### Corp connected
 
-The Corp Connected, also referred to as "internal/private", product line for application landing zone subscription vending provides connectivity, via traditional layer 3 (IP) methods, between resources in the same application landing zone, other corp connected application landing zones (normally via an Azure Firewall or Network Virtual Appliance (NVA)) and on-premises or other clouds via ExpressRoute or VPN connections.
+The Corp connected, also referred to as "internal/private", product line for application landing zone subscription vending provides connectivity, via traditional layer 3 (IP) methods, between resources in the same application landing zone, other corp connected application landing zones (normally via an Azure Firewall or Network Virtual Appliance (NVA)) and on-premises or other clouds via ExpressRoute or VPN connections.
 
-This is a popular product line for subscription vending as it aligns closely with how most customers on-premises environments work today, so provides a familiarity for customers to start their journey to Azure with. However, it should only be used when appropriate and taking advantage of more modern cloud-native approaches, such as the Online product line, is advised.
+This is a core product line for subscription vending as it aligns closely with how most on-premises environments work today. However, it should only be used when appropriate and taking advantage of more modern cloud-native approaches, such as the Online product line, is advised.
 
 > [!TIP]
 > Review the [What is the purpose of Connectivity, Corp, and Online Management Groups?](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#what-is-the-purpose-of-connectivity-corp-and-online-management-groups) section in the networking design area to gain further understanding of the differences between corp and online workloads.
@@ -130,7 +126,7 @@ A great way to think about the online application landing zone product line is i
 - Private IP address space isn't available or constrained to be able to use the Corp connected product line.
   - In this scenario you should review the guidance in [Prevent IPv4 exhaustion in Azure](/azure/architecture/networking/guide/ipv4-exhaustion)
 
-### Tech Platform
+### Tech platform
 
 The tech platform product line provides technology platform focused teams, such as ASE, AKS, AVS, AVD, a subscription vending product line that better suits their requirements. It allows these teams to host and manage complex workloads that, in turn, commonly host multiple related applications for other application teams across an organization.
 
@@ -141,7 +137,7 @@ Examples include ASE (typically via separate App Services Plans), AKS (typically
 
 These can also use either [Corp Connected](#corp-connected) or [Online](#online) product lines in relation to networking etc. depending upon the requirements for the technology platform that the team wishes to provide as a service to other application teams in the organization.
 
-### Shared Application Portfolio
+### Shared application portfolio
 
 The shared application portfolio product line for application landing zone subscription vending helps answer the question that platform and application teams within organizations might now be wondering; *"do we really need a separate application landing zone subscription for simple applications that might only be constructed from a small number of Azure resources?"*
 
