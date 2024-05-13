@@ -33,7 +33,7 @@ Follow these design considerations and recommendations as best practices for sub
 
 - **Ingress (inbound) traffic**. Consider using a reverse proxy for traffic going to Azure Spring Apps. Based on your requirements, choose native options, such as Azure Application Gateway, and Front Door, or regional services, such as API Management (APIM). If those options don't meet the needs of the workload, non-Azure services can be considered.
   
--  **Hybrid connectivity** If you are using Azure ExpressRoute for hybrid connectivity, ensure high availability for ExpressRoute. For more information, see [Designing for high availability with ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/designing-for-high-availability-with-expressroute). To ensure ExpressRoute resliency, check out the best practices detailed in [Azure Proactive Resiliency Library](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-gateway/).
+-  **Hybrid connectivity** If you are using Azure ExpressRoute for hybrid connectivity, ensure high availability for ExpressRoute. For more information, see [Designing for high availability with ExpressRoute](/azure/expressroute/designing-for-high-availability-with-expressroute). To ensure ExpressRoute resiliency, check out the best practices detailed in [Azure Proactive Resiliency Library](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-gateway/).
 
 ## Design recommendations
 
