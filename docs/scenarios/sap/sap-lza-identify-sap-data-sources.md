@@ -42,7 +42,7 @@ Customers might also deploy the following cloud-based analytics and planning sol
 SAP SaaS solutions:
 
 - [SAP S/4HANA Cloud](https://www.sap.com/products/erp/s4hana.html) is the public SaaS version of SAP S/4HANA.
-- SAP Customer Experience solutions, such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/service-management.html).
+- SAP Customer Experience solutions, such as [SAP Commerce Cloud](https://www.sap.com/products/crm/commerce-cloud.html), [SAP Sales Cloud](https://www.sap.com/products/crm/sales-cloud.html) and [SAP Service Cloud](https://www.sap.com/products/crm/service-cloud.html).
 - [SAP Business Network](https://www.sap.com/products/spend-management/ariba-network.html) for direct and indirect spend.
 - [SAP Concur](https://www.concur.com/) for travel and expense.
 - [SAP Fieldglass](https://www.fieldglass.com/) for external workforce management.
