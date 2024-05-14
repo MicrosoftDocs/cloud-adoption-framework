@@ -176,8 +176,7 @@ If Resource group delegation in a single Subscription between multiple teams is 
 
 The sandbox product line for application landing zone subscription vending is critical to help organizations provide safe, lightly governed and visible testing areas for anyone within an organization wishing to test, PoC, or MVP something in Azure.
 
-> [!TIP]
-> Checkout the existing sandbox guidance in [Landing zone sandbox environments](https://aka.ms/alz/sandbox) & [Manage application development environments in Azure landing zones](https://aka.ms/alz/dtp)
+Azure landing zones provides more detailed sandbox guidance in [Landing zone sandbox environments](https://aka.ms/alz/sandbox) & [Manage application development environments in Azure landing zones](https://aka.ms/alz/dtp) that you should review alongside the guidance in this section.
 
 Sandboxes are commonly ephemeral, meaning they're either time boxed or budget constrained and at the point of hitting the time or budget limit they either need to be extended or they're removed and decommissioned.
 
