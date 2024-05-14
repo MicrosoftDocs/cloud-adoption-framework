@@ -105,7 +105,7 @@ If your service-relocation automation doesn't move data, you also need to pick a
 
 ## Azure services relocation guidance
 
-To understand how to relocate the different Azure services, please refer to the [Azure Operational Excellence page](https://review.learn.microsoft.com/en-us/azure/operational-excellence/overview-relocation) where detailed guidance is available on which strategies are supported by each service. 
+To understand how to relocate the different Azure services, please refer to the [Azure Operational Excellence page](/azure/operational-excellence/overview-relocation) where detailed guidance is available on which strategies are supported by each service. 
 
 ## Select cutover approach
 
