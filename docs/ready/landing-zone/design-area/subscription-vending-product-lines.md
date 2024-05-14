@@ -69,11 +69,11 @@ These common subscription vending product lines should be used by platform teams
 
 Common product lines for subscription vending are:
 
-- [Corp connected](#corp-connected)
-- [Online](#online)
-- [Tech platform](#tech-platform)
-- [Shared application portfolio](#shared-application-portfolio)
-- [Sandbox](#sandbox)
+- [Corp connected](#corp-connected) - Workloads that require traditional layer 3 IP routing connectivity to other applications and on-premises via the connectivity subscription.
+- [Online](#online) - Workloads that connect with other applications via modern connectivity services and architectures, such as private link or interacting with each other via exposed APIs/endpoints from each application
+- [Tech platform](#tech-platform) - Workloads that build a platform for other applications to be built on top of. E.g. an AKS fleet of clusters managed by an AKS platform team that then host other applications within their AKS clusters on behalf of other application teams.
+- [Shared application portfolio](#shared-application-portfolio) - Workloads that are shared among the same application teams for a common set of closely coupled applications that don't make sense to be hosted in their own bubble, or with any one specific workload.
+- [Sandbox](#sandbox) - An area for application teams to build PoCs/MVPs in, that has less controls imposed upon them to promote development, invention and freedom to build the best possible application from the catalogue of services available in Azure. 
 
 ### Corp connected
 
