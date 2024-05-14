@@ -55,7 +55,7 @@ Organizations need to handle different application environments for application 
 
 Some Azure services provide native features to aid with environment isolation within a single instance of a resource, which lives in a single Azure subscription, such as Azure App Services with its Deployment Slots feature. In this example, forcing application teams to use separate subscriptions doesn't allow the application teams to take advantage of the full feature set of the services provided by Azure. It can also increase costs to deliver their application, including operational and maintenance overhead.
 
-## Common Product Lines for Subscription Vending
+## Design common product lines for subscription vending
 
 Now that you understand that platform teams must provide multiple types and styles of Azure Subscriptions (product lines) to the consumers of their Azure platform. What follows are several common product lines that can be used across industries and countries/regions.
 
@@ -98,7 +98,7 @@ This is a core product line for subscription vending as it aligns closely with h
 - Commonly platform teams vend the Virtual Network into the application landing zone subscription and peer to the regional hub Virtual Network or Virtual WAN Hub
   - This is so they can control the IP address allocation, usually via an IPAM tool.
 - Platform teams don't commonly vend subnets nor any other resources into the Virtual Network. Instead, they democratize these activities to the application teams, as they're then able to design their application networking as they desire.
-  - Platform teams then enforce the desired behavior, such as standardized Network Security Groups attached to every subnet, by using Azure Policy that is assigned to the Management Groups above the Subscription and therefore inherited and not editable by the application team. This approach follows the ALZ design principle of Subscription Democratization
+  - Platform teams then enforce the desired behavior, such as standardized Network Security Groups attached to every subnet, by using Azure Policy that is assigned to the Management Groups above the Subscription and therefore inherited and not editable by the application team. This approach follows the ALZ design principle of subscription democratization
 
 ### Online
 
@@ -128,18 +128,18 @@ A great way to think about the online application landing zone product line is i
 
 ### Tech platform
 
-The tech platform product line provides technology platform focused teams, such as ASE, AKS, AVS, AVD, a subscription vending product line that better suits their requirements. It allows these teams to host and manage complex workloads that, in turn, commonly host multiple related applications for other application teams across an organization.
+The tech platform product line provides technology platform focused teams, such as App Service Environments, Azure Kubernetes Service, Azure VMware Service, Azure Virtual Desktop, a subscription vending product line that better suits their requirements. It allows these teams to host and manage complex workloads that, in turn, commonly host multiple related applications for other application teams across your organization.
 
 > [!TIP]
-> One way to understand this product line is that the technology platform team, for example AKS, aim to offer "AKS-as-a-Service" (or product according to platform engineering terms) to other applications teams who need to run their applications on the AKS platform but leave the management, maintenance, security and configuration of AKS itself to the tech platform team for AKS; while the app team only has to care about their application and deploying it on the platform.
+> One way to understand this product line is that the technology platform team, for example AKS, aim to offer "AKS-as-a-service" (or product according to platform engineering terms) to other applications teams who need to run their applications on the AKS platform but leave the management, maintenance, security and configuration of AKS itself to the tech platform team for AKS; while the app team only has to care about their application and deploying it on the platform.
 
 Examples include ASE (typically via separate App Services Plans), AKS (typically via namespaces), VMs on AVS clusters and AVD providing virtual desktops or applications to an entire organization.
 
-These can also use either [Corp Connected](#corp-connected) or [Online](#online) product lines in relation to networking etc. depending upon the requirements for the technology platform that the team wishes to provide as a service to other application teams in the organization.
+These can also use either [Corp Connected](#corp-connected) or [Online](#online) product lines in relation to networking depending upon the requirements for the technology platform that the team wishes to provide as a service to other application teams in the organization.
 
 ### Shared application portfolio
 
-The shared application portfolio product line for application landing zone subscription vending helps answer the question that platform and application teams within organizations might now be wondering; *"do we really need a separate application landing zone subscription for simple applications that might only be constructed from a small number of Azure resources?"*
+The shared application portfolio product line for application landing zone subscription vending helps answer the question that platform and application teams your organizations might be wondering; *"Do we need a separate application landing zone subscription for simple applications that might only be constructed from a small number of Azure resources?"*
 
 This product line provides the option for application teams and departments that need to host several smaller applications or shared components such as storage accounts or SQL servers that are shared between several of their own applications, in a single, or lesser number of subscriptions.
 
@@ -196,7 +196,7 @@ Sandboxes often follow the networking configuration approach of the online produ
 ### Other important notes about the sandbox product line
 
 - Just like the Shared Application/Department Workload/Tech Platform product line, the sandbox product line can also be shared among teams in the same department with the same considerations.
-  - E.g., , there shouldn't be a single or a few sandbox subscriptions that people are given access to resource groups in.
+  - There shouldn't be a single or a few sandbox subscriptions that people are given access to resource groups in.
 
 ## Next steps
 
