@@ -12,7 +12,7 @@ ms.custom: internal
 
 Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
 
-It is strongly recommended to deploy your application in two or more Azure regions for high availability and your Azure landing zone platform should support these multiple regions in relation to central connectivity, identity and management services.
+In some situations, applications should be deployed into multiple Azure regions to support your high availability and disaster recovery business requirements. Even if you don't have an immediate need for multi-region applications today, it's a good idea to design your Azure landing zone platform to support multiple regions, especially for connectivity, identity, and management services from the start to ensure you can quickly enable and support multi-region application landing zones.
 
 For more guidance about choosing Azure regions, see [Select Azure regions](../azure-setup-guide/regions.md).
 
