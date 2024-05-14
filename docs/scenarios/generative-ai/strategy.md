@@ -5,7 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/07/2024
 ms.topic: conceptual
-ms.service: caf
 ---
 
 # Strategic considerations for adopting generative AI in Azure

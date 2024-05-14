@@ -1,24 +1,24 @@
 ---
 title: Generative vs. Traditional AI
-description: Learn about the differences between generative and traditional AI.
+description: Learn about the differences between generative AI and traditional AI and how to decide which one is right for your use cases.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/07/2024
-ms.topic: conceptual
-ms.service: caf
+ms.date: 05/14/2024
 ---
 
 # Generative vs. Traditional AI
 
-> TBD - Intro.
+When deciding on the right blend of AI for your use cases, it's important to understand the differences between generative AI and traditional AI. This article will help you understand the differences between the two and how to decide which one is right for your use cases.
+
+In some situations, a blend of both generative AI and traditional AI might be the best approach.
 
 ## Traditional AI
 
-- Enhanced productivity, etc. Also sometimes known as "Everyday AI".
+Traditional AI, sometimes known as "Everyday AI", is the type of AI that has been around for a long time and is used in many applications today.
 
-The type of AI used to detect and classify, work on vast amounts of data, operate in real-time applications and help with automation of capabilities is commonly known as traditional AI.
+Typically, traditional AI is used to detect and classify, work on vast amounts of data, operate in real-time applications and help with automation of capabilities.
 
-Here are some examples of traditional AI:
+Here are some examples of traditional AI and its applications:
 
 | Type                    | Example areas                                              |
 |-------------------------|------------------------------------------------------------|
@@ -31,20 +31,18 @@ Here are some examples of traditional AI:
 
 ## Generative AI
 
-With Generative AI (GAI) we typically mean AI that understands and creates content, such as GPT. It works on relatively small chunks of data - text, images, sounds, videos - and has a "liguistic" understanding. Large Language Models (LLMs) are a type of GAI and the term is often used as a synonym, but LLMs are ones that work on text.
+With Generative AI (GAI) we typically mean AI that understands and creates content, such as GPT. It works on relatively small chunks of data - text, images, sounds, videos - and has a linguistic understanding. Large Language Models (LLMs) are a type of GAI and the term is often used as a synonym, but LLMs are ones that work on text. There are also Small Language Models (SLMs) that work on smaller datasets and are less complex.
 
-Here are some examples of generative AI:
+Here are some examples of generative AI and its applications:
 
-- **OpenAI**: Ensure that artificial general intelligence (AGI) benefits all of humanity.
+| Type                    | Example areas                                              |
+|-------------------------|------------------------------------------------------------|
+| **Text generation**<br>Generating text based on input.| - Chatbots <br> - Content creation <br> - Code generation <br> - Storytelling <br> - Poetry generation <br> - Language translation <br> - Text summarization <br> - Text completion <br> - Text classification <br> - Text-to-speech <br> - Speech-to-text |
+| **Image generation**<br>Generating images based on input.| - Art generation <br> - Image-to-image translation <br> - Image completion <br> - Image super-resolution <br> - Image colorization <br> - Image editing <br> - Image synthesis <br> - Image-to-text |
+| **Sound generation**<br>Generating sounds based on input.| - Music generation <br> - Sound synthesis <br> - Sound editing <br> - Sound-to-text <br> - Text-to-sound |
+| **Video generation**<br>Generating videos based on input.| - Video editing <br> - Video synthesis <br> - Video-to-text <br> - Text-to-video |
 
 ## Deciding on the right blend of AI for your use cases
-
-When deciding between traditional AI and generative AI, consider the following:
-
-> TBD - Decision considerations.
-
-- Idea/talking points: How would you rate your organization's ability to develop or procure AI models?
-- Idea/talking points: When deciding between traditional AI and generative AI, consider the following:
 
 ### No-code
 
