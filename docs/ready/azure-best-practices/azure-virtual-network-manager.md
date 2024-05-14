@@ -73,5 +73,5 @@ You can use Virtual Network Manager to implement Azure landing zone design princ
 - Use [security admin rules](/azure/virtual-network-manager/concept-security-admins) to explicitly allow or deny network flows, regardless of NSG configurations that are controlled by application teams. Doing so also enables you to fully delegate the control of NSGs and their rules to application teams.
 
 ## Next steps
-Learn more about UDR Management at
-[Automate management of user-defined routes (UDRs) with Azure Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route).
+
+Learn more about user defined route management at [Automate management of user-defined routes (UDRs) with Azure Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route).
