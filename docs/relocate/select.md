@@ -103,6 +103,10 @@ If your service-relocation automation doesn't move data, you also need to pick a
 |[Azure Backup](/azure/backup/backup-overview)| Cold|
 |[Manual backup and restore](/azure/key-vault/general/move-region)| Cold|
 
+## Azure services relocation guidance
+
+To understand how to relocate the different Azure services, please refer to the [Azure Operational Excellence page](https://review.learn.microsoft.com/en-us/azure/operational-excellence/overview-relocation) where detailed guidance is available on which strategies are supported by each service. 
+
 ## Select cutover approach
 
 Cutover is when you transition from the old workload to the new one. You direct traffic to the workload in the target region and no longer to the source region. The domain name system (DNS) is central to this redirection. As a reminder, DNS tells browsers and API clients where to get a response. It resolves domain names to IP addresses. Every domain needs a domain host to manage it. Azure DNS is the Azure domain host service. There are different approaches to workload cutover, and the approach you take depends on the services in your workload. Here are a few examples.
