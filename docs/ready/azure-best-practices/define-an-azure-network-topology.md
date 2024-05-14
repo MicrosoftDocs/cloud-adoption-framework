@@ -32,3 +32,7 @@ Network topology is a critical element of a landing zone architecture because it
 
 :::image type="content" source="./media/customer-managed-topology.png" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.png" border="false":::
 
+## Next steps
+Azure Virtual Netowrk Manager provides powerful capabilities for managing virtual networks at scale, see
+[Azure Virtual Network Manager in Azure Landing Zone](../azure-best-practices/azure-virtual-network-manager.md)
+for more information.

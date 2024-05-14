@@ -21,9 +21,23 @@ You can use Virtual Network Manager to create three types of [topologies](/azure
 ![Diagram that shows Azure virtual network topologies.](../../_images/azure-best-practices/azure-virtual-network-manager-network-topologies.png)
 
 >[!NOTE]
-> Virtual Network Manager doesn't support Virtual WAN hubs as part of a network group or as the hub in a topology. For more information, see [Azure Virtual Network Manager FAQ](/azure/virtual-network-manager/faq).
+> Virtual Network Manager does support Virtual WAN in Private Preview. 
 
-When you create a hub-and-spoke topology with direct connectivity in Virtual Network Manager, where the spokes are connected to each other directly, direct connectivity between spoke virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) is automatically enabled, bi-directionally, via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
+This integration enables Azure customers to harness the benefits of both Azure Virtual Network Manager (AVNM) and Virtual WAN (vWAN) by deploying AVNM connectivity configurations with the vWAN hub, 
+effectively providing customers with an easier, automated and consistent method to connect virtual networks to a vWAN hub. This allows customers to combine the advantages of their existing vWAN  
+networking, routing, and security features with AVNM’s automated network management experience. Easily connecting hundreds of spokes to the desired vWAN hub with simplified transit connectivity.
+Customers get the benefits of automatic connectivity and scale management from AVNM, and can deploy multiple connectivity configurations with spoke network groups propagating to different VWAN hubs
+route tables to achieve isolation between their spoke virtual networks
+
+How it works: The private preview experience allows you to
+- create an AVNM connectivity configuration with a hub and spoke topology
+- specify a vWAN Hub as the hub
+- select spoke network groups that represent logical collections of virtual networks 
+- configure additional routing settings that the vWAN Hub will enact on the spoke network groups
+- take advantage of mesh orchestration by enabling direct connectivity for any spoke network group in this same connectivity configuration
+
+When you create a hub-and-spoke topology with direct connectivity in Virtual Network Manager, where the spokes are connected to each other directly, direct connectivity between spoke 
+virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) is automatically enabled, bi-directionally, via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
 
 You can use Virtual Network Manager to statically or dynamically add virtual networks to specific [network groups](/azure/virtual-network-manager/concept-network-groups). Doing so defines and creates the desired topology, based on your connectivity configuration in Virtual Network Manager.
 
@@ -57,3 +71,7 @@ You can use Virtual Network Manager to implement Azure landing zone design princ
 - Enable global mesh when all virtual networks across regions need to communicate with each other.  
 - Assign a priority value to each security admin rule in your rule collections. The lower the value, the higher the priority of the rule. 
 - Use [security admin rules](/azure/virtual-network-manager/concept-security-admins) to explicitly allow or deny network flows, regardless of NSG configurations that are controlled by application teams. Doing so also enables you to fully delegate the control of NSGs and their rules to application teams.
+
+## Next steps
+Learn more about UDR Management at
+[Automate management of user-defined routes (UDRs) with Azure Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route).
