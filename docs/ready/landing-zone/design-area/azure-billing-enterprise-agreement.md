@@ -72,7 +72,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - An organization can have various structures, including functional, divisional, geographic, matrix, or team structures. Using departments and accounts to map your organization's structure to your enrollment hierarchy can help with separating billing.
 
-- Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
+- Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which can use Azure metadata (for example, tags and location) to explore and analyze your organization's costs.
 
 - Restrict and minimize the number of account owners within the enrollment to limit administrator access to subscriptions and associated Azure resources.
 
@@ -90,6 +90,6 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
 
-- [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Azure Cost Management + Billing data.
+- [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Microsoft Cost Management data.
 
 - Any user that has permissions upon an enrollment to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles), must be protected with Multi-Factor Authentication (MFA) as any other privileged account should be as documented [here](/azure/active-directory/roles/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)

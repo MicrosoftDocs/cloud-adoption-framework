@@ -228,7 +228,7 @@ You can use Azure to gradually manage all or some aspects of your on-premises re
 | Health and status monitoring | Holistically observe, measure, learn, and improve the long-term warranty of the service or component, including service levels, in these aspects taken together: availability, capacity, performance, security, and compliance. A healthy system, service or component is online, performing well, secure and compliant. Health monitoring includes logs and is stateful with real-time health states and metrics. It also includes trending reports, insights, and trends focused on service usage. |
 | Utility monitoring | Observe, measure, learn, and improve the quality or qualitative aspects of how a system delivers value. User experience is one type of monitoring use case. |
 | Security monitoring | Observe, measure, learn, and improve protection in support of cybersecurity strategy and functions such as security operations, identity and access, information protection, privacy, threat management and compliance. Monitor using Microsoft Defender for Cloud and Microsoft Sentinel, and Microsoft 365. |
-| Cost monitoring | Monitor usage and estimate costs using Azure Monitor and Azure Cost Management + Billing as a new primary objective. The Azure Cost Management + Billing APIs allow you to explore cost and usage data using multidimensional analysis. |
+| Cost monitoring | Monitor usage and estimate costs using Azure Monitor and Microsoft Cost Management as a new primary objective. The Microsoft Cost Management APIs allow you to explore cost and usage data using multidimensional analysis. |
 
 | Tertiary objective | Goal and outcome |
 |---------------------|------------------|
