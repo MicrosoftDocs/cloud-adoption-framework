@@ -4,6 +4,7 @@ description: Learn about the differences between generative AI and traditional A
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/14/2024
+ms.topic: conceptual
 ---
 
 # Generative vs. Traditional AI
