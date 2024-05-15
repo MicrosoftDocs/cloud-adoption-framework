@@ -3,7 +3,7 @@ title: Governing an Azure Virtual Desktop environment
 description: Explore governance best practice for Azure Virtual Desktop
 author: martinekuan
 ms.author: martinek
-ms.date: 05/18/2021
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
@@ -22,7 +22,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Azure role-based access control (RBAC) for identity and access control.
 - Naming and tagging standards for consistent identification of resources.
 - Organization of resources using resource groups, subscriptions, and management groups.
-- Azure Policy and Azure Blueprints to enforce governance policies.
+- Azure Policy to enforce governance policies.
 
 ## Expanding on governance disciplines
 
@@ -38,5 +38,4 @@ For Azure Virtual Desktop, the baseline needs to expand to include controls for 
 The following guides provide best practices for implementing security controls for Azure Virtual Desktop environments:
 
 - [Azure Virtual Desktop security baseline](/security/benchmark/azure/baselines/azure-virtual-desktop-security-baseline).
-
 - [Azure Virtual Desktop security guide: best practices](/azure/virtual-desktop/security-guide#azure-virtual-desktop-security-best-practices).
