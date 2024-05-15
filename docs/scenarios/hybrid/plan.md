@@ -3,7 +3,7 @@ title: Plan methodology for hybrid and multicloud strategy
 description: Learn how to plan for hybrid and multicloud scenarios.
 author: mpvenables
 ms.author: martinek
-ms.date: 05/15/2024
+ms.date: 02/01/2020
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
