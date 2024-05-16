@@ -20,21 +20,7 @@ You can use Virtual Network Manager to create three types of [topologies](/azure
 
 ![Diagram that shows Azure virtual network topologies.](../../_images/azure-best-practices/azure-virtual-network-manager-network-topologies.png)
 
->[!NOTE]
-> Virtual Network Manager does support Virtual WAN in Private Preview. 
-
-This integration enables Azure customers to harness the benefits of both Azure Virtual Network Manager (AVNM) and Virtual WAN (vWAN) by deploying AVNM connectivity configurations with the vWAN hub, 
-effectively providing customers with an easier, automated and consistent method to connect virtual networks to a vWAN hub. This allows customers to combine the advantages of their existing vWAN  
-networking, routing, and security features with AVNM’s automated network management experience. Easily connecting hundreds of spokes to the desired vWAN hub with simplified transit connectivity.
-Customers get the benefits of automatic connectivity and scale management from AVNM, and can deploy multiple connectivity configurations with spoke network groups propagating to different VWAN hubs
-route tables to achieve isolation between their spoke virtual networks
-
-How it works: The private preview experience allows you to
-- create an AVNM connectivity configuration with a hub and spoke topology
-- specify a vWAN Hub as the hub
-- select spoke network groups that represent logical collections of virtual networks 
-- configure additional routing settings that the vWAN Hub will enact on the spoke network groups
-- take advantage of mesh orchestration by enabling direct connectivity for any spoke network group in this same connectivity configuration
+Virtual Network Manager does support Virtual WAN in Private Preview. 
 
 When you create a hub-and-spoke topology with direct connectivity in Virtual Network Manager, where the spokes are connected to each other directly, direct connectivity between spoke 
 virtual networks in the same [network group](/azure/virtual-network-manager/concept-network-groups) is automatically enabled, bi-directionally, via the [Connected group](/azure/virtual-network-manager/concept-connectivity-configuration#connected-group) feature. 
