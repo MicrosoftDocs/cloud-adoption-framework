@@ -3,7 +3,7 @@ title: Sustainability considerations in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to better manage your cloud operations and take sustainability and cloud efficiency into consideration.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/05/2023
+ms.date: 05/16/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
