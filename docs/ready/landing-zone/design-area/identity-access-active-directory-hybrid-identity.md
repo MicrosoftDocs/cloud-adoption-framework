@@ -4,14 +4,14 @@ description: Learn about considerations and recommendations for designing and im
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 02/26/2024
+ms.date: 03/25/2024
 ---
 
 # Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones
 
 This article provides guidance on how to design and implement Microsoft Entra ID and hybrid identity for Azure landing zones.
 
-Organizations that operate in the cloud require a directory service to manage user identities and access to resources. Microsoft Entra ID is a cloud-based identity and access management service that provides robust capabilities to manage users and groups. You can use it as a standalone identity solution, or integrate it with a Microsoft Entra Domain Services infrastructure or an on-premises Active Directory Domain Services (AD DS) infrastructure. 
+Organizations that operate in the cloud require a directory service to manage user identities and access to resources. Microsoft Entra ID is a cloud-based identity and access management service that provides robust capabilities to manage users and groups. You can use it as a standalone identity solution, or integrate it with a Microsoft Entra Domain Services infrastructure or an on-premises Active Directory Domain Services (AD DS) infrastructure.
 
 Microsoft Entra ID provides modern, secure identity and access management that's suitable for many organizations and workloads, and is at the core of Azure and Microsoft 365 services. If your organization has an on-premises AD DS infrastructure, your cloud-based workloads might require directory synchronization with Microsoft Entra ID for a consistent set of identities, groups, and roles between your on-premises and cloud environments. Or if you have applications that depend on legacy authentication mechanisms, you might have to deploy managed Domain Services in the cloud.
 
@@ -84,6 +84,9 @@ After AD DS or Domain Services is configured, you can domain join Azure VMs and 
 - Deploy domain controller VMs or Domain Services replica sets into the Identity platform subscription within the platform management group.
 
 - Secure the virtual network that contains the domain controllers. Prevent direct internet connectivity to and from those systems by placing the AD DS servers in an isolated subnet with a network security group (NSG), providing firewall functionality. Resources that use domain controllers for authentication must have a network route to the domain controller subnet. Only enable a network route for applications that require access to services in the Identity subscription. For more information, see [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain#recommendations).
+  - Use [Azure Virtual Network Manager](/azure/virtual-network-manager/concept-use-cases) to enforce standard rules that apply to virtual networks. For example, Azure Policy or virtual network resource tags can be used to add landing zone virtual networks to a network group if they require Active Directory identity services. The network group can then be used that allows access to the domain controller subnet only from applications that require it and block the access from other applications.
+
+- Secure the Role-Based Access Control (RBAC) permissions that applies to the domain controller virtual machines and other identity resources. Administrators with RBAC role assignments at the Azure control plane, such as Contributor, Owner, or Virtual Machine Contributor, can run commands on the virtual machines. Ensure that only authorized administrators can access the virtual machines in the Identity subscription, and that overly permissive role assignments are not inherited from higher management groups.
 
 - In a multiregional organization, deploy Domain Services into the region that hosts the core platform components. You can only deploy Domain Services into a single subscription. You can expand Domain Services to further regions by adding up to four more [replica sets](/entra/identity/domain-services/concepts-replica-sets) in separate virtual networks that are peered to the primary virtual network. To minimize latency, keep your core applications close to, or in the same region as, the virtual network for your replica sets.
 
