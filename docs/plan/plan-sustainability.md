@@ -3,7 +3,7 @@ title: Sustainability considerations in cloud adoption planning
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate sustainability into your cloud adoption plan.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/06/2023
+ms.date: 05/16/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
@@ -18,7 +18,9 @@ Identify current emissions to plan a sustainable cloud adoption journey. Measure
 
 ### Identify the most carbon-emitting workloads
 
-One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey. Consider using a tool like the [Emissions Savings Estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) which will help you understand the emissions from your current on-premises workloads.
+One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey. Consider using a tool like the [Emissions Savings Estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) or [Azure Carbon Optimization](/azure/carbon-optimization/overview) which will help you understand the emissions from your current on-premises workloads.
+
+To learn more about available sustainability tools, see [Sustainability tools and resources](/azure/cloud-adoption-framework/strategy/business-outcomes/sustainability#sustainability-tools-and-resources).
 
 ## Roles and responsibilities
 
