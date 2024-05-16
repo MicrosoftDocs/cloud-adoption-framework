@@ -48,3 +48,4 @@ The following diagram shows Oracle Database@Azure deployed to an application lan
 
 > [!div class="nextstepaction"]
 > [Strategic impact of Oracle on Azure](oracle-landing-zone-strategy.md)
+> [Oracle on Azure IaaS landing zone accelerator](oracle-on-iaas-lza.md)
