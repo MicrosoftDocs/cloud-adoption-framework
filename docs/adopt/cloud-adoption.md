@@ -29,12 +29,16 @@ Most organizations replace about 10% of their applications with software as a se
 
 *Table 1 - Examples of replacing workloads with SaaS and low-code solutions*
 
+<!-- docutune-disable -->
+
 | From | To |
 | --- | --- |
 |Custom line of <br>business (LOB)<br>applications|[Power Apps](/power-apps/powerapps-overview)|
 |DevOps tools|[GitHub](/training/modules/introduction-to-github/)|
 |Relationship <br>Management|[Dynamics 365](/dynamics365/get-started/intro-crossapp-index)|
 |Industry <br>verticals|[Third-party <br>SaaS](https://azuremarketplace.microsoft.com/marketplace/apps?filters=saas&page=1li)|
+
+<!-- docutune-enable -->
 
 ## Rearchitect or rebuild (5%)
 

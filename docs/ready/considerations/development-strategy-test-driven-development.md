@@ -104,10 +104,6 @@ You can easily integrate these Azure tools and features into TDD for landing zon
 
   Design and review [Azure Policy as Code workflows](/azure/governance/policy/concepts/policy-as-code) as part of your TDD approach.
 
-- [Azure Blueprints](/azure/governance/blueprints) groups policies and other deployment tools into a repeatable package that you can assign to multiple landing zones. Blueprints are useful for multiple adoption efforts that share common DoDs, which you might want to update over time. Azure Blueprints can also help with deployment during subsequent efforts to expand and refactor landing zones.
-
-  Azure Blueprints provides various [blueprint samples](/azure/governance/blueprints/samples), including policies for testing and templates for deployment. These blueprint samples can accelerate development, deployment, and testing efforts in TDD cycles.
-
 - [Azure Resource Graph](/azure/governance/resource-graph/overview) provides a query language for creating data-driven tests based on information about the assets deployed in a landing zone. Later in the adoption plan, this tool can also define complex tests based on the interactions between workload assets and the underlying cloud environment.
 
   Resource Graph includes advanced [query samples](/azure/governance/resource-graph/samples/advanced), which you can use to understand how workloads are deployed within a landing zone for advanced testing scenarios.

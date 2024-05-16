@@ -3,7 +3,7 @@ title: Data domains
 description: Learn about data domains
 author: PietheinStrengholt
 ms.author: pstrengholt
-ms.date: 02/02/2023
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-data-management, think-tank
 ---
@@ -40,7 +40,7 @@ Look at your business architecture when grouping your problem spaces. Within bus
 
 You can view the capability decomposition of a fictional company, Tailwind Traders, in the following model.
 
-:::image type="content" source="../media/data-domains-01.png" alt-text="Business Capability Decomposition" lightbox="../media/data-domains-01.png":::
+:::image type="content" source="../media/data-domains-01.png" alt-text="Diagram that shows business capability decomposition." lightbox="../media/data-domains-01.png":::
 
 Tailwind Traders needs to master all functional areas listed in the Business Capability Map to be successful. Tailwind Traders must be able to sell tickets as part of Online or Offline Tickets Management Systems, for example, or have Pilots available to fly planes as part of a Pilot Management Program. The company can outsource some activities while keeping others as the core of its business.
 
@@ -60,7 +60,7 @@ If business capabilities change, bounded contexts change. You preferably expect 
 
 If we project capability mapping to Tailwind Traders, bounded context boundaries and domain implementations might look similar to the following diagram.
 
-:::image type="content" source="../media/data-domains-02.png" alt-text="Diagram showing bounded contexts" lightbox="../media/data-domains-02.png":::
+:::image type="content" source="../media/data-domains-02.png" alt-text="Diagram that shows bounded contexts." lightbox="../media/data-domains-02.png":::
 
 In this diagram, Customer management is built upon subject matter expertise and therefore knows best what data to serve to other domains. Customer management's inner architecture is decoupled, so all application components within these boundaries can directly communicate using application-specific interfaces and data models. 
 
@@ -90,13 +90,13 @@ You can also ask your application domains to create a single data product that e
 
 Pay attention also to applications that cater to multiple business capabilities, which are often seen in large and traditional enterprises. In our example scenario, Tailwind Traders uses a complex software package to facilitate both "cost management" and "assets and financing". These shared applications are monoliths that provide as many features as possible, making them large and complex. In such a situation, the application domain should be larger. The same thing applies to shared ownership, in which several data domains reside in an application domain.
 
-### Design patterns for source-aligned, redelivery and consumer-aligned domains
+### Design patterns for source-aligned, redelivery, and consumer-aligned domains
 
-When mapping your domains, you'll learn there are different patterns based on the creation, consumption, or redelivery of data. For your architecture, design blueprints for supporting your domains based on their particular characteristics.
+When you map your domains, you can choose a pattern based on the creation, consumption, or redelivery of your data. For your architecture, you can design templates that support your domains based on the domain's specific characteristics.
 
 #### Source system-aligned domains
 
-:::image type="content" source="../media/data-domains-03.png" alt-text="Source system-aligned domains" lightbox="../media/data-domains-03.png":::
+:::image type="content" source="../media/data-domains-03.png" alt-text="Diagram that shows source system-aligned domains." lightbox="../media/data-domains-03.png":::
 
 Source system-aligned domains are aligned with source systems where data originates. These systems are typically transactional or operational.
 
@@ -106,15 +106,15 @@ These services, which include pre-configured container structures, enable your s
 
 #### Consumer-aligned domains
 
-:::image type="content" source="../media/data-domains-04.png" alt-text="Consumer-aligned domains" lightbox="../media/data-domains-04.png":::
+:::image type="content" source="../media/data-domains-04.png" alt-text="Diagram that shows consumer-aligned domains." lightbox="../media/data-domains-04.png":::
 
-Consumer-aligned domains are the opposite of source-aligned domains. They're aligned with specific end-user use cases that require data from other domains. Customer-aligned domains consume and transform data to fit the use cases of your organization. 
+Consumer-aligned domains are the opposite of source-aligned domains. They're aligned with specific end-user use cases that require data from other domains. Customer-aligned domains consume and transform data to fit the use cases of your organization.
 
 Consider offering shared data services for data transformation and consumption to cater to these consuming needs. You could offer domain-agnostic data infrastructure capabilities, for example, to handle data pipelines, storage infrastructure, streaming services, analytical processing, and so on.
 
 #### Redelivery domains
 
-:::image type="content" source="../media/data-domains-05.png" alt-text="Re-delivery domains" lightbox="../media/data-domains-05.png":::
+:::image type="content" source="../media/data-domains-05.png" alt-text="Diagram that shows re-delivery domains." lightbox="../media/data-domains-05.png":::
 
 The reusability of data is a different and more difficult scenario. For example, if downstream consumers are interested in a combination of data from different domains, you can create data products that aggregate data or combine high-level data required by many domains. This allows you to avoid repetitive work.
 
@@ -126,12 +126,12 @@ Domain modeling often gets complicated when data or business logic is shared acr
 
 For overlapping data requirements, you can use different patterns from domain-driven design. Here's a short summary of the patterns you could choose from:
 
-:::image type="content" source="../media/data-domains-06.png" alt-text="DDD patterns for overlapping domains" lightbox="../media/data-domains-06.png":::
+:::image type="content" source="../media/data-domains-06.png" alt-text="Diagram that shows DDD patterns for overlapping domains." lightbox="../media/data-domains-06.png":::
 
 * A **separate ways** pattern can be used if you prefer the associated cost of duplication over reusability. Reusability is sacrificed for higher flexibility and agility.
 * A **customer-supplier** pattern can be used if one domain is strong and willing to take ownership of downstream consumers' data and needs. Drawbacks include conflicting concerns and forcing your downstream teams to negotiate deliverables and schedule priorities.
 * A **partnership** pattern can be used when your integration logic is coordinated in an unplanned manner within a newly created domain. All teams cooperate with and regard each others' needs. Because no one can freely change the shared logic, significant commitment is needed from everyone involved.
-* A **conformist** pattern can be used to conform all your domains to all requirements. Use this pattern when 1) your integration work is complex, 2) no other parties can have control, or 3) you use vendor packages.
+* A **conformist** pattern can be used to conform all your domains to all requirements. Use this pattern when your integration work is complex, no other parties can have control, or you use vendor packages.
 
 In all cases, your domains should adhere to your interoperability standards. A partnership domain that produces new data for other domains must expose their data products like any other domain, including taking ownership.
 
@@ -178,6 +178,6 @@ Business capability modeling helps you to better recognize and organize your dom
 
 Some practitioners raise the concern that building target-state architecture by mapping everything out up front is an intensive exercise. They instead suggest you identify your domains organically while you onboard them into your new data mesh architecture. Instead of defining your target state from the top down, you work bottom-up, exploring, experimenting, and transitioning your current state towards a target state. While this proposed approach might be quicker, it carries significant risk. You can easily be in the middle of a complex move or remodeling operation when things start to break. Working from both directions, top-down and bottom-up, and then meeting in the middle over time is a more nuanced approach.
 
-## Next Steps
+## Next step
 
 * [What is a data product?](what-is-data-product.md)
