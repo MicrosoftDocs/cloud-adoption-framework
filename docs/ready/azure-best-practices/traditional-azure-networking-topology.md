@@ -64,7 +64,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 - Consider a network design based on the traditional hub-and-spoke network topology for the following scenarios:
 
-  - A network architecture deployed to one or multiple Azure regions.
+  - A network architecture deployed within a single Azure region.
   - A network architecture that spans multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
 
   - A network architecture that spans multiple Azure regions, and global virtual network peering that can connect virtual networks across Azure regions.
