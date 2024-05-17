@@ -55,4 +55,4 @@ Each overview page provides guidance to implement the scenario.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Strategy overview](../strategy/index.md)
+> [Develop a cloud adoption strategy](../strategy/index.md)
