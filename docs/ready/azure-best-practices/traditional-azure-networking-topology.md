@@ -171,3 +171,7 @@ The following figure shows both options:
   - The maximum number of prefixes that ExpressRoute with private peering advertises from Azure to on-premises.
 
   Ensure that the number of spoke virtual networks connected to the hub virtual network don't exceed these limits.
+
+## Next steps
+
+Explore key design considerations and recommendations for [virtual wide area networks (Virtual WAN) network topologies](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) in Microsoft Azure.
