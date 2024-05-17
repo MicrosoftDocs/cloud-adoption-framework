@@ -1,9 +1,9 @@
 ---
 title: DevOps security considerations overview
 description: See a summary of security considerations including access, agents, workstations, and scanning, for DevOps platforms like Azure DevOps and GitHub.
-author: SimonaKovatcheva
-ms.author: sikovatc
-ms.date: 06/23/2022
+author: steved0x 
+ms.author: sdanie 
+ms.date: 05/17/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
