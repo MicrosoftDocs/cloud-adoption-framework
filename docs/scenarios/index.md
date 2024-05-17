@@ -21,7 +21,7 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 
 ## Components of a cloud adoption scenario
 
-The following list comprises the components of a cloud adoption scenario:
+The following list describes the components of a cloud adoption scenario:
 
 - **The Microsoft Cloud Adoption Framework for Azure** guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts.
 
