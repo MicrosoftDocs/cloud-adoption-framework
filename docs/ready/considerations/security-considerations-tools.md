@@ -1,8 +1,8 @@
 ---
 title: Role-based access control for DevOps tools
 description: Learn about security considerations for role-based access control in DevOps Tools for Landing Zones.
-author: sikovatc
-ms.author: sikovatc
+author: steved0x 
+ms.author: sdanie 
 ms.date: 04/27/2022
 ms.topic: conceptual
 ms.custom: internal
