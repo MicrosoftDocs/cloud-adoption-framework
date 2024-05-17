@@ -3,7 +3,7 @@ title: Cloud adoption scenarios
 description: Find guidance for technology-specific and industry-specific scenarios for the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/08/2024
+ms.date: 05/17/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
@@ -20,8 +20,6 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 > Migration guidance can now be found at [Review product migration scenarios](../migrate/scenarios.md).
 
 ## Components of a cloud adoption scenario
-
-:::image type="content" source="./media/end-to-end-scenario-components.png" alt-text="Diagram of the components required for an end-to-end cloud adoption scenario." lightbox="./media/end-to-end-scenario-components.png":::
 
 | <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
 |--|--|
@@ -46,3 +44,7 @@ Each overview page provides guidance to implement the scenario.
 | <br> [Virtual desktops](./azure-virtual-desktop/index.md) | <br> Integrate Azure Virtual Desktop (AVD), formerly Windows Virtual Desktop, into your cloud adoption journey and migrate your organization's end-user desktops to the cloud. Help improve employee productivity and accelerate the migration of various workloads that support the overall user experience across your organization. Modernize existing virtual desktop environments, including session hosts, user profiles, images, and applications. Deploy a proven enterprise-scale architecture for AVD to your current environment. Prepare for governance and operations at scale with enterprise-scale landing zones to ensure consistent governance, security, and operational controls across multiple landing zones. Use enterprise-scale landing zones to centralize management of your virtual desktop environments. Accelerate and improve virtual desktop capabilities using Azure featured products. |
 | <br> [Retail industry](../industry/retail/index.md) | <br> Azure for Retail architecture solutions makes modern retail resilient and competitive, which provides cost savings, increases business agility, and heightens data security. You can unlock intelligent retail cloud maturity for your organization. The benefits include the ability to integrate cloud services across the supply chain with a PaaS cloud-based web services development. You can create a deployment environment with the end-strategy of deploying advanced SaaS-hosted AI and machine learning services to gain actionable intelligence and develop intelligent applications. Identify future growth factors for your organization and forecast your customers' preferences. Gain hybrid capabilities and innovate in any environment by using cloud services delivered across on-premises, multicloud, or the edge. Take advantage of modernized cloud services and the resiliency of on-site computing essential for your success. Use stores and distribution centers that operate 24/7. These capabilities help ensure security, privacy, compliance, and manageability within your environments across on-premises, multicloud, and the edge. |
 | <br> [Defense](./defense/index.md) | <br> The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country or region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to help navigate those challenges so that mission owners can focus on meeting mission objectives. The content highlights critical areas of focus but also references other documentation for deeper technical insights. The result should be a secure, scalable, and governed environment that is tailored to mission needs. |
+
+## Next step
+
+[Strategy overview](./strategy/index.md)
