@@ -66,21 +66,20 @@ Additionally, the risk of software supply chain attacks makes it critical to int
 - Protecting your organization: From malicious code and vulnerabilities in your source code supply chain
 - Protecting your customers: From any security issues in your applications and systems, which might result in reputation damage, liability, or other negative business impacts on your organization
 
+<!---MOVE This section UP After into before why/what MARK Text is done in doc--->
 ### Integrate security throughout the development lifecycle
 
 It’s critical to integrate security throughout the development lifecycle to quickly identify and correct design, code, and other issues early while people are working on that part of the process. This avoids more expensive and difficult fixes later that can cause a large amount of rework.
 
 :::image type="content" source="media/dev-sec-ops-plus-zero-trust.png" alt-text="Diagram of software development lifecycle with Zero Trust architecture and governance overlay.":::
 
-!PENDING MARK!
-Explain Lifecycle and Concepts
+Security risks (and the need to mitigate them) can occur at any point in the development lifecycle:
 
-- Design
-- Code
-- Build
-- Deploy
-- Run
-- Zero Trust Architecture and Governance
+- Design – ensure that the design doesn’t naturally allow attackers to easily gain unauthorized access to the workload, its data, or other business assets in the organization.
+- Code – ensure that writing (and re-use) of code doesn’t allow attackers to easily take control of the application to perform unauthorized actions that harm customers, employees, systems, data, or other business assets. Developers should also work in a secure environment that doesn’t allow attackers to do this without their knowledge.
+- Build and Deploy – ensure that the continuous integration and continuous deployment (CI/CD) processes don’t allow unauthorized users to alter the code and allow attackers to compromise it.
+- Run – ensure that environment running the code (cloud, servers, mobile devices, others) follows security best practices across people, process, and technology to avoid attackers compromising and abusing the workload. This includes the adoption of well established best practices, security baseline configurations, and more.
+- Zero Trust Architecture and Governance – All of these stages should follow Zero Trust principles to assume breach (assume compromise), explicitly verify trust, and grant the least privilege required for each user account, machine/service identity, and application component.
 
 ## The DevSecOps journey
 
