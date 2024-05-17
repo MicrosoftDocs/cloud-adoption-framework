@@ -3,7 +3,7 @@ title: Innovation security - DevSecOps strategy and culture
 description: Explore the key themes of consideration for integrating security best practices into innovation areas.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/16/2024
+ms.date: 05/17/2024
 ms.topic: conceptual
 ms.custom: internal
 ms.reviewer: mas
@@ -72,7 +72,7 @@ Protecting this innovation requires that organizations address potential securit
 
 Attackers can achieve their goals by exploiting weaknesses in either the development process, the underlying infrastructure for workloads, or both:
 
-- Development Attacks: using weaknesses in the application design and development process. For example, attackers might find code that doesn't validate input (allowing common attacks like SQL injection) or they may find the application uses weak encryption (or no encryption) for communications. Additionally, attackers might implant back doors in the code that allows them to return later to access assets in your environment or in your customer's environment.
+- Development Attacks: using weaknesses in the application design and development process. For example, attackers might find code that doesn't validate input (allowing common attacks like SQL injection) or they might find the application uses weak encryption (or no encryption) for communications. Additionally, attackers might implant back doors in the code that allows them to return later to access assets in your environment or in your customer's environment.
 - Infrastructure Attacks: that compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multistage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment.  
 
 Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
@@ -82,9 +82,9 @@ Additionally, the risk of software supply chain attacks makes it critical to int
 
 ## The DevSecOps journey
 
-Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process, where ideas first incubate in a safe space and then later released to production as a minimum viable product (MVP), which are then iteratively and continuously updated. 
+Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process. Ideas first incubate in a safe space, later released to production as a minimum viable product (MVP), then iteratively and continuously updated.
 
-This diagram shows the lifecycle of this kind of innovation factory approach: 
+This diagram shows the lifecycle of this kind of innovation factory approach:
 
 :::image type="content" source="./media/devsecops-overview.png" alt-text="DevSecOps Phases" lightbox="./media/devsecops-overview-popout.png":::
 
@@ -108,7 +108,7 @@ Integrating these cultures and goals together into a true DevSecOps approach can
 
 While having a few issues is normal and expected with new development, conflicts between teams often dramatically increase the number and severity of these issues. The conflicts occur, often because one or two teams have a political advantage, and repeatedly override requirements of other teams. Over time, the neglected issues grow in volume and seriousness. Left unsolved, this dynamic might get worse with DevOps as the speed of making decisions increases to meet the rapid evolution of business needs and customer preferences.
 
-Solving these problems requires creating a shared culture that values dev, sec, and ops requirements that are supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
+Solving these problems requires creating a shared culture that values dev, sec, and ops requirements supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
 
 #### Leadership techniques
 
@@ -118,14 +118,14 @@ These key techniques can help leadership build a shared culture:
 1. **Expect continuous improvement, not perfection:** Leaders should set an expectation of continuous improvement and continuous learning. Building a successful DevSecOps program doesn't happen overnight. It's a continuous journey with incremental progress.
 1. **Celebrate both common interests and unique individual values:** Ensure the teams can see that they're working toward common outcomes and each individual provides something the others can't. All of the requirement types are about creating and protecting the same business value. Development is trying to create new value, while ops and security are trying to protect and preserve that value, against different risk scenarios. Leaders at all levels throughout the organization should communicate this commonality and how important it is to meet all types of requirements for both immediate and long-term success.
 1. **Develop shared understanding:** Everyone on the team should have a basic understanding of:
-   - **Business urgency:** The team should have a clear picture of revenue at stake. This view should include current revenue (if the service is offline), and potential future revenue that will be affected by a delay in delivery of applications and features. This should be directly based on signals from leadership stakeholders.
+   - **Business urgency:** The team should have a clear picture of revenue at stake. This view should include current revenue (if the service is offline), and potential future revenue affected by a delay in delivery of applications and features. This view should be directly based on signals from leadership stakeholders.
    - **Likely risks and threats:** Based on threat intelligence team input, if present, the team should establish a sense of the likely threats that the application portfolio will face.
    - **Availability requirements:** The team should have a shared sense of the operational requirements such as required uptime, expected lifetime of the application, and troubleshooting and maintenance requirements, for example, patching while service online.
 1. **Demonstrate and model the desired behavior:** Leaders should publicly model the behavior that they want from their teams. For example, show humility, focus on learning and value the other disciplines. Another example is development managers discuss the value of security and high-quality applications or security managers discuss the value of rapid innovation and application performance.
 1. **Monitor the level of security friction:** Security naturally creates friction that slows down processes. It's critical for leaders to monitor the level and type of friction that security generates:
    - **Healthy friction:** Similar to how exercise makes a muscle stronger, integrating the right level of security friction in the DevOps process strengthens the application by forcing critical thinking at the right time. If teams are learning and using those learnings to improve security, for example, considering how why, and how an attacker might try to compromise an application, and finding and fixing important security bugs, then they are on track.
-   - **Unhealthy friction:** Look out for friction that impedes more value than it protects. This often happens when security bugs generated by tools have a high false positive rate or false alarms, or when the security effort to fix something exceeds the potential impact of an attack.
-1. **Integrate security into budget planning:** Ensure that security budget is allocated proportionally to other investments into security. This is analogous to a physical event like a concert where the event budget includes physical security as a norm. Some organizations allocate 10 percent of total cost for security as a general rule to ensure consistent application of security best practices.
+   - **Unhealthy friction:** Look out for friction that impedes more value than it protects. This friction often happens when security bugs generated by tools have a high false positive rate or false alarms, or when the security effort to fix something exceeds the potential impact of an attack.
+1. **Integrate security into budget planning:** Ensure that security budget is allocated proportionally to other investments into security. This concept is analogous to a physical event like a concert where the event budget includes physical security as a norm. Some organizations allocate 10 percent of total cost for security as a general rule to ensure consistent application of security best practices.
 1. **Establish shared goals:** Ensure performance and success metrics for application workloads reflect development, security, and operations goals.
 
 > [!NOTE]
@@ -155,12 +155,12 @@ For more information on DevSecOps, see [DevSecOps technical controls](./devsecop
 
 ## Tips on navigating the journey
 
-Transformation requires building toward this ideal state incrementally on a journey. Many organizations will have to navigate complexity and challenges on this journey. This section outlines some of the common ones that organizations face.
+Transformation requires building toward this ideal state incrementally on a journey. Many organizations have to navigate complexity and challenges on this journey. This section outlines some of the common ones that organizations face.
 
 - **Education and culture changes are critical early steps:** *You go to war with the army you have*. The team you have will often need to develop new skills and adopt new perspectives to understand the other parts of the DevSecOps model. This education and culture change takes time, focus, executive sponsorship, and regular follow up to help individuals fully understand and see the value of the change. Changing cultures and skills drastically can sometimes tap into the professional identity of individuals, creating potential for strong resistance. It's critical to understand and express the why, what, and how of the change for each individual and their situation.
 - **Change takes time:** You can only move as fast as your team can adapt to the implications of doing things in new ways. Teams will always have to do their existing jobs while they transform. It's critical to carefully prioritize what is most important and to manage expectations of how fast this change can happen. Focusing on a crawl, walk, run strategy, where the most important and foundational elements come first, will serve your organization well.
 - **Limited resources:** A challenge organizations usually face early on is to find talent and skills in both security and application development. As organizations begin to collaborate more effectively, they might find hidden talent, such as developers with a security mindset or security professionals with a development background.
-- **Shifting nature of applications, code, and infrastructure:** The technical definition and composition of an application is fundamentally changing with the introduction of technologies such as serverless, cloud services, cloud APIs, and codeless applications, such as Power Apps. This shift is changing development practices, application security, and even empowers non-developers to create applications.
+- **Shifting nature of applications, code, and infrastructure:** The technical definition and composition of an application is fundamentally changing with the introduction of technologies such as serverless, cloud services, cloud APIs, and codeless applications, such as Power Apps. This shift is changing development practices, application security, and even empowers nondevelopers to create applications.
 
 > [!NOTE]
 > Some implementations combine operations and security responsibilities into a **site reliability engineer (SRE)** role.
