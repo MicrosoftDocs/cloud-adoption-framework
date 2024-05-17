@@ -21,19 +21,21 @@ Learn and benefit from a repository of successful cloud adoption experiences and
 
 ## Components of a cloud adoption scenario
 
+:::image type="content" source="./media/end-to-end-scenario-components.png" alt-text="Diagram that shows the components of a cloud adoption scenario." lightbox="./media/end-to-end-scenario-components.png":::
+
 The following list describes the components of a cloud adoption scenario:
 
-- **The Microsoft Cloud Adoption Framework for Azure** guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts.
+- **[The Microsoft Cloud Adoption Framework for Azure](https://azure.microsoft.com/en-us/solutions/cloud-enablement/cloud-adoption-framework/)** guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts.
 
-- **Microsoft Learn** is a free online training platform. You can use guided, interactive, hands-on Learn modules to gain required skills. Modules teach you to implement, maintain, and support solutions in the cloud. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators.
+- **[Microsoft Learn](https://learn.microsoft.com)** is a free online training platform. You can use guided, interactive, hands-on Learn modules to gain required skills. Modules teach you to implement, maintain, and support solutions in the cloud. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators.
 
-- **The Azure Well-Architected Framework** provides a set of Azure architecture best practices to help you build and deliver great solutions. These best practices cover cost management, operational excellence, performance efficiency, reliability, and security. The Well-Architected Framework provides essential considerations for workload owners to review before they initiate their workload deployments.
+- **[The Azure Well-Architected Framework](learn.microsoft.com/azure/well-architected/)** provides a set of Azure architecture best practices to help you build and deliver great solutions. These best practices cover cost management, operational excellence, performance efficiency, reliability, and security. The Well-Architected Framework provides essential considerations for workload owners to review before they initiate their workload deployments.
 
-- **Reference architectures** are templates of required components and the technical requirements to implement them. Each reference architecture includes recommended best practices. Reference architectures have considerations for scalability, availability, security, resilience, and other aspects of design. Many articles include a deployable solution or reference implementation. Reference architectures can help your organization accelerate deployment for many common scenarios.
+- **[Reference architectures](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/reference-architecture-overview)** are templates of required components and the technical requirements to implement them. Each reference architecture includes recommended best practices. Reference architectures have considerations for scalability, availability, security, resilience, and other aspects of design. Many articles include a deployable solution or reference implementation. Reference architectures can help your organization accelerate deployment for many common scenarios.
 
-- **Best practices** can help you build reliable, scalable, and secure applications in the cloud. Best practices provide guidelines and tips to implement efficient systems, mechanisms, and approaches. You can use these guidelines to help onboard assets by using Azure Arc, Azure Resource Manager templates (ARM templates), and various Azure products.
+- **[Best practices](/azure/cloud-adoption-framework/overview)** can help you build reliable, scalable, and secure applications in the cloud. Best practices provide guidelines and tips to implement efficient systems, mechanisms, and approaches. You can use these guidelines to help onboard assets by using Azure Arc, Azure Resource Manager templates (ARM templates), and various Azure products.
 
-- **Featured Azure products** provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures, follow best practices guidance for scenarios, and implement solutions for common workloads on Azure.
+- **[Featured Azure products](https://azure.microsoft.com/products/category/)** provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures, follow best practices guidance for scenarios, and implement solutions for common workloads on Azure.
 
 ## Scenarios to support your cloud adoption strategy
 
