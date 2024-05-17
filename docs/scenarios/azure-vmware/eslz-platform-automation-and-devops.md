@@ -135,7 +135,6 @@ An Azure VMware Solution private cloud exists as a resource within the Azure Res
 
 - Use [Azure CLI](/cli/azure/vmware), [PowerShell](/powershell/module/az.vmware/), or a declarative template like [Azure Resource Manager or Bicep](/azure/templates/) to deploy Azure VMware Solution in an automated manner.
 - Where possible, use *what-if* to confirm changes before execution, pausing on resource deletion for verification.
-- For operations that are single deployment, but still require infrastructure as code, use Azure Blueprints. Azure Blueprints provides stamped and repeatable deployments without the need for automation pipelines.
 
 ## DevOps approach
 

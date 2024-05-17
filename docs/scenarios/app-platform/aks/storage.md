@@ -38,7 +38,7 @@ The following considerations are for designing storage for AKS. Consider where s
 
 For operating system (OS) disks, consider the following factors:
 
-- **Ephemeral disks for OS**. Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Ephemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
+- **Ephemeral disks for OS**. Each virtual machine (VM) in Azure requires a disk for its OS. Because Kubernetes nodes are ephemeral, AKS defaults to using ephemeral OS disks on supported VM sizes. For more information about ephemeral OS disks, see [Ephemeral OS](/azure/aks/concepts-storage#ephemeral-os-disk).
 
 - **Managed disks for OS**. If your workload requires them, you can instead use regular managed disks for the nodes in your AKS cluster. Doing so supports workloads that require persistent data on the OS drive. For more information about options for persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 

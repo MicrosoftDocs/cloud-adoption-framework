@@ -102,7 +102,7 @@ The following list provides a recommended set of functions for an enabling team 
 
 - Definition of horizontal (cross-function) guidance and capabilities to help acquire the right expertise across your organization, which ensures alignment with your overall target cloud operating model (like DevOps)
 - Support, training and coaching for other teams to reach the necessary level of expertise
-- Establishment of a common set of reusable templates and libraries for your application or platform teams, and fostering InnerSourcing, such as [Common Azure Resource Modules Library](https://github.com/azure/resourcemodules).
+- Establishment of a common set of reusable templates and libraries for your application or platform teams, and fostering InnerSourcing, such as [Azure verified modules](https://aka.ms/avm).
 
 ### Define interaction modes between teams
 
