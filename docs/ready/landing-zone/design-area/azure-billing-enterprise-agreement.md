@@ -12,9 +12,7 @@ ms.custom: think-tank, UpdateFrequency.5
 
 Enterprise Agreement enrollment represents the commercial relationship between Microsoft and how your organization uses Azure. It provides billing foundation for your subscriptions and how your digital estate is administered. The Microsoft Cost Management blade in the Azure portal helps you to manage your Enterprise Agreement enrollment. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost centers within an organization.
 
->[!NOTE]
-> > The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)) has been retired as of February 15, 2024. Customers should now use the Cost Management + Billing blade in the Azure portal to manage their enrollments as documented further in:
-
+> The Azure EA portal ([https://ea.azure.com](https://ea.azure.com)) has been retired as of February 15, 2024. Customers should now use the Cost Management + Billing blade in the Azure portal to manage their enrollments as documented further in:
 >
 > - [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration)
 > - [Get started with your Enterprise Agreement billing account](/azure/cost-management-billing/manage/ea-direct-portal-get-started)
