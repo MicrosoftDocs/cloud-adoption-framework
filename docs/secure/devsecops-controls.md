@@ -17,13 +17,13 @@ This documentation describes each control and shows how to apply these controls 
 
 The security control profiles are:
 
-- Temporary Minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs and should rapidly be brought up to the standard profile.
+- Temporary Minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
 - Standard (Center) - Balanced approach for most workloads most of the time
 - High Security (Right) – Stringent security for workloads with a potential high impact on business and human safety
 
 ## DevSecOps security controls
 
-This section provides a reference of recommended security controls for each type of workload. This reference might be adopted as is or it can be adapted to your existing software development and software security processes. Most organizations can’t implement all these controls right away if they aren’t already doing some of them, so taking a continuous improvement approach is often the best approach (prioritize controls, implement the first control, move to the next control, implement it, and so on). Most organizations should prioritize the critical foundations first.
+This section provides a reference of recommended security controls for each type of workload. This reference might be adopted as is or it can be adapted to your existing software development and software security processes. Most organizations can’t implement all these controls right away if they aren’t already doing some of them. Taking a continuous improvement approach is often the best approach: prioritize controls, implement the first control, move to the next control, implement it, and so on. Most organizations should prioritize the [critical foundations](#establish-critical-foundations) first.
 
 For more information, see The DevSecOps journey in XXXXXXXXXXXXXXXX (Link to other page).
 
@@ -33,9 +33,9 @@ This figure summarizes the security controls and how to apply them to each workl
 
 Key planning considerations include:
 
-- **Shift left… but double-check** - This reference is designed to detect and correct issues as early as possible to enable you to fix them when it's easier and cheaper to fix the issues (sometimes called shift left), but also to assume failure and include double checking later in the process. Always double-check any security controls in the CI/CD process to ensure avoidable issues don’t slip through to production systems. This follows the defense in depth and fail safe (assume failure) principles.
+- **Shift left… but double-check** - This reference is designed to detect and correct issues as early as possible to enable you to fix them when it's easier and cheaper to fix the issues (sometimes called shift left), but also to assume failure and include double checking later in the process. Always double-check any security controls in the CI/CD process to ensure avoidable issues don’t slip through to production systems. This concept follows "defense in depth" and "fail safe" principles.
 - **Artificial Intelligence (AI)** – The two main implications of artificial intelligence are:
-   - **Secure all code** – regardless of whether it's written by human or generative AI
+   - **Secure all code** regardless of whether it's written by human or generative AI
    - **Use both for security** - Apply both classic and AI controls as available to increase visibility and context for any security issues (such as code analysis tools)
 
 ## Security controls
@@ -61,7 +61,7 @@ The controls are grouped into the stages of development they apply to and the co
    - Network access controls
    - Monitoring, response, and recovery
 
-Each of these are defined in the following sections:
+Each of these items is defined in the following sections:
 
 ### Establish critical foundations
 
@@ -73,15 +73,15 @@ These controls apply across all development stages and control profiles.
 
 This control focuses on providing your developers and security teams with training to recognize and resolve security issues through the development lifecycle. Without security training your teams could miss core security weaknesses that lead to compromise during the applications lifetime.
 
-As a result, it's imperative that you implement security training across all roles (including users, developers, product line managers, testers, and more). Each of these roles must have education on security risks and their role in keeping the applications safe via formal training, on-demand training, simulation exercises, threat modeling, mentoring/advisors, security champions, application security support teams, direct mentoring, purple team activities, podcasts, videos, or any other learning methods.
+As a result, it's imperative that you implement security training across all roles (including users, developers, product line managers, testers, and more). Each role must have education on security risks and their role in keeping applications safe. This training might take the form of: formal or on-demand training, simulation exercises, threat modeling, mentoring/advisors, security champions, application security support teams, purple team activities, podcasts, videos, or any other learning methods.
 
-Ultimately, each role needs to understand why it’s important to address security risks, what they need to do for security in their role, and how to do those things. We have learned that people who understand the attacker’s perspective, their goals, and how that shows up in real world security incidents will quickly become security allies instead of trying to avoid security.
+Ultimately, each role needs to understand: why it’s important to address security risks, what they need to do for security in their role, and how to do those things. People who understand the attacker’s perspective, their goals, and how that shows up in real world security incidents quickly become security allies instead of trying to avoid security.
 
-Security is an infinite game where the threats, technology, and business assets to protect are always changing and the threat actors never give up so the security training approach should also be ongoing and continuously evolve. Effective training aligns with and reinforces security policies, software development lifecycle (SDL) practices, standards, and software security requirements. It should also be informed by insights derived from data or newly available technical capabilities.
+Security is an infinite game where the threats, technology, and business assets to protect are always changing and the threat actors never give up. Security training approach must be ongoing and continuously evolve. Effective training aligns with and reinforces security policies, software development lifecycle (SDL) practices, standards, and software security requirements. It should be informed by insights derived from data and newly available technical capabilities.
 
-Although security is everyone’s job, it’s important to remember that not everyone needs to be a security expert nor strive to become a proficient penetration tester. However, ensuring everyone understands security basics and how to apply them to their role of building security into software and services is essential (including in the safe use of their computers and their identities and logon accounts).
+Although security is everyone’s job, it’s important to remember that not everyone needs to be a security expert nor strive to become a proficient penetration tester. Ensuring everyone understands security basics and how to apply them to their role of building security into software and services is essential. This training should include in the safe use of their computers, applications, identity, and accounts.
 
-In particular, developers and the engineers building systems aren't usually security experts, so training in both the technical and conceptual aspects of threat modeling is necessary for them to become effective at it so they can build systems that are Secure by Design. This is also vital for the threat modeling process to work at-scale in organizations where developers far outnumber security professionals. Threat modeling must be thought of as a fundamental engineering skill in which all developers and engineers must have at least basic proficiency. Therefore, development and engineering teams must be trained to be competent at threat modeling as part of onboarding and with periodic refreshers.
+In particular, developers and the engineers building systems aren't usually security experts. Training in both the technical and conceptual aspects of threat modeling is necessary for them to become effective so they can build systems that are secure by design. This training is vital for the threat modeling process to work at-scale in organizations where developers far outnumber security professionals. Threat modeling must be thought of as a fundamental engineering skill in which all developers and engineers must have at least basic proficiency. Therefore, development and engineering teams must be trained to be competent at threat modeling as part of onboarding and with periodic refreshers.
 
 #### Include security in blameless postmortems
 
