@@ -44,6 +44,8 @@ items:
                 href: example-architectures.md
               - name: Virtual WAN Toplogies for Azure VMware Solution
                 items: 
+                  - name: Single region Secure Virtual WAN with Global Reach               
+                    href: eslz-single-region-with-secure-virtual-wan-with-globalreach.md
                   - name: Dual region Secure Virtual WAN with Global Reach               
                     href: eslz-dual-region-with-secure-virtual-wan-with-globalreach.md
       - name: Governance discipline
