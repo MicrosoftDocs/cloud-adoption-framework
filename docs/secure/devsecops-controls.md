@@ -381,7 +381,7 @@ Additional details and resources include:
 - [Microsoft Defender for Cloud ](/azure/defender-for-cloud/)
 - [Azure Firewall](/azure/firewall/overview)
    - [Azure Firewall forced tunneling](/azure/firewall/forced-tunneling)
-   - [Azure Security Baseline for Azure Security Firewall](security/benchmark/azure/baselines/azure-firewall-security-baseline)
+   - [Azure Security Baseline for Azure Security Firewall](/security/benchmark/azure/baselines/azure-firewall-security-baseline)
    - [Azure Firewall threat intelligence-based filtering](/azure/firewall/threat-intel)
 - [Azure Web Applications Firewalls (WAF)](/azure/web-application-firewall/overview)
 - [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview)
