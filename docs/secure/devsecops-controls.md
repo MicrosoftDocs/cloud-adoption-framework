@@ -135,7 +135,7 @@ It is essential to harden workstations, build environments, identities, and othe
 
 This practice is a critical foundation of your development lifecycle and should be established over all profiles.
 
-Throughout this practice you must take a Zero Trust approach. At it's core the Zero Trust model requires that each access request (user, service or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points, limit user access, especially privilege users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies and segment access to minimize the possible damage in the event of a breach. 
+Throughout this practice you must take a Zero Trust approach. At it's core the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) requires that each access request (user, service or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points, limit user access, especially privilege users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies and segment access to minimize the possible damage in the event of a breach. 
 
 Hardening your development environment can be achieved through a variety of different methods however a good starting point is to consider the developer workstation. By utilising technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box) you shift the development environment to a SAAS Application which can then be managed through security & network settings or through organizational policies.
 
@@ -256,27 +256,32 @@ Good secret hygiene is essential and is required in all profiles.
 
 Additional Information:
 
-- To learn more please visit Secret Scanning for GitHub Advanced Security for Azure DevOps - Azure Repos | Microsoft Learn
-- To understand how best to use Key Vault please review out Best practices for using Azure Key Vault | Microsoft Learn
+- [Secret Scanning for GitHub Advanced Security for Azure DevOps](/azure/devops/repos/security/github-advanced-security-secret-scanning)
+- [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices)
 
 > [!NOTE]
-> We strongly recommend using per workload keys with secret storage solutions like Azure Key Vault
+> We strongly recommend using per workload keys with secret storage solutions like Azure Key Vault.
 
 ### Secure pipeline
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain
 
 This control focuses on securing the DevOps pipeline and all the artifacts created during the build processes of your application.
+
 Pipelines are an essential part of automating core repeatable activities within the DevSecOps Lifecycle. In CI/CD, your team merges developer code into a central codebase on a regular schedule and automatically runs standard builds and test processes which include security toolsets.
+
 Using pipelines to run scripts or deploy code to production environments can introduce unique security challenges. You want to make sure your CI/CD pipelines don't become avenues to run malicious code, allow credentials to be stolen, or give attackers any surface area for access. You also want to ensure that only the code your team intends to release then deploys. This includes artifacts of your CI/CD pipelines, especially artifacts that are shared between different tasks that can be used as part of an attack.
-Software Bill of Materials (SBOM) generation should be automated into the build process to create this critically important code provenance artifact without requiring manual developer actions.
+
+**Software Bill of Materials (SBOM)** generation should be automated into the build process to create this critically important code provenance artifact without requiring manual developer actions.
+
 Pipeline security can be assured by ensuring good access control to resources used in pipeline and validating/updating core dependencies/scripts on a regular basis. It is Important to note that scripts used in CI/CD pipelines are also code and should be treated in the same way you treat other code in your project.
 
 > [!NOTE]
 > The security of the pipeline is dependent on the security of the underlying infrastructure and the accounts/identities that are used for the process. For more information, see the securing your development environment and the secure operations controls (Identity Identity/App Access Controls, Host/Container Controls, Network Access Controls)
 
 This control should be evaluated on an access level to every resource in the project, it is a required control across all DevSecOps profile levels.
-To learn more about pipeline security please visit Securing Azure Pipelines - Azure Pipelines | Microsoft Learn
+
+To learn more about pipeline security please visit [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
 ### Live Site Penetration Testing
 
@@ -296,7 +301,8 @@ Integrate the findings and feedback from these activities to improve your securi
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
 
-Ensure that security best practices for identity and access management (including securing privileged access – https://aka.ms/SPA) are followed for all technical elements of the development environment, CI/CD pipeline, operational workload, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Identity and access management is a foundational pillar of the Zero Trust model that Microsoft recommends.
+Ensure that security best practices for identity and access management including [securing privileged access](/security/privileged-access-workstations/overview) are followed for all technical elements of the development environment, CI/CD pipeline, operational workload, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Identity and access management is a foundational pillar of the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) that Microsoft recommends.
+
 Ensure security best practices are followed for all development systems as well as the infrastructure hosting them (VMs, containers, network devices, and more)
 
 Temporary Minimum: Ensure all users have enabled Microsoft Entra multifactor authentication and only have access to what they need to perform daily tasks
@@ -307,20 +313,17 @@ Managed Identities are the more secure and preferred method of authentication wh
 
 Additional details and resources include:
 
-- Securing Privileged Access (SPA) guidance
-https://aka.ms/SPA
-- Five steps to securing your identity infrastructure
-https://learn.microsoft.com/azure/security/fundamentals/steps-secure-identity
-- Microsoft Learn: What are managed identities for Azure resources https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview
-- What is Microsoft Entra Privileged Identity Management - https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure
-- What's Microsoft Entra Permissions Management (CIEM capability)
-https://learn.microsoft.com/entra/permissions-management/overview
+- [Securing Privileged Access (SPA) guidance](/security/privileged-access-workstations/overview)
+- [Five steps to securing your identity infrastructure](/azure/security/fundamentals/steps-secure-identity)
+- [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
+- [What is Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
+- [What's Microsoft Entra Permissions Management (CIEM capability)?](/entra/permissions-management/overview)
 
 ### Host/container/environment controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
 
-Ensure that security best practices are followed for all compute resources and hosting environments for all technical elements of the development lifecycle. Threat actors have sophisticated methods and automation for infrastructure and user endpoint attacks that they use frequently against both production systems and development processes. Infrastructure security is a foundational pillar of the Zero Trust model that Microsoft recommends.
+Ensure that security best practices are followed for all compute resources and hosting environments for all technical elements of the development lifecycle. Threat actors have sophisticated methods and automation for infrastructure and user endpoint attacks that they use frequently against both production systems and development processes. Infrastructure security is a foundational pillar of the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) that Microsoft recommends.
 
 This must include all elements of the development and operational lifecycle including but not limited to:
 
@@ -357,7 +360,7 @@ Additional details and resources include:
 ### Network access controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
-Ensure that security best practices for network access management are followed for all technical elements of the development environment, CI/CD pipeline, operational workload environment, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Network security is a foundational pillar of the Zero Trust model that Microsoft recommends.
+Ensure that security best practices for network access management are followed for all technical elements of the development environment, CI/CD pipeline, operational workload environment, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Network security is a foundational pillar of the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) that Microsoft recommends.
 
 Network security should include
 
@@ -405,5 +408,7 @@ High Security: Standard controls plus custom per-workload detections based on in
 ## Next steps
 
 Adopt these security controls and adapt them to your organization risk appetite and productivity requirements. You should use a continuous improvement approach where you start somewhere and build towards the ideal state.
+
 You should start by prioritize controls and the minimum/ideal target levels to ensure you have high positive security impact and low-friction changes first. Then implement and integrate the first control, move to the next control, implement and integrate that, and so on. 
+
 You should prioritize the critical foundations first because of their broad positive impact and credential and secret scanning (LINK) because of its high impact and frequent attacker use.
