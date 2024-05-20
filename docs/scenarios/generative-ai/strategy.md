@@ -104,7 +104,7 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 | Increase employee productivity | - Employee efficiency ratio<br> - Task completion time<br> - Employee satisfaction survey results |
 | Increase operational efficiency | - Process cycle time<br> - Overall Equipment Effectiveness (OEE)<br> - Workflow completion rate |
 | Increase revenue | - Revenue growth rate<br> - Average Revenue Per User (ARPU)<br> - Conversion rate |
-| Reduce costs | Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
+| Reduce costs | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
 | Improve product quality | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
 ## Next steps
