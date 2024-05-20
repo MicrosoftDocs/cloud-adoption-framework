@@ -3,16 +3,16 @@ title: Govern your portfolio of hybrid and multicloud workloads
 description: Expand governance capabilities to hybrid, multicloud, and edge deployments.
 author: martinekuan
 ms.author: martinek
-ms.date: 12/14/2020
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
 
 # Govern your portfolio of hybrid and multicloud workloads
 
-The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams can innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this newfound freedom is the infrastructure-as-code foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
+The cloud has fundamentally changed IT governance. Intensive manual reviews and change controls processes can now be replaced with automated guardrails and compliance tools. Cloud adoption and workload teams can innovate with confidence, knowing that compliance and governance requirements are detected and are often automated. The key to this newfound freedom is the infrastructure-as-code (IaC) foundation of the cloud. All assets equate back to a defined block of code that can be tested and governed, like any other code base.
 
-In a hybrid, multicloud, and edge strategy, the advantages of cloud governance can now be expanded beyond the cloud. You can combine [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview), [Azure Blueprints](/azure/governance/blueprints/overview), and other governance tools. The combination extends many of your governance guardrails to virtually any cloud resource, private or public clouds alike. [Unified operations](./unified-operations.md) is the best concept to extend your governance controls by using native Azure tools.
+You can expand the advantages of cloud governance beyond the cloud in a hybrid, multicloud, and edge strategy. You can combine [Azure Arc](/azure/azure-arc/overview) with [Azure Policy](/azure/governance/policy/overview) and other governance tools. This integration broadens the scope of your governance controls to encompass almost all cloud resources, whether they reside in private or public clouds. Use native Azure tools to incorporate the [unified operations](./unified-operations.md) concept and enhance your governance controls.
 
 ## Deploy a unified operations MVP for governance
 
@@ -37,7 +37,7 @@ Security baselines are among the most common ways that you can expand your gover
 - [Connect AWS accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-aws)
 - [Connect GCP accounts to Microsoft Defender for Cloud](/azure/security-center/quickstart-onboard-gcp)
 
-## Next steps
+## Next step
 
 For more guidance for your cloud adoption journey, see the following article:
 
