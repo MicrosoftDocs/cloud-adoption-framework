@@ -109,9 +109,9 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
 
-- [Set budget(s) in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
+- [Set budget(s) in Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 
-- [Create Azure Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
+- [Create Microsoft Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
