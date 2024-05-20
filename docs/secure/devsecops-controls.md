@@ -21,7 +21,7 @@ The security control profiles are:
 - High Security (Right) – Stringent security for workloads with a potential high impact 
 on business and human safety
 
-## DevSecOps Security Controls
+## DevSecOps security controls
 
 This section provides a reference of recommended security controls for each type of workload. This reference may be adopted as is or it can be adapted to your existing software development and software security processes. Most organizations can’t implement all these controls right away if they aren’t already doing some of them, so taking a continuous improvement approach is often the best approach (prioritize controls, implement the first control, move to the next control, implement it, and so on).  Most organizations should prioritize the critical foundations first. 
 
@@ -38,38 +38,38 @@ Key planning considerations include:
    - **Secure all code** – regardless of whether it is written by human or generative AI
    - **Use both for security** - Apply both classic and AI controls as available to increase visibility and context for any security issues (such as code analysis tools)
 
-## Security Controls
+## Security controls
 
 The controls are grouped into the stages of development they apply to and the common controls (critical foundations) that apply across all development stages and control profiles:
 
-- **Critical Foundations**
-   - Security in Blameless Postmortems
-   - Secure Coding Standards
-   - Security Tools and Training
-   - Tool Chain Security
-- **Secure Design**
-   - Threat Model (Security Design Review)
-- **Secure Code**
-   - Code Analysis
-- **Secure CI/CD Pipeline**
-   - Reinforce/Check ‘Secure the Code’ Controls
-   - Secure Pipeline (Access/Infrastructure/Apps)
-- **Secure Operations**
-   - Live Site Penetration Testing
-   - Identity/App Access  and Controls
-   - Host/Container Controls
-   - Network Access Controls
+- **[Critical foundations](#establish-critical-foundations)**
+   - [Provide security training](#providing-security-training)
+   - [Security in blameless postmortems](#include-security-in-blameless-postmortems)
+   - [Secure coding standards](#establish-security-standards-metrics-and-governance)
+   - [Tool chain security](#require-use-of-proven-security-features-languages-and-frameworks)
+- **Secure design**
+   - Threat model (security design review)
+- **Secure code**
+   - Code analysis
+- **Secure CI/CD pipeline**
+   - Reinforce/check ‘secure the code’ controls
+   - Secure pipeline (access/infrastructure/apps)
+- **Secure operations**
+   - Live site penetration testing
+   - Identity/application access and controls
+   - Host/container controls
+   - Network access controls
    - Monitoring, response, and recovery
 
 Each of these are defined in the following sections:
 
-### Establish Critical Foundations
+### Establish critical foundations
 
 This supports Continuous SDL Practice 1 – Establish security standards, metrics, and governance, Practice 2 – Require use of proven security features, languages, and frameworks, and Practice 10 – Provide security training
 
 These controls apply across all development stages and control profiles
 
-#### Providing Security Training 
+#### Providing security training 
 
 This control focuses on providing your developers and security teams with training to recognize and resolve security issues through the development lifecycle. Without security training your teams could miss core security weaknesses that lead to compromise during the applications lifetime. 
 
@@ -83,7 +83,7 @@ Although security is everyone’s job, it’s important to remember that not eve
 
 In particular, developers and the engineers building systems are not usually security experts, so training in both the technical and conceptual aspects of threat modeling is necessary for them to become effective at it so they can build systems that are Secure by Design. This is also vital for the threat modeling process to work at-scale in organizations where developers far outnumber security professionals. Threat modeling must be thought of as a fundamental engineering skill in which all developers and engineers must have at least basic proficiency. Therefore, development and engineering teams must be trained to be competent at threat modeling as part of onboarding and with periodic refreshers. 
 
-#### Include Security in Blameless Postmortems
+#### Include security in blameless postmortems
 
 Blameless postmortem analysis is a critically important method for teams to learn from mistakes effectively and efficiently without triggering defensiveness from team members by seeking someone to blame. Security learnings should be explicitly included into the blameless postmortem process to ensure the teams are also maximizing security learnings. 
 
@@ -101,7 +101,7 @@ Define and publish a list of approved tools and their associated security checks
 Ensure developers and engineers are taking advantage of new security analysis functionality and protections by always using the latest compiler, linker, libraries and are using the appropriate compiler and linker flags to generate secure executables.
 Organizations should also implement a review and approval process to validate the security of any integrated components (and establish a policy to only use approved components in build and deploy processes that is enforced and monitored).
 
-#### Foundational Identity Security
+#### Foundational identity security
 
 Ensure that the use and integration of identity follows well-established security best practices. Threat actors use identity attack techniques frequently against both production systems and development processes. A popular saying captures this, “attackers don't break in, they just log in”.
 
