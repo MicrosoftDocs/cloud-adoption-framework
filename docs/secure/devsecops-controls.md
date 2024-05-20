@@ -35,7 +35,7 @@ Key planning considerations include:
 
 - **Shift left… but double-check** - This reference is designed to detect and correct issues as early as possible to enable you to fix them when it's easier and cheaper to fix the issues (sometimes called shift left), but also to assume failure and include double checking later in the process. Always double-check any security controls in the CI/CD process to ensure avoidable issues don’t slip through to production systems. This concept follows "defense in depth" and "fail safe" principles.
 - **Artificial Intelligence (AI)** – The two main implications of artificial intelligence are:
-   - **Secure all code** regardless of whether it's written by human or generative AI
+   - **Secure all code** regardless of whether written by human or generative AI
    - **Use both for security** - Apply both classic and AI controls as available to increase visibility and context for any security issues (such as code analysis tools)
 
 ## Security controls
@@ -89,11 +89,14 @@ Blameless postmortem analysis is a critically important method for teams to lear
 
 #### Establish security standards, metrics, and governance
 
-Establishing security standards, metrics, and governance underpins the organization’s ability to innovate. It enables a strong security program that not only protects the organization’s assets but also aligns with its business objectives. Security standards are the baseline requirements and best practices for keeping an organization's systems, data, and processes safe.
+Establishing security standards, metrics, and governance underpins the organization’s ability to innovate. It enables a strong security program that not only protects the organization’s assets but also aligns with its business objectives. Security standards are the baseline requirements and best practices for keeping an organization's systems, data, and process safe.
 
 These standards should be measured and governed, including monitoring for compliance and regularly reviewing and updating them for current threats, tooling, and other factors. This should cover the entire lifecycle from initial ideation through the decommissioning of the application and any supporting development environments.
 
-Metrics are measurements used to see how effective the security controls and processes are. One key metric is the Mean Time To Remediate (MTTR) for tracking how long an application remains vulnerable. This allows us to strategically invest in issuing security fixes more promptly. Note that this differs from MTTR in security operations focused on time to remove adversary access to the organization’s assets.
+Metrics are measurements used to see how effective the security controls and processes are. One key metric is the Mean Time To Remediate (MTTR) for tracking how long an application remains vulnerable. This allows us to strategically invest in issuing security fixes more promptly. 
+
+> [!NOTE]
+> This concept differs from MTTR in security operations focused on time to remove adversary access to the organization’s assets.
 
 Security governance acts as a guiding hand to security teams and are often frameworks and processes that organizations use to manage and control their information security. These include Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
 
