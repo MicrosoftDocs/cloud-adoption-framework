@@ -207,21 +207,27 @@ There are a multitude of tools available to use for static analysis we recommend
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain
 
 This control focuses on securing your development supply chain by using SCA tools and frameworks such as the S2C2F to reduce the risk of being compromised by third party code.
+
 In today’s landscape, a vast majority of applications rely on open source software (OSS) with little oversight or control from consumers of these components. This control highlights core strategies, techniques, and technologies to securely ingest, consume, use, and maintain OSS. It also emphasizes securing internal dependencies, ensuring a complete end-to-end lifecycle, regardless of who coded the software.
+
 Failure to control your software supply chain exposes you to significant vulnerabilities introduced by code you do not control. A notorious example is the log4J/Log4Shell vulnerability, which allowed remote code execution in any system or application using this package. Such vulnerabilities can arise accidentally or maliciously (e.g., XZ Vulnerability).
+
 Securing your supply chain is an essential part of ensuring a secure development lifecycle and should be considered at every profile state, although every single state should follow the same standardized process of ingesting dependencies.
 
 Temporary Minimum: Inventory all of your dependences so you understand the impact a OSS vulnerability will have on your application. This can be achieved using dependabot or other Software Composition Analysis (SCA) tools. These tools may also help you generate a Software bill of Materials (SBOM).
 Balanced state: Analyze all OSS Vulnerabilities and automatically fix them with automatic pull requests. This can similarly be achieving using dependabot (Review, Alerts & Updates) and the GitHub Dependency graph/review.
 High Security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
 
-To learn more about this contol and measure your OSS Security maturity please review the OSS Supply Chain Framework (OSS Secure Supply Chain Framework (microsoft.com)) Which provides guidance on how to secure and implement the Secure Supply Chain Consumption Framework (SC2CF).
-Additionally, please review GitHub’s best practice documentation on Securing your development lifecycle. (Securing your end-to-end supply chain - GitHub Docs)
+To learn more about this contol and measure your OSS Security maturity please review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource) which provides guidance on how to secure and implement the Secure Supply Chain Consumption Framework (SC2CF).
+
+Additionally, review [GitHub’s best practice documentation on Securing your development lifecycle](https://docs.github.com/code-security/supply-chain-security/end-to-end-supply-chain/end-to-end-supply-chain-overview).
 
 ### Security code review
 
 This control focuses on having a security expert review code to identify potential security flaws. This helps find security issues that are hard to automate detections for.
+
 This can be performed by a peer on the same developer team with application security expertise, a security champion within the organization, an application security expert from central app security team, or an external party.
+
 This must always be a separate person from the developer who wrote the code. This should be done as a separate activity after automated code analysis is complete.
 
 Temporary Minimum: This is recommended for this profile
@@ -233,8 +239,10 @@ High Security: This is required for all high security applications and often inv
 This supports Continuous SDL Practice 7 – Perform Security Testing
 
 This control focuses on reducing risk from authentication keys and other secrets exposed in code. Threat actors have well established expertise and automation to find embedded secrets in code and exploit it.
-The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets has been a traditional coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management. This will primarily take the form of using managed identities  (such as Entra ID Managed identities for Azure resources - Managed identities for Azure resources)
-If the use of secrets is required, its critical to secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. Under no circumstances should plain text keys and secrets ever be stored in code (even temporarily!) as these secrets will be found by attackers and exploited.
+
+The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets has been a traditional coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management. This will primarily take the form of using managed identities, like [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview)
+
+If the use of secrets is required, its mandatory to secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. **Under no circumstances should plain text keys and secrets ever be stored in code even temporarily!** These secrets will be found by attackers and exploited.
 
 > [!IMPORTANT]
 > Internal source code repositories are not safe!
