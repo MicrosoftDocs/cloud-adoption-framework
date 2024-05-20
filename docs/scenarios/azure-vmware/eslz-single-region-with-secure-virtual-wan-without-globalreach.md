@@ -50,7 +50,7 @@ With ExpressRoute to ExpressRoute transitivity enabled on the Secure Hub and Rou
 
 The diagram illustrates traffic flows from the perspective of the Azure VMware Solution Private Cloud. 
 
-![Diagram of Single-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/single-region-without-globalreach-2.png)  
+![Diagram of Single-Region Azure VMware Solution with Azure VMware Solution Topology](./media/single-region-without-globalreach-2.png)  
 
 **Traffic Flow Chart**  
 
