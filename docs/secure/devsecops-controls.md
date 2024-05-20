@@ -9,7 +9,7 @@ ms.custom: internal
 ---
 # DevSecOps controls
 
-This page describes how to apply the security controls to support the Continuous SDL security practices. These security controls are an integral part of a DevSecOps strategy spanning people, process, and technology. 
+This page describes how to apply the security controls to support the [Continuous SDL](https://www.microsoft.com/SDL) security practices. These security controls are an integral part of a [DevSecOps strategy](/azure/cloud-adoption-framework/secure/innovation-security) spanning people, process, and technology. 
 This documentation describes each control and shows how to apply these controls to three security profiles. These profiles meet typical security requirements for common business scenarios at most organizations:
 
 ![XXX]XXX
@@ -113,29 +113,36 @@ See Identity/App Access Controls for more information.
 
 Apply identity security for systems and applications by following the guidance in these resources:
 
-- Secure your organization's identities with Microsoft Entra ID - Microsoft Entra | Microsoft Learn
-- Microsoft identity platform documentation - Microsoft identity platform | Microsoft Learn
-- Microsoft identity platform overview - Microsoft identity platform | Microsoft Learn
+- [Secure your organization's identities with Microsoft Entra](/entra/fundamentals/concept-secure-remote-workers)
+- [Microsoft identity platform](/entra/identity-platform/)
+- [What is the Microsoft identity platform?](/entra/identity-platform/v2-overview)
  
 #### Cryptographic Standards
 
-Apply sound cryptographic practices to all usage of cryptography. Follow all the guidelines described in Continuous SDL Practice 4 – Define and Use cryptographic Standards  
-Additional information is available at https://learn.microsoft.com/security/engineering/cryptographic-recommendations
+Apply sound cryptographic practices to all usage of cryptography. Follow all the guidelines described in Continuous SDL Practice 4 – Define and Use cryptographic Standards.
+
+For more information, see [Microsoft SDL cryptographic recommendations](/security/engineering/cryptographic-recommendations).
 
 #### Securing your development environment
 
 This supports Continuous SDL Practice 6 – Securing your engineering environment 
 
 This control focuses on securing your development environment using secure workstations and Integrated Development Environments (IDEs). This control highlights the benefit of using a Zero Trust approach in your software development lifecycle. 
-In the current landscape attackers have expanded their operations to target your developers’ machines and tamper with build process’s. A pivotal example of this was the SolarWinds attack where the attacker inserted a malicious DLL before the final stages of the software build. Effectively this backdoored the application and resulted in a targeted attack that was distributed to thousands of customers worldwide via the supply chain. For more information about the SolarWinds attack please review this Microsoft Blog (Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers | Microsoft Security Blog) 
+
+In the current landscape attackers have expanded their operations to target your developers’ machines and tamper with build process’s. A pivotal example of this was the SolarWinds attack where the attacker inserted a malicious DLL before the final stages of the software build. Effectively this backdoored the application and resulted in a targeted attack that was distributed to thousands of customers worldwide via the supply chain. For more information about the SolarWinds attack, see the Microsoft Blog [Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers](https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/) 
+
 It is essential to harden workstations, build environments, identities, and other development systems to ensure the integrity of developed applications. Failure to do so creates a pathway for attackers to compromise your application via your Source Code Management (SCM) system or via your developer workstation. 
+
 This practice is a critical foundation of your development lifecycle and should be established over all profiles. 
+
 Throughout this practice you must take a Zero Trust approach. At it's core the Zero Trust model requires that each access request (user, service or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points, limit user access, especially privilege users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies and segment access to minimize the possible damage in the event of a breach.  
-Hardening your development environment can be achieved through a variety of different methods however a good starting point is to consider the developer workstation. By utilising technologies such as GitHub Codespaces (GitHub Codespaces overview - GitHub Docs) or Microsoft DevBox  (What is Microsoft Dev Box? - Microsoft Dev Box | Microsoft Learn) you shift the development environment to a SAAS Application which can then be managed through security & network settings or through organizational policies. 
+
+Hardening your development environment can be achieved through a variety of different methods however a good starting point is to consider the developer workstation. By utilising technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box) you shift the development environment to a SAAS Application which can then be managed through security & network settings or through organizational policies.
+
 To further lockdown developer workstations you can issue them Privileged access workstations/Secure Access workstations (PAW/SAW) Devices directly to the developers reducing the threat vectors and ensuring a standardized/organizational controlled developer device. 
 
-- Why are privileged access devices important - Privileged access | Microsoft Learn
-- Deploying a privileged access solution - Privileged access | Microsoft Learn
+- [Why are privileged access devices important](/security/privileged-access-workstations/privileged-access-devices)
+- [Deploying a privileged access solution](/security/privileged-access-workstations/privileged-access-deployment)
 
 ### Perform threat modeling (security design review)
 
@@ -151,7 +158,7 @@ The stages of threat modelling are:
 
 1. **Identify use cases, scenarios, and assets** – Start with understanding what business functions and use cases the system enables to help assess the potential business impact of any system compromise and inform the discussions to follow. 
 1. **Create an architectural overview** – Create a visual summary of the application (or use an existing one) to provide a clear understanding of the system and how it works. This should include a business process map, components and subsystems, trust boundaries, authentication and authorization mechanisms, external and internal interfaces, and data flows between actors and components. 
-1. **Identify the threats** - Use a common methodology for enumerating potential security threats such as the STRIDE model or OWASP threat modeling. 
+1. **Identify the threats** - Use a common methodology for enumerating potential security threats such as the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats) or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling). 
 1. **Identify and track mitigations** - Monitor and track discovered design flaws using existing development processes and tools to ensure the fixes are implemented and documented. This should include prioritizing which mitigations to do first so that teams spend their time on the most important efforts first. Note that this is a risk driven process and you may not have resources to mitigate all risks fully so carefully consider which mitigations (including partial mitigations) raise the cost for an attacker for the least amount of defensive cost and resources. The goal of security is attacker failure which can take the form of fully blocking an attack technique, detecting them to enable a defender response, slowing them down to give defenders time to respond, limiting the scope of damage, and more. 
 
 A threat model often serves as an education process for all involved as well as providing important context for other security planning, implementation, and testing. 
