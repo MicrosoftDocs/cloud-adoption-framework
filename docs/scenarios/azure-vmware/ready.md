@@ -3,7 +3,7 @@ title: Azure landing zone review for Microsoft Azure VMware Solution
 description: Learn about how Microsoft Azure VMware Solution affects your Azure landing zone design.
 author: martinekuan
 ms.author: martinek
-ms.date: 04/21/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: e2e-azure-vmware, think-tank
 ---
@@ -68,10 +68,9 @@ When working with Azure VMware Solution in both primary (protected) and secondar
 Azure VMware Solution requires an understanding of Azure landing zones and makes use of infrastructure-as-code to deploy end-to-end solution templates. These solution templates are customizable and are a starter for most Azure VMware Solution scenarios. For more information, see:
 
 - [What is an Azure landing zone?](../../ready/landing-zone/index.md)
-- [Choose a landing zone option](../../ready/landing-zone/choose-landing-zone-option.md)
-- [Refactoring landing zones](../../ready/landing-zone/refactor.md)
+- [Deploy Azure landing zones](/azure/architecture/landing-zones/landing-zone-deploy)
 
-## Next steps
+## Next step
 
 Examine design considerations and recommendations related to identity and access management that are specific to the deployment of Azure VMware Solution.
 
