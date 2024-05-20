@@ -5,7 +5,6 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/16/2024
 ms.topic: conceptual
-ms.service: caf
 ---
 
 # Prepare your environment for generative AI
