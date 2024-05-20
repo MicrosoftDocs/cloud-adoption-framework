@@ -37,11 +37,13 @@ Having the right skills in place is crucial for the success of your generative A
 Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training resources to get started with generative AI.
 
 | Training resource | Description | Audience |
-|--------|-------------|----------|
+|---|---|---|
 | [Microsoft Azure AI Fundamentals: Generative AI](/training/paths/introduction-generative-ai/) | - Generative AI<br> - Azure OpenAI Service<br> - Responsible Generative AI | - Leaders<br> - Tech specialists<br> - End users |
 | [Introduction to generative AI for trainers](/training/paths/intro-generative-ai-for-trainers/) | This learning path explores the potential applications of generative AI tools in your training and personal pursuits. You will learn how to create engaging educational materials by harnessing the capabilities of Microsoft Copilot and how to create images in diverse artistic styles using AI-powered image generators. | - Leaders<br> - Tech specialists |
 | [Develop Generative AI solutions with Azure OpenAI Service](/training/paths/develop-ai-solutions-azure-openai/) | Azure OpenAI Service provides access to OpenAI's powerful large language models such as ChatGPT, GPT, Codex, and Embeddings models. These models enable various natural language processing (NLP) solutions to understand, converse, and generate content. Users can access the service through REST APIs, SDKs, and Azure OpenAI Studio. | - Tech specialists |
 | [Get started with Microsoft Copilot for Security](/training/paths/security-copilot-and-ai/) | Learn about Microsoft Copilot for Security, an AI-powered security analysis tool that enables analysts to process security signals and respond to threats at a machine speed, and the AI concepts upon which it's built. | - Tech specialists<br> - Security leaders<br> - Security engineers |
+| [Career Essentials in Generative AI by Microsoft and LinkedIn](https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin) | Discover the skills needed to apply generative AI in your career. Learn the core concepts of artificial intelligence and generative AI functionality. | - Leadership<br> - Tech specialists<br> - End users |
+| [Generative AI for Beginners - A Course](https://microsoft.github.io/generative-ai-for-beginners/) | Learn the fundamentals of building Generative AI applications with this comprehensive course by Microsoft Cloud Advocates. | - Tech specialists |
 
 ## Next steps
 
