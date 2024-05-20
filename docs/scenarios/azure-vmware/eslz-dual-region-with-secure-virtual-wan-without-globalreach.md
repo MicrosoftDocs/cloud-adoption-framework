@@ -51,7 +51,7 @@ With ExpressRoute to ExpressRoute transitivity enabled on the Secure Hub and Rou
 
 The diagram illustrates traffic flows from the perspective of the Azure VMware Solution Private Cloud Region 1 and Azure VMware Solution Private Cloud Region 2. 
 
-![Diagram of Dual-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/dual-region-without-globalreach-2.png)  
+![Diagram of Dual-Region Azure VMware Solution with Azure VMware Solution Topology](./media/dual-region-virtual-wan-without-globalreach-2.png)  
 
 **Traffic Flow Chart**  
 
@@ -68,24 +68,34 @@ The diagram illustrates traffic flows from the perspective of the Azure VMware S
 
 ## on-premises connectivity & traffic flow
 
-This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Region 1 and Region 2 hubs (connections labeled as "E").
+This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to both Hub 1 and Hub 2 (connection labeled as "E").
 
-On-premises systems can communicate to Azure VMware Solution Cloud Region 1 via connection Global Reach (A). On-premises systems are also able to communicate with Azure VMware Solution Cloud Region 2 via connection Global Reach (B). 
+With ExpressRoute to ExpressRoute transitivity enabled on both Secure Hubs and Routing-Intent enabled, each Secure Hub sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises over connection "E". In addition to the default RFC 1918 addresses, on-premises learns more specific routes from Azure Virtual Networks and Branch Networks that are connected to both Hub 1 and Hub 2. 
 
-Ensure that you explicitly configure Global Reach (A), Global Reach (B), and Global Reach (C). It's imperative to do this step to prevent connectivity issues between Global Reach sites. For more information, see traffic flow section.
+**Suboptimal Routing**  
+By default, on-premises won’t learn the specific routes for both Azure VMware Solution Private Clouds. Instead, it routes to both Azure VMware Solution Private Clouds using the default RFC 1918 addresses it learns over connection “E”. On-premises will learn the default RFC 1918 addresses from both Hub 1 and Hub 2 via connection “E”. Consequently, from on-premises, traffic destined to Azure VMware Solution Private Clouds will Equal Cost multi-path (ECMP) over both connections “E”. 
 
-The diagram illustrates traffic flows from an on-premises perspective.
+**Suboptimal Routing Flow Example** 
+For example, traffic from on-premises destined to Azure VMware Solution Private Cloud 1 will go through the following flow.  
+On-premises>Hub 2 Connection “E”>Hub 2’s firewall>inter-hub connection>Hub 1’s firewall>Azure VMware Solution Private Cloud 1.  
 
-![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-3.png)  
+If left alone, this indirect routing can cause latency, performance issues, and packet drops. To avoid this, we should advertise more specific routes to on-premises for both Azure VMware Solution Private Clouds 1 and 2. This will ensure that traffic is directed straight to the hub that is connected to the Azure VMware Solution cloud.
+
+**Introduce More Specific Routes and Resolve Suboptimal Routing**  
+This traffic transits through the Hub firewall, as shown in the diagram. The Hub firewall has the specific routes for Azure VMware Solution networks and routes traffic toward the destination over connection “D”. Traffic from on-premises, heading towards Virtual Networks, will transit the Hub firewall. For more information, see the traffic flow section for more detailed information.
+
+As mentioned earlier, when you enable ExpressRoute to ExpressRoute transitivity on the Hub, it sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to your on-premises network. Therefore, you shouldn't advertise the exact RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Advertising the same exact routes creates routing problems within Azure. Instead, you should advertise more specific routes back to Azure for your on-premises networks.
+
+The diagram illustrates traffic flows from the perspective of on-premises. 
+
+![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-without-globalreach-3.png)  
 
 **Traffic Flow Chart**
 
-| Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
+| Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN Hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
-| 2 | on-premises | &#8594;| Azure VMware Solution Cloud Region 1 | No, traffic bypasses firewall and transits Global Reach (A)|
-| 7 | on-premises | &#8594;| Azure VMware Solution Cloud Region 2 | No, traffic bypasses firewall and transits Global Reach (B)|
-| 8 | on-premises | &#8594;| Virtual Network 1 | Yes, traffic is inspected at Hub 1 firewall|
-| 9 | on-premises | &#8594;| Virtual Network 2 | Yes, traffic is inspected at Hub 2 firewall|
+| 3 | on-premises | &#8594;| Azure VMware Solution Cloud | Yes, traffic is inspected at the Hub firewall|
+| 4 | on-premises | &#8594;| Virtual Network | Yes, traffic is inspected at the Hub firewall|
 
 ## Azure Virtual Network connectivity & traffic flow
 
