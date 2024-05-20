@@ -48,9 +48,9 @@ The controls are grouped into the stages of development they apply to and the co
    - [Secure coding standards](#establish-security-standards-metrics-and-governance)
    - [Tool chain security](#require-use-of-proven-security-features-languages-and-frameworks)
 - **Secure design**
-   - Threat model (security design review)
+   - [Threat model (security design review)](#perform-threat-modeling-security-design-review)
 - **Secure code**
-   - Code analysis
+   - [Code analysis](#code-analysis)
 - **Secure CI/CD pipeline**
    - Reinforce/check ‘secure the code’ controls
    - Secure pipeline (access/infrastructure/apps)
@@ -137,7 +137,7 @@ To further lockdown developer workstations you can issue them Privileged access 
 - Why are privileged access devices important - Privileged access | Microsoft Learn
 - Deploying a privileged access solution - Privileged access | Microsoft Learn
 
-### Perform Threat Modeling (Security Design Review)
+### Perform threat modeling (security design review)
 
 This supports Continuous SDL Practice 3 – Perform Threat Modelling
 
@@ -162,7 +162,8 @@ Create and analyze threat models by communicating about the security design of t
 Threat modeling AIML - https://learn.microsoft.com/security/engineering/threat-modeling-aiml 
 Integrated threat modeling with DevOps - https://learn.microsoft.com/security/engineering/threat-modeling-with-dev-ops
 
-### Code Analysis 
+### Code analysis
+
 This supports Continuous SDL Practice 7 – Perform Security Testing 
 This control focuses on increasing the security of the code as developers write/enter it into an integrated development environment (IDE) or as they check code in. This is the cornerstone of DevSecOps practices as it directly addresses vulnerabilities that attackers exploit regularly. 
 Without this control, you may be missing vulnerabilities that have been coded directly into your application by your developers. Your developers are not being malicious but may lack the skilling needed to identify why what they coded is insecure. 
@@ -181,7 +182,7 @@ High Security: Ensure all applicable applications enforce a detailed and documen
 
 There are a multitude of tools available to use for static analysis we recommend checking out the list at Microsoft Security Development Lifecycle
 
-### Supply Chain / Dependency Management
+### Supply chain / dependency management
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain 
 
@@ -197,7 +198,7 @@ High Security: Actively block all insecure packages with exploitable vulnerabili
 To learn more about this contol and measure your OSS Security maturity please review the OSS Supply Chain Framework (OSS Secure Supply Chain Framework (microsoft.com)) Which provides guidance on how to secure and implement the Secure Supply Chain Consumption Framework (SC2CF).
 Additionally, please review GitHub’s best practice documentation on Securing your development lifecycle. (Securing your end-to-end supply chain - GitHub Docs)
 
-### Security Code Review
+### Security code review
 
 This control focuses on having a security expert review code to identify potential security flaws. This helps find security issues that are hard to automate detections for. 
 This can be performed by a peer on the same developer team with application security expertise, a security champion within the organization, an application security expert from central app security team, or an external party. 
@@ -207,13 +208,14 @@ Temporary Minimum: This is recommended for this profile
 Standard: This is strongly recommended for this profile 
 High Security: This is required for all high security applications and often involves multiple individual experts. 
 
-### Credential and Secret Scanning
+### Credential and secret scanning
 
 This supports Continuous SDL Practice 7 – Perform Security Testing 
 
 This control focuses on reducing risk from authentication keys and other secrets exposed in code. Threat actors have well established expertise and automation to find embedded secrets in code and exploit it. 
 The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets has been a traditional coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management. This will primarily take the form of using managed identities  (such as Entra ID Managed identities for Azure resources - Managed identities for Azure resources)
 If the use of secrets is required, its critical to secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. Under no circumstances should plain text keys and secrets ever be stored in code (even temporarily!) as these secrets will be found by attackers and exploited.
+
 > [!IMPORTANT]
 > Internal source code repositories are not safe!
 > 
@@ -224,14 +226,15 @@ Good secret hygiene is essential and is required in all profiles.
 > [!NOTE]
 > As these are found by your teams or by attackers, you must ensure that the key cannot be used to access resources (various by resource type) in addition to changing to a more secure access method like managed identities. 
 
-Additional Information: 
+Additional Information:
+
 - To learn more please visit Secret Scanning for GitHub Advanced Security for Azure DevOps - Azure Repos | Microsoft Learn
 - To understand how best to use Key Vault please review out Best practices for using Azure Key Vault | Microsoft Learn
 
 > [!NOTE]
 > We strongly recommend using per workload keys with secret storage solutions like Azure Key Vault 
 
-### Secure Pipeline
+### Secure pipeline
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain 
 
@@ -253,15 +256,18 @@ This supports Continuous SDL Practice 7 – Perform Security Testing
 
 Have professional application penetration testers attempt to compromise a live instance of the complete workload to validate that the security measures are effective and consistent. Penetration testing has been used successfully for many years to find and highlight the path of least resistance that an attacker could use to exploit your application and compromise this business. Penetration tests can be incredibly valuable when done at the right time and are at their best once all the cheap and easy to exploit vulnerabilities found in previous scans are complete.
 
-For this reason we recommend you do them at all levels of the DevSecOps Security Profiles. 
+For this reason we recommend you do them at all levels of the DevSecOps Security Profiles.
+
 Temporary Minimum: We recommend that you do a penetration test on applications especially if the project due to its pace may have vulnerabilities. You must identify the easy methods into the application that an attacker may exploit. 
 Standard: Similarly at a Standard profile we recommend that you do a penetration test however, in this case you may uncover more complex attacks/weakness’s due to the extra care that is taken early in the development process. 
 High Security: In the case of line of business applications and critical workloads it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with additional attention and care.
+
 Integrate the findings and feedback from these activities to improve your security processes and tools. 
 
-### Identity/App Access Controls
+### Identity/application access controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
+
 Ensure that security best practices for identity and access management (including securing privileged access – https://aka.ms/SPA) are followed for all technical elements of the development environment, CI/CD pipeline, operational workload, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Identity and access management is a foundational pillar of the Zero Trust model that Microsoft recommends.
 Ensure security best practices are followed for all development systems as well as the infrastructure hosting them (VMs, containers, network devices, and more)
 
@@ -282,7 +288,7 @@ https://learn.microsoft.com/azure/security/fundamentals/steps-secure-identity
 - What's Microsoft Entra Permissions Management (CIEM capability)
 https://learn.microsoft.com/entra/permissions-management/overview 
 
-### Host/Container/Environment Controls
+### Host/container/environment controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
 
@@ -322,7 +328,7 @@ https://learn.microsoft.com/azure/defender-for-cloud/
 - Windows Defender Application Control and virtualization-based protection of code integrity - https://learn.microsoft.com/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control 
 - Device Guard - https://learn.microsoft.com/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control
 
-### Network Access Controls
+### Network access controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment
 Ensure that security best practices for network access management are followed for all technical elements of the development environment, CI/CD pipeline, operational workload environment, and other development systems. Threat actors have sophisticated methods and automation for identity attacks that they use frequently against both production systems and development processes. Network security is a foundational pillar of the Zero Trust model that Microsoft recommends.
@@ -359,7 +365,7 @@ https://learn.microsoft.com/azure/web-application-firewall/overview
 - Azure DDoS Protection
 https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview
 
-### Monitoring, Response and Recovery
+### Monitoring, response and recovery
 
 This supports Continuous SDL Practice 9 – Implement Security Monitoring and Response 
 
