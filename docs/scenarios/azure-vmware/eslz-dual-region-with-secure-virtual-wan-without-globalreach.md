@@ -88,7 +88,7 @@ As mentioned earlier, when you enable ExpressRoute to ExpressRoute transitivity 
 
 The diagram illustrates traffic flows from the perspective of on-premises. 
 
-![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-without-globalreach-3.png)  
+![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-without-globalreach-3.png)  
 
 **Traffic Flow Chart**
 
