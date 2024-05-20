@@ -836,6 +836,21 @@
           "redirect_document_id": false
       },
       {
+         "source_path": "docs/scenarios/oracle-iaas/introduction-oracle-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-network-topology.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-network-topology-iaas",
+          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/oracle-iaas/oracle-security-guideline-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-security-overview-iaas",
+          "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/landing-zone/align-scenarios.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/align-scenario-single-subscription",
          "redirect_document_id": false
@@ -1551,6 +1566,11 @@
          "redirect_document_id": false
       },
       {
+        "source_path": "docs/scenarios/oracle-iaas/manage-resources-oracle-landing-zone.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/oracle-iaas/index",
+        "redirect_document_id": false   
+      },
+      {
          "source_path": "docs/govern/guides/complex/initial-corporate-policy.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/index",
          "redirect_document_id": false
@@ -1813,6 +1833,31 @@
       {
          "source_path": "docs/govern/security-baseline/toolchain.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#automate-security-governance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/choose-landing-zone-option.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/foundation-blueprint.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/migrate-landing-zone.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/refactor.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/organize-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
          "redirect_document_id": false
       }
    ]
