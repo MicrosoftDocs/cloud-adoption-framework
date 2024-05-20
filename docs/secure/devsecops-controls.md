@@ -108,7 +108,7 @@ Define and publish a list of approved tools and their associated security checks
 
 Ensure developers and engineers are taking advantage of new security analysis functionality and protections by always using the latest compiler, linker, libraries, and are using the appropriate compiler and linker flags to generate secure executables.
 
-Organizations should implement a review and approval process to validate the security of any integrated components. They should establish a policy to only use approved components in build and deploy processes that is enforced and monitored.
+Organizations should implement a review and approval process to validate the security of any integrated components. They should establish a policy to only use approved components in build and deploy processes that are enforced and monitored.
 
 #### Foundational identity security
 
@@ -146,7 +146,7 @@ This practice is a critical foundation of your development lifecycle and should 
 
 Throughout this practice you must take a Zero Trust approach. At its core the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) requires that each access request (user, service, or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points, limit user access, especially privilege users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies and segment access to minimize the possible damage in the event of a breach. 
 
-Hardening your development environment can be achieved through a variety of different methods however a good starting point is to consider the developer workstation. By utilizing technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box) you shift the development environment to a SAAS Application which can then be managed through security & network settings or through organizational policies.
+Hardening your development environment can be achieved through various methods, however a good starting point is to consider the developer workstation. By utilizing technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box) you shift the development environment to a SaaS Application which can then be managed through security and network settings or through organizational policies.
 
 To further lockdown developer workstations you can issue them Privileged access workstations/Secure Access workstations (PAW/SAW) Devices directly to the developers reducing the threat vectors and ensuring a standardized/organizational controlled developer device.
 
@@ -157,13 +157,13 @@ To further lockdown developer workstations you can issue them Privileged access 
 
 This supports Continuous SDL Practice 3 – Perform Threat Modeling.
 
-This control identifies security weaknesses in the design that can result in security incidents and business damage. Security weaknesses in the design can be very difficult to mitigate after the design is implemented, so finding and fixing these early in the lifecycle is critically important.
+This control identifies security weaknesses in the design that can result in security incidents and business damage. Security weaknesses in the design can be difficult to mitigate after the design is implemented, so finding and fixing these early in the lifecycle is critically important.
 
-Threat modeling serves as the security design review process which integrate security into the design of a system or application.
+Threat modeling serves as the security design review process, which integrate security into the design of a system or application.
 
 Threat modeling systematically identifies, assesses, prioritizes, and mitigates security risks within a software system. This structured approach to analyzing the design and architecture of a software application identifies potential threats and vulnerabilities early in the development process.
 
-The ultimate goal is to understand the system and what could go wrong. Threat modeling does this by leveraging a deep understanding of both the system itself and how a threat actor (potential attacker) views it.
+The ultimate goal is to understand the system and what could go wrong. Threat modeling does this by applying a deep understanding of both the system itself and how a threat actor (potential attacker) views it.
 
 This typically takes the form of threat discovery workshops where a team of experts on the system and security experts work together to discover and document risks. While this might start informally, this should quickly evolve into a structured process that discusses each aspect of the service being built, how it will be used, and system interfaces.
 
@@ -219,15 +219,15 @@ This control focuses on securing your development supply chain by using SCA tool
 
 In today’s landscape, a vast majority of applications rely on open source software (OSS) with little oversight or control from consumers of these components. This control highlights core strategies, techniques, and technologies to securely ingest, consume, use, and maintain OSS. It also emphasizes securing internal dependencies, ensuring a complete end-to-end lifecycle, regardless of who coded the software.
 
-Failure to control your software supply chain exposes you to significant vulnerabilities introduced by code you don't control. A notorious example is the log4J/Log4Shell vulnerability, which allowed remote code execution in any system or application using this package. Such vulnerabilities can arise accidentally or maliciously (e.g., XZ Vulnerability).
+Failure to control your software supply chain exposes you to significant vulnerabilities introduced by code you don't control. A notorious example is the log4J/Log4Shell vulnerability, which allowed remote code execution in any system or application using this package. Such vulnerabilities can arise accidentally or maliciously.
 
 Securing your supply chain is an essential part of ensuring a secure development lifecycle and should be considered at every profile state, although every single state should follow the same standardized process of ingesting dependencies.
 
-Temporary Minimum: Inventory all of your dependences so you understand the impact a OSS vulnerability will have on your application. This can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
+Temporary Minimum: Inventory all of your dependences so you understand the impact an OS vulnerability has on your application. This inventory can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
 Balanced state: Analyze all OSS Vulnerabilities and automatically fix them with automatic pull requests. This can similarly be achieving using [Dependabot](https://docs.github.com/code-security/dependabot) and the GitHub Dependency graph/review.
 High Security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
 
-To learn more about this control and measure your OSS Security maturity please review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource) which provides guidance on how to secure and implement the Secure Supply Chain Consumption Framework (SC2CF).
+To learn more about this control and measure your OSS Security maturity, review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource) that provides guidance on how to secure and implement the Secure Supply Chain Consumption Framework (SC2CF).
 
 Additionally, review [GitHub’s best practice documentation on Securing your development lifecycle](https://docs.github.com/code-security/supply-chain-security/end-to-end-supply-chain/end-to-end-supply-chain-overview).
 
@@ -240,18 +240,18 @@ This can be performed by a peer on the same developer team with application secu
 This must always be a separate person from the developer who wrote the code. This should be done as a separate activity after automated code analysis is complete.
 
 Temporary Minimum: This is recommended for this profile
-Standard: This is strongly recommended for this profile
+Standard: This is recommended for this profile
 High Security: This is required for all high security applications and often involves multiple individual experts.
 
 ### Credential and secret scanning
 
 This supports Continuous SDL Practice 7 – Perform Security Testing.
 
-This control focuses on reducing risk from authentication keys and other secrets exposed in code. Threat actors have well established expertise and automation to find embedded secrets in code and exploit it.
+This control focuses on reducing risk from authentication keys and other secrets exposed in code. Threat actors have expertise and automation to find and exploit embedded secrets in code.
 
 The best approach is to use of managed identities and modern authentication protocols instead of keys and secrets when possible. While using API keys and secrets has been a traditional coding and testing practice, the preferred method should always be identity-based authentication to resources because of the increased security and lifecycle management. This will primarily take the form of using managed identities, like [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview).
 
-If the use of secrets is required, its mandatory to secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. **Under no circumstances should plain text keys and secrets ever be stored in code even temporarily!** These secrets will be found by attackers and exploited.
+If the use of secrets is required, it's mandatory to secure them through their whole lifecycle including their creation, use, regular rotation, and revocation. Avoid directly using secrets in code and only store them in a secure key/secret storage system such as Azure Key Vault or a Hardware Security Module (HSM) if necessary. **Under no circumstances should plain text keys and secrets ever be stored in code even temporarily!** Attackers will find and exploit these secrets.
 
 > [!IMPORTANT]
 > Internal source code repositories are not safe!
@@ -290,7 +290,7 @@ Pipeline security can be assured by ensuring good access control to resources us
 
 This control should be evaluated on an access level to every resource in the project, it's a required control across all DevSecOps profile levels.
 
-To learn more about pipeline security please visit [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
+To learn more about pipeline security, see [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
 ### Live Site Penetration Testing
 
