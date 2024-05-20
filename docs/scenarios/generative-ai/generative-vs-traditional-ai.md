@@ -19,16 +19,16 @@ Traditional AI, sometimes known as "Everyday AI", is the type of AI that has bee
 
 Typically, traditional AI is used to detect and classify, work on vast amounts of data, operate in real-time applications and help with automation of capabilities.
 
-Here are some examples of traditional AI and its applications:
+Here are some examples of traditional AI and its applications, along with the Azure services that facilitate them:
 
-| Type                    | Example areas                                              |
-|-------------------------|------------------------------------------------------------|
-| **Machine Learning** <br>Teaching machines to learn from data.|- Reinforcement <br> - Supervised Learning <br> - Knowledge Learning <br> - Probabilistic Models <br> - Neural networks       |
-| **Natural Language Processing**<br>Understand and generate human language. | - Information extraction <br> - Sentiment analysis <br> - Speech recognition <br> - Machine translation <br> - Large Language Models (including ChatGPT) |
-| **Robotics**<br>Controlling objects in the physical world.| - Perception <br> - Actuation <br> - Locomotion <br> - Navigation <br> - Mapping localization <br> - Manipulation and grasping |
-| **Reasoning**<br>Making informed decisions.| - Knowledge engineering <br> - Planning and scheduling <br> - Learning and adaptation <br> - Explanation and justification <br> - Real world planning |
-| **Object Recognition**<br>Recognizing objects in images or video. | - Image processing <br> - Feature extraction <br> - Object detection <br> - Classification <br> - 3D reconstruction <br> - Motion, shading, contour analysis <br> - Scene understanding |
-| **Problem solving**<br>Process of finding a solution.| - Search and exploration <br> - Heuristics <br> - Optimization techniques <br> - Uncertainty handling <br> - Constraint analysis <br> - Evolutionary algorithms <br> - Fuzzy logic |
+| Type                    | Example areas                                              | Azure facilitation |
+|-------------------------|------------------------------------------------------------|--------------------|
+| **Machine Learning** <br>Teaching machines to learn from data.|- Reinforcement <br> - Supervised Learning <br> - Knowledge Learning <br> - Probabilistic Models <br> - Neural networks | - Azure Machine Learning<br> - Azure AI Services |
+| **Natural Language Processing**<br>Understand and generate human language. | - Information extraction <br> - Sentiment analysis <br> - Speech recognition <br> - Machine translation <br> - Large Language Models (including ChatGPT) | - Azure AI  Services<br> - Azure Language Understanding<br> - Azure Speech Services |
+| **Robotics**<br>Controlling objects in the physical world.| - Perception <br> - Actuation <br> - Locomotion <br> - Navigation <br> - Mapping localization <br> - Manipulation and grasping | - Azure IoT<br> - Azure Digital Twins<br> - Azure Robotics Services |
+| **Reasoning**<br>Making informed decisions.| - Knowledge engineering <br> - Planning and scheduling <br> - Learning and adaptation <br> - Explanation and justification <br> - Real world planning | - Azure Machine Learning<br> - Azure AI Services |
+| **Object Recognition**<br>Recognizing objects in images or video. | - Image processing <br> - Feature extraction <br> - Object detection <br> - Classification <br> - 3D reconstruction <br> - Motion, shading, contour analysis <br> - Scene understanding | - Azure AI Services<br> - Azure Custom Vision<br> - Azure Video Analyzer |
+| **Problem solving**<br>Process of finding a solution.| - Search and exploration <br> - Heuristics <br> - Optimization techniques <br> - Uncertainty handling <br> - Constraint analysis <br> - Evolutionary algorithms <br> - Fuzzy logic | - Azure Machine Learning<br> - Azure AI Services |
 
 ## Generative AI
 
@@ -36,12 +36,12 @@ With Generative AI (GAI) we typically mean AI that understands and creates conte
 
 Here are some examples of generative AI and its applications:
 
-| Type                    | Example areas                                              |
-|-------------------------|------------------------------------------------------------|
-| **Text generation**<br>Generating text based on input.| - Chatbots <br> - Content creation <br> - Code generation <br> - Storytelling <br> - Poetry generation <br> - Language translation <br> - Text summarization <br> - Text completion <br> - Text classification <br> - Text-to-speech <br> - Speech-to-text |
-| **Image generation**<br>Generating images based on input.| - Art generation <br> - Image-to-image translation <br> - Image completion <br> - Image super-resolution <br> - Image colorization <br> - Image editing <br> - Image synthesis <br> - Image-to-text |
-| **Sound generation**<br>Generating sounds based on input.| - Music generation <br> - Sound synthesis <br> - Sound editing <br> - Sound-to-text <br> - Text-to-sound |
-| **Video generation**<br>Generating videos based on input.| - Video editing <br> - Video synthesis <br> - Video-to-text <br> - Text-to-video |
+| Type                    | Example areas                                              | Azure facilitation |
+|-------------------------|------------------------------------------------------------|--------------------|
+| **Text generation**<br>Generating text based on input.| - Chatbots <br> - Content creation <br> - Code generation <br> - Storytelling <br> - Poetry generation <br> - Language translation <br> - Text summarization <br> - Text completion <br> - Text classification <br> - Text-to-speech <br> - Speech-to-text | - Azure OpenAI Services |
+| **Image generation**<br>Generating images based on input.| - Art generation <br> - Image-to-image translation <br> - Image completion <br> - Image super-resolution <br> - Image colorization <br> - Image editing <br> - Image synthesis <br> - Image-to-text | - Azure OpenAI Services |
+| **Sound generation**<br>Generating sounds based on input.| - Music generation <br> - Sound synthesis <br> - Sound editing <br> - Sound-to-text <br> - Text-to-sound | - Azure OpenAI Services |
+| **Video generation**<br>Generating videos based on input.| - Video editing <br> - Video synthesis <br> - Video-to-text <br> - Text-to-video | - Azure OpenAI Services |
 
 ## Deciding on the right blend of AI for your use cases
 

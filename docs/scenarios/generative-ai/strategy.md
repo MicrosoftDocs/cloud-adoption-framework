@@ -1,9 +1,9 @@
 ---
 title: Strategic considerations for adopting generative AI in Azure
-description: Learn how to build a generative AI strategy for your business.
+description: Establish an AI vision and strategy by considering key factors such as business justification, organizational readiness, business impact, and business goals.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/07/2024
+ms.date: 05/20/2024
 ms.topic: conceptual
 ---
 
@@ -17,21 +17,40 @@ To establish a generative AI vision and strategy, there are some key considerati
 
 ### Quantitative justifications
 
-## Organizational readiness for generative AI
+## Leadership and organizational readiness
+
+Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
+
+Consider asking yourself this:
+
+- How well aligned is your **leadership, organization, and employees** with your vision and strategy for generative AI?
 
 ### Leadership buy-in
 
-- Does leadership understand the value of GAI?
-- How committed is your leadership to the adoption of GAI?
-- How clear is your vision or strategy for generative AI, and does your leadership understand it?
-- Ensure you map out the budgets and resources needed to support your generative AI strategy, and anchor that in the vision and strategy.
-- Can you communicate use cases clearly to your leadership?
+You've identified the potential benefits of generative AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
 
-### Leadership and organizational alignment
+> "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
+> From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
+
+Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives.
+
+> TBD: Recommendation.
+
+### Organizational alignment
+
+> "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
+> From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
+
+> TBD: Recommendation.
+
+### Employee readiness
+
+> TBD considerations: The importance.
+> TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
+
+To learn more about the required skills, see [Planning for generative AI - Required skills](./plan.md#required-skills)
 
 ### Human in the loop
-
-### Workforce readiness
 
 #### Reskilling initiatives
 
@@ -70,27 +89,22 @@ To drive the adoption of generative AI in your organization, you need to underst
 
 Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
 
-### Define your ambition
-
-- What do you want this technology to do? Generally speaking.
-- What do you NOT want this technology to do? Generally speaking.
+In this section, we'll explore some common business goals and how they can be linked to generative AI investments.
 
 ### Define goals
 
-Define why you're adopting generative AI and what you hope to achieve.
+Define why you're adopting generative AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
 
 #### Example goals
 
-|Goal|Generative AI benefit|Use cases|
+|Goal|AI benefit|Examples|
 |----|---------------------|---------|
-|Increase customer satisfaction|||
-|Increase employee productivity|TBD|TBD|
-|Increase operational efficiency|TBD|TBD|
-|Increase revenue|TBD|TBD|
-|Reduce costs|TBD|TBD|
-|Improve product quality|TBD|TBD|
-
-### Define example use cases and value propositions
+|**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
+|**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation |
+|**Increase operational efficiency** | Optimize processes and reduce time and resource wastage. | - Process automation<br> - Predictive maintenance<br> - Workflow automation |
+|**Increase revenue** | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics |
+|**Reduce operational costs**| Automate routine tasks, optimize resource allocation, and streamline processes. | - Predictive maintenance using AI algorithms <br> - Supply chain optimization <br> - Automated data entry and processing |
+|**Improve product quality**| Enhance quality control, identify defects, and optimize production processes. | - AI-driven quality inspection systems <br> - Predictive analytics for product defects <br> - Process optimization using AI <br> - Automated testing and validation <br> - Real-time monitoring and adjustments in manufacturing |
 
 ### Define success metrics
 
@@ -98,14 +112,14 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 
 #### Example success metrics
 
-|Goal|Success metric|
-|----|--------------|
-|Increase customer satisfaction|TBD|
-|Increase employee productivity|TBD|
-|Increase operational efficiency|TBD|
-|Increase revenue|TBD|
-|Reduce costs||
-|Improve product quality|TBD|
+| Goal | Success metric examples |
+| ---- | -------------- |
+| **Increase customer satisfaction** | - Customer satisfaction score (CSAT)<br> - Net Promoter Score (NPS)<br> - Customer retention rate |
+| **Increase employee productivity** | - Employee efficiency ratio<br> - Task completion time<br> - Employee satisfaction survey results |
+| **Increase operational efficiency** | - Process cycle time<br> - Overall Equipment Effectiveness (OEE)<br> - Workflow completion rate |
+| **Increase revenue** | - Revenue growth rate<br> - Average Revenue Per User (ARPU)<br> - Conversion rate |
+| **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
+| **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
 ## Next steps
 
