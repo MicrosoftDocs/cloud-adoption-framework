@@ -1,2 +1,2 @@
-{:allowed-branchname-matches ["main" "collab-caf-genai" "release-.*"]
+{:allowed-branchname-matches ["main" "collab-caf-." "release-.*"]
  :allowed-filename-matches ["docs" "includes"]}
