@@ -318,15 +318,13 @@ High Security: Stringently apply MCSB standards and perform workload-specific th
 
 Additional details and resources include:
 
-- Microsoft Cloud Security Benchmark (MCSB)
-https://aka.ms/benchmarkdocs 
-- Microsoft Defender for Cloud 
-https://learn.microsoft.com/azure/defender-for-cloud/ 
-- AppLocker - https://learn.microsoft.com/windows/security/application-security/application-control/windows-defender-application-control/applocker/applocker-overview 
-- Securing SQL Server - https://learn.microsoft.com/sql/relational-databases/security/securing-sql-server?view=sql-server-ver16 
-- Windows Security baselines - https://learn.microsoft.com/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines 
-- Windows Defender Application Control and virtualization-based protection of code integrity - https://learn.microsoft.com/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control 
-- Device Guard - https://learn.microsoft.com/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control
+- [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/)
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/) 
+- [AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/applocker/applocker-overview) 
+- [Securing SQL Server](/sql/relational-databases/security/securing-sql-server?view=sql-server-ver16) 
+- [Windows Security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines) 
+- [Windows Defender Application Control and virtualization-based protection of code integrity](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) 
+- [Device Guard](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
 ### Network access controls
 
@@ -348,22 +346,14 @@ High Security: All standard protections plus high granularity of internal networ
 
 Additional details and resources include:
 
-- MCSB network security
-https://learn.microsoft.com/security/benchmark/azure/mcsb-network-security
-- Microsoft Defender for Cloud 
-https://learn.microsoft.com/azure/defender-for-cloud/ 
-- Azure Firewall
-https://learn.microsoft.com/azure/firewall/overview 
-   - Azure Firewall forced tunneling
-https://learn.microsoft.com/azure/firewall/forced-tunneling
-   - Azure Security Baseline for Azure Security Firewall
-https://learn.microsoft.com/ security/benchmark/azure/baselines/azure-firewall-security-baseline 
-   - Azure Firewall threat intelligence-based filtering
-https://learn.microsoft.com/azure/firewall/threat-intel
-- Azure Web Applications Firewalls (WAF)
-https://learn.microsoft.com/azure/web-application-firewall/overview
-- Azure DDoS Protection
-https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview
+- [MCSB network security](/security/benchmark/azure/mcsb-network-security)
+- [Microsoft Defender for Cloud ](/azure/defender-for-cloud/) 
+- [Azure Firewall](/azure/firewall/overview) 
+   - [Azure Firewall forced tunneling](/azure/firewall/forced-tunneling)
+   - [Azure Security Baseline for Azure Security Firewall](security/benchmark/azure/baselines/azure-firewall-security-baseline) 
+   - [Azure Firewall threat intelligence-based filtering](/azure/firewall/threat-intel)
+- [Azure Web Applications Firewalls (WAF)](/azure/web-application-firewall/overview)
+- [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview)
 
 ### Monitoring, response and recovery
 
@@ -378,13 +368,11 @@ Temporary Minimum: Deploy XDR capabilities in your environment to monitor traffi
 Standard state: Deploy XDR and custom SIEM detections that identify anomalous behavior relative to the overall environment. This may include custom detections for individual workloads. 
 High Security: Standard controls plus custom per-workload detections based on insights from threat modelling of the workload. Combine this with AI to provide contextual awareness to remediation recommendations.
 
-- Microsoft Defender
-https://learn.microsoft.com/defender/ 
-- Microsoft Sentinel
-https://learn.microsoft.com/azure/sentinel/ 
-- Microsoft Learn: Manage and respond to security alerts: https://learn.microsoft.com/azure/defender-for-cloud/managing-and-responding-alerts 
-- Microsoft Download: Security Incident Management in Microsoft Office 365: https://download.microsoft.com/download/2/F/1/2F16A9CA-8D4F-4BB5-8F85-3A362131A95B/Office%20365%20Security%20Incident%20Management.pdf 
-- Microsoft: Microsoft Incident Response and shared responsibility for cloud computing: https://azure.microsoft.com/blog/microsoft-incident-response-and-shared-responsibility-for-cloud-computing/ 
+- [Microsoft Defender](/defender)
+- [Microsoft Sentinel](/azure/sentinel)
+- [Manage and respond to security alerts](/azure/defender-for-cloud/managing-and-responding-alerts)
+- [Microsoft Download: Security Incident Management in Microsoft Office 365](https://download.microsoft.com/download/2/F/1/2F16A9CA-8D4F-4BB5-8F85-3A362131A95B/Office%20365%20Security%20Incident%20Management.pdf)
+- [Microsoft Incident Response and shared responsibility for cloud computing](https://azure.microsoft.com/blog/microsoft-incident-response-and-shared-responsibility-for-cloud-computing/)
 
 ## Next steps
 
