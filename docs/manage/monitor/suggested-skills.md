@@ -4,7 +4,7 @@ description: Skills readiness for cloud monitoring
 author: Zimmergren
 ms.author: tozimmergren
 ms.reviewer: tozimmergren
-ms.date: 06/20/2023
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal, engagement-fy23, UpdateFrequency2
 products: azure-monitor
@@ -27,7 +27,9 @@ Developing the necessary skills can be accelerated with the following learning p
 - Introduction to [Azure Policy](/azure/governance/policy/overview) helps you learn how to use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure VM insights and Microsoft Defender for Cloud, deploy diagnostic settings, audit guest configuration settings, and more.
 
 - Introduction to [Azure CLI](/cli/azure/get-started-with-azure-cli), our cross-platform command-line experience for managing Azure resources. Also, review the introduction to [Azure PowerShell](/powershell/azure/get-started-azureps). Extend your skills with the Azure CLI and Azure PowerShell further by taking these Microsoft Learn courses:
+
   - [Control Azure services with the CLI](/training/modules/control-azure-services-with-cli/) and [Create Azure resources by using Azure CLI](/training/modules/create-azure-resources-by-using-azure-cli/).
+  
   - [Review Azure PowerShell module](/training/modules/review-azure-powershell-module/) and [Manage Azure resources with Windows PowerShell](/training/modules/manage-azure-resources-windows-powershell/).
 
 - Learn how to secure resources using policy, Azure role-based access control, and other Azure services by viewing [implement resource management security in Azure](/training/paths/implement-resource-mgmt-security/).
@@ -116,7 +118,7 @@ Customers often need help managing, maintaining, and delivering the expected bus
 
 To achieve those goals, lay the groundwork using IT Service Management (ITSM) with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning with the strategic goals and needs of the organization.
 
-Consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint for transforming IT using a process-agnostic framework.
+Consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that uses a process-agnostic framework to deliver an alternative standard for transforming IT.
 
 ## Learn more
 

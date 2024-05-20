@@ -56,8 +56,6 @@ Here are some implementation options for landing zones keeping in mind the devel
 
 | Implementation option | Description | Deployment instructions |
 |---|---|---|
-| [Migration landing zone](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. </br>[Design areas](./migrate-landing-zone.md#design-areas)| [Deploy](/azure/governance/blueprints/samples/caf-foundation/deploy) |
-| [Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. </br>[Design areas](./foundation-blueprint.md#design-areas) | [Deploy](./foundation-blueprint.md) |
 | [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
 ## Next steps

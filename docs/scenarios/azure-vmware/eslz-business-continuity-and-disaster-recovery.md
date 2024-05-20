@@ -33,7 +33,7 @@ Whether you have an on-premises or Azure VMware Solution, you should consider va
 - For information about supported features in partner backup solutions, refer to the respective partner documentation.
 
   > [!NOTE]
-  > vCenter Server and NSX-T Data Center configurations for private clouds are backed up hourly, and backups are kept for three days.
+  > Azure VMware Solution private cloud vCenter Server and HCX Manager (if enabled) configurations are on a daily backup schedule and NSX configuration is on hourly backup schedule. The backups are retained for a minimum of three days.
 
 - Azure VMware Solution components such as vCenter Server, NSX-T Manager, or HCX Manager are managed services for which Azure manages backup. To restore from a backup, [create an Azure Support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 

@@ -1836,6 +1836,26 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/ready/landing-zone/choose-landing-zone-option.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/foundation-blueprint.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/migrate-landing-zone.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/landing-zone/refactor.md",
+         "redirect_url": "/azure/architecture/landing-zones/landing-zone-deploy",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/ready/azure-best-practices/organize-subscriptions.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
          "redirect_document_id": false
