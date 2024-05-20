@@ -81,14 +81,14 @@ Define why you're adopting generative AI and what you hope to achieve.
 
 #### Example goals
 
-|Goal|Generative AI benefit|Use cases|
+|Goal|AI benefit|Examples|
 |----|---------------------|---------|
-|Increase customer satisfaction|||
-|Increase employee productivity|TBD|TBD|
-|Increase operational efficiency|TBD|TBD|
-|Increase revenue|TBD|TBD|
-|Reduce costs|TBD|TBD|
-|Improve product quality|TBD|TBD|
+|Increase customer satisfaction (CSAT) ratings | Help serve customers faster. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
+|Increase employee productivity| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation |
+|Increase operational efficiency | | |
+|Increase revenue | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics |
+|Reduce operational costs| Automate routine tasks, optimize resource allocation, and streamline processes. | - Predictive maintenance using AI algorithms <br> - Supply chain optimization <br> - Automated data entry and processing |
+|Improve product quality| Enhance quality control, identify defects, and optimize production processes. | - AI-driven quality inspection systems <br> - Predictive analytics for product defects <br> - Process optimization using AI <br> - Automated testing and validation <br> - Real-time monitoring and adjustments in manufacturing |
 
 ### Define example use cases and value propositions
 
@@ -98,14 +98,14 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 
 #### Example success metrics
 
-|Goal|Success metric|
-|----|--------------|
-|Increase customer satisfaction|TBD|
-|Increase employee productivity|TBD|
-|Increase operational efficiency|TBD|
-|Increase revenue|TBD|
-|Reduce costs||
-|Improve product quality|TBD|
+| Goal | Success Metric |
+| ---- | -------------- |
+| Increase customer satisfaction | Customer satisfaction score (CSAT)<br> - Net Promoter Score (NPS)<br> - Customer retention rate |
+| Increase employee productivity | Employee efficiency ratio<br> - Task completion time<br> - Employee satisfaction survey results |
+| Increase operational efficiency | Process cycle time<br> - Overall Equipment Effectiveness (OEE)<br> - Workflow completion rate |
+| Increase revenue | Revenue growth rate<br> - Average Revenue Per User (ARPU)<br> - Conversion rate |
+| Reduce costs | Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
+| Improve product quality | Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
 ## Next steps
 
