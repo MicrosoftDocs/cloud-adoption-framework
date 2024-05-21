@@ -37,7 +37,7 @@ To refine your existing Azure environment's [security posture](./design-area/sec
 Like Azure security, [Azure governance](./design-area/governance.md) isn't a "one and done" proposition. Rather, it's an ever-evolving process of standardization and compliance enforcement. Consider implementing the following controls:
 
 - Review our guidance for establishing a [management baseline](./design-area/management.md) for your hybrid or multicloud environment
-- Implement [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
+- Implement [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) features like billing scopes, budgets, and alerts to ensure your Azure spend stays within prescribed bounds
 - Use [Azure Policy](/azure/governance/policy/overview) to enforce governance guardrails on Azure deployments, and trigger remediation tasks to bring existing Azure resources into a compliant state
 - Consider [Microsoft Entra entitlement management](/azure/active-directory/governance/entitlement-management-overview) to automate Azure requests, access assignments, reviews, and expiration
 - Apply [Azure Advisor](/azure/advisor/advisor-overview) recommendations to ensure cost optimization and operational excellence in Azure, both of which are core principles of the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/).

@@ -73,9 +73,9 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 [![Screenshot that shows Azure pricing calculator for Azure Monitor.](./media/pricing-calculator-azure-monitor.png)](./media/pricing-calculator-azure-monitor.png#lightbox)
 
-- Use [Azure Cost Management + Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
+- Use [Microsoft Cost Management](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
 
-[![Screenshot that shows Azure Cost Management and Billing.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
+[![Screenshot that shows Microsoft Cost Management.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
 
 - Use [Log Analytics workspaces insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to understand and monitor the collected logs and their ingestion rate on the Log Analytics workspace.
 
@@ -100,7 +100,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 
 :::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
 
-- Use [Azure Cost Management + Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
+- Use [Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
 :::image type="content" source="./media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="./media/cost-management-azure-sentinel.png":::
 
@@ -119,7 +119,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 ### Azure Policy machine configuration
 
 - Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy machine configuration pricing](https://azure.microsoft.com/pricing/details/azure-policy/).
-- Use Azure Cost Management + Billing to understand the Azure Policy machine configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
+- Use Cost Management to understand the Azure Policy machine configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in machine configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
 :::image type="content" source="./media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="./media/cost-management-policy-azure.png":::
@@ -138,7 +138,7 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 ### Azure Private Link
 
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
-- Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
+- Use [Cost Management](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
 :::image type="content" source="./media/cost-private-endpoints.png" alt-text="Screenshot that shows an example of Azure Private Link costs." lightbox="./media/cost-private-endpoints.png":::
 

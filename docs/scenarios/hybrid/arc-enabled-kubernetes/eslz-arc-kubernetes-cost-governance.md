@@ -82,9 +82,9 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
    :::image type="content" source="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" alt-text="A screenshot showing Azure Pricing Calculator Azure Monitor." lightbox="./media/arc-enabled-kubernetes-cost-pricing-calculator-az-monitor.png" border="true":::
 
-- Use [Azure Cost Management and Billing](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to view the costs of Azure Monitor for Containers.
+- Use [Microsoft Cost Management](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to view the costs of Azure Monitor for Containers.
 
-   :::image type="content" source="./media/arc-enabled-kubernetes-cost-billing.png" alt-text="A screenshot showing Azure cost management and billing." lightbox="./media/arc-enabled-kubernetes-cost-billing.png" border="true":::
+   :::image type="content" source="./media/arc-enabled-kubernetes-cost-billing.png" alt-text="A screenshot showing Microsoft Cost Management." lightbox="./media/arc-enabled-kubernetes-cost-billing.png" border="true":::
 
 - Use the [Log Analytics workspace insights](/azure/azure-monitor/logs/log-analytics-workspace-insights-overview) solution to gain insights on monitored Azure Kubernetes clusters, collected logs, and their integration rate so you can avoid unnecessary ingestion costs.
 
@@ -120,7 +120,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
    | order by TotalCoreCount
    ```
 
-- Use [Azure cost management and billing](/azure/cost-management-billing/cost-management-billing-overview) to understand Kubernetes GitOps configuration costs.
+- Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) to understand Kubernetes GitOps configuration costs.
 
    :::image type="content" source="./media/arc-enabled-kubernetes-configuration-cost.png" alt-text="A screenshot showing Kubernetes GitOps configuration cost in Azure portal." lightbox="./media/arc-enabled-kubernetes-configuration-cost.png" border="true":::
 
