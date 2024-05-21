@@ -52,7 +52,7 @@ This documentation describes each control and shows how to apply these controls 
 
 This section provides a reference of recommended security controls for each type of workload. This reference might be adopted as is or it can be adapted to your existing software development and software security processes. Most organizations can’t implement all these controls right away if they aren’t already doing some of them. Taking a continuous improvement approach is often the best approach: prioritize controls, implement the first control, move to the next control, implement it, and so on. Most organizations should prioritize the [critical foundations](#establish-critical-foundations) first.
 
-For more information, see The DevSecOps journey in XXXXXXXXXXXXXXXX (Link to other page).
+For more information, see [The DevSecOps journey](innovation-security.md).
 
 This figure summarizes the security controls and how to apply them to each workload security profile:
 
@@ -486,7 +486,7 @@ Ensure security best practices are followed for all development systems and the 
       :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **High security** – Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). Perform workload-specific threat model (LINK) of identity systems and components supporting each high security workload.
+      **High security** – Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). [Perform workload-specific threat model](#perform-threat-modeling-security-design-review) of identity systems and components supporting each high security workload.
    :::column-end:::
 :::row-end:::
 
@@ -551,7 +551,7 @@ Ensure to apply security best practice to the infrastructure components includin
       :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **High security** – Stringently apply MCSB standards and perform workload-specific threat model (LINK) of infrastructure supporting each high security workload.
+      **High security** – Stringently apply MCSB standards and [perform workload-specific threat model](#perform-threat-modeling-security-design-review) of infrastructure supporting each high security workload.
    :::column-end:::
 :::row-end:::
 
@@ -607,7 +607,7 @@ Ensure security best practices are followed for all development systems and the 
       :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **High security** – All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a workload-specific threat model (LINK) of network infrastructure supporting each high security workload.
+      **High security** – All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a [workload-specific threat model](#perform-threat-modeling-security-design-review) of network infrastructure supporting each high security workload.
    :::column-end:::
 :::row-end:::
 
@@ -683,4 +683,4 @@ Adopt these security controls and adapt them to your organization risk appetite 
 
 You should start by prioritize controls and the minimum/ideal target levels to ensure you have high positive security impact and low-friction changes first. Prioritize, implement, and integrate the first control then repeat the process with the next control.
 
-You should prioritize the critical foundations first because of their broad positive impact and credential and secret scanning (LINK) because of its high impact and frequent attacker use.
+You should prioritize the [critical foundations](#establish-critical-foundations) first because of their broad positive impact and [credential and secret scanning](#credential-and-secret-scanning) because of its high impact and frequent attacker use.
