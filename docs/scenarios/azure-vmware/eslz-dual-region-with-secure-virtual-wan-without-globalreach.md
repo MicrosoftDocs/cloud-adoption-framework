@@ -140,6 +140,14 @@ As mentioned earlier, when you enable Routing Intent on both Secure Hubs, it adv
 #### Azure VMware Solution Internet Connectivity
 When Routing Intent is enabled for internet traffic, the default behavior of the Secure Virtual WAN Hub is to not advertise the default route across ExpressRoute circuits. To ensure the default route is propagated to the its directly connected Azure VMware Solution from the Azure Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits - see [To advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints). Once changes are complete, the default route 0.0.0.0/0 is then advertised via connection “D” from the hub. It’s important to note that this setting shouldn't be enabled for on-premises ExpressRoute circuits. As a best practice, it’s recommended to implement a BGP Filter on your on-premises equipment. A BGP Filter in place prevents the inadvertent learning of the default route, adds an extra layer of precaution, and ensures that on-premises internet connectivity isn't impacted.
 
+You don’t have outbound internet connectivity redundancy because each Azure VMware Solution private cloud learns the default route from both its local regional hub and isn’t directly connected to its cross-regional hub. In the event of a regional outage that impacts the local regional hub, you have two options in order to achieve internet redundancy that are both manual configurations.
+
+**Option 1: For Outbound Internet Access Only**  
+During a local regional outage, if you need outbound internet access for your Azure VMware Solution workload, you can opt for VMware Solution Managed SNAT. It’s a straightforward solution that quickly provides the access you need. - see [Turn on Managed SNAT for Azure VMware Solution workloads](/azure/azure-vmware/enable-managed-snat-for-workloads)
+
+**Option 2: For Inbound and Outbound Internet Access**    
+During a local regional outage, if you need both inbound and outbound internet access for your Azure VMware Solution cloud, start by removing the “D” connection for your local regional hub. Remove the Authorization Key created for the “D” connection from the Azure VMware Solution blade in the Azure Portal. Then, create a new connection to the cross-regional hub. For handling inbound traffic, consider using Azure Front Door or Traffic Manager to maintain regional high availability.
+
 #### Virtual Network Internet Connectivity
 When Routing Intent for internet access is enabled, the default route generated from the Secure Virtual WAN Hub is automatically advertised to the hub-peered Virtual Network connections. You'll notice under Effective Routes for the Virtual Machines’ NICs in the Virtual Network that the 0.0.0.0/0 next hop is the regional hub firewall.
 
