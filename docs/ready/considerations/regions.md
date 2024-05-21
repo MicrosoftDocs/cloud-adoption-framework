@@ -7,7 +7,7 @@ ms.date: 11/27/2023
 ms.topic: conceptual
 ms.custom: internal
 ---
-
+ 
 # Landing zone regions
 
 Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
@@ -35,6 +35,9 @@ If you deploy a networking topology, you also need to select an Azure region to 
 - Azure Private DNS zones, including for Azure Private Link
 - Resource groups, to contain the resources listed above
 
+> [!NOTE]
+> To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
+
 ## Add a new region to an existing landing zone
 
 You should consider a multi-region strategy, either from the start of your cloud journey, or by expanding into more Azure regions once you've completed the initial deployment of your Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
@@ -51,6 +54,8 @@ You should consider a multi-region strategy, either from the start of your cloud
 
 > [!NOTE]
 > You should also use [availability zones](/azure/reliability/availability-zones-overview) for high availability within a region. Check whether [availability zones are supported](/azure/reliability/availability-zones-service-support) in your chosen regions and for the services you want to use.
+
+Microsoft Cloud for Sovereignty has guidelines for restricting services and regions. You can use these guidelines to enforce service configuration to help customers achieve their [data residency](/industry/sovereignty/data-residency) needs.
 
 ### High-level approach
 

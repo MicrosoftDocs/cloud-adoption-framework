@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/15/2020
 ms.topic: conceptual
-ms.custom: think-tank, e2e-hybrid
+ms.custom: think-tank, e2e-hybrid, linux-related-content
 ---
 
 # Connect Azure Arc-enabled servers to Microsoft Defender for Cloud

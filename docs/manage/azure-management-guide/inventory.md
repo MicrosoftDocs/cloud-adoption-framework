@@ -160,3 +160,8 @@ Each article guides you through a series of steps to onboard these solutions:
 - Microsoft Defender for Cloud
 
 Each of the previous steps helps establish inventory and visibility.
+
+## Microsoft Cloud for Sovereignty transparency logs
+
+If you're using Microsoft Cloud for Sovereignty, you can use [transparency logs](/industry/sovereignty/transparency-logs) to understand when Microsoft engineers access your resources. These logs help with sovereignty compliance and other regulatory requirements.
+

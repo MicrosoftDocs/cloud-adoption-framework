@@ -21,7 +21,7 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 
 **Benefits of a single tenant.** A single tenant is easier to manage and lower costs through operational efficiency. It allows you to configure a zero trust environment more easily. A single tenant avoids fragmenting the user experience with multiple sign-in credentials. It also helps prevent siloed solutions that you need to integrate later. You should strive to have your data, Microsoft 365, and Azure cloud services in a single tenant. If you already have multiple Microsoft Entra tenants, you should consider consolidating your environment to use a single tenant. You can consolidate tenants by transferring Azure subscriptions from your secondary tenants to the primary tenant. For more information, see [transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription).
 
-**Multi-tenant use cases.** There are reasons for a defense organization to use a multitenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
+**Multitenant use cases.** There are reasons for a defense organization to use a multitenant architecture. Large and complex defense organizations might need multiple Microsoft Entra tenants for security, compliance, and collaboration (*see table 1*).
 
 *Table 1. Reasons to have or create multiple tenants.*
 
@@ -31,7 +31,7 @@ Microsoft Entra tenants are the foundation of your identity architecture. A tena
 | Delegation and Segmentation of administration      | One organization doesn't have the ability to manage another organization.                               |
 | Data Sovereignty and/or Ownership            | One organization doesn't have the legal authority to manage data of another organization.                      |
 | Network and IT Organization               | It’s not possible nor favorable to collapse multiple large corporate enterprise IT architectures into a single enterprise architecture. |
-| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.
+| SOC Monitoring and Incident Response           | SOC needs separate tenant to manage their roles and responsibilities.|
 
 If you require multiple Microsoft Entra tenants, you should use [Microsoft Entra External ID (B2B)](/azure/active-directory/external-identities/what-is-b2b) and [Azure Lighthouse](/azure/lighthouse/overview). These features help support multitenant defense environments. For more information, see [Tenancy models for a multitenant solution](/azure/architecture/guide/multitenant/considerations/tenancy-models).
 
@@ -43,7 +43,7 @@ Multitenant defense organizations can categorize Microsoft Entra instances they 
 
 Some defense organizations consume Microsoft 365 in a shared tenant owned and operated by an outside agency. This agency acts as a shared service provider for Microsoft 365. Your organization might not manage or control the shared tenant, but it contains the licensed Microsoft Entra identities your users likely use for Office 365 and other applications. In this scenario, the shared service provider tenant is your primary tenant.
 
-**Identify all secondary tenants (if multi-tenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if you migrated applications to the cloud before standing up an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). You typically use secondary tenants to manage (4) Azure workloads with external users (B2B guests) or (5) cloud only accounts (*see figure 1*).
+**Identify all secondary tenants (if multitenant).** All other tenants that the organization manages are secondary tenants. You might have secondary tenants if you migrated applications to the cloud before standing up an [enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation). You typically use secondary tenants to manage (4) Azure workloads with external users (B2B guests) or (5) cloud only accounts (*see figure 1*).
 
 **Use the decision tree.** The easiest way to find your primary tenant is to consider the identity licenses you have in Microsoft Entra ID.
 
@@ -54,11 +54,13 @@ If your organization doesn’t use Microsoft 365, any Microsoft Entra tenant wit
 :::image type="content" source="./images/tenant-decision-tree.png" alt-text="Diagram showing a decision tree to determine if a Microsoft Entra tenant is primary or secondary. If it's a Microsoft 365 tenant, then it's the primary tenant. If the tenant has hybrid identity configured and has enterprise mobility and security licenses, then it's a primary tenant. All other tenants are secondary." lightbox="./images/tenant-decision-tree.png" border="false":::<br>
 *Figure 2. A decision tree to determine the Microsoft Entra primary tenant and secondary tenant.*
 
-To establish Microsoft Entra ID as a zero trust platform, you need a tenant populated with your user identities and licensed for user and device-based access policies.  Microsoft 365 licensing bundles these zero trust capabilities with Office 365. If you don't use Microsoft 365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
+To establish Microsoft Entra ID as a zero trust platform, you need a tenant populated with your user identities and licensed for user and device-based access policies. Microsoft 365 licensing bundles these zero trust capabilities with Office 365. If you don't use Microsoft 365, consider [Enterprise Mobility \+ Security E5](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) to establish a cloud-based identity provider for zero trust. For more information, see [Choosing your identity authority](/azure/azure-government/documentation-government-plan-identity#choosing-your-identity-authority).
 
 ## Configure zero trust
 
 When managing identities in Microsoft Entra ID, you should consider the following recommendations for each tenant type. There are general recommendations for all tenant types that you should adopt first. After implementing those general recommendations, find the recommendations for your specific tenant type (primary or secondary) and then apply those recommendations.
+
+To learn more about securing Microsoft Entra tenants with zero trust, see [Zero Trust Rapid Modernization Plan](/security/zero-trust/zero-trust-ramp-overview) and [Security Rapid Modernization Plan](/security/privileged-access-workstations/security-rapid-modernization-plan).
 
 ### All tenants
 
@@ -66,34 +68,48 @@ You should implement the following recommendations in all Microsoft Entra tenant
 
 **Establish emergency access accounts and procedures.** Create two or more emergency access accounts to avoid being locked out of your Microsoft Entra tenant. You need to assign the Global Administrator role to these accounts. The accounts should be cloud-only accounts. Cloud-only accounts use the *\*.onmicrosoft.com* domain. For more information, see [Manage emergency access admin accounts](/azure/active-directory/roles/security-emergency-access).
 
-**Protect Microsoft Entra ID from on-premises attacks.** Follow best practices outlined in [Securing Privileged Access](https://aka.ms/privsec). Only assign Microsoft Entra permissions to cloud-only user accounts with phishing-resistant credential like Hardware Passkey or Certificate-Based authentication. Don't use federated identities for administrative purposes. For more information, see [Protect Microsoft 365 from on-premises attacks](/azure/active-directory/fundamentals/protect-m365-from-on-premises-attacks).
+**Protect Microsoft Entra ID from on-premises attacks.** Follow best practices outlined in [Securing Privileged Access](/security/privileged-access-workstations/security-rapid-modernization-plan). Only assign Microsoft Entra permissions to cloud-only user accounts with phishing-resistant credential like Hardware Passkey or Certificate-Based authentication. Don't use federated identities for administrative purposes. For more information, see [Protect Microsoft 365 from on-premises attacks](/azure/active-directory/fundamentals/protect-m365-from-on-premises-attacks).
 
 **Use Privileged Identity Management.** Use [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure) to manage role assignments for Microsoft Entra ID and Azure roles. You should also use PIM to manage eligible group membership for privileged security groups. Establish periodic [access reviews](/azure/active-directory/governance/manage-access-review) for eligible administrators and external users (B2B guests).
 
 **Enable cloud-based authentication for all users.** Cloud-based authentication methods are more secure than federated authentication. They offer a better single sign-on experience when combined with Microsoft Entra joined devices. Federated authentication exposes Microsoft Entra ID to on-premises Active Directory compromises.
 
-[Microsoft Entra certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication) makes it unnecessary to federate Microsoft Entra domains. Microsoft Entra authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
+[Microsoft Entra certificate-based authentication (CBA)](/azure/active-directory/authentication/concept-certificate-based-authentication) makes it unnecessary to federate Microsoft Entra domains. Microsoft Entra authentication supports the following [passwordless authentication methods](/azure/active-directory/authentication/concept-authentication-methods):
 
-- Security Keys (FIDO2 / Passkey)
+- Passkeys (FIDO2 security keys)
 - Certificate-Based Authentication
 - Microsoft authenticator
 - Windows Hello for Business
 
-**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions for all risk levels within your policy set. Use the conditional access policy checklist as you build your baseline (*see table 2*).
+**Establish baseline conditional access policies.** Conditional access baseline varies by organization and requirements. Establish a core set of conditional access policies for all Microsoft Entra tenants. Use identity, device, application, and risk conditions within your policy set. Exclude [Emergency Access accounts](/azure/active-directory/roles/security-emergency-access) from your Conditional Access policies.
 
-*Table 2: Conditional access policy checklist.*
+[Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) helps organizations detect, investigate, and remediate [identity-based risks](/entra/id-protection/concept-identity-protection-risks). To protect risky sign-ins and users, create Conditional Access policies with risk conditions. Use separate policies for risky users and risky sign-ins. Increase applied controls with risk level for each risk type. To [balance user productivity with security](/entra/id-protection/howto-identity-protection-configure-risk-policies#choosing-acceptable-risk-levels), avoid using the **Block** control in risk-based policies. 
+
+> [!NOTE]
+> Users can self-remediate *sign-in* risks with MFA. To allow users to self-remediate sign-in risk, configure MFA or Authentication Strength grant control in a [sign-in risk-based Conditional Access policy](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy).
+>
+> Users can self-remediate *user* risks by changing their passwords. To allow users to self-remediate user risk, configure a [user risk-based Conditional Access policy](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-user-risk-policy-for-password-change) with **Require password change** grant control.
+
+> [!CAUTION] 
+> Passwordless users who *only* sign-in with passwordless methods like Entra certificate-based authentication, passkey, or Windows Hello for Business, could be blocked by the **Require password change** grant control if they can't reset their password in Microsoft Entra ID.
+
+Design Conditional Access policies for your organization, using the Example Conditional Access policy checklist (*see table 2*). Use [report-only mode](/entra/identity/conditional-access/concept-conditional-access-report-only) to test Conditional Access policies before deploying to production.
+
+*Table 2: Example Conditional Access policy checklist.*
 
 | Policy name          | Users   | Applications   | Conditions  | Grant control         |
 |:-------------------------------|:----------|:------------------|:-------------|:-------------------------------|
-|MFA for all users|All Users|All Apps|None|MFA
-|Require Managed Devices|All Users|All Apps|None|[Require Microsoft Entra hybrid joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
-|Protect low risk sign-ins|All Users|All Apps|[Low sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA
-|Protect medium risk sign-ins|All Users|All Apps|[Medium sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>[Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): Every Time
-|Block high risk sign-ins|All Users|All Apps|[High sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|[Block](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-access)
-|Secure Microsoft Entra Administration|[Microsoft Entra roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
-|Secure Cloud Management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|[Authentication strength](/azure/active-directory/authentication/concept-authentication-strengths): phishing-resistant MFA<br>Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)
+|MFA for all users|All Users|All Apps|None|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)|
+|Require managed device|All Users|All Apps|None|- [Require Microsoft Entra hybrid joined or compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)|
+|Protect medium risk sign-ins|All Users|All Apps|[Medium sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)<br>- [Require compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)<br>- [Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): 1 hour (adjust according to your organization's [risk tolerance](/entra/id-protection/howto-identity-protection-configure-risk-policies#choosing-acceptable-risk-levels))|
+|Protect high risk sign-ins|All Users|All Apps|[High sign-in risk](/azure/active-directory/identity-protection/concept-identity-protection-policies#sign-in-risk-based-conditional-access-policy)|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)<br>- [Require compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)<br>- [Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): Every Time|
+|Protect high risk users|All Users|All Apps|[High user risk](/entra/identity/authentication/tutorial-risk-based-sspr-mfa#enable-sign-in-risk-policy-for-mfa)|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)<br>- [Require compliant device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)<br>- [Sign-in Frequency](/entra/identity/conditional-access/howto-conditional-access-session-lifetime): Every Time|
+|Secure Microsoft Entra administration|[Microsoft Entra roles](/azure/active-directory/roles/concept-understand-roles)|All Apps|None|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)<br>- Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
+|Secure cloud management|All Users|Azure Management<br>[Google Cloud Platform](/azure/active-directory/saas-apps/google-apps-tutorial)<br>[Amazon Web Services](/azure/active-directory/saas-apps/aws-multi-accounts-tutorial)|None|- [Phishing-resistant MFA](/azure/active-directory/authentication/concept-authentication-strengths)<br>- Require Compliant [Privileged Access Workstation](/security/privileged-access-workstations/privileged-access-deployment) (PAW) using [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices)|
 
-For more information, see [Zero Trust identity and device access configuration](/microsoft-365/security/office-365-security/microsoft-365-policies-configurations).
+The example policy set in *table 2* is for passwordless organizations where all users only use phishing-resistant MFA from managed devices. Privileged users use Intune-managed Privileged Access Workstations (PAW). Instead of requiring a password change for high risk users, the risky user policy enforces authentication strength and sign-in frequency controls. These controls offer some protections but don't remediate the user's risk level in Microsoft Entra ID Protection. Your security operations team should [investigate](/entra/id-protection/howto-identity-protection-investigate-risk) and [remediate](/entra/id-protection/howto-identity-protection-remediate-unblock) high risk users.
+
+To learn more about Conditional Access deployment, see [Plan a Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access).
 
 **Use primary tenant identities for accessing all applications.** Users should be able to access applications using their identity in the primary tenant. You need to register applications in the primary tenant. Establish a policy to [register applications](/azure/active-directory/develop/quickstart-register-app) with the primary tenant, regardless of the application infrastructure hosting location.
 
@@ -125,7 +141,7 @@ You should implement the following recommendations in the primary tenant only.
 
 **Join and manage devices with the primary tenant.** The primary Microsoft Entra tenant contains all users and devices within the organization. Microsoft Entra join (or Microsoft Entra hybrid join) Windows devices to the primary tenant and manage with Microsoft Intune. [Use Intune policy to deploy Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration) enabling extended detection and response (XDR) capability.
 
-**Delegate application registration permissions.** Enterprise Apps, including application code running in any Azure subscription, use the primary Microsoft Entra ID for user identity. Make developers eligible for the [Application Developer Microsoft Entra role](/azure/active-directory/roles/permissions-reference#application-developer) or a [custom app registration role](/azure/active-directory/roles/custom-available-permissions) using Privileged Identity Management. This configuration allows developers building applications in secondary tenants to register them with the primary tenant for identity.
+**Delegate application registration permissions.** Enterprise Apps, including application code running in any Azure subscription, use the primary Microsoft Entra ID tenant for user identity. Make developers eligible for the [Application Developer Microsoft Entra role](/azure/active-directory/roles/permissions-reference#application-developer) or a [custom app registration role](/azure/active-directory/roles/custom-available-permissions) using Privileged Identity Management. This configuration allows developers building applications in secondary tenants to register them with the primary tenant for identity.
 
 **Attach platform-as-a-service (PaaS) services that need end user identity.** Some PaaS services, like [Azure Files](/azure/storage/files/storage-files-introduction) and [Azure Virtual Desktop](/azure/virtual-desktop/overview), depend on hybrid identity configuration or license entitlements. You must deploy these services to Azure subscriptions in the primary tenant.
 
@@ -135,18 +151,18 @@ You should implement the following recommendations in the secondary tenant.
 
 **Procure licenses required for Microsoft Entra management**. You need licenses to turn on advanced security features in secondary tenants. Consider the licenses you need for users, workloads, and devices.
 
-*User identities.* You need to have [Microsoft Entra ID P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multitenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
+*User identities.* You need to have [Microsoft Entra ID Premium P2](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing) licenses for tenant administrators and emergency access accounts. If you use an external identity (B2B guest) management model, you must assign at least one Microsoft Entra ID Premium P2 license to a local user in the tenant. This setup allows you to enable premium features like [Conditional Access](/azure/active-directory/conditional-access/overview) and [Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection). For more information, see [Common considerations for multitenant user management](/azure/active-directory/fundamentals/multi-tenant-common-considerations#azure-ad-conditional-access-considerations).
 
 *Workload identities.* You should use [workload identities premium](/azure/active-directory/workload-identities/workload-identities-overview) to secure workload identities with access to resources in the primary tenant, such as MS Graph API.
 
-*Device management.* You might need manage devices with Microsoft Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
+*Device management.* You might need to manage devices with Microsoft Intune in the secondary tenant. If so, you need to procure [Enterprise Mobility and Security (EMS)](/enterprise-mobility-security/solutions/ems-govt-service-description) licenses.
 
 **Configure cross-tenant access policies (XTAP).** Microsoft Entra External ID (Microsoft Entra B2B collaboration) [cross-tenant access settings](/azure/active-directory/external-identities/cross-tenant-access-overview) allow a secondary tenant to trust certain claims from the home primary tenant. Add the primary Microsoft Entra tenant as an organization and update the [inbound trust settings](/graph/api/resources/crosstenantaccesspolicy-overview) to include:
 
 - Trust multifactor authentication (MFA) from Microsoft Entra tenants
 - Trust compliant devices
 - Trust Microsoft Entra hybrid joined devices
-- Optional: Automatically redeem invitations with the tenant.
+- Optional: Automatically redeem invitations with the tenant
 
 **Manage the secondary tenant with identities from the primary tenant.** Reduce administrative overhead and cost by using external users (B2B guests) from the primary tenant to manage the secondary tenant and Azure resources. Assign Microsoft Entra roles following [least-privilege Microsoft Entra role by task](/azure/active-directory/roles/delegate-by-task) using [Microsoft Entra Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user). Use [end-user initiated access](/azure/active-directory/fundamentals/multi-tenant-user-management-scenarios#end-user-initiated-scenario) or [cross-tenant synchronization](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview) to reduce management overhead onboarding external identities in the secondary tenant.
 
@@ -155,7 +171,7 @@ You should implement the following recommendations in the secondary tenant.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage multi-tenant operations](manage-operations.md)
+> [Manage multitenant operations](manage-operations.md)
 
 ## Related links
 

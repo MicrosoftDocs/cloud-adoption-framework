@@ -14,7 +14,7 @@ This article explains security best practices for planning or managing a secure 
 
 ## Recommended network security architecture (managed network)
 
-The recommended machine learning network security architecture is a *managed virtual network* (preview). An Azure Machine Learning managed virtual network secures the workspace, associated Azure resources, and all managed compute resources. It simplifies the configuration and management of network security by preconfiguring required outputs and automatically creating managed resources within the network. You can use private endpoints to allow Azure services to access the network and can optionally define outbound rules to allow the network to access the internet.
+The recommended machine learning network security architecture is a *managed virtual network*. An Azure Machine Learning managed virtual network secures the workspace, associated Azure resources, and all managed compute resources. It simplifies the configuration and management of network security by preconfiguring required outputs and automatically creating managed resources within the network. You can use private endpoints to allow Azure services to access the network and can optionally define outbound rules to allow the network to access the internet.
 
 The managed virtual network has two modes that it can be configured for:
 

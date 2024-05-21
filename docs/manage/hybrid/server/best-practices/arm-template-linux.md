@@ -5,7 +5,7 @@ author: likamrat
 ms.author: martinek
 ms.date: 01/29/2021
 ms.topic: conceptual
-ms.custom: think-tank, e2e-hybrid, devx-track-arm-template
+ms.custom: think-tank, e2e-hybrid, devx-track-arm-template, linux-related-content
 ---
 
 # Use an Azure Resource Manager template to deploy and connect an Ubuntu virtual machine to Azure Arc
