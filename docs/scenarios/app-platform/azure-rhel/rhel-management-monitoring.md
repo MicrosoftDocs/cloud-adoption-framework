@@ -1,5 +1,8 @@
 ## <a name="_toc156377586"></a>Azure Linux Machine Update Management
-Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your Azure Linux VMs.
+For greenfield deployment scenarios, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your Azure Linux VMs.
+
+For existing brownfield deployments, the use of Red Hat Satellite and extending into Azure from on-premsies may be the optimal approach.
+
 ## <a name="_toc156377587"></a>Deployment Strategy
 In most cases automated software update management solutions are preferred over manual update installation process.  In brownfield installations integration with on-premises solutions should be accounted for. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other 3<sup>rd</sup> party open source software.
 ### <a name="_toc156377588"></a>Considerations
