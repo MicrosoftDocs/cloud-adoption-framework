@@ -94,7 +94,14 @@ Each of these items is defined in the following sections:
 
 This supports Continuous SDL Practice 1 – Establish security standards, metrics, and governance, Practice 2 – Require use of proven security features, languages, and frameworks, and Practice 10 – Provide security training.
 
-These controls apply across all development stages and control profiles.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - These controls apply across all development stages and control profiles.
+   :::column-end:::
+:::row-end:::
 
 #### Providing security training
 
@@ -365,7 +372,14 @@ If the use of secrets is required, it's mandatory to secure them through their w
 >
 > Internal repositories should be subject to the same requirements as publicly facing repositories as threat actors frequently hunt for secrets and keys in repositories after gaining access to an environment through phishing or other means. This is required for a Zero Trust approach that assumes breach and designs security controls accordingly.
 
-Good secret hygiene is essential and is required in all profiles.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Good secret hygiene is essential and is required in all profiles.
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > As these are found by your teams or by attackers, you must ensure that the key cannot be used to access resources (various by resource type) in addition to changing to a more secure access method like managed identities.
@@ -395,7 +409,14 @@ Pipeline security can be assured by ensuring good access control to resources us
 > [!NOTE]
 > The security of the pipeline is dependent on the security of the underlying infrastructure and the accounts/identities that are used for the process. For more information, see the securing your development environment and the secure operations controls (Identity Identity/App Access Controls, Host/Container Controls, Network Access Controls)
 
-This control should be evaluated on an access level to every resource in the project, it's a required control across all DevSecOps profile levels.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - This control should be evaluated on an access level to every resource in the project, it's a required control across all DevSecOps profile levels.
+   :::column-end:::
+:::row-end:::
 
 To learn more about pipeline security, see [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
