@@ -13,7 +13,7 @@ ms.reviewer: ridive, mas, jamesduncan, stbosted, nobiwan, thomq
 This page describes how to apply the security controls to support the [Continuous SDL](https://www.microsoft.com/SDL) security practices. These security controls are an integral part of a [DevSecOps strategy](/azure/cloud-adoption-framework/secure/innovation-security) spanning people, process, and technology.
 This documentation describes each control and shows how to apply these controls to three security profiles. These profiles meet typical security requirements for common business scenarios at most organizations:
 
-![XXX]XXX
+:::image type="content" source="media/devsecops-controls/security-control-profiles.png" alt-text="Diagram of security controls versus time and impact.":::
 
 The security control profiles are:
 
@@ -29,7 +29,7 @@ For more information, see The DevSecOps journey in XXXXXXXXXXXXXXXX (Link to oth
 
 This figure summarizes the security controls and how to apply them to each workload security profile:
 
-![XXX]XXX
+:::image type="content" source="media/devsecops-controls/devsecops-security-profile-comparison.png" alt-text="ALT" lightbox="media/devsecops-controls/devsecops-security-profile-comparison.png":::
 
 Key planning considerations include:
 
