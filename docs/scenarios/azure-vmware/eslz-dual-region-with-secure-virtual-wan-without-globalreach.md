@@ -149,7 +149,7 @@ During a local regional outage, if you need outbound internet access for your Az
 During a local regional outage, if you need both inbound and outbound internet access for your Azure VMware Solution cloud, start by removing the “D” connection for your local regional hub. Remove the Authorization Key created for the “D” connection from the Azure VMware Solution blade in the Azure Portal. Then, create a new connection to the cross-regional hub. For handling inbound traffic, consider using Azure Front Door or Traffic Manager to maintain regional high availability.
 
 #### Virtual Network Internet Connectivity
-When Routing Intent for internet access is enabled, the default route generated from the Secure Virtual WAN Hub is automatically advertised to the hub-peered Virtual Network connections. You'll notice under Effective Routes for the Virtual Machines’ NICs in the Virtual Network that the 0.0.0.0/0 next hop is the regional hub firewall.
+When you enable Routing Intent for internet access, it automatically generates a default route from both regional hubs and advertises it to the their hub-peered Virtual Network connections. You'll notice under Effective Routes for the Virtual Machines’ NICs in the Virtual Network that the 0.0.0.0/0 next hop is the regional hub firewall. The default route is never advertised across regional hubs over the ‘inter-hub’ link. Therefore, Virtual Networks use their local regional hub for internet access and have no backup internet connectivity to the cross-regional hub. 
 
 For more information, see the traffic flow section.
 
