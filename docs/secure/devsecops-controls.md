@@ -109,7 +109,13 @@ This control focuses on providing your developers and security teams with traini
 
 As a result, it's imperative that you implement security training across all roles (including users, developers, product line managers, testers, and more). Each role must have education on security risks and their role in keeping applications safe. This training might take the form of: formal or on-demand training, simulation exercises, threat modeling, mentoring/advisors, security champions, application security support teams, purple team activities, podcasts, videos, or any other learning methods.
 
-Ultimately, each role needs to understand: why it’s important to address security risks, what they need to do for security in their role, and how to do those things. People who understand the attacker’s perspective, their goals, and how that shows up in real world security incidents quickly become security allies instead of trying to avoid security.
+Ultimately, each role needs to understand: 
+
+- Why it’s important to address security risks?
+- What they need to do for security in their role?
+- How to make security part of their everyday role?
+
+People who understand the attacker’s perspective, their goals, and how that shows up in real world security incidents quickly become security allies instead of trying to avoid security.
 
 Security is an infinite game where the threats, technology, and business assets to protect are always changing and the threat actors never give up. Security training approach must be ongoing and continuously evolve. Effective training aligns with and reinforces security policies, software development lifecycle (SDL) practices, standards, and software security requirements. Training material should come from insights derived from data and newly available technical capabilities.
 
