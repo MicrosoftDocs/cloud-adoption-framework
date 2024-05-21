@@ -32,16 +32,36 @@ You've identified the potential benefits of generative AI and have a clear visio
 > "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 
-Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives.
+Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives:
 
-> TBD: Recommendation.
+- **Consider AI in decision-making**
+  - Regularly communicate the strategic importance of AI to the entire organization.
+  - Integrate AI into strategic planning and decision-making processes.
+  - See [how AI will transform decision-making](https://www.weforum.org/agenda/2023/09/how-artificial-intelligence-will-transform-decision-making/).
+- **Bring visibility to successful AI projects**
+  - Showcase successful AI projects to underscore its value to leadership.
+  - See [customer stories for Azure AI](https://customers.microsoft.com/search?sq=%22Azure%20AI%22&ff=language%26%3EEnglish&p=0&so=story_publish_date%20desc).
+- **Drive an innovate culture**
+  - Continuous learning helps drive AI innovation. See [Continuous learning](/azure/cloud-adoption-framework/innovate/considerations/learn#continuous-learning).
 
 ### Organizational alignment
 
 > "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 
-> TBD: Recommendation.
+A leader-stage company is typically characterized by the existence of a well-defined, comprehensive and future-proof strategy. This strategy is not only clear and specific, but also fully integrated into the broader business strategy. It specifies how AI technologies are intended to support and enhance business objectives, ensuring that all AI initiatives are aligned with, and contribute to, the overarching goals of the organization.
+
+Consider the importance of organizational alignment:
+
+- **Communicate the AI strategy**
+  - Communicate the strategy and vision as an integral part of the overall business strategy.
+  - Articulate how AI can support and enhance specific business objectives.
+  - See [Building a foundation for AI success: Business strategy](https://www.microsoft.com/microsoft-cloud/blog/2023/11/01/building-a-foundation-for-ai-success-business-strategy/)
+- **Review and realign**
+  - Regularly review and update the strategy as necessary to reflect changes in business objectives or advancements in AI technology.
+- **Measure effectiveness**
+  - Drive toward implementing tools and processes to measure the effectiveness of AI initiatives in achieving the business objectives, enabling continuous improvement and refinement of the strategy.
+  - If you can measure the effectiveness of your AI initiatives, you can better understand the value they bring to your organization, and get wider buy-in from stakeholders.
 
 ### Employee readiness
 
