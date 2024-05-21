@@ -13,8 +13,7 @@ ms.custom: think-tank, e2e-sap
 This article is part of the "SAP and Power Platform" article series.
 	
 - [SAP and Power Platform fundamentals](./sap-lza-sap-powerplatform-fundamental.md)
-
-- [SAP and Power Platform Architecture Workflow](./sap-lza-sap-powerplatform-architecture-workflow.md)
+- [SAP and Power Platform Architecture Workflow](./sap-lza-powerplatform-architecture-workflow.md)
 
 
 This article is Part 2 of the SAP and Power Platform Articles. 
@@ -25,9 +24,9 @@ The SAP ERP Connector requires an on-premises data gateway for a connection to S
 An OData connection or the use of "Other Connectors," such as the HTTP Connector, can be directly connected to SAP or through a firewall and API Management gateway.
 A firewall and API management are recommended for implementations in production environments with sensitive customer data. Especially for further improvement of access control, traffic management, governance, scalability, and flexibility adding the Azure API management is recommended.
 
-:::image type="content" source="./media/sap-powerplatform-integration.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with SAP." lightbox="./media/sap-powerplatform-integration.svg":::
+:::image type="content" source="./media/sap-powerplatform-architecture.svg" border="false" alt-text="Diagram that shows architecture diagram of Power Platform Integration with SAP." lightbox="./media/sap-powerplatform-architecture.svg":::
 
-*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-integraion.vsdx) of this architecture.*
+*Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/raw/main/ready/sap-powerplatform-architecture.vsdx) of this architecture.*
 
 ## Choose the optimal connector
 
