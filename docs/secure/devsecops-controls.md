@@ -22,7 +22,7 @@ This documentation describes each control and shows how to apply these controls 
       :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Temporary Minimum** – Abbreviated security profile for a **temporary exception state** to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
+      **Temporary minimum** – Abbreviated security profile for a **temporary exception state** to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -38,14 +38,14 @@ This documentation describes each control and shows how to apply these controls 
       :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **High Security**  – Stringent security for workloads with a potential high impact on business and human safety
+      **High security** – Stringent security for workloads with a potential high impact on business and human safety
    :::column-end:::
 :::row-end:::
 
 <!---
-- Temporary Minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
+- Temporary minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
 - Standard (Center) - Balanced approach for most workloads most of the time
-- High Security (Right) – Stringent security for workloads with a potential high impact on business and human safety
+- High security (Right) – Stringent security for workloads with a potential high impact on business and human safety
 --->
 
 ## DevSecOps security controls
@@ -231,9 +231,36 @@ SAST tools scan the existing codebase and have full access to the code. SAST too
 
 **Quality control matters!** A key consideration for running these tools is ensuring that you're tuning them to reduce the noise and wasted effort from false positives. Tuning these tools typically requires a security professional with a developer background that understands your organization’s development processes. The same professionals can also provide triage guidance and expertise on individual detections for developers. They can help distinguish true and false positives, real issues vs. false alarms. The processes for developers to access these experts is often closely related to [Providing Security Training](#providing-security-training) such as through champions programs, application security support teams, etc.
 
-Temporary Minimum: Ensure you enable built-in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the "bug bar" standard of which flaws must be fixed is limited until the application reaches the standard balanced or high security profiles.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Ensure you enable built-in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the "bug bar" standard of which flaws must be fixed is limited until the application reaches the standard balanced or high security profiles.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Ensure you fully scan all components with all applicable SAST/DAST tooling and identify weaknesses. Ensure full security coverage over your application code. Ensure you're following the documented process for remediation and have a "bug bar" standard matches your organization’s risk tolerance/appetite.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – Ensure all applicable applications enforce a detailed and documented process addressing all security vulnerabilities. Enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive "bug bar" that matches your organization’s risk tolerance/appetite for high security business critical workloads.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Ensure you enable built-in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the "bug bar" standard of which flaws must be fixed is limited until the application reaches the standard balanced or high security profiles.
 Standard: Ensure you fully scan all components with all applicable SAST/DAST tooling and identify weaknesses. Ensure full security coverage over your application code. Ensure you're following the documented process for remediation and have a "bug bar" standard matches your organization’s risk tolerance/appetite.
-High Security: Ensure all applicable applications enforce a detailed and documented process addressing all security vulnerabilities. Enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive "bug bar" that matches your organization’s risk tolerance/appetite for high security business critical workloads.
+High security: Ensure all applicable applications enforce a detailed and documented process addressing all security vulnerabilities. Enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive "bug bar" that matches your organization’s risk tolerance/appetite for high security business critical workloads.
+--->
 
 There are many tools available to use for static analysis we recommend checking out the list at [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
 
@@ -249,9 +276,36 @@ Failure to control your software supply chain exposes you to significant vulnera
 
 Securing your supply chain is an essential part of ensuring a secure development lifecycle and should be considered at every profile state, although every single state should follow the same standardized process of ingesting dependencies.
 
-Temporary Minimum: Inventory all of your dependences so you understand the impact an OS vulnerability has on your application. This inventory can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Inventory all of your dependences so you understand the impact an OS vulnerability has on your application. This inventory can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Analyze all OSS Vulnerabilities and automatically fix them with automatic pull requests. This control can similarly be achieving using [Dependabot](https://docs.github.com/code-security/dependabot) and the GitHub Dependency graph/review.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – Actively block all insecure packages with exploitable vulnerabilities being used in the application.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Inventory all of your dependences so you understand the impact an OS vulnerability has on your application. This inventory can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
 Balanced state: Analyze all OSS Vulnerabilities and automatically fix them with automatic pull requests. This control can similarly be achieving using [Dependabot](https://docs.github.com/code-security/dependabot) and the GitHub Dependency graph/review.
-High Security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
+High security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
+--->
 
 To learn more about this control and measure your OSS Security maturity, review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource).
 
@@ -265,9 +319,36 @@ This review could be performed by: a peer on the same team with application secu
 
 This review must always be a separate person from the developer who wrote the code. This review should be done as a separate activity after automated code analysis is complete.
 
-Temporary Minimum: This control is recommended for this profile
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – This control is recommended for this profile.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - This control is recommended for this profile.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – This control is required for all high security applications and often involves multiple individual experts.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: This control is recommended for this profile
 Standard: This control is recommended for this profile
-High Security: This control is required for all high security applications and often involves multiple individual experts.
+High security: This control is required for all high security applications and often involves multiple individual experts.
+--->
 
 ### Credential and secret scanning
 
@@ -326,10 +407,35 @@ Have professional application penetration testers attempt to compromise a live i
 
 We recommend you do this testing at all levels of the DevSecOps security profiles.
 
-Temporary Minimum: We recommend that you do a penetration test on applications especially if the project due to its pace might have vulnerabilities. You must identify the easy methods into the application that an attacker might exploit.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – We recommend that you do a penetration test on applications especially if the project due to its pace might have vulnerabilities. You must identify the easy methods into the application that an attacker might exploit.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - At a standard profile, we recommend that you do a penetration test. In this case, you might uncover more complex attacks/weakness’s due to the extra care that is taken early in the development process.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – For line of business applications and critical workloads, it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with extra attention and care.
+   :::column-end:::
+:::row-end:::
+<!---
+Temporary minimum: We recommend that you do a penetration test on applications especially if the project due to its pace might have vulnerabilities. You must identify the easy methods into the application that an attacker might exploit.
 Standard: At a standard profile, we recommend that you do a penetration test. In this case, you might uncover more complex attacks/weakness’s due to the extra care that is taken early in the development process.
-High Security: For line of business applications and critical workloads, it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with extra attention and care.
-
+High security: For line of business applications and critical workloads, it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with extra attention and care.
+--->
 Integrate the findings and feedback from these activities to improve your security processes and tools.
 
 ### Identity/application access controls
@@ -340,9 +446,36 @@ Ensure that security best practices for identity and access management including
 
 Ensure security best practices are followed for all development systems and the infrastructure hosting them (VMs, containers, network devices, and more).
 
-Temporary Minimum: Ensure everyone is using multifactor authentication and only have access to what they need to perform daily tasks
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Ensure everyone is using multifactor authentication and only have access to what they need to perform daily tasks.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Ensure that the infrastructure hosting the workload (VMs, containers, network, identity systems, etc.) meets security best practices for identity and access management, including securing privileged access.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). Perform workload-specific threat model (LINK) of identity systems and components supporting each high security workload.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Ensure everyone is using multifactor authentication and only have access to what they need to perform daily tasks
 Standard state: Ensure that the infrastructure hosting the workload (VMs, containers, network, identity systems, etc.) meets security best practices for identity and access management, including securing privileged access
-High Security: Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). Perform workload-specific threat model (LINK) of identity systems and components supporting each high security workload.
+High security: Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). Perform workload-specific threat model (LINK) of identity systems and components supporting each high security workload.
+--->
 
 Managed Identities are the more secure and preferred method of authentication wherever possible. The use of tokens and secrets is less secure due to the need to store and retrieve them at the application layer. In addition, Managed Identities are automatically rolled over without the need for manual intervention.
 
@@ -378,9 +511,36 @@ This control includes any resource that can run any code including but not limit
 
 Ensure to apply security best practice to the infrastructure components including security updates (patches), baseline security configurations, and more.
 
-Temporary Minimum: Apply standard enterprise configurations for hosts and subscriptions.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Apply standard enterprise configurations for hosts and subscriptions.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Ensure that the infrastructure meets security best practices outlined in the Microsoft Cloud Security Benchmark (MCSB).
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – Stringently apply MCSB standards and perform workload-specific threat model (LINK) of infrastructure supporting each high security workload.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Apply standard enterprise configurations for hosts and subscriptions.
 Standard state: Ensure that the infrastructure meets security best practices outlined in the Microsoft Cloud Security Benchmark (MCSB)
-High Security: Stringently apply MCSB standards and perform workload-specific threat model (LINK) of infrastructure supporting each high security workload.
+High security: Stringently apply MCSB standards and perform workload-specific threat model (LINK) of infrastructure supporting each high security workload.
+--->
 
 More details and resources include:
 
@@ -407,9 +567,36 @@ Network security should include:
 
 Ensure security best practices are followed for all development systems and the infrastructure hosting them (VMs, containers, network devices, and more).
 
-Temporary Minimum: Apply standard enterprise configurations for workload.
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Apply standard enterprise configurations for workload.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Ensure all systems have external network protection, DDoS protection, and a minimum of per-workload internal network protection.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a workload-specific threat model (LINK) of network infrastructure supporting each high security workload.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Apply standard enterprise configurations for workload.
 Standard state: Ensure all systems have external network protection, DDoS protection, and a minimum of per-workload internal network protection.
-High Security: All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a workload-specific threat model (LINK) of network infrastructure supporting each high security workload.
+High security: All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a workload-specific threat model (LINK) of network infrastructure supporting each high security workload.
+--->
 
 More details and resources include:
 
@@ -434,9 +621,36 @@ Security monitoring for custom workloads combines extended detection and respons
 
 This data is then infused with insights from real-time threat intelligence to identify patterns of anomalous behavior that could indicate potential attempts to infiltrate the network. Once aggregated, correlated, and normalized, the XDR and Security Information and Event Management (SIEM) platform offers remediation actions.
 
-Temporary Minimum: Deploy XDR capabilities in your environment to monitor traffic of your end user devices
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Temporary minimum** – Deploy XDR capabilities in your environment to monitor traffic of your end user devices.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **Standard** - Deploy XDR and custom SIEM detections that identify anomalous behavior relative to the overall environment. This profile might include custom detections for individual workloads.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="3":::
+      **High security** – Standard controls plus custom per-workload detections based on insights from threat modeling of the workload. Combine this profile with AI to provide contextual awareness to remediation recommendations.
+   :::column-end:::
+:::row-end:::
+
+<!---
+Temporary minimum: Deploy XDR capabilities in your environment to monitor traffic of your end user devices
 Standard state: Deploy XDR and custom SIEM detections that identify anomalous behavior relative to the overall environment. This profile might include custom detections for individual workloads.
-High Security: Standard controls plus custom per-workload detections based on insights from threat modeling of the workload. Combine this profile with AI to provide contextual awareness to remediation recommendations.
+High security: Standard controls plus custom per-workload detections based on insights from threat modeling of the workload. Combine this profile with AI to provide contextual awareness to remediation recommendations.
+--->
 
 - [Microsoft Defender](/defender)
 - [Microsoft Sentinel](/azure/sentinel)
