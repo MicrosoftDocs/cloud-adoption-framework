@@ -681,6 +681,6 @@ High security: Standard controls plus custom per-workload detections based on in
 
 Adopt these security controls and adapt them to your organization risk appetite and productivity requirements. You should use a continuous improvement approach where you start somewhere and build towards the ideal state.
 
-You should start by prioritize controls and the minimum/ideal target levels to ensure you have high positive security impact and low-friction changes first. Prioritize, implement, and integrate the first control then repeat the process with the next control.
+Start by prioritizing controls and the minimum ideal target levels. Ensure you have positive security impact and low-friction changes first. Prioritize, implement, and integrate the first control then repeat the process with the next control.
 
 You should prioritize the [critical foundations](#establish-critical-foundations) first because of their broad positive impact and [credential and secret scanning](#credential-and-secret-scanning) because of its high impact and frequent attacker use.
