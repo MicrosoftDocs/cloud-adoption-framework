@@ -1,7 +1,29 @@
 ## <a name="_toc156377586"></a>Azure Linux Machine Update Management
-For greenfield deployment scenarios, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your Azure Linux VMs.
+For greenfield deployment scenarios, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your Azure Linux VMs.
 
 For existing brownfield deployments, the use of Red Hat Satellite and extending into Azure from on-premsies may be the optimal approach.
+
+With Red Hat Satellite, you can provide content and apply patches to hosts systematically in all lifecycle stages. Content flow in Red Hat Satellite involves management and distribution of content from external sources to hosts.
+
+Content in Satellite flows from external content sources to Satellite Server. Capsule Servers mirror the content from Satellite Server to hosts.
+
+**External content sources**
+
+You can configure many content sources with Satellite. The supported content sources include the Red Hat Customer Portal, Git repositories, Ansible collections, Docker Hub, SCAP repositories, or internal data stores of your organization.
+
+**Satellite Server**
+
+On your Satellite Server, you plan and manage the content lifecycle.
+
+**Capsule Servers**
+
+By creating Capsule Servers, you can establish content sources in various locations based on your needs. For example, you can establish a content source for each geographical location or multiple content sources for a data center with separate networks.
+
+**Hosts**
+
+By assigning a host system to a Capsule Server or directly to your Satellite Server, you ensure the host receives the content they provide. Hosts can be physical or virtual.
+
+![Red Hat Satellite](images/system-architecture-satellite.png "Red Hat Satellite")
 
 ## <a name="_toc156377587"></a>Deployment Strategy
 In most cases automated software update management solutions are preferred over manual update installation process.  In brownfield installations integration with on-premises solutions should be accounted for. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other 3<sup>rd</sup> party open source software.
