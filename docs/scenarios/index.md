@@ -27,7 +27,7 @@ The following list describes the components of a cloud adoption scenario:
 
 - [The Cloud Adoption Framework](https://azure.microsoft.com/solutions/cloud-enablement/cloud-adoption-framework/) guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts.
 
-- [Microsoft Learn Training](https://learn.microsoft.com/training) is a free online training platform. Learn new skills and discover the power of Microsoft products with step-by-step guidance. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators.
+- [Microsoft Learn Training](/training) is a free online training platform. Learn new skills and discover the power of Microsoft products with step-by-step guidance. These modules include role-based training and learning paths for Azure developers, solution architects, and administrators.
 
 - **Reference architectures** are templates that include required components and technical requirements to implement the components. Each reference architecture includes best practices and considerations for scalability, availability, security, resilience, and other aspects of design. Reference architectures can help your organization accelerate deployment for many common scenarios.
 
