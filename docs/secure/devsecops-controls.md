@@ -33,7 +33,7 @@ This figure summarizes the security controls and how to apply them to each workl
 
 Key planning considerations include:
 
-- **Shift left… but double-check** - This reference is designed to detect and correct issues as early as possible to enable you to fix them when it's easier and cheaper to fix the issues (sometimes called shift left), but also to assume failure and include double checking later in the process. Always double-check any security controls in the CI/CD process to ensure avoidable issues don’t slip through to production systems. This concept follows "defense in depth" and "fail safe" principles.
+- **Shift left… but double-check** - This reference is designed to detect and correct issues as early as possible to enable you to fix them when it's easier and cheaper to fix the issues (sometimes called shift left), but also to assume failure and include double checking later in the process. Always double-check any security controls in the CI/CD process, ensure avoidable issues don’t slip through to production systems. This concept follows "defense in depth" and "fail safe" principles.
 - **Artificial Intelligence (AI)** – The two main implications of artificial intelligence are:
    - **Secure all code** regardless of whether written by human or generative AI
    - **Use both for security** - Apply both classic and AI controls as available to increase visibility and context for any security issues (such as code analysis tools)
@@ -77,7 +77,7 @@ As a result, it's imperative that you implement security training across all rol
 
 Ultimately, each role needs to understand: why it’s important to address security risks, what they need to do for security in their role, and how to do those things. People who understand the attacker’s perspective, their goals, and how that shows up in real world security incidents quickly become security allies instead of trying to avoid security.
 
-Security is an infinite game where the threats, technology, and business assets to protect are always changing and the threat actors never give up. Security training approach must be ongoing and continuously evolve. Effective training aligns with and reinforces security policies, software development lifecycle (SDL) practices, standards, and software security requirements. It should be informed by insights derived from data and newly available technical capabilities.
+Security is an infinite game where the threats, technology, and business assets to protect are always changing and the threat actors never give up. Security training approach must be ongoing and continuously evolve. Effective training aligns with and reinforces security policies, software development lifecycle (SDL) practices, standards, and software security requirements. It's informed by insights derived from data and newly available technical capabilities.
 
 Although security is everyone’s job, it’s important to remember that not everyone needs to be a security expert nor strive to become a proficient penetration tester. Ensuring everyone understands security basics and how to apply them to their role of building security into software and services is essential. This training should include in the safe use of their computers, applications, identity, and accounts.
 
@@ -91,22 +91,22 @@ Blameless postmortem analysis is a critically important method for teams to lear
 
 Establishing security standards, metrics, and governance underpins the organization’s ability to innovate. It enables a strong security program that not only protects the organization’s assets but also aligns with its business objectives. Security standards are the baseline requirements and best practices for keeping an organization's systems, data, and process safe.
 
-These standards should be measured and governed, including monitoring for compliance and regularly reviewing and updating them for current threats, tooling, and other factors. This should cover the entire lifecycle from initial ideation through the decommissioning of the application and any supporting development environments.
+These standards should be measured and governed, including monitoring for compliance and regularly reviewing and updating them for current threats, tooling, and other factors. This process should cover the entire lifecycle from initial ideation through the decommissioning of the application and any supporting development environments.
 
-Metrics are measurements used to see how effective the security controls and processes are. One key metric is the Mean Time To Remediate (MTTR) for tracking how long an application remains vulnerable. This allows us to strategically invest in issuing security fixes more promptly. 
+Metrics are measurements used to see how effective the security controls and processes are. One key metric is the Mean Time To Remediate (MTTR) for tracking how long an application remains vulnerable. This measurement allows us to strategically invest in issuing security fixes more promptly. 
 
 > [!NOTE]
 > This concept differs from MTTR in security operations focused on time to remove adversary access to the organization’s assets.
 
 Security governance acts as a guiding hand to security teams and are often frameworks and processes that organizations use to manage and control their information security. These include Policies, Procedures, Controls, and Risk Management. Metrics help quantify risk exposure. Without them, the organization might not fully understand its vulnerabilities and potential impact.
 
-Because security requirements might be new, you have the opportunity to take a progressive approach that gradually ramps up coding standards to the ideal state. This gives teams time to learn and automate the monitoring and controls.
+Because security requirements might be new, you have the opportunity to take a progressive approach that gradually ramps up coding standards to the ideal state. This approach gives teams time to learn and automate the monitoring and controls.
 
 #### Require use of proven security features, languages, and frameworks
 
 Define and publish a list of approved tools and their associated security checks. Using well established and proven security solutions is important to avoid common mistakes because building secure solutions is very challenging. Attempting to reinvent security solutions almost always results in increased security risk and wasted time and effort.
 
-Ensure developers and engineers are taking advantage of new security analysis functionality and protections by always using the latest compiler, linker, libraries, and are using the appropriate compiler and linker flags to generate secure executables.
+Ensure developers and engineers are taking advantage of new security analysis functionality and protections. They should always use the latest compiler, linker, libraries, and the appropriate compiler and linker flags to generate secure executables.
 
 Organizations should implement a review and approval process to validate the security of any integrated components. They should establish a policy to only use approved components in build and deploy processes that are enforced and monitored.
 
@@ -116,8 +116,7 @@ Ensure that the use and integration of identity follows well-established securit
 
 Identity security takes two forms for development:
 
-- Identity Security for Development Process - Ensure that all participants in the development process use strong authentication methods for their daily work and only have privileges required to execute their job tasks.
-See Identity/App Access Controls for more information.
+- Identity Security for Development Process - Ensure that all participants in the development process use strong authentication methods for their daily work and only have privileges required to execute their job tasks. For more information, see the section [Identity/application access controls](#identityapplication-access-controls).
 - Identity Security for Systems and Applications - Ensure that the systems they're designing and building follow best practices for authentication and authorization methods (and aren’t creating own weak imitations of proven and maintained identity systems).
 
 Apply identity security for systems and applications by following the guidance in these resources:
@@ -138,17 +137,17 @@ This supports Continuous SDL Practice 6 – Securing your engineering environmen
 
 This control focuses on securing your development environment using secure workstations and Integrated Development Environments (IDEs). This control highlights the benefit of using a Zero Trust approach in your software development lifecycle.
 
-In the current landscape attackers have expanded their operations to target your developers’ machines and tamper with build process’s. A pivotal example of this was the SolarWinds attack where the attacker inserted a malicious DLL before the final stages of the software build. Effectively this backdoored the application and resulted in a targeted attack that was distributed to thousands of customers worldwide via the supply chain. For more information about the SolarWinds attack, see the Microsoft Blog [Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers](https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/).
+In the current landscape, attackers expand their operations to target your developers’ machines and tamper with build processes. A pivotal example of this attack was the one experienced by SolarWinds, where the attacker inserted a malicious DLL before the final stages of the software build. Effectively this backdoored the application and resulted in a targeted attack that was distributed to thousands of customers worldwide via the supply chain. For more information about the SolarWinds attack, see the Microsoft Blog [Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers](https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/).
 
 It's essential to harden workstations, build environments, identities, and other development systems to ensure the integrity of developed applications. Failure to do so creates a pathway for attackers to compromise your application via your Source Code Management (SCM) system or via your developer workstation.
 
 This practice is a critical foundation of your development lifecycle and should be established over all profiles.
 
-Throughout this practice you must take a Zero Trust approach. At its core the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) requires that each access request (user, service, or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points, limit user access, especially privilege users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies and segment access to minimize the possible damage in the event of a breach. 
+Throughout this practice, you must take a Zero Trust approach. At its core the [Zero Trust model](https://www.microsoft.com/security/business/zero-trust) requires that each access request (user, service, or device) is verified as though it originated from an untrusted network, regardless of where the request originates or what resource it accesses. Base this always authenticate and authorize policy on all available data points. You should limit user access, especially privileged users, through Just-In-Time and Just-Enough-Access (JIT/JEA) policies, and segment access to minimize the possible damage if there's a breach. 
 
-Hardening your development environment can be achieved through various methods, however a good starting point is to consider the developer workstation. By utilizing technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box) you shift the development environment to a SaaS Application which can then be managed through security and network settings or through organizational policies.
+Hardening your development environment can be achieved through various methods, however a good starting point is to consider the developer workstation. By utilizing technologies such as [GitHub Codespaces](https://docs.github.com/codespaces/overview) or [Microsoft DevBox](/azure/dev-box/overview-what-is-microsoft-dev-box), you shift the development environment to SaaS applications, which can then be managed through security and network settings or through organizational policies.
 
-To further lockdown developer workstations you can issue them Privileged access workstations/Secure Access workstations (PAW/SAW) Devices directly to the developers reducing the threat vectors and ensuring a standardized/organizational controlled developer device.
+To further lockdown developer workstations, you can issue them privileged access workstations/secure access workstations (PAW/SAW). These workstations help you reduce threat vectors and ensure a standardized and controlled developer device.
 
 - [Why are privileged access devices important](/security/privileged-access-workstations/privileged-access-devices)
 - [Deploying a privileged access solution](/security/privileged-access-workstations/privileged-access-deployment)
@@ -157,22 +156,22 @@ To further lockdown developer workstations you can issue them Privileged access 
 
 This supports Continuous SDL Practice 3 – Perform Threat Modeling.
 
-This control identifies security weaknesses in the design that can result in security incidents and business damage. Security weaknesses in the design can be difficult to mitigate after the design is implemented, so finding and fixing these early in the lifecycle is critically important.
+This control identifies security weaknesses in the design that can result in security incidents and business damage. Security weaknesses in the design can be difficult to mitigate after the design is implemented, so finding and fixing these weaknesses early in the lifecycle is critically important.
 
-Threat modeling serves as the security design review process, which integrate security into the design of a system or application.
+Threat modeling serves as the security design review process, which integrates security into the design of a system or application.
 
 Threat modeling systematically identifies, assesses, prioritizes, and mitigates security risks within a software system. This structured approach to analyzing the design and architecture of a software application identifies potential threats and vulnerabilities early in the development process.
 
-The ultimate goal is to understand the system and what could go wrong. Threat modeling does this by applying a deep understanding of both the system itself and how a threat actor (potential attacker) views it.
+The ultimate goal is to understand the system and what could go wrong. Threat modeling does this review by applying a deep understanding of both the system itself and how a potential attacker views it.
 
-This typically takes the form of threat discovery workshops where a team of experts on the system and security experts work together to discover and document risks. While this might start informally, this should quickly evolve into a structured process that discusses each aspect of the service being built, how it will be used, and system interfaces.
+This process typically takes the form of threat discovery workshops where a team of experts on the system and security experts work together to discover and document risks. While this process might start informally, it should quickly evolve into a structured process that discusses each aspect of the service being built, how it's used, and system interfaces.
 
 The stages of threat modeling are:
 
 1. **Identify use cases, scenarios, and assets** – Start with understanding what business functions and use cases the system enables to help assess the potential business impact of any system compromise and inform the discussions to follow.
-1. **Create an architectural overview** – Create a visual summary of the application (or use an existing one) to provide a clear understanding of the system and how it works. This should include a business process map, components and subsystems, trust boundaries, authentication and authorization mechanisms, external and internal interfaces, and data flows between actors and components.
+1. **Create an architectural overview** – Create a visual summary of the application (or use an existing one) to provide a clear understanding of the system and how it works. This overview should include: a business process map, components and subsystems, trust boundaries, authentication and authorization mechanisms, external and internal interfaces, and data flows between actors and components.
 1. **Identify the threats** - Use a common methodology for enumerating potential security threats such as the [STRIDE model](/azure/security/develop/threat-modeling-tool-threats) or [OWASP threat modeling](https://owasp.org/www-community/Threat_Modeling).
-1. **Identify and track mitigations** - Monitor and track discovered design flaws using existing development processes and tools to ensure the fixes are implemented and documented. This should include prioritizing which mitigations to do first so that teams spend their time on the most important efforts first. Note that this is a risk driven process and you might not have resources to mitigate all risks fully so carefully consider which mitigations (including partial mitigations) raise the cost for an attacker for the least amount of defensive cost and resources. The goal of security is attacker failure which can take the form of fully blocking an attack technique, detecting them to enable a defender response, slowing them down to give defenders time to respond, limiting the scope of damage, and more.
+1. **Identify and track mitigations** - Monitor and track discovered design flaws using existing development processes and tools to ensure the fixes are implemented and documented. This process should include, prioritizing which mitigations to do first so that teams spend their time on the most important efforts first. This process is risk driven and you might not have resources to mitigate all risks fully. Carefully consider which mitigations, including partial mitigations, raise the cost for an attacker for the least defensive cost and resources. The goal of security is attacker failure, which can take the form of fully blocking an attack technique, detecting them to enable a defender response, slowing them down to give defenders time to respond, limiting the scope of damage, and more.
 
 A threat model often serves as an education process for all involved as well as providing important context for other security planning, implementation, and testing.
 
@@ -190,34 +189,34 @@ Create and analyze threat models by communicating about the security design of t
 
 This supports Continuous SDL Practice 7 – Perform Security Testing.
 
-This control focuses on increasing the security of the code as developers write/enter it into an integrated development environment (IDE) or as they check code in. This is the cornerstone of DevSecOps practices as it directly addresses vulnerabilities that attackers exploit regularly.
+This control focuses on increasing the security of the code as developers write/enter it into an integrated development environment (IDE) or as they check in code. This control is the cornerstone of DevSecOps practices as it directly addresses vulnerabilities that attackers exploit regularly.
 
-Without this control, you might be missing vulnerabilities that have been coded directly into your application by your developers. Your developers aren't being malicious but might lack the skilling needed to identify why what they coded is insecure.
+Without this control, you might be missing vulnerabilities that are coded directly into your application by your developers. Your developers aren't being malicious but might lack the skilling needed to identify why what they coded is insecure.
 
-This is a key area to get the productivity and security benefits of a shift left approach by integrating tools directly into the IDE. This process enables quick discovery and remediation of vulnerabilities at the earliest and cheapest opportunity. This process can be retroactively applied to already developed applications to identify security weaknesses and fixed later as they're found (though at greater expense and difficulty).
+This control is key to get the productivity and security benefits of a shift left approach by integrating tools directly into the IDE. This process enables quick discovery and remediation of vulnerabilities at the earliest and cheapest opportunity. This process can be retroactively applied to already developed applications to identify security weaknesses and fixed later as they're found (though at greater expense and difficulty).
 
-This typically takes the form of IDE plug-ins (or dedicated scanning tools) that scan the code using Static analysis security testing (SAST) and Dynamic Analysis Security Testing (DAST) toolsets.
+This process typically takes the form of IDE plug-ins or dedicated scanning tools, that scan the code using Static Analysis Security Testing (SAST) and Dynamic Analysis Security Testing (DAST) toolsets.
 
-SAST tools scan the existing codebase, they have full access to the code and can identify core weaknesses in the code itself. DAST on the other hand is executed on the built application therefore it has no access to the code and is executed to simulate and identify security weaknesses in runtime.
+SAST tools scan the existing codebase and have full access to the code. SAST tools can identify core weaknesses in the code itself. DAST on the other hand is executed on the built application therefore it has no access to the code and is executed to simulate and identify security weaknesses in runtime.
 
 > [!NOTE]
 > AI applications have different types of vulnerabilities (biases, hallucinations, etc.) than classic applications and require tools that focus on those.
 
-**Quality control matters!** A key consideration for running these tools is ensuring that you're tuning them to reduce the noise and wasted effort from false positives. Tuning these tools typically requires a security professional with a developer background that understands your organization’s development processes. The same professionals can also provide guidance and expertise on individual detections that developers need help triaging as either a true positive (real issue) or false positive (false alarm). The processes for developers to access these experts is often closely related to [Providing Security Training](#providing-security-training) such as through champions programs, application security support teams, etc.
+**Quality control matters!** A key consideration for running these tools is ensuring that you're tuning them to reduce the noise and wasted effort from false positives. Tuning these tools typically requires a security professional with a developer background that understands your organization’s development processes. The same professionals can also provide triage guidance and expertise on individual detections for developers. They can help distinguish true and false positives, real issues vs. false alarms. The processes for developers to access these experts is often closely related to [Providing Security Training](#providing-security-training) such as through champions programs, application security support teams, etc.
 
-Temporary Minimum: Ensure you enable built in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the ‘bug bar’ standard of which flaws must be fixed will be limited until the application reaches the standard balanced or high security profiles.
-Standard: Ensure you fully scan all components with all applicable SAST/DAST tooling to identify weaknesses and ensure full security coverage over your application code. Ensure you're following the documented process for remediation and have a ‘bug bar’ standard matches your organization’s risk tolerance/appetite.
-High Security: Ensure all applicable applications enforce a detailed and documented process to address all security vulnerabilities and enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive ‘bug bar’ that matches your organization’s risk tolerance/appetite for high security business critical workloads.
+Temporary Minimum: Ensure you enable built-in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the "bug bar" standard of which flaws must be fixed is limited until the application reaches the standard balanced or high security profiles.
+Standard: Ensure you fully scan all components with all applicable SAST/DAST tooling and identify weaknesses. Ensure full security coverage over your application code. Ensure you're following the documented process for remediation and have a "bug bar" standard matches your organization’s risk tolerance/appetite.
+High Security: Ensure all applicable applications enforce a detailed and documented process addressing all security vulnerabilities. Enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive "bug bar" that matches your organization’s risk tolerance/appetite for high security business critical workloads.
 
-There are a multitude of tools available to use for static analysis we recommend checking out the list at [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
+There are many tools available to use for static analysis we recommend checking out the list at [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
 
 ### Supply chain / dependency management
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain.
 
-This control focuses on securing your development supply chain by using SCA tools and frameworks such as the S2C2F to reduce the risk of being compromised by third party code.
+This control focuses on securing your development supply chain by using SCA tools and frameworks such as the S2C2F. These help reduce the risk of being compromised by third-party code.
 
-In today’s landscape, a vast majority of applications rely on open source software (OSS) with little oversight or control from consumers of these components. This control highlights core strategies, techniques, and technologies to securely ingest, consume, use, and maintain OSS. It also emphasizes securing internal dependencies, ensuring a complete end-to-end lifecycle, regardless of who coded the software.
+In today’s landscape, most applications rely on open source software (OSS) with little oversight or control from consumers of these components. This control highlights core strategies, techniques, and technologies to securely ingest, consume, use, and maintain OSS. It also emphasizes securing internal dependencies, ensuring a complete end-to-end lifecycle, regardless of who coded the software.
 
 Failure to control your software supply chain exposes you to significant vulnerabilities introduced by code you don't control. A notorious example is the log4J/Log4Shell vulnerability, which allowed remote code execution in any system or application using this package. Such vulnerabilities can arise accidentally or maliciously.
 
