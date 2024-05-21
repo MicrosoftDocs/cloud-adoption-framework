@@ -30,7 +30,7 @@ This documentation describes each control and shows how to apply these controls 
       :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Standard** - Balanced approach for most workloads most of the time
+      **Standard** - Balanced approach for most workloads, most of the time.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -38,7 +38,7 @@ This documentation describes each control and shows how to apply these controls 
       :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **High security** – Stringent security for workloads with a potential high impact on business and human safety
+      **High security** – Stringent security for workloads with a potential high impact on business and human safety.
    :::column-end:::
 :::row-end:::
 
@@ -204,7 +204,7 @@ A threat model often serves as an education process for all involved as well as 
 
 Applications that include the use of Artificial Intelligence (AI) components must evaluate the specific risk types associated with AI, which are different from classic applications.
 
-- [Threat Modeling Security Fundamentals learning path](https://learn.microsoft.com/training/paths/tm-threat-modeling-fundamentals/)
+- [Threat Modeling Security Fundamentals learning path](/training/paths/tm-threat-modeling-fundamentals/)
 - [Microsoft Threat Modeling Tool](https://www.microsoft.com/download/details.aspx?id=49168)
 
 Create and analyze threat models by: communicating about the security design of their systems, analyzing those designs for potential security issues using a proven methodology, and suggesting and managing mitigations for security issues.
