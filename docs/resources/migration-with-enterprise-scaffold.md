@@ -275,7 +275,7 @@ These are tools to provide you instant information on cost as well as the abilit
 
 - **Subscription resource cost:** Located in the portal, [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) view provides a quick look at your costs and information on daily spend by resource or resource group.
 
-- **Microsoft Cost Management:** This allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities.
+- **Cost Management:** This allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities.
 
 - **Azure budgets and action groups:** Knowing what something costs and doing something about it until recently has been more of a manual exercise. With the introduction of Azure budgets and its APIs, now you can [create actions](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups) that run when costs hit a threshold. For example, you could shut down a `test` resource group when its consumption reaches 100% of its budget.
 

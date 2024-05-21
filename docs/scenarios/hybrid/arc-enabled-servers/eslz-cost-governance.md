@@ -119,7 +119,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 ### Azure Policy machine configuration
 
 - Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy machine configuration pricing](https://azure.microsoft.com/pricing/details/azure-policy/).
-- Use Microsoft Cost Management to understand the Azure Policy machine configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
+- Use Cost Management to understand the Azure Policy machine configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
 - All built-in machine configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that do not need to be evaluated on your hybrid servers.
 
 :::image type="content" source="./media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="./media/cost-management-policy-azure.png":::
@@ -138,7 +138,7 @@ Review [recommendations for automation](./eslz-automation-arc-server.md) and [Az
 ### Azure Private Link
 
 - Review [recommendations for connectivity](./eslz-arc-servers-connectivity.md) and [Azure Private Link pricing](https://azure.microsoft.com/pricing/details/private-link/).
-- Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
+- Use [Cost Management](/azure/cost-management-billing/cost-management-billing-overview) to monitor the usage of Private Link, used with Azure Arc-enabled servers.
 
 :::image type="content" source="./media/cost-private-endpoints.png" alt-text="Screenshot that shows an example of Azure Private Link costs." lightbox="./media/cost-private-endpoints.png":::
 
