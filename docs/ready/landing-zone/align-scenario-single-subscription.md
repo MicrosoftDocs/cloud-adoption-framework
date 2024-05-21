@@ -30,7 +30,6 @@ In this scenario, the current state of the customer's Azure environment consists
 - Minimal usage of Azure Policy. Policy assignments, such as audit effects and deny effects, are performed for each resource group, with exceptions.
 - Resource groups that are treated as units of management and scale.
 - Role-based access control role assignments for each resource group.
-- Azure blueprints.
 - A single virtual network.
   - No hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
   - A new subnet is created for each application.
