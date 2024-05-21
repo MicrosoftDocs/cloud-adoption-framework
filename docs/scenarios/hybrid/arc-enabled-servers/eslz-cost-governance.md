@@ -100,7 +100,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 
 :::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
 
-- Use [Microsoft Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
+- Use [Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
 :::image type="content" source="./media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="./media/cost-management-azure-sentinel.png":::
 

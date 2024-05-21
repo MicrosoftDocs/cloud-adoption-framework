@@ -116,7 +116,7 @@ There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz
 
 ### Update subscription budget
 
-The platform and workload teams share responsibility for the financial health of the subscription. The deployment should create a subscription budget based on the information in the subscription request. The application should update the budget to meet their needs when they receive the subscription. Budgets are useful for auditing spending against current and forecast usage, but they aren't hard limits. You should create budget alerts to notify the subscription owners if the workload is about to exceed the budget threshold. For shared services, such as API Management, consider using [Microsoft Cost Allocation Rules (Preview)](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
+The platform and workload teams share responsibility for the financial health of the subscription. The deployment should create a subscription budget based on the information in the subscription request. The application should update the budget to meet their needs when they receive the subscription. Budgets are useful for auditing spending against current and forecast usage, but they aren't hard limits. You should create budget alerts to notify the subscription owners if the workload is about to exceed the budget threshold. For shared services, such as API Management, consider using [Azure cost allocation rules](/azure/cost-management-billing/costs/allocate-costs) to redistribute costs between consuming subscriptions.
 
 ### Deploy workload and operate
 
