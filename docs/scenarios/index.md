@@ -1,51 +1,49 @@
 ---
-title: The One Migrate approach to Azure adoption
-description: Follow the One Migrate approach of Azure Migrate to migrate and modernize entire IT portfolios.
-author: martinekuan
-ms.author: martinek
-ms.date: 07/21/2020
+title: Cloud adoption scenarios
+description: Find guidance for technology-specific and industry-specific scenarios with the Microsoft Cloud Adoption Framework.
+author: Zimmergren
+ms.author: tozimmergren
+ms.date: 03/18/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
 
-# The One Migrate approach to migrating the IT portfolio
+# Cloud adoption scenarios
 
-Azure and Azure Migrate are both well known for hosting Microsoft technologies. But you might not be aware of Azure's ability to support migrations beyond Windows and SQL Server. The *One Migrate* scenarios captured in the Migrate methodology demonstrate the same set of consistent guidelines and processes for migrating both Microsoft and third-party technologies.
+The following scenarios unify technical and non-technical considerations that can help your organization accelerate its overall cloud adoption journey.
 
-## Migration scenarios
+Your journey to the cloud can become more nuanced in complexity when you consider the implementation of larger, more complex cloud adoption scenarios that meet your unique business requirements. When you follow these scenarios, you'll encounter key sets of guidance that can help you focus on your requirements. These requirements might enable you to maximize your investment in the cloud. These scenarios include pointed guidance across several areas of cloud adoption best practices from the holistic and modular guidance of the Microsoft Cloud Adoption Framework (CAF). The workload-specific architectural guidance of the Azure Well-Architected Framework contains reference architectures and example scenarios with deployment templates to implement the solutions. These solutions are based on extensive customer experiences that represent an infrastructure your organization can rely on.
 
-The following diagram and table outline a number of scenarios that follow the same iterative Migrate methodology for migration and modernization.
+Learn and benefit from a repository of successful cloud adoption experiences and best practices guidance. We collected and codified this guidance from across the Microsoft customer and partner ecosystem. Read on for your answers about cloud adoption, and learn from successful migration and modernization experiences across our customer and partner communities. Let's make the cloud yours.
 
-![Diagram of the Cloud Adoption Framework migration model showing the virtual machines, applications, data, and hybrid resources you will need.](../_images/migrate/one-migrate.png)
+> [!NOTE]
+> **Looking for migration scenarios?**
+> We moved the migration scenarios to a new location. You can find them in the [Migration scenarios](../migrate/scenarios.md) section.
 
-| <span title="Scenario">&nbsp;</span> | <span title="Column 2">&nbsp;</span> | <span title="Column 3">&nbsp;</span> | <span title="Column 4">&nbsp;</span> |
-|--|---------|---------|---------|
-| Virtual machines | [Virtual machines](../migrate/azure-best-practices/contoso-migration-rehost-vm.md) | [Linux servers](../migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md) | [Virtual desktops](./wvd/index.md) |
-| Applications | [ASP.NET](../migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md) | [Java](/azure/developer/java/migration/migration-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | [PHP](../migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md) |
-| Data | [SQL Server](../migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md) | [Open-source databases](../migrate/azure-best-practices/sql-migration.md) | [Analytics](../migrate/azure-best-practices/analytics/analytics-solutions-overview.md) |
-| Hybrid | [Azure Stack](./azure-stack/index.md) | [VMware](./azure-vmware/index.md) | |
-| Technology platforms | SAP (classic and HANA) | Kubernetes | [Mainframes](../infrastructure/mainframe-migration/index.md) |
-| Additional scenarios | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Multitenant environments](/azure/lighthouse/how-to/migration-at-scale?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json) | NetApp |
+## Components of a cloud adoption scenario
 
-Watch this short video for more information about using the right tools to move, manage, and optimize your cloud environment.
+![Graphic of the end-to-end scenario components](./media/end-to-end-scenario-components.png)
 
-<!-- markdownlint-disable MD034 -->
+| <span title="Icon">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
+| <br> :::image type="icon" source="../_images/hybrid/cloud-journey.png"::: | <br> The Microsoft Cloud Adoption Framework for Azure guides you through each consideration and implementation along the phases of your cloud adoption journey. Use the Cloud Adoption Framework across your organization to prepare decision makers, central IT, and the cloud center of excellence (CCoE) for your organization's cloud adoption efforts. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-well-architected.png"::: | <br> The Azure Well-Architected Framework provides a set of Azure architecture best practices to help you build and deliver great solutions. These best practices cover cost management, operational excellence, performance efficiency, reliability, and security. The Well-Architected Framework outlines necessary considerations for the workload owner before initiating workload deployments. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-architectures.png"::: | <br> Reference architectures are templates of required components, and the technical requirements to implement them. Each reference architecture includes recommended best practices. They contain considerations for scalability, availability, security, resilience, and other design aspects. Many articles include a deployable solution or reference implementation. Reference architectures aid in accelerating deployment for many common scenarios. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-best-practices.png"::: | <br> Best practices help you build reliable, scalable, and secure applications in the cloud. They offer you guidelines and tips for implementing efficient systems, mechanisms, and approaches. These guidelines help you onboard assets using Azure Arc, ARM templates, and various Azure products. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-product-docs.png"::: | <br> Featured Azure products provide information about the products that support your Azure strategy. Use proven combinations of Azure products and services to solve your business problems. Get started with documentation and reference architectures, follow best practices guidance for scenarios, and implement solutions for common workloads on Azure. |
+| <br> :::image type="icon" source="../_images/hybrid/hybrid-skills.png"::: | <br> Microsoft Learn is an online free training platform. Guided, interactive, hands-on Learn modules help you gain required skills. They teach you to implement, maintain, and support solutions in the cloud. The modules include role-based training and learning paths for Azure developers, solution architects, and administrators. |
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4NHCS]
+## Scenario(s) to support your cloud adoption strategy
 
-<!-- markdownlint-enable MD034 -->
+Each overview page provides guidance to implement the scenario:
 
-## Migrate methodology
-
-In each of the preceding migration scenarios, the same basic process will guide your efforts as you move your existing workloads to the cloud, as shown here:
-
-![Diagram of the Cloud Adoption Framework migration model showing the migration waves and the migration effort.](../_images/migrate/methodology.png)
-
-In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the plan and Ready methodologies helps to add structure to your migration waves.
-
-During each iteration, follow the Migrate methodology to assess, deploy, and release workloads. To modify those processes to fit your organization's specific scenario, select any of the migration scenarios listed in the table.
-
-## Next steps
-
-If you aren't migrating a specific scenario, start by following the [four-step Cloud Adoption Framework migration process](../migrate/index.md)
-.
+| <span title="Scenario">&nbsp;</span> | <span title="Description">&nbsp;</span> |
+|--|--|
+| <br> [Azure VMware Solution](../scenarios/azure-vmware/index.md) | <br> Use a first party Azure service built with VMware to migrate your VMware resources to a vSphere-based, single-tenant, private cloud on dedicated infrastructure. Extend hybrid and multicloud agility. Learn how to optimize costs and develop cloud skilling so you can minimize negative impacts to your business continuity and reduce overall migration time. |
+| <br> [Cloud-scale analytics](./data-management/index.md) | <br> Ensure that your business data is discoverable, accurate, trusted, and protected. Scale complex data architectures within on-premises and multicloud scenarios without increased complexity—enabling a common, self-serve data infrastructure, distributed architecture, secure network line-of-sight, and centralized data governance that's protected and reliable across deployments. You can process, deliver, and manage your mature data estate across deployments, migrate data platforms, democratize data, and extend workloads with advanced cloud services. |
+| <br> [Hybrid and multicloud](./hybrid/index.md) | <br> Confidently mature your analytics, AI, machine learning, and IoT capabilities in the cloud. Choose a unified operations approach to build, deploy, and migrate streamlined solutions across on-premises, multicloud and edge. Modernize your existing on-premises investments, and gain the consistency and flexibility to innovate across on-premises, multicloud, and edge environments. Manage and govern with a single control plane. Bring Azure services to any infrastructure. Extend compute, storage to IoT devices, and gain real-time insights running machine learning, advanced analytics at the edge. |
+| <br> [Modern application platform](./app-platform/index.md) | <br> Enable rapid innovation and workload portability with Kubernetes and container integration. Integrate (PaaS) application services and containers into your strategy to maximize the value of cloud-enabled applications. Accelerate developer productivity by allowing developers to focus more on code and less on host environment concerns. Reduce operations costs with streamlined container orchestration and consistent runtimes. Allow workload portability between container hosts across hybrid, multicloud, and the edge with diverse container orchestration options and modernize legacy workloads. You can implement these changes before migration or modernization with customized application runtimes that are container host-agnostic and allow legacy requirements to be met in a cloud environment. |
+| <br> [SAP](./sap/index.md) | <br> The SAP on Azure Framework aligns with the Cloud Adoption Framework to migrate, innovate, and manage both workloads and technology platforms, and accomplish your business goals. Engage in parallel conversations across SAP and central IT teams to align your cloud adoption plan. Separate discovery processes into strategy during strategic alignment with business leadership, and plan to prepare current and future-state data. Prepare your team and environment for migration, integrating Azure landing zones with pre-configured approaches to rapidly deploy environments to various technology platforms. Demonstrate how an SAP migration can integrate with repeatable migration processes. Show how a common operations baseline can address run-state concerns during migration and meet operational needs of other technology platforms. Integrate cloud-native solutions into your workloads. |
+| <br> [Virtual desktops](./azure-virtual-desktop/index.md) | <br> Integrate Azure Virtual Desktop (AVD), formerly Windows Virtual Desktop into your cloud adoption journey, and migrate your organization's end-user desktops to the cloud. Help improve employee productivity and accelerate the migration of various workloads supporting the overall user experience across your organization. Modernize existing virtual desktop environments including, session hosts, user profiles, images, and applications. Deploy a proven enterprise-scale architecture for AVD to your current environment. Prepare for governance and operations at scale with enterprise-scale landing zones to ensure consistent governance, security, and operational controls across multiple landing zones, centralizing management of your virtual desktop environments. Accelerate and improve virtual desktop capabilities using Azure featured products. |
+| <br> [Retail industry](../industry/retail/index.md) | <br> Azure for Retail architecture solutions makes modern retail resilient and competitive, enabling cost savings, increased business agility, and heightened data security. You can unlock intelligent retail cloud maturity for your organization. The benefits include the ability to integrate cloud services across the supply chain with a PaaS cloud-based web services development. You can create a deployment environment with the end-strategy of deploying advanced SaaS-hosted AI and machine learning services to gain actionable intelligence and develop intelligent applications. Identify future growth factors for your organization, and forecast your customers' preferences. Gain hybrid capabilities and innovate in any environment using cloud services delivered across on-premises, multicloud, or the edge. Take advantage of modernized cloud services and the resiliency of on-site computing essential for your success. Use stores and distribution centers operational around the clock. These capabilities help ensure security, privacy, compliance, and manageability within your environments across on-premises, multicloud, and the edge. |
+| <br> [Defense](./defense/index.md) | <br> The Defense cloud adoption scenario provides universal guidance to help mission owners accelerate digital transformation. The guidance is impartial to country/region and collects best practices from our experience working with defense organizations around the world. Mission owners face unique challenges that are uncommon in other sectors. The Defense cloud adoption scenario provides recommendations to help navigate those challenges so mission owners can focus on meeting mission objectives. The content highlights critical areas of focus but also refers you to other documentation for deeper technical insight. The result should be a secure, scalable, and governed environment that is tailored to mission needs. |

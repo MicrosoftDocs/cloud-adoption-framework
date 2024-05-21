@@ -24,7 +24,7 @@ The initial governance foundation focuses on the following aspects of governance
 - Azure role-based access control (RBAC) for identity and access control.
 - Naming and tagging standards for consistent identification of resources.
 - Organization of resources using resource groups, subscriptions, and management groups.
-- Azure Policy and Azure Blueprints to enforce governance policies.
+- Employ Azure Policy to enforce governance policies.
 
 These features of the initial governance foundation can be used to govern modern application platform solution instances. But first, you'll need to add a few components to the initial foundation to apply [Azure Policy to your containers](/azure/governance/policy/concepts/policy-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json). Once configured, you can use Azure Policy and your initial governance foundation to govern the following types of containers:
 

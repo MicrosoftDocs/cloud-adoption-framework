@@ -137,6 +137,8 @@ Planning efforts for unified operations and management assume that most assets f
 - **Reach out, onboard, and manage any server, anywhere, from Azure** (Windows, Linux, VM, bare-metal) with Azure Arc enabled servers.
 - **Use your existing SQL servers with Azure Arc with no migration necessary**, with inventory, governance, security, and proactive SQL Database assessments.
 - **Connect, manage, and operate Kubernetes clusters and applications running anywhere**, and deploy applications with GitOps.
+- **Connect your Virtual Machine Manager environment to Azure and perform VM self-service operations from Azure portal**, enabling the use of Azure security, governance, and management capabilities consistently across System Center managed estate and Azure with [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
+- **Extend Azure management to VMware vSphere**: Use Azure Arc to manage your hybrid IT estate across VMware vSphere and Azure consistently, leveraging Azure's security, governance, and management features. To learn more, see [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview).
 - **Ensure compliance with your organization's security baseline with Azure Policy**, and enable cluster health monitoring with Azure Monitor for containers.
 - **Organize, inventory, and unify server management experience** with simplified management of hybrid machines with Azure VM extensions for non-Azure Windows, and Linux VMs.
 - **Apply unified governance and security baselines across disparate environments**, cross-platform compliance, and centralized agent management.

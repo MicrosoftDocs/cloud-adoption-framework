@@ -2,7 +2,7 @@
 title: Development lifecycle
 description: Design area guidance for DevOps principles and practices in Azure Landing Zones
 author: emguzman13
-ms.author: emguzman
+ms.author: eguzmanarias
 ms.date: 06/18/2022
 ms.topic: conceptual
 ms.custom: internal
