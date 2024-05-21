@@ -22,7 +22,7 @@ Secure Virtual WAN with Routing Intent is only supported with Virtual WAN Standa
 Each region also has an Azure VMware Solution Private Cloud and an Azure Virtual Network. There's also an on-premises site connecting to both regions, which we review in more detail later in this document. 
 
 >[!NOTE]
->  If you're using non-RFC1918 prefixes in your connected on-premises, Virtual Networks or Azure VMware Solution, make sure you have specified those prefixes in the "Private Prefixes" text box for Routing Intent. Keep in mind that you should always enter summarized routes only in the “Private Prefixes” section to cover your range. Do not input the exact range that is being advertised to Virtual WAN as this can lead to routing issues. For example, if the ExpressRoute Circuit is advertising 40.0.0.0/24 from on-premises, put a /23 CIDR range or larger in the Private Traffic Prefix text box (example: 40.0.0.0/23). - see [Configure routing intent and policies through Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva)
+>  If you're using non-RFC1918 prefixes in your connected on-premises, Virtual Networks or Azure VMware Solution, make sure you have specified those prefixes in the "Private Traffic Prefixes" text box for Routing Intent. Keep in mind that you should always enter summarized routes only in the “Private Traffic Prefixes” section to cover your range. Do not input the exact range that is being advertised to Virtual WAN as this can lead to routing issues. For example, if the ExpressRoute Circuit is advertising 40.0.0.0/24 from on-premises, put a /23 CIDR range or larger in the Private Traffic Prefix text box (example: 40.0.0.0/23). - see [Configure routing intent and policies through Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva)
 >
 
 >[!NOTE]
@@ -72,17 +72,19 @@ This section focuses only on the on-premises site. As shown in the diagram, the 
 
 With ExpressRoute to ExpressRoute transitivity enabled on both Secure Hubs and Routing-Intent enabled, each Secure Hub sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises over connection "E". In addition to the default RFC 1918 addresses, on-premises learns more specific routes from Azure Virtual Networks and Branch Networks that are connected to both Hub 1 and Hub 2. 
 
-**Suboptimal Routing**  
-By default, on-premises won’t learn the specific routes for both Azure VMware Solution Private Clouds. Instead, it routes to both Azure VMware Solution Private Clouds using the default RFC 1918 addresses it learns over connection “E”. On-premises will learn the default RFC 1918 addresses from both Hub 1 and Hub 2 via connection “E”. Consequently, from on-premises, traffic destined to Azure VMware Solution Private Clouds will Equal Cost multi-path (ECMP) over both connections “E”. 
+By default, on-premises won’t learn the specific routes for both Azure VMware Solution Private Clouds. Instead, it routes to both Azure VMware Solution Private Clouds using the default RFC 1918 addresses it learns over connection “E”. On-premises will learn the default RFC 1918 addresses from both Hub 1 and Hub 2 via connection “E”. 
 
-**Suboptimal Routing Flow Example** 
-For example, traffic from on-premises destined to Azure VMware Solution Private Cloud 1 will go through the following flow.  
-On-premises>Hub 2 Connection “E”>Hub 2’s firewall>inter-hub connection>Hub 1’s firewall>Azure VMware Solution Private Cloud 1.  
+>[!NOTE]
+>  It’s extremely important to add specific routes on both hubs. If you don’t add specific routes on the hubs, it leads to suboptimal routing because on-premises uses Equal Cost multi-path (ECMP) between the "E" connections for traffic destined to any Azure VMware Solution Private Cloud. As a result, traffic between on-premises and any Azure VMware Solution Private Cloud may experience latency, performance issues, or packet drops.
+>
 
-If left alone, this indirect routing can cause latency, performance issues, and packet drops. To avoid this, we should advertise more specific routes to on-premises for both Azure VMware Solution Private Clouds 1 and 2. This will ensure that traffic is directed straight to the hub that is connected to the Azure VMware Solution cloud.
+To advertise a more specific route down to on-premises, it needs to be accomplished from the "Private Traffic Prefixes" box within Routing Intent. - see [Configure routing intent and policies through Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva) You’ll need to add a summarized route that encompasses both your Azure VMware Solution /22 block and your Azure VMware Solution subnets. If you add the same exact prefix or a more specific prefix instead of a summary route, you’ll introduce routing issues within the Azure environment. Therefore, it’s important to remember that any prefixes added to the "Private Traffic Prefixes" box must be summarized routes.
 
-**Introduce More Specific Routes and Resolve Suboptimal Routing**  
-This traffic transits through the Hub firewall, as shown in the diagram. The Hub firewall has the specific routes for Azure VMware Solution networks and routes traffic toward the destination over connection “D”. Traffic from on-premises, heading towards Virtual Networks, will transit the Hub firewall. For more information, see the traffic flow section for more detailed information.
+As illustrated in the diagram, Azure VMware Solution Private Cloud 1 includes workload subnets from 10.10.0.0/24 to 10.10.7.0/24. On Hub 1, the summary route 10.10.0.0/21 is added to "Private Traffic Prefixes" because it encompasses all eight subnets. Additionally, on Hub 1, the summary route 10.150.0.0/22 is added to "Private Traffic Prefixes" to cover the Azure VMware Solution management block. Summary routes 10.10.0.0/21 and 10.150.0.0/22 are then advertised down to on-premises via connection "E", providing on-premises with a more specific route than 10.0.0.0/8.
+
+Azure VMware Solution Private Cloud 2 includes workload subnets from 10.20.0.0/24 to 10.20.7.0/24. On Hub 2, the summary route 10.20.0.0/21 is added to "Private Traffic Prefixes" because it encompasses all eight subnets. Additionally, on Hub 2, the summary route 10.250.0.0/22 is added to "Private Traffic Prefixes" to cover the Azure VMware Solution management block Summary routes 10.10.0.0/21 and 10.150.0.0/22 are then advertised down to on-premises via connection "E", providing on-premises with a more specific route than 10.0.0.0/8.
+
+There’s no issue in adding the entire Azure VMware Solution Management /22 block under "Private Traffic Prefixes" because Azure VMware Solution never advertises the exact /22 block back to Azure; it will always advertise more specific routes.
 
 As mentioned earlier, when you enable ExpressRoute to ExpressRoute transitivity on the Hub, it sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to your on-premises network. Therefore, you shouldn't advertise the exact RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Advertising the same exact routes creates routing problems within Azure. Instead, you should advertise more specific routes back to Azure for your on-premises networks.
 
@@ -94,8 +96,10 @@ The diagram illustrates traffic flows from the perspective of on-premises.
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN Hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
-| 3 | on-premises | &#8594;| Azure VMware Solution Cloud | Yes, traffic is inspected at the Hub firewall|
-| 4 | on-premises | &#8594;| Virtual Network | Yes, traffic is inspected at the Hub firewall|
+| 2 | on-premises | &#8594;| Azure VMware Solution Cloud Region 1 | Yes, traffic is inspected at the Hub 1 firewall|
+| 7 | on-premises | &#8594;| Azure VMware Solution Cloud Region 2 | Yes, traffic is inspected at the Hub 2 firewall|
+| 8 | on-premises | &#8594;| Virtual Network 1 | Yes, traffic is inspected at the Hub 1 firewall|
+| 9 | on-premises | &#8594;| Virtual Network 2 | Yes, traffic is inspected at the Hub 2 firewall|
 
 ## Azure Virtual Network connectivity & traffic flow
 
