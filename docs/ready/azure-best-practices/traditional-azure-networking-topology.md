@@ -3,7 +3,7 @@ title: Traditional Azure networking topology
 description: Learn about key design considerations and recommendations surrounding network topologies in Microsoft Azure.
 author: sitarant
 ms.author: sitarant
-ms.date: 02/17/2023
+ms.date: 05/21/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -13,12 +13,9 @@ ms.custom: think-tank
 > [!IMPORTANT]
 > Try the new [Topology (Preview)](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the Topology preview to visualize resources and their dependencies across subscriptions, regions and locations. [Select this link](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview) to navigate to the experience.
 
-
 Explore key design considerations and recommendations surrounding network topologies in Microsoft Azure.
 
-![Diagram that illustrates a traditional Azure network topology.](./media/customer-managed-topology.png)
-
-*Figure 1: A traditional Azure network topology.*
+:::image type="content" source="./media/customer-managed-topology.png" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.png" border="false":::
 
 **Design considerations:**
 
@@ -65,6 +62,7 @@ Explore key design considerations and recommendations surrounding network topolo
 - Consider a network design based on the traditional hub-and-spoke network topology for the following scenarios:
 
   - A network architecture deployed within a single Azure region.
+  
   - A network architecture that spans multiple Azure regions, with no need for transitive connectivity between virtual networks for landing zones across regions.
 
   - A network architecture that spans multiple Azure regions, and global virtual network peering that can connect virtual networks across Azure regions.
@@ -87,9 +85,7 @@ Explore key design considerations and recommendations surrounding network topolo
 
 The following diagram shows the hub-and-spoke topology. This configuration allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
-  ![Diagram that illustrates a hub-and-spoke network topology.](./media/hub-and-spoke-topology.png)
-
- *Figure 2: Hub-and-spoke network topology.*
+  :::image type="content" source="./media/hub-and-spoke-topology.png" alt-text="Diagram that illustrates a hub-and-spoke network topology." lightbox="./media/hub-and-spoke-topology.png" border="false":::
 
 - Use the topology of multiple virtual networks connected with multiple ExpressRoute circuits connected at different peering locations when one of these conditions is true. To learn more, see [Design and architect Azure ExpressRoute for resiliency](/azure/expressroute/design-architecture-for-resiliency).
 
@@ -101,9 +97,7 @@ The following diagram shows the hub-and-spoke topology. This configuration allow
 
 The following figure shows this topology.
 
-  ![Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits.](./media/vnet-multiple-circuits.png)
-
- *Figure 3: Multiple virtual networks connected with multiple ExpressRoute circuits.*
+  :::image type="content" source="./media/vnet-multiple-circuits.png" alt-text="Diagram that illustrates multiple virtual networks connected with multiple ExpressRoute circuits." lightbox="./media/vnet-multiple-circuits.png" border="false":::
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required), and Azure Firewall or partner NVAs (as required) in the central-hub virtual network. If necessary, also deploy Active Directory domain controllers and DNS servers.
 
@@ -127,7 +121,7 @@ The following figure shows this topology.
 
 - If you need transitivity between ExpressRoute and VPN gateways in a hub-and-spoke scenario, use Azure Route Server as described in [this reference scenario](/azure/route-server/expressroute-vpn-support).
 
-    ![Diagram that illustrates transitivity between ER and VPN gateways with Azure Route Server.](./media/route-server-transitivity.png)
+    :::image type="content" source="./media/route-server-transitivity.png" alt-text="Diagram that illustrates transitivity between ER and VPN gateways with Azure Route Server." lightbox="./media/route-server-transitivity.png" border="false":::
 
 - When you have hub-and-spoke networks in multiple Azure regions and a few landing zones need to connect across regions, use global virtual network peering to directly connect landing zone virtual networks that need to route traffic to each other. Depending on the communicating VM's SKU, global virtual network peering can provide high network throughput. Traffic between directly peered landing zone virtual networks bypasses NVAs within hub virtual networks. [Limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks) apply to the traffic.
 
@@ -139,17 +133,13 @@ The following figure shows this topology.
 
 The following figure shows both options:
 
- ![Diagram that illustrates options for hub-to-hub connectivity.](./media/hub-to-hub-er-or-peering.png)
-
-*Figure 4: Options for hub-to-hub connectivity.*
+  :::image type="content" source="./media/hub-to-hub-er-or-peering.png" alt-text="Diagram that illustrates options for hub-to-hub connectivity." lightbox="./media/hub-to-hub-er-or-peering.png" border="false":::
 
 - When two Azure regions need to connect, use global virtual network peering to connect both hub virtual networks.
 
 - When more than two Azure regions need to connect, then we recommend that the hub virtual networks in each region connect to the same ExpressRoute circuits. Global virtual network peering would require managing a large number of peering relationships and a complex set of user-defined routes (UDRs) across multiple virtual networks. The following diagram shows how to connect hub-and-spoke networks in three regions:
 
-![Diagram that illustrates ExpressRoute providing hub-to-hub connectivity between multiple regions.](./media/multiregion-hub-to-hub-er.png)
-
-*Figure 5: ExpressRoute providing hub-to-hub connectivity between multiple regions.*
+  :::image type="content" source="./media/multiregion-hub-to-hub-er.png" alt-text="Diagram that illustrates ExpressRoute providing hub-to-hub connectivity between multiple regions." lightbox="./media/multiregion-hub-to-hub-er.png" border="false":::
 
 - When you use ExpressRoute circuits for cross-region connectivity, spokes in different regions communicate directly and bypass the firewall because they learn via BGP routes to the spokes of the remote hub. If you need the firewall NVAs in the hub virtual networks to inspect traffic across spokes, you must implement one of these options:
 
@@ -172,6 +162,6 @@ The following figure shows both options:
 
   Ensure that the number of spoke virtual networks connected to the hub virtual network don't exceed these limits.
 
-## Next steps
+## Next step
 
-Explore key design considerations and recommendations for [virtual wide area networks (Virtual WAN) network topologies](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology) in Microsoft Azure.
+For more information about key design considerations and recommendations in Microsoft Azure, see [virtual wide area networks (Virtual WAN) network topologies](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology).
