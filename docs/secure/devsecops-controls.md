@@ -314,9 +314,7 @@ Balanced state: Analyze all OSS Vulnerabilities and automatically fix them with 
 High security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
 --->
 
-To learn more about this control and measure your OSS Security maturity, review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource).
-
-Additionally, review [GitHub’s best practice documentation on Securing your development lifecycle](https://docs.github.com/code-security/supply-chain-security/end-to-end-supply-chain/end-to-end-supply-chain-overview).
+To learn more about this control and measure your OSS Security maturity, review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource) and [GitHub’s best practice documentation on Securing your development lifecycle](https://docs.github.com/code-security/supply-chain-security/end-to-end-supply-chain/end-to-end-supply-chain-overview).
 
 ### Security code review
 
@@ -382,9 +380,9 @@ If the use of secrets is required, it's mandatory to secure them through their w
 :::row-end:::
 
 > [!NOTE]
-> As these are found by your teams or by attackers, you must ensure that the key cannot be used to access resources (various by resource type) in addition to changing to a more secure access method like managed identities.
+> As these secrets are found by your teams or by attackers, you must ensure that the key cannot be used to access resources (various by resource type) in addition to changing to a more secure access method like managed identities.
 
-Additional Information:
+More details and resources include:
 
 - [Secret Scanning for GitHub Advanced Security for Azure DevOps](/azure/devops/repos/security/github-advanced-security-secret-scanning)
 - [Best practices for using Azure Key Vault](/azure/key-vault/general/best-practices)
