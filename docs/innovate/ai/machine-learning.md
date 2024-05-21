@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 keywords: machine learning solutions, machine learning checklist, machine learning ai
 ---

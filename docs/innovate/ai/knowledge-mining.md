@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 07/14/2020
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 keywords: knowledge mining, knowledge mining solution, cognitive search, azure ai search, cloud search service
 ---
