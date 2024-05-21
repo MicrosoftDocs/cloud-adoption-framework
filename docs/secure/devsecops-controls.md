@@ -17,6 +17,31 @@ This documentation describes each control and shows how to apply these controls 
 
 The security control profiles are:
 
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
+   :::column-end:::
+   :::column span="4":::
+      **Temporary Minimum** – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
+   :::column-end:::
+   :::column span="4":::
+      **Standard** - Balanced approach for most workloads most of the time
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="media/devsecops-controls/high.png" border="false":::
+   :::column-end:::
+   :::column span="4":::
+      **High Security**  – Stringent security for workloads with a potential high impact on business and human safety
+   :::column-end:::
+:::row-end:::
+
 - Temporary Minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
 - Standard (Center) - Balanced approach for most workloads most of the time
 - High Security (Right) – Stringent security for workloads with a potential high impact on business and human safety
