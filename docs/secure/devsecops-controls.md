@@ -22,7 +22,7 @@ This documentation describes each control and shows how to apply these controls 
       :::image type="icon" source="media/devsecops-controls/minimum.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Temporary Minimum** – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
+      **Temporary Minimum** – Abbreviated security profile for a **temporary exception state** to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -79,14 +79,14 @@ The controls are grouped into the stages of development they apply to and the co
 - **Secure code**
    - [Code analysis](#code-analysis)
 - **Secure CI/CD pipeline**
-   - Reinforce/check secure the code controls
-   - Secure pipeline (access/infrastructure/apps)
+   - [Reinforce/check secure the code controls](#supply-chain--dependency-management)
+   - [Secure pipeline (access/infrastructure/apps)](#secure-pipeline)
 - **Secure operations**
-   - Live site penetration testing
-   - Identity/application access and controls
-   - Host/container controls
-   - Network access controls
-   - Monitoring, response, and recovery
+   - [Live site penetration testing](#live-site-penetration-testing)
+   - [Identity/application access and controls](#identityapplication-access-controls)
+   - [Host/container controls](#hostcontainerenvironment-controls)
+   - [Network access controls](#network-access-controls)
+   - [Monitoring, response, and recovery](#monitoring-response-and-recovery)
 
 Each of these items is defined in the following sections:
 
