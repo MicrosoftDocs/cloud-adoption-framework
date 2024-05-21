@@ -9,6 +9,12 @@ ms.topic: conceptual
 
 # Securing generative AI in Azure
 
+## Shared responsibility
+
+Much like the traditional [shared responsibility model in the cloud](/azure/security/fundamentals/shared-responsibility), AI in Azure also follows an [AI shared responsibility model](/azure/security/fundamentals/shared-responsibility-ai). This model defines the responsibilities of Microsoft and the customer in securing the AI services and data.
+
+![A diagram showing the shared responsibility model for AI in Azure.](./media/ai-shared-responsibility.svg)
+
 ## Secure your data
 
 ### Data access
