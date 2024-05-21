@@ -111,7 +111,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Set budget(s) in Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 
-- [Create Microsoft Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
+- [Create Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 

@@ -97,8 +97,8 @@ Download the following files to use the Power BI model:
 - [Control Azure spending and manage bills with Microsoft Cost Management](/training/paths/control-spending-manage-bills/).
 - [Microsoft Azure Well-Architected Framework - Cost Optimization](/training/modules/azure-well-architected-cost-optimization/)
 - [Plan and manage your costs](/training/modules/plan-manage-azure-costs/)
-- [Analyze costs and create budgets with Microsoft Cost Management](/training/modules/analyze-costs-create-budgets-azure-cost-management/)
-- [Configure and manage costs as a Microsoft partner by using Microsoft Cost Management](/training/modules/manage-costs-partner-cost-management/)
+- [Analyze costs and create budgets with Cost Management](/training/modules/analyze-costs-create-budgets-azure-cost-management/)
+- [Configure and manage costs as a Microsoft partner by using Cost Management](/training/modules/manage-costs-partner-cost-management/)
 
 ## Next steps
 
