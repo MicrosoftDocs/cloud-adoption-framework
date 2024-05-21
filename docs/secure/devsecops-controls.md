@@ -15,7 +15,7 @@ This documentation describes each control and shows how to apply these controls 
 
 :::image type="content" source="media/devsecops-controls/security-control-profiles.png" alt-text="Diagram of security controls versus time and impact.":::
 
-The security control profiles are:
+## Security control profiles
 
 :::row:::
    :::column span="":::
@@ -42,9 +42,11 @@ The security control profiles are:
    :::column-end:::
 :::row-end:::
 
+<!---
 - Temporary Minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
 - Standard (Center) - Balanced approach for most workloads most of the time
 - High Security (Right) – Stringent security for workloads with a potential high impact on business and human safety
+--->
 
 ## DevSecOps security controls
 
