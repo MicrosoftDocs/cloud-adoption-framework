@@ -3,17 +3,25 @@ title: Planning for generative AI
 description: Define and identify the requirements to implement generative AI in your organization, and create a plan to acquire the necessary skills.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/20/2024
+ms.date: 05/21/2024
 ms.topic: conceptual
 ---
 
 # Planning for generative AI
 
-The Microsoft Cloud Adoption Framework Plan methodology provides guidance on [creating a skills readiness plan](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes) for your organization. Base your requirements on the original guidance, and adapt it with the requirements around generative AI.
+## Initial organizational alignment
 
-For your generative AI business scenarios, define the required skills across your leadership, technical teams, and end users.
+### Cloud Center of Excellence with AI functions
+
+- CCoE / AI Functions
+- Map people to capabilities
+- Evolve your organizational structure as necessary
 
 ## Define a skills readiness plan
+
+The Plan methodology in CAF provides guidance on [creating a skills readiness plan](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes) for your organization. Base your requirements on the original guidance, and adapt it with the requirements around generative AI.
+
+For your generative AI business scenarios, define the required skills across your leadership, technical teams, and end users.
 
 Consider these important key points to include in your skilling plan:
 
@@ -28,9 +36,9 @@ Consider these important key points to include in your skilling plan:
 
 Having the right skills in place is crucial for the success of your generative AI initiatives. Here are some key skills to consider for the high-level functions in your organization.
 
-- **Leadership**: For leadership, it's important to understand the impact of generative AI, what options exist, and how to make decisions based on the insights provided by generative AI.
-- **Tech specialists**: For technical specialists, it's important to understand the technical aspects of generative AI, how to implement it, and how to maintain it.
-- **End users**: For end users, it's important to understand how to interact with generative AI, how to use it, and how to provide feedback.
+- **Leadership**: For leadership, it's important to understand the **impact** of generative AI, what options exist, and how to make decisions based on the insights provided by generative AI.
+- **Tech specialists**: For technical specialists, it's important to understand the **technical aspects** of generative AI, how to implement it, and how to maintain it.
+- **End users**: For end users, it's important to understand how to **interact** with generative AI, how to use it, and how to provide feedback.
 
 ### Skilling and training resources
 

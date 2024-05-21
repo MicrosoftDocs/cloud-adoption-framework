@@ -13,9 +13,42 @@ To establish a generative AI vision and strategy, there are some key considerati
 
 ## Business justification
 
-### Qualitative justifications
+To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
-### Quantitative justifications
+Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
+
+In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this as a template of examples to help you define your own business goals and success metrics for adopting AI.
+
+### Define goals
+
+Define why you're adopting generative AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
+
+#### Example goals
+
+|Goal|AI benefit|Examples|
+|----|---------------------|---------|
+|**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
+|**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation |
+|**Increase operational efficiency** | Optimize processes and reduce time and resource wastage. | - Process automation<br> - Predictive maintenance<br> - Workflow automation |
+|**Increase revenue** | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics |
+|**Reduce operational costs**| Automate routine tasks, optimize resource allocation, and streamline processes. | - Predictive maintenance using AI algorithms <br> - Supply chain optimization <br> - Automated data entry and processing |
+|**Improve product quality**| Enhance quality control, identify defects, and optimize production processes. | - AI-driven quality inspection systems <br> - Predictive analytics for product defects <br> - Process optimization using AI <br> - Automated testing and validation <br> - Real-time monitoring and adjustments in manufacturing |
+
+### Define success metrics
+
+To measure your goals, you need to define success metrics for each goal. Ensure you can map each individual objective or goal to one or more success metrics that can be measured easily. For example, if you are working according to an OKR model, you might have a few key results for each objective.
+
+#### Example success metrics
+
+| Goal | Success metric examples |
+| ---- | -------------- |
+| **Increase customer satisfaction** | - Customer satisfaction score (CSAT)<br> - Net Promoter Score (NPS)<br> - Customer retention rate |
+| **Increase employee productivity** | - Employee efficiency ratio<br> - Task completion time<br> - Employee satisfaction survey results |
+| **Increase operational efficiency** | - Process cycle time<br> - Overall Equipment Effectiveness (OEE)<br> - Workflow completion rate |
+| **Increase revenue** | - Revenue growth rate<br> - Average Revenue Per User (ARPU)<br> - Conversion rate |
+| **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
+| **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
+
 
 ## Leadership and organizational readiness
 
@@ -23,7 +56,7 @@ Be proactive in removing any barriers to adoption and ensure that your leadershi
 
 Consider asking yourself this:
 
-- How well aligned is your **leadership, organization, and employees** with your vision and strategy for generative AI?
+- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for generative AI?
 
 ### Leadership buy-in
 
@@ -102,44 +135,6 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 
 - How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
 - How supportive is your leadership in driving the AI adoption initiative within the organization?
-
-## Generative AI business goals
-
-To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
-
-Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
-
-In this section, we'll explore some common business goals and how they can be linked to generative AI investments.
-
-### Define goals
-
-Define why you're adopting generative AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
-
-#### Example goals
-
-|Goal|AI benefit|Examples|
-|----|---------------------|---------|
-|**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
-|**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation |
-|**Increase operational efficiency** | Optimize processes and reduce time and resource wastage. | - Process automation<br> - Predictive maintenance<br> - Workflow automation |
-|**Increase revenue** | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics |
-|**Reduce operational costs**| Automate routine tasks, optimize resource allocation, and streamline processes. | - Predictive maintenance using AI algorithms <br> - Supply chain optimization <br> - Automated data entry and processing |
-|**Improve product quality**| Enhance quality control, identify defects, and optimize production processes. | - AI-driven quality inspection systems <br> - Predictive analytics for product defects <br> - Process optimization using AI <br> - Automated testing and validation <br> - Real-time monitoring and adjustments in manufacturing |
-
-### Define success metrics
-
-To measure your goals, you need to define success metrics for each goal. Ensure you can map each individual objective or goal to one or more success metrics that can be measured easily. For example, if you are working according to an OKR model, you might have a few key results for each objective.
-
-#### Example success metrics
-
-| Goal | Success metric examples |
-| ---- | -------------- |
-| **Increase customer satisfaction** | - Customer satisfaction score (CSAT)<br> - Net Promoter Score (NPS)<br> - Customer retention rate |
-| **Increase employee productivity** | - Employee efficiency ratio<br> - Task completion time<br> - Employee satisfaction survey results |
-| **Increase operational efficiency** | - Process cycle time<br> - Overall Equipment Effectiveness (OEE)<br> - Workflow completion rate |
-| **Increase revenue** | - Revenue growth rate<br> - Average Revenue Per User (ARPU)<br> - Conversion rate |
-| **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
-| **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
 ## Next steps
 
