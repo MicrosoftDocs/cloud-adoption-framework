@@ -5,6 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/20/2024
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Strategic considerations for adopting generative AI in Azure

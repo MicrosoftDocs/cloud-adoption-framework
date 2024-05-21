@@ -5,6 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/14/2024
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Generative vs. Traditional AI
