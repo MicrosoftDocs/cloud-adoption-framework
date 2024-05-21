@@ -54,3 +54,10 @@ Before trying to integrate SAP systems with Power Platform, the customer must ha
 •	Segregate on-premises data gateways for non-production and production SAP environments.
 •	Use an API management solution (Azure API Management, SAP API Management etc.) to expose the backend SAP services to Power Platform components. This approach will ensure better security and management of SAP APIs and enhanced citizen developer experience.
 •	Use [Azure API Management landing zone accelerator](/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function) - Azure Architecture Center | Microsoft Learn to speed-up deployment, while using Azure API Management as API management solution.
+
+
+## Next steps
+
+- [SAP and Power Platform fundamentals](./sap-lza-powerplatform-fundamental.md)
+- [SAP and Power Platform Architecture Workflow](./sap-lza-powerplatform-architecture-workflow.md)
+- [Extend your SAP Landing Zone to support Power Platform](./sap-lza-powerplatform-extend-sap-lza.md)

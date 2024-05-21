@@ -91,6 +91,8 @@ Power Platform specific service tags are available to restrict incoming connecti
 By addressing these security and compliance considerations, organizations can ensure a secure, efficient, and compliant integration of SAP with the Power Platform, fostering a secure and responsive environment conducive to modern enterprise needs.
 
 
+## Next steps
 
+- [Extend your SAP Landing Zone to support Power Platform](./sap-lza-powerplatform-extend-sap-lza.md)
 
 
