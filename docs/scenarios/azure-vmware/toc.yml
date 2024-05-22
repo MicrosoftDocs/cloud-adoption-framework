@@ -44,6 +44,8 @@ items:
                 href: example-architectures.md
               - name: Virtual WAN Toplogies for Azure VMware Solution
                 items: 
+                  - name: Introduction to Single and Dual Virtual WAN Regions for AVS             
+                    href: eslz-introduction-to-single-and-dual-virtual-wan-regions-for-avs.md
                   - name: Single region Secure Virtual WAN with Global Reach               
                     href: eslz-single-region-with-secure-virtual-wan-with-globalreach.md
                   - name: Dual region Secure Virtual WAN with Global Reach               
