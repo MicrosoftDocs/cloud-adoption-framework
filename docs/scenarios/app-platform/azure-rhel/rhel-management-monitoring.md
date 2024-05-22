@@ -1,7 +1,7 @@
 ## <a name="_toc156377586"></a>Azure Linux Machine Update Management
 For greenfield deployment scenarios of RHEL in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
 
-For existing brownfield deployments, the use of Red Hat Satellite and extending into Azure from on-premsies may be the optimal approach.
+For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies may be the optimal approach.
 
 With Red Hat Satellite, you can provide content and apply patches to hosts systematically in all lifecycle stages. Content flow in Red Hat Satellite involves management and distribution of content from external sources to hosts.
 
