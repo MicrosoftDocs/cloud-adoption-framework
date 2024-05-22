@@ -47,7 +47,7 @@ When Global Reach is deployed, traffic between the Global Reach sites bypasses t
 
  A benefit of using Global Reach that it simplifies the design with a direct logical connection between Azure VMware Solution and On-Premises or regional Azure VMware Solution private clouds. This eases troubleshooting traffic between Global Reach sites and eliminates the concern of throughput limitations at the Secure Virtual WAN. The drawback is that it prevents the inspection of traffic between regional Azure VMware Solution private clouds and On-Premises or within Azure VMware Solution Private Clouds using the Secure Virtual Hub security solution.
 
-![Diagram of Global Reach Example](./media/single-region-virtual-wan-with-globalreach-1.png)
+![Diagram of Global Reach Example](./media/single-region-virtual-wan-1.png)
 
 ### Without Global Reach  
 It’s crucial to note that unless the situation falls into the following two categories below, it’s strongly recommended to consistently use Global Reach. A benefit of not using Global Reach is that all the traffic on the Secure Virtual WAN hub security solution between Azure VMware Solution and the on-premises or regional Azure VMware Solution private clouds can be inspected. However, the throughput limitations at the Secure Virtual WAN hub also need to be considered. A drawback of not using Global Reach is that it increases the complexity of the design.
@@ -65,7 +65,7 @@ Connectivity between ExpressRoute connections, whether between Azure VMware Solu
 ### Single-region design with Global Reach 
 When using single-region with Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. This is done by using Routing-Intent. However, Global Reach traffic between Azure VMware Solution and on-premises bypasses the hub firewall as shown below on Global Reach connection “A”. Therefore, you need to inspect this Global Reach traffic with NSX-T in Azure VMware Solution or a firewall on-premises for better security across Global Reach sites.
                             
-![Diagram of Single-Region with Global Reach Azure VMware Solution Scenario](./media/single-region-virtual-wan-with-globalreach-1.png)
+![Diagram of Single-Region with Global Reach Azure VMware Solution Scenario](./media//media/single-region-virtual-wan-1.png)
 
 See the table below for the traffic flows that the Secured Virtual Hub inspects with this design.
 
@@ -111,7 +111,7 @@ Traffic flow to and from Virtual Networks
 ### Dual-region design with Global Reach 
 Using dual-region with Global Reach, you deploy two secure hubs in different regions of your Virtual WAN. You also deploy two Azure VMware Solution private clouds in different regions. You cross connect both Azure VMware Solution private clouds and on-premises to each regional hub via ExpressRoute for redundancy (see connections “E”, “D” and “F”). All private and internet traffic will be routed through a security solution (such as Azure Firewall, a third-party NVA, or a SaaS solution) on both secure hubs using Routing-Intent. This lets you transit traffic across the inter-hub link and inspect it on both Hub firewalls for additional security. However, Global Reach traffic between the Azure VMware Solution private clouds, or between the Azure VMware Solution private clouds and on-premises, bypasses the two hub firewalls (see connections “A”, “B” and “C”). You need to inspect this traffic with NSX-T in Azure VMware Solution or a firewall on-premises for better security across Global Reach sites.
 
-![Diagram of Dual-Region with Global Reach Azure VMware Solution Scenario](./media/dual-region-virtual-wan-with-globalreach-1.png)
+![Diagram of Dual-Region with Global Reach Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
 
 See the table below for the traffic flows that the Secured Virtual Hub inspects with this design.
 
