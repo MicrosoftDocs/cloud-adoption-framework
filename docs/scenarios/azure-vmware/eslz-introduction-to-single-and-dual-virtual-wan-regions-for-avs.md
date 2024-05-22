@@ -1,5 +1,5 @@
 ---
-title: Introduction to Single and Dual Virtual WAN Regions with AVS
+title: Introduction to Single and Dual Virtual WAN Regions for AVS
 description: Discover how to use Secure Virtual WAN and Azure VMware Solution for single and dual-region deployments with best practices.
 author: jasonmedina
 ms.author: jasonmedina
@@ -10,7 +10,7 @@ ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware
 ---
 
-## Secure Virtual WAN with Route-Intent for Azure VMware Solution
+## Secure Virtual WAN for Azure VMware Solution
  A security solution such as Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution in the Virtual WAN hub effectively converts the hub to a Secure Virtual WAN hub. A Secure Virtual WAN hub is a requirement for configuring Routing-Intent. Routing-Intent streamlines the routing/security design of the secure hub, by driving all private and internet traffic to the hub security solution. This improves the security breadth and conducts traffic inspection for all traffic transiting through the secure hub, including Azure VMware Solution. 
 
 
