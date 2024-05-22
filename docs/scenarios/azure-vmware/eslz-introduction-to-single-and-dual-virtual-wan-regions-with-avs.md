@@ -58,7 +58,7 @@ This use case is best when there is a security requirement to inspect traffic be
 **Global Reach unavailability in the region**   
 Connectivity between ExpressRoute connections, whether between Azure VMware Solution and on-premises or among regional Azure VMware Solution private clouds, can be established with Route-Intent when Global Reach is unavailable in a region. By default, Secure Virtual Hubs do not support ExpressRoute to ExpressRoute transitivity. To enable this transitivity, a support ticket needs to be initiated. -See [ExpressRoute Global Reach Availability](/azure/expressroute/expressroute-global-reach#availability)
 
-![Diagram of without Global Reach Example](./media/single-region-virtual-wan-without-globalreach-1.png)
+![Diagram without Global Reach Example](./media/single-region-without-globalreach-1.png)  
 
  ## Single and Dual Regions with Global Reach Enabled and Disabled
  
