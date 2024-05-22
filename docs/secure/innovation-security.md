@@ -77,7 +77,7 @@ Attackers can achieve their goals by exploiting weaknesses in either the develop
 
 Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
 
-- Protecting your organization: From malicious code and vulnerabilities in your source code supply chain
+- **Protecting your organization** from malicious code and vulnerabilities in your source code supply chain
 - Protecting your customers: From any security issues in your applications and systems, which might result in reputation damage, liability, or other negative business impacts on your organization
 
 ## The DevSecOps journey
