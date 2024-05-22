@@ -85,6 +85,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
+| Private link scopes | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
@@ -250,6 +251,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
 | Virtual WAN Hub | `Microsoft.Network/virtualHubs` | `vhub`|
+
 
 ## Security
 
