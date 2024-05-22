@@ -32,7 +32,13 @@ When deploying any automated update management solution consideration to the loc
 
 Microsoft offers a public repository that can be found [here](https://packages.microsoft.com/) to programmatically update packages for various supported Linux distro’s.
 
-Red Hat offers its own repositories for software packages for registered systems and leverages the Red Hat Content Delivery Network (CDN) and Red Hat Subscription Manager for RHEL 9. <Need relevant content here from RH peer>
+Red Hat offers its own repositories for software packages for registered systems and leverages the Red Hat Content Delivery Network (CDN) and Red Hat Subscription Manager for RHEL 9.
+
+**Content Delivery Network (CDN) Structure**
+
+The Red Hat Content Delivery Network, nominally accessed via cdn.redhat.com is a geographically distributed series of static webservers, which contain content and errata that is designed to be consumed by systems. This content can be consumed directly (such as via a system registered via Red Hat Subscription Management) or mirrored via on premise solution, such as Red Hat Satellite 6. The Red Hat Content Delivery network is protected by x.509 certificate authentication, to ensure that only valid users can access it.
+
+In the case of a system registered to Red Hat Subscription Management, the attached subscriptions govern which subset of the CDN the system can access. In the case of Satellite 6, the subscriptions that are attached to the subscription manifest govern which subset of the CDN the system can access.
 
 Additional points which should be considered:
 
