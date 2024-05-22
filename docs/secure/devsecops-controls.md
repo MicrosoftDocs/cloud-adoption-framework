@@ -10,12 +10,14 @@ ms.reviewer: ridive, mas, jamesduncan, stbosted, nobiwan, thomq
 ---
 # DevSecOps controls
 
-This page describes how to apply the security controls to support the [Continuous SDL](https://www.microsoft.com/SDL) security practices. These security controls are an integral part of a [DevSecOps strategy](/azure/cloud-adoption-framework/secure/innovation-security) spanning people, process, and technology.
+This article describes how to apply security controls to support the [Continuous SDL](https://www.microsoft.com/SDL) security practices. These security controls are an integral part of a [DevSecOps strategy](/azure/cloud-adoption-framework/secure/innovation-security) spanning people, process, and technology.
 This documentation describes each control and shows how to apply these controls to three security profiles. These profiles meet typical security requirements for common business scenarios at most organizations:
 
 :::image type="content" source="media/devsecops-controls/security-control-profiles.png" alt-text="Diagram of security controls versus time and impact.":::
 
 ## Security control profiles
+
+There are three tiers of control profiles referenced in this article.
 
 :::row:::
    :::column span="":::
@@ -42,21 +44,13 @@ This documentation describes each control and shows how to apply these controls 
    :::column-end:::
 :::row-end:::
 
-<!---
-- Temporary minimum (Left) – Abbreviated security profile for a temporary exception state to support rapid prototyping of low-risk workloads. This profile should be used only for temporary exceptions that need to be released on an accelerated timeline to meet critical business needs. Items using this profile should rapidly be brought up to the standard profile.
-- Standard (Center) - Balanced approach for most workloads most of the time
-- High security (Right) – Stringent security for workloads with a potential high impact on business and human safety
---->
-
 ## DevSecOps security controls
 
 This section provides a reference of recommended security controls for each type of workload. This reference might be adopted as is or it can be adapted to your existing software development and software security processes. Most organizations can’t implement all these controls right away if they aren’t already doing some of them. Taking a continuous improvement approach is often the best approach: prioritize controls, implement the first control, move to the next control, implement it, and so on. Most organizations should prioritize the [critical foundations](#establish-critical-foundations) first.
 
 For more information, see [The DevSecOps journey](innovation-security.md).
 
-This figure summarizes the security controls and how to apply them to each workload security profile:
-
-:::image type="content" source="media/devsecops-controls/devsecops-security-profile-comparison.png" alt-text="ALT" lightbox="media/devsecops-controls/devsecops-security-profile-comparison.png":::
+:::image type="content" source="media/devsecops-controls/devsecops-security-profile-comparison.png" alt-text="This diagram summarizes the security controls and how to apply them to each workload security profile." lightbox="media/devsecops-controls/devsecops-security-profile-comparison.png":::
 
 Key planning considerations include:
 
@@ -74,14 +68,19 @@ The controls are grouped into the stages of development they apply to and the co
    - [Security in blameless postmortems](#include-security-in-blameless-postmortems)
    - [Secure coding standards](#establish-security-standards-metrics-and-governance)
    - [Tool chain security](#require-use-of-proven-security-features-languages-and-frameworks)
-- **Secure design**
+   - [Secure identities](#foundational-identity-security)
+   - [Strong cryptographic standards](#cryptographic-standards)
+   - [Secure development environment](#securing-your-development-environment)
+- **[Secure design](#secure-design)**
    - [Threat model (security design review)](#perform-threat-modeling-security-design-review)
-- **Secure code**
+- **[Secure code](#secure-code)**
    - [Code analysis](#code-analysis)
-- **Secure CI/CD pipeline**
+- **[Secure CI/CD pipeline](#secure-the-cicd-pipeline)**
    - [Reinforce/check secure the code controls](#supply-chain--dependency-management)
+   - [Security code review](#security-code-review)
+   - [Credential and secret scanning](#credential-and-secret-scanning)
    - [Secure pipeline (access/infrastructure/apps)](#secure-pipeline)
-- **Secure operations**
+- **[Secure operations](#secure-operations)**
    - [Live site penetration testing](#live-site-penetration-testing)
    - [Identity/application access and controls](#identityapplication-access-controls)
    - [Host/container controls](#hostcontainerenvironment-controls)
@@ -192,7 +191,9 @@ To further lockdown developer workstations, you can issue them privileged access
 - [Why are privileged access devices important](/security/privileged-access-workstations/privileged-access-devices)
 - [Deploying a privileged access solution](/security/privileged-access-workstations/privileged-access-deployment)
 
-### Perform threat modeling (security design review)
+### Secure design
+
+#### Perform threat modeling (security design review)
 
 This supports Continuous SDL Practice 3 – Perform Threat Modeling.
 
@@ -225,7 +226,9 @@ Create and analyze threat models by: communicating about the security design of 
 - [Threat Modeling AI/ML Systems and Dependencies](/security/engineering/threat-modeling-aiml)
 - [Integrated threat modeling with DevOps](/security/engineering/threat-modeling-with-dev-ops)
 
-### Code analysis
+### Secure code
+
+#### Code analysis
 
 This supports Continuous SDL Practice 7 – Perform Security Testing.
 
@@ -269,15 +272,11 @@ SAST tools scan the existing codebase and have full access to the code. SAST too
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: Ensure you enable built-in IDE security features and implement a minimum level of SAST Scanning across your repository to identify vulnerabilities across the application. There must be a documented process to remediate discovered issues in a reasonable time, though the "bug bar" standard of which flaws must be fixed is limited until the application reaches the standard balanced or high security profiles.
-Standard: Ensure you fully scan all components with all applicable SAST/DAST tooling and identify weaknesses. Ensure full security coverage over your application code. Ensure you're following the documented process for remediation and have a "bug bar" standard matches your organization’s risk tolerance/appetite.
-High security: Ensure all applicable applications enforce a detailed and documented process addressing all security vulnerabilities. Enforce fixes before any build/release. Ensure you're following the documented process for remediation and have a highly restrictive "bug bar" that matches your organization’s risk tolerance/appetite for high security business critical workloads.
---->
-
 There are many tools available to use for static analysis we recommend checking out the list at [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
 
-### Supply chain / dependency management
+### Secure the CI/CD pipeline
+
+#### Supply chain / dependency management
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain.
 
@@ -314,15 +313,9 @@ Securing your supply chain is an essential part of ensuring a secure development
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: Inventory all of your dependences so you understand the impact an OS vulnerability has on your application. This inventory can be achieved using [Dependabot](https://docs.github.com/code-security/dependabot) or other Software Composition Analysis (SCA) tools. These tools might also help you generate a Software bill of Materials (SBOM).
-Balanced state: Analyze all OSS Vulnerabilities and automatically fix them with automatic pull requests. This control can similarly be achieving using [Dependabot](https://docs.github.com/code-security/dependabot) and the GitHub Dependency graph/review.
-High security: Actively block all insecure packages with exploitable vulnerabilities being used in the application. 
---->
-
 To learn more about this control and measure your OSS Security maturity, review the [OSS Supply Chain Framework](https://www.microsoft.com/securityengineering/opensource) and [GitHub’s best practice documentation on Securing your development lifecycle](https://docs.github.com/code-security/supply-chain-security/end-to-end-supply-chain/end-to-end-supply-chain-overview).
 
-### Security code review
+#### Security code review
 
 This control focuses on having a security expert review code to identify potential security flaws. This helps find security issues that are hard to automate detections for.
 
@@ -355,13 +348,7 @@ This review must always be a separate person from the developer who wrote the co
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: This control is recommended for this profile
-Standard: This control is recommended for this profile
-High security: This control is required for all high security applications and often involves multiple individual experts.
---->
-
-### Credential and secret scanning
+#### Credential and secret scanning
 
 This supports Continuous SDL Practice 7 – Perform Security Testing.
 
@@ -396,7 +383,7 @@ More details and resources include:
 > [!NOTE]
 > We strongly recommend using per workload keys with secret storage solutions like Azure Key Vault.
 
-### Secure pipeline
+#### Secure pipeline
 
 This supports Continuous SDL Practice 5 - Securing the Software Supply Chain.
 
@@ -424,7 +411,9 @@ Pipeline security can be assured by ensuring good access control to resources us
 
 To learn more about pipeline security, see [Securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
-### Live Site Penetration Testing
+### Secure operations
+
+#### Live Site Penetration Testing
 
 This supports Continuous SDL Practice 7 – Perform Security Testing.
 
@@ -456,14 +445,10 @@ We recommend you do this testing at all levels of the DevSecOps security profile
       **High security** – For line of business applications and critical workloads, it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with extra attention and care.
    :::column-end:::
 :::row-end:::
-<!---
-Temporary minimum: We recommend that you do a penetration test on applications especially if the project due to its pace might have vulnerabilities. You must identify the easy methods into the application that an attacker might exploit.
-Standard: At a standard profile, we recommend that you do a penetration test. In this case, you might uncover more complex attacks/weakness’s due to the extra care that is taken early in the development process.
-High security: For line of business applications and critical workloads, it’s a requirement to complete a penetration test. Any vulnerability in these applications should be treated with extra attention and care.
---->
+
 Integrate the findings and feedback from these activities to improve your security processes and tools.
 
-### Identity/application access controls
+#### Identity/application access controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment.
 
@@ -496,12 +481,6 @@ Ensure security best practices are followed for all development systems and the 
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: Ensure everyone is using multifactor authentication and only have access to what they need to perform daily tasks
-Standard state: Ensure that the infrastructure hosting the workload (VMs, containers, network, identity systems, etc.) meets security best practices for identity and access management, including securing privileged access
-High security: Implement a full Zero Trust strategy that incorporates MFA, Identity Threat Detection and Response, and Cloud Infrastructure Entitlement Management (CIEM). Perform workload-specific threat model (LINK) of identity systems and components supporting each high security workload.
---->
-
 Managed Identities are the more secure and preferred method of authentication wherever possible. The use of tokens and secrets is less secure due to the need to store and retrieve them at the application layer. In addition, Managed Identities are automatically rolled over without the need for manual intervention.
 
 More details and resources include:
@@ -512,7 +491,7 @@ More details and resources include:
 - [What is Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure)
 - [What's Microsoft Entra Permissions Management?](/entra/permissions-management/overview)
 
-### Host/container/environment controls
+#### Host/container/environment controls
 
 This supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment.
 
@@ -561,12 +540,6 @@ Ensure to apply security best practice to the infrastructure components includin
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: Apply standard enterprise configurations for hosts and subscriptions.
-Standard state: Ensure that the infrastructure meets security best practices outlined in the Microsoft Cloud Security Benchmark (MCSB)
-High security: Stringently apply MCSB standards and perform workload-specific threat model (LINK) of infrastructure supporting each high security workload.
---->
-
 More details and resources include:
 
 - [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/)
@@ -577,7 +550,7 @@ More details and resources include:
 - [Windows Defender Application Control and virtualization-based protection of code integrity](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 - [Device Guard](/windows/security/application-security/application-control/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-### Network access controls
+#### Network access controls
 
 This control supports Continuous SDL Practice 8 – Ensure operational platform security and Practice 6 – Securing your engineering environment.
 
@@ -617,12 +590,6 @@ Ensure security best practices are followed for all development systems and the 
    :::column-end:::
 :::row-end:::
 
-<!---
-Temporary minimum: Apply standard enterprise configurations for workload.
-Standard state: Ensure all systems have external network protection, DDoS protection, and a minimum of per-workload internal network protection.
-High security: All standard protections plus high granularity of internal network protections, forced tunneling of outbound server traffic through external network protection mechanisms, and a workload-specific threat model (LINK) of network infrastructure supporting each high security workload.
---->
-
 More details and resources include:
 
 - [MCSB network security](/security/benchmark/azure/mcsb-network-security)
@@ -634,7 +601,7 @@ More details and resources include:
 - [Azure Web Applications Firewalls (WAF)](/azure/web-application-firewall/overview)
 - [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview)
 
-### Monitoring, response and recovery
+#### Monitoring, response and recovery
 
 This supports Continuous SDL Practice 9 – Implement Security Monitoring and Response.
 
@@ -670,12 +637,6 @@ This data is then infused with insights from real-time threat intelligence to id
       **High security** – Standard controls plus custom per-workload detections based on insights from threat modeling of the workload. Combine this profile with AI to provide contextual awareness to remediation recommendations.
    :::column-end:::
 :::row-end:::
-
-<!---
-Temporary minimum: Deploy XDR capabilities in your environment to monitor traffic of your end user devices
-Standard state: Deploy XDR and custom SIEM detections that identify anomalous behavior relative to the overall environment. This profile might include custom detections for individual workloads.
-High security: Standard controls plus custom per-workload detections based on insights from threat modeling of the workload. Combine this profile with AI to provide contextual awareness to remediation recommendations.
---->
 
 - [Microsoft Defender](/defender)
 - [Microsoft Sentinel](/azure/sentinel)
