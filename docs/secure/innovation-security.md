@@ -72,7 +72,7 @@ Protecting this innovation requires that organizations address potential securit
 
 Attackers can achieve their goals by exploiting weaknesses in either the development process, the underlying infrastructure for workloads, or both:
 
-- Development Attacks: using weaknesses in the application design and development process. For example, attackers might find code that doesn't validate input (allowing common attacks like SQL injection) or they might find the application uses weak encryption (or no encryption) for communications. Additionally, attackers might implant back doors in the code that allows them to return later to access assets in your environment or in your customer's environment.
+- **Development Attacks** using weaknesses in the application design and development process. For example, attackers might find code that doesn't validate input (allowing common attacks like SQL injection) or they might find the application uses weak encryption (or no encryption) for communications. Additionally, attackers might implant back doors in the code that allows them to return later to access assets in your environment or in your customer's environment.
 - Infrastructure Attacks: that compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multistage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment.  
 
 Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
