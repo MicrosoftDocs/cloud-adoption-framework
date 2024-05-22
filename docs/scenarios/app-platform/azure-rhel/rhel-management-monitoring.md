@@ -136,7 +136,11 @@ Azure Update Manger has been redesigned and doesn't depend on Azure Automation o
 - [Manage update settings via the portal](https://learn.microsoft.com/en-us/azure/update-manager/manage-update-settings)
 - [Manage multiple machines by using Update Manager](https://learn.microsoft.com/en-us/azure/update-manager/manage-multiple-machines)
 
-## <a name="_toc156377590"></a>Azure Linux VM Monitoring
+## VM Monitoring
+
+Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infratrucutre components on an individual VM. In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
+
+### <a name="_toc156377590"></a>Azure Linux VM Monitoring
 Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map. <Need relevant content here from RH peer>
 ### <a name="_toc156377593"></a>Recommendations
 For native Azure VM’s the use of boot diagnostics is supported and for on-premises Linux VM’s the use of [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/overview) is recommended for a comprehensive hybrid solution. Steps to enable Azure Arc on a Linux VM can be found here:
