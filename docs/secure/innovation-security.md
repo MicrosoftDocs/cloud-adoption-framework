@@ -82,7 +82,7 @@ Additionally, the risk of software supply chain attacks makes it critical to int
 
 ## The DevSecOps journey
 
-Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process. Ideas first incubate in a safe space, later released to production as a minimum viable product (MVP), then iteratively and continuously updated.
+Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process. Ideas first incubate in a safe space and are later released to production as a minimum viable product (MVP). They are then iteratively and continuously updated.
 
 This diagram shows the lifecycle of this kind of innovation factory approach:
 
