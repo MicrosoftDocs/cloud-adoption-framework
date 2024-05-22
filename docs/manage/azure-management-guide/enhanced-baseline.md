@@ -3,7 +3,7 @@ title: Enhanced management baseline in Azure
 description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline.
 author: martinekuan
 ms.author: martinek
-ms.date: 08/12/2021
+ms.date: 05/22/2024
 ms.topic: conceptual
 ms.custom: internal, fasttrack-edit, AQC
 ---
@@ -63,7 +63,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 
 ::: zone-end
 
-Azure Automation provides a centralized system for the management of automated controls. In Azure Automation, you can run simple remediation, scale, and optimization processes in response to environmental metrics. These processes reduce the overhead associated with manual incident processing.
+[Azure Automation](/azure/automation/overview) provides a centralized system for the management of automated controls. In Azure Automation, you can run simple remediation, scale, and optimization processes in response to environmental metrics. These processes reduce the overhead associated with manual incident processing.
 
 Most importantly, automated remediation can be delivered in near-real-time, significantly reducing interruptions to business processes. A study of the most common business interruptions identifies activities within your environment that could be automated.
 
@@ -73,10 +73,11 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 
 To create or manage runbooks:
 
+1. Sign in to the Azure [portal](https://portal.azure.com)
 1. Go to **Azure Automation**.
 1. Select **Automation accounts** and choose one of the listed accounts.
-1. Go to **Process automation**.
-1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
+1. Go to **Process automation**, select **Runbooks** to open the list of runbooks.
+1. With the options presented, you can [create or manage runbooks](/azure/automation/manage-runbooks), schedules, and other automated remediation functionality.
 
 ::: zone target="chromeless"
 
