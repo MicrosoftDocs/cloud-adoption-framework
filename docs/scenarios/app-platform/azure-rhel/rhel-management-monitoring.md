@@ -104,7 +104,8 @@ Point-In-Time restore can be used for point-in-time restores, allowing you to re
 Azure monitoring has the capabilities to incorporate customer sources as indicated in the diagram below:
 
 ![A screenshot of a computer Description automatically generated](images/rhelmanmon002.png "A screenshot of a computer Description automatically generated")
-#### *Change (Configuration) Management*
+
+### Change (Configuration) Management
 In terms of Red Hat infrastructure the term [configuration managemnt](https://www.redhat.com/en/topics/automation/what-is-configuration-management) is the focus of the [Ansible Automation platform](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4).
 
 **Overview of Red Hat Ansible Automation Platform**
@@ -119,6 +120,8 @@ For information about the components included in Ansible Automation Platform, se
 For more information about upgrading Ansible Automation Platform, see the [Red Hat Ansible Automation Platform Upgrade and Migration Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_upgrade_and_migration_guide/index).
 
 For procedures related to using the Ansible Automation Platform installer, see the [Ansible Automation Platform Installation Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index).
+
+**Azure native tooling for update management**
 
 Azure Update Manger has been redesigned and doesn't depend on Azure Automation or Azure Monitor Logs, as required by the Azure Automation Update Management feature. Update Manager offers many new features and provides enhanced functionality over the original version available with Azure Automation. Some of those benefits can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/overview?tabs=azure-vms#key-benefits).
 
