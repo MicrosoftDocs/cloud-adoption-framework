@@ -65,7 +65,7 @@ Connectivity between ExpressRoute connections, whether between Azure VMware Solu
 ### Single-region design with Global Reach 
 When using single-region with Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. This is done by using Routing-Intent. However, Global Reach traffic between Azure VMware Solution and on-premises bypasses the hub firewall as shown below on Global Reach connection “A”. Therefore, you need to inspect this Global Reach traffic with NSX-T in Azure VMware Solution or a firewall on-premises for better security across Global Reach sites.
                             
-![Diagram of Single-Region with Global Reach Azure VMware Solution Scenario](./media//media/single-region-virtual-wan-1.png)
+![Diagram of Single-Region with Global Reach Azure VMware Solution Scenario](./media/single-region-virtual-wan-1.png)
 
 See the table below for the traffic flows that the Secured Virtual Hub inspects with this design.
 
