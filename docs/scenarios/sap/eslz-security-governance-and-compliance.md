@@ -196,7 +196,7 @@ Azure Policy also helps bring your resources to compliance through bulk remediat
 
 ### Manage SAP on Azure costs
 
-Cost management is very important. Microsoft offers various ways to optimize costs, like reservations, right sizing, and snoozing. It's important to understand and set alerts for the [Azure cost spending limits](/azure/cost-management-billing/manage/spending-limit). You can extend this monitoring to integrate with the overall IT service management (ITSM) solution.
+Cost management is very important. Microsoft offers various ways to optimize costs, like reservations, right sizing, and snoozing. It's important to understand and set alerts for the [Cost spending limits](/azure/cost-management-billing/manage/spending-limit). You can extend this monitoring to integrate with the overall IT service management (ITSM) solution.
 
 ### Automate SAP deployments
 

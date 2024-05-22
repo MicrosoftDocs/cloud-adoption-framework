@@ -10,13 +10,13 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Manage costs and billing for your Azure resources
 
-Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and application teams. Azure Cost Management + Billing can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
+Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and application teams. Microsoft Cost Management can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
 
 For more information about integrating cloud cost management processes throughout your organization, see the Cloud Adoption Framework article on how to [track costs across business units, environments, or projects](../azure-best-practices/track-costs.md).
 
-## Manage your costs with Azure Cost Management + Billing
+## Manage your costs with Microsoft Cost Management
 
-Azure Cost Management + Billing provides a few ways to help you predict and manage costs:
+Microsoft Cost Management provides a few ways to help you predict and manage costs:
 
 - **Analyze cloud costs** helps you explore and analyze your costs. You can view aggregated cost for your account or view accumulated costs over time.
 - **Monitor with budgets** allows you to create a budget and then configure alerts to warn you when you're close to exceeding it.
@@ -58,7 +58,7 @@ To view your support requests and their status:
 
 To learn more, see:
 
-- [Azure Cost Management + Billing documentation](/azure/cost-management-billing/)
+- [Microsoft Cost Management documentation](/azure/cost-management-billing/)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
 - [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 
