@@ -138,7 +138,25 @@ Azure Update Manger has been redesigned and doesn't depend on Azure Automation o
 
 ## VM Monitoring
 
-Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infratrucutre components on an individual VM. In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
+Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infratrucutre components on an individual VM. The list of tools include:
+
+- pcp
+- top
+- ps
+- vmstat
+- sar
+- perf
+- iostat
+- irqbalance
+- ss
+- numastat
+- numad
+- valgrind
+- pqos
+
+You can find addtional documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) for futher review.
+
+In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
 
 ### <a name="_toc156377590"></a>Azure Linux VM Monitoring
 Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map. <Need relevant content here from RH peer>
