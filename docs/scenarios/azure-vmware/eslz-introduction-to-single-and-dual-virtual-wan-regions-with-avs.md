@@ -28,7 +28,7 @@ The document assumes readers have a basic understanding of Virtual WAN and Secur
 **ExpressRoute Global Reach**  
 [About ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach)
 
-## Secure Virtual WAN with Route-Intent for Azure VMware Solution designs 
+## Secure Virtual WAN for Azure VMware Solution designs 
 Secure Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution. With Azure VMware Solution, Secure Virtual WAN with Route-Intent supports both Single-Region and Dual-Region designs.  
 
 ### Single-Region design    
@@ -85,10 +85,10 @@ Traffic flow to and from Virtual Networks
 | Virtual Networks   | &#8594;<br>&#8592;| Internet |  Yes 
 | Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes
 
-### Single-region design without Global Reach
+## Single-region design without Global Reach
 When using single-region without Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. This is done by using Routing-Intent. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. As mentioned earlier, Secure Virtual Hubs do not support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, a support ticket needs to be initiated. Once the support ticket has been fulfilled, the secure hub will advertise the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When using Routing-Intent from on-premises, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 
-![Diagram of Single-Region without Global Reach Azure VMware Solution Scenario](./media/single-region-virtual-wan-without-globalreach-1.png)
+![Diagram of Single-Region without Global Reach Azure VMware Solution Scenario](./media/single-region-without-globalreach-1.png)
 
 See the table below for the traffic flows that the Secured Virtual Hub inspects with this design.
 
@@ -108,7 +108,7 @@ Traffic flow to and from Virtual Networks
 | Virtual Networks   | &#8594;<br>&#8592;| Internet |  Yes 
 | Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes
 
-### Dual-region design with Global Reach 
+## Dual-region design with Global Reach 
 Using dual-region with Global Reach, you deploy two secure hubs in different regions of your Virtual WAN. You also deploy two Azure VMware Solution private clouds in different regions. You cross connect both Azure VMware Solution private clouds and on-premises to each regional hub via ExpressRoute for redundancy (see connections “E”, “D” and “F”). All private and internet traffic will be routed through a security solution (such as Azure Firewall, a third-party NVA, or a SaaS solution) on both secure hubs using Routing-Intent. This lets you transit traffic across the inter-hub link and inspect it on both Hub firewalls for additional security. However, Global Reach traffic between the Azure VMware Solution private clouds, or between the Azure VMware Solution private clouds and on-premises, bypasses the two hub firewalls (see connections “A”, “B” and “C”). You need to inspect this traffic with NSX-T in Azure VMware Solution or a firewall on-premises for better security across Global Reach sites.
 
 ![Diagram of Dual-Region with Global Reach Azure VMware Solution Scenario](./media/dual-region-virtual-wan-1.png)
@@ -148,7 +148,7 @@ Traffic flow to and from Virtual Networks
 | Virtual Network 2   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 2 firewall  
 
 
-### Dual-region design without Global Reach 
+## Dual-region design without Global Reach 
 Using dual-region without Global Reach, you deploy two secure hubs in different regions of your Virtual WAN. You also deploy two Azure VMware Solution private clouds in different regions. You cross connect both Azure VMware Solution private clouds and on-premises to each regional hub via ExpressRoute for redundancy (see connections “E”, “D” and “F”). All private and internet traffic will be routed through a security solution (such as Azure Firewall, a third-party NVA, or a SaaS solution) on both secure hubs using Routing-Intent. This lets you transit traffic across the inter-hub link and inspect it on both Hub firewalls for additional security. When using Routing-Intent from on-premises, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes. Since Global Reach is not in use, the traffic between the Azure VMware Solution private clouds, or between the Azure VMware Solution private clouds and on-premises, is routed through the hubs, transiting the hub firewalls.
 
 ![Diagram of Dual-Region without Global Reach Azure VMware Solution Scenario](./media/dual-region-virtual-wan-without-globalreach-1.png)
