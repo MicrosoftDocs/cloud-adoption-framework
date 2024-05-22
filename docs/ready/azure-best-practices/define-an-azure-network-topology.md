@@ -16,7 +16,7 @@ Network topology is a critical element of a landing zone architecture because it
 
 - Your organization intends to deploy resources across several Azure regions and requires global connectivity between virtual networks in these Azure regions and multiple on-premises locations.
 
-- Your organization intends to integrate a large-scale branch network directly into Azure by using a software-defined WAN (SD-WAN) deployment, or requires more than 30 branch sites for native IPSec termination.
+- Your organization intends to use a software-defined WAN (SD-WAN) deployment to integrate a large-scale branch network directly into Azure, or requires more than 30 branch sites for native IPSec termination.
 
 - You require transitive routing between a virtual private network (VPN) and Azure ExpressRoute. For example, remote branches connected through site-to-site VPN or remote users connected through point-to-site VPN require connectivity to an ExpressRoute-connected DC through Azure.
 

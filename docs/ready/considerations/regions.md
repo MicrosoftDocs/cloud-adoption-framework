@@ -12,7 +12,7 @@ ms.custom: internal
 
 Azure landing zone architecture itself is region-agnostic. However, you're asked to specify Azure regions to deploy your Azure landing zone architecture. This article explains how landing zones use Azure regions. It also explains how to add a region to an existing landing zone, and some considerations when you migrate your Azure estate to a different region.
 
-In some situations, applications should be deployed into multiple Azure regions to support your high availability and disaster recovery business requirements. Even if you don't have an immediate need for multi-region applications today, it's a good idea to design your Azure landing zone platform to support multiple regions, especially for connectivity, identity, and management services from the start to ensure you can quickly enable and support multi-region application landing zones.
+In some situations, you should deploy applications into multiple Azure regions to support your high availability and disaster recovery business requirements. Even if you don't have an immediate need for multi-region applications today, it's a good idea to design your Azure landing zone platform to support multiple regions, especially for connectivity, identity, and management services from the start to ensure you can quickly enable and support multi-region application landing zones.
 
 For more guidance about how to choose Azure regions, see [Select Azure regions](../azure-setup-guide/regions.md).
 
@@ -42,13 +42,13 @@ If you deploy a networking topology, you also need to select an Azure region to 
 
 ## Add a new region to an existing landing zone
 
-You should consider a multi-region strategy, either from the start of your cloud journey, or by expanding into more Azure regions once you've completed the initial deployment of your Azure landing zone architecture. For example, if you enable disaster recovery for your virtual machines by using Azure Site Recovery, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
+You should consider a multi-region strategy, either from the start of your cloud journey, or by expanding into more Azure regions once you've completed the initial deployment of your Azure landing zone architecture. For example, if you use Azure Site Recovery to enable disaster recovery for your virtual machines, you might want to replicate them to a different Azure region. To add Azure regions within Azure landing zone architecture, consider the following areas and recommendations:
 
 | Area | Recommendation |
 | ---- | -------------- |
 | Management groups | No action necessary. Management groups aren't tied to a region, and it's not a good practice to create a management group structure based on regions. |
 | Subscriptions | Subscriptions aren't tied to a region. |
-| Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. These assignments must be updated to allow resource deployments to the new region you want to enable. |
+| Azure Policy | Make changes here if you assigned policies to deny resource deployment to all regions by specifying a list of "allowed" Azure regions. Update these assignments to allow resource deployments to the new region you want to enable. |
 | Role-based access control | No action necessary. Azure RBAC isn't tied to a region. |
 | Monitoring and logging | Decide whether to use a single Log Analytics workspace for all regions, or to create multiple workspaces to cover different geographical regions. There are advantages and disadvantages of each approach, including potential cross-region networking charges. For more information, see [Design a Log Analytics workspace architecture](/azure/azure-monitor/logs/workspace-design#azure-regions). |
 | Networking | If you deployed a networking topology, [Virtual WAN](../azure-best-practices/virtual-wan-network-topology.md), or [traditional hub and spoke](../azure-best-practices/traditional-azure-networking-topology.md), expand the networking to the new Azure region. Create another networking hub by deploying the required networking resources into the existing Connectivity subscription in the new Azure region. [Azure Virtual Network Manager](../azure-best-practices/azure-virtual-network-manager.md) can make it easier to expand and manage virtual networks at scale in multiple regions. From a DNS perspective, you might also want to deploy forwarders, if used, into the new Azure region. Use forwarders for spoke virtual networks in the new region for resolution. Azure DNS zones are global resources and not tied to a single Azure region, so they don't require any action. |
@@ -84,11 +84,11 @@ When you expand an Azure landing zone into a new region, consider following the 
 
 1. Create and configure any required routing, such as Azure Route Server or user-defined routes.
 
-1. If required, enable name resolution by deploying DNS forwarders for the new target region and linking to any private DNS zones.
+1. If required, deploy DNS forwarders for the new target region and link to any private DNS zones to enable name resolution.
 
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
 
-To host your workloads, you can then connect application landing zone spokes to the new hub virtual network in the new region by using virtual network peering.
+To host your workloads, you can then use virtual network peering to connect application landing zone spokes to the new hub virtual network in the new region.
 
 > [!TIP]
 > [Azure Virtual Network Manager](../azure-best-practices/azure-virtual-network-manager.md) can make it easier to expand and manage virtual networks at scale in multiple regions.
@@ -110,9 +110,9 @@ To host your workloads, you can then connect application landing zone spokes to 
 
    - Some customers might configure name resolution on their Active Directory domain controllers within the *Identity* platform landing zone subscription.
 
-   - In Virtual WAN deployments this must be in a spoke virtual network that is connected to the virtual hub via a virtual network connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
+   - In Virtual WAN deployments, this must be in a spoke virtual network that is connected to the virtual hub through a virtual network connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
 
-To host your workloads, you can then connect application landing zone spokes to the virtual WAN's new virtual hub in the new region by using virtual network connections.
+To host your workloads, you can then use virtual network peering to connect application landing zone spokes to the new hub virtual network in the new region.
 
 #### Identity
 
@@ -144,21 +144,21 @@ Most of the globally deployed landing zone configuration doesn't typically need 
 
 Region-specific landing zone resources often require more consideration because some Azure resources can't be moved between regions. Consider the following approach:
 
-1. **Add the destination region as an additional region to your landing zone.** Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone).
+1. **Add the destination region as an additional region to your landing zone**: Follow the guidance in [Add a new region to an existing landing zone](#add-a-new-region-to-an-existing-landing-zone) to learn how to add a new region to an existing landing zone.
 
-1. **Deploy centralized components in the destination region.** For example, deploy a new Log Analytics workspace in your destination region so that workloads can begin to use the new component when they're migrated.
+1. **Deploy centralized components in the destination region**: For example, deploy a new Log Analytics workspace in your destination region so that workloads can begin to use the new component after they're migrated.
 
-1. **Migrate your workloads from the source region to the destination region.** During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
+1. **Migrate your workloads from the source region to the destination region**: During the workload migration process, reconfigure the resources to use the destination region's networking components, identity components, Log Analytics workspace, and other regional resources.
 
-1. **Decommission the resources in the source region after the migration is complete.**
+1. **Decommission the resources in the source region after the migration is complete**:
 
-Consider the following tips when migrating landing zone resources across regions:
+Consider the following tips when you migrate landing zone resources across regions:
 
-- **Use infrastructure as code:** Complex configuration, such as rules for Azure Firewall, can be exported and reimported by using Bicep, ARM templates, Terraform, scripting, or a similar approach.
+- **Use infrastructure as code**: Use Bicep, Azure Resource Manager templates (ARM templates), Terraform, scripting, or a similar approach to export and reimport complex configurations, such as rules for Azure Firewall.
 
-- **Azure Automation:** Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
+- **Azure Automation**: Azure Automation provides [guidance and scripts](https://github.com/azureautomation/Migrate-automation-account-assets-from-one-region-to-another) to assist with inter-region migration of Azure Automation resources.
 
-- **ExpressRoute:** Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other ExpressRoute SKUs.
+- **ExpressRoute**: Consider whether you can use [ExpressRoute Local](/azure/expressroute/expressroute-faqs#expressroute-local) in your destination region. If your on-premises environments are within the same metropolitan area as your Azure region, ExpressRoute Local can provide a lower-cost option than other ExpressRoute SKUs.
 
 ## Next step
 
