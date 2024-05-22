@@ -42,7 +42,7 @@ Security risks (and the need to mitigate them) can occur at any point in the dev
 
 ## What is DevSecOps?
 
-Technology innovation is frequently developed in the context of a rapid lean and agile development approach that combines development and operations together into a *DevOps* process. We see that integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.
+Technology innovation is frequently developed in the context of a rapid, lean, and agile development approach that combines development and operations together into a *DevOps* process and integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.
 
 ### Secure by design and shifting left
 
