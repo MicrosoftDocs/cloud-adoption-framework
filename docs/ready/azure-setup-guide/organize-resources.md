@@ -137,7 +137,7 @@ Other common uses for tags include:
 
 - **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like *ProjectOwner*.
 - **Automation:** Regularly running scripts can take action based on a tag value like *ShutdownTime* or *DeprovisionDate*.
-- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In [Cost Management + Billing](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
+- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the costs. In [Microsoft Cost Management](/azure/cost-management-billing/), you can apply your cost center tag as a filter to report charges based on usage by team or department.
 
 Each resource or resource group can have a maximum of 50 pairs of tag names and values. This limitation is only for tags that directly apply to the resource group or resource.
 

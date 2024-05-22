@@ -40,7 +40,7 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 - Before you provision more billing profiles, [review the potential impact to charges and reservations](/azure/cost-management-billing/manage/mca-section-invoice#things-to-consider-when-adding-new-billing-profiles).
 
-- Use [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which explore and analyze your organization's costs with Azure metadata.
+- Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which explore and analyze your organization's costs with Azure metadata.
 
 ## Design recommendations
 
