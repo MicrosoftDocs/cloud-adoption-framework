@@ -34,8 +34,8 @@ The following diagram shows how to implement this process using a combination of
 
 To provide the metadata used to drive automated ingestion, you need data asset registration. The information you capture contains:
 
-- **Technical information:** data asset name, source system, type, format and frequency.
-- **Governance information:** owner, stewards, visibility (for discovery purposes) and sensitivity.
+- **Technical information:** Data asset name, source system, type, format and frequency.
+- **Governance information:** Owner, stewards, visibility (for discovery purposes) and sensitivity.
 
 PowerApps is used to capture metadata describing each data asset. Use a model-driven app to enter the information that gets persisted to a custom Dataverse table. When metadata is created or updated within Dataverse, it triggers an Automated Cloud flow that invokes further processing steps.
 

@@ -14,7 +14,7 @@ If you have a presence in more than one Azure region and need to host your data 
 
 Multi-region deployments generally have a connectivity hub subscription in each individual Azure location. For instance, if you have services running in both East US and West Europe, you'll set up a connectivity hub subscription with shared network resources in each region. Shared network resources include:
 
-- network virtual appliances (like Azure Firewall)
+- Network virtual appliances (like Azure Firewall)
 - ExpressRoute Gateways
 - VPN Gateways
 - Hub Virtual Networks (in a hub and spoke architecture) or vWAN Hubs (in a vWan setup)
