@@ -1,7 +1,7 @@
 ## <a name="_toc156377586"></a>Azure Linux Virtual Machine Management
-For greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
+For Greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
 
-For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies might be the optimal approach to use exsisting skillsets.
+For existing Brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premises might be the optimal approach to use existing skillsets.
 
 With Red Hat Satellite, you can provide content and apply patches to hosts systematically in all lifecycle stages. Content flow in Red Hat Satellite involves management and distribution of content from external sources to hosts.
 
@@ -52,7 +52,7 @@ Other points which should be considered:
 <a name="_toc156377589"></a>
 ### Recommendations
 #### *Use of custom images versus Azure Marketplace images*
-Azure VM's can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specifc complaince and security needs. When using specific supported Linux distro’s such as Red Hat you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
+Azure VMs can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using specific supported Linux distro’s such as Red Hat you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
 #### *Testing of Updates in non-production environment*
 Separation of test environments from production environments helps to minimize potential impact to production workloads. Use of [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview) can provide isolation in addition reduce Cloud subscription costs and accelerate testing of new updates. Implement continuous integration (CI) and continuous deployment (CD) pipelines using Azure DevOps or similar tools.
 
@@ -96,12 +96,12 @@ Snapshot Management:
 Point-In-Time restore can be used for point-in-time restores, allowing you to revert a VM or disk to the state captured in the snapshot. This is critical for quick recovery from data corruption, accidental deletions, or similar incidents.
 
 ## Change (Configuration) Management
-In terms of Red Hat infrastructure the term [configuration managemnt](https://www.redhat.com/en/topics/automation/what-is-configuration-management) is the focus of the [Ansible Automation platform](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4).
+In terms of Red Hat infrastructure the term [configuration management](https://www.redhat.com/en/topics/automation/what-is-configuration-management) is the focus of the [Ansible Automation platform](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4).
 
 **Overview of Red Hat Ansible Automation Platform**
 
 Red Hat Ansible Automation Platform simplifies the development and operation of automation workloads for managing enterprise application infrastructure lifecycles. Ansible Automation Platform works across multiple IT domains including operations, networking, security, and development, as well as across diverse hybrid environments. Simple to adopt, use, and understand, Ansible Automation Platform provides the tools needed to rapidly implement enterprise-wide automation, no matter where you are in your automation journey.
-Azure Automation Update Management and Azure Update Manger are a comprehensive set of tools that helps to track and implement change management within your Azure environment. Azure Automation Update Management will retire on 31 August 2024. It is recommended to use Azure Update Manager going forward.
+Azure Automation Update Management and Azure Update Manger are a comprehensive set of tools that helps to track and implement change management within your Azure environment. Azure Automation Update Management will retire on 31 August 2024. It's recommended to use Azure Update Manager going forward.
 
 *Additional resources*
 
@@ -128,7 +128,7 @@ Azure Update Manger has been redesigned and doesn't depend on Azure Automation o
 
 ## VM Monitoring and Reporting
 
-Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infratrucutre components on an individual VM. The list of tools include:
+Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infrastructure components on an individual VM. The list of tools include:
 
 - pcp
 - top
@@ -144,7 +144,7 @@ Red Hat Enterprise Linux provides a robust set of command line tools that provid
 - valgrind
 - pqos
 
-You can find addtional documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) for futher review.
+You can find additional documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) further review.
 
 [Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
@@ -154,7 +154,7 @@ Azure monitoring has the capabilities to incorporate customer sources as indicat
 
 ![A screenshot of a computer Description automatically generated](images/rhelmanmon002.png "A screenshot of a computer Description automatically generated")
 
-In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
+In conjunction Azure provides a robust set of tools to collect, analyze, and visualize the output of the RHEL tools.
 
 ### <a name="_toc156377590"></a>Azure Linux VM Monitoring
 Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map.
