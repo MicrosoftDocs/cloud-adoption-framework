@@ -9,22 +9,22 @@ Topic: Azure automation and management for Red Hat Enterprise Linux
 
 # Platform automation for Red Hat Enterprise Linux systems on Azure
 
-This article describes how you can manage automation for Red Hat Linux systems on Azure by reviewing design considerations, design recommendations, options for various tooling within the Azure ecosystem to achieve a consistent and stable environment. The inent of this article is to provide guidance that aligns with varying customer scenarios, business requirements, operational practices, and technical maturity.     
+This article describes how you can manage automation for Red Hat Linux systems on Azure by reviewing design considerations, design recommendations, options for various tooling within the Azure ecosystem to achieve a consistent and stable environment. The intent of this article is to provide guidance that aligns with varying customer scenarios, business requirements, operational practices, and technical maturity.     
 
 ## Overview
 
-The goal of the automation of Red Hat Enterprise Linux (RHEL) Platform for Azure Landing Zones is to align the Azure Landing Zone lifecycle management via the Red Hat Infrastructure Standard (RH-IS) and associated Adoption Model (RH-ISAM). The standardization of systems is the base of the solution: the RH-IS defines the Standard Operating Environment (SOE) that comprises the default set of software components and configurations applied to systems via the RH-ISAM, a set of DevOps/GitOps principles, Azure Resource Manager Templates (ARM), Terraform, Azure Command-Line Interafec (CLI), and Azure PowerShell. When put into practice, this includes provisioning, systems management, platform evolution, infrastructure operations and application and workload lifecycles; all through automation and Infrastructure/Configuration as Code. Defined and tested configurations reduce errors and increase reliability. Automated provisioning speeds up mass migration. Automated configuration reduces configuration drifts, ensuring systems function correctly. 
+The goal of the automation of Red Hat Enterprise Linux (RHEL) Platform for Azure Landing Zones is to align the Azure Landing Zone lifecycle management via the Red Hat Infrastructure Standard (RH-IS) and associated Adoption Model (RH-ISAM). The standardization of systems is the base of the solution: the RH-IS defines the Standard Operating Environment (SOE) that comprises the default set of software components and configurations applied to systems via the RH-ISAM, a set of DevOps/GitOps principles, Azure Resource Manager Templates (ARM), Terraform, Azure Command-Line Interface (CLI), and Azure PowerShell. When put into practice, this includes provisioning, systems management, platform evolution, infrastructure operations and application and workload lifecycles; all through automation and Infrastructure/Configuration as Code. Defined and tested configurations reduce errors and increase reliability. Automated provisioning speeds up mass migration. Automated configuration reduces configuration drifts, ensuring systems function correctly. 
 
 ## Design Considerations
 
-Red Hat Identity Management delivers on a centralized and unified means to manage identity stores, authentication, policies, and authorization policies for RHEL systems. In hybrid scenariio you can extend your existing Red Hat Identity Management infrastructure across a Virtual Private Network or ExpressRoute connecting on-premises with the RHEL Landing Zone within Azure. Extending your on-premises environment into Azure also affords the capability for integrating your workloads with Azure Entra to support Hybrid cloud identity scenarios. You can read more about Azure Entra formerly known as Azure Active Directory in the following arctle [Microsoft Entra authentication documentation]( https://learn.microsoft.com/en-us/entra/identity/authentication/). Another additional option for identity consideration would be to join RHEL to create a an external trust with Windows Active Directory or join directly into an existing active directory forest. Please see the following article here [Integrating RHEL systems directly with Windows Active Directory](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
+Red Hat Identity Management delivers on a centralized and unified means to manage identity stores, authentication, policies, and authorization policies for RHEL systems. In hybrid scenario you can extend your existing Red Hat Identity Management infrastructure across a Virtual Private Network or ExpressRoute connecting on-premises with the RHEL Landing Zone within Azure. Extending your on-premises environment into Azure also affords the capability for integrating your workloads with Microsoft Entra to support Hybrid cloud identity scenarios. You can read more about Microsoft Entra formerly known as Azure Active Directory in the following arctle [Microsoft Entra authentication documentation]( https://learn.microsoft.com/en-us/entra/identity/authentication/). Another additional option for identity consideration would be to join RHEL to create an external trust with Windows Active Directory or join directly into an existing active directory forest. See the following article here [Integrating RHEL systems directly with Windows Active Directory](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
 
-Red Hat Satellite is implemented as the single source of content delivered to managed RHEL systems. This includes Red Hat packages and patches, as well as third party packages and custom packages developed by application development teams. It also acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations, to recognize security or performance risks. Please note on Azure there is also available the Red Hat Update Infrastructure (RHUI) for RHEL Pay-As-You-Go (PAYG) images that already come preconfigured to access Azure RHUI. Learn more about RHUI in the following online documentation [Red Hat Update Infrastructure for on-demand Red Hat Enterprise Linux VMs in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7).
+Red Hat Satellite is implemented as the single source of content delivered to managed RHEL systems. This includes Red Hat packages and patches, as well as third party packages and custom packages developed by application development teams. It also acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations, to recognize security or performance risks. Note on Azure there's also available the Red Hat Update Infrastructure (RHUI) for RHEL pay-as-you-go (PAYG) images that already come preconfigured to access Azure RHUI. Learn more about RHUI in the following online documentation [Red Hat Update Infrastructure for on-demand Red Hat Enterprise Linux VMs in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7).
 
 
 ### Red Hat Ansible Automation Platform Design Considerations
 
-Red Hat Ansible Automation Platform helps to standardize technical workflows and recurring tasks. It is used for orchestrating provisioning processes for new systems, and recurring operational tasks. Using one common automation platform and language reduces complexity. At the same time, fully automated workflows accelerate application innovation and ease mass workload migrations across on-premises and cloud footprints. 
+Red Hat Ansible Automation Platform helps to standardize technical workflows and recurring tasks. It's used for orchestrating provisioning processes for new systems, and recurring operational tasks. Using one common automation platform and language reduces complexity. At the same time, fully automated workflows accelerate application innovation and ease mass workload migrations across on-premises and cloud footprints. 
 
 Some of the core benefits of a RHEL as a Platform automation strategy: 
 
@@ -46,7 +46,7 @@ Implementation of Red Hat Ansible Automation Platform can be accomplished via se
 [Red Hat Ansible Automation Platform on Microsoft Azure ](https://www.redhat.com/en/technologies/management/ansible/azure) when deployed in self-managed mode in an on-premises and/or cloud infrastructure, provides the following benefits: 
 
 - Architecture and scale - determine what is the most ideal architecture to support the automation platform, whether based on RHEL infrastructure or OpenShift operator deployment. Based on fleet size and 
-  requirements, choose the number, as well as instance sizing, of controllers, execution nodes, and private automation hub instances. For more on architecture, design, configuration and scale, please visit the 
+  requirements, choose the number, as well as instance sizing, of controllers, execution nodes, and private automation hub instances. For more on architecture, design, configuration and scale, visit the 
   Ansible Platform [Red Hat Ansible Automation Platform Planning Guide](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
 
 - Azure configuration -  automation architecture can be optimized for the organization’s Azure design and configuration.
@@ -63,7 +63,7 @@ Implementation of Red Hat Ansible Automation Platform can be accomplished via se
 - Automation beyond the cloud - Ansible Automation Platform on Azure allows you to deploy in your Microsoft Azure cloud—and then extend across your infrastructure. Organizations can deploy, run, and scale applications across Azure and hybrid cloud environments.
 - Support - Red Hat and Microsoft partnered to build Ansible Automation Platform on Azure to ensure consistent and security-focused operations. Red Hat manages, services, and supports the application so your IT team can focus on delivering automation strategies. 
 
-### Additional considerations, managed mode
+### Other considerations, managed mode
 
 Red Hat Ansible Automation Platform on Microsoft Azure in managed mode is installed as a managed application. Red Hat manages both the underlying Azure resources and the software running on it while that infrastructure runs in your Azure tenant.
 
@@ -74,15 +74,15 @@ For information about how this works and how resources and access are isolated f
 Ansible Automation Platform on Microsoft Azure in managed mode uses the following resource groups:
 
 - A new or existing resource group (RG) in your tenant. This resource group includes a single resource referring to the Ansible Automation Platform on Microsoft Azure managed application deployment. Red Hat has access to the managed app to perform support, maintenance, and upgrades, but the resource group is outside of Red Hat’s management. 	
-- A multi-tenant managed resource group (MRG) that contains most of the infrastructure needed to operate Ansible Automation Platform on Microsoft Azure. This multi-tenant resource group is shared between the Red Hat tenant and your tenant. Red Hat has full administrative control and you have read-only access to the resource group. 
-- An AKS node pool resource group (NPRG). Microsoft requires the NPRG for AKS deployments. It contains resources that AKS uses to function. It is created on deployment, and it is outside of Red Hat’s management. Refer to [Microsoft’s AKS documentation](https://learn.microsoft.com/en-us/azure/aks/faq#why-are-two-resource-groups-created-with-aks) for more information about NPRGs.
+- A multitenant managed resource group (MRG) that contains most of the infrastructure needed to operate Ansible Automation Platform on Microsoft Azure. This multitenant resource group is shared between the Red Hat tenant and your tenant. Red Hat has full administrative control and you have read-only access to the resource group. 
+- An AKS node pool resource group (NPRG). Microsoft requires the NPRG for AKS deployments. It contains resources that AKS uses to function. It's created on deployment, and it's outside of Red Hat’s management. Refer to [Microsoft’s AKS documentation](https://learn.microsoft.com/en-us/azure/aks/faq#why-are-two-resource-groups-created-with-aks) for more information about NPRGs.
 
 For Ansible Automation Platform on Microsoft Azure in managed mode, additionally consider: 
 
 - When you install Ansible Automation Platform on Microsoft Azure, you choose whether the deployment is public or private. This affects how users can access the Ansible Automation Platform user interfaces. 
-- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from Ansible Automation Platform to the private networks that contain resources that you want to automate against. You can configure network peering from Ansible Automation Platform on Microsoft Azure to your private Azure virtual network (VNets) and to on-premises or multi-cloud networks where transit routing with Azure exists. 
+- Regardless of whether you choose a public or private deployment, you must configure network peering for outbound communication from Ansible Automation Platform to the private networks that contain resources that you want to automate against. You can configure network peering from Ansible Automation Platform on Microsoft Azure to your private Azure virtual network (VNets) and to on-premises or multicloud networks where transit routing with Azure exists. 
 
-### Additional considerations, self-managed mode 
+### Other considerations, self-managed mode 
 
 Ansible Automation Platform on Microsoft Azure in self-managed mode, provides much of the same benefits of self-managed Ansible Automation platform, however, whereas managed mode runs within an AKS cluster, for self-managed mode, automation platform resources are VM-based. 
 
@@ -134,7 +134,7 @@ Refer to [Azure Landing Zone design guidance for platform automation considerati
 - [Environments](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/environments) explains the purpose of multi environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development) addresses how to use unit testing to improve the quality of new features and improvements in the Azure Landing Zone code-base. 
 
-With requisite source code management tooling in place, along with source code management processes established from the previous sections, Ansible automation code with accompanying infrastructure/configuration as code should be developed to deploy core infrastructure to support the RHEL Platform for Azure Landing Zones model (note the following assumes a complete, greenfield deployment of the platform, with brownfield and/or existing on-premises RH-ISAM deployments only requiring a subset): 
+With requisite source code management tooling in place, along with source code management processes established from the previous sections, Ansible automation code with accompanying infrastructure/configuration as code should be developed to deploy core infrastructure to support the RHEL Platform for Azure Landing Zones model (note the following assumes a complete, Greenfield deployment of the platform, with Brownfield and/or existing on-premises RH-ISAM deployments only requiring a subset): 
 
 - Create Azure resource groups
 - Create virtual networks
@@ -167,14 +167,14 @@ With requisite source code management tooling in place, along with source code m
 
 ### RHEL system lifecycle management  
 
-Once core platform infrastructure is in place, automation for Red Hat Enterprise Linux applications and workload lifecycles can be implemented. Refer to “Deployment, management, and patching considerations” and “Governance and compliance” sections for in-depth coverage of considerations to be made when forming automation pipelines.  The following encapsulates an example automation workflow for a development lifecycle pipeline:
+Once core platform infrastructure is in place, automation for Red Hat Enterprise Linux applications and workload lifecycles can be implemented. Refer to “Deployment, management, and patching considerations” and “Governance and compliance” sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
 
    - Update the Errata Filter end date and publish content in Satellite
    - Promote Content Views (CV)/Composite Content Views (CCV) to Development
    - Deploy RHEL Development test system(s) from Satellite Host Groups
         - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
     - Update/create Azure network security group based on application communication paths
-    - For multi-tier application stacks, update or create Azure application security group for additional, layered security 
+    - For multi-tier application stacks, update or create Azure application security group for additional layered security 
     - Update RHEL Development system(s), deploy and configure desired application from Satellite Development CV/CCV
         - Deploy to single RHEL instance for simple application stack
         - Deploy to several RHEL instances for multi-tier application stacks
@@ -201,7 +201,7 @@ Subsequent stages in the  lifecycle pipeline are slightly different from the Dev
     - Promote CVs/CCVs to Production 
     - Destroy RHEL QA test system(s)
 
-# Additional design considerations leveraging native Azure tooling           
+# Other design considerations leveraging native Azure tooling           
 
 ## Azure Automation
 
@@ -332,11 +332,11 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
 
 ### Azure DevOps
 
-Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps and Azure Functions facilitates seamless collaboration, development and delivery of modern software projects. 
+Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps and Azure Functions facilitate seamless collaboration, development and delivery of modern software projects. 
 
 #### Azure Boards
 
-Cloud software development and corresponding project management is focused on Agile software development. Current documentation on Azure boards can be found [here](https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](https://learn.microsoft.com/en-us/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process). 
+Cloud software development and corresponding project management is focused on Agile software development. Current documentation on Azure Boards can be found [here](https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](https://learn.microsoft.com/en-us/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process). 
 
 To make the most of Azure Boards, understand how your teams use their tools and functions (for example, Scrum, Kanban, and Scrumban), and their dependencies on configurations and customizations. The following table summarizes the primary items you should consider as you structure your project. 
 
@@ -364,7 +364,7 @@ Use Azure Pipelines to support the following scenarios:
 
 Azure Pipelines has extensive documentation, the best place to find complete documentation can be found here.  
 
-Depending on your organizational needs there are four core architectures for Azure pipelines. 
+Depending on your organizational needs there are four core architectures for Azure Pipelines. 
 
 [Azure Pipelines baseline architecture](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops)
 [Azure Pipelines architecture for Azure Web Apps](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-azure-web-apps-architecture?view=azure-devops)
@@ -405,7 +405,7 @@ While Azure Policy directly applies to resources within Azure environments, its 
 
 - Compliance in CI/CD Pipelines: You can integrate compliance checks into your Azure Pipelines. For example, ensuring that any infrastructure deployed through Azure DevOps complies with the policies defined in Azure Policy. 
 - Environment Consistency: By using Azure Policy to enforce specific configurations or resource types, teams can ensure that the environments they deploy to through Azure DevOps are consistent and compliant. 
-- Security and Governance: Policies can enforce security standards and governance practices on the resources managed by Azure DevOps projects, ensuring that the development lifecycle includes compliance with organizational and regulatory standards. 
+- Security and Governance: Policies can enforce security standards and governance practices on the resources managed by Azure DevOps Projects, ensuring that the development lifecycle includes compliance with organizational and regulatory standards. 
 
 To effectively integrate Azure Policy with Azure DevOps, teams often use Azure Policy's compliance data and audit capabilities to inform their DevOps practices, making adjustments to their pipelines or infrastructure as code (IaC) definitions to align with the organizational policies enforced through Azure Policy. 
 
