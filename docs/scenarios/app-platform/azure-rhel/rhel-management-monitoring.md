@@ -1,4 +1,4 @@
-## <a name="_toc156377586"></a>Azure Linux Machine Update Management
+## <a name="_toc156377586"></a>Azure Linux Machine Management
 For greenfield deployment scenarios of RHEL in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
 
 For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies may be the optimal approach.
@@ -48,8 +48,6 @@ Additional points which should be considered:
 - Security and Compliance
 - Dependencies and Compatibility
 - Backup and Recovery
-- Monitoring and Reporting
-- Change Management
 
 <a name="_toc156377589"></a>
 ### Recommendations
@@ -96,16 +94,8 @@ Snapshot Management:
 - Retention Policies: Azure Backup allows you to set retention policies for how long snapshots are kept, enabling you to comply with data retention requirements and manage storage costs effectively.
 
 Point-In-Time restore can be used for point-in-time restores, allowing you to revert a VM or disk to the state captured in the snapshot. This is critical for quick recovery from data corruption, accidental deletions, or similar incidents.
-#### *Monitoring and Reporting*
-[Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
-![A screenshot of a computer Description automatically generated](images/rhelmanmon001.png "A screenshot of a computer Description automatically generated")
-
-Azure monitoring has the capabilities to incorporate customer sources as indicated in the diagram below:
-
-![A screenshot of a computer Description automatically generated](images/rhelmanmon002.png "A screenshot of a computer Description automatically generated")
-
-### Change (Configuration) Management
+## Change (Configuration) Management
 In terms of Red Hat infrastructure the term [configuration managemnt](https://www.redhat.com/en/topics/automation/what-is-configuration-management) is the focus of the [Ansible Automation platform](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4).
 
 **Overview of Red Hat Ansible Automation Platform**
@@ -136,7 +126,7 @@ Azure Update Manger has been redesigned and doesn't depend on Azure Automation o
 - [Manage update settings via the portal](https://learn.microsoft.com/en-us/azure/update-manager/manage-update-settings)
 - [Manage multiple machines by using Update Manager](https://learn.microsoft.com/en-us/azure/update-manager/manage-multiple-machines)
 
-## VM Monitoring
+## VM Monitoring and Reporting
 
 Red Hat Enterprise Linux provides a robust set of command line tools that provide deep level performance and tuning of the operating system, running processes, and infratrucutre components on an individual VM. The list of tools include:
 
@@ -156,6 +146,14 @@ Red Hat Enterprise Linux provides a robust set of command line tools that provid
 
 You can find addtional documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) for futher review.
 
+[Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
+
+![A screenshot of a computer Description automatically generated](images/rhelmanmon001.png "A screenshot of a computer Description automatically generated")
+
+Azure monitoring has the capabilities to incorporate customer sources as indicated in the diagram below:
+
+![A screenshot of a computer Description automatically generated](images/rhelmanmon002.png "A screenshot of a computer Description automatically generated")
+
 In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
 
 ### <a name="_toc156377590"></a>Azure Linux VM Monitoring
@@ -170,69 +168,9 @@ As Linux VMs boot, the boot diagnostic extension captures boot output and stores
 
 Before enabling boot diagnostics, a storage account needs to be created for storing boot logs. Storage accounts must have a globally unique name, be between 3 and 24 characters, and must contain only numbers and lowercase letters. Create a storage account with the [az storage account create](https://learn.microsoft.com/en-us/cli/azure/storage/account#az_storage_account_create) command. In this example, a random string is used to create a unique storage account name.
 
-Azure CLICopy
-
-Open Cloudshell
-
-storageacct=mydiagdata$RANDOM
-
-az storage account create \
-
-`  `--resource-group myResourceGroupMonitor \
-
-`  `--name $storageacct \
-
-`  `--sku Standard\_LRS \
-
-`  `--location eastus
-
-When enabling boot diagnostics, the URI to the blob storage container is needed. The following command queries the storage account to return this URI. The URI value is stored in a variable names *bloburi*, which is used in the next step.
-
-Azure CLICopy
-
-Open Cloudshell
-
-bloburi=$(az storage account show --resource-group myResourceGroupMonitor --name $storageacct --query 'primaryEndpoints.blob' -o tsv)
-
-Now enable boot diagnostics with [az vm boot-diagnostics enable](https://learn.microsoft.com/en-us/cli/azure/vm/boot-diagnostics#az-vm-boot-diagnostics-enable). The --storage value is the blob URI collected in the previous step.
-
-Azure CLICopy
-
-Open Cloudshell
-
-az vm boot-diagnostics enable \
-
-`  `--resource-group myResourceGroupMonitor \
-
-`  `--name myVM \
-
-`  `--storage $bloburi
-
 **View boot diagnostics**
 
-When boot diagnostics are enabled, each time you stop and start the VM, information about the boot process is written to a log file. For this example, first deallocate the VM with the [az vm deallocate](https://learn.microsoft.com/en-us/cli/azure/vm#az_vm_deallocate) command as follows:
-
-Azure CLICopy
-
-Open Cloudshell
-
-az vm deallocate --resource-group myResourceGroupMonitor --name myVM
-
-Now start the VM with the [az vm start](https://learn.microsoft.com/en-us/cli/azure/vm#az_vm_start) command as follows:
-
-Azure CLICopy
-
-Open Cloudshell
-
-az vm start --resource-group myResourceGroupMonitor --name myVM
-
-You can get the boot diagnostic data for *myVM* with the [az vm boot-diagnostics get-boot-log](https://learn.microsoft.com/en-us/cli/azure/vm/boot-diagnostics#az-vm-boot-diagnostics-get-boot-log) command as follows:
-
-Azure CLICopy
-
-Open Cloudshell
-
-az vm boot-diagnostics get-boot-log --resource-group myResourceGroupMonitor --name myVM
+When boot diagnostics are enabled, each time you stop and start the VM, information about the boot process is written to a log file.
 
 **View host metrics**
 
