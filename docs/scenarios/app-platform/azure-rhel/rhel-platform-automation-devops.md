@@ -1,6 +1,6 @@
 ---
 Title: Red Hat Linux Platform Automation
-Description: Learn about the tools, features, and services that are available to automate various tasks as well as manage Red Hat Enterprise Linux lifecycle within your Azure environment.
+Description: Learn about the tools, features, and services that are available to automate various tasks and manage Red Hat Enterprise Linux lifecycle within your Azure environment.
 Authors: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
 Contributor: Anthony de Lagarde
 Date: 04/03/2024
@@ -17,7 +17,7 @@ The goal of the automation of Red Hat Enterprise Linux (RHEL) Platform for Azure
 
 ## Design Considerations
 
-Red Hat Identity Management delivers on a centralized and unified means to manage identity stores, authentication, policies, and authorization policies for RHEL systems. In hybrid scenario you can extend your existing Red Hat Identity Management infrastructure across a Virtual Private Network or ExpressRoute connecting on-premises with the RHEL Landing Zone within Azure. Extending your on-premises environment into Azure also affords the capability for integrating your workloads with Microsoft Entra to support Hybrid cloud identity scenarios. You can read more about Microsoft Entra formerly known as Azure Active Directory in the following arctle [Microsoft Entra authentication documentation]( https://learn.microsoft.com/en-us/entra/identity/authentication/). Another additional option for identity consideration would be to join RHEL to create an external trust with Windows Active Directory or join directly into an existing active directory forest. See the following article here [Integrating RHEL systems directly with Windows Active Directory](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
+Red Hat Identity Management delivers on a centralized and unified means to manage identity stores, authentication, policies, and authorization policies for RHEL systems. In hybrid scenario you can extend your existing Red Hat Identity Management infrastructure across a Virtual Private Network or ExpressRoute connecting on-premises with the RHEL Landing Zone within Azure. Extending your on-premises environment into Azure also affords the capability for integrating your workloads with Microsoft Entra to support Hybrid cloud identity scenarios. You can read more about Microsoft Entra formerly known as Azure Active Directory in the following arctle [Microsoft Entra authentication documentation]( https://learn.microsoft.com/en-us/entra/identity/authentication/). Another option for identity consideration would be to join RHEL to create an external trust with Windows Active Directory or join directly into an existing active directory forest. See the following article here [Integrating RHEL systems directly with Windows Active Directory](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/integrating_rhel_systems_directly_with_windows_active_directory/index).   
 
 Red Hat Satellite is implemented as the single source of content delivered to managed RHEL systems. This includes Red Hat packages and patches, as well as third party packages and custom packages developed by application development teams. It also acts as the gateway to Red Hat Insights, which offers predictive analysis of configurations, to recognize security or performance risks. Note on Azure there's also available the Red Hat Update Infrastructure (RHUI) for RHEL pay-as-you-go (PAYG) images that already come preconfigured to access Azure RHUI. Learn more about RHUI in the following online documentation [Red Hat Update Infrastructure for on-demand Red Hat Enterprise Linux VMs in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel7).
 
@@ -26,7 +26,7 @@ Red Hat Satellite is implemented as the single source of content delivered to ma
 
 Red Hat Ansible Automation Platform helps to standardize technical workflows and recurring tasks. It's used for orchestrating provisioning processes for new systems, and recurring operational tasks. Using one common automation platform and language reduces complexity. At the same time, fully automated workflows accelerate application innovation and ease mass workload migrations across on-premises and cloud footprints. 
 
-Some of the core benefits of a RHEL as a Platform automation strategy: 
+Benefits of RHEL as a Platform automation strategy:
 
 - Fully automated provisioning of new systems at scale, fostering the speed of mass migrations. 
 - Increased homogeneity of tested systems’ configuration and application installations, across on-premises and the cloud, across physical and virtual systems. 
@@ -67,7 +67,7 @@ Implementation of Red Hat Ansible Automation Platform can be accomplished via se
 
 Red Hat Ansible Automation Platform on Microsoft Azure in managed mode is installed as a managed application. Red Hat manages both the underlying Azure resources and the software running on it while that infrastructure runs in your Azure tenant.
 
-The managed application resource group is completely separate from other resource groups in your tenant. Red Hat only has access to the managed application resource group, with no visibility into other tenant resources.
+The managed application resource group is separate from other resource groups in your tenant. Red Hat only has access to the managed application resource group, with no visibility into other tenant resources.
 
 For information about how this works and how resources and access are isolated from the rest of your Azure resources, refer to [Azure managed applications overview](https://learn.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/overview) in the Microsoft Azure managed applications guide. 	
 
@@ -171,35 +171,35 @@ Once core platform infrastructure is in place, automation for Red Hat Enterprise
 
    - Update the Errata Filter end date and publish content in Satellite
    - Promote Content Views (CV)/Composite Content Views (CCV) to Development
-   - Deploy RHEL Development test system(s) from Satellite Host Groups
+   - Deploy RHEL Development test systems from Satellite Host Groups
         - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
     - Update/create Azure network security group based on application communication paths
     - For multi-tier application stacks, update or create Azure application security group for additional layered security 
-    - Update RHEL Development system(s), deploy and configure desired application from Satellite Development CV/CCV
+    - Update RHEL Development systems, deploy and configure desired application from Satellite Development CV/CCV
         - Deploy to single RHEL instance for simple application stack
         - Deploy to several RHEL instances for multi-tier application stacks
         - Configure application stack 
     - Execute application testing framework 
-        - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test system(s) remain deployed for post-mortem failure analysis
+        - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test systems remain deployed for post-mortem failure analysis
         - On test success, continue 
     - Promote CVs/CCVs to QA 
-    - Destroy RHEL Development test system(s)
+    - Destroy RHEL Development test systems
 
 Subsequent stages in the  lifecycle pipeline are slightly different from the Development lifecycle stage, as only the Development stage utilizes the initial content publishing and initial CV/CCV promotion to Development. The following encapsulates an example automation workflow for non-Development lifecycle pipelines, i.e. QA, pre-Production, Production, etc. In this case,  QA will be considered: 
 
-- Deploy RHEL QA test system(s) from Satellite Host Groups
+- Deploy RHEL QA test systems from Satellite Host Groups
        - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
 - Update/create Azure network security group based on application communication paths 
    - For multi-tier application stacks, update or create Azure application security group for additional, layered security 
-- Update RHEL QA system(s), deploy and configure desired application from Satellite QA CV/CCV 
+- Update RHEL QA systems, deploy and configure desired application from Satellite QA CV/CCV 
     - Deploy to single RHEL instance for simple application stack
     - Deploy to several RHEL instances for multi-tier application stacks 
     - Configure application stack
     - Execute application testing framework 
-    - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test system(s) remain deployed for post-mortem failure analysis 
+    - On failure, notify OnCall automation administration to assist in troubleshooting/analysis, exit automation workflow, RHEL test systems remain deployed for post-mortem failure analysis 
     - On test success, continue 
     - Promote CVs/CCVs to Production 
-    - Destroy RHEL QA test system(s)
+    - Destroy RHEL QA test systems
 
 # Other design considerations leveraging native Azure tooling           
 
@@ -332,11 +332,11 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
 
 ### Azure DevOps
 
-Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps and Azure Functions facilitate seamless collaboration, development and delivery of modern software projects. 
+Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps and Azure Functions facilitate seamless collaboration, development and delivery of modern software projects.
 
 #### Azure Boards
 
-Cloud software development and corresponding project management is focused on Agile software development. Current documentation on Azure Boards can be found [here](https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](https://learn.microsoft.com/en-us/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process). 
+Agile software development for Cloud software development and project management. Current documentation on Azure Boards can be found [here](https://learn.microsoft.com/en-us/azure/devops/boards/?view=azure-devops). Initial guidance on options and that can be configured and optimized are detailed [here](https://learn.microsoft.com/en-us/azure/devops/boards/configure-customize?view=azure-devops&tabs=agile-process).
 
 To make the most of Azure Boards, understand how your teams use their tools and functions (for example, Scrum, Kanban, and Scrumban), and their dependencies on configurations and customizations. The following table summarizes the primary items you should consider as you structure your project. 
 
