@@ -1,7 +1,7 @@
 ## <a name="_toc156377586"></a>Azure Linux Machine Management
 For greenfield deployment scenarios of RHEL in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
 
-For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies may be the optimal approach.
+For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies might be the optimal approach to leverage exsisting skillsets.
 
 With Red Hat Satellite, you can provide content and apply patches to hosts systematically in all lifecycle stages. Content flow in Red Hat Satellite involves management and distribution of content from external sources to hosts.
 
@@ -157,7 +157,7 @@ Azure monitoring has the capabilities to incorporate customer sources as indicat
 In conjunction Azure provides a robust set of tools to collect, analayze, and visuaize the ouput of the RHEL tools.
 
 ### <a name="_toc156377590"></a>Azure Linux VM Monitoring
-Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map. <Need relevant content here from RH peer>
+Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map.
 ### <a name="_toc156377593"></a>Recommendations
 For native Azure VM’s the use of boot diagnostics is supported and for on-premises Linux VM’s the use of [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/overview) is recommended for a comprehensive hybrid solution. Steps to enable Azure Arc on a Linux VM can be found here:
 
@@ -185,7 +185,7 @@ A Linux VM has a dedicated host in Azure that it interacts with. Metrics are aut
 
 To enable monitoring of your Azure VM with Azure Monitor for VMs:
 
-1. In the Azure portal, click **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
+1. In the Azure portal, select **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
 1. On the VM page, in the **Monitoring** section, select **Insights (preview)**.
 1. On the **Insights (preview)** page, select **Try now**.
 
@@ -207,7 +207,7 @@ After you've enabled monitoring, you might need to wait several minutes before y
 
 Azure Monitor for VMs includes a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To access from your VM, perform the following steps.
 
-1. In the Azure portal, click **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
+1. In the Azure portal, select **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
 1. On the VM page, in the **Monitoring** section, select **Insights (preview)**.
 1. Select the **Performance** tab.
 
@@ -219,12 +219,12 @@ You can create alerts based on specific performance metrics. Alerts can be used 
 
 The following example creates an alert for average CPU usage.
 
-1. In the Azure portal, click **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
-1. Click **Alert rules** on the VM blade, then click **Add metric alert** across the top of the alerts blade.
+1. In the Azure portal, select **Resource Groups**, select **myResourceGroupMonitor**, and then select **myVM** in the resource list.
+1. Select **Alert rules** on the VM blade, then select **Add metric alert** across the top of the alerts blade.
 1. Provide a **Name** for your alert, such as *myAlertRule*
 1. To trigger an alert when CPU percentage exceeds 1.0 for five minutes, leave all the other defaults selected.
 1. Optionally, check the box for *Email owners, contributors, and readers* to send email notification. The default action is to present a notification in the portal.
-1. Click the **OK** button.
+1. Select the **OK** button.
 
 **Next steps**
 
