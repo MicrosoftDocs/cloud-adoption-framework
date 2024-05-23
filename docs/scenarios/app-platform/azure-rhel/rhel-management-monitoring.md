@@ -1,7 +1,7 @@
 ## <a name="_toc156377586"></a>Azure Linux Virtual Machine Management
 For greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
 
-For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies might be the optimal approach to leverage exsisting skillsets.
+For existing brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premsies might be the optimal approach to use exsisting skillsets.
 
 With Red Hat Satellite, you can provide content and apply patches to hosts systematically in all lifecycle stages. Content flow in Red Hat Satellite involves management and distribution of content from external sources to hosts.
 
@@ -26,7 +26,7 @@ By assigning a host system to a Capsule Server or directly to your Satellite Ser
 ![Red Hat Satellite](images/system-architecture-satellite.png "Red Hat Satellite")
 
 ## <a name="_toc156377587"></a>Deployment Strategy
-In most cases automated software update management solutions are preferred over manual update installation process.  In brownfield installations integration with on-premises solutions should be accounted for. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other 3<sup>rd</sup> party open source software.
+Automated software update management solutions are preferred over manual update installation process.  Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other 3<sup>rd</sup> party open source software.
 ### <a name="_toc156377588"></a>Considerations
 When deploying any automated update management solution consideration to the location of Linux software package repositories should be kept in mind.
 
@@ -40,7 +40,7 @@ The Red Hat Content Delivery Network, nominally accessed via cdn.redhat.com is a
 
 In the case of a system registered to Red Hat Subscription Management, the attached subscriptions govern which subset of the CDN the system can access. In the case of Satellite 6, the subscriptions that are attached to the subscription manifest govern which subset of the CDN the system can access.
 
-Additional points which should be considered:
+Other points which should be considered:
 
 - Use of custom images versus Azure Marketplace images
 - Testing of Updates in non-production environment such as [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview).
@@ -52,15 +52,15 @@ Additional points which should be considered:
 <a name="_toc156377589"></a>
 ### Recommendations
 #### *Use of custom images versus Azure Marketplace images*
-Azure supports the use of [custom Linux images](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control as well as Marketplace images. When using specific supported Linux distro’s such as Red Hat you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images). 
+Azure VM's can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specifc complaince and security needs. When using specific supported Linux distro’s such as Red Hat you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
 #### *Testing of Updates in non-production environment*
 Separation of test environments from production environments helps to minimize potential impact to production workloads. Use of [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview) can provide isolation in addition reduce Cloud subscription costs and accelerate testing of new updates. Implement continuous integration (CI) and continuous deployment (CD) pipelines using Azure DevOps or similar tools.
 
 Have a clear and tested rollback strategy in case the new update introduces critical issues. This might involve database backups, snapshotting, and quick deployment reversal mechanisms.
 #### *Scheduling and Maintenance Windows*
-Azure Automation accounts can help orchestrate the scheduling of software updates within your cloud environment. For more information on Azure Automation, you can find additional documentation [here](https://learn.microsoft.com/en-us/azure/automation/overview). 
+Azure Automation accounts can help orchestrate the scheduling of software updates within your cloud environment. For more information on Azure Automation, you can find other documentation [here](https://learn.microsoft.com/en-us/azure/automation/overview).
 
-Regarding maintenance windows for your specific application or workload, leveraging the strategy of a Blue-Green deployment model or Azure App deployment slots can help minimize the overall time needed during a maintenance window for any given software update. Keep in mind Azure services will update the underlying infrastructure that might impact your running virtual machines and must be accounted for. Information regarding planned updates within Azure can be found in the [Service Health](https://azure.microsoft.com/en-us/get-started/azure-portal/service-health/#overview) section of your Azure portal. 
+Blue-Green deployment model or Azure App deployment slots can help minimize the overall time needed during a maintenance window for any given software update. Keep in mind Azure services will update the underlying infrastructure that might impact your running virtual machines and should be accounted for. Information regarding planned updates within Azure can be found in the [Service Health](https://azure.microsoft.com/en-us/get-started/azure-portal/service-health/#overview) section of your Azure portal.
 #### *Security and Compliance*
 Azure Policy is the primary Azure service to ensure your environment meets your companies security and compliance standards, detailed information can be found [here](https://learn.microsoft.com/en-us/azure/governance/policy/overview).
 
