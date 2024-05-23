@@ -175,7 +175,7 @@ Make sure you review [the network topology and connectivity critical design area
 The Kubernetes API receives requests to perform actions in the cluster. As this is a central way to interact with and manage a cluster, the Kubernetes API is a key piece you should protect. Using [Azure Arc-enabled Kubernetes cluster connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect), you can securely connect to Azure Arc-enabled Kubernetes clusters anywhere without needing to enable any inbound port on the firewall. Access to the API server of your Azure Arc-enabled Kubernetes provides the following benefits:
 
 - Enables interactive debugging and troubleshooting.
-- Enables the use of hosted agents/runners of Azure Pipelines, GitHub Actions, or any other hosted CI/CD service. without requiring self-hosted agents.
+- Enables the use of hosted agents/runners of Azure Pipelines, GitHub Actions, or any other hosted CI/CD service, Without requiring self-hosted agents.
 - Provides cluster access to Azure services for [custom locations](/azure/azure-arc/kubernetes/custom-locations) and other resources created on top of them.
 
 ## Microservices observability and security
