@@ -12,8 +12,8 @@ ms.custom: internal
 
 Prior to preparing for a potential workload outage, cloud management teams should first make sure they've met requirements for:
 
-- [inventory and visibility](./inventory.md) 
-- [operational compliance](./operational-compliance.md)
+- [Inventory and visibility](./inventory.md) 
+- [Operational compliance](./operational-compliance.md)
 
 As they plan, the teams must start with an assumption that something will fail when disaster strikes. Preparation for an outage allows the teams to detect failures sooner and recover more quickly. The focus of this discipline is on the steps that come immediately after a system fails. How do you protect workloads so that they can be recovered quickly when an outage occurs?
 
@@ -23,10 +23,10 @@ No technical solution can consistently offer an SLA that guarantees 100 percent 
 
 The workloads that power business operations consist of:
 
-- applications
-- data
-- virtual machines (VMs)
-- other assets
+- Applications
+- Data
+- Virtual machines (VMs)
+- Other assets
 
 Each asset might require its own approach to protection and recovery. The important goal of this discipline is to establish a consistent commitment within the management baseline, which can provide a starting point for business discussions.
 
@@ -36,8 +36,8 @@ At a minimum, cloud management teams should create a baseline approach for each 
 
 A recovery time objective is the amount of time it should take to recover any system to its state prior to a disaster. This would include the time needed to:
 
-- restore minimal functionality to VMs and applications
-- restore data required by applications.
+- Restore minimal functionality to VMs and applications
+- Restore data required by applications.
 
 In business terms, RTO represents the amount of time that business processes are out of service. For mission-critical workloads, this variable should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
 
@@ -75,9 +75,9 @@ Each of these models reduces the RTO, which helps businesses restore their busin
 
 Also note that, apart from replication for high-availability, backup should be enabled for scenarios such as: 
 
-- accidental delete
-- data corruption
-- ransomware attacks
+- Accidental delete
+- Data corruption
+- Ransomware attacks
 
 For more information about this thought process, see [Workload operations discipline](./workload.md).
 
