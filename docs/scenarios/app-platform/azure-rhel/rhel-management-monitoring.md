@@ -26,7 +26,7 @@ By assigning a host system to a Capsule Server or directly to your Satellite Ser
 ![Red Hat Satellite](images/system-architecture-satellite.png "Red Hat Satellite")
 
 ## <a name="_toc156377587"></a>Deployment Strategy
-Automated software update management solutions are preferred over manual update installation process.  Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other third party open source software.
+Automated software update management solutions are preferred over manual update installation process. Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other third party open source software.
 ### <a name="_toc156377588"></a>Considerations
 When deploying any automated update management solution consideration to the location of Linux software package repositories should be kept in mind.
 
@@ -52,11 +52,11 @@ Other points that should be considered:
 <a name="_toc156377589"></a>
 ### Recommendations
 #### *Use of custom images versus Azure Marketplace images*
-Azure VMs can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using supported Linux distro’s such as Red Hat Enterprise Linux, you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
+Azure VMs can be built using predefined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using supported Linux distro’s such as Red Hat Enterprise Linux, you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
 #### *Testing of Updates in nonproduction environment*
 Separation of test environments from production environments helps to minimize potential impact to production workloads. Use of [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview) can provide isolation in addition reduce Cloud subscription costs and accelerate testing of new updates. Implement continuous integration (CI) and continuous deployment (CD) pipelines using Azure DevOps or similar tools.
 
-Have a clear and tested rollback strategy in case the new update introduces critical issues. This might involve database backups, snapshotting, and quick deployment reversal mechanisms.
+Have a clear and tested rollback strategy in case the new update introduces critical issues. These strategies should include database backups, snapshotting, and quick deployment reversal mechanisms.
 #### *Scheduling and Maintenance Windows*
 Azure Automation accounts can help orchestrate the scheduling of software updates within your cloud environment. For more information on Azure Automation, you can find other documentation [here](https://learn.microsoft.com/en-us/azure/automation/overview).
 
@@ -146,7 +146,7 @@ Red Hat Enterprise Linux provides a robust set of command line tools that provid
 
 You can find more documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) further review.
 
-[Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
+[Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing, and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
 ![A screenshot of a computer Description automatically generated](images/rhelmanmon001.png "A screenshot of a computer Description automatically generated")
 
