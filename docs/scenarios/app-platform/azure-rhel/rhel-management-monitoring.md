@@ -26,24 +26,24 @@ By assigning a host system to a Capsule Server or directly to your Satellite Ser
 ![Red Hat Satellite](images/system-architecture-satellite.png "Red Hat Satellite")
 
 ## <a name="_toc156377587"></a>Deployment Strategy
-Automated software update management solutions are preferred over manual update installation process.  Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other 3<sup>rd</sup> party open source software.
+Automated software update management solutions are preferred over manual update installation process.  Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview)  or [Ansible on Azure](https://learn.microsoft.com/en-us/azure/developer/ansible/overview) can significantly reduce time to value versus using other third party open source software.
 ### <a name="_toc156377588"></a>Considerations
 When deploying any automated update management solution consideration to the location of Linux software package repositories should be kept in mind.
 
 Microsoft offers a public repository that can be found [here](https://packages.microsoft.com/) to programmatically update packages for various supported Linux distro’s.
 
-Red Hat offers its own repositories for software packages for registered systems and leverages the Red Hat Content Delivery Network (CDN) and Red Hat Subscription Manager for RHEL 9.
+Red Hat offers its own repositories for software packages for registered systems and uses the Red Hat Content Delivery Network (CDN) and Red Hat Subscription Manager for RHEL 9.
 
 **Content Delivery Network (CDN) Structure**
 
-The Red Hat Content Delivery Network, nominally accessed via cdn.redhat.com is a geographically distributed series of static webservers, which contain content and errata that is designed to be consumed by systems. This content can be consumed directly (such as via a system registered via Red Hat Subscription Management) or mirrored via on premise solution, such as Red Hat Satellite 6. The Red Hat Content Delivery network is protected by x.509 certificate authentication, to ensure that only valid users can access it.
+The Red Hat Content Delivery Network, nominally accessed via cdn.redhat.com is a geographically distributed series of static webservers, which contain content and errata that are designed to be consumed by systems. This content can be consumed directly (such as via a system registered via Red Hat Subscription Management) or mirrored via on premise solution, such as Red Hat Satellite 6. The Red Hat Content Delivery network is protected by x.509 certificate authentication, to ensure that only valid users can access it.
 
 In the case of a system registered to Red Hat Subscription Management, the attached subscriptions govern which subset of the CDN the system can access. In the case of Satellite 6, the subscriptions that are attached to the subscription manifest govern which subset of the CDN the system can access.
 
-Other points which should be considered:
+Other points that should be considered:
 
 - Use of custom images versus Azure Marketplace images
-- Testing of Updates in non-production environment such as [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview).
+- Testing of Updates in nonproduction environment such as [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview).
 - Scheduling and Maintenance Windows
 - Security and Compliance
 - Dependencies and Compatibility
@@ -52,15 +52,15 @@ Other points which should be considered:
 <a name="_toc156377589"></a>
 ### Recommendations
 #### *Use of custom images versus Azure Marketplace images*
-Azure VMs can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using specific supported Linux distro’s such as Red Hat you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
-#### *Testing of Updates in non-production environment*
+Azure VMs can be built using pre-defined Marketplace images and supports the use of [custom Linux images,](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using supported Linux distro’s such as Red Hat Enterprise Linux, you can follow the specific guidance for building your customer image such as [RHEL 8](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](https://learn.microsoft.com/en-us/azure/update-manager/manage-updates-customized-images).
+#### *Testing of Updates in nonproduction environment*
 Separation of test environments from production environments helps to minimize potential impact to production workloads. Use of [Azure DevTest Labs](https://learn.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview) can provide isolation in addition reduce Cloud subscription costs and accelerate testing of new updates. Implement continuous integration (CI) and continuous deployment (CD) pipelines using Azure DevOps or similar tools.
 
 Have a clear and tested rollback strategy in case the new update introduces critical issues. This might involve database backups, snapshotting, and quick deployment reversal mechanisms.
 #### *Scheduling and Maintenance Windows*
 Azure Automation accounts can help orchestrate the scheduling of software updates within your cloud environment. For more information on Azure Automation, you can find other documentation [here](https://learn.microsoft.com/en-us/azure/automation/overview).
 
-Blue-Green deployment model or Azure App deployment slots can help minimize the overall time needed during a maintenance window for any given software update. Keep in mind Azure services will update the underlying infrastructure that might impact your running virtual machines and should be accounted for. Information regarding planned updates within Azure can be found in the [Service Health](https://azure.microsoft.com/en-us/get-started/azure-portal/service-health/#overview) section of your Azure portal.
+Blue-Green deployment model or Azure App deployment slots can help minimize the overall time needed during a maintenance window for any given software update. Keep in mind Azure services  update the underlying infrastructure that might impact your running virtual machines and should be accounted for. Information regarding planned updates within Azure can be found in the [Service Health](https://azure.microsoft.com/en-us/get-started/azure-portal/service-health/#overview) section of your Azure portal.
 #### *Security and Compliance*
 Azure Policy is the primary Azure service to ensure your environment meets your companies security and compliance standards, detailed information can be found [here](https://learn.microsoft.com/en-us/azure/governance/policy/overview).
 
@@ -144,7 +144,7 @@ Red Hat Enterprise Linux provides a robust set of command line tools that provid
 - valgrind
 - pqos
 
-You can find additional documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) further review.
+You can find more documentation [here](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) further review.
 
 [Azure Monitoring](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing and reporting of both your Cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
@@ -159,11 +159,11 @@ In conjunction Azure provides a robust set of tools to collect, analyze, and vis
 ### <a name="_toc156377590"></a>Azure Linux VM Monitoring
 Azure monitoring uses agents to collect boot and performance data from Azure VMs, store this data in Azure storage, and make it accessible through portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics, discover application components installed on the VM, and includes performance charts and dependency map.
 ### <a name="_toc156377593"></a>Recommendations
-For native Azure VM’s the use of boot diagnostics is supported and for on-premises Linux VM’s the use of [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/overview) is recommended for a comprehensive hybrid solution. Steps to enable Azure Arc on a Linux VM can be found here:
+For native Azure VMs the use of boot diagnostics is supported and for on-premises Linux VMs the use of [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/overview) is recommended for a comprehensive hybrid solution. Steps to enable Azure Arc on a Linux VM can be found here:
 
 [Connect an existing Linux server to Azure Arc - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
-### Enable boot diagnostics on Azure Linux VM’s
+### Enable boot diagnostics on Azure Linux VMs
 As Linux VMs boot, the boot diagnostic extension captures boot output and stores it in Azure storage. This data can be used to troubleshoot VM boot issues. Boot diagnostics aren't automatically enabled when you create a Linux VM using the Azure CLI.
 
 Before enabling boot diagnostics, a storage account needs to be created for storing boot logs. Storage accounts must have a globally unique name, be between 3 and 24 characters, and must contain only numbers and lowercase letters. Create a storage account with the [az storage account create](https://learn.microsoft.com/en-us/cli/azure/storage/account#az_storage_account_create) command. In this example, a random string is used to create a unique storage account name.
