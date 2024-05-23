@@ -1,5 +1,5 @@
 ## <a name="_toc156377586"></a>Azure Linux Virtual Machine Management
-For Greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL VMs.
+For Greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL Virtual Machines (VMs).
 
 For existing Brownfield deployments, the use of [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending into Azure from on-premises might be the optimal approach to use existing skillsets.
 
@@ -9,7 +9,7 @@ Content in Satellite flows from external content sources to Satellite Server. Ca
 
 **External content sources**
 
-You can configure many content sources with Satellite. The supported content sources include the Red Hat Customer Portal, Git repositories, Ansible collections, Docker Hub, SCAP repositories, or internal data stores of your organization.
+You can configure many content sources with Satellite. The supported content sources include the Red Hat Customer Portal, Git repositories, Ansible collections, Docker Hub, Security Content Automation Protocol (SCAP) repositories, or internal data stores of your organization.
 
 **Satellite Server**
 
@@ -100,10 +100,10 @@ In terms of Red Hat infrastructure the term [configuration management](https://w
 
 **Overview of Red Hat Ansible Automation Platform**
 
-Red Hat Ansible Automation Platform simplifies the development and operation of automation workloads for managing enterprise application infrastructure lifecycles. Ansible Automation Platform works across multiple IT domains including operations, networking, security, and development, as well as across diverse hybrid environments. Simple to adopt, use, and understand, Ansible Automation Platform provides the tools needed to rapidly implement enterprise-wide automation, no matter where you are in your automation journey.
+Red Hat Ansible Automation Platform simplifies the development and operation of automation workloads for managing enterprise application infrastructure lifecycles. Ansible Automation Platform works across multiple IT domains including operations, networking, security, and development, and across diverse hybrid environments. Simple to adopt, use, and understand, Ansible Automation Platform provides the tools needed to rapidly implement enterprise-wide automation, no matter where you are in your automation journey.
 Azure Automation Update Management and Azure Update Manger are a comprehensive set of tools that helps to track and implement change management within your Azure environment. Azure Automation Update Management will retire on 31 August 2024. It's recommended to use Azure Update Manager going forward.
 
-*Additional resources*
+*Other resources*
 
 For information about the components included in Ansible Automation Platform, see the table in [What is included in Ansible Automation Platform](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_release_notes/platform-introduction#whats-included).
 
