@@ -50,13 +50,16 @@ When Global Reach is deployed, traffic between the Global Reach sites bypasses t
 ![Diagram of Global Reach Example](./media/single-region-virtual-wan-1.png)
 
 ### Without Global Reach  
-It’s crucial to note that unless the situation falls into the following two categories, it’s recommended to consistently use Global Reach. A benefit of not using Global Reach is that all the traffic on the Secure Virtual WAN hub security solution between Azure VMware Solution and the on-premises or regional Azure VMware Solution private clouds can be inspected. However, the throughput limitations at the Secure Virtual WAN hub also need to be considered. A drawback of not using Global Reach is that it increases the complexity of the design.
+It’s crucial to note that unless the situation falls into the following three categories, it’s recommended to consistently use Global Reach. A benefit of not using Global Reach is that all the traffic on the Secure Virtual WAN hub security solution between Azure VMware Solution and the on-premises or regional Azure VMware Solution private clouds can be inspected. However, the throughput limitations at the Secure Virtual WAN hub also need to be considered. A drawback of not using Global Reach is that it increases the complexity of the design.
 
 **Category 1: A requirement to inspect traffic on the Virtual WAN Hub between Azure VMware Solution and on-premises, as well as within Azure VMware Solution Private Clouds.**   
 This use case is best when there's a security requirement to inspect traffic between Azure VMware Solution and on-premises, or between regional Azure VMware Solution Private Clouds on the Virtual Hub Firewall. 
    
 **Category 2: Global Reach unavailability in the region**   
 Connectivity between ExpressRoute connections, whether between Azure VMware Solution and on-premises or among regional Azure VMware Solution private clouds, can be established with Route-Intent when Global Reach is unavailable in a region. By default, Secure Virtual Hubs don't support ExpressRoute to ExpressRoute transitivity. To enable this transitivity, a support ticket needs to be initiated. -See [ExpressRoute Global Reach Availability](/azure/expressroute/expressroute-global-reach#availability)
+
+**Category 3: on-premises ExpressRoute is using the ExpressRoute Local SKU**   
+The ExpressRoute Local SKU doesn’t currently support Global Reach. Using the Local SKU, you’ll rely on Routing Intent for connectivity between the Azure VMware Solution and your on-premises network.
 
 ![Diagram without Global Reach Example](./media/single-region-without-globalreach-1.png)  
 
