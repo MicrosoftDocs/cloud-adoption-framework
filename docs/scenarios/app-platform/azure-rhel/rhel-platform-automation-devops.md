@@ -84,7 +84,7 @@ For Ansible Automation Platform on Microsoft Azure in managed mode, additionally
 
 ### Other considerations, self-managed mode 
 
-Ansible Automation Platform on Microsoft Azure in self-managed mode, provides much of the same benefits of self-managed Ansible Automation platform, however, whereas managed mode runs within an AKS cluster, for self-managed mode, automation platform resources are VM-based. 
+Ansible Automation Platform on Microsoft Azure in self-managed mode, provides many of the same benefits of self-managed Ansible Automation platform, however, whereas managed mode runs within an AKS cluster, for self-managed mode, automation platform resources are VM-based.
 
 For Ansible Automation Platform on Microsoft Azure in self-managed mode, additionally consider: 
 
@@ -127,7 +127,7 @@ ansible.*  |  ansible.controller  |  infra.controller_configuration
 
 ### Core platform Infrastructure deployment
 
-Refer to [Azure Landing Zone design guidance for platform automation considerations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation) and establish the concepts and processes described in order to effectively deploy core platform infrastructure to support a RHEL Platform on Azure Landing Zones model.
+Refer to [Azure Landing Zone design guidance for platform automation considerations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/automation) and establish the concepts and processes described in order to effectively deploy core platform infrastructure to support an RHEL Platform on Azure Landing Zones model.
 
 - [Development lifecycle](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle) explores key design considerations and recommendations for the creation of a landing zone by using automation. This resource discusses the repository, branch, automated builds, deployment, and rollback strategy. 
 - [Infrastructure as Code](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) explains the benefits of implementing Azure Landing Zones by using Infrastructure as Code. Learn about considerations around code structure, tools, and technology. 
@@ -167,7 +167,7 @@ With requisite source code management tooling in place, along with source code m
 
 ### RHEL system lifecycle management  
 
-Once core platform infrastructure is in place, automation for Red Hat Enterprise Linux applications and workload lifecycles can be implemented. Refer to “Deployment, management, and patching considerations” and “Governance and compliance” sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
+Once core platform infrastructure is in place, automation for Red Hat Enterprise Linux applications and workload lifecycles can be implemented. Refer to 'Deployment, management, and patching considerations' and 'Governance and compliance' sections for in-depth coverage of considerations to be made when forming automation pipelines. The following encapsulates an example automation workflow for a development lifecycle pipeline:
 
    - Update the Errata Filter end date and publish content in Satellite
    - Promote Content Views (CV)/Composite Content Views (CCV) to Development
@@ -175,7 +175,7 @@ Once core platform infrastructure is in place, automation for Red Hat Enterprise
         - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
     - Update/create Azure network security group based on application communication paths
     - For multi-tier application stacks, update or create Azure application security group for additional layered security 
-    - Update RHEL Development systems, deploy and configure desired application from Satellite Development CV/CCV
+    - Update RHEL Development systems, deploy, and configure desired application from Satellite Development CV/CCV
         - Deploy to single RHEL instance for simple application stack
         - Deploy to several RHEL instances for multi-tier application stacks
         - Configure application stack 
@@ -191,7 +191,7 @@ Subsequent stages in the  lifecycle pipeline are slightly different from the Dev
        - RHEL 8.x & 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite 
 - Update/create Azure network security group based on application communication paths 
    - For multi-tier application stacks, update or create Azure application security group for additional, layered security 
-- Update RHEL QA systems, deploy and configure desired application from Satellite QA CV/CCV 
+- Update RHEL QA systems, deploy, and configure desired application from Satellite QA CV/CCV 
     - Deploy to single RHEL instance for simple application stack
     - Deploy to several RHEL instances for multi-tier application stacks 
     - Configure application stack
@@ -207,7 +207,7 @@ Subsequent stages in the  lifecycle pipeline are slightly different from the Dev
 
 Process Automation in Azure Automation allows you to automate frequent, time-consuming, and error-prone management tasks. This service helps you focus on work that adds business value. By reducing errors and boosting efficiency, it also helps to lower your operational costs. A detailed overview can be found [here](https://learn.microsoft.com/en-us/azure/automation/overview). 
 
-Process automation supports the integration of Azure services and other third-party systems such as Red Hat required in deploying, configuring, and managing your end-to-end processes. The service allows you to author graphical, PowerShell and Python [runbooks](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10).  
+Process automation supports the integration of Azure services and other third-party systems such as Red Hat required in deploying, configuring, and managing your end-to-end processes. The service allows you to author graphical PowerShell and Python [runbooks](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types?tabs=lps72%2Cpy10).  
 
 Runbooks can be used for a wide range of automation tasks like managing resources, starting and stopping VMs, and handling maintenance tasks both within in Azure and targets outside Azure. It is recommended to ensure that you review the authentication scenarios which can be found [here](https://learn.microsoft.com/en-us/azure/automation/automation-security-overview). You can find an overview of Runbooks execution and recommendations [here](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-execution). 
 
@@ -228,7 +228,7 @@ Azure Arc represents a significant advancement in cloud computing, offering a un
 
 ![](https://github.com/hannah-leland/cloud-adoption-framework-pr/blob/main/docs/scenarios/azure-rhel/images/arcecosystem.png)
 
-You can find the prerequisites and steps to onboard a Linux machine in this article:[Connect an existing Linux server to Azure Arc](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
+You can find the prerequisites and steps to onboard a Linux machine in this article:[Connect an existing Linux server to Azure Arc.](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
 ## Azure Resource Manager (ARM) Templates
 
@@ -332,7 +332,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
 
 ### Azure DevOps
 
-Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps and Azure Functions facilitate seamless collaboration, development and delivery of modern software projects.
+Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
 
 #### Azure Boards
 
