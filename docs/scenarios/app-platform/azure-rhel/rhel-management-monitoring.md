@@ -164,7 +164,7 @@ For native Azure VM’s the use of boot diagnostics is supported and for on-prem
 [Connect an existing Linux server to Azure Arc - Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
 ### Enable boot diagnostics on Azure Linux VM’s
-As Linux VMs boot, the boot diagnostic extension captures boot output and stores it in Azure storage. This data can be used to troubleshoot VM boot issues. Boot diagnostics are not automatically enabled when you create a Linux VM using the Azure CLI.
+As Linux VMs boot, the boot diagnostic extension captures boot output and stores it in Azure storage. This data can be used to troubleshoot VM boot issues. Boot diagnostics aren't automatically enabled when you create a Linux VM using the Azure CLI.
 
 Before enabling boot diagnostics, a storage account needs to be created for storing boot logs. Storage accounts must have a globally unique name, be between 3 and 24 characters, and must contain only numbers and lowercase letters. Create a storage account with the [az storage account create](https://learn.microsoft.com/en-us/cli/azure/storage/account#az_storage_account_create) command. In this example, a random string is used to create a unique storage account name.
 
