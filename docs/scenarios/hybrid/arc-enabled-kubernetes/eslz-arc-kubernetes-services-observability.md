@@ -120,7 +120,7 @@ The following table shows differences between implementation options to help you
 | Logging capability     | Yes      |   Yes |   Custom implementation |
 | Distributed Traces capability  | Yes      |    Yes |    Yes |
 | Implementation layer  | Network      |    Application |    Network |
-| Protocols supported | Http(s), tcp, gRPC      |    N/A |    Http(s), websockets |
+| Protocols supported | HTTP(S), TCP, gRPC      |    N/A |    HTTP(S), websockets |
 | Configuration responsibility | Cluster Operators      |    Application Developers |   Application Operators & Cluster Operators  |
 | Configuration complexity for observability | Low      |    High |    Medium |
 
