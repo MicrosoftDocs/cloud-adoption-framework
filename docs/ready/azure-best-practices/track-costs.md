@@ -97,11 +97,9 @@ After you establish access to a well-managed environment hierarchy, the followin
 - [Optimize costs based on recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Use cost alerts to monitor usage and spending](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
-<!-- docutune: "AWS Cost and Usage" -->
-
 ### Use Cost Management to govern AWS costs
 
-- [Set up AWS Cost and Usage report integration](/azure/cost-management-billing/costs/aws-integration-set-up-configure)
+- [Set up AWS Cost and Usage Reports integration](/azure/cost-management-billing/costs/aws-integration-set-up-configure)
 - [Manage AWS costs](/azure/cost-management-billing/costs/aws-integration-manage)
 
 ### Establish access, roles, and scope

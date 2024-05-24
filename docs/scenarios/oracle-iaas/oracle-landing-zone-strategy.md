@@ -1,6 +1,6 @@
 ---
 title: Strategic impact of Oracle on Azure
-description: Learn about technical considerations that might affect your cloud strategy when you migrate Oracle workloads to Azure. 
+description: Learn about technical considerations that might affect your cloud strategy when you migrate Oracle workloads to Azure.
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024

@@ -12,21 +12,17 @@ ms.custom: internal, e2e-retail
 
 ## End-to-end solution with consolidated machine learning models
 
-The global retail ecosystem is a reflection of our fast-paced modern environment we live in. You must be able to change quickly, and adjust based on the demands of the moment. Businesses can't meet the
-demand of their customers in an increasingly competitive retail marketplace, where consumer preferences change frequently, and presume customer experiences that are personal, cross platform—delivered on any medium.
+The global retail ecosystem is a reflection of our fast-paced modern environment we live in. You must be able to change quickly, and adjust based on the demands of the moment. Businesses can't meet the demand of their customers in an increasingly competitive retail marketplace, where consumer preferences change frequently, and presume customer experiences that are personal, cross platform—delivered on any medium.
 
 Retailers are looking for an approach to understand where there is any amount of shortfall, backlog, or break-down in the supply chain. In the supercharged, competitive retail ecosystem in these challenging times, it's a requirement to have a 360-degree view of all dimensions of the customer journey—from production to delivery—along the supply chain. Operations and manufacturing teams need to remove silos and data antipatterns within the organization—to free up resources and prevent waste along the supply chain.
 
-To assist you in meeting the demands of your highly time-sensitive market, we recommend the Demand Forecasting Solution Accelerator. The Demand Forecasting Solution Accelerator shows you how to build a customized sales forecasting model. This
-accelerator will assist by reducing development time through pre-built, pre-configured assets. Deploying the Demand Forecasting Solution can help you return results in weeks, and deliver you the ability to scale as your business requirements grow.
+To assist you in meeting the demands of your highly time-sensitive market, we recommend the Demand Forecasting Solution Accelerator. The Demand Forecasting Solution Accelerator shows you how to build a customized sales forecasting model. This accelerator will assist by reducing development time through pre-built, pre-configured assets. Deploying the Demand Forecasting Solution can help you return results in weeks, and deliver you the ability to scale as your business requirements grow.
 
 ## Improve accuracy with the "many models" approach
 
 [ ![Many models demand forecasting approach](./media/many-models-demand-forecasting-approach.png) ](./media/many-models-demand-forecasting-approach.png#lightbox)
 
-The Pattern of many models is very common across a wide variety of industries,
-and applicable to many real-world use cases. In the retail sector, the many
-models approach is commonly seen in:
+The Pattern of many models is very common across a wide variety of industries, and applicable to many real-world use cases. In the retail sector, the many models approach is commonly seen in:
 
 - Retail organizations building workforce optimization models for thousands of stores
 
@@ -53,8 +49,7 @@ Learn how to configure your environment, prepare your dataset, train 10,000+ mod
 1. Find your code in the Demand Forecasting Solution Accelerator [GitHub repository](https://github.com/microsoft/solution-accelerator-many-models).
 2. Deploy Azure machine learning and assets to Azure.
 3. Configure the development environment using a Notebook virtual machine.
-4. **Run Jupyter Notebooks**. Once your development environment is set up, run through the
-    Jupyter Notebooks step by step, [following the steps for the Many Models Solution Accelerator](https://github.com/microsoft/solution-accelerator-many-models).
+4. **Run Jupyter Notebooks**. Once your development environment is set up, run through the Jupyter Notebooks step by step, [following the steps for the Many Models Solution Accelerator](https://github.com/microsoft/solution-accelerator-many-models).
 
 Read more:
 

@@ -469,7 +469,7 @@ Ensure security best practices are followed for all development systems and the 
       :::image type="icon" source="media/devsecops-controls/balanced.png" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Standard** - Ensure that the infrastructure hosting the workload (VMs, containers, network, identity systems, etc.) meets security best practices for identity and access management, including securing privileged access.
+      **Standard** - Ensure that the infrastructure components hosting the workload (such as VMs, containers, network, and identity systems) meet security best practices for identity and access management, including securing privileged access.
    :::column-end:::
 :::row-end:::
 :::row:::
