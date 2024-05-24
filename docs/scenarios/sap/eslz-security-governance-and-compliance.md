@@ -152,9 +152,9 @@ The following table summarizes the Azure load-balancing services by category:
 | Service | Global or regional | Recommended traffic |
 |---|---|---|
 | Azure Front Door | Global | HTTP/S |
-| Traffic Manager | Global | non-HTTP/S |
+| Traffic Manager | Global | Non-HTTP/S |
 | Application Gateway | Regional | HTTP/S |
-| Azure Load Balancer | Regional | non-HTTP/S |
+| Azure Load Balancer | Regional | Non-HTTP/S |
 
 - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
