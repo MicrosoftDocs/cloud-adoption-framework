@@ -12,10 +12,10 @@ ms.custom: internal, UpdateFrequency.5
 
 Subscriptions are a unit of management, billing, and scale within Azure. They play a critical role when you're designing for large-scale Azure adoption. This article can help you capture subscription requirements and design target subscriptions based on critical factors, which are based on:
 
-- environment type
-- ownership and governance model
-- organizational structure
-- application portfolios
+- Environment type
+- Ownership and governance model
+- Organizational structure
+- Application portfolios
 
 > [!TIP]
 > We discussed this topic in a recent YouTube video: [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)

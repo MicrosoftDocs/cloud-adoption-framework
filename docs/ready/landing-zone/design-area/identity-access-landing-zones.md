@@ -2,7 +2,7 @@
 title: Landing zone identity and access management
 description: Learn about considerations and recommendations for implementing identity and access control within Azure application and platform landing zones.
 author: soderholmd
-ms.author: dsoderholm 
+ms.author: dsoderholm
 ms.topic: conceptual
 ms.date: 02/26/2024
 ---

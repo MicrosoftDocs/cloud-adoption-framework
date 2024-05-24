@@ -163,7 +163,7 @@ To do this procedure, first you need to identify the policy or reduced scope tha
 
 Some suggested examples of scopes and policies are shown in the following table:
 
-| When you want to... | ...choose from these scopes | Example policies to use |
+| When you want to... | Choose from these scopes | Example policies to use |
 | ------------------- | --------------------------- | ----------------------- |
 | - Test the DINE/Modify automated remediation capabilities. <br> - Verify how your complete deployment processes and CI/CD pipelines, including tests, might be affected. <br> - Verify how your workload might be affected. | - Sandbox subscription <br> - Sandbox management group <br> - Nonproduction workload landing zone subscription <br> - [Enterprise-scale "canary" environment](./testing-approach.md) | - Configure Azure Activity logs to stream to a specified Log Analytics workspace. <br> - Deploy Defender for Cloud configuration. <br> - Enable Azure Monitor for VMs or Virtual Machine Scale Sets. <br> - Deploy diagnostic settings to Azure services. <br>  - Potentially only enable for specific services within the initiative. |
 
