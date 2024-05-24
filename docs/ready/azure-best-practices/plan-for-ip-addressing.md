@@ -62,11 +62,9 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 An increasing number of organizations are adopting IPv6 in their environments. This adoption is driven by the public IPv4 space exhaustion, private IPv4 scarcity, especially within large-scale networks, and the need to provide connectivity to IPv6-only clients. 
 There's no universal approach to adopting IPv6. There are, however, best practices that you can follow when you plan for IPv6 and implement it in your existing Azure networks.
 
-The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure helps you understand the 
-considerations to take into account when you create systems in the cloud. 
+The Microsoft [Cloud Adoption Framework](/azure/cloud-adoption-framework/) for Azure helps you understand the considerations to take into account when you create systems in the cloud.
 To learn about architectural best practices for designing sustainable systems, see [Azure landing zone design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles).
-For in-depth recommendations and best practices regarding your cloud architecture, including reference architecture deployments,
-diagrams, and guides, see the [Architecture Center guide for IPv6](/azure/architecture/networking/guide/ipv6-architecture).
+For in-depth recommendations and best practices regarding your cloud architecture, including reference architecture deployments, diagrams, and guides, see the [Architecture Center guide for IPv6](/azure/architecture/networking/guide/ipv6-architecture).
 
 **Design considerations:**
 
@@ -104,8 +102,7 @@ These are main differences between the NVA approach and the Azure Front Door app
 - NVAs are customer-managed, work at Layer 4 of the OSI model, and can be deployed in the same Azure virtual network as the application, with a private and public interface.
 - Azure Front Door is a global Azure PaaS service and operates at Layer 7 (HTTP/HTTPS). The application back end is an internet-facing service that can be locked down to accept only traffic from Azure Front Door.
 
-In complex environments, you can use a combination of both. NVAs are used within a regional deployment. Azure Front Door is used to route traffic to one or more regional deployments in different Azure regions or other internet-facing locations. To determine the best solution, we recommend that you review the capabilities 
-of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product documentation.
+In complex environments, you can use a combination of both. NVAs are used within a regional deployment. Azure Front Door is used to route traffic to one or more regional deployments in different Azure regions or other internet-facing locations. To determine the best solution, we recommend that you review the capabilities of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product documentation.
 
 **IPv6 virtual network CIDR blocks:**
 
@@ -114,12 +111,9 @@ of [Azure Front Door](/azure/frontdoor/front-door-overview) and the product docu
 - You can't disable IPv4 support for your virtual network and subnets. IPv4 is the default IP addressing system for Azure virtual networks.
 - Associate an IPv6 CIDR block with your virtual network and subnet or BYOIP IPv6. CIDR notation is a method of representing an IP address and its network mask. The formats of these addresses are as follows:
   - An individual IPv4 address is 32 bits, with four groups of as many as three decimal digits. For example, `10.0.1.0`.
-  - An IPv4 CIDR block has four groups of as many as three decimal digits, from 0 through 255, separated by periods, and followed by a slash 
-  and a number from 0 through 32. For example, `10.0.0.0/16`.
-  - An individual IPv6 address is 128 bits. It has eight groups of four hexadecimal digits. For example, 
-  `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
-  - An IPv6 CIDR block has four groups of as many as four hexadecimal digits, separated by colons, followed by a double colon, and then
-  followed by a slash and a number from 1 through 128. For example, `2001:db8:1234:1a00::/64`.
+  - An IPv4 CIDR block has four groups of as many as three decimal digits, from 0 through 255, separated by periods, and followed by a slash and a number from 0 through 32. For example, `10.0.0.0/16`.
+  - An individual IPv6 address is 128 bits. It has eight groups of four hexadecimal digits. For example, `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+  - An IPv6 CIDR block has four groups of as many as four hexadecimal digits, separated by colons, followed by a double colon, and then followed by a slash and a number from 1 through 128. For example, `2001:db8:1234:1a00::/64`.
 - Update your route tables to route IPv6 traffic. For public traffic, create a route that routes all IPv6 traffic from the subnet to VPN Gateway or an Azure ExpressRoute gateway.
 - Update your security group rules to include rules for IPv6 addresses. Doing so enables IPv6 traffic to flow to and from your instances. If you have network security group rules to control the flow of traffic to and from your subnet, you must include rules for IPv6 traffic.
 - If your instance type doesn't support IPv6, use dual stack or deploy an NVA, as previously described, that translates from IPv4 to IPv6.
