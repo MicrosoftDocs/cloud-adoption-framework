@@ -129,8 +129,8 @@ Next, complete the steps to set up Purview to catalog the data product batch. Yo
 
 From the JSON output generated in the preceding step, get the following returned values:
 
-- service principal ID (`appId`)
-- service principal key (`password`)
+- Service principal ID (`appId`)
+- Service principal key (`password`)
 
 The service principal must have the following permissions:
 
