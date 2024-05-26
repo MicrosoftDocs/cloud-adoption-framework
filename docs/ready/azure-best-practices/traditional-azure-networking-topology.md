@@ -123,8 +123,6 @@ If you use BGP metrics to influence ExpressRoute routing, you need to change the
 
 - Use your existing network, multiprotocol label switching, and SD-WAN to connect branch locations with corporate headquarters. If you don't use Route Server, then there's no support for transit in Azure between ExpressRoute and VPN gateways.
 
-- When you have hub-and-spoke networks in multiple Azure regions, and you need to connect a few landing zones across regions, use global virtual network peering. You can directly connect landing zone virtual networks that need to route traffic to each other. Depending on the communicating virtual machine's SKU, global virtual network peering can provide high network throughput. Traffic that goes between directly peered landing zone virtual networks bypasses NVAs within hub virtual networks. [Limitations on global virtual network peering](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks) apply to the traffic.
-
 - If you need transitivity between ExpressRoute and VPN gateways in a hub-and-spoke scenario, use Route Server. For more information, see [Route Server support for ExpressRoute and Azure VPN](/azure/route-server/expressroute-vpn-support).
 
     :::image type="content" source="./media/route-server-transitivity.png" alt-text="Diagram that illustrates transitivity between ER and VPN gateways with Route Server." lightbox="./media/route-server-transitivity.png" border="false":::
@@ -138,6 +136,8 @@ If you use BGP metrics to influence ExpressRoute routing, you need to change the
 The following diagram shows options for hub-to-hub connectivity:
 
   :::image type="content" source="./media/hub-to-hub-er-or-peering.png" alt-text="Diagram that illustrates options for hub-to-hub connectivity." lightbox="./media/hub-to-hub-er-or-peering.png" border="false":::
+
+- When you have hub-and-spoke networks in multiple Azure regions, and you need to connect a few landing zones across regions, use global virtual network peering. You can directly connect landing zone virtual networks that need to route traffic to each other. Depending on the communicating virtual machine's SKU, global virtual network peering can provide high network throughput. Traffic that goes between directly peered landing zone virtual networks bypasses NVAs within hub virtual networks. Limitations on global virtual network peering apply to the traffic.
 
 - When you need to connect two Azure regions, use global virtual network peering to connect the hub virtual networks in each region.
 
