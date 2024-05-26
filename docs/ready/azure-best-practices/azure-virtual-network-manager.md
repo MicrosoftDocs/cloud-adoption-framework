@@ -1,6 +1,6 @@
 ---
 title: Azure Virtual Network Manager in Azure landing zones
-description: Learn about key considerations for designing network topologies in Azure with Azure Virtual Network Manager. 
+description: Learn about key considerations for designing network topologies in Azure with Azure Virtual Network Manager. Learn how to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale.
 author: sitarant
 ms.author: sitarant
 ms.reviewer: tozimmergren
@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 This article describes how to use Virtual Network Manager to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale. The Azure landing zones conceptual architecture recommends one of two networking topologies: a network topology that's based on Azure Virtual WAN or a network topology that's based on a traditional hub-and-spoke architecture.
 
-You can use Virtual Network Manager to expand and implement networking changes as your business requirements change over time, for example if you require hybrid connectivity to migrate on-premises applications to Azure. In many cases, you can expand and implement networking changes without disrupting your deployed resources in Azure.  
+You can use Virtual Network Manager to expand and implement networking changes as your business requirements change over time, such as if you require hybrid connectivity to migrate on-premises applications to Azure. In many cases, you can expand and implement networking changes without disrupting your deployed resources in Azure.  
 
 You can use Virtual Network Manager to create three types of [topologies](/azure/virtual-network-manager/concept-connectivity-configuration) across subscriptions for both existing and new virtual networks:
 

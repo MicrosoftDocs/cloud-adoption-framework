@@ -28,14 +28,14 @@ Other resources are deployed regionally. Depending on your own landing zone conf
 
 If you deploy a networking topology, you also need to select an Azure region to deploy the networking resources to. This region can be different from the region that you use for the resources listed in the preceding list. Depending on the topology you select, the networking resources that you deploy might include:
 
-- Azure Virtual WAN (including Virtual WAN Hub)
+- Azure Virtual WAN, including a Virtual WAN hub
 - Azure virtual networks
 - VPN gateway
-- ExpressRoute gateway
+- Azure ExpressRoute gateway
 - Azure Firewall
 - Azure DDoS Protection plans
-- Azure Private DNS zones, including for Azure Private Link
-- Resource groups, to contain the resources listed above
+- Azure private DNS zones, including zones for Azure Private Link
+- Resource groups, to contain the preceding resources
 
 > [!NOTE]
 > To minimize the effect of regional outages, we recommend that you place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
@@ -102,7 +102,7 @@ To host your workloads, you can then use virtual network peering to connect appl
 
 1. Deploy Azure Firewall or other supported network virtual appliances (NVAs) into your new virtual hub. Configure [Virtual WAN routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) to route traffic through the new secured virtual hub.
 
-1. If applicable, deploy virtual network gateways for VPN and/or ExpressRoute connectivity in the new virtual hub and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft's resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
+1. If applicable, deploy virtual network gateways for VPN or ExpressRoute connectivity in the new virtual hub and establish connections. Ensure that your ExpressRoute circuits and on-premises locations follow Microsoft resiliency recommendations. For more information, see [Designing for disaster recovery with ExpressRoute private peering](/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering).
 
 1. Create and configure any other routing that you require, such as virtual hub static routes.
 
