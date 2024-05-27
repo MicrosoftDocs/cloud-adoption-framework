@@ -5,6 +5,7 @@ author: SudhandKumar
 ms.author: kumarsud
 ms.date: 01/20/2021
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 ---
 

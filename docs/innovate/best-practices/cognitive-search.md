@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 keywords: cognitive search, azure cognitive services, azure ai search, what is cognitive, azure search
 ---

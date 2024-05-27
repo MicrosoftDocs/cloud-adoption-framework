@@ -262,9 +262,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
-- Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns)
-  or your own DNS server (with DNS forwarding) to resolve to a private
-  link resource?
+- Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns) or your own DNS server (with DNS forwarding) to resolve to a private link resource?
 
 - IP Filtering and VNets are only supported in the Premium SKU tier for Service Bus. If the Premium Tier isn’t practical, look at using [SAS Tokens](/azure/service-bus-messaging/service-bus-authentication-and-authorization#shared-access-signature) as your primary way of locking down access to your namespace.
 

@@ -5,6 +5,7 @@ author: DonnaForlin
 ms.author: krbock
 ms.date: 06/21/2023
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 ---
 
