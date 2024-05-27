@@ -5,6 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 02/16/2024
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Prepare your environment for generative AI
