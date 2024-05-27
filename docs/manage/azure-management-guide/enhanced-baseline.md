@@ -77,7 +77,7 @@ To create or manage runbooks:
 1. Go to **Azure Automation**.
 1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**, select **Runbooks** to open the list of runbooks.
-1. With the options presented, you can [create or manage runbooks](/azure/automation/manage-runbooks), schedules, and other automated remediation functionality.
+1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
 
 ::: zone target="chromeless"
 
