@@ -3,7 +3,7 @@ title: Enhanced management baseline in Azure
 description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/22/2024
+ms.date: 08/12/2021
 ms.topic: conceptual
 ms.custom: internal, fasttrack-edit, AQC
 ---
