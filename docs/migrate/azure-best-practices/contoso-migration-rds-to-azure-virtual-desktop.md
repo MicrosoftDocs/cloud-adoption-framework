@@ -77,7 +77,7 @@ The diagram outlines resources that are prerequisites for the migration (Identit
 Contoso will go through the following flow to migrate from on-premises RDS to Azure Virtual Desktop:
 
    :::image type="content" border="false" source="./media/contoso-migration-rds-to-azure-virtual-desktop/rds-to-avd-migration-flow.png" alt-text="*Figure 2: The migration process.*" lightbox="./media/contoso-migration-rds-to-azure-virtual-desktop/rds-to-avd-migration-flow.png":::
-   *Figure 2: The migration process. "\*" indicates an optional step.*
+   *Figure 2: The migration process. A `*` indicates an optional step.*
 
 The migration flow will be structured in the following migration steps:
 
@@ -279,7 +279,7 @@ For scenarios on which VM image must persist to Azure Virtual Desktop, the follo
 1. **Licensing**: [Microsoft 365 licenses](https://azure.microsoft.com/pricing/details/virtual-desktop) are used for the desktop deployments. If Windows Server session hosts are still required, Contoso will need to bring their RDS CAL (Client Access License) licenses. Thanks to Azure Virtual Desktop licensing entitlement, there is no OS cost for any operating system, including Windows Server.
 
 1. **Cost optimization**: Contoso will use the following features to help with cost optimization:
-   - Contoso will enable [Azure Cost Management + Billing](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+   - Contoso will enable [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
    - Contoso will use Azure Virtual Desktop [Tagging](/azure/virtual-desktop/tag-virtual-desktop-resources) to track costs and group it based on related resources to the host pool.
    - Contoso will monitor utilization across their entire Azure Virtual Desktop deployments using Azure Virtual Desktop [Insights](/azure/virtual-desktop/insights) and assess the cost savings opportunities of Reserved Instances, Savings Plans or Reserved Capacity.
 

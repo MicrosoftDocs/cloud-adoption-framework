@@ -96,6 +96,8 @@ The following section provides some example names for common Azure resource type
 > [!NOTE]
 > The following examples are intended to provide visualization of a naming convention, but actual conventions vary by organization.  
 
+<!-- docutune:ignored "(?-i)[a-z]+(?=[\\-])" -->
+
 ### Example names: General
 
 | Asset type | Scope | Format and examples |

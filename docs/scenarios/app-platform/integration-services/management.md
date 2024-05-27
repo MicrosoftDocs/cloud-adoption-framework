@@ -19,16 +19,13 @@ We can utilize this information to visualize the overall health of our resources
 
 ## Definitions
 
-- **[Azure Monitor Logs](/azure/azure-monitor/logs/data-platform-logs)** collects and organizes log and performance data from monitored
-  resources. Tools such as Log Analytics can then query or visualize this log information, or allow you to alert if certain conditions are met.
+- **[Azure Monitor Logs](/azure/azure-monitor/logs/data-platform-logs)** collects and organizes log and performance data from monitored resources. Tools such as Log Analytics can then query or visualize this log information, or allow you to alert if certain conditions are met.
 
 - **[Azure Metric Logs](/azure/azure-monitor/essentials/data-platform-metrics)** collects numeric data into a time-series database from monitored resources. Tools such as Application Insights can then visualize this data, help you identify performance and runtime issues.
 
-- **[Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)** is an Azure Monitoring offering, which provides a location to store
-  log and performance data, provides a mechanism and language for querying those logs (Kusto); and provides the ability to create alerts and dashboards based on those logs (among other capabilities).
+- **[Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)** is an Azure Monitoring offering, which provides a location to store log and performance data, provides a mechanism and language for querying those logs (Kusto); and provides the ability to create alerts and dashboards based on those logs (among other capabilities).
 
-- **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** is an Azure Monitoring offering, which provides the ability visualize
-  and alert on performance data emitted by monitored resources.
+- **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** is an Azure Monitoring offering, which provides the ability visualize and alert on performance data emitted by monitored resources.
 
 - **[Kusto Query Language](/azure/data-explorer/kusto/query/)** (KQL) is a powerful query language optimized for querying and formatting data. For example, it's the primary query language for Log Analytics.
 

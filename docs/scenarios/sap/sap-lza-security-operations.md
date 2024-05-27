@@ -43,8 +43,7 @@ SAP systems are business-critical in an enterprise landscape. To ensure that onl
 
 Azure provides a comprehensive set of security controls to help you protect your SAP systems that deploy in Azure. Here are some of the example compliance offerings that are relevant to SAP systems:
 
-- **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an information
-security management system (ISMS). This certification covers security controls and best practices, including network security, access control, and risk management.
+- **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an information security management system (ISMS). This certification covers security controls and best practices, including network security, access control, and risk management.
 - **SOC 1, SOC 2, and SOC 3**: Azure is audited under the service organization controls (SOC) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
 - **General Data Protection Regulation (GDPR)**: Azure is compliant with the GDPR, which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features, like data protection, data breach notification, and privacy by design.
 

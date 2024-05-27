@@ -65,15 +65,13 @@ General security considerations include:
 
 - Look at the use of an **Application Gateway** (Azure Application Gateway or Azure Front Door) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
 
-  - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and
-    availability of your applications.
+  - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
   - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door because of common challenges around DNS caching and systems not honoring DNS TTL.
   
   - [Application Gateway](/azure/application-gateway/overview) provides a managed application delivery controller with various Layer 7 load-balancing capabilities. You can use Application Gateway to optimize web-farm productivity by offloading CPU-intensive SSL termination to the gateway.
   
-  - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and
-    outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
+  - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
 
 - Implement network isolation for your integration services resources by using VNet integration to place them in an isolated subnet combined with using [Azure private link](/azure/private-link/private-link-overview) and private endpoints. See the [Network topology and connectivity](./network-topology-and-connectivity.md) article in this series for a review of this design guidance.
 
