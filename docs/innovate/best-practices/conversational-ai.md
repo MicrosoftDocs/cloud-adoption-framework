@@ -5,6 +5,7 @@ author: v-hanki
 ms.author: martinek
 ms.date: 01/26/2021
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: think-tank
 keywords: ai agent, ai agents, bot framework, conversational interface, build a bot, azure bot service
 ---

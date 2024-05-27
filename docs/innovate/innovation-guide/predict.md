@@ -5,6 +5,7 @@ author: martinekuan
 ms.author: martinek
 ms.date: 08/14/2021
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ms.custom: internal, fasttrack-edit, AQC
 keywords: Automate business processes, ai innovation, machine learning, knowledge mining
 ---

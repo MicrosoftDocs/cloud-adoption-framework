@@ -2,7 +2,7 @@
 title: Application identity and access management
 description: Learn about recommendations that application owners and developers can use to design the identity and access management for cloud-native applications.
 author: soderholmd
-ms.author: dsoderholm 
+ms.author: dsoderholm
 ms.topic: conceptual
 ms.date: 02/26/2024
 ---

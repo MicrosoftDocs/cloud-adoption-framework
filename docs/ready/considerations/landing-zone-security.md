@@ -87,13 +87,10 @@ Protect the processes and data of innovation against cyberattacks as new applica
 ### DevSecOps controls
 
 Add security to each stage of continuous integration and continuous delivery (CI/CD) when making [DevSecOps controls](../../secure/devsecops-controls.md).
-- [Plan and develop](../../secure/devsecops-controls.md#plan-and-develop): Bring security to the planning phase in modern development methodologies to implement threat modeling, IDE security plugins/pre-commit, and peer review.
-- [Commit the code](../../secure/devsecops-controls.md#commit-the-code): Evaluate and implement vulnerability scanning capability to your centralized repositories to discover risks and perform remediation.
-- [Build and test](../../secure/devsecops-controls.md#build-and-test): Use build and release pipelines for automation and standardization for the processes of building and deploying secure code without spending large amounts of time in redeploying or upgrading existing environments.
-- [Go to production and operate](../../secure/devsecops-controls.md#go-to-production-and-operate): Oversee and manage the state of security when the solution is brought to production. Use infrastructure scanning tools and penetration testing practices for enabling teams to find risks and vulnerabilities to address.
-
-
-
+- [Secure the design](../../secure/devsecops-controls.md#secure-design): Bring security to the planning phase in modern development methodologies to implement threat modeling, IDE security plugins/pre-commit, and peer review.
+- [Secure the code](../../secure/devsecops-controls.md#secure-code): Evaluate and implement vulnerability scanning capability to your centralized repositories to discover risks and perform remediation.
+- [Secure the pipeline](../../secure/devsecops-controls.md#secure-pipeline): Use build and release pipelines for automation and standardization for the processes of building and deploying secure code without spending large amounts of time in redeploying or upgrading existing environments.
+- [Secure operations](../../secure/devsecops-controls.md#secure-operations): Oversee and manage the state of security when the solution is brought to production. Use infrastructure scanning tools and penetration testing practices for enabling teams to find risks and vulnerabilities to address.
 
 ## Test-driven development cycle
 

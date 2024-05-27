@@ -50,7 +50,7 @@ Review the following sections to find recommended security controls and governan
 
 - Use [Just-in-Time access](/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
 
-- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening#:~:text=From%20Defender%20for%20Cloud's%20menu,adaptive%20network%20hardening%20(2).&text=The%20insights%20panel%20shows%20the,defended%20with%20adaptive%20network%20hardening.) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
+- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
 
 - Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Azure Sentinel or a similar service.
 
@@ -107,11 +107,11 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Use Azure Tags](/azure/azure-resource-manager/management/tag-resources?tabs=json) to organize costs for creating, managing, and deploying Azure Virtual Desktop resources. To identify Azure Virtual Desktop's associated compute cost, tag all your host pools and virtual machines. Tag Azure Files or Azure NetApp Files resources to track the storage cost associated with FSLogix User Profile Containers, custom OS images, and MSIX app attach (if used).
 
-- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies#:~:text=You%20use%20Azure%20Policy%20to,expected%20tags%20for%20your%20organization.) to enforce tagging rules.
+- Define the [minimum suggested tags](../../ready/azure-best-practices/resource-tagging.md) to be set across all your Azure Virtual Desktop resources. You can set Azure tags during deployment or after provisioning. Consider using [Azure Policy built-in definitions](/azure/azure-resource-manager/management/tag-policies) to enforce tagging rules.
 
-- [Set budget(s) in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
+- [Set budget(s) in Microsoft Cost Management](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to proactively manage Azure usage costs. When budget thresholds you've created are exceeded, notifications are triggered.
 
-- [Create Azure Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
+- [Create Cost Management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) to monitor Azure usage and spending against Azure Virtual Desktop Landing zone.
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
