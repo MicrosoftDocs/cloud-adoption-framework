@@ -28,10 +28,10 @@ Define why you're adopting generative AI and what you hope to achieve. Break dow
 
 |Goal|AI benefit|Examples|
 |----|---------------------|---------|
-|**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
-|**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation |
+|**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster with a higher quality and better consistency. Perform customer research and analytics. | - Customer chat bots <br> - Customer service automation <br>- Virtual customer assistants |
+|**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | - Content generation<br> - Code generation <br> - Task management <br> - Easier information searching/retrieval |
 |**Increase operational efficiency** | Optimize processes and reduce time and resource wastage. | - Process automation<br> - Predictive maintenance<br> - Workflow automation |
-|**Increase revenue** | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics |
+|**Increase revenue** | New business initiatives enabled by AI. | - New product lines or services<br> - Customer and behavior analytics <br> - Upselling products and services |
 |**Reduce operational costs**| Automate routine tasks, optimize resource allocation, and streamline processes. | - Predictive maintenance using AI algorithms <br> - Supply chain optimization <br> - Automated data entry and processing |
 |**Improve product quality**| Enhance quality control, identify defects, and optimize production processes. | - AI-driven quality inspection systems <br> - Predictive analytics for product defects <br> - Process optimization using AI <br> - Automated testing and validation <br> - Real-time monitoring and adjustments in manufacturing |
 
