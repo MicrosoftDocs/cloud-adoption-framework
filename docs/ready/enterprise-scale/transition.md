@@ -22,7 +22,7 @@ You can move some resources in Azure after creation. There are different approac
 
 | Scope | Destination | Pro | Con |
 | ----- | ----------- | ---- | ---- |
-| Resources in resource groups. | You can move to a new resource group in the same or different subscription. | You can modify the resource composition in a resource group after deployment. | Not supported by all resourceTypes. <br><br> Some resourceTypes have specific limitations or requirements. <br><br> resourceIds are updated and it affects existing monitoring, alerts, and control plane operations. <br><br> Resource groups are locked during the move period. <br><br> Requires an assessment of policies and RBAC pre-move and post-move operation. |
+| Resources in resource groups. | You can move to a new resource group in the same or different subscription. | You can modify the resource composition in a resource group after deployment. | Not supported by all resourceTypes. <br><br> Some resourceTypes have specific limitations or requirements. <br><br> ResourceIds are updated and it affects existing monitoring, alerts, and control plane operations. <br><br> Resource groups are locked during the move period. <br><br> Requires an assessment of policies and RBAC pre-move and post-move operation. |
 | Subscriptions in a tenant. | You can move to different management groups. | No effect on existing resources within the subscription because resourceId values don't change. | Requires an assessment of policies and RBAC pre-move and post-move operation. |
 
 To determine which move strategy you should use, consider the following examples.

@@ -1,36 +1,50 @@
 ---
-title: Innovation security
-description: Explore the key themes of consideration for integrating security best practices into innovation areas
+title: Innovation security - DevSecOps strategy and culture
+description: Explore the key themes of consideration for integrating security best practices into innovation areas.
 author: martinekuan
 ms.author: martinek
-ms.date: 05/16/2021
+ms.date: 05/17/2024
 ms.topic: conceptual
 ms.custom: internal
+ms.reviewer: mas
 ---
+# Applying the Continuous Security Development Lifecycle (Continuous SDL) approach
 
-# Innovation security
-
-Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or [DevSecOps](./devsecops-controls.md) method to rapidly innovate without waiting for the traditional waterfall ship schedule that can take months or years between releases.
+Innovation is the lifeblood of an organization in the digital age and needs to be both enabled and protected. Innovation security protects the processes and data of innovation against cyberattacks. Innovation in the digital age takes the form of developing applications using the DevOps or [DevSecOps](./devsecops-controls.md) method. This approach allows organizations to rapidly innovate without waiting for traditional waterfall ship schedules that can take months or years between releases.
 
 ![DevSecOps heart](./media/devsecops-heart.png)
 
-Developing new capabilities and applications requires successfully meeting three different requirement types:
+Successful capabilities and applications meet three different requirement types:  
 
-- **Business development (`Dev`):** Your application must meet business and user needs, which are often rapidly evolving.
-- **Security (`Sec`):** Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
-- **IT operations (`Ops`):** Your application must be reliable and perform efficiently.
+- Functional (Dev): Your application must meet business and user needs, which are often rapidly evolving.
+- Secure (Sec): Your application must be resilient to attacks from rapidly evolving attackers and take advantage of innovations in security defenses.
+- Reliable (Ops): Your application must be reliable and perform efficiently.
 
-Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change. For more information, see the [leadership imperative: blend the cultures](/#the-leadership-imperative-blend-the-cultures).
+Merging these three requirements together and creating a shared culture is critically important, but often challenging. Leaders of development, IT, and security teams must work together to drive this change.  
 
 Watch the following video to learn more about the DevSecOps method for secure and rapid innovation.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWVu6q]
 
+## Integrate security throughout the development lifecycle
+
+It’s critical to integrate security throughout the development lifecycle to quickly identify and correct design, code, and other issues early while people are working on that part of the process. This approach avoids more expensive and difficult fixes later that can cause a large amount of rework.
+
+:::image type="content" source="media/dev-sec-ops-plus-zero-trust.png" alt-text="Diagram of software development lifecycle with Zero Trust architecture and governance overlay.":::
+
+Security risks (and the need to mitigate them) can occur at any point in the development lifecycle:
+
+- **Design** – Ensure that the design doesn’t naturally allow attackers to easily gain unauthorized access to the workload, its data, or other business assets in the organization.
+- **Code** – Ensure that writing (and reuse) of code doesn’t allow attackers to easily take control of the application to perform unauthorized actions that harm customers, employees, systems, data, or other business assets. Developers should also work in a secure environment that doesn’t allow attackers to take control without their knowledge.
+- **Build and Deploy** – Ensure that the continuous integration and continuous deployment (CI/CD) processes don’t allow unauthorized users to alter the code and allow attackers to compromise it.
+- **Run** – Ensure that environment running the code (cloud, servers, mobile devices, others) follows security best practices across people, process, and technology to avoid attackers compromising and abusing the workload. This process includes the adoption of well established best practices, security baseline configurations, and more.
+- **Zero Trust Architecture and Governance** – All of these stages should follow Zero Trust principles to assume breach (assume compromise), explicitly verify trust, and grant the least privilege required for each user account, machine/service identity, and application component.
+
 ## What is DevSecOps?
 
-Technology innovation is frequently developed in the context of a rapid lean and agile development approach that combines development and operations together into a *DevOps* process. We've learned that integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.
+Technology innovation is frequently developed in the context of a rapid, lean, and agile development approach that combines development and operations together into a *DevOps* process and integrating security into that process is critical to mitigate risks to the innovation process, the organization's growth, and the existing assets in organization. Integrating security into the process creates a *DevSecOps* process.
 
-## Secure by design and shifting left
+### Secure by design and shifting left
 
 As organizations adopt DevOps and other rapid innovation methodologies, security must be a thread woven throughout the tapestry of the organization and its development processes. Integrating security late in the process is expensive and difficult to fix.
 
@@ -42,9 +56,9 @@ In the waterfall model, security was traditionally a *quality gate* after develo
 
 DevOps expanded the traditional development model (people, process, and technology) to include operations teams. This change reduced the friction that resulted from having the development and operations teams separated. Similarly, [DevSecOps](./devsecops-controls.md) expands DevOps to reduce the friction from separate or disparate security teams.
 
-DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development and operations. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. With mutual understanding and mutual respect for each other's needs, the teams will work on the most important issues first, whatever the source.
+DevSecOps is the integration of security into every stage of the DevOps lifecycle from idea inception through envisioning, architectural design, iterative application development, and operations. Teams must align simultaneously to goals of innovation speed, reliability, and security resilience. With mutual understanding and mutual respect for each other's needs, teams work on the most important issues first, whatever the source.
 
-The Organize methodology of the Cloud Adoption Framework provides further context on DevSecOps structures in an organization. For more information, see [Understand application security and DevSecOps functions](../organize/cloud-security-application-security-devsecops.md).
+The **Organize** methodology of the Cloud Adoption Framework provides further context on DevSecOps structures in an organization. For more information, see [Understand application security and DevSecOps functions](../organize/cloud-security-application-security-devsecops.md).
 
 ## Why DevSecOps?
 
@@ -52,20 +66,23 @@ DevOps brings agility, DevSecOps brings secure agility.
 
 Nearly every organization on the planet looks to software development to gain a competitive advantage through innovation. Securing the DevOps process is critical to the success of the organization. Attackers have taken notice of this shift to custom applications and are increasingly attacking custom applications during their attacks. These new applications are often rich sources of valuable intellectual property that contain valuable new ideas that aren't yet a commodity in the marketplace.
 
-Protecting this innovation requires that organizations address potential security weaknesses and attacks in both the development process and the infrastructure hosting the applications. This approach applied to both cloud and on-premises.
+Protecting this innovation requires that organizations address potential security weaknesses and attacks in both the development process and the infrastructure hosting the applications. This approach must be applied to both cloud and on-premises resource.
 
 :::image type="content" source="./media/attacker-opportunities.png" alt-text="Attacker Opportunities" lightbox="./media/attacker-opportunities.png":::
 
-Attackers might exploit weaknesses in:
+Attackers can achieve their goals by exploiting weaknesses in either the development process, the underlying infrastructure for workloads, or both:
 
-- **Development process:** Attackers might find weaknesses in the application design process, for example, using weak or no encryption for communications. Or attackers might find weakness in the implementation of the design, for example, code doesn't validate input and allows common attacks like SQL injection. Additionally, attackers might implant back doors in the code that allows them to return later to exploit in your environment or in your customer's environment.
-- **IT infrastructure:** Attackers can compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multistage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment. Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
-- **Protecting your organization:** From malicious code and vulnerabilities in your source code supply chain
-- **Protecting your customers:** From any security issues in your applications and systems, which might result in reputation damage, liability, or other negative business impacts on your organization
+- **Development Attacks** using weaknesses in the application design and development process. For example, attackers might find code that doesn't validate input (allowing common attacks like SQL injection) or they might find the application uses weak encryption (or no encryption) for communications. Additionally, attackers might implant back doors in the code that allows them to return later to access assets in your environment or in your customer's environment.
+- **Infrastructure Attacks** that compromise endpoint and infrastructure elements that the development process is hosted on using standard attacks. Attackers might also conduct a multistage attack that uses stolen credentials or malware to access development infrastructure from other parts of the environment.  
+
+Additionally, the risk of software supply chain attacks makes it critical to integrate security into your process for both:
+
+- **Protecting your organization** from malicious code and vulnerabilities in your source code supply chain
+- **Protecting your customers** from any security issues in your applications and systems, which might result in reputation damage, liability, or other negative business impacts on your organization
 
 ## The DevSecOps journey
 
-Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process, where ideas first incubate in a safe space and then later released to production and iteratively and continuously updated.
+Most organizations find that DevOps or DevSecOps for any given workload or application is actually a two-phase process. Ideas first incubate in a safe space and are later released to production as a minimum viable product (MVP). They are then iteratively and continuously updated.
 
 This diagram shows the lifecycle of this kind of innovation factory approach:
 
@@ -91,7 +108,7 @@ Integrating these cultures and goals together into a true DevSecOps approach can
 
 While having a few issues is normal and expected with new development, conflicts between teams often dramatically increase the number and severity of these issues. The conflicts occur, often because one or two teams have a political advantage, and repeatedly override requirements of other teams. Over time, the neglected issues grow in volume and seriousness. Left unsolved, this dynamic might get worse with DevOps as the speed of making decisions increases to meet the rapid evolution of business needs and customer preferences.
 
-Solving these problems requires creating a shared culture that values dev, sec, and ops requirements that are supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
+Solving these problems requires creating a shared culture that values dev, sec, and ops requirements supported by leadership. This approach will allow your teams to work better together and help solve the most urgent issues on any given sprint, whether they're improving security, operational stability, or adding critical business features.
 
 #### Leadership techniques
 
@@ -101,15 +118,14 @@ These key techniques can help leadership build a shared culture:
 1. **Expect continuous improvement, not perfection:** Leaders should set an expectation of continuous improvement and continuous learning. Building a successful DevSecOps program doesn't happen overnight. It's a continuous journey with incremental progress.
 1. **Celebrate both common interests and unique individual values:** Ensure the teams can see that they're working toward common outcomes and each individual provides something the others can't. All of the requirement types are about creating and protecting the same business value. Development is trying to create new value, while ops and security are trying to protect and preserve that value, against different risk scenarios. Leaders at all levels throughout the organization should communicate this commonality and how important it is to meet all types of requirements for both immediate and long-term success.
 1. **Develop shared understanding:** Everyone on the team should have a basic understanding of:
-     - **Business urgency:** The team should have a clear picture of revenue at stake. This view should include current revenue (if the service is offline), and potential future revenue that will be affected by a delay in delivery of applications and features. This should be directly based on signals from leadership stakeholders.
-     - **Likely risks and threats:** Based on threat intelligence team input, if present, the team should establish a sense of the likely threats that the application portfolio will face.
-     - **Availability requirements:** The team should have a shared sense of the operational requirements such as required uptime, expected lifetime of the application, and troubleshooting and maintenance requirements, for example, patching while service online.
+   - **Business urgency:** The team should have a clear picture of revenue at stake. This view should include current revenue (if the service is offline), and potential future revenue affected by a delay in delivery of applications and features. This view should be directly based on signals from leadership stakeholders.
+   - **Likely risks and threats:** Based on threat intelligence team input, if present, the team should establish a sense of the likely threats that the application portfolio will face.
+   - **Availability requirements:** The team should have a shared sense of the operational requirements such as required uptime, expected lifetime of the application, and troubleshooting and maintenance requirements, for example, patching while service online.
 1. **Demonstrate and model the desired behavior:** Leaders should publicly model the behavior that they want from their teams. For example, show humility, focus on learning and value the other disciplines. Another example is development managers discuss the value of security and high-quality applications or security managers discuss the value of rapid innovation and application performance.
 1. **Monitor the level of security friction:** Security naturally creates friction that slows down processes. It's critical for leaders to monitor the level and type of friction that security generates:
-      - **Healthy friction:** Similar to how exercise makes a muscle stronger, integrating the right level of security friction in the DevOps process strengthens the application by forcing critical thinking at the right time. If teams are learning and using those learnings to improve security, for example, considering how why, and how an attacker might try to compromise an application, and finding and fixing important security bugs, then they are on track.
-      - **Unhealthy friction:** Look out for friction that impedes more value than it protects. This often happens when security bugs generated by tools have a high false positive rate or false alarms, or when the security effort to fix something exceeds the potential impact of an attack.
-1. **Integrate security into budget planning:** Ensure that security budget is allocated proportionally to other investments into security. This is analogous to a physical event like a concert where the event budget includes physical security as a norm. Some organizations allocate 10 percent of total cost for security as a general rule to ensure consistent application of security best practices.
-
+   - **Healthy friction:** Similar to how exercise makes a muscle stronger, integrating the right level of security friction in the DevOps process strengthens the application by forcing critical thinking at the right time. If teams are learning and using those learnings to improve security, for example, considering why and how an attacker might try to compromise an application, and finding and fixing important security bugs, then they are on track.
+   - **Unhealthy friction:** Look out for friction that impedes more value than it protects. This friction often happens when security bugs generated by tools have a high false positive rate or false alarms, or when the security effort to fix something exceeds the potential impact of an attack.
+1. **Integrate security into budget planning:** Ensure that security budget is allocated proportionally to other investments into security. This concept is analogous to a physical event like a concert where the event budget includes physical security as a norm. Some organizations allocate 10 percent of total cost for security as a general rule to ensure consistent application of security best practices.
 1. **Establish shared goals:** Ensure performance and success metrics for application workloads reflect development, security, and operations goals.
 
 > [!NOTE]
@@ -139,12 +155,12 @@ For more information on DevSecOps, see [DevSecOps technical controls](./devsecop
 
 ## Tips on navigating the journey
 
-Transformation requires building toward this ideal state incrementally on a journey. Many organizations will have to navigate complexity and challenges on this journey. This section outlines some of the common ones that organizations face.
+Transformation requires building toward this ideal state incrementally on a journey. Many organizations have to navigate complexity and challenges on this journey. This section outlines some of the common ones that organizations face.
 
 - **Education and culture changes are critical early steps:** *You go to war with the army you have*. The team you have will often need to develop new skills and adopt new perspectives to understand the other parts of the DevSecOps model. This education and culture change takes time, focus, executive sponsorship, and regular follow up to help individuals fully understand and see the value of the change. Changing cultures and skills drastically can sometimes tap into the professional identity of individuals, creating potential for strong resistance. It's critical to understand and express the why, what, and how of the change for each individual and their situation.
 - **Change takes time:** You can only move as fast as your team can adapt to the implications of doing things in new ways. Teams will always have to do their existing jobs while they transform. It's critical to carefully prioritize what is most important and to manage expectations of how fast this change can happen. Focusing on a crawl, walk, run strategy, where the most important and foundational elements come first, will serve your organization well.
 - **Limited resources:** A challenge organizations usually face early on is to find talent and skills in both security and application development. As organizations begin to collaborate more effectively, they might find hidden talent, such as developers with a security mindset or security professionals with a development background.
-- **Shifting nature of applications, code, and infrastructure:** The technical definition and composition of an application is fundamentally changing with the introduction of technologies such as serverless, cloud services, cloud APIs, and codeless applications, such as Power Apps. This shift is changing development practices, application security, and even empowers non-developers to create applications.
+- **Shifting nature of applications, code, and infrastructure:** The technical definition and composition of an application is fundamentally changing with the introduction of technologies such as serverless, cloud services, cloud APIs, and codeless applications, such as Power Apps. This shift is changing development practices, application security, and even empowers nondevelopers to create applications.
 
 > [!NOTE]
 > Some implementations combine operations and security responsibilities into a **site reliability engineer (SRE)** role.

@@ -35,6 +35,7 @@ The core objective of the Strategy methodology is to develop alignment among sta
 **Competing priorities:**
 
 - **Depth of justification:** Stakeholders often want a deep financial analysis and full business justification before they're comfortable with aligning to a strategic direction. Unfortunately, that level of analysis might require an extended time period to allow for data collection and analysis.
+
 - **Time to business impact:** Conversely, stakeholders are often held accountable for delivering business outcomes within defined timeframes. Time-consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
 
 **Minimum scope:** Finding the correct balance requires stakeholder discussions early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. Stakeholders should then quickly commit to a few initial projects or pilots to drive required learning opportunities.
@@ -48,11 +49,13 @@ As during the strategy phase, there's a need during the planning phase to balanc
 **Competing priorities:**
 
 - **Depth of initial planning** for technical implementation in the cloud is often based on many assumptions. Especially when there are skill gaps on the team, the environment suffers from discovery gaps, or the workloads don't have clearly defined architectural end states. All of these assumptions are common in detailed cloud adoption plans. Experimentation, pilots, and qualitative analysis are required to verify or improve upon these assumptions.
+
 - **Delayed technical decisions** are based on the assumption that the later a technical decision is made, the more accurate it is. Following principles of agile product planning helps to delay technical decisions, allowing them to happen at the right time, based on sufficient information. However, this approach results in more ambiguity in the initial plan.
 
 **Minimum scope:** We suggest agile product development approaches to drive prompt action within manageable plans. The Plan methodology recommends the following steps to achieve this balance: 
-1. Inventory the full digital estate by using automated discovery tools, but use incremental rationalization to plan as far as the next 1 to 3 months of work. 
-1. Ensure proper organizational alignment to move quickly. 
+
+1. Inventory the full digital estate by using automated discovery tools, but use incremental rationalization to plan as far as the next 1 to 3 months of work.
+1. Ensure proper organizational alignment to move quickly.
 1. Create a skills readiness plan for the assigned team. Use the strategy and plan template to quickly deploy an initial backlog.
 
 **Expanded scope example:** The delivery of a cloud adoption plan might sometimes be in response to a time-sensitive or high-impact business event. When success requires the movement of a high number of assets during a fixed period of time, the preceding steps are often followed by a deeper planning effort. The key to success in these scenarios is to plan enough to get going, and then later plan for the full engagement. This approach reduces the likelihood that planning will block business outcomes.
@@ -64,9 +67,10 @@ When teams are preparing for their first steps into cloud adoption, there are of
 **Competing priorities:**
 
 - **Long-term operations:** Organizations are often blocked by the desire to have a cloud environment that meets feature parity with current operations management, governance, and security systems. In one study, more than 90 percent of organizations needed support to get past that mindset. This blocker can create months of delay, slowing down or preventing business impact.
-- **Time to adoption:** Cloud-based tools like Azure Policy, Azure Blueprints, and management groups can simplify the process of refactoring across the IT platform. Additionally, predefined landing zones provide recommendations to accelerate deployment toward an environment that already meets many feature parity requirements. These tools provide opportunities to accelerate time to market with minimal effect on long-term operations.
 
-**Minimum scope:** The Ready methodology outlines a direct path from rapid adoption to long-term operations. This approach starts with a basic introduction to the tools that you can use to refactor your environment. The tools take into account your requirements and guide you to a selection of predefined landing zones, each delivered with infrastructure as code models. You can then refactor the code during the course of cloud adoption to improve operations, security, and management.
+- **Time to adoption:** Cloud-based tools like Azure Policy, continuous integration and continuous delivery (CI/CD) approaches such as infrastructure as code (IaC), and management groups can simplify the process of refactoring across the IT platform. Additionally, predefined landing zones provide recommendations to accelerate deployment toward an environment that already meets many feature parity requirements. These tools provide opportunities to accelerate time to market with minimal effect on long-term operations.
+
+**Minimum scope:** The Ready methodology outlines a direct path from rapid adoption to long-term operations. This approach starts with a basic introduction to the tools that you can use to refactor your environment. The tools take into account your requirements and guide you to a selection of predefined landing zones, each delivered with IaC models. You can then refactor the code during the course of cloud adoption to improve operations, security, and management.
 
 <!-- docutune:casing "Govern and Manage methodologies" -->
 
@@ -79,6 +83,7 @@ During migration, adoption teams commonly assume that workloads will be rehosted
 **Competing priorities:**
 
 - **Rehost:** Organizations often equate migration with a *lift-and-shift* approach that replicates all assets to the cloud in their current configuration. This approach results in little drift within the IT portfolio. It's also the fastest way to retire assets in an existing datacenter.
+
 - **Rearchitect:** Modernizing the architecture of each workload maximizes the value of cloud adoption across cost, performance, and operations. However, this approach is slower and often requires access to each application's source code.
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this choice is based on an initial business assumption and isn't a technical decision. In the Migrate methodology, the cloud adoption team then challenges this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group of workloads to create a migration factory. During the assessment phase, the adoption team evaluates the technical fit and architecture of each workload. That assessment effort seldom results in a pure lift-and-shift approach because many of the components in the architecture tend to be selected for refactoring and modernization.
@@ -92,6 +97,7 @@ True customer-facing innovation frequently creates conflicting priorities betwee
 **Competing priorities:**
 
 - **Feature focus:** Initial plans for innovation build on the existing digital estate and cloud capabilities to deliver a set of features that meet a customer need. It's easy to allow the plan to drive technical implementation, leading to a feature-focused development effort. This approach often leads to temporary stakeholder satisfaction but reduces the likelihood of driving innovation that influences customer behavior.
+
 - **Customer empathy:** Initial plans are an important part of the business side of development and should be included in regular reporting. However, learning, measuring, and building with customer empathy as a goal is a more accurate measure of success in an innovation effort. Focusing on customers over features is more likely to result in short-term and long-term customer satisfaction and business impact.
 
 **Minimum scope:** The Innovate methodology illustrates how to integrate strategy and plans through business-value consensus. The guide then introduces cloud-native tools that can accelerate each discipline of innovation and best practices for implementation. Finally, the process improvements section demonstrates approaches for building customer empathy while respecting plans and strategies across the cloud adoption journey. This approach focuses on delivering innovation with the use of as little technology as possible.
@@ -118,6 +124,7 @@ The IT business model for operations management has continuously evolved over th
 **Competing priorities:**
 
 - **Broad investments:** Investing equally in outage avoidance, rapid recovery, and monitoring across the environment is the traditional approach to operations management. This approach can be expensive and sometimes duplicates the supporting products provided by the cloud vendor.
+
 - **No-ops and low-ops:** Use cloud-native operations tools to minimize repetitive and recurring tasks that were previously delivered by your employees. Reducing these operational dependencies frees employees to drive value in other ways. In isolation, however, this approach can lead to subpar operations support.
 
 **Minimum scope:** The Manage methodology suggests establishing a cloud-native, no-ops baseline. Acknowledging that the no-ops baseline won't meet all business needs, work with the business to define commitments and better align investments. Expand the baseline to meet common needs for all workloads. Then enable platform teams or specific workload teams to maintain well-managed solutions within a well-managed environment.
@@ -131,6 +138,7 @@ The competing priorities described in this article reflect IT's drive to deliver
 **Competing priorities:**
 
 - **Centralized control:** This operating model focuses on the centralization of all controls that are required to enforce rigid policies. In this model, IT serves as a blocker to innovation, speed, and agility. However, IT can ensure a higher degree of stability, compliance, and security.
+
 - **Delegated control:** In this distributed operating model, it's assumed that each DevOps team or business application team will provide their own set of controls, based on the solutions that are required to deliver on business objectives. In this model, IT provides guidelines to help teams avoid risks but minimizes the number of enforced technical constraints whenever possible.
 
 **Minimum scope:** Most organizations go through a natural set of evolutions over time. The Organize methodology outlines the most common series of evolutions. We recommend that teams try to move toward a cloud center of excellence (CCoE) structure to deliver delegated control approaches.

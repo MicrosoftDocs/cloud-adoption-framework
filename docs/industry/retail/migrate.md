@@ -30,10 +30,10 @@ To be able to fulfill the demands of creating the omnichannel experience, retail
 
  To remain competitive and continue to delight customers, it's essential for retailers to uncover customer insights across freshly connected data silos—using a common unified data model that makes use of both structured and unstructured data to better engage with customers in the Analytics-driven retail stage:
 
-- finding ways of recognizing the customer—gathering data for online channels experiencing huge COVID growth
-- gaining a 360-degree perspective on customer loyalty
-- delivering seamless and consistent multichannel experiences (curbside pickup)
-- humanizing the online experience with live streaming and virtual private shopping—and delivering more personalized, targeted marketing.
+- Finding ways of recognizing the customer—gathering data for online channels experiencing huge COVID growth
+- Gaining a 360-degree perspective on customer loyalty
+- Delivering seamless and consistent multichannel experiences (curbside pickup)
+- Humanizing the online experience with live streaming and virtual private shopping—and delivering more personalized, targeted marketing.
 
 Analytics-driven retail's common data model will enable an agile supply chain allowing all parties to interact in a common retail solution by implementing [industry priority scenarios](../retail/industry-priority-scenarios.md). Meeting these challenges will require retailers to advance technology improvements across the supply chain with use cases such as  [personalization](../retail/retail-personalization.md) and [supply chain optimization](../retail/retail-supply-chain-optimization.md).
 
@@ -53,9 +53,9 @@ Breaking down these silos, unifying data, and combining with AI and ML-driven in
   
 Azure Marketplace enables your organization the ability to democratize data by offering partner solutions that your organization can use to quickly and reliably provision end-to-end solutions to:
 
-- bring together dirty data
-- integrate with partners' data across your retail supply chain operations
-- add AI and ML intelligence to enrich business process and uncover insights
+- Bring together dirty data
+- Integrate with partners' data across your retail supply chain operations
+- Add AI and ML intelligence to enrich business process and uncover insights
 
 Provision end-to-end solutions from thousands of products from independent software vendors (ISVs) that help you reach successful retail business outcomes and:
 
@@ -64,7 +64,7 @@ Provision end-to-end solutions from thousands of products from independent softw
 - Use free trials to deploy and use software in your Azure subscription
 - Confidently deploy—standing up an end-to-end solution reliably, in a few minutes with trusted software vendors
 - learn architectural guidance and implementation help and lever a strong ecosystem of top system integrators and solution architects
-- use Azure, Azure Stack, and reuse your existing software licenses with Bring Your Own License (BYOL) offers to optimize cost
+- Use Azure, Azure Stack, and reuse your existing software licenses with Bring Your Own License (BYOL) offers to optimize cost
 
 ## Reimagined retail data model
 

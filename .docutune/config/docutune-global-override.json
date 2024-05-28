@@ -1,5 +1,6 @@
 {
   "RemoveTermSets": [
-    "*hipaa*"
+    "casing-quotations",
+    "*-llm-*"
   ]
 }

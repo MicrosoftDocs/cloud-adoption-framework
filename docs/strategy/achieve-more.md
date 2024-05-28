@@ -50,7 +50,7 @@ There are many cost-savings offers the can help reduce your cloud costs:
 
 Microsoft provides frameworks and tools to help you understand your costs and continually optimize your environment:
 
-Understand and forecast your costs: Monitor your bill, set budgets, and allocate costs to teams and projects with Azure Cost Management + Billing.
+Understand and forecast your costs: Monitor your bill, set budgets, and allocate costs to teams and projects with Microsoft Cost Management.
 
 **Learn more:**
 

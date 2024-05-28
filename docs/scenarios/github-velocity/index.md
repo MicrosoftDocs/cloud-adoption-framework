@@ -3,7 +3,7 @@ title: How GitHub accelerates cloud adoption
 description: Companies can take advantage of GitHub's connectedness to the open-source community and find thousands of reiterated, enhanced, and ready-to-deploy cloud solution examples from organizations that have successfully adopted Azure services.
 author: nkpatterson
 ms.author: martinek
-ms.date: 1/11/2020
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: think-tank
 ---
@@ -32,11 +32,11 @@ From securing the open-source packages to the intellectual property that's writt
 
 Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
 
-While OSS could be interpreted as the packages, libraries, scripts, and dependencies incorporated into applications, there are thousands of open-source assets in the form of infrastructure as code (IaC), documentation, guidance, and blueprints for well-defined Azure architectures. These blueprints have been contributed to the OSS community by Microsoft, partners, vendors, customers, and individuals, and they're readily available in GitHub. They can be easily modified, reused, and deployed to a specific Azure environment.
+OSS consists of packages, libraries, scripts, and dependencies that are incorporated into applications. OSS also includes thousands of open-source assets in the form of infrastructure as code (IaC), documentation, and guidance for well-defined Azure architectures. Microsoft, partners, vendors, customers, and individuals contribute these packages to the OSS community. You can find them in GitHub, and modify, reuse, and deploy them to a specific Azure environment.
 
 ### Infrastructure as code
 
-Infrastructure as code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using the same versioning system that the DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time that it's applied. IaC is a key DevOps practice that's used with [continuous delivery (CD)](/devops/deliver/what-is-continuous-delivery).
+IaC is the management of infrastructure that includes networks, virtual machines, load balancers, and connection topology in a descriptive model. IaC uses the same versioning system that a DevOps team uses for source code. For example, a DevOps team follows the principle that the same source code generates the same binary. An IaC model also follows that principle and generates the same environment each time that you apply the model. IaC is a key DevOps practice that you can use with [continuous delivery (CD)](/devops/deliver/what-is-continuous-delivery).
 
 IaC evolved to solve the problem of environment drift in the release pipeline. Without it, teams must maintain the settings of individual deployment environments, and inconsistencies between environments lead to issues during deployments. Every environment eventually becomes a snowflake, a unique configuration that can't be reproduced automatically. With snowflakes, infrastructure administration and maintenance requires manual processes that contribute to errors and are hard to track. Infrastructure deployments with IaC are repeatable and prevent runtime issues caused by configuration drift or missing dependencies.
 
@@ -44,13 +44,13 @@ With IaC, teams make changes to the environment description and version the conf
 
 See the [AzOps](https://github.com/Azure/azops) GitHub action for an example of how to deploy custom Resource Manager templates at various Azure scopes. If you're new to Resource Manager templates or IaC, you can also browse the [`azure-quickstart-templates` repo](https://github.com/Azure/azure-quickstart-templates) on GitHub, find the template that you wish to deploy, and select the **Deploy to Azure** button to test how it works.
 
-![Screenshot of a **Deploy to Azure** button.](./media/deploy-to-azure.png)
+![Screenshot of a Deploy to Azure button.](./media/deploy-to-azure.png)
 
 ### Cloud pattern components and best practices
 
 The following architecture diagram highlights the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment:
 
-![An architecture diagram highlighting the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
+![An architecture diagram that highlights the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
 - [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
 
