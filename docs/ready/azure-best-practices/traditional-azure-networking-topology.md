@@ -19,7 +19,7 @@ This article describes key design considerations and recommendations for network
 
 ## Design considerations
 
-- Various network topologies can connect multiple landing zone virtual networks. Examples of network topologies include hub-and-spoke, full-mesh, and hybrid topologies. You can also have one large flat virtual network or multiple virtual networks that are connected via multiple Azure ExpressRoute circuits or connections.
+- Various network topologies can connect multiple landing zone virtual networks. Examples of network topologies include hub-and-spoke, full-mesh, and hybrid topologies. You can also have multiple virtual networks that are connected via multiple Azure ExpressRoute circuits or connections.
 
 - Virtual networks can't traverse subscription boundaries. However, you can use virtual network peering, an ExpressRoute circuit, or VPN gateways to achieve connectivity between virtual networks across different subscriptions.
 
