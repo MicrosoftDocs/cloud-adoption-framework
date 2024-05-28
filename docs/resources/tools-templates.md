@@ -36,7 +36,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 | Resource | Description |
 |----------|-------------|
 | [Azure naming tool](https://github.com/mspnp/AzureNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
-| [Naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/main/ready/naming-and-tagging-conventions-tracking-template.xlsx) | Document your decisions about naming and tagging standards to ensure consistency across resources and reduce onboarding time. |
 | [Cloud Adoption Framework foundation blueprint](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/governance/blueprints/samples/caf-foundation/deploy.md) | Deploy your lightweight implementation of an initial governance foundation, providing practical experience with governance tools in Azure. |
 | [Cloud Adoption Framework migration landing zone blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/main/ready/migration-landing-zone) | Provision and prepare to host your workloads that you migrate from on-premises environments into Azure. For more information, see [Deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md). |
 | [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your Cloud Adoption Framework Azure landing zone. |

@@ -88,7 +88,6 @@ All existing workloads and assets should be suitably named and tagged following 
 **Guidance to support deliverable completion:**
 
 - Create a [naming and tagging standard](../ready/azure-best-practices/naming-and-tagging.md).
-- Populate the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) to track decisions.
 - [Review and update existing tags in Azure](/azure/azure-resource-manager/management/tag-resources).
 - [Enforce tagging policies in Azure](/azure/azure-resource-manager/management/tag-policies).
 
