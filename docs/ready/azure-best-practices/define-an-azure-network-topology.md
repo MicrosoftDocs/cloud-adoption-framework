@@ -42,4 +42,5 @@ The following diagram shows a traditional Azure networking topology:
 
 ## Next step
 
-[Virtual Network Manager in Azure landing zones](./azure-virtual-network-manager.md)
+> [!div class="nextstepaction"]
+> [Virtual Network Manager in Azure landing zones](./azure-virtual-network-manager.md)

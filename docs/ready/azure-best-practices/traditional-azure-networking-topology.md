@@ -177,4 +177,5 @@ The following diagram shows options for hub-to-hub connectivity:
 
 ## Next step
 
-[Virtual WAN network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology)
+> [!div class="nextstepaction"]
+> [Virtual WAN network topology](/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology)
