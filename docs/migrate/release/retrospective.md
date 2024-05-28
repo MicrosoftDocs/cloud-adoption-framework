@@ -43,7 +43,7 @@ After you complete the preceding steps, do the following steps with your team:
   - If using a digital board, let each member fill in their answers via the tool.
 - **Organizer read-out**: After each team member documents their thoughts, the organizer should review the feedback and then read it aloud to the team.
   - You should group together similar ideas as you discover them so that you recognize reoccurring trends.
-  - Create labels or _parent_ items as needed to help organize these thoughts.
+  - Create labels or *parent* items as needed to help organize these thoughts.
   - If you find misplaced items that belong in another area, move them over at this time.
 
 - Repeat this process for "_What could have been better?_"
