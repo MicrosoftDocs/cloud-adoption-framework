@@ -70,7 +70,7 @@ If your organization has [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-be
 
 - Review the recommendations in the [resource organization](eslz-arc-data-service-sql-managed-instance-resource-organization.md) and [governance disciplines](eslz-arc-data-service-sql-managed-instance-governance-disciplines.md) critical design areas. The recommendations help you implement a governance strategy, organize your resources for better cost control and visibility, and avoid unnecessary costs by using the least privileged access model for onboarding and management. Also, review the broader recommendations for Azure Arc-enabled Kubernetes [resource organization](../arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md) and [governance discipline](../arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md) to understand governance principles outside of a data services context.
 
-- Use [Azure cost management and billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
+- Use [Microsoft Cost Management](/azure/cost-management-billing/costs/quick-acm-cost-analysis) to understand Arc-enabled SQL MI costs.
 
 :::image type="content" source="./media/arc-enabled-data-svc-sql-mi-cost-03.png" alt-text="A screenshot of cost analysis." lightbox="./media/arc-enabled-data-svc-sql-mi-cost-03.png":::
 
