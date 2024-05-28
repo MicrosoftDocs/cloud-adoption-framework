@@ -65,7 +65,9 @@ You've identified the potential benefits of generative AI and have a clear visio
 > "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 
-Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives:
+Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives.
+
+**Recommendations:**
 
 - **Consider AI in decision-making**
   - Regularly communicate the strategic importance of AI to the entire organization.
@@ -73,7 +75,7 @@ Consider the importance of getting early buy-in from stakeholders and leadership
   - See [how AI will transform decision-making](https://www.weforum.org/agenda/2023/09/how-artificial-intelligence-will-transform-decision-making/).
 - **Bring visibility to successful AI projects**
   - Showcase successful AI projects to underscore its value to leadership.
-  - See [customer stories for Azure AI](https://customers.microsoft.com/search?sq=%22Azure%20AI%22&ff=language%26%3EEnglish&p=0&so=story_publish_date%20desc).
+  - See [customer stories for Artificial Intelligence](https://customers.microsoft.com/en-us/search?sq=&ff=story_product_categories%26%3EArtificial%20Intelligence&p=0&so=cam_rank%20desc).
 - **Drive an innovate culture**
   - Continuous learning helps drive AI innovation. See [Continuous learning](/azure/cloud-adoption-framework/innovate/considerations/learn#continuous-learning).
 
@@ -102,6 +104,18 @@ Consider the importance of organizational alignment:
 > TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
 
 To learn more about the required skills, see [Planning for generative AI - Required skills](./plan.md#required-skills)
+
+### Encourage an adaptable strategy
+
+With the fact-paced evolution of AI technologies, it's important to establish an adaptable AI strategy that can evolve with the technology and the business needs. This strategy should be aligned with the overall business strategy and should be able to adapt to changes in the business environment.
+
+**Recommendations:**
+
+- **Review regularly**: Regularly review and update the AI strategy to reflect changes in business objectives or advancements in AI technology. Don't treat the AI strategy as a one-time project, but as an ongoing process.
+- **Capture data**: Analyze data from ongoing and past AI implementations to ensure continuous alignment to business objectives. Refine the business strategy based on the insights gained from the past AI implementations.
+- **Prepare for pivots**: Be prepared to pivot the AI strategy based on the insights gained from the data analysis. Be open to changing the strategy if the data suggests that the current strategy is not aligned with the business objectives.
+- **Stay informed**: Stay informed about the latest AI technologies and trends. Be prepared to incorporate new technologies into the AI strategy if they align with the business objectives.
+- **Feedback mechanism**: Develop a robust feedback mechanism to learn from the successes and failures in AI implementations with full transparency. Use those learnings to continuously invest in skilling, refining the AI strategy, and improving the business outcomes.
 
 ## Determine business impact
 
