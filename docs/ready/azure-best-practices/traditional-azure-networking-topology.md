@@ -93,7 +93,7 @@ If you use BGP metrics to influence ExpressRoute routing, you need to change the
 
   - You need dedicated ExpressRoute bandwidth for specific business units.
 
-  - You reach the maximum number of connections for each ExpressRoute gateway. To determine the maximum number, see [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits)
+  - You reach the maximum number of connections for each ExpressRoute gateway. To determine the maximum number, see [ExpressRoute limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#expressroute-limits).
 
 - The following diagram shows this topology.
 

@@ -23,7 +23,7 @@ Azure landing zones consist of a set of resources and configuration. Some of the
 Other resources are deployed regionally. Depending on your own landing zone configuration, you might have some or all of the following regionally deployed resources:
 
 - An Azure Monitor Logs workspace, including selected solutions
-- An Azure automation account
+- An Azure Automation account
 - Resource groups, for the other resources
 
 If you deploy a networking topology, you also need to select an Azure region to deploy the networking resources to. This region can be different from the region that you use for the resources listed in the preceding list. Depending on the topology you select, the networking resources that you deploy might include:

@@ -36,7 +36,7 @@ You can use Virtual Network Manager to group virtual networks. You can then appl
 
 You can segment networks by environments, teams, locations, lines of business, or some other function that suits your needs. To define network groups statically or dynamically, create a set of conditions that govern group membership.
 
-### Design considerations
+## Design considerations
 
 - In a traditional hub-and-spoke deployment, you manually create and maintain virtual network peering connections. Virtual Network Manager introduces a layer of automation for virtual network peering, which makes large and complex network topologies like mesh easier to manage at scale. For more information, see [Network group overview](/azure/virtual-network-manager/concept-network-groups).
 
@@ -50,7 +50,7 @@ You can segment networks by environments, teams, locations, lines of business, o
 
 - You can use the Virtual Network Manager [security administrator rules](/azure/virtual-network-manager/concept-security-admins) feature to explicitly allow or deny specific network flows regardless of NSG configurations at the subnet or network interface levels. You can use this capability, for example, to always permit management services network flows. NSGs that application teams control can't override these rules.
 
-### Design recommendations
+## Design recommendations
 
 - Define the [scope of Virtual Network Manager](/azure/virtual-network-manager/concept-network-manager-scope). Apply security administrator rules that enforce organization-level rules at the root management group or the tenant. This strategy hierarchically applies rules automatically to existing resources, new resources, and to all associated management groups.
 
@@ -68,4 +68,4 @@ You can segment networks by environments, teams, locations, lines of business, o
 
 ## Next step
 
-[Automate management of user-defined routes (UDRs) with Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route)
+[Automate management of user-defined routes (UDRs) with Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route).
