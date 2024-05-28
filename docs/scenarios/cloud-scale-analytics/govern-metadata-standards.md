@@ -41,13 +41,13 @@ When implementing Azure Purview, don't introduce too much change and complexity 
 
 Once you have your metadata, start with the basics:
 
-- business terms
-- lists of authoritative data sources
-- lists of databases
-- schema information
-- data ownership
-- data stewardship
-- security
+- Business terms
+- Lists of authoritative data sources
+- Lists of databases
+- Schema information
+- Data ownership
+- Data stewardship
+- Security
 
 Then scale by slowly involving more domain owners and data stewards and by adding more classifications and sensitivity labels. These additions improve the search experience and allow for better data access management.
 
@@ -65,17 +65,17 @@ To build a unified view of your organization's data with custom user experience,
 
 The end result of the Azure Cosmos DB architecture is an organization-wide graph that provides a unified view of all data in your organization using end-to-end context. The metadata lake isn't only about storing information. It also actively organizes your metadata as a graph by connecting it with other services and tools. This organized graph allows you cross-correlate many subject areas, including:
 
-- domains
-- data quality
-- data usage
-- business capabilities
-- application functions
-- technical architecture information
-- operational events
-- organizational metadata
-- application ownership metadata
-- location information
-- application life cycle management information
+- Domains
+- Data quality
+- Data usage
+- Business capabilities
+- Application functions
+- Technical architecture information
+- Operational events
+- Organizational metadata
+- Application ownership metadata
+- Location information
+- Application life cycle management information
 
 ## Next steps
 

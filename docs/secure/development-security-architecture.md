@@ -14,8 +14,8 @@ This article describes steps to help you achieve an ideal end state for developm
 
 Your development security architecture should integrate these key components:
 
-- security best practices
-- innovations in DevOps culture, tools, processes, and technology
+- Security best practices
+- Innovations in DevOps culture, tools, processes, and technology
 - Infrastructure as Code (IaC), to ensure deployment consistency
 
 Align security best practices and technologies with processes and workflows that operationalize DevOps architecture. Maximize the automation of your security analysis tools, threat modeling processes, security posture management, and other security techniques, along with their integration with CI/CD processes. Establish clear roles and responsibilities for security elements.

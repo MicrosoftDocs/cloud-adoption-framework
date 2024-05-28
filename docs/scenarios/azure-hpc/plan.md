@@ -16,8 +16,7 @@ Application of the Plan methodology focuses on the [five Rs of rationalizing you
 
 ## HPC estate
 
-While it's important to gather inventory data for a digital estate for cloud adoption, it's recommended to assess your current environment's HPC usage. [Digital estate measurements](../../digital-estate/index.md#how-can-a-digital-estate-be-measured)
- can change depending on the desired business outcomes.
+While it's important to gather inventory data for a digital estate for cloud adoption, it's recommended to assess your current environment's HPC usage. [Digital estate measurements](../../digital-estate/index.md#how-can-a-digital-estate-be-measured) can change depending on the desired business outcomes.
 
 Evaluate the attributes of your HPC environment in terms of an [asset-driven](../../digital-estate/approach.md#asset-driven-approach) approach when planning your digital estate.
 

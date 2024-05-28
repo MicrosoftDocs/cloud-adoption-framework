@@ -5,7 +5,6 @@ author: brsteph
 ms.author: bstephenson
 ms.date: 12/17/2023
 ms.topic: conceptual
-ms.custom: 
 ---
 
 # Incorporate Zero Trust practices in your landing zone
