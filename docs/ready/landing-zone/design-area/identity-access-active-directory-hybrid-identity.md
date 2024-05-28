@@ -37,8 +37,10 @@ User objects that are created entirely in Microsoft Entra ID are known as *cloud
 
 However, many organizations already have longstanding AD DS directories that might be integrated with other systems, such as line-of-business or enterprise resource planning (ERP) via Lightweight Directory Access Protocol (LDAP). These domains might have many domain-joined computers and applications that use Kerberos or older NTLMv2 protocols for authentication. In these environments, you can synchronize user objects to Microsoft Entra ID so that users can sign in to both on-premises systems and cloud resources with a single identity. Uniting on-premises and cloud directory services is known as *hybrid identity*. You can extend on-premises domains into Azure landing zones:
 
-- To maintain a single user object in both cloud and on-premises environments, you can sync AD DS domain users with Microsoft Entra ID via Microsoft Entra Connect or Microsoft Entra Connect Sync. To determine the recommended configuration for your environment, see [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies).
+- To maintain a single user object in both cloud and on-premises environments, you can sync AD DS domain users with Microsoft Entra ID via Microsoft Entra Connect or Microsoft Entra Cloud Sync. To determine the recommended configuration for your environment, see [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies) and [Topologies for Microsoft Entra Cloud Sync](/entra/identity/hybrid/cloud-sync/plan-cloud-sync-topologies).
 
+    
+    
 - To domain join Windows VMs and other services, you can deploy AD DS domain controllers or Domain Services in Azure. With this approach, AD DS users can sign in to Windows servers, Azure Files shares, and other resources that use Active Directory as an authentication source. You can also use other Active Directory technologies, such as group policy. For more information, see [Common deployment scenarios for Microsoft Entra Domain Services](/entra/identity/domain-services/scenarios).
 
 ### Hybrid identity recommendations
@@ -58,6 +60,10 @@ However, many organizations already have longstanding AD DS directories that mig
 - Determine the right [synchronization tool](/entra/identity/hybrid/sync-tools#selecting-the-right-tool) for your cloud identity.
 
 - If you have requirements for using AD FS, see [Deploy AD FS in Azure](/windows-server/identity/ad-fs/deployment/how-to-connect-fed-azure-adfs).
+
+- When utilizing [Microsoft Entra Connect](/entra/identity/hybrid/connect/whatis-azure-ad-connect-v2) as your synchronization tool, consider deploying a [staging server](/entra/identity/hybrid/connect/how-to-connect-sync-staging-server) for disaster recovery in another region from the primary Connect Server; alternatively, if you are not using multi-regions, utilize availability zones for high availability.
+
+- When utilizing [Microsoft Entra Cloud Sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) as your synchronization tool, consider installing at least [three agents](/entra/identity/hybrid/cloud-sync/how-to-prerequisites?tabs=public-cloud) across different servers in multiple regions for disaster recovery; alternatively, install the agent across servers in different availability zones for high availability.
 
 > [!IMPORTANT]
 >
