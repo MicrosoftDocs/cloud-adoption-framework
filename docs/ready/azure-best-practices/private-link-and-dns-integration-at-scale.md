@@ -21,7 +21,7 @@ Many customers build their network infrastructure in Azure using the hub and spo
 
 In hub and spoke network architectures, application owners are typically provided with an Azure subscription, which includes a VNet (*a spoke*) connected to the *hub* VNet. In this architecture, they can deploy their virtual machines and have private connectivity to other VNets or to on-premises networks by way of ExpressRoute or VPN.
 
-A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity. [The Firewall can also be used as a DNS proxy to customize DNS forwarding.](/samples/azure/azure-quickstart-templates/azure-firewall-dns-proxy/)
+A central network virtual appliance (NVA), such as Azure Firewall, provides Internet-outbound connectivity. Additionally, that device, such as with [Azure Firewall DNS proxy](/azure/firewall/dns-details), or another service in or adjacent to the hub is typically used to customize DNS forwarding.
 
 Many application teams build their solutions using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services (such as SQL Managed Instance) can be deployed in customer VNets. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
 
