@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Responsible and trusted AI
+# Responsible AI
 
 > TBD - Intro.
 > Repurpose Innovate content.
