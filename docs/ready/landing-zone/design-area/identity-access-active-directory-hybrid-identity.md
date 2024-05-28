@@ -25,7 +25,7 @@ For more information, see [Identity decision guide](../../../decision-guides/ide
 
 The platform team is responsible for the administration of identity and access management. Identity and access management services are fundamental to organizational security. Your organization can use Microsoft Entra ID to control administrative access and protect platform resources. This approach prevents users outside of the platform team from making changes to the configuration or to the security principals contained within Microsoft Entra ID.
 
-If you use Azure AD DS or Domain Services, you must protect the domain controllers from unauthorized access. Domain controllers are highly vulnerable to attacks and should have strict security controls and segregation from application workloads.
+If you use AD DS or Domain Services, you must protect the domain controllers from unauthorized access. Domain controllers are highly vulnerable to attacks and should have strict security controls and segregation from application workloads.
 
 Deploy domain controllers and associated components, such as Microsoft Entra Connect servers, in the Identity subscription that's located in the platform management group. Domain controllers aren't delegated to application teams. This isolation allows application owners to use identity services without having to maintain them, which reduces the risk of compromise to identity and access management services. The resources in the Identity platform subscription are a critical point of security for your cloud and on-premises environments.
 
@@ -45,7 +45,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 - To determine your identity solution requirements, document the authentication provider that each application uses. Use the [identity decision guide](../../../decision-guides/identity/index.md) to select the right services for your organization. For more information, see [Compare Active Directory to Microsoft Entra ID](/entra/fundamentals/compare).
 
-- You might use [Domain Services](/entra/identity/domain-services/overview) for applications that rely on domain services and use older protocols. Existing Azure AD DS domains sometimes support backward compatibility and allow legacy protocols, which can negatively affect security. Instead of extending an on-premises domain, consider using Domain Services to create a new domain that doesn't allow legacy protocols. Use the new domain as the directory service for cloud-hosted applications.
+- You might use [Domain Services](/entra/identity/domain-services/overview) for applications that rely on domain services and use older protocols. Existing AD DS domains sometimes support backward compatibility and allow legacy protocols, which can negatively affect security. Instead of extending an on-premises domain, consider using Domain Services to create a new domain that doesn't allow legacy protocols. Use the new domain as the directory service for cloud-hosted applications.
 
 - Factor in resiliency as a critical design requirement for your hybrid identity strategy in Azure. Microsoft Entra ID is a [globally redundant, cloud-based system](/entra/architecture/architecture) but Domain Services and AD DS aren't. Carefully plan for resiliency when you implement Domain Services and AD DS. When you design either service, consider using multiregion deployments to ensure continued service operation in the event of a regional incident.
 
@@ -72,7 +72,7 @@ Your organization might already have longstanding AD DS directories that you int
 
 To implement Microsoft directory services, familiarize administrators with the following options:
 
-- You can [deploy Azure AD DS domain controllers into Azure as Windows VMs](/azure/architecture/example-scenario/identity/adds-extend-domain) that platform or identity administrators fully control. This approach is an infrastructure as a service (IaaS) solution. You can join the domain controllers to an existing Active Directory domain or host a new domain that has an optional trust relationship with existing on-premises domains. For more information, see [Azure Virtual Machines baseline architecture in an Azure landing zone](/azure/architecture/virtual-machines/baseline-landing-zone).
+- You can [deploy AD DS domain controllers into Azure as Windows VMs](/azure/architecture/example-scenario/identity/adds-extend-domain) that platform or identity administrators fully control. This approach is an infrastructure as a service (IaaS) solution. You can join the domain controllers to an existing Active Directory domain or host a new domain that has an optional trust relationship with existing on-premises domains. For more information, see [Azure Virtual Machines baseline architecture in an Azure landing zone](/azure/architecture/virtual-machines/baseline-landing-zone).
 
 - [Domain Services](/entra/identity/domain-services/overview) is an Azure-managed service that you can use to create a new managed Active Directory domain that's hosted in Azure. The domain can have a trust relationship with existing domains and can synchronize identities from Microsoft Entra ID. Administrators don't have direct access to the domain controllers and aren't responsible for patching and other maintenance operations.
 
@@ -96,7 +96,7 @@ After you configure AD DS or Domain Services, you can use the same method as on-
 
 - Keep your core applications close to, or in the same region as, the virtual network for your replica sets to minimize latency. In a multiregional organization, deploy Domain Services into the region that hosts the core platform components. You can only deploy Domain Services into a single subscription. To expand Domain Services to further regions, you can add up to four more [replica sets](/entra/identity/domain-services/concepts-replica-sets) in separate virtual networks that are peered to the primary virtual network.
 
-- Consider deploying Azure AD DS domain controllers into multiple Azure regions and across [availability zones](/azure/reliability/availability-zones-overview) to increase resiliency and availability. For more information, see [Create VMs in availability zones](/azure/virtual-machines/create-portal-availability-zone) and [Migrate VMs to availability zones](/azure/reliability/migrate-vm).
+- Consider deploying AD DS domain controllers into multiple Azure regions and across [availability zones](/azure/reliability/availability-zones-overview) to increase resiliency and availability. For more information, see [Create VMs in availability zones](/azure/virtual-machines/create-portal-availability-zone) and [Migrate VMs to availability zones](/azure/reliability/migrate-vm).
 
 - Explore the [authentication methods for Microsoft Entra ID](/entra/identity/hybrid/connect/choose-ad-authn) as part of your identity planning. Authentication can occur in the cloud and on-premises, or on-premises only.
 
