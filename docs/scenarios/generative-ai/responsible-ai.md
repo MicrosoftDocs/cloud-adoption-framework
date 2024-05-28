@@ -8,9 +8,10 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Responsible AI considerations for generative AI
+# Responsible and trusted AI
 
 > TBD - Intro.
+> Repurpose Innovate content.
 
 ## Governance, security, and ethical considerations for AI
 

@@ -23,27 +23,9 @@ Much like the traditional [shared responsibility model in the cloud](/azure/secu
 
 ## Secure your model
 
-### What are Guardrails?
+### What are guardrails?
 
 ### Attack types and their risks
-
-#### Metaprompt
-
-#### Prompt injection
-
-#### Prompt leaking
-
-#### INsecure output handling
-
-#### Denial of Wallet
-
-#### Jailbreaks
-
-#### OWASP LLM Top-10
-
-#### Hallucinations
-
-#### Training data poisoning
 
 ## Protect and recover
 

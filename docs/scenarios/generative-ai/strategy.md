@@ -50,7 +50,6 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 | **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
 | **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
-
 ## Leadership and organizational readiness
 
 Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
@@ -103,10 +102,6 @@ Consider the importance of organizational alignment:
 > TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
 
 To learn more about the required skills, see [Planning for generative AI - Required skills](./plan.md#required-skills)
-
-### Human in the loop
-
-#### Reskilling initiatives
 
 ## Determine business impact
 

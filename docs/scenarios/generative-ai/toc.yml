@@ -9,9 +9,9 @@ items:
       href: generative-vs-traditional-ai.md
     - name: Types of Generative AI models
       href: generative-ai-model-types.md
-    - name: Responsible AI considerations
+    - name: Responsible and trusted AI
       href: responsible-ai.md
-  - name: Strategic
+  - name: Strategic impact
     href: strategy.md
   - name: Planning
     href: plan.md

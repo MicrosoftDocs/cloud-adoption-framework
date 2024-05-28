@@ -14,6 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ### Cloud Center of Excellence with AI functions
 
+- Link to CCoE -> append AI information here.
 - CCoE / AI Functions
 - Map people to capabilities
 - Evolve your organizational structure as necessary

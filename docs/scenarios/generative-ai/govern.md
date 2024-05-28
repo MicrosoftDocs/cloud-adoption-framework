@@ -32,8 +32,6 @@ Risks are associated with all areas of business. With generative AI, there are n
 
 - Establish policies.
 
-### Threat modeling
-
 ## Compliance
 
 ### Policy enforcement

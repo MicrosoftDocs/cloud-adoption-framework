@@ -46,12 +46,6 @@ Here are some examples of generative AI and its applications:
 
 ## Deciding on the right blend of AI for your use cases
 
-### No-code
-
-### Low-code
-
-### Pro-code
-
 ## Next steps
 
 > [!div class="nextstepaction"]

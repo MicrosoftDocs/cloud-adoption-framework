@@ -10,24 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Prepare your environment for generative AI
 
-## Azure landing zones
-
-### When do you need a landing zone?
-
-### Designing landing zones for generative AI
-
-## Data availability
-
-## Scaling generative AI solutions
-
-## Solution accelerators
-
-## Content safety
-
-## Model selection and benchmarking
-
-## Setting up automated testing frameworks
-
 ## Next steps
 
 > [!div class="nextstepaction"]
