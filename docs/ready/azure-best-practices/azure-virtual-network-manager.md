@@ -69,4 +69,4 @@ You can segment networks by environments, teams, locations, lines of business, o
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Automate management of user-defined routes (UDRs) with Virtual Network Manager](/azure/virtual-network-manager/concept-user-defined-route)
+> [Automate management of user-defined routes (UDRs)](/azure/virtual-network-manager/concept-user-defined-route)
