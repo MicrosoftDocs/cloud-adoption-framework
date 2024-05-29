@@ -1,6 +1,6 @@
 ---
 title: Governing generative AI in Azure
-description: Learn how to govern generative AI in Azure with the Microsoft Cloud Adoption Framework.
+description: Learn how to govern generative AI in Azure by managing risks, ensuring compliance, and managing data effectively.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/07/2024

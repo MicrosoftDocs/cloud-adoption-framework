@@ -30,4 +30,4 @@ To be successful with adopting AI, you need to plan and estimate the required bu
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [Prepare your environment](./ready.md)

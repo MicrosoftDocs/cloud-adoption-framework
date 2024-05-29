@@ -61,7 +61,7 @@ Consider the importance of organizational alignment:
 > TBD considerations: The importance.
 > TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
 
-To learn more about the required skills, see [Planning for generative AI - Required skills](./plan.md#required-skills)
+To learn more about the required skills, see [Skills readiness plan for AI](./skills-readiness-ai.md)
 
 ## Encourage an adaptable strategy
 
@@ -74,35 +74,6 @@ With the fact-paced evolution of AI technologies, it's important to establish an
 - **Prepare for pivots**: Be prepared to pivot the AI strategy based on the insights gained from the data analysis. Be open to changing the strategy if the data suggests that the current strategy is not aligned with the business objectives.
 - **Stay informed**: Stay informed about the latest AI technologies and trends. Be prepared to incorporate new technologies into the AI strategy if they align with the business objectives.
 - **Feedback mechanism**: Develop a robust feedback mechanism to learn from the successes and failures in AI implementations with full transparency. Use those learnings to continuously invest in skilling, refining the AI strategy, and improving the business outcomes.
-
-## Determine business impact
-
-### Re-imagining the business impacts on experience, end-users, and employees
-
-### Workforce transformation with AI
-
-### Relocation and specialization of resources
-
-### Adapt and learn
-
-Ensuring that your organization is ready to adapt and learn from the potential of generative AI is key to success.
-
-- Incorporate feedback mechanisms to constantly refine and improve your generative AI initiatives.
-- What will change for employees?
-- What will change for customers?
-
-### Change management and communication
-
-- How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
-- To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
-- To what extent is your organization open to the changes that AI adoption may bring to existing processes and workflows?
-- How are changes from adopting generative AI communicated (change communication/change management)
-- How effectively is the AI strategy and its benefits communicated across all levels of the organization?
-
-### Foster a positive culture
-
-- How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
-- How supportive is your leadership in driving the AI adoption initiative within the organization?
 
 ## Next steps
 
