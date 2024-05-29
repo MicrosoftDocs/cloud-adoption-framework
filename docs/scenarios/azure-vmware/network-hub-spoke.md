@@ -94,7 +94,7 @@ Dynamic route propagation:
 - Third Party NVA integration
    - Peer ARS with NVAs so that you don’t need UDRs for each AVS segment to filter traffic.
    - Return traffic from peered VNETs needs a UDR (User Defined Routes) back to the local interface of the firewall
-Transit mechanism from Expressroute to VPN Gateways
+- Transit mechanism from Expressroute to VPN Gateways
 -	VPN Gateway must be of type Site-to-Site and configured in Active-Active
 
 To use Azure Route Server, you must:
