@@ -14,10 +14,10 @@ The structure of your resource storage directly determines your options for impl
 
 Use the guidance this section provides to ensure resource organization and segmentation across:
 
-- management group hierarchies
-- subscriptions
-- resource groups
-- landing zones
+- Management group hierarchies
+- Subscriptions
+- Resource groups
+- Landing zones
 
 Consider using tagging strategies to help organize your resources.
 

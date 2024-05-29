@@ -51,7 +51,7 @@ As you can see from these questions, the deployment model varies depending on yo
 - It allows you to provision infrastructure for HPC systems, such as virtual machines, scale sets, network interfaces, and disks.
 - It automatically scales the infrastructure to run jobs efficiently at any scale based on job load, availability, and time requirements.
 - It provides a rich, declarative, templating format to construct complete HPC environments on Azure.
-- It integrates with Azure services such as Azure Monitor and Azure Cost Management tools.
+- It integrates with Azure services such as Azure Monitor and Microsoft Cost Management tools.
 
 ### AzHop
 
