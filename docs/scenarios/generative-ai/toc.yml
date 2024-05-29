@@ -1,10 +1,6 @@
 items:
   - name: Generative AI adoption in Azure
     href: index.md
-  - name: Get started
-    items:
-    - name: Types of Generative AI models
-      href: generative-ai-model-types.md
   - name: Strategy
     items:
     - name: Business justification and goals
@@ -15,6 +11,8 @@ items:
       href: leadership-organizational-readiness.md
     - name: Buy, Build, or Blend
       href: buy-build-blend.md
+    - name: Understanding types of generative AI models
+      href: generative-ai-model-types.md
     href: strategy.md
   - name: Planning
     items:
