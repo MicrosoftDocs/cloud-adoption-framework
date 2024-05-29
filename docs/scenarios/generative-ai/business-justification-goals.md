@@ -1,14 +1,14 @@
 ---
-title: Strategic considerations for adopting generative AI in Azure
-description: Establish an AI vision and strategy by considering key factors such as business justification, organizational readiness, business impact, and business goals.
+title: Business justification and goals for generative AI
+description: Establish a generative AI strategy by understanding the potential benefits of generative AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/20/2024
+ms.date: 05/29/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Strategic considerations for adopting generative AI in Azure
+# Business justification and goals for generative AI
 
 To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance will help you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process.
 
@@ -50,64 +50,6 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 | **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
 | **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
-
-## Leadership and organizational readiness
-
-Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
-
-Consider asking yourself this:
-
-- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for generative AI?
-
-### Leadership buy-in
-
-You've identified the potential benefits of generative AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
-
-> "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
-> From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
-
-Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives:
-
-- **Consider AI in decision-making**
-  - Regularly communicate the strategic importance of AI to the entire organization.
-  - Integrate AI into strategic planning and decision-making processes.
-  - See [how AI will transform decision-making](https://www.weforum.org/agenda/2023/09/how-artificial-intelligence-will-transform-decision-making/).
-- **Bring visibility to successful AI projects**
-  - Showcase successful AI projects to underscore its value to leadership.
-  - See [customer stories for Azure AI](https://customers.microsoft.com/search?sq=%22Azure%20AI%22&ff=language%26%3EEnglish&p=0&so=story_publish_date%20desc).
-- **Drive an innovate culture**
-  - Continuous learning helps drive AI innovation. See [Continuous learning](/azure/cloud-adoption-framework/innovate/considerations/learn#continuous-learning).
-
-### Organizational alignment
-
-> "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
-> From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
-
-A leader-stage company is typically characterized by the existence of a well-defined, comprehensive and future-proof strategy. This strategy is not only clear and specific, but also fully integrated into the broader business strategy. It specifies how AI technologies are intended to support and enhance business objectives, ensuring that all AI initiatives are aligned with, and contribute to, the overarching goals of the organization.
-
-Consider the importance of organizational alignment:
-
-- **Communicate the AI strategy**
-  - Communicate the strategy and vision as an integral part of the overall business strategy.
-  - Articulate how AI can support and enhance specific business objectives.
-  - See [Building a foundation for AI success: Business strategy](https://www.microsoft.com/microsoft-cloud/blog/2023/11/01/building-a-foundation-for-ai-success-business-strategy/)
-- **Review and realign**
-  - Regularly review and update the strategy as necessary to reflect changes in business objectives or advancements in AI technology.
-- **Measure effectiveness**
-  - Drive toward implementing tools and processes to measure the effectiveness of AI initiatives in achieving the business objectives, enabling continuous improvement and refinement of the strategy.
-  - If you can measure the effectiveness of your AI initiatives, you can better understand the value they bring to your organization, and get wider buy-in from stakeholders.
-
-### Employee readiness
-
-> TBD considerations: The importance.
-> TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
-
-To learn more about the required skills, see [Planning for generative AI - Required skills](./plan.md#required-skills)
-
-### Human in the loop
-
-#### Reskilling initiatives
-
 ## Determine business impact
 
 ### Re-imagining the business impacts on experience, end-users, and employees
@@ -139,7 +81,7 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 
 ## Next steps
 
-The following list of articles takes you to the guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md)

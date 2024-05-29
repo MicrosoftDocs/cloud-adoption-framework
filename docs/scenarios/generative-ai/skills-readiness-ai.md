@@ -1,5 +1,5 @@
 ---
-title: Planning for generative AI
+title: Skills readiness plan for generative AI
 description: Define and identify the requirements to implement generative AI in your organization, and create a plan to acquire the necessary skills.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,15 +8,9 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Planning for generative AI
 
-## Initial organizational alignment
+# Skills readiness plan for generative AI
 
-### Cloud Center of Excellence with AI functions
-
-- CCoE / AI Functions
-- Map people to capabilities
-- Evolve your organizational structure as necessary
 
 ## Define a skills readiness plan
 
@@ -57,4 +51,4 @@ Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training re
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [AI Center of Excellence](./ai-center-of-excellence.md)

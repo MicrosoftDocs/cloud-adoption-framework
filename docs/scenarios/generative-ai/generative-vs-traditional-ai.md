@@ -1,5 +1,5 @@
 ---
-title: Generative vs. Traditional AI
+title: Understanding generative vs. traditional AI
 description: Learn about the differences between generative AI and traditional AI and how to decide which one is right for your use cases.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Generative vs. Traditional AI
+# Understanding generative vs. traditional AI
 
 When deciding on the right blend of AI for your use cases, it's important to understand the differences between generative AI and traditional AI. This article will help you understand the differences between the two and how to decide which one is right for your use cases.
 
@@ -46,13 +46,9 @@ Here are some examples of generative AI and its applications:
 
 ## Deciding on the right blend of AI for your use cases
 
-### No-code
-
-### Low-code
-
-### Pro-code
-
 ## Next steps
 
+Continue building your strategy for adopting generative AI in Azure by understanding the importance of leadership and organizational readiness.
+
 > [!div class="nextstepaction"]
-> [Strategic impact of generative AI in Azure](./strategy.md)
+> [Leadership and organizational readiness](./leadership-organizational-readiness.md)

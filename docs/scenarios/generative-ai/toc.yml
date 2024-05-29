@@ -1,20 +1,26 @@
 items:
   - name: Generative AI adoption in Azure
     href: index.md
-  - name: Get started
+  - name: Strategy
     items:
+    - name: Business justification and goals
+      href: business-justification-goals.md
+    - name: Understanding generative vs. traditional AI
+      href: generative-vs-traditional-ai.md
+    - name: Leadership and organizational readiness
+      href: leadership-organizational-readiness.md
     - name: Buy, Build, or Blend
       href: buy-build-blend.md
-    - name: Generative vs. traditional AI
-      href: generative-vs-traditional-ai.md
-    - name: Types of Generative AI models
+    - name: Understanding types of generative AI models
       href: generative-ai-model-types.md
-    - name: Responsible AI considerations
-      href: responsible-ai.md
-  - name: Strategic
-    href: strategy.md
   - name: Planning
-    href: plan.md
+    items:
+    - name: Embrace responsible AI
+      href: responsible-ai.md
+    - name: Skills readiness plan for AI
+      href: skills-readiness-ai.md
+    - name: AI Center of Excellence
+      href: ai-center-of-excellence.md
   - name: Prepare your environments
     items: 
     - name: Azure landing zones

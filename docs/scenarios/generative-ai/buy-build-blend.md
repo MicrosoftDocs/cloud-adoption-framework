@@ -23,4 +23,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Generative AI vs. Traditional AI](./generative-vs-traditional-ai.md)
+> [Understanding types of generative AI models](./generative-ai-model-types.md)

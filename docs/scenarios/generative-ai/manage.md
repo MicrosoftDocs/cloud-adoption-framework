@@ -10,6 +10,10 @@ ms.collection: ce-skilling-ai-copilot
 
 # Managing generative AI in Azure
 
+## Considerations for PaaS AI solutions
+
+## Considerations IaaS AI solutions
+
 ## Manage your generative AI solutions
 
 ### Management overview and baseline
@@ -18,15 +22,9 @@ ms.collection: ce-skilling-ai-copilot
 
 - Tokens, model differences, text/semantic/hybrid search, ...
 
-### API versions
-
-### Manage different models
-
-## End-to-end lifecycle using LLMOps
+## Establish and end-to-end management lifecycle using LLMOps
 
 ### DevOps vs. MLOps. vs LLMOps
-
-### Selecting the right model (duplicate?)
 
 ### Testing
 
@@ -34,6 +32,6 @@ ms.collection: ce-skilling-ai-copilot
 
 ### Benchmarking
 
-### Logging and monitoring
+## Logging and monitoring
 
 ## Next steps
