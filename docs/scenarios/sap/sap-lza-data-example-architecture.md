@@ -73,8 +73,7 @@ In Data Lake Storage Gen2, Azure Storage is the foundation for building enterpri
 
 Data is encrypted at rest after it's ingested into the data lake. Use your customer-managed keys to further enhance encryption and add access control flexibility.
 
-For more information, see the Data Lake Storage Gen2 [introduction](/azure/storage/blobs/data-lake-storage-introduction)
-and [best practices](/azure/storage/blobs/data-lake-storage-best-practices).
+For more information, see the Data Lake Storage Gen2 [introduction](/azure/storage/blobs/data-lake-storage-introduction) and [best practices](/azure/storage/blobs/data-lake-storage-best-practices).
 
 #### Data transformation and consumption
 

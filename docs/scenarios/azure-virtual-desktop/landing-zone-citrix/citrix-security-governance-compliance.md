@@ -182,10 +182,10 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 
 | Source | Destination | Protocol | Port | Purpose |
 |----|----|----|----|----|
-| Cloud Connectors | \*.digicert.com | HTTP | 80 | Certificate Revocation Check |
-| Cloud Connectors | \*.digicert.com | HTTPS | 443 | Certificate Revocation Check |
-| Cloud Connectors | dl.cacerts.digicert.com/DigiCertAssuredIDRootCA.crt | HTTPS | 443 | Certificate Revocation Check |
-| Cloud Connectors | dl.cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `*.digicert.com` | HTTP | 80 | Certificate Revocation Check |
+| Cloud Connectors | `*.digicert.com` | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `dl.cacerts.digicert.com/DigiCertAssuredIDRootCA.crt` | HTTPS | 443 | Certificate Revocation Check |
+| Cloud Connectors | `dl.cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt` | HTTPS | 443 | Certificate Revocation Check |
 | Cloud Connectors | Cloud Connectors | TCP | 80 | Communication between controllers |
 | Cloud Connectors | Cloud Connectors | TCP | 89 | Local host cache |
 | Cloud Connectors | Cloud Connectors | TCP | 9095 | Orchestration service |
@@ -194,7 +194,7 @@ By using NSGs to allow only expected traffic in the Citrix Cloud environment, yo
 | Cloud Connector | VDA | TCP | 80 (bidirect) | Application and performance discovery |
 | VDA | Gateway Service | TCP | 443 | Rendezvous Protocol |
 | VDA | Gateway Service | UDP | 443 | EDT UDP over 443 to Gateway Service |
-| VDA | \*.nssvc.net <br> \*.c.nssv.net <br> \*.g.nssv.net | TCP UDP | 443 | Gateway service domains and subdomains |
+| VDA | `*.nssvc.net` <br> `*.c.nssv.net` <br> `*.g.nssv.net` | TCP UDP | 443 | Gateway service domains and subdomains |
 | Citrix Provisioning Services | Cloud Connectors | HTTPS | 443 | Citrix Cloud Studio integration |
 | Citrix License Server | Citrix Cloud | HTTPS | 443 | Citrix Cloud Licensing integration |
 | CVAD Remote PowerShell SDK | Citrix Cloud | HTTPS | 443 | Any system running remote PowerShell scripts via the SDK |

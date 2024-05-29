@@ -41,7 +41,7 @@ Notice that *process modernization* is listed with every modernization motivatio
 
 ## Add modernization strategies
 
-With the modernization strategies identified, it's time to update the modernization update. your workload table with modernization strategies by adding the modernization strategies you identified in step 1 with the table you created in the [envision step of business alignment](../business-alignment/envision-cloud-modernization.md) (*see the following example*).
+With the modernization strategies identified, it's time to update the modernization update. Your workload table with modernization strategies by adding the modernization strategies you identified in step 1 with the table you created in the [envision step of business alignment](../business-alignment/envision-cloud-modernization.md) (*see the following example*).
 
 |Business function<span title="Business Function">&nbsp;</span> |Workload <span title="Supporting IT Assets">&nbsp;</span> |Motivation<span title="Motivation">&nbsp;</span> |Modernization Strategy
 | --- | --- | --- | --- |
