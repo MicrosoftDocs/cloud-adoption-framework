@@ -34,7 +34,7 @@ As you work your way through the Ready guide, consider your progress as a contin
   - [Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
 - Subscription landing zone vending process
   - [Vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
-  - [Vending module (Bicep)](https://github.com/Azure/bicep-lz-vending)
+  - [Vending module (Bicep)](https://aka.ms/lz-vending/bicep)
 - Deploy workload landing zone components
   - [Cloud adoption scenarios and related accelerators](/azure/cloud-adoption-framework/scenarios/overview#scenarios-to-support-your-cloud-adoption-strategy)
 
