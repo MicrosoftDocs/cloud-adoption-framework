@@ -15,6 +15,26 @@ This article describes how you can improve business continuity and disaster reco
 
 ## Design Considerations
 
+### Recovery time objectives (RTO)
+
+A recovery time objective is the amount of time it should take to recover any system to its state prior to a disaster. This would include the time needed to:
+
+- restore minimal functionality to VMs and applications
+- restore data required by applications.
+
+In business terms, RTO represents the amount of time that business processes are out of service. For mission-critical workloads, this variable should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
+
+A business should create a management baseline that establishes a standard RTO for non-mission-critical workloads. The business can then use that baseline as a way to justify additional investments in recovery times.
+
+### Recovery point objectives (RPO)
+
+In most cloud management systems, some form of data protection periodically captures and stores data. The recovery point refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
+
+The recovery point objective is measured from the most recent recovery point to an outage. If the RPO is measured in hours, a system failure results in the loss of data for the hours between the last recovery point and the outage. If the RPO is measured in days, a system failure results in the loss of data for the days between the last recovery point and the outage. A one-day RPO would theoretically result in the loss of all transactions in the day leading up to the failure.
+
+For mission-critical systems, measuring an RPO in minutes or seconds might help avoid loss in revenue or profits. However, a shorter RPO generally results in increased management costs. To help minimize these costs, a business should create a management baseline that focuses on the longest acceptable RPO. The business can then decrease the RPO of the specific platforms or workloads that warrant more investment.
+
+
 ### Workload BCDR Considerations
 
 High availability and disaster recovery design considerations for Red Hat Enterprise Linux based workloads is dependent on the technologies supporting those workloads. Many modern workloads can take advantage of native Azure services to provide redundancy across availability zone and across regions. Azure’s sophisticated services for managing data replication, autoscaling of availability sets and control of update and fault domains make ensuring the availability of RHEL deployments simpler. Database solutions and other stateful applications may need operating system centric solutions to provide high availability and disaster recovery. It's important to work with the application developer or vendor to verify applicable solutions for those applications. For general Azure BCDR guidance, see [High availability and disaster recovery for IaaS apps](/azure/architecture/example-scenario/infrastructure/iaas-high-availability-disaster-recovery).
@@ -54,6 +74,10 @@ For many traditional stateful applications that require high availability, Red H
 
 Availability issues aren't limited to service outages, but also service response time. Service degradation can occur and your customer’s service experience may be degraded. To ensure performance levels are maintained, the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature can be used to ensure sufficient capacity within the required regions.
 
+### Reliability
+
+Many of the concepts that apply to IaaS VM infrastructures also apply to Red Hat Enterprise Linux architectures. For more details, please see [Reliability design principles](https://learn.microsoft.com/en-us/azure/well-architected/reliability/principles).
+
 ### Clusters
 
 Azure currently doesn't support combining ASCS (Application Server Central Services) and database high availability within a single Red Hat Enterprise Linux pacemaker cluster. To address this limitation, separate them into individual clusters. However, you can still combine up to [five central services clusters](/azure/sap/workloads/high-availability-guide-suse-multi-sid?tabs=ensa1) in a pair of virtual machines (VMs).
@@ -80,6 +104,8 @@ Note: recommended practice is to have at least two galleries, in different regio
 ### Azure Site Recovery
 
 [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can enhance the resilience of some RHEL components. For a list of supported RHEL site recovery servers see: [Support matrix for Azure VM disaster recovery with Azure Site Recovery](/azure/site-recovery/azure-to-azure-support-matrix#linux). Azure Site Recovery can also be set up as a [failover from on-premises to the cloud](/azure/site-recovery/failover-failback-overview-modernized).  
+
+### Recovery Cluster Nodes
 
 You can also reduce Recovery Time Objectives (RTOs) and increase resilience by using Active/Standby remote [recovery cluster](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. A disaster recovery cluster doesn't set up resources or copy data by itself. The user must configure those items manually. 
 
