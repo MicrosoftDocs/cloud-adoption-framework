@@ -1,5 +1,5 @@
 ---
-title: Responsible AI considerations for generative AI
+title: Plan to incorporate Responsible AI practices
 description: Learn about the importance of responsible AI considerations when adopting generative AI in your organization.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Responsible AI
+# Plan to incorporate Responsible AI practices
 
 > TBD - Intro.
 > Repurpose Innovate content.
