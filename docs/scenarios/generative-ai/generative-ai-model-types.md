@@ -19,4 +19,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Strategic impact of generative AI in Azure](./strategy.md)
+> [Embrace responsible AI](./responsible-ai.md)

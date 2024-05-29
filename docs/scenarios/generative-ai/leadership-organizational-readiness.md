@@ -1,6 +1,6 @@
 ---
 title: Leadership and organizational readiness for generative AI
-description: Establish an AI vision and strategy by considering key factors such as business justification, organizational readiness, business impact, and business goals.
+description: Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/29/2024
@@ -106,7 +106,7 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 
 ## Next steps
 
-The following list of articles takes you to the guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+Understand your options for buying, building, or blending generative AI solutions on Azure.
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [Buy, Build, or Blend](./buy-build-blend.md)

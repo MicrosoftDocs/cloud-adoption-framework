@@ -21,5 +21,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Can you vs. should you?
 
+## Next steps
+
 > [!div class="nextstepaction"]
-> [Strategic impact of generative AI in Azure](./strategy.md)
+> [Skills readiness plan for AI](./skills-readiness-ai.md)

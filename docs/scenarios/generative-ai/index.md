@@ -28,7 +28,7 @@ We also talk about the business justifications, building a strategy, and the tec
 
 ## Next steps
 
-Before diving into the details about building a generative AI strategy for your business, you must understand whether to buy or build.
+Before diving into the details about building a generative AI strategy for your business, you should establish clear business justifications and goals for your organization.
 
 > [!div class="nextstepaction"]
-> [Buy, Build, or Blend AI](./buy-build-blend.md)
+> [Business justification and goals for generative AI](./business-justification-goals.md)

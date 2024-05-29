@@ -48,8 +48,7 @@ Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training re
 | [Career Essentials in Generative AI by Microsoft and LinkedIn](https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin) | Discover the skills needed to apply generative AI in your career. Learn the core concepts of artificial intelligence and generative AI functionality. | - Leadership<br> - Tech specialists<br> - End users |
 | [Generative AI for Beginners - A Course](https://microsoft.github.io/generative-ai-for-beginners/) | Learn the fundamentals of building Generative AI applications with this comprehensive course by Microsoft Cloud Advocates. | - Tech specialists |
 
-
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [AI Center of Excellence](./ai-center-of-excellence.md)

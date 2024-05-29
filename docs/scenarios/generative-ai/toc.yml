@@ -13,13 +13,12 @@ items:
       href: buy-build-blend.md
     - name: Understanding types of generative AI models
       href: generative-ai-model-types.md
-    href: strategy.md
   - name: Planning
     items:
     - name: Embrace responsible AI
       href: responsible-ai.md
     - name: Skills readiness plan for AI
-      href: skills-readiness-plan-ai.md
+      href: skills-readiness-ai.md
     - name: AI Center of Excellence
       href: ai-center-of-excellence.md
   - name: Prepare your environments

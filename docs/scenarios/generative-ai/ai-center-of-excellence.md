@@ -1,6 +1,6 @@
 ---
 title: Planning for generative AI
-description: Define and identify the requirements to implement generative AI in your organization, and create a plan to acquire the necessary skills.
+description: Learn how to plan for generative AI adoption in your organization by establishing an AI Center of Excellence and planning for an initial AI adoption budget.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/21/2024

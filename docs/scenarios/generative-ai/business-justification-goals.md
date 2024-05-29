@@ -1,6 +1,6 @@
 ---
 title: Business justification and goals for generative AI
-description: Establish an AI vision and strategy by considering key factors such as business justification, organizational readiness, business impact, and business goals.
+description: Establish a generative AI strategy by understanding the potential benefits of generative AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/29/2024
@@ -148,7 +148,7 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 
 ## Next steps
 
-The following list of articles takes you to the guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
+To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
 
 > [!div class="nextstepaction"]
-> [Planning for generative AI](./plan.md)
+> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md)
