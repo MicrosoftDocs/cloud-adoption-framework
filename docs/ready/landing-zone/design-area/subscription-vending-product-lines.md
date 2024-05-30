@@ -13,9 +13,6 @@ As outlined in the [Subscription vending](/azure/cloud-adoption-framework/ready/
 
 Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments. It also helps organizations align to the [platform engineering principles](/platform-engineering/about/principles) of ["Adopt a product mindset"](/platform-engineering/about/product-mindset) and ["Empower developers through self-service with guardrails"](/platform-engineering/about/self-service).
 
-> [!TIP]
-> The Azure Landing Zones team have published a YouTube video that is also useful to review when looking at this topic [Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
-
 :::image type="content" source="./media/sub-vend-product-line0.png" alt-text="Diagram showing the subscription vending process in the context of Azure Landing Zones." lightbox="./media/sub-vend-product-line0.png" border="false":::
 
 Some questions you may have when deciding on the approach to implement subscription vending in your organization are:
@@ -29,14 +26,6 @@ Some questions you may have when deciding on the approach to implement subscript
 There's no single answer and no single type nor style of subscription that can be vended to address the unique requirements of every application and platform team. Therefore, platform teams must provide application teams with flexibility through choice of multiple types and styles of subscriptions that can be vended to them via a self-service system. These types of subscriptions are referred to as product lines.
 
 Continue reading to learn why different product lines are required and examples of common product lines used through Azure landing zones and subscription vending.
-
-> [!NOTE]
-> Review [Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones) to gain further understanding as to their differences and also the different management approaches for application landing zones.
-
-> [!TIP]
-> Azure policy is a key service used in Azure Landing Zones to help govern and secure application landing zone subscriptions at scale.
->  
-> Azure Landing Zones provides a baseline of policy definitions, initiatives, and assignments to help customers get started in the cloud adoption journey; these are documented here [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
 
 ## Why do we need different product lines?
 
@@ -63,9 +52,6 @@ These common subscription vending product lines should be used by platform teams
 
 > [!NOTE]
 > These are only examples and should be used as a starting point for organizations. They can of course be customized and expanded to cater to the needs of each organization.
-
-> [!TIP]
-> Platform teams should review [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz) and implement any changes to their architecture to support any product lines they decide to implement based on their organization's needs.
 
 Common product lines for subscription vending are:
 
@@ -159,10 +145,7 @@ If Resource group delegation in a single Subscription between multiple teams is 
 | Azure Services & Feature Alignment | While services that provide basic Azure service primitives, such as Virtual Machines, Virtual Networks, and simple PaaS services, can be deployed within a single Resource Group, the complexity of modern composite offerings can require that these more complex services be deployed outside the boundaries of a single Resource Group. These deployment scenarios are better suited for the other subscription democratized approaches outlined above. |
 | Restricting Resource Group Creation to Platform Teams Only | When sharing a subscription between different application teams across different business units/departments, it's common to restrict any team from being able to create new Resource Groups in the shared subscription. <br><br> This restriction is intended to limit resource group sprawl and new resource groups are created and governed solely by the platform team. <br><br> This approach increases the complexity of RBAC assignments and places an increased dependency on platform teams to manage application deployments, which can impede the agility and empowerment of application teams. |
 
-> [!NOTE]
-> Even though this is a different product line, the subscriptions vended using this product line would still be placed under the either the Corp or Online Management Groups from the Azure Landing Zones default recommended hierarchy.
->
-> Alternatively, they might be placed beneath new Management Groups in an organizations Management Group hierarchy that is following the guidance in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
+Even though this is a different product line, the subscriptions vended using this product line would still be placed under the either the Corp or Online Management Groups from the Azure Landing Zones default recommended hierarchy. Alternatively, they might be placed beneath new Management Groups in an organizations Management Group hierarchy that is following the guidance in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
 
 :::image type="content" source="./media/sub-vend-product-line3.png" alt-text="Diagram showing an example of the tech platform/shared application portfolio subscription vending product line" lightbox="./media/sub-vend-product-line3.png" border="false":::
 
@@ -197,6 +180,16 @@ Sandboxes often follow the networking configuration approach of the online produ
 
 - Just like the Shared Application/Department Workload/Tech Platform product line, the sandbox product line can also be shared among teams in the same department with the same considerations.
   - There shouldn't be a single or a few sandbox subscriptions that people are given access to resource groups in.
+
+## Additional resources
+
+Subscription vending can become a complicated and advanced area to implement within your organization however, we hope in this guidance we are able to provide clarity and practical steps to help you move towards implementing it. To further support this we have listed some additional resources that you should review when designing and implementing your subscription vending product lines and offerings in your organization:
+
+- [Video - Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
+- [Document - Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones)
+- [Document - Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
+- [Document - Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+- [Document - What is the purpose of Connectivity, Corp, and Online Management Groups?](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#what-is-the-purpose-of-connectivity-corp-and-online-management-groups)
 
 ## Next steps
 
