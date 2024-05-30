@@ -1,5 +1,5 @@
 ---
-title: Buy, Build, or Blend generative AI
+title: Buy, build, or blend generative AI
 description: Recommendations on how to decide whether to buy, build, or blend generative AI in your organization.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Buy, Build, or Blend generative AI
+# Buy, build, or blend generative AI
 
 ## Options for buying
 
