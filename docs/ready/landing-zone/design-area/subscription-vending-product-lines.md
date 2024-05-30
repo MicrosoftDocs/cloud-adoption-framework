@@ -180,9 +180,23 @@ Sandboxes often follow the networking configuration approach of the online produ
 - Just like the Shared Application/Department Workload/Tech Platform product line, the sandbox product line can also be shared among teams in the same department with the same considerations.
   - There shouldn't be a single or a few sandbox subscriptions that people are given access to resource groups in.
 
-## Additional resources
+## Summary and takeaways
 
-Subscription vending can become a complicated and advanced area to implement within your organization however, we hope in this guidance we are able to provide clarity and practical steps to help you move towards implementing it. To further support this we have listed some additional resources that you should review when designing and implementing your subscription vending product lines and offerings in your organization:
+Subscription vending can become a complicated and advanced area to implement within your organization however, we hope in this guidance we are able to provide clarity and practical steps to help you move towards implementing it. Now you have consumed all of the information and the five common subscription vending products detailed above, it is important to know where to begin in your subscription vending journey within your organization.
+
+Firstly it's important to understand what your application teams, across the organization, requirements actually are and of these requirements which subscription vending product line do they best fit into. Knowing this for the first sets of workloads looking to be built or migrated into your Azure environment, or at least the first five to ten workloads, will help you then prioritize which subscription vending product lines to enable and expose via a self-service interface first.
+
+Commonly we see customer look to enable the following subscription vending product lines initially, and then look to add the remaining or create their own later down the line as requirements from the organization evolve over time:
+
+- [Sandbox](#sandbox)
+- [Corp connected](#corp-connected)
+- [Online](#online)
+
+Use this as a starting point within your organization to get started with subscription vending and then evolve them or create and enable new ones as your application teams generate more requirements.
+
+### Additional resources
+
+To further support this we have listed some additional resources that you should review when designing and implementing your subscription vending product lines and offerings in your organization:
 
 - [Video - Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 - [Document - Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones)
