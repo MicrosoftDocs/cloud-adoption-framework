@@ -9,15 +9,21 @@ ms.topic: conceptual
 
 # Establish common subscription vending product lines
 
+Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments. It also helps organizations align to the [platform engineering principles](/platform-engineering/about/principles) of ["Adopt a product mindset"](/platform-engineering/about/product-mindset) and ["Empower developers through self-service with guardrails"](/platform-engineering/about/self-service).
+
 Many organizations struggle to provide their application teams with the flexibility they need to deliver their workloads and services effectively. One key obstacle is the lack of a standardized approach to [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending), which can lead to confusion, delay, and inefficiency.
 
 In this article, we'll explore how platform teams can establish common subscription vending product lines that cater to the diverse needs of various application teams. We'll discuss the benefits of offering different product lines, provide examples of common scenarios (based on real customer deployments), and we'll also discuss why a there is "no one size fits all" in subscription vending and why you must provide different product lines to application teams.
 
-Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments. It also helps organizations align to the [platform engineering principles](/platform-engineering/about/principles) of ["Adopt a product mindset"](/platform-engineering/about/product-mindset) and ["Empower developers through self-service with guardrails"](/platform-engineering/about/self-service).
-
 :::image type="content" source="./media/sub-vend-product-line0.png" alt-text="Diagram showing the subscription vending process in the context of Azure Landing Zones." lightbox="./media/sub-vend-product-line0.png" border="false":::
 
-Some questions you are likely to have when deciding on the approach to implement subscription vending in your organization are:
+Continue reading to learn why different product lines are required and examples of common product lines used by customers with Azure landing zones and subscription vending.
+
+## Why do we need different product lines?
+
+There's no "one size fits all" for the types and styles of subscriptions that application teams require to deliver their workloads and services. And outside of application teams there will be other requirements, such as different compliance and data handling rules or architecture patterns, from your organization that requires the use of an Azure Subscription. 
+
+Some common questions you are likely to have when deciding on the approach to design and implement subscription vending in your organization are:
 
 - "What other resources should the platform team vend as part of the subscription vending process?"
 - "Do we deploy multiple subscriptions, such as one per environment, by default for each application team?"
@@ -27,18 +33,9 @@ Some questions you are likely to have when deciding on the approach to implement
 
 There's no single answer and no single type nor style of subscription that can be vended to address the unique requirements of every application and platform team. Therefore, platform teams must provide application teams with flexibility through choice of multiple types and styles of subscriptions that can be vended to them via a self-service system. These types of subscriptions are referred to as product lines.
 
-Continue reading to learn why different product lines are required and examples of common product lines used by customers with Azure landing zones and subscription vending.
-
-## Why do we need different product lines?
-
-There's no "one size fits all" for the types and styles of subscriptions that application teams require to deliver their workloads and services. And outside of application teams there will be other requirements, such as different compliance and data handling rules or architecture patterns, from your organization that requires the use of an Azure Subscription.
-
 Organizations that only provide a "one size fits all" approach to subscription vending often have their internal customers (for example, application teams) be limited by the lack of flexibility that might affect their architecture design choices and potentially lead to compromises, due to what they have had vended to them.
 
 Therefore, platform teams need to provide various product lines (for example, types/styles of subscriptions to be vended) to their organization to ensure that the consumers can choose the best fit product line based upon their requirements.
-
-> [!TIP]
-> Review the [Prioritize Customers Platform Engineering principle](/platform-engineering/about/customers) to further understand why this topic is important for platform teams to provide flexibility.
 
 ### Manage different application environments (dev/test/prod)
 
