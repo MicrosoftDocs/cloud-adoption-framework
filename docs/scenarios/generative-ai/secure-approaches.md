@@ -1,5 +1,5 @@
 ---
-title: Secure principles for generative AI in Azure
+title: Secure approaches for generative AI in Azure
 description: Learn how to embrace a secure approach to generative AI by following the Microsoft Cloud Adoption Framework.
 ms.author: tozimmergren
 author: Zimmergren
