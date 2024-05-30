@@ -113,12 +113,17 @@ A great way to think about the online application landing zone product line is i
 
 ### Tech platform
 
-The tech platform product line provides technology platform focused teams, such as App Service Environments, Azure Kubernetes Service, Azure VMware Service, Azure Virtual Desktop, a subscription vending product line that better suits their requirements. It allows these teams to host and manage complex workloads that, in turn, commonly host multiple related applications for other application teams across your organization.
+The tech platform product line provides technology platform focused teams, such as Azure VMware Service or Azure Virtual Desktop, a subscription vending product line that better suits their requirements. It allows these teams to host and manage these typically larger and more complex workloads that, in turn, host multiple applications for several other application teams across the organization; where the application team only managed the application parts and not the underlying technology platform pieces.
 
 > [!TIP]
 > One way to understand this product line is that the technology platform team, for example AKS, aim to offer "AKS-as-a-service" (or product according to platform engineering terms) to other applications teams who need to run their applications on the AKS platform but leave the management, maintenance, security and configuration of AKS itself to the tech platform team for AKS; while the app team only has to care about their application and deploying it on the platform.
 
-Examples include ASE (typically via separate App Services Plans), AKS (typically via namespaces), VMs on AVS clusters and AVD providing virtual desktops or applications to an entire organization.
+Examples include:
+
+- App Service Environments (ASEs) - typically via separate App Services Plans
+- Azure Kubernetes Services (AKS) - typically via namespaces within one or more clusters
+- Virtual Machines on Azure VMware Service clusters/hosts
+- Azure Virtual Desktop providing virtual desktops or applications to an entire organization.
 
 These can also use either [Corp Connected](#corp-connected) or [Online](#online) product lines in relation to networking depending upon the requirements for the technology platform that the team wishes to provide as a service to other application teams in the organization.
 
