@@ -9,13 +9,15 @@ ms.topic: conceptual
 
 # Establish common subscription vending product lines
 
-As outlined in the [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) guidance, most customers aspire to be able to allow application teams to be able to request and gain access to newly provisioned Azure Subscriptions to use as their application landing zones to host their workloads and services within, via a self-service process and supporting tooling and automation. However, most organizations struggle to get started enabling a self-service subscription vending process and either get stuck in an analysis process on what scenarios to enable or they only enable one single scenario as a "one size fits all" approach; neither of which are sufficient for their organizations. This guidance helps platform teams understand common scenarios that can be adopted from the start of their subscription vending journey and expanded upon in the future; all of which are based upon real customers usage.
+Many organizations struggle to provide their application teams with the flexibility they need to deliver their workloads and services effectively. One key obstacle is the lack of a standardized approach to [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending), which can lead to confusion, delay, and inefficiency.
+
+In this article, we'll explore how platform teams can establish common subscription vending product lines that cater to the diverse needs of various application teams. We'll discuss the benefits of offering different product lines, provide examples of common scenarios (based on real customer deployments), and we'll also discuss why a there is "no one size fits all" in subscription vending and why you must provide different product lines to application teams.
 
 Subscription vending helps organizations achieve the [subscription democratization design principle](/azure/cloud-adoption-framework/ready/landing-zone/design-principles#subscription-democratization) of Azure Landing Zones, which is critical to consistent scale, security and governance of Azure environments. It also helps organizations align to the [platform engineering principles](/platform-engineering/about/principles) of ["Adopt a product mindset"](/platform-engineering/about/product-mindset) and ["Empower developers through self-service with guardrails"](/platform-engineering/about/self-service).
 
 :::image type="content" source="./media/sub-vend-product-line0.png" alt-text="Diagram showing the subscription vending process in the context of Azure Landing Zones." lightbox="./media/sub-vend-product-line0.png" border="false":::
 
-Some questions you may have when deciding on the approach to implement subscription vending in your organization are:
+Some questions you are likely to have when deciding on the approach to implement subscription vending in your organization are:
 
 - "What other resources should the platform team vend as part of the subscription vending process?"
 - "Do we deploy multiple subscriptions, such as one per environment, by default for each application team?"
@@ -25,7 +27,7 @@ Some questions you may have when deciding on the approach to implement subscript
 
 There's no single answer and no single type nor style of subscription that can be vended to address the unique requirements of every application and platform team. Therefore, platform teams must provide application teams with flexibility through choice of multiple types and styles of subscriptions that can be vended to them via a self-service system. These types of subscriptions are referred to as product lines.
 
-Continue reading to learn why different product lines are required and examples of common product lines used through Azure landing zones and subscription vending.
+Continue reading to learn why different product lines are required and examples of common product lines used by customers with Azure landing zones and subscription vending.
 
 ## Why do we need different product lines?
 
@@ -190,6 +192,8 @@ Subscription vending can become a complicated and advanced area to implement wit
 - [Document - Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
 - [Document - Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
 - [Document - What is the purpose of Connectivity, Corp, and Online Management Groups?](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#what-is-the-purpose-of-connectivity-corp-and-online-management-groups)
+- [Document - Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments)
+- [Document - Platform engineering principles](/platform-engineering/about/principles)
 
 ## Next steps
 
