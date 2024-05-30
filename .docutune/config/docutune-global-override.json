@@ -1,6 +1,7 @@
 {
   "RemoveTermSets": [
     "casing-quotations",
+    "*cloudsimple*",
     "*-llm-*"
   ]
 }
