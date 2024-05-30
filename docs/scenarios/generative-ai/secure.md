@@ -1,14 +1,24 @@
 ---
 title: Securing generative AI in Azure
-description: Learn how to secure generative AI in Azure by following the shared responsibility model, securing your data and models, and protecting and recovering your data.
+description: Learn how to secure generative AI by following the secure considerations from the Cloud Adoption Framework.
 ms.author: tozimmergren
 author: Zimmergren
-ms.date: 05/21/2024
+ms.date: 05/30/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
 # Securing generative AI in Azure
+
+## Checklist
+
+The following table provides an overview of the secure methodology and how it applies to generative AI.
+
+|Topic|Description|
+|---|---|---|
+|[Secure principles](./secure-principles.md)|Considerations for applying the CAF Secure methodology principles to generative AI investments.|
+|[Secure approaches](./secure-approaches.md)|Learn how to approach security efforts for generative AI projects.|
+|[Secure preparedness](./secure-preparedness.md)|Learn how to embrace security preparedness for  generative AI projects.|
 
 ## Shared responsibility
 
@@ -16,23 +26,7 @@ Much like the traditional [shared responsibility model in the cloud](/azure/secu
 
 ![A diagram showing the shared responsibility model for AI in Azure.](./media/ai-shared-responsibility.svg)
 
-## Secure your data
-
-### Data access
-
-### Anonymization/pseudonymization
-
-## Secure your model
-
-### What are guardrails?
-
-### Attack types and their risks
-
-## Protect and recover
-
-### Backup
-
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Organizational considerations for generative AI adoption](./organize.md)
+> [Secure principles](./secure-principles.md)

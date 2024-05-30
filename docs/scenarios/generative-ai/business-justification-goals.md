@@ -3,7 +3,7 @@ title: Business justification and goals for generative AI
 description: Establish a generative AI strategy by understanding the potential benefits of generative AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/29/2024
+ms.date: 05/30/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -70,7 +70,7 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 
 - How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
 - To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
-- To what extent is your organization open to the changes that AI adoption may bring to existing processes and workflows?
+- To what extent is your organization open to the changes that AI adoption might bring to existing processes and workflows?
 - How are changes from adopting generative AI communicated (change communication/change management)
 - How effectively is the AI strategy and its benefits communicated across all levels of the organization?
 

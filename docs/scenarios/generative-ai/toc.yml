@@ -3,32 +3,38 @@ items:
     href: index.md
   - name: Strategy
     items:
-    - name: Business justification and goals
+    - name: Business justification
       href: business-justification-goals.md
-    - name: Understanding generative vs. traditional AI
+    - name: Generative vs. traditional AI
       href: generative-vs-traditional-ai.md
-    - name: Leadership and organizational readiness
+    - name: Organizational readiness
       href: leadership-organizational-readiness.md
-    - name: Buy, Build, or Blend
+    - name: Buy, build, or blend
       href: buy-build-blend.md
-    - name: Understanding types of generative AI models
+    - name: Generative AI model types
       href: generative-ai-model-types.md
-  - name: Planning
+  - name: Plan
     items:
     - name: Embrace responsible AI
       href: responsible-ai.md
-    - name: Skills readiness plan for AI
+    - name: Skills readiness
       href: skills-readiness-ai.md
     - name: AI Center of Excellence
       href: ai-center-of-excellence.md
-  - name: Prepare your environments
+  - name: Prepare your environment
     items: 
     - name: Azure landing zones
       href: ready.md
   - name: Secure
-    href: secure.md
-  - name: Organize
-    href: organize.md
+    items:
+      - name: Overview
+        href: secure.md
+      - name: Principles
+        href: secure-principles.md
+      - name: Approaches
+        href: secure-approaches.md
+      - name: Preparedness
+        href: secure-preparedness.md
   - name: Govern
     href: govern.md
   - name: Manage
