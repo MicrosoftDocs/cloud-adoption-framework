@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 Network topology is a critical element of a landing zone architecture because it defines how applications can communicate with one another. This section explores technologies and topology approaches for Azure deployments. It focuses on two core approaches: topologies that are based on Azure Virtual WAN and traditional topologies.
 
-## Azure Virtual WAN topologies
+## Virtual WAN network topology
 
 You can use [Virtual WAN to meet large-scale interconnectivity requirements](../azure-best-practices/virtual-wan-network-topology.md). Virtual WAN is a service that Microsoft manages, which reduces overall network complexity and helps to modernize your organization's network. Use a Virtual WAN topology if any of the following requirements apply to your organization:
 
