@@ -131,7 +131,7 @@ The application team should have autonomy to create the resources they need for 
 
 ## Next steps
 
-For the best results, you should automate as much of the subscription vending process as possible. Use the companion guidance on implementing subscription vending automation.
+You should now review the different types of subscriptions (product lines) that you can vend to application teams to establish a great starting point for being able to cater for a number of differing scenarios.
 
 > [!div class="nextstepaction"]
-> [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending)
+> [Establish common subscription vending product lines](./subscription-vending-product-lines.md)
