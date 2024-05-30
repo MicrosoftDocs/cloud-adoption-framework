@@ -1,6 +1,6 @@
 ---
 title: Secure principles for generative AI in Azure
-description: Learn how to secure generative AI in Azure by following the shared responsibility model, securing your data and models, and protecting and recovering your data.
+description: Learn how to embrace a secure approach to generative AI by following the Microsoft Cloud Adoption Framework.
 ms.author: tozimmergren
 author: Zimmergren
 ms.date: 05/30/2024

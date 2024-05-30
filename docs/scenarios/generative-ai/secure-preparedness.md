@@ -1,5 +1,5 @@
 ---
-title: Secure principles for generative AI
+title: Secure preparedness for generative AI
 description: Learn how to secure generative AI by following the preparedness considerations and recommendations for generative AI.
 ms.author: tozimmergren
 author: Zimmergren
