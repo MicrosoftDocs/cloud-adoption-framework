@@ -13,7 +13,7 @@ items:
       href: buy-build-blend.md
     - name: Generative AI model types
       href: generative-ai-model-types.md
-  - name: Planning
+  - name: Plan
     items:
     - name: Embrace responsible AI
       href: responsible-ai.md
@@ -21,14 +21,20 @@ items:
       href: skills-readiness-ai.md
     - name: AI Center of Excellence
       href: ai-center-of-excellence.md
-  - name: Prepare your environments
+  - name: Prepare your environment
     items: 
     - name: Azure landing zones
       href: ready.md
   - name: Secure
-    href: secure.md
-  - name: Organize
-    href: organize.md
+    items:
+      - name: Overview
+        href: secure.md
+      - name: Principles
+        href: secure-principles.md
+      - name: Approaches
+        href: secure-approaches.md
+      - name: Preparedness
+        href: secure-preparedness.md
   - name: Govern
     href: govern.md
   - name: Manage
