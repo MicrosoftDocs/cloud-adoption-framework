@@ -96,8 +96,7 @@ For large scale deployments it is highly recommended to create dedicated shared 
 * *(B) Peering with shared resources spoke:*  Ensure your hub virtual network is peered with the shared resources spoke to provide [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
 * **(C)** Shared resource spoke virtual networks, hosts all required and optional the Citrix components as well as shares services e.g. Profile storage accounts, Azure Compute Galleries. To minimize latency and improve performance these networks are peered directly with the VDA spokes. 
 * **(D)** VDA workload spokes, host only the VDAs. All east-west management and profile traffic is routed directly to the shared resource spoke; all north-south traffic is routed to the hub virtual network.
-* **(E)** Azure Compute Gallery Version Replicas. 
-[Azure Compute Gallery](https://learn.microsoft.com/en-us/azure/virtual-machines/azure-compute-gallery#scaling) allows you to specify the number of replicas you want to keep. In multi-VM deployment scenarios the VM deployments can be spread to different replicas reducing the chance of instance creation processing being throttled due to overloading of a single replica.
+* *(E) Azure Compute Gallery version replicas:* Specify the number of replicas you want to keep in the [Azure Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas to reduce the chance of instance creation processing being throttled due to overloading of a single replica.
 
 ## Contributors
 
