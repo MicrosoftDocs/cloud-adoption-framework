@@ -3,14 +3,13 @@ title: Skills readiness plan for generative AI
 description: Define and identify the requirements to implement generative AI in your organization, and create a plan to acquire the necessary skills.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/21/2024
+ms.date: 05/31/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
 
 # Skills readiness plan for generative AI
-
 
 ## Define a skills readiness plan
 

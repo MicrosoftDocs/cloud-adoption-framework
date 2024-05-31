@@ -23,9 +23,18 @@ You've identified the potential benefits of generative AI and have a clear visio
 > "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 
+### Risks
+
+If you don't have leadership buy-in for your AI adoption plans, it can result in several significant risks. Here are a few examples:
+
+- **Lack of strategic alignment**: It can be challenging to align your AI initiatives with your organization's strategic goals. A consequence might be that you're not delivering on measurable or long-term business goals.
+- **Lack of resources**: AI projects can require significant investments in resources, technology, talent, and time. Securing the required resources might not be possible without leadership buy-in. A consequence might be that you're not able to execute on your AI initiatives with the required quality or speed.
+- **Lack of adaptability**: If leadership buy-in doesn't exist, employees might resist AI adoption due to lack of unclear benefits. This can result in a lack of adaptability to change, which can hinder the success of your AI initiatives.
+- **Lack of competitive advantage**: Without leadership support, the organization might lag behind competitors who are successfully adopting AI to imrpove their efficiency, innovation, and customer insights.
+
 Consider the importance of getting early buy-in from stakeholders and leadership to ensure the success of your generative AI initiatives.
 
-**Recommendations:**
+### Recommendations
 
 - **Consider AI in decision-making**
   - Regularly communicate the strategic importance of AI to the entire organization.
