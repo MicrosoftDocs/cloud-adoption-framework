@@ -63,6 +63,19 @@ Consider the importance of organizational alignment:
 
 To learn more about the required skills, see [Skills readiness plan for AI](./skills-readiness-ai.md)
 
+## Change management and communication
+
+- How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
+- To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
+- To what extent is your organization open to the changes that AI adoption might bring to existing processes and workflows?
+- How are changes from adopting generative AI communicated (change communication/change management)
+- How effectively is the AI strategy and its benefits communicated across all levels of the organization?
+
+## Foster a positive culture
+
+- How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
+- How supportive is your leadership in driving the AI adoption initiative within the organization?
+
 ## Encourage an adaptable strategy
 
 With the fact-paced evolution of AI technologies, it's important to establish an adaptable AI strategy that can evolve with the technology and the business needs. This strategy should be aligned with the overall business strategy and should be able to adapt to changes in the business environment.
