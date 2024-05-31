@@ -1,5 +1,5 @@
 items:
-  - name: Generative AI adoption in Azure
+  - name: Artificial Intelligence adoption in Azure
     href: index.md
   - name: Strategy
     items:
@@ -21,9 +21,13 @@ items:
       href: skills-readiness-ai.md
     - name: AI Center of Excellence
       href: ai-center-of-excellence.md
-  - name: Prepare your environment
+  - name: Ready
     items: 
-    - name: Azure landing zones
+    - name: SaaS
+      href: ready.md
+    - name: PaaS
+      href: ready.md
+    - name: IaaS
       href: ready.md
   - name: Secure
     items:
