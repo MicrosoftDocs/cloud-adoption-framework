@@ -10,20 +10,20 @@ ms.custom: internal
 
 # DevOps considerations
 
-This article provides considerations and recommendations for DevOps in Azure Landing Zones.
+This article provides considerations and recommendations for DevOps in Azure landing zones.
 
 ## What is DevOps
 
 DevOps is the union of people, processes, and technology that provides continuous value to development (dev) and operations (ops). The DevOps approach encourages team collaboration that creates repeatable processes to help organizations operate efficiently and at scale.
 
-In the context of Azure Landing Zones, DevOps becomes the framework that guides your team (or teams) responsible for your entire Azure Landing Zones lifecycle management in areas such as:
+In the context of Azure landing zones, DevOps becomes the framework that guides your team (or teams) responsible for your entire Azure landing zones lifecycle management in areas such as:
 
 - How to self-organize and define boundaries with other teams to achieve the appropriate balance between autonomy and governance
-- How to continuously evolve Azure Landing Zone architecture design [(Conway's Law)](devops-teams-topologies.md)
-- How to plan, prioritize and iterate the implementation of the designed Architecture
-- How to implement version control, continuous integration and continuous deployment for Azure Landing Zone code
+- How to continuously evolve Azure landing zone architecture design [(Conway's Law)](devops-teams-topologies.md)
+- How to plan, prioritize and iterate the implementation of the designed architecture
+- How to implement version control, continuous integration and continuous deployment for Azure landing zone code
 - How to operate and respond to incidents for systems and platforms you own
-- The level of automation you apply to Azure Landing Zone provisioning and self-healing
+- The level of automation you apply to Azure landing zone provisioning and self-healing
 - How to collaborate with other teams in your organization in an agile, outcome-oriented way
 - How to create a generative culture of security, quality, user-centricity and continuous learning
 
@@ -37,7 +37,7 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
-- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure Landing Zone or workload deployments.
+- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure landing zone or workload deployments.
 
 - Evaluate the effect that your implemented DevOps practices and DevOps tools have on the design of your Azure Landing Zones.
 
@@ -78,11 +78,11 @@ To establish your DevOps framework, consider using the frameworks that are alrea
     - [Continuous Improvement](/training/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
     - [Continuous Collaboration](/training/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
 
-### Define DevOps practices for your Azure Landing Zones management
+### Define DevOps practices for your Azure landing zones management
 
-Consider the following DevOps practices for your Azure Landing Zones:
+Consider the following DevOps practices for your Azure landing zones:
 
-- Review how to [manage the development lifecycle of Azure Landing Zones as code](./development-strategy-development-lifecycle.md).
+- Review how to [manage the development lifecycle of Azure landing zones as code](./development-strategy-development-lifecycle.md).
 - Review [security considerations](./security-considerations-overview.md) for Azure Landing Zones in the DevOps space.
 
 ### Plan your DevOps implementation journey
@@ -91,7 +91,7 @@ Define and align your DevOps implementation journey with your organization's [cl
 
 - Determine where your team is today in the following areas:
   - DevOps practices your team has adopted for Azure Landing Zones management.
-    - Use tools like [DevOps Self-assessment](https://devopsassessment.net/) to assess the current state of your team's DevOps status.
+    - Use tools like the [DevOps Capability Assessment](/assessments/56ec577c-acb6-4c7b-ad13-e224b0846153/) to assess the current state of your team's DevOps status.
   - Current team [structure](../../organize/index.md#structure-type), including [roles and responsibilities](../../organize/raci-alignment.md) and owned [cloud functions](../../organize/index.md#understand-required-cloud-functions).
   - What [technical skills](../suggested-skills.md) your team has.
   - Which [cloud operations model](../../operating-model/define.md) your team currently follows.
@@ -135,11 +135,13 @@ Use the [DevOps framework](#define-your-devops-framework) that you previously de
 
 Examples of DevOps technologies across different DevOps stages include:
 
-- **Planning:** Azure Boards, GitHub, Atlassian Jira, Trello
-- **Continuous Integration:** Azure Repos, GitHub Repos, Atlassian Bitbucket, SonarQube, Selenium, Cucumber, OWASP ZA, NuGet, npm
-- **Continuous Delivery:** Azure Pipelines, GitHub Actions, Bicep, Terraform, Jenkins, Atlassian Bamboo, RedHat Ansible, Chef, Puppet
-- **Operations:** Azure Monitor, Azure Automation, Microsoft Power BI, Grafana, Splunk
-- **Collaboration and feedback:** Azure DevOps Wikis, GitHub Wikis, GitHub Discussions, Microsoft Teams, Slack, Confluence, Stack Overflow
+- **Planning:** Atlassian Jira, Atlassian Trello, Azure Boards, GitHub
+- **Continuous integration (CI) and testing:** Atlassian Bitbucket, Azure Repos, GitHub Repos, npm, NuGet, Selenium, SmartBear Cucumber, SonarSource SonarQube, Zed Attack Proxy
+- **Continuous delivery (CD):** Atlassian Bamboo, Azure Pipelines, GitHub Actions, Jenkins, Octopus Deploy, Perforce Puppet, RedHat Ansible
+  - **Infrastructure as code:** Bicep, Pulumi, Terraform
+  - **Bootstrapping:** ArgoCD GitOps, Flux GitOps, Progress Chef, PowerShell Desired State Configuration (DSC)
+- **Operations:** Azure Automation, Azure Monitor, CISCO Splunk, Grafana, Microsoft Power BI
+- **Collaboration and feedback:** Atlassian Confluence, Azure DevOps Wikis, GitHub Discussions, GitHub Wikis, Microsoft Teams, Slack, Stack Overflow
 
 The following diagram shows an example DevOps framework with Azure DevOps toolchain selection:
 
@@ -148,3 +150,8 @@ The following diagram shows an example DevOps framework with Azure DevOps toolch
 The following diagram shows an example DevOps framework with Azure DevOps and GitHub toolchain selection:
 
 ![Diagram of DevOps framework with Azure DevOps and GitHub toolchain selection.](./media/devops-toolchain-github.png)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Understand team topologies](./devops-teams-topologies.md)
