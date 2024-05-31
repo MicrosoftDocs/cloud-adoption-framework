@@ -121,9 +121,8 @@ The following table shows restrictions and naming patterns for resource groups, 
 | **Scope** | Subscription | Resource group | Associated entity |
 | **Length** | 1-90 | 1-80 | 512 (name), 256 (value) |
 | **Valid characters** | Alphanumeric, underscore, parentheses, hyphen, and period except at end | Alphanumeric, underscore, and hyphen | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period |
-| **Suggested pattern** | `<service-short-name>-<environment>-rg` | `<service-short-name>-<context>-as`  | `key` : `value` |
-| **Example**           | `profx-prod-rg` | `profx-SQL-as` | `Department` : `Central IT ☺` |
-
+| **Suggested pattern** | *rg-<app or service name>-<purpose>* | *as-<app or service name>-<purpose>*  | `key` : `value` |
+| **Example**           | `rg-profx-prod` | `as-profx-SQL` | `Department` : `Central IT ☺` |
 
 ## Resource tags
 
@@ -176,13 +175,11 @@ To apply one or more tags to a resource group:
 1. Enter the name and value for a tag under **Name** and **Value**.
 1. Enter more names and values or select **Save**.
 
-
 To remove one or more tags from a resource group:
 
 1. In the Azure portal, go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups) and select the ellipses menu for the group, and then select **Edit tags**.
 1. Select the trash can icon for each tag that you want to remove.
 1. To save your changes, select **Save**.
-
 
 ::: zone-end
 
