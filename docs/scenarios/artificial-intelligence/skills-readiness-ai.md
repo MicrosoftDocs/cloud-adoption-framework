@@ -34,6 +34,7 @@ Having the right skills in place is crucial for the success of your generative A
 - **Leadership**: For leadership, it's important to understand the **impact** of generative AI, what options exist, and how to make decisions based on the insights provided by generative AI.
 - **Tech specialists**: For technical specialists, it's important to understand the **technical aspects** of generative AI, how to implement it, and how to maintain it.
 - **End users**: For end users, it's important to understand how to **interact** with generative AI, how to use it, and how to provide feedback.
+- **Everyone**: It's important for everyone in your organization to understand responsible AI practices and how to apply them in their daily work, both as consumers of generative AI and as creators of generative AI solutions.
 
 ### Skilling and training resources
 
@@ -41,6 +42,7 @@ Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training re
 
 | Training resource | Description | Audience |
 |---|---|---|
+| [Embrace responsible AI principles and practices](/training/modules/embrace-responsible-ai-principles-practices/) | Learn how to adopt responsible AI practices. It offers an overview of the principles, governance system, and procedures followed at Microsoft. | - Everyone |
 | [Microsoft Azure AI Fundamentals: Generative AI](/training/paths/introduction-generative-ai/) | - Generative AI<br> - Azure OpenAI Service<br> - Responsible Generative AI | - Leaders<br> - Tech specialists<br> - End users |
 | [Introduction to generative AI for trainers](/training/paths/intro-generative-ai-for-trainers/) | This learning path explores the potential applications of generative AI tools in your training and personal pursuits. You will learn how to create engaging educational materials by harnessing the capabilities of Microsoft Copilot and how to create images in diverse artistic styles using AI-powered image generators. | - Leaders<br> - Tech specialists |
 | [Develop Generative AI solutions with Azure OpenAI Service](/training/paths/develop-ai-solutions-azure-openai/) | Azure OpenAI Service provides access to OpenAI's powerful large language models such as ChatGPT, GPT, Codex, and Embeddings models. These models enable various natural language processing (NLP) solutions to understand, converse, and generate content. Users can access the service through REST APIs, SDKs, and Azure OpenAI Studio. | - Tech specialists |

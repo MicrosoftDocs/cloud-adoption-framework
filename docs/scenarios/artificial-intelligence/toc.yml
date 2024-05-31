@@ -1,0 +1,45 @@
+items:
+  - name: Artificial Intelligence adoption in Azure
+    href: index.md
+  - name: Strategy
+    items:
+    - name: Business justification
+      href: business-justification-goals.md
+    - name: Generative vs. traditional AI
+      href: generative-vs-traditional-ai.md
+    - name: Organizational readiness
+      href: leadership-organizational-readiness.md
+    - name: Buy, build, or blend
+      href: buy-build-blend.md
+    - name: Generative AI model types
+      href: generative-ai-model-types.md
+  - name: Plan
+    items:
+    - name: Embrace responsible AI
+      href: responsible-ai.md
+    - name: Skills readiness
+      href: skills-readiness-ai.md
+    - name: AI Center of Excellence
+      href: ai-center-of-excellence.md
+  - name: Ready
+    items: 
+    - name: SaaS
+      href: ready.md
+    - name: PaaS
+      href: ready.md
+    - name: IaaS
+      href: ready.md
+  - name: Secure
+    items:
+      - name: Overview
+        href: secure.md
+      - name: Principles
+        href: secure-principles.md
+      - name: Approaches
+        href: secure-approaches.md
+      - name: Preparedness
+        href: secure-preparedness.md
+  - name: Govern
+    href: govern.md
+  - name: Manage
+    href: manage.md
