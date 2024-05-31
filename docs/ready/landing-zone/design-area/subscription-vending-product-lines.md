@@ -189,17 +189,15 @@ Subscription vending can become a complicated and advanced area to implement wit
 
 Firstly, it's important to predict or learn what your future application teams', across the organization, requirements will be, and which subscription vending product line will they best fit into. Knowing this for the first sets of workloads looking to be built or migrated into your Azure environment, or at least the first five to ten workloads, will help you then prioritize which subscription vending product lines to enable and expose via a self-service interface first. Each product line will come with an implementation and a maintenance cost, so evaluating the long-term cost vs long term benefit and usage is critical.
 
-Commonly we see customer look to enable the following subscription vending product lines initially, and then look to add the remaining or create their own later down the line as requirements from the organization evolve over time:
+Commonly we see customers look to enable the following subscription vending product lines initially, and then look to add the remaining or create their own later down the line as requirements from the organization or workload teams evolve over time:
 
 - [Sandbox](#sandbox)
 - [Corp connected](#corp-connected)
 - [Online](#online)
 
-Use this as a starting point within your organization to get started with subscription vending and then evolve them or create and enable new ones as your application teams generate more requirements.
-
 ### Additional resources
 
-To further support this we have listed some additional resources that you should review when designing and implementing your subscription vending product lines and offerings in your organization:
+To further support this platform engineering approach, here are some additional resources that you should review when designing and implementing your subscription vending product lines and offerings in your organization:
 
 - [Video - Azure Landing Zones - How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 - [Document - Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones)
