@@ -93,7 +93,7 @@ The following architectural diagram shows a detailed guidance for large scale Az
 For large scale deployments it is highly recommended to create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. 
 
 * **(A)** Your hub virtual network, hosts and remains the central point of firewalls, connectivity for cross-premises networks and north-south traffic.
-* **(B)** Your hub virtual network is peered with the shared resources spoke to ensure the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) have 443 outbound connectivity.
+* *(B) Peering with shared resources spoke:*  Ensure your hub virtual network is peered with the shared resources spoke to provide [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
 * **(C)** Shared resource spoke virtual networks, hosts all required and optional the Citrix components as well as shares services e.g. Profile storage accounts, Azure Compute Galleries. To minimize latency and improve performance these networks are peered directly with the VDA spokes. 
 * **(D)** VDA workload spokes, host only the VDAs. All east-west management and profile traffic is routed directly to the shared resource spoke; all north-south traffic is routed to the hub virtual network.
 * **(E)** Azure Compute Gallery Version Replicas. 
