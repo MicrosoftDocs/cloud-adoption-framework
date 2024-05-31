@@ -114,16 +114,6 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 ::: zone-end
 
-The following table shows restrictions and naming patterns for resource groups, availability sets, and tags.
-
-| | Resource group | Availability set | Tag |
-|----------|----------|----------|----------|
-| **Scope** | Subscription | Resource group | Associated entity |
-| **Length** | 1-90 | 1-80 | 512 (name), 256 (value) |
-| **Valid characters** | Alphanumeric, underscore, parentheses, hyphen, and period except at end | Alphanumeric, underscore, and hyphen | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period |
-| **Suggested pattern** | *rg-&lt;app or service name&gt;-&lt;purpose&gt;* | *as-&lt;app or service name&gt;-&lt;purpose&gt;*  | `key` : `value` |
-| **Example**           | `rg-profx-prod` | `as-profx-SQL` | `Department` : `Central IT ☺` |
-
 ## Resource tags
 
 Tags can quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Tags can include context about the resource's associated workload or application, operational requirements, and ownership information.
