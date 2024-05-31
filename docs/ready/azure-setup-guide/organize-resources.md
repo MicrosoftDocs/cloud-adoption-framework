@@ -121,7 +121,7 @@ The following table shows restrictions and naming patterns for resource groups, 
 | **Scope** | Subscription | Resource group | Associated entity |
 | **Length** | 1-90 | 1-80 | 512 (name), 256 (value) |
 | **Valid characters** | Alphanumeric, underscore, parentheses, hyphen, and period except at end | Alphanumeric, underscore, and hyphen | Alphanumeric, spaces, and Unicode characters except for angle brackets, percent symbol, ampersand, forward or back slashes, question mark, or period |
-| **Suggested pattern** | *rg-&lt;app or service name&lt;-&lt;purpose&lt;* | *as-&lt;app or service name&lt;-&lt;purpose&lt;*  | `key` : `value` |
+| **Suggested pattern** | *rg-&lt;app or service name&gt;-&lt;purpose&gt;* | *as-&lt;app or service name&gt;-&lt;purpose&gt;*  | `key` : `value` |
 | **Example**           | `rg-profx-prod` | `as-profx-SQL` | `Department` : `Central IT ☺` |
 
 ## Resource tags
