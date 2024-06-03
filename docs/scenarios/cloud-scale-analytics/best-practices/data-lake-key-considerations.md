@@ -21,6 +21,9 @@ Azure Storage offers different access tiers, which allows you to store blob obje
 - **Cold tier:** Optimized for storing data that is infrequently accessed or modified. Data is stored for at least 90 days. The cold tier has lower storage costs and higher access costs compared to the cool tier.
 - **Archive:** Optimized for storing data that's rarely accessed. The data is stored for at least 180 days with flexible latency requirements, on the order of hours.
 
+> [!IMPORTANT]
+> There are no reliability, security, operational excellence performance efficiency tradeoffs between the various online access tiers, leaving the choice of an online tier to be a financial decision, per-blob, based on workload access data size, operational interactions, and time before the blob is deleted. Select the correct tier, per blob, based on [a calculation of the above factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob/estimating-pricing-for-azure-block-blob-deployments.xlsx). For more information, please take a look at the [Estimating Pricing for Azure Block Blob Deployments](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob/).
+
 Consider the following information when using access tiers:
 
 - Only the Hot and Cool access tiers can be set at the account level. The Archive access tier isn't available at the account level.
