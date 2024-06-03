@@ -27,7 +27,7 @@ Consider the following information when using access tiers:
 
 - Hot, Cool, and Archive tiers can all be set at the blob level during upload or after upload.
 
-- Data in the Cool tier has slightly lower availability, but offers the same high durability, retrieval latency, and throughput characteristics as Hot tier data. For data in the Cool tier, slightly lower availability and higher access costs can be acceptable trade-offs for lower overall storage costs compared to the Hot tier.
+- Data in the Cool and Cold tiers have slightly lower availability, but offer the same high durability, retrieval latency, and throughput characteristics as the Hot tier data. For data in the Cool or Cold tiers, slightly lower availability and higher access costs can be acceptable trade-offs for lower overall storage costs compared to the Hot tier.
 
 - Archive storage stores data offline and offers the lowest storage costs. However, it also carries the highest data rehydration and access costs.
 
