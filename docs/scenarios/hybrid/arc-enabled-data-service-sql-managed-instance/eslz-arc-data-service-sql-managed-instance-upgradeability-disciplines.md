@@ -78,7 +78,7 @@ The following diagrams display the upgrade process for Arc-enabled SQL Managed I
 
 #### General considerations
 
-- Upgrades to the Azure Arc Data Controller must be performed prior to upgrading the Arc-enabled SQL Managed Instance. The _arcdata_ cluster extension and SQL Managed Instance extensions versions are related and must be the same.
+- Upgrades to the Azure Arc Data Controller must be performed prior to upgrading the Arc-enabled SQL Managed Instance. The *arcdata* cluster extension and SQL Managed Instance extensions versions are related and must be the same.
 - Decide if you'll use automatic or manual upgrades of your Arc-enabled SQL Managed Instance depending on your requirements.
 - In the case of automatic upgrades, only a single maintenance window can be defined for a Data Controller. Consider the number of different maintenance windows needed for different workloads to identify the number of needed data controllers.
 
@@ -96,7 +96,7 @@ The following diagrams display the upgrade process for Arc-enabled SQL Managed I
 
 ### Azure Arc Data Controller upgrades
 
-- If you upgrade using the Azure CLI, verify that the _arcdata_ Azure CLI extension version corresponds to the image version you want to upgrade to in the [version log](/azure/azure-arc/data/version-log).
+- If you upgrade using the Azure CLI, verify that the *arcdata* Azure CLI extension version corresponds to the image version you want to upgrade to in the [version log](/azure/azure-arc/data/version-log).
 - In multi-cluster environments, perform upgrades first in a test/dev environment to validate any potential issues or breaking changes.
 - Perform a [dry run](/azure/azure-arc/data/upgrade-data-controller-direct-cli#upgrade-data-controller-1) prior to the upgrade to validate the version schema, the private repository authorization token if used, and that the registry exists before attempting an actual upgrade.
 - Create a process to [monitor for new Azure Arc Data Controller upgrades](/azure/azure-arc/data/upgrade-data-controller-direct-cli#view-available-images-and-chose-a-version).

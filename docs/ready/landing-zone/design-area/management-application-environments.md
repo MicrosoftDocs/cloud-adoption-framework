@@ -12,11 +12,13 @@ ms.custom: internal
 
 This article describes how cloud platform teams can implement guardrails to manage application environments in Azure landing zones. It also explains how to align various application development environments with their framework. A key aspect in creating the proper environment is placing subscriptions in the appropriate management groups.
 
+<!-- docutune:ignoredCasing "policy-driven governance" -->
+
 ## Set the foundation
 
 Development teams require the ability to iterate quickly, and cloud governance and platform teams need to manage organizational risk, compliance, and security at scale. You can properly manage application environments by focusing on two key [Azure landing zone design principles](../design-principles.md): policy-driven governance and subscription democratization. These principles provide foundational guardrails and describe how to delegate controls to application teams. The application teams use [Azure Well-Architected Framework guidance](/azure/well-architected) to design their workload. They deploy and manage their own landing zone resources, and the platform team controls the resources by assigning Azure policies.
 
-It's important to provide sandbox resources for _semi-governed_ resources, so application teams can experiment with technologies and capabilities.
+It's important to provide sandbox resources for *semi-governed* resources, so application teams can experiment with technologies and capabilities.
 
 When application owners use [subscription vending](subscription-vending.md) or other subscription creation processes, they must know how to request subscriptions for multiple development environments.
 
@@ -32,9 +34,9 @@ In practice, you can use any number and type of phased environment. This article
 Environment | Description | Management group
 ---|---|---
 **Sandbox** |  The environment that's used for rapid innovation of prototypes but not production-bound configurations | Sandbox management group
-**Development** |  The environment that's used to build potential release candidates | Archetype management group, like _corp_ or _online_
-**Test** | The environment that's used to perform testing, including unit testing, user acceptance testing, and quality assurance testing | Archetype management group, like _corp_ or _online_
-**Production** | The environment that's used to deliver value to customers | Archetype management group, like _corp_ or _online_
+**Development** |  The environment that's used to build potential release candidates | Archetype management group, like *corp* or *online*
+**Test** | The environment that's used to perform testing, including unit testing, user acceptance testing, and quality assurance testing | Archetype management group, like *corp* or *online*
+**Production** | The environment that's used to deliver value to customers | Archetype management group, like *corp* or *online*
 
 For more information, see the videos [Handling development, testing, and production environments for application workloads](https://youtu.be/8ECcvTxkrJA) and [How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
 
@@ -57,7 +59,7 @@ Use a single subscription for multiple application environments if:
 
 If an application or service workload needs to be in a single subscription, and you need to make changes to the policies that apply to each environment, you can:
 
-- Create a new _archetype-aligned_ management group beneath the landing zones management group. For more information, see [Management group hierarchy](#management-group-hierarchy) in this article.
+- Create a new *archetype-aligned* management group beneath the landing zones management group. For more information, see [Management group hierarchy](#management-group-hierarchy) in this article.
 
 - Use sandbox subscriptions for development activities. Sandboxes have a less restrictive policy set.
 - Use policies that are applied at the subscription level instead of the management group level. You can add tags in the policy definitions to help filter and apply policies to the correct environment. You can also assign policies to or exclude them from specific resource groups.
@@ -69,7 +71,7 @@ If an application or service workload needs to be in a single subscription, and 
 > [!WARNING]
 > Unlike policies and controls at the management group level, subscription-based policies and tags can be changed by individuals with elevated permissions to the subscription. Administrators with appropriate roles can bypass these controls by excluding policies, modifying policies, or changing the tags on resources.
 >
->As a result, you shouldn't apply tags in the definitions of security-focused policies. In addition, don't assign permissions as _always active_ for the following actions:
+>As a result, you shouldn't apply tags in the definitions of security-focused policies. In addition, don't assign permissions as *always active* for the following actions:
 >
 >- `Microsoft.Authorization/policyAssignments/*`
 >- `Microsoft.Authorization/policyDefinitions/*`
@@ -82,11 +84,11 @@ If an application or service workload needs to be in a single subscription, and 
 
 Avoid complicated management group hierarchies. They can require frequent amendment, scale inefficiently, and lack value. To avoid these potential problems, Azure landing zone management groups are workload archetype-aligned. For more information, see [Management group and subscription organization](resource-org.md).
 
-_Archetype-aligned_ means that management groups are only created for specific workload archetypes. For example, in the conceptual architecture, the _landing zones_ management group has _corp_ and _online_ child management groups. These child management groups align with distinct archetype patterns for the workloads that they hold. The child management groups focus on hybrid connectivity (VPN/Azure ExpressRoute) requirements, such as internal only versus public-facing applications and services.
+*Archetype-aligned* means that management groups are only created for specific workload archetypes. For example, in the conceptual architecture, the *landing zones* management group has *corp* and *online* child management groups. These child management groups align with distinct archetype patterns for the workloads that they hold. The child management groups focus on hybrid connectivity (VPN/Azure ExpressRoute) requirements, such as internal only versus public-facing applications and services.
 
-Excluding sandbox environments, various application environments should use the same archetype for deployment. Even if environments are divided across several subscriptions, they're held within the same single management group (_corp_ or _online_), based on the management group archetype and the requirements.
+Excluding sandbox environments, various application environments should use the same archetype for deployment. Even if environments are divided across several subscriptions, they're held within the same single management group (_corp_ or *online*), based on the management group archetype and the requirements.
 
-You can use [sandbox subscriptions](../../considerations/sandbox-environments.md) for unstructured development, such as personal labs or for a workload that doesn't have an archetype. An application or service workload team uses a sandbox management group to test various Azure services to determine what works best for their requirements. After they decide on services, they can provision a landing zone (in the correct workload archetype-aligned management group in the _landing zones_ management group hierarchy) for the team.
+You can use [sandbox subscriptions](../../considerations/sandbox-environments.md) for unstructured development, such as personal labs or for a workload that doesn't have an archetype. An application or service workload team uses a sandbox management group to test various Azure services to determine what works best for their requirements. After they decide on services, they can provision a landing zone (in the correct workload archetype-aligned management group in the *landing zones* management group hierarchy) for the team.
 
 The sandbox environments can be used for specific applications, or a workload team can use them for experimentation.
 
@@ -102,7 +104,7 @@ Management groups for environments within archetypes can add management overhead
 
 :::image type="content" source="./media/management-groups.png" alt-text="Diagram that shows an example of an optimal management group hierarchy for the Azure landing zone architecture." lightbox="./media/management-groups.png":::
 
-The _landing zones_ management group should have universal policies that enforce guardrails for both _corp_ and _online_ child management groups. _Corp_ and _online_ have unique policies that enforce company guidelines related to public and private-facing workloads.
+The *landing zones* management group should have universal policies that enforce guardrails for both *corp* and *online* child management groups. *Corp* and *online* have unique policies that enforce company guidelines related to public and private-facing workloads.
 
 Many organizations create separate management groups for workload software development lifecycle (SDLC) environments to assign environmental policies and controls. In practice, this method creates more challenges for workload teams than it solves. SDLC environments shouldn't have different policies, so we don't recommend separate management groups.
 
@@ -117,7 +119,7 @@ For example, imagine an organization defines a policy that requires storage acco
 As a result, the application development team must rework their deployment and architecture, after already investing significant effort. This example demonstrates how different policies in various environments can create problems.
 
 > [!NOTE]
-> The following equation demonstrates why a separate management group for each environment or workload doesn't scale well: _N workloads x Z management groups = total management groups_.
+> The following equation demonstrates why a separate management group for each environment or workload doesn't scale well: *N workloads x Z management groups = total management groups*.
 >
 >If an organization has 30 workloads that each require a management group and a child management group for development, testing, and production environments, the organization is left with:
 >
@@ -133,7 +135,7 @@ Some policies can be enabled as audit policies at the management group level. Ap
 
 In this shared responsibility model, the platform team audits practices, and the application team manages the implementation. This model can improve the agility of deployments.
 
-Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. The platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate _product lines_ for various types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
+Platform operators must work with each application or service workload team (landing zone owners) to understand their requirements. The platform operators can provide subscriptions based on the application requirements and plans. The platform operators might also decide to designate *product lines* for various types of workloads so that they can build subscription creation processes and tooling based on common requirements from application or service workload teams.
 
 ### Scenario: Virtual machine (VM) based workloads
 
