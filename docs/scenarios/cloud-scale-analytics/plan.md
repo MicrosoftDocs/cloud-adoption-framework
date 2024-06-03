@@ -66,9 +66,9 @@ This section provides useful tips for developing your skilling plan.
 
 Harnessing the power of data in a secure and compliant manner is a challenge. You can run into various difficulties throughout the process, including:
 
-* organizational silos dividing your organization
-* roadblocks in your effort to build a data-driven culture
-* multiple tools and technologies being in use across your organization
+* Organizational silos dividing your organization
+* Roadblocks in your effort to build a data-driven culture
+* Multiple tools and technologies being in use across your organization
 
 Time-to-market is one of the most critical factors for any business. Your organization can have an excellent idea and the data to enable it, but challenges and roadblocks can significantly extend your time-to-market. An unexpected challenge might prevent you from gaining insights and business value from your data for weeks or months. It's important for you to prepare for potential challenges and roadblocks early, so you minimize the impact they can have on your time.
 

@@ -14,9 +14,9 @@ Data lineage plays an important role in cloud-scale analytics. Lineage shows dep
 
 A primary of any data catalog is its ability to show the lineage between data products. Azure Purview supports data lineage capture from three Azure Data Factory activities:
 
-* copy data
-* data flow
-* execute SSIS package
+* Copy data
+* Data flow
+* Execute SSIS package
 
 In addition to this native lineage reporting, Azure Purview also allows custom lineage reporting via Apache Atlas hooks or REST API.
 

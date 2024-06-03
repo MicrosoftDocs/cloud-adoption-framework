@@ -34,7 +34,7 @@ Cold relocation can take a few minutes or a few days depending on the number of 
 
 ### Hot relocation
 
-The hot relocation method is for workloads that need minimal to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you need to use a warm relocation approach instead. Here's the hot relocation process.
+The hot relocation method is for workloads that need minimal (seconds, minutes) to zero downtime. For critical workloads, you should see if the service supports hot relocation before trying a warm approach. Hot relocation helps minimize the data delta after cutover. Hot relocation is only possible if the service supports synchronous data replication. Some services don't have this feature, and you need to use a warm relocation approach instead. Here's the hot relocation process.
 
 1. Perform service replication in the new target region.
 1. Keep the workload running in the source region.
@@ -53,6 +53,8 @@ Warm relocation is for critical workloads that don't support hot relocation. War
 1. Restore the data in the new target region.
 1. Switch and validate endpoints.
 1. Shut down the workload in the source region.
+
+Warm relocation can take a few minutes or an hour depending on the number of services and volume of data.
 
 ## Select service-relocation automation
 
