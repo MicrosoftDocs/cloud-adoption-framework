@@ -31,7 +31,7 @@ Consider the following information when using access tiers:
 
 - Archive storage stores data offline and offers the lowest storage costs. However, it also carries the highest data rehydration and access costs.
 
-For more information, see [Hot, Cool and Archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
+For more information, see [Access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
 > [!CAUTION]
 > For cloud-scale analytics, we recommend that you implement [lifecycle management](../../cloud-scale-analytics/govern-lifecycle.md) using a custom microservice and carefully consider the impact of moving user discoverable data to cool storage.
