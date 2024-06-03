@@ -40,6 +40,11 @@ items:
       - name: Preparedness
         href: secure-preparedness.md
   - name: Govern
-    href: govern.md
+    items:
+    - name: Overview
+      href: govern.md
+    - name: Cost governance
+      href: govern.md
+
   - name: Manage
     href: manage.md

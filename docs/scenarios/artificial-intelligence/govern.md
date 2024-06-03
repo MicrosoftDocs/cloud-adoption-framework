@@ -10,7 +10,11 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governing generative AI in Azure
 
-## Risk management
+## AI governance team
+
+-> Point to Govern. INject the importance of adding AI to that governance team; potentially as part of your AI CoE.
+
+## Assess risks
 
 Risks are associated with all areas of business. With generative AI, there are new risks to consider. While there are many risk areas, we'll focus on a few examples:
 
@@ -28,9 +32,17 @@ Risks are associated with all areas of business. With generative AI, there are n
 |Competency risk|Lack of skills and knowledge to effectively manage generative AI in your organization.|
 |Financial risk|Unforeseen costs associated with generative AI adoption.|
 
-### Mitigate risks
+### Enforce AI governance policies
 
+Mitigate risks by enforcing AI governance polities.
+
+- See Govern for examples. Add AI-specific examples here.
 - Establish policies.
+
+## Monitor AI governance
+
+- Monitor AI your AI governance.
+- Add examples of how.
 
 ## Compliance
 
