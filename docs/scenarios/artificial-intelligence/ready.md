@@ -1,5 +1,5 @@
 ---
-title: Prepare your environment for Artificial Intelligence (AI)
+title: Prepare your environment for artificial intelligence (AI)
 description: Learn how to prepare your environment for generative AI adoption in your organization, including considerations around Azure landing zones.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,9 +8,10 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Prepare your environment for Artificial Intelligence (AI)
+# Prepare your environment for artificial intelligence (AI)
 
+ <!--
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Securing generative AI](./secure.md)
+> [Securing generative AI](./secure.md) -->
