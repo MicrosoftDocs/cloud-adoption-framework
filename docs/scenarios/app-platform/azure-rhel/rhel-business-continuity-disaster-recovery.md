@@ -24,8 +24,6 @@ A recovery time objective is the amount of time it should take to recover any sy
 
 In business terms, RTO represents the amount of time that business processes are out of service. For mission-critical workloads, this variable should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
 
-A business should create a management baseline that establishes a standard RTO for non-mission-critical workloads. The business can then use that baseline as a way to justify additional investments in recovery times.
-
 ### Recovery point objectives (RPO)
 
 In most cloud management systems, some form of data protection periodically captures and stores data. The recovery point refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
