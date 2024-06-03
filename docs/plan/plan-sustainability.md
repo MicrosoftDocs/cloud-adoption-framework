@@ -3,7 +3,7 @@ title: Sustainability considerations in cloud adoption planning
 description: Use the Cloud Adoption Framework for Azure to learn how to integrate sustainability into your cloud adoption plan.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/16/2024
+ms.date: 06/03/2024
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
@@ -18,13 +18,13 @@ Identify current emissions to plan a sustainable cloud adoption journey. Measure
 
 ### Identify the most carbon-emitting workloads
 
-One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey. Consider using a tool like the [Emissions Savings Estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) or [Azure Carbon Optimization](/azure/carbon-optimization/overview) which will help you understand the emissions from your current on-premises workloads.
+One key criterion for prioritization of migration workload can be current carbon emissions. From a cloud efficiency and sustainability perspective, the highest emitters should be prioritized to migrate first to the cloud, maximizing the ROI early in the migration journey. Consider using a tool like the [Emissions Savings Estimator](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html) which will help you understand the emissions from your current on-premises workloads.
 
 To learn more about available sustainability tools, see [Sustainability tools and resources](/azure/cloud-adoption-framework/strategy/business-outcomes/sustainability#sustainability-tools-and-resources).
 
 ## Roles and responsibilities
 
-To successfully integrate sustainability into your cloud journey, it's essential to nominate a lead responsible for your sustainability efforts, define clear RACI (Responsibility, Accountability, Consulted, and Informed) for sustainability targets, and build green teams with specific sustainability metrics. This approach helps businesses to have a sustainability focal point, ensures accountability for meeting targets, and encourages cross-functional collaboration.
+To successfully integrate sustainability into your cloud journey, it's essential to nominate a lead responsible for your sustainability efforts, define clear RACI (Responsibility, Accountability, Consulted, and Informed) for sustainability targets, and build green teams with specific sustainability metrics. The sustainability lead can also engage individual service or application teams to monitor and optimize carbon emissions using [Azure carbon optimization](/azure/carbon-optimization/overview). This approach helps businesses to have a sustainability focal point, ensures accountability for meeting targets, and encourages cross-functional collaboration.
 
 ### Nominate a sustainability lead
 

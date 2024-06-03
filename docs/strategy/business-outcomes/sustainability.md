@@ -4,7 +4,7 @@ description: Learn how the Cloud Adoption Framework and cloud computing can supp
 author: mpvenables
 ms.author: martinek
 ms.reviewer: tozimmergren
-ms.date: 05/16/2024
+ms.date: 06/03/2024
 ms.topic: conceptual
 ms.custom: 
 - internal
@@ -134,11 +134,11 @@ The [Microsoft Sustainability Manager](/industry/sustainability/sustainability-m
 
 Microsoft Sustainability Manager covers data input from sources beyond just Azure workloads. For example, you can connect to AWS, GCP, SAP, and more.
 
-### Azure Carbon Optimization
+### Azure carbon optimization
 
-Use [Azure Carbon Optimization](/azure/carbon-optimization/overview) (ACO) to measure and minimize the carbon impact of your Azure resources. With ACO, you can find opportunities to optimize resource utilization to lower carbon emissions and costs, track and analyze emissions associated with Azure resources and subscriptions, and access carbon data and insights through APIs and exports.
+Use [Azure carbon optimization](/azure/carbon-optimization/overview) to measure and minimize the carbon impact of your Azure resources. With Carbon optimization, you can find opportunities to optimize resource utilization to lower carbon emissions and costs, track and analyze emissions associated with Azure resources and subscriptions, and access carbon data and insights through APIs and exports.
 
-ACO provides emission data for all Azure resource types, based on billing and usage. The emissions calculation adopts the same methodology as the Emissions Impact Dashboard and the Cloud for Sustainability API, ensuring consistency, transparency, and easy comparison of emissions data across Azure.
+Carbon optimization provides emission data for all Azure resource types, based on billing and usage. The emissions calculation adopts the same methodology as the Emissions Impact Dashboard and the Cloud for Sustainability API, ensuring consistency, transparency, and easy comparison of emissions data across Azure.
 
 This capability is readily available for you in the Azure portal, and you can start using it today.
 
