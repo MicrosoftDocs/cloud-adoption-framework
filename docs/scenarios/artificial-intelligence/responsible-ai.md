@@ -1,5 +1,5 @@
 ---
-title: Plan to incorporate Responsible AI practices
+title: Incorporate responsible artificial intelligence (AI) practices
 description: Learn about the importance of responsible AI considerations when adopting generative AI in your organization.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,8 +8,9 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Plan to incorporate Responsible AI practices
+# Incorporate responsible artificial intelligence (AI) practices
 
+ <!--
 > TBD - Intro.
 > Repurpose Innovate content.
 
@@ -25,3 +26,4 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!div class="nextstepaction"]
 > [Skills readiness plan for AI](./skills-readiness-ai.md)
+ -->
