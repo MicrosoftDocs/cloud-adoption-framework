@@ -64,11 +64,11 @@ The governance section on [data lineage](govern-lineage.md) explores how you can
 
 Data discovery is the first step for a data analytics or data governance workload for consumers. In an enterprise data lake platform, it's difficult for data consumers (like data scientists and analysts) to locate the data they need and evaluate its reliability. Data catalogs with accurate metadata make searches easier using data index that provides:
 
-- locations of available data
-- data quality detection
-- data structure understanding
-- data lineage understanding
-- access to desired data
+- Locations of available data
+- Data quality detection
+- Data structure understanding
+- Data lineage understanding
+- Access to desired data
 
 Data catalogs offering these search capabilities increase the speed of all data discovery processes.
 

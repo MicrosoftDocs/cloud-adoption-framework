@@ -89,8 +89,8 @@ Summary: :::image type="icon" source="./media/plus-icon.png"::::::image type="ic
 
 In this network design, you only pay for:
 
-- your Private Endpoints (per hour)
-- the ingress and egress traffic sent through your Private Endpoints to load your raw dataset (1) and store your processed dataset (6)
+- Your Private Endpoints (per hour)
+- The ingress and egress traffic sent through your Private Endpoints to load your raw dataset (1) and store your processed dataset (6)
 
 Vnet peering won't be charged (2), which is why this option has minimal cost.
 
@@ -178,7 +178,7 @@ The same applies to Storage Account B, and potentially to other services inside 
 
 *Figure 4: Private Endpoint projection architecture.*
 
-Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VMA connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Servers-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
+Since all Private Endpoints of a particular service (for example, Storage Account A) have the same FQDN (such as `storageaccounta.privatelink.blob.core.windows.net`), this solution creates challenges in the DNS layer that can't be solved using Private DNS Zones. You instead need a custom DNS solution capable of resolving DNS names based on the origin/IP-address of the requestor. This allows you to make VMA connect to the Private Endpoints connected to the Vnet in data landing zone A, and to make VM B connect to the Private Endpoints connected to the Vnet in data landing zone B. You can do this with a Windows Server-based setup, whereas you can automate the DNS A-records lifecycle through a combination of Activity Log and Azure Functions.
 
 In this setup, you can load the raw dataset in Storage Account A into VM B by accessing the dataset through the local Private Endpoint (1). After you load and process the dataset ((2) and (3)), you can store it on Storage Account B by directly accessing the local Private Endpoint (4). In this scenario, data must not traverse any Vnet peerings.
 
@@ -188,9 +188,9 @@ This design's approach to user access management is similar to that of the [mesh
 
 Because of this, your data application teams require three things, not two, to be able to create new services themselves:
 
-- write access to a resource group in a designated data landing zone
-- join access to their designated subnet
-- access to a resource group and subnet inside all the other data landing zones to create their respective local Private Endpoints
+- Write access to a resource group in a designated data landing zone
+- Join access to their designated subnet
+- Access to a resource group and subnet inside all the other data landing zones to create their respective local Private Endpoints
 
 This network design increases complexity in your access management layer since your data application teams require permissions in every single data landing zone. The design can also be confusing and lead to inconsistent RBAC over time.
 
@@ -243,8 +243,8 @@ Data traverses a single Vnet peering between the Connectivity Hub and data landi
 
 In this network design, your data landing zone teams and data application teams need two things to be able to connect Private Endpoints to the Hub Vnet:
 
-- write permissions to a resource group in your Connectivity Hub subscription
-- join permissions to the Hub Vnet
+- Write permissions to a resource group in your Connectivity Hub subscription
+- Join permissions to the Hub Vnet
 
 Your Connectivity Hub is designated for your organization's Azure platform team and is dedicated for host your organization's necessary and shared network infrastructure (including firewalls, gateways, and network management tools). This network option makes that design inconsistent, because it doesn't follow access management principles from the Enterprise-Scale Landing Zone base principles. Therefore, most Azure platform teams won't approve this design option.
 

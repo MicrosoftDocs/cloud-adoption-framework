@@ -3,21 +3,20 @@ title: Expand your landing zone
 description: Learn how to expand a landing zone using shared architecture pillars from the Cloud Adoption Framework.
 author: martinekuan
 ms.author: martinek
-ms.date: 08/05/2022
+ms.date: 05/07/2024
 ms.topic: conceptual
 ms.custom: internal
 ---
 
 # Expand your landing zone
 
-This section of the Ready methodology builds on the principles of [landing zone refactoring](../landing-zone/refactor.md). A refactoring approach to infrastructure as code removes blockers to business success while minimizing risk. This series of articles assumes that you've deployed your first landing zone and would now like to expand that landing zone to meet enterprise requirements.
+A refactoring approach to infrastructure as code (IaC) removes blockers to business success and minimizes risk. This series of articles assumes that you deployed your first landing zone and want to expand that landing zone to meet enterprise requirements.
 
 ## Shared architecture pillars
 
 Landing zone expansion provides the opportunity to embed the following pillars into your landing zone and into your broader cloud environment.
 
-![Diagram of shared architecture pillars.](../../_images/ready/shared-principles.png)
-*Figure 1: Shared architecture pillars.*
+:::image type="content" source="../../_images/ready/shared-principles.png" alt-text="Diagram that shows the shared architecture pillars." lightbox="../../_images/ready/shared-principles.png":::
 
 These pillars are shared by [Azure Advisor](/azure/advisor/advisor-overview), the [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/), and the solutions in the [Azure Architecture Center](/azure/architecture/).
 
@@ -33,7 +32,7 @@ To better align with the Cloud Adoption Framework, the pillars above are grouped
 > [!WARNING]
 > If you have a midterm objective (within 24 months) to **host more than 1,000 applications, infrastructure assets, or data assets in the cloud**, consider these expansions early in the cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration.
 
-## Next steps
+## Next step
 
 Before refactoring your first landing zone, it's important to understand test-driven development.
 

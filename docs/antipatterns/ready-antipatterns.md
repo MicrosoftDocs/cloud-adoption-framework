@@ -55,7 +55,7 @@ See trusted, mature resources for information on architectural best practices th
 - [Reference architectures](/azure/architecture/browse/)
 - [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/)
 
-Identify the right balance between costs and features like [high resiliency and availability](/azure/architecture/framework/resiliency/design-resiliency). Increased resiliency and availability typically lead to increased costs. For instance:
+Identify the right balance between costs and features such as [high resiliency and availability](/azure/architecture/framework/resiliency/design-resiliency). Increased resiliency and availability typically lead to increased costs. For instance:
 
 - A single VM might have an SLA with a guaranteed uptime of 99.9%.
 - Two VMs running the same workload would provide an SLA with an uptime between 99.95 and 99.99 percent.

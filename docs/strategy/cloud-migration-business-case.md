@@ -37,7 +37,7 @@ There are several key components to consider when you plan a business case.
 
 :::image type="content" source="./media/create-financial-plan/optimized-consumption-plan.png" alt-text="Diagram of on-premises costs in Azure scenario.":::
 
-**Migration timeline and Azure costs:** Forecast the migration timeline and estimated costs for a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
+**Migration timeline and costs:** Forecast the migration timeline and estimated costs for a given environment. Consider how you can optimize and get the most out of your Azure investment. For example, use reserved instances, scale capacity up and down, use the Azure hybrid benefit, and right-size your resources.
 
 A business case isn't just a moment-in-time view. It's a plan that covers a period of time. As you shift to the cloud, your costs begin to decrease. You can forecast the ramp-down in on-premises spending over time associated with your cloud migration plan.
 
@@ -94,11 +94,11 @@ Download the following files to use the Power BI model:
 
 [Microsoft Learn training](/training/) offers many learning paths for Azure that you might want to consider as you build your business case.
 
-- [Control Azure spending and manage bills with Azure Cost Management + Billing](/training/paths/control-spending-manage-bills/).
+- [Control Azure spending and manage bills with Microsoft Cost Management](/training/paths/control-spending-manage-bills/).
 - [Microsoft Azure Well-Architected Framework - Cost Optimization](/training/modules/azure-well-architected-cost-optimization/)
-- [Plan and manage your Azure costs](/training/modules/plan-manage-azure-costs/)
-- [Analyze costs and create budgets with Azure Cost Management](/training/modules/analyze-costs-create-budgets-azure-cost-management/)
-- [Configure and manage costs as a Microsoft partner by using Azure Cost Management](/training/modules/manage-costs-partner-cost-management/)
+- [Plan and manage your costs](/training/modules/plan-manage-azure-costs/)
+- [Analyze costs and create budgets with Cost Management](/training/modules/analyze-costs-create-budgets-azure-cost-management/)
+- [Configure and manage costs as a Microsoft partner by using Cost Management](/training/modules/manage-costs-partner-cost-management/)
 
 ## Next steps
 

@@ -26,6 +26,11 @@ The following video discusses the solution that's described in this article and 
 
 Baseline metric, activity log, and log query alerts are available for landing zone platform components and other selected landing zone components. These alerts ensure consistent alerting and monitoring for your Azure landing zone. They're based on Microsoft-recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response. Use the following guidance to achieve real-time visibility into the performance, utilization, and security of your platform landing zone implementation. Proactively address issues, optimize resource allocation, and ensure a reliable and secure environment.
 
+:::image type="complex" source="media/azure-monitor-baseline-alerts-policy-initiative-flow.svg" alt-text="Diagram that shows Azure Monitor baseline alert topology." lightbox="media/azure-monitor-baseline-alerts-policy-initiative-flow.svg":::
+   Diagram that shows the initiatives are applied at the platform management groups, connectivity, identity and management while the landing zone initiative is applied to the landing zones management group. The service health initiative and notifications assets initiative is applied at the intermediate root management group so that it is applied to all subscriptions.
+:::image-end:::
+*Download a [Visio file](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/media/AMBA-Diagrams.vsdx) of this architecture.*
+
 The following subsets of Azure components have one or more alerts defined:
 
 - Azure ExpressRoute

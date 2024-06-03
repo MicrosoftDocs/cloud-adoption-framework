@@ -106,7 +106,6 @@ For more information on how to expand your hybrid governance, see:
 - [How to secure your private cloud environment](/azure/vmware-cloudsimple/private-cloud-secure?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json)
 - [Using Microsoft Entra ID as an identify provider for vCenter on CloudSimple Private Cloud](/azure/vmware-cloudsimple/azure-ad)
 - [Security Control V2: Asset Management](/security/benchmark/azure/security-controls-v2-asset-management)
-- [Overview of the Azure Security Benchmark Foundation blueprint sample](/azure/governance/blueprints/samples/azure-security-benchmark-foundation/)
 
 ### Azure VMware infrastructure hybridity
 
