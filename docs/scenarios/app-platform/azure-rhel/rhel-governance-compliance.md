@@ -1,5 +1,5 @@
 ---
-title: Governance and compliance for Citrix on Azure
+title: Governance and compliance for RHEL on Azure
 description: Learn about key design considerations and recommendations for governance and compliance in RHEL on Azure infrastructure.
 author: 
 ms.author: 
