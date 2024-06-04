@@ -10,6 +10,8 @@ ms.collection: ce-skilling-ai-copilot
 
 # Secure generative AI in Azure
 
+Introductory paragraph - TO DO
+
 ## Checklist
 
 The following table provides an overview of the secure methodology and how it applies to generative AI.
