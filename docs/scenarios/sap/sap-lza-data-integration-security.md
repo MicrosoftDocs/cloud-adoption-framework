@@ -32,7 +32,7 @@ The data ingestion layer consists of:
 The following diagram is an example architecture of SAP data integration security on Azure. Use the example architecture as a starting point.
 
 :::image type="content" source="./media/sap-extend-security-architecture.png" lightbox="./media/sap-extend-security-architecture.png" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure.":::
-_Download a [Visio file](https://arch-center.azureedge.net/sap-extend-security-architecture.vsdx) of this architecture._
+*Download a [Visio file](https://arch-center.azureedge.net/sap-extend-security-architecture.vsdx) of this architecture.*
 
 ## Considerations and recommendations
 
@@ -73,8 +73,8 @@ Data Lake Storage Gen2 supports the following authorization strategies:
 
 There are two kinds of ACLs in Data Lake Storage Gen2:
 
-- _Access ACLs_ control access to an object. Files and directories have access ACLs.
-- _Default ACLs_ are templates of ACLs that are associated with a directory. They determine the access ACLs for any child items that are created under that directory. Files don't have default ACLs.
+- *Access ACLs* control access to an object. Files and directories have access ACLs.
+- *Default ACLs* are templates of ACLs that are associated with a directory. They determine the access ACLs for any child items that are created under that directory. Files don't have default ACLs.
 
 In an ACL entry, don't directly assign individual users or service principals. Always use Microsoft Entra security groups as the assigned principal. This practice lets you add and remove users or service principals without reapplying ACLs to an entire directory structure. Instead, you can add or remove users and service principals from the appropriate Microsoft Entra security group. For more information, see [Access control lists](/azure/storage/blobs/data-lake-storage-access-control).
 
@@ -86,9 +86,9 @@ See the following considerations for Data Factory security.
 
 There are two data movement scenarios: a cloud scenario and a hybrid scenario. For information about data movement security, see [Security considerations for data movement in Data Factory](/azure/data-factory/data-movement-security-considerations).
 
-- In a _cloud scenario_, your source and your destination are publicly accessible through the internet. Your source or destination might be managed cloud storage services, such as Azure Storage, Azure Synapse Analytics, Azure SQL Database, Data Lake Storage Gen2, Amazon S3, Amazon Redshift, software-as-a-service (SaaS) services, such as Salesforce, or web protocols, such as file transfer protocol (FTP) and open data protocol (OData). Find a complete list of supported data sources in supported data stores and formats.
+- In a *cloud scenario*, your source and your destination are publicly accessible through the internet. Your source or destination might be managed cloud storage services, such as Azure Storage, Azure Synapse Analytics, Azure SQL Database, Data Lake Storage Gen2, Amazon S3, Amazon Redshift, software-as-a-service (SaaS) services, such as Salesforce, or web protocols, such as file transfer protocol (FTP) and open data protocol (OData). Find a complete list of supported data sources in supported data stores and formats.
 
-- In a _hybrid scenario_, either your source or your destination is behind a firewall or inside an on-premises corporate network. Or the data store is in a private network or virtual network and isn't publicly accessible. In that case, the data store is usually the source. The hybrid scenario also includes database servers that are hosted on virtual machines.
+- In a *hybrid scenario*, either your source or your destination is behind a firewall or inside an on-premises corporate network. Or the data store is in a private network or virtual network and isn't publicly accessible. In that case, the data store is usually the source. The hybrid scenario also includes database servers that are hosted on virtual machines.
 
 #### Data access strategies
 
