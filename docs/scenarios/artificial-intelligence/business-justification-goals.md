@@ -10,15 +10,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business justification and goals for generative AI
 
-<!-- To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process. -->
+To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process.
 
 ## Business justification
 
-<!-- To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
+To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
 Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
 
-In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this guidance as a template of examples to help you define your own business goals and success metrics for adopting AI. 
+In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this guidance as a template of examples to help you define your own business goals and success metrics for adopting AI.
 
 ### Define goals
 
@@ -77,11 +77,11 @@ Ensuring that your organization is ready to adapt and learn from the potential o
 ### Foster a positive culture
 
 - How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
-- How supportive is your leadership in driving the AI adoption initiative within the organization? -->
+- How supportive is your leadership in driving the AI adoption initiative within the organization?
 
 ## Next steps
 
-<!-- To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
+To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
 
 > [!div class="nextstepaction"]
-> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md) -->
+> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md)

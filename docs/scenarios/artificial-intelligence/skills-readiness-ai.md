@@ -50,4 +50,4 @@ Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training re
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [AI Center of Excellence](./ai-center-of-excellence.md) -->
+> [AI Center of Excellence](./ai-center-of-excellence.md)

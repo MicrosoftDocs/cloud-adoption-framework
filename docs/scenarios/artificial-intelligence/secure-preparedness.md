@@ -9,7 +9,7 @@ ms.collection: ce-skilling-ai-copilot
 ---
 
 # Secure preparedness for generative AI
- <!--
+
 - Communication plan around AI
 - Empower teams to enforce stricter controls for AI
 - AI incident response plan
@@ -18,4 +18,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern generative AI](./govern.md) -->
+> [Govern generative AI](./govern.md)

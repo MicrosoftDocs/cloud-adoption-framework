@@ -10,7 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Secure principles for generative AI in Azure
 
- <!--
 ## Principles
 
 ### Confidentiality
@@ -24,4 +23,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Secure approaches](./secure-approaches.md) -->
+> [Secure approaches](./secure-approaches.md)
