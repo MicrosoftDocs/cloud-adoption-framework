@@ -1,5 +1,5 @@
 ---
-title: Managing AI in Azure
+title: Manage AI in Azure
 description: Learn how to manage Artificial Intelligence (AI) in Azure with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,8 +8,9 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Managing AI in Azure
+# Manage AI in Azure
 
+ <!--
 ## Considerations for PaaS AI solutions
 
 ## Considerations IaaS AI solutions
@@ -35,3 +36,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Logging and monitoring
 
 ## Next steps
+ -->

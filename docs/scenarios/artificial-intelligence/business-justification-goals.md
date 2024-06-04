@@ -10,15 +10,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business justification and goals for generative AI
 
-To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance will help you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process.
+<!-- To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process. -->
 
 ## Business justification
 
-To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
+<!-- To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
 Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
 
-In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this as a template of examples to help you define your own business goals and success metrics for adopting AI.
+In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this guidance as a template of examples to help you define your own business goals and success metrics for adopting AI. 
 
 ### Define goals
 
@@ -37,7 +37,7 @@ Define why you're adopting generative AI and what you hope to achieve. Break dow
 
 ### Define success metrics
 
-To measure your goals, you need to define success metrics for each goal. Ensure you can map each individual objective or goal to one or more success metrics that can be measured easily. For example, if you are working according to an OKR model, you might have a few key results for each objective.
+To measure your goals, you need to define success metrics for each goal. Ensure you can map each individual objective or goal to one or more success metrics that can be measured easily. For example, if you're working according to an OKR model, you might have a few key results for each objective.
 
 #### Example success metrics
 
@@ -52,33 +52,36 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 
 ## Determine business impact
 
+### Reimagining the business impacts on experience, end-users, and employees
+
+### Workforce transformation with AI
+
+### Relocation and specialization of resources
+
+### Adapt and learn
+
 Ensuring that your organization is ready to adapt and learn from the potential of generative AI is key to success.
 
 - Incorporate feedback mechanisms to constantly refine and improve your generative AI initiatives.
 - What will change for employees?
 - What will change for customers?
 
-## Risks and challenges
+### Change management and communication
 
-By understanding the potential risks and challenges, you can better prepare for them and mitigate them as you move forward with your AI initiatives. We've mapped out pitfalls and lessons learned from customer projects to help you avoid common mistakes.
+- How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
+- To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
+- To what extent is your organization open to the changes that AI adoption might bring to existing processes and workflows?
+- How are changes from adopting generative AI communicated (change communication/change management)
+- How effectively is the AI strategy and its benefits communicated across all levels of the organization?
 
-### Non-Technical
+### Foster a positive culture
 
-- **Lack of user training**: Organizations might face data privacy issues or information leaks. If employees aren't appropriately trained on how to use generative AI tools and services, they might accidentally expose data that they shouldn't.
-- **Data cleanup**: Organizations that train their own AI models need to take appropriate steps to clean up their data before training a model to remove any intellectual property (IP). They also need to ensure that the resulting models meet any compliance standards or existing regulations.
-- **Lack of understanding for AI deceptions**: Deep fakes are one example of misuses of generative AI for deceptive gain - political or otherwise. Team members at an organization need to be trained to recognize deep fakes when they occur so that they can differentiate between inaccurate or false information and the truth.
-- **Understand LLM model misuse**: It's possible for generative AI models to inadvertently produce harmful or inappropriate content. Organizations need to develop processes to mitigate against issues arising in cases where LLM models that they provide are misused in some way.
-
-### Technical
-
-- **Hallucinations**: Generative AI models may experience hallucinations and give answers that are untrue. Hallucinations result from inefficient prompting by the user or through a lack of prompt engineering when writing intelligent applications. 
-- **Embracing MLOps and LLMOps**: Whenever a model changes MLOps and LLMOps processes need to be run to test the new version for any changes in behavior or response accuracy.
-- **Poor data quality**: Poor data quality results in poor responses.
-- **Lack of proper feedback mechanisms**: A lack of feedback from end users of intelligent apps may lead to a situation where the organization believes its workloads are performing well when they don't for a large proportion of their user group.
+- How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
+- How supportive is your leadership in driving the AI adoption initiative within the organization? -->
 
 ## Next steps
 
-To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
+<!-- To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.
 
 > [!div class="nextstepaction"]
-> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md)
+> [Understanding generative vs. traditional AI](./generative-vs-traditional-ai.md) -->
