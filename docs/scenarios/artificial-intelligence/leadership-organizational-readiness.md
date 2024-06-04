@@ -30,7 +30,7 @@ If you don't have leadership buy-in for your AI adoption plans, it can result in
 - **Lack of strategic alignment**: It can be challenging to align your AI initiatives with your organization's strategic goals. A consequence might be that you're not delivering on measurable or long-term business goals.
 - **Lack of resources**: AI projects can require significant investments in resources, technology, talent, and time. Securing the required resources might not be possible without leadership buy-in. A consequence might be that you're not able to execute on your AI initiatives with the required quality or speed.
 - **Lack of adaptability**: If leadership buy-in doesn't exist, employees might resist AI adoption due to lack of unclear benefits. This can result in a lack of adaptability to change, which can hinder the success of your AI initiatives.
-- **Lack of competitive advantage**: Without leadership support, the organization might lag behind competitors who are successfully adopting AI to imrpove their efficiency, innovation, and customer insights.
+- **Lack of competitive advantage**: Without leadership support, the organization might lag behind competitors who are successfully adopting AI to improve their efficiency, innovation, and customer insights.
 
 ### Recommendations
 
@@ -65,23 +65,32 @@ Consider the importance of organizational alignment:
 
 ## Employee readiness
 
-> TBD considerations: The importance.
-> TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
+Employees who are ready to work with AI technologies can integrate them into their workflows more seamlessly, minimizing disruption and ensuring that AI solutions are used to their full potential.
+
+As a few examples, consider the following risks:
+
+- Lack of readiness can lead to resistance, operational inefficiencies, and failure to benefit from the full potential of your AI investments. Without proper readiness, the organization might not realize the full benefits of their AI investments, resulting in suboptimal performance and wasted resources.
+- Preparing employees for AI adoption helps cultivate a culture of continuous learning and innovation, which is essential for staying competitive in today's rapidly evolving business- and technological landscapes.
+
+**Recommendations:**
+
+- **Invest in skilling your workforce**: Invest in upskilling and reskilling programs to prepare employees for AI adoption. See [Skills readiness plan for AI](./skills-readiness-ai.md).
+- **Establish change management**: Establish change management and communication plans to ensure that employees are informed and engaged throughout the AI adoption process. See [Change management and communication](#change-management-and-communication).
 
 To learn more about the required skills, see [Skills readiness plan for AI](./skills-readiness-ai.md)
 
 ## Change management and communication
 
-- How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
-- To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
-- To what extent is your organization open to the changes that AI adoption might bring to existing processes and workflows?
-- How are changes from adopting generative AI communicated (change communication/change management)
-- How effectively is the AI strategy and its benefits communicated across all levels of the organization?
+Change management and communication help ensure that employees are informed, engaged, and prepared for the changes that AI adoption bring. Neglecting AI change management might lead to operational inefficiencies and employee resistance, resulting in wasted investments and missed opportunities.
 
-## Foster a positive culture
+**Recommendations:**
 
-- How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
-- How supportive is your leadership in driving the AI adoption initiative within the organization?
+When you develop your change management and communication plans, consider ensuring the following items are included:
+
+- **Leadership and vision communication**: Ensure there's a strong leadership and a clear vision, aligned with [organizational AI goals](./business-justification-goals.md#define-goals). Secure executive sponsorship as necessary, and communicate the vision and strategy to the entire organization.
+- **Engagement and readiness**: Ensure there's a continuous focus on employee engagement and readiness, including an [AI skills readiness plan](./skills-readiness-ai.md).
+- **Process integration**: Regularly assess your existing workflows and processes, and redesign them to integrate AI technologies where appropriate. Ensure that employees are trained on the new processes and workflows.
+- **Communicate AI benefits**: Track and report on key performance indicators (KPIs) and success stories to illustrate the positive impact of AI in the organization. Continuously communicate the benefits of AI adoption to employees, fostering a culture of innovation and continuous learning, and ensuring that employees are motivated to adopt AI technologies.
 
 ## Encourage an adaptable strategy
 

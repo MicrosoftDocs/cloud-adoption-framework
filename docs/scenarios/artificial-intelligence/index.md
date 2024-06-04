@@ -3,7 +3,7 @@ title: Artificial Intelligence (AI) adoption in Azure
 description: Learn how Microsoft recommends adopting Artificial Intelligence (AI) in your organization with the Microsoft Cloud Adoption Framework.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/07/2024
+ms.date: 06/04/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -18,7 +18,7 @@ In this Microsoft Cloud Adoption Framework (CAF) guidance, we'll explore how to 
 
 Generative AI is a type of AI that can generate content, such as text, images, sounds, and videos. Generative AI is focused on creativity, allowing innovation with new products, new services, serving new industries, and more. It's a subset of AI that focuses on understanding and creating content, as opposed to traditional AI. Traditional AI, sometimes known as "Everyday AI," focuses on detecting and classifying content and productivity enhancement.
 
-For more information, see [Generative AI vs. Traditional AI](./generative-vs-traditional-ai.md). 
+For more information, see [Generative vs. traditional AI](./generative-vs-traditional-ai.md). 
 
 ## Intended audience
 
