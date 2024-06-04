@@ -10,15 +10,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # Leadership and organizational readiness for generative AI
 
- <!-- Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
+Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
 
 Consider asking yourself:
 
-- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for generative AI? -->
+- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for generative AI?
 
 ## Leadership buy-in
 
- <!-- You identified the potential benefits of generative AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
+You identified the potential benefits of generative AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
 
 > "**Senior leadership’s vision and support are—by far—the strongest drivers of success**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
@@ -39,7 +39,7 @@ Ensure the success of your generative AI initiatives by considering the importan
 
 ## Organizational alignment
 
- <!--
+
 > "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 
@@ -55,20 +55,17 @@ Consider the importance of organizational alignment:
   - Regularly review and update the strategy as necessary to reflect changes in business objectives or advancements in AI technology.
 - **Measure effectiveness**
   - Drive toward implementing tools and processes to measure the effectiveness of AI initiatives in achieving the business objectives, enabling continuous improvement and refinement of the strategy.
-  - If you can measure the effectiveness of your AI initiatives, you can better understand the value they bring to your organization, and get wider buy-in from stakeholders. -->
+  - If you can measure the effectiveness of your AI initiatives, you can better understand the value they bring to your organization, and get wider buy-in from stakeholders.
 
 ## Employee readiness
 
- <!--
 > TBD considerations: The importance.
 > TBD recommendations: See the list of upskilling (modules) as per the links to Plan.
 
 To learn more about the required skills, see [Skills readiness plan for AI](./skills-readiness-ai.md)
--->
 
 ## Encourage an adaptable strategy
 
- <!--
 With the fact-paced evolution of AI technologies, it's important to establish an adaptable AI strategy that can evolve with the technology and the business needs. This strategy should be aligned with the overall business strategy and should be able to adapt to changes in the business environment.
 
 **Recommendations:**
@@ -77,12 +74,11 @@ With the fact-paced evolution of AI technologies, it's important to establish an
 - **Capture data**: Analyze data from ongoing and past AI implementations to ensure continuous alignment to business objectives. Refine the business strategy based on the insights gained from the past AI implementations.
 - **Prepare for pivots**: Be prepared to pivot the AI strategy based on the insights gained from the data analysis. Be open to changing the strategy if the data suggests that the current strategy isn't aligned with the business objectives.
 - **Stay informed**: Stay informed about the latest AI technologies and trends. Be prepared to incorporate new technologies into the AI strategy if they align with the business objectives.
-- **Feedback mechanism**: Develop a robust feedback mechanism to learn from the successes and failures in AI implementations with full transparency. Use those learnings to continuously invest in skilling, refining the AI strategy, and improving the business outcomes. -->
+- **Feedback mechanism**: Develop a robust feedback mechanism to learn from the successes and failures in AI implementations with full transparency. Use those learnings to continuously invest in skilling, refining the AI strategy, and improving the business outcomes.
 
 ## Next steps
 
- <!--
 Understand your options for buying, building, or blending generative AI solutions on Azure.
 
 > [!div class="nextstepaction"]
-> [Buy, Build, or Blend](./buy-build-blend.md) -->
+> [Buy, Build, or Blend](./buy-build-blend.md)

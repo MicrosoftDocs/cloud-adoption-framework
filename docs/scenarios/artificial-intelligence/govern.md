@@ -10,7 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governing generative AI in Azure
 
- <!--
 ## Risk management
 
 Risks are associated with all areas of business. With generative AI, there are new risks to consider. While there are many risk areas, let's focus on a few examples:
@@ -62,10 +61,9 @@ Risks are associated with all areas of business. With generative AI, there are n
 - To what extent you have a **plan to manage potential risks** associated with AI (for example, data security, privacy, ethical considerations)?
 - How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
 - How **effective is your data governance framework** in managing data access, usage, privacy, and security?
-- How often **do you audit your data management practices** for quality and compliance? 
+- How often **do you audit your data management practices** for quality and compliance?
 
 ## Next steps
 
- <!--
 > [!div class="nextstepaction"]
-> [Managing generative AI in Azure](./manage.md) -->
+> [Managing generative AI in Azure](./manage.md)

@@ -10,7 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Manage AI in Azure
 
- <!--
 ## Considerations for PaaS AI solutions
 
 ## Considerations IaaS AI solutions
@@ -36,4 +35,3 @@ ms.collection: ce-skilling-ai-copilot
 ## Logging and monitoring
 
 ## Next steps
- -->

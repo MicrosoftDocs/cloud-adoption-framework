@@ -10,7 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Incorporate responsible artificial intelligence (AI) practices
 
- <!--
 > TBD - Intro.
 > Repurpose Innovate content.
 
@@ -26,4 +25,3 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!div class="nextstepaction"]
 > [Skills readiness plan for AI](./skills-readiness-ai.md)
- -->

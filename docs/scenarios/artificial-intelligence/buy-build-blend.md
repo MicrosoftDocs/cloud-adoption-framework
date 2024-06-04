@@ -10,7 +10,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Buy, build, or blend generative AI
 
-<!-- ## Options for buying
+## Options for buying
 
 ## Options for building
 
@@ -22,5 +22,5 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Next steps
 
-<!-- > [!div class="nextstepaction"]
-> [Understanding types of generative AI models](./generative-ai-model-types.md) -->
+> [!div class="nextstepaction"]
+> [Understanding types of generative AI models](./generative-ai-model-types.md)
