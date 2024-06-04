@@ -116,5 +116,3 @@ The Planning Identity Management guide provides detailed considerations for plan
 ## Next steps
 
 Learn about Network topology and connectivity considerations for Red Hat Enterprise Linux.
-
-- [Resource organization](citrix-resource-organization.md)
