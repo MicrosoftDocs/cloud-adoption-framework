@@ -9,7 +9,6 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Skills readiness plan for generative AI
 
- <!--
 ## Define a skills readiness plan
 
 The Plan methodology in CAF provides guidance on [creating a skills readiness plan](/azure/cloud-adoption-framework/plan/adapt-roles-skills-processes) for your organization. Base your requirements on the original guidance, and adapt it with the requirements around generative AI.
@@ -51,4 +50,4 @@ Dive into these relevant Learning Paths, Learn Modules, and LinkedIn training re
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [AI Center of Excellence](./ai-center-of-excellence.md) -->
+> [AI Center of Excellence](./ai-center-of-excellence.md)

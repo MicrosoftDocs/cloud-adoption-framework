@@ -10,8 +10,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Prepare your environment for artificial intelligence (AI)
 
- <!--
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Securing generative AI](./secure.md) -->
+> [Securing generative AI](./secure.md)

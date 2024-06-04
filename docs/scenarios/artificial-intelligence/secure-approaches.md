@@ -10,7 +10,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Secure approaches for generative AI in Azure
 
- <!--
 - Security automation for and with AI (Defender, Sentinel, Policy, ...)
 - Security monitoring for AI -> What should be captured in SIEM systems to allow for monitoring of AI systems?
 - Auditing and logging for AI -> What should be logged and audited in AI systems?
@@ -21,4 +20,4 @@ ms.collection: ce-skilling-ai-copilot
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Secure preparedness](./secure-preparedness.md) -->
+> [Secure preparedness](./secure-preparedness.md)

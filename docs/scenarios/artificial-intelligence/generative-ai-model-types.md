@@ -10,13 +10,13 @@ ms.collection: ce-skilling-ai-copilot
 
 # Types of generative AI models
 
-<!-- ## Open-source vs. closed source models
+## Open-source vs. closed source models
 
 ## The importance of choosing the right model
 
-## The importance of deciding where and how to run and deploy your model 
+## The importance of deciding where and how to run and deploy your model
 
 ## Next steps
 
-<!-- > [!div class="nextstepaction"]
-> [Embrace responsible AI](./responsible-ai.md) -->
+> [!div class="nextstepaction"]
+> [Embrace responsible AI](./responsible-ai.md)
