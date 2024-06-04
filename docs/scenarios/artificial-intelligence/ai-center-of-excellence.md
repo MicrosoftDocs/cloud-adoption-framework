@@ -1,6 +1,6 @@
 ---
-title: Planning for generative AI
-description: Learn how to plan for generative AI adoption in your organization by establishing an AI Center of Excellence and planning for an initial AI adoption budget.
+title: Plan for generative AI
+description: Learn how to plan for generative AI adoption in your organization. Establish an AI Center of Excellence and planning for an initial AI adoption budget.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/21/2024
@@ -10,7 +10,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI Center of Excellence
 
-## AI functions
+**AI functions**
 
 - Link to CCoE -> append AI information here.
 - CCoE / AI Functions

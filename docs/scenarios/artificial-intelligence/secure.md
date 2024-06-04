@@ -1,5 +1,5 @@
 ---
-title: Securing generative AI in Azure
+title: Secure generative AI in Azure
 description: Learn how to secure generative AI by following the secure considerations from the Cloud Adoption Framework.
 ms.author: tozimmergren
 author: Zimmergren
@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Securing generative AI in Azure
+# Secure generative AI in Azure
 
 ## Checklist
 
 The following table provides an overview of the secure methodology and how it applies to generative AI.
 
-|Topic|Description|
+|Article|Description|
 |---|---|---|
 |[Secure principles](./secure-principles.md)|Considerations for applying the CAF Secure methodology principles to generative AI investments.|
 |[Secure approaches](./secure-approaches.md)|Learn how to approach security efforts for generative AI projects.|

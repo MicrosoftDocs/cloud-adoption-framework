@@ -10,13 +10,13 @@ ms.collection: ce-skilling-ai-copilot
 
 # Understanding generative vs. traditional AI
 
-When deciding on the right blend of AI for your use cases, it's important to understand the differences between generative AI and traditional AI. This article will help you understand the differences between the two and how to decide which one is right for your use cases.
+When deciding on the right blend of AI for your use cases, it's important to understand the differences between generative AI and traditional AI. This article helps you understand the differences between the two and how to decide which one is right for your use cases.
 
 In some situations, a blend of both generative AI and traditional AI might be the best approach.
 
 ## Traditional AI
 
-Traditional AI, sometimes known as "Everyday AI", is the type of AI that has been around for a long time and is used in many applications today.
+Traditional AI, sometimes known as "Everyday AI," is the type of AI that has been around for a long time and is used in many applications today.
 
 Typically, traditional AI is used to detect and classify, work on vast amounts of data, operate in real-time applications and help with automation of capabilities.
 
@@ -33,7 +33,7 @@ Here are some examples of traditional AI and its applications, along with the Az
 
 ## Generative AI
 
-With Generative AI (GAI) we typically mean AI that understands and creates content, such as GPT. It works on relatively small chunks of data - text, images, sounds, videos - and has a linguistic understanding. Large Language Models (LLMs) are a type of GAI and the term is often used as a synonym, but LLMs are ones that work on text. There are also Small Language Models (SLMs) that work on smaller datasets and are less complex.
+With Generative AI (GAI), we typically mean AI that understands and creates content, such as GPT. It works on relatively small chunks of data - text, images, sounds, videos - and has a linguistic understanding. Large Language Models (LLMs) are a type of GAI and the term is often used as a synonym, but LLMs are ones that work on text. There are also Small Language Models (SLMs) that work on smaller datasets and are less complex.
 
 Here are some examples of generative AI and its applications:
 
