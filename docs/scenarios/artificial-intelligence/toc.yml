@@ -11,8 +11,6 @@ items:
       href: leadership-organizational-readiness.md
     - name: Buy, build, or blend
       href: buy-build-blend.md
-    - name: Generative AI model types
-      href: generative-ai-model-types.md
   - name: Plan
     items:
     - name: Embrace responsible AI
@@ -33,12 +31,6 @@ items:
     items:
       - name: Overview
         href: secure.md
-      - name: Principles
-        href: secure-principles.md
-      - name: Approaches
-        href: secure-approaches.md
-      - name: Preparedness
-        href: secure-preparedness.md
   - name: Govern
     items:
     - name: Overview

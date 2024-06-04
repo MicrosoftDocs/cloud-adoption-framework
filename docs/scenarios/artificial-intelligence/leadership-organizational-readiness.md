@@ -32,17 +32,6 @@ If you don't have leadership buy-in for your AI adoption plans, it can result in
 - **Lack of adaptability**: If leadership buy-in doesn't exist, employees might resist AI adoption due to lack of unclear benefits. This can result in a lack of adaptability to change, which can hinder the success of your AI initiatives.
 - **Lack of competitive advantage**: Without leadership support, the organization might lag behind competitors who are successfully adopting AI to imrpove their efficiency, innovation, and customer insights.
 
-### Risks
-
-If you don't have leadership buy-in for your AI adoption plans, it can result in several significant risks. Here are a few examples:
-
-- **Lack of strategic alignment**: It can be challenging to align your AI initiatives with your organization's strategic goals. A consequence might be that you're not delivering on measurable or long-term business goals.
-- **Lack of resources**: AI projects can require significant investments in resources, technology, talent, and time. Securing the required resources might not be possible without leadership buy-in. A consequence might be that you're not able to execute on your AI initiatives with the required quality or speed.
-- **Lack of adaptability**: If leadership buy-in doesn't exist, employees might resist AI adoption due to lack of unclear benefits. This can result in a lack of adaptability to change, which can hinder the success of your AI initiatives.
-- **Lack of competitive advantage**: Without leadership support, the organization might lag behind competitors who are successfully adopting AI to imrpove their efficiency, innovation, and customer insights.
-
-Ensure the success of your generative AI initiatives by considering the importance of getting early buy-in from stakeholders and leadership.
-
 ### Recommendations
 
 - **Consider AI in decision-making**
@@ -56,7 +45,6 @@ Ensure the success of your generative AI initiatives by considering the importan
   - Continuous learning helps drive AI innovation. See [Continuous learning](/azure/cloud-adoption-framework/innovate/considerations/learn#continuous-learning).
 
 ## Organizational alignment
-
 
 > "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
