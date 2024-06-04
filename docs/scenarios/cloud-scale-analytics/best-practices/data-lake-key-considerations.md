@@ -22,7 +22,7 @@ Azure Storage offers different access tiers, which allows you to store blob obje
 - **Archive:** Optimized for storing data that's rarely accessed. The data is stored for at least 180 days with flexible latency requirements, on the order of hours.
 
 > [!IMPORTANT]
-> There are no reliability, security, operational excellence performance efficiency tradeoffs between the various online access tiers, leaving the choice of an online tier to be a financial decision, per-blob, based on workload access data size, operational interactions, and time before the blob is deleted. Select the correct tier, per blob, based on [a calculation of the above factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob/estimating-pricing-for-azure-block-blob-deployments.xlsx). For more information, please take a look at the [Estimating Pricing for Azure Block Blob Deployments](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob/).
+> There are no reliability, security, operational excellence performance efficiency tradeoffs between the various online access tiers, leaving the choice of an online tier to be a financial decision, per-blob, based on workload access data size, operational interactions, and time before the blob is deleted. Select the correct tier, per blob, based on [a calculation of the above factors](https://azure.github.io/Storage/docs/application-and-user-data/code-samples/estimate-block-blob). For more information, please take a look at the [Plan and manage costs for Azure Blob Storage ](https://learn.microsoft.com/azure/storage/common/storage-plan-manage-costs).
 
 Consider the following information when using access tiers:
 
