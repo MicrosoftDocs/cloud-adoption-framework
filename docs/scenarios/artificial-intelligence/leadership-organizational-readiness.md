@@ -39,7 +39,6 @@ Ensure the success of your generative AI initiatives by considering the importan
 
 ## Organizational alignment
 
-
 > "**As organizations realize greater value from AI, they tend to increase their focus on growth**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
 

@@ -10,15 +10,27 @@ ms.collection: ce-skilling-ai-copilot
 
 # Secure principles for generative AI in Azure
 
+Introductory paragraph - TO DO
+
 ## Principles
+
+TO DO
 
 ### Confidentiality
 
+TO DO
+
 ### Integrity
+
+TO DO
 
 ### Availability
 
+TO DO
+
 ### Sustainment
+
+TO DO
 
 ## Next steps
 

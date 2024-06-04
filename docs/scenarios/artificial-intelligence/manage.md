@@ -10,28 +10,52 @@ ms.collection: ce-skilling-ai-copilot
 
 # Manage AI in Azure
 
+Introductory paragraph - TO DO
+
 ## Considerations for PaaS AI solutions
 
-## Considerations IaaS AI solutions
+TO DO
+
+## Considerations for IaaS AI solutions
+
+TO DO
 
 ## Manage your generative AI solutions
 
+TO DO
+
 ### Management overview and baseline
+
+TO DO
 
 ### Cost management
 
-- Tokens, model differences, text/semantic/hybrid search, ...
+- Tokens, model differences, text/semantic/hybrid search, ... TO DO
 
-## Establish and end-to-end management lifecycle using LLMOps
+## Establish and end-to-end management lifecycle by using LLMOps
 
-### DevOps vs. MLOps. vs LLMOps
+TO DO
+
+### DevOps vs. MLOps vs. LLMOps
+
+TO DO
 
 ### Testing
 
+TO DO
+
 ### Evaluating outputs
+
+TO DO
 
 ### Benchmarking
 
+TO DO
+
 ## Logging and monitoring
 
+TO DO
+
 ## Next steps
+
+TO DO

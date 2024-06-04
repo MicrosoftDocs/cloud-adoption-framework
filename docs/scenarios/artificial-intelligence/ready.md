@@ -10,6 +10,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Prepare your environment for artificial intelligence (AI)
 
+Introductory paragraph - TO DO
+
+## Second Heading - TO DO
+
+TO DO
+
 ## Next steps
 
 > [!div class="nextstepaction"]

@@ -17,6 +17,10 @@ ms.collection: ce-skilling-ai-copilot
 - Zero Trust and AI?
 - Security posture for AI?
 
+## Second Heading - TO DO
+
+TO DO
+
 ## Next steps
 
 > [!div class="nextstepaction"]

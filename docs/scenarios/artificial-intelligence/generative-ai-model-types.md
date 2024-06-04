@@ -10,11 +10,19 @@ ms.collection: ce-skilling-ai-copilot
 
 # Types of generative AI models
 
+Introductory paragraph - TO DO
+
 ## Open-source vs. closed source models
+
+TO DO
 
 ## The importance of choosing the right model
 
+TO DO
+
 ## The importance of deciding where and how to run and deploy your model
+
+TO DO
 
 ## Next steps
 

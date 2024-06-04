@@ -52,11 +52,19 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 
 ## Determine business impact
 
+TO DO
+
 ### Reimagining the business impacts on experience, end-users, and employees
+
+TO DO
 
 ### Workforce transformation with AI
 
+TO DO
+
 ### Relocation and specialization of resources
+
+TO DO
 
 ### Adapt and learn
 
