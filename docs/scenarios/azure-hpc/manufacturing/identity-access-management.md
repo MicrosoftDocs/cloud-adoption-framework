@@ -16,6 +16,8 @@ This article builds on considerations and recommendations that are described in 
 
 For more information, see [design recommendations for platform access](../../../ready/landing-zone/design-area/identity-access-platform-access.md#design-recommendations-for-platform-access) and [Azure identity and access for landing zones](../../../ready/landing-zone/design-area/identity-access-landing-zones.md).
 
+<!-- docutune:ignoredCasing "a built-in database" -->
+
 ## HPC design considerations
 
 Depending on the HPC compute resource orchestrator that you use, various authentication methods are supported, as described here.
