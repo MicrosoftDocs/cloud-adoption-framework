@@ -99,7 +99,7 @@ The General Purpose tier of Arc-enabled SQL Managed Instance must use remote sto
 
 #### Business Critical service tier
 
-Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote storage classes. Local storage classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node. Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage. Keep in mind that using more Business Critical database replicas requires extra Persistent Volumes for _Data_, _Logs_, and _DataLogs_. The required total storage capacity is much higher.
+Business Critical tier uses a multiple pod model where data and log volumes can be stored on local or remote storage classes. Local storage classes typically perform better in terms of latency and throughput because the storage device is directly attached to the node. Remote storage typically offers built-in redundancy but often has lower latency and throughput compared with local storage. Keep in mind that using more Business Critical database replicas requires extra Persistent Volumes for *Data*, *Logs*, and *DataLogs*. The required total storage capacity is much higher.
 
 The following diagram shows the Business Critical storage configuration for Arc-Enabled SQL Managed Instance with two replicas.
 
@@ -111,7 +111,7 @@ Configuring multiple replicas with synchronous-commit mode data replication ensu
 
 #### Azure Arc SQL Managed Instance provisioning and uninstalling
 
-When provisioning Arc-enabled SQL Managed Instance, you have the flexibility to assign different storage classes to each of the required Arc-enabled SQL Managed Instance Persistent Volumes. You might want higher-performance storage options for _Data_ and _DataLogs_, but the _Logs_ and _Backup_ volumes could use more cost-efficient StorageClass options to save on costs. In scenarios where you use local storage, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O. Placing the _Data_ and _DataLogs_ on the same physical drive can cause contention for that storage drive, resulting in poor performance. Instead, consider placing the _Data_ and _DataLogs_ on separate storage drives to parallelize I/O for both database data and logs.
+When provisioning Arc-enabled SQL Managed Instance, you have the flexibility to assign different storage classes to each of the required Arc-enabled SQL Managed Instance Persistent Volumes. You might want higher-performance storage options for *Data* and *DataLogs*, but the *Logs* and *Backup* volumes could use more cost-efficient StorageClass options to save on costs. In scenarios where you use local storage, ensure that the volumes are able to land on different nodes and physical storage devices to avoid contention on disk I/O. Placing the *Data* and *DataLogs* on the same physical drive can cause contention for that storage drive, resulting in poor performance. Instead, consider placing the *Data* and *DataLogs* on separate storage drives to parallelize I/O for both database data and logs.
 
 When you delete Arc-enabled SQL Managed Instance, its associated PVs and PVCs aren't removed. This behavior ensures that you can access the database files in case the deletion was accidental.
 
@@ -147,7 +147,7 @@ Depending on your Kubernetes cluster organization, provision Arc-enabled SQL Man
 
 Use node labels to ensure that database instances are put onto separate nodes to distribute the overall I/O traffic across multiple nodes, see Kubernetes [Node Labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#built-in-node-labels) along with Kubernetes [Node affinity and anti-affinity labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) for configuring the labels. If operating in a virtualized environment, ensure that the I/O is appropriately distributed at the physical host-level.
 
-Plan the capacity for Arc-enabled SQL Managed Instance to include adequate storage sizes for _Data_, _Logs_, _DataLogs_, and _Backups_. When you plan capacity to accommodate both current needs and projected growth for all databases that will live on the instances of Arc-enabled SQL Managed Instance, it prevents having to resize the PVCs in the future. Choose separate physical drives for _Data_ and _DataLogs_ to allow parallel I/O activity to occur. Parallel I/O activity results in improved performance by avoiding the possible contention caused when using a shared drive.
+Plan the capacity for Arc-enabled SQL Managed Instance to include adequate storage sizes for *Data*, *Logs*, *DataLogs*, and *Backups*. When you plan capacity to accommodate both current needs and projected growth for all databases that will live on the instances of Arc-enabled SQL Managed Instance, it prevents having to resize the PVCs in the future. Choose separate physical drives for *Data* and *DataLogs* to allow parallel I/O activity to occur. Parallel I/O activity results in improved performance by avoiding the possible contention caused when using a shared drive.
 
 While there are several factors that might dictate a deployment of the Business Critical or General Purpose tier of Arc-enabled SQL Managed Instance, Business Critical using local storage provides the lowest latency and highest availability. Review the [Arc-enabled SQL Managed Instance business continuity](./eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md) design area for recommendations surrounding point-in-time restore, high availability, and disaster recovery. Additionally, review the [Arc-enabled SQL Managed Instance cost governance](./eslz-arc-data-service-sql-managed-instance-cost-governance.md) design area to learn more about the cost implications between tiers.
 
@@ -155,7 +155,7 @@ The following subsections provide more specific recommendations for each tier:
 
 #### General Purpose service tier recommendations
 
-It's recommended to choose a low latency remote StorageClass for the _Data_ and _DataLogs_ Persistent Volumes for optimal performance. Avoid using a StorageClass that introduces network partitions, such as having an on-premises cluster configured to use an internet-provided StorageClass for the _Backup_ and _Logs_ Persistent Volumes.
+It's recommended to choose a low latency remote StorageClass for the *Data* and *DataLogs* Persistent Volumes for optimal performance. Avoid using a StorageClass that introduces network partitions, such as having an on-premises cluster configured to use an internet-provided StorageClass for the *Backup* and *Logs* Persistent Volumes.
 
 #### Business Critical service tier recommendations
 

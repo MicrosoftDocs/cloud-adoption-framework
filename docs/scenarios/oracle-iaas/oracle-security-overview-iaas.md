@@ -59,8 +59,8 @@ Ensure the OS is hardened to eliminate vulnerabilities that could be exploited t
 - Use Secure Shell (SSH) key pairs for Linux account access instead of passwords.
 - Disable password-protected Linux accounts and enable them only on request for a short period.
 - Disable login access for privileged Linux accounts (root or Oracle), which allows login access only to personalized accounts.
-- Instead of direct login access, use _sudo_ to grant access to privileged Linux accounts from personalized accounts.
-- Capture Linux audit trail logs and _sudo_ access logs in Azure Monitor Logs by using the Linux SYSLOG utility.
+- Instead of direct login access, use *sudo* to grant access to privileged Linux accounts from personalized accounts.
+- Capture Linux audit trail logs and *sudo* access logs in Azure Monitor Logs by using the Linux SYSLOG utility.
 - Apply security patches and OS patches or updates regularly from trusted sources only.
 - Implement restrictions to limit access to the OS.
 - Restrict unauthorized access to the server.
