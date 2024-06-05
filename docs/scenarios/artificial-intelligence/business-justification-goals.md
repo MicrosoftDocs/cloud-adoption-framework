@@ -50,43 +50,6 @@ To measure your goals, you need to define success metrics for each goal. Ensure 
 | **Reduce costs** | - Cost reduction percentage<br> - Cost per unit<br> - [Operating expense (OPEX) and Capital expense (CAPEX) ratio](/azure/cloud-adoption-framework/strategy/financial-considerations/#capex-to-opex) |
 | **Improve product quality** | - Defect rate<br> - Customer complaints<br> - Quality Assurance (QA) score |
 
-## Determine business impact
-
-TO DO
-
-### Reimagining the business impacts on experience, end-users, and employees
-
-TO DO
-
-### Workforce transformation with AI
-
-TO DO
-
-### Relocation and specialization of resources
-
-TO DO
-
-### Adapt and learn
-
-Ensuring that your organization is ready to adapt and learn from the potential of generative AI is key to success.
-
-- Incorporate feedback mechanisms to constantly refine and improve your generative AI initiatives.
-- What will change for employees?
-- What will change for customers?
-
-### Change management and communication
-
-- How much consideration do you give to cultural fit and change management skills when hiring for AI roles, given the significant changes that AI can introduce?
-- To what extent does your AI strategy take into consideration the impact of AI on your organization's employees and their roles?
-- To what extent is your organization open to the changes that AI adoption might bring to existing processes and workflows?
-- How are changes from adopting generative AI communicated (change communication/change management)
-- How effectively is the AI strategy and its benefits communicated across all levels of the organization?
-
-### Foster a positive culture
-
-- How much does your organization encourage innovation and experimentation, even if it involves risk of failure?
-- How supportive is your leadership in driving the AI adoption initiative within the organization?
-
 ## Next steps
 
 To establish a clear understanding of the options available to you, you should understand the options of generative vs traditional AI.

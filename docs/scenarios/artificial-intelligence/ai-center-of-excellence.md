@@ -1,6 +1,6 @@
 ---
-title: Plan for generative AI
-description: Learn how to plan for generative AI adoption in your organization. Establish an AI Center of Excellence and planning for an initial AI adoption budget.
+title: AI Center of Excellence
+description: Learn how to establish an AI Center of Excellence (CCoE) to drive AI adoption on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/21/2024
