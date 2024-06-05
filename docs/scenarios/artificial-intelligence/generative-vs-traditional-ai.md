@@ -46,6 +46,8 @@ Here are some examples of generative AI and its applications:
 
 ## Deciding on the right blend of AI for your use cases
 
+TO DO
+
 ## Next steps
 
 Continue building your strategy for adopting generative AI in Azure by understanding the importance of leadership and organizational readiness.

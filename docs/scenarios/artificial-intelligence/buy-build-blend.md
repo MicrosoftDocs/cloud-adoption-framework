@@ -10,7 +10,11 @@ ms.collection: ce-skilling-ai-copilot
 
 # Buy, build, or blend generative AI
 
+Introductory paragraph - TO DO
+
 ## Options for buying
+
+TO DO
 
 ## Options for building
 
@@ -18,7 +22,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Building in-house vs. using a partner
 
-> TBD.
+TO DO
 
 ## Next steps
 

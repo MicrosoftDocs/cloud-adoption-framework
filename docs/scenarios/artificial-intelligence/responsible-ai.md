@@ -10,16 +10,24 @@ ms.collection: ce-skilling-ai-copilot
 
 # Incorporate responsible artificial intelligence (AI) practices
 
-> TBD - Intro.
-> Repurpose Innovate content.
+TBD - Intro.
+Repurpose Innovate content.
 
 ## Governance, security, and ethical considerations for AI
 
+TO DO
+
 ## Bias and fairness
+
+TO DO
 
 ## Ever-changing laws and regulations
 
+TO DO
+
 ## Can you vs. should you?
+
+TO DO
 
 ## Next steps
 

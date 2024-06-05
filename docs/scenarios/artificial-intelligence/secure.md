@@ -10,6 +10,8 @@ ms.collection: ce-skilling-ai-copilot
 
 # Secure generative AI in Azure
 
+Introductory paragraph - TO DO
+
 ## Checklist
 
 ## Shared responsibility

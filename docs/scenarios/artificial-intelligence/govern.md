@@ -10,6 +10,8 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governing generative AI in Azure
 
+Introductory paragraph - TO DO
+
 ## AI governance team
 
 -> Point to Govern. INject the importance of adding AI to that governance team; potentially as part of your AI CoE.
@@ -46,29 +48,51 @@ Mitigate risks by enforcing AI governance polities.
 
 ## Compliance
 
+TO DO
+
 ### Policy enforcement
+
+TO DO
 
 ### Understanding regulatory requirements
 
+TO DO
+
 ### Compliance monitoring and reporting
+
+TO DO
 
 ## Data management
 
+TO DO
+
 ### Data quality
+
+TO DO
 
 ### Data lifecycle
 
+TO DO
+
 ### Data privacy
+
+TO DO
 
 ### Data access control
 
+TO DO
+
 ### Data security
+
+TO DO
 
 ### Data segregation to different environments
 
+TO DO
+
 ## Other risk considerations
 
-> TBD
+TO DO
 
 - To what extent you have a **plan to manage potential risks** associated with AI (for example, data security, privacy, ethical considerations)?
 - How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
