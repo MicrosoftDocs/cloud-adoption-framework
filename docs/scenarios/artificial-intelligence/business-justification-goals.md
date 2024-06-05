@@ -1,6 +1,6 @@
 ---
-title: Business justification and goals for generative AI
-description: Establish a generative AI strategy by understanding the potential benefits of generative AI, defining your ambition, and establishing a decision-making process.
+title: Business justification and goals for AI
+description: Establish an AI strategy by understanding the potential benefits of AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/30/2024
@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Business justification and goals for generative AI
+# Business justification and goals for AI
 
-To establish a generative AI vision and strategy, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of generative AI, define your ambition, and establish a decision-making process.
+To establish an AI vision and strategy, covering both traditional and generative AI, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of AI, define your ambition, and establish a decision-making process.
 
 ## Business justification
 
-To drive the adoption of generative AI in your organization, you need to understand the potential benefits and how they align with your business goals.
+To drive the adoption of AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
-Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of generative AI, both short term and long term.
+Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of AI, both short term and long term.
 
-In this section, we'll explore some common business goals and how they can be linked to generative AI investments. Use this guidance as a template of examples to help you define your own business goals and success metrics for adopting AI.
+In this section, we'll explore some common business goals and how they can be linked to AI investments. Use this guidance as a template of examples to help you define your own business goals and success metrics for adopting AI.
 
 ### Define goals
 
-Define why you're adopting generative AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
+Define why you're adopting AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
 
 #### Example goals
 
