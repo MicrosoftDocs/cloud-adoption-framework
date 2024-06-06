@@ -117,8 +117,7 @@ For more information, see the traffic flow section.
 
 The diagram illustrates traffic flows from a Virtual Network and Azure VMware Solution perspective.
 
-![Diagram of Single-Region Azure VMware Solution with Internet](./media/single-region-without-globalreach-5.png)  
-**Traffic Flow**  
+![Diagram of Single-Region Azure VMware Solution with Internet](./media/single-region-without-globalreach-5.png)   
 
 **Traffic Flow Chart**  
 
