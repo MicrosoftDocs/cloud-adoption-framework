@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/02/2024
+ms.date: 06/04/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -14,6 +14,58 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## May 2024
+
+### New articles
+
+- [Introduction to the Oracle on Azure adoption scenario](../scenarios/oracle-iaas/index.md): Learn how to set up and manage Oracle workloads within your Azure landing zone. Learn about specific architectural strategies and implementations for Oracle database systems on Azure.
+- [Identity and access management for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-iam-odaa.md): Learn key tactics for proper identity and access management for Oracle Database@Azure. Deploy your initial Oracle Database@Azure instance to create specific groups within Microsoft Entra ID and in the corresponding tenant. Learn how to use Microsoft Entra administrator groups and how to establish other groups and roles to enhance the granularity of access permissions.
+- [Network topology and connectivity for Oracle on Azure Virtual Machines](../scenarios/oracle-iaas/oracle-network-topology-iaas.md): Learn about network topology and connectivity considerations for running Oracle on Azure Virtual Machines. Explore the importance of security for Oracle workloads, and receive a high-level network design with various recommendations.
+- [Network topology and connectivity for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-network-topology-odaa.md): Learn how to set up network topologies and connectivity for Oracle Database@Azure. Explore options for physical placement, learn about the use of virtual machine clusters, and learn the importance of private subnets. See how to configure network security groups and why you should use Azure Firewall to protect your Oracle Database@Azure instance.
+- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-iaas/oracle-security-overview-odaa.md): Receive design considerations and recommendations for implementing security measures for Oracle Database@Azure. See the importance of a defense-in-depth strategy, which layers multiple defense mechanisms for comprehensive security. This strategy includes strong authentication and authorization frameworks, network security, and encryption of data.
+- [Azure Virtual Network Manager in Azure landing zones](../ready/azure-best-practices/azure-virtual-network-manager.md): Use Azure's Virtual Network Manager to implement landing zone design principles for application migrations, modernization, and innovation at scale. Learn more about two recommended networking topologies: Azure Virtual WAN and traditional hub-and-spoke. The Virtual Network Manager allows for the expansion and implementation of networking changes as business requirements evolve. See how these changes can be made without disrupting deployed Azure resources.
+
+### Updated articles
+
+- We made updates that reflect the deprecation of Azure Blueprint:
+  - [Govern antipatterns](../antipatterns/govern-antipatterns.md)
+  - [Resource consistency decision guide](../decision-guides/resource-consistency/index.md)
+  - [Get started: Document foundational alignment decisions](../get-started/cloud-concepts.md)
+  - [Get started: Secure the enterprise environment](../get-started/security.md)
+  - [Innovate methodology and maturity modeling](../innovate/best-practices/ci-cd.md)
+  - [Operational compliance in Azure](../manage/azure-management-guide/operational-compliance.md)
+  - [Understand the functions of a central IT team](../organize/central-it.md)
+  - [Function of cloud infrastructure and endpoint security](../organize/cloud-security-infrastructure-endpoint.md)
+  - [Function of cloud security posture management](../organize/cloud-security-posture-management.md)  
+  - [Track costs across business units, environments, or projects](../ready/azure-best-practices/track-costs.md)
+  - [Azure governance design area](../ready/landing-zone/design-area/governance.md)
+  - [Inventory and visibility considerations](../ready/landing-zone/design-area/management-platform.md)  
+  - [Azure enterprise scaffold](../resources/migration-with-enterprise-scaffold.md)
+  - [Tools and templates](../resources/tools-templates.md)
+  - [Data domains](../scenarios/cloud-scale-analytics/architectures/data-domains.md)
+  - [Self-serve data platforms](../scenarios/cloud-scale-analytics/architectures/self-serve-data-platforms.md)
+  - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md)
+  - [Balance competing priorities](../strategy/balance-competing-priorities.md)
+
+- We updated articles to include considerations on Oracle Database@Azure:
+  - [Capacity planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-capacity-planning.md)  
+  - [Plan for Oracle on Azure adoption](../scenarios/oracle-iaas/oracle-landing-zone-plan.md)  
+  - [Strategic impact of Oracle on Azure](../scenarios/oracle-iaas/oracle-landing-zone-strategy.md)  
+  - [Migration planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)  
+
+- We updated articles to provide recommendations for multi-region deployments with Azure landing zones:
+  - [Define an Azure network topology](../ready/azure-best-practices/define-an-azure-network-topology.md)
+  - [Resource naming and tagging decision guide](../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
+  - [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md)
+  - [Traditional Azure networking topology](../ready/azure-best-practices/traditional-azure-networking-topology.md)
+  - [Landing zone regions](../ready/considerations/regions.md)
+  - [Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones](../ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md)
+  - [Management groups](../ready/landing-zone/design-area/resource-org-management-groups.md)  
+  - [Subscription considerations and recommendations](../ready/landing-zone/design-area/resource-org-subscriptions.md)
+  - [Resource organization design area overview](../ready/landing-zone/design-area/resource-org.md)  
+
+- [DevOps considerations](../ready/considerations/devops-principles-and-practices.md): The DevOps technologies list was updated to include bootstrapping and infrastructure as code (IaC) tools.
+
 ## April 2024
 
 ### New articles
@@ -22,7 +74,7 @@ This month, we completely refreshed articles related to the Migrate and Govern m
 
 #### Migrate methodology refresh
 
-Explore dozens of new and updated articles to guide you through the migration process. 
+Explore dozens of new and updated articles to guide you through the migration process.
 
 - **Prepare to migrate your workload**
     - [Migrate overview](../migrate/index.md): Learn about the Migrate methodology and how to apply it as you move your workloads to Azure.
