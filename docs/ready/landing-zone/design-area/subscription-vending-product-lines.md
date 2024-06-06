@@ -143,7 +143,7 @@ These use cases can also employ either [corp connected](#corp-connected) or [onl
 
 The **shared application portfolio product line** for application landing zone subscription vending helps answer the question that your organization's platform and application teams might be wondering; "*Do we need a separate application landing zone subscription for simple applications that might only be constructed from a small number of Azure resources?*"
 
-This product line gives application teams and departments the option to host several smaller applications or components (such as storage accounts or SQL Servers) shared between several of their own applications in a single or fewer subscriptions.
+This product line gives application teams and departments the option to host several smaller applications or components (such as storage accounts or SQL Servers) shared between several of their own applications in a single subscription or fewer subscriptions.
 
 > [!IMPORTANT]
 > It's important to highlight that subscriptions vended under this product line are owned by a common team responsible for the related portfolio of applications deployed in this subscription for this product line. This product line is not intended for general deployments of unrelated application workloads owned by distinct application portfolio owners.
@@ -161,7 +161,7 @@ If you consider resource group delegation in a single subscription between multi
 | Azure services and feature alignment | Although you can deploy services that provide basic Azure service primitives (such as Virtual Machines, Virtual Networks, and simple PaaS services) within a single resource group, the complexity of modern composite offerings can require that you deploy these more complex services outside the boundaries of a single resource group. These deployment scenarios are better suited for the other democratized subscription  approaches outlined previously. |
 | Restricting resource group creation to platform teams only | When sharing a subscription between different application teams across different business units or departments, it's common to restrict any team's ability to create new resource groups in the shared subscription. <br><br> This restriction is intended to limit resource group sprawl. Only the platform team can create and govern new resource groups. <br><br> This approach increases the complexity of RBAC assignments and places an increased dependency on platform teams to manage application deployments, which can impede application teams' agility and empowerment. |
 
-Even though this is a different product line, the subscriptions vended using the shared application portfolio product line would still be placed under the either the Corp or Online Management Groups from the Azure landing zones default recommended hierarchy. Alternatively, you might place the subscriptions beneath new Management Groups in an organization's Management Group hierarchy that follows the guidance in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
+Even though this is a different product line, the subscriptions vended using the shared application portfolio product line would still be placed under either the Corp or Online Management Groups from the Azure landing zones default recommended hierarchy. Alternatively, you might place the subscriptions beneath new Management Groups in an organization's Management Group hierarchy that follows the guidance in [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
 
 The following diagram shows an example of the shared application portfolio subscription vending product line that includes a network architecture diagram with a **Routable Hub** labeled 10.0.0.0/24 at the center. This hub connects to various smaller elements, like a single virtual machine or storage account, for many applications that the same team controls. This includes a **Routable Spoke** labeled 10.1.1.0/24, all in a single subscription carved into resource groups. The diagram also shows **Additional Landing Zones** that contain icons for different network components such as databases, storage services, and Virtual Machines that the share application portfolio subscription can connect to via vNet peering through the hub.
 
@@ -182,7 +182,7 @@ For more detailed guidance on using the sandbox product line with Azure landing 
 
 Sandboxes are commonly ephemeral, meaning they're either time-boxed or budget-constrained and nearing a time or budget limit. In these cases, the sandbox either needs to be extended or removed and decommissioned.
 
-Organizations that don't provide a sandbox product line for application teams or others within their organization to test and experiment with services in Azure might see lots of "shadow IT" setups. The organization might struggle to provide reporting and visibility and apply any form of governance to subscriptions that business users create outside of the the platform team's control and oversight.
+Organizations that don't provide a sandbox product line for application teams or others within their organization to test and experiment with services in Azure might see lots of "shadow IT" setups. The organization might struggle to provide reporting and visibility and apply any form of governance to subscriptions that business users create outside of the platform team's control and oversight.
 
 Therefore, it's critically important that platform teams provide easily accessible, preferably self-service, and automatically approved access to sandbox subscriptions for their organization's users and teams. It's better to give users and teams access to something that can be seen and governed by a platform team than to create it in a "shadow IT" style where the platform team can't access or control it, which creates risk.
 
@@ -190,7 +190,7 @@ Sandboxes often follow the networking configuration approach of online product l
 
 #### When to use the sandbox product line
 
-Use the sandbox product line to provide a safe, secure, and governed Azure subscription to anyone across the organization who wants to experiment, PoC, or MVP in Azure. The organization must lightly govern these users and allow them access to all services so that they aren't forced to consider "shadow IT" practices.
+Use the sandbox product line to provide a safe, secure, and governed Azure subscription to anyone across the organization who wants to experiment, PoC, or MVP in Azure. The organization must lightly govern these users and grant them access to all services so that they aren't forced to consider "shadow IT" practices.
 
 #### Other important notes about the sandbox product line
 
