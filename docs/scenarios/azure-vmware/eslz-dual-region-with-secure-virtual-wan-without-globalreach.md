@@ -88,6 +88,10 @@ There’s no issue in adding the entire Azure VMware Solution Management /22 blo
 
 As mentioned earlier, when you enable ExpressRoute to ExpressRoute transitivity on the Hub, it sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to your on-premises network. Therefore, you shouldnt advertise the exact RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Advertising the same exact routes creates routing problems within Azure. Instead, you should advertise more specific routes back to Azure for your on-premises networks.
 
+>[!NOTE]
+>  If you’re currently advertising the default RFC 1918 addresses from on-premises to Azure and wish to continue this practice, you need to split each RFC 1918 range into two equal sub-ranges and advertise these sub-ranges back to Azure. The sub-ranges are 10.0.0.0/9, 10.128.0.0/9, 172.16.0.0/13, 172.24.0.0/13, 192.168.0.0/17, and 192.168.128.0/17.
+>
+
 The diagram illustrates traffic flows from the perspective of on-premises. 
 
 ![Diagram of Dual-Region Azure VMware Solution with on-premises](./media/dual-region-virtual-wan-without-globalreach-3.png)  
@@ -140,14 +144,6 @@ As mentioned earlier, when you enable Routing Intent on both Secure Hubs, it adv
 #### Azure VMware Solution Internet Connectivity
 When Routing Intent is enabled for internet traffic, the default behavior of the Secure Virtual WAN Hub is to not advertise the default route across ExpressRoute circuits. To ensure the default route is propagated to its directly connected Azure VMware Solution from the Azure Virtual WAN, you must enable default route propagation on your Azure VMware Solution ExpressRoute circuits - see [To advertise default route 0.0.0.0/0 to endpoints](/azure/virtual-wan/virtual-wan-expressroute-portal#to-advertise-default-route-00000-to-endpoints). Once changes are complete, the default route 0.0.0.0/0 is then advertised via connection “D” from the hub. It’s important to note that this setting shouldnt be enabled for on-premises ExpressRoute circuits. As a best practice, it’s recommended to implement a BGP Filter on your on-premises equipment. A BGP Filter in place prevents the inadvertent learning of the default route, adds an extra layer of precaution, and ensures that on-premises internet connectivity isnt impacted.
 
-You don’t have outbound internet connectivity redundancy because each Azure VMware Solution private cloud learns the default route from both its local regional hub and isn’t directly connected to its cross-regional hub. If a regional outage that impacts the local regional hub, you have two options in order to achieve internet redundancy that are manual configurations.
-
-**Option 1: For Outbound Internet Access Only**  
-During a local regional outage, if you need outbound internet access for your Azure VMware Solution workload, you can opt for VMware Solution Managed SNAT. It’s a straightforward solution that quickly provides the access you need. - see [Turn on Managed SNAT for Azure VMware Solution workloads](/azure/azure-vmware/enable-managed-snat-for-workloads)
-
-**Option 2: For Inbound and Outbound Internet Access**    
-During a local regional outage, if you need both inbound and outbound internet access for your Azure VMware Solution cloud, start by removing the “D” connection for your local regional hub. Remove the Authorization Key created for the “D” connection from the Azure VMware Solution blade in the Azure portal. Then, create a new connection to the cross-regional hub. For handling inbound traffic, consider using Azure Front Door or Traffic Manager to maintain regional high availability.
-
 #### Virtual Network Internet Connectivity
 When you enable Routing Intent for internet access, it automatically generates a default route from both regional hubs and advertises it to their hub-peered Virtual Network connections. Youll notice under Effective Routes for the Virtual Machines’ NICs in the Virtual Network that the 0.0.0.0/0 next hop is the regional hub firewall. The default route is never advertised across regional hubs over the ‘inter-hub’ link. Therefore, Virtual Networks use their local regional hub for internet access and have no backup internet connectivity to the cross-regional hub. 
 
@@ -165,6 +161,15 @@ The diagram illustrates traffic flows from the Virtual Networks and Azure VMware
 | 12 | Virtual Network 2 | &#8594;| Internet | Yes, traffic is inspected at the Hub 2 firewall
 | 13 | Virtual Network 1 | &#8594;| Internet | Yes, traffic is inspected at the Hub 1 firewall
 | 14 | Azure VMware Solution Cloud Region 2 | &#8594;| Internet | Yes, traffic is inspected at the Hub 2 firewall
+
+#### Internet Access Resiliency for Azure VMware Solution
+With Azure VMware Solution using the Dual-Region without Global Reach design, you don’t have outbound internet connectivity redundancy because each Azure VMware Solution private cloud learns the default route from both its local regional hub and isn’t directly connected to its cross-regional hub. If a regional outage that impacts the local regional hub, you have two options in order to achieve internet redundancy that are manual configurations.
+
+**Option 1: For Outbound Internet Access Only**  
+During a local regional outage, if you need outbound internet access for your Azure VMware Solution workload, you can opt for VMware Solution Managed SNAT. It’s a straightforward solution that quickly provides the access you need. - see [Turn on Managed SNAT for Azure VMware Solution workloads](/azure/azure-vmware/enable-managed-snat-for-workloads)
+
+**Option 2: For Inbound and Outbound Internet Access**    
+During a local regional outage, if you need both inbound and outbound internet access for your Azure VMware Solution cloud, start by removing the “D” connection for your local regional hub. Remove the Authorization Key created for the “D” connection from the Azure VMware Solution blade in the Azure portal. Then, create a new connection to the cross-regional hub. For handling inbound traffic, consider using Azure Front Door or Traffic Manager to maintain regional high availability.
 
 ## Utilizing VMware HCX Mobility Optimized Networking (MON) without Global Reach
 HCX Mobility Optimized Networking (MON) is an optional feature to enable when using HCX Network Extensions (NE). Mobility Optimized Networking (MON) provides optimal traffic routing under certain scenarios to prevent network tromboning between the on-premises-based and cloud-based resources on extended networks.
