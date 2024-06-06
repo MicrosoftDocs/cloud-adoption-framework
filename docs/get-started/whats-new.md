@@ -22,7 +22,7 @@ This month, we introduced a new article related to Azure Virtual Network Manager
 
 #### Azure Virtual Network Manager
 
-[Azure Virtual Network Manager in Azure landing zones](../ready/azure-best-practices/azure-virtual-network-manager.md): Use Azure's Virtual Network Manager to implement landing zone design principles for application migrations, modernization, and innovation at scale. Learn more about two recommended networking topologies: Azure Virtual WAN and traditional hub-and-spoke. The Virtual Network Manager allows for the expansion and implementation of networking changes as business requirements evolve. See how these changes can be made without disrupting deployed Azure resources.
+- [Azure Virtual Network Manager in Azure landing zones](../ready/azure-best-practices/azure-virtual-network-manager.md): Use Azure's Virtual Network Manager to implement landing zone design principles for application migrations, modernization, and innovation at scale. Learn more about two recommended networking topologies: Azure Virtual WAN and traditional hub-and-spoke. The Virtual Network Manager allows for the expansion and implementation of networking changes as business requirements evolve. See how these changes can be made without disrupting deployed Azure resources.
 
 #### Oracle Database@Azure
 
@@ -81,6 +81,8 @@ We updated articles to provide recommendations for multiregion deployments in Az
 - [Management groups](../ready/landing-zone/design-area/resource-org-management-groups.md)  
 - [Subscription considerations and recommendations](../ready/landing-zone/design-area/resource-org-subscriptions.md)
 - [Resource organization design area overview](../ready/landing-zone/design-area/resource-org.md)  
+
+#### DevOps updates
 
 - [DevOps considerations](../ready/considerations/devops-principles-and-practices.md): The DevOps technologies list was updated to include bootstrapping and infrastructure as code (IaC) tools.
 
