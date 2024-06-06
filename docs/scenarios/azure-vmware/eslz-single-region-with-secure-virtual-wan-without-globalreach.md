@@ -96,8 +96,8 @@ The diagram illustrates traffic flows from an Azure Virtual Network perspective.
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN Hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
-| 3 | on-premises | &#8594;| Azure VMware Solution Cloud | No, traffic bypasses firewall and transits Global Reach (A)|
-| 4 | on-premises | &#8594;| Virtual Network | Yes, traffic is inspected at the Hub firewall|
+| 5 | Virtual Network | &#8594;| Azure VMware Solution Cloud | Yes, traffic is inspected at the Hub firewall|
+| 6 | Virtual Network | &#8594;| on-premises | Yes, traffic is inspected at the Hub firewall|
 
 ## Internet connectivity
 
