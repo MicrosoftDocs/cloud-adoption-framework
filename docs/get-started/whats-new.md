@@ -53,7 +53,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
   - [Strategic impact of Oracle on Azure](../scenarios/oracle-iaas/oracle-landing-zone-strategy.md)  
   - [Migration planning for Oracle on Azure](../scenarios/oracle-iaas/oracle-migration-planning.md)  
 
-- We updated articles to provide recommendations for multi-region deployments with Azure landing zones:
+- We updated articles to provide recommendations for multiregion deployments in Azure landing zones:
   - [Define an Azure network topology](../ready/azure-best-practices/define-an-azure-network-topology.md)
   - [Resource naming and tagging decision guide](../ready/azure-best-practices/resource-naming-and-tagging-decision-guide.md)
   - [Define your tagging strategy](../ready/azure-best-practices/resource-tagging.md)
