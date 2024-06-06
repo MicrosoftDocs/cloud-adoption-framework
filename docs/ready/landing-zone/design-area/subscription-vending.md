@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/17/2023
+ms.date: 06/06/2023
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
