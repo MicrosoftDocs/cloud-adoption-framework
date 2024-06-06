@@ -67,6 +67,10 @@ With ExpressRoute to ExpressRoute transitivity enabled on the Secure Hub and Rou
 
 As mentioned earlier, when you enable ExpressRoute to ExpressRoute transitivity on the Hub, it sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to your on-premises network. Therefore, you shouldn't advertise the exact RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Advertising the same exact routes creates routing problems within Azure. Instead, you should advertise more specific routes back to Azure for your on-premises networks.
 
+>[!NOTE]
+>  If you’re currently advertising the default RFC 1918 addresses from on-premises to Azure and wish to continue this practice, you need to split each RFC 1918 range into two equal sub-ranges and advertise these sub-ranges back to Azure. The sub-ranges are 10.0.0.0/9, 10.128.0.0/9, 172.16.0.0/13, 172.24.0.0/13, 192.168.0.0/17, and 192.168.128.0/17.
+>
+
 The diagram illustrates traffic flows from the perspective of on-premises. 
 
 ![Diagram of Single-Region Azure VMware Solution with on-premises](./media/single-region-without-globalreach-3.png)  
