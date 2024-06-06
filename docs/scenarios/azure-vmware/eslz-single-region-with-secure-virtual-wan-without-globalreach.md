@@ -127,8 +127,8 @@ The diagram illustrates traffic flows from a Virtual Network and Azure VMware So
 
 | Traffic Flow Number | Source |   Direction | Destination | Traffic Inspected on Secure Virtual WAN hub firewall? |
 | - | -------------- | -------- | ---------- | ---------- |
-| 7 | Azure VMware Solution Cloud | &#8594;| Internet| Yes, traffic is inspected at the Hub firewall
-| 8 | Virtual Network | &#8594;| Internet | Yes, traffic is inspected at the Hub firewall
+| 7 | Virtual Network | &#8594;| Internet| Yes, traffic is inspected at the Hub firewall
+| 8 | Azure VMware Solution Cloud | &#8594;| Internet | Yes, traffic is inspected at the Hub firewall
 
 
 ## Utilizing VMware HCX Mobility Optimized Networking (MON) without Global Reach
