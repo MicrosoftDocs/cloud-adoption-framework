@@ -87,6 +87,10 @@ When deploying in multiple regions, it is recommended to deploy hubs, shared res
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
+### Components
+
+The large scale deployment adds the following components to the standard deployment.
+
 ### Citrix Design recommendations
 
 All the previous design recommendations apply to large-scale deployments. The following recommendations apply specifically to large-scale deployments:
