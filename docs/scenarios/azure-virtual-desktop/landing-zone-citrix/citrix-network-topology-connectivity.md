@@ -14,11 +14,9 @@ This article describes a reference architecture that demonstrates major design a
 
 ## [WHAT TYPE OF DEPLOYMENT?]
 
-[ADD]
+[ADD]  The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
 
 ### Architecture
-
-The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-multiple.png#lightbox)
 
