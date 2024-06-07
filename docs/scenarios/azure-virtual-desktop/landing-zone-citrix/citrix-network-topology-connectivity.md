@@ -79,7 +79,7 @@ You can use [application security groups](/azure/virtual-network/application-sec
 
 ## Large scale enterprise deployments
 
-The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions.
+When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions. The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. 
 
 ### Architecture
 
@@ -91,9 +91,13 @@ The following architectural diagram shows a detailed guidance for large scale Az
 
 All the previous design recommendations apply to large-scale deployments. The following recommendations apply specifically to large-scale deployments:
 
-*Understand resource limitations.* When you design a large-scale Citrix DaaS on Azure deployment, review the [Citrix DaaS limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The information is dynamic, so check for updates frequently. If current limits do not meet your needs, contact your Microsoft and Citrix representatives early.
+#### Understand resource limitations
 
-*Peer virtual networks with VDA spokes.* For large-scale deployments, create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. The following points A-E illustrate this approach:
+When you design a large-scale Citrix DaaS on Azure deployment, review the [Citrix DaaS limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The information is dynamic, so check for updates frequently. If current limits do not meet your needs, contact your Microsoft and Citrix representatives early.
+
+#### Peer virtual networks with VDA spokes
+
+For large-scale deployments, create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. The following points A-E illustrate this approach:
 
 *  *(A) Hub virtual network configuration:* Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
 * *(B) Peering with shared resources spoke:*  Ensure your hub virtual network is peered with the shared resources spoke to provide [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
