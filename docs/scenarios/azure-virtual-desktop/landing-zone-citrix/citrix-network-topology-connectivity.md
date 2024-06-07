@@ -12,7 +12,11 @@ ms.custom: think-tank, e2e-avd
 
 This article describes a reference architecture that demonstrates major design areas and design best practices for an Azure and Citrix Cloud environment with multiple subscriptions.
 
-## Architecture
+## [WHAT TYPE OF DEPLOYMENT?]
+
+[ADD]
+
+### Architecture
 
 The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
 
@@ -20,7 +24,7 @@ The following architectural diagram shows an Azure and Citrix Cloud environment 
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
-## Components
+### Components
 
 You can implement this architecture with the following components:
 
@@ -49,17 +53,17 @@ The following Citrix components within the Azure landing zone are optional. Cons
 - [Citrix Provisioning](https://docs.citrix.com/en-us/provisioning/current-release/architecture.html) is a network-based image management solution that you can deploy within your Azure tenant to enable scalable deployment of up to thousands of non-persistent machines. Citrix Provisioning supports rapid updates and reduced storage requirements by streaming centralized images over an Azure virtual network.
 - [Citrix App Layering appliance](https://docs.citrix.com/en-us/citrix-app-layering/4/install-appliance/ms-azure.html) is the central component for the App Layering technology that hosts the management console and allows the creation and management of layers, layer assignments, and image templates. App Layering helps manage single OS and app instances and compose images from layers, greatly reducing effort in environments with many golden images.
 
-## Citrix design considerations
+### Citrix design considerations
 
 Design guidance for Citrix DaaS on Microsoft Azure is available on [Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). That guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
 
 The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. All network appliances, such as Citrix ADC and firewalls, must be sized appropriately to handle load increases during disaster recovery scenarios. For more information, see [Design Decision: Azure Specific Considerations](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/azure-system-considerations.html).
 
-### Network segmentation
+#### Network segmentation
 
 Citrix also provides guidance for Azure network segmentation and logically segmented subnets. When you review the guidance on network segmentation for Citrix workloads, use the following guidelines to help with initial planning:
 
-#### Segment by workload types
+##### Segment by workload types
 
 Create separate single-session and multisession virtual networks or subnets to enable growth of each network type without impacting the scalability of the other type.
 
@@ -67,7 +71,7 @@ For example, if you fill a shared multisession and single-session subnet with vi
 
 If you use [workload subscriptions](https://www.citrix.com/blogs/2020/10/14/citrix-tips-citrix-on-azure-enterprise-scale-landing-zones-part-1/) as part of a multisubscription architecture, understand Citrix Machine Creation Service (MCS) [limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#machine-creation-services-mcs-limits) on the number of virtual machines (VMs) per Azure subscription. Consider these limits in your virtual network design and when you [plan for IP addressing](../../../ready/azure-best-practices/plan-for-ip-addressing.md).
 
-#### Segment by tenant, business unit, or security zone
+##### Segment by tenant, business unit, or security zone
 
 If you're running a multitenant deployment, such as a [Citrix Service Provider architecture](https://docs.citrix.com/en-us/tech-zone/design/reference-architectures/csp-cvads.html), it's best to isolate tenants between networks or subnets is recommended. If your existing security standards need specific isolation requirements at a network level, consider isolating separate business units or security zones within your organization.
 
@@ -79,18 +83,19 @@ You can use [application security groups](/azure/virtual-network/application-sec
 
 The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions.
 
-#### Architecture
-
- 
+### Architecture
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png)](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png#lightbox)
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
 #### Citrix Design recommendations
-- *Understand resource limitations.* When you design a large-scale Citrix DaaS on Azure deployment, review the [Citrix DaaS limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The information is dynamic, so check for updates frequently. If current limits do not meet your needs, contact your Microsoft and Citrix representatives early.
 
-For large-scale deployments, create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. The following points A-E illustrate this approach:
+All the previous design recommendations apply to large-scale deployments. The following recommendations apply specifically to large-scale deployments:
+
+*Understand resource limitations.* When you design a large-scale Citrix DaaS on Azure deployment, review the [Citrix DaaS limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The information is dynamic, so check for updates frequently. If current limits do not meet your needs, contact your Microsoft and Citrix representatives early.
+
+*Peer virtual networks with VDA spokes.* For large-scale deployments, create dedicated shared service and management spokes directly peered with your VDA spokes to minimize latency and to avoid hitting networking limits at your hub networks. The following points A-E illustrate this approach:
 
 *  *(A) Hub virtual network configuration:* Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
 * *(B) Peering with shared resources spoke:*  Ensure your hub virtual network is peered with the shared resources spoke to provide [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
