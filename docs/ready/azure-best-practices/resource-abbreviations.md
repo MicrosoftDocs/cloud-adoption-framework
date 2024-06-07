@@ -98,7 +98,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
-| Private link scopes | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
+| Azure Arc private link scope | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
@@ -251,7 +251,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Virtual network subnet | `Microsoft.Network/virtualNetworks/subnets` | `snet`|
 | Virtual WAN | `Microsoft.Network/virtualWans` | `vwan`|
 | Virtual WAN Hub | `Microsoft.Network/virtualHubs` | `vhub`|
-
 
 ## Security
 
