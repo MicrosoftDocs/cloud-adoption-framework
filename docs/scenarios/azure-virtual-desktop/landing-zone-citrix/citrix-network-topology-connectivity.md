@@ -87,7 +87,7 @@ The following architectural diagram shows a detailed guidance for large scale Az
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
-#### Citrix Design recommendations
+### Citrix Design recommendations
 
 All the previous design recommendations apply to large-scale deployments. The following recommendations apply specifically to large-scale deployments:
 
