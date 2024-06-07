@@ -85,7 +85,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Load Testing instance | `Microsoft.LoadTestService/loadTests` | `lt` |
 | Availability set | `Microsoft.Compute/availabilitySets` | `avail` |
 | Azure Arc enabled server | `Microsoft.HybridCompute/machines` | `arcs` |
-| Private link scopes | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
 | Azure Arc enabled Kubernetes cluster | `Microsoft.Kubernetes/connectedClusters` | `arck` |
 | Batch accounts | `Microsoft.Batch/batchAccounts` | `ba` |
 | Cloud service | `Microsoft.Compute/cloudServices` | `cld` |
@@ -99,6 +98,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Managed disk (data) | `Microsoft.Compute/disks` | `disk` |
 | Notification Hubs | `Microsoft.NotificationHubs/namespaces/notificationHubs` | `ntf` |
 | Notification Hubs namespace | `Microsoft.NotificationHubs/namespaces` | `ntfns` |
+| Private link scopes | `Microsoft.HybridCompute/privateLinkScopes` | `pls` |
 | Proximity placement group | `Microsoft.Compute/proximityPlacementGroups` | `ppg` |
 | Restore point collection | `Microsoft.Compute/restorePointCollections` | `rpc` |
 | Snapshot | `Microsoft.Compute/snapshots` | `snap` |
