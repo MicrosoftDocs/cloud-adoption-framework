@@ -5,6 +5,7 @@ author: Zimmergren
 ms.author: tozimmergren
 ms.date: 04/10/2024
 ms.topic: conceptual
+ms.custom: devx-track-extended-java, linux-related-content
 ---
 
 # Review product migration scenarios
