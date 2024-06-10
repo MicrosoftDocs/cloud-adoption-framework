@@ -58,9 +58,9 @@ Your platform team should use these common subscription vending product lines as
 
 Common product lines for subscription vending include:
 
-- [Corp connected](#corp-connected): Workloads that require traditional Layer-3 IP routing connectivity to other applications and on-premises environments via the Connectivity subscription.
-- [Online](#online): Workloads that connect with other applications through modern connectivity services and architectures, such as Azure Private Link or interaction via exposed APIs or endpoints from each application.
-- [Tech platform](#tech-platform): Workloads that build a platform on which you can build other applications. For example, an Azure Kubernetes Service (AKS) fleet of clusters that an AKS platform team manages can host other applications within its AKS clusters on behalf of other application teams.
+- [Corp connected](#the-corp-connected-product-line): Workloads that require traditional Layer-3 IP routing connectivity to other applications and on-premises environments via the Connectivity subscription.
+- [Online](#the-online-product-line): Workloads that connect with other applications through modern connectivity services and architectures, such as Azure Private Link or interaction via exposed APIs or endpoints from each application.
+- [Tech platform](#the-tech-platform-product-line): Workloads that build a platform on which you can build other applications. For example, an Azure Kubernetes Service (AKS) fleet of clusters that an AKS platform team manages can host other applications within its AKS clusters on behalf of other application teams.
 - [Shared application portfolio](#shared-application-portfolio): Shared workloads among the same application teams for a common set of closely coupled applications. You don't want to host the applications on their own or with any specific workload.
 - [Sandbox](#sandbox): An area where application teams can build a proof of concept (PoC) or minimum viable product (MVP) and impose fewer controls, so the team can promote development, invention, and freedom to build the best possible application from the catalog of available Azure services.
 
@@ -152,7 +152,7 @@ You might include the following products in a tech platform product line:
 - **Azure Virtual Machines** on Azure VMware Solution clusters or hosts.
 - **Azure Virtual Desktop** to provide virtual desktops or applications to your entire organization.
 
-You can include these products in either [corp connected](#corp-connected) or [online](#online) product lines, depending on the requirements for the technology platform that your team wants to provide as a service to other application teams in your organization.
+You can include these products in either [corp connected](#the-corp-connected-product-line) or [online](#the-online-product-line) product lines, depending on the requirements for the technology platform that your team wants to provide as a service to other application teams in your organization.
 
 ### Shared application portfolio
 
@@ -225,8 +225,8 @@ Each product line has an implementation cost and a maintenance cost. Evaluate th
 Customers typically enable the following subscription vending product lines initially:
 
 - [Sandbox](#sandbox)
-- [Corp connected](#corp-connected)
-- [Online](#online)
+- [Corp connected](#the-corp-connected-product-line)
+- [Online](#the-online-product-line)
 
 ### Additional resources
 
