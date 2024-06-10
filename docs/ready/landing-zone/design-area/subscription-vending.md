@@ -38,7 +38,7 @@ Subscription vending involves three teams. The Cloud Center of Excellence (CCoE)
 
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
 
-Platform teams can vend many options and subscription types to application teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For assistance in choosing the option that best suits your needs, see explanations of [common subscription vending product lines](./subscription-vending-product-lines.md) customers often create and provide to help start their subscription vending journey.
+Platform teams can vend many options and subscription types to application teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For more information about choosing the option that best suits your needs, see [Common subscription vending product lines](./subscription-vending-product-lines.md).
 
 ### Establish business logic and approval process
 
@@ -131,7 +131,7 @@ The application team should have autonomy to create the resources they need for 
 
 ## Next steps
 
-You should now review the different types of subscriptions (product lines) that you can vend to application teams to establish a great starting point to cater for a number of different scenarios.
+Review the subscriptions, or product lines, that you can vend to application teams. Establish a great starting point so you can cater to a number of different scenarios.
 
 > [!div class="nextstepaction"]
 > [Establish common subscription vending product lines](./subscription-vending-product-lines.md)
