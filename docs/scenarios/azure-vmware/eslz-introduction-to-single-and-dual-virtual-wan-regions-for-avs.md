@@ -56,7 +56,7 @@ It’s crucial to note that unless the situation falls into the following three 
 This use case is best when there's a security requirement to inspect traffic between Azure VMware Solution and on-premises, or between regional Azure VMware Solution Private Clouds on the Virtual Hub Firewall. 
    
 **Category 2: Global Reach unavailability in the region**   
-Connectivity between ExpressRoute connections, whether between Azure VMware Solution and on-premises or among regional Azure VMware Solution private clouds, can be established with Route-Intent when Global Reach is unavailable in a region. By default, Secure Virtual Hubs don't support ExpressRoute to ExpressRoute transitivity. To enable this transitivity, a support ticket needs to be initiated. -See [ExpressRoute Global Reach Availability](/azure/expressroute/expressroute-global-reach#availability)
+Connectivity between ExpressRoute connections, whether between Azure VMware Solution and on-premises or among regional Azure VMware Solution private clouds, can be established with Route-Intent when Global Reach is unavailable in a region. By default, Virtual Hubs don't support ExpressRoute to ExpressRoute transitivity. To enable this transitivity, a support ticket needs to be initiated. -See [ExpressRoute Global Reach Availability](/azure/expressroute/expressroute-global-reach#availability)
 
 **Category 3: on-premises ExpressRoute is using the ExpressRoute Local SKU**   
 The ExpressRoute Local SKU doesn’t currently support Global Reach. Using the Local SKU, you’ll rely on Routing Intent for connectivity between the Azure VMware Solution and your on-premises network.
@@ -89,7 +89,7 @@ Traffic flow to and from Virtual Networks
 | Virtual Networks   | &#8594;<br>&#8592;| Virtual Networks |  Yes
 
 ## Single-region design without Global Reach
-When using single-region without Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. Inspection of traffic is done by using Routing Intent. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. As mentioned earlier, Secure Virtual Hubs do not support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, a support ticket needs to be initiated. Once the support ticket has been fulfilled, the secure hub advertises the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When using Routin Intent from on-premises, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
+When using single-region without Global Reach, the secure hub routes all private and internet traffic through a security solution, such as Azure Firewall, a third-party NVA, or a SaaS solution. Inspection of traffic is done by using Routing Intent. With this design, traffic between Azure VMware Solution and on-premises transits the hub firewall for inspection. As mentioned earlier, Virtual Hubs do not support ExpressRoute to ExpressRoute transitivity by default. To enable this transitivity, a support ticket needs to be initiated. Once the support ticket has been fulfilled, the secure hub advertises the default RFC 1918 addresses to Azure VMware Solution and to on-premises. When using Routing Intent from on-premises, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 
 ![Diagram of Single-Region without Global Reach Azure VMware Solution Scenario](./media/single-region-without-globalreach-1.png)
 
@@ -131,8 +131,8 @@ Traffic flow to and from Azure VMware Solution Private Cloud Region 1
 Traffic flow to and from Azure VMware Solution Private Cloud Region 2
 | Location 1 |   Direction |  Location 2 | Traffic Inspected on Secure Virtual WAN hub firewall?  
 | -------------- | -------- | ---------- | ---|
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 1 |  Yes, via the Hub 2 firewall
-| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 2 |  Yes, via the Hub 1 and Hub 2 firewalls
+| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 1 |   Yes, via the Hub 1 and Hub 2 firewalls
+| Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Virtual Network 2 |  Yes, via the Hub 2 firewall
 | Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| Internet |  Yes, via the Hub 2 firewall  
 | Azure VMware Solution Private Cloud Region 2   | &#8594;<br>&#8592;| on-premises |  No 
 
