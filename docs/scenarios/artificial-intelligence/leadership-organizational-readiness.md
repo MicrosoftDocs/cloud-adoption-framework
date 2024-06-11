@@ -1,6 +1,6 @@
 ---
-title: Leadership and organizational readiness for generative AI
-description: Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
+title: Leadership and organizational readiness for AI
+description: Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for AI.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/29/2024
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Leadership and organizational readiness for generative AI
+# Leadership and organizational readiness for AI
 
-Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for generative AI.
+Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for AI.
 
 Consider asking yourself:
 
-- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for generative AI?
+- How well aligned is your **leadership**, **organization**, and **employees** with your vision and strategy for AI?
 
 ## Leadership buy-in
 
-You identified the potential benefits of generative AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
+You identified the potential benefits of AI and have a clear vision and strategy. Now you need to ensure that your leadership is aligned to that vision and strategy.
 
 > "**Senior leadership's vision and support are—by far—the strongest drivers of success**"
 > From [The AI Strategy Roadmap: Navigating the stages of value creation](https://www.microsoft.com/microsoft-cloud/blog/2024/04/03/the-ai-strategy-roadmap-navigating-the-stages-of-value-creation/)
@@ -87,7 +87,7 @@ With the fact-paced evolution of AI technologies, it's important to establish an
 
 ## Next steps
 
-Understand your options for buying, building, or blending generative AI solutions on Azure.
+Understand your options for buying, building, or blending AI solutions on Azure.
 
 > [!div class="nextstepaction"]
 > [Buy, Build, or Blend](./buy-build-blend.md)

@@ -3,6 +3,8 @@ items:
     href: index.md
   - name: Strategy
     items:
+    - name: Overview
+      href: strategy.md
     - name: Business justification
       href: business-justification-goals.md
     - name: Generative vs. traditional AI
