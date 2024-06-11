@@ -250,9 +250,7 @@ Each product line has an implementation cost and a maintenance cost. Evaluate th
 Customers typically enable the following subscription vending product lines initially:
 
 - [Sandbox](#sandbox)
-  
 - [Corp connected](#the-corp-connected-product-line)
-  
 - [Online](#the-online-product-line)
 
 ### Additional resources
@@ -260,17 +258,11 @@ Customers typically enable the following subscription vending product lines init
 To further support your platform-engineering approach, review the following resources when you design and implement your organization's subscription vending product lines and offerings:
 
 - [Video: How many subscriptions should I use in Azure?](https://youtu.be/R-5oeguxFpo)
-  
 - [Platform landing zones vs. application landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zones-vs-application-landing-zones)
-  
 - [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies)
-  
 - [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
-  
 - [What is the purpose of Connectivity, Corp, and Online management groups?](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity#what-is-the-purpose-of-connectivity-corp-and-online-management-groups)
-  
 - [Manage application development environments in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-application-environments)
-  
 - [Platform engineering principles](/platform-engineering/about/principles)
 
 ## Next step
