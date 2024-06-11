@@ -1,6 +1,6 @@
 ---
-title: Govern generative AI in Azure
-description: Learn how to govern generative AI in Azure by managing risks, ensuring compliance, and managing data effectively.
+title: Governing AI in Azure
+description: Learn how to govern AI in Azure by managing risks, ensuring compliance, and managing data effectively.
 author: Zimmergren
 ms.author: tozimmergren
 ms.date: 05/07/2024
@@ -8,9 +8,30 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Governing generative AI in Azure
+# Governing AI in Azure
 
 Introductory paragraph - TO DO
+
+## Checklist
+
+The following table provides an overview of recommended components to embrace in your AI governance processes.
+
+|AI governance plan component|Description|
+|---|---|
+| Understand the importance of governing AI | |
+| Establish an AI governance team (AI COE)|  |
+| Assess and document AI risks | Use the Cloud Adoption Framework Govern methodology to establish a governance function within your organization. Apply an AI lens to cater for the potential risks and impact of adopting AI. |
+| Enforce AI governance policies | |
+| Monitor AI governance | |
+
+## Understand the importance of governing AI
+
+### Consider asking yourself
+
+- To what extent you have a **plan to manage potential risks** associated with AI (for example, data security, privacy, ethical considerations)?
+- How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
+- How **effective is your data governance framework** in managing data access, usage, privacy, and security?
+- How often **do you audit your data management practices** for quality and compliance?
 
 ## AI governance team
 
@@ -43,61 +64,8 @@ Mitigate risks by enforcing AI governance polities.
 
 ## Monitor AI governance
 
-- Monitor AI your AI governance.
+- Monitor your AI governance.
 - Add examples of how.
-
-## Compliance
-
-TO DO
-
-### Policy enforcement
-
-TO DO
-
-### Understanding regulatory requirements
-
-TO DO
-
-### Compliance monitoring and reporting
-
-TO DO
-
-## Data management
-
-TO DO
-
-### Data quality
-
-TO DO
-
-### Data lifecycle
-
-TO DO
-
-### Data privacy
-
-TO DO
-
-### Data access control
-
-TO DO
-
-### Data security
-
-TO DO
-
-### Data segregation to different environments
-
-TO DO
-
-## Other risk considerations
-
-TO DO
-
-- To what extent you have a **plan to manage potential risks** associated with AI (for example, data security, privacy, ethical considerations)?
-- How **comprehensive is your plan** to address potential risks and challenges related to AI adoption?
-- How **effective is your data governance framework** in managing data access, usage, privacy, and security?
-- How often **do you audit your data management practices** for quality and compliance?
 
 ## Next steps
 
