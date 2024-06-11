@@ -16,7 +16,7 @@ Building an AI adoption plan is a critical step in adopting AI in your organizat
 
 The following table provides an overview of recommended components to embrace in your AI adoption plan.
 
-|Activity|Description|
+|AI adoption plan component|Description|
 |---|---|
 |[Embrace responsible AI](./responsible-ai.md)| Building and incorporating AI in your organization requires you to be aware of the principles of responsible AI. |
 |[AI skills readiness plan](./skills-readiness-ai.md)| Define the required AI skills and incorporate them in your skills readiness category as part of your AI adoption plan. |

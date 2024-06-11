@@ -1,5 +1,5 @@
 ---
-title: Leadership and organizational readiness for AI
+title: Leadership and organizational AI readiness
 description: Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for AI.
 author: Zimmergren
 ms.author: tozimmergren
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Leadership and organizational readiness for AI
+# Leadership and organizational AI readiness
 
 Be proactive in removing any barriers to adoption and ensure that your leadership is aligned with your vision and strategy for AI.
 
