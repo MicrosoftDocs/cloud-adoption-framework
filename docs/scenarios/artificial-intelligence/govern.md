@@ -49,7 +49,7 @@ Here are some common AI risks to consider for your risk list:
 |---|---|---|---|---|---|
 |R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to laws such as GDPR or CCPA can result in fines and legal consequences.|Medium|High|High|
 |R02|Regulatory compliance|**Violations of industry-specific regulations.**<br> Some industries, like healthcare and finance, have additional regulations that must be met, such as HIPAA or FINRA.|Medium|High|High|
-|R03|Regulatory compliance|**Breach of international data transfer rules.**<br> Not handing data correctly across borders can lead to violations of laws governing international data transfer, such as the EU-US. Privacy Shield.|Mediuh|High|
+|R03|Regulatory compliance|**Breach of international data transfer rules.**<br> Not handing data correctly across borders can lead to violations of laws governing international data transfer, such as the EU-US. Privacy Shield.|Medium|High|High|
 |R04|Ethical|**Unfair treatment of users or customers.**<br> Biased AI decisions can result in discriminatory practices affecting certain groups of users or customers.|Medium|High|High|
 |R05|Ethical|**Lack of transparency in AI decision-making.**<br> Without proper transparency, it’s difficult to understand and justify decisions from AI, undermining trust and accountability.|Medium|High|High|
 |R06|Ethical|**Inaccurate predictions.**<br> If a model is flawed, it might produce incorrect predictions or classifications, leading to poor business decisions and potential financial losses.|Medium|High|High|
@@ -67,7 +67,7 @@ With risks identified, you should establish policies to mitigate them. You shoul
 Here are some examples of AI governance policies:
 
 | Policy ID | Policy category | Risk IDs | Policy statement | Purpose | Scope | Remediation | Monitoring |
-|-----------|-----------------|---------|------------------|---------|-------|-------------| ---------- |
+|---|---|---|---|---|---|---|---|
 | RC01 | Regulatory compliance | [R01](#example-ai-risk-list) | Store and process data in compliant geographic regions. | Regulatory compliance | Workload teams, platform team | Use Azure Policy to configure data residency and compliance requirements policies to ensure data is stored in approved specific regions. | - Azure Policy |
 | RC02 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Enforce regulatory compliance with Microsoft Defender for Cloud. | Regulatory compliance | Workload teams, platform team | Use Microsoft Defender for Cloud to enforce regulatory compliance requirements in your Azure environment. Use Microsoft Purview to enforce and monitor compliance in your wider organization. | - Microsoft Purview.<br> - Microsoft Defender for Cloud. |
 | RC03 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Document and audit regulatory compliance continuously. | Regulatory compliance | AI Center of Excellence, platform team | Use compliance management tools, such as Microsoft Purview Compliance Manager and Microsoft Defender for Cloud, to track and manage compliance activities and documentation. | - Microsoft Purview Compliance Manager.<br> - Microsoft Defender for Cloud. |
