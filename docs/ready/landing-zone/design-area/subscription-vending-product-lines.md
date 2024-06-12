@@ -93,6 +93,18 @@ The following diagram shows an example of the corp connected subscription vendin
 The diagram shows an example of the corp connected subscription vending product line with a network architecture that features a central Routable hub with an IP address of 10.1.0.0/24. The routable hub connects to two spokes: Landing zone A and Landing zone B, with IP addresses 10.1.1.0/24 and 10.1.2.0/24 respectively. The diagram also shows Virtual network peering connections between the hub and the landing zones, and other unspecified landing zones. This setup is typical for a hub-and-spoke network model and helps to manage network traffic and policies efficiently.
 :::image-end:::
 
+#### When to use the corp connected product line
+
+Use the corp connected product line when:
+
+- You want to perform Rehost and Refactor migrations and application builds based on [the five Rs of rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization).
+
+- You want to start your journey in Azure and are familiar with a similar on-premises architecture.
+
+- You want to "lift and shift" applications into Azure.
+
+- You want to enhance security between workloads by isolating applications into their own landing zone subscriptions and moving toward micro-segmentation principles from zero-trust without yet rearchitecting the application to be fully cloud-native.
+
 Take note of these other considerations for the corp connected product line:
 
 - Your platform team can vend the virtual network into the application landing zone subscription and peer the virtual network to the regional hub virtual network or the Azure Virtual WAN hub. Your team can then use an IP address management (IPAM) tool to control the IP address allocation.
@@ -129,6 +141,22 @@ The following diagram shows an example of an online subscription vending product
 :::image type="complex" source="./media/sub-vend-product-line2.svg" alt-text="Diagram that shows an example of the online subscription vending product line." lightbox="./media/sub-vend-product-line2.svg" border="false":::
 This diagram shows an example of an online subscription vending product line that has a network architecture diagram with sections labeled Landing zone A, Landing zone B, Landing zone C, and Landing zone D. Each section includes icons for network elements like databases and cloud services, interconnected with arrows to show data flow. A central Routable hub 10.0.0/24 with a security lock icon connects to other landing zones depicted by cloud icons. Importantly, none of the virtual networks are peered together and all use modern services and approaches like private links to interact with each other.
 :::image-end:::
+
+#### When to use the online product line
+
+Use the online product line when you want to:
+
+- Refactor, rearchitect, rebuild, and perform migrations and application builds, based on [the five Rs of rationalization](/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization).
+
+- Provide application teams with a fully democratized application landing zone to use, even regarding networking configuration.
+
+- Take advantage of cloud-native services and architectures.
+
+- Considerably enhance alignment with zero-trust principles.
+
+- Use the corp connected product line, but private IP address space is unavailable or limited.
+
+  - In this scenario, you should review the guidance in [Prevent IPv4 exhaustion in Azure](/azure/architecture/networking/guide/ipv4-exhaustion).
 
 ### The Tech platform product line
 
