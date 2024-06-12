@@ -22,7 +22,7 @@ Ask yourself these questions to establish criteria for a monitoring configuratio
 
 - **Service composition**: What's the composition of the services? Are those dependencies monitored today? If so, are multiple tools involved, and is there an opportunity to consolidate without introducing additional risk?
 
-- **Define predictable failure states**: These signals are the symptoms of the _failure_, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
+- **Define predictable failure states**: These signals are the symptoms of the *failure*, not the cause. The monitoring tools use metrics and logs for advanced diagnostics and root cause analysis.
 
 - **Service SLA**: What's the Service Level Agreement (SLA) of the service, and how will you measure and report it?
 
