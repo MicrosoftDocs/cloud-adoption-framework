@@ -36,11 +36,6 @@ items:
       - name: Overview
         href: secure.md
   - name: Govern
-    items:
-    - name: Overview
-      href: govern.md
-    - name: Cost governance
-      href: govern.md
-
+    href: govern.md
   - name: Manage
     href: manage.md
