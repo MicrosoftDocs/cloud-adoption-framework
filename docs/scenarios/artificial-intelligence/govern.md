@@ -3,7 +3,7 @@ title: Governing AI in Azure
 description: Learn how to govern AI in Azure by managing risks, ensuring compliance, and managing data effectively.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/07/2024
+ms.date: 06/12/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -24,24 +24,26 @@ The following table provides an overview of recommended components to embrace in
 
 |AI governance plan component|Description|
 |---|---|
-| Understand the importance of governing AI | |
-| Establish an AI governance team (AI COE)|  |
-| Assess and document AI risks | Use the Cloud Adoption Framework Govern methodology to establish a governance function within your organization. Apply an AI lens to cater for the potential risks and impact of adopting AI. |
+| Establish an AI governance team |  |
+| Assess AI risks |  |
 | Enforce AI governance policies | |
 | Monitor AI governance | |
 
 ## Establish an AI governance team
 
-> Point to Govern's section for establishing a team.
-> Expand with specific functions as per an AI CoE -> Link to the AI CoE article.
+In the Cloud Adoption Framework, the Govern methodology provides guidance on how to [establish a governance function](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) within your organization. This function is responsible for ensuring that the organization’s cloud resources are used in a compliant, secure, and efficient manner. When adopting AI, you should extend this governance function to cater for the specific risks and challenges associated with AI.
+
+By extending your cloud governance team to include AI governance, you can ensure that AI systems are developed, deployed, and managed in a responsible and compliant manner. This team should be responsible for setting AI governance policies, monitoring compliance, and providing guidance and support to AI development teams. For enterprises, the governance function might exist within the AI center of Excellence (CoE), which is responsible for driving AI adoption across the organization.
+
+For more information on the functions of an AI Center of Excellence team, see [AI Center of Excellence](./ai-center-of-excellence.md).
 
 ## Assess AI risks
 
 Risks are associated with all areas of business. With AI, there are new types of risks to consider. You should use the prescribed process in the CAF Govern methodology to [assess risk](/azure/cloud-adoption-framework/govern/assess-cloud-risks). As you build your [risk list](/azure/cloud-adoption-framework/govern/assess-cloud-risks#example-risk-list), consider applying an AI lens to cater for the potential risks and impact of adopting AI.
 
-Here are some common AI risks to consider for your risk list:
-
 ### Example AI risk list
+
+Here are some common AI risks to consider for your risk list:
 
 #### Version 1
 
@@ -74,9 +76,11 @@ Here are some common AI risks to consider for your risk list:
 |Cost|**Unexpected costs**: AI projects can be expensive, and costs can spiral out of control if not managed properly.|
 |Cost|**Underutilization of AI resources**: If AI resources are not used efficiently, it can lead to wasted resources and missed opportunities, and a poor sustainability score.|
 
-### Example AI governance policies
+## Enforce AI governance policies
 
-With risks identified, you should establish policies to mitigate them. These policies should be enforced across the organization to ensure that AI systems are developed, deployed, and managed in a responsible and compliant manner. Some policies might be possible to implement using built-in tools and services in Azure, while others might require manual enforcement and monitoring.
+With risks identified, you should establish policies to mitigate them. You should use the prescribed process in the CAF Govern methodology to [Enforce cloud governance policies](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies). Policies should be enforced across the organization to ensure that AI systems are developed, deployed, and managed in a responsible and compliant manner. Some policies might be possible to implement using built-in tools and services in Azure, while others might require manual enforcement and monitoring.
+
+### Example AI governance policies
 
 Here are some examples of AI governance policies:
 
