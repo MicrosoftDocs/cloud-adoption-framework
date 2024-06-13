@@ -100,7 +100,7 @@ The following list is a variety of resources that help organizations skill and g
 
 - [Tech community blog](https://techcommunity.microsoft.com/t5/azure-migration-and/bg-p/AzureMigrationBlog)
 - [Azure VMware Solution quickstart guides](/azure/azure-vmware/plan-private-cloud-deployment)
-- [Azure VMware Solution hands-on labs](https://web.hol.vmware.com/landingPages/index.aspx?id=PN5RRQA9)
+- [Azure VMware Solution hands-on labs](https://labs.hol.vmware.com/HOL/)
 
 ## Next steps
 
