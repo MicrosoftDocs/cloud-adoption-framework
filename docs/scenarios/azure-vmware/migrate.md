@@ -77,7 +77,7 @@ You can use the vSphere Client interface to manage vCenter Server and VMware's P
 
 Azure VMware Solution allows you to work in a familiar environment, with familiar tools. It allows you to iterate, innovate, and modernize at your own pace as you work through your digital transformation.
 
-To get more experience migrating VMware vSphere with Azure VMware Solution, try one of these [hands on labs](https://web.hol.vmware.com/landingPages/index.aspx?id=PN5RRQA9).
+To get more experience migrating VMware vSphere with Azure VMware Solution, try one of these [hands on labs](https://labs.hol.vmware.com/HOL/).
 
 - **Azure VMware Solution private cloud deployment and connectivity:** A guided lab for VMware vSphere administrators, showing how to set up the cloud deployment and connectivity.
 - **Azure VMware Solution workload migration with VMware HCX:** This lab addresses the migration components. It walks through how to create the environment, deploy the environment, and migrate VMs.
