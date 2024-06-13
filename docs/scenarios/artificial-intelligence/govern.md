@@ -47,7 +47,7 @@ Here are some common AI risks to consider for your risk list:
 
 |Risk ID|Risk category|Risk description|Risk probability|Risk impact|Risk priority|
 |---|---|---|---|---|---|
-|R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to laws such as GDPR or CCPA can result in fines and legal consequences.|Medium|High|High|
+|R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to local or international laws can result in fines and legal consequences.|Medium|High|High|
 |R02|Regulatory compliance|**Violations of industry-specific regulations.**<br> Some industries, like healthcare and finance, have additional regulations that must be met, such as HIPAA or FINRA.|Medium|High|High|
 |R03|Regulatory compliance|**Breach of international data transfer rules.**<br> Not handing data correctly across borders can lead to violations of laws governing international data transfer, such as the EU-US. Privacy Shield.|Medium|High|High|
 |R04|Ethical|**Unfair treatment of users or customers.**<br> Biased AI decisions can result in discriminatory practices affecting certain groups of users or customers.|Medium|High|High|
