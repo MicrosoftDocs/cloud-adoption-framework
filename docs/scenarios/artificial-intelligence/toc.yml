@@ -1,5 +1,5 @@
 items:
-  - name: Artificial Intelligence adoption in Azure
+  - name: AI adoption on Azure
     href: index.md
   - name: Strategy
     items:
@@ -36,11 +36,6 @@ items:
       - name: Overview
         href: secure.md
   - name: Govern
-    items:
-    - name: Overview
-      href: govern.md
-    - name: Cost governance
-      href: govern.md
-
+    href: govern.md
   - name: Manage
     href: manage.md
