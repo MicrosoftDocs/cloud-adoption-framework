@@ -20,7 +20,7 @@ Other guidance that should also be reviewed is covered within the [Azure Well-Ar
 
 To manage and monitor your Azure landing zone, Microsoft Azure provides various tools and services including Azure Monitor, Azure Advisor, and Azure Service Health. These tools can alert system owners of potential irregularities and bottlenecks within an Azure Landing Zone. The focus of this article is on using Azure Monitor to achieve a stable Oracle Database@Azure, Exadata Database services implementation. Review the following documentation to learn more about Azure Monitor [Azure Monitor documentation - Azure Monitor | Microsoft Learn](/azure/azure-monitor/).
 
-The following are key topics to consider before deploying your Oracle resources:
+The following are key topics to consider before deploying Oracle Database@Azure, Exadata Database services:
 
 - In which Azure datacenter will you deploy your Oracle Exadata databases in relation to your current or planned Azure enterprise landing zone. Can your current monitor tooling of choice be able to extend into your region of choice.
 - Network planning has to be taken into consideration before you deploy your resources. When you deploy your Oracle resources, you have the choice of a single virtual network or a Hub and Spoke architecture with hybrid connectivity.Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
