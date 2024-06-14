@@ -1,6 +1,6 @@
 ---
 title: Manage and Monitor Oracle Database@Azure, Exadata Database services 
-description: Learn how to manage and monitor your Exadata Database for Oracle Database@Azure.
+description: Learn how to manage and monitor your Oracle Database@Azure, Exadata Database services.
 author: AnthonyDelagarde
 ms.author: anthdela
 ms.reviewer: janfaurs
