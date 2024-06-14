@@ -18,7 +18,7 @@ Other guidance that should also be reviewed is covered within the [Azure Well-Ar
 
 ## Design considerations
 
-To manage and monitor Oracle Exadata databases, Microsoft Azure provides various tools and services including Azure Monitor, Azure Advisor, and Azure Service Health. These tools can alert system owners of potential irregularities and bottlenecks within an Azure Landing Zone. The focus of this article focuses on using Azure Monitor to achieve a stable Oracle Exadata Database cluster. Review the following documentation to learn more about Azure Monitor [Azure Monitor documentation - Azure Monitor | Microsoft Learn](/azure/azure-monitor/).
+To manage and monitor your Azure landing zone, Microsoft Azure provides various tools and services including Azure Monitor, Azure Advisor, and Azure Service Health. These tools can alert system owners of potential irregularities and bottlenecks within an Azure Landing Zone. The focus of this article is on using Azure Monitor to achieve a stable Oracle Database@Azure, Exadata Database services implementation. Review the following documentation to learn more about Azure Monitor [Azure Monitor documentation - Azure Monitor | Microsoft Learn](/azure/azure-monitor/).
 
 The following are key topics to consider before deploying your Oracle resources:
 
