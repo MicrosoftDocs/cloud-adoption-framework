@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: scenario
 ---
 
-# Manage and Monitor Oracle Exadata Database Landing Zone Accelerator 
+# Manage and Monitor Oracle Database@Azure, Exadata Database services
 
 This article provides recommended business practices to manage and monitor Oracle Exadata Database on Azure. The recommendations outlined provide important recommendations and considerations for the overall design and onboarding of this service within your Azure Enterprise Landing Zone. There is more recommended design, platform management, and guidance in the following article [Azure enterprise-scale landing zone for management and monitoring](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management). The intent of this article is to provide the reader with the required steps to proactively monitor mission critical workloads to promote both a stable and reliable digital estate.
 
