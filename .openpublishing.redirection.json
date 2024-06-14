@@ -16,6 +16,111 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-azure-sentinal.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-inventory-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-policies-mma.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-security-center.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arm-template-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/arm-template-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-scale-ansible.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-terraform-al2.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/aws-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/gcp-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/gcp-terraform-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/local-vagrant-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/local-vagrant-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/onboard-server-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/onboard-server-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-scaled-powercli-linux.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-scaled-powercli-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-terraform-ubuntu.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-terraform-windows.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-ubuntu-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/hybrid/server/best-practices/vmware-windows-template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/get-started/help.md",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
          "redirect_document_id": false
