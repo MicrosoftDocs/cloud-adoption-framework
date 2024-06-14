@@ -16,7 +16,7 @@
          "redirect_document_id": false
       },
       {
-         "source_path": "docs/manage/hybrid/server/best-practices/arc-azure-sentinal.md",
+         "source_path": "docs/manage/hybrid/server/best-practices/arc-azure-sentinel.md",
          "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/scenario-overview",
          "redirect_document_id": false
       },
