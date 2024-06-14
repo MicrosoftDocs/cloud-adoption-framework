@@ -1,5 +1,5 @@
 ---
-title: Manage and Monitor Oracle Exadata Database Landing Zone Accelerator 
+title: Manage and Monitor Oracle Database@Azure, Exadata Database services 
 description: Learn how to manage and monitor your Exadata Database for Oracle Database@Azure.
 author: AnthonyDelagarde
 ms.author: anthdela
