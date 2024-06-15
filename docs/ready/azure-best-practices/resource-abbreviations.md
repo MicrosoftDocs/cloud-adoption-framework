@@ -189,6 +189,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
 | Microsoft Purview instance | `Microsoft.Purview/accounts` | `pview` |
+| Multicloud connectors | `Microsoft.HybridConnectivity/publicCloudConnectors` | `pcc` |
 | Resource group | `Microsoft.Resources/resourceGroups` | `rg` |
 | Template specs name | `Microsoft.Resources/templateSpecs` | `ts` |
 
