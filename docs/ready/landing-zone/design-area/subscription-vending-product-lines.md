@@ -17,7 +17,7 @@ This article explores how platform teams can establish common subscription vendi
 
 The following diagram shows the organization of management groups and subscriptions within an Azure environment.
 
-:::image type="complex" source="./media/sub-vend-product-line0.png" alt-text="A diagram that shows the organization of management groups and subscriptions within an Azure environment." lightbox="./media/sub-vend-product-line0.png" border="false":::
+:::image type="complex" source="./media/subscription-vending-product-line-0.png" alt-text="A diagram that shows the organization of management groups and subscriptions within an Azure environment." lightbox="./media/subscription-vending-product-line-0.png" border="false":::
 The diagram shows elements such as management groups, landing zones, and platforms named Connectivity and Identity. The diagram also depicts Connectivity subscriptions with components like a regional hub and subscription vending automation, which indicates the flow and relationships between different organizational components. This architecture aligns with Azure landing zones.
 :::image-end:::
 
