@@ -89,7 +89,7 @@ Organizations that use subscription vending often incorporate this product line 
 
 The following diagram shows an example of the corp connected subscription vending product line. You can use this setup for a hub-and-spoke network model to help effectively manage network traffic and policies.
 
-:::image type="complex" source="./media/sub-vend-product-line1.svg" alt-text="Diagram that shows an example of the corp connected subscription vending product line." lightbox="./media/subscription-vending-product-line-1.svg" border="false":::
+:::image type="complex" source="./media/subscription-vending-product-line-1.svg" alt-text="Diagram that shows an example of the corp connected subscription vending product line." lightbox="./media/subscription-vending-product-line-1.svg" border="false":::
 The diagram shows an example of the corp connected subscription vending product line with a network architecture that features a central Routable hub with an IP address of 10.1.0.0/24. The routable hub connects to two spokes: Landing zone A and Landing zone B, with IP addresses 10.1.1.0/24 and 10.1.2.0/24 respectively. The diagram also shows Virtual network peering connections between the hub and the landing zones, and other unspecified landing zones. This setup is typical for a hub-and-spoke network model and helps to manage network traffic and policies efficiently.
 :::image-end:::
 
