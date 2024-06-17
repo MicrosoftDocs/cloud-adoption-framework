@@ -138,7 +138,7 @@ Think of the online application landing zone product line as isolated islands. B
 
 The following diagram shows an example of an online subscription vending product line.
 
-:::image type="complex" source="./media/sub-vend-product-line2.svg" alt-text="Diagram that shows an example of the online subscription vending product line." lightbox="./media/sub-vend-product-line2.svg" border="false":::
+:::image type="complex" source="./media/subscription-vending-product-line-2.svg" alt-text="Diagram that shows an example of the online subscription vending product line." lightbox="./media/subscription-vending-product-line-2.svg" border="false":::
 This diagram shows an example of an online subscription vending product line that has a network architecture diagram with sections labeled Landing zone A, Landing zone B, Landing zone C, and Landing zone D. Each section includes icons for network elements like databases and cloud services, interconnected with arrows to show data flow. A central Routable hub 10.0.0/24 with a security lock icon connects to other landing zones depicted by cloud icons. Importantly, none of the virtual networks are peered together and all use modern services and approaches like private links to interact with each other.
 :::image-end:::
 
