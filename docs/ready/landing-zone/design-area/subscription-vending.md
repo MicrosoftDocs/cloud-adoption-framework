@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/17/2023
+ms.date: 06/06/2023
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -37,6 +37,8 @@ Subscription vending offers several benefits to organizations that need to deplo
 Subscription vending involves three teams. The Cloud Center of Excellence (CCoE) establishes business logic and the approval process. When ready, the application teams make subscription requests. The platform team uses the request to create and configure the subscription before handing off the subscription to the application team. The application team updates the budget, deploys the workload, and establishes operations. The following guidance provides more details on each step of the subscription vending process. For more information, see [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending).
 
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
+
+Platform teams can vend many options and subscription types to application teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For more information about choosing the option that best suits your needs, see [Common subscription vending product lines](./subscription-vending-product-lines.md).
 
 ### Establish business logic and approval process
 
@@ -129,7 +131,7 @@ The application team should have autonomy to create the resources they need for 
 
 ## Next steps
 
-For the best results, you should automate as much of the subscription vending process as possible. Use the companion guidance on implementing subscription vending automation.
+Review the subscriptions, or product lines, that you can vend to application teams. Establish a great starting point so you can cater to a number of different scenarios.
 
 > [!div class="nextstepaction"]
-> [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending)
+> [Establish common subscription vending product lines](./subscription-vending-product-lines.md)
