@@ -14,9 +14,9 @@ AI governance is a key factor for effective AI adoption. Use the Govern methodol
 
 AI governance usually refers to policies, processes, and standards that direct the organization's creation, deployment, and management of AI.
 
-An AI adoption governance strategy should consider ethical guidelines, regulatory compliance considerations, accountability structures, and operational procedures to make sure AI technologies are used in a responsible, efficient, and safe manner.
+An AI adoption governance strategy should consider ethical guidelines, regulatory compliance considerations, accountability structures, and operational procedures. This helps make sure AI technologies are used in a responsible, efficient, and safe manner.
 
-With this guidance, you get examples of how to reduce risks, increase transparency, and ensure that AI systems match the organization’s strategic objectives while protecting stakeholder interests.
+With this guidance, you get examples of how to reduce risks, increase transparency, and ensure that AI systems match the organization’s strategic objectives, while protecting stakeholder interests.
 
 ## Checklist
 
@@ -56,7 +56,8 @@ Here are some common AI risks to consider for your risk list:
 |R07|Security|**AI system breaches**: Malicious actors might target AI systems, manipulating outputs or stealing proprietary data and algorithms.|Medium|High|High|
 |R08|Security|**Insider threats.**<br> Employees with access to AI systems and data might misuse their privileges, either intentionally or not, compromising security.|Medium|High|High|
 |R09|Cost|**Unexpected costs.**<br> AI projects can be expensive, and costs can spiral out of control if not managed properly.|Medium|High|High|
-|R10|Cost|**Underutilization of AI resources.**<br> If AI resources are not used efficiently, it can lead to wasted resources and missed opportunities, and a poor sustainability score.|Medium|High|High|
+|R10|Cost|**Underutilization of AI resources.**<br> If AI resources aren't used efficiently, it can lead to wasted resources and missed opportunities, and a poor sustainability score.|Medium|High|High|
+|R11|Legal|**Copyright issues.**<br> Many Large Language Models (LLMs) are trained on a vast amount of data, which might contain copyrighted material if it's from an internet source.|Medium|High|High|
 
 ## Enforce AI governance policies
 
@@ -68,11 +69,12 @@ Here are some examples of AI governance policies:
 
 | Policy ID | Policy category | Risk IDs | Policy statement | Purpose | Scope | Remediation | Monitoring |
 |---|---|---|---|---|---|---|---|
-| RC01 | Regulatory compliance | [R01](#example-ai-risk-list) | Store and process data in compliant geographic regions. | Regulatory compliance | Workload teams, platform team | Use Azure Policy to configure data residency and compliance requirements policies to ensure data is stored in approved specific regions. | - Azure Policy |
-| RC02 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Enforce regulatory compliance with Microsoft Defender for Cloud. | Regulatory compliance | Workload teams, platform team | Use Microsoft Defender for Cloud to enforce regulatory compliance requirements in your Azure environment. Use Microsoft Purview to enforce and monitor compliance in your wider organization. | - Microsoft Purview.<br> - Microsoft Defender for Cloud. |
-| RC03 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Document and audit regulatory compliance continuously. | Regulatory compliance | AI Center of Excellence, platform team | Use compliance management tools, such as Microsoft Purview Compliance Manager and Microsoft Defender for Cloud, to track and manage compliance activities and documentation. | - Microsoft Purview Compliance Manager.<br> - Microsoft Defender for Cloud. |
-| ET01 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Develop, maintain, and enforce ethical guidelines. | Ethical | AI Center of Excellence |Integrate the Responsible AI principles in your AI strategy adoption roadmaps. | Manual. |
-| ET02 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Conduct bias and fairness checks for Azure Machine Learning models. | Ethical | Workload team, AI development teams | - Use the Fairlearn toolkit to assess and mitigate bias in AI models. <br>- Use the Azure Responsible AI Dashboard for tools and guidelines to ensure ethical AI practices.| Manual. |
+| RC01 | Regulatory compliance | [R01](#example-ai-risk-list) | Store and process data in compliant geographic regions. | Regulatory compliance | Workload teams, platform team | Use Azure Policy to configure data residency and compliance requirements policies to ensure data is stored in approved specific regions. | <li> Azure Policy |
+| RC02 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Enforce regulatory compliance with Microsoft Defender for Cloud. | Regulatory compliance | Workload teams, platform team | Use Microsoft Defender for Cloud to enforce regulatory compliance requirements in your Azure environment. Use Microsoft Purview to enforce and monitor compliance in your wider organization. | <li> Microsoft Purview.<br> <li> Microsoft Defender for Cloud. |
+| RC03 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Document and audit regulatory compliance continuously. | Regulatory compliance | AI Center of Excellence, platform team | Use compliance management tools, such as Microsoft Purview Compliance Manager and Microsoft Defender for Cloud, to track and manage compliance activities and documentation. | <li> Microsoft Purview Compliance Manager.<br> <li> Microsoft Defender for Cloud. |
+| ET01 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Develop, maintain, and enforce ethical guidelines. | Ethical | AI Center of Excellence |Integrate the Responsible AI principles in your AI strategy adoption roadmaps. | <li> Manual. |
+| ET02 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Conduct bias and fairness checks for Azure Machine Learning models. | Ethical | Workload team, AI development teams | - Use the Fairlearn toolkit to assess and mitigate bias in AI models. <br>- Use the Azure Responsible AI Dashboard for tools and guidelines to ensure ethical AI practices.| <li> Manual. |
+| LE01 | Legal | [R11](#example-ai-risk-list) | Validate source references and output transparency. | Legal | AI Center of Excellence, platform team | Ensure visibility into data sources used, and the methods of the data retrieval. | <li> Manual. |
 
 ## Monitor AI governance
 

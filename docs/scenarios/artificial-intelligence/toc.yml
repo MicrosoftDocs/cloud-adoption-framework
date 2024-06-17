@@ -32,9 +32,7 @@ items:
     - name: IaaS
       href: ready.md
   - name: Secure
-    items:
-      - name: Overview
-        href: secure.md
+    href: secure.md
   - name: Govern
     href: govern.md
   - name: Manage
