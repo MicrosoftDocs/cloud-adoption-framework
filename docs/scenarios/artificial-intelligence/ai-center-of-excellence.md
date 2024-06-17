@@ -10,7 +10,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI Center of Excellence
 
-An AI Center of Excellence is a strategic initiative designed to harness the transformative power of artificial intelligence within organizations, both startups and enterprises. An AI CoE initiative aligns closely with the foundational principles outlines in [Building a Foundation for AI Success: A Leader's Guide](https://info.microsoft.com/ww-landing-building-a-foundation-for-ai-success.html).
+An AI Center of Excellence is a strategic initiative designed to harness the transformative power of artificial intelligence within organizations, both **startups and enterprises**. An AI CoE initiative aligns closely with the foundational principles outlines in [Building a Foundation for AI Success: A Leader's Guide](https://info.microsoft.com/ww-landing-building-a-foundation-for-ai-success.html).
 
 An AI Center of Excellence is a cross-functional team that provides leadership, standards, and best practices for organizations AI initiatives. It plays a crucial role in guiding and overseeing AI projects, bridging the gap between executive decision-making and AI implementation.
 
@@ -18,15 +18,15 @@ An AI Center of Excellence is a cross-functional team that provides leadership, 
 
 The [Cloud Center of Excellence](/azure/cloud-adoption-framework/organize/cloud-center-of-excellence) (CoE), is building the foundation around cloud adoption and optimization by supporting cloud strategy, governance, and implementation. On the other hand, an AI Center of Excellence is driving AI initiatives within an organization and providing best practices and standards for AI projects, specifically. Both types of Center of Excellence play a critical role but focusing on different domains.
 
-## Key functions of an AI Center of Excellence
+## Key reasons to have an AI Center of Excellence
 
 An AI Center of Excellence integrates and operationalizes the [Five Pillars of AI Success](https://info.microsoft.com/ww-landing-building-a-foundation-for-ai-success.html):
 
-1. **Business strategy**: Clearly defined and prioritized business objectives, use cases, and measurement of AI value.
-1. **Technology strategy**: An AI-ready application and data platform architecture, aligned parameters for build vs. buy decisions, and plans for where to host data and applications to optimize outcomes.
-1. **AI strategy and experience**: A systematic, customer-centric approach to AI that includes applying the right model to the right use case and experience in building, testing, and realizing AI value across multiple business units, use cases, and dimensions.
-1. **Organization and culture**: A clear operating model, leadership support, change-management process, access to continuous learning and development, and strong relationships with diverse subject-matter experts.
-1. **AI Governance**: Implementation of processes, controls, and accountability structures to govern data privacy, security, and responsible use of AI.
+1. **Business strategy**: Develops clearly defined and prioritized business objectives, identifies key use cases, and establishes metrics to measure the value derived from AI initiatives.
+1. **Technology strategy**: Designs an AI-ready application and data platform architecture, determines the parameters for making build vs. buy decisions, and formulates plans for optimal data and application hosting.
+1. **AI strategy and experience**: Implements a customer-centric AI approach, ensuring the correct models are applied to appropriate use cases and leveraging experience in building, testing, and realizing AI value across various business units and scenarios.
+1. **Organization and culture**: Establishes a clear operating model, secures leadership support, manages change processes effectively, provides access to continuous learning and development opportunities, and fosters strong relationships with diverse subject-matter experts.
+1. **AI Governance**: Sets up processes, controls, and accountability structures to oversee data privacy, security, and the ethical use of AI technologies.
 
 The AI CoE aims to ensure that AI initiatives are integrated with the organization's strategic objectives, leans on a robust technological foundation, and are implemented with a focus on user experience and ethical considerations.
 
@@ -52,6 +52,10 @@ The elements or approach for an AI CoE is not particularly radical. Besides defi
 - Implements the framework so the CoE team can grow with the AI usage across the organization.
 - Provides a one stop approach to educating, nurturing, adopting, and maintaining AI across the enterprise.
 - Ensures the organization can manage the growth of the platform based on the needs of the organization today and into the future.
+
+### AI CoE key function examples
+
+> Insert example table with responsibilities/roles and their importance.
 
 ## Planning considerations for an initial AI adoption budget
 
