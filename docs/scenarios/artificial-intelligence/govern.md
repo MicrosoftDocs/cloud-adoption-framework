@@ -74,7 +74,7 @@ Here are some examples of AI governance policies:
 | RC03 | Regulatory compliance | [R02](#example-ai-risk-list), [R03](#example-ai-risk-list) | Document and audit regulatory compliance continuously. | Regulatory compliance | AI Center of Excellence, platform team | Use compliance management tools, such as Microsoft Purview Compliance Manager and Microsoft Defender for Cloud, to track and manage compliance activities and documentation. | <li> Microsoft Purview Compliance Manager.<br> <li> Microsoft Defender for Cloud. |
 | ET01 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Develop, maintain, and enforce ethical guidelines. | Ethical | AI Center of Excellence |Integrate the Responsible AI principles in your AI strategy adoption roadmaps. | <li> Manual. |
 | ET02 | Ethical | [R04](#example-ai-risk-list), [R05](#example-ai-risk-list) | Conduct bias and fairness checks for Azure Machine Learning models. | Ethical | Workload team, AI development teams | - Use the Fairlearn toolkit to assess and mitigate bias in AI models. <br>- Use the Azure Responsible AI Dashboard for tools and guidelines to ensure ethical AI practices.| <li> Manual. |
-| LE01 | Legal | [R11](#example-ai-risk-list) | Validate source references and output transparency. | Legal | AI Center of Excellence, platform team | Validate source references for generated content, and ensure you have enough transparency and insights to where generated information comes from. | <li> Manual. |
+| LE01 | Legal | [R11](#example-ai-risk-list) | Validate source references and output transparency. | Legal | AI Center of Excellence, platform team | Ensure visibility into data sources used, and the methods of the data retrieval. | <li> Manual. |
 
 ## Monitor AI governance
 
