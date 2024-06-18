@@ -3,7 +3,7 @@ title: Sustainability considerations in cloud management
 description: Use the Cloud Adoption Framework for Azure to learn how to better manage your cloud operations and take sustainability and cloud efficiency into consideration.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 04/05/2023
+ms.date: 06/03/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency2
 ---
@@ -16,7 +16,7 @@ Introducing sustainability in your cloud management and operations help drive ca
 
 Utilize monitoring capabilities to understand better how your organization uses resources and help identify areas of improvement.
 
-In the Azure Well-Architected Framework, we describe measuring and tracking carbon impact using the Emissions Impact Dashboard, defining emissions targets, identifying the metrics and setting improvement goals, using cost optimization as a proxy for carbon, and defining policies. To learn more, see [operational procedure considerations for sustainable workloads on Azure](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
+In the Azure Well-Architected Framework, we describe measuring and tracking carbon impact using the Emissions Impact Dashboard and Azure carbon optimization, defining emissions targets, identifying the metrics and setting improvement goals, using cost optimization as a proxy for carbon, and defining policies. To learn more, see [operational procedure considerations for sustainable workloads on Azure](/azure/architecture/framework/sustainability/sustainability-operational-procedures#measure-and-track-carbon-impact).
 
 ### Cost as a proxy for sustainability
 
@@ -44,11 +44,15 @@ When reporting on sustainability and cloud management, it's essential to conside
 
 By tracking and reporting on key metrics, organizations can promote transparency, accountability, and continuous sustainability and environmental impact improvement.
 
-### Emissions Impact Dashboard for detailed insights on carbon emissions
+### Emissions Impact Dashboard
 
 In Azure, customers can use the [Emissions Impact Dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) to track and get insights on carbon emissions. This tool provides valuable insights into emissions by subscription, region, and service, allowing customers to understand their environmental impact better.
 
 Customers can access information on emissions scopes, years, months, and other details, providing a comprehensive view of their emissions. This centralized tool can be valuable for large enterprises with complex cloud environments in tracking emissions accurately and efficiently.
+
+### Azure carbon optimization
+
+Use [Azure carbon optimization](/azure/carbon-optimization/overview) to measure and minimize the carbon impact of your Azure resources. With Carbon optimization, you can find opportunities to optimize resource utilization to lower carbon emissions and costs, track and analyze emissions associated with Azure resources and subscriptions, and access carbon data and insights through APIs and exports. Carbon optimization provides emission data for all Azure resource types, based on billing and usage.
 
 ## Demand shaping
 
