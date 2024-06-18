@@ -10,13 +10,11 @@ ms.custom: think-tank, e2e-avd
 
 # Hybrid networking with Citrix Cloud and Azure
 
-This article describes a reference architecture that demonstrates major design areas and design best practices for an Azure and Citrix Cloud environment with multiple subscriptions.
-
-## [WHAT TYPE OF DEPLOYMENT?]
-
-[ADD]  The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions.
+This article describes a reference architecture that demonstrates major design areas and design best practices for an Azure and Citrix Cloud environment with multiple subscriptions in a single region deployment.
 
 ### Architecture
+
+The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions. While it's possible to deploy Citrix on Azure within a single subscription, multiple Azure subscriptions create agility for business units through a mechanism to centralize policy, audit, and configuration requirements. This is one of the primary reasons we recommend a dedicated subscription for Citrix workloads on Azure as a starting point.
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-multiple.png#lightbox)
 
@@ -79,7 +77,9 @@ You can use [application security groups](/azure/virtual-network/application-sec
 
 ## Large scale enterprise deployments
 
-When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions. The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. 
+When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions. The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. Selecting a subscription- and networking model is a complex decision that involves understanding the growth of the customer's Azure footprint within and outside the Citrix deployment. Even if the Citrix deployment is small, the customer might still have a large amount of other resources that are reading/writing heavily against the Azure API, which can have a negative impact on the Citrix environment. The reverse is also true, where many Citrix resources can consume an inordinate number of the available API calls, reducing availability for other resources within the subscription.
+
+For large scale deployments and to prevent a negative impact on the customer Citrix environment, isolation of workloads and services becomes a critical design area and allows you to scale out deployments more effectively.
 
 ### Architecture
 
