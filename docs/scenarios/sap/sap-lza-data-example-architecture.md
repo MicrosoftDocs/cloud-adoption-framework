@@ -26,6 +26,8 @@ This article describes the flow of SAP data from source SAP systems to downstrea
 
 The following diagram is an example architecture of an SAP data integration on Azure. Use this example architecture as a starting point.
 
+*Apache Spark® and Apache Kafka® are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.*
+
 :::image type="content" source="./media/sap-extend-data-integration-architecture-updated.svg" border="false" alt-text="Diagram that shows the SAP data integration security architecture on Azure." lightbox="./media/sap-extend-data-integration-architecture-updated.svg":::
 *Download a [Visio file](https://arch-center.azureedge.net/sap-extend-data-integration-architecture.vsdx) of this architecture.*
 
