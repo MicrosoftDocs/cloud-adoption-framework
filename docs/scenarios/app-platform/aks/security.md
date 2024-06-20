@@ -243,14 +243,14 @@ Here are some other design considerations for AKS security governance and compli
 
 - Limit access to the [Kubernetes cluster configuration](/azure/aks/control-kubeconfig-access) file by using Azure RBAC.
 - [Secure pod access to resources](/azure/aks/developer-best-practices-pod-security#secure-pod-access-to-resources). Provide the least number of permissions, and avoid using root or privileged escalation.
-- Use [pod-managed identities](/azure/aks/operator-best-practices-identity#use-pod-managed-identities) and the [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
+- Use [Entra Workload ID with AKS](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview?tabs=dotnet) and the [Azure Key Vault provider for Secrets Store CSI Driver](/azure/aks/csi-secrets-store-driver) to protect secrets, certificates, and connection strings.
 - Use [AKS node image upgrade](/azure/aks/node-image-upgrade) to update AKS cluster node images if possible, or [kured](/azure/aks/node-updates-kured) to automate node reboots after you apply updates.
 - Monitor and enforce configuration by using the [Azure Policy add-on for Kubernetes](/azure/aks/use-azure-policy). In subscriptions deployed according to enterprise-scale landing-zones best practices, this configuration happens automatically through an Azure Policy deployed at the management group level.
 - View AKS recommendations in [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction).
 - Use [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction), the cloud-native solution to improve, monitor, and maintain the security of your clusters, containers, and their applications.
 - Deploy a dedicated and private instance of [Azure Container Registry](/azure/container-registry/) to each landing zone subscription.
 - Use [Private Link for Container Registry](/azure/container-registry/container-registry-private-link) to connect it to AKS.
-- Scan your images for vulnerabilities with [Microsoft Defender for container registries](/azure/security-center/defender-for-container-registries-introduction) or any other image-scanning solution.
+- Scan your images for vulnerabilities with [Microsoft Defender Vulnerability Management](https://learn.microsoft.com/en-us/azure/defender-for-cloud/agentless-vulnerability-assessment-azure) or any other image-scanning solution.
 
 > [!IMPORTANT]
 > Microsoft Defender for Cloud image scanning isn't compatible with Container Registry endpoints. For more information, see [Connect privately to a container registry by using Private Link](/azure/container-registry/container-registry-private-link).
