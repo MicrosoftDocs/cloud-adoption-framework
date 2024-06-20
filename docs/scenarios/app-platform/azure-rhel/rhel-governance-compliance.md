@@ -28,7 +28,7 @@ Microsoft Azure has a wide array of compliance offerings to help ensure that you
 
 ## Design Considerations
 
-Managing governance for Red Hat Enterprise Linux instances in an Azure landing zone centers around which compliance standards are ideal and generally applicable to RHEL systems based on security standards set by your organization and those compliance standards that are mandated by your industry. Considerations with respect to enforcement of standards and the remediation of deviations can affect the tooling and services which you decide to deploy. Compliance measurement, reporting and remediation capabilities are tied closely to these choices. From an implementation perspective, these choices impact most of the areas which we have discussed in this model.
+Managing governance for Red Hat Enterprise Linux instances in an Azure landing zone centers around the compliance standards that your organization must adhere to, based on internally mandated and regulatory framework defined controls, as they apply to your RHEL systems.  Considerations with respect to enforcement of standards and the remediation of deviations can affect the tooling and services that you decide to deploy. Compliance measurement, reporting and remediation capabilities are tied closely to these choices. From an implementation perspective, these choices impact most of the areas that we have discussed in this model.
 
 Image and Instance Management - Compliance standards contain factorable lists of security requirements that should allow organizations to integrate content and image management with automation tooling to:
 
