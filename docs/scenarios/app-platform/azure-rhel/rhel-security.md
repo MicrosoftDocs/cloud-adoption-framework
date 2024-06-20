@@ -102,4 +102,4 @@ Consider [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overvie
 
 ### Confidential Computing
 
-RedHat Enterprise Linux features a confidential image for [certain RHEL OS options](https://learn.microsoft.com/azure/confidential-computing/confidential-vm-overview#os-support). Consider confidential computing [use cases](https://learn.microsoft.com/azure/confidential-computing/use-cases-scenarios).
+RedHat Enterprise Linux features a confidential image for [certain RHEL OS options](/azure/confidential-computing/confidential-vm-overview#os-support). Consider confidential computing [use cases](/azure/confidential-computing/use-cases-scenarios).
