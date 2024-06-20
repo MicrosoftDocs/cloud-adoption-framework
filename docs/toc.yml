@@ -11,7 +11,7 @@ items:
     items:
     - name: Overview
       href: scenarios/index.md
-    - name: Generative AI
+    - name: AI adoption on Azure
       href: scenarios/artificial-intelligence/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
