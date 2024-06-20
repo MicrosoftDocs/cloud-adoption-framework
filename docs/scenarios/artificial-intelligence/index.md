@@ -38,4 +38,4 @@ We also talk about the business justifications, building a strategy, and the tec
  Before diving into the details about building an AI strategy for your business, you should establish clear business justifications and goals for your organization.
 
 > [!div class="nextstepaction"]
-> [Business justification and goals for AI](./business-justification-goals.md)
+> [Business justification and goals for AI](./business-outcomes-goals.md)
