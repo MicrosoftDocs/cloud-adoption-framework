@@ -34,7 +34,7 @@ Where compliance with cryptographic standards and compliance baselines are requi
 Azure presents unique opportunities for using cloud-specific features while maintaining best practices for security and compliance. Be cognizant of security considerations that have available services within Azure's infrastructure:
 
 - Securing instance BIOS and configuration - [Azure Trusted Launch](/azure/virtual-machines/trusted-launch) is able to secure the boot process, ensuring that VMs boot with verified code.
-- Encrypt data at rest - Azure Disk Encryption using Azure Key Vault is able to manage encryption keys and secrets for securing data at rest. Key Vault service supports two types of containers: vaults and managed hardware security module(HSM) pools. Vaults support storing software and HSM-backed keys, secrets, and certificates.
+- Encrypt data at rest - [Azure Disk Encryption using Azure Key Vault](/azure/virtual-machines/linux/disk-encryption-key-vault) is able to manage encryption keys and secrets for securing data at rest. Key Vault service supports two types of containers: vaults and managed hardware security module(HSM) pools. Vaults support storing software and HSM-backed keys, secrets, and certificates.
 - Ensure centralized system auditing - Azure Security Center can provide a centralized viewport for unified security management and threat protection.
 
 ## Design Recommendations
@@ -48,7 +48,7 @@ Red Hat recommends using certified [Ansible Automation Platform collections](htt
 - and patch cycle testing and delivery for persistent VM instances
 - using automation pipelines. Doing so will significantly reduce management effort, ensure consistent policy enforcement, improve anomaly detection and speed remediation throughout RHEL landing zones.
 
-In addition to the recommendations listed, we recommend using the [Azure Shared Image Gallery](https://learn.microsoft.com/azure/virtual-machines/azure-compute-gallery). You can build your RedHat image with all of the required security mechanisms that you use in your organization and create an image of that VM. This allows you to share security, compliant images across subscriptions and regions in your Azure environment. It also allows versioning for greater granular control over VM images. This ensures more homogeneity of compute instance security patches and tooling used in your environment.
+In addition to the recommendations listed, consider using the [Azure Shared Image Gallery](/azure/virtual-machines/azure-compute-gallery). You can build your RedHat image with all of the required security mechanisms that you use in your organization and create an image of that VM. This allows you to share security, compliant images across subscriptions and regions in your Azure environment. It also allows versioning for greater granular control over VM images. This ensures more homogeneity of compute instance security patches and tooling used in your environment.
 
 Consider [Azure Update Manager](/azure/update-manager/overview?tabs=azure-vms) as part of your update management scheme. Azure Update Manager is a unified service that can monitor updates across your deployments. It has the feature of being able to survey your entire fleet of machines in Azure, on-premises and in other clouds.
 
@@ -69,7 +69,7 @@ Understanding roles and responsibilities on your team will define the RBAC roles
 
 ### Antivirus
 
-Ensure that you are equipped with appropriate anti-virus software on your RHEL machine. Consider onboarding [Microsoft Defender for Cloud Endpoint Protection](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide) on Linux for protection against the latest vulnerabilities. Keep in mind that Microsoft Defender for Cloud Standard should not be enabled on RHEL machines used to host SAP databases. Ensure that each RHEL machine and workload is compatible with running any endpoint protection software.
+Ensure that you are equipped with appropriate anti-virus software on your RHEL machine. Consider onboarding [Microsoft Defender for Cloud Endpoint Protection](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide) on Linux for protection against the latest vulnerabilities. Keep in mind that Microsoft Defender for Cloud Standard should not be enabled on RHEL machines used to host SAP databases. Ensure that each RHEL machine and workload is compatible with running any endpoint protection software.
 
 ### Managing Secrets
 
