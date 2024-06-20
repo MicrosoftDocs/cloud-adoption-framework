@@ -82,7 +82,7 @@ Refer to the [Cloud Adoption Framework subscription guidance](/azure/cloud-adopt
 
 ### Enforcement
 
-Ensure that you use [Azure Policy](https://learn.microsoft.com/azure/governance/policy/overview) to enforce governance standards and implement regulatory initiatives. With its compliance dashboard, you are able to view compliance down to a per resource, per policy granularity. You can also perform remediation. Azure Policies are the guardrails for enforcing compliance across security, cost, regulatory compliance, resource consistency and management.
+Ensure that you use [Azure Policy](/azure/governance/policy/overview) to enforce governance standards and implement regulatory initiatives. With its compliance dashboard, you are able to view compliance down to a per resource, per policy granularity. You can also perform remediation. Azure Policies are the guardrails for enforcing compliance across security, cost, regulatory compliance, resource consistency and management.
 
 Leverage Red Hat Satellite along with Ansible Automation Platform to develop pipelines for content and image delivery that integrate your workload compliance requirements.
 
