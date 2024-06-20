@@ -36,7 +36,7 @@ Image and Instance Management - Compliance standards contain factorable lists of
 - continually measure, maintain and deliver images that meet requirements from deployment time
 - continually measure, maintain and remediate persistent instances.
 Content lifecycle and image build pipelines are ideal points of enforcement.
-- Analysis and Reporting - Cloud platforms provide comprehensive services to enable aggregation of metadata and relevant log content from deployed systems to deliver required content to meet regulatory reporting requirements and relevant auditability
+- **Analysis and reporting** - Cloud platforms provide comprehensive services to enable aggregation of metadata and relevant log data from deployed systems, and to deliver and store the captured data as required for regulatory reporting requirements and relevant auditability
 - **Automation first** - Modern automation systems provide the necessary capabilities to ease regulatory compliance and reporting burden while increasing accuracy and visibility. Implement compliance management via Infrastructure-as-Code automation as part of your deployment process. Consider linking scanning with maintenance activity workflows to ensure timely reporting and a “fail fast” methodology to keep your compliance backlog to a minimum. Unify implementation automation and remediation code to ensure consistency.
 - **Compliance maintenance** - Compliance standards are updated regularly and have well known delivery mechanisms and content types. Ensure the use of open standards within your compliance management implementation. Design your compliance content streaming and review into your lifecycle for application and image development.
 
