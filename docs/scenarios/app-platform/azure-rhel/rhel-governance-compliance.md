@@ -69,7 +69,7 @@ Red Hat Satellite and Image Builder includes integrated SCAP features that allow
 - scan scheduling for managed systems
 - testing content pipelines and delivering versioned content to meet standards
 
-Azure provides tooling for implementing a breadth of regulatory standards. Use [Azure Policy Initiatives](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives) to enforce a wide variety of initiatives automatically. Consider [Linux security baseline](https://learn.microsoft.com/azure/governance/policy/samples/guest-configuration-baseline-linux) to implement secure settings for Linux OS guests.
+Azure provides tooling for implementing a breadth of regulatory standards. Use [Azure Policy Initiatives](/azure/governance/policy/samples/built-in-initiatives) to enforce a wide variety of initiatives automatically. Consider [Linux security baseline](/azure/governance/policy/samples/guest-configuration-baseline-linux) to implement secure settings for Linux OS guests.
 
 ### Cost
 
