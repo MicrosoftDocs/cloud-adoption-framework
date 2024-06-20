@@ -14,13 +14,13 @@ products: azure-monitor
 
 This article is part of a series in [the cloud monitoring guide](./index.md).
 
-Response is the result of defining one or more _actions_ based on data-driven decisions from monitoring that let service consumers:
+Response is the result of defining one or more *actions* based on data-driven decisions from monitoring that let service consumers:
 
 - **Make it actionable**: Use well-tuned monitoring configurations to create actionable signals.
 - **Continuously monitor**: Apply monitoring throughout the incident and troubleshooting activities to further help diagnose problems.
 - **Automate**: Configure automatic investigation, diagnosis, resolution, recovery, and remediation based on identified signals.
 
- The principle of _significance_ applies here. This helps with process flow or policy for action to tune and optimize alerts, notifications, and report digests. Cloud monitoring is much more than notifying humans that something is wrong. It is also about providing signals to systems and services to react.
+ The principle of *significance* applies here. This helps with process flow or policy for action to tune and optimize alerts, notifications, and report digests. Cloud monitoring is much more than notifying humans that something is wrong. It is also about providing signals to systems and services to react.
 
 Monitoring plays a critical role in a wide range of scenarios:
 
@@ -88,7 +88,7 @@ For example:
 
 The example or use case can be fully automated.
 
-The role of automation then provides a sort of _playbook_ that reduces costs and saves time:
+The role of automation then provides a sort of *playbook* that reduces costs and saves time:
 
 - No security incident was needed to follow through a lengthy investigation, diagnosis, resolution, and recovery.
 - The detection-to-correction cycle could be in seconds or minutes versus hours.
@@ -102,21 +102,21 @@ Here's a list of suggested reading for more automation based on identity- or sec
 
 ## Successful alerting strategy
 
-_You can't fix what you don't know is broken._
+*You can't fix what you don't know is broken.*
 
 Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. You can improve the observability of your services and applications only if you fully understand their composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This configuration includes the predictable failure states (the symptoms, not the cause of the failure) that make sense to alert for.
 
 ### Informational alerts
 
-Under certain circumstances, some alerts can be _informational_. We can use this to learn about how our systems behave. For example, you might want to get these informational alerts:
+Under certain circumstances, some alerts can be *informational*. We can use this to learn about how our systems behave. For example, you might want to get these informational alerts:
 
-- **A VM was shut down**: A VM was automatically shut down to _minimize waste and control costs_ based on a schedule or low utilization detected.
+- **A VM was shut down**: A VM was automatically shut down to *minimize waste and control costs* based on a schedule or low utilization detected.
 
   In this example, the orchestration was used based on a native scheduling feature and by the monitoring platform detecting the utilization condition. Instead of the alert notifying or escalating as the only action, it informs you of the action performed and why.
 
 - **Idle resources**: IaaS or PaaS resources are idle for an extended period or not provisioned based on Azure Advisor recommendations.
 
-  In this example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, _alerting_ is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
+  In this example, orchestration can be used to manage those infrastructure-related activities based on business logic or ITSM process workflow. Much faster responses and actions are needed today. With the cloud, *alerting* is less for humans than for an automated response or an ongoing orchestration as part of an automated value stream.
 
 ### Alerting strategy considerations
 

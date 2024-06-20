@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/17/2023
+ms.date: 06/06/2023
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency.5
 ---
@@ -19,7 +19,7 @@ Step 1 is to create the platform subscriptions. Step 2 is to create the platform
 Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
 - [Platform landing zones vs. application landing zones](../index.md#platform-landing-zones-vs-application-landing-zones)
-- [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)  
+- [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
 ## Why subscription vending?
@@ -37,6 +37,8 @@ Subscription vending offers several benefits to organizations that need to deplo
 Subscription vending involves three teams. The Cloud Center of Excellence (CCoE) establishes business logic and the approval process. When ready, the application teams make subscription requests. The platform team uses the request to create and configure the subscription before handing off the subscription to the application team. The application team updates the budget, deploys the workload, and establishes operations. The following guidance provides more details on each step of the subscription vending process. For more information, see [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending).
 
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
+
+Platform teams can vend many options and subscription types to application teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For more information about choosing the option that best suits your needs, see [Common subscription vending product lines](./subscription-vending-product-lines.md).
 
 ### Establish business logic and approval process
 
@@ -94,7 +96,7 @@ You can now create and configure the requested subscription. The goal is to crea
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
 - [MPA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-partner-agreement#prerequisites)
 
-There are example subscription vending [Bicep](https://github.com/Azure/bicep-lz-vending#bicep-landing-zone-vending-module-for-azure) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model regardless of your enrollment in a commercial agreement. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+There are example subscription vending [Bicep](https://github.com/Azure/bicep-registry-modules/tree/main/avm/ptn/lz/sub-vending) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model regardless of your enrollment in a commercial agreement. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
 
 **Use tags for cost management.** You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Microsoft Cost Management. Although you receive billing reports with your commercial agreements, Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see [How to use tags in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data) and [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
@@ -129,7 +131,7 @@ The application team should have autonomy to create the resources they need for 
 
 ## Next steps
 
-For the best results, you should automate as much of the subscription vending process as possible. Use the companion guidance on implementing subscription vending automation.
+Review the subscriptions, or product lines, that you can vend to application teams. Establish a great starting point so you can cater to a number of different scenarios.
 
 > [!div class="nextstepaction"]
-> [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending)
+> [Establish common subscription vending product lines](./subscription-vending-product-lines.md)

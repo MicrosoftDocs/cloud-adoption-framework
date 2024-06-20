@@ -37,7 +37,7 @@ This scenario also includes the following Citrix components within the Azure lan
 
 - [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html#system-requirements) establishes a connection between Citrix Cloud and your resource locations.
 - [Citrix Virtual Delivery Agent (VDA)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-vdas.html) installs on a master image or target device that hosts your apps or desktops. This agent enables connectivity, provisioning, and orchestration of these resources as persistent or non-persistent machines. The VDA is compatible with physical or virtual devices and Windows Server, Windows Client, or Linux OS.
-- [Citrix Workspace](https://docs.citrix.com/en-us/tech-zone/learn/tech-briefs/citrix-workspace.html) is a cloud service that delivers secure access to the information, apps, and other content relevant to end user roles. Citrix Workspace integrates Azure and on-premises assets, enabling unified access to all your users' resources in one location from anywhere, on any device.
+- [Citrix Workspace](https://community.citrix.com/tech-zone/learn/tech-briefs/citrix-workspace) is a cloud service that delivers secure access to the information, apps, and other content relevant to end user roles. Citrix Workspace integrates Azure and on-premises assets, enabling unified access to all your users' resources in one location from anywhere, on any device.
 
 ### Optional Citrix components
 
@@ -53,7 +53,7 @@ The following Citrix components within the Azure landing zone are optional. Cons
 
 Design guidance for Citrix DaaS on Microsoft Azure is available on [Citrix TechZone - Design Guidance for Citrix DaaS on Microsoft Azure](https://docs.citrix.com/en-us/tech-zone/toc/by-product/citrix-daas/design-guidance.html). That guidance highlights the system, workload, user, and network considerations for Citrix technologies in alignment with Cloud Adoption Framework design principles.
 
-The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. All network appliances, such as Citrix ADC and firewalls, must be sized appropriately to handle load increases during disaster recovery scenarios. For more information, see [Design Decision: Azure Specific Considerations](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/azure-system-considerations.html).
+The Citrix on Azure solution requires a certain amount of throughput for each user, various protocols and ports, and other network considerations. All network appliances, such as Citrix ADC and firewalls, must be sized appropriately to handle load increases during disaster recovery scenarios. For more information, see [Design Decision: Azure Specific Considerations](https://community.citrix.com/tech-zone/design/design-decisions/azure-system-considerations).
 
 ### Network segmentation
 

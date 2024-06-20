@@ -34,7 +34,7 @@ When you design or update your regional resource organization, consider the foll
 - That one team uses within a single geography/region?
 - That you can retire together?
 
-If the answer is _yes_ for any of these questions, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
+If the answer is *yes* for any of these questions, consider placing those resources (deployed in region X) together in a resource group (also deployed in region X).
 
 To minimize the effect of regional outages, place resources in the same region as the resource group. For more information, see [Resource group location alignment](/azure/azure-resource-manager/management/overview#resource-group-location-alignment).
 
