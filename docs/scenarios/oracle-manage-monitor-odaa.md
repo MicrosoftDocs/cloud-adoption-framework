@@ -23,12 +23,12 @@ To manage and monitor your Azure landing zone, Microsoft Azure provides various 
 The following are key topics to consider before deploying Oracle Database@Azure, Exadata Database services:
 
 - In which Azure region will you deploy your Oracle Database@Azure, Exadata Database services in relation to your current or planned Azure enterprise landing zone. If the region is different from what you are current leveraging, can your current monitor tooling of choice extend into this region?
-- Network planning has to be taken into consideration before you deploy your resources. When you deploy your Oracle resources, you have the choice of a single virtual network or a Hub and Spoke architecture with hybrid connectivity.Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
+- Network planning has to be taken into consideration before you deploy your resources. Please note that Oracle Exadata database resources are deployed to a private subnet that isn't accessible from the internet. If your current enterprise monitoring solution is on-premises, you'll need to account for the connectivity.
 - The subnets that the Oracle Exadata database clusters are deployed within a virtual network and are delegated subnets, which have constraints. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#constraints).
 - As part of your networking planning, you need to take into consideration the topology that best supports your migration method of choice. Your choice should also monitor the process while moving your critical data.
-- Review with the database administrators the monitoring metrics selected of your chosen solution to align expectations.
 - Once a monitoring alert is received for your Oracle workload decide how to integrate it into your current triage process.
 - Identify if there are other key stakeholders that need to be included once an alert is triggered.
+- Review with the database administrators the monitoring metrics selected of your chosen solution to align expectations.
 
 For additional design considerations, see [Plan for Oracle on Azure adoption - Cloud Adoption Framework | Microsoft Learn](/azure/cloud-adoption-framework/scenarios/oracle-iaas/oracle-landing-zone-plan).
 
@@ -40,7 +40,7 @@ The metrics for Oracle Exadata database help measure useful quantitative data, s
 
 An Azure administrator can create a custom dashboard in the Azure portal with an aggregated view of the various metrics collected. Details on how to create a custom dashboard can be found in this article [Create a dashboard in the Azure portal - Azure portal | Microsoft Learn](/azure/azure-portal/azure-portal-dashboards).
 
-As part of your design considerations review the following article to understand the required roles [Roles, permissions, and security in Azure Monitor - Azure Monitor | Microsoft Learn](/azure/azure-monitor/roles-permissions-security). 
+As part of your preparation please review the following article to understand the required roles [Roles, permissions, and security in Azure Monitor - Azure Monitor | Microsoft Learn](/azure/azure-monitor/roles-permissions-security). 
 
 Note at the time of writing of this article the telemetry provided by Azure Monitor can provide adequate monitoring, but if you require granular database monitoring we recommend that you review Oracle documentaion [Enterprise Manager Database Management](https://www.oracle.com/database/technologies/manageability.html). Oracle has a comprehensive monitoring guide for review in this article [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html). This article focuses on monitoring and management with Azure based tooling.
 
@@ -62,9 +62,14 @@ The recommendation is to have alerts with your monitoring solution of choice for
 | Session Limit Utilization                              |   5 Minutes                                             | 90%                            | The database session limit utilization |
 | Usable Fast Recovery Area                              | 15 Minutes                                              | 90%                            | The usable fast recovery area          |
 | OCI Database Cluster Memory Utilization                | 5 Minutes                                               | 90%                            | Amount of Memory the Exadata database clusters are consuming |
-| Average Node Status                                    | 5 Minutes                                               | 0 (this dimension means false) | Evaluate if the  Exadata database cluster node within the cluster is available or unavailable. The setting should be set against each node |
+| Average Node Status                                    | 5 Minutes                                               | 0 (this dimension means false) | Evaluate if the  Exadata database cluster node within the cluster is available or unavailable. |
 
 For detailed information and key metrics to monitor Oracle Exadata can be found in the following article [Oracle Cloud Database Metrics](https://docs.oracle.com/iaas/database-management/doc/oracle-cloud-database-metrics.html)
+
+## Next Steps
+- [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
+- [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md)
+- [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
 
 
 
