@@ -98,7 +98,7 @@ Networking Security Groups can be applied to the Network Interface or subnet lev
 
 ### SIEM/SOAR
 
-Consider [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/overview) for SIEM/SOAR tooling for your RHEL systems. Microsoft Sentinel uses artificial intelligence to adapt how it detects threats to the system and you can automate responses to attacks via runbooks. You can use Microsoft Sentinel for proactive threat detection, threat hunting, and threat response.
+Consider [Microsoft Sentinel](/azure/sentinel/overview) for SIEM/SOAR tooling for your RHEL systems. Microsoft Sentinel uses artificial intelligence to adapt how it detects threats to the system and you can automate responses to attacks via runbooks. You can use Microsoft Sentinel for proactive threat detection, threat hunting, and threat response.
 
 ### Confidential Computing
 
