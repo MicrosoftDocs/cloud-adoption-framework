@@ -24,7 +24,7 @@ Red Hat also contributes to the open-source projects that develop the standard l
 
 Red Hat founded and contributes to the [Compliance as Code open-source project](https://www.redhat.com/en/blog/compliance-code-extending-compliance-automation-process-improvement) to deliver content in SCAP, Ansible and other formats. SCAP is typically used for measurement and reporting while Ansible is used for remediation.
 
-Microsoft Azure has a wide array of compliance offerings to help ensure that your workloads keep withing regulatory guidelines. Here is the starting point for learning how to implement specific [compliance](https://learn.microsoft.com/azure/compliance/) standards.
+Microsoft Azure has a wide array of compliance offerings to help ensure that your workloads comply with regulatory guidelines. Here is the starting point for learning how to implement specific [compliance](/azure/compliance/) standards.
 
 ## Design Considerations
 
