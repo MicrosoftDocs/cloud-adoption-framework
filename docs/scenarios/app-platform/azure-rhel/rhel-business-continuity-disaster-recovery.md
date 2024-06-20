@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Business continuity and disaster recovery considerations for Red Hat Enterprise Linux (RHEL) on Azure
 
-This article describes how you can improve business continuity and disaster recovery (BDCR) for a Red Hat Enterprise Linux (RHEL) on an Azure environment. The documentation provides recommendations for deploying RHEL platform management components, and for supporting RHEL workloads. The Red Hat Management subscription contains the platform components for managing workloads in one or more RHEL Landing zones. These components offer their own BCDR configurations as described in the relevant section. There are separate BCDR considerations and deployment considerations for workload components running in your Red Hat Landing Zone. 
+This article describes how you can improve business continuity and disaster recovery (BCDR) for a Red Hat Enterprise Linux (RHEL) on an Azure environment. The documentation provides recommendations for deploying RHEL platform management components, and for supporting RHEL workloads. The Red Hat Management subscription contains the platform components for managing workloads in one or more RHEL Landing zones. These components offer their own BCDR configurations as described in the relevant section. There are separate BCDR considerations and deployment considerations for workload components running in your Red Hat Landing Zone. 
 
 ## Design Considerations
 
