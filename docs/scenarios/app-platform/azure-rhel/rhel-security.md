@@ -33,7 +33,7 @@ Where compliance with cryptographic standards and compliance baselines are requi
 
 Azure presents unique opportunities for using cloud-specific features while maintaining best practices for security and compliance. Be cognizant of security considerations that have available services within Azure's infrastructure:
 
-- Securing instance BIOS and configuration - Azure Trusted Launch is able to secure the boot process, ensuring that VMs boot with verified code.
+- Securing instance BIOS and configuration - [Azure Trusted Launch](/azure/virtual-machines/trusted-launch) is able to secure the boot process, ensuring that VMs boot with verified code.
 - Encrypt data at rest - Azure Disk Encryption using Azure Key Vault is able to manage encryption keys and secrets for securing data at rest. Key Vault service supports two types of containers: vaults and managed hardware security module(HSM) pools. Vaults support storing software and HSM-backed keys, secrets, and certificates.
 - Ensure centralized system auditing - Azure Security Center can provide a centralized viewport for unified security management and threat protection.
 
