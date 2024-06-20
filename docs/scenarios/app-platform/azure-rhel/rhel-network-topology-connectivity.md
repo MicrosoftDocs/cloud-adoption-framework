@@ -105,7 +105,7 @@ Following are some key considerations in the design.
 
 Redhat Enterprise environment will utilize both On-Premises & Azure Resources which makes name resolution an important area.  The following considerations will help in this design area.
 
-- Azure provides internal name resolution within a virtual network, no configuration is required to use this.  Do note, the DNS suffix cannot be modified and manual registration is not possible.  Refer  [Name resolution that Azure Provides](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/azure-dns?tabs=ubuntu#name-resolution-that-azure-provides) for more details. 
+- Azure provides internal name resolution within a virtual network, so no configuration is required to use this.  Be aware that the DNS suffix cannot be modified and manual registration is not possible.  Refer to [Name resolution that Azure Provides](/azure/virtual-machines/linux/azure-dns?tabs=ubuntu#name-resolution-that-azure-provides) for more details. 
 
 - Name resolution across virtual networks, common with RHEL deployment will be use of DNS in  enabled on Redhat Identity Management Server (IDm) or [Azure DNS](https://learn.microsoft.com/en-us/azure/dns/dns-overview).  Combination of [Azure Private DNS Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure can utilize rule base forwarding if needed. 
 
