@@ -107,7 +107,7 @@ Redhat Enterprise environment will utilize both On-Premises & Azure Resources wh
 
 - Azure provides internal name resolution within a virtual network, so no configuration is required to use this.  Be aware that the DNS suffix cannot be modified and manual registration is not possible.  Refer to [Name resolution that Azure Provides](/azure/virtual-machines/linux/azure-dns?tabs=ubuntu#name-resolution-that-azure-provides) for more details. 
 
-- Name resolution across virtual networks, common with RHEL deployment will be use of DNS in  enabled on Redhat Identity Management Server (IDm) or [Azure DNS](https://learn.microsoft.com/en-us/azure/dns/dns-overview).  Combination of [Azure Private DNS Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure can utilize rule base forwarding if needed. 
+- You can manage DNS using Redhat Identity Management Server (IDm) or [Azure DNS](/azure/dns/dns-overview).  A combination of [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) and existing DNS infrastructure can enable rule-based forwarding if needed. 
 
 
 ## Next Steps
