@@ -60,7 +60,7 @@ Red Hat provides validated content to meet governance needs. When determining ba
 - Health Insurance Portability and Accountability Act (HIPAA)
 - Protection Profile for General Purpose Operating Systems
 - PCI-DSS v3.2.1 Control Baseline for Red Hat Enterprise Linux 9
-- PCI-DSS v4.0 Control Baseline for Red Hat Enterprise Linux 7, 8, 9
+- PCI-DSS v4.0 Control Baseline for Red Hat Enterprise Linux 7, 8 (RHEL-1808), 9
 - [DRAFT] DISA STIG for Red Hat Enterprise Linux 9
 - [DRAFT] DISA STIG with GUI for Red Hat Enterprise Linux 9
 Red Hat Security Response Team provides a published stream of known CVE information for Red Hat products in OVAL format. Red Hat recommends using these resources as part of your compliance implementation in Azure.
