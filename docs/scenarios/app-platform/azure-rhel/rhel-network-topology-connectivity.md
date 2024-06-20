@@ -101,7 +101,7 @@ Following are some key considerations in the design.
 - Virtual WAN secured hub with Azure Firewall, with L4 and DNAT.
 - Virtual WAN secured hub with NVA in various scenarios.
 
-## Domain Name Resolution for On-Premises and Azure Resources
+## Domain name resolution for on-premises and Azure resources
 
 Redhat Enterprise environment will utilize both On-Premises & Azure Resources which makes name resolution an important area.  The following considerations will help in this design area.
 
