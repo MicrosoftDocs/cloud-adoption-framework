@@ -56,7 +56,7 @@ GitOps configurations enforce a desired system state and are an important tool f
 
 ### Policy management and reporting
 
-Define a governance plan for your hybrid Kubernetes clusters that translates into Azure policies that audit and enforce organizational standards at-scale. For example, you might enforce a _sourceControlConfiguration_ policy to Kubernetes clusters to ensure the clusters get their source of truth for workloads and configurations from a defined git repo and track compliance using Azure Policy.
+Define a governance plan for your hybrid Kubernetes clusters that translates into Azure policies that audit and enforce organizational standards at-scale. For example, you might enforce a *sourceControlConfiguration* policy to Kubernetes clusters to ensure the clusters get their source of truth for workloads and configurations from a defined git repo and track compliance using Azure Policy.
 
 ### Log management strategy
 
@@ -105,7 +105,7 @@ You should apply the same RBAC principle to the sensitive data that is sent to t
 [Integrating your Azure Arc-enabled Kubernetes cluster with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac) allows you to use Azure role assignments for more granular control over who has access to and permissions for Azure Arc-enabled Kubernetes cluster resources.
 
   >[!Note]
-  >This integration works natively with Kubernetes _ClusterRoleBinding_ and _RoleBinding_ object types and effectively consolidates authorization to your Kubernetes cluster with Microsoft Entra ID as the central identity and access management service. By using Microsoft Entra ID, you get full auditing and tracing of changes made in your cluster as well as any authorization events.
+  >This integration works natively with Kubernetes *ClusterRoleBinding* and *RoleBinding* object types and effectively consolidates authorization to your Kubernetes cluster with Microsoft Entra ID as the central identity and access management service. By using Microsoft Entra ID, you get full auditing and tracing of changes made in your cluster as well as any authorization events.
 
 Integrating with Microsoft Entra ID also lets you access advanced security capabilities, which you should use to configure:
 

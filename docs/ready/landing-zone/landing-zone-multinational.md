@@ -52,14 +52,14 @@ There are three [deployment models for ISVs](isv-landing-zone.md#isv-deployment-
 
 - **Dual-deployment SaaS**: This model combines the customer-deployed model and the pure SaaS model.
 
-In a _pure SaaS model_, the ISV is responsible for managing compliance on behalf of the customer. The ISV must demonstrate compliance to the customer and potentially to auditors or regulators. If you use the SaaS model, your architecture might be subject to multiple regulations that can conflict. The ISV must manage compliance for these various regulations. For more information, see [the section in this article, Scenarios that require modification](#scenarios-that-require-modification).
+In a *pure SaaS model*, the ISV is responsible for managing compliance on behalf of the customer. The ISV must demonstrate compliance to the customer and potentially to auditors or regulators. If you use the SaaS model, your architecture might be subject to multiple regulations that can conflict. The ISV must manage compliance for these various regulations. For more information, see [the section in this article, Scenarios that require modification](#scenarios-that-require-modification).
 
-In a _customer-deployed model_, the customer is responsible for managing compliance. For this model, the ISV doesn't need to modify the landing zones. However, the solution is deployed in a landing zone that the customer deploys, including any policy controls and custom policies.
+In a *customer-deployed model*, the customer is responsible for managing compliance. For this model, the ISV doesn't need to modify the landing zones. However, the solution is deployed in a landing zone that the customer deploys, including any policy controls and custom policies.
 
 >[!TIP]
 >ISVs can target policy initiatives at particular compliance requirements to test a solution. This practice can help minimize the chance of conflicts with policies that customers use to meet their compliance requirements.
 
-In a _dual-deployment SaaS model_, all the considerations for the customer-deployed and pure SaaS model apply.
+In a *dual-deployment SaaS model*, all the considerations for the customer-deployed and pure SaaS model apply.
 
 ## Considerations for multinational organizations
 
@@ -71,11 +71,11 @@ Multinational organizations use various structures to organize their IT governan
 
 - **Hybrid structure**: Global IT functions are provided centrally, while IT functions required only locally are governed in each geographic location.
 
-In a _decentralized_ scenario, the local IT team is responsible for managing compliance and can tailor their landing zone accordingly.
+In a *decentralized* scenario, the local IT team is responsible for managing compliance and can tailor their landing zone accordingly.
 
-In a _centralized_ scenario, the central IT team is responsible for managing compliance and must ensure that solutions meet the local compliance requirements of all the geographic locations where the multinational organization operates. The compliance requirements of various geographic locations can conflict, and it might be necessary to modify landing zones.
+In a *centralized* scenario, the central IT team is responsible for managing compliance and must ensure that solutions meet the local compliance requirements of all the geographic locations where the multinational organization operates. The compliance requirements of various geographic locations can conflict, and it might be necessary to modify landing zones.
 
-In a _hybrid_ scenario, the considerations for both the decentralized and centralized scenarios apply. The centralized organization provides solutions that the local organizations need to deploy in their environment. The centralized organization also tests that those solutions deploy in all landing zones of the local organizations.
+In a *hybrid* scenario, the considerations for both the decentralized and centralized scenarios apply. The centralized organization provides solutions that the local organizations need to deploy in their environment. The centralized organization also tests that those solutions deploy in all landing zones of the local organizations.
 
 ## Scenarios that require modification
 
@@ -101,7 +101,7 @@ The following diagrams show options that you can use to organize Microsoft Entra
 :::image type="content" source="./media/tenant-organization.png" alt-text="A diagram that shows three ways to organize Microsoft Entra tenants." lightbox="./media/tenant-organization.png":::
 
 >[!TIP]
->If you have multiple Microsoft Entra tenants to meet regulatory requirements, name the tenants based on the geographic location rather than specific regulations, for example _contoso-ops-us.com_ in the example diagram.
+>If you have multiple Microsoft Entra tenants to meet regulatory requirements, name the tenants based on the geographic location rather than specific regulations, for example *contoso-ops-us.com* in the example diagram.
 
 For more information, see [Azure landing zones and multiple Microsoft Entra tenants](./design-area/multi-tenant/overview.md) and [ISV considerations for Azure landing zones](isv-landing-zone.md#microsoft-entra-tenants).
 
