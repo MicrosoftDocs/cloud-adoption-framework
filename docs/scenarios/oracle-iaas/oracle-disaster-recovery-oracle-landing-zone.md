@@ -35,7 +35,7 @@ Use the following flowchart to choose the best high availability option for your
 
 ### High availability using Data Guard in maximum availability mode
 
-Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex set, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across Availability Zones, see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
+Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across Availability Zones, see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Virtual Machines landing zone accelerator.":::
 
@@ -175,7 +175,7 @@ Achieving high availability and disaster recovery requires a financial and busin
 
 Business continuity requires an integrated approach that includes all components of the workload. Network infrastructure is a primary component for any workload on Azure and it needs to align with the high availability and disaster recovery architecture.
 
-- Oracle Data Guard provides high availability and (in most scenarios) provides sufficient support for common failures. Virtual machines can be placed in a VMSS Flex set, and all services in a single solution should reside within the same availability zone to reduce network latency. For the same reason, the services should share the same virtual network.
+- Oracle Data Guard provides high availability and (in most scenarios) provides sufficient support for common failures. Virtual machines can be placed in a VMSS Flex, and all services in a single solution should reside within the same availability zone to reduce network latency. For the same reason, the services should share the same virtual network.
 - For further protection, virtual machines can be strategically placed in separate availability zones rather than a single availability zone. This approach can prevent downtime during a data center failure.
 - For extreme protection, a secondary database can be placed in another Azure region with continuous updates applied with Oracle Data Guard using Global virtual network peering. This protection enables data updates to be applied to the secondary region privately through the Microsoft backbone. Resources communicate directly, without gateways, extra hops, or transit over the public internet. This networking option allows a high-bandwidth, low-latency connection across peered virtual networks in different regions. You can use Global virtual network peering to connect your primary site to disaster recovery site in another region through a high-speed network.
 
@@ -183,7 +183,7 @@ Business continuity requires an integrated approach that includes all components
 
 | Failure Scenario | Oracle on Azure HA/DR Scenario | RPO/RTO  |
 |:-----------|:-----------|:-----------|
-| Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same VMSS Flex set in the same data center.<br>  - Protects against single instance failure. <br> - Will cause downtime if entire data center is down. | RPO=0 RTO<=2 mins <br> - Using Observer for Fast Failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
+| Single component failure (host, rack, cooling, networking, power) | Data Guard with two nodes in the same VMSS Flex in the same data center.<br>  - Protects against single instance failure. <br> - Will cause downtime if entire data center is down. | RPO=0 RTO<=2 mins <br> - Using Observer for Fast Failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
 | Data Center failure | Data Guard with two nodes in separate availability zones. <br> - Protects against data center failure. <br> - Will cause downtime if whole region is down. <br> - Requires more failover configuration for app servers to manage network latency.  | RPO<=5 mins RTO<=5 mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5 mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
 |Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires more failover configuration for app servers to manage network latency.  |  RPO>=10 mins RTO>=15 mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
 | All above scenarios |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be set up in the target region during failover.   | RPO>=24 hrs RTO>=4 hrs   |
