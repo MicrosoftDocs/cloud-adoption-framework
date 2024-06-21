@@ -35,7 +35,7 @@ Use the following flowchart to choose the best high availability option for your
 
 ### High availability using Data Guard in maximum availability mode
 
-Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across Availability Zones, see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
+Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex set, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across Availability Zones, see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Virtual Machines landing zone accelerator.":::
 
