@@ -127,7 +127,7 @@ Consider using one of the following approaches to maintain the disaster recovery
 
 - A second approach is to deploy and maintain a scaled version of your production environment. A version that can function accurately for a small workload and can potentially be scaled up as necessary during failover to serve for production load. This option is the most used method, especially for complex deployments where you don't want to take the risk of creating the entire environment or when you would like to failover quickly in order to provide a lower RTO.
 
-- A third approach is you deploy and maintain your entire solution to the disaster recovery site for the fastest RTO and failover times, accepting that you will be doubling your cost.
+- A third approach is you deploy and maintain your entire solution to the disaster recovery site for the fastest RTO and failover times, accepting the cost impact of running fully redundant infrastructure.
 
 ### Special considerations for disaster recovery
 
