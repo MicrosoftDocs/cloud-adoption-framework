@@ -59,7 +59,7 @@ One advantage of using availability zones with VMSS Flex is that your virtual ma
 
 #### Shared storage clustering for high availability
 
-Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can adopt on Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
+Shared storage clustering technologies provide unique attributes that can help achieve your business goals. One such technology you can implement in Azure is Pacemaker/Corosync (PCS) cluster with shared storage. You can use managed disks or Azure NetApp Files as shared storage for PCS Cluster instances. Using PCS cluster doesn't duplicate data and provides a virtual IP service with a static IP address/network name that doesn't change across failovers.
 
 **NOTE:** PCS Cluster isn't an Oracle certified solution. Consider this when determining your high availability architecture.
 
