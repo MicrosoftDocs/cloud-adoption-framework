@@ -35,7 +35,7 @@ Use the following flowchart to choose the best high availability option for your
 
 ### High availability using Data Guard in maximum availability mode
 
-Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across Availability Zones, see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
+Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available configuration of two Oracle database servers created within a VMSS Flex, Azure provides 99.95% service availability for SLA for instances spread across Fault Domains and 99.99% for instances spread across [Availability Zones](/azure/reliability/availability-zones-overview?WT.mc_id=modinfra-11089-salean&tabs=azure-cli), see [virtual-machine-scale-sets-orchestration-modes#high-availability](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing high availability configuration with Data Guard for Oracle on Azure Virtual Machines landing zone accelerator.":::
 
@@ -53,7 +53,7 @@ The following sections describe special considerations for high availability.
 
 #### Use availability zones for improved high availability
 
-Azure availability zones are Azure datacenters within the same Azure region that is guaranteed to have <2 ms roundtrip latency. Although normally used for disaster recovery purposes as discussed later, it's possible to use them to improve high availability. However, you must make sure that your solution can run with the latency and throughput provided between availability zones you use.
+[Azure availability zones](/azure/reliability/availability-zones-overview?WT.mc_id=modinfra-11089-salean&tabs=azure-cli) are Azure datacenters within the same Azure region that is guaranteed to have <2 ms roundtrip latency. Although normally used for disaster recovery purposes as discussed later, it's possible to use them to improve high availability. However, you must make sure that your solution can run with the latency and throughput provided between availability zones you use.
 
 One advantage of using availability zones with VMSS Flex is that your virtual machine availability SLA will increase to 99.99%.
 
@@ -67,7 +67,7 @@ Shared storage clustering technologies provide unique attributes that can help a
 
 #### Use proximity placement groups
 
-On rare occasions, when latency is your first priority, you can put VMs in a [proximity placement group](/azure/virtual-machines/co-location) and the entire solution in an availability zone. Such configuration ensures the minimum latency between database servers and also between applications and database servers. However, if resiliency is your top priority, spread your instances across multiple availability zones (a single proximity placement group cannot span zones). It is important to test the inter zone latency for your region to make a informed decision about using proximity placement groups.
+To get VMs as close as possible, achieving the lowest possible latency, you can deploy them within a [proximity placement group]((/azure/virtual-machines/co-location). A proximity placement group is a logical grouping used to make sure that Azure compute resources are physically located close to each other. Proximity placement groups are useful for workloads where low latency is a requirement. 
 
 ### Disaster recovery for Oracle on Azure workloads
 
@@ -170,7 +170,7 @@ It's also recommended to automate failover procedures to ensure  enterprise stan
 Achieving high availability and disaster recovery requires a financial and business decision that balances the recovery time (RTO) and the potential data loss (RPO) against the other Oracle licensing, virtual machine servicing and data transfer costs to implement. Hosting a workload on a single Azure virtual machine offers basic protection for common hardware failure and delivers the least costly solution. However, because a failure on a single virtual machine is likely to cause downtime and data loss, production environments should include, at the minimum, one secondary Oracle database hosted on a separate virtual machine with Oracle Data Guard. Configure the data guard properly for data replication with one or more of the following architectures, depending on your requirements.
 
 - **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate virtual machine within the same VMSS Flex and same availability zone as the primary database. This achieves high availability with protection against a single instance failure.
-- **Data protection from a data center failure**. Placing the secondary Oracle database in a second data center (Availability Zone) provides a high availability set-up with protection in the event an entire data center (Availability Zone) fails. Latency between the primary and secondary database can be as much as 2 ms, which could affect performance, RTO and RPO. T
+- **Data protection from a data center failure**. Placing the secondary Oracle database in a second availability zone provides a high availability set-up with protection in the event an entire availability zone fails. Latency between the primary and secondary database can be as much as 2 ms, which could affect performance, RTO and RPO.
 - **Data protection from a regional failure**. To help protect against potential data loss from an Azure regional failure, the secondary database can be placed in another region. As latency between regions can be between 30 ms and 300 ms, the RTO and RPO targets may not be supportable. So, this solution is best used for regional disaster recovery rather than high availability. 
 
 Business continuity requires an integrated approach that includes all components of the workload. Network infrastructure is a primary component for any workload on Azure and it needs to align with the high availability and disaster recovery architecture.
