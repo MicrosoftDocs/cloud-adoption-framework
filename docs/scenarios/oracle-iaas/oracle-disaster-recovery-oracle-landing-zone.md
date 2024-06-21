@@ -171,7 +171,7 @@ Achieving high availability and disaster recovery requires a financial and busin
 
 - **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate virtual machine within the same VMSS Flex and same availability zone as the primary database. This achieves high availability with protection against a single instance failure.
 - **Data protection from a data center failure**. Placing the secondary Oracle database in a second data center (Availability Zone) provides a high availability set-up with protection in the event an entire data center (Availability Zone) fails. Latency between the primary and secondary database can be as much as 2 ms, which could affect performance, RTO and RPO. T
-- **Data protection from a regional failure**. To extend protection to prevent data loss from an Azure regional failure, the secondary database can be placed in another region. As latency between regions can be between 30 ms and 300 ms, the impact on the production workload and RTO and RPO can increase making this scenario useful for regional disaster recovery rather than high availability. 
+- **Data protection from a regional failure**. To help protect against potential data loss from an Azure regional failure, the secondary database can be placed in another region. As latency between regions can be between 30 ms and 300 ms, the RTO and RPO targets may not be supportable. So, this solution is best used for regional disaster recovery rather than high availability. 
 
 Business continuity requires an integrated approach that includes all components of the workload. Network infrastructure is a primary component for any workload on Azure and it needs to align with the high availability and disaster recovery architecture.
 
