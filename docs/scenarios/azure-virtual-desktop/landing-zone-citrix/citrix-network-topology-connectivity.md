@@ -32,6 +32,7 @@ You can implement this architecture with the following components:
 - Azure private endpoints
 - Azure Files storage accounts or Azure NetApp Files [Compare profile storage options](/azure/storage/files/storage-files-netapp-comparison)
 - Azure Key Vault
+- Azure Compute Gallery
 
 This scenario also includes the following Citrix components within the Azure landing zone:
 
@@ -86,10 +87,6 @@ For large scale deployments and to prevent a negative impact on the customer Cit
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png)](../media/citrix-accelerator-enterprise-scale-alz-architecture-largescale.png#lightbox)
 
 [Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
-
-### Components
-
-The large scale deployment adds the following components to the standard deployment.
 
 ### Citrix Design recommendations
 
