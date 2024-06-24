@@ -4,5 +4,8 @@
     "*oxford-comma*",
     "*cloudsimple*",
     "*-llm-*"
-  ]
+  ],
+  "Grammar": {
+    "Article": "thine"
+  }
 }
