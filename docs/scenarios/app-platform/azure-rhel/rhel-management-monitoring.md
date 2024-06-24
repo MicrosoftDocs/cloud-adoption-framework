@@ -197,7 +197,7 @@ The list preselects the default workspace and location where the VM is deployed 
 
 ` `**Note**
 
-To create a new Log Analytics workspace to store the monitoring data from the VM, see [**Create a Log Analytics workspace**](https://learn.microsoft.com/en-us/previous-versions/azure/azure-monitor/learn/quick-create-workspace). The workspace must belong to one of the [**supported regions**](https://learn.microsoft.com/en-us/previous-versions/azure/azure-monitor/insights/vminsights-configure-workspace#supported-regions).
+To create a new Log Analytics workspace to store the monitoring data from the VM, see [**Create a Log Analytics workspace**](/azure/azure-monitor/learn/quick-create-workspace). The workspace must belong to one of the [**supported regions**](/azure/azure-monitor/insights/vminsights-configure-workspace#supported-regions).
 
 After you've enabled monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
