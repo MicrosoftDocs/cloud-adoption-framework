@@ -79,7 +79,7 @@ Critical design recommendations for your Red Hat Identity Management deployment 
 
 - Implement enterprise and application identity support. Understand clearly which services are exposed by instances and require authentication at the operating system level and which require authentication at the application level. Red Hat IdM is recommended to implement OS layer security, host-based access control rules, privilege escalation management rules (for example, sudo), SELinux policy mapping, and identity mapping for legacy systems. Red Hat single sign-on is recommended to integrate enterprise authentication sources with web-based applications.
 
-- Centralized identity management is critical in threat response. It can instantly invalidate and/or rotate compromised credentials across cloud-scale deployments. Which is why we strongly advise the use of centralized identity and authorization frameworks.
+- Centralized identity management is critical in threat response; it can instantly invalidate and/or rotate compromised credentials across cloud-scale deployments. 
 
 - Determine the initial integration path for current identity providers with the Azure Cloud deployment, such as Active Directory, Microsoft Entra ID, etc. Red Hat Identity Management supports several integration options. Adding and removing integrations can be performed within IdM, however, it's best to evaluate existing requirements, migration impacts, and cost of change over time.  
 
