@@ -79,7 +79,13 @@ All three previously mentioned reference customers run workloads on different ha
 
 All three customers realize they need to have hybrid and multicloud established practices to achieve business success. The need for modernized workloads is becoming crucial to all three customers' relevancy in their respected areas.
 
-With Azure Arc as their hybrid and multicloud control plane, these customers can use existing IT investments and current operational practices in a non-distributive fashion. To continue using their current practices, the customers onboard Azure Arc-enabled servers/Azure Arc-enabled VMware vSphere/Azure Arc-enabled System Center Virtual Machine Manager, SQL servers, and Kubernetes clusters. They use Azure Arc-enabled data services, application services, and machine-learning services to modernize their workloads while ensuring they still meet data sovereignty requirements.
+With Azure Arc as their hybrid and multicloud control plane, these customers can use existing IT investments and current operational practices in a non-distributive way. To continue using their current practices, the customers onboard these resources:
+
+- Azure Arc-enabled servers, Azure Arc-enabled VMware vSphere, or Azure Arc-enabled System Center Virtual Machine Manager 
+- SQL servers
+- Kubernetes clusters
+
+They use Azure Arc-enabled data services, application services, and machine-learning services to modernize their workloads while ensuring they still meet data sovereignty requirements.
 
 Azure Arc extends Azure Resource Manager (ARM) APIs so you can represent any workload as a first-class citizen in Azure. This extension provides the foundation for you to implement unified operations, management, compliance, security, and governance at scale. It's implemented with:
 
