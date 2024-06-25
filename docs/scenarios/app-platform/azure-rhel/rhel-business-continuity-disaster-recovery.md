@@ -74,7 +74,7 @@ Availability issues aren't limited to service outages, but also service response
 
 ### Reliability
 
-Many of the concepts that apply to IaaS VM infrastructures also apply to Red Hat Enterprise Linux architectures. For more details, please see [Reliability design principles](https://learn.microsoft.com/en-us/azure/well-architected/reliability/principles).
+Many of the concepts that apply to IaaS VM infrastructures also apply to Red Hat Enterprise Linux architectures. For more details, please see [Reliability design principles](/azure/well-architected/reliability/principles).
 
 ### Clusters
 
