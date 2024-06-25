@@ -81,7 +81,7 @@ Critical design recommendations for your Red Hat Identity Management deployment 
 
 - Centralized identity management is critical in threat response; it can instantly invalidate and/or rotate compromised credentials across cloud-scale deployments. 
 
-- Determine the initial integration path for current identity providers with the Azure Cloud deployment, such as Active Directory, Microsoft Entra ID, etc. Red Hat Identity Management supports several integration options. Adding and removing integrations can be performed within IdM, however, it's best to evaluate existing requirements, migration impacts, and cost of change over time.  
+- Determine the initial integration path for Azure's native identity providers, such as Active Directory and Microsoft Entra ID. Red Hat Identity Management supports several integration options. Adding and removing integrations can be performed within IdM, but it's best to evaluate existing requirements, migration impacts, and cost of change over time.  
 
 - Geographical deployments of Red Hat Enterprise Linux instances affect your IdM infrastructure. IdM primary and replica deployments should be configured to reduce latencies and ensure no single point of failure in replication. Red Hat Identity Management provides for performance, load balancing, failover, and high availability by deploying multiple IdM replicas. Deployments can consist of up to 60 replicas. Replica deployments should ensure that systems span fault domains. IdM replica updates should be managed via automation to ensure replication consistency. Use Red Hat recommended replication topologies.  
 
@@ -91,27 +91,27 @@ Critical design recommendations for your Red Hat Identity Management deployment 
 
 - Back up your IdM resources. Although Identity Management is typically deployed in a self-managed multi-master replica configuration, ensuring proper backups of systems and data is critical. Identity Management supports using hidden replicas to implement full offline backups without interrupting service availability. Use Azure platform encrypted backup or other encrypted backup facility.  
 
-- When you deploy Red Hat Enterprise Linux with the integrated certificate authority (CA), having the IdM root certificate signed by an external CA, corporate, or 3rd-party, is recommended.
+- When you deploy Red Hat Enterprise Linux with the integrated certificate authority (CA), having the IdM root certificate signed by an external CA, corporate, or third-party, is recommended.
 
-- Integrating Red Hat Identity services with other Red Hat products. Red Hat Identity Management and Red Hat SSO integrate with Ansible Automation Platform, OpenShift Container Platform, OpenStack Platform, Satellite, and development tools.
+- Integrate Red Hat Identity services with other Red Hat products. Red Hat Identity Management and Red Hat SSO integrate with Ansible Automation Platform, OpenShift Container Platform, OpenStack Platform, Satellite, and development tools.
 
 The Planning Identity Management guide provides detailed considerations for planning the infrastructure and service integration of a Red Hat Identity Management deployment. Refer to the specific guide for the operating system release of Red Hat Enterprise Linux on which your IdM deployment is based.
 
 ## Design Recommendations - Azure Native Identity Management
 
-- Use Azure Red Hat Enterprise Linux (RHEL) Virtual Machines (VMs) with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access. [Azure built-in roles for Compute](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/compute)
+- Use Azure Red Hat Enterprise Linux (RHEL) Virtual Machines (VMs) with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access. [Azure built-in roles for Compute](/azure/role-based-access-control/built-in-roles/compute)
 
-- Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks. Give full access only as needed and just-in-time. Use [Privileged Identity Management](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage) in Microsoft Entra ID and [identity and access management in Azure landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
+- Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks. Give full access only as needed and just-in-time. Use [Privileged Identity Management](/azure/defender-for-cloud/just-in-time-access-usage) in Microsoft Entra ID and [identity and access management in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
 
-- Access Microsoft Entra protected RHEL resources without needing to manage secrets for workloads that run on Azure using [managed identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview?toc=%2Fazure%2Factive-directory%2Fworkload-identities%3Ftoc%3D%2Fazure%2Factive-directory%2Fworkload-identities%2Ftoc.json&bc=%2Fazure%2Factive-directory%2Fworkload-identities%2Fbreadcrumb%2Ftoc.json).
+- Access Microsoft Entra protected RHEL resources without needing to manage secrets for workloads that run on Azure using [managed identities](/entra/identity/managed-identities-azure-resources/overview).
 
-- Consider using Microsoft Entra ID as a core authentication platform and a certificate authority to [SSH into a Linux VM](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
+- Consider using Microsoft Entra ID as a core authentication platform and a certificate authority to [SSH into a Linux VM](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
 
 - For access to sensitive information, use Azure Keyvault provider to mount secrets stored in Azure Key Vault
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to RHEL applications without a user ID and password once the central identity provider successfully authenticates them.
 
-- Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords. For more information, see [Security assessment: Microsoft LAPS usage](https://learn.microsoft.com/en-us/defender-for-identity/cas-isp-laps).
+- Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 
 ## Next steps
 
