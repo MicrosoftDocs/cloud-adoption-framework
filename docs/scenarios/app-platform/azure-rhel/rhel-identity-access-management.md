@@ -61,15 +61,15 @@ Design recommendations for identity and access management regarding Azure Landin
 
 Red Hat developed a centralized way to manage identity stores, authentication, policies, and authorization in a Linux-based domain called Red Hat Identity Management (IdM). Red Hat IdM natively integrates with Microsoft Active Directory and Microsoft Entra ID and is included with Red Hat Enterprise Linux. Organizations extending their on-premises Active Directory to Azure could benefit from Red Hat IdM's native AD trust capability. Similarly, those adopting Microsoft Entra ID or using an alternate IdP provider can also use Red Hat IdM and Red Hat single sign-on (SSO) for seamless integration. Red Hat SSO is a supported enterprise implementation of the Keycloak open-source project. It's provided at no extra cost with various Red Hat subscriptions, including Red Hat Ansible Automation Platform. Red Hat recommends implementing Red Hat Identity Management within your Red Hat Enterprise Linux deployment in Azure.
 
-![IAM Diagram](images/IAM-Diagram.png)
+![Diagram of Red Hat Management Subscription Architecture](images/IAM-Diagram.png)
 *Figure n: A high-level depiction of a Red Hat Enterprise Linux management subscription deployment.*
 
-The identity and access management components for your Red Hat deployment in Azure use the subscription scaling model described in the Azure Cloud Adoption Framework documentation to provide extra control and isolation to the management tooling. The Identity Management primary and replica systems and Red Hat single sign-on instances reside in a Red Hat Management Subscription with other tools. The subscription provides resource groups throughout the implementation to provide localized services and high availability.
+The identity and access management components for your Red Hat deployment in Azure use the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) described in the Azure Cloud Adoption Framework documentation to provide extra control and isolation to the management tooling. The Identity Management primary and replica systems and Red Hat single sign-on instances reside in a Red Hat Management Subscription with other tools. The subscription provides resource groups throughout the implementation to provide localized services and high availability.
 
-![Zone IdM HA](images/rhel-lz-idm-zoneHA.png)
+![Red Hat Identity Management Zonal Deployment Architecture Diagram](images/rhel-lz-idm-zoneHA.png)
 <br />*Figures: Zone level HA and Regional level HA with Red Hat Identity Management*
 
-![Regional IdM HA](images/rhel-lz-idm-deploy-detail.png)
+![Red Hat Identity Management Multi-Region Deployment Architecture Diagram](images/rhel-lz-idm-deploy-detail.png)
 *Figure N: A recommended high availability deployment of Red Hat Identity Management across regions and availability zones. IdM servers within each region replicate to one another and a hidden replica. There are at least two replication links across regions. The hidden replicas serve as the backup points as they might be taken offline for full backups without affecting availability.*
 *IdM clients can load balance and failover between IdM servers based on service record discovery or via a list of servers in sssd.conf. Don't use external load balancing or HA configurations with IdM.*
 
@@ -95,7 +95,7 @@ Critical design recommendations for your Red Hat Identity Management deployment 
 
 - Integrate Red Hat Identity services with other Red Hat products. Red Hat Identity Management and Red Hat SSO integrate with Ansible Automation Platform, OpenShift Container Platform, OpenStack Platform, Satellite, and development tools.
 
-The Planning Identity Management guide provides detailed considerations for planning the infrastructure and service integration of a Red Hat Identity Management deployment. Refer to the specific guide for the operating system release of Red Hat Enterprise Linux on which your IdM deployment is based.
+The [Planning Identity Management guide](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/planning_identity_management/index) provides detailed considerations for planning the infrastructure and service integration of a Red Hat Identity Management deployment. Refer to the specific guide for the operating system release of Red Hat Enterprise Linux on which your IdM deployment is based.
 
 ## Design Recommendations - Azure Native Identity Management
 
@@ -107,7 +107,7 @@ The Planning Identity Management guide provides detailed considerations for plan
 
 - Consider using Microsoft Entra ID as a core authentication platform and a certificate authority to [SSH into a Linux VM](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
 
-- For access to sensitive information, use Azure Keyvault provider to mount secrets stored in Azure Key Vault
+- For protection of sensitive information such as keys, secrets and certificates, follow the guidence in the [Cloud Adoption Framework for Encryption and Key Management in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys)
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to RHEL applications without a user ID and password once the central identity provider successfully authenticates them.
 
