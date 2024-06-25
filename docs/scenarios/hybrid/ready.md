@@ -117,7 +117,7 @@ For each cloud mix, you'll need an Azure environment to support, govern, and man
 
 Azure Arc resources can be part of any application. Examples include:
 
-- Azure Arc-enabled servers, Azure Arc-enabled VMware vSphere, and Azure Arc-enabled System Center Virtual Machine Manager representing IT assets deployed outside of Azure.
+- Azure Arc-enabled servers, Azure Arc-enabled VMware vSphere, and Azure Arc-enabled System Center Virtual Machine Manager, which represent IT assets deployed outside of Azure.
 - Customer-managed Kubernetes clusters in a multicloud environment.
 - Azure Arc-enabled data, application, and machine-learning services working at the edge.
 
