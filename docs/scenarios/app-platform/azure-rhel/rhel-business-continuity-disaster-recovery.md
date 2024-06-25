@@ -22,7 +22,7 @@ A recovery time objective is the amount of time it should take to recover any sy
 - restore minimal functionality to VMs and applications
 - restore data required by applications.
 
-In business terms, RTO represents the amount of time that business processes are out of service. For mission-critical workloads, this variable should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
+In business terms, RTO represents the amount of time that business processes are out of service. For [mission-critical workloads](/azure/well-architected/mission-critical/), this metric should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a higher RTO might not have a noticeable impact on company performance.
 
 ### Recovery point objectives (RPO)
 
