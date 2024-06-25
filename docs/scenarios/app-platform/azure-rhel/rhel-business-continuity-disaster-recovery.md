@@ -26,7 +26,7 @@ In business terms, RTO represents the amount of time that business processes are
 
 ### Recovery point objectives (RPO)
 
-In most cloud management systems, some form of data protection periodically captures and stores data. The recovery point refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
+Protecting data from failures through backups or replication, or both is an integral component of operating a cloud environment. The recovery point objective refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
 
 The recovery point objective is measured from the most recent recovery point to an outage. If the RPO is measured in hours, a system failure results in the loss of data for the hours between the last recovery point and the outage. If the RPO is measured in days, a system failure results in the loss of data for the days between the last recovery point and the outage. A one-day RPO would theoretically result in the loss of all transactions in the day leading up to the failure.
 
