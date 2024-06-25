@@ -40,7 +40,7 @@ Content lifecycle and image build pipelines are ideal points of enforcement.
 - **Automation first** - Modern automation systems provide the necessary capabilities to ease regulatory compliance and reporting burden while increasing accuracy and visibility. Implement compliance management via Infrastructure-as-Code automation as part of your deployment process. Consider linking scanning with maintenance activity workflows to ensure timely reporting and a “fail fast” methodology to keep your compliance backlog to a minimum. Unify implementation automation and remediation code to ensure consistency.
 - **Compliance maintenance** - Compliance standards are updated regularly and have well known delivery mechanisms and content types. Ensure the use of open standards within your compliance management implementation. Design your compliance content streaming and review into your lifecycle for application and image development.
 
-Governance in Azure spans beyond regulatory compliance and extends to cost, resource management, and resource scaling. Consider these recommendations from RedHat and Microsoft to implement governance comprehensively.
+Governance in Azure spans beyond regulatory compliance and extends to cost, resource management, and resource scaling. Consider these recommendations from Red Hat and Microsoft to implement governance comprehensively.
 
 ## Design Recommendations
 
