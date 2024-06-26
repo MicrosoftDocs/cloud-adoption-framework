@@ -226,7 +226,7 @@ Supported Runbook types are detailed in the table below:
 
 Azure Arc represents a significant advancement in cloud computing, offering a unified management platform that extends Azure's capabilities to on-premises, multi-cloud, and edge environments. Azure Arc-enabled enables integration with the Azure Automation service using the VM extension framework to deploy the Hybrid Runbook Worker role and simplify onboarding to Update Management and Change Tracking and Inventory.
 
-![](https://github.com/hannah-leland/cloud-adoption-framework-pr/blob/main/docs/scenarios/azure-rhel/images/arcecosystem.png)
+![Image of Azure Arc Ecosystem](images/arcecosystem.png)
 
 You can find the prerequisites and steps to onboard a Linux machine in this article: [Connect an existing Linux server to Azure Arc.](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
 
@@ -237,7 +237,7 @@ Infrastructure as Code (IaC) using Azure Resource Manager (ARM) templates provid
 A complete overview of Azure Resource Manager (ARM) Templates can be found here, in addition best practices using ARM are detailed [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/).
 
 #### JSON example:
-
+```json
 { 
 
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#", 
@@ -295,13 +295,13 @@ A complete overview of Azure Resource Manager (ARM) Templates can be found here,
   ] 
 
 }  
-
+```
 To help reduce the complexity of the JSON syntax, Bicep domain specific language can be used to reduce the learning curve for those new to Azure. Bicep is a transparent abstraction over ARM template JSON and doesn't lose any of the JSON template capabilities. During deployment, the Bicep CLI converts a Bicep file into ARM template JSON. 
 
 The following examples show the difference between a Bicep file and the equivalent JSON template. Both examples deploy a storage account. 
 
 #### Bicep example:
-
+```bicep
 param location string = resourceGroup().location 
 
 param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}' 
@@ -329,7 +329,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
   } 
 
 } 
-
+```
 ### Azure DevOps
 
 Azure DevOps is a comprehensive set of development tools to provide project management, CI/CD (Continuous Integration/Continuous Delivery) services, and source code repositories for both cloud and on-premises environments. Combing these features along with Azure Test Plans, Azure Artifacts, Azure Logic Apps, and Azure Functions facilitate seamless collaboration, development, and delivery of modern software projects.
