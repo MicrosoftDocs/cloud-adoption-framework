@@ -59,7 +59,7 @@ For specific guidance on RHEL BCDR capabilities for RHEL platform infrastructure
 
 ## Design Recommendations
 
-For cloud-native applications in Linux containers, opt for a Kubernetes-based platform to ensure scalability, high availability, and redundancy. Consider using the Azure Red Hat OpenShift platform or a self-managed OpenShift deployment with replicated or geo-replicated storage.
+For cloud-native applications in Linux containers, opt for a Kubernetes-based platform to ensure scalability, high availability, and redundancy. Consider using the [Azure Red Hat OpenShift](https://azure.microsoft.com/products/openshift) platform or a self-managed OpenShift deployment with replicated or geo-replicated storage.
 
 For native web application front ends and stateless applications, many of the Azure native services designed to provide application availability can be used. Follow Azure general guidance for such services:
 
