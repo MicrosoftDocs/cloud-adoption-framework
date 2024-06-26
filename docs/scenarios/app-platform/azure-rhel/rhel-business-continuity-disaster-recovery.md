@@ -53,7 +53,7 @@ High availability and disaster recovery design considerations for Red Hat Enterp
 ### RHEL Platform BCDR Considerations
 
 For specific guidance on RHEL BCDR capabilities for RHEL platform infrastructure see: 
-- [Satellite HA Architecture](TODOPointToManagementAndMonitoringWhenItIsComplete) 
+- [Satellite HA Architecture](./rhel-management-monitoring.md) 
 - [Ansible Automation Platform HA Architecture](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
 - [Identity Management HA Architecture](./rhel-identity-access-management.md#design-recommendations)
 
