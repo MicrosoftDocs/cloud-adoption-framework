@@ -54,7 +54,7 @@ High availability and disaster recovery design considerations for Red Hat Enterp
 
 For specific guidance on RHEL BCDR capabilities for RHEL platform infrastructure see: 
 - [Satellite HA Architecture](./rhel-management-monitoring.md) 
-- [Ansible Automation Platform HA Architecture](https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
+- [Ansible Automation Platform HA Architecture](https://docs.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
 - [Identity Management HA Architecture](./rhel-identity-access-management.md#design-recommendations)
 
 ## Design Recommendations
@@ -68,7 +68,7 @@ For native web application front ends and stateless applications, many of the Az
 
 The above configurations make use of Azure services for availability zones, Azure Front Door for load balancing services and geo-replication for content.
 
-For many traditional stateful applications that require high availability, Red Hat Enterprise Linux offers pacemaker high availability add-on. The Azure marketplace can deliver systems with this feature, or you can deploy a custom image with the required software components embedded. See Red Hat documentation for details on [Configuring a Red Hat High Availability cluster on Microsoft Azure](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure).
+For many traditional stateful applications that require high availability, Red Hat Enterprise Linux offers pacemaker high availability add-on. The Azure marketplace can deliver systems with this feature, or you can deploy a custom image with the required software components embedded. See Red Hat documentation for details on [Configuring a Red Hat High Availability cluster on Microsoft Azure](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure).
 
 Availability issues aren't limited to service outages, but also service response time. Service degradation can occur and your customer’s service experience may be degraded. To ensure performance levels are maintained, the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature can be used to ensure sufficient capacity within the required regions.
 
@@ -89,9 +89,9 @@ Remember to choose the appropriate service based on your specific needs and the 
 
 See also Red Hat HA documentation:
 
-- RHEL 9 - [Configuring a Red Hat High Availability cluster on Microsoft Azure](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure)
-- RHEL 9 - [Configuring and managing high availability clusters](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
-- Similar documentation exists for [RHEL 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8)
+- RHEL 9 - [Configuring a Red Hat High Availability cluster on Microsoft Azure](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure)
+- RHEL 9 - [Configuring and managing high availability clusters](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
+- Similar documentation exists for [RHEL 8](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/8)
 
 ### Azure Gallery Replicas
 
@@ -105,5 +105,5 @@ Note: recommended practice is to have at least two galleries, in different regio
 
 ### Recovery Cluster Nodes
 
-You can also reduce Recovery Time Objectives (RTOs) and increase resilience by using Active/Standby remote [recovery cluster](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. A disaster recovery cluster doesn't set up resources or copy data by itself. The user must configure those items manually. 
+You can also reduce Recovery Time Objectives (RTOs) and increase resilience by using Active/Standby remote [recovery cluster](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. A disaster recovery cluster doesn't set up resources or copy data by itself. The user must configure those items manually. 
 
