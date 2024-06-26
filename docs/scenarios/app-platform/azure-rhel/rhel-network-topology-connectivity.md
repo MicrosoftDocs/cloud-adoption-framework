@@ -8,13 +8,6 @@ ms.topic: conceptual
 ms.custom: e2e-alz
 ---
 
-# In this article
-
-- Overview
-- Architecture
-- Design considerations
-- Next steps
-
 ## Overview
 
 The Red Hat Enterprise Linux (RHEL) network considerations and recommendations are based on Azure landing zone article [Azure landing zone design area for network topology and connectivity](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
