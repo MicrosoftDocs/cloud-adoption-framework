@@ -22,6 +22,8 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 This article describes the flow of SAP data from source SAP systems to downstream targets. Each target serves a purpose in the data journey for your enterprise. The architecture design extends SAP solutions by using Azure data services. Use Azure Synapse Analytics to build a modern data platform to ingest, process, store, serve, and visualize data from various sources.
 
+*Apache Spark® and Apache Kafka® are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.*
+
 ## Architecture
 
 The following diagram is an example architecture of an SAP data integration on Azure. Use this example architecture as a starting point.
