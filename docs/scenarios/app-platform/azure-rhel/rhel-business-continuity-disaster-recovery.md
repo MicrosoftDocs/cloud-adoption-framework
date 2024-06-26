@@ -101,7 +101,7 @@ Note: recommended practice is to have at least two galleries, in different regio
 
 ### Azure Site Recovery
 
-[Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can enhance the resilience of some RHEL components. For a list of supported RHEL site recovery servers see: [Support matrix for Azure VM disaster recovery with Azure Site Recovery](/azure/site-recovery/azure-to-azure-support-matrix#linux). Azure Site Recovery can also be set up as a [failover from on-premises to the cloud](/azure/site-recovery/failover-failback-overview-modernized).  
+[Azure Site Recovery](/azure/site-recovery/site-recovery-overview) can enhance the resilience of some RHEL components. For a list of supported RHEL site recovery servers see: [Support matrix for Azure VM disaster recovery with Azure Site Recovery](/azure/site-recovery/azure-to-azure-support-matrix#linux). Azure Site Recovery can also be set up as a [failover from on-premises to the cloud](/azure/site-recovery/failover-failback-overview-modernized). To obtain an esitmate of the costs associated with Azure Site Recovery use the [Azure Site Recovery Deployment Planner](https://learn.microsoft.com/azure/site-recovery/hyper-v-deployment-planner-cost-estimation) to obtain a cost estimation report.
 
 ### Recovery Cluster Nodes
 
