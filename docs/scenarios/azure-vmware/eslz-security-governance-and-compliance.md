@@ -70,7 +70,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
   Use Azure Arc for servers to onboard your guest VMs. Once onboarded, use Azure Log Analytics, Azure Monitor, and Microsoft Defender for Cloud to collect logs and metrics and create dashboards and alerts. Use Microsoft Defender Security Center to protect and alert on threats associated with VM guests. For more information, see [Integrate and deploy Azure native services in Azure VMware Solution](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers).
 
-  Deploy the Azure Monitor Agent (AMA) on VMware vSphere VMs before starting a migration, or when deploying new guest VMs. Configure Data Collection Rules (DCRs) to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Microsoft Defender for Cloud.
+  Deploy the Azure Monitor Agent on VMware vSphere VMs before starting a migration, or when deploying new guest VMs. Configure Data Collection Rules to send metrics and logs to an Azure Log Analytics workspace. After the migration, verify that the Azure VMware Solution VM reports alerts in Azure Monitor and Microsoft Defender for Cloud.
 
   Alternatively, use a solution from an Azure VMware Solution certified partner to assess VM security postures and provide regulatory compliance against Center for Internet Security (CIS) requirements.
 
@@ -135,7 +135,7 @@ Security posture awareness for Azure VMware Solution workload VMs helps you unde
 
 - **Workload VM logging and monitoring:** Enable diagnostics metrics and logging on workload VMs to more easily debug OS and application issues. Implement log collection and querying capabilities that provide quick response times for debugging and troubleshooting. Enable near-real time [VM insights](/azure/azure-monitor/vm/vminsights-overview) on workload VMs for prompt detection of performance bottlenecks and operational issues. Configure [log alerts](/azure/azure-monitor/alerts/alerts-log) to capture boundary conditions for workload VMs.
 
-  Deploy the Azure Monitor Agent (AMA) on VMware vSphere workload VMs before migration, or when deploying new workload VMs in the Azure VMware Solution environment. Configure Data collection rules (DCRs) to send metrics and logs to an Azure Log Analytics workspace, and [link the Azure Log Analytics workspace with Azure Automation](/azure/automation/how-to/region-mappings). Validate the status of any workload VM AMA agents deployed before migration with Azure Monitor.
+  Deploy the Azure Monitor Agent on VMware vSphere workload VMs before migration, or when deploying new workload VMs in the Azure VMware Solution environment. Configure Data Collection Rules to send metrics and logs to an Azure Log Analytics workspace, and [link the Azure Log Analytics workspace with Azure Automation](/azure/automation/how-to/region-mappings). Validate the status of any workload VM monitoring agents deployed before migration with Azure Monitor.
 
 - **Workload VM update governance:** Delayed or incomplete updates or patching are top attack vectors that can result in exposing or compromising Azure VMware Solution workload VMs and applications. Ensure timely update installations on guest VMs.
 
