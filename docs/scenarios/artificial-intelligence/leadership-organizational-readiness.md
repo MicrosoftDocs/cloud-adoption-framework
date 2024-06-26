@@ -70,7 +70,7 @@ Change management and communication help ensure that employees are informed, eng
 
 When you develop your change management and communication plans, we recommend to include the following elements:
 
-- **Communication plan**: Ensure there's a strong leadership and a clear vision, aligned with [organizational AI goals](./business-justification-goals.md#define-goals). Secure executive sponsorship as necessary, and communicate the vision and strategy to the entire organization.
+- **Communication plan**: Ensure there's a strong leadership and a clear vision, aligned with [organizational AI goals](./business-outcomes-goals.md#define-goals). Secure executive sponsorship as necessary, and communicate the vision and strategy to the entire organization.
 - **Engagement and readiness plan**: Ensure there's a continuous focus on employee engagement and readiness, including an [AI skills readiness plan](./skills-readiness-ai.md). Make sure your change management and communication plans describe how employee readiness and engagement play a role in the AI adoption process.
 - **Process integration plan**: Regularly assess your existing workflows and processes, and redesign them to integrate AI technologies where appropriate. Ensure that employees are trained on the new processes and workflows.
 - **Communicate AI benefits**: Track and report on key performance indicators (KPIs) and success stories to illustrate the positive impact of AI in the organization. Continuously communicate the benefits of AI adoption to employees, fostering a culture of innovation and continuous learning, and ensuring that employees are motivated to adopt AI technologies.

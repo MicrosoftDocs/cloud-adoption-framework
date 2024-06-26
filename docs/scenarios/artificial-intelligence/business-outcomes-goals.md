@@ -3,16 +3,16 @@ title: Business justification and goals for AI
 description: Establish an AI strategy by understanding the potential benefits of AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 05/30/2024
+ms.date: 06/20/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Business justification and goals for AI
+# Business outcomes and goals for AI
 
 To establish an AI vision and strategy, covering both traditional and generative AI, there are some key considerations to keep in mind. This guidance helps you understand the potential benefits of AI, define your ambition, and establish a decision-making process.
 
-## Business justification
+## Business outcomes
 
 To drive the adoption of AI in your organization, you need to understand the potential benefits and how they align with your business goals.
 
