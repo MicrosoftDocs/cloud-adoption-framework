@@ -14,7 +14,7 @@ In organizing a Red Hat deployment on Azure, careful consideration of management
 
 ## Subscription Structure
 
-The components for a Red Hat deployment follow the subscription scaling model outlined in the Azure Cloud Adoption Framework documentation. This model provides extra control and isolation to the management tooling. Specifically, various subscriptions are employed to cater to different aspects of the deployment:
+The components for a Red Hat deployment follow the subscription scaling model outlined in the Azure Cloud Adoption Framework [documentation](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-design-considerations). This model provides extra control and isolation to the management tooling. Specifically, various subscriptions are employed to cater to different aspects of the deployment:
 
 1. **Hub VNet Subscription:** Hosting the Hub virtual network infrastructure in a Hub-Spoke topology, this subscription facilitates secure communication and connectivity among resources within your Red Hat deployment, across other workloads as necessary, and enables hybrid networking for Red Hat deployments. Under the Landing Zone model, this subscription and its resources would reside under the "Connectivity" Management Group.
 
