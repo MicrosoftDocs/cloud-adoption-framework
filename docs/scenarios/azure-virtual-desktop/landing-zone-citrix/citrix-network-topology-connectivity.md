@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Hybrid networking with Citrix Cloud and Azure
 
-This article provides design recommendations for a single-region Azure and Citrix Cloud environment and a multi-region environment. 
+This article provides design recommendations for a single-region Azure and Citrix Cloud environment and a multi-region environment. It covers the components and design considerations you need for a successful deployment.
 
 ## Single region deployment
 
