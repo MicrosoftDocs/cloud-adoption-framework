@@ -147,11 +147,11 @@ You can find more documentation [here](https://access.redhat.com/documentation/e
 
 [Azure Monitor](/azure/azure-monitor/overview) provides a comprehensive set of tools that allows the collection, analyzing, and reporting of both your cloud and on-premises environments. The diagram below shows the extensive tools to help collect, visualize, and report in your resources such as Azure Dashboards, Power BI or Grafana dashboards. 
 
-![A screenshot of a computer description automatically generated](images/rhelmanmon001.png "A screenshot of a computer description automatically generated")
+![Azure Monitor overview](images/rhelmanmon001.png "Azure Monitor overview")
 
-Azure monitoring has the capabilities to incorporate customer sources as demonstrated in the diagram below:
+Azure monitoring has the capabilities to incorporate customer data sources as demonstrated in the diagram below:
 
-![A screenshot of a computer description automatically generated](images/rhelmanmon002.png "A screenshot of a computer description automatically generated")
+![Azure Monitor data sources](images/rhelmanmon002.png "Azure Monitor data sources")
 
 ### Azure Linux VM Monitoring
 Azure Monitor uses agents to collect boot and performance data from Azure VMs. It stores this data in Azure storage, and makes it accessible through the Azure portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics and discovering application components installed on the VMs. You can also make use of performance charts and dependency maps.
