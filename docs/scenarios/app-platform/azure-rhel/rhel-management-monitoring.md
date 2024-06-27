@@ -114,7 +114,7 @@ For procedures related to using the Ansible Automation Platform installer, see t
 
 Azure Update Manger has been redesigned and, unlike Azure Automation Manager, doesn't depend on Azure Automation or Azure Monitor Logs. Update Manager offers many new features and provides enhanced functionality over the original version available with Azure Automation. Some of those benefits can be found [here](/azure/update-manager/overview?tabs=azure-vms#key-benefits).
 
-![A screenshot of a computer Description automatically generated](images/rhelmanmon003.png "A screenshot of a computer Description automatically generated")
+![Azure Update Manager hybrid connectivity](images/rhelmanmon003.png "Azure Update Manager hybrid connectivity")
 
 **Steps to enabling and using Update Manager**
 
