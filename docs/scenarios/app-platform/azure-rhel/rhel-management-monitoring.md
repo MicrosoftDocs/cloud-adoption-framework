@@ -155,9 +155,9 @@ Azure monitoring has the capabilities to incorporate customer sources as demonst
 
 In conjunction Azure provides a robust set of tools to collect, analyze, and visualize the output of the RHEL tools.
 
-### <a name="_toc156377590"></a>Azure Linux VM Monitoring
+### Azure Linux VM Monitoring
 Azure Monitor uses agents to collect boot and performance data from Azure VMs. It stores this data in Azure storage, and makes it accessible through the Azure portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics and discovering application components installed on the VMs. You can also make use of performance charts and dependency maps.
-### <a name="_toc156377593"></a>Recommendations
+### Recommendations
 For native Azure VMs the use of boot diagnostics is supported, and for on-premises Linux VMs the use of [Azure Arc](/azure/azure-arc/overview) is recommended for a comprehensive hybrid solution. Steps to enable Azure Arc on a Linux VM can be found here:
 
 [Connect an existing Linux server to Azure Arc](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux)
