@@ -79,7 +79,7 @@ Weigh business unit segmentation beyond workload-specific networks against the e
 
 You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application backends on a shared virtual network. For example, you could limit customer relations management (CRM) backend access to the CRM machine catalog VMs that Marketing uses in the multisession VDA network.
 
-## Large scale enterprise deployments
+## Multi-region deployments
 
 When deploying in multiple regions, it is recommended to deploy hubs, shared resource spokes and VDA spokes in each regions. The following architectural diagram shows a detailed guidance for large scale Azure and Citrix Cloud environments in a single region. Selecting a subscription- and networking model is a complex decision that involves understanding the growth of the customer's Azure footprint within and outside the Citrix deployment. Even if the Citrix deployment is small, the customer might still have a large amount of other resources that are reading/writing heavily against the Azure API, which can have a negative impact on the Citrix environment. The reverse is also true, where many Citrix resources can consume an inordinate number of the available API calls, reducing availability for other resources within the subscription.
 
