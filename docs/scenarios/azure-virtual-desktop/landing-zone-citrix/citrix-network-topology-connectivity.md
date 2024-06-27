@@ -14,7 +14,6 @@ This article provides design recommendations for a single-region Azure and Citri
 
 ### Architecture
 
-The following architectural diagram shows an Azure and Citrix Cloud environment with multiple subscriptions. While it's possible to deploy Citrix on Azure within a single subscription, multiple Azure subscriptions create agility for business units through a mechanism to centralize policy, audit, and configuration requirements. This is one of the primary reasons we recommend a dedicated subscription for Citrix workloads on Azure as a starting point.
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment.](../media/citrix-cloud-azure-virtual-desktop-multiple.png)](../media/citrix-cloud-azure-virtual-desktop-multiple.png#lightbox)
 
