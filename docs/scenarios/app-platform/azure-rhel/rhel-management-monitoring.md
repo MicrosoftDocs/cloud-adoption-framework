@@ -25,9 +25,9 @@ By assigning a host system to a Capsule Server or directly to your Satellite Ser
 
 ![Red Hat Satellite Architecture](images/system-architecture-satellite.png "Red Hat Satellite")
 
-## <a name="_toc156377587"></a>Deployment Strategy
+## Deployment Strategy
 Automated software update management solutions are preferred over manual update installation process. Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](/azure/automation/update-management/overview) or [Ansible on Azure](/azure/developer/ansible/overview) can significantly reduce time to value versus using other third party open source software.
-### <a name="_toc156377588"></a>Considerations
+### Considerations
 When deploying any automated update management solution consideration to the location of Linux software package repositories should be kept in mind.
 
 Microsoft offers a public repository that can be found [here](https://packages.microsoft.com/) to programmatically update packages for various supported Linux distro’s.
@@ -49,7 +49,6 @@ Other points that should be considered:
 - Dependencies and compatibility
 - Backup and recovery
 
-<a name="_toc156377589"></a>
 ### Recommendations
 #### Use of custom images versus Azure Marketplace images
 Azure VMs can be built using predefined Marketplace images and supports the use of [custom Linux images,](/azure/virtual-machines/linux/create-upload-generic) which you build and control to your specific compliance and security needs. When using supported Linux distro’s such as Red Hat Enterprise Linux, you can follow the specific guidance for building your customer image such as [RHEL 8](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). When using custom Linux images ensure to follow the best practice guidance that is detailed in the Update Manager documentation, which can be found [here](/azure/update-manager/manage-updates-customized-images).
