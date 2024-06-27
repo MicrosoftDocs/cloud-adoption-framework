@@ -1,4 +1,4 @@
-## <a name="_toc156377586"></a>Azure Linux Virtual Machine Management
+## Azure Linux Virtual Machine Management
 For greenfield deployment scenarios of Red Hat Enterprise Linux (RHEL) in Azure, Azure [Change Tracking](/azure/automation/change-tracking/overview) allows you to easily identify changes and [Update Management](/azure/automation/update-management/overview) allows you to manage operating system updates for your RHEL Virtual Machines (VMs).
 
 For existing brownfield deployments, using [Red Hat Satellite](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15) and extending the service into Azure from on-premises might be the best approach to leverage existing skillsets.
