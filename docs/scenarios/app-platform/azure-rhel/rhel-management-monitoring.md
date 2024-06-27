@@ -153,8 +153,6 @@ Azure monitoring has the capabilities to incorporate customer sources as demonst
 
 ![A screenshot of a computer description automatically generated](images/rhelmanmon002.png "A screenshot of a computer description automatically generated")
 
-In conjunction Azure provides a robust set of tools to collect, analyze, and visualize the output of the RHEL tools.
-
 ### Azure Linux VM Monitoring
 Azure Monitor uses agents to collect boot and performance data from Azure VMs. It stores this data in Azure storage, and makes it accessible through the Azure portal, the Azure PowerShell module, and Azure CLI. Advanced monitoring is delivered with Azure Monitor for VMs by collecting performance metrics and discovering application components installed on the VMs. You can also make use of performance charts and dependency maps.
 ### Recommendations
