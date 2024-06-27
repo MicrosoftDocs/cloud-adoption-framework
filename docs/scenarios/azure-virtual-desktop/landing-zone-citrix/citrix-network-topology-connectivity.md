@@ -12,6 +12,10 @@ ms.custom: think-tank, e2e-avd
 
 This article provides design recommendations for a single-region Azure and Citrix Cloud environment and a multi-region environment. 
 
+## Single region deployment
+
+When deploying to a single region, your Azure and Citrix Cloud environment should use multiple subscriptions. Multiple Azure subscriptions create agility for business units through a mechanism to centralize policy, audit, and configuration requirements. This is one of the primary reasons we recommend a dedicated subscription for Citrix workloads on Azure as a starting point.
+
 ### Architecture
 
 
