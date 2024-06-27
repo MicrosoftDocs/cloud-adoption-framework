@@ -23,7 +23,7 @@ By creating Capsule Servers, you can establish content sources in various locati
 
 By assigning a host system to a Capsule Server or directly to your Satellite Server, you ensure the host receives the content they provide. Hosts can be physical or virtual.
 
-![Red Hat Satellite](images/system-architecture-satellite.png "Red Hat Satellite")
+![Red Hat Satellite Architecture](images/system-architecture-satellite.png "Red Hat Satellite")
 
 ## <a name="_toc156377587"></a>Deployment Strategy
 Automated software update management solutions are preferred over manual update installation process. Integration with on-premises solutions should be accounted for when working with brownfield installations. When deploying net new workloads into Azure, using cloud native tooling such as  [Update Management](/azure/automation/update-management/overview) or [Ansible on Azure](/azure/developer/ansible/overview) can significantly reduce time to value versus using other third party open source software.
