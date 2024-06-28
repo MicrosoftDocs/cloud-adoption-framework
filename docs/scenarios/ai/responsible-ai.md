@@ -63,10 +63,7 @@ Azure provides a wide range of services that can help you build AI solutions. Mi
 |[Conversational AI guidelines](https://www.microsoft.com/research/uploads/prod/2018/11/Bot_Guidelines_Nov_2018.pdf)|In order for people and society to realize the full potential of bots, they need to be designed in such a way that they earn the trust of others. These guidelines are aimed at helping you to design a bot that builds trust in the company and service that the bot represents.|
 |[Inclusive AI design guidelines](https://inclusive.microsoft.design/tools-and-activities/InPursuitofInclusiveAI.pdf)|These guidelines are intended to help you design AI that is inclusive and accessible to everyone.|
 |[AI Fairness Checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)|Use the AI fairness checklist to determine whether your AI system is fair and unbiased.|
-
-### Tools for responsible AI
-
-TBD.
+|[Responsible AI](/azure/machine-learning/concept-responsible-ai) in Azure Machine Learning|Review these responsible AI resources if you build AI systems with Azure Machine Learning.|
 
 ## Next steps
 

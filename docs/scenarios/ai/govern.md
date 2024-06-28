@@ -45,19 +45,19 @@ Risks are associated with all areas of business. With AI, there are new types of
 
 Here are some common AI risks to consider for your risk list:
 
-|Risk ID|Risk category|Risk description|Risk probability|Risk impact|Risk priority|
+|Risk ID|Risk category|Risk description|Business risk?|Technical risk?|
 |---|---|---|---|---|---|
-|R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to local or international laws can result in fines and legal consequences.|Medium|High|High|
-|R02|Regulatory compliance|**Violations of industry-specific regulations.**<br> Some industries, like healthcare and finance, have additional regulations that must be met, such as HIPAA or FINRA.|Medium|High|High|
-|R03|Regulatory compliance|**Breach of international data transfer rules.**<br> Not handing data correctly across borders can lead to violations of laws governing international data transfer, such as the EU-US. Privacy Shield.|Medium|High|High|
-|R04|Ethical|**Unfair treatment of users or customers.**<br> Biased AI decisions can result in discriminatory practices affecting certain groups of users or customers.|Medium|High|High|
-|R05|Ethical|**Lack of transparency in AI decision-making.**<br> Without proper transparency, it’s difficult to understand and justify decisions from AI, undermining trust and accountability.|Medium|High|High|
-|R06|Ethical|**Inaccurate predictions.**<br> If a model is flawed, it might produce incorrect predictions or classifications, leading to poor business decisions and potential financial losses.|Medium|High|High|
-|R07|Security|**AI system breaches**: Malicious actors might target AI systems, manipulating outputs or stealing proprietary data and algorithms.|Medium|High|High|
-|R08|Security|**Insider threats.**<br> Employees with access to AI systems and data might misuse their privileges, either intentionally or not, compromising security.|Medium|High|High|
-|R09|Cost|**Unexpected costs.**<br> AI projects can be expensive, and costs can spiral out of control if not managed properly.|Medium|High|High|
-|R10|Cost|**Underutilization of AI resources.**<br> If AI resources aren't used efficiently, it can lead to wasted resources and missed opportunities, and a poor sustainability score.|Medium|High|High|
-|R11|Legal|**Copyright issues.**<br> Many Large Language Models (LLMs) are trained on a vast amount of data, which might contain copyrighted material if it's from an internet source.|Medium|High|High|
+|R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to local or international laws can result in fines and legal consequences.|Yes|No|
+|R02|Regulatory compliance|**Violations of industry-specific regulations.**<br> Some industries, like healthcare and finance, have additional regulations that must be met, such as HIPAA or FINRA.|Yes|No|
+|R03|Regulatory compliance|**Breach of international data transfer rules.**<br> Not handing data correctly across borders can lead to violations of laws governing international data transfer, such as the EU-US. Privacy Shield.|Yes|No|
+|R04|Ethical|**Unfair treatment of users or customers.**<br> Biased AI decisions can result in discriminatory practices affecting certain groups of users or customers.|Yes|No|
+|R05|Ethical|**Lack of transparency in AI decision-making.**<br> Without proper transparency, it’s difficult to understand and justify decisions from AI, undermining trust and accountability.|Yes|No|
+|R06|Ethical|**Inaccurate predictions.**<br> If a model is flawed, it might produce incorrect predictions or classifications, leading to poor business decisions and potential financial losses.|Yes|No|
+|R07|Security|**AI system breaches**: Malicious actors might target AI systems, manipulating outputs or stealing proprietary data and algorithms.|Yes|Yes|
+|R08|Security|**Insider threats.**<br> Employees with access to AI systems and data might misuse their privileges, either intentionally or not, compromising security.|Yes|Yes|
+|R09|Cost|**Unexpected costs.**<br> AI projects can be expensive, and costs can spiral out of control if not managed properly.|Yes|No|
+|R10|Cost|**Underutilization of AI resources.**<br> If AI resources aren't used efficiently, it can lead to wasted resources and missed opportunities, and a poor sustainability score.|Yes|No|
+|R11|Legal|**Copyright issues.**<br> Many Large Language Models (LLMs) are trained on a vast amount of data, which might contain copyrighted material if it's from an internet source.|Yes|No|
 
 ## Enforce AI governance policies
 
