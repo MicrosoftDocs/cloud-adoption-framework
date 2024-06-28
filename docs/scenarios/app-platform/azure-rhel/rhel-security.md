@@ -18,8 +18,8 @@ Security for Red Hat Enterprise Linux systems, whether deployed in Azure or else
 
 A superior methodology would use GitOps practices to develop image pipelines. These pipelines layer the composable components, defined as configuration code, onto the initial image to produce the workload images. Consider the following list of considerations:
 
-- A hardened base image adhering to the model of least privilege provides a solid foundation.
-- Layering software and security configuration together promotes reuse and follows standard operating environment (SOE) and DevSecOps best practices
+- A hardened base image adhering to the model of [least privilege](https://www.redhat.com/en/topics/security/what-identity-and-access-management-iam#:~:text=Least%20privilege%20only%20gives%20a%20user%20access%20to,to%20take%20the%20actions%20%28permissions%29%20they%20are%20required.) provides a solid foundation.
+- Layering software and security configuration together promotes reuse and follows standard operating environment (SOE) and [DevSecOps best practices](https://www.redhat.com/en/topics/security/devsecops/approach)
 - Composition models for images can reduce testing and qualification effort
 - Composition models increase flexibility and speed time to delivery for new workloads
 - Composition models can decrease maintenance costs
