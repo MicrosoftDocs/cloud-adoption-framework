@@ -66,7 +66,7 @@ For host pool VM resiliency, consider these factors:
   > The maximum number of VMs inside an availability set is 200, as documented in [Subscription and service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
   >
 -  Azure Policy Initiative for Zone Resilience
-  - Azure Policy Initiative for Zone Resilience has been introduced to check if resources are deployed in a zone resilient fashion. [Learn more](https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#resilience).
+  - Azure Policy Initiative for Zone Resilience has been introduced to check if resources are deployed in a zone resilient fashion. [Learn more](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives#resilience).
   - More information about the Azure Policy Initiative for Zone Resilience can be found [here](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/130fb88f-0fc9-4678-bfe1-31022d71c7d5.html).
 
 
