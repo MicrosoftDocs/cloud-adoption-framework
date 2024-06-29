@@ -25,6 +25,7 @@ Learn more about the [network topology and connectivity](../../../ready/landing-
 - Decide whether connectivity to on-premises or multi-cloud environments is required.
 - Decide if [multi-region deployment](/azure/api-management/api-management-howto-deploy-multi-region) is required to service geographically distributed API consumers.
 - Consider using a load balancing solution such as [Application Gateway](/azure/application-gateway/overview) or [Azure Front Door](/azure/frontdoor/front-door-overview).
+- **Hybrid connectivity** If you are using Azure ExpressRoute for hybrid connectivity, ensure high availability for ExpressRoute. For more information, see [Designing for high availability with ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/designing-for-high-availability-with-expressroute). To ensure ExpressRoute resliency, check out the best practices detailed in [Azure Proactive Resiliency Library](https://azure.github.io/Azure-Proactive-Resiliency-Library/services/networking/expressroute-gateway/).
 
 ## Design recommendations
 
