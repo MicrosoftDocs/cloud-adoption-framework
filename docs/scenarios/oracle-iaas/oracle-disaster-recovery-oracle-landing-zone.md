@@ -1,10 +1,10 @@
 ---
-title: Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator
-description: Learn about continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator.
+title: Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator
+description: Learn about business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator.
 author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
-ms.date: 08/31/2023
+ms.date: 07/01/2024
 ms.topic: conceptual
 ms.custom: 
   - think-tank
@@ -13,9 +13,9 @@ ms.custom:
 --- 
 
 
-# Business continuity and disaster recovery (BCDR) for Oracle on Azure Virtual Machines landing zone accelerator
+# Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance, this article provides you with design considerations and best practices surrounding business continuity and disaster recovery (BCDR) options available for Oracle workload deployments on Azure Infrastructure Virtual Machines.
+This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). Following the guidance, this article provides you with design considerations and best practices surrounding BCDR options available for Oracle workload deployments on Azure Infrastructure Virtual Machines.
 
 Azure provides services to design highly available and resilient architecture. This guide outlines various options and best practices designing high availability and disaster recovery for Oracle databases on Azure Virtual Machines landing zone accelerator. It also describes how accompanying Azure services are configured to achieve high end-to-end availability for your solution.
 
