@@ -143,15 +143,15 @@ Oracle Data Guard Far Sync doesn't help with the high availability capabilities,
 
 In addition to the technologies in this article, you can use any technology that facilitates data replication across two Oracle databases to maintain a high availability replica and a disaster recovery replica for your Oracle databases on Azure. The technology that you choose must serve your solution requirements across these pillars.
 
-**Latency:** The amount of time that it takes to replicate an update from a primary database to secondary databases for high availability and disaster recovery should comply with your solution requirements.
+**Latency:** The amount of time that it takes to replicate an update from a primary database to secondary databases for high availability and disaster recovery should comply with your solution's requirements.
 
-**Bandwidth:** The amount and cost of bandwidth you need to replicate data to secondaries for high availability and disaster recovery should be provided. Azure already provides a high-speed network infrastructure between availability zones. When considering replication to other Azure regions for disaster recovery purposes, consider the amount of bandwidth that can be achieved as well as egress costs for data leaving the Azure datacenter.
+**Bandwidth:** The amount and cost of bandwidth that you need to replicate data to secondary databases for high availability and disaster recovery should be provided. Azure already provides a high-speed network infrastructure between availability zones. When you consider replication to other Azure regions for disaster recovery purposes, consider the amount of bandwidth that can be achieved and the egress costs for data that leaves the Azure datacenter.
 
-**Impact:** The level of impact replication introduces on transaction processing on primary database should comply with your solution requirements.
+**Impact:** The level of impact that replication has on transaction processing on the primary database should comply with your solution's requirements.
 
-**Data loss:** The amount of data loss expected in an abrupt failure of primary database should comply with your solution requirements.
+**Data loss:** The amount of data loss that you expect during an abrupt failure of the primary database should comply with your solution's requirements.
 
-**Total cost of ownership:** The cost of acquisition (a third-party replication solution) and amount of effort required to configure and maintain the replication solution should also be considered and verified to be within solution requirements.
+**Total cost of ownership:** Consider the cost of acquisition (of a non-Microsoft replication solution) and the amount of effort that you need to configure and maintain the replication solution. Verify that these factors comply with your solution's requirements.
 
 ### Optimize failover instance
 
