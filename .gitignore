@@ -13,3 +13,9 @@ _repo.*/
 docs/cspell-empty.json
 .DS_Store
 .vscode/settings.json
+docs/scenarios/oracle-iaas/media/disaster-recovery-data-guard-old.png
+docs/scenarios/oracle-iaas/media/high-availability-configuration-data-guard-old.png
+docs/scenarios/oracle-iaas/media/reference-architecture-pacemaker-cluster-old.png
+docs/scenarios/oracle-iaas/media/disaster-recovery-data-guard-old-1.png
+docs/scenarios/oracle-iaas/media/high-availability-configuration-data-guard-old1.png
+docs/scenarios/oracle-iaas/media/reference-architecture-pacemaker-cluster-old-1.png
