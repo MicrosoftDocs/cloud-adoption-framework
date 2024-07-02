@@ -3,7 +3,7 @@ title: What's new in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/04/2024
+ms.date: 07/02/2024
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
 ---
@@ -13,6 +13,22 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## June 2024
+
+### New articles
+
+- [Establish common subscription vending product lines](../ready/landing-zone/design-area/subscription-vending-product-lines.md): Give application teams the flexibility to deliver their workloads and services effectively by offering different subscription vending product lines. Implement subscription vending in your Azure landing zones to establish consistent scaling, security, and governance of Azure environments.
+
+### Updated articles
+
+- [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
+- [How to select a strategy for relocating cloud workloads](../relocate/select.md): We updated the guidance on service and data-relocation automation methods.
+
+We updated these articles to provide the latest guidance on Azure Carbon Optimization:
+
+- [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
+- [Sustainability outcomes and benefits for business](../strategy/business-outcomes/sustainability.md)
 
 ## May 2024
 
@@ -299,17 +315,17 @@ To support the imminent general availability of Azure Monitor baseline alerts fo
 
 These guides describe the Microsoft-recommended approach to help you design network connectivity for Azure VMware Solution private clouds. They explore four design areas: connectivity with on-premises sites, connectivity with Azure virtual networks, inbound internet connectivity, and outbound internet connectivity. Each design area is covered in a dedicated article, which presents architectural options, including their pros and cons. There are also two articles that cover the basics of Azure VMware Solution networking and guidance on how to prioritize requirements and related design areas.
 
--   [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
+- [Azure VMware Solution network design guide](../scenarios/azure-vmware/network-design-guide-intro.md)
 
--   [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
+- [Azure VMware Solution network design guide: Inbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md)
 
--   [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
+- [Azure VMware Solution network design guide: Networking basics](../scenarios/azure-vmware/azure-vmware-solution-network-basics.md)
 
--   [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
+- [Azure VMware Solution network design guide: Outbound internet connectivity](../scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md)
 
--   [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
+- [Azure VMware Solution network design guide: Connectivity with on-premises sites](../scenarios/azure-vmware/on-premises-connectivity.md)
 
--   [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
+- [Azure VMware Solution network design guide: Connectivity with Azure virtual networks](../scenarios/azure-vmware/virtual-network-connectivity.md)
 
 ## July 2023
 
@@ -338,17 +354,5 @@ This series provides guidance for your SAP environment in Azure. You can find be
 - [Security operations for SAP on Azure](../scenarios/sap/sap-lza-security-operations.md)
 
 - [Microsoft Sentinel for SAP on Azure](../scenarios/sap/sap-lza-sentinel-for-sap.md)
-
-## June 2023
-
-### Updated machine learning inference during deployment
-
-Learn about the [best practices for deploying machine learning models in production environments](../innovate/best-practices/ml-deployment-inference.md) by using Azure Machine Learning. Explore architectural considerations and deployment methods (real time and batch inference). Learn how to ensure consistency, monitor performance, implement security measures, and create a plan for updates.
-
-### New landing zone sandbox environments
-
-This article describes how to use a sandbox environment, including configuring networking, enabling audit logging, assigning a budget, and setting an expiration date.
-
-- [Landing zone sandbox environments](../ready/considerations/sandbox-environments.md)
 
 <!-- docutune:ignoreNextStep -->
