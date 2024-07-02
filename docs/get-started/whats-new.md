@@ -25,7 +25,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
 - [How to select a strategy for relocating cloud workloads](../relocate/select.md): We updated the guidance on service and data-relocation automation methods.
 
-We updated these articles to provide the latest guidance on Azure Carbon Optimization:
+We updated these articles to provide the latest guidance on Azure carbon optimization:
 
 - [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
 - [Sustainability outcomes and benefits for business](../strategy/business-outcomes/sustainability.md)
