@@ -24,11 +24,16 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Ready methodology for hybrid and multicloud strategy](../scenarios/hybrid/ready.md): We updated this article to include Azure Arc-enabled VMware vSphere and Azure Arc-enabled System Center Virtual Machine Manager.
 - [How to select a strategy for relocating cloud workloads](../relocate/select.md): We updated the guidance on service and data-relocation automation methods.
+- [Security, governance, and compliance disciplines for Azure VMware Solution](../scenarios/azure-vmware/eslz-security-governance-and-compliance.md): We updated this article to replace references to MMA, which is planned for deprecation. New guidance points to the Azure Monitor Agent.
 
-We updated these articles to provide the latest guidance on Azure Carbon Optimization:
+We updated these articles to provide the latest guidance on Azure carbon optimization:
 
 - [Sustainability considerations in cloud management](../manage/considerations/sustainability.md)
 - [Sustainability outcomes and benefits for business](../strategy/business-outcomes/sustainability.md)
+
+#### Hybrid/Azure Arc retirement
+
+We retired the Hybrid/Azure Arc best practices content set. The content was outdated and no longer relevant to the Cloud Adoption Framework.
 
 ## May 2024
 
