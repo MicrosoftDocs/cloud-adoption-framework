@@ -45,7 +45,7 @@ Risks are associated with all areas of business. With AI, there are new types of
 
 Here are some common AI risks to consider for your risk list:
 
-|Risk ID|Risk category|Risk description|Business risk?|Technical risk?|
+|Risk ID|Risk category|Risk description|Business risk|Technical risk|
 |---|---|---|---|---|---|
 |R01|Regulatory compliance|**Non-compliance with data protection laws.**<br> Failure to adhere to local or international laws can result in fines and legal consequences.|Yes|No|
 |R02|Regulatory compliance|**Violations of industry-specific regulations.**<br> Some industries, like healthcare and finance, have additional regulations that must be met, such as HIPAA or FINRA.|Yes|No|
