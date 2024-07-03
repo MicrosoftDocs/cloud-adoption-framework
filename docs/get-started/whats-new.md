@@ -33,7 +33,7 @@ We updated these articles to provide the latest guidance on Azure carbon optimiz
 
 #### Hybrid/Azure Arc retirement
 
-We retired the Hybrid/Azure Arc best practices content set. The content was outdated and no longer relevant to the Cloud Adoption Framework.
+We retired several articles in the Hybrid/Azure Arc scenario in the best practices area. The content was outdated and no longer relevant to the Cloud Adoption Framework.
 
 ## May 2024
 
