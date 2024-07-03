@@ -64,7 +64,7 @@ Shared storage clustering technologies provide unique attributes that can help y
 > [!NOTE]
 > A PCS cluster isn't an Oracle-certified solution. Consider this factor when you determine your high availability architecture.
 
-:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing a high availability configuration with Pacemaker for Oracle on Virtual Machines landing zone accelerator.":::
+:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing a high availability configuration with Pacemaker for Oracle on Virtual Machines landing zone accelerator." border="false":::
 
 #### Use proximity placement groups
 
@@ -122,14 +122,14 @@ There are several backup options that you can use to replicate data. For more in
 
 Consider using one of the following approaches to maintain the disaster recovery site:
 
-- Approach 1: To avoid the extra maintenance effort and cost, don't maintain physical deployment at the disaster recovery site. You can use infrastructure as code (IaC) and site reliability engineering practices to develop and maintain a repository that can replicate deployment as configuration with one click at the time of the failover to a disaster recovery site. This method optimizes cost because it doesn't use any physical resources until the failover occurs.
+- **Approach 1**: To avoid the extra maintenance effort and cost, don't maintain physical deployment at the disaster recovery site. You can use infrastructure as code and site reliability engineering practices to develop and maintain a repository that can replicate deployment as configuration with one click at the time of the failover to a disaster recovery site. This method optimizes cost because it doesn't use any physical resources until the failover occurs.
 
-> [!IMPORTANT]
-> You must ensure the solution's RTO requirements can be met if you create an entire deployment from scratch during a failover. To ensure that deployment code isn't broken, you must routinely simulate and test the disaster recovery scenario.
+  > [!IMPORTANT]
+> If you create an entire deployment from scratch during a failover, you must ensure that your deployment can meet the solution's RTO requirements. To ensure that deployment code isn't broken, you must routinely simulate and test the disaster recovery scenario.
 
-- Approach 2: Deploy and maintain a scaled version of your production environment. Have a version that can function accurately for a small workload and that you can potentially scale up as necessary during a failover to serve for production load. This method is commonly used, especially for complex deployments in which you don't want the risk of creating an entire environment or if you want to failover quickly to provide a low RTO.
+- **Approach 2**: Deploy and maintain a scaled version of your production environment. Have a version that can function accurately for a small workload and that you can potentially scale up as necessary during a failover to serve for production load. This method is commonly used, especially for complex deployments in which you don't want the risk of creating an entire environment or if you want to failover quickly to provide a low RTO.
 
-- Approach 3: Deploy and maintain your entire solution to the disaster recovery site for the fastest RTO and failover times. This method increases cost due to running a fully redundant infrastructure.
+- **Approach 3**: Deploy and maintain your entire solution to the disaster recovery site for the fastest RTO and failover times. This method increases cost due to running a fully redundant infrastructure.
 
 ### Special considerations for disaster recovery
 
@@ -183,14 +183,14 @@ Business continuity requires an integrated approach that includes all components
 - For further protection, you can strategically place VMs in separate availability zones rather than a single availability zone. This approach can prevent downtime during a datacenter failure.
 - For maximum protection, you can place a secondary database in another Azure region. To apply continuous updates, you can use Data Guard to implement global virtual network peering. Use this approach to apply data updates to the secondary region privately through the Microsoft backbone. Resources communicate directly, without gateways, extra hops, or transit over the public internet. This networking option provides a high-bandwidth, low-latency connection across peered virtual networks in different regions. You can use global virtual network peering to connect your primary site to a disaster recovery site in another region through a high-speed network.
 
-## Summary of resiliency against different failure types
+## Summary of resiliency against various failure types
 
 | Failure scenario | Oracle on Azure HA/DR scenario | RPO/RTO  |
 |:-----------|:-----------|:-----------|
-| Single component failure, like a host, rack, cooling, networking, or power failure | Data Guard with two nodes in the same Virtual Machine Scale Sets flexible orchestration in the same datacenter.<br>  - Protects against a single instance failure. <br> - Causes downtime if an entire datacenter fails. | RPO is zero.<br> RTO is less than or equal to two mins. <br> - Use Observer for fast failover <br> - Using MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard.   |
-| Datacenter failure | Data Guard with two nodes in separate availability zones. <br> - Protects against datacenter failure. <br> - Will cause downtime if whole region is down. <br> - Requires more failover configuration for app servers to manage network latency.  | RPO<=5 mins RTO<=5 mins<br> - Using MAX_PERFORMANCE mode for Data Guard <br> RPO=0 RTO<=5 mins <br> - Using MAX_AVAILABILITY mode for Data Guard  |
-|Region failure | Data Guard with two nodes in separate Azure regions:<br> - Protects against regional failures <br> - Requires more failover configuration for app servers to manage network latency.  |  RPO>=10 mins RTO>=15 mins<br> - Using MAX_PERFORMANCE mode for Data Guard.  |
-| All above scenarios |Backups shipped to a different Azure region: <br> - Protects against regional failures.<br> - Requires entire Azure environment to be set up in the target region during failover.   | RPO>=24 hrs RTO>=4 hrs   |
+| Single component failure, like a host, rack, cooling, networking, or power failure | Data Guard with two nodes in the same Virtual Machine Scale Sets flexible orchestration in the same datacenter:<br><br>  - Protects against a single instance failure. <br> - Causes downtime if an entire datacenter fails. | If you use Observer for fast-start failover and MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard:<br>- RPO is zero.<br> - RTO is less than or equal to two mins. <br>    |
+| Datacenter failure | Data Guard with two nodes in separate availability zones: <br><br> - Protects against a datacenter failure. <br> - Causes downtime if a whole region fails. <br> - Requires more failover configuration for app servers to manage network latency.  | - RPO is less than or equal to 5 mins <br> - RTO is less than or equal to 5 mins<br><br> If you use MAX_PERFORMANCE mode and MAX_AVAILABILITY mode for Data Guard: <br> - RPO is zero. <br> - RTO is less than or equal to 5 mins. |
+|Region failure | Data Guard with two nodes in separate Azure regions:<br><br> - Protects against regional failures. <br> - Requires more failover configuration for app servers to manage network latency.  |  If you use MAX_PERFORMANCE mode for Data Guard: <br> - RPO is greater than or equal to 10 mins. <br> - RTO is greater than or equal to 15 mins. |
+| All scenarios: a single component, datacenter, and region failure |Backups that are shipped to a different Azure region: <br><br> - Protect against regional failures.<br> - Require an entire Azure environment to be set up in the target region during a failover.   | - RPO is greater than or equal to 24 hrs. <br> - RTO is greater than or equal to 4 hrs.   |
 
 ## Next step
 
