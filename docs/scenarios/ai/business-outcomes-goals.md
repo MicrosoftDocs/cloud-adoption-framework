@@ -3,7 +3,7 @@ title: Business justification and goals for AI
 description: Establish an AI strategy by understanding the potential benefits of AI, defining your ambition, and establishing a decision-making process.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/20/2024
+ms.date: 07/04/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -14,7 +14,7 @@ To establish an AI vision and strategy, covering both traditional and generative
 
 ## Business outcomes
 
-To drive the adoption of AI in your organization, you need to understand the potential benefits and how they align with your business goals.
+To drive the adoption of AI in your organization, you need to understand the potential benefits of AI and how they align with your business goals.
 
 Setting clear objectives and goals and having a clear way to measure success is important to ensure a successful adoption of AI, both short term and long term.
 
@@ -24,11 +24,14 @@ In this section, we'll explore some common business goals and how they can be li
 
 Define why you're adopting AI and what you hope to achieve. Break down your goals into smaller, measurable objectives if necessary, and exemplify how they can be measured and achieved by defining success metrics.
 
+**Use AI to solve for your business**: _AI objectives_ should support your _business objectives_. Don't consider AI as a solution to problems you have yet to identify. Identify your business goals first, then consider how AI can help you achieve them.
+
 #### Example goals
 
 |Goal|AI benefit|Examples|
 |----|---------------------|---------|
 |**Increase customer satisfaction (CSAT) ratings** | Help serve customers faster with a higher quality and better consistency. Perform customer research and analytics. | <li> Customer chat bots <br> <li> Customer service automation <br><li> Virtual customer assistants |
+|**Increase decision-making speed and accuracy** | Provide insights and recommendations to help make better decisions faster. | <li> Predictive analytics <br> <li> Automated reporting <br><li> [Make data-drive policies and influence decision-making](/azure/machine-learning/concept-causal-inference) |
 |**Increase employee productivity**| Shift focus from repetitive and basic tasks to more impactful and strategic work | <li> Content generation<br> <li> Code generation <br> <li> Task management <br> <li> Easier information searching/retrieval |
 |**Increase operational efficiency** | Optimize processes and reduce time and resource wastage. | <li> Process automation<br> <li> Predictive maintenance<br> <li> Workflow automation |
 |**Increase revenue** | New business initiatives enabled by AI. | <li> New product lines or services<br> <li> Customer and behavior analytics <br> <li> Upselling products and services |
