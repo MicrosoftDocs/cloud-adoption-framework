@@ -25,7 +25,9 @@ There are **six key principles** for responsible AI:
 - **Transparency**: AI systems should be transparent and understandable. AI systems might help inform decisions that have great impact on people's lives, so it's important that people understand how these decisions are made.
 - **Accountability**: AI systems, and people designing and deploying then, should be accountable and answerable.
 
-![Responsible AI Principles](./media/responsible-ai.png)
+The responsible AI principles should be considered across each phase of the AI adoption journey. From strategy and planning, to implementation, and securing, managing, and governing your AI initiatives.
+
+![Responsible AI Principles](./media/responsible-ai-caf.png)
 
 ## The importance of responsible AI
 
