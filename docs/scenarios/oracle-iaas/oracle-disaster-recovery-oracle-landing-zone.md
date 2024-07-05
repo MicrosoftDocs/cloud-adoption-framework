@@ -47,7 +47,7 @@ For a step-by-step configuration of Data Guard on Azure, see [Implement Oracle D
 
 If you require a transactionally consistent copy of your database, consider using Data Guard in maximum protection mode. However, maximum protection mode doesn't allow transactions to continue when standby database isn't available. Therefore, despite using Virtual Machines Scale Sets flexible orchestration, your SLA is reduced to 99.9% x 99.9% = 99.8% when you use maximum protection mode. This configuration ensures a consistent copy of data but doesn't necessarily increase availability.
 
-Other attributes of this architecture are the same as maximum availability mode. For example the RPO is zero, and the RTO is less than or equal to two minutes.
+Other attributes of this architecture are the same as maximum availability mode. For example, the RPO is zero, and the RTO is less than or equal to two minutes.
 
 ### Consider other ways to implement high availability
 
@@ -129,7 +129,7 @@ Consider using one of the following approaches to maintain a disaster recovery s
 > [!IMPORTANT]
 > If you create an entire deployment from scratch during a failover, you must ensure that your deployment can meet the solution's RTO requirements. To ensure that deployment code isn't broken, you must routinely simulate and test the disaster recovery scenario.
 
-**Approach 2:** Deploy and maintain a scaled version of your production environment. Have a version that can properly function for a small workload and that you can potentially scale up as necessary during a failover to serve for production load. This method is commonly used, especially for complex deployments in which you don't want to risk creating an entire environment or if you want to failover quickly to provide a low RTO.
+**Approach 2:** Deploy and maintain a scaled version of your production environment. Have a version that can properly function for a small workload and that you can potentially scale up as necessary during a failover to serve for production load. This method is commonly used, especially for complex deployments in which you don't want to risk creating an entire environment or if you want to fail over quickly to provide a low RTO.
 
 **Approach 3:** Deploy and maintain your entire solution in the disaster recovery site for the fastest RTO and failover times. This method increases cost due to running a fully redundant infrastructure.
 
@@ -176,7 +176,7 @@ To achieve high availability and disaster recovery, you need to make financial a
 - **Optimal RTO and RPO**. To minimize latency, incorporate a secondary Oracle database on a separate VM within the same Virtual Machine Scale Sets flexible orchestration and in the same availability zone as the primary database. This configuration provides high availability and protection against a single-instance failure.
 
 - **Data protection from a datacenter failure**. Place the secondary Oracle database in a second availability zone to provide a high availability setup and to provide protection if an entire availability zone fails. This configuration can have up to two milliseconds of latency between the primary and secondary database, which can affect performance, RTOs, and RPOs.
-- **Data protection from a regional failure**. To help protect against potential data loss due to an Azure regional failure, you can place the secondary database in a different region. This configuration can have between 30 and 300 milliseconds of latency between regions, so you might not meet your RTO and RPO targets. This solution is best for regional disaster recovery rather than high availability. 
+- **Data protection from a regional failure**. To help protect against potential data loss due to an Azure regional failure, you can place the secondary database in a different region. This configuration can have between 30 milliseconds and 300 milliseconds of latency between regions, so you might not meet your RTO and RPO targets. This solution is best for regional disaster recovery rather than high availability. 
 
 Business continuity requires an integrated approach that includes all components of a workload. Network infrastructure is a primary component for any workload on Azure. Your network infrastructure needs to align with your high availability or disaster recovery architecture. Consider the following network infrastructure factors:
 
