@@ -3,7 +3,7 @@ title: Responsible AI adoption
 description: Learn about the importance of responsible AI considerations when adopting AI on Azure in your organization.
 author: Zimmergren
 ms.author: tozimmergren
-ms.date: 06/20/2024
+ms.date: 07/04/2024
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -25,7 +25,9 @@ There are **six key principles** for responsible AI:
 - **Transparency**: AI systems should be transparent and understandable. AI systems might help inform decisions that have great impact on people's lives, so it's important that people understand how these decisions are made.
 - **Accountability**: AI systems, and people designing and deploying then, should be accountable and answerable.
 
-![Responsible AI Principles](./media/responsible-ai.png)
+The responsible AI principles should be considered across each phase of the AI adoption journey. From strategy and planning, to implementation, and securing, managing, and governing your AI initiatives.
+
+![Responsible AI Principles](./media/responsible-ai-caf.png)
 
 ## The importance of responsible AI
 
@@ -54,6 +56,17 @@ Use [Azure AI Content Safety](/azure/ai-services/content-safety/) to detect harm
 Microsoft provides a list of transparency notes for AI-relevant Azure services. Use the following link to learn more about the guidelines on how to responsibly use AI in applications. Different services within the Azure AI service suite are represented:
 
 - [Responsible use of AI with Azure AI services](/azure/ai-services/responsible-use-of-ai-overview)
+
+### Use the Responsible AI dashboard for Azure Machine Learning
+
+If you're building systems with Azure Machine Learning, you can assess your AI systems using the [Responsible AI dashboard](/azure/machine-learning/concept-responsible-ai-dashboard). The Responsible AI dashboard provides a single interface to help you implement Responsible AI in practice. Here's a few of the Responsible AI components:
+
+- **Data analysis**: Understand and explore your dataset distributions and statistics.
+- **Model overview and fairness assessment**: Evaluate the performance of your model, and evaluate your model's group fairness issues.
+- **Error analysis**: View and understand how errors are distributed in your dataset.
+- **Model interpretability**: Understand how your model's predictions and how those overall and individuals predictions are made.
+- **Counterfactual what-if**: Observe how feature perturbations would affect your model predictions.
+- **Causal analysis**: Use historical data to view the causal effects of treatment features on real-world outcomes.
 
 ### Guidelines to develop AI responsibly
 

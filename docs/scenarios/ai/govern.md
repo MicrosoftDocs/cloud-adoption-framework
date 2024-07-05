@@ -33,9 +33,11 @@ The following table provides an overview of recommended components to embrace in
 
 In the Cloud Adoption Framework, the Govern methodology provides guidance on how to [establish a governance function](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) within your organization. This function is responsible for ensuring that the organization’s cloud resources are used in a compliant, secure, and efficient manner. When adopting AI, you should extend this governance function to cater for the specific risks and challenges associated with AI.
 
-By extending your cloud governance team to include AI governance, you can ensure that AI systems are developed, deployed, and managed in a responsible and compliant manner. This team should be responsible for setting AI governance policies, monitoring compliance, and providing guidance and support to AI development teams. For enterprises, the governance function might exist within the AI center of Excellence (CoE), which is responsible for driving AI adoption across the organization.
+By extending your cloud governance team to include AI governance, you can ensure that AI systems are designed, developed, deployed, and managed in a safe, secure, responsible and compliant manner. This team should be responsible for setting AI governance policies, monitoring compliance, and providing guidance and support to AI development teams.
 
-For more information on the functions of an AI Center of Excellence team, see [AI Center of Excellence](./ai-center-of-excellence.md).
+For enterprises, the governance function might exist within the AI center of Excellence (CoE), which is responsible for driving AI adoption across the organization. For startups and smaller organizations, the governance function might be part of the AI development team or a separate team dedicated to AI governance.
+
+For more information about what functions and purpose an AI governance team provides for all sizes of organizations, see [AI Center of Excellence](./ai-center-of-excellence.md).
 
 ## Assess AI risks
 
