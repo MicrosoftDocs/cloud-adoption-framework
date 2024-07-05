@@ -22,9 +22,9 @@ Enterprise Agreement enrollment represents the commercial relationship between M
 
 - Departments help to segment costs into logical groupings and set a budget or quota at the department level. The quota isn't firmly enforced; it's used for reporting purposes.
 
-- Accounts are organizational units in the Azure EA portal. They can be used to manage subscriptions and access reports.
+- Accounts are organizational units in the Cost Management blade of the Azure portal. They can be used to manage subscriptions and access reports.
 
-- Subscriptions are the smallest units in the Azure EA portal. They're containers for Azure services that are managed by a Service Administrator. This is where your organization deploys Azure services.
+- Subscriptions are the smallest units in the Azure portal. They're containers for Azure services that are managed by a Service Administrator. This is where your organization deploys Azure services.
 
 - [Enterprise Agreement enrollment roles](/azure/cost-management-billing/manage/understand-ea-roles#enterprise-user-roles) link users with their functional role. These roles are:
 
@@ -52,7 +52,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - A range of administrators can be assigned to a single enrollment.
 
-- Each subscription should have a designated account owner. See [Azure EA portal administration guide](/azure/cost-management-billing/manage/ea-portal-administration#change-azure-subscription-or-account-ownership) for details on how to change this, if needed.
+- Each subscription should have a designated account owner. See [Azure EA administration guide](/azure/cost-management-billing/manage/ea-portal-administration#change-azure-subscription-or-account-ownership) for details on how to change this, if needed.
 
 - Each account owner is a subscription owner for any subscriptions provisioned under that account.
 
@@ -88,7 +88,7 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 - Don't move or rename an Enterprise Agreement account in Microsoft Entra ID.
 
-- Periodically audit the Azure EA portal to review who has access, and when possible, avoid using a Microsoft account.
+- Periodically audit the Cost Management blade in the Azure portal to review who has access, and when possible, avoid using a Microsoft account.
 
 - [Enable both **DA View Charges** and **AO View Charges** on every Enterprise Agreement enrollment](/azure/cost-management-billing/costs/assign-access-acm-data#enable-access-to-costs-in-the-azure-portal) to allow users with the correct permissions to view Cost Management data.
 
