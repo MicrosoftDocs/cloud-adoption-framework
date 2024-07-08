@@ -16,9 +16,10 @@ Specific migration scenarios require different approaches and tools. This articl
 
 | Link | Description |
 |---|---|
-| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | Complete a tutorial to learn how to discover Amazon Web Services (AWS) instances by using the Azure Migrate discovery and assessment tool. |
-| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure by using the Azure Migrate discovery and assessment tool. |
-| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs by using the Azure Migrate server assessment tool and the migration and modernization tool. |
+| [Discover AWS instances](/azure/migrate/tutorial-discover-aws) | Complete a tutorial to learn how to discover Amazon Web Services (AWS) instances using the [Azure Migrate: Discovery and assessment tool]
+(/azure/migrate/migrate-services-overview#azure-migrate-discovery-and-assessment-tool>). |
+| [Assess AWS instances for migration to Azure](/azure/migrate/tutorial-assess-aws) | Learn how to assess AWS instances for migration to Azure using the Azure Migrate: Discovery and assessment tool. |
+| [Migrate AWS instances](/azure/migrate/tutorial-migrate-aws-virtual-machines) | Complete a tutorial to learn how to discover and assess AWS virtual machines (VMs), and then migrate them to Azure VMs using the Azure Migrate: Discovery and assessment tool and the Migration and modernization tool. |
 
 ## Containers
 
