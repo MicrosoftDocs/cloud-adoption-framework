@@ -81,4 +81,4 @@ If you're building systems with Azure Machine Learning, you can assess your AI s
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Skills readiness plan for AI](./skills-readiness-ai.md)
+> [AI strategy overview](./strategy.md)
