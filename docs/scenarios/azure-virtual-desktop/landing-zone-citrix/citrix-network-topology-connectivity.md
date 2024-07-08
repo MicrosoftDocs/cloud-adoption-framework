@@ -91,7 +91,7 @@ For large-scale deployments, isolate workloads so that you can effectively scale
 
 ### Architecture
 
-:::image type="content" source="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg" alt-text="Diagram of a reference architecture that demonstrates major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment." border="false" lightbox="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg":::
+:::image type="content" source="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg" alt-text="Diagram of a reference architecture that demonstrates major design areas and design best practices for a large-scale Azure and Citrix Cloud multisubscription environment." border="false" lightbox="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg":::
 
 *Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
 
@@ -108,7 +108,7 @@ For large-scale deployments, create dedicated shared service and management spok
 * *(B) Peering with shared resources spoke:*  Ensure your hub virtual network is peered with the shared resources spoke to provide [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
 * *(C) Shared resource spoke virtual networks:* Host all required and optional Citrix components, and also shared services, such as Profile storage accounts and Azure Compute Galleries, in the shared resource spoke virtual networks. Peer these networks directly with the VDA spokes to minimize latency and improve performance.
 * *(D) VDA workload spokes configuration*: Host only the VDAs in the VDA workload spokes. Route all network traffic from VMs and services. e.g. profile traffic directly to the shared resource spoke as long as they within a specific data center region. Route all network traffic that leaves the datacenter region, like internet egress, hybrid, or cross-region connectivity, to the hub virtual network.
-* *(E) Compute Gallery version replicas:* Specify the number of replicas that you want to keep in the [Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas to reduce the chance of instance creation processing being throttled due to overloading of a single replica.
+* *(E) Compute Gallery version replicas:* Specify the number of replicas that you want to keep in the [Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas to reduce the chance that throttling occurs for an instance creation process due to overloading a single replica.
 
 #### Understand resource limitations
 
