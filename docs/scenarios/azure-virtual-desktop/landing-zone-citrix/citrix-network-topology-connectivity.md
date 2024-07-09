@@ -20,7 +20,7 @@ When you deploy your Azure and Citrix Cloud environment to a single region, use 
 
 :::image type="content" source="../media/citrix-network-topology-connectivity/citrix-cloud-azure-virtual-desktop-multiple-subscription.svg" alt-text="Diagram that shows a reference architecture of major design areas and design best practices in an Azure and Citrix Cloud multisubscription environment." border="false" lightbox="../media/citrix-network-topology-connectivity/citrix-cloud-azure-virtual-desktop-multiple-subscription.svg":::
 
-*Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
+*Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/citrix-cloud-azure-virtual-desktop-multiple-subscription.vsdx) of this architecture.*
 
 ### Components
 
@@ -94,7 +94,7 @@ For large-scale deployments, isolate workloads so that you can effectively scale
 
 :::image type="content" source="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg" alt-text="Diagram that shows a reference architecture of major design areas and design best practices for a large-scale Azure and Citrix Cloud multisubscription environment." border="false" lightbox="../media/citrix-network-topology-connectivity/citrix-accelerator-architecture-large-scale.svg":::
 
-*Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx) of this architecture.*
+*Download a [Visio file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/citrix-accelerator-architecture-large-scale.vsdx) of this architecture.*
 
 ### Citrix design recommendations
 
