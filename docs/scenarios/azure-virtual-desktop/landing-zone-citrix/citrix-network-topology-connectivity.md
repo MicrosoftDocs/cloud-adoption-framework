@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Configure hybrid networking for Citrix Cloud and Azure
 
-This article describes design recommendations for a single-region and multiregion Azure and Citrix Cloud environment. It also describes the components and design considerations that you can implement for a successful deployment.
+This article describes architectures for single-region and multiregion Azure and Citrix Cloud environments. It provides design considerations, design recommendations, and components that you can implement for a successful deployment.
 
 ## Single-region deployment
 
@@ -38,22 +38,22 @@ This architecture consists of the following components:
 
 For more information, see [Compare profile storage options](/azure/storage/files/storage-files-netapp-comparison).
 
-This scenario also includes the following Citrix components within the Azure landing zone:
+This architecture also includes the following Citrix components within the Azure landing zone:
 
 - The [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html#system-requirements) establishes a connection between Citrix Cloud and the resource locations.
 
-- [Citrix Virtual Delivery Agent (VDA)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-vdas.html) is installed on a golden image or target device that hosts apps or desktops. You can use this agent to connect to, provision, and orchestrate apps and desktops as persistent or non-persistent machines. The VDA is compatible with physical devices or virtual devices, including Windows Server, Windows client, and Linux OS.
+- [Citrix Virtual Delivery Agent (VDA)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-vdas.html) is installed on a golden image or target device that hosts apps or desktops. This agent can be used to connect to, provision, and orchestrate apps and desktops as persistent or non-persistent machines. The VDA is compatible with physical devices or virtual devices, including Windows Server, Windows client, and Linux OS.
 - [Citrix Workspace](https://community.citrix.com/tech-zone/learn/tech-briefs/citrix-workspace) is a cloud service that provides users secure access to information, apps, and other content. Citrix Workspace integrates Azure assets and on-premises assets so that users have unified access to all their resources in one location from anywhere, on any device.
 
 ### Optional Citrix components
 
 The following Citrix components within the Azure landing zone are optional. Consider these components if you need advanced functionality.
 
-- [Citrix Federated Authentication Service](https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/secure/federated-authentication-service.html) dynamically issues certificates for users so that they can sign in to an Active Directory environment. This method is similar to using a smartcard. Citrix Federated Authentication Service enables single sign-on when you use Security Assertion Markup Language (SAML)-based authentication. You can use a broad range of authentication options and partner identity providers, such as Okta and Ping.
+- [Citrix Federated Authentication Service](https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/secure/federated-authentication-service.html) dynamically issues certificates for users so that they can sign in to a Windows Server Active Directory environment. This method is similar to using a smartcard. Citrix Federated Authentication Service enables single sign-on when you use Security Assertion Markup Language-based authentication. You can use a broad range of authentication options and partner identity providers, such as Okta and Ping.
 
-- [Citrix StoreFront](https://www.citrix.com/products/citrix-daas/citrix-storefront.html) is an alternative internal user access point for Citrix Workspace. StoreFront is self-managed and seamlessly aggregates resources across multiple on-premises environments and Azure environments. Lift-and-shift scenarios often use StoreFront to maintain user access to existing Citrix deployments while moving workloads to Azure.
-- [Citrix Application Delivery Controller (ADC) or NetScaler](https://www.citrix.com/products/citrix-adc/) is an alternative external user access point for Citrix Workspace and Citrix Gateway Service. Citrix ADC is a self-managed virtual appliance within your Azure tenant that provides secure proxy for external connectivity and authentication. You can integrate Citrix ADC with StoreFront or Workspace. Lift-and-shift scenarios often use Citrix ADC to maintain user access to existing Citrix deployments while moving workloads to Azure.
-- [Citrix Provisioning](https://docs.citrix.com/en-us/provisioning/current-release/architecture.html) is a network-based image-management solution that you can deploy within your Azure tenant to enable scalable deployment of up to thousands of non-persistent machines. Citrix Provisioning streams centralized images over an Azure virtual network, which provides rapid updates and minimizes storage requirements.
+- [Citrix StoreFront](https://www.citrix.com/products/citrix-daas/citrix-storefront.html) is an alternative internal user access point for Citrix Workspace. StoreFront is self-managed and seamlessly aggregates resources across multiple on-premises environments and Azure environments. You can use StoreFront in a lift-and-shift scenario to maintain user access to existing Citrix deployments while you move workloads to Azure.
+- [Citrix Application Delivery Controller (ADC) or NetScaler](https://www.citrix.com/products/citrix-adc/) is an alternative external user access point for Citrix Workspace and Citrix Gateway Service. Citrix ADC is a self-managed virtual appliance within your Azure tenant that provides secure proxy for external connectivity and authentication. You can integrate Citrix ADC with StoreFront or Workspace. Use Citrix ADC in a lift-and-shift scenario to maintain user access to existing Citrix deployments while you move workloads to Azure.
+- [Citrix Provisioning](https://docs.citrix.com/en-us/provisioning/current-release/architecture.html) is a network-based image-management solution that you can deploy within your Azure tenant to enable scalable deployment of up to thousands of non-persistent machines. Citrix Provisioning streams centralized images over an Azure virtual network, which provides quick updates and minimizes storage requirements.
 - The [Citrix App Layering appliance](https://docs.citrix.com/en-us/citrix-app-layering/4/install-appliance/ms-azure.html) is the central component for the App Layering technology that hosts the management console. You can use App Layering to create and manage layers, layer assignments, and image templates. You can also help manage single OS instances and app instances and compose images from layers, which reduces effort in environments that have several golden images.
 
 ### Citrix design considerations
@@ -64,7 +64,7 @@ The Citrix on Azure solution requires a certain amount of throughput for each us
 
 #### Network segmentation
 
-Also consider [Citrix guidance for Azure network segmentation and logically segmented subnets](https://community.citrix.com/tech-zone/design/reference-architectures/virtual-apps-and-desktops-azure/#wiki-header-45). Use the following guidelines to help with initial network planning.
+Also consider [Citrix guidance for Azure network segmentation and logically segmented subnets](https://community.citrix.com/tech-zone/design/reference-architectures/virtual-apps-and-desktops-azure/#wiki-header-45). Use the following guidelines to help plan your initial networking.
 
 ##### Segment by workload types
 
@@ -76,19 +76,19 @@ If you use [workload subscriptions](https://www.citrix.com/blogs/2020/10/14/citr
 
 ##### Segment by tenant, business unit, or security zone
 
-If you run a multitenant deployment, such as a [Citrix Service Provider architecture](https://docs.citrix.com/en-us/tech-zone/design/reference-architectures/csp-cvads.html), we recommend that you isolate tenants between networks or subnets. If your existing security standards need specific isolation requirements at a network level, consider isolating separate business units or security zones within your organization.
+If you run a multitenant deployment, such as a [Citrix Service Provider architecture](https://docs.citrix.com/en-us/tech-zone/design/reference-architectures/csp-cvads.html), we recommend that you isolate tenants between networks or subnets. If your existing security standards need specific isolation requirements at the network level, consider isolating separate business units or security zones within your organization.
 
-If you segment business units beyond workload-specific networks, the complexity of the overall environment increases. Determine whether this method is worth the increased complexity. Use this method as an exception rather than the rule, and apply this method with the right justification and projected scale. For example, you could create a network for 1,000 contractors that support finance to accommodate security needs beyond the standard single-session VDI network.
+If you segment business units beyond workload-specific networks, the complexity of the overall environment increases. Determine whether this method is worth the increased complexity. Use this method as an exception rather than the rule, and apply it with the right justification and projected scale. For example, you might create a network for 1,000 contractors that support finance to accommodate security needs beyond the standard single-session VDI network.
 
-You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you could limit customer relations management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multisession VDA network.
+You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you might limit customer relations management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multisession VDA network.
 
 ## Multiregion deployment
 
-When you deploy your workload in multiple regions, deploy hubs, shared resource spokes, and VDA spokes in each region. Carefully select a subscription model and networking model. To choose your models, understand the growth of your Azure footprint inside and outside the Citrix deployment.
+When you deploy your workload in multiple regions, deploy hubs, shared resource spokes, and VDA spokes in each region. Carefully select a subscription model and networking model. Determine your models based on the growth of your Azure footprint inside and outside the Citrix deployment.
 
-You might have a small Citrix deployment, but you might also have a large amount of other resources that read and write heavily against the Azure API, which can have a negative effect on the Citrix environment. Alternatively, you could have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
+You might have a small Citrix deployment and a large amount of other resources that read and write heavily against the Azure API, which can have a negative effect on the Citrix environment. Alternatively, you might have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
 
-For large-scale deployments, isolate workloads so that you can effectively scale out deployments and prevent a negative effect on the customer's Citrix environment. The following architectural diagram shows a single region in a multiregion Azure and Citrix Cloud environment.
+For large-scale deployments, isolate workloads so that you can effectively scale out deployments and prevent a negative effect on the customer's Citrix environment. The following architectural diagram shows a single region that's in a multiregion Azure and Citrix Cloud environment.
 
 ### Architecture
 
@@ -104,12 +104,12 @@ Consider the following recommendations for your large-scale deployments.
 
 For large-scale deployments, create dedicated shared service and management spokes, and directly peer them with your VDA spokes. This configuration minimizes latency and prevents you from reaching networking limits in your hub networks. The following points illustrate this approach, and they correspond to the preceding diagram.
 
-*  *(A) Hub virtual network configuration:* Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
+*  *(A) Hub virtual network configuration*: Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
 
-* *(B) Peering with shared resources spoke:*  Ensure that you peer your hub virtual network with the shared resources spoke to provide the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
-* *(C) Shared resource spoke virtual networks:* Host all required and optional Citrix components, and host shared services, such as profile storage accounts and Azure compute galleries, in the shared resource spoke virtual networks. To minimize latency and improve performance, peer these networks directly with the VDA spokes.
+* *(B) Shared resource spoke peering*:  Ensure that you peer your hub virtual network with the shared resource spoke to provide the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
+* *(C) Shared resource spoke virtual networks*: Host all required and optional Citrix components, and host shared services, such as profile storage accounts and Azure compute galleries, in the shared resource spoke virtual networks. To minimize latency and improve performance, peer these networks directly with the VDA spokes.
 * *(D) VDA workload spokes configuration*: Host only the VDAs in the VDA workload spokes. Route all network traffic from VMs and services. For example, you can route profile traffic directly to a shared resource spoke if the resource spoke is within a specific datacenter region. Route all network traffic that leaves the datacenter region, like internet egress, hybrid, or cross-region connectivity, to the hub virtual network.
-* *(E) Compute Gallery version replicas:* Specify the number of replicas that you want to keep in [Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas. Use this approach so that when you create an instance, throttling doesn't occur due to overloading a single replica.
+* *(E) Compute Gallery version replicas*: Specify the number of replicas that you want to keep in [Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas. Use this approach so that when you create an instance, throttling doesn't occur due to overloading a single replica.
 
 #### Understand resource limitations
 
