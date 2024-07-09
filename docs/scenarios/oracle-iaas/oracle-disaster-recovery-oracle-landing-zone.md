@@ -33,21 +33,21 @@ Azure Virtual Machines instances that run Oracle workloads benefit from the Azur
 
 Use the following flow chart to choose the best high availability option for your Oracle database.
 
-:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram showing the service design protection process map of Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/service-protection-design-process-map.png":::
+:::image type="content" source="media/service-protection-design-process-map.png" alt-text="Diagram that shows the service design protection process map of Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/service-protection-design-process-map.png":::
 
 ### Use Data Guard in maximum availability mode for high availability
 
 Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For a highly available configuration of two Oracle database servers that are created within a Virtual Machine Scale Sets flexible orchestration, Azure provides 99.95% service availability for a service-level agreement (SLA) for instances that are spread across fault domains. Azure provides 99.99% service availability for instances that are spread across [availability zones](/azure/reliability/availability-zones-overview). For more information, see [High availability for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
 
-:::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram showing a high availability configuration with Data Guard for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/high-availability-configuration-data-guard.png":::
+:::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram that shows a high availability configuration with Data Guard for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/high-availability-configuration-data-guard.png":::
 
 For a step-by-step configuration of Data Guard on Azure, see [Implement Oracle Data Guard on a Linux-based Azure VM](/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard).
 
 ### Use Data Guard in maximum protection mode for high availability
 
-If you require a transactionally consistent copy of your database, consider using Data Guard in maximum protection mode. However, maximum protection mode doesn't allow transactions to continue when standby database isn't available. Therefore, despite using Virtual Machines Scale Sets flexible orchestration, your SLA is reduced to 99.9% x 99.9% = 99.8% when you use maximum protection mode. This configuration ensures a consistent copy of data but doesn't necessarily increase availability.
+If you require a transactionally consistent copy of your database, consider using Data Guard in maximum protection mode. However, maximum protection mode doesn't allow transactions to continue when the standby database isn't available. Therefore, despite using Virtual Machines Scale Sets flexible orchestration, your SLA is reduced to 99.9% x 99.9% = 99.8% when you use maximum protection mode. This configuration ensures a consistent copy of data but doesn't necessarily increase availability.
 
-Other attributes of this architecture are the same as maximum availability mode. For example, the RPO is zero, and the RTO is less than or equal to two minutes.
+Other attributes of this architecture are the same as the maximum availability mode. For example, the RPO is zero, and the RTO is less than or equal to two minutes.
 
 ### Consider other ways to implement high availability
 
@@ -66,7 +66,7 @@ Shared storage clustering technologies provide unique attributes that can help y
 > [!NOTE]
 > A PCS cluster isn't an Oracle-certified solution. Keep this factor in mind when you choose your high availability architecture.
 
-:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram showing a high availability configuration with Pacemaker for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/reference-architecture-pacemaker-cluster.png":::
+:::image type="content" source="media/reference-architecture-pacemaker-cluster.png" alt-text="Diagram that shows a high availability configuration with Pacemaker for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/reference-architecture-pacemaker-cluster.png":::
 
 #### Use proximity placement groups
 
@@ -74,7 +74,7 @@ To provide the lowest possible latency, place VMs as close as possible. You can 
 
 ## Configure your workload for disaster recovery
 
-A disaster recovery architecture provides resiliency against failures that affect Azure datacenters or regions or failures that hinder application functionality across an entire region. In such a scenario, you should move your entire workload to a different datacenter or region.
+A disaster recovery architecture provides resiliency against failures that affect Azure datacenters or regions or against failures that hinder application functionality across an entire region. In such a scenario, you should move your entire workload to a different datacenter or region.
 
 Choose your disaster recovery architecture based on your solution requirements. You determine your requirements based on your RTO and RPO. Disaster recovery architectures are for exceptional failure cases, so failover processes are manual. In the high availability design, failover processes are automatic. In a disaster recovery architecture, you should have more relaxed requirements for RTO and RPO, which saves money.
 
@@ -84,15 +84,15 @@ This article focuses on scenarios in which the primary server and secondary serv
 
 Use the following flow chart to choose the best disaster recovery option for your Oracle database.
 
-:::image type="content" source="media/data-protection-design-process-map.png" alt-text="Diagram showing the data protection design process map of Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/data-protection-design-process-map.png":::
+:::image type="content" source="media/data-protection-design-process-map.png" alt-text="Diagram that shows the data protection design process map of Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/data-protection-design-process-map.png":::
 
 ### Use Data Guard for disaster recovery
 
 You can use Data Guard to replicate data to your disaster recovery site. Use that site as another availability zone in the same region or in a different region depending on your requirements for data protection. Your configuration also depends on the availability zone structure on your production site. A Data Guard implementation in a disaster recovery scenario is similar to the high availability scenario discussed earlier, with a few important differences. For example:
 
-- When you failover to a secondary replica in the high availability scenario, you configure Azure Load Balancer to redirect requests to the new primary database instance.
+- When you fail over to a secondary replica in the high availability scenario, you configure Azure Load Balancer to redirect requests to the new primary database instance.
 
-- When you failover to the disaster recovery site, you failover the *entire* solution to the new site. To avoid latency challenges, you typically need to configure failover for application services. 
+- When you fail over to the disaster recovery site, you fail over the *entire* solution to the new site. To avoid latency challenges, you typically need to configure failover for application services. 
 
 If the disaster recovery site is in another region, you need to design the site for the failover depending on your requirements.
 
@@ -100,7 +100,7 @@ The latency within a single datacenter is less than the latency between datacent
 
 Additionally, when you send data across Azure regions or datacenters, you pay egress costs for data, like redo logs, that's sent to a disaster recovery site. If you don't need to replicate all the data in your database, you can use Oracle Golden Gate-based replication to replicate only partial data as needed, which reduces egress costs.
 
-:::image type="content" source="media/disaster-recovery-data-guard.png" alt-text="Diagram showing a disaster recovery configuration with Data Guard for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/disaster-recovery-data-guard.png":::
+:::image type="content" source="media/disaster-recovery-data-guard.png" alt-text="Diagram that shows a disaster recovery configuration with Data Guard for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/disaster-recovery-data-guard.png":::
 
 For a step-by-step configuration of Data Guard on Azure, see [Implement Data Guard on a Linux-based Azure Linux VM](/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard).
 
@@ -189,12 +189,12 @@ Business continuity requires an integrated approach that includes all components
 
 ## Summary of resiliency against various failure types
 
-| Failure scenario | Oracle on Azure HA/DR scenario | RPO/RTO  |
+| Failure scenario | Oracle on Azure high availability or disaster recovery scenario | RPO/RTO  |
 |:-----------|:-----------|:-----------|
-| Single component failure, like a host, rack, cooling, networking, or power failure | Data Guard with two nodes in the same Virtual Machine Scale Sets flexible orchestration in the same datacenter:<br><br>  - Protects against a single instance failure. <br> - Causes downtime if an entire datacenter fails. | If you use Observer for fast-start failover and MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard:<br>- RPO is zero.<br> - RTO is less than or equal to two mins. <br>    |
-| Datacenter failure | Data Guard with two nodes in separate availability zones: <br><br> - Protects against a datacenter failure. <br> - Causes downtime if a whole region fails. <br> - Requires more failover configuration for app servers to manage network latency.  | - RPO is less than or equal to 5 mins. <br> - RTO is less than or equal to 5 mins.<br><br> If you use MAX_PERFORMANCE mode and MAX_AVAILABILITY mode for Data Guard: <br> - RPO is zero. <br> - RTO is less than or equal to 5 mins. |
-|Regional failure | Data Guard with two nodes in separate Azure regions:<br><br> - Protects against regional failures. <br> - Requires more failover configuration for app servers to manage network latency.  |  If you use MAX_PERFORMANCE mode for Data Guard: <br> - RPO is greater than or equal to 10 mins. <br> - RTO is greater than or equal to 15 mins. |
-| All scenarios: a single component, datacenter, and region failure |Backups that are shipped to a different Azure region: <br><br> - Protect against regional failures.<br> - Require an entire Azure environment to be set up in the target regional during a failover.   | - RPO is greater than or equal to 24 hrs. <br> - RTO is greater than or equal to 4 hrs.   |
+| Single component failure, like a host, rack, cooling, networking, or power failure | Data Guard with two nodes in the same Virtual Machine Scale Sets flexible orchestration in the same datacenter:<br><br>  - Protects against a single instance failure. <br> - Causes downtime if an entire datacenter fails. | If you use Observer for fast-start failover and MAX_AVAILABILITY or MAX_PROTECTION mode for Data Guard:<br>- RPO is zero.<br> - RTO is less than or equal to 2 min. <br>    |
+| Datacenter failure | Data Guard with two nodes in separate availability zones: <br><br> - Protects against a datacenter failure. <br> - Causes downtime if a whole region fails. <br> - Requires more failover configuration for app servers to manage network latency.  | - RPO is less than or equal to 5 min. <br> - RTO is less than or equal to 5 min.<br><br> If you use MAX_PERFORMANCE mode and MAX_AVAILABILITY mode for Data Guard: <br> - RPO is zero. <br> - RTO is less than or equal to 5 min. |
+|Regional failure | Data Guard with two nodes in separate Azure regions:<br><br> - Protects against regional failures. <br> - Requires more failover configuration for app servers to manage network latency.  |  If you use MAX_PERFORMANCE mode for Data Guard: <br> - RPO is greater than or equal to 10 min. <br> - RTO is greater than or equal to 15 min. |
+| All scenarios: a single component, datacenter, and region failure |Backups that are shipped to a different Azure region: <br><br> - Protect against regional failures.<br> - Require an entire Azure environment to be set up in the target region during a failover.   | - RPO is greater than or equal to 24 h. <br> - RTO is greater than or equal to 4 h.   |
 
 ## Next step
 
