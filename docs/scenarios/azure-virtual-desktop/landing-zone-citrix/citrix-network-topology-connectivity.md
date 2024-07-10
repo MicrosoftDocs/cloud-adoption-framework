@@ -43,7 +43,7 @@ This architecture also includes the following Citrix components within the Azure
 - The [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html#system-requirements) establishes a connection between Citrix Cloud and the resource locations.
 
 - [Citrix Virtual Delivery Agent (VDA)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-vdas.html) is installed on a golden image or target device that hosts apps or desktops. This agent can be used to connect to, provision, and orchestrate apps and desktops as persistent or non-persistent machines. The VDA is compatible with physical devices or virtual devices, including Windows Server, Windows client, and Linux OS.
-- [Citrix Workspace](https://community.citrix.com/tech-zone/learn/tech-briefs/citrix-workspace) is a cloud service that provides users secure access to information, apps, and other content. Citrix Workspace integrates Azure assets and on-premises assets so that users have unified access to all their resources in one location from anywhere, on any device.
+- [Citrix Workspace](https://community.citrix.com/tech-zone/learn/tech-briefs/citrix-workspace) is a cloud service that provides users secure access to information, apps, and other content. Citrix Workspace integrates Azure assets and on-premises assets so that users have a single point of access to all their resources from any location and on any device.
 
 ### Optional Citrix components
 
@@ -64,11 +64,11 @@ The Citrix on Azure solution requires a certain amount of throughput for each us
 
 #### Network segmentation
 
-Also consider [Citrix guidance for Azure network segmentation and logically segmented subnets](https://community.citrix.com/tech-zone/design/reference-architectures/virtual-apps-and-desktops-azure/#wiki-header-45). Use the following guidelines to help plan your initial networking.
+Also consider the [Citrix guidance for Azure network segmentation and logically segmented subnets](https://community.citrix.com/tech-zone/design/reference-architectures/virtual-apps-and-desktops-azure/#wiki-header-45). Use the following guidelines to help plan your initial networking.
 
 ##### Segment by workload types
 
-Create separate single-session and multisession virtual networks or subnets to enable growth of each network type without affecting the scalability of the other type.
+Create separate single-session and multisession virtual networks or subnets to enable growth of each network type without affecting the scalability of the other network type.
 
 For example, if you fill a shared multisession and single-session subnet with virtual desktop infrastructure (VDI), you might need to create a new hosting unit to support applications. A new hosting unit requires that you either create multiple machine catalogs to support scaling applications or that you migrate the existing app catalogs to a new subnet.
 
@@ -84,9 +84,9 @@ You can use [application security groups](/azure/virtual-network/application-sec
 
 ## Multiregion deployment
 
-When you deploy your workload in multiple regions, deploy hubs, shared resource spokes, and VDA spokes in each region. Carefully select a subscription model and networking model. Determine your models based on the growth of your Azure footprint inside and outside the Citrix deployment.
+When you deploy your workload in multiple regions, you should deploy hubs, shared resource spokes, and VDA spokes in each region. Carefully select a subscription model and a networking model. Determine your models based on the growth of your Azure footprint inside and outside the Citrix deployment.
 
-You might have a small Citrix deployment and a large amount of other resources that read and write heavily against the Azure API, which can have a negative effect on the Citrix environment. Alternatively, you might have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
+You might have a small Citrix deployment and a large number of other resources that read and write heavily against the Azure API, which can negatively effect the Citrix environment. Alternatively, you might have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
 
 For large-scale deployments, isolate workloads so that you can effectively scale out deployments and prevent a negative effect on the customer's Citrix environment. The following architectural diagram shows a single region that's in a multiregion Azure and Citrix Cloud environment.
 
@@ -106,7 +106,7 @@ For large-scale deployments, create dedicated shared service and management spok
 
 *  *(A) Hub virtual network configuration*: Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
 
-* *(B) Shared resource spoke peering*:  Ensure that you peer your hub virtual network with the shared resource spoke to provide the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
+* *(B) Shared resource spoke peering*: Ensure that you peer your hub virtual network with the shared resource spoke to provide the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
 * *(C) Shared resource spoke virtual networks*: Host all required and optional Citrix components, and host shared services, such as profile storage accounts and Azure compute galleries, in the shared resource spoke virtual networks. To minimize latency and improve performance, peer these networks directly with the VDA spokes.
 * *(D) VDA workload spokes configuration*: Host only the VDAs in the VDA workload spokes. Route all network traffic from VMs and services. For example, you can route profile traffic directly to a shared resource spoke if the resource spoke is within a specific datacenter region. Route all network traffic that leaves the datacenter region, like internet egress, hybrid, or cross-region connectivity, to the hub virtual network.
 * *(E) Compute Gallery version replicas*: Specify the number of replicas that you want to keep in [Compute Gallery](/azure/virtual-machines/azure-compute-gallery#scaling). In multi-VM deployment scenarios, distribute VM deployments across different replicas. Use this approach so that when you create an instance, throttling doesn't occur due to overloading a single replica.
@@ -131,7 +131,6 @@ Principal authors:
 
 To learn more about Azure networking best practices and how to plan for virtual networks based on isolation, connectivity, and location requirements, see [Plan virtual networks](/azure/virtual-network/virtual-network-vnet-plan-design-arm).
 
-Review the critical design considerations and recommendations for management and monitoring that are specific to the deployment of Citrix on Azure.
+Review the critical design considerations and recommendations for [management and monitoring](citrix-management-monitoring.md) that are specific to the deployment of Citrix on Azure.
 
-- [Management and monitoring](citrix-management-monitoring.md)
 
