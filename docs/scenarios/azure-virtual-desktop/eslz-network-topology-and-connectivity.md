@@ -82,7 +82,11 @@ You can implement this scenario with:
 - Azure Files storage accounts.
 - Azure Key Vault.
 
-:::image type="content" source="./media/network-topology-scenario-1.svg" alt-text="Architecture diagram of the scenario that uses a hub and spoke with hybrid connectivity." lightbox="./media/network-topology-scenario-1.svg" border="false":::
+:::image type="content" source="./media/Azure-virtual-desktop-baseline-networking-scenario-hubandspoke.png" alt-text="Architecture diagram of the scenario that uses a hub and spoke with hybrid connectivity." lightbox="./media/Azure-virtual-desktop-baseline-networking-scenario-hubandspoke.png" border="false":::
+
+> [!NOTE]
+> If you're looking for the full Azure Virtual Desktop multi-region resilient architecture it can be found here: *Download the [Visio file](https://github.com/Microsoft/CloudAdoptionFramework/tree/main/scenarios/azure-virtual-desktop/azure-virtual-desktop-multi-region-resilient-deployment.vsdx)*
+
 
 ### Considerations
 
