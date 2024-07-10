@@ -20,7 +20,7 @@ Following the guidance, this article further explains key design considerations 
 
 ## Monitor Oracle databases on Azure Virtual Machines landing zone accelerator
 
-The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics.  After you configure the general Azure Virtual Machine monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
+The first step of monitoring is to set up general Azure Virtual Machine monitoring and define threshold for the metrics. After you configure the general Azure Virtual Machine monitoring, the next step is to set up Oracle specified monitoring adapted to your environment.
 
 ### Log monitoring by Azure monitor
 
@@ -46,13 +46,13 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
     - Data Disk Write Bytes/Sec
     - Disk Queue Depth
 
-    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information, see  [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes) for more details.
+    While monitoring the disk metrics, it's important to ensure that the database Virtual Machine limits aren't exceeded. Virtual Machine limits specific to managed disks are detailed in the technical specifications for the individual VM SKUs. For more information about VM specifications, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-    Selecting the appropriate VM SKU, use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling may happen at the disk level.
+    Selecting the appropriate VM SKU, use the table and column **Max uncached disk throughput: IOPS/MBps** to see how multiple managed disks attached to the Virtual Machine can cumulatively provide a higher combined IOPS and throughput. Note if the database IO requirements during peak load are higher than the Virtual Machine max uncached disk throughput, the Virtual Machine IO operations can be throttled. Alternatively, if there's insufficient IOPS and/or storage throughput per disk, throttling could happen at the disk level.
 
     For more information about Disk performance related metrics, see [Disk metrics - Azure Virtual Machines](/azure/virtual-machines/disks-metrics).
 
-5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
+5. Monitor Azure NetApp Files (ANF) metrics. If the database files are stored in Azure NetApp Files (ANF) volumes, you should monitor ANF metrics for allocated storage, actual storage usage, volume IOPS, throughput, and latency. Refer to the following articles to understand ways to monitor Azure NetApp Files and related performance metrics.
 
     - [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)
 
@@ -78,7 +78,7 @@ The first step of monitoring for you is to set up general Azure Virtual Machine 
   
 ### Monitor related Azure services
 
- The following table lists a number of other typical solution components that should be monitored to some extent or other.
+ The following table lists other typical solution components that should be monitored to some extent or other.
 
 |Azure Services |Description |URL |
 |:-----------------|:-------------------|:-------------|
@@ -104,10 +104,11 @@ Utilize Azure Monitor to collect telemetry data and gain insights into the healt
 |:---------------|:---------------|:-------------|
 |AWR(Automatic Workload Repository)  |AWR provides the monitoring features to collect, process, and maintain performance statistics for problem detection and self-tuning. This monitoring helps you to realize historical analytics and identify the problems. |[Gathering database statistics](https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/gathering-database-statistics.html#GUID-9D3A3890-8E68-48C5-84D0-DB0A8D93C53A)|
 |Statspack |Statspack gathers Oracle database instance statistics even in environments where AWR and ADDM aren't running. Statspack includes the summary and details of database statistics, and wait events, system statistics, etc. For more information, see the following links.  |[Performance tuning with STATSPACK, part I](https://www.oracle.com/technetwork/database/performance/statspack-129989.pdf) <br>  [Performance tuning with STATSPACK, part II](https://www.oracle.com/technetwork/database/performance/statspack-tuning-otn-new-128500.pdf) |
+|Oracle Enterprise Manager Diagnostics and Tuning  |The Oracle Diagnostics Pack provides automatic performance diagnostic and advanced system monitoring functionality. The Oracle Tuning Pack provides database administrators with expert performance management for the Oracle environment, including SQL tuning and storage optimizations. |[Diagnostics and Tuning packs](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/performance.html)  |
+
 ## Next steps
 
 - [Strategic impact of Oracle on Azure landing zone accelerator](oracle-landing-zone-strategy.md)  
 - [Plan for Oracle on Azure landing zone accelerator](oracle-landing-zone-plan.md)  
 - [Oracle on Azure landing zone accelerator](introduction-oracle-landing-zone.md)
-
 - [Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator](oracle-disaster-recovery-oracle-landing-zone.md)
