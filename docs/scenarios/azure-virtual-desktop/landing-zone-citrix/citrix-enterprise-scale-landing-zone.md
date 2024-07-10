@@ -38,7 +38,7 @@ The following diagram shows a reference architecture that demonstrates major des
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure environment.](../media/citrix-cloud-azure-virtual-desktop-architecture.png)](../media/citrix-cloud-azure-virtual-desktop-architecture.png#lightbox)
 
-[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
+[Download the Visio file.](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/scenarios/azure-virtual-desktop/landing-zone-citrix/Citrix-accelerator-enterprise-scale-alz-architecture.vsdx)
 
 ## Design guidelines
 
