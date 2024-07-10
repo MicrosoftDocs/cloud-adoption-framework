@@ -1,32 +1,32 @@
 ---
-title: Business continuity and disaster recovery for Red Hat Enterprise Linux (RHEL) on Azure
+title: Business continuity and disaster recovery for Red Hat Enterprise Linux on Azure
 description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for Red Hat Enterprise Linux (RHEL) on Azure environment.
 author: terrymandin
 Authors: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
-Date: 04/26/2024
+Date: 07/22/2024
 Topic: Azure Business Continuity and Disaster Recovery for Red Hat Enterprise Linux
 ms.author: temandin
 ms.topic: conceptual
 ---
 
-# Business continuity and disaster recovery considerations for Red Hat Enterprise Linux (RHEL) on Azure
+# Business continuity and disaster recovery considerations for Red Hat Enterprise Linux on Azure
 
-This article describes how you can improve business continuity and disaster recovery (BCDR) readiness for a Red Hat Enterprise Linux (RHEL)-based environment in Azure. The documentation provides recommendations for deploying RHEL platform management components and for supporting RHEL workloads. The Red Hat Management subscription contains the platform components for managing workloads in one or more RHEL landing zones. These components offer their own BCDR configurations as described in the relevant sections. There are separate BCDR considerations and deployment considerations for workload components running in your Red Hat landing zone. 
+This article describes how you can improve business continuity and disaster recovery (BCDR) readiness for a Red Hat Enterprise Linux (RHEL)-based environment on Azure. It provides recommendations that you can use to deploy RHEL platform-management components and to support RHEL workloads. The Red Hat Management subscription contains platform components to manage workloads in one or more RHEL landing zones. These components offer their own BCDR configurations as described in the relevant sections. There are separate BCDR considerations and deployment considerations for workload components that run in your Red Hat landing zone. 
 
-## Design Considerations
+## Design considerations
 
-### Recovery time objectives (RTO)
+### Recovery time objectives
 
-A recovery time objective is the amount of time it should take to recover any system to its state prior to a disaster. This would include the time needed to:
+A recovery time objective (RTO) is the amount of time that it should take your system to recover to its state before a disaster. The RTO includes the time that it takes to:
 
-- restore minimal functionality to VMs and applications
-- restore data required by applications.
+- Restore minimal functionality to virtual machines (VMs) and applications.
+- Restore data that applications require.
 
-In business terms, RTO represents the amount of time that business processes are out of service. For [mission-critical workloads](/azure/well-architected/mission-critical/), this metric should be relatively low, allowing business processes to resume quickly. For lower-priority workloads, a higher RTO might not have a noticeable impact on company performance.
+In business terms, the RTO represents the amount of time that business processes are out of service. For [mission-critical workloads](/azure/well-architected/mission-critical/), this metric should be relatively low so that business processes can resume quickly. For lower priority workloads, a higher RTO might not have a noticeable affect on company performance.
 
-### Recovery point objectives (RPO)
+### Recovery point objectives
 
-Protecting data from failures through backups or replication, or both is an integral component of operating a cloud environment. The recovery point objective refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
+Protecting data from failures through backups or replication, or both is an integral component of operating a cloud environment. The recovery point objective (RPO) refers to the last time the data was captured. When a system fails, it can be restored only to the most recent recovery point.
 
 The recovery point objective is measured from the most recent recovery point to an outage. If the RPO is measured in hours, a system failure results in the loss of data for the hours between the last recovery point and the outage. If the RPO is measured in days, a system failure results in the loss of data for the days between the last recovery point and the outage. A one-day RPO would theoretically result in the loss of all transactions in the day leading up to the failure.
 
