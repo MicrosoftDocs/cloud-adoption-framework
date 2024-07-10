@@ -29,6 +29,8 @@ The responsible AI principles should be considered across each phase of the AI a
 
 ![Responsible AI Principles](./media/responsible-ai-caf.png)
 
+Throughout this AI adoption guidance, you'll find examples of where CAF provides support to help you implement responsible AI practices. The principles of responsible AI are embedded in the guidance and recommendations provided in this AI adoption journey.
+
 ## The importance of responsible AI
 
 - **Unintended consequences**: Careful planning and oversight are important to reduce the risk of unforeseen impacts with ethical implications.
@@ -81,4 +83,4 @@ If you're building systems with Azure Machine Learning, you can assess your AI s
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Skills readiness plan for AI](./skills-readiness-ai.md)
+> [AI strategy overview](./strategy.md)

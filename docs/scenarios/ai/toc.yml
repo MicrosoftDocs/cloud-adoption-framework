@@ -1,6 +1,8 @@
 items:
   - name: AI adoption on Azure
     href: index.md
+  - name: Responsible AI adoption
+    href: responsible-ai.md
   - name: Strategy
     items:
     - name: Overview
@@ -17,8 +19,6 @@ items:
     items:
     - name: Overview
       href: plan.md
-    - name: Embrace responsible AI
-      href: responsible-ai.md
     - name: Skills readiness
       href: skills-readiness-ai.md
     - name: AI Center of Excellence
