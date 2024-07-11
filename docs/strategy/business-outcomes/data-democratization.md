@@ -1,6 +1,6 @@
 ---
-title: Support business with data innovation
-description: Support business with data innovation by using a centralized data repository.
+title: Support business with data democratization
+description: Support business with data democratization by using a centralized data repository.
 author: martinekuan
 ms.author: martinek
 ms.date: 05/22/2020
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2, build-2023, build-2023-dataai
 ---
 
-# Support business with data innovation
+# Support business with data democratization
 
 Many companies keep data warehouses in their datacenters to help different parts of their business analyze data and make decisions. Sales, marketing, and finance departments rely heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc querying and analysis of data in data marts. These data marts use self-service business intelligence tools to perform multidimensional analysis.
 
-A business that's supported by data innovation and a modern data estate can empower a broad range of contributors, from an IT stakeholder to a data professional and beyond. They can take action on this repository of centralized data, which is often referred to as "the single source of truth."
+A business that's supported by data democratization and a modern data estate can empower a broad range of contributors, from an IT stakeholder to a data professional and beyond. They can take action on this repository of centralized data, which is often referred to as "the single source of truth."
 
 Azure Synapse Analytics is a single service for seamless collaboration and accelerated time-to-insight. To understand this service in more detail, first consider the various roles and skills involved in a typical data estate:
 
