@@ -86,7 +86,7 @@ You can use [application security groups](/azure/virtual-network/application-sec
 
 When you deploy your workload in multiple regions, you should deploy hubs, shared resource spokes, and VDA spokes in each region. Carefully select a subscription model and a networking model. Determine your models based on the growth of your Azure footprint inside and outside the Citrix deployment.
 
-You might have a small Citrix deployment and a large number of other resources that read and write heavily against the Azure API, which can negatively effect the Citrix environment. Alternatively, you might have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
+You might have a small Citrix deployment and a large number of other resources that read and write heavily against the Azure API, which can negatively affect the Citrix environment. Alternatively, you might have several Citrix resources that consume an excessive number of available API calls, which reduces availability for other resources within the subscription.
 
 For large-scale deployments, isolate workloads so that you can effectively scale out deployments and prevent a negative effect on the customer's Citrix environment. The following architectural diagram shows a single region that's in a multiregion Azure and Citrix Cloud environment.
 
