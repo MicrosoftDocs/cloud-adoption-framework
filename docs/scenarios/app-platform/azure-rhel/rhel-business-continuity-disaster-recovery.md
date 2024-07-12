@@ -4,7 +4,6 @@ description: Learn how this design area can improve business continuity and disa
 author: terrymandin
 Authors: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
 Date: 07/22/2024
-Topic: Azure Business Continuity and Disaster Recovery for Red Hat Enterprise Linux
 ms.author: temandin
 ms.topic: conceptual
 ---
