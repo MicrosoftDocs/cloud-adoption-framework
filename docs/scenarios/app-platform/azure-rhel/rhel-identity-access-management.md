@@ -55,7 +55,7 @@ For smaller cloud deployments or pilot deployments, these traditional IAM method
 
 There are various tools that provide for centralized security within a Linux environment. Any of these tools that meet the general considerations and recommendations for deploying centralized IAM management in a cloud can be used as long as they meet business and technical requirements. Red Hat Enterprise Linux has a broad software compatibility list with respect to security. Customers can integrate application-level security using Azure's native Microsoft Entra ID, commercial open-source software solutions like Okta, Sailpoint, or JumpCloud, or open-source project solutions such as Keycloak. Additionally, various security solutions are available at the operating system level as well. Many commercial solutions and open-source software projects can be operated in the cloud.
 
-## Design recommendations - Red Hat Identity Management
+## Design recommendations for Red Hat Identity Management
 
 Design recommendations for identity and access management regarding Azure Landing Zones for Red Hat Enterprise Linux using Red Hat Identity Management (IdM) and Red Hat single sign-on (SSO) follow the Microsoft Azure Cloud Adoption Framework and Red Hat Infrastructure Standard Adoption Model. The recommendations extend the principles you would use to implement a hybrid-cloud deployment.  
 
@@ -97,7 +97,7 @@ Critical design recommendations for your Red Hat Identity Management deployment 
 
 The [Planning Identity Management guide](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/planning_identity_management/index) provides detailed considerations for planning the infrastructure and service integration of a Red Hat Identity Management deployment. Refer to the specific guide for the operating system release of Red Hat Enterprise Linux on which your IdM deployment is based.
 
-## Design Recommendations - Azure Native Identity Management
+## Design Recommendations for Azure native Identity Management
 
 - Use Azure Red Hat Enterprise Linux (RHEL) Virtual Machines (VMs) with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access. [Azure built-in roles for Compute](/azure/role-based-access-control/built-in-roles/compute)
 
