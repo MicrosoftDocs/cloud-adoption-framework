@@ -1,6 +1,6 @@
 ---
 title: Business continuity and disaster recovery for Red Hat Enterprise Linux on Azure
-description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for Red Hat Enterprise Linux (RHEL) on Azure environment.
+description: Learn how this design area can improve business continuity and disaster recovery (BCDR) for a Red Hat Enterprise Linux (RHEL) on Azure environment.
 author: terrymandin
 Authors: Paul Armstrong, Mike Savage, Jon Austin and Terry Mandin
 Date: 07/22/2024
@@ -14,6 +14,8 @@ ms.topic: conceptual
 This article describes how you can improve business continuity and disaster recovery (BCDR) readiness for a Red Hat Enterprise Linux (RHEL)-based environment on Azure. It provides recommendations that you can use to deploy RHEL platform-management components and to support RHEL workloads. The Red Hat Management subscription contains platform components to manage workloads in one or more RHEL landing zones. These components offer their own BCDR configurations as described in the relevant sections. There are separate BCDR considerations and deployment considerations for workload components that run in your Red Hat landing zone. 
 
 ## Design considerations
+
+Implement the following considerations to improve the resiliency of your RHEL workloads.
 
 ### Recovery time objectives
 
@@ -56,7 +58,7 @@ Database solutions and other stateful applications might need operating system-c
 
 For more information about RHEL BCDR capabilities for an RHEL platform infrastructure, see: 
 - [Satellite high availability architecture](./rhel-management-monitoring.md) 
-- [Ansible Automation platform high availability architecture](https://docs.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
+- [Ansible Automation platform high availability architecture](https://docs.redhat.com/documentation/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index)
 - [Identity management high availability architecture](./rhel-identity-access-management.md#design-recommendations)
 
 ## Design recommendations
@@ -85,27 +87,28 @@ Azure doesn't support combining Application Server Central Services and database
 For [BCDR on SAP](/azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery), consider the following services to run SAP central services clusters:
 
 - [RHEL Pacemaker cluster](/azure/sap/workloads/high-availability-guide-rhel-netapp-files?tabs=lb-portal%2Censa1): STONITH block devices aren't supported, but you can rely on the Azure fence agent.
-- SAP-certified third-party cluster software: Explore this option if it aligns with your requirements.
+- SAP-certified non-Microsoft cluster software: Explore this option if it aligns with your requirements.
 
-Choose the appropriate service based on your specific needs and on your operating system.
+Choose the appropriate service based on your specific needs and your operating system.
 
 For more information, see:
 
-- RHEL 9 - [Configuring a Red Hat High Availability cluster on Microsoft Azure](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure)
-- RHEL 9 - [Configuring and managing high availability clusters](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
-- Similar documentation exists for [RHEL 8](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/8)
+- [Configure a Red Hat high availability cluster on Microsoft Azure for RHEL 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure)
+- [Configure and manage high availability clusters for RHEL 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
+- [RHEL 8 documentation](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8)
 
-### Azure Gallery Replicas
+### Azure Compute Gallery replicas
 
-Azure gallery can be used to store golden images for deployments. These images can be used for disaster recovery of applications and tools. Azure gallery can use highly available [resources with Zone Redundant Storage (ZRS) accounts](/azure/virtual-machines/azure-compute-gallery) in regions that support Availability Zones. ZRS offers better resilience against zonal failures. Furthermore, gallery images can be replicated to other regions/geographies.
+You can use Compute Gallery to store golden images for deployments. Use these images for the disaster recovery of applications and tools. Compute Gallery can use highly available [resources with zone-redundant storage (ZRS) accounts](/azure/virtual-machines/azure-compute-gallery) in regions that support availability zones. ZRS offers resiliency against zonal failures. You can also replicate gallery images to other regions or geographies.
 
-Note: recommended practice is to have at least two galleries, in different regions.
+> [!NOTE]
+> We recommend that you have at least two galleries in different regions.
 
 ### Site Recovery
 
-[Site Recovery](/azure/site-recovery/site-recovery-overview) can enhance the resilience of some RHEL components. For a list of supported RHEL site recovery servers see: [Support matrix for Azure VM disaster recovery with Site Recovery](/azure/site-recovery/azure-to-azure-support-matrix#linux). Site Recovery can also be set up as a [failover from on-premises to the cloud](/azure/site-recovery/failover-failback-overview-modernized). To obtain an estimate of the costs associated with Site Recovery use the [Site Recovery Deployment Planner](/azure/site-recovery/hyper-v-deployment-planner-cost-estimation) to obtain a cost estimation report.
+[Site Recovery](/azure/site-recovery/site-recovery-overview) can enhance the resilience of some RHEL components. For a list of supported RHEL site recovery servers, see [Support matrix for Azure VM disaster recovery with Site Recovery](/azure/site-recovery/azure-to-azure-support-matrix#linux). You can also set up Site Recovery as a [failover from on-premises to the cloud](/azure/site-recovery/failover-failback-overview-modernized). To get an estimate of Site Recovery costs, use the [Site Recovery deployment planner](/azure/site-recovery/hyper-v-deployment-planner-cost-estimation).
 
-### Recovery Cluster Nodes
+### Recovery cluster nodes
 
-You can also reduce Recovery Time Objectives (RTOs) and increase resilience by using Active/Standby remote [recovery cluster](https://docs.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. A disaster recovery cluster doesn't set up resources or copy data by itself. The user must configure those items manually. 
+To reduce RTOs and increase resilience, you can use active/standby remote [recovery cluster](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
 
