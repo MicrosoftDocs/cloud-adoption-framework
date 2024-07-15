@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Business continuity and disaster recovery considerations for Red Hat Enterprise Linux on Azure
 
-This article describes how you can improve business continuity and disaster recovery (BCDR) readiness for a Red Hat Enterprise Linux (RHEL)-based environment on Azure. It provides recommendations that you can use to deploy RHEL platform-management components and to support RHEL workloads. The Red Hat Management subscription contains platform components to manage workloads in one or more RHEL landing zones. These components offer their own BCDR configurations as described in the relevant sections. There are separate BCDR considerations and deployment considerations for workload components that run in your Red Hat landing zone. 
+This article describes how to improve business continuity and disaster recovery (BCDR) readiness for a Red Hat Enterprise Linux (RHEL)-based environment on Azure. It provides recommendations that you can use to support RHEL workloads and to deploy RHEL platform-management components. The Red Hat Management subscription contains platform components that help manage workloads in one or more RHEL landing zones. These components offer their own BCDR configurations.
 
 ## Design considerations
 
@@ -18,7 +18,7 @@ Implement the following considerations to improve the resiliency of your RHEL wo
 
 ### Recovery time objectives
 
-A recovery time objective (RTO) is the amount of time that it should take your system to recover to its state before a disaster. The RTO includes the time that it takes to:
+A recovery time objective (RTO) is the amount of time that it should take your system to recover to the state it was in before a disaster. The RTO includes the time that it takes to:
 
 - Restore minimal functionality to virtual machines (VMs) and applications.
 - Restore data that applications require.
