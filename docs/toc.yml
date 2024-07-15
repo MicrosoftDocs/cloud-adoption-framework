@@ -881,7 +881,7 @@ items:
           items:
           - name: Overview
             href: manage/azure-server-management/ongoing-management-overview.md
-          - name: Enable guest configuration policy
+          - name: Enable machine configuration policy
             href: manage/azure-server-management/guest-configuration-policy.md
           - name: Critical changes (tracking and alerting)
             href: manage/azure-server-management/enable-tracking-alerting.md
