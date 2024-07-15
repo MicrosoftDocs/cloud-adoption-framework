@@ -45,7 +45,7 @@ Review the following *considerations* for platform management and monitoring of 
 ### Guest workload management considerations
 
 - Virtual machines within Azure VMware Solution are treated the same as on-premises VMware vSphere VMs by default. You can continue using existing VM-level monitoring within AVS via existing agents.
-- Azure VMware Solution VMs won't show up in the Azure portal unless [Azure Arc for Servers](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) is deployed to them. Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane. You can apply Azure Policy guest configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest VMs.
+- Azure VMware Solution VMs won't show up in the Azure portal unless [Azure Arc for Servers](/azure/azure-vmware/integrate-azure-native-services#onboard-vms-to-azure-arc-enabled-servers) is deployed to them. Azure Arc for Servers allows for an agent-based approach to VM management & monitoring from the Azure control plane. You can apply Azure Policy machine configurations, protect servers with Microsoft Defender, and deploy the Azure Monitor agent to the guest VMs.
 
 ## Design recommendations
 
