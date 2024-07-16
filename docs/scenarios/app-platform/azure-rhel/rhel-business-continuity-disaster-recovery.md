@@ -23,13 +23,13 @@ A recovery time objective (RTO) is the amount of time that it should take your s
 - Restore minimal functionality to virtual machines (VMs) and applications.
 - Restore data that applications require.
 
-In business terms, the RTO represents the amount of time that business processes are out of service. A low RTO is ideal for [mission-critical workloads](/azure/well-architected/mission-critical/) so that business processes can resume quickly. For lower priority workloads, a higher RTO might not have a noticeable affect on company performance.
+In business terms, the RTO represents the amount of time that business processes are out of service. A low RTO is ideal for [mission-critical workloads](/azure/well-architected/mission-critical/) so that business processes can resume quickly. For lower-priority workloads, a higher RTO might not have a noticeable effect on company performance.
 
 ### Recovery point objectives
 
 To successfully operate a cloud environment, you must implement backups, replication, or both to protect data from failures. The recovery point objective (RPO) refers to the last time that data was captured. When a system fails, you can restore it only to the most recent recovery point.
 
-You measure the RPO from the most recent recovery point to time that an outage occurs. If you measure the RPO in hours, a system failure results in the loss of data for the hours between the last recovery point and the outage. If you measure the RPO in days, a system failure results in the loss of data for the days between the last recovery point and the outage. A one-day RPO theoretically results in the loss of all transactions in the day that leads up to the failure.
+You measure the RPO from the most recent recovery point to the time that an outage occurs. If you measure the RPO in hours, a system failure results in the loss of data for the hours between the last recovery point and the outage. If you measure the RPO in days, a system failure results in the loss of data for the days between the last recovery point and the outage. A one-day RPO theoretically results in the loss of all transactions in the day that leads up to the failure.
 
 For mission-critical systems, measure the RPO in minutes or seconds to help avoid loss in revenue or profits. A short RPO generally results in increased management costs. To help reduce these costs, you should create a management baseline that focuses on the longest acceptable RPO. You can then decrease the RPO of the specific platforms or workloads that warrant more investment.
 
