@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 ## Intro section
 
-TBD - Maybe reuse https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/define-security-strategy
+Your security posture is defined by your security strategy and how that strategy is implemented and governed. Developing a security strategy requires collaboration between technology and business leaders to ensure that the strategy can meet business requirements and all parties understand any tradeoffs that must be made in the process. Implementing the security strategy relies on the expertise of all [teams and roles](./refresh-teams-and-roles.md) in the security organization and must be carefully planned and executed to ensure strict alignment with the strategy. Governance of the strategy is the day-to-day operations activities and continuous improvement activities that maintain and enforce the implementation. 
 
 ## Strategy
 
