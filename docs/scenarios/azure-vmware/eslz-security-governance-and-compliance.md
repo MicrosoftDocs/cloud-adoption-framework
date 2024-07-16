@@ -124,7 +124,7 @@ Security posture awareness for Azure VMware Solution workload VMs helps you unde
 
 - **Use [Azure Arc enabled servers](/azure/azure-arc/servers/overview)** to manage Azure VMware Solution guest VMs with tools that replicate Azure native resource tooling, including:
 
-  - Azure Policy to govern, report, and audit guest configurations and settings
+  - Azure Policy to govern, report, and audit machine configurations and settings
   - Azure Automation State Configuration and supported extensions to simplify deployments
   - Update Management to manage updates for the Azure VMware Solution application VM landscape
   - Tags to manage and organize Azure VMware Solution application VM inventory
