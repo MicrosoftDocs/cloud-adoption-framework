@@ -35,8 +35,6 @@ Implement a multi-subscription architecture for your RHEL deployment to get:
 
 - **Scalability and resource isolation**: Get independent scalability and resource isolation for various workloads or projects to minimize contention and enhance performance.
 
-## Recommendation
-
 Apply the recommended subscription structure to maximize manageability, governance, and scalability for your RHEL deployment on Azure. This approach ensures efficient resource usage, enhanced security, and streamlined operations across your organization.
 
 ## Next steps
