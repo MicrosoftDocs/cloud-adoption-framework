@@ -1,10 +1,10 @@
 ---
-Title: Red Hat Linux Platform Automation
-Description: Learn about the tools, features, and services that are available to automate various tasks and manage Red Hat Enterprise Linux lifecycle within your Azure environment.
-Authors: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
-Contributor: Anthony de Lagarde
-Date: 04/03/2024
-Topic: Azure automation and management for Red Hat Enterprise Linux
+title: Red Hat Linux Platform Automation
+description: Learn about the tools, features, and services that are available to automate various tasks and manage Red Hat Enterprise Linux lifecycle within your Azure environment.
+author: Paul Armstrong, Mike Savage, Michael Finkelstein, Robert Erenberg-Andersen, Alexander Bokovoy, and Joel Sisko
+ms.author: AnthonyDelagarde
+ms.date: 04/03/2024
+ms.topic: conceptual
 ---
 
 # Platform automation for Red Hat Enterprise Linux systems on Azure
