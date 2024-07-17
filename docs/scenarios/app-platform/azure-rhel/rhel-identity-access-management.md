@@ -86,7 +86,7 @@ Consider the following critical design recommendations for your Red Hat IdM depl
 
 - Ensure that you properly set up the Windows Server Active Directory trust configuration and Domain Name System (DNS) configuration. When you configure IdM and Windows Server Active Directory, both on-premises Active Directory servers and IdM servers need to reside in their own DNS domains or subdomains. This requirement is because of Kerberos service records and Kerberos service discovery. The Cloud Adoption Framework recommends [private IP DNS resolution](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources) for Azure-based instances.
 
-- Red Hat IdM provides an integrated DNS service. Configure Red Hat Satellite for IdM integration to automate management tasks such as forward and reverse DNS zones, host registration, and SSH key generation and registration within IdM. Combine this integration with Windows Server Active Directory trust so that Windows Server Active Directory users can seamlessly sign in to RHEL systems and services via SSO.
+- Red Hat IdM provides an integrated DNS service. Configure Red Hat Satellite for IdM integration to automate management tasks such as forward and reverse DNS zones, host registration, and Secure Shell (SSH) key generation and registration within IdM. Combine this integration with Windows Server Active Directory trust so that Windows Server Active Directory users can seamlessly sign in to RHEL systems and services via SSO.
 
 - Back up your IdM resources. Typically, you deploy IdM in a self-managed multi-master replica configuration, but you must also ensure that you have proper system and data backups. Use IdM hidden replicas to implement full offline backups without interrupting service availability. Use Azure Backup for encrypted backup facility.   
 
@@ -98,19 +98,19 @@ Use the [Planning Identity Management guide](https://docs.redhat.com/documentati
 
 ## Design recommendations for Azure native identity management
 
-- Use Azure RHEL virtual machines with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limiting user rights protects the configuration and secrets access. [Azure built-in roles for Compute](/azure/role-based-access-control/built-in-roles/compute)
+- Use Azure RHEL virtual machines with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limit user rights to protect the configuration and secrets access. For more information, see [Azure built-in roles for compute](/azure/role-based-access-control/built-in-roles/compute).
 
-- Follow the principle of least privilege by assigning the minimum permissions needed for authorized tasks. Give full access only as needed and just-in-time. Use [Privileged Identity Management](/azure/defender-for-cloud/just-in-time-access-usage) in Microsoft Entra ID and [IAM in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
+- Follow the principle of least privilege, and assign the minimum permissions that users need for authorized tasks. Give full access and just-in-time access only as needed. Use [Microsoft Entra ID PIM](/azure/defender-for-cloud/just-in-time-access-usage) and [IAM in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
 
-- Access Microsoft Entra protected RHEL resources without needing to manage secrets for workloads that run on Azure using [managed identities](/entra/identity/managed-identities-azure-resources/overview).
+- Use [managed identities](/entra/identity/managed-identities-azure-resources/overview) to access Microsoft Entra ID protected RHEL resources without needing to manage secrets for workloads that run on Azure.
 
 - Consider using Microsoft Entra ID as a core authentication platform and a certificate authority to [SSH into a Linux VM](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux).
 
-- For protection of sensitive information such as keys, secrets and certificates, follow the guidance in the [Cloud Adoption Framework for Encryption and Key Management in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys)
+- Protect sensitive information such as keys, secrets, and certificates. For more information, see [Cloud Adoption Framework for encryption and key management in Azure](/azure/cloud-adoption-framework/ready/landing-zone/design-area/encryption-and-keys).
 
-- Implement SSO by using Windows Server Active Directory, Microsoft Entra ID, or Active Directory Federation Services (AD FS), depending on the access type, so that the end users can connect to RHEL applications without a user ID and password once the central identity provider successfully authenticates them.
+- Implement SSO by using Windows Server Active Directory, Microsoft Entra ID, or Active Directory Federation Services (AD FS). Choose your service based on the access type. Use SSO so that the users can connect to RHEL applications without a user ID and password after the central identity provider successfully authenticates them.
 
-- Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
+- Use a solution, like Local Administrator Password Solution (LAPS), to frequently rotate local administrator passwords. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/cas-isp-laps).
 
 ## Next steps
 
