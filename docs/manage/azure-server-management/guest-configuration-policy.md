@@ -10,7 +10,7 @@ ms.custom: internal, devx-track-azurepowershell
 
 # Azure Policy machine configuration extension
 
-You can use the [Azure Policy machine configuration extension](/azure/governance/machine-configuration/overview) to audit the configuration settings in a virtual machine. Machine configuration supports Azure VMs natively and non-Azure physical and virtual servers through [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) or [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview) or [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
+You can use the [Azure Policy machine configuration extension](/azure/governance/machine-configuration/overview) to audit the configuration settings of a virtual machine. Machine configuration supports Azure VMs natively. Physical servers and non-Azure virtual servers are supported with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview), [Azure Arc-enabled VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), or [Azure Arc-enabled System Center Virtual Machine Manager](/azure/azure-arc/system-center-virtual-machine-manager/overview).
 
 To find the list of machine configuration policies, search for *machine configuration* on the Azure Policy portal page, or run this cmdlet in a PowerShell window to find the list:
 
