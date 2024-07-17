@@ -1,46 +1,47 @@
 ---
-title: 
-description: 
-author: 
-ms.author: 
-ms.date: 
-ms.topic: 
-ms.custom: 
+title: Resource organization for a Red Hat deployment on Azure
+description: Learn about key design considerations and recommendations for resource organization in Red Hat Enterprise Linux on Azure infrastructure.
+author: terrymandin
+ms.author: temandin 
+ms.date: 7/20/2024
+ms.topic: conceptual
 ---
 
-# Resource Organization for Red Hat Deployment on Azure
+# Resource organization for a Red Hat deployment on Azure
 
-In organizing a Red Hat deployment on Azure, careful consideration of management groups and subscriptions is crucial for effective governance and resource management.
+When you organize a Red Hat deployment on Azure, carefully consider management groups and subscriptions to ensure that you effectively govern and manage resources.
 
-## Subscription Structure
+## Subscription structure
 
-The components for a Red Hat deployment follow the subscription scaling model outlined in the Azure Cloud Adoption Framework [documentation](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-design-considerations). This model provides extra control and isolation to the management tooling. Specifically, various subscriptions are employed to cater to different aspects of the deployment:
+The components for a Red Hat deployment follow the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions#organization-and-governance-design-considerations). This model provides extra control and isolation to the management tooling. Specifically, various subscriptions cater to different aspects of a deployment, for example:
 
-1. **Hub VNet Subscription:** Hosting the Hub virtual network infrastructure in a Hub-Spoke topology, this subscription facilitates secure communication and connectivity among resources within your Red Hat deployment, across other workloads as necessary, and enables hybrid networking for Red Hat deployments. Under the Landing Zone model, this subscription and its resources would reside under the "Connectivity" Management Group.
+- **Hub virtual network subscriptions** host the hub virtual network infrastructure in a hub-spoke topology. This subscription facilitates secure communication and connectivity among resources within a Red Hat deployment and across other workloads as necessary. It provides hybrid networking for Red Hat deployments. Under the landing zone model, this subscription and its resources reside under the Connectivity management group.
 
-2. **Red Hat Management Subscription:** This subscription serves as the backbone for identity management components, housing Identity Management primary and replica systems, Red Hat single sign-on instances, Red Hat Satellite, Ansible Automation Platform, and other essential tools. Under the Landing Zone model, this subscription would reside under the "Management" Management Group.
+- **Red Hat Management subscriptions** serve as the backbone for identity management components. They house Red Hat IdM primary and replica systems, Red Hat Single Sign-on (SSO) instances, Red Hat Satellite, Ansible Automation Platform, and other essential tools. Under the landing zone model, this subscription resides under the Management management group.
 
-3. **Production Workload Subscription:** Reserved for hosting production-grade workloads, ensuring optimal performance, reliability, and scalability for critical applications. Under the Landing Zone model, this subscription would reside within the "Landing Zones" management group in either "Corp" or "Online" Management Groups depending on the nature of the workload.
+- **Production Workload subscriptions** host production-grade workloads to ensure optimal performance, reliability, and scalability for critical applications. Under the landing zone model, this subscription resides within the Landing Zones management group in either Corp or online management groups, depending on the nature of the workload.
 
-4. **Non-production Workload Subscription:** Dedicated to nonproduction environments such as development, testing, and staging, this subscription would contain resources for a non-production environment allowing teams to iterate and validate changes before deployment to production. Under the Landing Zone model, this subscription can reside within the "Landing Zones" management group in either "Corp" or "Online" Management Groups depending on the nature of the workload. If it is for a sandbox environment, it can also reside under the "Sandbox" Management Group.
+- **Non-production Workload subscriptions** are for nonproduction environments, such as development, testing, and staging. This subscription contains resources for a nonproduction environment so that teams can iterate and validate changes before deployment to production. Under the landing zone model, this subscription resides within the Landing Zones management group in either Corp or Online management groups, depending on the nature of the workload. If you use this subscription as a sandbox environment, you can put it under the Sandbox management group.
 
-## Benefits of Multi-Subscription Architecture
+## Benefits of a multi-subscription architecture
 
-Implementing a multi-subscription architecture for your Red Hat deployment offers several key benefits:
+Implement a multi-subscription architecture for your Red Hat deployment to get:
 
-- **Enhanced Identity and Access Management(IAM):** Fine-grained control over IAM policies and access controls tailored to specific subscriptions.
-- **Effective Policy Enforcement:** Enforcement of Azure Policy and governance standards at the subscription level, ensuring compliance and security.
+- **Enhanced identity and access management (IAM)**: Get fine-grained control over IAM policies and access controls that are tailored to specific subscriptions.
 
-- **Accurate Billing and Cost Management:** Clear cost allocation and optimization with delineation of costs associated with each subscription.
+- **Effective policy enforcement**: Enforce Azure Policy and governance standards at the subscription level to ensure compliance and security.
 
-- **Scalability and Resource Isolation:** Independent scalability and resource isolation for different workloads or projects, minimizing contention and enhancing performance.
+- **Accurate billing and cost management**: View clear cost allocation and optimization with delineation of costs that are associated with each subscription.
+
+- **Scalability and resource isolation**: Get independent scalability and resource isolation for various workloads or projects to minimize contention and enhance performance.
 
 ## Recommendation
 
 Apply the recommended subscription structure to maximize manageability, governance, and scalability for your Red Hat deployment on Azure. This approach ensures efficient resource utilization, enhanced security, and streamlined operations across your organization.
 
-## Next Steps
+## Next steps
 
 - Define subscription boundaries and resource allocation based on organizational requirements and workload characteristics.
+
 - Establish IAM policies, access controls, and Azure Policy enforcement mechanisms at the subscription level.
 - Implement budget alerts and cost tracking mechanisms to monitor spending and optimize resource utilization.

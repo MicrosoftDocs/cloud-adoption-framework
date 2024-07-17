@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Identity and access considerations for Red Hat Enterprise Linux on Azure
 
-This article describes identity and access management (IAM) considerations for your Azure Red Hat Enterprise Linux (RHEL) landing zone accelerator deployment. IAM is a key part of your organization's security settings. The RHEL operating system and the applications that run on it need to consume external identities to scale operations. Carefully design your hybrid cloud IAM implementation to ensure smooth integration and management of your instance landscape in the Azure cloud. Red Hat and Microsoft work together to ensure native integration between RHEL, Windows Server Active Directory, and Microsoft Entra ID Privileged Identity Management (PIM).
+This article describes identity and access management (IAM) considerations for your Azure Red Hat Enterprise Linux (RHEL) landing zone accelerator deployment. IAM is a key part of your organization's security settings. The RHEL operating system and the applications that run on it need to consume external identities to scale operations. Carefully design your hybrid cloud IAM implementation to ensure smooth integration and management of your instance landscape in the Azure cloud. Red Hat and Microsoft work together to ensure native integration between RHEL, Windows Server Active Directory, and Microsoft Entra Privileged Identity Management (PIM).
 
 ## Design considerations
 
