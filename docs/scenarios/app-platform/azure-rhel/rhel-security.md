@@ -1,8 +1,8 @@
 ---
 title: Security for RHEL on Azure
 description: Learn about key design considerations and recommendations for security in RHEL on Azure infrastructure.
-author: 
-ms.author: 
+author: Paul Armstrong and Mike Savage
+ms.author: jhajduk-microsoft
 ms.date: 7/20/2024
 ms.topic: conceptual
 ---
